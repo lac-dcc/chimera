@@ -1,0 +1,1 @@
+`define FPGA_ARCH_ANLOGIC_AL3

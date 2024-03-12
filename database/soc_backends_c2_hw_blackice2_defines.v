@@ -1,0 +1,4 @@
+`define ICE 1
+`define DISABLE_MICROOPS 1
+`define DISABLE_BARREL_SHIFTER 1
+// `define DISABLE_CMPOPS 1
