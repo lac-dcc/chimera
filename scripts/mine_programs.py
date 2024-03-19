@@ -1,3 +1,39 @@
+"""Mine Verilog programs from GitHub
+
+This script searches for the most popular Verilog repositories in GitHub and
+copies Verilog files from them until a certain threshold to number of copied
+programs.
+
+It uses the GitHub API to search for repositories, thus you must have a GitHub
+personal access token in order to use it. After generating a token, store it in
+a file called credentials.py.
+
+In order to avoid cloning repositories that were already cloned before when
+running multiple times, the script saves the names of all cloned repositories in
+a savefile. If you delete the savefile or change its name, the script will clone
+repositories that were already used.
+
+Usage:
+    mine_programs.py [-h] [--clones_dir CLONES_DIR]
+                     [--clones_savefile CLONES_SAVEFILE]
+                     [--target_dir TARGET_DIR] [--access_token ACCESS_TOKEN]
+                     [--max_programs MAX_PROGRAMS]
+
+Arguments:
+    --clones_dir CLONES_DIR
+        (str) directory to store repositories cloned from GitHub (default: "../database/cloned_repos")
+    --clones_savefile CLONES_SAVEFILE
+        (str) name of the file where the names of used repos are saved (default: "cloned_repos.txt")
+    --target_dir TARGET_DIR
+        (str) directory to store mined Verilog programs (default: "../database")
+    --access_token ACCESS_TOKEN
+        (str) GitHub access token (by default, takes token from credentials.py)
+    --max_programs MAX_PROGRAMS
+        (int) maximum number of Verilog programs to be added to the target directory (default: 50000)
+    -h, --help
+        show help message and exit
+"""
+
 import credentials
 import argparse
 import glob
@@ -37,13 +73,13 @@ def main():
                         help='(%(type)s) name of the file where the names of used repos are saved (default: "%(default)s")',
                         default='cloned_repos.txt')
     parser.add_argument('--target_dir', type=str,
-                        help='directory to store mined Verilog programs (default: "%(default)s")',
+                        help='(%(type)s) directory to store mined Verilog programs (default: "%(default)s")',
                         default='../database')
     parser.add_argument('--access_token', type=str,
-                        help='GitHub access token (by default, takes token from credentials.py)',
+                        help='(%(type)s) GitHub access token (by default, takes token from credentials.py)',
                         default=credentials.GITHUB_ACCESS_TOKEN)
     parser.add_argument('--max_programs', type=int,
-                        help='maximum number of Verilog programs to be added to the target directory (default: %(default)s)',
+                        help='(%(type)s) maximum number of Verilog programs to be added to the target directory (default: %(default)s)',
                         default=50000)
     args = parser.parse_args()
 
