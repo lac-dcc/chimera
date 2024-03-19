@@ -66,3 +66,25 @@ following command:
 ```
 jg -no_gui filter_programs.tcl
 ```
+## `count_productions.py`
+
+It is a script for counting how many times times a grammar rule is used by analyzing the trace of the execution of the parser created by Bison.
+
+In this project we use the [verible](https://chipsalliance.github.io/verible/) parser to analyze the program and generate the trace. The [verible-verilog-syntax](https://github.com/chipsalliance/verible/tree/master/verilog/tools/syntax) tool was used with the flag `--verilog_trace_parser`.
+
+### Running
+
+To run the script directly one must use python,  and redirect the output of the trace to the script's input, such as in the example below:
+
+```bash
+cat output_tracer.txt | python3 count_productions.py --output_file count.json
+```
+
+#### Arguments
+
+the script takes one mandatory argument
+
+```
+--output_file OUTPUT_FILE
+   (str) the name of the file to save the output. If the file already exists the script will load its information, considering it a previous saved state. If the file does not exist it will be created.
+```
