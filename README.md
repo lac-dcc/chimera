@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="jotai drawing" src="./assets/images/Banner.png" width="95%" height="auto"/></br>
+  <img alt="jotai drawing" src="./assets/images/Banner.png" width="100%" height="auto"/></br>
 </p>
 
 ChiBench consists of a large collection of Verilog programs mined from open-source github repositories.
