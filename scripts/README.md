@@ -1,11 +1,14 @@
 # Chimera scripts
 
 ## `mine_programs.py`
+
 This Python script searches for the most popular Verilog programs in GitHub and
 then clones them in order to extract all of its `.v` files.
 
 ### Running
+
 #### Dependencies
+
 In order to run the script, you must first install its dependencies. You can use
 the available `requirements.txt` in order to install them:
 
@@ -14,6 +17,7 @@ pip3 install -r requirements.txt
 ```
 
 #### GitHub API Token
+
 The script uses the GitHub API to mine Verilog programs. Thus, you need a
 personal access token to able to send requests to the API. You can read more
 about how to generate personal access tokens
@@ -31,6 +35,7 @@ Although you must create this file for the script to work, you can also use the
 `--access_token` argument to specify a different personal access token.
 
 #### Arguments
+
 The script doesn't take any mandatory arguments. However, there a few optional
 arguments that you can use to customize its execution:
 
@@ -50,6 +55,7 @@ arguments that you can use to customize its execution:
 ```
 
 ## `filter_programs.tcl`
+
 This Tcl script uses Jasper's `analyze` command to analyze all Verilog programs
 in a given directory. The script will move all invalid programs to a separate
 directory and keep the valid ones.
@@ -60,12 +66,14 @@ change this by modifying the `database_dir` and `target_dir` variables within
 the script.
 
 ### Running
+
 This script can only run within Jasper's Tcl shell. You can run it with the
 following command:
 
 ```
 jg -no_gui filter_programs.tcl
 ```
+
 ## `count_productions.py`
 
 It is a script for counting how many times times a grammar rule is used by analyzing the trace of the execution of the parser created by Bison.
@@ -88,3 +96,27 @@ the script takes one mandatory argument
 --output_file OUTPUT_FILE
    (str) the name of the file to save the output. If the file already exists the script will load its information, considering it a previous saved state. If the file does not exist it will be created.
 ```
+
+## `run_parser_count_productions.sh`
+
+Consists of a script that runs the parser and uses the generated trace to feed the `count_productions.py` script.
+
+### Running
+
+To run the script one must use the following command:
+
+```bash
+./run_parser_count_productions.sh <directory> <_verible_parser_executable> <output_file>
+```
+
+#### Arguments
+
+The positional arguments are explained below and follow their respective sequence:
+
+```
+<directory> : (str) Directory in which the files to parse are stored
+<_verible_parser_executable>: (str) Filepath to the parser executable
+<output_file>: (str) name of the file to save the output of count_productions.py. More information see above.
+```
+
+We highly recommend the use of the [verible](https://chipsalliance.github.io/verible/) project, since it was the only tested and based on when creating this script. The parser can be found on [verible-verilog-syntax](https://github.com/chipsalliance/verible/tree/master/).

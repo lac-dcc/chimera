@@ -51,7 +51,7 @@ def load_map(filename):
         return dict(dict())
 
 
-def process_tracer(output_filename):
+def process_trace(output_filename):
     reduction = list()
     append_next_lines = False
     reduction_map = load_map(output_filename)
@@ -78,10 +78,10 @@ def process_tracer(output_filename):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output_file", type=str, help="File to save the output in json format")
+    parser.add_argument("--output_file", type=str, help="File to save the output in json format.")
     args = parser.parse_args()
     
-    process_tracer(output_filename=args.output_file)
+    process_trace(output_filename=args.output_file)
     
 
 if __name__ == '__main__':
