@@ -22,7 +22,7 @@ fi
 
 count=1
 total=$(ls $1/ -l | wc -l)
-echo "total: $total"
+echo "total of programs: $total"
 for file in  "$1"/*.v; do
 
     echo "Analyzing $count/$total: $file"
