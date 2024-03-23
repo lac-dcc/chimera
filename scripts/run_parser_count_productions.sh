@@ -21,7 +21,7 @@ if [ ! -f "$2" ]; then
 fi
 
 count=1
-total=$(ls $1/ -l | wc -l)
+total=$(ls $1/ -l | wc -l)-1
 echo "total of programs: $total"
 for file in  "$1"/*.v; do
 
