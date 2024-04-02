@@ -27,7 +27,21 @@ echo "total of programs: $total"
 for file in  "$1"/*.v; do
 
     echo "Analyzing $count/$total: $file"
-    "$2" --verilog_trace_parser $file 2>&1 >/dev/null | python3 count_productions.py --output_file $3
+    "$2" --verilog_trace_parser "$file" 2> aux.txt
+
+    #echo $out
+
+    if [ $? -ne 1 ]
+    then
+        echo "Analyzing $count/$total: $file"
+        python3 count_productions.py --output_file $3 < aux.txt
+    
+    else
+        echo "Error at file: $file"
+        
+    fi
+    
+    rm -f aux.txt
     ((count++))
 done
 

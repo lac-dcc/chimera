@@ -57,7 +57,6 @@ def process_trace(output_filename):
     reduction_map = load_map(output_filename)
 
     line = sys.stdin.readline()
-
     while line != '':
         
         if append_next_lines:
@@ -74,6 +73,7 @@ def process_trace(output_filename):
 
     with open(output_filename, 'w', encoding="utf-8") as file:
         json.dump(reduction_map, file)
+        
 
 
 def main():
