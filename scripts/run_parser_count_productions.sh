@@ -33,7 +33,7 @@ for file in  "$1"/*.v; do
 
     if [ $? -ne 1 ]
     then
-        echo "Analyzing $count/$total: $file"
+        
         python3 count_productions.py --output_file $3 < aux.txt
     
     else
