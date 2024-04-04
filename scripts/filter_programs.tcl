@@ -12,7 +12,7 @@ foreach v_file [glob $glob_path] {
   if { [catch {analyze -sv $v_file}] } {
     set file_name [file tail $v_file]
     puts "Invalid Verilog program detected: $file_name"
-    file rename $v_file [file join $target_dir $file_name]
+    file rename -force $v_file [file join $target_dir $file_name]
   }
 
   analyze -clear
