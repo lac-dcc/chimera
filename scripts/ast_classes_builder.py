@@ -59,10 +59,10 @@ def create_std_classes():
     f.add_argument("Visitor &visitor")
     
     
-    c.add_variable(CppVariable(name="element", type="string", initialization_value=""))
+    d.add_variable(CppVariable(name="element", type="string", initialization_value=""))
 
-    c.add_method(f)
-    c.parent_class="Node"
+    d.add_method(f)
+    d.parent_class="Node"
 
     return [c,d]
     
@@ -139,21 +139,24 @@ def create_AST_classes(prod_dict:dict):
     analyzed_items = []
     classes = []
     for k,v in prod_dict.items(): #outside dict
-        if k not in analyzed_items:
-            curr = ProdElement(k)
+        curr = ProdElement(k)
+        if curr.element not in analyzed_items:
+            
             classes.append(create_AST_class(curr))
-            analyzed_items.append(k)
+            analyzed_items.append(curr.element)
         
         for p,b in v.items(): #inside dict
 
             r = breaK_rule_in_ops(p)
             for x in r:
-                if x not in analyzed_items:
+
+                if x.element not in analyzed_items:
                     if not x.isTerminal and x not in prod_dict.keys():
                         x.isToken = True
                     c = create_AST_class(x)
                     if c is not None:
                         classes.append(c)
+                    analyzed_items.append(x.element)
     
     return classes
 
