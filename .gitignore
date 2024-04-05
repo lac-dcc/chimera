@@ -3,3 +3,4 @@ cloned_repos/
 __pycache__/
 jgproject/
 invalid_programs/
+database/verible_invalid_programs/
