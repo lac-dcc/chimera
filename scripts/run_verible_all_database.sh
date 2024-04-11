@@ -21,7 +21,7 @@ if [ ! -f "$2" ]; then
 fi
 
 count=1
-total=$(($(find "$1" -type f | wc -l)))
+total=$(($(find "$1"/ -name "*.v" -type f | wc -l)))
 total=$(($total-1))
 
 echo "total of programs: $total"
@@ -35,7 +35,7 @@ for file in $(find  "$1"/ -name "*.v" -type f)  ; do
     fi
 
     echo "Analyzing $count/$total: $file"    
-    "$2" "$file"  2>&1 
+    "$2" "$file"  2>&1 >/dev/null
 
 
     ((count++))

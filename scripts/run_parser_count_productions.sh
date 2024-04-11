@@ -24,19 +24,22 @@ count=1
 total=$(($(ls $1/ -l | wc -l)))
 total=$(($total-1))
 echo "total of programs: $total"
+
+mkdir "$1/verible_invalid_programs"
 for file in  "$1"/*.v; do
 
     echo "Analyzing $count/$total: $file"
-    "$2" --verilog_trace_parser "$file" 2> aux.txt
+    "$2"  "$file"
 
     #echo $out
 
     if [ $? -ne 1 ]
     then
         
-        python3 count_productions.py --output_file $3 < aux.txt
+        "$2" "--verilog_trace_parser"  "$file" 2>&1 | python3 count_productions.py --output_file $3
     
     else
+        mv "$file" "$1/verible_invalid_programs"
         echo "Error at file: $file"
         
     fi
