@@ -4,7 +4,6 @@ from code_generation.cpp_variable import *
 from code_generation.cpp_class import *
 import json
 import argparse
-from typing import List
     
 class ProdElement:
     def __init__(self, element:str, isTerminal:bool=False, isToken:bool=False) -> None:
@@ -26,9 +25,12 @@ def breaK_rule_in_ops(rule:str):
     line = []
 
     for op in ops:
+        
+
         if op.startswith('\'') or op.startswith('"'):
+            op1 = op[1:-1]
+            e = ProdElement(op1, isTerminal=True)
             
-            e = ProdElement(op[1:-1], isTerminal=True)
             
             line.append(e)
         else:
@@ -36,9 +38,95 @@ def breaK_rule_in_ops(rule:str):
     return line
     
 
+
+
+def create_function_visitor_base_class(e:ProdElement):
     
-def create_visitor_class():
-    print("working")
+    
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_pure_virtual=True, is_virtual=True)
+    f.add_argument(f"{e.element.capitalize()} *node")
+   
+    
+    return f
+
+def create_function_gen_class(e):
+    
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_virtual=True,
+                           implementation_handle=lambda s,cpp: cpp('for(std::shared_ptr<Node> child: node->getChildren()){\nchild->accept(*this);\n}'))
+    
+    f.add_argument(f"{e.element.capitalize()} *node")
+    return f
+    
+
+    
+def create_visitor_classes(elements, ast_classes):
+    v = CppFile("Visitor.cpp")
+    vh = CppFile("Visitor.h")
+
+    vh.append("#include <iostream>\n")
+    vh.append("#include <memory>\n")
+    vh.append("#include <string>\n")
+    vh.append("#include <vector>\n")
+
+    v.append("#include \"Visitor.h\"\n")
+    v.append("#include \"AST.h\"\n")
+    vh.append("#ifndef VISITOR_H\n")
+    vh.append("#define VISITOR_H\n")
+    vh.newline(2)
+
+    vh.append("")
+
+    for c in ast_classes:
+        
+        vh.append(f"class {c.name};\n")
+
+
+    c = CppClass(name="Visitor")
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_pure_virtual=True, is_virtual=True)
+    f.add_argument("Visitor &visitor")
+
+    c.add_method(f)
+
+    code_gen = CppClass(name="CodeGenVisitor")
+    code_gen.parent_class = "Visitor"
+
+    #code_gen.add_variable(CppVariable(type="std::string", name="code"))
+    #get = CppClass.CppMethod(name="getCode", ret_type="std::string",
+    #implementation_handle=lambda s,cpp: cpp('return this->code;'))
+
+    #set = CppClass.CppMethod(name="setCode", ret_type="void",
+    #implementation_handle=lambda s,cpp: cpp('this->code = code;'))
+    #set.add_argument("std::string code")
+
+    #code_gen.add_method(get)
+    #code_gen.add_method(set)
+
+    
+    for e in elements:
+        if not e.isTerminal and e.element != "%empty":
+            
+            c.add_method(create_function_visitor_base_class(e))
+            code_gen.add_method(create_function_gen_class(e))
+    
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_pure_virtual=True, is_virtual=True)
+    f.add_argument(f"Terminal *node")
+
+    c.add_method(f)
+
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_virtual=True,
+                           implementation_handle=lambda s,cpp: cpp('for(std::shared_ptr<Node> child: node->getChildren()){\nchild->accept(*this);\n}'))
+    
+    f.add_argument(f"Terminal *node")
+
+    code_gen.add_method(f)
+    
+    c.render_to_string_declaration(vh)
+    code_gen.render_to_string_declaration(vh)
+
+    c.render_to_string_implementation(v)
+    code_gen.render_to_string_implementation(v)
+    vh.append("#endif")
+
 
 
 def create_std_classes():
@@ -50,18 +138,33 @@ def create_std_classes():
 
     c.add_method(f)
 
-
+    
     d = CppClass(name="Terminal")
     f = CppClass.CppMethod(name="accept", ret_type="void", 
                            implementation_handle=lambda s,cpp: cpp('visitor.visit(this);'), 
                            is_virtual=True)
+
+    const = CppClass.CppMethod(name="Terminal", ret_type="",
+    implementation_handle=lambda s,cpp: cpp('this->element = element;'))
+    const.add_argument("std::string element")
     
     f.add_argument("Visitor &visitor")
     
+    d.add_variable(CppVariable(name="element", type="std::string", initialization_value=""))
+
+    get = CppClass.CppMethod(name="getElement", ret_type="std::string",
+    implementation_handle=lambda s,cpp: cpp('return this->element;'))
+
+    set = CppClass.CppMethod(name="setElement", ret_type="void",
+    implementation_handle=lambda s,cpp: cpp('this->element = element;'))
+    set.add_argument("std::string element")
     
-    d.add_variable(CppVariable(name="element", type="string", initialization_value=""))
 
     d.add_method(f)
+    d.add_method(const)
+    d.add_method(get)
+    d.add_method(set)
+    
     d.parent_class="Node"
 
     return [c,d]
@@ -69,37 +172,59 @@ def create_std_classes():
 
 def add_classes(class_list, cpp:CppFile, h:CppFile):
     
-    
+    h.newline(2)
     for c in class_list:
-        #print("Creating class:",c.name)
-        h.append(f"class {c.name};")
-        h.newline()
-
-    
-    for c in class_list:
-        c.render_to_string(cpp)
-        cpp.newline(2)
+        c.render_to_string_declaration(h)
+        c.render_to_string_implementation(cpp)
 
     
 def create_AST_file(prod_dict):
     cpp = CppFile("AST.cpp")
     h = CppFile("AST.h")
-    cpp.append("#include <iostream>\n")
-    cpp.append("#include <memory>\n")
-    cpp.append("#include <string>\n")
-    cpp.append("#include <vector>\n")
+    h.append("#include <iostream>\n")
+    h.append("#include <memory>\n")
+    h.append("#include <string>\n")
+    h.append("#include <vector>\n")
+    h.append("#include <map>\n")
     cpp.append("#include \"Visitor.h\"\n")
+
     cpp.append("#include \"AST.h\"\n")
-    cpp.newline(2)
+
+    h.append("#ifndef AST_H\n")
+    h.append("#define AST_H\n")
+    h.newline(2)
+
+    h.append("class Visitor;\n\n")
 
     std = create_std_classes()
     
-    classes = create_AST_classes(prod_dict)
+    classes, elements_in_gram = create_AST_classes(prod_dict)
+
+    for c in std[::-1]:
+        classes.insert(0, c)
+    
+    add_classes(classes, cpp, h)
+
+    create_visitor_classes(set(elements_in_gram), classes)
+    m = ""
+    for c in classes:
+        if c.name.lower() !="node":
+            m += f'if(c == "{c.name.lower()}")\n return std::make_shared<{c.name.capitalize()}>(c);\nelse '
+    
+    m+= "return std::make_shared<Terminal>(c);"
+    
+    func_class = CppFunction(name="map_class", ret_type="std::shared_ptr<Node>",
+    implementation_handle=lambda s,cpp: cpp(m))
+    func_class.add_argument("std::string c")
+    func_class.render_to_string(cpp)
 
     
-    classes.extend(std)
 
-    add_classes(classes, cpp, h)
+    
+    
+    h.append("#endif\n")
+
+
 
 
     #create_AST_classes()
@@ -112,16 +237,25 @@ def create_AST_class(prod:ProdElement):
     
     f.add_argument("Visitor &visitor")
 
+    const = CppClass.CppMethod(name=f"{prod.element.capitalize()}", ret_type="",
+    implementation_handle=lambda s,cpp: cpp('this->element = element;'))
+    const.add_argument("std::string element")
+
+    
+
     
     if not prod.isTerminal and prod.element != "%empty":
     
-        c = CppClass(name=prod.element)
+        c = CppClass(name=prod.element.capitalize())
+        
 
 
         if prod.isToken:
-            c.add_variable(CppVariable(name="element", type="string", initialization_value=prod.element))
+            c.add_variable(CppVariable(name="element", type="std::string", initialization_value=prod.element))
 
         c.add_method(f)
+        c.add_method(const)
+        
         c.parent_class="Node"
         return c
     
@@ -138,35 +272,42 @@ def create_AST_classes(prod_dict:dict):
     '''
     analyzed_items = []
     classes = []
+    elements = set()
     for k,v in prod_dict.items(): #outside dict
         curr = ProdElement(k)
-        if curr.element not in analyzed_items:
+        curr.isToken = True
+
+        if (curr.element,curr.isTerminal, curr.isToken) not in analyzed_items:
+            elements.add(curr)
+            
             
             classes.append(create_AST_class(curr))
-            analyzed_items.append(curr.element)
+            analyzed_items.append((curr.element,curr.isTerminal, curr.isToken))
         
-        for p,b in v.items(): #inside dict
+        for p,_ in v.items(): #inside dict
 
             r = breaK_rule_in_ops(p)
+            
             for x in r:
-
-                if x.element not in analyzed_items:
-                    if not x.isTerminal and x not in prod_dict.keys():
+                if not x.isTerminal and x not in prod_dict.keys():
                         x.isToken = True
+
+                
+                
+                if (x.element, x.isTerminal, x.isToken) not in analyzed_items:
+                    
+                    elements.add(x)
+                    
+                        
+                    
                     c = create_AST_class(x)
                     if c is not None:
                         classes.append(c)
-                    analyzed_items.append(x.element)
+                    analyzed_items.append((x.element, x.isTerminal, x.isToken))
     
-    return classes
+    return classes, elements
 
         
-
-
-
-def create_start():
-    #Where the verilog build starts, first 
-    print("working")
 def main():
     #######flags
     parser = argparse.ArgumentParser()
@@ -179,10 +320,10 @@ def main():
     #######flags
     productions = read_json(args.json_file)
     create_AST_file(productions)
+
     
 
 if __name__ == "__main__":
     main()
-    
-    #create_AST_node_class()
+
 

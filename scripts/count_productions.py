@@ -51,12 +51,20 @@ def load_map(filename):
         return dict(dict())
 
 
-def process_trace(p:subprocess.Popen, reduction_map):
+def save_map(reduction_map, output_filename):
+    with open(output_filename, 'w', encoding="utf-8") as file:
+        json.dump(reduction_map, file)
+
+
+def process_trace(out_file):
     reduction = list()
     append_next_lines = False
-    
 
-    for line in p.stderr:
+    reduction_map = load_map(out_file)
+
+    line = sys.stdin.readline()
+
+    while line != '':
         line = line.strip()
         #print("LINE", line)
         if append_next_lines:
@@ -69,45 +77,20 @@ def process_trace(p:subprocess.Popen, reduction_map):
 
         if line.strip().startswith('Reducing'):
             append_next_lines = True
+        line = sys.stdin.readline()
 
-    return reduction_map
+    save_map(reduction_map, out_file)
         
 
-def save_map(reduction_map, output_filename):
-    with open(output_filename, 'w', encoding="utf-8") as file:
-        json.dump(reduction_map, file)
+
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output_file", type=str, help="File to save the output in json format.")
-    parser.add_argument("--parser_executable", type=str, help="Filepath to the parser_executable.")
-    parser.add_argument("--dir", type=str, help="Directory with files to be analyzed.")
     args = parser.parse_args()
 
-    files = os.listdir(args.dir)
-    total = len(files)
-    count = 1
-    for file in files:
-
-        print(f"Analyzing file {count}/{total}: {file}", flush=True)
-        count+=1
-
-        filename = os.path.join(args.dir, file)
-
-        if os.path.isfile(os.path.join(args.dir, filename)):
-
-            command = f"{args.parser_executable} --verilog_trace_parser {filename}"
-            
-            p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-            map = process_trace(p, load_map(args.output_file))
-            p.wait()
-
-            if p.returncode != 1:
-                save_map(map, args.output_file)
-            else:
-                print("error in file:", file)
+    process_trace(args.output_file)
 
 
     
