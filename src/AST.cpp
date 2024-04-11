@@ -1,8866 +1,6738 @@
-#include <iostream>
-#include <memory>
-#include <string>
-#include <vector>
 #include "Visitor.h"
 #include "AST.h"
 
 
-class time_literal  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void time_literal::accept(Visitor &visitor)
+void Terminal::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
+ Terminal::Terminal(std::string element)
+{
+	this->element = element;
+}
 
+std::string Terminal::getElement()
+{
+	return this->element;
+}
 
-class TK_TimeLiteral  : public Node
+void Terminal::setElement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_TimeLiteral::accept(Visitor &visitor)
+
+void Time_literal::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_DecNumber  : public Node
+ Time_literal::Time_literal(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_DecNumber::accept(Visitor &visitor)
+
+void Tk_timeliteral::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class timescale_directive  : public Node
+ Tk_timeliteral::Tk_timeliteral(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void timescale_directive::accept(Visitor &visitor)
+
+void Tk_decnumber::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_item_no_pp  : public Node
+ Tk_decnumber::Tk_decnumber(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void package_item_no_pp::accept(Visitor &visitor)
+
+void Timescale_directive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class misc_directive  : public Node
+ Timescale_directive::Timescale_directive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void misc_directive::accept(Visitor &visitor)
+
+void Package_item_no_pp::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_or_generate_item_declaration  : public Node
+ Package_item_no_pp::Package_item_no_pp(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void package_or_generate_item_declaration::accept(Visitor &visitor)
+
+void Misc_directive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_declaration  : public Node
+ Misc_directive::Misc_directive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void data_declaration::accept(Visitor &visitor)
+
+void Package_or_generate_item_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_param_declaration  : public Node
+ Package_or_generate_item_declaration::Package_or_generate_item_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void any_param_declaration::accept(Visitor &visitor)
+
+void Data_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class timeunits_declaration  : public Node
+ Data_declaration::Data_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void timeunits_declaration::accept(Visitor &visitor)
+
+void Any_param_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class type_declaration  : public Node
+ Any_param_declaration::Any_param_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void type_declaration::accept(Visitor &visitor)
+
+void Timeunits_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_import_declaration  : public Node
+ Timeunits_declaration::Timeunits_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void package_import_declaration::accept(Visitor &visitor)
+
+void Type_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class macro_call_or_item  : public Node
+ Type_declaration::Type_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void macro_call_or_item::accept(Visitor &visitor)
+
+void Package_import_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class description  : public Node
+ Package_import_declaration::Package_import_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void description::accept(Visitor &visitor)
+
+void Description::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_or_interface_declaration  : public Node
+ Description::Description(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void module_or_interface_declaration::accept(Visitor &visitor)
+
+void Module_or_interface_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class preprocessor_action  : public Node
+ Module_or_interface_declaration::Module_or_interface_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void preprocessor_action::accept(Visitor &visitor)
+
+void Preprocessor_action::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class udp_primitive  : public Node
+ Preprocessor_action::Preprocessor_action(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void udp_primitive::accept(Visitor &visitor)
+
+void Udp_primitive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_declaration  : public Node
+ Udp_primitive::Udp_primitive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void package_declaration::accept(Visitor &visitor)
+
+void Package_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class description_list  : public Node
+ Package_declaration::Package_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void description_list::accept(Visitor &visitor)
+
+void Description_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_start  : public Node
+ Description_list::Description_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_start::accept(Visitor &visitor)
+
+void Module_start::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class lifetime_opt  : public Node
+ Module_start::Module_start(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void lifetime_opt::accept(Visitor &visitor)
+
+void Lifetime_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class lifetime  : public Node
+ Lifetime_opt::Lifetime_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void lifetime::accept(Visitor &visitor)
+
+void Lifetime::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class GenericIdentifier  : public Node
+ Lifetime::Lifetime(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void GenericIdentifier::accept(Visitor &visitor)
+
+void Genericidentifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class SymbolIdentifier  : public Node
+ Genericidentifier::Genericidentifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void SymbolIdentifier::accept(Visitor &visitor)
+
+void Symbolidentifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class MacroIdentifier  : public Node
+ Symbolidentifier::Symbolidentifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void MacroIdentifier::accept(Visitor &visitor)
+
+void Escapedidentifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class EscapedIdentifier  : public Node
+ Escapedidentifier::Escapedidentifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void EscapedIdentifier::accept(Visitor &visitor)
+
+void Keywordidentifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class KeywordIdentifier  : public Node
+ Keywordidentifier::Keywordidentifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void KeywordIdentifier::accept(Visitor &visitor)
+
+void Symbol_or_label::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class symbol_or_label  : public Node
+ Symbol_or_label::Symbol_or_label(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void symbol_or_label::accept(Visitor &visitor)
+
+void Module_package_import_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_package_import_list_opt  : public Node
+ Module_package_import_list_opt::Module_package_import_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_package_import_list_opt::accept(Visitor &visitor)
+
+void Package_import_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_import_list  : public Node
+ Package_import_list::Package_import_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void package_import_list::accept(Visitor &visitor)
+
+void Module_parameter_port_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port_list_opt  : public Node
+ Module_parameter_port_list_opt::Module_parameter_port_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port_list_opt::accept(Visitor &visitor)
+
+void Module_parameter_port_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port_list  : public Node
+ Module_parameter_port_list::Module_parameter_port_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port_list::accept(Visitor &visitor)
+
+void Module_port_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_port_list_opt  : public Node
+ Module_port_list_opt::Module_port_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_port_list_opt::accept(Visitor &visitor)
+
+void List_of_ports_or_port_declarations_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class list_of_ports_or_port_declarations_opt  : public Node
+ List_of_ports_or_port_declarations_opt::List_of_ports_or_port_declarations_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void list_of_ports_or_port_declarations_opt::accept(Visitor &visitor)
+
+void Module_attribute_foreign_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_attribute_foreign_opt  : public Node
+ Module_attribute_foreign_opt::Module_attribute_foreign_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_attribute_foreign_opt::accept(Visitor &visitor)
+
+void Integer_vector_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class integer_vector_type  : public Node
+ Integer_vector_type::Integer_vector_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void integer_vector_type::accept(Visitor &visitor)
+
+void Signed_unsigned_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class signed_unsigned_opt  : public Node
+ Signed_unsigned_opt::Signed_unsigned_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void signed_unsigned_opt::accept(Visitor &visitor)
+
+void Signing::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class signing  : public Node
+ Signing::Signing(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void signing::accept(Visitor &visitor)
+
+void Data_type_primitive_scalar::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_type_primitive_scalar  : public Node
+ Data_type_primitive_scalar::Data_type_primitive_scalar(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_type_primitive_scalar::accept(Visitor &visitor)
+
+void Integer_atom_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class integer_atom_type  : public Node
+ Integer_atom_type::Integer_atom_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void integer_atom_type::accept(Visitor &visitor)
+
+void Non_integer_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class non_integer_type  : public Node
+ Non_integer_type::Non_integer_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void non_integer_type::accept(Visitor &visitor)
+
+void Enum_data_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class enum_data_type  : public Node
+ Enum_data_type::Enum_data_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void enum_data_type::accept(Visitor &visitor)
+
+void Struct_data_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class struct_data_type  : public Node
+ Struct_data_type::Struct_data_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void struct_data_type::accept(Visitor &visitor)
+
+void Decl_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class decl_dimensions_opt  : public Node
+ Decl_dimensions_opt::Decl_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void decl_dimensions_opt::accept(Visitor &visitor)
+
+void Decl_dimensions::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class decl_dimensions  : public Node
+ Decl_dimensions::Decl_dimensions(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void decl_dimensions::accept(Visitor &visitor)
+
+void Data_type_primitive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_type_primitive  : public Node
+ Data_type_primitive::Data_type_primitive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_type_primitive::accept(Visitor &visitor)
+
+void Data_type_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_type_base  : public Node
+ Data_type_base::Data_type_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_type_base::accept(Visitor &visitor)
+
+void Data_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_type  : public Node
+ Data_type::Data_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_type::accept(Visitor &visitor)
+
+void Reference::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class reference  : public Node
+ Reference::Reference(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void reference::accept(Visitor &visitor)
+
+void Instantiation_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class instantiation_type  : public Node
+ Instantiation_type::Instantiation_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void instantiation_type::accept(Visitor &visitor)
+
+void Trailing_decl_assignment_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class trailing_decl_assignment_opt  : public Node
+ Trailing_decl_assignment_opt::Trailing_decl_assignment_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void trailing_decl_assignment_opt::accept(Visitor &visitor)
+
+void Trailing_decl_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class trailing_decl_assignment  : public Node
+ Trailing_decl_assignment::Trailing_decl_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void trailing_decl_assignment::accept(Visitor &visitor)
+
+void Non_anonymous_gate_instance_or_register_variable::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class non_anonymous_gate_instance_or_register_variable  : public Node
+ Non_anonymous_gate_instance_or_register_variable::Non_anonymous_gate_instance_or_register_variable(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void non_anonymous_gate_instance_or_register_variable::accept(Visitor &visitor)
+
+void Any_port_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_port_list_opt  : public Node
+ Any_port_list_opt::Any_port_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void any_port_list_opt::accept(Visitor &visitor)
+
+void Non_anonymous_gate_instance_or_register_variable_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class non_anonymous_gate_instance_or_register_variable_list  : public Node
+ Non_anonymous_gate_instance_or_register_variable_list::Non_anonymous_gate_instance_or_register_variable_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void non_anonymous_gate_instance_or_register_variable_list::accept(Visitor &visitor)
+
+void Gate_instance_or_register_variable::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class gate_instance_or_register_variable  : public Node
+ Gate_instance_or_register_variable::Gate_instance_or_register_variable(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void gate_instance_or_register_variable::accept(Visitor &visitor)
+
+void Instantiation_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class instantiation_base  : public Node
+ Instantiation_base::Instantiation_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void instantiation_base::accept(Visitor &visitor)
+
+void Reference_or_call_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class reference_or_call_base  : public Node
+ Reference_or_call_base::Reference_or_call_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void reference_or_call_base::accept(Visitor &visitor)
+
+void Data_declaration_or_module_instantiation::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_declaration_or_module_instantiation  : public Node
+ Data_declaration_or_module_instantiation::Data_declaration_or_module_instantiation(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_declaration_or_module_instantiation::accept(Visitor &visitor)
+
+void Const_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class const_opt  : public Node
+ Const_opt::Const_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void const_opt::accept(Visitor &visitor)
+
+void Module_or_generate_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_or_generate_item  : public Node
+ Module_or_generate_item::Module_or_generate_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_or_generate_item::accept(Visitor &visitor)
+
+void Module_common_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_common_item  : public Node
+ Module_common_item::Module_common_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void module_common_item::accept(Visitor &visitor)
+
+void Parameter_override::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_override  : public Node
+ Parameter_override::Parameter_override(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void parameter_override::accept(Visitor &visitor)
+
+void Gate_instantiation::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class gate_instantiation  : public Node
+ Gate_instantiation::Gate_instantiation(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void gate_instantiation::accept(Visitor &visitor)
+
+void Non_port_module_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
+ Non_port_module_item::Non_port_module_item(std::string element)
+{
+	this->element = element;
+}
 
 
-class non_port_module_item  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
 
-virtual void non_port_module_item::accept(Visitor &visitor)
+void Generate_region::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class generate_region  : public Node
+ Generate_region::Generate_region(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void generate_region::accept(Visitor &visitor)
+void Specify_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class specify_block  : public Node
+ Specify_block::Specify_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void specify_block::accept(Visitor &visitor)
+void Module_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class module_item  : public Node
+ Module_item::Module_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void module_item::accept(Visitor &visitor)
+void Module_port_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class module_port_declaration  : public Node
+ Module_port_declaration::Module_port_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void module_port_declaration::accept(Visitor &visitor)
+void Module_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class module_block  : public Node
+ Module_block::Module_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void module_block::accept(Visitor &visitor)
+void Module_item_directive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class module_item_directive  : public Node
+ Module_item_directive::Module_item_directive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void module_item_directive::accept(Visitor &visitor)
+void Module_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class module_item_list  : public Node
+ Module_item_list::Module_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void module_item_list::accept(Visitor &visitor)
+void Net_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_type  : public Node
+ Net_type::Net_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_type::accept(Visitor &visitor)
+void Number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class number  : public Node
+ Number::Number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void number::accept(Visitor &visitor)
+void Constant_dec_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class constant_dec_number  : public Node
+ Constant_dec_number::Constant_dec_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void constant_dec_number::accept(Visitor &visitor)
+void Based_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class based_number  : public Node
+ Based_number::Based_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void based_number::accept(Visitor &visitor)
+void Tk_unbasednumber::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class TK_UnBasedNumber  : public Node
+ Tk_unbasednumber::Tk_unbasednumber(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_UnBasedNumber::accept(Visitor &visitor)
+void Expr_primary_no_groups::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expr_primary_no_groups  : public Node
+ Expr_primary_no_groups::Expr_primary_no_groups(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void expr_primary_no_groups::accept(Visitor &visitor)
+void System_tf_call::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class TK_RealTime  : public Node
+ System_tf_call::System_tf_call(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_RealTime::accept(Visitor &visitor)
+void String_literal::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class string_literal  : public Node
+ String_literal::String_literal(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void string_literal::accept(Visitor &visitor)
+void Tk_realtime::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class system_tf_call  : public Node
+ Tk_realtime::Tk_realtime(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void system_tf_call::accept(Visitor &visitor)
+void Cast::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class cast  : public Node
+ Cast::Cast(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void cast::accept(Visitor &visitor)
+void Expr_primary::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class MacroGenericItem  : public Node
+ Expr_primary::Expr_primary(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void MacroGenericItem::accept(Visitor &visitor)
+void Expr_primary_parens::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expr_primary  : public Node
+ Expr_primary_parens::Expr_primary_parens(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void expr_primary::accept(Visitor &visitor)
+void Expr_primary_braces::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expr_primary_parens  : public Node
+ Expr_primary_braces::Expr_primary_braces(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void expr_primary_parens::accept(Visitor &visitor)
+void Assignment_pattern_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expr_primary_braces  : public Node
+ Assignment_pattern_expression::Assignment_pattern_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void expr_primary_braces::accept(Visitor &visitor)
+void Postfix_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class assignment_pattern_expression  : public Node
+ Postfix_expression::Postfix_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void assignment_pattern_expression::accept(Visitor &visitor)
+void Reference_or_call::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class postfix_expression  : public Node
+ Reference_or_call::Reference_or_call(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void postfix_expression::accept(Visitor &visitor)
+void Inc_or_dec_or_primary_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class reference_or_call  : public Node
+ Inc_or_dec_or_primary_expr::Inc_or_dec_or_primary_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void reference_or_call::accept(Visitor &visitor)
+void Inc_or_dec_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class inc_or_dec_or_primary_expr  : public Node
+ Inc_or_dec_expression::Inc_or_dec_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void inc_or_dec_or_primary_expr::accept(Visitor &visitor)
+void Unary_prefix_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class inc_or_dec_expression  : public Node
+ Unary_prefix_expr::Unary_prefix_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void inc_or_dec_expression::accept(Visitor &visitor)
+void Unary_op::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class unary_prefix_expr  : public Node
+ Unary_op::Unary_op(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void unary_prefix_expr::accept(Visitor &visitor)
+void Unary_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class unary_op  : public Node
+ Unary_expr::Unary_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void unary_op::accept(Visitor &visitor)
+void Pow_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class unary_expr  : public Node
+ Pow_expr::Pow_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void unary_expr::accept(Visitor &visitor)
+void Mul_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class pow_expr  : public Node
+ Mul_expr::Mul_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void pow_expr::accept(Visitor &visitor)
+void Add_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class mul_expr  : public Node
+ Add_expr::Add_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void mul_expr::accept(Visitor &visitor)
+void Shift_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class add_expr  : public Node
+ Shift_expr::Shift_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void add_expr::accept(Visitor &visitor)
+void Comp_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class shift_expr  : public Node
+ Comp_expr::Comp_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void shift_expr::accept(Visitor &visitor)
+void Open_range_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class comp_expr  : public Node
+ Open_range_list::Open_range_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void comp_expr::accept(Visitor &visitor)
+void Logeq_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class open_range_list  : public Node
+ Logeq_expr::Logeq_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void open_range_list::accept(Visitor &visitor)
+void Caseeq_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class logeq_expr  : public Node
+ Caseeq_expr::Caseeq_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void logeq_expr::accept(Visitor &visitor)
+void Bitand_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class caseeq_expr  : public Node
+ Bitand_expr::Bitand_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void caseeq_expr::accept(Visitor &visitor)
+void Xor_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class bitand_expr  : public Node
+ Xor_expr::Xor_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void bitand_expr::accept(Visitor &visitor)
+void Bitor_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class xor_expr  : public Node
+ Bitor_expr::Bitor_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void xor_expr::accept(Visitor &visitor)
+void With_exprs_suffix::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class bitor_expr  : public Node
+ With_exprs_suffix::With_exprs_suffix(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void bitor_expr::accept(Visitor &visitor)
+void Matches_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class with_exprs_suffix  : public Node
+ Matches_expr::Matches_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void with_exprs_suffix::accept(Visitor &visitor)
+void Logand_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class matches_expr  : public Node
+ Logand_expr::Logand_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void matches_expr::accept(Visitor &visitor)
+void Logor_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class logand_expr  : public Node
+ Logor_expr::Logor_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void logand_expr::accept(Visitor &visitor)
+void Cond_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class logor_expr  : public Node
+ Cond_expr::Cond_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void logor_expr::accept(Visitor &visitor)
+void Expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class cond_expr  : public Node
+ Expression::Expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void cond_expr::accept(Visitor &visitor)
+void Equiv_impl_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expression  : public Node
+ Equiv_impl_expr::Equiv_impl_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void expression::accept(Visitor &visitor)
+void Decl_variable_dimension::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class equiv_impl_expr  : public Node
+ Decl_variable_dimension::Decl_variable_dimension(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void equiv_impl_expr::accept(Visitor &visitor)
+void Expression_or_null_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class decl_variable_dimension  : public Node
+ Expression_or_null_list_opt::Expression_or_null_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void decl_variable_dimension::accept(Visitor &visitor)
+void Delay3_or_drive_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class expression_or_null_list_opt  : public Node
+ Delay3_or_drive_opt::Delay3_or_drive_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void expression_or_null_list_opt::accept(Visitor &visitor)
+void Delay3::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class delay3_or_drive_opt  : public Node
+ Delay3::Delay3(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void delay3_or_drive_opt::accept(Visitor &visitor)
+void Data_type_or_implicit::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class delay3  : public Node
+ Data_type_or_implicit::Data_type_or_implicit(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void delay3::accept(Visitor &visitor)
+void Net_variable::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class data_type_or_implicit  : public Node
+ Net_variable::Net_variable(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void data_type_or_implicit::accept(Visitor &visitor)
+void Net_variable_or_decl_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_variable  : public Node
+ Net_variable_or_decl_assign::Net_variable_or_decl_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_variable::accept(Visitor &visitor)
+void Net_decl_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_variable_or_decl_assign  : public Node
+ Net_decl_assign::Net_decl_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_variable_or_decl_assign::accept(Visitor &visitor)
+void Net_variable_or_decl_assigns::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_decl_assign  : public Node
+ Net_variable_or_decl_assigns::Net_variable_or_decl_assigns(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void net_decl_assign::accept(Visitor &visitor)
+void Net_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_variable_or_decl_assigns  : public Node
+ Net_declaration::Net_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_variable_or_decl_assigns::accept(Visitor &visitor)
+void Charge_strength_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_declaration  : public Node
+ Charge_strength_opt::Charge_strength_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_declaration::accept(Visitor &visitor)
+void Delay3_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class charge_strength_opt  : public Node
+ Delay3_opt::Delay3_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void charge_strength_opt::accept(Visitor &visitor)
+void List_of_identifiers::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class delay3_opt  : public Node
+ List_of_identifiers::List_of_identifiers(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void delay3_opt::accept(Visitor &visitor)
+void Task_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class list_of_identifiers  : public Node
+ Task_declaration::Task_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_identifiers::accept(Visitor &visitor)
+void Function_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class task_declaration  : public Node
+ Function_declaration::Function_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void task_declaration::accept(Visitor &visitor)
+void Class_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class function_declaration  : public Node
+ Class_declaration::Class_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void function_declaration::accept(Visitor &visitor)
+void Dpi_import_export::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class class_declaration  : public Node
+ Dpi_import_export::Dpi_import_export(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void class_declaration::accept(Visitor &visitor)
+void Specparam_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class dpi_import_export  : public Node
+ Specparam_declaration::Specparam_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void dpi_import_export::accept(Visitor &visitor)
+
+void Module_or_generate_item_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class specparam_declaration  : public Node
+ Module_or_generate_item_declaration::Module_or_generate_item_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void specparam_declaration::accept(Visitor &visitor)
+
+void Genvar_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assertion_item_declaration  : public Node
+ Genvar_declaration::Genvar_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void assertion_item_declaration::accept(Visitor &visitor)
+
+void Clocking_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_or_generate_item_declaration  : public Node
+ Clocking_declaration::Clocking_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_or_generate_item_declaration::accept(Visitor &visitor)
+
+void Initial_construct::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class genvar_declaration  : public Node
+ Initial_construct::Initial_construct(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void genvar_declaration::accept(Visitor &visitor)
+
+void Always_construct::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class clocking_declaration  : public Node
+ Always_construct::Always_construct(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void clocking_declaration::accept(Visitor &visitor)
+
+void Continuous_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class initial_construct  : public Node
+ Continuous_assign::Continuous_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void initial_construct::accept(Visitor &visitor)
+
+void Loop_generate_construct::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class always_construct  : public Node
+ Loop_generate_construct::Loop_generate_construct(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void always_construct::accept(Visitor &visitor)
+
+void Conditional_generate_construct::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class continuous_assign  : public Node
+ Conditional_generate_construct::Conditional_generate_construct(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void continuous_assign::accept(Visitor &visitor)
+
+void Assertion_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class loop_generate_construct  : public Node
+ Assertion_item::Assertion_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void loop_generate_construct::accept(Visitor &visitor)
+
+void Final_construct::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class conditional_generate_construct  : public Node
+ Final_construct::Final_construct(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void conditional_generate_construct::accept(Visitor &visitor)
+
+void Parameter_value_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assertion_item  : public Node
+ Parameter_value_opt::Parameter_value_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void assertion_item::accept(Visitor &visitor)
+
+void Parameters::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class final_construct  : public Node
+ Parameters::Parameters(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void final_construct::accept(Visitor &visitor)
+
+void Unqualified_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_value_opt  : public Node
+ Unqualified_id::Unqualified_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void parameter_value_opt::accept(Visitor &visitor)
+
+void Class_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameters  : public Node
+ Class_id::Class_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void parameters::accept(Visitor &visitor)
+
+void Qualified_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class unqualified_id  : public Node
+ Qualified_id::Qualified_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void unqualified_id::accept(Visitor &visitor)
+
+void Type_or_id_root::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_id  : public Node
+ Type_or_id_root::Type_or_id_root(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void class_id::accept(Visitor &visitor)
+
+void Implicit_class_handle::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class qualified_id  : public Node
+ Implicit_class_handle::Implicit_class_handle(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void qualified_id::accept(Visitor &visitor)
+
+void Local_root::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class type_or_id_root  : public Node
+ Local_root::Local_root(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void type_or_id_root::accept(Visitor &visitor)
+
+void Select_variable_dimension::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class implicit_class_handle  : public Node
+ Select_variable_dimension::Select_variable_dimension(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void implicit_class_handle::accept(Visitor &visitor)
+
+void Hierarchy_extension::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class local_root  : public Node
+ Hierarchy_extension::Hierarchy_extension(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void local_root::accept(Visitor &visitor)
+
+void Member_name::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class select_variable_dimension  : public Node
+ Member_name::Member_name(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void select_variable_dimension::accept(Visitor &visitor)
+
+void Builtin_array_method::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class hierarchy_extension  : public Node
+ Builtin_array_method::Builtin_array_method(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void hierarchy_extension::accept(Visitor &visitor)
+
+void Port_named::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class MacroCall  : public Node
+ Port_named::Port_named(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void MacroCall::accept(Visitor &visitor)
+
+void Any_port::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class member_name  : public Node
+ Any_port::Any_port(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void member_name::accept(Visitor &visitor)
+
+void Any_port_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class builtin_array_method  : public Node
+ Any_port_list_item_last::Any_port_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void builtin_array_method::accept(Visitor &visitor)
+
+void Any_port_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class port_named  : public Node
+ Any_port_list_trailing_comma::Any_port_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void port_named::accept(Visitor &visitor)
+
+void Any_port_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_port  : public Node
+ Any_port_list::Any_port_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_port::accept(Visitor &visitor)
+
+void Label_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_port_list_item_last  : public Node
+ Label_opt::Label_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_port_list_item_last::accept(Visitor &visitor)
+
+void Begin::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_port_list_trailing_comma  : public Node
+ Begin::Begin(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void any_port_list_trailing_comma::accept(Visitor &visitor)
+
+void Lpvalue::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_port_list  : public Node
+ Lpvalue::Lpvalue(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_port_list::accept(Visitor &visitor)
+
+void Range_list_in_braces::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class label_opt  : public Node
+ Range_list_in_braces::Range_list_in_braces(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void label_opt::accept(Visitor &visitor)
+
+void Assignment_statement_no_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class begin  : public Node
+ Assignment_statement_no_expr::Assignment_statement_no_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void begin::accept(Visitor &visitor)
+
+void Assign_modify_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class lpvalue  : public Node
+ Assign_modify_statement::Assign_modify_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void lpvalue::accept(Visitor &visitor)
+
+void Assignment_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class range_list_in_braces  : public Node
+ Assignment_statement::Assignment_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void range_list_in_braces::accept(Visitor &visitor)
+
+void Statement_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assignment_statement_no_expr  : public Node
+ Statement_item::Statement_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void assignment_statement_no_expr::accept(Visitor &visitor)
+
+void Procedural_timing_control_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assign_modify_statement  : public Node
+ Procedural_timing_control_statement::Procedural_timing_control_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void assign_modify_statement::accept(Visitor &visitor)
+
+void Subroutine_call::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assignment_statement  : public Node
+ Subroutine_call::Subroutine_call(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void assignment_statement::accept(Visitor &visitor)
+
+void Seq_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class statement_item  : public Node
+ Seq_block::Seq_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void statement_item::accept(Visitor &visitor)
+
+void Nonblocking_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class procedural_timing_control_statement  : public Node
+ Nonblocking_assignment::Nonblocking_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void procedural_timing_control_statement::accept(Visitor &visitor)
+
+void Conditional_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class subroutine_call  : public Node
+ Conditional_statement::Conditional_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void subroutine_call::accept(Visitor &visitor)
+
+void Case_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class seq_block  : public Node
+ Case_statement::Case_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void seq_block::accept(Visitor &visitor)
+
+void Loop_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class nonblocking_assignment  : public Node
+ Loop_statement::Loop_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void nonblocking_assignment::accept(Visitor &visitor)
+
+void Par_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class conditional_statement  : public Node
+ Par_block::Par_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void conditional_statement::accept(Visitor &visitor)
+
+void Blocking_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class case_statement  : public Node
+ Blocking_assignment::Blocking_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void case_statement::accept(Visitor &visitor)
+
+void Wait_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class loop_statement  : public Node
+ Wait_statement::Wait_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void loop_statement::accept(Visitor &visitor)
+
+void Procedural_assertion_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class procedural_continuous_assignment  : public Node
+ Procedural_assertion_statement::Procedural_assertion_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void procedural_continuous_assignment::accept(Visitor &visitor)
+
+void Procedural_continuous_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class blocking_assignment  : public Node
+ Procedural_continuous_assignment::Procedural_continuous_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void blocking_assignment::accept(Visitor &visitor)
+
+void Event_trigger::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class par_block  : public Node
+ Event_trigger::Event_trigger(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void par_block::accept(Visitor &visitor)
+
+void Disable_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class wait_statement  : public Node
+ Disable_statement::Disable_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void wait_statement::accept(Visitor &visitor)
+
+void Jump_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class procedural_assertion_statement  : public Node
+ Jump_statement::Jump_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void procedural_assertion_statement::accept(Visitor &visitor)
+
+void Block_item_or_statement_or_null::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class event_trigger  : public Node
+ Block_item_or_statement_or_null::Block_item_or_statement_or_null(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void event_trigger::accept(Visitor &visitor)
+
+void Block_item_decl::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class disable_statement  : public Node
+ Block_item_decl::Block_item_decl(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void disable_statement::accept(Visitor &visitor)
+
+void Block_item_or_statement_or_null_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class jump_statement  : public Node
+ Block_item_or_statement_or_null_list::Block_item_or_statement_or_null_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void jump_statement::accept(Visitor &visitor)
+
+void Delay_value_simple::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class block_item_or_statement_or_null  : public Node
+ Delay_value_simple::Delay_value_simple(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void block_item_or_statement_or_null::accept(Visitor &visitor)
+
+void Delay_identifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class block_item_decl  : public Node
+ Delay_identifier::Delay_identifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void block_item_decl::accept(Visitor &visitor)
+
+void Delay1::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class block_item_or_statement_or_null_list  : public Node
+ Delay1::Delay1(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void block_item_or_statement_or_null_list::accept(Visitor &visitor)
+
+void Delay_value::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class delay_value_simple  : public Node
+ Delay_value::Delay_value(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void delay_value_simple::accept(Visitor &visitor)
+
+void Statement_or_null::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class delay_identifier  : public Node
+ Statement_or_null::Statement_or_null(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void delay_identifier::accept(Visitor &visitor)
+
+void Statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class delay1  : public Node
+ Statement::Statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void delay1::accept(Visitor &visitor)
+
+void Event_control::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class delay_value  : public Node
+ Event_control::Event_control(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void delay_value::accept(Visitor &visitor)
+
+void Cycle_delay::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class statement_or_null  : public Node
+ Cycle_delay::Cycle_delay(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void statement_or_null::accept(Visitor &visitor)
+
+void Systemtfidentifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class statement  : public Node
+ Systemtfidentifier::Systemtfidentifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void statement::accept(Visitor &visitor)
+
+void Call_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class event_control  : public Node
+ Call_base::Call_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void event_control::accept(Visitor &visitor)
+
+void Block_item_or_statement_or_null_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class cycle_delay  : public Node
+ Block_item_or_statement_or_null_list_opt::Block_item_or_statement_or_null_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void cycle_delay::accept(Visitor &visitor)
+void End::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class SystemTFIdentifier  : public Node
+ End::End(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void SystemTFIdentifier::accept(Visitor &visitor)
+void Always_any::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class call_base  : public Node
+ Always_any::Always_any(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void call_base::accept(Visitor &visitor)
+void Module_item_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class block_item_or_statement_or_null_list_opt  : public Node
+ Module_item_list_opt::Module_item_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void block_item_or_statement_or_null_list_opt::accept(Visitor &visitor)
+void Module_end::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class end  : public Node
+ Module_end::Module_end(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void end::accept(Visitor &visitor)
+void Source_text::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class always_any  : public Node
+ Source_text::Source_text(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void always_any::accept(Visitor &visitor)
+void Port_reference::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class module_item_list_opt  : public Node
+ Port_reference::Port_reference(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void module_item_list_opt::accept(Visitor &visitor)
+void Port_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class module_end  : public Node
+ Port_expression::Port_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void module_end::accept(Visitor &visitor)
+void Port_reference_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class source_text  : public Node
+ Port_reference_list::Port_reference_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void source_text::accept(Visitor &visitor)
+void Trailing_assign_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_reference  : public Node
+ Trailing_assign_opt::Trailing_assign_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void port_reference::accept(Visitor &visitor)
+void Trailing_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_expression  : public Node
+ Trailing_assign::Trailing_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void port_expression::accept(Visitor &visitor)
+void Port::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_reference_list  : public Node
+ Port::Port(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void port_reference_list::accept(Visitor &visitor)
+void Port_expression_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class trailing_assign_opt  : public Node
+ Port_expression_opt::Port_expression_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void trailing_assign_opt::accept(Visitor &visitor)
+void Port_or_port_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class trailing_assign  : public Node
+ Port_or_port_declaration::Port_or_port_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void trailing_assign::accept(Visitor &visitor)
+void Port_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port  : public Node
+ Port_declaration::Port_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void port::accept(Visitor &visitor)
+void List_of_ports_or_port_declarations_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_expression_opt  : public Node
+ List_of_ports_or_port_declarations_item_last::List_of_ports_or_port_declarations_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void port_expression_opt::accept(Visitor &visitor)
+void List_of_ports_or_port_declarations_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_or_port_declaration  : public Node
+ List_of_ports_or_port_declarations_trailing_comma::List_of_ports_or_port_declarations_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void port_or_port_declaration::accept(Visitor &visitor)
+void List_of_ports_or_port_declarations::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_declaration  : public Node
+ List_of_ports_or_port_declarations::List_of_ports_or_port_declarations(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void port_declaration::accept(Visitor &visitor)
+void Dir::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_ports_or_port_declarations_item_last  : public Node
+ Dir::Dir(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_ports_or_port_declarations_item_last::accept(Visitor &visitor)
+void Var_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_ports_or_port_declarations_trailing_comma  : public Node
+ Var_type::Var_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_ports_or_port_declarations_trailing_comma::accept(Visitor &visitor)
+void List_of_port_identifiers::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_ports_or_port_declarations  : public Node
+ List_of_port_identifiers::List_of_port_identifiers(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_ports_or_port_declarations::accept(Visitor &visitor)
+void Port_direction::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_ports_or_port_declarations_preprocessor_last  : public Node
+ Port_direction::Port_direction(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_ports_or_port_declarations_preprocessor_last::accept(Visitor &visitor)
+void List_of_module_item_identifiers::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class dir  : public Node
+ List_of_module_item_identifiers::List_of_module_item_identifiers(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void dir::accept(Visitor &visitor)
+void List_of_identifiers_unpacked_dimensions::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class var_type  : public Node
+ List_of_identifiers_unpacked_dimensions::List_of_identifiers_unpacked_dimensions(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void var_type::accept(Visitor &visitor)
+void Port_net_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_port_identifiers  : public Node
+ Port_net_type::Port_net_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_port_identifiers::accept(Visitor &visitor)
+void Identifier_optional_unpacked_dimensions::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_direction  : public Node
+ Identifier_optional_unpacked_dimensions::Identifier_optional_unpacked_dimensions(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void port_direction::accept(Visitor &visitor)
+void Drive_strength_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_module_item_identifiers  : public Node
+ Drive_strength_opt::Drive_strength_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_module_item_identifiers::accept(Visitor &visitor)
+void Drive_strength::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class list_of_identifiers_unpacked_dimensions  : public Node
+ Drive_strength::Drive_strength(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_identifiers_unpacked_dimensions::accept(Visitor &visitor)
+void Cont_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class port_net_type  : public Node
+ Cont_assign::Cont_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void port_net_type::accept(Visitor &visitor)
+void Cont_assign_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class identifier_optional_unpacked_dimensions  : public Node
+ Cont_assign_list::Cont_assign_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void identifier_optional_unpacked_dimensions::accept(Visitor &visitor)
+void Edge_operator::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class drive_strength_opt  : public Node
+ Edge_operator::Edge_operator(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void drive_strength_opt::accept(Visitor &visitor)
+void Event_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class drive_strength  : public Node
+ Event_expression::Event_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void drive_strength::accept(Visitor &visitor)
+void Event_expression_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class cont_assign  : public Node
+ Event_expression_list::Event_expression_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void cont_assign::accept(Visitor &visitor)
+void Hierarchy_event_identifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class cont_assign_list  : public Node
+ Hierarchy_event_identifier::Hierarchy_event_identifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void cont_assign_list::accept(Visitor &visitor)
+void Unique_priority_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class edge_operator  : public Node
+ Unique_priority_opt::Unique_priority_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void edge_operator::accept(Visitor &visitor)
+void Expression_in_parens::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class event_expression  : public Node
+ Expression_in_parens::Expression_in_parens(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void event_expression::accept(Visitor &visitor)
+void Delay_or_event_control_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class event_expression_list  : public Node
+ Delay_or_event_control_opt::Delay_or_event_control_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void event_expression_list::accept(Visitor &visitor)
+void Delay_or_event_control::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class hierarchy_event_identifier  : public Node
+ Delay_or_event_control::Delay_or_event_control(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void hierarchy_event_identifier::accept(Visitor &visitor)
+void Expression_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class unique_priority_opt  : public Node
+ Expression_opt::Expression_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void unique_priority_opt::accept(Visitor &visitor)
+void Bit_logic_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class expression_in_parens  : public Node
+ Bit_logic_opt::Bit_logic_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void expression_in_parens::accept(Visitor &visitor)
+void Bit_logic::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class delay_or_event_control_opt  : public Node
+ Bit_logic::Bit_logic(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void delay_or_event_control_opt::accept(Visitor &visitor)
+void Param_type_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class delay_or_event_control  : public Node
+ Param_type_followed_by_id_and_dimensions_opt::Param_type_followed_by_id_and_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void delay_or_event_control::accept(Visitor &visitor)
+void Parameter_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class expression_opt  : public Node
+ Parameter_expr::Parameter_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void expression_opt::accept(Visitor &visitor)
+void Parameter_value_ranges_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class bit_logic_opt  : public Node
+ Parameter_value_ranges_opt::Parameter_value_ranges_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void bit_logic_opt::accept(Visitor &visitor)
+void Parameter_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class bit_logic  : public Node
+ Parameter_assign::Parameter_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void bit_logic::accept(Visitor &visitor)
+void Parameter_assign_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class param_type_followed_by_id_and_dimensions_opt  : public Node
+ Parameter_assign_list::Parameter_assign_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void param_type_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
+void Localparam_assign_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class parameter_expr  : public Node
+ Localparam_assign_list::Localparam_assign_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void parameter_expr::accept(Visitor &visitor)
+void Type_assignment_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class parameter_value_ranges_opt  : public Node
+ Type_assignment_list::Type_assignment_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void parameter_value_ranges_opt::accept(Visitor &visitor)
+void Macronumericwidth::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class parameter_assign  : public Node
+ Macronumericwidth::Macronumericwidth(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void parameter_assign::accept(Visitor &visitor)
+void Hex_based_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class parameter_assign_list  : public Node
+ Hex_based_number::Hex_based_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void parameter_assign_list::accept(Visitor &visitor)
+void Tk_hexbase::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class localparam_assign_list  : public Node
+ Tk_hexbase::Tk_hexbase(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void localparam_assign_list::accept(Visitor &visitor)
+void Tk_hexdigits::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class type_assignment_list  : public Node
+ Tk_hexdigits::Tk_hexdigits(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void type_assignment_list::accept(Visitor &visitor)
+void Dec_based_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class MacroNumericWidth  : public Node
+ Dec_based_number::Dec_based_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void MacroNumericWidth::accept(Visitor &visitor)
+void Bin_based_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class hex_based_number  : public Node
+ Bin_based_number::Bin_based_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void hex_based_number::accept(Visitor &visitor)
+void Oct_based_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_HexBase  : public Node
+ Oct_based_number::Oct_based_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_HexBase::accept(Visitor &visitor)
+void Tk_decbase::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_HexDigits  : public Node
+ Tk_decbase::Tk_decbase(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_HexDigits::accept(Visitor &visitor)
+void Tk_decdigits::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class dec_based_number  : public Node
+ Tk_decdigits::Tk_decdigits(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void dec_based_number::accept(Visitor &visitor)
+void Tk_xzdigits::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class bin_based_number  : public Node
+ Tk_xzdigits::Tk_xzdigits(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void bin_based_number::accept(Visitor &visitor)
+void Case_any::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class oct_based_number  : public Node
+ Case_any::Case_any(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void oct_based_number::accept(Visitor &visitor)
+void Expression_list_proper::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_DecBase  : public Node
+ Expression_list_proper::Expression_list_proper(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_DecBase::accept(Visitor &visitor)
+void Case_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_DecDigits  : public Node
+ Case_item::Case_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_DecDigits::accept(Visitor &visitor)
+void Preprocessor_directive::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_XZDigits  : public Node
+ Preprocessor_directive::Preprocessor_directive(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_XZDigits::accept(Visitor &visitor)
+void Case_items::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class case_any  : public Node
+ Case_items::Case_items(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void case_any::accept(Visitor &visitor)
+void Tk_binbase::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class expression_list_proper  : public Node
+ Tk_binbase::Tk_binbase(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void expression_list_proper::accept(Visitor &visitor)
+void Tk_bindigits::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class case_item  : public Node
+ Tk_bindigits::Tk_bindigits(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void case_item::accept(Visitor &visitor)
+
+void Dist_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class preprocessor_directive  : public Node
+ Dist_opt::Dist_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void preprocessor_directive::accept(Visitor &visitor)
+
+void Expression_or_dist::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class case_items  : public Node
+ Expression_or_dist::Expression_or_dist(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void case_items::accept(Visitor &visitor)
+
+void Boolean_abbrev_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_BinBase  : public Node
+ Boolean_abbrev_opt::Boolean_abbrev_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_BinBase::accept(Visitor &visitor)
+
+void Sequence_repetition_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_BinDigits  : public Node
+ Sequence_repetition_expr::Sequence_repetition_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_BinDigits::accept(Visitor &visitor)
+
+void Sequence_expr_primary::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class dist_opt  : public Node
+ Sequence_expr_primary::Sequence_expr_primary(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void dist_opt::accept(Visitor &visitor)
+
+void Sequence_delay_repetition_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class expression_or_dist  : public Node
+ Sequence_delay_repetition_list::Sequence_delay_repetition_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void expression_or_dist::accept(Visitor &visitor)
+
+void Sequence_delay_range_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class boolean_abbrev_opt  : public Node
+ Sequence_delay_range_expr::Sequence_delay_range_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void boolean_abbrev_opt::accept(Visitor &visitor)
+
+void Sequence_throughout_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_repetition_expr  : public Node
+ Sequence_throughout_expr::Sequence_throughout_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_repetition_expr::accept(Visitor &visitor)
+
+void Sequence_within_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_expr_primary  : public Node
+ Sequence_within_expr::Sequence_within_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_expr_primary::accept(Visitor &visitor)
+
+void Sequence_intersect_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_delay_repetition_list  : public Node
+ Sequence_intersect_expr::Sequence_intersect_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_delay_repetition_list::accept(Visitor &visitor)
+
+void Sequence_unary_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_delay_range_expr  : public Node
+ Sequence_unary_expr::Sequence_unary_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_delay_range_expr::accept(Visitor &visitor)
+
+void Sequence_and_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_throughout_expr  : public Node
+ Sequence_and_expr::Sequence_and_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_throughout_expr::accept(Visitor &visitor)
+
+void Sequence_or_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_within_expr  : public Node
+ Sequence_or_expr::Sequence_or_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_within_expr::accept(Visitor &visitor)
+
+void Simple_sequence_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_intersect_expr  : public Node
+ Simple_sequence_expr::Simple_sequence_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_intersect_expr::accept(Visitor &visitor)
+
+void Property_if_else_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_unary_expr  : public Node
+ Property_if_else_expr::Property_if_else_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_unary_expr::accept(Visitor &visitor)
+
+void Property_prefix_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_and_expr  : public Node
+ Property_prefix_expr::Property_prefix_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_and_expr::accept(Visitor &visitor)
+
+void Property_implication_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_or_expr  : public Node
+ Property_implication_expr::Property_implication_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_or_expr::accept(Visitor &visitor)
+
+void Sequence_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class simple_sequence_expr  : public Node
+ Sequence_expr::Sequence_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void simple_sequence_expr::accept(Visitor &visitor)
+
+void Property_expr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_if_else_expr  : public Node
+ Property_expr::Property_expr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_if_else_expr::accept(Visitor &visitor)
+
+void Property_expr_or_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_prefix_expr  : public Node
+ Property_expr_or_assignment::Property_expr_or_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_prefix_expr::accept(Visitor &visitor)
+
+void Property_expr_or_assignment_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_implication_expr  : public Node
+ Property_expr_or_assignment_list::Property_expr_or_assignment_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_implication_expr::accept(Visitor &visitor)
+
+void Expr_mintypmax_generalized::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class sequence_expr  : public Node
+ Expr_mintypmax_generalized::Expr_mintypmax_generalized(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void sequence_expr::accept(Visitor &visitor)
+
+void Expr_mintypmax_trans_set::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_expr  : public Node
+ Expr_mintypmax_trans_set::Expr_mintypmax_trans_set(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_expr::accept(Visitor &visitor)
+
+void Expr_mintypmax::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_expr_or_assignment  : public Node
+ Expr_mintypmax::Expr_mintypmax(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_expr_or_assignment::accept(Visitor &visitor)
+
+void Value_range::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_expr_or_assignment_list  : public Node
+ Value_range::Value_range(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_expr_or_assignment_list::accept(Visitor &visitor)
+
+void Streaming_concatenation::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class expr_mintypmax_generalized  : public Node
+ Streaming_concatenation::Streaming_concatenation(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void expr_mintypmax_generalized::accept(Visitor &visitor)
+
+void Genvar_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class expr_mintypmax_trans_set  : public Node
+ Genvar_opt::Genvar_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void expr_mintypmax_trans_set::accept(Visitor &visitor)
+
+void For_step::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class expr_mintypmax  : public Node
+ For_step::For_step(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void expr_mintypmax::accept(Visitor &visitor)
+
+void For_step_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class value_range  : public Node
+ For_step_opt::For_step_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void value_range::accept(Visitor &visitor)
+
+void Generate_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class streaming_concatenation  : public Node
+ Generate_item::Generate_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void streaming_concatenation::accept(Visitor &visitor)
+
+void Generate_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class genvar_opt  : public Node
+ Generate_block::Generate_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void genvar_opt::accept(Visitor &visitor)
+
+void Generate_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class for_step  : public Node
+ Generate_item_list::Generate_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void for_step::accept(Visitor &visitor)
+
+void Generate_item_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class for_step_opt  : public Node
+ Generate_item_list_opt::Generate_item_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void for_step_opt::accept(Visitor &visitor)
+
+void For_init_decl_or_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_item  : public Node
+ For_init_decl_or_assign::For_init_decl_or_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void generate_item::accept(Visitor &visitor)
+
+void For_initialization::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_block  : public Node
+ For_initialization::For_initialization(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void generate_block::accept(Visitor &visitor)
+
+void For_initialization_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_item_list  : public Node
+ For_initialization_opt::For_initialization_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void generate_item_list::accept(Visitor &visitor)
+
+void Repeat_control::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_item_list_opt  : public Node
+ Repeat_control::Repeat_control(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void generate_item_list_opt::accept(Visitor &visitor)
+
+void Tk_stringliteral::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class for_init_decl_or_assign  : public Node
+ Tk_stringliteral::Tk_stringliteral(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void for_init_decl_or_assign::accept(Visitor &visitor)
+
+void Tk_evalstringliteral::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class for_initialization  : public Node
+ Tk_evalstringliteral::Tk_evalstringliteral(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void for_initialization::accept(Visitor &visitor)
+
+void Preprocess_include_argument::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class for_initialization_opt  : public Node
+ Preprocess_include_argument::Preprocess_include_argument(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void for_initialization_opt::accept(Visitor &visitor)
+
+void Pp_identifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class repeat_control  : public Node
+ Pp_identifier::Pp_identifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void repeat_control::accept(Visitor &visitor)
+
+void Macro_formals_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_StringLiteral  : public Node
+ Macro_formals_list_opt::Macro_formals_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_StringLiteral::accept(Visitor &visitor)
+
+void Parameter_expr_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class preprocess_include_argument  : public Node
+ Parameter_expr_list::Parameter_expr_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void preprocess_include_argument::accept(Visitor &visitor)
+
+void Parameter_value_byname_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class PP_Identifier  : public Node
+ Parameter_value_byname_list::Parameter_value_byname_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void PP_Identifier::accept(Visitor &visitor)
+
+void Parameter_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class macro_formals_list_opt  : public Node
+ Parameter_opt::Parameter_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void macro_formals_list_opt::accept(Visitor &visitor)
+
+void Module_parameter_port::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_expr_list  : public Node
+ Module_parameter_port::Module_parameter_port(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void parameter_expr_list::accept(Visitor &visitor)
+
+void Type_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_value_byname_list  : public Node
+ Type_assignment::Type_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void parameter_value_byname_list::accept(Visitor &visitor)
+
+void Module_parameter_port_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_opt  : public Node
+ Module_parameter_port_list_item_last::Module_parameter_port_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void parameter_opt::accept(Visitor &visitor)
+
+void Module_parameter_port_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port  : public Node
+ Module_parameter_port_list_trailing_comma::Module_parameter_port_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port::accept(Visitor &visitor)
+
+void Module_parameter_port_list_preprocessor_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class type_assignment  : public Node
+ Module_parameter_port_list_preprocessor_last::Module_parameter_port_list_preprocessor_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void type_assignment::accept(Visitor &visitor)
+
+void Parameter_value_byname::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port_list_item_last  : public Node
+ Parameter_value_byname::Parameter_value_byname(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port_list_item_last::accept(Visitor &visitor)
+
+void Parameter_value_byname_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port_list_trailing_comma  : public Node
+ Parameter_value_byname_list_item_last::Parameter_value_byname_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port_list_trailing_comma::accept(Visitor &visitor)
+
+void Parameter_value_byname_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class module_parameter_port_list_preprocessor_last  : public Node
+ Parameter_value_byname_list_trailing_comma::Parameter_value_byname_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void module_parameter_port_list_preprocessor_last::accept(Visitor &visitor)
+
+void Generate_if::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_value_byname  : public Node
+ Generate_if::Generate_if(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void parameter_value_byname::accept(Visitor &visitor)
+
+void Generate_case_items::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_value_byname_list_item_last  : public Node
+ Generate_case_items::Generate_case_items(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void parameter_value_byname_list_item_last::accept(Visitor &visitor)
+
+void Var_or_net_type_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class parameter_value_byname_list_trailing_comma  : public Node
+ Var_or_net_type_opt::Var_or_net_type_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void parameter_value_byname_list_trailing_comma::accept(Visitor &visitor)
+
+void Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_if  : public Node
+ Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt::Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void generate_if::accept(Visitor &visitor)
+
+void Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class generate_case_items  : public Node
+ Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt::Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void generate_case_items::accept(Visitor &visitor)
+
+void Port_declaration_noattr::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_new  : public Node
+ Port_declaration_noattr::Port_declaration_noattr(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void class_new::accept(Visitor &visitor)
+
+void Type_identifier_followed_by_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class dynamic_array_new  : public Node
+ Type_identifier_followed_by_id::Type_identifier_followed_by_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void dynamic_array_new::accept(Visitor &visitor)
+
+void Class_new::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_argument  : public Node
+ Class_new::Class_new(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_argument::accept(Visitor &visitor)
+
+void Dynamic_array_new::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_argument_list_item_last  : public Node
+ Dynamic_array_new::Dynamic_array_new(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_argument_list_item_last::accept(Visitor &visitor)
+
+void Localparam_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_argument_list_trailing_comma  : public Node
+ Localparam_assign::Localparam_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void any_argument_list_trailing_comma::accept(Visitor &visitor)
+
+void Defparam_assign::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class any_argument_list  : public Node
+ Defparam_assign::Defparam_assign(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void any_argument_list::accept(Visitor &visitor)
+
+void Defparam_assign_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
+ Defparam_assign_list::Defparam_assign_list(std::string element)
+{
+	this->element = element;
+}
 
 
-class argument_list_opt  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
 
-virtual void argument_list_opt::accept(Visitor &visitor)
+void Any_argument::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class task_declaration_id  : public Node
+ Any_argument::Any_argument(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void task_declaration_id::accept(Visitor &visitor)
+void Any_argument_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class scope_or_if_res  : public Node
+ Any_argument_list_item_last::Any_argument_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void scope_or_if_res::accept(Visitor &visitor)
+void Any_argument_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_list_paren_opt  : public Node
+ Any_argument_list_trailing_comma::Any_argument_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_list_paren_opt::accept(Visitor &visitor)
+void Any_argument_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_list_opt  : public Node
+ Any_argument_list::Any_argument_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_list_opt::accept(Visitor &visitor)
+void Argument_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_item_or_statement_or_null  : public Node
+ Argument_list_opt::Argument_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_item_or_statement_or_null::accept(Visitor &visitor)
+void Task_declaration_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class task_item  : public Node
+ Task_declaration_id::Task_declaration_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void task_item::accept(Visitor &visitor)
+void Scope_or_if_res::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_item_or_statement_or_null_list  : public Node
+ Scope_or_if_res::Scope_or_if_res(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_item_or_statement_or_null_list::accept(Visitor &visitor)
+void Tf_port_list_paren_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_item_or_statement_or_null_list_opt  : public Node
+ Tf_port_list_paren_opt::Tf_port_list_paren_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_item_or_statement_or_null_list_opt::accept(Visitor &visitor)
+void Tf_port_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class var_or_net_type_opt  : public Node
+ Tf_port_list_opt::Tf_port_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void var_or_net_type_opt::accept(Visitor &visitor)
+void Tf_item_or_statement_or_null::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt  : public Node
+ Tf_item_or_statement_or_null::Tf_item_or_statement_or_null(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
+void Task_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class data_type_or_implicit_basic_followed_by_id_and_dimensions_opt  : public Node
+ Task_item::Task_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void data_type_or_implicit_basic_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
+void Tf_item_or_statement_or_null_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class port_declaration_noattr  : public Node
+ Tf_item_or_statement_or_null_list::Tf_item_or_statement_or_null_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void port_declaration_noattr::accept(Visitor &visitor)
+void Tf_item_or_statement_or_null_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class type_identifier_followed_by_id  : public Node
+ Tf_item_or_statement_or_null_list_opt::Tf_item_or_statement_or_null_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void type_identifier_followed_by_id::accept(Visitor &visitor)
+void Array_reduction_method::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class localparam_assign  : public Node
+ Array_reduction_method::Array_reduction_method(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void localparam_assign::accept(Visitor &visitor)
+void Array_locator_method::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class defparam_assign  : public Node
+ Array_locator_method::Array_locator_method(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void defparam_assign::accept(Visitor &visitor)
+void Gatetype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class defparam_assign_list  : public Node
+ Gatetype::Gatetype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void defparam_assign_list::accept(Visitor &visitor)
+void Primitive_gate_instance::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class array_reduction_method  : public Node
+ Primitive_gate_instance::Primitive_gate_instance(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void array_reduction_method::accept(Visitor &visitor)
+void Primitive_gate_instance_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class array_locator_method  : public Node
+ Primitive_gate_instance_list::Primitive_gate_instance_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void array_locator_method::accept(Visitor &visitor)
+void Switchtype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class array_ordering_method  : public Node
+ Switchtype::Switchtype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void array_ordering_method::accept(Visitor &visitor)
+void Dr_strength1::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class gatetype  : public Node
+ Dr_strength1::Dr_strength1(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void gatetype::accept(Visitor &visitor)
+void Dr_strength0::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class primitive_gate_instance  : public Node
+ Dr_strength0::Dr_strength0(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void primitive_gate_instance::accept(Visitor &visitor)
+void Delay_scope::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class primitive_gate_instance_list  : public Node
+ Delay_scope::Delay_scope(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void primitive_gate_instance_list::accept(Visitor &visitor)
+void Join_keyword::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class switchtype  : public Node
+ Join_keyword::Join_keyword(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void switchtype::accept(Visitor &visitor)
+void Generate_case_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class dr_strength1  : public Node
+ Generate_case_item::Generate_case_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void dr_strength1::accept(Visitor &visitor)
+void Function_return_type_and_id::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class dr_strength0  : public Node
+ Function_return_type_and_id::Function_return_type_and_id(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void dr_strength0::accept(Visitor &visitor)
+void Tf_port_direction::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class delay_scope  : public Node
+ Tf_port_direction::Tf_port_direction(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void delay_scope::accept(Visitor &visitor)
+void Tf_port_direction_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_direction  : public Node
+ Tf_port_direction_opt::Tf_port_direction_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_direction::accept(Visitor &visitor)
+void Tf_port_item_expr_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_direction_opt  : public Node
+ Tf_port_item_expr_opt::Tf_port_item_expr_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_direction_opt::accept(Visitor &visitor)
+void Tf_port_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_item_expr_opt  : public Node
+ Tf_port_item::Tf_port_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_item_expr_opt::accept(Visitor &visitor)
+void Tf_port_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_item  : public Node
+ Tf_port_list_item_last::Tf_port_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_item::accept(Visitor &visitor)
+void Tf_port_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_list_item_last  : public Node
+ Tf_port_list_trailing_comma::Tf_port_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_list_item_last::accept(Visitor &visitor)
+void Tf_port_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_list_trailing_comma  : public Node
+ Tf_port_list::Tf_port_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_list_trailing_comma::accept(Visitor &visitor)
+void Endfunction_label_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_list  : public Node
+ Endfunction_label_opt::Endfunction_label_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_list::accept(Visitor &visitor)
+void Function_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class join_keyword  : public Node
+ Function_item_list::Function_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void join_keyword::accept(Visitor &visitor)
+void Statement_or_null_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class generate_case_item  : public Node
+ Statement_or_null_list_opt::Statement_or_null_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void generate_case_item::accept(Visitor &visitor)
+void Net_type_or_none::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class function_return_type_and_id  : public Node
+ Net_type_or_none::Net_type_or_none(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void function_return_type_and_id::accept(Visitor &visitor)
+void Pull01::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class endfunction_label_opt  : public Node
+ Pull01::Pull01(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void endfunction_label_opt::accept(Visitor &visitor)
+void Macro_formal_parameter::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class function_item_list  : public Node
+ Macro_formal_parameter::Macro_formal_parameter(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void function_item_list::accept(Visitor &visitor)
+void Macro_formals_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class statement_or_null_list_opt  : public Node
+ Macro_formals_list::Macro_formals_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void statement_or_null_list_opt::accept(Visitor &visitor)
+void Tf_variable_identifier_first::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class net_type_or_none  : public Node
+ Tf_variable_identifier_first::Tf_variable_identifier_first(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void net_type_or_none::accept(Visitor &visitor)
+void List_of_tf_variable_identifiers::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class pull01  : public Node
+ List_of_tf_variable_identifiers::List_of_tf_variable_identifiers(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void pull01::accept(Visitor &visitor)
+void Tf_variable_identifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class macro_formal_parameter  : public Node
+ Tf_variable_identifier::Tf_variable_identifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void macro_formal_parameter::accept(Visitor &visitor)
+void Tf_port_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class macro_formals_list  : public Node
+ Tf_port_declaration::Tf_port_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void macro_formals_list::accept(Visitor &visitor)
+void Function_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class macro_arg_opt  : public Node
+ Function_item::Function_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void macro_arg_opt::accept(Visitor &visitor)
+void Function_item_data_declaration::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class MacroArg  : public Node
+ Function_item_data_declaration::Function_item_data_declaration(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void MacroArg::accept(Visitor &visitor)
+void Non_anonymous_instantiation_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class macro_args_opt  : public Node
+ Non_anonymous_instantiation_base::Non_anonymous_instantiation_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void macro_args_opt::accept(Visitor &visitor)
+void Statement_or_null_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class MacroCallId  : public Node
+ Statement_or_null_list::Statement_or_null_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void MacroCallId::accept(Visitor &visitor)
+void Tk_octbase::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_variable_identifier_first  : public Node
+ Tk_octbase::Tk_octbase(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_variable_identifier_first::accept(Visitor &visitor)
+void Tk_octdigits::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class list_of_tf_variable_identifiers  : public Node
+ Tk_octdigits::Tk_octdigits(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_tf_variable_identifiers::accept(Visitor &visitor)
+void Specify_terminal_descriptor::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_variable_identifier  : public Node
+ Specify_terminal_descriptor::Specify_terminal_descriptor(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_variable_identifier::accept(Visitor &visitor)
+void Spec_reference_event::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class tf_port_declaration  : public Node
+ Spec_reference_event::Spec_reference_event(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void tf_port_declaration::accept(Visitor &visitor)
+void Edge_descriptor_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class function_item  : public Node
+ Edge_descriptor_list::Edge_descriptor_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void function_item::accept(Visitor &visitor)
+void Spec_notifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class function_item_data_declaration  : public Node
+ Spec_notifier::Spec_notifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void function_item_data_declaration::accept(Visitor &visitor)
+void Spec_notifier_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class non_anonymous_instantiation_base  : public Node
+ Spec_notifier_opt::Spec_notifier_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void non_anonymous_instantiation_base::accept(Visitor &visitor)
+void Specify_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class statement_or_null_list  : public Node
+ Specify_item::Specify_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void statement_or_null_list::accept(Visitor &visitor)
+void Specify_simple_path_decl::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class TK_OctBase  : public Node
+ Specify_simple_path_decl::Specify_simple_path_decl(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_OctBase::accept(Visitor &visitor)
+void Specify_edge_path_decl::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class TK_OctDigits  : public Node
+ Specify_edge_path_decl::Specify_edge_path_decl(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_OctDigits::accept(Visitor &visitor)
+void Specparam_decl::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class specify_terminal_descriptor  : public Node
+ Specparam_decl::Specparam_decl(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void specify_terminal_descriptor::accept(Visitor &visitor)
+void Specify_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class spec_reference_event  : public Node
+ Specify_item_list::Specify_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void spec_reference_event::accept(Visitor &visitor)
+void Specify_path_identifiers::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class edge_descriptor_list  : public Node
+ Specify_path_identifiers::Specify_path_identifiers(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void edge_descriptor_list::accept(Visitor &visitor)
+void Spec_polarity::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class spec_notifier  : public Node
+ Spec_polarity::Spec_polarity(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void spec_notifier::accept(Visitor &visitor)
+void Specify_simple_path::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class spec_notifier_opt  : public Node
+ Specify_simple_path::Specify_simple_path(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void spec_notifier_opt::accept(Visitor &visitor)
+void Delay_value_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class specify_item  : public Node
+ Delay_value_list::Delay_value_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void specify_item::accept(Visitor &visitor)
+void Specify_item_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class specify_simple_path_decl  : public Node
+ Specify_item_list_opt::Specify_item_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void specify_simple_path_decl::accept(Visitor &visitor)
+
+void Casting_type::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class specify_edge_path_decl  : public Node
+ Casting_type::Casting_type(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
-
-virtual void specify_edge_path_decl::accept(Visitor &visitor)
-{
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class specparam_decl  : public Node
+void Polarity_operator::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
-
-virtual void specparam_decl::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
-
-
-class specify_item_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
-
-virtual void specify_item_list::accept(Visitor &visitor)
+ Polarity_operator::Polarity_operator(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
 
 
-class specify_path_identifiers  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
 
-virtual void specify_path_identifiers::accept(Visitor &visitor)
+void Specify_edge_path::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class spec_polarity  : public Node
+ Specify_edge_path::Specify_edge_path(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void spec_polarity::accept(Visitor &visitor)
-{
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class specify_simple_path  : public Node
+void Udp_port_list::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void specify_simple_path::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
 
-
-class delay_value_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void delay_value_list::accept(Visitor &visitor)
+ Udp_port_list::Udp_port_list(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class specify_item_list_opt  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void specify_item_list_opt::accept(Visitor &visitor)
+void Udp_port_decl::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class casting_type  : public Node
+ Udp_port_decl::Udp_port_decl(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void casting_type::accept(Visitor &visitor)
-{
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class polarity_operator  : public Node
+void Udp_port_decls::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void polarity_operator::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
-
-
-class specify_edge_path  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
-
-virtual void specify_edge_path::accept(Visitor &visitor)
+ Udp_port_decls::Udp_port_decls(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class udp_port_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void udp_port_list::accept(Visitor &visitor)
+void Udp_init_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
-
-class udp_port_decl  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
-
-virtual void udp_port_decl::accept(Visitor &visitor)
+ Udp_init_opt::Udp_init_opt(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class udp_port_decls  : public Node
+void Udp_initial::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void udp_port_decls::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
 
-
-class udp_init_opt  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void udp_init_opt::accept(Visitor &visitor)
+ Udp_initial::Udp_initial(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class udp_initial  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
 
 
-virtual void udp_initial::accept(Visitor &visitor)
+void Udp_input_sym::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class udp_input_sym  : public Node
+ Udp_input_sym::Udp_input_sym(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void udp_input_sym::accept(Visitor &visitor)
-{
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class udp_input_list  : public Node
+void Udp_input_list::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void udp_input_list::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
-
-
-class udp_output_sym  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
 
-virtual void udp_output_sym::accept(Visitor &visitor)
+ Udp_input_list::Udp_input_list(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class udp_sequ_entry  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void udp_sequ_entry::accept(Visitor &visitor)
+void Udp_output_sym::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
-
-class udp_sequ_entry_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
-
-virtual void udp_sequ_entry_list::accept(Visitor &visitor)
+ Udp_output_sym::Udp_output_sym(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class udp_entry_list  : public Node
+void Udp_sequ_entry::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void udp_entry_list::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
 
-
-class udp_comb_entry_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
-
-virtual void udp_comb_entry_list::accept(Visitor &visitor)
+ Udp_sequ_entry::Udp_sequ_entry(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class udp_body  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void udp_body::accept(Visitor &visitor)
+void Udp_sequ_entry_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
-
-class TK_reg_opt  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
 
-virtual void TK_reg_opt::accept(Visitor &visitor)
+ Udp_sequ_entry_list::Udp_sequ_entry_list(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
 
 
-class udp_initial_expr_opt  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
 
-
-virtual void udp_initial_expr_opt::accept(Visitor &visitor)
+void Udp_entry_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
-
-class udp_input_declaration_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
 
-virtual void udp_input_declaration_list::accept(Visitor &visitor)
+ Udp_entry_list::Udp_entry_list(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
-
 
-class enum_name  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void enum_name::accept(Visitor &visitor)
+void Udp_comb_entry_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
-
-class pos_neg_number  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
 
-
-virtual void pos_neg_number::accept(Visitor &visitor)
+ Udp_comb_entry_list::Udp_comb_entry_list(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
 
 
 
-class enum_name_list_item_last  : public Node
+void Udp_body::accept(Visitor &visitor)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
-
-
-virtual void enum_name_list_item_last::accept(Visitor &visitor)
-{
 	visitor.visit(this);
 }
-
 
-
-class enum_name_list_trailing_comma  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
-
-
-virtual void enum_name_list_trailing_comma::accept(Visitor &visitor)
+ Udp_body::Udp_body(std::string element)
 {
-	visitor.visit(this);
+	this->element = element;
 }
-
 
-
-class enum_name_list  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
 
 
-virtual void enum_name_list::accept(Visitor &visitor)
+void Tk_reg_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class action_block  : public Node
+ Tk_reg_opt::Tk_reg_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void action_block::accept(Visitor &visitor)
+
+void Udp_initial_expr_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class simple_immediate_assertion_statement  : public Node
+ Udp_initial_expr_opt::Udp_initial_expr_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void simple_immediate_assertion_statement::accept(Visitor &visitor)
+
+void Udp_input_declaration_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class immediate_assertion_statement  : public Node
+ Udp_input_declaration_list::Udp_input_declaration_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void immediate_assertion_statement::accept(Visitor &visitor)
+void Enum_name::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class deferred_immediate_assertion_statement  : public Node
+ Enum_name::Enum_name(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void deferred_immediate_assertion_statement::accept(Visitor &visitor)
+
+void Pos_neg_number::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class udp_comb_entry  : public Node
+ Pos_neg_number::Pos_neg_number(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void udp_comb_entry::accept(Visitor &visitor)
+
+void Enum_name_list_item_last::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class specparam_list  : public Node
+ Enum_name_list_item_last::Enum_name_list_item_last(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void specparam_list::accept(Visitor &visitor)
+
+void Enum_name_list_trailing_comma::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class MacroIdItem  : public Node
+ Enum_name_list_trailing_comma::Enum_name_list_trailing_comma(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void MacroIdItem::accept(Visitor &visitor)
+
+void Enum_name_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class MacroCallItem  : public Node
+ Enum_name_list::Enum_name_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void MacroCallItem::accept(Visitor &visitor)
+void Action_block::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class var_opt  : public Node
+ Action_block::Action_block(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void var_opt::accept(Visitor &visitor)
+void Simple_immediate_assertion_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class data_declaration_modifiers_opt  : public Node
+ Simple_immediate_assertion_statement::Simple_immediate_assertion_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_declaration_modifiers_opt::accept(Visitor &visitor)
+
+void Immediate_assertion_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class data_declaration_base  : public Node
+ Immediate_assertion_statement::Immediate_assertion_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void data_declaration_base::accept(Visitor &visitor)
+
+void Deferred_immediate_assertion_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class block_identifier_opt  : public Node
+ Deferred_immediate_assertion_statement::Deferred_immediate_assertion_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void block_identifier_opt::accept(Visitor &visitor)
+void Var_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class event_control_opt  : public Node
+ Var_opt::Var_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void event_control_opt::accept(Visitor &visitor)
+void Data_declaration_modifiers_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class property_spec_disable_iff_opt  : public Node
+ Data_declaration_modifiers_opt::Data_declaration_modifiers_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void property_spec_disable_iff_opt::accept(Visitor &visitor)
+void Data_declaration_base::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class property_spec  : public Node
+ Data_declaration_base::Data_declaration_base(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_spec::accept(Visitor &visitor)
+
+void Specparam::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class assert_property_statement  : public Node
+ Specparam::Specparam(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void assert_property_statement::accept(Visitor &visitor)
+
+void Specparam_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class concurrent_assertion_statement  : public Node
+ Specparam_list::Specparam_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void concurrent_assertion_statement::accept(Visitor &visitor)
+void Block_identifier_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class assume_property_statement  : public Node
+ Block_identifier_opt::Block_identifier_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void assume_property_statement::accept(Visitor &visitor)
+void Event_control_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class cover_property_statement  : public Node
+ Event_control_opt::Event_control_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void cover_property_statement::accept(Visitor &visitor)
+
+void Property_spec_disable_iff_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class concurrent_assertion_item  : public Node
+ Property_spec_disable_iff_opt::Property_spec_disable_iff_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void concurrent_assertion_item::accept(Visitor &visitor)
+
+void Property_spec::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class MacroCallCloseToEndLine  : public Node
+ Property_spec::Property_spec(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void MacroCallCloseToEndLine::accept(Visitor &visitor)
+
+void Assert_property_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_virtual_opt  : public Node
+ Assert_property_statement::Assert_property_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void TK_virtual_opt::accept(Visitor &visitor)
+
+void Concurrent_assertion_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class class_declaration_extends_opt  : public Node
+ Concurrent_assertion_statement::Concurrent_assertion_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void class_declaration_extends_opt::accept(Visitor &visitor)
+void Assume_property_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class implements_interface_list_opt  : public Node
+ Assume_property_statement::Assume_property_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void implements_interface_list_opt::accept(Visitor &visitor)
+
+void Cover_property_statement::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class variable_decl_assignment  : public Node
+ Cover_property_statement::Cover_property_statement(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void variable_decl_assignment::accept(Visitor &visitor)
+
+void Concurrent_assertion_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class list_of_variable_decl_assignments  : public Node
+ Concurrent_assertion_item::Concurrent_assertion_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void list_of_variable_decl_assignments::accept(Visitor &visitor)
+void Tk_virtual_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class class_item  : public Node
+ Tk_virtual_opt::Tk_virtual_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void class_item::accept(Visitor &visitor)
+void Class_declaration_extends_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class class_constructor  : public Node
+ Class_declaration_extends_opt::Class_declaration_extends_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void class_constructor::accept(Visitor &visitor)
+void Implements_interface_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class method_qualifier_list_opt  : public Node
+ Implements_interface_list_opt::Implements_interface_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void method_qualifier_list_opt::accept(Visitor &visitor)
+void Variable_decl_assignment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class method_prototype  : public Node
+ Variable_decl_assignment::Variable_decl_assignment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void method_prototype::accept(Visitor &visitor)
+
+void List_of_variable_decl_assignments::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_item_qualifier_list_opt  : public Node
+ List_of_variable_decl_assignments::List_of_variable_decl_assignments(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void class_item_qualifier_list_opt::accept(Visitor &visitor)
+
+void Class_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class method_property_qualifier_list_not_starting_with_virtual  : public Node
+ Class_item::Class_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void method_property_qualifier_list_not_starting_with_virtual::accept(Visitor &visitor)
+void Class_constructor::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class class_items  : public Node
+ Class_constructor::Class_constructor(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void class_items::accept(Visitor &visitor)
+
+void Method_qualifier_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_constructor_prototype  : public Node
+ Method_qualifier_list_opt::Method_qualifier_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void class_constructor_prototype::accept(Visitor &visitor)
+
+void Method_prototype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class endnew_opt  : public Node
+ Method_prototype::Method_prototype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void endnew_opt::accept(Visitor &visitor)
+
+void Class_item_qualifier_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_items_opt  : public Node
+ Class_item_qualifier_list_opt::Class_item_qualifier_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void class_items_opt::accept(Visitor &visitor)
+
+void Method_property_qualifier_list_not_starting_with_virtual::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_item  : public Node
+ Method_property_qualifier_list_not_starting_with_virtual::Method_property_qualifier_list_not_starting_with_virtual(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void package_item::accept(Visitor &visitor)
+void Class_items::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class package_item_list  : public Node
+ Class_items::Class_items(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void package_item_list::accept(Visitor &visitor)
+void Class_constructor_prototype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class task_prototype  : public Node
+ Class_constructor_prototype::Class_constructor_prototype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void task_prototype::accept(Visitor &visitor)
+
+void Endnew_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class function_prototype  : public Node
+ Endnew_opt::Endnew_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void function_prototype::accept(Visitor &visitor)
+
+void Class_items_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class package_item_list_opt  : public Node
+ Class_items_opt::Class_items_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void package_item_list_opt::accept(Visitor &visitor)
+void Package_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class select_dimensions_opt  : public Node
+ Package_item::Package_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void select_dimensions_opt::accept(Visitor &visitor)
+void Package_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class hierarchy_segment  : public Node
+ Package_item_list::Package_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void hierarchy_segment::accept(Visitor &visitor)
+void Task_prototype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class dpi_spec_string  : public Node
+ Task_prototype::Task_prototype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void dpi_spec_string::accept(Visitor &visitor)
+
+void Function_prototype::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class dpi_import_property_opt  : public Node
+ Function_prototype::Function_prototype(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void dpi_import_property_opt::accept(Visitor &visitor)
+
+void Package_item_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class dpi_import_item  : public Node
+ Package_item_list_opt::Package_item_list_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void dpi_import_item::accept(Visitor &visitor)
+void Select_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_LS_EQ  : public Node
+ Select_dimensions_opt::Select_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_LS_EQ::accept(Visitor &visitor)
+void Hierarchy_segment::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_RS_EQ  : public Node
+ Hierarchy_segment::Hierarchy_segment(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_RS_EQ::accept(Visitor &visitor)
+
+void Dpi_spec_string::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_RSS_EQ  : public Node
+ Dpi_spec_string::Dpi_spec_string(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_RSS_EQ::accept(Visitor &visitor)
+
+void Dpi_import_property_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class packed_signing_opt  : public Node
+ Dpi_import_property_opt::Dpi_import_property_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void packed_signing_opt::accept(Visitor &visitor)
+
+void Dpi_import_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class random_qualifier_opt  : public Node
+ Dpi_import_item::Dpi_import_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void random_qualifier_opt::accept(Visitor &visitor)
+
+void Udp_comb_entry::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class data_type_or_implicit_followed_by_id_and_dimensions_opt  : public Node
+ Udp_comb_entry::Udp_comb_entry(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void data_type_or_implicit_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
+void Tk_ls_eq::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class type_identifier_or_implicit_followed_by_id_and_dimensions_opt  : public Node
+ Tk_ls_eq::Tk_ls_eq(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void type_identifier_or_implicit_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
+
+void Tk_rs_eq::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class struct_union_member  : public Node
+ Tk_rs_eq::Tk_rs_eq(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void struct_union_member::accept(Visitor &visitor)
+
+void Tk_rss_eq::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class struct_union_member_list  : public Node
+ Tk_rss_eq::Tk_rss_eq(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void struct_union_member_list::accept(Visitor &visitor)
+void Packed_signing_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class TK_tagged_opt  : public Node
+ Packed_signing_opt::Packed_signing_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void TK_tagged_opt::accept(Visitor &visitor)
+void Random_qualifier_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class assignment_pattern  : public Node
+ Random_qualifier_opt::Random_qualifier_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void assignment_pattern::accept(Visitor &visitor)
+void Data_type_or_implicit_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class structure_or_array_pattern_expression_list  : public Node
+ Data_type_or_implicit_followed_by_id_and_dimensions_opt::Data_type_or_implicit_followed_by_id_and_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
+
 
 
-virtual void structure_or_array_pattern_expression_list::accept(Visitor &visitor)
+void Type_identifier_or_implicit_followed_by_id_and_dimensions_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class structure_or_array_pattern_key  : public Node
+ Type_identifier_or_implicit_followed_by_id_and_dimensions_opt::Type_identifier_or_implicit_followed_by_id_and_dimensions_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void structure_or_array_pattern_key::accept(Visitor &visitor)
+
+void Struct_union_member::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class structure_or_array_pattern_expression  : public Node
+ Struct_union_member::Struct_union_member(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void structure_or_array_pattern_expression::accept(Visitor &visitor)
+
+void Struct_union_member_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class scope_prefix  : public Node
+ Struct_union_member_list::Struct_union_member_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void scope_prefix::accept(Visitor &visitor)
+void Tk_tagged_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class package_import_item  : public Node
+ Tk_tagged_opt::Tk_tagged_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void package_import_item::accept(Visitor &visitor)
+
+void Assignment_pattern::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class package_import_item_list  : public Node
+ Assignment_pattern::Assignment_pattern(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void package_import_item_list::accept(Visitor &visitor)
+
+void Structure_or_array_pattern_expression_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class TK_edge_descriptor  : public Node
+ Structure_or_array_pattern_expression_list::Structure_or_array_pattern_expression_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
+	this->element = element;
+}
 
 
-virtual void TK_edge_descriptor::accept(Visitor &visitor)
+
+void Structure_or_array_pattern_key::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class class_item_qualifier  : public Node
+ Structure_or_array_pattern_key::Structure_or_array_pattern_key(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void class_item_qualifier::accept(Visitor &visitor)
+
+void Structure_or_array_pattern_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_qualifier  : public Node
+ Structure_or_array_pattern_expression::Structure_or_array_pattern_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void property_qualifier::accept(Visitor &visitor)
+void Scope_prefix::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class final_or_zero  : public Node
+ Scope_prefix::Scope_prefix(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void final_or_zero::accept(Visitor &visitor)
+void Package_import_item::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class property_port_list_in_parens_opt  : public Node
+ Package_import_item::Package_import_item(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_port_list_in_parens_opt::accept(Visitor &visitor)
+
+void Package_import_item_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class optional_semicolon  : public Node
+ Package_import_item_list::Package_import_item_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void optional_semicolon::accept(Visitor &visitor)
+
+void Tk_edge_descriptor::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class stream_operator  : public Node
+ Tk_edge_descriptor::Tk_edge_descriptor(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void stream_operator::accept(Visitor &visitor)
+void Class_item_qualifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class slice_size_opt  : public Node
+ Class_item_qualifier::Class_item_qualifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void slice_size_opt::accept(Visitor &visitor)
+void Property_qualifier::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class stream_expression  : public Node
+ Property_qualifier::Property_qualifier(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void stream_expression::accept(Visitor &visitor)
+void Final_or_zero::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
-
 
-class stream_expression_list  : public Node
+ Final_or_zero::Final_or_zero(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void stream_expression_list::accept(Visitor &visitor)
+
+void Stream_operator::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class preprocessor_balanced_port_declarations  : public Node
+ Stream_operator::Stream_operator(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void preprocessor_balanced_port_declarations::accept(Visitor &visitor)
+
+void Slice_size_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class property_declaration  : public Node
+ Slice_size_opt::Slice_size_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void property_declaration::accept(Visitor &visitor)
+
+void Stream_expression::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class identifier_opt  : public Node
+ Stream_expression::Stream_expression(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
 
 
-virtual void identifier_opt::accept(Visitor &visitor)
+
+void Stream_expression_list::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
-
-class clocking_item_list_opt  : public Node
+ Stream_expression_list::Stream_expression_list(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-};
+	this->element = element;
+}
+
 
 
-virtual void clocking_item_list_opt::accept(Visitor &visitor)
+void Identifier_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
 
-
-
-class Node  : public 
+ Identifier_opt::Identifier_opt(std::string element)
 {
-public:
-	virtual void accept(Visitor &visitor) = 0;
-	
-	
-private:
-	std::vector<std::shared_ptr<Node>> children;
-	
-};
-
-
-
+	this->element = element;
+}
 
-class Terminal  : public Node
-{
-public:
-	virtual void accept(Visitor &visitor);
-	
-	
-private:
-	string element;
-	
-};
 
 
-virtual void Terminal::accept(Visitor &visitor)
+void Clocking_item_list_opt::accept(Visitor &visitor)
 {
 	visitor.visit(this);
 }
-
 
+ Clocking_item_list_opt::Clocking_item_list_opt(std::string element)
+{
+	this->element = element;
+}
 
+std::shared_ptr<Node> map_class(std::string c)
+{
+	if(c == "terminal")
+ return std::make_shared<Terminal>(c);
+else if(c == "time_literal")
+ return std::make_shared<Time_literal>(c);
+else if(c == "tk_timeliteral")
+ return std::make_shared<Tk_timeliteral>(c);
+else if(c == "tk_decnumber")
+ return std::make_shared<Tk_decnumber>(c);
+else if(c == "timescale_directive")
+ return std::make_shared<Timescale_directive>(c);
+else if(c == "package_item_no_pp")
+ return std::make_shared<Package_item_no_pp>(c);
+else if(c == "misc_directive")
+ return std::make_shared<Misc_directive>(c);
+else if(c == "package_or_generate_item_declaration")
+ return std::make_shared<Package_or_generate_item_declaration>(c);
+else if(c == "data_declaration")
+ return std::make_shared<Data_declaration>(c);
+else if(c == "any_param_declaration")
+ return std::make_shared<Any_param_declaration>(c);
+else if(c == "timeunits_declaration")
+ return std::make_shared<Timeunits_declaration>(c);
+else if(c == "type_declaration")
+ return std::make_shared<Type_declaration>(c);
+else if(c == "package_import_declaration")
+ return std::make_shared<Package_import_declaration>(c);
+else if(c == "description")
+ return std::make_shared<Description>(c);
+else if(c == "module_or_interface_declaration")
+ return std::make_shared<Module_or_interface_declaration>(c);
+else if(c == "preprocessor_action")
+ return std::make_shared<Preprocessor_action>(c);
+else if(c == "udp_primitive")
+ return std::make_shared<Udp_primitive>(c);
+else if(c == "package_declaration")
+ return std::make_shared<Package_declaration>(c);
+else if(c == "description_list")
+ return std::make_shared<Description_list>(c);
+else if(c == "module_start")
+ return std::make_shared<Module_start>(c);
+else if(c == "lifetime_opt")
+ return std::make_shared<Lifetime_opt>(c);
+else if(c == "lifetime")
+ return std::make_shared<Lifetime>(c);
+else if(c == "genericidentifier")
+ return std::make_shared<Genericidentifier>(c);
+else if(c == "symbolidentifier")
+ return std::make_shared<Symbolidentifier>(c);
+else if(c == "escapedidentifier")
+ return std::make_shared<Escapedidentifier>(c);
+else if(c == "keywordidentifier")
+ return std::make_shared<Keywordidentifier>(c);
+else if(c == "symbol_or_label")
+ return std::make_shared<Symbol_or_label>(c);
+else if(c == "module_package_import_list_opt")
+ return std::make_shared<Module_package_import_list_opt>(c);
+else if(c == "package_import_list")
+ return std::make_shared<Package_import_list>(c);
+else if(c == "module_parameter_port_list_opt")
+ return std::make_shared<Module_parameter_port_list_opt>(c);
+else if(c == "module_parameter_port_list")
+ return std::make_shared<Module_parameter_port_list>(c);
+else if(c == "module_port_list_opt")
+ return std::make_shared<Module_port_list_opt>(c);
+else if(c == "list_of_ports_or_port_declarations_opt")
+ return std::make_shared<List_of_ports_or_port_declarations_opt>(c);
+else if(c == "module_attribute_foreign_opt")
+ return std::make_shared<Module_attribute_foreign_opt>(c);
+else if(c == "integer_vector_type")
+ return std::make_shared<Integer_vector_type>(c);
+else if(c == "signed_unsigned_opt")
+ return std::make_shared<Signed_unsigned_opt>(c);
+else if(c == "signing")
+ return std::make_shared<Signing>(c);
+else if(c == "data_type_primitive_scalar")
+ return std::make_shared<Data_type_primitive_scalar>(c);
+else if(c == "integer_atom_type")
+ return std::make_shared<Integer_atom_type>(c);
+else if(c == "non_integer_type")
+ return std::make_shared<Non_integer_type>(c);
+else if(c == "enum_data_type")
+ return std::make_shared<Enum_data_type>(c);
+else if(c == "struct_data_type")
+ return std::make_shared<Struct_data_type>(c);
+else if(c == "decl_dimensions_opt")
+ return std::make_shared<Decl_dimensions_opt>(c);
+else if(c == "decl_dimensions")
+ return std::make_shared<Decl_dimensions>(c);
+else if(c == "data_type_primitive")
+ return std::make_shared<Data_type_primitive>(c);
+else if(c == "data_type_base")
+ return std::make_shared<Data_type_base>(c);
+else if(c == "data_type")
+ return std::make_shared<Data_type>(c);
+else if(c == "reference")
+ return std::make_shared<Reference>(c);
+else if(c == "instantiation_type")
+ return std::make_shared<Instantiation_type>(c);
+else if(c == "trailing_decl_assignment_opt")
+ return std::make_shared<Trailing_decl_assignment_opt>(c);
+else if(c == "trailing_decl_assignment")
+ return std::make_shared<Trailing_decl_assignment>(c);
+else if(c == "non_anonymous_gate_instance_or_register_variable")
+ return std::make_shared<Non_anonymous_gate_instance_or_register_variable>(c);
+else if(c == "any_port_list_opt")
+ return std::make_shared<Any_port_list_opt>(c);
+else if(c == "non_anonymous_gate_instance_or_register_variable_list")
+ return std::make_shared<Non_anonymous_gate_instance_or_register_variable_list>(c);
+else if(c == "gate_instance_or_register_variable")
+ return std::make_shared<Gate_instance_or_register_variable>(c);
+else if(c == "instantiation_base")
+ return std::make_shared<Instantiation_base>(c);
+else if(c == "reference_or_call_base")
+ return std::make_shared<Reference_or_call_base>(c);
+else if(c == "data_declaration_or_module_instantiation")
+ return std::make_shared<Data_declaration_or_module_instantiation>(c);
+else if(c == "const_opt")
+ return std::make_shared<Const_opt>(c);
+else if(c == "module_or_generate_item")
+ return std::make_shared<Module_or_generate_item>(c);
+else if(c == "module_common_item")
+ return std::make_shared<Module_common_item>(c);
+else if(c == "parameter_override")
+ return std::make_shared<Parameter_override>(c);
+else if(c == "gate_instantiation")
+ return std::make_shared<Gate_instantiation>(c);
+else if(c == "non_port_module_item")
+ return std::make_shared<Non_port_module_item>(c);
+else if(c == "generate_region")
+ return std::make_shared<Generate_region>(c);
+else if(c == "specify_block")
+ return std::make_shared<Specify_block>(c);
+else if(c == "module_item")
+ return std::make_shared<Module_item>(c);
+else if(c == "module_port_declaration")
+ return std::make_shared<Module_port_declaration>(c);
+else if(c == "module_block")
+ return std::make_shared<Module_block>(c);
+else if(c == "module_item_directive")
+ return std::make_shared<Module_item_directive>(c);
+else if(c == "module_item_list")
+ return std::make_shared<Module_item_list>(c);
+else if(c == "net_type")
+ return std::make_shared<Net_type>(c);
+else if(c == "number")
+ return std::make_shared<Number>(c);
+else if(c == "constant_dec_number")
+ return std::make_shared<Constant_dec_number>(c);
+else if(c == "based_number")
+ return std::make_shared<Based_number>(c);
+else if(c == "tk_unbasednumber")
+ return std::make_shared<Tk_unbasednumber>(c);
+else if(c == "expr_primary_no_groups")
+ return std::make_shared<Expr_primary_no_groups>(c);
+else if(c == "system_tf_call")
+ return std::make_shared<System_tf_call>(c);
+else if(c == "string_literal")
+ return std::make_shared<String_literal>(c);
+else if(c == "tk_realtime")
+ return std::make_shared<Tk_realtime>(c);
+else if(c == "cast")
+ return std::make_shared<Cast>(c);
+else if(c == "expr_primary")
+ return std::make_shared<Expr_primary>(c);
+else if(c == "expr_primary_parens")
+ return std::make_shared<Expr_primary_parens>(c);
+else if(c == "expr_primary_braces")
+ return std::make_shared<Expr_primary_braces>(c);
+else if(c == "assignment_pattern_expression")
+ return std::make_shared<Assignment_pattern_expression>(c);
+else if(c == "postfix_expression")
+ return std::make_shared<Postfix_expression>(c);
+else if(c == "reference_or_call")
+ return std::make_shared<Reference_or_call>(c);
+else if(c == "inc_or_dec_or_primary_expr")
+ return std::make_shared<Inc_or_dec_or_primary_expr>(c);
+else if(c == "inc_or_dec_expression")
+ return std::make_shared<Inc_or_dec_expression>(c);
+else if(c == "unary_prefix_expr")
+ return std::make_shared<Unary_prefix_expr>(c);
+else if(c == "unary_op")
+ return std::make_shared<Unary_op>(c);
+else if(c == "unary_expr")
+ return std::make_shared<Unary_expr>(c);
+else if(c == "pow_expr")
+ return std::make_shared<Pow_expr>(c);
+else if(c == "mul_expr")
+ return std::make_shared<Mul_expr>(c);
+else if(c == "add_expr")
+ return std::make_shared<Add_expr>(c);
+else if(c == "shift_expr")
+ return std::make_shared<Shift_expr>(c);
+else if(c == "comp_expr")
+ return std::make_shared<Comp_expr>(c);
+else if(c == "open_range_list")
+ return std::make_shared<Open_range_list>(c);
+else if(c == "logeq_expr")
+ return std::make_shared<Logeq_expr>(c);
+else if(c == "caseeq_expr")
+ return std::make_shared<Caseeq_expr>(c);
+else if(c == "bitand_expr")
+ return std::make_shared<Bitand_expr>(c);
+else if(c == "xor_expr")
+ return std::make_shared<Xor_expr>(c);
+else if(c == "bitor_expr")
+ return std::make_shared<Bitor_expr>(c);
+else if(c == "with_exprs_suffix")
+ return std::make_shared<With_exprs_suffix>(c);
+else if(c == "matches_expr")
+ return std::make_shared<Matches_expr>(c);
+else if(c == "logand_expr")
+ return std::make_shared<Logand_expr>(c);
+else if(c == "logor_expr")
+ return std::make_shared<Logor_expr>(c);
+else if(c == "cond_expr")
+ return std::make_shared<Cond_expr>(c);
+else if(c == "expression")
+ return std::make_shared<Expression>(c);
+else if(c == "equiv_impl_expr")
+ return std::make_shared<Equiv_impl_expr>(c);
+else if(c == "decl_variable_dimension")
+ return std::make_shared<Decl_variable_dimension>(c);
+else if(c == "expression_or_null_list_opt")
+ return std::make_shared<Expression_or_null_list_opt>(c);
+else if(c == "delay3_or_drive_opt")
+ return std::make_shared<Delay3_or_drive_opt>(c);
+else if(c == "delay3")
+ return std::make_shared<Delay3>(c);
+else if(c == "data_type_or_implicit")
+ return std::make_shared<Data_type_or_implicit>(c);
+else if(c == "net_variable")
+ return std::make_shared<Net_variable>(c);
+else if(c == "net_variable_or_decl_assign")
+ return std::make_shared<Net_variable_or_decl_assign>(c);
+else if(c == "net_decl_assign")
+ return std::make_shared<Net_decl_assign>(c);
+else if(c == "net_variable_or_decl_assigns")
+ return std::make_shared<Net_variable_or_decl_assigns>(c);
+else if(c == "net_declaration")
+ return std::make_shared<Net_declaration>(c);
+else if(c == "charge_strength_opt")
+ return std::make_shared<Charge_strength_opt>(c);
+else if(c == "delay3_opt")
+ return std::make_shared<Delay3_opt>(c);
+else if(c == "list_of_identifiers")
+ return std::make_shared<List_of_identifiers>(c);
+else if(c == "task_declaration")
+ return std::make_shared<Task_declaration>(c);
+else if(c == "function_declaration")
+ return std::make_shared<Function_declaration>(c);
+else if(c == "class_declaration")
+ return std::make_shared<Class_declaration>(c);
+else if(c == "dpi_import_export")
+ return std::make_shared<Dpi_import_export>(c);
+else if(c == "specparam_declaration")
+ return std::make_shared<Specparam_declaration>(c);
+else if(c == "module_or_generate_item_declaration")
+ return std::make_shared<Module_or_generate_item_declaration>(c);
+else if(c == "genvar_declaration")
+ return std::make_shared<Genvar_declaration>(c);
+else if(c == "clocking_declaration")
+ return std::make_shared<Clocking_declaration>(c);
+else if(c == "initial_construct")
+ return std::make_shared<Initial_construct>(c);
+else if(c == "always_construct")
+ return std::make_shared<Always_construct>(c);
+else if(c == "continuous_assign")
+ return std::make_shared<Continuous_assign>(c);
+else if(c == "loop_generate_construct")
+ return std::make_shared<Loop_generate_construct>(c);
+else if(c == "conditional_generate_construct")
+ return std::make_shared<Conditional_generate_construct>(c);
+else if(c == "assertion_item")
+ return std::make_shared<Assertion_item>(c);
+else if(c == "final_construct")
+ return std::make_shared<Final_construct>(c);
+else if(c == "parameter_value_opt")
+ return std::make_shared<Parameter_value_opt>(c);
+else if(c == "parameters")
+ return std::make_shared<Parameters>(c);
+else if(c == "unqualified_id")
+ return std::make_shared<Unqualified_id>(c);
+else if(c == "class_id")
+ return std::make_shared<Class_id>(c);
+else if(c == "qualified_id")
+ return std::make_shared<Qualified_id>(c);
+else if(c == "type_or_id_root")
+ return std::make_shared<Type_or_id_root>(c);
+else if(c == "implicit_class_handle")
+ return std::make_shared<Implicit_class_handle>(c);
+else if(c == "local_root")
+ return std::make_shared<Local_root>(c);
+else if(c == "select_variable_dimension")
+ return std::make_shared<Select_variable_dimension>(c);
+else if(c == "hierarchy_extension")
+ return std::make_shared<Hierarchy_extension>(c);
+else if(c == "member_name")
+ return std::make_shared<Member_name>(c);
+else if(c == "builtin_array_method")
+ return std::make_shared<Builtin_array_method>(c);
+else if(c == "port_named")
+ return std::make_shared<Port_named>(c);
+else if(c == "any_port")
+ return std::make_shared<Any_port>(c);
+else if(c == "any_port_list_item_last")
+ return std::make_shared<Any_port_list_item_last>(c);
+else if(c == "any_port_list_trailing_comma")
+ return std::make_shared<Any_port_list_trailing_comma>(c);
+else if(c == "any_port_list")
+ return std::make_shared<Any_port_list>(c);
+else if(c == "label_opt")
+ return std::make_shared<Label_opt>(c);
+else if(c == "begin")
+ return std::make_shared<Begin>(c);
+else if(c == "lpvalue")
+ return std::make_shared<Lpvalue>(c);
+else if(c == "range_list_in_braces")
+ return std::make_shared<Range_list_in_braces>(c);
+else if(c == "assignment_statement_no_expr")
+ return std::make_shared<Assignment_statement_no_expr>(c);
+else if(c == "assign_modify_statement")
+ return std::make_shared<Assign_modify_statement>(c);
+else if(c == "assignment_statement")
+ return std::make_shared<Assignment_statement>(c);
+else if(c == "statement_item")
+ return std::make_shared<Statement_item>(c);
+else if(c == "procedural_timing_control_statement")
+ return std::make_shared<Procedural_timing_control_statement>(c);
+else if(c == "subroutine_call")
+ return std::make_shared<Subroutine_call>(c);
+else if(c == "seq_block")
+ return std::make_shared<Seq_block>(c);
+else if(c == "nonblocking_assignment")
+ return std::make_shared<Nonblocking_assignment>(c);
+else if(c == "conditional_statement")
+ return std::make_shared<Conditional_statement>(c);
+else if(c == "case_statement")
+ return std::make_shared<Case_statement>(c);
+else if(c == "loop_statement")
+ return std::make_shared<Loop_statement>(c);
+else if(c == "par_block")
+ return std::make_shared<Par_block>(c);
+else if(c == "blocking_assignment")
+ return std::make_shared<Blocking_assignment>(c);
+else if(c == "wait_statement")
+ return std::make_shared<Wait_statement>(c);
+else if(c == "procedural_assertion_statement")
+ return std::make_shared<Procedural_assertion_statement>(c);
+else if(c == "procedural_continuous_assignment")
+ return std::make_shared<Procedural_continuous_assignment>(c);
+else if(c == "event_trigger")
+ return std::make_shared<Event_trigger>(c);
+else if(c == "disable_statement")
+ return std::make_shared<Disable_statement>(c);
+else if(c == "jump_statement")
+ return std::make_shared<Jump_statement>(c);
+else if(c == "block_item_or_statement_or_null")
+ return std::make_shared<Block_item_or_statement_or_null>(c);
+else if(c == "block_item_decl")
+ return std::make_shared<Block_item_decl>(c);
+else if(c == "block_item_or_statement_or_null_list")
+ return std::make_shared<Block_item_or_statement_or_null_list>(c);
+else if(c == "delay_value_simple")
+ return std::make_shared<Delay_value_simple>(c);
+else if(c == "delay_identifier")
+ return std::make_shared<Delay_identifier>(c);
+else if(c == "delay1")
+ return std::make_shared<Delay1>(c);
+else if(c == "delay_value")
+ return std::make_shared<Delay_value>(c);
+else if(c == "statement_or_null")
+ return std::make_shared<Statement_or_null>(c);
+else if(c == "statement")
+ return std::make_shared<Statement>(c);
+else if(c == "event_control")
+ return std::make_shared<Event_control>(c);
+else if(c == "cycle_delay")
+ return std::make_shared<Cycle_delay>(c);
+else if(c == "systemtfidentifier")
+ return std::make_shared<Systemtfidentifier>(c);
+else if(c == "call_base")
+ return std::make_shared<Call_base>(c);
+else if(c == "block_item_or_statement_or_null_list_opt")
+ return std::make_shared<Block_item_or_statement_or_null_list_opt>(c);
+else if(c == "end")
+ return std::make_shared<End>(c);
+else if(c == "always_any")
+ return std::make_shared<Always_any>(c);
+else if(c == "module_item_list_opt")
+ return std::make_shared<Module_item_list_opt>(c);
+else if(c == "module_end")
+ return std::make_shared<Module_end>(c);
+else if(c == "source_text")
+ return std::make_shared<Source_text>(c);
+else if(c == "port_reference")
+ return std::make_shared<Port_reference>(c);
+else if(c == "port_expression")
+ return std::make_shared<Port_expression>(c);
+else if(c == "port_reference_list")
+ return std::make_shared<Port_reference_list>(c);
+else if(c == "trailing_assign_opt")
+ return std::make_shared<Trailing_assign_opt>(c);
+else if(c == "trailing_assign")
+ return std::make_shared<Trailing_assign>(c);
+else if(c == "port")
+ return std::make_shared<Port>(c);
+else if(c == "port_expression_opt")
+ return std::make_shared<Port_expression_opt>(c);
+else if(c == "port_or_port_declaration")
+ return std::make_shared<Port_or_port_declaration>(c);
+else if(c == "port_declaration")
+ return std::make_shared<Port_declaration>(c);
+else if(c == "list_of_ports_or_port_declarations_item_last")
+ return std::make_shared<List_of_ports_or_port_declarations_item_last>(c);
+else if(c == "list_of_ports_or_port_declarations_trailing_comma")
+ return std::make_shared<List_of_ports_or_port_declarations_trailing_comma>(c);
+else if(c == "list_of_ports_or_port_declarations")
+ return std::make_shared<List_of_ports_or_port_declarations>(c);
+else if(c == "dir")
+ return std::make_shared<Dir>(c);
+else if(c == "var_type")
+ return std::make_shared<Var_type>(c);
+else if(c == "list_of_port_identifiers")
+ return std::make_shared<List_of_port_identifiers>(c);
+else if(c == "port_direction")
+ return std::make_shared<Port_direction>(c);
+else if(c == "list_of_module_item_identifiers")
+ return std::make_shared<List_of_module_item_identifiers>(c);
+else if(c == "list_of_identifiers_unpacked_dimensions")
+ return std::make_shared<List_of_identifiers_unpacked_dimensions>(c);
+else if(c == "port_net_type")
+ return std::make_shared<Port_net_type>(c);
+else if(c == "identifier_optional_unpacked_dimensions")
+ return std::make_shared<Identifier_optional_unpacked_dimensions>(c);
+else if(c == "drive_strength_opt")
+ return std::make_shared<Drive_strength_opt>(c);
+else if(c == "drive_strength")
+ return std::make_shared<Drive_strength>(c);
+else if(c == "cont_assign")
+ return std::make_shared<Cont_assign>(c);
+else if(c == "cont_assign_list")
+ return std::make_shared<Cont_assign_list>(c);
+else if(c == "edge_operator")
+ return std::make_shared<Edge_operator>(c);
+else if(c == "event_expression")
+ return std::make_shared<Event_expression>(c);
+else if(c == "event_expression_list")
+ return std::make_shared<Event_expression_list>(c);
+else if(c == "hierarchy_event_identifier")
+ return std::make_shared<Hierarchy_event_identifier>(c);
+else if(c == "unique_priority_opt")
+ return std::make_shared<Unique_priority_opt>(c);
+else if(c == "expression_in_parens")
+ return std::make_shared<Expression_in_parens>(c);
+else if(c == "delay_or_event_control_opt")
+ return std::make_shared<Delay_or_event_control_opt>(c);
+else if(c == "delay_or_event_control")
+ return std::make_shared<Delay_or_event_control>(c);
+else if(c == "expression_opt")
+ return std::make_shared<Expression_opt>(c);
+else if(c == "bit_logic_opt")
+ return std::make_shared<Bit_logic_opt>(c);
+else if(c == "bit_logic")
+ return std::make_shared<Bit_logic>(c);
+else if(c == "param_type_followed_by_id_and_dimensions_opt")
+ return std::make_shared<Param_type_followed_by_id_and_dimensions_opt>(c);
+else if(c == "parameter_expr")
+ return std::make_shared<Parameter_expr>(c);
+else if(c == "parameter_value_ranges_opt")
+ return std::make_shared<Parameter_value_ranges_opt>(c);
+else if(c == "parameter_assign")
+ return std::make_shared<Parameter_assign>(c);
+else if(c == "parameter_assign_list")
+ return std::make_shared<Parameter_assign_list>(c);
+else if(c == "localparam_assign_list")
+ return std::make_shared<Localparam_assign_list>(c);
+else if(c == "type_assignment_list")
+ return std::make_shared<Type_assignment_list>(c);
+else if(c == "macronumericwidth")
+ return std::make_shared<Macronumericwidth>(c);
+else if(c == "hex_based_number")
+ return std::make_shared<Hex_based_number>(c);
+else if(c == "tk_hexbase")
+ return std::make_shared<Tk_hexbase>(c);
+else if(c == "tk_hexdigits")
+ return std::make_shared<Tk_hexdigits>(c);
+else if(c == "dec_based_number")
+ return std::make_shared<Dec_based_number>(c);
+else if(c == "bin_based_number")
+ return std::make_shared<Bin_based_number>(c);
+else if(c == "oct_based_number")
+ return std::make_shared<Oct_based_number>(c);
+else if(c == "tk_decbase")
+ return std::make_shared<Tk_decbase>(c);
+else if(c == "tk_decdigits")
+ return std::make_shared<Tk_decdigits>(c);
+else if(c == "tk_xzdigits")
+ return std::make_shared<Tk_xzdigits>(c);
+else if(c == "case_any")
+ return std::make_shared<Case_any>(c);
+else if(c == "expression_list_proper")
+ return std::make_shared<Expression_list_proper>(c);
+else if(c == "case_item")
+ return std::make_shared<Case_item>(c);
+else if(c == "preprocessor_directive")
+ return std::make_shared<Preprocessor_directive>(c);
+else if(c == "case_items")
+ return std::make_shared<Case_items>(c);
+else if(c == "tk_binbase")
+ return std::make_shared<Tk_binbase>(c);
+else if(c == "tk_bindigits")
+ return std::make_shared<Tk_bindigits>(c);
+else if(c == "dist_opt")
+ return std::make_shared<Dist_opt>(c);
+else if(c == "expression_or_dist")
+ return std::make_shared<Expression_or_dist>(c);
+else if(c == "boolean_abbrev_opt")
+ return std::make_shared<Boolean_abbrev_opt>(c);
+else if(c == "sequence_repetition_expr")
+ return std::make_shared<Sequence_repetition_expr>(c);
+else if(c == "sequence_expr_primary")
+ return std::make_shared<Sequence_expr_primary>(c);
+else if(c == "sequence_delay_repetition_list")
+ return std::make_shared<Sequence_delay_repetition_list>(c);
+else if(c == "sequence_delay_range_expr")
+ return std::make_shared<Sequence_delay_range_expr>(c);
+else if(c == "sequence_throughout_expr")
+ return std::make_shared<Sequence_throughout_expr>(c);
+else if(c == "sequence_within_expr")
+ return std::make_shared<Sequence_within_expr>(c);
+else if(c == "sequence_intersect_expr")
+ return std::make_shared<Sequence_intersect_expr>(c);
+else if(c == "sequence_unary_expr")
+ return std::make_shared<Sequence_unary_expr>(c);
+else if(c == "sequence_and_expr")
+ return std::make_shared<Sequence_and_expr>(c);
+else if(c == "sequence_or_expr")
+ return std::make_shared<Sequence_or_expr>(c);
+else if(c == "simple_sequence_expr")
+ return std::make_shared<Simple_sequence_expr>(c);
+else if(c == "property_if_else_expr")
+ return std::make_shared<Property_if_else_expr>(c);
+else if(c == "property_prefix_expr")
+ return std::make_shared<Property_prefix_expr>(c);
+else if(c == "property_implication_expr")
+ return std::make_shared<Property_implication_expr>(c);
+else if(c == "sequence_expr")
+ return std::make_shared<Sequence_expr>(c);
+else if(c == "property_expr")
+ return std::make_shared<Property_expr>(c);
+else if(c == "property_expr_or_assignment")
+ return std::make_shared<Property_expr_or_assignment>(c);
+else if(c == "property_expr_or_assignment_list")
+ return std::make_shared<Property_expr_or_assignment_list>(c);
+else if(c == "expr_mintypmax_generalized")
+ return std::make_shared<Expr_mintypmax_generalized>(c);
+else if(c == "expr_mintypmax_trans_set")
+ return std::make_shared<Expr_mintypmax_trans_set>(c);
+else if(c == "expr_mintypmax")
+ return std::make_shared<Expr_mintypmax>(c);
+else if(c == "value_range")
+ return std::make_shared<Value_range>(c);
+else if(c == "streaming_concatenation")
+ return std::make_shared<Streaming_concatenation>(c);
+else if(c == "genvar_opt")
+ return std::make_shared<Genvar_opt>(c);
+else if(c == "for_step")
+ return std::make_shared<For_step>(c);
+else if(c == "for_step_opt")
+ return std::make_shared<For_step_opt>(c);
+else if(c == "generate_item")
+ return std::make_shared<Generate_item>(c);
+else if(c == "generate_block")
+ return std::make_shared<Generate_block>(c);
+else if(c == "generate_item_list")
+ return std::make_shared<Generate_item_list>(c);
+else if(c == "generate_item_list_opt")
+ return std::make_shared<Generate_item_list_opt>(c);
+else if(c == "for_init_decl_or_assign")
+ return std::make_shared<For_init_decl_or_assign>(c);
+else if(c == "for_initialization")
+ return std::make_shared<For_initialization>(c);
+else if(c == "for_initialization_opt")
+ return std::make_shared<For_initialization_opt>(c);
+else if(c == "repeat_control")
+ return std::make_shared<Repeat_control>(c);
+else if(c == "tk_stringliteral")
+ return std::make_shared<Tk_stringliteral>(c);
+else if(c == "tk_evalstringliteral")
+ return std::make_shared<Tk_evalstringliteral>(c);
+else if(c == "preprocess_include_argument")
+ return std::make_shared<Preprocess_include_argument>(c);
+else if(c == "pp_identifier")
+ return std::make_shared<Pp_identifier>(c);
+else if(c == "macro_formals_list_opt")
+ return std::make_shared<Macro_formals_list_opt>(c);
+else if(c == "parameter_expr_list")
+ return std::make_shared<Parameter_expr_list>(c);
+else if(c == "parameter_value_byname_list")
+ return std::make_shared<Parameter_value_byname_list>(c);
+else if(c == "parameter_opt")
+ return std::make_shared<Parameter_opt>(c);
+else if(c == "module_parameter_port")
+ return std::make_shared<Module_parameter_port>(c);
+else if(c == "type_assignment")
+ return std::make_shared<Type_assignment>(c);
+else if(c == "module_parameter_port_list_item_last")
+ return std::make_shared<Module_parameter_port_list_item_last>(c);
+else if(c == "module_parameter_port_list_trailing_comma")
+ return std::make_shared<Module_parameter_port_list_trailing_comma>(c);
+else if(c == "module_parameter_port_list_preprocessor_last")
+ return std::make_shared<Module_parameter_port_list_preprocessor_last>(c);
+else if(c == "parameter_value_byname")
+ return std::make_shared<Parameter_value_byname>(c);
+else if(c == "parameter_value_byname_list_item_last")
+ return std::make_shared<Parameter_value_byname_list_item_last>(c);
+else if(c == "parameter_value_byname_list_trailing_comma")
+ return std::make_shared<Parameter_value_byname_list_trailing_comma>(c);
+else if(c == "generate_if")
+ return std::make_shared<Generate_if>(c);
+else if(c == "generate_case_items")
+ return std::make_shared<Generate_case_items>(c);
+else if(c == "var_or_net_type_opt")
+ return std::make_shared<Var_or_net_type_opt>(c);
+else if(c == "type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt")
+ return std::make_shared<Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt>(c);
+else if(c == "data_type_or_implicit_basic_followed_by_id_and_dimensions_opt")
+ return std::make_shared<Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt>(c);
+else if(c == "port_declaration_noattr")
+ return std::make_shared<Port_declaration_noattr>(c);
+else if(c == "type_identifier_followed_by_id")
+ return std::make_shared<Type_identifier_followed_by_id>(c);
+else if(c == "class_new")
+ return std::make_shared<Class_new>(c);
+else if(c == "dynamic_array_new")
+ return std::make_shared<Dynamic_array_new>(c);
+else if(c == "localparam_assign")
+ return std::make_shared<Localparam_assign>(c);
+else if(c == "defparam_assign")
+ return std::make_shared<Defparam_assign>(c);
+else if(c == "defparam_assign_list")
+ return std::make_shared<Defparam_assign_list>(c);
+else if(c == "any_argument")
+ return std::make_shared<Any_argument>(c);
+else if(c == "any_argument_list_item_last")
+ return std::make_shared<Any_argument_list_item_last>(c);
+else if(c == "any_argument_list_trailing_comma")
+ return std::make_shared<Any_argument_list_trailing_comma>(c);
+else if(c == "any_argument_list")
+ return std::make_shared<Any_argument_list>(c);
+else if(c == "argument_list_opt")
+ return std::make_shared<Argument_list_opt>(c);
+else if(c == "task_declaration_id")
+ return std::make_shared<Task_declaration_id>(c);
+else if(c == "scope_or_if_res")
+ return std::make_shared<Scope_or_if_res>(c);
+else if(c == "tf_port_list_paren_opt")
+ return std::make_shared<Tf_port_list_paren_opt>(c);
+else if(c == "tf_port_list_opt")
+ return std::make_shared<Tf_port_list_opt>(c);
+else if(c == "tf_item_or_statement_or_null")
+ return std::make_shared<Tf_item_or_statement_or_null>(c);
+else if(c == "task_item")
+ return std::make_shared<Task_item>(c);
+else if(c == "tf_item_or_statement_or_null_list")
+ return std::make_shared<Tf_item_or_statement_or_null_list>(c);
+else if(c == "tf_item_or_statement_or_null_list_opt")
+ return std::make_shared<Tf_item_or_statement_or_null_list_opt>(c);
+else if(c == "array_reduction_method")
+ return std::make_shared<Array_reduction_method>(c);
+else if(c == "array_locator_method")
+ return std::make_shared<Array_locator_method>(c);
+else if(c == "gatetype")
+ return std::make_shared<Gatetype>(c);
+else if(c == "primitive_gate_instance")
+ return std::make_shared<Primitive_gate_instance>(c);
+else if(c == "primitive_gate_instance_list")
+ return std::make_shared<Primitive_gate_instance_list>(c);
+else if(c == "switchtype")
+ return std::make_shared<Switchtype>(c);
+else if(c == "dr_strength1")
+ return std::make_shared<Dr_strength1>(c);
+else if(c == "dr_strength0")
+ return std::make_shared<Dr_strength0>(c);
+else if(c == "delay_scope")
+ return std::make_shared<Delay_scope>(c);
+else if(c == "join_keyword")
+ return std::make_shared<Join_keyword>(c);
+else if(c == "generate_case_item")
+ return std::make_shared<Generate_case_item>(c);
+else if(c == "function_return_type_and_id")
+ return std::make_shared<Function_return_type_and_id>(c);
+else if(c == "tf_port_direction")
+ return std::make_shared<Tf_port_direction>(c);
+else if(c == "tf_port_direction_opt")
+ return std::make_shared<Tf_port_direction_opt>(c);
+else if(c == "tf_port_item_expr_opt")
+ return std::make_shared<Tf_port_item_expr_opt>(c);
+else if(c == "tf_port_item")
+ return std::make_shared<Tf_port_item>(c);
+else if(c == "tf_port_list_item_last")
+ return std::make_shared<Tf_port_list_item_last>(c);
+else if(c == "tf_port_list_trailing_comma")
+ return std::make_shared<Tf_port_list_trailing_comma>(c);
+else if(c == "tf_port_list")
+ return std::make_shared<Tf_port_list>(c);
+else if(c == "endfunction_label_opt")
+ return std::make_shared<Endfunction_label_opt>(c);
+else if(c == "function_item_list")
+ return std::make_shared<Function_item_list>(c);
+else if(c == "statement_or_null_list_opt")
+ return std::make_shared<Statement_or_null_list_opt>(c);
+else if(c == "net_type_or_none")
+ return std::make_shared<Net_type_or_none>(c);
+else if(c == "pull01")
+ return std::make_shared<Pull01>(c);
+else if(c == "macro_formal_parameter")
+ return std::make_shared<Macro_formal_parameter>(c);
+else if(c == "macro_formals_list")
+ return std::make_shared<Macro_formals_list>(c);
+else if(c == "tf_variable_identifier_first")
+ return std::make_shared<Tf_variable_identifier_first>(c);
+else if(c == "list_of_tf_variable_identifiers")
+ return std::make_shared<List_of_tf_variable_identifiers>(c);
+else if(c == "tf_variable_identifier")
+ return std::make_shared<Tf_variable_identifier>(c);
+else if(c == "tf_port_declaration")
+ return std::make_shared<Tf_port_declaration>(c);
+else if(c == "function_item")
+ return std::make_shared<Function_item>(c);
+else if(c == "function_item_data_declaration")
+ return std::make_shared<Function_item_data_declaration>(c);
+else if(c == "non_anonymous_instantiation_base")
+ return std::make_shared<Non_anonymous_instantiation_base>(c);
+else if(c == "statement_or_null_list")
+ return std::make_shared<Statement_or_null_list>(c);
+else if(c == "tk_octbase")
+ return std::make_shared<Tk_octbase>(c);
+else if(c == "tk_octdigits")
+ return std::make_shared<Tk_octdigits>(c);
+else if(c == "specify_terminal_descriptor")
+ return std::make_shared<Specify_terminal_descriptor>(c);
+else if(c == "spec_reference_event")
+ return std::make_shared<Spec_reference_event>(c);
+else if(c == "edge_descriptor_list")
+ return std::make_shared<Edge_descriptor_list>(c);
+else if(c == "spec_notifier")
+ return std::make_shared<Spec_notifier>(c);
+else if(c == "spec_notifier_opt")
+ return std::make_shared<Spec_notifier_opt>(c);
+else if(c == "specify_item")
+ return std::make_shared<Specify_item>(c);
+else if(c == "specify_simple_path_decl")
+ return std::make_shared<Specify_simple_path_decl>(c);
+else if(c == "specify_edge_path_decl")
+ return std::make_shared<Specify_edge_path_decl>(c);
+else if(c == "specparam_decl")
+ return std::make_shared<Specparam_decl>(c);
+else if(c == "specify_item_list")
+ return std::make_shared<Specify_item_list>(c);
+else if(c == "specify_path_identifiers")
+ return std::make_shared<Specify_path_identifiers>(c);
+else if(c == "spec_polarity")
+ return std::make_shared<Spec_polarity>(c);
+else if(c == "specify_simple_path")
+ return std::make_shared<Specify_simple_path>(c);
+else if(c == "delay_value_list")
+ return std::make_shared<Delay_value_list>(c);
+else if(c == "specify_item_list_opt")
+ return std::make_shared<Specify_item_list_opt>(c);
+else if(c == "casting_type")
+ return std::make_shared<Casting_type>(c);
+else if(c == "polarity_operator")
+ return std::make_shared<Polarity_operator>(c);
+else if(c == "specify_edge_path")
+ return std::make_shared<Specify_edge_path>(c);
+else if(c == "udp_port_list")
+ return std::make_shared<Udp_port_list>(c);
+else if(c == "udp_port_decl")
+ return std::make_shared<Udp_port_decl>(c);
+else if(c == "udp_port_decls")
+ return std::make_shared<Udp_port_decls>(c);
+else if(c == "udp_init_opt")
+ return std::make_shared<Udp_init_opt>(c);
+else if(c == "udp_initial")
+ return std::make_shared<Udp_initial>(c);
+else if(c == "udp_input_sym")
+ return std::make_shared<Udp_input_sym>(c);
+else if(c == "udp_input_list")
+ return std::make_shared<Udp_input_list>(c);
+else if(c == "udp_output_sym")
+ return std::make_shared<Udp_output_sym>(c);
+else if(c == "udp_sequ_entry")
+ return std::make_shared<Udp_sequ_entry>(c);
+else if(c == "udp_sequ_entry_list")
+ return std::make_shared<Udp_sequ_entry_list>(c);
+else if(c == "udp_entry_list")
+ return std::make_shared<Udp_entry_list>(c);
+else if(c == "udp_comb_entry_list")
+ return std::make_shared<Udp_comb_entry_list>(c);
+else if(c == "udp_body")
+ return std::make_shared<Udp_body>(c);
+else if(c == "tk_reg_opt")
+ return std::make_shared<Tk_reg_opt>(c);
+else if(c == "udp_initial_expr_opt")
+ return std::make_shared<Udp_initial_expr_opt>(c);
+else if(c == "udp_input_declaration_list")
+ return std::make_shared<Udp_input_declaration_list>(c);
+else if(c == "enum_name")
+ return std::make_shared<Enum_name>(c);
+else if(c == "pos_neg_number")
+ return std::make_shared<Pos_neg_number>(c);
+else if(c == "enum_name_list_item_last")
+ return std::make_shared<Enum_name_list_item_last>(c);
+else if(c == "enum_name_list_trailing_comma")
+ return std::make_shared<Enum_name_list_trailing_comma>(c);
+else if(c == "enum_name_list")
+ return std::make_shared<Enum_name_list>(c);
+else if(c == "action_block")
+ return std::make_shared<Action_block>(c);
+else if(c == "simple_immediate_assertion_statement")
+ return std::make_shared<Simple_immediate_assertion_statement>(c);
+else if(c == "immediate_assertion_statement")
+ return std::make_shared<Immediate_assertion_statement>(c);
+else if(c == "deferred_immediate_assertion_statement")
+ return std::make_shared<Deferred_immediate_assertion_statement>(c);
+else if(c == "var_opt")
+ return std::make_shared<Var_opt>(c);
+else if(c == "data_declaration_modifiers_opt")
+ return std::make_shared<Data_declaration_modifiers_opt>(c);
+else if(c == "data_declaration_base")
+ return std::make_shared<Data_declaration_base>(c);
+else if(c == "specparam")
+ return std::make_shared<Specparam>(c);
+else if(c == "specparam_list")
+ return std::make_shared<Specparam_list>(c);
+else if(c == "block_identifier_opt")
+ return std::make_shared<Block_identifier_opt>(c);
+else if(c == "event_control_opt")
+ return std::make_shared<Event_control_opt>(c);
+else if(c == "property_spec_disable_iff_opt")
+ return std::make_shared<Property_spec_disable_iff_opt>(c);
+else if(c == "property_spec")
+ return std::make_shared<Property_spec>(c);
+else if(c == "assert_property_statement")
+ return std::make_shared<Assert_property_statement>(c);
+else if(c == "concurrent_assertion_statement")
+ return std::make_shared<Concurrent_assertion_statement>(c);
+else if(c == "assume_property_statement")
+ return std::make_shared<Assume_property_statement>(c);
+else if(c == "cover_property_statement")
+ return std::make_shared<Cover_property_statement>(c);
+else if(c == "concurrent_assertion_item")
+ return std::make_shared<Concurrent_assertion_item>(c);
+else if(c == "tk_virtual_opt")
+ return std::make_shared<Tk_virtual_opt>(c);
+else if(c == "class_declaration_extends_opt")
+ return std::make_shared<Class_declaration_extends_opt>(c);
+else if(c == "implements_interface_list_opt")
+ return std::make_shared<Implements_interface_list_opt>(c);
+else if(c == "variable_decl_assignment")
+ return std::make_shared<Variable_decl_assignment>(c);
+else if(c == "list_of_variable_decl_assignments")
+ return std::make_shared<List_of_variable_decl_assignments>(c);
+else if(c == "class_item")
+ return std::make_shared<Class_item>(c);
+else if(c == "class_constructor")
+ return std::make_shared<Class_constructor>(c);
+else if(c == "method_qualifier_list_opt")
+ return std::make_shared<Method_qualifier_list_opt>(c);
+else if(c == "method_prototype")
+ return std::make_shared<Method_prototype>(c);
+else if(c == "class_item_qualifier_list_opt")
+ return std::make_shared<Class_item_qualifier_list_opt>(c);
+else if(c == "method_property_qualifier_list_not_starting_with_virtual")
+ return std::make_shared<Method_property_qualifier_list_not_starting_with_virtual>(c);
+else if(c == "class_items")
+ return std::make_shared<Class_items>(c);
+else if(c == "class_constructor_prototype")
+ return std::make_shared<Class_constructor_prototype>(c);
+else if(c == "endnew_opt")
+ return std::make_shared<Endnew_opt>(c);
+else if(c == "class_items_opt")
+ return std::make_shared<Class_items_opt>(c);
+else if(c == "package_item")
+ return std::make_shared<Package_item>(c);
+else if(c == "package_item_list")
+ return std::make_shared<Package_item_list>(c);
+else if(c == "task_prototype")
+ return std::make_shared<Task_prototype>(c);
+else if(c == "function_prototype")
+ return std::make_shared<Function_prototype>(c);
+else if(c == "package_item_list_opt")
+ return std::make_shared<Package_item_list_opt>(c);
+else if(c == "select_dimensions_opt")
+ return std::make_shared<Select_dimensions_opt>(c);
+else if(c == "hierarchy_segment")
+ return std::make_shared<Hierarchy_segment>(c);
+else if(c == "dpi_spec_string")
+ return std::make_shared<Dpi_spec_string>(c);
+else if(c == "dpi_import_property_opt")
+ return std::make_shared<Dpi_import_property_opt>(c);
+else if(c == "dpi_import_item")
+ return std::make_shared<Dpi_import_item>(c);
+else if(c == "udp_comb_entry")
+ return std::make_shared<Udp_comb_entry>(c);
+else if(c == "tk_ls_eq")
+ return std::make_shared<Tk_ls_eq>(c);
+else if(c == "tk_rs_eq")
+ return std::make_shared<Tk_rs_eq>(c);
+else if(c == "tk_rss_eq")
+ return std::make_shared<Tk_rss_eq>(c);
+else if(c == "packed_signing_opt")
+ return std::make_shared<Packed_signing_opt>(c);
+else if(c == "random_qualifier_opt")
+ return std::make_shared<Random_qualifier_opt>(c);
+else if(c == "data_type_or_implicit_followed_by_id_and_dimensions_opt")
+ return std::make_shared<Data_type_or_implicit_followed_by_id_and_dimensions_opt>(c);
+else if(c == "type_identifier_or_implicit_followed_by_id_and_dimensions_opt")
+ return std::make_shared<Type_identifier_or_implicit_followed_by_id_and_dimensions_opt>(c);
+else if(c == "struct_union_member")
+ return std::make_shared<Struct_union_member>(c);
+else if(c == "struct_union_member_list")
+ return std::make_shared<Struct_union_member_list>(c);
+else if(c == "tk_tagged_opt")
+ return std::make_shared<Tk_tagged_opt>(c);
+else if(c == "assignment_pattern")
+ return std::make_shared<Assignment_pattern>(c);
+else if(c == "structure_or_array_pattern_expression_list")
+ return std::make_shared<Structure_or_array_pattern_expression_list>(c);
+else if(c == "structure_or_array_pattern_key")
+ return std::make_shared<Structure_or_array_pattern_key>(c);
+else if(c == "structure_or_array_pattern_expression")
+ return std::make_shared<Structure_or_array_pattern_expression>(c);
+else if(c == "scope_prefix")
+ return std::make_shared<Scope_prefix>(c);
+else if(c == "package_import_item")
+ return std::make_shared<Package_import_item>(c);
+else if(c == "package_import_item_list")
+ return std::make_shared<Package_import_item_list>(c);
+else if(c == "tk_edge_descriptor")
+ return std::make_shared<Tk_edge_descriptor>(c);
+else if(c == "class_item_qualifier")
+ return std::make_shared<Class_item_qualifier>(c);
+else if(c == "property_qualifier")
+ return std::make_shared<Property_qualifier>(c);
+else if(c == "final_or_zero")
+ return std::make_shared<Final_or_zero>(c);
+else if(c == "stream_operator")
+ return std::make_shared<Stream_operator>(c);
+else if(c == "slice_size_opt")
+ return std::make_shared<Slice_size_opt>(c);
+else if(c == "stream_expression")
+ return std::make_shared<Stream_expression>(c);
+else if(c == "stream_expression_list")
+ return std::make_shared<Stream_expression_list>(c);
+else if(c == "identifier_opt")
+ return std::make_shared<Identifier_opt>(c);
+else if(c == "clocking_item_list_opt")
+ return std::make_shared<Clocking_item_list_opt>(c);
+else return std::make_shared<Terminal>(c);
+}
