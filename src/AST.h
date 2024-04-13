@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <functional>
 #ifndef AST_H
 #define AST_H
 
@@ -16,9 +17,19 @@ class Node
 public:
 	virtual void accept(Visitor &visitor) = 0;
 	
+	std::vector<std::shared_ptr<Node>> getChildren();
+	
+	void setChildren(std::vector<std::shared_ptr<Node>> children);
+	
+	std::string getElement();
+	
+	void setElement(std::string element);
+	
 	
 private:
 	std::vector<std::shared_ptr<Node>> children;
+	
+	std::string element;
 	
 };
 class Terminal  : public Node
@@ -28,14 +39,8 @@ public:
 	
 	 Terminal(std::string element);
 	
-	std::string getElement();
-	
-	void setElement(std::string element);
-	
 	
 private:
-	std::string element;
-	
 };
 class Time_literal  : public Node
 {
@@ -46,8 +51,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_timeliteral  : public Node
 {
@@ -58,8 +61,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_decnumber  : public Node
 {
@@ -70,8 +71,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Timescale_directive  : public Node
 {
@@ -82,8 +81,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_item_no_pp  : public Node
 {
@@ -94,8 +91,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Misc_directive  : public Node
 {
@@ -106,8 +101,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_or_generate_item_declaration  : public Node
 {
@@ -118,8 +111,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_declaration  : public Node
 {
@@ -130,8 +121,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_param_declaration  : public Node
 {
@@ -142,8 +131,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Timeunits_declaration  : public Node
 {
@@ -154,8 +141,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_declaration  : public Node
 {
@@ -166,8 +151,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_import_declaration  : public Node
 {
@@ -178,8 +161,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Description  : public Node
 {
@@ -190,8 +171,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_or_interface_declaration  : public Node
 {
@@ -202,8 +181,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Preprocessor_action  : public Node
 {
@@ -214,8 +191,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_primitive  : public Node
 {
@@ -226,8 +201,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_declaration  : public Node
 {
@@ -238,8 +211,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Description_list  : public Node
 {
@@ -250,8 +221,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_start  : public Node
 {
@@ -262,8 +231,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Lifetime_opt  : public Node
 {
@@ -274,8 +241,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Lifetime  : public Node
 {
@@ -286,8 +251,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Genericidentifier  : public Node
 {
@@ -298,8 +261,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Symbolidentifier  : public Node
 {
@@ -310,8 +271,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Escapedidentifier  : public Node
 {
@@ -322,8 +281,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Keywordidentifier  : public Node
 {
@@ -334,8 +291,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Symbol_or_label  : public Node
 {
@@ -346,8 +301,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_package_import_list_opt  : public Node
 {
@@ -358,8 +311,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_import_list  : public Node
 {
@@ -370,8 +321,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port_list_opt  : public Node
 {
@@ -382,8 +331,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port_list  : public Node
 {
@@ -394,8 +341,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_port_list_opt  : public Node
 {
@@ -406,8 +351,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_ports_or_port_declarations_opt  : public Node
 {
@@ -418,8 +361,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_attribute_foreign_opt  : public Node
 {
@@ -430,8 +371,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Integer_vector_type  : public Node
 {
@@ -442,8 +381,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Signed_unsigned_opt  : public Node
 {
@@ -454,8 +391,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Signing  : public Node
 {
@@ -466,8 +401,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_primitive_scalar  : public Node
 {
@@ -478,8 +411,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Integer_atom_type  : public Node
 {
@@ -490,8 +421,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Non_integer_type  : public Node
 {
@@ -502,8 +431,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Enum_data_type  : public Node
 {
@@ -514,8 +441,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Struct_data_type  : public Node
 {
@@ -526,8 +451,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Decl_dimensions_opt  : public Node
 {
@@ -538,8 +461,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Decl_dimensions  : public Node
 {
@@ -550,8 +471,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_primitive  : public Node
 {
@@ -562,8 +481,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_base  : public Node
 {
@@ -574,8 +491,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type  : public Node
 {
@@ -586,8 +501,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Reference  : public Node
 {
@@ -598,8 +511,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Instantiation_type  : public Node
 {
@@ -610,8 +521,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Trailing_decl_assignment_opt  : public Node
 {
@@ -622,8 +531,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Trailing_decl_assignment  : public Node
 {
@@ -634,8 +541,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Non_anonymous_gate_instance_or_register_variable  : public Node
 {
@@ -646,8 +551,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_port_list_opt  : public Node
 {
@@ -658,8 +561,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Non_anonymous_gate_instance_or_register_variable_list  : public Node
 {
@@ -670,8 +571,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Gate_instance_or_register_variable  : public Node
 {
@@ -682,8 +581,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Instantiation_base  : public Node
 {
@@ -694,8 +591,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Reference_or_call_base  : public Node
 {
@@ -706,8 +601,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_declaration_or_module_instantiation  : public Node
 {
@@ -718,8 +611,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Const_opt  : public Node
 {
@@ -730,8 +621,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_or_generate_item  : public Node
 {
@@ -742,8 +631,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_common_item  : public Node
 {
@@ -754,8 +641,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_override  : public Node
 {
@@ -766,8 +651,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Gate_instantiation  : public Node
 {
@@ -778,8 +661,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Non_port_module_item  : public Node
 {
@@ -790,8 +671,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_region  : public Node
 {
@@ -802,8 +681,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_block  : public Node
 {
@@ -814,8 +691,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_item  : public Node
 {
@@ -826,8 +701,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_port_declaration  : public Node
 {
@@ -838,8 +711,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_block  : public Node
 {
@@ -850,8 +721,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_item_directive  : public Node
 {
@@ -862,8 +731,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_item_list  : public Node
 {
@@ -874,8 +741,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_type  : public Node
 {
@@ -886,8 +751,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Number  : public Node
 {
@@ -898,8 +761,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Constant_dec_number  : public Node
 {
@@ -910,8 +771,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Based_number  : public Node
 {
@@ -922,8 +781,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_unbasednumber  : public Node
 {
@@ -934,8 +791,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_primary_no_groups  : public Node
 {
@@ -946,8 +801,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class System_tf_call  : public Node
 {
@@ -958,8 +811,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class String_literal  : public Node
 {
@@ -970,8 +821,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_realtime  : public Node
 {
@@ -982,8 +831,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cast  : public Node
 {
@@ -994,8 +841,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_primary  : public Node
 {
@@ -1006,8 +851,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_primary_parens  : public Node
 {
@@ -1018,8 +861,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_primary_braces  : public Node
 {
@@ -1030,8 +871,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assignment_pattern_expression  : public Node
 {
@@ -1042,8 +881,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Postfix_expression  : public Node
 {
@@ -1054,8 +891,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Reference_or_call  : public Node
 {
@@ -1066,8 +901,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Inc_or_dec_or_primary_expr  : public Node
 {
@@ -1078,8 +911,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Inc_or_dec_expression  : public Node
 {
@@ -1090,8 +921,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Unary_prefix_expr  : public Node
 {
@@ -1102,8 +931,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Unary_op  : public Node
 {
@@ -1114,8 +941,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Unary_expr  : public Node
 {
@@ -1126,8 +951,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Pow_expr  : public Node
 {
@@ -1138,8 +961,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Mul_expr  : public Node
 {
@@ -1150,8 +971,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Add_expr  : public Node
 {
@@ -1162,8 +981,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Shift_expr  : public Node
 {
@@ -1174,8 +991,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Comp_expr  : public Node
 {
@@ -1186,8 +1001,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Open_range_list  : public Node
 {
@@ -1198,8 +1011,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Logeq_expr  : public Node
 {
@@ -1210,8 +1021,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Caseeq_expr  : public Node
 {
@@ -1222,8 +1031,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Bitand_expr  : public Node
 {
@@ -1234,8 +1041,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Xor_expr  : public Node
 {
@@ -1246,8 +1051,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Bitor_expr  : public Node
 {
@@ -1258,8 +1061,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class With_exprs_suffix  : public Node
 {
@@ -1270,8 +1071,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Matches_expr  : public Node
 {
@@ -1282,8 +1081,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Logand_expr  : public Node
 {
@@ -1294,8 +1091,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Logor_expr  : public Node
 {
@@ -1306,8 +1101,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cond_expr  : public Node
 {
@@ -1318,8 +1111,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression  : public Node
 {
@@ -1330,8 +1121,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Equiv_impl_expr  : public Node
 {
@@ -1342,8 +1131,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Decl_variable_dimension  : public Node
 {
@@ -1354,8 +1141,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression_or_null_list_opt  : public Node
 {
@@ -1366,8 +1151,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay3_or_drive_opt  : public Node
 {
@@ -1378,8 +1161,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay3  : public Node
 {
@@ -1390,8 +1171,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_or_implicit  : public Node
 {
@@ -1402,8 +1181,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_variable  : public Node
 {
@@ -1414,8 +1191,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_variable_or_decl_assign  : public Node
 {
@@ -1426,8 +1201,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_decl_assign  : public Node
 {
@@ -1438,8 +1211,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_variable_or_decl_assigns  : public Node
 {
@@ -1450,8 +1221,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_declaration  : public Node
 {
@@ -1462,8 +1231,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Charge_strength_opt  : public Node
 {
@@ -1474,8 +1241,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay3_opt  : public Node
 {
@@ -1486,8 +1251,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_identifiers  : public Node
 {
@@ -1498,8 +1261,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Task_declaration  : public Node
 {
@@ -1510,8 +1271,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_declaration  : public Node
 {
@@ -1522,8 +1281,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_declaration  : public Node
 {
@@ -1534,8 +1291,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dpi_import_export  : public Node
 {
@@ -1546,8 +1301,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specparam_declaration  : public Node
 {
@@ -1558,8 +1311,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_or_generate_item_declaration  : public Node
 {
@@ -1570,8 +1321,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Genvar_declaration  : public Node
 {
@@ -1582,8 +1331,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Clocking_declaration  : public Node
 {
@@ -1594,8 +1341,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Initial_construct  : public Node
 {
@@ -1606,8 +1351,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Always_construct  : public Node
 {
@@ -1618,8 +1361,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Continuous_assign  : public Node
 {
@@ -1630,8 +1371,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Loop_generate_construct  : public Node
 {
@@ -1642,8 +1381,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Conditional_generate_construct  : public Node
 {
@@ -1654,8 +1391,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assertion_item  : public Node
 {
@@ -1666,8 +1401,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Final_construct  : public Node
 {
@@ -1678,8 +1411,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_opt  : public Node
 {
@@ -1690,8 +1421,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameters  : public Node
 {
@@ -1702,8 +1431,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Unqualified_id  : public Node
 {
@@ -1714,8 +1441,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_id  : public Node
 {
@@ -1726,8 +1451,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Qualified_id  : public Node
 {
@@ -1738,8 +1461,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_or_id_root  : public Node
 {
@@ -1750,8 +1471,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Implicit_class_handle  : public Node
 {
@@ -1762,8 +1481,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Local_root  : public Node
 {
@@ -1774,8 +1491,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Select_variable_dimension  : public Node
 {
@@ -1786,8 +1501,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Hierarchy_extension  : public Node
 {
@@ -1798,8 +1511,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Member_name  : public Node
 {
@@ -1810,8 +1521,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Builtin_array_method  : public Node
 {
@@ -1822,8 +1531,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_named  : public Node
 {
@@ -1834,8 +1541,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_port  : public Node
 {
@@ -1846,8 +1551,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_port_list_item_last  : public Node
 {
@@ -1858,8 +1561,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_port_list_trailing_comma  : public Node
 {
@@ -1870,8 +1571,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_port_list  : public Node
 {
@@ -1882,8 +1581,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Label_opt  : public Node
 {
@@ -1894,8 +1591,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Begin  : public Node
 {
@@ -1906,8 +1601,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Lpvalue  : public Node
 {
@@ -1918,8 +1611,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Range_list_in_braces  : public Node
 {
@@ -1930,8 +1621,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assignment_statement_no_expr  : public Node
 {
@@ -1942,8 +1631,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assign_modify_statement  : public Node
 {
@@ -1954,8 +1641,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assignment_statement  : public Node
 {
@@ -1966,8 +1651,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Statement_item  : public Node
 {
@@ -1978,8 +1661,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Procedural_timing_control_statement  : public Node
 {
@@ -1990,8 +1671,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Subroutine_call  : public Node
 {
@@ -2002,8 +1681,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Seq_block  : public Node
 {
@@ -2014,8 +1691,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Nonblocking_assignment  : public Node
 {
@@ -2026,8 +1701,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Conditional_statement  : public Node
 {
@@ -2038,8 +1711,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Case_statement  : public Node
 {
@@ -2050,8 +1721,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Loop_statement  : public Node
 {
@@ -2062,8 +1731,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Par_block  : public Node
 {
@@ -2074,8 +1741,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Blocking_assignment  : public Node
 {
@@ -2086,8 +1751,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Wait_statement  : public Node
 {
@@ -2098,8 +1761,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Procedural_assertion_statement  : public Node
 {
@@ -2110,8 +1771,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Procedural_continuous_assignment  : public Node
 {
@@ -2122,8 +1781,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Event_trigger  : public Node
 {
@@ -2134,8 +1791,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Disable_statement  : public Node
 {
@@ -2146,8 +1801,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Jump_statement  : public Node
 {
@@ -2158,8 +1811,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Block_item_or_statement_or_null  : public Node
 {
@@ -2170,8 +1821,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Block_item_decl  : public Node
 {
@@ -2182,8 +1831,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Block_item_or_statement_or_null_list  : public Node
 {
@@ -2194,8 +1841,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_value_simple  : public Node
 {
@@ -2206,8 +1851,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_identifier  : public Node
 {
@@ -2218,8 +1861,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay1  : public Node
 {
@@ -2230,8 +1871,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_value  : public Node
 {
@@ -2242,8 +1881,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Statement_or_null  : public Node
 {
@@ -2254,8 +1891,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Statement  : public Node
 {
@@ -2266,8 +1901,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Event_control  : public Node
 {
@@ -2278,8 +1911,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cycle_delay  : public Node
 {
@@ -2290,8 +1921,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Systemtfidentifier  : public Node
 {
@@ -2302,8 +1931,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Call_base  : public Node
 {
@@ -2314,8 +1941,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Block_item_or_statement_or_null_list_opt  : public Node
 {
@@ -2326,8 +1951,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class End  : public Node
 {
@@ -2338,8 +1961,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Always_any  : public Node
 {
@@ -2350,8 +1971,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_item_list_opt  : public Node
 {
@@ -2362,8 +1981,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_end  : public Node
 {
@@ -2374,8 +1991,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Source_text  : public Node
 {
@@ -2386,8 +2001,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_reference  : public Node
 {
@@ -2398,8 +2011,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_expression  : public Node
 {
@@ -2410,8 +2021,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_reference_list  : public Node
 {
@@ -2422,8 +2031,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Trailing_assign_opt  : public Node
 {
@@ -2434,8 +2041,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Trailing_assign  : public Node
 {
@@ -2446,8 +2051,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port  : public Node
 {
@@ -2458,8 +2061,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_expression_opt  : public Node
 {
@@ -2470,8 +2071,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_or_port_declaration  : public Node
 {
@@ -2482,8 +2081,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_declaration  : public Node
 {
@@ -2494,8 +2091,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_ports_or_port_declarations_item_last  : public Node
 {
@@ -2506,8 +2101,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_ports_or_port_declarations_trailing_comma  : public Node
 {
@@ -2518,8 +2111,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_ports_or_port_declarations  : public Node
 {
@@ -2530,8 +2121,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dir  : public Node
 {
@@ -2542,8 +2131,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Var_type  : public Node
 {
@@ -2554,8 +2141,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_port_identifiers  : public Node
 {
@@ -2566,8 +2151,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_direction  : public Node
 {
@@ -2578,8 +2161,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_module_item_identifiers  : public Node
 {
@@ -2590,8 +2171,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_identifiers_unpacked_dimensions  : public Node
 {
@@ -2602,8 +2181,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_net_type  : public Node
 {
@@ -2614,8 +2191,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Identifier_optional_unpacked_dimensions  : public Node
 {
@@ -2626,8 +2201,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Drive_strength_opt  : public Node
 {
@@ -2638,8 +2211,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Drive_strength  : public Node
 {
@@ -2650,8 +2221,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cont_assign  : public Node
 {
@@ -2662,8 +2231,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cont_assign_list  : public Node
 {
@@ -2674,8 +2241,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Edge_operator  : public Node
 {
@@ -2686,8 +2251,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Event_expression  : public Node
 {
@@ -2698,8 +2261,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Event_expression_list  : public Node
 {
@@ -2710,8 +2271,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Hierarchy_event_identifier  : public Node
 {
@@ -2722,8 +2281,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Unique_priority_opt  : public Node
 {
@@ -2734,8 +2291,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression_in_parens  : public Node
 {
@@ -2746,8 +2301,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_or_event_control_opt  : public Node
 {
@@ -2758,8 +2311,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_or_event_control  : public Node
 {
@@ -2770,8 +2321,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression_opt  : public Node
 {
@@ -2782,8 +2331,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Bit_logic_opt  : public Node
 {
@@ -2794,8 +2341,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Bit_logic  : public Node
 {
@@ -2806,8 +2351,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Param_type_followed_by_id_and_dimensions_opt  : public Node
 {
@@ -2818,8 +2361,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_expr  : public Node
 {
@@ -2830,8 +2371,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_ranges_opt  : public Node
 {
@@ -2842,8 +2381,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_assign  : public Node
 {
@@ -2854,8 +2391,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_assign_list  : public Node
 {
@@ -2866,8 +2401,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Localparam_assign_list  : public Node
 {
@@ -2878,8 +2411,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_assignment_list  : public Node
 {
@@ -2890,8 +2421,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Macronumericwidth  : public Node
 {
@@ -2902,8 +2431,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Hex_based_number  : public Node
 {
@@ -2914,8 +2441,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_hexbase  : public Node
 {
@@ -2926,8 +2451,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_hexdigits  : public Node
 {
@@ -2938,8 +2461,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dec_based_number  : public Node
 {
@@ -2950,8 +2471,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Bin_based_number  : public Node
 {
@@ -2962,8 +2481,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Oct_based_number  : public Node
 {
@@ -2974,8 +2491,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_decbase  : public Node
 {
@@ -2986,8 +2501,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_decdigits  : public Node
 {
@@ -2998,8 +2511,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_xzdigits  : public Node
 {
@@ -3010,8 +2521,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Case_any  : public Node
 {
@@ -3022,8 +2531,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression_list_proper  : public Node
 {
@@ -3034,8 +2541,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Case_item  : public Node
 {
@@ -3046,8 +2551,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Preprocessor_directive  : public Node
 {
@@ -3058,8 +2561,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Case_items  : public Node
 {
@@ -3070,8 +2571,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_binbase  : public Node
 {
@@ -3082,8 +2581,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_bindigits  : public Node
 {
@@ -3094,8 +2591,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dist_opt  : public Node
 {
@@ -3106,8 +2601,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expression_or_dist  : public Node
 {
@@ -3118,8 +2611,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Boolean_abbrev_opt  : public Node
 {
@@ -3130,8 +2621,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_repetition_expr  : public Node
 {
@@ -3142,8 +2631,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_expr_primary  : public Node
 {
@@ -3154,8 +2641,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_delay_repetition_list  : public Node
 {
@@ -3166,8 +2651,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_delay_range_expr  : public Node
 {
@@ -3178,8 +2661,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_throughout_expr  : public Node
 {
@@ -3190,8 +2671,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_within_expr  : public Node
 {
@@ -3202,8 +2681,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_intersect_expr  : public Node
 {
@@ -3214,8 +2691,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_unary_expr  : public Node
 {
@@ -3226,8 +2701,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_and_expr  : public Node
 {
@@ -3238,8 +2711,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_or_expr  : public Node
 {
@@ -3250,8 +2721,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Simple_sequence_expr  : public Node
 {
@@ -3262,8 +2731,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_if_else_expr  : public Node
 {
@@ -3274,8 +2741,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_prefix_expr  : public Node
 {
@@ -3286,8 +2751,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_implication_expr  : public Node
 {
@@ -3298,8 +2761,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Sequence_expr  : public Node
 {
@@ -3310,8 +2771,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_expr  : public Node
 {
@@ -3322,8 +2781,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_expr_or_assignment  : public Node
 {
@@ -3334,8 +2791,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_expr_or_assignment_list  : public Node
 {
@@ -3346,8 +2801,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_mintypmax_generalized  : public Node
 {
@@ -3358,8 +2811,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_mintypmax_trans_set  : public Node
 {
@@ -3370,8 +2821,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Expr_mintypmax  : public Node
 {
@@ -3382,8 +2831,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Value_range  : public Node
 {
@@ -3394,8 +2841,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Streaming_concatenation  : public Node
 {
@@ -3406,8 +2851,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Genvar_opt  : public Node
 {
@@ -3418,8 +2861,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class For_step  : public Node
 {
@@ -3430,8 +2871,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class For_step_opt  : public Node
 {
@@ -3442,8 +2881,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_item  : public Node
 {
@@ -3454,8 +2891,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_block  : public Node
 {
@@ -3466,8 +2901,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_item_list  : public Node
 {
@@ -3478,8 +2911,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_item_list_opt  : public Node
 {
@@ -3490,8 +2921,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class For_init_decl_or_assign  : public Node
 {
@@ -3502,8 +2931,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class For_initialization  : public Node
 {
@@ -3514,8 +2941,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class For_initialization_opt  : public Node
 {
@@ -3526,8 +2951,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Repeat_control  : public Node
 {
@@ -3538,8 +2961,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_stringliteral  : public Node
 {
@@ -3550,8 +2971,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_evalstringliteral  : public Node
 {
@@ -3562,8 +2981,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Preprocess_include_argument  : public Node
 {
@@ -3574,8 +2991,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Pp_identifier  : public Node
 {
@@ -3586,8 +3001,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Macro_formals_list_opt  : public Node
 {
@@ -3598,8 +3011,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_expr_list  : public Node
 {
@@ -3610,8 +3021,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_byname_list  : public Node
 {
@@ -3622,8 +3031,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_opt  : public Node
 {
@@ -3634,8 +3041,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port  : public Node
 {
@@ -3646,8 +3051,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_assignment  : public Node
 {
@@ -3658,8 +3061,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port_list_item_last  : public Node
 {
@@ -3670,8 +3071,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port_list_trailing_comma  : public Node
 {
@@ -3682,8 +3081,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Module_parameter_port_list_preprocessor_last  : public Node
 {
@@ -3694,8 +3091,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_byname  : public Node
 {
@@ -3706,8 +3101,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_byname_list_item_last  : public Node
 {
@@ -3718,8 +3111,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Parameter_value_byname_list_trailing_comma  : public Node
 {
@@ -3730,8 +3121,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_if  : public Node
 {
@@ -3742,8 +3131,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_case_items  : public Node
 {
@@ -3754,8 +3141,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Var_or_net_type_opt  : public Node
 {
@@ -3766,8 +3151,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt  : public Node
 {
@@ -3778,8 +3161,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt  : public Node
 {
@@ -3790,8 +3171,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Port_declaration_noattr  : public Node
 {
@@ -3802,8 +3181,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_identifier_followed_by_id  : public Node
 {
@@ -3814,8 +3191,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_new  : public Node
 {
@@ -3826,8 +3201,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dynamic_array_new  : public Node
 {
@@ -3838,8 +3211,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Localparam_assign  : public Node
 {
@@ -3850,8 +3221,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Defparam_assign  : public Node
 {
@@ -3862,8 +3231,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Defparam_assign_list  : public Node
 {
@@ -3874,8 +3241,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_argument  : public Node
 {
@@ -3886,8 +3251,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_argument_list_item_last  : public Node
 {
@@ -3898,8 +3261,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_argument_list_trailing_comma  : public Node
 {
@@ -3910,8 +3271,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Any_argument_list  : public Node
 {
@@ -3922,8 +3281,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Argument_list_opt  : public Node
 {
@@ -3934,8 +3291,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Task_declaration_id  : public Node
 {
@@ -3946,8 +3301,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Scope_or_if_res  : public Node
 {
@@ -3958,8 +3311,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_list_paren_opt  : public Node
 {
@@ -3970,8 +3321,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_list_opt  : public Node
 {
@@ -3982,8 +3331,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_item_or_statement_or_null  : public Node
 {
@@ -3994,8 +3341,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Task_item  : public Node
 {
@@ -4006,8 +3351,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_item_or_statement_or_null_list  : public Node
 {
@@ -4018,8 +3361,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_item_or_statement_or_null_list_opt  : public Node
 {
@@ -4030,8 +3371,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Array_reduction_method  : public Node
 {
@@ -4042,8 +3381,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Array_locator_method  : public Node
 {
@@ -4054,8 +3391,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Gatetype  : public Node
 {
@@ -4066,8 +3401,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Primitive_gate_instance  : public Node
 {
@@ -4078,8 +3411,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Primitive_gate_instance_list  : public Node
 {
@@ -4090,8 +3421,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Switchtype  : public Node
 {
@@ -4102,8 +3431,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dr_strength1  : public Node
 {
@@ -4114,8 +3441,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dr_strength0  : public Node
 {
@@ -4126,8 +3451,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_scope  : public Node
 {
@@ -4138,8 +3461,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Join_keyword  : public Node
 {
@@ -4150,8 +3471,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Generate_case_item  : public Node
 {
@@ -4162,8 +3481,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_return_type_and_id  : public Node
 {
@@ -4174,8 +3491,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_direction  : public Node
 {
@@ -4186,8 +3501,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_direction_opt  : public Node
 {
@@ -4198,8 +3511,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_item_expr_opt  : public Node
 {
@@ -4210,8 +3521,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_item  : public Node
 {
@@ -4222,8 +3531,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_list_item_last  : public Node
 {
@@ -4234,8 +3541,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_list_trailing_comma  : public Node
 {
@@ -4246,8 +3551,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_list  : public Node
 {
@@ -4258,8 +3561,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Endfunction_label_opt  : public Node
 {
@@ -4270,8 +3571,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_item_list  : public Node
 {
@@ -4282,8 +3581,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Statement_or_null_list_opt  : public Node
 {
@@ -4294,8 +3591,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Net_type_or_none  : public Node
 {
@@ -4306,8 +3601,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Pull01  : public Node
 {
@@ -4318,8 +3611,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Macro_formal_parameter  : public Node
 {
@@ -4330,8 +3621,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Macro_formals_list  : public Node
 {
@@ -4342,8 +3631,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_variable_identifier_first  : public Node
 {
@@ -4354,8 +3641,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_tf_variable_identifiers  : public Node
 {
@@ -4366,8 +3651,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_variable_identifier  : public Node
 {
@@ -4378,8 +3661,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tf_port_declaration  : public Node
 {
@@ -4390,8 +3671,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_item  : public Node
 {
@@ -4402,8 +3681,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_item_data_declaration  : public Node
 {
@@ -4414,8 +3691,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Non_anonymous_instantiation_base  : public Node
 {
@@ -4426,8 +3701,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Statement_or_null_list  : public Node
 {
@@ -4438,8 +3711,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_octbase  : public Node
 {
@@ -4450,8 +3721,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_octdigits  : public Node
 {
@@ -4462,8 +3731,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_terminal_descriptor  : public Node
 {
@@ -4474,8 +3741,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Spec_reference_event  : public Node
 {
@@ -4486,8 +3751,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Edge_descriptor_list  : public Node
 {
@@ -4498,8 +3761,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Spec_notifier  : public Node
 {
@@ -4510,8 +3771,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Spec_notifier_opt  : public Node
 {
@@ -4522,8 +3781,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_item  : public Node
 {
@@ -4534,8 +3791,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_simple_path_decl  : public Node
 {
@@ -4546,8 +3801,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_edge_path_decl  : public Node
 {
@@ -4558,8 +3811,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specparam_decl  : public Node
 {
@@ -4570,8 +3821,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_item_list  : public Node
 {
@@ -4582,8 +3831,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_path_identifiers  : public Node
 {
@@ -4594,8 +3841,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Spec_polarity  : public Node
 {
@@ -4606,8 +3851,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_simple_path  : public Node
 {
@@ -4618,8 +3861,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Delay_value_list  : public Node
 {
@@ -4630,8 +3871,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_item_list_opt  : public Node
 {
@@ -4642,8 +3881,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Casting_type  : public Node
 {
@@ -4654,8 +3891,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Polarity_operator  : public Node
 {
@@ -4666,8 +3901,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specify_edge_path  : public Node
 {
@@ -4678,8 +3911,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_port_list  : public Node
 {
@@ -4690,8 +3921,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_port_decl  : public Node
 {
@@ -4702,8 +3931,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_port_decls  : public Node
 {
@@ -4714,8 +3941,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_init_opt  : public Node
 {
@@ -4726,8 +3951,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_initial  : public Node
 {
@@ -4738,8 +3961,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_input_sym  : public Node
 {
@@ -4750,8 +3971,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_input_list  : public Node
 {
@@ -4762,8 +3981,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_output_sym  : public Node
 {
@@ -4774,8 +3991,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_sequ_entry  : public Node
 {
@@ -4786,8 +4001,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_sequ_entry_list  : public Node
 {
@@ -4798,8 +4011,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_entry_list  : public Node
 {
@@ -4810,8 +4021,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_comb_entry_list  : public Node
 {
@@ -4822,8 +4031,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_body  : public Node
 {
@@ -4834,8 +4041,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_reg_opt  : public Node
 {
@@ -4846,8 +4051,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_initial_expr_opt  : public Node
 {
@@ -4858,8 +4061,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_input_declaration_list  : public Node
 {
@@ -4870,8 +4071,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Enum_name  : public Node
 {
@@ -4882,8 +4081,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Pos_neg_number  : public Node
 {
@@ -4894,8 +4091,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Enum_name_list_item_last  : public Node
 {
@@ -4906,8 +4101,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Enum_name_list_trailing_comma  : public Node
 {
@@ -4918,8 +4111,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Enum_name_list  : public Node
 {
@@ -4930,8 +4121,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Action_block  : public Node
 {
@@ -4942,8 +4131,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Simple_immediate_assertion_statement  : public Node
 {
@@ -4954,8 +4141,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Immediate_assertion_statement  : public Node
 {
@@ -4966,8 +4151,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Deferred_immediate_assertion_statement  : public Node
 {
@@ -4978,8 +4161,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Var_opt  : public Node
 {
@@ -4990,8 +4171,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_declaration_modifiers_opt  : public Node
 {
@@ -5002,8 +4181,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_declaration_base  : public Node
 {
@@ -5014,8 +4191,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specparam  : public Node
 {
@@ -5026,8 +4201,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Specparam_list  : public Node
 {
@@ -5038,8 +4211,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Block_identifier_opt  : public Node
 {
@@ -5050,8 +4221,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Event_control_opt  : public Node
 {
@@ -5062,8 +4231,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_spec_disable_iff_opt  : public Node
 {
@@ -5074,8 +4241,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_spec  : public Node
 {
@@ -5086,8 +4251,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assert_property_statement  : public Node
 {
@@ -5098,8 +4261,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Concurrent_assertion_statement  : public Node
 {
@@ -5110,8 +4271,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assume_property_statement  : public Node
 {
@@ -5122,8 +4281,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Cover_property_statement  : public Node
 {
@@ -5134,8 +4291,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Concurrent_assertion_item  : public Node
 {
@@ -5146,8 +4301,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_virtual_opt  : public Node
 {
@@ -5158,8 +4311,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_declaration_extends_opt  : public Node
 {
@@ -5170,8 +4321,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Implements_interface_list_opt  : public Node
 {
@@ -5182,8 +4331,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Variable_decl_assignment  : public Node
 {
@@ -5194,8 +4341,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class List_of_variable_decl_assignments  : public Node
 {
@@ -5206,8 +4351,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_item  : public Node
 {
@@ -5218,8 +4361,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_constructor  : public Node
 {
@@ -5230,8 +4371,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Method_qualifier_list_opt  : public Node
 {
@@ -5242,8 +4381,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Method_prototype  : public Node
 {
@@ -5254,8 +4391,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_item_qualifier_list_opt  : public Node
 {
@@ -5266,8 +4401,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Method_property_qualifier_list_not_starting_with_virtual  : public Node
 {
@@ -5278,8 +4411,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_items  : public Node
 {
@@ -5290,8 +4421,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_constructor_prototype  : public Node
 {
@@ -5302,8 +4431,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Endnew_opt  : public Node
 {
@@ -5314,8 +4441,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_items_opt  : public Node
 {
@@ -5326,8 +4451,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_item  : public Node
 {
@@ -5338,8 +4461,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_item_list  : public Node
 {
@@ -5350,8 +4471,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Task_prototype  : public Node
 {
@@ -5362,8 +4481,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Function_prototype  : public Node
 {
@@ -5374,8 +4491,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_item_list_opt  : public Node
 {
@@ -5386,8 +4501,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Select_dimensions_opt  : public Node
 {
@@ -5398,8 +4511,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Hierarchy_segment  : public Node
 {
@@ -5410,8 +4521,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dpi_spec_string  : public Node
 {
@@ -5422,8 +4531,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dpi_import_property_opt  : public Node
 {
@@ -5434,8 +4541,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Dpi_import_item  : public Node
 {
@@ -5446,8 +4551,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Udp_comb_entry  : public Node
 {
@@ -5458,8 +4561,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_ls_eq  : public Node
 {
@@ -5470,8 +4571,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_rs_eq  : public Node
 {
@@ -5482,8 +4581,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_rss_eq  : public Node
 {
@@ -5494,8 +4591,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Packed_signing_opt  : public Node
 {
@@ -5506,8 +4601,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Random_qualifier_opt  : public Node
 {
@@ -5518,8 +4611,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Data_type_or_implicit_followed_by_id_and_dimensions_opt  : public Node
 {
@@ -5530,8 +4621,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Type_identifier_or_implicit_followed_by_id_and_dimensions_opt  : public Node
 {
@@ -5542,8 +4631,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Struct_union_member  : public Node
 {
@@ -5554,8 +4641,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Struct_union_member_list  : public Node
 {
@@ -5566,8 +4651,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_tagged_opt  : public Node
 {
@@ -5578,8 +4661,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Assignment_pattern  : public Node
 {
@@ -5590,8 +4671,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Structure_or_array_pattern_expression_list  : public Node
 {
@@ -5602,8 +4681,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Structure_or_array_pattern_key  : public Node
 {
@@ -5614,8 +4691,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Structure_or_array_pattern_expression  : public Node
 {
@@ -5626,8 +4701,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Scope_prefix  : public Node
 {
@@ -5638,8 +4711,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_import_item  : public Node
 {
@@ -5650,8 +4721,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Package_import_item_list  : public Node
 {
@@ -5662,8 +4731,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Tk_edge_descriptor  : public Node
 {
@@ -5674,8 +4741,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Class_item_qualifier  : public Node
 {
@@ -5686,8 +4751,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Property_qualifier  : public Node
 {
@@ -5698,8 +4761,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Final_or_zero  : public Node
 {
@@ -5710,8 +4771,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Stream_operator  : public Node
 {
@@ -5722,8 +4781,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Slice_size_opt  : public Node
 {
@@ -5734,8 +4791,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Stream_expression  : public Node
 {
@@ -5746,8 +4801,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Stream_expression_list  : public Node
 {
@@ -5758,8 +4811,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Identifier_opt  : public Node
 {
@@ -5770,8 +4821,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
 class Clocking_item_list_opt  : public Node
 {
@@ -5782,7 +4831,6 @@ public:
 	
 	
 private:
-	std::string element;
-	
 };
+extern std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> class_map;
 #endif

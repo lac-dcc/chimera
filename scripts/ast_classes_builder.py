@@ -52,7 +52,7 @@ def create_function_visitor_base_class(e:ProdElement):
 def create_function_gen_class(e):
     
     f = CppClass.CppMethod(name="visit", ret_type="void", is_virtual=True,
-                           implementation_handle=lambda s,cpp: cpp('for(std::shared_ptr<Node> child: node->getChildren()){\nchild->accept(*this);\n}'))
+                           implementation_handle=lambda s,cpp: cpp('\nif(node->getChildren().empty()){\nstd::cout << node->getElement();\n}else{\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}}'))
     
     f.add_argument(f"{e.element.capitalize()} *node")
     return f
@@ -82,24 +82,17 @@ def create_visitor_classes(elements, ast_classes):
 
 
     c = CppClass(name="Visitor")
-    f = CppClass.CppMethod(name="visit", ret_type="void", is_pure_virtual=True, is_virtual=True)
-    f.add_argument("Visitor &visitor")
 
-    c.add_method(f)
-
+    
     code_gen = CppClass(name="CodeGenVisitor")
     code_gen.parent_class = "Visitor"
 
-    #code_gen.add_variable(CppVariable(type="std::string", name="code"))
-    #get = CppClass.CppMethod(name="getCode", ret_type="std::string",
-    #implementation_handle=lambda s,cpp: cpp('return this->code;'))
+    f = CppClass.CppMethod(name="visit", ret_type="void", is_virtual=True,
+                           implementation_handle=lambda s,cpp: cpp('if(node->getChildren().empty()){\nstd::cout << node->getElement();\n}else{\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}}'))
 
-    #set = CppClass.CppMethod(name="setCode", ret_type="void",
-    #implementation_handle=lambda s,cpp: cpp('this->code = code;'))
-    #set.add_argument("std::string code")
+    f.add_argument("Node* node")
+    code_gen.add_method(f)
 
-    #code_gen.add_method(get)
-    #code_gen.add_method(set)
 
     
     for e in elements:
@@ -114,7 +107,7 @@ def create_visitor_classes(elements, ast_classes):
     c.add_method(f)
 
     f = CppClass.CppMethod(name="visit", ret_type="void", is_virtual=True,
-                           implementation_handle=lambda s,cpp: cpp('for(std::shared_ptr<Node> child: node->getChildren()){\nchild->accept(*this);\n}'))
+                           implementation_handle=lambda s,cpp: cpp('if(node->getChildren().empty()){\nstd::cout << node->getElement();\n}else{\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}}'))
     
     f.add_argument(f"Terminal *node")
 
@@ -138,19 +131,18 @@ def create_std_classes():
 
     c.add_method(f)
 
-    
-    d = CppClass(name="Terminal")
-    f = CppClass.CppMethod(name="accept", ret_type="void", 
-                           implementation_handle=lambda s,cpp: cpp('visitor.visit(this);'), 
-                           is_virtual=True)
+    g = CppClass.CppMethod(name="getChildren", ret_type="std::vector<std::shared_ptr<Node>>",
+    implementation_handle=lambda s,cpp: cpp('return this->children;'))
 
-    const = CppClass.CppMethod(name="Terminal", ret_type="",
-    implementation_handle=lambda s,cpp: cpp('this->element = element;'))
-    const.add_argument("std::string element")
-    
-    f.add_argument("Visitor &visitor")
-    
-    d.add_variable(CppVariable(name="element", type="std::string", initialization_value=""))
+    s = CppClass.CppMethod(name="setChildren", ret_type="void",
+    implementation_handle=lambda s,cpp: cpp('this->children = children;'))
+
+    s.add_argument("std::vector<std::shared_ptr<Node>> children")
+
+    c.add_variable(CppVariable(name="element", type="std::string"))
+
+    c.add_method(g)
+    c.add_method(s)
 
     get = CppClass.CppMethod(name="getElement", ret_type="std::string",
     implementation_handle=lambda s,cpp: cpp('return this->element;'))
@@ -158,12 +150,27 @@ def create_std_classes():
     set = CppClass.CppMethod(name="setElement", ret_type="void",
     implementation_handle=lambda s,cpp: cpp('this->element = element;'))
     set.add_argument("std::string element")
+
+    c.add_method(get)
+    c.add_method(set)
+
+    
+    d = CppClass(name="Terminal")
+    f = CppClass.CppMethod(name="accept", ret_type="void", 
+                           implementation_handle=lambda s,cpp: cpp('visitor.visit(this);'), 
+                           is_virtual=True)
+
+    const = CppClass.CppMethod(name="Terminal", ret_type="",
+    implementation_handle=lambda s,cpp: cpp('this->setElement(element);'))
+    const.add_argument("std::string element")
+    
+    f.add_argument("Visitor &visitor")
     
 
+    
     d.add_method(f)
     d.add_method(const)
-    d.add_method(get)
-    d.add_method(set)
+    
     
     d.parent_class="Node"
 
@@ -186,6 +193,7 @@ def create_AST_file(prod_dict):
     h.append("#include <string>\n")
     h.append("#include <vector>\n")
     h.append("#include <map>\n")
+    h.append("#include <functional>\n")
     cpp.append("#include \"Visitor.h\"\n")
 
     cpp.append("#include \"AST.h\"\n")
@@ -195,6 +203,7 @@ def create_AST_file(prod_dict):
     h.newline(2)
 
     h.append("class Visitor;\n\n")
+    
 
     std = create_std_classes()
     
@@ -209,19 +218,11 @@ def create_AST_file(prod_dict):
     m = ""
     for c in classes:
         if c.name.lower() !="node":
-            m += f'if(c == "{c.name.lower()}")\n return std::make_shared<{c.name.capitalize()}>(c);\nelse '
+            m += f'{{"{c.name.lower()}", [](const std::string& f) -> std::shared_ptr<Node> {{return std::make_shared<{c.name.capitalize()}>(f);}}}}, '
     
-    m+= "return std::make_shared<Terminal>(c);"
-    
-    func_class = CppFunction(name="map_class", ret_type="std::shared_ptr<Node>",
-    implementation_handle=lambda s,cpp: cpp(m))
-    func_class.add_argument("std::string c")
-    func_class.render_to_string(cpp)
+    h.append("extern std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> class_map;\n");
+    cpp.append(f"std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> class_map ={{{m}}};\n")
 
-    
-
-    
-    
     h.append("#endif\n")
 
 
@@ -238,7 +239,7 @@ def create_AST_class(prod:ProdElement):
     f.add_argument("Visitor &visitor")
 
     const = CppClass.CppMethod(name=f"{prod.element.capitalize()}", ret_type="",
-    implementation_handle=lambda s,cpp: cpp('this->element = element;'))
+    implementation_handle=lambda s,cpp: cpp('this->setElement(element);'))
     const.add_argument("std::string element")
 
     
@@ -248,11 +249,7 @@ def create_AST_class(prod:ProdElement):
     
         c = CppClass(name=prod.element.capitalize())
         
-
-
-        if prod.isToken:
-            c.add_variable(CppVariable(name="element", type="std::string", initialization_value=prod.element))
-
+            
         c.add_method(f)
         c.add_method(const)
         
