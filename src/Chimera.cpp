@@ -1,26 +1,18 @@
 #include "AST.h"
 #include "Visitor.h"
-#include "lib/json.hpp"
 #include <algorithm>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <map>
+#include <nlohmann/json.hpp>
 #include <random>
 #include <stack>
 #include <vector>
 
 using json = nlohmann::json;
 
-/**
- * ler json
- * percorrer começando em source_text
- * definir pesos para cada possivel produção
- *
- */
-
 std::vector<std::string> break_rule_in_prods(const std::string &rule) {
-
   std::istringstream iss(rule);
   std::string token;
 
@@ -49,7 +41,9 @@ void pp(std::shared_ptr<Node> head) {
 
 int main(int argc, char **argv) {
   if (argc < 2) {
-    std::cout << "Usage:\n" << argv[0] << " [path to json file]" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " <json_production_count>"
+              << std::endl;
+    return 1;
   }
 
   std::ifstream f(argv[1]);
@@ -102,7 +96,6 @@ int main(int argc, char **argv) {
     std::vector<std::shared_ptr<Node>> children;
 
     for (std::string p : prods) {
-
       std::shared_ptr<Node> c;
 
       if (p[0] == '\'' || p[0] == '\"') {
@@ -139,4 +132,6 @@ int main(int argc, char **argv) {
 
   // pp(head);
   code_gen(head);
+
+  return 0;
 }
