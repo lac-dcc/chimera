@@ -4,6 +4,7 @@ from code_generation.cpp_variable import *
 from code_generation.cpp_class import *
 import json
 import argparse
+import subprocess
     
 class ProdElement:
     def __init__(self, element:str, isTerminal:bool=False, isToken:bool=False) -> None:
@@ -63,6 +64,10 @@ def create_visitor_classes(elements, ast_classes):
     v = CppFile("Visitor.cpp")
     vh = CppFile("Visitor.h")
 
+    
+    vh.append("#ifndef VISITOR_H\n")
+    vh.append("#define VISITOR_H\n")
+
     vh.append("#include <iostream>\n")
     vh.append("#include <memory>\n")
     vh.append("#include <string>\n")
@@ -70,8 +75,6 @@ def create_visitor_classes(elements, ast_classes):
 
     v.append("#include \"Visitor.h\"\n")
     v.append("#include \"AST.h\"\n")
-    vh.append("#ifndef VISITOR_H\n")
-    vh.append("#define VISITOR_H\n")
     vh.newline(2)
 
     vh.append("")
@@ -188,18 +191,20 @@ def add_classes(class_list, cpp:CppFile, h:CppFile):
 def create_AST_file(prod_dict):
     cpp = CppFile("AST.cpp")
     h = CppFile("AST.h")
-    h.append("#include <iostream>\n")
-    h.append("#include <memory>\n")
-    h.append("#include <string>\n")
-    h.append("#include <vector>\n")
-    h.append("#include <map>\n")
-    h.append("#include <functional>\n")
+    
     cpp.append("#include \"Visitor.h\"\n")
 
     cpp.append("#include \"AST.h\"\n")
 
     h.append("#ifndef AST_H\n")
     h.append("#define AST_H\n")
+
+    h.append("#include <iostream>\n")
+    h.append("#include <memory>\n")
+    h.append("#include <string>\n")
+    h.append("#include <vector>\n")
+    h.append("#include <map>\n")
+    h.append("#include <functional>\n")
     h.newline(2)
 
     h.append("class Visitor;\n\n")
@@ -311,12 +316,26 @@ def main():
     parser.add_argument("--json_file", type=str, 
                       default="number_of_productions.json", 
                       help="Filepath to json file containing the productions count")
+    
+    parser.add_argument("--format", type=bool, 
+                      
+                      action="store_true",
+                      help="Use to format generated files, uses clang-format.")
+
 
     args = parser.parse_args()
     
     #######flags
     productions = read_json(args.json_file)
     create_AST_file(productions)
+
+    
+
+    if args.format:
+        files_to_format = ["AST.cpp","Visitor.cpp","AST.h","Visitor.h"]
+        for f in files_to_format:
+            subprocess.run(["clang-format","-i","-style=llvm",f])
+        
 
     
 
