@@ -317,8 +317,7 @@ def main():
                       default="number_of_productions.json", 
                       help="Filepath to json file containing the productions count")
     
-    parser.add_argument("--format", type=bool, 
-                      
+    parser.add_argument("--format",
                       action="store_true",
                       help="Use to format generated files, uses clang-format.")
 
@@ -326,6 +325,7 @@ def main():
     args = parser.parse_args()
     
     #######flags
+    
     productions = read_json(args.json_file)
     create_AST_file(productions)
 
@@ -334,7 +334,7 @@ def main():
     if args.format:
         files_to_format = ["AST.cpp","Visitor.cpp","AST.h","Visitor.h"]
         for f in files_to_format:
-            subprocess.run(["clang-format","-i","-style=llvm",f])
+            subprocess.run(["clang-format","-i","-style=file", f])
         
 
     
