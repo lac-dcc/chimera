@@ -11,6 +11,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "")
 
-add_executable(chimera Chimera.cpp Visitor.cpp AST.cpp)
+add_executable(Chimera Chimera.cpp Visitor.cpp AST.cpp)
 
-target_link_libraries(chimera PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(Chimera PRIVATE nlohmann_json::nlohmann_json)

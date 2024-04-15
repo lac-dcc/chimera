@@ -220,8 +220,8 @@ def create_AST_file(prod_dict):
         if c.name.lower() !="node":
             m += f'{{"{c.name.lower()}", [](const std::string& f) -> std::shared_ptr<Node> {{return std::make_shared<{c.name.capitalize()}>(f);}}}}, '
     
-    h.append("extern std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> class_map;\n");
-    cpp.append(f"std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> class_map ={{{m}}};\n")
+    h.append("extern std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> classMap;\n");
+    cpp.append(f"std::map<std::string,std::function<std::shared_ptr<Node>(const std::string&)>> classMap ={{{m}}};\n")
 
     h.append("#endif\n")
 

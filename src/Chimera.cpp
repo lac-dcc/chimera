@@ -12,7 +12,7 @@
 
 using json = nlohmann::json;
 
-std::vector<std::string> break_rule_in_prods(const std::string &rule) {
+std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
   std::string token;
 
@@ -25,18 +25,19 @@ std::vector<std::string> break_rule_in_prods(const std::string &rule) {
   return result;
 }
 
-void code_gen(std::shared_ptr<Node> head) {
+void codeGen(std::shared_ptr<Node> head) {
   CodeGenVisitor visitor;
   visitor.visit(head.get());
 }
 
 void pp(std::shared_ptr<Node> head) {
-  std::cout << head.get()->getElement() << " ->";
+
+  std::cerr << head.get()->getElement() << " ->";
 
   for (auto &c : head.get()->getChildren()) {
     pp(c);
   }
-  std::cout << std::endl;
+  std::cerr << std::endl;
 }
 
 int main(int argc, char **argv) {
@@ -59,7 +60,7 @@ int main(int argc, char **argv) {
 
   std::stack<std::shared_ptr<Node>> stack;
 
-  auto head = class_map["source_text"]("source_text");
+  auto head = classMap["source_text"]("source_text");
 
   stack.push(head);
 
@@ -70,28 +71,28 @@ int main(int argc, char **argv) {
     auto curr = stack.top();
     stack.pop();
 
-    std::vector<std::string> productions_str;
-    std::vector<double> productions_count;
+    std::vector<std::string> productionsStr;
+    std::vector<double> productionsCount;
 
     auto element = (*curr).getElement();
 
     int sum = 0;
 
     for (auto &e : map[element]) {
-      productions_str.push_back(e.first);
-      productions_count.push_back(e.second);
+      productionsStr.push_back(e.first);
+      productionsCount.push_back(e.second);
       sum += e.second;
     }
 
-    for (auto &c : productions_count) {
+    for (auto &c : productionsCount) {
       c /= sum;
     }
-    std::discrete_distribution<> d(productions_count.begin(),
-                                   productions_count.end());
+    std::discrete_distribution<> d(productionsCount.begin(),
+                                   productionsCount.end());
 
-    auto choosen_prod = productions_str[d(gen)];
+    auto chosenProd = productionsStr[d(gen)];
 
-    auto prods = break_rule_in_prods(choosen_prod);
+    auto prods = breakRuleInProds(chosenProd);
 
     std::vector<std::shared_ptr<Node>> children;
 
@@ -113,12 +114,12 @@ int main(int argc, char **argv) {
           auto aux = p;
           std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
 
-          c = class_map[aux](" " + p + " ");
+          c = classMap[aux](" " + p + " ");
         } else {
           auto aux = p;
           std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
 
-          c = class_map[aux](p);
+          c = classMap[aux](p);
 
           stack.push(c);
         }
@@ -129,9 +130,9 @@ int main(int argc, char **argv) {
 
     (*curr).setChildren(children);
   }
-
-  // pp(head);
-  code_gen(head);
+  std::cout << "teste" << std::endl;
+  pp(head);
+  codeGen(head);
 
   return 0;
 }
