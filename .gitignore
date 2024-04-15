@@ -6,3 +6,4 @@ database/verible_invalid_programs/
 invalid_programs
 jgproject*/
 build/
+.vscode/
