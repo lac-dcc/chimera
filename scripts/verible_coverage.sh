@@ -1,28 +1,73 @@
 #!/bin/bash
 
-if [ $# -gt 2 ]; then
-  >&2 echo "Usage: $0 <_verible_tool_executable> [worklist]"
+display_usage() {
+  >&2 echo "\
+Usage: $0 <_verible_tool_executable> [-h|--help] [-f|--file FILE] [-i|--incremental]
+
+Options:
+  -f, --file FILE        Specifies a file with a list of paths to be used for coverage instead of getting programs from "../database".
+  -i, --incremental      Indicates that coverate should start at the first program and keep previous profilings for the next coverages.
+  -h, --help             Display this help message and exit.\
+"
+}
+
+incremental=false
+
+# Argument parsing
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+  -i | --incremental)
+    incremental=true
+    shift
+    ;;
+  -f | --file)
+    if [ $# -lt 2 -o ! -f "$2" ]; then
+      >&2 echo "Invalid value for \"$1\" option"
+      exit 1
+    fi
+    file=$2
+    shift 2
+    ;;
+  -h | --help)
+    display_usage
+    exit 0
+    ;;
+  -* | --*)
+    echo "Invalid option '$1'"
+    echo "Use $0 --help for more information."
+    exit 1
+    ;;
+  *)
+    if [ ! -z "$verible_exe" ]; then
+      display_usage
+      exit 1
+    fi
+    verible_exe="$1"
+    shift
+    ;;
+  esac
+done
+
+if [ -z "$verible_exe" ]; then
+  display_usage
   exit 1
 fi
 
-if [ ! -f "$1" ]; then
-  >&2 echo "$1 does not exist or is not a file"
+if [ ! -f "$verible_exe" ]; then
+  >&2 echo "$verible_exe does not exist or is not a file"
   exit 1
 fi
 
-if [ $# -eq 2 -a ! -f "$2" ]; then
-  >&2 echo "$2 does not exist or is not a file"
-  exit 1
-fi
-
-verible_exe="$1"
 is_obfuscate=false
 if [[ $verible_exe == *"obfuscate" ]]; then
   is_obfuscate=true
 fi
 
-echo "file,line_coverage,branch_coverage"
+printf "file,line_coverage,branch_coverage"
+[ $incremental = true ] && printf ",num_files"
+printf "\n"
 
+profraw_files=()
 run_coverage() {
   >&2 echo "$1"
 
@@ -35,7 +80,12 @@ run_coverage() {
     LLVM_PROFILE_FILE=$profraw_file "$verible_exe" "$1"
   fi
 
-  llvm-profdata merge -sparse "$profraw_file" -o "$profdata_file"
+  if [ $incremental = true ]; then
+    profraw_files+=("$profraw_file")
+    eval llvm-profdata merge -sparse "${profraw_files[@]}" -o "$profdata_file"
+  else
+    llvm-profdata merge -sparse "$profraw_file" -o "$profdata_file"
+  fi
 
   # Generate report and check which programs have either "0.00%" or "-" in all
   # coverage columns
@@ -57,21 +107,33 @@ run_coverage() {
   branch_coverage=$(echo "$summary" | awk '{print $(NF)}')
 
   # Output the total line coverage and the total branch coverage
-  echo "$1,${line_coverage::-1},${branch_coverage::-1}"
+  # If "incremental" is set, also output the number of files
+  printf "$1,${line_coverage::-1},${branch_coverage::-1}"
+  [ $incremental = true ] && printf ",${#profraw_files[@]}"
+  printf "\n"
 
-  rm "$profraw_file" "$profdata_file"
+  [ $incremental = false ] && rm "$profraw_file"
+  rm "$profdata_file"
 }
 
-if [ $# -eq 1 ]; then
+if [ -z "$file" ]; then
   for input in ../database/*.v; do
-    run_coverage "$input" &
+    if [ $incremental = false ]; then
+      run_coverage "$input" &
+    else
+      run_coverage "$input"
+    fi
   done
 
-  wait
+  [ $incremental = false ] && wait || rm *.profraw
 else
   while IFS="" read -r input || [ -n "$input" ]; do
-    run_coverage "$input" &
-  done < $2
+    if [ $incremental = false ]; then
+      run_coverage "$input" &
+    else
+      run_coverage "$input"
+    fi
+  done < $file
 
-  wait
+  [ $incremental = false ] && wait || rm *.profraw
 fi
