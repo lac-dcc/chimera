@@ -1,8 +1,8 @@
-"""Mine Verilog programs from GitHub
+"""Mine HDL programs from GitHub
 
-This script searches for the most popular Verilog repositories in GitHub and
-copies Verilog files from them until a certain threshold to number of copied
-programs.
+This script searches for the most popular repositories in GitHub for a given
+Hardware Description Language and copies files from them until a certain
+threshold to number of copied programs.
 
 It uses the GitHub API to search for repositories, thus you must have a GitHub
 personal access token in order to use it. After generating a token, store it in
@@ -18,8 +18,11 @@ Usage:
                      [--clones_savefile CLONES_SAVEFILE]
                      [--target_dir TARGET_DIR] [--access_token ACCESS_TOKEN]
                      [--max_programs MAX_PROGRAMS]
+                     {Verilog,SystemVerilog,VHDL}
 
 Arguments:
+    {Verilog,SystemVerilog,VHDL}
+        (str) Language of the programs which will be mined.
     --clones_dir CLONES_DIR
         (str) directory to store repositories cloned from GitHub (default: "../database/cloned_repos")
     --clones_savefile CLONES_SAVEFILE
@@ -38,20 +41,23 @@ import credentials
 import argparse
 import glob
 import os
+import re
 import shutil
 
 from subprocess import run
 from github import Github, Auth
 
 
-def copy_verilog_files(repo_name, repo_path, target_dir):
+def copy_verilog_files(repo_name, repo_path, target_dir, ext):
     for file in (file for result in os.walk(repo_path)
-                 for file in glob.iglob(os.path.join(result[0], '*.v'))
+                 for file in glob.iglob(os.path.join(result[0], ext))
                  if not os.path.islink(file)):
         split = file.split(os.sep)
         split = split[split.index(repo_name):]
 
         filename = os.path.join(target_dir, '_'.join(split))
+        filename = re.sub(r'[ |$|&|#|\||"|\'|>|<|*|;|=|^|`|!|?]', '', filename)
+        filename = re.sub(r'[(|)|\[|\]|{|}]', '_', filename)
 
         if len(filename) > os.pathconf('/', 'PC_NAME_MAX'):
             # If the file name is too long, it is shortened by taking only the
@@ -64,8 +70,13 @@ def copy_verilog_files(repo_name, repo_path, target_dir):
 
 
 def main():
+    language_dict = {'Verilog': ['*.v'], 'SystemVerilog': ['*.sv'], 'VHDL': ['*.vhdl', '*.vhd']}
+
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('language', type=str,
+                        choices=language_dict.keys(),
+                        help='(%(type)s) Language of the programs which will be mined.')
     parser.add_argument('--clones_dir', type=str,
                         help='(%(type)s) directory to store repositories cloned from GitHub (default: "%(default)s")',
                         default='../database/cloned_repos')
@@ -98,20 +109,23 @@ def main():
     else:
         current_repos = set()
 
-    repos_search = g.search_repositories('language:Verilog', 'stars', 'desc')
+    repos_search = g.search_repositories('language:VHDL', 'stars', 'desc')
     for repo in (repo for repo in repos_search if repo.name not in current_repos):
         run(['git', 'clone', repo.clone_url], cwd=args.clones_dir)
 
         print(f'Copying files from {repo.name}... ', end='')
         repo_path = os.path.join(args.clones_dir, repo.name)
-        copy_verilog_files(repo.name, repo_path, args.target_dir)
+        for ext in language_dict[args.language]:
+            copy_verilog_files(repo.name, repo_path, args.target_dir, ext)
         print('done\n')
 
         # Removes clone dir after using it
         shutil.rmtree(repo_path)
 
-        num_programs = len(glob.glob(os.path.join(args.target_dir, '*.v')))
-        print(f'Current number of Verilog programs: {num_programs}\n')
+        num_programs = 0
+        for ext in language_dict[args.language]:
+            num_programs += len(glob.glob(os.path.join(args.target_dir, ext)))
+        print(f'Current number of {args.language} programs: {num_programs}\n')
 
         with open(cloned_repos_savefile, 'a') as savefile:
             savefile.write(repo.name + '\n')

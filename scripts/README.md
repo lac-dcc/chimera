@@ -2,8 +2,9 @@
 
 ## `mine_programs.py`
 
-This Python script searches for the most popular Verilog programs in GitHub and
-then clones them in order to extract all of its `.v` files.
+This Python script searches for the most popular programs in GitHub of a given
+Hardware Description Language and then clones them in order to extract their
+relevant files.
 
 ### Running
 
@@ -18,9 +19,9 @@ pip3 install -r requirements.txt
 
 #### GitHub API Token
 
-The script uses the GitHub API to mine Verilog programs. Thus, you need a
-personal access token to able to send requests to the API. You can read more
-about how to generate personal access tokens
+The script uses the GitHub API to mine programs. Thus, you need a personal
+access token to able to send requests to the API. You can read more about how to
+generate personal access tokens
 [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 After you have generated your own personal access token, you have to create a
@@ -36,8 +37,12 @@ Although you must create this file for the script to work, you can also use the
 
 #### Arguments
 
-The script doesn't take any mandatory arguments. However, there a few optional
-arguments that you can use to customize its execution:
+The script takes only one mandatory argument, which is a string which describes
+which progamming language will be searched for when mining for programs. There
+are currently three supported options: Verilog, SystemVerilog and VHDL.
+
+However, there a few optional arguments that you can use to customize its
+execution:
 
 ```
 --clones_dir CLONES_DIR
