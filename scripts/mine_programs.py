@@ -109,7 +109,7 @@ def main():
     else:
         current_repos = set()
 
-    repos_search = g.search_repositories('language:VHDL', 'stars', 'desc')
+    repos_search = g.search_repositories(f'language:{args.language}', 'stars', 'desc')
     for repo in (repo for repo in repos_search if repo.name not in current_repos):
         run(['git', 'clone', repo.clone_url], cwd=args.clones_dir)
 
