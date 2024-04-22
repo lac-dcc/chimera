@@ -1,0 +1,216 @@
+------------------------------------------------------------------------------
+--  This file is a part of the GRLIB VHDL IP LIBRARY
+--  Copyright (C) 2003 - 2008, Gaisler Research
+--  Copyright (C) 2008 - 2014, Aeroflex Gaisler
+--  Copyright (C) 2015 - 2017, Cobham Gaisler
+--
+--  This program is free software; you can redistribute it and/or modify
+--  it under the terms of the GNU General Public License as published by
+--  the Free Software Foundation; either version 2 of the License, or
+--  (at your option) any later version.
+--
+--  This program is distributed in the hope that it will be useful,
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of
+--  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--  GNU General Public License for more details.
+--
+--  You should have received a copy of the GNU General Public License
+--  along with this program; if not, write to the Free Software
+--  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
+
+library ieee;
+use ieee.std_logic_1164.all;
+library grlib;
+use grlib.amba.all;
+use grlib.devices.all;
+library gaisler;
+use gaisler.ddrpkg.all;
+
+entity ddr3if is
+  generic (
+    hindex: integer;
+    haddr: integer := 16#400#;
+    hmask: integer := 16#000#;
+    burstlen: integer := 8
+    );
+  port (
+    pll_ref_clk: in std_ulogic;
+    global_reset_n: in std_ulogic;
+    mem_a: out   std_logic_vector(13 downto 0);
+    mem_ba: out std_logic_vector(2 downto 0);
+    mem_ck: out   std_ulogic;
+    mem_ck_n: out   std_ulogic;
+    mem_cke: out   std_ulogic;
+    mem_reset_n: out std_ulogic;
+    mem_cs_n: out   std_ulogic;
+    mem_dm: out   std_logic_vector(8 downto 0);
+    mem_ras_n: out std_ulogic;
+    mem_cas_n: out std_ulogic;
+    mem_we_n: out std_ulogic;
+    mem_dq: inout std_logic_vector(71 downto 0);
+    mem_dqs: inout std_logic_vector(8 downto 0);
+    mem_dqs_n: inout std_logic_vector(8 downto 0);
+    mem_odt: out std_ulogic;
+    oct_rzqin: in    std_logic;
+    ahb_clk: in std_ulogic;
+    ahb_rst: in std_ulogic;
+    ahbsi: in ahb_slv_in_type;
+    ahbso: out ahb_slv_out_type
+    );
+end;
+
+architecture rtl of ddr3if is
+
+	component ddr3ctrl is
+		port (
+			pll_ref_clk               : in    std_logic                      := 'X';             -- clk
+			global_reset_n            : in    std_logic                      := 'X';             -- reset_n
+			soft_reset_n              : in    std_logic                      := 'X';             -- reset_n
+			afi_clk                   : out   std_logic;                                         -- clk
+			afi_half_clk              : out   std_logic;                                         -- clk
+			afi_reset_n               : out   std_logic;                                         -- reset_n
+			afi_reset_export_n        : out   std_logic;                                         -- reset_n
+			mem_a                     : out   std_logic_vector(13 downto 0);                     -- mem_a
+			mem_ba                    : out   std_logic_vector(2 downto 0);                      -- mem_ba
+			mem_ck                    : out   std_logic_vector(0 downto 0);                      -- mem_ck
+			mem_ck_n                  : out   std_logic_vector(0 downto 0);                      -- mem_ck_n
+			mem_cke                   : out   std_logic_vector(0 downto 0);                      -- mem_cke
+			mem_cs_n                  : out   std_logic_vector(0 downto 0);                      -- mem_cs_n
+			mem_dm                    : out   std_logic_vector(8 downto 0);                      -- mem_dm
+			mem_ras_n                 : out   std_logic_vector(0 downto 0);                      -- mem_ras_n
+			mem_cas_n                 : out   std_logic_vector(0 downto 0);                      -- mem_cas_n
+			mem_we_n                  : out   std_logic_vector(0 downto 0);                      -- mem_we_n
+			mem_reset_n               : out   std_logic;                                         -- mem_reset_n
+			mem_dq                    : inout std_logic_vector(71 downto 0)  := (others => 'X'); -- mem_dq
+			mem_dqs                   : inout std_logic_vector(8 downto 0)   := (others => 'X'); -- mem_dqs
+			mem_dqs_n                 : inout std_logic_vector(8 downto 0)   := (others => 'X'); -- mem_dqs_n
+			mem_odt                   : out   std_logic_vector(0 downto 0);                      -- mem_odt
+			avl_ready                 : out   std_logic;                                         -- waitrequest_n
+			avl_burstbegin            : in    std_logic                      := 'X';             -- beginbursttransfer
+			avl_addr                  : in    std_logic_vector(24 downto 0)  := (others => 'X'); -- address
+			avl_rdata_valid           : out   std_logic;                                         -- readdatavalid
+			avl_rdata                 : out   std_logic_vector(287 downto 0);                    -- readdata
+			avl_wdata                 : in    std_logic_vector(287 downto 0) := (others => 'X'); -- writedata
+			avl_be                    : in    std_logic_vector(35 downto 0)  := (others => 'X'); -- byteenable
+			avl_read_req              : in    std_logic                      := 'X';             -- read
+			avl_write_req             : in    std_logic                      := 'X';             -- write
+			avl_size                  : in    std_logic_vector(2 downto 0)   := (others => 'X'); -- burstcount
+			local_init_done           : out   std_logic;                                         -- local_init_done
+			local_cal_success         : out   std_logic;                                         -- local_cal_success
+			local_cal_fail            : out   std_logic;                                         -- local_cal_fail
+			oct_rzqin                 : in    std_logic                      := 'X';             -- rzqin
+			pll_mem_clk               : out   std_logic;                                         -- pll_mem_clk
+			pll_write_clk             : out   std_logic;                                         -- pll_write_clk
+			pll_locked                : out   std_logic;                                         -- pll_locked
+			pll_write_clk_pre_phy_clk : out   std_logic;                                         -- pll_write_clk_pre_phy_clk
+			pll_addr_cmd_clk          : out   std_logic;                                         -- pll_addr_cmd_clk
+			pll_avl_clk               : out   std_logic;                                         -- pll_avl_clk
+			pll_config_clk            : out   std_logic;                                         -- pll_config_clk
+			pll_p2c_read_clk          : out   std_logic;                                         -- pll_p2c_read_clk
+			pll_c2p_write_clk         : out   std_logic                                         -- pll_c2p_write_clk
+--			pll_dr_clk                : out   std_logic;                                         -- pll_dr_clk
+--			pll_dr_clk_pre_phy_clk    : out   std_logic                                          -- pll_dr_clk_pre_phy_clk
+		);
+	end component ddr3ctrl;
+
+        signal vcc: std_ulogic;
+
+        signal afi_clk, afi_half_clk, afi_reset_n: std_ulogic;
+        signal local_init_done, local_cal_success, local_cal_fail: std_ulogic;
+
+        signal ck_p_arr, ck_n_arr, cke_arr, cs_arr: std_logic_vector(0 downto 0);
+        signal rasn_arr, casn_arr, wen_arr, odt_arr: std_logic_vector(0 downto 0);
+
+        signal avlsi: ddravl_slv_in_type;
+        signal avlso: ddravl_slv_out_type;
+
+        signal avl_rdata, avl_wdata: std_logic_vector(287 downto 0);
+		  signal avl_be: std_logic_vector(35 downto 0);
+
+begin
+
+  vcc <= '1';
+
+  mem_ck   <= ck_p_arr(0);
+  mem_ck_n <= ck_n_arr(0);
+  mem_cke <= cke_arr(0);
+  mem_cs_n <= cs_arr(0);
+  mem_ras_n <= rasn_arr(0);
+  mem_cas_n <= casn_arr(0);
+  mem_we_n <= wen_arr(0);
+  mem_odt <= odt_arr(0);
+  
+  ctrl0: ddr3ctrl
+    port map (
+      pll_ref_clk => pll_ref_clk,
+      global_reset_n => global_reset_n,
+      soft_reset_n => vcc,
+      afi_clk => afi_clk,
+      afi_half_clk => afi_half_clk,
+      afi_reset_n => afi_reset_n,
+      afi_reset_export_n => open,
+      mem_a => mem_a,
+      mem_ba => mem_ba,
+      mem_ck => ck_p_arr,
+      mem_ck_n => ck_n_arr,
+      mem_cke => cke_arr,
+      mem_cs_n => cs_arr,
+      mem_dm => mem_dm,
+      mem_ras_n => rasn_arr,
+      mem_cas_n => casn_arr,
+      mem_we_n => wen_arr,
+      mem_reset_n => mem_reset_n,
+      mem_dq => mem_dq,
+      mem_dqs => mem_dqs,
+      mem_dqs_n => mem_dqs_n,
+      mem_odt => odt_arr,
+      avl_ready => avlso.ready,
+      avl_burstbegin => avlsi.burstbegin,
+      avl_addr => avlsi.addr(24 downto 0),
+      avl_rdata_valid => avlso.rdata_valid,
+      avl_rdata => avl_rdata,
+      avl_wdata => avl_wdata,
+      avl_be => avl_be,
+      avl_read_req => avlsi.read_req,
+      avl_write_req => avlsi.write_req,
+      avl_size => avlsi.size(2 downto 0),
+      local_init_done => local_init_done,
+      local_cal_success => local_cal_success,
+      local_cal_fail => local_cal_fail,
+      oct_rzqin => oct_rzqin,
+      pll_mem_clk => open,
+      pll_write_clk => open,
+      pll_write_clk_pre_phy_clk => open,
+      pll_addr_cmd_clk => open,
+      pll_locked => open,
+      pll_avl_clk => open,
+      pll_config_clk => open
+      );
+  avlso.rdata(avlso.rdata'high downto 256) <= (others => '0');
+  avlso.rdata(255 downto 0) <= avl_rdata(255 downto 0);
+  avl_wdata <= x"00000000" & avlsi.wdata(255 downto 0);
+  avl_be <= "0000" & avlsi.be(31 downto 0);
+
+  ahb2avl0: ahb2avl_async
+    generic map (
+      hindex => hindex,
+      haddr => haddr,
+      hmask => hmask,
+      burstlen => burstlen,
+      nosync => 0,
+      avldbits => 256,
+      avlabits => 25
+      )
+    port map (
+      rst_ahb => ahb_rst,
+      clk_ahb => ahb_clk,
+      ahbsi => ahbsi,
+      ahbso => ahbso,
+      rst_avl => afi_reset_n,
+      clk_avl => afi_clk,
+      avlsi => avlsi,
+      avlso => avlso
+      );
+
+end;
+

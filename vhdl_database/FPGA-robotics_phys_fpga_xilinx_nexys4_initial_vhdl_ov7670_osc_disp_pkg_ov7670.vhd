@@ -1,0 +1,83 @@
+--------------------------------------------------------------------------------
+--   Felipe Machado Sanchez
+--   Area de Tecnologia Electronica
+--   Universidad Rey Juan Carlos
+--   https://github.com/felipe-m
+-- 
+--   constants declarations, some of them instead of generics
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+-- in some tools, functions have to be in other packages
+library WORK;
+use WORK.PKG_FUN.all;
+
+package ov7670_pkg is
+
+  -- c_on: indicates how the pushbuttons, switches and leds are asserted
+  constant c_on        : std_logic := '1'; 
+  constant c_off       : std_logic := not c_on; 
+
+  -- constant for the 7 segment display
+  constant c_anode_on  : std_logic := '0'; 
+  constant c_anode_off  : std_logic := not c_anode_on; 
+  constant c_seg_on  : std_logic := '0'; 
+  constant c_seg_off  : std_logic := not c_seg_on; 
+  
+  constant c_clk_period  : integer := 10; -- fpga clk peridod in ns
+  -- fpga clk frequency in MHz
+  constant c_clk_freq    : integer := 1_000_000_000/c_clk_period;
+
+  -- camera system clock:
+  --     freq   :  min: 10 MHz  -- typ: 24 MHz  -- Max: 48 MHz
+  --     Period : max: 100 ns   -- typ: 42 ns   -- Max: 21 ns
+  -- duty cycle between 45% and 55%
+
+  constant c_img_cols : natural := 640;
+  constant c_img_rows : natural := 480;
+
+  -- number of bits to count the pixels of a line
+  constant c_nb_line_pxls : natural := log2i(c_img_cols-1) + 1;
+
+  constant c_img_pxls : natural := c_img_cols * c_img_rows;
+
+  -- number of bits necessary to represent c_img_pxls in binary
+  constant c_nb_img_pxls : natural := log2i(c_img_pxls-1) + 1;
+
+---------- Pixels. 1 Pixel = 2 Pclk (horizontal, columns) -----------------|
+--         Each pixel have 2 bytes (2 Pclk)
+-- |                             |                |
+-- |      active video           |    href        |
+-- |                             |                |
+-- |                             |                |
+-- |<--------- 640 ------------->|<----- 144 ---->|
+-- |                             |                |
+-- |      c_ov_pxl_visible       | c_ov_pxl_href  |
+-- |                                              |
+-- |<------------- c_ov_pxl_total: 784 pixels---->|
+
+---------- Lines (vertical) ----------------------------------------------|
+-- |              |                       |              |                |
+-- |   back       |      active video     |    front     |   vertical     |
+-- |   porch      |                       |    porch     |   sync         |
+-- |              |                       |              |                |
+-- |<----17------>|<--------- 480 ------->|<--- 10------>|<------ 3  ---->|
+-- |              |                       |              |                |
+-- |c_ov_lin_bpr  |  c_ov_lin_visible     |c_ov_lin_fpor | c_ov_lin_sync  |
+-- |              |                       |              |                |
+-- |                                      |              |                |
+-- |<----- c_ov_lin_sync2endvis: 497 ---->|              |                |
+-- |                                                                      |
+-- |<------------------------- c_ov_lin_total: 510 lines----------------->| 
+
+
+  constant c_ov_pxl_visible : natural := c_img_cols;
+  constant c_ov_lin_visible : natural := c_img_rows;
+  constant c_ov_lin_bpr     : natural := 17;
+  constant c_ov_lin_sync2endvis   : natural := 510;
+  constant c_ov_lin_total   : natural := 510;
+
+
+end ov7670_pkg;
+

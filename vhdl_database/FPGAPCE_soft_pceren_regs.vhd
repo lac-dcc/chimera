@@ -1,0 +1,12 @@
+CR <= x"00CC";
+RCR <= x"0118";
+MWR <= x"0050";
+HPR <= x"0202";
+HDR <= x"041F";
+VSR <= x"0F02";
+VDR <= x"00EF";
+VDE <= x"0004";
+BXR <= x"0008";
+BYR <= x"01FF";
+DCR <= x"0000";
+SATB <= x"0F00";

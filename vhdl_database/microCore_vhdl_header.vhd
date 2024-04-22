@@ -1,0 +1,24 @@
+-- ---------------------------------------------------------------------
+-- @file : .vhd
+-- ---------------------------------------------------------------------
+--
+-- Last change: KS 05.04.2021 16:53:00
+-- @project: microCore
+-- @language: VHDL-93
+-- @copyright (c): Klaus Schleisiek, All Rights Reserved.
+-- @contributors:
+--
+-- @license: Do not use this file except in compliance with the License.
+-- You may obtain a copy of the Public License at
+-- https://github.com/microCore-VHDL/microCore/tree/master/documents
+-- Software distributed under the License is distributed on an "AS IS"
+-- basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.
+-- See the License for the specific language governing rights and
+-- limitations under the License.
+--
+-- @brief:
+--
+-- Version Author   Date       Changes
+--           ks    8-Jun-2020  initial version
+-- ---------------------------------------------------------------------
+

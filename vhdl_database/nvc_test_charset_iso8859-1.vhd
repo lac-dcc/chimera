@@ -1,0 +1,13 @@
+-- -*- coding: iso-8859-1 -*-
+entity ÚÛÜİŞ is
+end entity;
+
+architecture ûüışÿûüışÿ of ÚÛÜİŞ is
+    signal çxÿÑ : bit;
+    constant ßàáâãäåæçèéêëìíîïğñòóôõöøùúûüışÿ : integer := 1;
+    -- ßÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞÿ
+    constant ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞ : integer := 2;
+
+    constant times× :  integer := 3;    -- Error
+begin
+end architecture;

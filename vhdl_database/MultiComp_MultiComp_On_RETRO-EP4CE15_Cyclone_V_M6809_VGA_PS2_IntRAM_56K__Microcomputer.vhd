@@ -1,0 +1,322 @@
+-- ----------------------------------------------------------------------------------------------
+-- This file is copyright by Grant Searle 2014
+-- Grant Searle's web site http://searle.hostei.com/grant/    
+-- Grant Searle's "multicomp" page at http://searle.hostei.com/grant/Multicomp/index.html
+--
+-- Changes to this code by Doug Gilliland 2020-2022
+-- 6809 CPU
+-- 	16.7 MHz
+--	56K Internal SRAM
+-- 8K Extended BASIC
+--		(c) 1982 MICROSOFT
+-- Serial interface or VGA VDU
+--		Jumper in pin Pin_L17 to ground (adjacent pin) of the FPGA selects the VDU/Serial port
+--			J3 SW1 at the bottom on the box connects to FPGA pin Pin_L17
+--		115,200 baud serial port
+--		Hardware handshake RTS/CTS
+--	MEMORY MAP
+--		x0000-xdfff - 56KB Internal SRAM
+--		xe000-xffff - 8KB ROM
+--		xffd0-xffd1 - VDU
+--		xffd2-xffd3 - Serial port
+-- ----------------------------------------------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
+use  IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity Microcomputer is
+	port(
+		i_n_reset		: in std_logic;
+		i_CLOCK_50	: in std_logic;
+		
+		-- 1MB external SRAM
+		io_sramData		: inout std_logic_vector(7 downto 0);
+		o_sramAddress	: out std_logic_vector(19 downto 0) := x"00000";
+		o_n_sRamWE		: out std_logic := '1';
+		o_n_sRamCS		: out std_logic := '1';
+		o_n_sRamOE		: out std_logic := '1';
+		
+		-- Serial port (USB-Serial interface)
+		i_rxd1			: in std_logic := '1';
+		o_txd1			: out std_logic;
+		i_cts1			: in std_logic := '1';
+		o_rts1			: out std_logic;
+		i_serSelect	: in std_logic;			--		Install to make serial port default
+		
+		-- Video Display Unit (VGA)
+		o_videoR0		: out std_logic := '1';
+		o_videoG0		: out std_logic := '1';
+		o_videoB0		: out std_logic := '1';
+		o_videoR1		: out std_logic := '1';
+		o_videoG1		: out std_logic := '1';
+		o_videoB1		: out std_logic := '1';
+		o_hSync			: out std_logic := '1';
+		o_vSync			: out std_logic := '1';
+
+		-- PS/2 keyboard
+		io_ps2Clk		: inout std_logic;
+		io_ps2Data		: inout std_logic;
+		
+		IO_PIN		: inout std_logic_vector(44 downto 3) := x"000000000"&"00";
+	
+		-- SD Card
+		o_sdCardCS		: out std_logic := '1';
+		o_sdCardMOSI	: out std_logic := '1';
+		i_sdCardMISO	: in std_logic;
+		o_sdCardSCLK	: out std_logic := '1';
+		o_driveLED		: out std_logic := '1';
+
+		-- Not using the SD RAM on the QMTECH FPGA card but making sure that it's not active
+		n_sdRamCas	: out std_logic := '1';		-- CAS on schematic
+		n_sdRamRas	: out std_logic := '1';		-- RAS
+		n_sdRamWe	: out std_logic := '1';		-- SDWE
+		n_sdRamCe	: out std_logic := '1';		-- SD_NCS0
+		sdRamClk		: out std_logic := '1';		-- SDCLK0
+		sdRamClkEn	: out std_logic := '1';		-- SDCKE0
+		sdRamAddr	: out std_logic_vector(14 downto 0) := "000"&x"000";
+		sdRamData	: in std_logic_vector(15 downto 0)
+	);
+end Microcomputer;
+
+architecture struct of Microcomputer is
+
+	signal w_n_WR				: std_logic;
+--	signal w_n_RD				: std_logic;
+	signal w_cpuAddress		: std_logic_vector(15 downto 0);
+	signal w_cpuDataOut		: std_logic_vector(7 downto 0);
+	signal w_cpuDataIn		: std_logic_vector(7 downto 0);
+
+	signal w_basRomData		: std_logic_vector(7 downto 0);
+	signal sramData1			: std_logic_vector(7 downto 0);
+	signal sramData2			: std_logic_vector(7 downto 0);
+	signal sramData3			: std_logic_vector(7 downto 0);
+	signal w_if1DataOut		: std_logic_vector(7 downto 0);
+	signal w_if2DataOut		: std_logic_vector(7 downto 0);
+	signal w_SDData				: std_logic_vector(7 downto 0);
+
+	signal w_n_memWR			: std_logic :='1';
+	signal w_n_memRD 			: std_logic :='1';
+
+	signal w_n_int1			: std_logic :='1';	
+	signal w_n_int2			: std_logic :='1';	
+	
+	signal w_n_intRamCS1		: std_logic :='1';
+	signal w_n_intRamCS2		: std_logic :='1';
+	signal w_n_intRamCS3		: std_logic :='1';
+	signal w_n_basRomCS		: std_logic :='1';
+	signal w_n_IF1CS			: std_logic :='1';
+	signal w_n_IF2CS			: std_logic :='1';
+	signal w_n_SDCS			: std_logic :='1';
+
+	signal q_cpuClkCount		: std_logic_vector(5 downto 0); 
+	signal w_cpuClock			: std_logic;
+	signal w_resetLow			: std_logic := '1';
+
+--   signal w_serialCount    : std_logic_vector(15 downto 0) := x"0000";
+--   signal w_serialCount_d  : std_logic_vector(15 downto 0);
+   signal w_serialEn       : std_logic;
+	
+begin
+	
+	-- Debounce the reset line
+	DebounceResetSwitch	: entity work.Debouncer
+	port map (
+		i_clk			=> w_cpuClock,
+		i_PinIn		=> i_n_reset,
+		o_PinOut		=> w_resetLow
+	);
+	
+	-- MEMORY READ/WRITE LOGIC
+	w_n_memRD <= not(w_cpuClock) nand w_n_WR;
+	w_n_memWR <= not(w_cpuClock) nand (not w_n_WR);
+	
+	-- ____________________________________________________________________________________
+	-- CHIP SELECTS
+	-- Jumper in pin Pin_L17 to ground (adjacent pin) of the FPGA selects the VDU/Serial port
+	w_n_basRomCS	<= '0' when   w_cpuAddress(15 downto 13) = "111" 											else '1';	-- 8K at top of memory
+	w_n_IF1CS		<= '0' when ((w_cpuAddress(15 downto 1) = x"ffd"&"000" and i_serSelect = '1') or 
+								       (w_cpuAddress(15 downto 1) = x"ffd"&"001" and i_serSelect = '0'))	else '1';	-- 2 bytes FFD0-FFD1
+	w_n_IF2CS		<= '0' when ((w_cpuAddress(15 downto 1) = x"ffd"&"001" and i_serSelect = '1') or 
+								       (w_cpuAddress(15 downto 1) = x"ffd"&"000" and i_serSelect = '0'))	else '1';	-- 2 bytes FFD2-FFD3
+	w_n_SDCS			<= '0' when   w_cpuAddress(15 downto 3) = x"ffd"&"1"										else '1';	-- SD Card
+	w_n_intRamCS1	<= '0' when   w_cpuAddress(15) = '0' 															else '1';	-- active low
+	w_n_intRamCS2	<= '0' when   w_cpuAddress(15 downto 14) = "10" 											else '1';	-- active low
+	w_n_intRamCS3	<= '0' when   w_cpuAddress(15 downto 13) = "110" 											else '1';	-- active low
+	
+	-- ____________________________________________________________________________________
+	-- BUS ISOLATION
+	-- Order matters since SRAM overlaps I/O chip selects
+	w_cpuDataIn <=
+		w_if1DataOut	when w_n_IF1CS			= '0' else
+		w_if2DataOut	when w_n_IF2CS			= '0' else
+		w_SDData			when w_n_SDCS			= '0' else
+		sramData1		when w_n_intRamCS1	= '0' else
+		sramData2		when w_n_intRamCS2	= '0' else
+		sramData3		when w_n_intRamCS3	= '0' else
+		w_basRomData	when w_n_basRomCS		= '0' else
+		x"FF";
+
+	-- 48KB Internal SRAM total
+	-- 32KB Internal SRAM
+	sram32KB : entity work.InternalRam32K
+		port map(
+			address	=> w_cpuAddress(14 downto 0),
+			clock		=> i_CLOCK_50,
+			data		=> w_cpuDataOut,
+			wren		=> not w_cpuAddress(15) and not w_n_WR,
+			q			=> sramData1
+		);
+	
+	-- 16KB SRAM
+	sram16KB : entity work.InternalRam16K
+		port map(
+			address	=> w_cpuAddress(13 downto 0),
+			clock		=> i_CLOCK_50,
+			data		=> w_cpuDataOut,
+			wren		=> w_cpuAddress(15) and not w_cpuAddress(14) and not w_n_WR,
+			q			=> sramData2
+		);
+	
+	-- 8KB SRAM
+	sram8KB : entity work.InternalRam8K
+		port map(
+			address	=> w_cpuAddress(12 downto 0),
+			clock		=> i_CLOCK_50,
+			data		=> w_cpuDataOut,
+			wren		=> w_cpuAddress(15) and w_cpuAddress(14) and not w_cpuAddress(13) and not w_n_WR,
+			q			=> sramData3
+		);
+	
+	-- ____________________________________________________________________________________
+	-- 6809 CPU
+	-- works with Version 1.26
+	-- Does not work with Version 1.28 FPGA core
+	cpu1 : entity work.cpu09
+		port map(
+			clk		=> not(w_cpuClock),
+			rst		=> not w_resetLow,
+			rw			=> w_n_WR,
+			addr		=> w_cpuAddress,
+			data_in	=> w_cpuDataIn,
+			data_out	=> w_cpuDataOut,
+			halt		=> '0',
+			hold		=> '0',
+			irq		=> '0',
+			firq		=> '0',
+			nmi		=> '0'
+		); 
+	
+	-- ____________________________________________________________________________________
+	-- BASIC ROM	
+	rom1 : entity work.M6809_EXT_BASIC_ROM -- 8KB BASIC
+		port map(
+			address	=> w_cpuAddress(12 downto 0),
+			clock		=> i_CLOCK_50,
+			q			=> w_basRomData
+		);
+	
+	-- ____________________________________________________________________________________
+	-- INPUT/OUTPUT DEVICES
+	-- Grant's VGA driver
+	-- Removed the Composite video output
+	io1 : entity work.SBCTextDisplayRGB
+		GENERIC map (
+			EXTENDED_CHARSET	=>  1,
+			COLOUR_ATTS_ENABLED => 1
+		)
+		port map (
+			n_reset	=> w_resetLow,
+			clk		=> i_CLOCK_50,
+			-- CPU I/F
+			n_WR		=> w_n_IF1CS or w_cpuClock or w_n_WR,
+			n_RD		=> w_n_IF1CS or w_cpuClock or (not w_n_WR),
+			n_int		=> w_n_int1,
+			regSel	=> w_cpuAddress(0),
+			dataIn	=> w_cpuDataOut,
+			dataOut	=> w_if1DataOut,
+			-- VGA signals
+			hSync		=> o_hSync,
+			vSync		=> o_vSync,
+			videoR0	=> o_videoR0,
+			videoR1	=> o_videoR1,
+			videoG0	=> o_videoG0,
+			videoG1	=> o_videoG1,
+			videoB0	=> o_videoB0,
+			videoB1	=> o_videoB1,
+			-- PS/2 keyboard
+			ps2clk	=> io_ps2Clk,
+			ps2Data	=> io_ps2Data
+		);
+	
+	-- Replaced Grant's bufferedUART with Neal Crook's version which uses clock enables instead of clock
+	io2 : entity work.bufferedUART
+		port map(
+			clk		=> i_CLOCK_50,
+			n_WR		=> w_n_IF2CS or w_cpuClock or w_n_WR,
+			n_RD		=> w_n_IF2CS or w_cpuClock or (not w_n_WR),
+			n_int		=> w_n_int2,
+			regSel	=> w_cpuAddress(0),
+			dataIn	=> w_cpuDataOut,
+			dataOut	=> w_if2DataOut,
+			rxClkEn	=> w_serialEn,
+			txClkEn	=> w_serialEn,			
+			rxd		=> i_rxd1,
+			txd		=> o_txd1,
+			n_cts		=> i_cts1,
+			n_rts		=> o_rts1
+		);
+	
+	SDCtrlr : entity work.sd_controller
+	port map (
+		-- CPU
+		n_reset 	=> i_n_reset,
+		n_rd		=> w_n_SDCS or w_cpuClock or (not w_n_WR),
+		n_wr		=> w_n_SDCS or w_cpuClock or w_n_WR,
+		dataIn	=> w_cpuDataOut,
+		dataOut	=> w_SDData,
+		regAddr	=> w_cpuAddress(2 downto 0),
+		clk 		=> i_CLOCK_50,
+		-- SD Card SPI connections
+		sdCS 		=> o_sdCardCS,
+		sdMOSI	=> o_sdCardMOSI,
+		sdMISO	=> i_sdCardMISO,
+		sdSCLK	=> o_sdCardSCLK,
+		-- LEDs
+		driveLED	=> o_driveLED
+	);
+
+
+	-- ____________________________________________________________________________________
+	-- ____________________________________________________________________________________
+	-- SYSTEM CLOCKS
+	process (i_CLOCK_50)
+		begin
+			if rising_edge(i_CLOCK_50) then
+				if q_cpuClkCount < 2 then		-- 4 = 10MHz, 3 = 12.5MHz, 2=16.6MHz, 1=25MHz
+					q_cpuClkCount <= q_cpuClkCount + 1;
+				else
+					q_cpuClkCount <= (others=>'0');
+				end if;
+				if q_cpuClkCount < 2 then		-- 2 when 10MHz, 2 when 12.5MHz, 2 when 16.6MHz, 1 when 25MHz
+					w_cpuClock <= '0';
+				else
+					w_cpuClock <= '1';
+				end if;
+			end if;
+		end process;
+
+	-- Pass Baud Rate in BAUD_RATE generic as integer value (300, 9600, 115,200)
+	-- Legal values are 115200, 38400, 19200, 9600, 4800, 2400, 1200, 600, 300
+
+	BaudRateGen : entity work.BaudRate6850
+	GENERIC map (
+		BAUD_RATE	=>  115200
+	)
+	PORT map (
+		i_CLOCK_50	=> i_CLOCK_50,
+		o_serialEn	=> w_serialEn
+	);
+
+end;

@@ -1,0 +1,139 @@
+-- © IBM Corp. 2020
+-- Licensed under the Apache License, Version 2.0 (the "License"), as modified by
+-- the terms below; you may not use the files in this repository except in
+-- compliance with the License as modified.
+-- You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+--
+-- Modified Terms:
+--
+--    1) For the purpose of the patent license granted to you in Section 3 of the
+--    License, the "Work" hereby includes implementations of the work of authorship
+--    in physical form.
+--
+--    2) Notwithstanding any terms to the contrary in the License, any licenses
+--    necessary for implementation of the Work that are available from OpenPOWER
+--    via the Power ISA End User License Agreement (EULA) are explicitly excluded
+--    hereunder, and may be obtained from OpenPOWER under the terms and conditions
+--    of the EULA.  
+--
+-- Unless required by applicable law or agreed to in writing, the reference design
+-- distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+-- WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
+-- for the specific language governing permissions and limitations under the License.
+-- 
+-- Additional rights, including the ability to physically implement a softcore that
+-- is compliant with the required sections of the Power ISA Specification, are
+-- available at no cost under the terms of the OpenPOWER Power ISA EULA, which can be
+-- obtained (along with the Power ISA) here: https://openpowerfoundation.org. 
+
+library ieee; use ieee.std_logic_1164.all;
+library support;
+use support.power_logic_pkg.all;
+
+entity c_debug_mux8 is
+generic( DBG_WIDTH      : integer := 88         
+);         
+port(
+     vd                 : inout power_logic;
+     gd                 : inout power_logic;
+
+     select_bits        : in std_ulogic_vector(0 to 15);
+     trace_data_in      : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     trigger_data_in    : in std_ulogic_vector(0 to 11);
+
+     dbg_group0         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group1         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group2         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group3         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group4         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group5         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group6         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+     dbg_group7         : in std_ulogic_vector(0 to DBG_WIDTH-1);
+
+     trg_group0         : in std_ulogic_vector(0 to 11);
+     trg_group1         : in std_ulogic_vector(0 to 11);
+     trg_group2         : in std_ulogic_vector(0 to 11);
+     trg_group3         : in std_ulogic_vector(0 to 11);
+
+     trace_data_out     : out std_ulogic_vector(0 to DBG_WIDTH-1);
+     trigger_data_out   : out std_ulogic_vector(0 to 11)
+);
+-- synopsys translate_off
+
+-- synopsys translate_on
+
+end c_debug_mux8;
+
+
+architecture c_debug_mux8 of c_debug_mux8 is
+
+constant DBG_1FOURTH            : positive := DBG_WIDTH/4;
+constant DBG_2FOURTH            : positive := DBG_WIDTH/2;
+constant DBG_3FOURTH            : positive := 3*DBG_WIDTH/4;
+
+signal debug_grp_selected       : std_ulogic_vector(0 to DBG_WIDTH-1);
+signal debug_grp_rotated        : std_ulogic_vector(0 to DBG_WIDTH-1);
+signal trigg_grp_selected       : std_ulogic_vector(0 to 11);
+signal trigg_grp_rotated        : std_ulogic_vector(0 to 11);
+
+signal unused                   : std_ulogic;
+
+begin
+
+    unused <= select_bits(3) or select_bits(4);
+
+    with select_bits(0 to 2) select debug_grp_selected <= 
+      dbg_group0    when "000",
+      dbg_group1    when "001",
+      dbg_group2    when "010",
+      dbg_group3    when "011",
+      dbg_group4    when "100",
+      dbg_group5    when "101",
+      dbg_group6    when "110",
+      dbg_group7    when others;
+
+   with select_bits(5 to 6) select 
+       debug_grp_rotated  <=  debug_grp_selected(DBG_1FOURTH to DBG_WIDTH-1) & debug_grp_selected(0 to DBG_1FOURTH-1) when "11",
+                              debug_grp_selected(DBG_2FOURTH to DBG_WIDTH-1) & debug_grp_selected(0 to DBG_2FOURTH-1) when "10",
+                              debug_grp_selected(DBG_3FOURTH to DBG_WIDTH-1) & debug_grp_selected(0 to DBG_3FOURTH-1) when "01",
+                              debug_grp_selected(0 to DBG_WIDTH-1)                                                    when others;
+
+
+   with select_bits(7)  select trace_data_out(0 to DBG_1FOURTH-1) <= 
+      trace_data_in(0 to DBG_1FOURTH-1)                 when '0',
+      debug_grp_rotated(0 to DBG_1FOURTH-1)             when others;
+
+   with select_bits(8)  select trace_data_out(DBG_1FOURTH to DBG_2FOURTH-1) <= 
+      trace_data_in(DBG_1FOURTH to DBG_2FOURTH-1)       when '0',
+      debug_grp_rotated(DBG_1FOURTH to DBG_2FOURTH-1)   when others;
+
+   with select_bits(9)  select trace_data_out(DBG_2FOURTH to DBG_3FOURTH-1) <= 
+      trace_data_in(DBG_2FOURTH to DBG_3FOURTH-1)       when '0',
+      debug_grp_rotated(DBG_2FOURTH to DBG_3FOURTH-1)   when others;
+
+   with select_bits(10) select trace_data_out(DBG_3FOURTH to DBG_WIDTH-1) <= 
+      trace_data_in(DBG_3FOURTH to DBG_WIDTH-1)         when '0',
+      debug_grp_rotated(DBG_3FOURTH to DBG_WIDTH-1)     when others;
+
+
+
+   with select_bits(11 to 12) select trigg_grp_selected <= 
+      trg_group0    when "00",
+      trg_group1    when "01",
+      trg_group2    when "10",
+      trg_group3    when others;
+
+   with select_bits(13) select 
+       trigg_grp_rotated  <=  trigg_grp_selected(6 to 11) & trigg_grp_selected(0 to 5) when '1',
+                              trigg_grp_selected(0 to 11)                              when others;
+
+   with select_bits(14) select trigger_data_out(0 to 5) <=
+      trigger_data_in(0 to 5)       when '0',
+      trigg_grp_rotated(0 to 5)     when others;
+
+   with select_bits(15) select trigger_data_out(6 to 11) <=
+      trigger_data_in(6 to 11)      when '0',
+      trigg_grp_rotated(6 to 11)    when others;
+
+
+end c_debug_mux8;

@@ -1,0 +1,1250 @@
+--
+--  File Name:         TbUtilPkg.vhd
+--  Design Unit Name:  TbUtilPkg
+--  Revision:          STANDARD VERSION
+--
+--  Maintainer:        Jim Lewis      email:  jim@SynthWorks.com
+--  Contributor(s):
+--     Jim Lewis      email:  jim@SynthWorks.com
+--
+--  Package Defines
+--
+--  Developed for:
+--        SynthWorks Design Inc.
+--        VHDL Training Classes
+--        11898 SW 128th Ave.  Tigard, Or  97223
+--        http://www.SynthWorks.com
+--
+--  Revision History:
+--    Date      Version    Description
+--    01/2024   2024.01    IfElse function moved to IfElsePkg
+--    09/2022   2022.09    Added WaitForTransactionOrIrq, FinishTransaction, and TransactionPending for AckType/RdyType
+--    03/2022   2022.03    Added EdgeRose, EdgeFell, FindRisingEdge, FindFallingEdge.
+--    01/2022   2022.01    Added MetaTo01.  Added WaitForTransaction without clock for RdyType/AckType and bit.
+--    02/2021   2021.02    Added AckType, RdyType, RequestTransaction, WaitForTransaction for AckType/RdyType
+--    12/2020   2020.12    Added IfElse functions for string and integer.
+--                         Added Increment function for integer
+--    01/2020   2020.01    Updated Licenses to Apache
+--    08/2018   2018.08    Updated WaitForTransaction to allow 0 time transactions
+--    04/2018   2018.04    Added RequestTransaction, WaitForTransaction, Toggle, WaitForToggle for bit.
+--                         Added Increment and WaitForToggle for integer.
+--    11/2016   2016.11    First Public Release Version
+--                         Updated naming for consistency.
+--    10/2013   2013.10    Split out Text Utilities
+--    11/1999:  0.1        Initial revision
+--                         Numerous revisions for VHDL Testbenches and Verification
+--
+--
+--  This file is part of OSVVM.
+--
+--  Copyright (c) 1999 - 2021 by SynthWorks Design Inc.
+--
+--  Licensed under the Apache License, Version 2.0 (the "License");
+--  you may not use this file except in compliance with the License.
+--  You may obtain a copy of the License at
+--
+--      https://www.apache.org/licenses/LICENSE-2.0
+--
+--  Unless required by applicable law or agreed to in writing, software
+--  distributed under the License is distributed on an "AS IS" BASIS,
+--  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+--  See the License for the specific language governing permissions and
+--  limitations under the License.
+--
+
+library ieee ;
+  use ieee.std_logic_1164.all ;
+
+  use work.AlertLogPkg.all ;
+  use work.TranscriptPkg.all ;
+  use work.ResolutionPkg.all ;
+  use work.OsvvmGlobalPkg.all ;
+
+package TbUtilPkg is
+
+  constant CLK_ACTIVE : std_logic := '1' ;
+
+  constant t_sim_resolution : time := std.env.resolution_limit ;  -- VHDL-2008
+  -- constant t_sim_resolution : time := 1 ns ;  -- for non VHDL-2008 simulators
+
+  ------------------------------------------------------------
+  -- ZeroOneHot, OneHot
+  --   OneHot:      return true if exactly one value is 1
+  --   ZeroOneHot:  return false when more than one value is a 1
+  ------------------------------------------------------------
+  function OneHot ( constant A : in std_logic_vector ) return boolean ;
+  function ZeroOneHot ( constant A : in std_logic_vector ) return boolean ;
+
+  ------------------------------------------------------------
+  -- EdgeRose, EdgeFell, FindRisingEdge, FindFallingEdge
+  ------------------------------------------------------------
+  function  EdgeRose ( signal C : in std_logic ) return boolean ;
+  function  EdgeFell ( signal C : in std_logic ) return boolean ;
+  function  EdgeActive ( signal C : in std_logic; A : std_logic ) return boolean ;
+  procedure FindRisingEdge ( signal C : in std_logic) ;
+  procedure FindFallingEdge ( signal C : in std_logic ) ;
+  procedure FindActiveEdge ( signal C : in std_logic; A : std_logic ) ;
+
+  ------------------------------------------------------------
+  -- MetaTo01
+  --   Convert Meta values to 0
+  ------------------------------------------------------------
+  function MetaTo01 ( constant A : in std_ulogic ) return std_ulogic ;
+  function MetaTo01 ( constant A : in std_ulogic_vector ) return std_ulogic_vector ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   RequestTransaction - Transaction initiation in transaction procedure
+  --   WaitForTransaction - Transaction execution control in VC
+  ------------------------------------------------------------
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   std_logic
+  ------------------------------------------------------------
+  procedure RequestTransaction (
+    signal Rdy  : Out std_logic ;
+    signal Ack  : In  std_logic
+  ) ;
+
+  procedure WaitForTransaction (
+    signal Clk  : In  std_logic ;
+    signal Rdy  : In  std_logic ;
+    signal Ack  : Out std_logic
+  ) ;
+
+  -- Only for clockless models
+  procedure WaitForTransaction (
+    signal Rdy : In  std_logic ;
+    signal Ack : Out std_logic
+  ) ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   bit
+  ------------------------------------------------------------
+  procedure RequestTransaction (
+    signal Rdy  : Out bit ;
+    signal Ack  : In  bit
+  ) ;
+
+  procedure WaitForTransaction (
+    signal Clk  : In  std_logic ;
+    signal Rdy  : In  bit ;
+    signal Ack  : Out bit
+  ) ;
+  
+  -- Only for clockless models
+  procedure WaitForTransaction (
+    signal Rdy : in  bit ;
+    signal Ack : out bit
+  ) ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   integer
+  ------------------------------------------------------------
+  subtype RdyType is resolved_max integer range  0 to integer'high ;
+  subtype AckType is resolved_max integer range -1 to integer'high ;
+
+  procedure RequestTransaction (
+    signal Rdy     : InOut RdyType ;
+    signal Ack     : In    AckType
+  ) ;
+
+  procedure WaitForTransaction (
+    signal Clk      : In    std_logic ;
+    signal Rdy      : In    RdyType ;
+    signal Ack      : InOut AckType
+  ) ;
+
+  -- Only for clockless models
+  procedure WaitForTransaction (
+    signal Rdy      : In    RdyType ;
+    signal Ack      : InOut AckType
+  );
+
+
+  ------------------------------------------------------------
+  -- Interrupt handling variations of WaitForTransaction 
+  --   std_logic / std_logic 
+  ------------------------------------------------------------
+  procedure WaitForTransaction (
+    signal   Clk       : In  std_logic ;
+    signal   Rdy       : In  std_logic ;
+    signal   Ack       : Out std_logic ;
+    signal   TimeOut   : In  std_logic ;
+    constant Polarity  : In  std_logic := '1'
+  ) ;
+
+  -- Intended for models that need to switch between instruction streams
+  -- such as a CPU when interrupt is pending
+  procedure WaitForTransactionOrIrq (
+    signal Clk     : In  std_logic ;
+    signal Rdy     : In  std_logic ;
+    signal IntReq  : In  std_logic
+  ) ;
+
+  -- Set Ack to Model starting value
+  procedure StartTransaction  ( signal Ack : Out std_logic ) ;
+  -- Set Ack to Model finishing value
+  procedure FinishTransaction ( signal Ack : Out std_logic ) ;
+  -- If a transaction is pending, return true
+  function TransactionPending ( signal Rdy : In  std_logic ) return boolean ;
+
+  ------------------------------------------------------------
+  -- Interrupt handling variations of WaitForTransaction 
+  --   RdyType/AckType 
+  ------------------------------------------------------------
+  -- Intended for models that need to switch between instruction streams
+  -- such as a CPU when interrupt is pending
+  procedure WaitForTransactionOrIrq (
+    signal   Clk      : In  std_logic ;
+    signal   Rdy      : In  RdyType ;
+    signal   Ack      : In  AckType ;
+    signal   IntReq   : In  std_logic ;
+    constant POLARITY : In  std_logic := '1' 
+  ) ;
+
+  -- StartTransaction not used, Ack is incremented at transaction completion
+--  procedure StartTransaction  ( signal Ack : Out AckType ) ; 
+
+  -- Increment Ack
+  procedure FinishTransaction ( signal Ack : InOut AckType ) ;
+
+  -- If a transaction is pending, return true
+  --   Used to detect presence of transaction stream,
+  --   such as an interrupt handler
+  function TransactionPending (
+    signal Rdy     : In  RdyType ;
+    signal Ack     : In  AckType
+  ) return boolean ;
+
+
+  ------------------------------------------------------------
+  -- Toggle, WaitForToggle
+  --   Used for communicating between processes
+  ------------------------------------------------------------
+  procedure Toggle (
+    signal Sig        : InOut std_logic ;
+    constant DelayVal : time
+  ) ;
+  procedure Toggle ( signal Sig : InOut std_logic ) ;
+  procedure ToggleHS ( signal Sig : InOut std_logic ) ;
+  function  IsToggle ( signal Sig : In std_logic ) return boolean ;
+  procedure WaitForToggle ( signal Sig : In std_logic ) ;
+
+  -- Bit type versions
+  procedure Toggle ( signal Sig : InOut bit ; constant DelayVal : time ) ;
+  procedure Toggle ( signal Sig : InOut bit ) ;
+  procedure ToggleHS ( signal Sig : InOut bit ) ;
+  function  IsToggle ( signal Sig : In bit ) return boolean ;
+  procedure WaitForToggle ( signal Sig : In bit ) ;
+
+  -- Integer type versions
+  procedure Increment ( signal Sig : InOut integer ; constant RollOverValue : in integer := 0) ;
+  function  Increment (constant Sig : in integer ; constant Amount : in integer := 1) return integer ;
+  procedure WaitForToggle ( signal Sig : In integer ) ;
+
+
+  ------------------------------------------------------------
+  -- WaitForBarrier
+  --   Barrier Synchronization
+  --   Multiple processes call it, it finishes when all have called it
+  ------------------------------------------------------------
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ) ;
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1') ;
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ; constant TimeOut : time ) ;
+  -- resolved_barrier : summing resolution used in conjunction with integer based barriers
+  function resolved_barrier ( s : integer_vector ) return integer ;
+  subtype  BarrierType is resolved_barrier integer range integer'low+1 to integer'high ;
+--  alias    integer_barrier is BarrierType ; 
+  subtype  integer_barrier is BarrierType ; 
+  -- Usage of integer barriers requires resolved_barrier. Initialization to 1 recommended, but not required
+  --   signal barrier1 : resolved_barrier integer := 1 ;     -- using the resolution function
+  --   signal barrier2 : integer_barrier := 1 ;              -- using the subtype that already applies the resolution function
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ) ;
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1') ;
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ; constant TimeOut : time ) ;
+  -- Using separate signals
+  procedure WaitForBarrier2 ( signal SyncOut : out std_logic ; signal SyncIn : in  std_logic ) ;
+  procedure WaitForBarrier2 ( signal SyncOut : out std_logic ; signal SyncInV : in  std_logic_vector ) ;
+
+
+  ------------------------------------------------------------
+  -- WaitForClock
+  --   Sync to Clock - after a delay, after a number of clocks
+  ------------------------------------------------------------
+  procedure WaitForClock ( signal Clk : in std_logic ;  constant Delay : in time ) ;
+  procedure WaitForClock ( signal Clk : in std_logic ;  constant NumberOfClocks : in integer := 1) ;
+  procedure WaitForClock ( signal Clk : in std_logic ;  signal Enable : in boolean ) ;
+  procedure WaitForClock ( signal Clk : in std_logic ;  signal Enable : in std_logic ; constant Polarity : std_logic := '1' ) ;
+
+
+  ------------------------------------------------------------
+  -- WaitForLevel
+  --   Find a signal at a level
+  ------------------------------------------------------------
+  procedure WaitForLevel ( signal A : in boolean ) ;
+  procedure WaitForLevel ( signal A : in std_logic ; Polarity : std_logic := '1' ) ;
+
+  ------------------------------------------------------------
+  -- CreateClock,  CreateReset
+  --   Note these do not exit
+  ------------------------------------------------------------
+  procedure CreateClock (
+    signal   Clk        : inout std_logic ;
+    constant Period     : time ;
+    constant DutyCycle  : real := 0.5
+  )  ;
+
+  procedure CheckClockPeriod (
+    constant AlertLogID : AlertLogIDType ;
+    signal   Clk        : in  std_logic ;
+    constant Period     : time ;
+    constant ClkName    : string := "Clock" ;
+    constant HowMany    : integer := 5
+  ) ;
+
+  procedure CheckClockPeriod (
+    signal   Clk        : in  std_logic ;
+    constant Period     : time ;
+    constant ClkName    : string := "Clock" ;
+    constant HowMany    : integer := 5
+  ) ;
+
+  procedure CreateReset (
+    signal   Reset       : out std_logic ;
+    constant ResetActive : in  std_logic ;
+    signal   Clk         : in  std_logic ;
+    constant Period      :     time ;
+    constant tpd         :     time := 0 ns
+  ) ;
+
+  procedure LogReset (
+    constant AlertLogID  : AlertLogIDType ;
+    signal   Reset       : in  std_logic ;
+    constant ResetActive : in  std_logic ;
+    constant ResetName   : in  string := "Reset" ;
+    constant LogLevel    : in  LogType := ALWAYS
+  ) ;
+
+  procedure LogReset (
+    signal   Reset       : in  std_logic ;
+    constant ResetActive : in  std_logic ;
+    constant ResetName   : in  string := "Reset" ;
+    constant LogLevel    : in  LogType := ALWAYS
+  ) ;
+
+  ------------------------------------------------------------
+  --  Deprecated subprogram names
+  --    Maintaining backward compatibility using aliases
+  ------------------------------------------------------------
+  -- History of RequestTransaction / WaitForTransaction
+  alias RequestAction is RequestTransaction [std_logic, std_logic] ;
+  alias WaitForRequest is WaitForTransaction [std_logic, std_logic, std_logic] ;
+  -- History of WaitForToggle
+  alias WaitOnToggle is WaitForToggle [std_logic] ;
+  -- History of WaitForBarrier
+  alias WayPointBlock is WaitForBarrier [std_logic] ;
+  alias SyncTo is WaitForBarrier2[std_logic, std_logic] ;
+  alias SyncTo is WaitForBarrier2[std_logic, std_logic_vector] ;
+  -- Backward compatible name
+  alias SyncToClk is WaitForClock [std_logic, time] ;
+
+  ------------------------------------------------------------
+  -- Deprecated
+  -- WaitForAck, StrobeAck
+  --   Replaced by WaitForToggle and Toggle
+  ------------------------------------------------------------
+  procedure WaitForAck ( signal Ack : In  std_logic ) ;
+  procedure StrobeAck  ( signal Ack : Out std_logic ) ;
+
+end TbUtilPkg ;
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+package body TbUtilPkg is
+  type stdulogic_indexby_stdulogic is array (std_ulogic) of std_ulogic;
+
+  ------------------------------------------------------------
+  -- ZeroOneHot, OneHot
+  --   OneHot:      return true if exactly one value is 1
+  --   ZeroOneHot:  return false when more than one value is a 1
+  ------------------------------------------------------------
+  function OneHot ( constant A : in std_logic_vector ) return boolean is
+    variable found_one : boolean := FALSE ;
+  begin
+    for i in A'range loop
+      if A(i) = '1' or A(i) = 'H' then
+        if found_one then
+          return FALSE ;
+        end if ;
+        found_one := TRUE ;
+      end if ;
+    end loop ;
+    return found_one ; -- found a one
+  end function OneHot ;
+
+  function ZeroOneHot ( constant A : in std_logic_vector ) return boolean is
+    variable found_one : boolean := FALSE ;
+  begin
+    for i in A'range loop
+      if A(i) = '1' or A(i) = 'H' then
+        if found_one then
+          return FALSE ;
+        end if ;
+        found_one := TRUE ;
+      end if ;
+    end loop ;
+    return TRUE ;  -- all zero or found a one
+  end function ZeroOneHot ;
+
+  ------------------------------------------------------------
+  -- EdgeRose, EdgeFell, FindRisingEdge, FindFallingEdge
+  ------------------------------------------------------------
+  function EdgeRose ( signal C : in std_logic ) return boolean is
+  begin
+    return  to_x01(C)='1' and to_x01(C'last_value)='0' and C'last_event= 0 sec ;
+  end function EdgeRose ;
+
+  function EdgeFell ( signal C : in std_logic ) return boolean is
+  begin
+    return  to_x01(C)='0' and to_x01(C'last_value)='1' and C'last_event= 0 sec ;
+  end function EdgeFell ;
+
+  function EdgeActive ( signal C : in std_logic; A : std_logic ) return boolean is
+  begin
+    return  to_x01(C)=A and to_x01(C'last_value)=not A and C'last_event= 0 sec ;
+  end function EdgeActive ;
+
+  procedure FindRisingEdge ( signal C : in std_logic) is
+  begin
+    if not EdgeRose(C) then
+      wait until rising_edge(C) ;
+    end if ;
+  end procedure FindRisingEdge ;
+
+--!!  Rejected as the semantic is confusing
+--!!  procedure FindRisingEdge ( signal C : in std_logic; Count : integer) is
+--!!    variable Start : integer := 1 ;
+--!!  begin
+--!!    if EdgeRose(C) then
+--!!      Start := 2 ;
+--!!    end if
+--!!    for i in Start to Count loop
+--!!      wait until rising_edge(C) ;
+--!!    end loop ;
+--!!  end procedure FindRisingEdge ;
+
+  procedure FindFallingEdge ( signal C : in std_logic ) is
+  begin
+    if not EdgeFell(C) then
+      wait until falling_edge(C) ;
+    end if ;
+  end procedure FindFallingEdge ;
+
+  procedure FindActiveEdge ( signal C : in std_logic; A : std_logic ) is
+  begin
+    if A = '1' then
+      FindRisingEdge(C) ;
+    else
+      FindFallingEdge(C) ;
+    end if ;
+  end procedure FindActiveEdge ;
+
+
+  ------------------------------------------------------------
+  -- MetaTo01
+  --   Convert Meta values to 0
+  ------------------------------------------------------------
+  constant MetaTo01Table : stdulogic_indexby_stdulogic := (
+      '1'     => '1',
+      'H'     => '1',
+      others  => '0'
+  );
+
+  function MetaTo01 ( constant A : in std_ulogic ) return std_ulogic is
+  begin
+    return MetaTo01Table(A) ;
+  end function MetaTo01 ;
+
+  function MetaTo01 ( constant A : in std_ulogic_vector ) return std_ulogic_vector is
+    variable result : std_logic_vector(A'range) ;
+  begin
+    for i in A'range loop
+      result(i) := MetaTo01Table(A(i)) ;
+    end loop ;
+    return result ;
+  end function MetaTo01 ;
+
+  -- Moved  ------------------------------------------------------------
+  -- Moved  -- IfElse
+  -- Moved  --   Crutch until VHDL-2019 conditional initialization
+  -- Moved  --   If condition is true return first parameter otherwise return second
+  -- Moved  ------------------------------------------------------------
+  -- Moved  function IfElse(Expr : boolean ; A, B : std_logic_vector) return std_logic_vector is
+  -- Moved  begin
+  -- Moved    if Expr then
+  -- Moved      return A ;
+  -- Moved    else
+  -- Moved      return B ;
+  -- Moved    end if ;
+  -- Moved  end function IfElse ;
+  -- Moved  
+  -- Moved  function IfElse(Expr : boolean ; A, B : integer) return integer is
+  -- Moved  begin
+  -- Moved    if Expr then
+  -- Moved      return A ;
+  -- Moved    else
+  -- Moved      return B ;
+  -- Moved    end if ;
+  -- Moved  end function IfElse ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   RequestTransaction - Transaction initiation in transaction procedure
+  --   WaitForTransaction - Transaction execution control in VC
+  ------------------------------------------------------------
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   std_logic
+  ------------------------------------------------------------
+  procedure RequestTransaction (
+    signal Rdy  : Out std_logic ;
+    signal Ack  : In  std_logic
+  ) is
+  begin
+    -- Record contains new transaction
+    Rdy        <= '1' ;
+    -- Find Ack low = '0'
+    wait until Ack = '0' ;
+    -- Prepare for Next Transaction
+    Rdy        <= '0' ;
+    -- Transaction Done
+    wait until Ack = '1' ;
+  end procedure RequestTransaction ;
+
+  procedure WaitForTransaction (
+    signal Clk  : In  std_logic ;
+    signal Rdy  : In  std_logic ;
+    signal Ack  : Out std_logic
+  ) is
+    variable AckTime : time ;
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack        <= '1' ;               --  #6
+    AckTime    := NOW ;
+    -- Find Start of Transaction
+    wait for 0 ns ; -- Allow Rdy from previous cycle to clear
+    if Rdy /= '1' then                --   #2
+      wait until Rdy = '1' ;
+    else
+      wait for 0 ns ; -- allow Ack to update
+    end if ;
+    -- align to clock if needed (not back-to-back transactions)
+    if NOW /= AckTime then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+    -- Model active and owns the record
+    Ack        <= '0' ;               --  #3
+    wait for 0 ns ; -- Allow transactions without time passing
+  end procedure WaitForTransaction ;
+
+  -- Only for clockless models 
+  procedure WaitForTransaction (
+    signal Rdy  : In  std_logic ;
+    signal Ack  : Out std_logic
+  ) is
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack        <= '1' ;               --  #6
+    -- Find Start of Transaction
+    wait for 0 ns ; -- Allow Rdy from previous cycle to clear
+    if Rdy /= '1' then                --   #2
+      wait until Rdy = '1' ;
+    end if ;
+    -- Model active and owns the record
+    Ack        <= '0' ;               --  #3
+    wait for 0 ns ; -- allow 0 time transactions
+  end procedure WaitForTransaction ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   bit
+  ------------------------------------------------------------
+  procedure RequestTransaction (
+    signal Rdy  : Out bit ;
+    signal Ack  : In  bit
+  ) is
+  begin
+    -- Record contains new transaction
+    Rdy        <= '1' ;
+    -- Find Ack low = '0'
+    wait until Ack = '0' ;
+    -- Prepare for Next Transaction
+    Rdy        <= '0' ;
+    -- Transaction Done
+    wait until Ack = '1' ;
+  end procedure RequestTransaction ;
+
+  procedure WaitForTransaction (
+    signal Clk  : In  std_logic ;
+    signal Rdy  : In  bit ;
+    signal Ack  : Out bit
+  ) is
+    variable AckTime : time ;
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack        <= '1' ;               --  #6
+    AckTime    := NOW ;
+    -- Find Start of Transaction
+    wait for 0 ns ; -- Allow Rdy from previous cycle to clear
+    if Rdy /= '1' then                --   #2
+      wait until Rdy = '1' ;
+    else
+      wait for 0 ns ; -- allow Ack to update
+    end if ;
+    -- align to clock if needed (not back-to-back transactions)
+    if NOW /= AckTime then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+    -- Model active and owns the record
+    Ack        <= '0' ;               --  #3
+    wait for 0 ns ; -- Allow transactions without time passing
+  end procedure WaitForTransaction ;
+
+  -- Only for clockless models 
+  procedure WaitForTransaction (
+    signal Rdy  : in  bit ;
+    signal Ack  : out bit
+  ) is
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack        <= '1' ;               --  #6
+    -- Find Start of Transaction
+    wait for 0 ns ; -- Allow Rdy from previous cycle to clear
+    if Rdy /= '1' then                --   #2
+      wait until Rdy = '1' ;
+    end if ;
+    -- Model active and owns the record
+    Ack        <= '0' ;               --  #3
+    wait for 0 ns ; -- allow 0 time transactions
+  end procedure WaitForTransaction ;
+
+  ------------------------------------------------------------
+  -- RequestTransaction - WaitForTransaction
+  --   integer
+  ------------------------------------------------------------
+  procedure RequestTransaction (
+    signal Rdy     : InOut RdyType ;
+    signal Ack     : In    AckType
+  ) is
+  begin
+    -- Initiate Transaction Request
+    Rdy <= Increment(Rdy) ;
+    wait for 0 ns ;
+
+    -- Wait for Transaction Completion
+    wait until Rdy = Ack ;
+  end procedure RequestTransaction ;
+
+  procedure WaitForTransaction (
+    signal Clk      : In    std_logic ;
+    signal Rdy      : In    RdyType ;
+    signal Ack      : InOut AckType
+  ) is
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack <= Increment(Ack) ;
+
+    -- Find Start of Transaction
+    wait until Ack /= Rdy ;
+
+    -- Align to clock if needed (not back-to-back transactions)
+    if not EdgeActive(Clk, CLK_ACTIVE) then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+  end procedure WaitForTransaction ;
+
+  -- Only for clockless models 
+  procedure WaitForTransaction (
+    signal Rdy      : In    RdyType ;
+    signal Ack      : InOut AckType
+  ) is
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack <= Increment(Ack) ;
+
+    -- Find Start of Transaction
+    wait until Ack /= Rdy ;
+  end procedure WaitForTransaction ;
+
+  ------------------------------------------------------------
+  -- WaitForTransaction 
+  --   Specializations for interrupt handling
+  ------------------------------------------------------------
+  procedure WaitForTransaction (
+    signal   Clk       : In  std_logic ;
+    signal   Rdy       : In  std_logic ;
+    signal   Ack       : Out std_logic ;
+    signal   TimeOut   : In  std_logic ;
+    constant Polarity  : In  std_logic := '1'
+  ) is
+    variable AckTime : time ;
+    variable FoundRdy : boolean ;
+  begin
+    -- End of Previous Cycle.  Signal Done
+    Ack        <= '1' ;               --  #6
+    AckTime    := NOW ;
+    -- Find Ready or Time out
+    wait for 0 ns ; -- Allow Rdy from previous cycle to clear
+    if (Rdy /= '1' and TimeOut /= Polarity) then
+      wait until Rdy = '1' or TimeOut = Polarity ;
+    end if ;
+    FoundRdy := Rdy = '1' ;
+    -- align to clock if Rdy or TimeOut does not happen within delta cycles from Ack
+    if NOW /= AckTime then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+    if FoundRdy then
+      -- Model active and owns the record
+      Ack        <= '0' ;             --  #3
+      wait for 0 ns ; -- Allow transactions without time passing
+    end if ;
+  end procedure WaitForTransaction ;
+
+  -- Variation for model that stops waiting when IntReq is asserted
+  -- Intended for models that need to switch between instruction streams
+  -- such as a CPU when interrupt is pending
+  procedure WaitForTransactionOrIrq (
+    signal Clk     : In  std_logic ;
+    signal Rdy     : In  std_logic ;
+    signal IntReq  : In  std_logic
+  ) is
+    variable AckTime : time ;
+    constant POLARITY : std_logic := '1' ;
+  begin
+    AckTime    := NOW ;
+    -- Find Ready or Time out
+    wait for 0 ns ; -- allow Rdy from previous cycle to clear
+    if (Rdy /= '1' and IntReq /= POLARITY) then
+      wait until Rdy = '1' or IntReq = POLARITY ;
+    else
+      wait for 0 ns ; -- allow Ack to update
+   end if ;
+    -- align to clock if Rdy or IntReq does not happen within delta cycles from Ack
+    if NOW /= AckTime then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+  end procedure ;
+
+  -- Set Ack to Model starting value
+  -- Pairs with WaitForTransactionOrIrq above
+  procedure StartTransaction  ( signal Ack : Out std_logic ) is
+  begin
+    Ack        <= '0' ;
+    wait for 0 ns ; -- Allow transactions without time passing
+  end procedure StartTransaction ;
+
+  -- Set Ack to Model finishing value
+  -- Pairs with WaitForTransactionOrIrq above
+  procedure FinishTransaction ( signal Ack : Out std_logic ) is
+  begin
+    -- End of Cycle
+    Ack        <= '1' ;
+    wait for 0 ns ; -- Allow Ack to update
+  end procedure FinishTransaction ;
+
+  -- If a transaction is pending, return true
+  --   Used to detect presence of transaction stream,
+  --   such as an interrupt handler
+  function TransactionPending (
+    signal Rdy     : In  std_logic
+  ) return boolean is
+  begin
+    return Rdy = '1' ;
+  end function TransactionPending ;
+
+  ------------------------------------------------------------
+  -- WaitForTransaction - RdyType/AckType 
+  --   Specializations for interrupt handling
+  ------------------------------------------------------------
+  -- Intended for models that need to switch between instruction streams
+  -- such as a CPU when interrupt is pending
+  procedure WaitForTransactionOrIrq (
+    signal   Clk      : In  std_logic ;
+    signal   Rdy      : In  RdyType ;
+    signal   Ack      : In  AckType ;
+    signal   IntReq   : In  std_logic ;
+    constant POLARITY : In  std_logic := '1' 
+  ) is
+  begin
+    if (Ack = Rdy and IntReq /= POLARITY) then
+      wait until Ack /= Rdy or IntReq = POLARITY ;
+   end if ;
+    -- Align to clock if needed (not back-to-back transactions)
+    if not EdgeActive(Clk, CLK_ACTIVE) then
+      wait until Clk = CLK_ACTIVE ;
+    end if ;
+  end procedure ;
+
+  -- Set Ack to Model starting value
+  -- Pairs with WaitForTransactionOrIrq above
+--  procedure StartTransaction  ( signal Ack : Out AckType ) is
+--  begin
+--    Null ; -- Do nothing
+--  end procedure StartTransaction ;
+
+  -- Set Ack to Model finishing value
+  -- Pairs with WaitForTransactionOrIrq above
+  procedure FinishTransaction ( signal Ack : InOut AckType ) is
+  begin
+    -- End of Cycle
+    Ack <= Increment(Ack) ;
+    wait for 0 ns ; -- allow Ack to update - required for WaitForTransactionOrIrq
+  end procedure FinishTransaction ;
+
+  -- If a transaction is pending, return true
+  --   Used to detect presence of transaction stream,
+  --   such as an interrupt handler
+  function TransactionPending (
+    signal Rdy     : In  RdyType ;
+    signal Ack     : In  AckType
+  ) return boolean is
+  begin
+    return Rdy /= Ack ;
+  end function TransactionPending ;
+
+
+  ------------------------------------------------------------
+  -- Toggle, WaitForToggle
+  --   Used for communicating between processes
+  ------------------------------------------------------------
+  constant toggle_sl_table : stdulogic_indexby_stdulogic := (
+      '0'     => '1',
+      'L'     => '1',
+      others  => '0'
+  );
+
+  procedure Toggle (
+    signal Sig        : InOut std_logic ;
+    constant DelayVal : time
+  ) is
+    variable iDelayVal : time ;
+  begin
+    if DelayVal > t_sim_resolution then
+      iDelayVal := DelayVal - t_sim_resolution ;
+    else
+      iDelayVal := 0 sec ;
+      AlertIf(OSVVM_ALERTLOG_ID, DelayVal < 0 sec, "osvvm.TbUtilPkg.Toggle: Delay value < 0 ns") ;
+    end if ;
+    Sig <= toggle_sl_table(Sig) after iDelayVal ;
+  end procedure Toggle ;
+
+  procedure Toggle ( signal Sig : InOut std_logic ) is
+  begin
+    Sig <= toggle_sl_table(Sig) ;
+  end procedure Toggle ;
+
+  procedure ToggleHS ( signal Sig : InOut std_logic ) is
+  begin
+    Sig    <= toggle_sl_table(Sig) ;
+    wait for 0 ns ;  -- Sig toggles
+    wait for 0 ns ;  -- new values updated into record
+  end procedure ToggleHS ;
+
+  function IsToggle ( signal Sig : In std_logic ) return boolean is
+  begin
+    return Sig'event ;
+  end function IsToggle ;
+
+  procedure WaitForToggle ( signal Sig : In std_logic ) is
+  begin
+    wait on Sig ;
+  end procedure WaitForToggle ;
+
+  -- Bit type versions
+  procedure Toggle ( signal Sig : InOut bit ; constant DelayVal : time ) is
+    variable iDelayVal : time ;
+  begin
+    if DelayVal > t_sim_resolution then
+      iDelayVal := DelayVal - t_sim_resolution ;
+    else
+      iDelayVal := 0 sec ;
+      AlertIf(OSVVM_ALERTLOG_ID, DelayVal < 0 sec,
+         "osvvm.TbUtilPkg.Toggle: Delay value < 0 ns", WARNING) ;
+    end if ;
+    Sig <= not Sig after iDelayVal ;
+  end procedure Toggle ;
+
+  procedure Toggle ( signal Sig : InOut bit ) is
+  begin
+    Sig <= not Sig ;
+  end procedure Toggle ;
+
+  procedure ToggleHS ( signal Sig : InOut bit ) is
+  begin
+    Sig    <= not Sig ;
+    wait for 0 ns ;  -- Sig toggles
+    wait for 0 ns ;  -- new values updated into record
+  end procedure ToggleHS ;
+
+  function IsToggle ( signal Sig : In bit ) return boolean is
+  begin
+    return Sig'event ;
+  end function IsToggle ;
+
+  procedure WaitForToggle ( signal Sig : In bit ) is
+  begin
+    wait on Sig ;
+  end procedure WaitForToggle ;
+
+  -- Integer type versions
+  procedure Increment (signal Sig : InOut integer ; constant RollOverValue : in integer := 0) is
+  begin
+--!!    if Sig = integer'high then
+    if Sig = 2**30-1 then -- for consistency with function increment
+      Sig <= RollOverValue ;
+    else
+      Sig <= Sig + 1 ;
+    end if ;
+  end procedure Increment ;
+
+  function Increment (constant Sig : in integer ; constant Amount : in integer := 1) return integer is
+  begin
+--! Sig = integer'high - Amount + 1 ;
+    return (Sig + Amount) mod 2**30 ;
+  end function Increment ;
+
+  procedure WaitForToggle ( signal Sig : In integer ) is
+  begin
+    wait on Sig ;
+  end procedure WaitForToggle ;
+
+  ------------------------------------------------------------
+  -- WaitForBarrier
+  --   Barrier Synchronization
+  --   Multiple processes call it, it finishes when all have called it
+  ------------------------------------------------------------
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ) is
+  begin
+    Sig <= 'H' ;
+    -- Wait until all processes set Sig to H
+    -- Level check not necessary since last value /= H yet
+    wait until Sig = 'H' ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= '0' ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1') is
+  begin
+    Sig <= 'H' ;
+    -- Wait until all processes set Sig to H
+    -- Level check not necessary since last value /= H yet
+    wait until Sig = 'H' or TimeOut = Polarity ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= '0' ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  procedure WaitForBarrier ( signal Sig : InOut std_logic ; constant TimeOut : time ) is
+  begin
+    Sig <= 'H' ;
+    -- Wait until all processes set Sig to H
+    -- Level check not necessary since last value /= H yet
+    wait until Sig = 'H' for TimeOut ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= '0' ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  ------------------------------------------------------------
+  -- resolved_barrier
+  -- summing resolution used in conjunction with integer based barriers
+  function resolved_barrier ( s : integer_vector ) return integer is
+    variable result : integer := 0 ;
+  begin
+    for i in s'RANGE loop
+--      if s(i) /= integer'left then
+--        result := result + s(i);
+--      else
+      if s(i) /= 0 then
+        result := result + 1;  -- removes the initialization requirement
+      end if ;
+    end loop ;
+    return result ;
+  end function resolved_barrier ;
+
+  -- Usage of integer barriers requires resolved_barrier. Initialization to 1 recommended, but not required
+  --   signal barrier1 : resolved_barrier integer := 1 ;     -- using the resolution function
+  --   signal barrier2 : integer_barrier := 1 ;              -- using the subtype that already applies the resolution function
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ) is
+  begin
+    Sig <= 0 ;
+    -- Wait until all processes set Sig to 0
+    -- Level check not necessary since last value /= 0 yet
+    wait until Sig = 0  ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= 1 ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1') is
+  begin
+    Sig <= 0 ;
+    -- Wait until all processes set Sig to 0
+    -- Level check not necessary since last value /= 0 yet
+    wait until Sig = 0 or TimeOut = Polarity ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= 1 ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  procedure WaitForBarrier ( signal Sig : InOut BarrierType ; constant TimeOut : time ) is
+  begin
+    Sig <= 0 ;
+    -- Wait until all processes set Sig to 0
+    -- Level check not necessary since last value /= 0 yet
+    wait until Sig = 0 for TimeOut ;
+    -- Deactivate and propagate to allow back to back calls
+    Sig <= 1 ;
+    wait for 0 ns ;
+  end procedure WaitForBarrier ;
+
+  -- Using separate signals
+  procedure WaitForBarrier2 ( signal SyncOut : out std_logic ; signal SyncIn : in  std_logic ) is
+  begin
+    -- Activate Rdy
+    SyncOut <= '1' ;
+    -- Make sure our Rdy is seen
+    wait for 0 ns ;
+    -- Wait until other process' Rdy is at level 1
+    if SyncIn /= '1' then
+       wait until SyncIn = '1' ;
+    end if ;
+    -- Deactivate Rdy
+    SyncOut <= '0' ;
+  end procedure WaitForBarrier2 ;
+
+  procedure WaitForBarrier2 ( signal SyncOut : out std_logic ; signal SyncInV : in  std_logic_vector ) is
+    constant ALL_ONE : std_logic_vector(SyncInV'Range) := (others => '1');
+  begin
+    -- Activate Rdy
+    SyncOut <= '1' ;
+    -- Make sure our Rdy is seen
+    wait for 0 ns ;
+    -- Wait until all other process' Rdy is at level 1
+    if SyncInV /= ALL_ONE then
+       wait until SyncInV = ALL_ONE ;
+    end if ;
+    -- Deactivate Rdy
+    SyncOut <= '0' ;
+  end procedure WaitForBarrier2 ;
+
+
+  ------------------------------------------------------------
+  -- WaitForClock
+  --   Sync to Clock - after a delay, after a number of clocks
+  ------------------------------------------------------------
+  procedure WaitForClock ( signal Clk : in std_logic ;  constant Delay : in time ) is
+  begin
+    if delay > t_sim_resolution then
+      wait for delay - t_sim_resolution ;
+    end if ;
+    wait until Clk = CLK_ACTIVE ;
+  end procedure WaitForClock ;
+
+  procedure WaitForClock ( signal Clk : in std_logic ;  constant NumberOfClocks : in integer := 1) is
+  begin
+    for i in 1 to NumberOfClocks loop
+      wait until Clk = CLK_ACTIVE ;
+    end loop ;
+  end procedure WaitForClock ;
+
+  procedure WaitForClock ( signal Clk : in std_logic ;  signal Enable : in boolean ) is
+  begin
+    wait on Clk until Clk = CLK_ACTIVE and Enable ;
+  end procedure WaitForClock ;
+
+  procedure WaitForClock ( signal Clk : in std_logic ;  signal Enable : in std_logic ; constant Polarity : std_logic := '1' ) is
+  begin
+    wait on Clk until Clk = CLK_ACTIVE and Enable = Polarity ;
+  end procedure WaitForClock ;
+
+
+  ------------------------------------------------------------
+  -- WaitForLevel
+  --   Find a signal at a level
+  ------------------------------------------------------------
+  procedure WaitForLevel ( signal A : in boolean ) is
+  begin
+    if not A then
+      wait until A ;
+    end if ;
+  end procedure WaitForLevel ;
+
+  procedure WaitForLevel ( signal A : in std_logic ; Polarity : std_logic := '1' ) is
+  begin
+    if A /= Polarity then
+      -- wait on A until A = Polarity ;
+      if Polarity = '1' then
+        wait until A = '1' ;
+      else
+        wait until A = '0' ;
+      end if ;
+    end if ;
+  end procedure WaitForLevel ;
+
+
+  ------------------------------------------------------------
+  -- CreateClock,  CreateReset
+  --   Note these do not exit
+  ------------------------------------------------------------
+  procedure CreateClock (
+    signal   Clk        : inout std_logic ;
+    constant Period     : time ;
+    constant DutyCycle  : real := 0.5
+  ) is
+    constant HIGH_TIME : time := Period * DutyCycle ;
+    constant LOW_TIME  : time := Period - HIGH_TIME ;
+  begin
+    if HIGH_TIME = LOW_TIME then
+ --     -- Set a 1 if not initialized, otherwise use initialized value.
+ --     if Clk = 'U' then 
+ --       Clk <= '1' ; 
+ --       wait for 0 ns ; 
+ --     end if  ;
+      loop
+        Clk <= toggle_sl_table(Clk) after HIGH_TIME ;
+        wait on Clk ;
+      end loop ;
+    else
+      -- Schedule s.t. all assignments after the first occur on delta cycle 0
+      Clk <= '0', '1' after LOW_TIME ;
+      wait for period - t_sim_resolution ; -- allows after on future Clk <= '0'
+      loop
+        Clk <= '0' after t_sim_resolution, '1' after LOW_TIME + t_sim_resolution ;
+        wait for period ;
+      end loop ;
+    end if ;
+  end procedure CreateClock ;
+
+  procedure CheckClockPeriod (
+    constant AlertLogID : AlertLogIDType ;
+    signal   Clk        : in  std_logic ;
+    constant Period     : time ;
+    constant ClkName    : string := "Clock" ;
+    constant HowMany    : integer := 5
+  ) is
+    variable LastLogTime, ObservedPeriod : time ;
+  begin
+    wait until EdgeActive(Clk, CLK_ACTIVE) ;
+    LastLogTime := now ;
+    -- Check First HowMany clocks
+    for i in 1 to HowMany loop
+      wait until Clk = CLK_ACTIVE ;
+      ObservedPeriod := now - LastLogTime ;
+      AffirmIf(AlertLogID, ObservedPeriod = Period,
+         "CheckClockPeriod: " & ClkName & " Period: " & to_string(ObservedPeriod, GetOsvvmDefaultTimeUnits) &
+         " = Expected " & to_string(Period, GetOsvvmDefaultTimeUnits)) ;
+      LastLogTime := now ;
+     end loop ;
+     wait ;
+  end procedure CheckClockPeriod ;
+
+  procedure CheckClockPeriod (
+    signal   Clk        : in  std_logic ;
+    constant Period     : time ;
+    constant ClkName    : string := "Clock" ;
+    constant HowMany    : integer := 5
+  ) is
+  begin
+    CheckClockPeriod (
+      AlertLogID => ALERTLOG_DEFAULT_ID,
+      Clk        => Clk,
+      Period     => Period,
+      ClkName    => ClkName,
+      HowMany    => HowMany
+    ) ;
+  end procedure CheckClockPeriod ;
+
+  procedure CreateReset (
+    signal   Reset       : out std_logic ;
+    constant ResetActive : in  std_logic ;
+    signal   Clk         : in  std_logic ;
+    constant Period      :     time ;
+    constant tpd         :     time := 0 ns
+  ) is
+  begin
+    wait until EdgeActive(Clk, CLK_ACTIVE) ;
+    Reset <= ResetActive after tpd ;
+    wait for Period - t_sim_resolution ;
+    wait until Clk = CLK_ACTIVE ;
+    Reset <= not ResetActive after tpd ;
+    wait ;
+  end procedure CreateReset ;
+
+  procedure LogReset (
+    constant AlertLogID  : AlertLogIDType ;
+    signal   Reset       : in  std_logic ;
+    constant ResetActive : in  std_logic ;
+    constant ResetName   : in  string := "Reset" ;
+    constant LogLevel    : in  LogType := ALWAYS
+  ) is
+  begin
+    -- Does not log the value of Reset at time 0.
+    for_ever : loop
+      wait on Reset ;
+      if Reset = ResetActive then
+        LOG(AlertLogID, ResetName & " now active", INFO) ;
+        print("") ;
+      elsif Reset = not ResetActive then
+        LOG(AlertLogID, ResetName & " now inactive", INFO) ;
+        print("") ;
+      else
+        LOG(AlertLogID, ResetName & " = " & to_string(Reset), INFO) ;
+        print("") ;
+      end if ;
+    end loop for_ever ;
+  end procedure LogReset ;
+
+  procedure LogReset (
+    signal   Reset       : in  std_logic ;
+    constant ResetActive : in  std_logic ;
+    constant ResetName   : in  string := "Reset" ;
+    constant LogLevel    : in  LogType := ALWAYS
+  ) is
+  begin
+    LogReset (
+      AlertLogID  => ALERTLOG_DEFAULT_ID,
+      Reset       => Reset,
+      ResetActive => ResetActive,
+      ResetName   => ResetName,
+      LogLevel    => LogLevel
+    ) ;
+  end procedure LogReset ;
+
+  ------------------------------------------------------------
+  -- Deprecated
+  -- WaitForAck, StrobeAck
+  --   Replaced by WaitForToggle and Toggle
+  ------------------------------------------------------------
+  procedure WaitForAck ( signal Ack : In  std_logic ) is
+  begin
+    -- Wait for Model to be done
+    wait until Ack = '1' ;
+    wait for 0 ns ;
+  end procedure ;
+
+  procedure StrobeAck  ( signal Ack  : Out std_logic ) is
+  begin
+    -- Model done, drive rising edge on Ack
+    Ack        <= '0' ;
+    wait for 0 ns ;
+    Ack        <= '1' ;
+    wait for 0 ns ;
+  end procedure ;
+
+
+end TbUtilPkg ;
