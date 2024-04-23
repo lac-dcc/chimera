@@ -5,6 +5,9 @@ from code_generation.cpp_class import *
 import json
 import argparse
 import subprocess
+import os
+
+from constants_replacer_visitor import replace_constants
     
 class ProdElement:
     def __init__(self, element:str, isTerminal:bool=False, isToken:bool=False) -> None:
@@ -220,6 +223,9 @@ def create_AST_file(prod_dict):
     add_classes(classes, cpp, h)
 
     create_visitor_classes(set(elements_in_gram), classes)
+    replace_constants(classes)
+
+
     m = ""
     for c in classes:
         if c.name.lower() !="node":
@@ -332,10 +338,10 @@ def main():
     
 
     if args.format:
-        files_to_format = ["AST.cpp","Visitor.cpp","AST.h","Visitor.h"]
-        for f in files_to_format:
-            subprocess.run(["clang-format","-i","-style=file", f])
-        
+            os.system("clang-format -i -style=file *.cpp *.h")
+            
+
+     
 
     
 

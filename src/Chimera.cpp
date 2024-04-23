@@ -1,4 +1,5 @@
 #include "AST.h"
+#include "ConstantsReplacerVisitor.h"
 #include "Visitor.h"
 #include <algorithm>
 #include <fstream>
@@ -6,6 +7,7 @@
 #include <iostream>
 #include <map>
 #include <nlohmann/json.hpp>
+#include <cxxopts.hpp>
 #include <random>
 #include <stack>
 #include <vector>
@@ -27,7 +29,12 @@ std::vector<std::string> breakRuleInProds(const std::string &rule) {
 
 void codeGen(std::shared_ptr<Node> head) {
   CodeGenVisitor visitor;
-  visitor.visit(head.get());
+  head.get()->accept(visitor);
+}
+
+void replaceConstants(std::shared_ptr<Node> head) {
+  ReplaceConstantsVisitor visitor;
+  head.get()->accept(visitor);
 }
 
 void pp(std::shared_ptr<Node> head) {
@@ -41,12 +48,22 @@ void pp(std::shared_ptr<Node> head) {
 }
 
 int main(int argc, char **argv) {
-  if (argc < 2) {
-    std::cerr << "Usage: " << argv[0] << " <json_production_count>"
-              << std::endl;
-    return 1;
-  }
+  cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
 
+  options.add_options()
+  ("d,debug", "Prints productions chains.",cxxopts::value<bool>()->default_value("false")) // Needs to improve
+  ("file", "The script file to execute", cxxopts::value<std::string>())
+  ("v,verbose", "Verbose output", cxxopts::value<bool>()->default_value("false"));//Needs to implement
+
+  options.parse_positional({"file"});
+
+  auto flags = options.parse(argc, argv);
+
+  if( flags.count("file") == 0){
+    std::cerr << "json file with probabilities not provided" << std::endl;
+    exit(1);
+  }
+  
   std::ifstream f(argv[1]);
 
   std::string json_str((std::istreambuf_iterator<char>(f)),
@@ -130,9 +147,12 @@ int main(int argc, char **argv) {
 
     (*curr).setChildren(children);
   }
-  std::cout << "teste" << std::endl;
-  pp(head);
-  codeGen(head);
+  replaceConstants(head);
 
+  if (flags.count("debug"))
+    pp(head);
+
+
+  codeGen(head);
   return 0;
 }
