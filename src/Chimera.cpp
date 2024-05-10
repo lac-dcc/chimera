@@ -2,12 +2,12 @@
 #include "ConstantsReplacerVisitor.h"
 #include "Visitor.h"
 #include <algorithm>
+#include <cxxopts.hpp>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <map>
 #include <nlohmann/json.hpp>
-#include <cxxopts.hpp>
 #include <random>
 #include <stack>
 #include <vector>
@@ -47,24 +47,46 @@ void pp(std::shared_ptr<Node> head) {
   std::cerr << std::endl;
 }
 
-int main(int argc, char **argv) {
+cxxopts::ParseResult parseArgs(int argc, char **argv) {
+  // clang-format off
   cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
+  options.positional_help("<file> <n-value>");
 
   options.add_options()
-  ("d,debug", "Prints productions chains.",cxxopts::value<bool>()->default_value("false")) // Needs to improve
-  ("file", "The script file to execute", cxxopts::value<std::string>())
-  ("v,verbose", "Verbose output", cxxopts::value<bool>()->default_value("false"));//Needs to implement
+    ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
+    ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
+    ("d,debug", "Prints productions chains.") // Needs to improve
+    ("v,verbose", "Verbose output")//Needs to implement
+    ("h,help", "Display usage");
+  // clang-format on
 
-  options.parse_positional({"file"});
-
+  options.parse_positional({"file", "n-value"});
   auto flags = options.parse(argc, argv);
 
-  if( flags.count("file") == 0){
-    std::cerr << "json file with probabilities not provided" << std::endl;
+  if (flags.count("help")) {
+    std::cerr << options.help() << std::endl;
+    exit(0);
+  }
+
+  if (!flags.count("file")) {
+    std::cerr << "Missing JSON file with probabilities." << std::endl;
+    std::cerr << "Use --help for more information." << std::endl;
     exit(1);
   }
-  
-  std::ifstream f(argv[1]);
+
+  if (!flags.count("n-value")) {
+    std::cerr << "Missing value of 'n'." << std::endl;
+    std::cerr << "Use --help for more information." << std::endl;
+    exit(1);
+  }
+
+  return flags;
+}
+
+int main(int argc, char **argv) {
+  auto flags = parseArgs(argc, argv);
+
+  std::ifstream f(flags["file"].as<std::string>());
 
   std::string json_str((std::istreambuf_iterator<char>(f)),
                        std::istreambuf_iterator<char>());
@@ -151,7 +173,6 @@ int main(int argc, char **argv) {
 
   if (flags.count("debug"))
     pp(head);
-
 
   codeGen(head);
   return 0;
