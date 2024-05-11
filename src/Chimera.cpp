@@ -6,20 +6,19 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
-#include <map>
 #include <nlohmann/json.hpp>
 #include <random>
 #include <stack>
+#include <unordered_map>
 #include <vector>
 
 using json = nlohmann::json;
 
-std::vector<std::string> breakRuleInProds(const std::string &rule) {
+static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
-  std::string token;
-
   std::vector<std::string> result;
 
+  std::string token;
   while (std::getline(iss, token, ' ')) {
     result.push_back(token);
   }
@@ -27,27 +26,100 @@ std::vector<std::string> breakRuleInProds(const std::string &rule) {
   return result;
 }
 
-void codeGen(std::shared_ptr<Node> head) {
+static std::vector<std::string> chooseProds(
+    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &map,
+    const std::string& element, std::mt19937 &gen) {
+  std::vector<std::string> productionsStr;
+  std::vector<double> productionsCount;
+
+  int sum = 0;
+  for (const auto &[prod, prodCount] : map.at(element)) {
+    productionsStr.push_back(prod);
+    productionsCount.push_back(prodCount);
+    sum += prodCount;
+  }
+
+  for (double &count : productionsCount) {
+    count /= sum;
+  }
+
+  std::discrete_distribution<> d(productionsCount.begin(),
+                                 productionsCount.end());
+  auto chosenProd = productionsStr[d(gen)];
+  return breakRuleInProds(chosenProd);
+}
+
+static std::shared_ptr<Node> buildSyntaxTree(
+    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &map,
+    const int n) {
+  auto head = classMap["source_text"]("source_text");
+  
+  std::stack<std::shared_ptr<Node>> stack;
+  stack.push(head);
+
+  std::random_device rd;
+  std::mt19937 gen(rd());
+
+  while (!stack.empty()) {
+    auto curr = stack.top();
+    stack.pop();
+
+    std::string element = curr->getElement();
+    auto prods = chooseProds(map, element, gen);
+
+    std::vector<std::shared_ptr<Node>> children;
+    for (std::string prod : prods) {
+      std::shared_ptr<Node> child;
+
+      if (prod[0] == '\'' || prod[0] == '\"') {
+        prod.erase(0, 1);
+        prod.erase(prod.size() - 1);
+
+        child = std::make_shared<Terminal>(" " + prod + " ");
+      } else if (prod == "%empty") {
+        child = std::make_shared<Terminal>("");
+      } else {
+        auto aux = prod;
+        std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
+
+        if (map.find(prod) == map.end()) {
+          child = classMap[aux](" " + prod + " ");
+        } else {
+          child = classMap[aux](prod);
+          stack.push(child);
+        }
+      }
+
+      children.push_back(child);
+    }
+
+    curr->setChildren(std::move(children));
+  }
+
+  return head;
+}
+
+static void codeGen(std::shared_ptr<Node> head) {
   CodeGenVisitor visitor;
   head.get()->accept(visitor);
 }
 
-void replaceConstants(std::shared_ptr<Node> head) {
+static void replaceConstants(std::shared_ptr<Node> head) {
   ReplaceConstantsVisitor visitor;
   head.get()->accept(visitor);
 }
 
-void pp(std::shared_ptr<Node> head) {
-
+static void dumpSyntaxTree(std::shared_ptr<Node> head) {
   std::cerr << head.get()->getElement() << " ->";
-
-  for (auto &c : head.get()->getChildren()) {
-    pp(c);
+  for (auto &child : head.get()->getChildren()) {
+    dumpSyntaxTree(child);
   }
-  std::cerr << std::endl;
+  std::cerr << "\n";
 }
 
-cxxopts::ParseResult parseArgs(int argc, char **argv) {
+static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   // clang-format off
   cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
   options.positional_help("<file> <n-value>");
@@ -80,6 +152,11 @@ cxxopts::ParseResult parseArgs(int argc, char **argv) {
     exit(1);
   }
 
+  if (flags["n-value"].as<int>() < 0) {
+    std::cerr << "'n' must be greater than 0." << std::endl;
+    exit(1);
+  }
+
   return flags;
 }
 
@@ -90,90 +167,19 @@ int main(int argc, char **argv) {
 
   std::string json_str((std::istreambuf_iterator<char>(f)),
                        std::istreambuf_iterator<char>());
-
   json data = json::parse(json_str);
   f.close();
+  auto map = data.get<
+      std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
 
-  std::map<std::string, std::map<std::string, int>> map =
-      data.get<std::map<std::string, std::map<std::string, int>>>();
+  auto head = buildSyntaxTree(map, flags["n-value"].as<int>());
 
-  std::stack<std::shared_ptr<Node>> stack;
-
-  auto head = classMap["source_text"]("source_text");
-
-  stack.push(head);
-
-  std::random_device rd;
-  std::mt19937 gen(rd());
-
-  while (!stack.empty()) {
-    auto curr = stack.top();
-    stack.pop();
-
-    std::vector<std::string> productionsStr;
-    std::vector<double> productionsCount;
-
-    auto element = (*curr).getElement();
-
-    int sum = 0;
-
-    for (auto &e : map[element]) {
-      productionsStr.push_back(e.first);
-      productionsCount.push_back(e.second);
-      sum += e.second;
-    }
-
-    for (auto &c : productionsCount) {
-      c /= sum;
-    }
-    std::discrete_distribution<> d(productionsCount.begin(),
-                                   productionsCount.end());
-
-    auto chosenProd = productionsStr[d(gen)];
-
-    auto prods = breakRuleInProds(chosenProd);
-
-    std::vector<std::shared_ptr<Node>> children;
-
-    for (std::string p : prods) {
-      std::shared_ptr<Node> c;
-
-      if (p[0] == '\'' || p[0] == '\"') {
-        p.erase(0, 1);
-        p.erase(p.size() - 1);
-
-        c = std::make_shared<Terminal>(" " + p + " ");
-
-      } else if (p == "%empty") {
-        c = std::make_shared<Terminal>("");
-      } else {
-
-        if (map.count(p) == 0) {
-
-          auto aux = p;
-          std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
-
-          c = classMap[aux](" " + p + " ");
-        } else {
-          auto aux = p;
-          std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
-
-          c = classMap[aux](p);
-
-          stack.push(c);
-        }
-      }
-
-      children.push_back(c);
-    }
-
-    (*curr).setChildren(children);
-  }
   replaceConstants(head);
 
   if (flags.count("debug"))
-    pp(head);
+    dumpSyntaxTree(head);
 
   codeGen(head);
+
   return 0;
 }
