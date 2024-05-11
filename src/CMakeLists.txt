@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug)
+endif()
+
 project(Chimera)
 
 include(FetchContent)
@@ -12,7 +16,8 @@ FetchContent_MakeAvailable(opts)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_compile_options(-Wall -Wextra)
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "")
 
