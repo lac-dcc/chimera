@@ -1,1486 +1,1515 @@
-#include "ConstantsReplacerVisitor.h"
+#include "IdentifierRenamingVisitor.h"
 
-void ReplaceConstantsVisitor::visit(Node *node) {
+void IdentifierRenamingVisitor::visit(Node *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Terminal *node) {
+void IdentifierRenamingVisitor::visit(Terminal *node) {
+  if(isStartingToken(node->getElement())){
+    std::cerr << "Entering new Scope" << node->getElement() << std::endl;
+
+    startNewScope();
+
+    if(node->getElement() == " module "){
+      createIDContext(ContextType::module);
+      std::cerr << "Cont: " << contexts.top() << std::endl;
+    }
+
+
+  }else if(isFnishingToken(node->getElement())){
+
+    finishScope();
+  }
+  
+  
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Time_literal *node) {
+void IdentifierRenamingVisitor::visit(Time_literal *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
-  if(isTimeScale)
-    node->setElement("0ns");
-  else
-    node->setElement("0");
+void IdentifierRenamingVisitor::visit(Tk_timeliteral *node) {
 
-  for (std::shared_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
-
-  node->setElement("8");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Timescale_directive *node) {
-  isTimeScale = true;
-  for (std::shared_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-  isTimeScale = false;
-}
+void IdentifierRenamingVisitor::visit(Tk_decnumber *node) {
 
-void ReplaceConstantsVisitor::visit(Package_item_no_pp *node) {
+ 
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Misc_directive *node) {
+void IdentifierRenamingVisitor::visit(Timescale_directive *node) {
+  
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(Package_item_no_pp *node) {
+  for (std::shared_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(Misc_directive *node) {
+  for (std::shared_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(
     Package_or_generate_item_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_declaration *node) {
+void IdentifierRenamingVisitor::visit(Data_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_param_declaration *node) {
+void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Timeunits_declaration *node) {
+void IdentifierRenamingVisitor::visit(Timeunits_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Type_declaration *node) {
+void IdentifierRenamingVisitor::visit(Type_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_import_declaration *node) {
+void IdentifierRenamingVisitor::visit(Package_import_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Description *node) {
+void IdentifierRenamingVisitor::visit(Description *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_or_interface_declaration *node) {
+void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Preprocessor_action *node) {
+void IdentifierRenamingVisitor::visit(Preprocessor_action *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_primitive *node) {
+void IdentifierRenamingVisitor::visit(Udp_primitive *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_declaration *node) {
+void IdentifierRenamingVisitor::visit(Package_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Description_list *node) {
+void IdentifierRenamingVisitor::visit(Description_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_start *node) {
+void IdentifierRenamingVisitor::visit(Module_start *node) {
+  createIDContext(ContextType::module);
+  for (std::shared_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+  contexts.pop();
+}
+
+void IdentifierRenamingVisitor::visit(Lifetime_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Lifetime_opt *node) {
+void IdentifierRenamingVisitor::visit(Lifetime *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Lifetime *node) {
+void IdentifierRenamingVisitor::visit(Genericidentifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Genericidentifier *node) {
+void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
+  //discover possible type of symbol
+  node->setElement(placeID("logic"));
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Symbolidentifier *node) {
+void IdentifierRenamingVisitor::visit(Escapedidentifier *node) {
+  node->setElement(placeID("logic"));
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Escapedidentifier *node) {
+void IdentifierRenamingVisitor::visit(Keywordidentifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Keywordidentifier *node) {
+void IdentifierRenamingVisitor::visit(Symbol_or_label *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Symbol_or_label *node) {
+void IdentifierRenamingVisitor::visit(Module_package_import_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_package_import_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Package_import_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_import_list *node) {
+void IdentifierRenamingVisitor::visit(Module_parameter_port_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_parameter_port_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Module_parameter_port_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_parameter_port_list *node) {
+void IdentifierRenamingVisitor::visit(Module_port_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_port_list_opt *node) {
-  for (std::shared_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     List_of_ports_or_port_declarations_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_attribute_foreign_opt *node) {
+void IdentifierRenamingVisitor::visit(Module_attribute_foreign_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Integer_vector_type *node) {
+void IdentifierRenamingVisitor::visit(Integer_vector_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Signed_unsigned_opt *node) {
+void IdentifierRenamingVisitor::visit(Signed_unsigned_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Signing *node) {
+void IdentifierRenamingVisitor::visit(Signing *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_type_primitive_scalar *node) {
+void IdentifierRenamingVisitor::visit(Data_type_primitive_scalar *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Integer_atom_type *node) {
+void IdentifierRenamingVisitor::visit(Integer_atom_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Non_integer_type *node) {
+void IdentifierRenamingVisitor::visit(Non_integer_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Enum_data_type *node) {
+void IdentifierRenamingVisitor::visit(Enum_data_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Struct_data_type *node) {
+void IdentifierRenamingVisitor::visit(Struct_data_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Decl_dimensions_opt *node) {
+void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Decl_dimensions *node) {
+void IdentifierRenamingVisitor::visit(Decl_dimensions *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_type_primitive *node) {
+void IdentifierRenamingVisitor::visit(Data_type_primitive *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_type_base *node) {
+void IdentifierRenamingVisitor::visit(Data_type_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_type *node) {
+void IdentifierRenamingVisitor::visit(Data_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Reference *node) {
+void IdentifierRenamingVisitor::visit(Reference *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Instantiation_type *node) {
+void IdentifierRenamingVisitor::visit(Instantiation_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Trailing_decl_assignment_opt *node) {
+void IdentifierRenamingVisitor::visit(Trailing_decl_assignment_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Trailing_decl_assignment *node) {
+void IdentifierRenamingVisitor::visit(Trailing_decl_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Gate_instance_or_register_variable *node) {
+void IdentifierRenamingVisitor::visit(Gate_instance_or_register_variable *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Instantiation_base *node) {
+void IdentifierRenamingVisitor::visit(Instantiation_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Reference_or_call_base *node) {
+void IdentifierRenamingVisitor::visit(Reference_or_call_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Data_declaration_or_module_instantiation *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Const_opt *node) {
+void IdentifierRenamingVisitor::visit(Const_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_or_generate_item *node) {
+void IdentifierRenamingVisitor::visit(Module_or_generate_item *node) {
+  createIDContext(ContextType::decl);
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+
+  contexts.pop();
 }
 
-void ReplaceConstantsVisitor::visit(Module_common_item *node) {
+void IdentifierRenamingVisitor::visit(Module_common_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_override *node) {
+void IdentifierRenamingVisitor::visit(Parameter_override *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Gate_instantiation *node) {
+void IdentifierRenamingVisitor::visit(Gate_instantiation *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Non_port_module_item *node) {
+void IdentifierRenamingVisitor::visit(Non_port_module_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_region *node) {
+void IdentifierRenamingVisitor::visit(Generate_region *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_block *node) {
+void IdentifierRenamingVisitor::visit(Specify_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_item *node) {
+void IdentifierRenamingVisitor::visit(Module_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_port_declaration *node) {
+void IdentifierRenamingVisitor::visit(Module_port_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_block *node) {
+void IdentifierRenamingVisitor::visit(Module_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_item_directive *node) {
+void IdentifierRenamingVisitor::visit(Module_item_directive *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_item_list *node) {
+void IdentifierRenamingVisitor::visit(Module_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_type *node) {
+void IdentifierRenamingVisitor::visit(Net_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Number *node) {
+void IdentifierRenamingVisitor::visit(Number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Constant_dec_number *node) {
+void IdentifierRenamingVisitor::visit(Constant_dec_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Based_number *node) {
+void IdentifierRenamingVisitor::visit(Based_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_unbasednumber *node) {
+void IdentifierRenamingVisitor::visit(Tk_unbasednumber *node) {
 
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_primary_no_groups *node) {
+void IdentifierRenamingVisitor::visit(Expr_primary_no_groups *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(System_tf_call *node) {
+void IdentifierRenamingVisitor::visit(System_tf_call *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(String_literal *node) {
+void IdentifierRenamingVisitor::visit(String_literal *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_realtime *node) {
+void IdentifierRenamingVisitor::visit(Tk_realtime *node) {
 
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cast *node) {
+void IdentifierRenamingVisitor::visit(Cast *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_primary *node) {
+void IdentifierRenamingVisitor::visit(Expr_primary *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_primary_parens *node) {
+void IdentifierRenamingVisitor::visit(Expr_primary_parens *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_primary_braces *node) {
+void IdentifierRenamingVisitor::visit(Expr_primary_braces *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assignment_pattern_expression *node) {
+void IdentifierRenamingVisitor::visit(Assignment_pattern_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Postfix_expression *node) {
+void IdentifierRenamingVisitor::visit(Postfix_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Reference_or_call *node) {
+void IdentifierRenamingVisitor::visit(Reference_or_call *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Inc_or_dec_or_primary_expr *node) {
+void IdentifierRenamingVisitor::visit(Inc_or_dec_or_primary_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Inc_or_dec_expression *node) {
+void IdentifierRenamingVisitor::visit(Inc_or_dec_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Unary_prefix_expr *node) {
+void IdentifierRenamingVisitor::visit(Unary_prefix_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Unary_op *node) {
+void IdentifierRenamingVisitor::visit(Unary_op *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Unary_expr *node) {
+void IdentifierRenamingVisitor::visit(Unary_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Pow_expr *node) {
+void IdentifierRenamingVisitor::visit(Pow_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Mul_expr *node) {
+void IdentifierRenamingVisitor::visit(Mul_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Add_expr *node) {
+void IdentifierRenamingVisitor::visit(Add_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Shift_expr *node) {
+void IdentifierRenamingVisitor::visit(Shift_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Comp_expr *node) {
+void IdentifierRenamingVisitor::visit(Comp_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Open_range_list *node) {
+void IdentifierRenamingVisitor::visit(Open_range_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Logeq_expr *node) {
+void IdentifierRenamingVisitor::visit(Logeq_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Caseeq_expr *node) {
+void IdentifierRenamingVisitor::visit(Caseeq_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Bitand_expr *node) {
+void IdentifierRenamingVisitor::visit(Bitand_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Xor_expr *node) {
+void IdentifierRenamingVisitor::visit(Xor_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Bitor_expr *node) {
+void IdentifierRenamingVisitor::visit(Bitor_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(With_exprs_suffix *node) {
+void IdentifierRenamingVisitor::visit(With_exprs_suffix *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Matches_expr *node) {
+void IdentifierRenamingVisitor::visit(Matches_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Logand_expr *node) {
+void IdentifierRenamingVisitor::visit(Logand_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Logor_expr *node) {
+void IdentifierRenamingVisitor::visit(Logor_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cond_expr *node) {
+void IdentifierRenamingVisitor::visit(Cond_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression *node) {
+void IdentifierRenamingVisitor::visit(Expression *node) {
+  createIDContext(ContextType::expr);
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  contexts.pop();
 }
 
-void ReplaceConstantsVisitor::visit(Equiv_impl_expr *node) {
+void IdentifierRenamingVisitor::visit(Equiv_impl_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Decl_variable_dimension *node) {
+void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression_or_null_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Expression_or_null_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay3_or_drive_opt *node) {
+void IdentifierRenamingVisitor::visit(Delay3_or_drive_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay3 *node) {
+void IdentifierRenamingVisitor::visit(Delay3 *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_type_or_implicit *node) {
+void IdentifierRenamingVisitor::visit(Data_type_or_implicit *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_variable *node) {
+void IdentifierRenamingVisitor::visit(Net_variable *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_variable_or_decl_assign *node) {
+void IdentifierRenamingVisitor::visit(Net_variable_or_decl_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_decl_assign *node) {
+void IdentifierRenamingVisitor::visit(Net_decl_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_variable_or_decl_assigns *node) {
+void IdentifierRenamingVisitor::visit(Net_variable_or_decl_assigns *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_declaration *node) {
+void IdentifierRenamingVisitor::visit(Net_declaration *node) {
+  createIDContext(ContextType::decl);
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  contexts.pop();
 }
 
-void ReplaceConstantsVisitor::visit(Charge_strength_opt *node) {
+void IdentifierRenamingVisitor::visit(Charge_strength_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay3_opt *node) {
+void IdentifierRenamingVisitor::visit(Delay3_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_identifiers *node) {
+void IdentifierRenamingVisitor::visit(List_of_identifiers *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Task_declaration *node) {
+void IdentifierRenamingVisitor::visit(Task_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_declaration *node) {
+void IdentifierRenamingVisitor::visit(Function_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_declaration *node) {
+void IdentifierRenamingVisitor::visit(Class_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dpi_import_export *node) {
+void IdentifierRenamingVisitor::visit(Dpi_import_export *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specparam_declaration *node) {
+void IdentifierRenamingVisitor::visit(Specparam_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_or_generate_item_declaration *node) {
+void IdentifierRenamingVisitor::visit(Module_or_generate_item_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Genvar_declaration *node) {
+void IdentifierRenamingVisitor::visit(Genvar_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Clocking_declaration *node) {
+void IdentifierRenamingVisitor::visit(Clocking_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Initial_construct *node) {
+void IdentifierRenamingVisitor::visit(Initial_construct *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Always_construct *node) {
+void IdentifierRenamingVisitor::visit(Always_construct *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Continuous_assign *node) {
+void IdentifierRenamingVisitor::visit(Continuous_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Loop_generate_construct *node) {
+void IdentifierRenamingVisitor::visit(Loop_generate_construct *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Conditional_generate_construct *node) {
+void IdentifierRenamingVisitor::visit(Conditional_generate_construct *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assertion_item *node) {
+void IdentifierRenamingVisitor::visit(Assertion_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Final_construct *node) {
+void IdentifierRenamingVisitor::visit(Final_construct *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_value_opt *node) {
+void IdentifierRenamingVisitor::visit(Parameter_value_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameters *node) {
+void IdentifierRenamingVisitor::visit(Parameters *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Unqualified_id *node) {
+void IdentifierRenamingVisitor::visit(Unqualified_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_id *node) {
+void IdentifierRenamingVisitor::visit(Class_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Qualified_id *node) {
+void IdentifierRenamingVisitor::visit(Qualified_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Type_or_id_root *node) {
+void IdentifierRenamingVisitor::visit(Type_or_id_root *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Implicit_class_handle *node) {
+void IdentifierRenamingVisitor::visit(Implicit_class_handle *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Local_root *node) {
+void IdentifierRenamingVisitor::visit(Local_root *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Select_variable_dimension *node) {
+void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Hierarchy_extension *node) {
+void IdentifierRenamingVisitor::visit(Hierarchy_extension *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Member_name *node) {
+void IdentifierRenamingVisitor::visit(Member_name *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Builtin_array_method *node) {
+void IdentifierRenamingVisitor::visit(Builtin_array_method *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_named *node) {
+void IdentifierRenamingVisitor::visit(Port_named *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port *node) {
+void IdentifierRenamingVisitor::visit(Any_port *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port_list_item_last *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port_list_trailing_comma *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port_list *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Label_opt *node) {
+void IdentifierRenamingVisitor::visit(Label_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Begin *node) {
+void IdentifierRenamingVisitor::visit(Begin *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Lpvalue *node) {
+void IdentifierRenamingVisitor::visit(Lpvalue *node) {
+  createIDContext(ContextType::expr);
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  contexts.pop();
 }
 
-void ReplaceConstantsVisitor::visit(Range_list_in_braces *node) {
+void IdentifierRenamingVisitor::visit(Range_list_in_braces *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assignment_statement_no_expr *node) {
+void IdentifierRenamingVisitor::visit(Assignment_statement_no_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assign_modify_statement *node) {
+void IdentifierRenamingVisitor::visit(Assign_modify_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assignment_statement *node) {
+void IdentifierRenamingVisitor::visit(Assignment_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Statement_item *node) {
+void IdentifierRenamingVisitor::visit(Statement_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Procedural_timing_control_statement *node) {
+void IdentifierRenamingVisitor::visit(Procedural_timing_control_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Subroutine_call *node) {
+void IdentifierRenamingVisitor::visit(Subroutine_call *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Seq_block *node) {
+void IdentifierRenamingVisitor::visit(Seq_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Nonblocking_assignment *node) {
+void IdentifierRenamingVisitor::visit(Nonblocking_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Conditional_statement *node) {
+void IdentifierRenamingVisitor::visit(Conditional_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Case_statement *node) {
+void IdentifierRenamingVisitor::visit(Case_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Loop_statement *node) {
+void IdentifierRenamingVisitor::visit(Loop_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Par_block *node) {
+void IdentifierRenamingVisitor::visit(Par_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Blocking_assignment *node) {
+void IdentifierRenamingVisitor::visit(Blocking_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Wait_statement *node) {
+void IdentifierRenamingVisitor::visit(Wait_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Procedural_assertion_statement *node) {
+void IdentifierRenamingVisitor::visit(Procedural_assertion_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Procedural_continuous_assignment *node) {
+void IdentifierRenamingVisitor::visit(Procedural_continuous_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Event_trigger *node) {
+void IdentifierRenamingVisitor::visit(Event_trigger *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Disable_statement *node) {
+void IdentifierRenamingVisitor::visit(Disable_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Jump_statement *node) {
+void IdentifierRenamingVisitor::visit(Jump_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Block_item_or_statement_or_null *node) {
+void IdentifierRenamingVisitor::visit(Block_item_or_statement_or_null *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Block_item_decl *node) {
+void IdentifierRenamingVisitor::visit(Block_item_decl *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Block_item_or_statement_or_null_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_value_simple *node) {
+void IdentifierRenamingVisitor::visit(Delay_value_simple *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_identifier *node) {
+void IdentifierRenamingVisitor::visit(Delay_identifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay1 *node) {
+void IdentifierRenamingVisitor::visit(Delay1 *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_value *node) {
+void IdentifierRenamingVisitor::visit(Delay_value *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Statement_or_null *node) {
+void IdentifierRenamingVisitor::visit(Statement_or_null *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Statement *node) {
+void IdentifierRenamingVisitor::visit(Statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Event_control *node) {
+void IdentifierRenamingVisitor::visit(Event_control *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cycle_delay *node) {
+void IdentifierRenamingVisitor::visit(Cycle_delay *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Systemtfidentifier *node) {
+void IdentifierRenamingVisitor::visit(Systemtfidentifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Call_base *node) {
+void IdentifierRenamingVisitor::visit(Call_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Block_item_or_statement_or_null_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(End *node) {
+void IdentifierRenamingVisitor::visit(End *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Always_any *node) {
+void IdentifierRenamingVisitor::visit(Always_any *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_item_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Module_item_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_end *node) {
+void IdentifierRenamingVisitor::visit(Module_end *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Source_text *node) {
+void IdentifierRenamingVisitor::visit(Source_text *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_reference *node) {
+void IdentifierRenamingVisitor::visit(Port_reference *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_expression *node) {
+void IdentifierRenamingVisitor::visit(Port_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_reference_list *node) {
+void IdentifierRenamingVisitor::visit(Port_reference_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Trailing_assign_opt *node) {
+void IdentifierRenamingVisitor::visit(Trailing_assign_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Trailing_assign *node) {
+void IdentifierRenamingVisitor::visit(Trailing_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port *node) {
+void IdentifierRenamingVisitor::visit(Port *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_expression_opt *node) {
+void IdentifierRenamingVisitor::visit(Port_expression_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_or_port_declaration *node) {
+void IdentifierRenamingVisitor::visit(Port_or_port_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_declaration *node) {
+void IdentifierRenamingVisitor::visit(Port_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     List_of_ports_or_port_declarations_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     List_of_ports_or_port_declarations_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_ports_or_port_declarations *node) {
+void IdentifierRenamingVisitor::visit(List_of_ports_or_port_declarations *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dir *node) {
+void IdentifierRenamingVisitor::visit(Dir *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Var_type *node) {
+void IdentifierRenamingVisitor::visit(Var_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_port_identifiers *node) {
+void IdentifierRenamingVisitor::visit(List_of_port_identifiers *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_direction *node) {
+void IdentifierRenamingVisitor::visit(Port_direction *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_module_item_identifiers *node) {
+void IdentifierRenamingVisitor::visit(List_of_module_item_identifiers *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     List_of_identifiers_unpacked_dimensions *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_net_type *node) {
+void IdentifierRenamingVisitor::visit(Port_net_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Identifier_optional_unpacked_dimensions *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Drive_strength_opt *node) {
+void IdentifierRenamingVisitor::visit(Drive_strength_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Drive_strength *node) {
+void IdentifierRenamingVisitor::visit(Drive_strength *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cont_assign *node) {
+void IdentifierRenamingVisitor::visit(Cont_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cont_assign_list *node) {
+void IdentifierRenamingVisitor::visit(Cont_assign_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Edge_operator *node) {
+void IdentifierRenamingVisitor::visit(Edge_operator *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Event_expression *node) {
+void IdentifierRenamingVisitor::visit(Event_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Event_expression_list *node) {
+void IdentifierRenamingVisitor::visit(Event_expression_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Hierarchy_event_identifier *node) {
+void IdentifierRenamingVisitor::visit(Hierarchy_event_identifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Unique_priority_opt *node) {
+void IdentifierRenamingVisitor::visit(Unique_priority_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression_in_parens *node) {
+void IdentifierRenamingVisitor::visit(Expression_in_parens *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_or_event_control_opt *node) {
+void IdentifierRenamingVisitor::visit(Delay_or_event_control_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_or_event_control *node) {
+void IdentifierRenamingVisitor::visit(Delay_or_event_control *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression_opt *node) {
+void IdentifierRenamingVisitor::visit(Expression_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Bit_logic_opt *node) {
+void IdentifierRenamingVisitor::visit(Bit_logic_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Bit_logic *node) {
+void IdentifierRenamingVisitor::visit(Bit_logic *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Param_type_followed_by_id_and_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_expr *node) {
+void IdentifierRenamingVisitor::visit(Parameter_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_value_ranges_opt *node) {
+void IdentifierRenamingVisitor::visit(Parameter_value_ranges_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_assign *node) {
+void IdentifierRenamingVisitor::visit(Parameter_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_assign_list *node) {
+void IdentifierRenamingVisitor::visit(Parameter_assign_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Localparam_assign_list *node) {
+void IdentifierRenamingVisitor::visit(Localparam_assign_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Type_assignment_list *node) {
+void IdentifierRenamingVisitor::visit(Type_assignment_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Macronumericwidth *node) {
+void IdentifierRenamingVisitor::visit(Macronumericwidth *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Hex_based_number *node) {
+void IdentifierRenamingVisitor::visit(Hex_based_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_hexbase *node) {
+void IdentifierRenamingVisitor::visit(Tk_hexbase *node) {
 
   node->setElement("'h");
 
@@ -1489,34 +1518,34 @@ void ReplaceConstantsVisitor::visit(Tk_hexbase *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_hexdigits *node) {
+void IdentifierRenamingVisitor::visit(Tk_hexdigits *node) {
 
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dec_based_number *node) {
+void IdentifierRenamingVisitor::visit(Dec_based_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Bin_based_number *node) {
+void IdentifierRenamingVisitor::visit(Bin_based_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Oct_based_number *node) {
+void IdentifierRenamingVisitor::visit(Oct_based_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_decbase *node) {
+void IdentifierRenamingVisitor::visit(Tk_decbase *node) {
 
   node->setElement("'d");
 
@@ -1525,55 +1554,55 @@ void ReplaceConstantsVisitor::visit(Tk_decbase *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_decdigits *node) {
+void IdentifierRenamingVisitor::visit(Tk_decdigits *node) {
 
-  node->setElement("0");
-
-  for (std::shared_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void ReplaceConstantsVisitor::visit(Tk_xzdigits *node) {
-
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Case_any *node) {
+void IdentifierRenamingVisitor::visit(Tk_xzdigits *node) {
+
+  
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression_list_proper *node) {
+void IdentifierRenamingVisitor::visit(Case_any *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Case_item *node) {
+void IdentifierRenamingVisitor::visit(Expression_list_proper *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Preprocessor_directive *node) {
+void IdentifierRenamingVisitor::visit(Case_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Case_items *node) {
+void IdentifierRenamingVisitor::visit(Preprocessor_directive *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_binbase *node) {
+void IdentifierRenamingVisitor::visit(Case_items *node) {
+  for (std::shared_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(Tk_binbase *node) {
 
   node->setElement("'b");
 
@@ -1582,696 +1611,696 @@ void ReplaceConstantsVisitor::visit(Tk_binbase *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_bindigits *node) {
+void IdentifierRenamingVisitor::visit(Tk_bindigits *node) {
 
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dist_opt *node) {
+void IdentifierRenamingVisitor::visit(Dist_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expression_or_dist *node) {
+void IdentifierRenamingVisitor::visit(Expression_or_dist *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Boolean_abbrev_opt *node) {
+void IdentifierRenamingVisitor::visit(Boolean_abbrev_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_repetition_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_repetition_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_expr_primary *node) {
+void IdentifierRenamingVisitor::visit(Sequence_expr_primary *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_delay_repetition_list *node) {
+void IdentifierRenamingVisitor::visit(Sequence_delay_repetition_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_delay_range_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_delay_range_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_throughout_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_throughout_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_within_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_within_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_intersect_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_intersect_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_unary_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_unary_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_and_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_and_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_or_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_or_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Simple_sequence_expr *node) {
+void IdentifierRenamingVisitor::visit(Simple_sequence_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_if_else_expr *node) {
+void IdentifierRenamingVisitor::visit(Property_if_else_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_prefix_expr *node) {
+void IdentifierRenamingVisitor::visit(Property_prefix_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_implication_expr *node) {
+void IdentifierRenamingVisitor::visit(Property_implication_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Sequence_expr *node) {
+void IdentifierRenamingVisitor::visit(Sequence_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_expr *node) {
+void IdentifierRenamingVisitor::visit(Property_expr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_expr_or_assignment *node) {
+void IdentifierRenamingVisitor::visit(Property_expr_or_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_expr_or_assignment_list *node) {
+void IdentifierRenamingVisitor::visit(Property_expr_or_assignment_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_mintypmax_generalized *node) {
+void IdentifierRenamingVisitor::visit(Expr_mintypmax_generalized *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_mintypmax_trans_set *node) {
+void IdentifierRenamingVisitor::visit(Expr_mintypmax_trans_set *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Expr_mintypmax *node) {
+void IdentifierRenamingVisitor::visit(Expr_mintypmax *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Value_range *node) {
+void IdentifierRenamingVisitor::visit(Value_range *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Streaming_concatenation *node) {
+void IdentifierRenamingVisitor::visit(Streaming_concatenation *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Genvar_opt *node) {
+void IdentifierRenamingVisitor::visit(Genvar_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(For_step *node) {
+void IdentifierRenamingVisitor::visit(For_step *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(For_step_opt *node) {
+void IdentifierRenamingVisitor::visit(For_step_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_item *node) {
+void IdentifierRenamingVisitor::visit(Generate_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_block *node) {
+void IdentifierRenamingVisitor::visit(Generate_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_item_list *node) {
+void IdentifierRenamingVisitor::visit(Generate_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_item_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Generate_item_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(For_init_decl_or_assign *node) {
+void IdentifierRenamingVisitor::visit(For_init_decl_or_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(For_initialization *node) {
+void IdentifierRenamingVisitor::visit(For_initialization *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(For_initialization_opt *node) {
+void IdentifierRenamingVisitor::visit(For_initialization_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Repeat_control *node) {
+void IdentifierRenamingVisitor::visit(Repeat_control *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_stringliteral *node) {
+void IdentifierRenamingVisitor::visit(Tk_stringliteral *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_evalstringliteral *node) {
+void IdentifierRenamingVisitor::visit(Tk_evalstringliteral *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Preprocess_include_argument *node) {
+void IdentifierRenamingVisitor::visit(Preprocess_include_argument *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Pp_identifier *node) {
+void IdentifierRenamingVisitor::visit(Pp_identifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Macro_formals_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Macro_formals_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_expr_list *node) {
+void IdentifierRenamingVisitor::visit(Parameter_expr_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_value_byname_list *node) {
+void IdentifierRenamingVisitor::visit(Parameter_value_byname_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_opt *node) {
+void IdentifierRenamingVisitor::visit(Parameter_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Module_parameter_port *node) {
+void IdentifierRenamingVisitor::visit(Module_parameter_port *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Type_assignment *node) {
+void IdentifierRenamingVisitor::visit(Type_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Module_parameter_port_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Module_parameter_port_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Module_parameter_port_list_preprocessor_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Parameter_value_byname *node) {
+void IdentifierRenamingVisitor::visit(Parameter_value_byname *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Parameter_value_byname_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Parameter_value_byname_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_if *node) {
+void IdentifierRenamingVisitor::visit(Generate_if *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_case_items *node) {
+void IdentifierRenamingVisitor::visit(Generate_case_items *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Var_or_net_type_opt *node) {
+void IdentifierRenamingVisitor::visit(Var_or_net_type_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_declaration_noattr *node) {
+void IdentifierRenamingVisitor::visit(Port_declaration_noattr *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Type_identifier_followed_by_id *node) {
+void IdentifierRenamingVisitor::visit(Type_identifier_followed_by_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_new *node) {
+void IdentifierRenamingVisitor::visit(Class_new *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dynamic_array_new *node) {
+void IdentifierRenamingVisitor::visit(Dynamic_array_new *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Localparam_assign *node) {
+void IdentifierRenamingVisitor::visit(Localparam_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Defparam_assign *node) {
+void IdentifierRenamingVisitor::visit(Defparam_assign *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Defparam_assign_list *node) {
+void IdentifierRenamingVisitor::visit(Defparam_assign_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_argument *node) {
+void IdentifierRenamingVisitor::visit(Any_argument *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_argument_list_item_last *node) {
+void IdentifierRenamingVisitor::visit(Any_argument_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_argument_list_trailing_comma *node) {
+void IdentifierRenamingVisitor::visit(Any_argument_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_argument_list *node) {
+void IdentifierRenamingVisitor::visit(Any_argument_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Argument_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Argument_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Task_declaration_id *node) {
+void IdentifierRenamingVisitor::visit(Task_declaration_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Scope_or_if_res *node) {
+void IdentifierRenamingVisitor::visit(Scope_or_if_res *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_list_paren_opt *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_list_paren_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_item_or_statement_or_null *node) {
+void IdentifierRenamingVisitor::visit(Tf_item_or_statement_or_null *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Task_item *node) {
+void IdentifierRenamingVisitor::visit(Task_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_item_or_statement_or_null_list *node) {
+void IdentifierRenamingVisitor::visit(Tf_item_or_statement_or_null_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Tf_item_or_statement_or_null_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Array_reduction_method *node) {
+void IdentifierRenamingVisitor::visit(Array_reduction_method *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Array_locator_method *node) {
+void IdentifierRenamingVisitor::visit(Array_locator_method *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Gatetype *node) {
+void IdentifierRenamingVisitor::visit(Gatetype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Primitive_gate_instance *node) {
+void IdentifierRenamingVisitor::visit(Primitive_gate_instance *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Primitive_gate_instance_list *node) {
+void IdentifierRenamingVisitor::visit(Primitive_gate_instance_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Switchtype *node) {
+void IdentifierRenamingVisitor::visit(Switchtype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dr_strength1 *node) {
+void IdentifierRenamingVisitor::visit(Dr_strength1 *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dr_strength0 *node) {
+void IdentifierRenamingVisitor::visit(Dr_strength0 *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_scope *node) {
+void IdentifierRenamingVisitor::visit(Delay_scope *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Join_keyword *node) {
+void IdentifierRenamingVisitor::visit(Join_keyword *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Generate_case_item *node) {
+void IdentifierRenamingVisitor::visit(Generate_case_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_return_type_and_id *node) {
+void IdentifierRenamingVisitor::visit(Function_return_type_and_id *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_direction *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_direction *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_direction_opt *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_direction_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_item_expr_opt *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_item_expr_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_item *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_list_item_last *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_list_trailing_comma *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_list *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Endfunction_label_opt *node) {
+void IdentifierRenamingVisitor::visit(Endfunction_label_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_item_list *node) {
+void IdentifierRenamingVisitor::visit(Function_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Statement_or_null_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Statement_or_null_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Net_type_or_none *node) {
+void IdentifierRenamingVisitor::visit(Net_type_or_none *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Pull01 *node) {
+void IdentifierRenamingVisitor::visit(Pull01 *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Macro_formal_parameter *node) {
+void IdentifierRenamingVisitor::visit(Macro_formal_parameter *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Macro_formals_list *node) {
+void IdentifierRenamingVisitor::visit(Macro_formals_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_variable_identifier_first *node) {
+void IdentifierRenamingVisitor::visit(Tf_variable_identifier_first *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_tf_variable_identifiers *node) {
+void IdentifierRenamingVisitor::visit(List_of_tf_variable_identifiers *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_variable_identifier *node) {
+void IdentifierRenamingVisitor::visit(Tf_variable_identifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tf_port_declaration *node) {
+void IdentifierRenamingVisitor::visit(Tf_port_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_item *node) {
+void IdentifierRenamingVisitor::visit(Function_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_item_data_declaration *node) {
+void IdentifierRenamingVisitor::visit(Function_item_data_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Non_anonymous_instantiation_base *node) {
+void IdentifierRenamingVisitor::visit(Non_anonymous_instantiation_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Statement_or_null_list *node) {
+void IdentifierRenamingVisitor::visit(Statement_or_null_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_octbase *node) {
+void IdentifierRenamingVisitor::visit(Tk_octbase *node) {
 
   node->setElement("'o");
 
@@ -2280,677 +2309,679 @@ void ReplaceConstantsVisitor::visit(Tk_octbase *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_octdigits *node) {
+void IdentifierRenamingVisitor::visit(Tk_octdigits *node) {
 
-  node->setElement("0");
+  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_terminal_descriptor *node) {
+void IdentifierRenamingVisitor::visit(Specify_terminal_descriptor *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Spec_reference_event *node) {
+void IdentifierRenamingVisitor::visit(Spec_reference_event *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Edge_descriptor_list *node) {
+void IdentifierRenamingVisitor::visit(Edge_descriptor_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Spec_notifier *node) {
+void IdentifierRenamingVisitor::visit(Spec_notifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Spec_notifier_opt *node) {
+void IdentifierRenamingVisitor::visit(Spec_notifier_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_item *node) {
+void IdentifierRenamingVisitor::visit(Specify_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_simple_path_decl *node) {
+void IdentifierRenamingVisitor::visit(Specify_simple_path_decl *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_edge_path_decl *node) {
+void IdentifierRenamingVisitor::visit(Specify_edge_path_decl *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specparam_decl *node) {
+void IdentifierRenamingVisitor::visit(Specparam_decl *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_item_list *node) {
+void IdentifierRenamingVisitor::visit(Specify_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_path_identifiers *node) {
+void IdentifierRenamingVisitor::visit(Specify_path_identifiers *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Spec_polarity *node) {
+void IdentifierRenamingVisitor::visit(Spec_polarity *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_simple_path *node) {
+void IdentifierRenamingVisitor::visit(Specify_simple_path *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Delay_value_list *node) {
+void IdentifierRenamingVisitor::visit(Delay_value_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_item_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Specify_item_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Casting_type *node) {
+void IdentifierRenamingVisitor::visit(Casting_type *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Polarity_operator *node) {
+void IdentifierRenamingVisitor::visit(Polarity_operator *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specify_edge_path *node) {
+void IdentifierRenamingVisitor::visit(Specify_edge_path *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_port_list *node) {
+void IdentifierRenamingVisitor::visit(Udp_port_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_port_decl *node) {
+void IdentifierRenamingVisitor::visit(Udp_port_decl *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_port_decls *node) {
+void IdentifierRenamingVisitor::visit(Udp_port_decls *node) {
+  createIDContext(ContextType::decl);
+  for (std::shared_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+  contexts.pop();
+}
+
+void IdentifierRenamingVisitor::visit(Udp_init_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_init_opt *node) {
+void IdentifierRenamingVisitor::visit(Udp_initial *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_initial *node) {
+void IdentifierRenamingVisitor::visit(Udp_input_sym *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_input_sym *node) {
+void IdentifierRenamingVisitor::visit(Udp_input_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_input_list *node) {
+void IdentifierRenamingVisitor::visit(Udp_output_sym *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_output_sym *node) {
+void IdentifierRenamingVisitor::visit(Udp_sequ_entry *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_sequ_entry *node) {
+void IdentifierRenamingVisitor::visit(Udp_sequ_entry_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_sequ_entry_list *node) {
+void IdentifierRenamingVisitor::visit(Udp_entry_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_entry_list *node) {
+void IdentifierRenamingVisitor::visit(Udp_comb_entry_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_comb_entry_list *node) {
+void IdentifierRenamingVisitor::visit(Udp_body *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_body *node) {
+void IdentifierRenamingVisitor::visit(Tk_reg_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_reg_opt *node) {
+void IdentifierRenamingVisitor::visit(Udp_initial_expr_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_initial_expr_opt *node) {
+void IdentifierRenamingVisitor::visit(Udp_input_declaration_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_input_declaration_list *node) {
+void IdentifierRenamingVisitor::visit(Enum_name *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Enum_name *node) {
+void IdentifierRenamingVisitor::visit(Pos_neg_number *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Pos_neg_number *node) {
+void IdentifierRenamingVisitor::visit(Enum_name_list_item_last *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Enum_name_list_item_last *node) {
+void IdentifierRenamingVisitor::visit(Enum_name_list_trailing_comma *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Enum_name_list_trailing_comma *node) {
+void IdentifierRenamingVisitor::visit(Enum_name_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Enum_name_list *node) {
+void IdentifierRenamingVisitor::visit(Action_block *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Action_block *node) {
-  for (std::shared_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Simple_immediate_assertion_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Immediate_assertion_statement *node) {
+void IdentifierRenamingVisitor::visit(Immediate_assertion_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Deferred_immediate_assertion_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Var_opt *node) {
+void IdentifierRenamingVisitor::visit(Var_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_declaration_modifiers_opt *node) {
+void IdentifierRenamingVisitor::visit(Data_declaration_modifiers_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Data_declaration_base *node) {
+void IdentifierRenamingVisitor::visit(Data_declaration_base *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specparam *node) {
+void IdentifierRenamingVisitor::visit(Specparam *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Specparam_list *node) {
+void IdentifierRenamingVisitor::visit(Specparam_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Block_identifier_opt *node) {
+void IdentifierRenamingVisitor::visit(Block_identifier_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Event_control_opt *node) {
+void IdentifierRenamingVisitor::visit(Event_control_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_spec_disable_iff_opt *node) {
+void IdentifierRenamingVisitor::visit(Property_spec_disable_iff_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_spec *node) {
+void IdentifierRenamingVisitor::visit(Property_spec *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assert_property_statement *node) {
+void IdentifierRenamingVisitor::visit(Assert_property_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Concurrent_assertion_statement *node) {
+void IdentifierRenamingVisitor::visit(Concurrent_assertion_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assume_property_statement *node) {
+void IdentifierRenamingVisitor::visit(Assume_property_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Cover_property_statement *node) {
+void IdentifierRenamingVisitor::visit(Cover_property_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Concurrent_assertion_item *node) {
+void IdentifierRenamingVisitor::visit(Concurrent_assertion_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_virtual_opt *node) {
+void IdentifierRenamingVisitor::visit(Tk_virtual_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_declaration_extends_opt *node) {
+void IdentifierRenamingVisitor::visit(Class_declaration_extends_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Implements_interface_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Implements_interface_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Variable_decl_assignment *node) {
+void IdentifierRenamingVisitor::visit(Variable_decl_assignment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_variable_decl_assignments *node) {
+void IdentifierRenamingVisitor::visit(List_of_variable_decl_assignments *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_item *node) {
+void IdentifierRenamingVisitor::visit(Class_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_constructor *node) {
+void IdentifierRenamingVisitor::visit(Class_constructor *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Method_qualifier_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Method_qualifier_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Method_prototype *node) {
+void IdentifierRenamingVisitor::visit(Method_prototype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_item_qualifier_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Class_item_qualifier_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Method_property_qualifier_list_not_starting_with_virtual *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_items *node) {
+void IdentifierRenamingVisitor::visit(Class_items *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_constructor_prototype *node) {
+void IdentifierRenamingVisitor::visit(Class_constructor_prototype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Endnew_opt *node) {
+void IdentifierRenamingVisitor::visit(Endnew_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_items_opt *node) {
+void IdentifierRenamingVisitor::visit(Class_items_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_item *node) {
+void IdentifierRenamingVisitor::visit(Package_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_item_list *node) {
+void IdentifierRenamingVisitor::visit(Package_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Task_prototype *node) {
+void IdentifierRenamingVisitor::visit(Task_prototype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Function_prototype *node) {
+void IdentifierRenamingVisitor::visit(Function_prototype *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_item_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Package_item_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Select_dimensions_opt *node) {
+void IdentifierRenamingVisitor::visit(Select_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Hierarchy_segment *node) {
+void IdentifierRenamingVisitor::visit(Hierarchy_segment *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dpi_spec_string *node) {
+void IdentifierRenamingVisitor::visit(Dpi_spec_string *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dpi_import_property_opt *node) {
+void IdentifierRenamingVisitor::visit(Dpi_import_property_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Dpi_import_item *node) {
+void IdentifierRenamingVisitor::visit(Dpi_import_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Udp_comb_entry *node) {
+void IdentifierRenamingVisitor::visit(Udp_comb_entry *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_ls_eq *node) {
+void IdentifierRenamingVisitor::visit(Tk_ls_eq *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_rs_eq *node) {
+void IdentifierRenamingVisitor::visit(Tk_rs_eq *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_rss_eq *node) {
+void IdentifierRenamingVisitor::visit(Tk_rss_eq *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Packed_signing_opt *node) {
+void IdentifierRenamingVisitor::visit(Packed_signing_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Random_qualifier_opt *node) {
+void IdentifierRenamingVisitor::visit(Random_qualifier_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Data_type_or_implicit_followed_by_id_and_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Type_identifier_or_implicit_followed_by_id_and_dimensions_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Struct_union_member *node) {
+void IdentifierRenamingVisitor::visit(Struct_union_member *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Struct_union_member_list *node) {
+void IdentifierRenamingVisitor::visit(Struct_union_member_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_tagged_opt *node) {
+void IdentifierRenamingVisitor::visit(Tk_tagged_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Assignment_pattern *node) {
+void IdentifierRenamingVisitor::visit(Assignment_pattern *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Structure_or_array_pattern_expression_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Structure_or_array_pattern_key *node) {
+void IdentifierRenamingVisitor::visit(Structure_or_array_pattern_key *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(
+void IdentifierRenamingVisitor::visit(
     Structure_or_array_pattern_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Scope_prefix *node) {
+void IdentifierRenamingVisitor::visit(Scope_prefix *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_import_item *node) {
+void IdentifierRenamingVisitor::visit(Package_import_item *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Package_import_item_list *node) {
+void IdentifierRenamingVisitor::visit(Package_import_item_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Tk_edge_descriptor *node) {
+void IdentifierRenamingVisitor::visit(Tk_edge_descriptor *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Class_item_qualifier *node) {
+void IdentifierRenamingVisitor::visit(Class_item_qualifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Property_qualifier *node) {
+void IdentifierRenamingVisitor::visit(Property_qualifier *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Final_or_zero *node) {
+void IdentifierRenamingVisitor::visit(Final_or_zero *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Stream_operator *node) {
+void IdentifierRenamingVisitor::visit(Stream_operator *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Slice_size_opt *node) {
+void IdentifierRenamingVisitor::visit(Slice_size_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Stream_expression *node) {
+void IdentifierRenamingVisitor::visit(Stream_expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Stream_expression_list *node) {
+void IdentifierRenamingVisitor::visit(Stream_expression_list *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Identifier_opt *node) {
+void IdentifierRenamingVisitor::visit(Identifier_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Clocking_item_list_opt *node) {
+void IdentifierRenamingVisitor::visit(Clocking_item_list_opt *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }

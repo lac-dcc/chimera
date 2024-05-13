@@ -1,6 +1,7 @@
 #include "AST.h"
 #include "ConstantsReplacerVisitor.h"
 #include "Visitor.h"
+#include "IdentifierRenamingVisitor.h"
 #include <algorithm>
 #include <cxxopts.hpp>
 #include <fstream>
@@ -26,22 +27,46 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   return result;
 }
 
-static std::vector<std::string> chooseProds(
-    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
-        &map,
-    const std::string& element, std::mt19937 &gen) {
-  std::vector<std::string> productionsStr;
-  std::vector<double> productionsCount;
+void codeGen(std::shared_ptr<Node> head) {
+  CodeGenVisitor visitor;
+  head.get()->accept(visitor);
+}
 
-  int sum = 0;
-  for (const auto &[prod, prodCount] : map.at(element)) {
-    productionsStr.push_back(prod);
-    productionsCount.push_back(prodCount);
-    sum += prodCount;
+void replaceConstants(std::shared_ptr<Node> head) {
+  ReplaceConstantsVisitor visitor;
+  head.get()->accept(visitor);
+}
+
+void renameVars(std::shared_ptr<Node> head){
+  IdentifierRenamingVisitor visitor;
+  head.get()->accept(visitor);
+}
+
+void pp(std::shared_ptr<Node> head) {
+
+  std::cerr << head.get()->getElement() << " ->";
+
+  for (auto &c : head.get()->getChildren()) {
+    pp(c);
   }
+  std::cerr << std::endl;
+}
 
-  for (double &count : productionsCount) {
-    count /= sum;
+int main(int argc, char **argv) {
+  cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
+
+  options.add_options()
+  ("d,debug", "Prints productions chains.",cxxopts::value<bool>()->default_value("false")) // Needs to improve
+  ("file", "The script file to execute", cxxopts::value<std::string>())
+  ("v,verbose", "Verbose output", cxxopts::value<bool>()->default_value("false"));//Needs to implement
+
+  options.parse_positional({"file"});
+
+  auto flags = options.parse(argc, argv);
+
+  if( flags.count("file") == 0){
+    std::cerr << "json file with probabilities not provided" << std::endl;
+    exit(1);
   }
 
   std::discrete_distribution<> d(productionsCount.begin(),
@@ -177,8 +202,9 @@ int main(int argc, char **argv) {
   replaceConstants(head);
 
   if (flags.count("debug"))
-    dumpSyntaxTree(head);
+    pp(head);
 
+  renameVars(head);
   codeGen(head);
 
   return 0;
