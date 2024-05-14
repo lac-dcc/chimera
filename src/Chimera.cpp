@@ -30,7 +30,7 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
 static std::vector<std::string> chooseProds(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const std::string& element, std::mt19937 &gen) {
+    const std::string &element, std::mt19937 &gen) {
   std::vector<std::string> productionsStr;
   std::vector<double> productionsCount;
 
@@ -56,7 +56,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         &map,
     const int n) {
   auto head = classMap["source_text"]("source_text");
-  
+
   std::stack<std::shared_ptr<Node>> stack;
   stack.push(head);
 

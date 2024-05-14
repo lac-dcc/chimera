@@ -152,7 +152,7 @@ def create_std_classes():
     s1 = CppClass.CppMethod(name="setParent", ret_type="void",
     implementation_handle=lambda s,cpp: cpp('this->parent = parent;'))
 
-    s1.add_argument("std::shared_ptr<Node> children")
+    s1.add_argument("std::shared_ptr<Node> parent")
 
     c.add_variable(CppVariable(name="element", type="std::string"))
 

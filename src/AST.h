@@ -19,7 +19,7 @@ public:
 
   std::shared_ptr<Node> getParent();
 
-  void setParent(std::shared_ptr<Node> children);
+  void setParent(std::shared_ptr<Node> parent);
 
   std::string getElement();
 

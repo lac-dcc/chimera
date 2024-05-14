@@ -13,7 +13,7 @@ std::shared_ptr<Node> Node::getParent() {
   return this->parent;
 }
 
-void Node::setParent(std::shared_ptr<Node> children) {
+void Node::setParent(std::shared_ptr<Node> parent) {
   this->parent = parent;
 }
 
