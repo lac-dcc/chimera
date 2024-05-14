@@ -27,50 +27,22 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   return result;
 }
 
-void codeGen(std::shared_ptr<Node> head) {
-  CodeGenVisitor visitor;
-  head.get()->accept(visitor);
-}
+static std::vector<std::string> chooseProds(
+    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &map,
+    const std::string& element, std::mt19937 &gen) {
+  std::vector<std::string> productionsStr;
+  std::vector<double> productionsCount;
 
-void replaceConstants(std::shared_ptr<Node> head) {
-  ReplaceConstantsVisitor visitor;
-  head.get()->accept(visitor);
-}
-
-void renameVars(std::shared_ptr<Node> head) {
-  IdentifierRenamingVisitor visitor;
-  head.get()->accept(visitor);
-}
-
-void pp(std::shared_ptr<Node> head) {
-
-  std::cerr << head.get()->getElement() << " ->";
-
-  for (auto &c : head.get()->getChildren()) {
-    pp(c);
+  int sum = 0;
+  for (const auto &[prod, prodCount] : map.at(element)) {
+    productionsStr.push_back(prod);
+    productionsCount.push_back(prodCount);
+    sum += prodCount;
   }
-  std::cerr << std::endl;
-}
 
-int main(int argc, char **argv) {
-  cxxopts::Options options(
-      "Chimera",
-      "Generates SystemVerilog based on a json file of probabilities.");
-
-  options.add_options()(
-      "d,debug", "Prints productions chains.",
-      cxxopts::value<bool>()->default_value("false")) // Needs to improve
-      ("file", "The script file to execute", cxxopts::value<std::string>())(
-          "v,verbose", "Verbose output",
-          cxxopts::value<bool>()->default_value("false")); // Needs to implement
-
-  options.parse_positional({"file"});
-
-  auto flags = options.parse(argc, argv);
-
-  if (flags.count("file") == 0) {
-    std::cerr << "json file with probabilities not provided" << std::endl;
-    exit(1);
+  for (double &count : productionsCount) {
+    count /= sum;
   }
 
   std::discrete_distribution<> d(productionsCount.begin(),
@@ -84,7 +56,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         &map,
     const int n) {
   auto head = classMap["source_text"]("source_text");
-
+  
   std::stack<std::shared_ptr<Node>> stack;
   stack.push(head);
 
@@ -137,6 +109,11 @@ static void codeGen(std::shared_ptr<Node> head) {
 
 static void replaceConstants(std::shared_ptr<Node> head) {
   ReplaceConstantsVisitor visitor;
+  head.get()->accept(visitor);
+}
+
+void renameVars(std::shared_ptr<Node> head) {
+  IdentifierRenamingVisitor visitor;
   head.get()->accept(visitor);
 }
 
@@ -206,9 +183,8 @@ int main(int argc, char **argv) {
   replaceConstants(head);
 
   if (flags.count("debug"))
-    pp(head);
+    dumpSyntaxTree(head);
 
-  renameVars(head);
   codeGen(head);
 
   return 0;
