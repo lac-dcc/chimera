@@ -91,7 +91,6 @@ def __create_func_visitor(e:CppClass):
     elif e.name in terms_to_replace:
         f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("0");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     else:
-        print(e.name)
         f.implementation_handle = lambda s,cpp: cpp('for(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     
     f.add_argument(f"{e.name}* node")

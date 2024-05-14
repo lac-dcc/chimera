@@ -132,6 +132,7 @@ def create_std_classes():
 
     c = CppClass(name="Node")
     c.add_variable(CppVariable(type='std::vector<std::shared_ptr<Node>>', name="children"))
+    c.add_variable(CppVariable(type='std::shared_ptr<Node>', name="parent"))
     f = CppClass.CppMethod(name="accept", ret_type="void", is_pure_virtual=True, is_virtual=True)
     f.add_argument("Visitor &visitor")
 
@@ -145,10 +146,20 @@ def create_std_classes():
 
     s.add_argument("std::vector<std::shared_ptr<Node>> children")
 
+    g1 = CppClass.CppMethod(name="getParent", ret_type="std::shared_ptr<Node>",
+    implementation_handle=lambda s,cpp: cpp('return this->parent;'))
+
+    s1 = CppClass.CppMethod(name="setParent", ret_type="void",
+    implementation_handle=lambda s,cpp: cpp('this->parent = parent;'))
+
+    s1.add_argument("std::shared_ptr<Node> children")
+
     c.add_variable(CppVariable(name="element", type="std::string"))
 
     c.add_method(g)
     c.add_method(s)
+    c.add_method(g1)
+    c.add_method(s1)
 
     get = CppClass.CppMethod(name="getElement", ret_type="std::string",
     implementation_handle=lambda s,cpp: cpp('return this->element;'))
