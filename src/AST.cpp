@@ -9,6 +9,14 @@ void Node::setChildren(std::vector<std::shared_ptr<Node>> children) {
   this->children = children;
 }
 
+std::shared_ptr<Node> Node::getParent() {
+  return this->parent;
+}
+
+void Node::setParent(std::shared_ptr<Node> children) {
+  this->parent = parent;
+}
+
 std::string Node::getElement() {
   return this->element;
 }

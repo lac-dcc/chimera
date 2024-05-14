@@ -19,10 +19,8 @@ void ReplaceConstantsVisitor::visit(Time_literal *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
-  if(isTimeScale)
-    node->setElement("0ns");
-  else
-    node->setElement("0");
+
+  node->setElement("'0ps");
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -31,7 +29,7 @@ void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 
-  node->setElement("8");
+  node->setElement("0");
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -39,11 +37,9 @@ void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Timescale_directive *node) {
-  isTimeScale = true;
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  isTimeScale = false;
 }
 
 void ReplaceConstantsVisitor::visit(Package_item_no_pp *node) {

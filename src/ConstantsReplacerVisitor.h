@@ -489,8 +489,6 @@ class Identifier_opt;
 class Clocking_item_list_opt;
 class Visitor;
 class ReplaceConstantsVisitor : public Visitor {
-private:
-  bool isTimeScale = false;
 public:
   virtual void visit(Node *node);
 

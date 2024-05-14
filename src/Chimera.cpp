@@ -1,7 +1,7 @@
 #include "AST.h"
 #include "ConstantsReplacerVisitor.h"
-#include "Visitor.h"
 #include "IdentifierRenamingVisitor.h"
+#include "Visitor.h"
 #include <algorithm>
 #include <cxxopts.hpp>
 #include <fstream>
@@ -37,7 +37,7 @@ void replaceConstants(std::shared_ptr<Node> head) {
   head.get()->accept(visitor);
 }
 
-void renameVars(std::shared_ptr<Node> head){
+void renameVars(std::shared_ptr<Node> head) {
   IdentifierRenamingVisitor visitor;
   head.get()->accept(visitor);
 }
@@ -53,18 +53,22 @@ void pp(std::shared_ptr<Node> head) {
 }
 
 int main(int argc, char **argv) {
-  cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
+  cxxopts::Options options(
+      "Chimera",
+      "Generates SystemVerilog based on a json file of probabilities.");
 
-  options.add_options()
-  ("d,debug", "Prints productions chains.",cxxopts::value<bool>()->default_value("false")) // Needs to improve
-  ("file", "The script file to execute", cxxopts::value<std::string>())
-  ("v,verbose", "Verbose output", cxxopts::value<bool>()->default_value("false"));//Needs to implement
+  options.add_options()(
+      "d,debug", "Prints productions chains.",
+      cxxopts::value<bool>()->default_value("false")) // Needs to improve
+      ("file", "The script file to execute", cxxopts::value<std::string>())(
+          "v,verbose", "Verbose output",
+          cxxopts::value<bool>()->default_value("false")); // Needs to implement
 
   options.parse_positional({"file"});
 
   auto flags = options.parse(argc, argv);
 
-  if( flags.count("file") == 0){
+  if (flags.count("file") == 0) {
     std::cerr << "json file with probabilities not provided" << std::endl;
     exit(1);
   }
@@ -80,7 +84,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         &map,
     const int n) {
   auto head = classMap["source_text"]("source_text");
-  
+
   std::stack<std::shared_ptr<Node>> stack;
   stack.push(head);
 

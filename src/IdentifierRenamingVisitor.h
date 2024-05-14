@@ -4,10 +4,10 @@
 #include "Visitor.h"
 #include <iostream>
 #include <memory>
+#include <queue>
+#include <stack>
 #include <string>
 #include <vector>
-#include <stack>
-#include <queue>
 class Node;
 class Terminal;
 class Time_literal;
@@ -492,106 +492,100 @@ class Clocking_item_list_opt;
 class Visitor;
 class IdentifierRenamingVisitor : public Visitor {
 private:
-int varID = 0;
+  int varID = 0;
 
-class Var{
+  class Var {
   public:
-  std::string name;
-  std::string t;
-};
+    std::string name;
+    std::string t;
+  };
 
-enum ContextType{
-  expr =0,
-  decl,
-  module
-};
+  enum ContextType { expr = 0, decl, module };
 
+  std::stack<ContextType> contexts;
+  std::vector<std::shared_ptr<Var>> identifiers;
+  std::stack<int> scopeLimit;
 
-std::stack<ContextType> contexts;
-std::vector<std::shared_ptr<Var>> identifiers;
-std::stack<int> scopeLimit;
+  bool isStartingToken(std::string t) {
 
-bool isStartingToken(std::string t){
-  
-  return t ==" begin " || t == " module ";
-}
+    return t == " begin " || t == " module ";
+  }
 
-bool isFnishingToken(std::string t){
-  return t == " end " || t==" endmodule ";
-}
+  bool isFnishingToken(std::string t) {
+    return t == " end " || t == " endmodule ";
+  }
 
-void startNewScope(){
-  scopeLimit.push(identifiers.size());//start of new context
-}
+  void startNewScope() {
+    scopeLimit.push(identifiers.size()); // start of new context
+  }
 
-void finishScope(){
-  std::cerr << "finishing scope" << std::endl;
-  if(!scopeLimit.empty()){
-    std::cerr << "scope not empty" << std::endl;
-    std::cerr << "limit: " << scopeLimit.top() << "scope size: " << scopeLimit.size() <<" size identifiers: " << identifiers.size()  << std::endl;
+  void finishScope() {
+    std::cerr << "finishing scope" << std::endl;
+    if (!scopeLimit.empty()) {
+      std::cerr << "scope not empty" << std::endl;
+      std::cerr << "limit: " << scopeLimit.top()
+                << "scope size: " << scopeLimit.size()
+                << " size identifiers: " << identifiers.size() << std::endl;
 
-    for(int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++){
-      std::cerr << "Removing: " << identifiers.back() << std::endl;
-      identifiers.pop_back();
+      for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
+        std::cerr << "Removing: " << identifiers.back() << std::endl;
+        identifiers.pop_back();
+      }
+      scopeLimit.pop();
     }
-    scopeLimit.pop();
-  }
   }
 
-std::string createNewID(std::string t){
-  
-  Var v;
-  if(t == "module"){
-    v.name = " module_" + std::to_string(varID++);
-  }else{
-    v.name = " id_" + std::to_string(varID++); 
+  std::string createNewID(std::string t) {
+
+    Var v;
+    if (t == "module") {
+      v.name = " module_" + std::to_string(varID++);
+    } else {
+      v.name = " id_" + std::to_string(varID++);
+    }
+
+    std::cerr << "Var name: " << v.name << std::endl;
+    v.t = t;
+    identifiers.push_back(std::make_shared<Var>(v));
+
+    return v.name;
   }
 
-  std::cerr << "Var name: " << v.name << std::endl;
-  v.t = t;
-  identifiers.push_back(std::make_shared<Var>(v));
-  
-  return v.name;
-}
-
-void createIDContext(ContextType t){
-  std::cerr << "Creating context: " << t << std::endl;
-  contexts.push(t);
-}
-
-
-std::string placeID(std::string type){//SymbolIdentifier, EscapedIdentifier
-  std::cerr << "Context: " << contexts.top() << " Context Size: " << contexts.size() << std::endl;
-
-  if(contexts.top() == ContextType::module){
-
-    std::cerr << "entrou em mod" << std::endl;
-    contexts.pop();
-    contexts.push(ContextType::decl);
-    return createNewID("module");
-    
-  }
-  if(contexts.top() == ContextType::decl){
-    std::cerr << "Creating new ID for type: " << type << std::endl;
-    return createNewID(type);
+  void createIDContext(ContextType t) {
+    std::cerr << "Creating context: " << t << std::endl;
+    contexts.push(t);
   }
 
-  std::cerr << "Trying to use previous created ID" << std::endl;
+  std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
+    std::cerr << "Context: " << contexts.top()
+              << " Context Size: " << contexts.size() << std::endl;
 
-  std::vector<std::string> options;
-  for(auto id = identifiers.rbegin(); id != identifiers.rend(); id++){
-    if((*id).get()->t == type)
-      options.push_back((*id).get()->name);
+    if (contexts.top() == ContextType::module) {
+
+      std::cerr << "entrou em mod" << std::endl;
+      contexts.pop();
+      contexts.push(ContextType::decl);
+      return createNewID("module");
+    }
+    if (contexts.top() == ContextType::decl) {
+      std::cerr << "Creating new ID for type: " << type << std::endl;
+      return createNewID(type);
+    }
+
+    std::cerr << "Trying to use previous created ID" << std::endl;
+
+    std::vector<std::string> options;
+    for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
+      if ((*id).get()->t == type)
+        options.push_back((*id).get()->name);
+    }
+    if (options.size() == 0)
+      return createNewID(type);
+
+    auto c = rand() % options.size();
+    std::cerr << "Using var: " << options[c] << std::endl;
+    return options[c];
   }
-  if(options.size() == 0)
-    return createNewID(type);
-
-  auto c = rand() % options.size();
-  std::cerr << "Using var: " << options[c] << std::endl;
-  return options[c];
-  
-
-}
 
 public:
   virtual void visit(Node *node);

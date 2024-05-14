@@ -7,23 +7,21 @@ void IdentifierRenamingVisitor::visit(Node *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Terminal *node) {
-  if(isStartingToken(node->getElement())){
+  if (isStartingToken(node->getElement())) {
     std::cerr << "Entering new Scope" << node->getElement() << std::endl;
 
     startNewScope();
 
-    if(node->getElement() == " module "){
+    if (node->getElement() == " module ") {
       createIDContext(ContextType::module);
       std::cerr << "Cont: " << contexts.top() << std::endl;
     }
 
-
-  }else if(isFnishingToken(node->getElement())){
+  } else if (isFnishingToken(node->getElement())) {
 
     finishScope();
   }
-  
-  
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -37,8 +35,6 @@ void IdentifierRenamingVisitor::visit(Time_literal *node) {
 
 void IdentifierRenamingVisitor::visit(Tk_timeliteral *node) {
 
-  
-
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -46,15 +42,13 @@ void IdentifierRenamingVisitor::visit(Tk_timeliteral *node) {
 
 void IdentifierRenamingVisitor::visit(Tk_decnumber *node) {
 
- 
-
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(Timescale_directive *node) {
-  
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -172,7 +166,7 @@ void IdentifierRenamingVisitor::visit(Genericidentifier *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
-  //discover possible type of symbol
+  // discover possible type of symbol
   node->setElement(placeID("logic"));
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -363,7 +357,8 @@ void IdentifierRenamingVisitor::visit(
   }
 }
 
-void IdentifierRenamingVisitor::visit(Gate_instance_or_register_variable *node) {
+void IdentifierRenamingVisitor::visit(
+    Gate_instance_or_register_variable *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -496,8 +491,6 @@ void IdentifierRenamingVisitor::visit(Based_number *node) {
 
 void IdentifierRenamingVisitor::visit(Tk_unbasednumber *node) {
 
-  
-
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -522,8 +515,6 @@ void IdentifierRenamingVisitor::visit(String_literal *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Tk_realtime *node) {
-
-  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -822,7 +813,8 @@ void IdentifierRenamingVisitor::visit(Specparam_declaration *node) {
   }
 }
 
-void IdentifierRenamingVisitor::visit(Module_or_generate_item_declaration *node) {
+void IdentifierRenamingVisitor::visit(
+    Module_or_generate_item_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1034,7 +1026,8 @@ void IdentifierRenamingVisitor::visit(Statement_item *node) {
   }
 }
 
-void IdentifierRenamingVisitor::visit(Procedural_timing_control_statement *node) {
+void IdentifierRenamingVisitor::visit(
+    Procedural_timing_control_statement *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1308,7 +1301,8 @@ void IdentifierRenamingVisitor::visit(
   }
 }
 
-void IdentifierRenamingVisitor::visit(List_of_ports_or_port_declarations *node) {
+void IdentifierRenamingVisitor::visit(
+    List_of_ports_or_port_declarations *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1520,8 +1514,6 @@ void IdentifierRenamingVisitor::visit(Tk_hexbase *node) {
 
 void IdentifierRenamingVisitor::visit(Tk_hexdigits *node) {
 
-  
-
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1556,16 +1548,12 @@ void IdentifierRenamingVisitor::visit(Tk_decbase *node) {
 
 void IdentifierRenamingVisitor::visit(Tk_decdigits *node) {
 
-  
-
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(Tk_xzdigits *node) {
-
-  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1612,8 +1600,6 @@ void IdentifierRenamingVisitor::visit(Tk_binbase *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Tk_bindigits *node) {
-
-  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -2310,8 +2296,6 @@ void IdentifierRenamingVisitor::visit(Tk_octbase *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Tk_octdigits *node) {
-
-  
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);

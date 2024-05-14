@@ -17,12 +17,18 @@ public:
 
   void setChildren(std::vector<std::shared_ptr<Node>> children);
 
+  std::shared_ptr<Node> getParent();
+
+  void setParent(std::shared_ptr<Node> children);
+
   std::string getElement();
 
   void setElement(std::string element);
 
 private:
   std::vector<std::shared_ptr<Node>> children;
+
+  std::shared_ptr<Node> parent;
 
   std::string element;
 };
