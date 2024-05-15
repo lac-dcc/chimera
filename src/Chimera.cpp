@@ -185,6 +185,7 @@ int main(int argc, char **argv) {
   if (flags.count("debug"))
     dumpSyntaxTree(head);
 
+  renameVars(head);
   codeGen(head);
 
   return 0;

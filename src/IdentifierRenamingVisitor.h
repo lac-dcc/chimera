@@ -556,6 +556,10 @@ private:
     contexts.push(t);
   }
 
+  void finishIDContext(){
+    contexts.pop();
+  }
+
   std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
     std::cerr << "Context: " << contexts.top()
               << " Context Size: " << contexts.size() << std::endl;

@@ -7,6 +7,14 @@ void IdentifierRenamingVisitor::visit(Node *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Terminal *node) {
+  if (node->getElement() == " [ "){
+    createIDContext(ContextType::expr);
+  }
+
+  if(node->getElement() == " ] "){
+    finishIDContext();
+  }
+
   if (isStartingToken(node->getElement())) {
     std::cerr << "Entering new Scope" << node->getElement() << std::endl;
 
@@ -144,7 +152,7 @@ void IdentifierRenamingVisitor::visit(Module_start *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Lifetime_opt *node) {
@@ -396,7 +404,7 @@ void IdentifierRenamingVisitor::visit(Module_or_generate_item *node) {
     child->accept(*this);
   }
 
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Module_common_item *node) {
@@ -694,7 +702,7 @@ void IdentifierRenamingVisitor::visit(Expression *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Equiv_impl_expr *node) {
@@ -762,7 +770,7 @@ void IdentifierRenamingVisitor::visit(Net_declaration *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Charge_strength_opt *node) {
@@ -993,7 +1001,7 @@ void IdentifierRenamingVisitor::visit(Lpvalue *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Range_list_in_braces *node) {
@@ -2427,7 +2435,7 @@ void IdentifierRenamingVisitor::visit(Udp_port_decls *node) {
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Udp_init_opt *node) {
