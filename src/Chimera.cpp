@@ -14,6 +14,7 @@
 #include <vector>
 
 using json = nlohmann::json;
+bool debug = false;
 
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
@@ -133,7 +134,8 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   options.add_options()
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
-    ("d,debug", "Prints productions chains.") // Needs to improve
+    ("p,printtree", "Prints productions chains.")
+    ("d,debug", "Prints debug messages.") // Needs to improve
     ("v,verbose", "Verbose output")//Needs to implement
     ("h,help", "Display usage");
   // clang-format on
@@ -169,6 +171,9 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 int main(int argc, char **argv) {
   auto flags = parseArgs(argc, argv);
 
+  if (flags.count("debug"))
+    debug = true;
+
   std::ifstream f(flags["file"].as<std::string>());
 
   std::string json_str((std::istreambuf_iterator<char>(f)),
@@ -182,7 +187,7 @@ int main(int argc, char **argv) {
 
   replaceConstants(head);
 
-  if (flags.count("debug"))
+  if (flags.count("printtree"))
     dumpSyntaxTree(head);
 
   renameVars(head);

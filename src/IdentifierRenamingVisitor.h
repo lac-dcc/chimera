@@ -8,6 +8,7 @@
 #include <stack>
 #include <string>
 #include <vector>
+extern bool debug;
 class Node;
 class Terminal;
 class Time_literal;
@@ -520,15 +521,19 @@ private:
   }
 
   void finishScope() {
-    std::cerr << "finishing scope" << std::endl;
+    if(debug)
+      std::cerr << "finishing scope" << std::endl;
     if (!scopeLimit.empty()) {
-      std::cerr << "scope not empty" << std::endl;
-      std::cerr << "limit: " << scopeLimit.top()
-                << "scope size: " << scopeLimit.size()
-                << " size identifiers: " << identifiers.size() << std::endl;
+      if(debug){
+        std::cerr << "scope not empty" << std::endl;
+        std::cerr << "limit: " << scopeLimit.top()
+                  << "scope size: " << scopeLimit.size()
+                  << " size identifiers: " << identifiers.size() << std::endl;
+      }
 
       for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
-        std::cerr << "Removing: " << identifiers.back() << std::endl;
+        if(debug)
+          std::cerr << "Removing: " << identifiers.back().get()->name << std::endl;
         identifiers.pop_back();
       }
       scopeLimit.pop();
@@ -543,8 +548,8 @@ private:
     } else {
       v.name = " id_" + std::to_string(varID++);
     }
-
-    std::cerr << "Var name: " << v.name << std::endl;
+    if(debug)
+      std::cerr << "Var name: " << v.name << std::endl;
     v.t = t;
     identifiers.push_back(std::make_shared<Var>(v));
 
@@ -552,7 +557,8 @@ private:
   }
 
   void createIDContext(ContextType t) {
-    std::cerr << "Creating context: " << t << std::endl;
+    if(debug)
+      std::cerr << "Creating context: " << t << std::endl;
     contexts.push(t);
   }
 
@@ -561,22 +567,23 @@ private:
   }
 
   std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
-    std::cerr << "Context: " << contexts.top()
+    if(debug)
+      std::cerr << "Context: " << contexts.top()
               << " Context Size: " << contexts.size() << std::endl;
 
     if (contexts.top() == ContextType::module) {
 
-      std::cerr << "entrou em mod" << std::endl;
       contexts.pop();
       contexts.push(ContextType::decl);
       return createNewID("module");
     }
     if (contexts.top() == ContextType::decl) {
-      std::cerr << "Creating new ID for type: " << type << std::endl;
+      if(debug)
+        std::cerr << "Creating new ID for type: " << type << std::endl;
       return createNewID(type);
     }
-
-    std::cerr << "Trying to use previous created ID" << std::endl;
+    if(debug)
+      std::cerr << "Trying to use previous created ID" << std::endl;
 
     std::vector<std::string> options;
     for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
@@ -587,7 +594,8 @@ private:
       return createNewID(type);
 
     auto c = rand() % options.size();
-    std::cerr << "Using var: " << options[c] << std::endl;
+    if(debug)
+      std::cerr << "Using var: " << options[c] << std::endl;
     return options[c];
   }
 

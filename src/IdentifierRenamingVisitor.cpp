@@ -16,13 +16,12 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
   }
 
   if (isStartingToken(node->getElement())) {
-    std::cerr << "Entering new Scope" << node->getElement() << std::endl;
+    
 
     startNewScope();
 
     if (node->getElement() == " module ") {
       createIDContext(ContextType::module);
-      std::cerr << "Cont: " << contexts.top() << std::endl;
     }
 
   } else if (isFnishingToken(node->getElement())) {
