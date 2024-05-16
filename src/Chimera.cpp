@@ -16,6 +16,8 @@
 using json = nlohmann::json;
 bool debug = false;
 
+static constexpr char separator = '~';
+
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
   std::vector<std::string> result;
@@ -31,12 +33,12 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
 static std::vector<std::string> chooseProds(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const std::string &element, std::mt19937 &gen) {
+    const std::string& context, std::mt19937 &gen) {
   std::vector<std::string> productionsStr;
   std::vector<double> productionsCount;
 
   int sum = 0;
-  for (const auto &[prod, prodCount] : map.at(element)) {
+  for (const auto &[prod, prodCount] : map.at(context)) {
     productionsStr.push_back(prod);
     productionsCount.push_back(prodCount);
     sum += prodCount;
@@ -48,8 +50,25 @@ static std::vector<std::string> chooseProds(
 
   std::discrete_distribution<> d(productionsCount.begin(),
                                  productionsCount.end());
-  auto chosenProd = productionsStr[d(gen)];
-  return breakRuleInProds(chosenProd);
+  return breakRuleInProds(productionsStr[d(gen)]);
+}
+
+static std::string getNodeContext(std::shared_ptr<Node> node, const int n) {
+  std::string context = "";
+
+  int depth = 0;
+  while (depth < n && node != nullptr) {
+    context.insert(0, node->getElement() + separator);
+    ++depth;
+    node = node->getParent();
+  }
+
+  if (context.size() > 0) {
+    // Remove last separator
+    context.pop_back();
+  }
+
+  return context;
 }
 
 static std::shared_ptr<Node> buildSyntaxTree(
@@ -57,6 +76,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         &map,
     const int n) {
   auto head = classMap["source_text"]("source_text");
+  head->setParent(nullptr);
 
   std::stack<std::shared_ptr<Node>> stack;
   stack.push(head);
@@ -68,10 +88,13 @@ static std::shared_ptr<Node> buildSyntaxTree(
     auto curr = stack.top();
     stack.pop();
 
-    std::string element = curr->getElement();
-    auto prods = chooseProds(map, element, gen);
+    std::string context = getNodeContext(curr, n);
+    auto prods = chooseProds(map, context, gen);
 
     std::vector<std::shared_ptr<Node>> children;
+    context = getNodeContext(curr, n - 1);
+    if (!context.empty())
+      context += separator;
     for (std::string prod : prods) {
       std::shared_ptr<Node> child;
 
@@ -86,7 +109,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         auto aux = prod;
         std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
 
-        if (map.find(prod) == map.end()) {
+        if (map.find(context + prod) == map.end()) {
           child = classMap[aux](" " + prod + " ");
         } else {
           child = classMap[aux](prod);
@@ -94,6 +117,7 @@ static std::shared_ptr<Node> buildSyntaxTree(
         }
       }
 
+      child->setParent(curr);
       children.push_back(child);
     }
 
@@ -113,7 +137,7 @@ static void replaceConstants(std::shared_ptr<Node> head) {
   head.get()->accept(visitor);
 }
 
-void renameVars(std::shared_ptr<Node> head) {
+static void renameVars(std::shared_ptr<Node> head) {
   IdentifierRenamingVisitor visitor;
   head.get()->accept(visitor);
 }
