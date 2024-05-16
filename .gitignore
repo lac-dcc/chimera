@@ -7,3 +7,4 @@ invalid_programs
 jgproject*/
 build/
 .vscode/
+generated_programs/
