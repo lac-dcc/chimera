@@ -3,7 +3,7 @@ cloned_repos/
 __pycache__/
 jgproject/
 database/verible_invalid_programs/
-invalid_programs
+
 jgproject*/
 build/
 .vscode/
