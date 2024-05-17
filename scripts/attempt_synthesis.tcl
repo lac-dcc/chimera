@@ -1,5 +1,10 @@
-set target_dir "../database/invalid_programs"
-set database_dir "../database"
+if {![info exists target_dir]} {
+  set target_dir "../database/invalid_programs"
+}
+
+if {![info exists database_dir]} {
+  set database_dir "../database"
+}
 
 file mkdir $target_dir
 
@@ -21,6 +26,3 @@ foreach v_file [glob $glob_path] {
     puts "Failed with exit code $exit_code"
   }
 }
-
-# -batch
-exit
