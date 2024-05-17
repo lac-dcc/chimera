@@ -18,7 +18,9 @@ foreach v_file [glob $glob_path] {
 
   set exit_code [catch {elaborate -bbox 1}]
   if { $exit_code != 0 } {
-    puts "Elaborete for $v_file failed with exit code $exit_code"
+    puts "Elaborate for $v_file failed with exit code $exit_code"
+  } else {
+    puts "Elaborate for $v_file successful"
   }
 }
 
