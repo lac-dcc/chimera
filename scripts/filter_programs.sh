@@ -31,6 +31,10 @@ for file in $(find  "$1"/ -name "*.v" -type f)  ; do
      continue; 
     fi
 
+    if [ ! -s "$file" ]; then
+        mv "$file" "$1/verible_invalid_programs"
+        >&2 echo "Blank File: $file" 
+
     echo "Analyzing $count/$total: $file"    
     "$2" "$file"  2>&1 >/dev/null
 
