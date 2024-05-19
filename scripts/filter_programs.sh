@@ -2,7 +2,7 @@
 
 # Check if directory argument is provided
 if [ $# -ne 2 ]; then
-    echo "Usage: $0 <directory> <_verible_parser_executable>>"
+    echo "Usage: $0 <directory> <verible_parser_executable>"
     exit 1
 fi
 
@@ -12,38 +12,39 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
+# Check if the provided argument is a file
 if [ ! -f "$2" ]; then
     echo "$2 does not exist or is not a file"
     exit 1
 fi
 
 count=1
-total=$(($(find "$1"/ -name "*.v" -type f | wc -l)))
-total=$(($total-1))
+total=$(find "$1" -name "*.v" -type f | wc -l)
+total=$((total - 1))
 
-echo "total of programs: $total"
+echo "Total number of programs: $total"
 
-mkdir "$1/verible_invalid_programs"
+mkdir -p "$1/verible_invalid_programs"
 
-for file in $(find  "$1"/ -name "*.v" -type f)  ; do
-
+for file in $(find "$1" -name "*.v" -type f); do
     if [[ ! -f "$file" ]]; then
-     continue; 
+        continue
     fi
+    
+    echo "Analyzing $count/$total: $file"
+    "$2" "$file" --printtokens >/dev/null 2>&1
+    result=$?
 
-    if [ ! -s "$file" ]; then
+    if [ $result -ne 0 ]; then
         mv "$file" "$1/verible_invalid_programs"
-        >&2 echo "Blank File: $file" 
-
-    echo "Analyzing $count/$total: $file"    
-    "$2" "$file"  2>&1 >/dev/null
-
-    if [ $? -eq 1 ]
-        mv "$file" "$1/verible_invalid_programs"
-        >&2 echo "Error at file: $file"
+        echo "Error at file: $file" >&2
+    else
+        num_linhas=$("$2" "$file" --printtokens | wc -l)
+        if [ "$num_linhas" -le 3 ]; then
+            mv "$file" "$1/verible_invalid_programs"
+            echo "Blank File: $file" >&2
+        fi
     fi
-
 
     ((count++))
 done
-
