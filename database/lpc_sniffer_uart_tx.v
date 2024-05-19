@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 
 module uart_tx #(parameter CLOCK_FREQ = 12_000_000, BAUD_RATE = 115_200)
 	(

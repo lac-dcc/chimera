@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test is derived from bug report PR#511. Mostly what it is
  * doing is checking the behavior of === and wait.

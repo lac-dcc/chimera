@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Trigger breakage of Icarus Verilog CVS 2004-06-18
 // $ iverilog netnet.v
 // netnet.v:7: internal error: pin(3) out of bounds(3)

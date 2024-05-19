@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alangarf/apple-one
+// License: Apache License 2.0
+
 ////////////////////////////////////////////////////////
 // RS-232 RX and TX module
 // (c) fpga4fun.com & KNJN LLC - 2003 to 2016

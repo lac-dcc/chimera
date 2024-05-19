@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-NFC
+// License: GNU General Public License v3.0
+
 
 module uart2nfca_system_top (
     input  wire       rstn,           // 0:reset, 1:work

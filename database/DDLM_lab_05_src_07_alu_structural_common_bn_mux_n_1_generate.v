@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module bn_mux_n_1_generate
 #( parameter  DATA_WIDTH = 8,
    parameter  SEL_WIDTH   = 2) 

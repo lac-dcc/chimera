@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 module usb_fs_tx_mux (
   // interface to IN Protocol Engine
   input in_tx_pkt_start,

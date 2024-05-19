@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaoerlang0359/E203plus
+// License: Apache License 2.0
+
 module vga_driver(
     input vga_clk,
     input sys_rst_n,   

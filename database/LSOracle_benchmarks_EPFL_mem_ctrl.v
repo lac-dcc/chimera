@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module mem_ctrl ( 
     pi0000, pi0001, pi0002, pi0003, pi0004, pi0005, pi0006, pi0007, pi0008,
     pi0009, pi0010, pi0011, pi0012, pi0013, pi0014, pi0015, pi0016, pi0017,

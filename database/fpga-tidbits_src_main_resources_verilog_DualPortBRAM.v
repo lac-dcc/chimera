@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/maltanar/fpga-tidbits
+// License: BSD 2-Clause "Simplified" License
+
 // the dual-port BRAM Verilog below is adapted from Dan Strother's example:
 // http://danstrother.com/2010/09/11/inferring-rams-in-fpgas/
 

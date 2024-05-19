@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 // megafunction wizard: %ALTPLL%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Test that expression width calculation correctly treats right operand
 // of shift as unsigned regardless of its actual type.
 module test;

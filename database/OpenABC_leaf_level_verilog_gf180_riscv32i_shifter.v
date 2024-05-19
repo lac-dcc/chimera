@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module shifter (input  wire signed [31:0] a,
 		input wire [ 4:0]  shamt,
 		input wire [ 1:0]  shtype,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // NOTE: This test program is WRONG, in that it ignores the fact
 // that continuous assigns drive with their own strength and drop
 // any strength that the r-value may have.

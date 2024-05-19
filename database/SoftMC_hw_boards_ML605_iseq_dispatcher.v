@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CMU-SAFARI/SoftMC
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module iseq_dispatcher #(parameter ROW_WIDTH = 15, BANK_WIDTH = 3, CKE_WIDTH = 1, 

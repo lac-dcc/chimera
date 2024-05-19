@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/Neogeo_MiSTer_old
+// License: GNU General Public License v2.0
+
 module sync_vg
 #(
 	parameter X_BITS=12, Y_BITS=12

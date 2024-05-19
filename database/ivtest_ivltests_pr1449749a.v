@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This tests the handling of signed/types parameters. This is a test
  * of the complaints from pr 1449749.

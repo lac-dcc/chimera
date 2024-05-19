@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module dq (clk, q, d);
   input  clk;
   input  [width-1:0] d;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /*-------------------------------------------------------------------
 CM_FIFO_1x
 	Communication Manager (CM) FIFO, using 1 RAM block.

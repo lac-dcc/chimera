@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 // megafunction wizard: %ALTDDIO_BIDIR%
 // GENERATION: STANDARD
 // VERSION: WM1.0

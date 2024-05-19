@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/embmicro/mojo-base-project
+// License: MIT License
+
 module cclk_detector #(
     parameter CLK_RATE = 50000000
     )(

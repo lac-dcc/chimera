@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module BreakpointUnit( // @[:freechips.rocketchip.system.TinyConfig.fir@123153.2]
   input         io_status_debug, // @[:freechips.rocketchip.system.TinyConfig.fir@123156.4]
   input         io_bp_0_control_action, // @[:freechips.rocketchip.system.TinyConfig.fir@123156.4]

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/micro-FPGA/engine-V
+// License: Apache License 2.0
+
 module mf8_reg(Clk, Reset_n, Wr, Rd_Addr, Rr_Addr, Data_In, Rd_Data, Rr_Data, Z);
 	input			Clk;
 	input			Reset_n;

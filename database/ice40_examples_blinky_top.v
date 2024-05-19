@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nesl/ice40_examples
+// License: GNU General Public License v3.0
+
 // Blink an LED provided an input clock
 /* module */
 module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8 );

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 module loopback #(
   parameter integer C_M_AXI_RD_BURST_LEN      = 16,
   parameter integer C_M_AXI_WR_BURST_LEN      = 16,

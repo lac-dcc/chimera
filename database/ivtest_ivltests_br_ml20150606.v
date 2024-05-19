@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module dut(input [3:0] DataI, output [3:0] DataO);
 
 wire [3:0] DataI;

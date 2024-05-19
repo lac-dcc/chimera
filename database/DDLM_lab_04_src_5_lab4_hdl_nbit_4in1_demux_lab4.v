@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b1_demux_1_4_case
 (
     input      din, 

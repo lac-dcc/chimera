@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module MISTRAL_IB((* iopad_external_pin *)  input PAD, output O);
 	assign O = PAD;
 endmodule

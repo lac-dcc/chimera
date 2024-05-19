@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This module generate M single 2*HW-1 bit vector each T time steps
 
 module stimulus #(parameter W = 8, M = 200, MAX = 256) (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // OKI M71064
 // Copyright (C) 2020 Sean 'furrtek' Gonsalves
 // This was only tested in simulation

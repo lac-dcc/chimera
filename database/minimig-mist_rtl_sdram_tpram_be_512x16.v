@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // megafunction wizard: %RAM: 2-PORT%
 // GENERATION: STANDARD
 // VERSION: WM1.0

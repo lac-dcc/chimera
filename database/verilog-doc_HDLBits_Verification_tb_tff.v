@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 `timescale 1ps/1ps
 module top_module ();
     reg clk, reset, t, q;

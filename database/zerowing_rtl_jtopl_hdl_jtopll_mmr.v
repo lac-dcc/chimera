@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -73,6 +76,7 @@ localparam [7:0] REG_TESTYM  = 8'h0F,
 reg  [ 7:0] selreg;       // selected register
 reg  [ 7:0] din_copy;
 reg         csm, effect;
+reg  [ 3:0] sel_ch;
 reg  [ 1:0] sel_group;     // group to update
 reg  [ 2:0] sel_sub;       // subslot to update
 reg         up_fnumlo, up_fnumhi, up_inst,
@@ -89,6 +93,7 @@ always @(posedge clk) begin
     if( rst ) begin
         selreg      <= 0;
         sel_group   <= 0;
+        sel_ch      <= 0;
         sel_sub     <= 0;
         // Updaters
         up_inst     <= 0;
@@ -140,6 +145,7 @@ always @(posedge clk) begin
                     // Channels 3-5 -> group 1
                     // Channels 6-8 -> group 2
                     // other        -> group 3 - ignored
+                    sel_ch    <= selreg[3:0];
                     sel_group <= selreg[3:0] < 4'd3 ? 2'd0 :
                                  selreg[3:0] < 4'd6 ? 2'd1 :
                                  selreg[3:0] < 4'd9 ? 2'd2 : 2'd3;
@@ -169,6 +175,7 @@ jtopll_reg u_reg(
     .op         ( op            ),
     .slot       ( slot          ),
     
+    .sel_ch     ( sel_ch        ),
     .sel_group  ( sel_group     ),     // group to update
     .sel_sub    ( sel_sub       ),     // subslot to update
 

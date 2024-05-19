@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "TOP" written by ABC on Tue Mar  5 09:56:39 2019
 
 module diffeq ( clock, 

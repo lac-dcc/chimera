@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Purpose: Clock divider with 2 outputs                                     #
 //           Secondary clock must be multiple of first clock                  #

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/vipinkmenon/neuralNetwork
+// License: MIT License
+
 `define pretrained
 `define numLayers 5
 `define dataWidth 16

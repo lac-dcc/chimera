@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nanamake/r22sdf
+// License: MIT License
+
 //----------------------------------------------------------------------
 //  SdfUnit: Radix-2^2 Single-Path Delay Feedback Unit for N-Point FFT
 //----------------------------------------------------------------------

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 // The IN Protocol Engine sends data to the host.
 module usb_fs_in_pe #(
   parameter NUM_IN_EPS = 11,

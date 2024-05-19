@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * Based on Request id 1313366 in the iverilog Bugs database, or
  * pr699 in the ivl-bugs database.

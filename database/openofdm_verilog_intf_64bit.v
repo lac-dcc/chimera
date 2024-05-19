@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /********************************************************           
     * An interface to assemble bytes into 64 bits.         *   
     *                                                      *   

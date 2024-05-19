@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // this is the sprite parallel to serial converter
 // clk is 7.09379 MHz (low resolution pixel clock)
 // the sprdata assign circuitry is constructed differently from the hardware

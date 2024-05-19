@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module DMABuffer(PHI2, SPR_PPU, DB, RnW_fromcore, RW_topad, n_R4015, n_DBGRD, WR_topad, RD_topad);
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/unisims/MULT18X18.v,v 1.9 2006/02/08 23:28:02 fphillip Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: One hot N:1 MUX                                                 #
 //#############################################################################
@@ -27,7 +30,7 @@ module oh_mux
 	      for(i=0;i<M;i=i+1)
 		mux[N-1:0] = mux[N-1:0] | {(N){sel[i]}} & in[((i+1)*N-1)-:N];
 	   end
-	 assign out[N-1:0] = mux[N-1];
+	 assign out[N-1:0] = mux[N-1:0];
       end
       else begin
 	 //TODO: implement

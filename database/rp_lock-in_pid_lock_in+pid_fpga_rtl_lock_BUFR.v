@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marceluda/rp_lock-in_pid
+// License: GNU General Public License v3.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/virtex4/BUFR.v,v 1.12 2006/07/21 21:06:20 yanx Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This is frpm PR#138. It is supposed to generate an error.
  */

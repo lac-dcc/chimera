@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module lab7_2
 (
 	input [3:0] x,

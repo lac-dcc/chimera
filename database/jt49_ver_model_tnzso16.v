@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt49
+// License: GNU General Public License v3.0
+
 module vcd_tnzso16(
 	input clk,
 	output  wr_n,

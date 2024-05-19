@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zf3/psram-tang-nano-9k
+// License: Apache License 2.0
+
 //
 // PSRAM/HyperRAM controller for Tang Nano 9K / Gowin GW1NR-LV9QN88PC6/15.
 // Feng Zhou, 2022.8

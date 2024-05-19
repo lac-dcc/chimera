@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/strigeus/fpganes
+// License: GNU General Public License v3.0
+
 // Copyright (c) 2012-2013 Ludvig Strigeus
 // This program is GPL Licensed. See COPYING for the full license.
  

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg pass;
   reg [1:0] in, shift, result;

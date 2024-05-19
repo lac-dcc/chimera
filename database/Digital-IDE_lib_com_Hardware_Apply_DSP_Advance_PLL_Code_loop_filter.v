@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module loop_filter(CLK, RESET, C, D1, D2);
    input         CLK;
    input         RESET;

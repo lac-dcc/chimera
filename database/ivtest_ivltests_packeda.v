@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
 
    // packed 2D array, arranged as 4 bytes of 8 bits each.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module magcompare2c (LT, GT, GT_in, LT_in);
 
    input [1:0] LT_in;

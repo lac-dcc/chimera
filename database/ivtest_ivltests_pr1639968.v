@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
  module RegisterArrayBug01;
 
  reg [15:0] rf[0:7];

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // A unit test for checking APU Clock Trees.
 
 // Just do a few iterations with reset, then no reset.

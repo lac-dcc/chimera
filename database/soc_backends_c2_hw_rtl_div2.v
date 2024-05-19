@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // A pipelined non-restoring integer division,
 // output is valid in WIDTH/2 + 1 clock cycles.
 // E.g.,  9 cycles for 16-bit, 17 cycles for 32-bit

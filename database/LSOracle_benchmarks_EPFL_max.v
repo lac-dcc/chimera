@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module top ( 
     \in0[0] , \in0[1] , \in0[2] , \in0[3] , \in0[4] , \in0[5] , \in0[6] ,
     \in0[7] , \in0[8] , \in0[9] , \in0[10] , \in0[11] , \in0[12] ,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 module test;
 
 reg  SPI_SCK, SPI_SS2, SPI_DI;

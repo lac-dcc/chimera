@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module vga (
 	output [7:0] light,
     input clk, // 50 MHz

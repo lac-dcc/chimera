@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_shift_reg_width_p81_stages_p2
 (
   clk,

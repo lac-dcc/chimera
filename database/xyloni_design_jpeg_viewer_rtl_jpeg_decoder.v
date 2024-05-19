@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module jpeg_decoder
 #(
 	parameter	SOS_CNT_W				= 4,

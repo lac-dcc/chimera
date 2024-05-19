@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/time-sleuth
+// License: MIT License
+
 `define MODE_1080p 8'b_0000_0010
 `define MODE_1080i 8'b_0000_0011
 `define MODE_720p  8'b_0000_0100

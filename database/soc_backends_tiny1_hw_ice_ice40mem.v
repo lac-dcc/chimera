@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // ICE40 RAM 4k cell, configured as 2048x2
 //
 //  taken from Swapforth [1]

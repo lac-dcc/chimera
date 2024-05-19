@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hamsternz/DisplayPort_Verilog
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // test_source_3840_2180_YCC_422_ch2.v : 
 //

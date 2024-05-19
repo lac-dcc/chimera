@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DinoMax00/TJ-FPGA_MP3
+// License: MIT License
+
 //--------------- uart data receiver for 9600bps  ----------------
 //------------------------- author : Dino ------------------------
 module uart_deal(

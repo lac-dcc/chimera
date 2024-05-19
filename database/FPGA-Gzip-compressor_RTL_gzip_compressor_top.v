@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-Gzip-compressor
+// License: GNU General Public License v3.0
+
 
 //--------------------------------------------------------------------------------------------------------
 // Module  : gzip_compressor_top

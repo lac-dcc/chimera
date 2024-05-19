@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/racerxdl/riskow
+// License: Apache License 2.0
+
 module ALU (
   input         [3:0]   operation,
   input         [31:0]  X,

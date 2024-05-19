@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stillwater-sc/RISC-V-TensorCore
+// License: MIT License
+
 module base_ram (
   input logic clk,
   input logic nrst,

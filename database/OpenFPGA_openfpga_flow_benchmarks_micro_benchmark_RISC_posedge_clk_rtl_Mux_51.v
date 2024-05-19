@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module Mux_51(Y,A0,A1,A2,A3,A4,sel);
 
 output	[7:0]Y;

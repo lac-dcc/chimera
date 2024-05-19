@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 ///////////////////////////////////////////////////////////////////////////////
 // ./src/test_streams/insert_main_stream_attrbutes_one_channel.v : 
 //

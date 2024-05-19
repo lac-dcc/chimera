@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 /*main function
 1)parsing packet header 
 2)fetch the keys from packet header include  l3_protocol ,tos,l4_protocol,source ip,derection ip,source port derection port ,tcp_flag icmp layer_type and icmp code 

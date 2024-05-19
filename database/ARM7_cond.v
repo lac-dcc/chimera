@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chsasank/ARM7
+// License: MIT License
+
 //This module decides if a particticular instruction satisfies conditions or not
 
 module cond ( nzcv,  condition_code, will_this_be_executed);

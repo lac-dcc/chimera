@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module decoder_param_en (out, in, en);
 
    parameter BITS = 2;

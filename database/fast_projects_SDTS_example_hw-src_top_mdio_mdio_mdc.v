@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //=========================================================================
 //written by zq/lxj
 //外部MDIO接口所属器件型号：VSC8224

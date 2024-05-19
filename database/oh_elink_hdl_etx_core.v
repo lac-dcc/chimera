@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module etx_core(/*AUTOARG*/
    // Outputs
    tx_data_slow, tx_frame_slow, txrd_wait, txrr_wait, txwr_wait,

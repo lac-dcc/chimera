@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter amax = 9;
   reg [31:0] mem [amax:0];

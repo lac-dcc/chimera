@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Xilinx/XilinxUnisimLibrary
+// License: Apache License 2.0
+
 ///////////////////////////////////////////////////////////////////////////////
 //     Copyright (c) 1995/2014 Xilinx, Inc.
 // 

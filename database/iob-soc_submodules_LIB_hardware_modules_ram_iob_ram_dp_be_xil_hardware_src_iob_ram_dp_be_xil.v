@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/IObundle/iob-soc
+// License: MIT License
+
 // Dual-Port BRAM with Byte-wide Write Enable
 // Read-First mode 
 

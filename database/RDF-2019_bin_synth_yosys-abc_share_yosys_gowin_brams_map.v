@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 /* Semi Dual Port (SDP) memory have the following configurations:
  * Memory Config    RAM(BIT)   Port Mode   Memory Depth   Data Depth
  * ----------------|---------| ----------|--------------|------------|

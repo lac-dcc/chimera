@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg pass;
   enum bit signed [7:0] {a = 1, b = 2, c = 3, d = 4} enum_var;

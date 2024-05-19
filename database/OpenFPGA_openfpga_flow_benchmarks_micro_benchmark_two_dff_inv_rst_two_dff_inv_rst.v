@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: Two FFs share a differential pair of reset. One is controlled by an inversion of the reset, while the other is controlled by the original reset. This is useful to validate 
 //                 - reset signal to drive LUT from global network

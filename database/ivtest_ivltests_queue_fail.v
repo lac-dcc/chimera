@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   integer res, id, job, inform, status, code, value;
   reg [30:0] short_job, short_inform, short_stat;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 // Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 // based on Xilinx Vivado auto generated script. openwifi add necessary modifications.
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.

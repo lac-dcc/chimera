@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/randyrossi/vicii-kawari
+// License: GNU General Public License v3.0
+
 // This file is part of the vicii-kawari distribution
 // (https://github.com/randyrossi/vicii-kawari)
 // Copyright (c) 2022 Randy Rossi.

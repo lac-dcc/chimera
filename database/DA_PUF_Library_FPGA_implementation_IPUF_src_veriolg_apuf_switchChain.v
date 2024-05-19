@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 
 /*************************************************************************** 
 	Design: Chain of switch

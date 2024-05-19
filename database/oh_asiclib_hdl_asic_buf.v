@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Non-inverting Buffer                                            #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

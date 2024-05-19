@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_dvi_framebuffer
+// License: MIT License
+
 module reset_gen
 (
     input  clk_i,

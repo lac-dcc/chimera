@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ilaydayaman/CNN_for_SLR
+// License: BSD 2-Clause "Simplified" License
+
 module Counter2(
     input clk,
     input start,

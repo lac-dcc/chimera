@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt12
+// License: GNU General Public License v3.0
+
 module jt10_test(
     input           rst,        // rst should be at least 6 clk&cen cycles long
     input           clk,        // CPU clock

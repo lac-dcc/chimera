@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$__EFINIX_5K (CLK2, CLK3, A1ADDR, A1DATA, A1EN, B1ADDR, B1DATA, B1EN);
 	parameter CFG_ABITS = 8;
 	parameter CFG_DBITS = 20;

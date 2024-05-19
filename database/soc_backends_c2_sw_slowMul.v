@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // Non-pipelined multiplier
 module slowMul(input clk,
                input         rst,

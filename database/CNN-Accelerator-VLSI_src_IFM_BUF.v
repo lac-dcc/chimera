@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lirui-shanghaitech/CNN-Accelerator-VLSI
+// License: Apache License 2.0
+
 module IFM_BUF (clk, rst_n, ifm_input, ifm_read, ifm_buf0, ifm_buf1, ifm_buf2, ifm_buf3);
 
 input clk;

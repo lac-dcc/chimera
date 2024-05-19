@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * For a non-blocking delay the last NB assign in the same thread
  * at the same time must set the final result, but you are allowed

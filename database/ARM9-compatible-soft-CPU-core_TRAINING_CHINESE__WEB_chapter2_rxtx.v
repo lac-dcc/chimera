@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/risclite/ARM9-compatible-soft-CPU-core
+// License: Apache License 2.0
+
 `define DEL 3
 module rxtx
 #(parameter baud = 9600,

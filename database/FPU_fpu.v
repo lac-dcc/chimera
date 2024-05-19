@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/danshanley/FPU
+// License: GNU General Public License v3.0
+
 //IEEE 754 Single Precision ALU
 module fpu(clk, A, B, opcode, O);
 	input clk;

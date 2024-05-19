@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_cce_reg_num_lce_p2_num_cce_p1_addr_width_p22_lce_assoc_p8_lce_sets_p64_block_size_in_bytes_p64
 (
   clk_i,

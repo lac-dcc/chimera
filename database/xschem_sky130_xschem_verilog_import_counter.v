@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/StefanSchippers/xschem_sky130
+// License: Apache License 2.0
+
 module counter (VGND,
     VPWR,
     clk_i,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 // Created by David J. Marion
 // 200kHz Generator for Basys 3 PmodTMP2 Temperature Sensor I2C Master

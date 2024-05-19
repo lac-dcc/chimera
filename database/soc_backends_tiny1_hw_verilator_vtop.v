@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // Model only!
 module ram16k(input clk,
 	      input [13:0] 	addr,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/randyrossi/vicii-kawari
+// License: GNU General Public License v3.0
+
 //////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 2009 Xilinx, Inc.
 // This design is confidential and proprietary of Xilinx, All Rights Reserved.

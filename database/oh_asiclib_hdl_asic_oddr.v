@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Dual data rate output buffer                                    #
 //# Copyright: OH Project Authors. All rights Reserved.                       #

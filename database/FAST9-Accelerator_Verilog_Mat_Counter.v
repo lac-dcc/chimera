@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 `define INIT 4'd0
 `define S1 4'd1
 `define S2 4'd2

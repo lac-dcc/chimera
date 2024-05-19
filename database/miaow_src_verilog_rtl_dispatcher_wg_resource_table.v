@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module wg_resource_table (/*AUTOARG*/
    // Outputs
    wg_res_tbl_wg_slot_id, wg_res_tbl_wg_count_out,

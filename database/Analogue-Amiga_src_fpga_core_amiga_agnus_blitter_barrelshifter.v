@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 //Blitter barrel shifter
 //This module can shift 0-15 positions to the right (normal mode) or to the left (descending mode).
 //Multipliers are used to save logic.

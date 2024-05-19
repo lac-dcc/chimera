@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module  \$_DFF_N_ (input D, C, output Q); DFFN _TECHMAP_REPLACE_ (.D(D), .Q(Q), .CLK(C)); endmodule
 module  \$_DFF_P_ #(parameter INIT = 1'b0) (input D, C, output Q); DFF  #(.INIT(INIT)) _TECHMAP_REPLACE_ (.D(D), .Q(Q), .CLK(C)); endmodule
 

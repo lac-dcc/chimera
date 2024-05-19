@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/sergachev/spi_mem_programmer
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module testbench();

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YutongChenVictor/Fpga-accelerator-demos
+// License: MIT License
+
 module vga_top(
     input           sys_clk     ,
     input           sys_rst_n   ,

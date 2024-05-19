@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module Switch(clk,reset,ADDR,Switch_WD,IRQ,Switch_RD);
 //input
     input clk;

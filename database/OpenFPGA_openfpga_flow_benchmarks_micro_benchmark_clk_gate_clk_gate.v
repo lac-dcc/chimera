@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: Use clock to gate the output of an AND2 gate
 //                 This is to test if LUTs can be mapped as wires

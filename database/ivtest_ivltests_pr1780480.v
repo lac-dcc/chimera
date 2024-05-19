@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // show bug in icarus verilog
 // this shouldn't crash, should it?
 

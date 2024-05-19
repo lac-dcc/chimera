@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 (* abc9_box, lib_whitebox *)
 module \$__ICE40_CARRY_WRAPPER (
 	(* abc9_carry *)

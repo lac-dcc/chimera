@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_parallel_in_serial_out_width_p16_els_p4
 (
   clk_i,

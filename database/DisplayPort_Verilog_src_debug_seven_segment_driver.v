@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hamsternz/DisplayPort_Verilog
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // ./src/debug/seven_segment_driver.v : 
 //

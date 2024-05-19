@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TheSUPERCD/8bit_MicroComputer_Verilog
+// License: MIT License
+
 `timescale 1ns/1ps
 module IC(input clk, input enable, input [3:0] Instruction, output reg [14:0] ctrl_wrd);
 wire CLK;

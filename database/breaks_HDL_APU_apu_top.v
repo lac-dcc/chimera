@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module APU(AUX_A, AUX_B, n_RES, A, D, CLK, DBG, M2, n_IRQ, n_NMI, RnW, n_IN0, n_IN1, OUT0, OUT1, OUT2);
 

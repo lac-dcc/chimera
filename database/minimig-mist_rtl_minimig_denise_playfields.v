@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //This is the playfield engine.
 //It takes the raw bitplane data and generates a
 //single or dual playfield

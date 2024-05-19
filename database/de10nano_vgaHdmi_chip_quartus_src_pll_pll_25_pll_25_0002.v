@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nhasbun/de10nano_vgaHdmi_chip
+// License: MIT License
+
 `timescale 1ns/10ps
 module  pll_25_0002(
 

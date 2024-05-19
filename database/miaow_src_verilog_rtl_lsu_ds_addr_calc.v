@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module ds_addr_calc (
  lds_base,
  in_addr,

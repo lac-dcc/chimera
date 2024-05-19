@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 // No pipelined/piplined MAC
 // Version: 1.0
 

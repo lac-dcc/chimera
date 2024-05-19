@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module AD9226_driver #
 (
 	parameter signed CH_offset = 27

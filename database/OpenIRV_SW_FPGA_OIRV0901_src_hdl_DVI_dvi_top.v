@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OVGN/OpenIRV
+// License: Apache License 2.0
+
 // Project F: Display Controller DVI Demo
 // (C)2020 Will Green, Open source hardware released under the MIT License
 // Learn more at https://projectf.io

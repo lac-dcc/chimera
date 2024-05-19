@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eda-lab/CNNAF-CNN-Accelerator_init
+// License: MIT License
+
 // megafunction wizard: %ALTERA_FP_FUNCTIONS v17.1%
 // GENERATION: XML
 // fp_add_bias.v

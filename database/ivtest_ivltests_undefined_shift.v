@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Check that when the right hand operand of a shift operation
 // contains 'x' or 'z' bits, the result is undefined.
 module test;

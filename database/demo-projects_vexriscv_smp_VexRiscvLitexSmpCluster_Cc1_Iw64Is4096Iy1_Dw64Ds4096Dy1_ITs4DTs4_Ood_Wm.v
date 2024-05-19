@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 // Generator : SpinalHDL v1.7.1-SNAPSHOT    git head : dac69e9041b2c5ccabdd5bff79d49e20a2fcf093
 // Component : VexRiscvLitexSmpCluster_Cc1_Iw64Is4096Iy1_Dw64Ds4096Dy1_ITs4DTs4_Ood_Wm
 // Git hash  : b1252f47de08982e39b346d28ef0fc6d46e85dfa

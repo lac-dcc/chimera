@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 /****************************************************************************************
 *
 *    File Name:  MT48LC8M16A2.V  

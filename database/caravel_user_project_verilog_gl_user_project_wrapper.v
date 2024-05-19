@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel_user_project
+// License: Apache License 2.0
+
 module user_project_wrapper (user_clock2,
     vccd1,
     vccd2,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OpenTimer/Parser-Verilog
+// License: MIT License
+
 module tv80 (
 x884,
 x825,

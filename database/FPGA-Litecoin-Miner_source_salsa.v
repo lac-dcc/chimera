@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* salsa.v ... yes its crude, I'm not very good at verilog
 *
 * Copyright (c) 2013 kramble

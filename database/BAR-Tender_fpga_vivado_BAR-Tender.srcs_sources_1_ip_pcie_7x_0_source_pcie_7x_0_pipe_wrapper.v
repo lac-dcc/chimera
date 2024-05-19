@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/defparam/BAR-Tender
+// License: MIT License
+
 //-----------------------------------------------------------------------------
 //
 // (c) Copyright 2010-2011 Xilinx, Inc. All rights reserved.

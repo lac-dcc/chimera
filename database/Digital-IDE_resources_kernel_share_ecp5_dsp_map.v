@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$__MUL18X18 (input [17:0] A, input [17:0] B, output [35:0] Y);
 
 	parameter A_WIDTH = 18;

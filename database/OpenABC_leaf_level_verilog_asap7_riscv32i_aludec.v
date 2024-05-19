@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module aludec (input wire        funct7b,
          input wire [2:0]  funct3,
                input wire [2:0]  aluop,

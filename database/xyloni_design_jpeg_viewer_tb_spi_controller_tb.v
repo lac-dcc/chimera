@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 `timescale 1ns/1ns
 
 module spi_controller_tb();

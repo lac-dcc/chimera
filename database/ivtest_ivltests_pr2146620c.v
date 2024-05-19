@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module comp1001a;
 // extracted from comp1001.v,
 // Copyright (c) 2000 Paul Campbell (paul@verifarm.com)

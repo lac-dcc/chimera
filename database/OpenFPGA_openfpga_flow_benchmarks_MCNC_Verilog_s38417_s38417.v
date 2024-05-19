@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "TOP" written by ABC on Tue Mar  5 10:04:28 2019
 
 module s38417 ( clock, 

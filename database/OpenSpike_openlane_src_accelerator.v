@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/sfmth/OpenSpike
+// License: GNU General Public License v3.0
+
 `default_nettype none
 `timescale 1ns/1ns
 

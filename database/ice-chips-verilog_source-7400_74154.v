@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 4-line to 16-line decoder/demultiplexer (inverted outputs)
 
 module ttl_74154 #(parameter WIDTH_OUT = 16, WIDTH_IN = $clog2(WIDTH_OUT),

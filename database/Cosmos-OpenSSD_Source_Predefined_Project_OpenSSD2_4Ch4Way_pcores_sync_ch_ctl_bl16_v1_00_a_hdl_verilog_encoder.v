@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Cosmos-OpenSSD/Cosmos-OpenSSD
+// License: GNU General Public License v3.0
+
 //////////////////////////////////////////////////////////////////////////////////
 // encoder.v for Cosmos OpenSSD
 // Copyright (c) 2015 Hanyang University ENC Lab.

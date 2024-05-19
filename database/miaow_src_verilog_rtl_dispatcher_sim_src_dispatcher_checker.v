@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dispatcher_checker (/*AUTOARG*/
                            // Inputs
                            clk, rst, inflight_wg_buffer_host_rcvd_ack, host_wg_id,

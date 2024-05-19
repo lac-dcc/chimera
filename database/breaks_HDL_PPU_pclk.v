@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Pixel clock (abbreviated as PCLK) is used by all PPU parts (except the video phase generator).
 
 module PixelClock (

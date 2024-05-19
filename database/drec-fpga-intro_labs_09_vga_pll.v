@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viktor-prutyanov/drec-fpga-intro
+// License: GNU General Public License v2.0
+
 // megafunction wizard: %ALTPLL%
 // GENERATION: STANDARD
 // VERSION: WM1.0

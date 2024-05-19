@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // Taken from:
 // http://www.asic-world.com/code/hdl_models/arbiter.v
 

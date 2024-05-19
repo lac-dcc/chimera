@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // created by Ahmad darabiha
 // last updated Aug. 2002
 // this is the design for chip #1 of stereo 

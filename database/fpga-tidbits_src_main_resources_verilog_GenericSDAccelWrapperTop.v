@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/maltanar/fpga-tidbits
+// License: BSD 2-Clause "Simplified" License
+
 module GenericSDAccelWrapperTop(input ap_clk, input ap_rst_n,
     output s_axi_control_AWREADY,
     input  s_axi_control_AWVALID,

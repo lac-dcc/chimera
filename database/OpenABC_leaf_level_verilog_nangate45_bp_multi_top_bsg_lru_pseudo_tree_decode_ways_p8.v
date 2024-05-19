@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_lru_pseudo_tree_decode_ways_p8
 (
   way_id_i,

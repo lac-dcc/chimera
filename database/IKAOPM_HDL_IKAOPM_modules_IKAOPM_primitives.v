@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ika-musume/IKAOPM
+// License: BSD 2-Clause "Simplified" License
+
 //primitive : SR latch
 module primitive_srlatch (
     input   wire            i_S,

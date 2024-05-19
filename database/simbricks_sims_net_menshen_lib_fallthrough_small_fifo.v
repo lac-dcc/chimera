@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // $Id: small_fifo.v 1998 2007-07-21 01:22:57Z grg $
 //

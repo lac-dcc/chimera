@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/blanc/BUFH.v,v 1.3 2008/11/11 21:41:06 yanx Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.

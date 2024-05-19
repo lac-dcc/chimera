@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Released under GPL 2.0
 // (C) 2002 Tom Verbeure
 

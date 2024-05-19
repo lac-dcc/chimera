@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 
 // synchronous presettable 4-bit binary counter, asynchronous clear
 module jt74161(

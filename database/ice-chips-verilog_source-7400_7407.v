@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // Hex buffer/driver (OC)
 
 module ttl_7407 #(parameter BLOCKS = 6, DELAY_RISE = 0, DELAY_FALL = 0)

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/liuqdev/8-bits-RISC-CPU-Verilog
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 module machine(ins, clk, rst, write_r, read_r, PC_en, fetch, ac_ena, ram_ena, rom_ena,ram_write, ram_read, rom_read, ad_sel);

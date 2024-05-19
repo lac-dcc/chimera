@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This test was written to catch spurious "internal error" messages generated
 // by the compiler, so uses a gold file for checking.
 module test();

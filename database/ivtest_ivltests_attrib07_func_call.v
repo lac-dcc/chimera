@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module foo(clk, rst, inp_a, inp_b, out);
   input  wire clk;
   input  wire rst;

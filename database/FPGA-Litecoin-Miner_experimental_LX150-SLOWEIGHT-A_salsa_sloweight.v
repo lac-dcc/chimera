@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* salsa_sloweight.v
 *
 * Copyright (c) 2013 kramble

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 
 module fibonacci_p #(parameter W = 16)(
 	input clock,

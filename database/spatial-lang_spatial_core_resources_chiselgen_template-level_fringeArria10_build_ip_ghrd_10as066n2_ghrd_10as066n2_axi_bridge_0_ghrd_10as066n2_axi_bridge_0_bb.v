@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_axi_bridge_0 #(
 		parameter USE_PIPELINE          = 1,
 		parameter USE_M0_AWID           = 1,

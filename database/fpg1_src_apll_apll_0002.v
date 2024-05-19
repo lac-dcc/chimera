@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 `timescale 1ns/10ps
 module  apll_0002(
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/raymondrc/FPGA-SM3-HASH
+// License: MIT License
+
 /*
  * File: tb_SM3_top.v
  * Project: tb

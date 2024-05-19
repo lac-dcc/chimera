@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 module debounce #(
   parameter INITIAL_STATE     = 0,
   parameter DEBOUNCE_COUNT    = 100

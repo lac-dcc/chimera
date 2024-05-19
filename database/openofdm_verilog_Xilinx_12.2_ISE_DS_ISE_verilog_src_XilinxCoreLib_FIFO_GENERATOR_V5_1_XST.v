@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /*
  * $RDCfile: $ $Revision: 1.3 $ $Date: 2009/09/08 15:26:50 $
  *******************************************************************************

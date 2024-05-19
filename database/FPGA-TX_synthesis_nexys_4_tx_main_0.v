@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/FPGA-TX
+// License: MIT License
+
 //name : main_0
 //input : input_rs232_rx:16
 //input : input_gps_rx:16

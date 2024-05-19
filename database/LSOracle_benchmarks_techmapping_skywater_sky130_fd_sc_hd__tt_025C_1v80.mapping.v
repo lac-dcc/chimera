@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module mapped_register(D, Q, CLK);
 input D, CLK;
 output Q;

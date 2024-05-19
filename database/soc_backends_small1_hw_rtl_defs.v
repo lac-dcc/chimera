@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 `define ENABLE_IMUL
 
 // Memory mapping is managed by the bus configuration

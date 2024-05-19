@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module logical(rs, rb, op, invert_in, invert_out, datalen, result);
   wire _0000_;
   wire _0001_;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 //light up the leds depending on each switch (careful, leds are active low, but so are the switches)
 
 module switch(input [3:0] SW, output LED_R, output LED_G, output LED_B);

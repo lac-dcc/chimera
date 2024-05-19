@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nhasbun/de10nano_vgaHdmi_chip
+// License: MIT License
+
 module I2C_WRITE_WDATA  (
    input  				RESET_N ,
 	input      		  	PT_CK,

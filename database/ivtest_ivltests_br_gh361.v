@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module a();
 // Need to add enumerations to packages.
    typedef enum logic[4:0] {

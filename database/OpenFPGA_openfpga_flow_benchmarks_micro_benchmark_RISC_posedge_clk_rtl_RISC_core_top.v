@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module RISC_core_top(Reg_R0_out,Reg_R1_out,Reg_R2_out,Reg_R3_out,bus_1_out,clk,rst,MEMdataout,MEMAddress);
 
 output	[7:0]bus_1_out,MEMAddress;

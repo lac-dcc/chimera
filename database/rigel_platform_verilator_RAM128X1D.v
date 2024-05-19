@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 module RAM128X1D(WCLK,D,WE,SPO,DPO,A,DPRA);
    input      WCLK; //write clock
    input      D; // write data input

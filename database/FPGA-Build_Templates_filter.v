@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AugustinJose1221/FPGA-Build
+// License: MIT License
+
 /*
 Working of this module:
 It uses two reg arrays, one to store the image of resolution n x m pixels in one frame and the other to select the required pixels for the convolution.

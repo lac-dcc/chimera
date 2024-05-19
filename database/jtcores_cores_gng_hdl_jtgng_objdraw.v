@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -308,7 +311,7 @@ generate
         reg  [8:0] posx2;
 
         always @(posedge clk ) if (cen) begin // do not gate by !rom_wait
-            pospal <= objpal1;
+            pospal <= objpal1[PALW-1:0];
             posx2  <= posx1; // 1-clk delay to match the PROM data
             if( OBJON ) begin
                 new_pxl <= prom_dout;

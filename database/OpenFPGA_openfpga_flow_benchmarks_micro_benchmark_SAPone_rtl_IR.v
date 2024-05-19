@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module IR(
 	output [7:4] opcode,
 	output [3:0] oprand,

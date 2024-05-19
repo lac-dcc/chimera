@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Copyright 2007, Martin Whitaker.
 // This code may be freely copied for any purpose.
 module generate_memory();

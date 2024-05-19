@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module Flags_Control (
 	PHI2, X,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ryuz/jelly
+// License: MIT License
+
 // ---------------------------------------------------------------------------
 //
 //                                 Copyright (C) 2008-2010 by Ryuz

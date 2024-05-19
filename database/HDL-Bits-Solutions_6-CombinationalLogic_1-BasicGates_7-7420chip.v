@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 module top_module ( 
     input p1a, p1b, p1c, p1d,
     output p1y,

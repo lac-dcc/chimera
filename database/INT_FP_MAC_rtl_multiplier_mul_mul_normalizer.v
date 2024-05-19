@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module mul_normalizer (
 	input  [ 4:0] exponent,
 	input  [21:0] mantissa_prod,

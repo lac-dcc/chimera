@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lastweek/fpga_readings
+// License: Apache License 2.0
+
 /*
  * Copyright (c) 2019 Yizhou Shan <ys@purdue.edu>. All rights reserved.
  * License: Apache License v2.0

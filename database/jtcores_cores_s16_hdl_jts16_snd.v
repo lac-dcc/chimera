@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,8 +18,6 @@
     Author: Jose Tejada Gomez. Twitter: @topapate
     Version: 1.0
     Date: 16-3-2021 */
-
-`ifndef NOSOUND
 
 module jts16_snd(
     input                rst,
@@ -50,7 +51,7 @@ module jts16_snd(
     output signed [15:0] fm_l, fm_r,
     output signed [ 7:0] pcm
 );
-
+`ifndef NOSOUND
 wire [15:0] A;
 reg         fm_cs, latch_cs, ram_cs;
 wire        mreq_n, iorq_n, int_n, nmi_n;
@@ -176,6 +177,13 @@ jts16_pcm u_pcm(
     // Sound output
     .snd        ( pcm       )
 );
-
-endmodule
+`else
+assign  ack      = 0;
+assign  rom_addr = 0;
+assign  pcm_addr = 0;
+assign  pcm_cs   = 0;
+assign  fm_l     = 0;
+assign  pcm      = 0;
+initial rom_cs   = 0;
 `endif
+endmodule

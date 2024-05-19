@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/embmicro/mojo-base-project
+// License: MIT License
+
 module serial_tx #(
         parameter CLK_PER_BIT = 50
     )(

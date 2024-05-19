@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alan4186/Hardware-CNN
+// License: MIT License
+
 module rgb2gray(
   input [11:0] r,
   input [11:0] g,

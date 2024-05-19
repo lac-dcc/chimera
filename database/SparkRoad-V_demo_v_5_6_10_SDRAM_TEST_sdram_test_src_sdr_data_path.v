@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 
 
 module sdr_data_path(CLK, RESET_N, OE, DATAIN, DATAOUT, DQIN, DQOUT);

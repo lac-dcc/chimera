@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-------------------------------------------------------
 //  Functionality: A 18-bit multiply-acculumate circuit
 //  Author:        Xifan Tang

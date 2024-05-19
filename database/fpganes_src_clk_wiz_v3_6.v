@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/strigeus/fpganes
+// License: GNU General Public License v3.0
+
 // file: clk_wiz_v3_6.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

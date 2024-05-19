@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 module TinyFPGA_B (
   inout pin1_usb_dp,
   inout pin2_usb_dn,

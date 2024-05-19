@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTFRAME.
     JTFRAME program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,16 +19,12 @@
     Version: 1.0
     Date: 4-2-2019 */
 
-// Based on MiST tutorials
-
 module jtframe_keyboard(
-    input clk,
-    input rst,
-
+    input            clk,
+    input            rst,
     // ps2 interface
-    input ps2_clk,
-    input ps2_data,
-
+    input            ps2_clk,
+    input            ps2_data,
     // decodes keys
     output reg [9:0] key_joy1,
     output reg [9:0] key_joy2,
@@ -34,18 +33,20 @@ module jtframe_keyboard(
     output reg [3:0] key_start,
     output reg [3:0] key_coin,
     output     [7:0] key_digit,
-    output reg key_reset,
-    output reg key_pause,
-    output reg key_tilt,
-    output reg key_test,
-    output reg key_service,
+    output reg       key_reset,
+    output reg       key_pause,
+    output reg       key_tilt,
+    output reg       key_test,
+    output reg       key_service,
+    output reg       vol_up,
+    output reg       vol_down,
 
-    output     shift,
-    output     ctrl,
-    output     alt,
+    output           shift,
+    output           ctrl,
+    output           alt,
     // debug features
     output reg [3:0] key_gfx,
-    output reg [4:0] key_snd,
+    output reg [5:0] key_snd,
     output reg       debug_plus,
     output reg       debug_minus
 );
@@ -83,6 +84,9 @@ always @(posedge clk) begin
 
       debug_plus   <= 0;
       debug_minus  <= 0;
+
+      vol_up     <= 0;
+      vol_down    <= 0;
     end else begin
         // ps2 decoder has received a valid ps2byte
         if(valid) begin
@@ -154,6 +158,8 @@ always @(posedge clk) begin
                     9'h2c: key_tilt    <= !key_released; //  T
                     9'h06: key_test    <= !key_released; // F2
                     9'h04: key_reset   <= !key_released; // F3
+                    9'h0c: vol_up      <= !key_released; // F4
+                    9'h03: vol_down    <= !key_released; // F5
                     9'h46: key_service <= !key_released; //  9
                     // Debug keys
                     // GFX/Sound channels enable
@@ -162,6 +168,7 @@ always @(posedge clk) begin
                     9'h0_01: if( !shift ) key_gfx[2] <= !key_released; else key_snd[2] <= !key_released; // F9: SCR2 enable
                     9'h0_09: if( !shift ) key_gfx[3] <= !key_released; else key_snd[3] <= !key_released; // F10:OBJ  enable
                     9'h0_78: if(  shift ) key_snd[4] <= !key_released; // shift+F11:ch[4]  enable
+                    9'h0_07: if(  shift ) key_snd[5] <= !key_released; // shift+F12:ch[5]  enable
 
                     9'h0_5b: debug_plus  <= !key_released;
                     9'h0_4a: debug_minus <= !key_released;

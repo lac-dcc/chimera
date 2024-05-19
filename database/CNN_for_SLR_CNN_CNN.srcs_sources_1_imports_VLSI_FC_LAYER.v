@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ilaydayaman/CNN_for_SLR
+// License: BSD 2-Clause "Simplified" License
+
 `timescale 1ns / 1ps
 
 //A PIXEL IS TAKEN AS INPUT AT EVERY CLOCK PULSE.

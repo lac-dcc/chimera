@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-Mini_GW
+// License: Apache License 2.0
+
 // (C) 2001-2017 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 

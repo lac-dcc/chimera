@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MoonbaseOtago/vroom
+// License: GNU General Public License v3.0
+
 //  UART core define
 //
 // Author: Jacob Gorban   (jacob.gorban@flextronicssemi.com)

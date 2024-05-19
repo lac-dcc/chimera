@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 module top_module (input x, input y, output z);
     wire z1, z2, z3, z4,z5,z6;
     

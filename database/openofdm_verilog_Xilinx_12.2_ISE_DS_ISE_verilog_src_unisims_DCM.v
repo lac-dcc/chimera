@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/unisims/DCM.v,v 1.36 2008/07/11 20:26:52 yanx Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.

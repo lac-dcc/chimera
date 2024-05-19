@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // Computer_System_VGA_Subsystem_Char_Buf_Subsystem_mm_interconnect_0.v
 
 // This file was auto-generated from altera_mm_interconnect_hw.tcl.  If you edit it your changes

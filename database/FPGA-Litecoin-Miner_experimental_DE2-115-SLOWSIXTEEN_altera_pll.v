@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 module main_pll # (parameter SPEED_MHZ = 25) (inclk0, c0);
 
 	input	  inclk0;

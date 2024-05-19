@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Testing of the adder of a square wave sound generator.
 
 // This test runs a test vector exclusively for Adder and its single bit (full adder) circuitry.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/wuxx/Colorlight-FPGA-Projects
+// License: Apache License 2.0
+
 module rst_gen (
 	input 			clk_i,
 	input 			rst_i,

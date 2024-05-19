@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 `timescale 1ns/10ps
 module  Computer_System_VGA_Subsystem_VGA_PLL_video_pll(
 

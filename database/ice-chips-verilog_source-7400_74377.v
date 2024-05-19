@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // Octal D flip-flop with enable
 
 module ttl_74377 #(parameter WIDTH = 8, DELAY_RISE = 0, DELAY_FALL = 0)

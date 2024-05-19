@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 
 typedef enum logic [3:0] { WORD0, WORD1, WORD9='b1001, WORDC='b1100 } word_t;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Testing the extra counter (T2-T5), which is actually a shift register (weird one)
 
 `timescale 1ns/1ns

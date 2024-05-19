@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/ADC-lvds
+// License: GNU General Public License v3.0
+
 // ***************************************************************************
 // ***************************************************************************
 // Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.

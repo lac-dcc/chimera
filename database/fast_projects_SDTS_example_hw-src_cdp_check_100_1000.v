@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 module check_100_1000(
    rgmii_rx_clk,//网口rgmii_rx_clk  25MHz时网口速率为100M、125MHz时网口速率为1000M
    sys_clk,//用125M的本板时钟

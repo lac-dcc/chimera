@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 // instantiate PMOS: pmos instance_name(out, data, control)
 // instantiate NMOS: nmos instance_name(out, data, control)

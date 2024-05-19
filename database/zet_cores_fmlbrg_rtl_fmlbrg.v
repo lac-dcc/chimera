@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  * Wishbone to FML 8x16 bridge
  * Milkymist SoC

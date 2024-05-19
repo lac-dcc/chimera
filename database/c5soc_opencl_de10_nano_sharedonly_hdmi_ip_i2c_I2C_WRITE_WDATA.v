@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 module I2C_WRITE_WDATA  (
    input  				RESET_N ,
 	input      		  	PT_CK,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/PCIE_A1.v,v 1.9 2010/02/03 23:42:05 robh Exp $
 ///////////////////////////////////////////////////////
 //  Copyright (c) 2009 Xilinx Inc.

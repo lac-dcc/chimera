@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 // Generator : SpinalHDL v1.4.0    git head : ecb5a80b713566f417ea3ea061f9969e73770a7f
 // Date      : 14/05/2020, 16:13:04
 // Component : TestMemIVerilog

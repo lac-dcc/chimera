@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/taoyilee/clacc
+// License: MIT License
+
 module bs_adder_tb;
 	initial begin
 		$fsdbDumpfile("bs_adder");

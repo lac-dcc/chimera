@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/freecores/verilog_fixed_point_math_library
+// License: GNU Lesser General Public License v2.1
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

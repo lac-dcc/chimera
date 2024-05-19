@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lsils/benchmarks
+// License: MIT License
+
 module top ( 
     \A[0] , \A[1] , \A[2] , \A[3] , \A[4] , \A[5] , \A[6] , \A[7] , \A[8] ,
     \A[9] , \A[10] , \A[11] , \A[12] , \A[13] , \A[14] , \A[15] , \A[16] ,

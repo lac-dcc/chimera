@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* salsa-B.v for use with hashvariant-B.v
    Based on salsa3.v ... registered at the column-row interface (and final row output)
 

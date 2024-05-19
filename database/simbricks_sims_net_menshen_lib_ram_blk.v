@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 module ram_blk #(
     parameter ADDR_BITS = 5,
     parameter DATA_BITS = 32

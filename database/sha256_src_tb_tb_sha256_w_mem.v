@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/secworks/sha256
+// License: BSD 2-Clause "Simplified" License
+
 //======================================================================
 //
 // tb_sha256_w_mem.v

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VenciFreeman/FFT_ChipDesign
+// License: Mozilla Public License 2.0
+
 
 module ctrl ( clk, rst_n, s_p_flag_in, mux_flag, rotation, demux_flag );
   output [2:0] rotation;

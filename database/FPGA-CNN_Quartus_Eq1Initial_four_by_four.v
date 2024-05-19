@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 // The fourbyfour module takes in the A template, B template, I template, input, initial x and clock.
 // This module gives out the output of 4x4 matrix.
 

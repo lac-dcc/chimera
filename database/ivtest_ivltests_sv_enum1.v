@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 module foo_mod(output reg pass_flag, input wire go_flag);
 

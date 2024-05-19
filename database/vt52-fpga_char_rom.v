@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AndresNavarro82/vt52-fpga
+// License: GNU General Public License v3.0
+
 /**
  * Character Font ROM (4kx8)
  * This could be a RAM to allow font modifications, but not for now

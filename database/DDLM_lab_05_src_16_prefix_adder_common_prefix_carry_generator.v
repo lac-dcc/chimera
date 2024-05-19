@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module prefix_carry_generator
 # (
     parameter LEVELS = 3,

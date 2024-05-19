@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 module usb_fs_tx (
   // A 48MHz clock is required to send USB data at 12MHz
   input clk_48mhz,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : channel_adder.v
 //  Created On    : 2018-01-02 15:21:12

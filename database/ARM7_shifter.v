@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chsasank/ARM7
+// License: MIT License
+
 //This is shifter module used for data processing instructions and some other instructions
 
 module bshift(instr_bit_25,imm_value, Rm, Rs, operand2, cin, c_to_alu, direct_data, use_shifter);

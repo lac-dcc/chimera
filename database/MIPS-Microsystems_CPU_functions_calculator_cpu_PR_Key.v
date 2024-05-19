@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module Key(clk,reset,key,IRQ,Key_RD);
 //input
     input clk;

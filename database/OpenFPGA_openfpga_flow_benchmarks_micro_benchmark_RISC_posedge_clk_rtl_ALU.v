@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module ALU(zero_flag_out,alu_out,Reg_Y_in,Bus_1_in,IR_code);
 
 output	zero_flag_out;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module pr_region_default_onchip_memory2_0 (
 		input  wire        clk,        //   clk1.clk
 		input  wire        reset,      // reset1.reset

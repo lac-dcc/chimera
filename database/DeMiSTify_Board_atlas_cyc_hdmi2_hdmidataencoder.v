@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 //---------------------------------------------------------------------------
 //-- (c) 2016 Alexey Spirkov
 //-- I am happy for anyone to use this for non-commercial use.

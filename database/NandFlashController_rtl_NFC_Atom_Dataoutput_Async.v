@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/NandFlashController
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 module NFC_Atom_Dataoutput_Async
 #

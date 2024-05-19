@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/virtex4/BSCAN_VIRTEX4.v,v 1.5 2006/03/08 01:52:48 fphillip Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // Copyright(C) 2004 by Xilinx, Inc. All rights reserved. 
 // This text/file contains proprietary, confidential 
 // information of Xilinx, Inc., is distributed under license 

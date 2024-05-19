@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
  module math(a, b, c, z);
  input signed [19:0] a, b;
  input signed [24:0] c;

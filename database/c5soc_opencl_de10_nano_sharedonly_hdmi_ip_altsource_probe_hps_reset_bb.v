@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 // megafunction wizard: %In-System Sources and Probes%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0

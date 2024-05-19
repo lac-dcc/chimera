@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/RISC-V
+// License: MIT License
+
 // Core plus memory
 
 `timescale 1ns / 1ps

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/brabect1/sta_basics_course
+// License: Creative Commons Attribution 4.0 International
+
 //
 // Copyright 2021 Tomas Brabec
 // 

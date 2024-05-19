@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 `timescale 1ns/1ns
 /* VGA参数配置表
 ************	clk		 	H_SYNC 		H_BACK 		H_DISP 		H_FRONT 	H_TOTAL 		V_SYNC 		V_BACK 		V_DISP 		V_FRONT 	V_TOTAL		*

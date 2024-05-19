@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------------------------------
 // Design Name : testbench for 2-level SRAM MUX
 // File Name   : mux_tb.v

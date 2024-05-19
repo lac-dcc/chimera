@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Arithmetic units: adder
 // Adapt from:  https://github.com/chipsalliance/yosys-f4pga-plugins/blob/0ad1af26a29243a9e76379943d735e119dcd0cc6/ql-qlf-plugin/qlf_k6n10/cells_sim.v
 // Many thanks to F4PGA for their contribution

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/time-sleuth
+// License: MIT License
+
 
 module bcdcounter(
     input trigger,

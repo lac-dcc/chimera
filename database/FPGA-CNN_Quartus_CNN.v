@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 // The CNN module takes in the clock and give out the output matrix. 
 
 `define WIDTH 9

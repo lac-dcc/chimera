@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 module	buf_add_manage(
 input							clk,
 input							reset,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/XueTianyu24/cnn_accelerator
+// License: MIT License
+
 // 滑窗法，滑窗读取数据
 // 用于给卷积模块提供输入数据
 module window   

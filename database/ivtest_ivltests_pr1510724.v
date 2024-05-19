@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test is really about the defparam working so it just does a
  * simple test of the logic functionality (eveything in manyNands

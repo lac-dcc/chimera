@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
 //*****************************************************************************
 // (c) Copyright 2009 Xilinx, Inc. All rights reserved.
 //
@@ -164,7 +167,7 @@ module s6_ddr3 #
    localparam C3_CLKOUT1_DIVIDE       = 1;       
    localparam C3_CLKOUT2_DIVIDE       = 16;       
    localparam C3_CLKOUT3_DIVIDE       = 8;       
-   localparam C3_CLKFBOUT_MULT        = 2;       
+   localparam C3_CLKFBOUT_MULT        = 20;       
    localparam C3_DIVCLK_DIVIDE        = 1;       
    localparam C3_ARB_ALGORITHM        = 0;       
    localparam C3_ARB_NUM_TIME_SLOTS   = 12;       

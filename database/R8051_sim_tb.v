@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/risclite/R8051
+// License: Apache License 2.0
+
 `timescale 1 ns/1 ps
 `define PERIOD 10
 `define HALF_PERIOD (`PERIOD/2)

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alan4186/Hardware-CNN
+// License: MIT License
+
 // --------------------------------------------------------------------
 // Copyright (c) 2005 by Terasic Technologies Inc. 
 // --------------------------------------------------------------------

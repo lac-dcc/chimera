@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module  \$_DFFE_PN0P_ (input D, C, R, E, output Q); AL_MAP_SEQ #(.DFFMODE("FF"), .REGSET("RESET"), .SRMUX("INV"), .SRMODE("ASYNC")) _TECHMAP_REPLACE_ (.d(D), .q(Q), .clk(C) ,.ce(E), .sr(R)); wire _TECHMAP_REMOVEINIT_Q_ = 1'b1; endmodule
 module  \$_DFFE_PN1P_ (input D, C, R, E, output Q); AL_MAP_SEQ #(.DFFMODE("FF"), .REGSET("SET"), .SRMUX("INV"), .SRMODE("ASYNC")) _TECHMAP_REPLACE_ (.d(D), .q(Q), .clk(C), .ce(E), .sr(R)); wire _TECHMAP_REMOVEINIT_Q_ = 1'b1; endmodule
 module  \$_DFFE_PP0P_ (input D, C, R, E, output Q); AL_MAP_SEQ #(.DFFMODE("FF"), .REGSET("RESET"), .SRMUX("SR"),  .SRMODE("ASYNC")) _TECHMAP_REPLACE_ (.d(D), .q(Q), .clk(C), .ce(E), .sr(R)); wire _TECHMAP_REMOVEINIT_Q_ = 1'b1; endmodule

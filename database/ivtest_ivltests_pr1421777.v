@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This is the essence of tracker id#1421777. The problem is the error
  * message around the "... dut.tmp" expression. This probram won't

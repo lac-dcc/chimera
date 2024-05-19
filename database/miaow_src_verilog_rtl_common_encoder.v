@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module encoder(in,out);
 input [39:0] in;
 output [5:0] out;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module RegFile(clk, reset, ReadReg1, ReadReg2, WriteData, WriteReg, RegWrite, ReadData1, ReadData2);
 	input clk, reset, RegWrite;
 	input [31:0] WriteData;

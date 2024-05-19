@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 /* ctrl_clk.v */
 /* 2012, rok.krajnc@gmail.com */
 

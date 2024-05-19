@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * In this example, the set and clr are both synchronous. This checks
  * that this complex case is handled correctly.

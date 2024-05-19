@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module InstructionMemory32(instruction, ProgramCounter, clk);
 	input[31:0] ProgramCounter;
 	input clk;

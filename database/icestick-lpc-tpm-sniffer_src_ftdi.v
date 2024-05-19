@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SySS-Research/icestick-lpc-tpm-sniffer
+// License: GNU General Public License v3.0
+
 /*
  * iCEstick LPC TPM Sniffer (ftdi.v)
  * 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 module deserializer
 #(
 	parameter D = 8,  // data bitwidth

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 module CNT2(
 	input CLK,
 	input nLOAD, CEN1, CEN2,

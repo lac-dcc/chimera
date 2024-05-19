@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 module I2C_Controller (
     CLOCK,
     I2C_SCLK,   // I2C CLOCK

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // From: Peter Monta <pmonta@pmonta.com>
 // Subject: verilog: vvp bug, function or concat related?
 // Message-Id: <20010726071414.1CEF41C5@www.pmonta.com>

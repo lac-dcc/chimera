@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pwmarcz/fpga-chip8
+// License: MIT License
+
 `default_nettype none
 
 module bcd(input wire [7:0] abc,

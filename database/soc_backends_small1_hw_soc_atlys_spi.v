@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // Wrapper around UART to simulate LogiPi SPI behaviour (because I'm lazy
 //   and do not want to invent a new, half-duplex protocol).
 

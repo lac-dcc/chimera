@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alangarf/apple-one
+// License: Apache License 2.0
+
 module ledAndKey(
     input clk,
     input clk_en,

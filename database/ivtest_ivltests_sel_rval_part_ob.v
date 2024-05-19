@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Module to test the messages for out of bound R-value part selects.
 
 `ifdef __ICARUS__

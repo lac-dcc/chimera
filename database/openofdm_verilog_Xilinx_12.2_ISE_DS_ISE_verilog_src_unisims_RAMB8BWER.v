@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/RAMB8BWER.v,v 1.19.4.2 2010/03/29 22:55:35 wloo Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2008 Xilinx, Inc.

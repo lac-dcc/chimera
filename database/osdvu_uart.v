@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cyrozap/osdvu
+// License: MIT License
+
 `timescale 1ns / 1ps
 // Documented Verilog UART
 // Copyright (C) 2010 Timothy Goddard (tim@goddard.net.nz)

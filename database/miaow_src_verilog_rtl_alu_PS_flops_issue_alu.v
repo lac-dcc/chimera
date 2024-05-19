@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module PS_flops_issue_alu (/*AUTOARG*/
    // Outputs
    out_alu_select, out_wfid, out_instr_pc, out_opcode, out_imm_value0,

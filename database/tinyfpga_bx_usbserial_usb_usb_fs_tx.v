@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/tinyfpga_bx_usbserial
+// License: Apache License 2.0
+
 module usb_fs_tx (
   // A 48MHz clock is required to receive USB data at 12MHz
   // it's simpler to juse use 48MHz everywhere

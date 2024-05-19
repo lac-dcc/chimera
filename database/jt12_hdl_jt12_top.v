@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt12
+// License: GNU General Public License v3.0
+
 /*  This file is part of JT12.
 
     JT12 is free software: you can redistribute it and/or modify
@@ -76,7 +79,8 @@ module jt12_top (
 // defaults to YM2612
 parameter use_lfo=1, use_ssg=0, num_ch=6, use_pcm=1;
 parameter use_adpcm=0;
-parameter JT49_DIV=2;
+parameter JT49_DIV=2,
+          YM2203_LUMPED=0;
 parameter mask_div=1;
 
 wire flag_A, flag_B, busy;
@@ -452,7 +456,7 @@ endgenerate
 `ifndef NOSSG
 generate
     if( use_ssg==1 ) begin : gen_ssg
-        jt49 #(.COMP(2'b01), .CLKDIV(JT49_DIV))
+        jt49 #(.COMP(3'b01), .CLKDIV(JT49_DIV), .YM2203_LUMPED(YM2203_LUMPED))
             u_psg( // note that input ports are not multiplexed
             .rst_n      ( ~rst      ),
             .clk        ( clk       ),    // signal on positive edge
@@ -486,6 +490,10 @@ generate
         assign psg_A    = 8'd0;
         assign psg_B    = 8'd0;
         assign psg_C    = 8'd0;
+        assign IOA_oe   = 0;
+        assign IOB_oe   = 0;
+        assign IOA_out  = 0;
+        assign IOB_out  = 0;
     end
 endgenerate
 `else

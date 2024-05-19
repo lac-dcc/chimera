@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 module rising_edge_detector ( 
   input clk,
   input in,

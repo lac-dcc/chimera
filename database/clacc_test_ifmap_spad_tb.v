@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/taoyilee/clacc
+// License: MIT License
+
 module ifmap_spad_tb;
 	initial begin
 		$fsdbDumpfile("ifmap_spad");

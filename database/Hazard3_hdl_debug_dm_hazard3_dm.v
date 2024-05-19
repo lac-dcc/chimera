@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Wren6991/Hazard3
+// License: Apache License 2.0
+
 /*****************************************************************************\
 |                      Copyright (C) 2021-2022 Luke Wren                      |
 |                     SPDX-License-Identifier: Apache-2.0                     |
@@ -456,7 +459,7 @@ always @ (posedge clk or negedge rst_n) begin
 					sberror <= SBERROR_BADADDR;
 				end
 			end
-		end else if (sb_want_start_read || sb_want_start_write && ~|sberror && !sbbusyerror) begin
+		end else if ((sb_want_start_read || sb_want_start_write) && ~|sberror && !sbbusyerror) begin
 			if (sb_badsize) begin
 				sberror <= SBERROR_BADSIZE;
 			end else if (sb_badalign) begin

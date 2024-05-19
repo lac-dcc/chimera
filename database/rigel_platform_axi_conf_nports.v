@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 
 module Conf #(parameter ADDR_BASE = 32'd0,
               parameter NREG = 4,

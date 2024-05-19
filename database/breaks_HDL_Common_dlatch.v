@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Asynchronous dynamic (d=dynamic) latch used in old NMOS chips. Totally unprotected against jitter and other timing circuit problems.
 // Use carefully and wisely.
 

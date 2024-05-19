@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 
 // Trying to simulate how an automatic naive (non-pipelined) translation
 //     of _IDIVMOD could work.

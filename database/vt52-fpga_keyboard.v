@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AndresNavarro82/vt52-fpga
+// License: GNU General Public License v3.0
+
 module keyboard
   (input  clk,
    input  reset,

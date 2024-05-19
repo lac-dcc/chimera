@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module sqrt_tb;
   reg clk;
   reg [31:0] sqrt_a;

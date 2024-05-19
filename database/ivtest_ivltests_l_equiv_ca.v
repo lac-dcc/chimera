@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   wire res, ler0, ler1, ler2, ler3;
   wire [1:0] lew, lews;

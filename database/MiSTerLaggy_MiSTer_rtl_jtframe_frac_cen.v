@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/MiSTerLaggy_MiSTer
+// License: GNU General Public License v2.0
+
 ///////////////////////////////////////////////////////////////////////////
 // Fractional clock enable signal
 // W refers to the number of divided down cen signals available

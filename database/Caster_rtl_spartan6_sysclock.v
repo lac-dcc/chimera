@@ -1,4 +1,7 @@
-// Copyright Modos / Wenting Zhang 2023
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
+// Copyright Wenting Zhang 2024
 //
 // This source describes Open Hardware and is licensed under the CERN-OHL-P v2
 //
@@ -99,19 +102,8 @@ module sysclock(
         .O (clk_ddr),
         .I (clkfx)
     );
-    //assign clk_ddr = clkfx;
-    
-    /*wire clk_3m;
-    clk_div #(.WIDTH(4), .DIV(10)) clk_div(
-        .i(clk_in_buffered),
-        .o(clk_3m)
-    );
-   
-    BUFG clksys_buf (
-        .O (clk_sys),
-        .I (clk_3m)
-    );*/
+
     // System runs at input clock (33MHz)
-    assign clk_sys = clk_in_buffered;
+    assign clk_sys = clkfb;
 
 endmodule

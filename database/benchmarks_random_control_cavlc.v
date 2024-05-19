@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lsils/benchmarks
+// License: MIT License
+
 module top ( 
     \totalcoeffs[0] , \totalcoeffs[1] , \totalcoeffs[2] , \totalcoeffs[3] ,
     \totalcoeffs[4] , \ctable[0] , \ctable[1] , \ctable[2] ,

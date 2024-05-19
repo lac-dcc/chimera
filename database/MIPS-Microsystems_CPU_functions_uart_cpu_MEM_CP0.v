@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module CP0(clk,reset,CP0We,EXL_Clr,IP,ExcCode,BD,Start,CP0_A1,CP0_A3,CP0_WD,PC_RAW,IRQ,CP0_RD,CP0_EPC);

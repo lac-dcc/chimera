@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module PC(PC_out,PC_in,load,inc,clk,rst);
 
 output	[7:0]PC_out;

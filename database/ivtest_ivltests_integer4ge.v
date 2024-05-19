@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * integer4ge - a verilog test for integer greater-or-equal conditional >=
  *

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/maxs-well/Ethernet-design-verilog
+// License: GNU General Public License v2.0
+
 module ethernet_top
 (
 	/* system signal*/

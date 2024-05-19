@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module dct
 (
 	input	[2:0]i_Gxy,

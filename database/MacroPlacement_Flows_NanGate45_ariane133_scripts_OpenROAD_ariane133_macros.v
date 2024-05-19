@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TILOS-AI-Institute/MacroPlacement
+// License: BSD 3-Clause "New" or "Revised" License
+
 module SyncSpRamBeNx64_00000008_00000100_0_2
   (
    Clk_CI,

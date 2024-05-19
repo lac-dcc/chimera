@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 //NPCOp
 `define PC_4 0
 `define PC_beq 1

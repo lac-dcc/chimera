@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   bit [2:-1] vec = 4'b1001;
   bit btvar = 0;

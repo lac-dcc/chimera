@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alexforencich/verilog-axi
+// License: MIT License
+
 /*
 
 Copyright (c) 2018 Alex Forencich

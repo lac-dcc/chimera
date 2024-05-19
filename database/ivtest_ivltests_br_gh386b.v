@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test();
 
 typedef enum logic [8:0] { ILLEGAL, IA, IB } inst_t;

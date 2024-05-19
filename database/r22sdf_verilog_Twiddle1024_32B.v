@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nanamake/r22sdf
+// License: MIT License
+
 //----------------------------------------------------------------------
 //  Twiddle: 1024-Point Twiddle Table for Radix-2^2 Butterfly
 //----------------------------------------------------------------------

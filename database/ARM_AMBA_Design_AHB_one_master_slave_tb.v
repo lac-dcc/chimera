@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lucky-wfw/ARM_AMBA_Design
+// License: GNU General Public License v3.0
+
 //-------------------------------------------------------------
 // Module Name: one_master_slave_tb
 // The testbench of one_master_slave

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module Mat_Datapath (adjFBPixel, dbValue, matPoint);
 	input [63:0] adjFBPixel; // 인접한 8개의 점 데이터
 	input [287:0] dbValue; // DB 데이터

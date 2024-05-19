@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Tommydag/CAN-Bus-Controller
+// License: MIT License
+
 `timescale 1ns / 1ps
 //-----------------------------------------------------------------------------
 // Copyright (C) 2009 OutputLogic.com 

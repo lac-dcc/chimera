@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 // Second order sigma-delta dac
 //
 // For benchmarking purposes only -- don't use this for an actual design.

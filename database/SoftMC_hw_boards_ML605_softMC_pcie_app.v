@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CMU-SAFARI/SoftMC
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module softMC_pcie_app #(

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module check (input unsigned [0:22] a, b, c);
   wire [0:22] int_AB;
 

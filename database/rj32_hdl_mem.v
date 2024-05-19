@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rj45/rj32
+// License: MIT License
+
 module prog_bram (
     input             clk_i,
     input       [7:0] addr_i,

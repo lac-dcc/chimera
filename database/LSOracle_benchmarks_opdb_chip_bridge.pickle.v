@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 /*
 Copyright (c) 2015 Princeton University
 All rights reserved.

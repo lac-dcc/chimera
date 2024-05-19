@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 //spi master module for flash reading (N25Q032A)
 module spi_master(input wire clk, input wire reset,
       output reg SPI_SCK, output reg SPI_SS, output reg SPI_MOSI, input wire SPI_MISO,

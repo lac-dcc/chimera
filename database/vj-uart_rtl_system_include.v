@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/binary-logic/vj-uart
+// License: GNU General Public License v3.0
+
 //=======================================================
 //  Standard Include
 //=======================================================

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DinoMax00/TJ-FPGA_MP3
+// License: MIT License
+
 //----------- generate a second clock -------------------
 //---------------- author : Dino ------------------------
 module timeCounter(

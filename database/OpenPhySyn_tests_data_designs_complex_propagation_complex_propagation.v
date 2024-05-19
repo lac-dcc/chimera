@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scale-lab/OpenPhySyn
+// License: BSD 3-Clause "New" or "Revised" License
+
 module complex_propagation(input x, input y, output o);
     wire w1;
     wire w2;

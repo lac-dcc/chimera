@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 module top_module ( output reg A, output reg B );//
     parameter CYCLE = 5;
     reg clk;

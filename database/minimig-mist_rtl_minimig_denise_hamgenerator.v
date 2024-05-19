@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // this module handles the hold and modify mode (HAM)
 // the module has its own colour pallete bank, this is to let
 // the sprites run simultaneously with a HAM playfield

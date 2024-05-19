@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module display_fsm
 #(
 	parameter	TIMER_WIDTH	= 16

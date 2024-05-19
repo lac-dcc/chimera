@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TILOS-AI-Institute/MacroPlacement
+// License: BSD 3-Clause "New" or "Revised" License
+
 //RAM : RAMDP_64X14_GL_M2_E2
 //Technology : TSMC16FFLR
 //Compiler version: FINAL.1 - 2017-05-23.14:46:11

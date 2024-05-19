@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   localparam wid = 7;
   localparam vec_wid = $clog2(wid+1)-1;

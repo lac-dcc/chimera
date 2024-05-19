@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
    //Byte Mode:
    //ADDR[2:0]   B7 B6 B5 B4  B3 B2 B1 B0
    //x00         0  0  0  MB0 0  0  0  MB0

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test deminstrates a complication in the handling of a vector
  * as a unit, instead of breaking it out. The problem is with the

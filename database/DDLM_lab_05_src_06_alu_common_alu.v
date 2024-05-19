@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 //ALU commands
 `define ALU_AND 2'b00
 `define ALU_ADD 2'b01

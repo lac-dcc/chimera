@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Converts a falling edge to a single cycle pulse                 #
 //#############################################################################

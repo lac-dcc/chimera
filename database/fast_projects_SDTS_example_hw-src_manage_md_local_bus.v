@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //local bus module,can write or read;
 //by ZQ 20110916;
 module local_bus(

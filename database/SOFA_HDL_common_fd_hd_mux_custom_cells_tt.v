@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 // Verilog for library /research/ece/lnis/USERS/brown/Skywater/lib/SCRIPTS/liberate/netlists/Verilog/sclib_SKYWATER130_tt created by Liberate 19.2.1.591 on Wed Dec  2 19:03:48 MST 2020 for SDF version 2.1
 
 // type: scs8hd_muxinv8_1 

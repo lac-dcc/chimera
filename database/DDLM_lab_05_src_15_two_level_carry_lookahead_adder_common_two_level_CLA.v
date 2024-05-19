@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module two_level_CLA
 # (
     parameter WIDTH_0 = 2,

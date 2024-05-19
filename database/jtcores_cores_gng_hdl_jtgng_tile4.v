@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -194,8 +197,8 @@ always @(posedge clk) if(cen6) begin
         8: begin // Side Arms, 32x32 tiles, 256kBytes in 16 bits = 2^17 words
             scr_attr0 <= attr[7:3];
             scr_addr  <= { attr[0], id, // AS=1+8+2+5+1=17 bits
-                            HS[4:3]^{2{scr_hflip^flip}},
                             SV[4:0]^{5{scr_vflip}},
+                            HS[4:3]^{2{scr_hflip^flip}},
                             HS[2]^scr_hflip };
         end
         9: begin // Street Fighter, 16x16 tiles

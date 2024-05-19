@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 module test (
     input wire [7 : 0] i,
     output wire [7 : 0] o

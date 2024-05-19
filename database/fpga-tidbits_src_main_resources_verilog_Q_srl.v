@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/maltanar/fpga-tidbits
+// License: BSD 2-Clause "Simplified" License
+
 // original source:
 // https://github.com/nachiket/tdfc/blob/master/verilog/queues/Q_srl_oreg3_prefull_SIMPLE.v
 

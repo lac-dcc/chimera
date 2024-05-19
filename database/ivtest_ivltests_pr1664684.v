@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // pr1664684
 
 module bug (rdo, rm, cpen, up14, rdi);

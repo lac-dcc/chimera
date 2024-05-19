@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module RS_D_MUX(RS_D_Sel,RD1,RF_WD_E,RF_WD_M,RF_WD_W,RS_D);
 //input
     input [31:0] RS_D_Sel;

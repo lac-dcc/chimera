@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/RISC-V
+// License: MIT License
+
 //regfile controller for the 32 integer base registers
 
 `timescale 1ns / 1ps

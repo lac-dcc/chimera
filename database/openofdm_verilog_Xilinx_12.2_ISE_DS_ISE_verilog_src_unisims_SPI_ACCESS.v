@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/trilogy/SPI_ACCESS.v,v 1.17 2009/08/27 18:57:33 robh Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2008 Xilinx, Inc.

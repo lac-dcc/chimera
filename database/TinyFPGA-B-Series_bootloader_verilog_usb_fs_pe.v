@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 module usb_fs_pe #(
   NUM_OUT_EPS = 1,
   NUM_IN_EPS = 1

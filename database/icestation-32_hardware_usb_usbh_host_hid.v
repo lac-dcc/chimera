@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // File ../../../../usbhost/usbh_host_hid_convertible.vhd translated with vhd2vl v3.0 VHDL to Verilog RTL translator
 // vhd2vl settings:
 //  * Verilog Module Declaration Style: 2001

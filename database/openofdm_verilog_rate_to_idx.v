@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // translate rate to idx
 // rate format
 // MSB = 0 --> 802.11a rates, rate[3:0] is the rate bits

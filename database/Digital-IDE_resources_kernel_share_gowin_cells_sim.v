@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 (* abc9_lut=1 *)
 module LUT1(output F, input I0);
 	parameter [1:0] INIT = 0;

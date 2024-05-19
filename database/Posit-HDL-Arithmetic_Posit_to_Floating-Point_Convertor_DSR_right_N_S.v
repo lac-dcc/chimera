@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/manish-kj/Posit-HDL-Arithmetic
+// License: BSD 3-Clause "New" or "Revised" License
+
 module DSR_right_N_S(a,b,c);
         parameter N=16;
         parameter S=4;

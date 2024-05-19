@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_wormhole_router_decoder_dor_1_2_1
 (
   target_cord_i,

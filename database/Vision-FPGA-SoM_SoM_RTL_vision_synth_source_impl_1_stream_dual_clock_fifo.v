@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 module stream_dual_clock_fifo
   #(parameter DW = 0,
     parameter AW = 0)

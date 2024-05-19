@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module ROM(
 	output reg [7:0] rom_out,
 	input [3:0] rom_in

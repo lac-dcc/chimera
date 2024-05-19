@@ -1,4 +1,7 @@
-// Copyright Modos / Wenting Zhang 2023
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
+// Copyright Wenting Zhang 2024
 //
 // This source describes Open Hardware and is licensed under the CERN-OHL-P v2
 //
@@ -46,9 +49,9 @@ module bramdp #(
         else
             doutb <= mem[addrb];
     end
-    
+
     generate
-        if (INITIALIZE == 1) begin
+        if (INITIALIZE == 1) begin: gen_bram_init
             initial begin
                 $readmemh(INIT_FILE, mem);
             end

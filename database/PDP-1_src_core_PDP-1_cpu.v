@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 /*The PDP-1 Core running Spacewar! on the Analogue Pocket via openFPGA
 Uses the original tape program file of Spacewar! v3.1 1962
 Supports Sleep/Wake and Memories (beta)

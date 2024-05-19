@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_me_network_pkt_encode_data_resp_num_lce_p2_num_cce_p1_paddr_width_p22_block_size_in_bits_p512_max_num_flit_p4_x_cord_width_p1_y_cord_width_p1
 (
   payload_i,

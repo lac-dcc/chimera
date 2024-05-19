@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for bug reported by Niels Moeller on
 // 15-Mar-2015 via the iverilog-devel mailing list.
 module test();

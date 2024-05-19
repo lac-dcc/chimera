@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 (* abc9_lut=1, lib_whitebox *)
 module LUT1 (
   output O,

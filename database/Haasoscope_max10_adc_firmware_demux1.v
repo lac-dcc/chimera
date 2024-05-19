@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 //Verilog module for 1:2 DEMUX
 module demux1to2(     Data_in,     sel,    Data_out_0,    Data_out_1    );
 

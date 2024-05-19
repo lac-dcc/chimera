@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VenciFreeman/FFT_ChipDesign
+// License: Mozilla Public License 2.0
+
 //
 // Milkyway Hierarchical Verilog Dump:
 // Generated on 03/22/2019 at 07:05:02

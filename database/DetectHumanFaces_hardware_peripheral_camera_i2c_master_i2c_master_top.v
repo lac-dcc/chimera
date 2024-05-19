@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 module i2c_master_top
 (
 	input rst,

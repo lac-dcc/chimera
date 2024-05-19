@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
 // Copyright 2013, 2014 Rok Krajnc                                            //

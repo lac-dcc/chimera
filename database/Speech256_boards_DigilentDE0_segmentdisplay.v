@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/trcwm/Speech256
+// License: GNU Lesser General Public License v3.0
+
 // SPEECH 256
 // Copyright (C) 2017 Niels Moseley / Moseley Instruments
 // http://www.moseleyinstruments.com

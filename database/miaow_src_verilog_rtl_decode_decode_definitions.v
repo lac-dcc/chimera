@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 `define DECODE_BIT0 3'b111
 `define DECODE_BIT32 3'b000
 `define DECODE_BIT64 3'b001

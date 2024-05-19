@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Cosmos-OpenSSD/Cosmos-OpenSSD
+// License: GNU General Public License v3.0
+
 // file: pll_50M.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

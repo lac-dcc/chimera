@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------------------------------
 // Design Name : mult_36x36
 // File Name   : mult_36x36.v

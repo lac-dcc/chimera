@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/picorv32_Xilinx
+// License: MIT License
+
 `timescale 1ns / 1ps
 // Documented Verilog UART
 // Copyright (C) 2010 Timothy Goddard (tim@goddard.net.nz)

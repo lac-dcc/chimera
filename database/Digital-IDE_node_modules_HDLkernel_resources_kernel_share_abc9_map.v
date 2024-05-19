@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 `ifdef DFF
 (* techmap_celltype = "$_DFF_[PN]_" *)
 module $_DFF_x_(input C, D, output Q);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 
 // testbench is a module which only task is to test another module
 // testbench is for simulation only, not for synthesis

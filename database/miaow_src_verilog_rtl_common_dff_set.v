@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 // D-flipflop
 // Copied from http://pages.cs.wisc.edu/~karu/courses/cs552/spring2009/handouts/verilog_code/dff.v
 module dff_set (q, d, clk, set);

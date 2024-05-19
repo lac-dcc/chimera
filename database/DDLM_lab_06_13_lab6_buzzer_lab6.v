@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module tone_gen
 #( 
    parameter ref_clock     = 50000000,

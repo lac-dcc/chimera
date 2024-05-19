@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_dbg_bridge
+// License: GNU Lesser General Public License v2.1
+
 //-----------------------------------------------------------------
 //                     UART -> AXI Debug Bridge
 //                              V1.0

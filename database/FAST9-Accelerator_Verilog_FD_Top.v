@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module FD_Top (clock, nReset, isCorner, refAddr, refPixel, adjPixel, thres, compare);
 	input clock;
 	input nReset;

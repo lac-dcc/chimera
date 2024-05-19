@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //----------------------------------------------------------------------------
 //-- Limitaciones en la sintesis de puertas triestado
 //-- Error 2: Conexion de dos registro de 1 bit a un cable de 2 bits

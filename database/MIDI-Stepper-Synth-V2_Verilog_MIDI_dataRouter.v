@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jzkmath/MIDI-Stepper-Synth-V2
+// License: GNU General Public License v3.0
+
 /*
 MIDI_dataRouter by Jonathan Kayne, February 2019
 NNNNCCCC PPPPPPPP VVVVVVVV

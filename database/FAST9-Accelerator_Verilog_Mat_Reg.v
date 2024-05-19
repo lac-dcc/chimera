@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module Mat_Reg (clock, nReset, matReaden, regAddr, FBData, adjFBPixel);
 	input clock;
 	input nReset;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module one_of_eight(in0,in1,in2,in3,in4,in5,in6,in7,sel,out);
     parameter WIDTH = 8;
     parameter BHC = 10;

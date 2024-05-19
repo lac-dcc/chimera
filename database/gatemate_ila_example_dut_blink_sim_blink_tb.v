@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/colognechip/gatemate_ila
+// License: GNU General Public License v3.0
+
 `timescale 1 ns / 1 ps
 
 // simplified CC_PLL model

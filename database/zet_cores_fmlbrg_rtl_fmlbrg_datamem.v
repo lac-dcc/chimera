@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  * Milkymist SoC
  * Copyright (C) 2007, 2008, 2009, 2010 Sebastien Bourdeauducq

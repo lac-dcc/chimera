@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b7_4bit_dec_assign_shift (
   input [3:0] binary_in,
   output wire [15:0] decoder_out,

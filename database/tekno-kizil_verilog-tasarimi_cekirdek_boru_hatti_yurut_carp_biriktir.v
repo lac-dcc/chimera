@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 // Note: The license below is based on the template at:
 // http://opensource.org/licenses/BSD-3-Clause
 // Copyright (C) 2020 Regents of the University of Texas

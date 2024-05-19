@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_scan_width_p3_or_p1_lo_to_hi_p1
 (
   i,

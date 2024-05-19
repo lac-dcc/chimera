@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 // file: clk25_2_X.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

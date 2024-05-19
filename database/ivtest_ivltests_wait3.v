@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * this test attempts to show a problem with the waits. This skip
  * and skip2 modules should have identical behavior.

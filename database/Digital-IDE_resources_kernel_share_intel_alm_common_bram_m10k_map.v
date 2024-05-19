@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 // Stub to invert M10K write-enable.
 
 module \$__MISTRAL_M10K (CLK1, A1ADDR, A1DATA, A1EN, B1ADDR, B1DATA, B1EN);

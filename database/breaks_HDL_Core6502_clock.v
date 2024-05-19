@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module ClkGen(PHI0, PHI1, PHI2, PHI1_topad, PHI2_topad);
 

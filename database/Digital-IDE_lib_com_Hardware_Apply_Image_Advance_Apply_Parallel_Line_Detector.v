@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module Parallel_Line_Detector #(
 	parameter	IMG_VDISP      = 1240,
 	parameter	X_THRESHOLD    = 100,

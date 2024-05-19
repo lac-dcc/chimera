@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module TLXbar_9( // @[:freechips.rocketchip.system.TinyConfig.fir@102674.2]
   output        auto_in_a_ready, // @[:freechips.rocketchip.system.TinyConfig.fir@102677.4]
   input         auto_in_a_valid, // @[:freechips.rocketchip.system.TinyConfig.fir@102677.4]

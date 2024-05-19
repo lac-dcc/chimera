@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg q1, q2, q3, q4, q5, q6, q7, d;
   reg clk;

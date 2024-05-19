@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module NMS_Datapath (refScore, adjScore, refAddr, outAddr, outPixel);
 	input [7:0] refScore; // 기준점 Score
 	input [63:0] adjScore; // 인접한 8개의 점 Score

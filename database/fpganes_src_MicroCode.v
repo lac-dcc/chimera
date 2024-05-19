@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/strigeus/fpganes
+// License: GNU General Public License v3.0
+
 module MicroCodeTableInner(input clk, input ce, input reset, input [7:0] IR, input [2:0] State, output reg [8:0] M);
   reg [8:0] L[0:2047];
   initial begin

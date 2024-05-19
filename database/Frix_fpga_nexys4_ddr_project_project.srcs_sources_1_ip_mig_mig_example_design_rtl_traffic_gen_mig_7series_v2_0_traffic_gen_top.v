@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/archlabo/Frix
+// License: BSD 2-Clause "Simplified" License
+
 //*****************************************************************************
 // (c) Copyright 2009-2010 Xilinx, Inc. All rights reserved.
 //

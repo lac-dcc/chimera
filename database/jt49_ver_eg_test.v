@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt49
+// License: GNU General Public License v3.0
+
 module test;
 
 reg clk, cen=1'b1, rst_n, restart;

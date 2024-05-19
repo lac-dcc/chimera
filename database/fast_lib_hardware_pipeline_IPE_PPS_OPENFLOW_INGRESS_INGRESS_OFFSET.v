@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 /*
 main function:
 1)add tail padding for pkt,make the length of pkt to 64byte align

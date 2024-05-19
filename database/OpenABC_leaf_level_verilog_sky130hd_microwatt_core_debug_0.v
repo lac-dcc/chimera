@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module core_debug_0(clk, rst, dmi_addr, dmi_din, dmi_req, dmi_wr, terminate, core_stopped, nia, msr, dbg_gpr_ack, dbg_gpr_data, log_data, log_read_addr, dmi_dout, dmi_ack, core_stop, core_rst, icache_rst, dbg_gpr_req, dbg_gpr_addr, log_read_data, log_write_addr, terminated_out);
   wire _00_;
   wire _01_;

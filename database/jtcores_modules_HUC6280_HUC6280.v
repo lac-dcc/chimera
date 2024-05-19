@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /* verilator lint_off UNOPTFLAT*/
 module bit_adder
   (input  a,

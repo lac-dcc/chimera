@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 
 // Implements GPIO pins from the PS/EMIO
 // Works with 7010 (24 pins) or 7020 (48 pins) and

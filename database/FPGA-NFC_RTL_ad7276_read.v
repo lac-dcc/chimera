@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-NFC
+// License: GNU General Public License v3.0
+
 
 module ad7276_read (
     input  wire       rstn, 

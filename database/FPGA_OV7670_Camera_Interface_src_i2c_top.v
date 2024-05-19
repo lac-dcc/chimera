@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/FPGA_OV7670_Camera_Interface
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module i2c_top //works on both i2c and SCCB mode(no pullups resistors needed)

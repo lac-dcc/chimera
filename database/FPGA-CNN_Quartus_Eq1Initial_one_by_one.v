@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 `define WIDTH 9
 module one_by_one (
 clk, 

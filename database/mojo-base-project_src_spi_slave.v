@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/embmicro/mojo-base-project
+// License: MIT License
+
 module spi_slave(
     input clk,
     input rst,

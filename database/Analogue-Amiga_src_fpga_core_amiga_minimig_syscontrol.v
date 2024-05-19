@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 //syscontrol handles the startup of the FGPA,
 //after fpga config, it automatically does a global system reset and asserts boot.
 //the boot signal puts gary in a special mode so that the bootrom

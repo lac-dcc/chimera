@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt49
+// License: GNU General Public License v3.0
+
 `timescale 100ns/1ns
 
 module test;

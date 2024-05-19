@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module oh_simchecker #(parameter DW = 32 // Datapath width
 		       )
   (

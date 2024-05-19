@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module CMP(D1,D2,equ,zero_greater,zero_equ,zero_less);
 //interface
 	input [31:0] D1;

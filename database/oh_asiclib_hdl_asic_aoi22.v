@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: And-Or-Inverter (aoi22) Gate                                    #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

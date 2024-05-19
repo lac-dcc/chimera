@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/albertxie/iverilog-tutorial
+// License: MIT License
+
 module simple_tb;
 
    // initial values

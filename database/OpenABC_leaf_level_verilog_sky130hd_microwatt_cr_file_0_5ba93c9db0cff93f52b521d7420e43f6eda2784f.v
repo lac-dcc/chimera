@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module cr_file_0_5ba93c9db0cff93f52b521d7420e43f6eda2784f(clk, \d_in.read , \w_in.write_cr_enable , \w_in.write_cr_mask , \w_in.write_cr_data , \w_in.write_xerc_enable , \w_in.write_xerc_data , sim_dump, \d_out.read_cr_data , \d_out.read_xerc_data , log_out);
   wire [3:0] _00_;
   wire [3:0] _01_;

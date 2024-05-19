@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 module frog_up_rom
 	(
 		input wire clk,

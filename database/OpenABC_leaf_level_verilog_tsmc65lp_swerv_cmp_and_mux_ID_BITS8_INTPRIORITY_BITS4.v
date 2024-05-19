@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module cmp_and_mux_ID_BITS8_INTPRIORITY_BITS4
 (
   a_id,

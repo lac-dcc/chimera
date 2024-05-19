@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/enjoy-digital/usb3_pipe
+// License: BSD 2-Clause "Simplified" License
+
 // 128x32b rom
 // read latency: 2 clocks
 

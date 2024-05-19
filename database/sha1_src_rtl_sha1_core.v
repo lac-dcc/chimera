@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/secworks/sha1
+// License: BSD 2-Clause "Simplified" License
+
 //======================================================================
 //
 // sha1_core.v

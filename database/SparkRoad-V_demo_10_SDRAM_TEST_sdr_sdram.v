@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 
 
 module sdr_sdram(CLK, RESET_N, ADDR, CMD, CMDACK, DATAIN, DATAOUT, SA, BA, CS_N, CKE, RAS_N, CAS_N, WE_N, DQ);

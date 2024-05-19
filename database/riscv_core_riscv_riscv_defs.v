@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/riscv
+// License: BSD 3-Clause "New" or "Revised" License
+
 //-----------------------------------------------------------------
 //                         RISC-V Core
 //                            V1.0.1

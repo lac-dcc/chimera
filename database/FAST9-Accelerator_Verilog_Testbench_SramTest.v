@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module Testbench_SramTest;
 	reg clock;
 	reg wren;

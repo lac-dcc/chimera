@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_dvi_framebuffer
+// License: MIT License
+
 //--------------------------------------------------------------------------------
 //  Engineer: Mike Field <hamster@snap.net.nz>
 //  

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // 5 counter with 5 clock domain
 // each counter has 130 bits
 // each counter has 21 output

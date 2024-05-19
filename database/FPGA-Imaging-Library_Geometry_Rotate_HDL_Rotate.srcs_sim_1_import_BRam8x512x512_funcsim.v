@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dtysky/FPGA-Imaging-Library
+// License: GNU Lesser General Public License v2.1
+
 `timescale 1 ps / 1 ps
 module BRam8x512x512(
   clka,

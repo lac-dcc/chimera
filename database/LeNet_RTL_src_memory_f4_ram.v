@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : f4_ram.v
 //  Created On    : 2018-01-01 15:35:30

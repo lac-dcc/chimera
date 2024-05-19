@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module ripple_block_CLA
 # (
     parameter GROUP_WIDTH = 4,

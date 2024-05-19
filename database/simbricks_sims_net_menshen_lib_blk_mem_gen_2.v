@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 module blk_mem_gen_2 #(
     parameter ADDR_BITS = 5,
     parameter DATA_BITS = 38

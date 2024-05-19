@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 `timescale 1 ps / 1ps
 module dvi_encoder
 (

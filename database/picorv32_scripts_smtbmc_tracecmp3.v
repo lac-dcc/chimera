@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/picorv32
+// License: ISC License
+
 // Based on the benchmark from 2016 Yosys-SMTBMC presentation, which in turn is
 // based on the tracecmp2 test from this directory.
 

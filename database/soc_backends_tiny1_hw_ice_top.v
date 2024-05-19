@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 
 // CPU and memory bundled together,
 //  exposing the UART bare wires

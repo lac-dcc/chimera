@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/adumont/hrm-cpu
+// License: GNU General Public License v3.0
+
 module ALU_tb();
 
 	// //-- Registro para generar la señal de reloj

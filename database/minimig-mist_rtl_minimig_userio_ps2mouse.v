@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //PS2 mouse controller.
 //This module decodes the standard 3 byte packet of an PS/2 compatible 2 or 3 button mouse, or alternatively, if an intellimouse is detected, a 4-byte packet is supported with scrollwheel support.
 //The module also automatically handles power-up initailzation of the mouse.

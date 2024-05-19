@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 // (C) 2001-2014 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 

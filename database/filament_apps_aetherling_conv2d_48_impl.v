@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cucapra/filament
+// License: MIT License
+
 module sseqTupleCreator_tTSeq_3_0_Int_ (
     input [7:0] I0,
     input [7:0] I1,

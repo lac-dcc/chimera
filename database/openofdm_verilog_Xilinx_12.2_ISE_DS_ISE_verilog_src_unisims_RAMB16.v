@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/virtex4/RAMB16.v,v 1.26 2007/06/06 22:10:08 wloo Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2005 Xilinx, Inc.

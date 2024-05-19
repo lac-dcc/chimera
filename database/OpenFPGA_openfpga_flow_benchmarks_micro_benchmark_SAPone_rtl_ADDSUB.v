@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module ADDSUB(
 	output [7:0] ADDSUB_out,
 	input [7:0] ADDSUB_in1,

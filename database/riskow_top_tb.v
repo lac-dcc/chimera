@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/racerxdl/riskow
+// License: Apache License 2.0
+
 `timescale 1 ns/1 ns  // time-unit = 1 ns, precision = 10 ps
 
 module RiskowTest;

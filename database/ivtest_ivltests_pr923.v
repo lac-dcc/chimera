@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* I expected that p1=p2.  But the generated output looks like:
 
 Icarus Verilog version 0.7

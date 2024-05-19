@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/liuqdev/8-bits-RISC-CPU-Verilog
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 module addr_mux(addr, sel, ir_ad, pc_ad); 

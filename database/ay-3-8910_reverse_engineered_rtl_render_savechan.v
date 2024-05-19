@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lvd2/ay-3-8910_reverse_engineered
+// License: GNU General Public License v3.0
+
 // (c) 2019 lvd
 
 // This is system verilog class used to write sound dump files

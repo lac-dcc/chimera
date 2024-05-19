@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
@@ -54,7 +57,7 @@ reg [4:0] auxcnt;
 always @(*) begin
     objcnt = auxcnt;
     if( (V[7]^flip) && auxcnt> 'hf && game_id==0)
-        objcnt[3] = objcnt[3]^1;
+        objcnt[3] = objcnt[3]^1'b1;
 end
 
 always @(posedge clk) begin

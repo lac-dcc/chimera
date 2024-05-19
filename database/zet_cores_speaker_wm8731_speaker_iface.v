@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  DE1/DE2 Audio Interface (WM8731 audio chip)
  *  Copyright (c) 2010  YS <ys05@mail.ru>

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DinoMax00/TJ-FPGA_MP3
+// License: MIT License
+
 //----------------- time show module ----------------------
 //------------------ author : Dino ------------------------
 module display7(

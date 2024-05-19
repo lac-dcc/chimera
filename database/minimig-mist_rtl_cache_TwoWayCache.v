@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // Two Way Cache, supporting 64 meg address space.
 // Would be easy enough to extend to wider address spaces, just need
 // to increase the width of the "tag" blockram.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Integrated "And" Clock Gating Cell (And)                        #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

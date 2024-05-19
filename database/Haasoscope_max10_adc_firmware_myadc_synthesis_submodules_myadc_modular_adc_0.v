@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 // myadc_modular_adc_0.v
 
 // This file was auto-generated from altera_modular_adc_hw.tcl.  If you edit it your changes

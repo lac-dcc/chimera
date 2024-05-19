@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module decode1_0_bf8b4530d8d246dd74ac53a13471bba17941dff7(clk, rst, stall_in, flush_in, \f_in.valid , \f_in.stop_mark , \f_in.fetch_failed , \f_in.nia , \f_in.insn , \f_in.big_endian , \f_in.next_predicted , \f_in.next_pred_ntaken , busy_out, flush_out, \f_out.redirect , \f_out.redirect_nia , \d_out.valid , \d_out.stop_mark , \d_out.nia , \d_out.insn , \d_out.ispr1 , \d_out.ispr2 , \d_out.ispro , \d_out.decode , \d_out.br_pred , \d_out.big_endian , log_out);
   wire _000_;
   wire [164:0] _001_;

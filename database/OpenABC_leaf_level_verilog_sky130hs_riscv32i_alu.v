@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module alu (input wire [31:0]  a, b, 
             input wire [3:0] 	alucont,
 	    input wire 	sltunsigned,

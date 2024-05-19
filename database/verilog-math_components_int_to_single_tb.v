@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module int_to_single_tb;
   reg clk;
   reg [31:0] int_to_single_a;

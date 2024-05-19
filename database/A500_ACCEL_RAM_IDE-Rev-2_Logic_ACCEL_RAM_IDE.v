@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/PR77/A500_ACCEL_RAM_IDE-Rev-2
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 /*
     This file is part of A500_ACCEL_RAM_IDE originally designed by

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 module zynq_loopback_wrapper #(
   parameter READ_ADDR_BASE_0   = 32'h1fd00000,
   parameter WRITE_ADDR_BASE_0  = 32'h1fd80000,

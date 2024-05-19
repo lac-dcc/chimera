@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WillGreen/timetoexplore
+// License: MIT License
+
 // FPGA VGA Graphics Part 1: Top Module (static squares in 800x600)
 // (C)2018 Will Green - Licensed under the MIT License
 // Learn more at https://timetoexplore.net/blog/arty-fpga-vga-verilog-01

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module MAR(
 	output reg [3:0] mar_out,
 	input wire [3:0] mar_in,

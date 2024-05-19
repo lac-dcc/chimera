@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module IntSyncCrossingSink_2( // @[:freechips.rocketchip.system.TinyConfig.fir@115330.2]
   input   auto_in_sync_0, // @[:freechips.rocketchip.system.TinyConfig.fir@115333.4]
   output  auto_out_0 // @[:freechips.rocketchip.system.TinyConfig.fir@115333.4]

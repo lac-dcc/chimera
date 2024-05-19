@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xenowing/xenowing
+// License: Apache License 2.0
+
 
 // file: clk_mmcm.v
 // 

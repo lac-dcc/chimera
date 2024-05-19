@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtopl
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -201,12 +204,13 @@ jtopl_acc u_acc(
     .clk        ( clk           ),
     .cenop      ( cenop         ),
     .zero       ( zero          ),
+    .slot       ( slot          ),
+    .rhy_en     ( rhy_en        ),
     .op_result  ( op_result     ),
     .op         ( op_out        ),
     .con        ( con_out       ),
     .snd        ( snd           )
 );
-
 
 endmodule
     

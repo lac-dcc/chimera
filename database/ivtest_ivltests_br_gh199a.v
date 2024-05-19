@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module bug();
   reg [31:0] n1, d1, q1, m1;
   reg [63:0] n2, d2, q2, m2;

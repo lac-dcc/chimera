@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Basic DFF
 module \$_DFF_P_ (D, C, Q);
     input D;

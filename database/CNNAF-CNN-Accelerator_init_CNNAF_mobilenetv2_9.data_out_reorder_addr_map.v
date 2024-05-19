@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eda-lab/CNNAF-CNN-Accelerator_init
+// License: MIT License
+
 module addr_map(
     input                       clk_200M,
     input                       rst_n,

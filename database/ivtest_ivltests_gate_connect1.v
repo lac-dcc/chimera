@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Test behaviour when a multi-bit expression is used as the input of
 // a single instance of a primitive gate. The standard is quiet about
 // this, but the consensus among other simulators is that the LSB of

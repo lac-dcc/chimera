@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1_AR76780 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021

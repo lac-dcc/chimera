@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/brianbennett/fpga_nes
+// License: BSD 2-Clause "Simplified" License
+
 /***************************************************************************************************
 ** fpga_nes/hw/src/cmn/block_ram/block_ram.v
 *

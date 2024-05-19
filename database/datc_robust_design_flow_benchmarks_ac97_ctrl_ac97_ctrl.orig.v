@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jinwookjungs/datc_robust_design_flow
+// License: GNU General Public License v3.0
+
 module ac97_ctrl (
 x1542,
 x1203,

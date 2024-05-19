@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/MegaCD_MiSTer
+// License: GNU General Public License v3.0
+
 /*MIT License
 
 Copyright (c) 2019 Gregory Hogan (Soltan_G42)

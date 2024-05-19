@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 ///sram
 module sram_128x32b(
 input clk,

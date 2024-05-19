@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTFRAME.
     JTFRAME program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,6 +22,7 @@
 // wrapper for jtframe_objdraw_gate that hides the
 // buffer data ports (buf_pred and buf_din that let
 // the core modify the data before storing it)
+// object width is always 16 pixels
 
 module jtframe_objdraw #( parameter
     CW    = 12,
@@ -91,6 +95,7 @@ module jtframe_objdraw #( parameter
         .code           ( code          ),
         .xpos           ( xpos          ),
         .ysub           ( ysub          ),
+        .trunc          ( 2'd0          ), // always 16 pixels
         .hzoom          ( hzoom         ),
         .hz_keep        ( hz_keep       ),
         .hflip          ( hflip         ),

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simonmonk/prog_fpgas
+// License: MIT License
+
 module debounce(
     input CLK,
     input switch_a,

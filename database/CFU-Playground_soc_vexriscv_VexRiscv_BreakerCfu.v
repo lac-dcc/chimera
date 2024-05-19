@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/google/CFU-Playground
+// License: Apache License 2.0
+
 // Generator : SpinalHDL v1.7.1    git head : 0444bb76ab1d6e19f0ec46bc03c4769776deb7d5
 // Component : VexRiscv
 // Git hash  : 342d9a9aad896fb116df7afd1d3b8a39d22b8c2a

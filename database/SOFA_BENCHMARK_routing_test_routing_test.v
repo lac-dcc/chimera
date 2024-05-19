@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 
 module routing_test(IN0,IN1,IN2, clk, OUT0,OUT1,OUT2);
 

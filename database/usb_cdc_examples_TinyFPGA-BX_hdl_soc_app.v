@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ulixxe/usb_cdc
+// License: MIT License
+
 // APP module shall implement an example of application module for USB_CDC.
 // APP shall:
 //   - Loopback data from out_data_i to in_data_o, and at the same time:

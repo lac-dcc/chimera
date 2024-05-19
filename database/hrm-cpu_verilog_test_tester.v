@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/adumont/hrm-cpu
+// License: GNU General Public License v3.0
+
 `define EOF 32'hFFFF_FFFF
 `define NULL 0
 `define MAX_LINE_LENGTH 1000

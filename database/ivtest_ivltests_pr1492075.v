@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 //                              -*- Mode: Verilog -*-
 // Filename        : cnr_tb.v
 // Description     : single row corner bender testbench

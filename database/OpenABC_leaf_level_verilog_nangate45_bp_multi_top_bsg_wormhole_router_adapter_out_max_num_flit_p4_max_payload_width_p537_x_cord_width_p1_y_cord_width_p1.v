@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_wormhole_router_adapter_out_max_num_flit_p4_max_payload_width_p537_x_cord_width_p1_y_cord_width_p1
 (
   clk_i,

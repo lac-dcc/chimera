@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //This module handles a single amiga audio channel. attached modes are not supported
 
 module paula_audio_channel

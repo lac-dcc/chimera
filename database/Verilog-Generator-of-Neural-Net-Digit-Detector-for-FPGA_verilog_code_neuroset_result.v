@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA
+// License: Apache License 2.0
+
 module result(clk,enable,STOP,memstartp,read_addressp,qp,re,RESULT);
 
 parameter SIZE_1=0;

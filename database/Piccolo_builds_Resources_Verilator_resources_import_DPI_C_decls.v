@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/bluespec/Piccolo
+// License: Apache License 2.0
+
 // Copyright (c) 2018-2019 Bluespec, Inc. All Rights Reserved
 
 // Hand-written System Verilog import statements for imported C functions

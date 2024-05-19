@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/synlig
+// License: Apache License 2.0
+
 package pkg;
 	typedef enum logic [3:0] {
 		PRIV_LVL_M = 4'b11

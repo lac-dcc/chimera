@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pmezydlo/BeagleWire
+// License: GNU General Public License v2.0
+
 module top(input         clk,
            output [3:0]  led,
            output [15:0] rgb565,

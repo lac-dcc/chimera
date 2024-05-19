@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // megafunction wizard: %Altera PLL Reconfig v17.0%
 // GENERATION: XML
 // pll_cfg.v

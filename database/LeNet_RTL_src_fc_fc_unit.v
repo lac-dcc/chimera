@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : fc_unit.v
 //  Created On    : 2018-01-06 13:54:11

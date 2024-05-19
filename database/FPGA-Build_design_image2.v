@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AugustinJose1221/FPGA-Build
+// License: MIT License
+
 module image2(
 input               clk,
 input               camera_en,

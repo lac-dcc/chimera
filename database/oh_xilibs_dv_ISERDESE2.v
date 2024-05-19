@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 /*WARNING: INCOMPLETE MODEL, DON'T USE. I RECOMMEND AGAINST USING THIS
  *BLOCK ALL TOGETHER. NOT OPEN SOURCE FRIENDLY /AO
  */

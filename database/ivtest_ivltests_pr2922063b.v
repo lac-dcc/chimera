@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This is the second part of a two-part test that checks that the argument to
 // a $signed or $unsigned function is treated as a self-determined expression.
 // This part performs tests where the argument is signed.

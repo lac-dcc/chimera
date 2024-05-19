@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/FPGA_OV7670_Camera_Interface
+// License: MIT License
+
 // file: dcm_165MHz.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lmxyy/Computer-Architecture-Task-2
+// License: MIT License
+
 //////////////////////////////////////////////////////////////////////
 ////                                                              ////
 //// Copyright (C) 2014 leishangwen@163.com                       ////

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module regfile (input         clk, 
 		input         we3, 
 		input  [4:0]  ra1, ra2, wa3, 

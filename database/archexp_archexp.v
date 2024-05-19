@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zhanghai/archexp
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 
 module archexp(

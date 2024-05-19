@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ahmedshahein/DSP-RTL-Lib
+// License: BSD 2-Clause "Simplified" License
+
 // -------------------------------------------------------------------
 // Copyright (C) 2019 Ahmed Shahein
 // -------------------------------------------------------------------

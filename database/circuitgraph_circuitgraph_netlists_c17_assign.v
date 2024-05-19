@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 // Benchmark "/storage/rpurdy/benchmarks/ISCAS/bench/c17" written by ABC on Tue Jun 30 14:50:35 2020
 
 module c17_assign (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/PulseRain/Reindeer
+// License: Apache License 2.0
+
 //-----------------------------------------------------------------------------
 // Copyright (C) 2009 OutputLogic.com
 // This source file may be used and distributed without restriction

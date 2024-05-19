@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function:  Positive edge-triggered static inverting D-type flop-flop with #
 //             async active low set.                                          # 

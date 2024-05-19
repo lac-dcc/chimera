@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 // 这个模块用于实现exp()指数运算
 // 还是基于cordic算法
 // Mark: 2018/6/3: 发现存在上溢/下溢的bug！

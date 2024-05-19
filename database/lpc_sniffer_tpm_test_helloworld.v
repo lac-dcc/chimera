@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/denandz/lpc_sniffer_tpm
+// License: GNU General Public License v3.0
+
 module helloworld #(parameter CLOCK_FREQ = 12000000, parameter BAUD_RATE = 115200)
 (
 	input ext_clock,

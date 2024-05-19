@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Fujitsu AV cell
 // 2:1 Selector
 // furrtek 2022

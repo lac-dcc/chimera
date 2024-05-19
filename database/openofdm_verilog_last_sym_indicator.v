@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /*
 * track ofdm symbol and give indication of end of all ofdm symbol
 */

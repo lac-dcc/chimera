@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/virtex4/IDELAY.v,v 1.10 2007/06/08 01:59:04 fphillip Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2005 Xilinx, Inc.

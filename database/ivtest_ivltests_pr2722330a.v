@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Check that the >> and >>> operators with unsigned values.
 module top;
   parameter py = 8'b10101010 >> 3'b101;

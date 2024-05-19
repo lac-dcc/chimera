@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module eth_rxaddrcheck(MRxClk,  Reset, RxData, Broadcast ,r_Bro ,r_Pro,
                        ByteCntEq2, ByteCntEq3, ByteCntEq4, ByteCntEq5,
                        ByteCntEq6, ByteCntEq7, HASH0, HASH1, ByteCntEq0,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_soc
+// License: GNU General Public License v2.0
+
 //-----------------------------------------------------------------
 //                     Basic Peripheral SoC
 //                           V1.1

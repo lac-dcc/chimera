@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/teknohog/Xilinx-Serial-Miner
+// License: GNU General Public License v3.0
+
 module raw7seg(clk, segment, anode, word);
 
    // by teknohog at iki 0 fi

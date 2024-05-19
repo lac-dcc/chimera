@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel
+// License: Apache License 2.0
+
 module caravel_clocking (core_clk,
     ext_clk,
     ext_clk_sel,

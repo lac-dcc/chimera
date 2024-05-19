@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt12
+// License: GNU General Public License v3.0
+
 module sep24 #(parameter width=10, parameter pos0=5'd0)
 (
 	input 	clk,

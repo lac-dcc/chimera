@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/defparam/21FX
+// License: GNU General Public License v3.0
+
 // SNES-Hook - A tiny 5V CPLD device to hijack reset on the SNES console
 //
 // Copyright (C) 2015 Evan Custodio

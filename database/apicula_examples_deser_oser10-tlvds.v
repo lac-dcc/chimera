@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 `default_nettype none
 /*
 * This example allows you to generate several OSER10 primitives and then check

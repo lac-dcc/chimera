@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 module MUX(in_0,in_1,in_2,in_3,out,key_0,key_1);
   input in_0,in_1,in_2,in_3;
   input key_0,key_1;

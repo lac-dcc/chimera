@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Carry Save Adder (4:2) (aka 5:3)                                #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

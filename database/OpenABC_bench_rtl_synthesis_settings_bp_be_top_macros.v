@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module hard_mem_1rw_bit_mask_d64_w96_wrapper(clk_i, reset_i, data_i,
      addr_i, v_i, w_mask_i, w_i, data_o);
   input clk_i, reset_i, v_i, w_i;

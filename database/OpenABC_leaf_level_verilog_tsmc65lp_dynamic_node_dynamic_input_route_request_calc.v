@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dynamic_input_route_request_calc(route_req_n, route_req_e, route_req_s, route_req_w, route_req_p,
                                         default_ready_n, default_ready_e, default_ready_s, default_ready_w, default_ready_p,
                                         my_loc_x_in, my_loc_y_in, my_chip_id_in, abs_x, abs_y, abs_chip_id, final_bits, length, header_in);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marceluda/rp_lock-in_pid
+// License: GNU General Public License v3.0
+
 /**
  * $Id: red_pitaya_dfilt1.v 964 2014-01-24 12:58:17Z matej.oblak $
  *

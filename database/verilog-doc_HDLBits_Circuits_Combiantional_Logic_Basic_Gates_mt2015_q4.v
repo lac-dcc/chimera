@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 module top_module (input x, input y, output z);
     wire z1,z2,z3,z4,out1,out2;
     A ins1(x,y,z1);

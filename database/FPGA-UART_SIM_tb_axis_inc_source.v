@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-UART
+// License: GNU General Public License v3.0
+
 
 module tb_axis_inc_source # (
     parameter    BYTE_WIDTH = 4

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 `timescale 1ns/1ps
 
 module cross_clock_enable (

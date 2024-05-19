@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module PS_flops_EX_WB_alu (
  in_wfid,
  in_instr_pc,

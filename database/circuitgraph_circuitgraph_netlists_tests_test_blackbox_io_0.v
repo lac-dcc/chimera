@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 module test_blackbox_io(clk, i0, i1, o0);
 
     input clk, i0, i1;

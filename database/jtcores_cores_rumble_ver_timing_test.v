@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Side Arms Timing Model, Jose Tejada, 8/8/2020
 // Street Fighter seems to fit with this model
 // the horizontal count PROM is equal

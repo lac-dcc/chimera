@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 
 module myadc (
 	adc_pll_clock_clk,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eda-lab/CNNAF-CNN-Accelerator_init
+// License: MIT License
+
 module ddr_rd_data_pro(
     input                       clk_200M,
     input                       rst_n,

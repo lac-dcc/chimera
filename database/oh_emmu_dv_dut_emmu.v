@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //`include "elink_regmap.v"
 module dut(/*AUTOARG*/
    // Outputs

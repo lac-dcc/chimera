@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jzkmath/MIDI-Stepper-Synth-V2
+// License: GNU General Public License v3.0
+
 /*
 MidiStepperSynthV2 by Jonathan Kayne, December 2018
 This is the Top level module for the Stepper Synth V2. It connects all the modules together

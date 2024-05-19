@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b13_custombit_dec (
    binary_in,
    decoder_out,

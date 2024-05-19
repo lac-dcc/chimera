@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module xics_icp(clk, rst, \wb_in.adr , \wb_in.dat , \wb_in.sel , \wb_in.cyc , \wb_in.stb , \wb_in.we , \ics_in.src , \ics_in.pri , \wb_out.dat , \wb_out.ack , \wb_out.stall , core_irq_out);
   reg _00_;
   reg [73:0] _01_;

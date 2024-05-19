@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 /******************************************************************
  Title       : wdwt_decoder_Maj.v	     		 
  Design      : Maj. St. Don't Walk Countdown Light Decoder (*Timer Mode)

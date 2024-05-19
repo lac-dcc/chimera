@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-Gzip-compressor
+// License: GNU General Public License v3.0
+
 
 module elastic_fifo_for_output #(
     parameter SIMULATION = 0

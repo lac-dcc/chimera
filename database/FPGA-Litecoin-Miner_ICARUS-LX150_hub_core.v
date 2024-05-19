@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 module hub_core (uart_clk, new_nonces, golden_nonce, serial_send, serial_busy, slave_nonces);
    parameter SLAVES = 2;
 

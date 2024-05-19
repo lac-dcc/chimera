@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module jfif_parser
 #(
 	parameter	SOS_CNT_W	= 4

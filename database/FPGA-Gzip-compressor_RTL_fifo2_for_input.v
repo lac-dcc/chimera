@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-Gzip-compressor
+// License: GNU General Public License v3.0
+
 
 module fifo2_for_input (
     input  wire       rstn,

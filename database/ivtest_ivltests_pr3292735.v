@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module table_out(
 	input [1:0] a,
 	(* rom_style = "distributed" *) output reg signed [9:0] phase

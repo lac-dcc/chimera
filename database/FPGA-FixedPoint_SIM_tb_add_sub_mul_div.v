@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-FixedPoint
+// License: GNU General Public License v3.0
+
 
 //--------------------------------------------------------------------------------------------------------
 // Module  : tb_add_sub_mul_div

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_me_wormhole_packet_encode_mem_cmd_05_62_3_2_4
 (
   mem_cmd_i,

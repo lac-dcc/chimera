@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /* $Id: C_DIST_MEM_V5_0.v,v 1.17 2008/09/08 20:06:48 akennedy Exp $
 --
 -- Filename - C_DIST_MEM_V5_0.v

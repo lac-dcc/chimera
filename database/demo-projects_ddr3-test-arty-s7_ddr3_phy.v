@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 `default_nettype none
 `timescale 1ps / 1ps
 //`define DEBUG_DQS

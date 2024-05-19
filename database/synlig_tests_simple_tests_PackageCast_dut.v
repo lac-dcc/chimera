@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/synlig
+// License: Apache License 2.0
+
 package pkg;
    typedef enum logic[7:0] { ONE, TWO, THREE, FOUR, FIVE } enum_t;
 endpackage

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // 832 CPU MCU for the Analogue Pocket
 // Copyright � 2022 by Murray Aickin(mazamars312)
 

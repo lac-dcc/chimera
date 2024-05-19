@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/niklasekstrom/clockport_pi_interface
+// License: GNU General Public License v3.0
+
 /*
  * Amiga clock port to Raspberry Pi interface.
  * Fits in XC9572XL-10-VQ64.

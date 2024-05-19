@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 module RAM256x8_ASYNC (
    input CLK,
    input WE0,

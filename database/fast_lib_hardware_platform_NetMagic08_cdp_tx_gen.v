@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //tx crc genetator module,crc_gen and pkt copy;
 //by jzc 20101025;
 `timescale 1ns/1ns

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module br918d;
   reg pass;
   reg [1:0] v1, v2, v3, v4;

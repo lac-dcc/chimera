@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 module CNT2(
 	input CLK,
 	input nLOAD, CEN1, CEN2,

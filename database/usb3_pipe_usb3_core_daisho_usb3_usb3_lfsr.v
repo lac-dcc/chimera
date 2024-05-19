@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/enjoy-digital/usb3_pipe
+// License: BSD 2-Clause "Simplified" License
+
 
 //
 // usb 3.0 data scrambling lfsr

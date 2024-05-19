@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 //this module multiplies a signed 8 bit sample with an unsigned 6 bit volume setting
 //it produces a 14bit signed result
 

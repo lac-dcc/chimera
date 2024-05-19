@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 // megafunction wizard: %Altera PLL v16.0%
 // GENERATION: XML
 // vga_pll.v

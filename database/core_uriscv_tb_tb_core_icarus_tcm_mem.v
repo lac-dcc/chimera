@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_uriscv
+// License: Apache License 2.0
+
 
 module tcm_mem
 (

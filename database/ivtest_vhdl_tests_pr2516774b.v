@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This slightly convoluted module used to cause an argument-size
 // mismatch in the call to the function extend_data
 

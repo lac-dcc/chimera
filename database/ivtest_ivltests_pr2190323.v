@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This is a reduced example from comp1001 to demonstrate a problem
  * in Icarus Verilog. Since this fails using just the compiler this

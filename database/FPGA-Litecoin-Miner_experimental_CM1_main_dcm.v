@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // file: main_dcm.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

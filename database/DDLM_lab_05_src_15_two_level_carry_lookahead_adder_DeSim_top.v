@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module top (CLOCK_50, KEY, SW, LEDR);
 
     input CLOCK_50;             // DE-series 50 MHz clock signal

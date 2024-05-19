@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module DataMemory32(clk, MemRead, ReadAddress, ReadData, MemWrite, WriteAddress, WriteData);
 	input MemRead, MemWrite, clk;
 	input [31:0] ReadAddress, WriteAddress;

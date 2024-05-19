@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dis_controller (/*AUTOARG*/
    // Outputs
    dis_controller_start_alloc, dis_controller_alloc_ack,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module Memory(Data_out,Address);
 
 	output	[7:0]Data_out;

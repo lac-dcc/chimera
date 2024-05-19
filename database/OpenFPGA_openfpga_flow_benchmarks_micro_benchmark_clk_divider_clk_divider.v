@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: A two-stage clock divider (Frequency is divided by 4)
 //                 This is to test the clock generated locally by a LUT/FF

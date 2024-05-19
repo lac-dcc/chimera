@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alan4186/Hardware-CNN
+// License: MIT License
+
 // megafunction wizard: %Shift register (RAM-based)%
 // GENERATION: STANDARD
 // VERSION: WM1.0

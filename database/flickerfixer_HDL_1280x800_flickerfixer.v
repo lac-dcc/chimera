@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/niklasekstrom/flickerfixer
+// License: Creative Commons Zero v1.0 Universal
+
 /*
  * Written Christmas 2019 by Niklas Ekström
  */

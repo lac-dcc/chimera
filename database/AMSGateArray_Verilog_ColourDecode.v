@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/codedchip/AMSGateArray
+// License: GNU General Public License v3.0
+
 // ===============================================================================
 //
 //  Amstrad CPC Gate Array for Xilinx X95288XL

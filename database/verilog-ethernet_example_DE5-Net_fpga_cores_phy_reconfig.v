@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alexforencich/verilog-ethernet
+// License: MIT License
+
 // megafunction wizard: %Transceiver Reconfiguration Controller v15.0%
 // GENERATION: XML
 // phy_reconfig.v

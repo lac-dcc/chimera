@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module traffic_light(clk,rst,out,dot_row,dot_col);
 	input clk,rst;
 	output reg [6:0] out;

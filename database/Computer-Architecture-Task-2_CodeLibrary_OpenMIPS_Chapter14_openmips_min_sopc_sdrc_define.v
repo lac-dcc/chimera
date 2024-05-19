@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lmxyy/Computer-Architecture-Task-2
+// License: MIT License
+
 
 `define SDR_REQ_ID_W       4
 

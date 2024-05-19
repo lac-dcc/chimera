@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 module io_reg_tb;
     
     reg clk_gen, in_gen;

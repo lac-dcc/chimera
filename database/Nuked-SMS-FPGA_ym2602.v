@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-SMS-FPGA
+// License: GNU General Public License v2.0
+
 /*
  * Copyright (C) 2023 nukeykt
  *
@@ -60,9 +63,13 @@ module ym2602
 	output CE,
 	output INT,
 	output [15:0] PSG,
-	output vdp_hclk1
+	output vdp_hclk1,
+	output VSYNC,
+	output HSYNC,
+	output HBLANK,
+	output VBLANK
 	);
-	
+
 	wire clk1, clk2;
 	wire hclk1, hclk2;
 	wire zclk;
@@ -2265,7 +2272,17 @@ module ym2602
 						((dac_sel[5:4] == 2'h1) ? 8'd103 : 8'd0) |
 						((dac_sel[5:4] == 2'h2) ? 8'd170 : 8'd0) |
 						((dac_sel[5:4] == 2'h3) ? 8'd255 : 8'd0);
-	
+
+	// expose BLANK for digital displays
+	wire hb1, vb1, hb2, vb2;
+	ymn_dlatch l_hb1(.MCLK(MCLK), .en(hclk1), .inp(w385), .val(hb1));
+	ymn_dlatch l_vb1(.MCLK(MCLK), .en(hclk1), .inp(w156), .val(vb1));
+
+	ymn_sr_bit l_hb2(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(hb1), .val(hb2));
+	ymn_sr_bit l_vb2(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(vb1), .val(vb2));
+	ymn_dlatch l_hblank(.MCLK(MCLK), .en(hclk2), .inp(hb2), .val(HBLANK));
+	ymn_dlatch l_vblank(.MCLK(MCLK), .en(hclk2), .inp(vb2), .val(VBLANK));
+
 	ympsg psg(.MCLK(MCLK), .clk(zclk), .reset(RESET), .write(~(cpu_wr | cpu_iorq | cpu_a7 | ~cpu_a6)), .data(io_data),
 		.psg(PSG));
 	
@@ -2274,9 +2291,18 @@ module ym2602
 	ymn_dlatch l752(.MCLK(MCLK), .en(hclk1), .inp(reg_80_b0), .val(w752));
 	
 	ymn_dlatch l753(.MCLK(MCLK), .en(hclk2), .inp(~(w751 | w752)), .val(w753));
-	
+
 	assign CSYNC_pull = w753;
-	
+
+    // expose H/VSYNC
+    wire w_hs1, w_hs2, w_vs1, w_vs2;
+	ymn_dlatch l_hs1(.MCLK(MCLK), .en(hclk1), .inp(~w384), .val(w_hs1));
+	ymn_dlatch l_vs1(.MCLK(MCLK), .en(hclk1), .inp(~w151), .val(w_vs1));
+	ymn_sr_bit l_hs2(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(w_hs1), .val(w_hs2));
+	ymn_sr_bit l_vs2(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(w_vs1), .val(w_vs2));
+	ymn_dlatch l_hs (.MCLK(MCLK), .en(hclk2), .inp(~w_hs2), .val(HSYNC));
+	ymn_dlatch l_vs (.MCLK(MCLK), .en(hclk2), .inp(~w_vs2), .val(VSYNC));
+
 	ymn_sr_bit l754(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(w659), .val(w754));
 	
 	ymn_sr_bit #(.SR_LENGTH(4)) l755(.MCLK(MCLK), .c1(hclk2), .c2(hclk1), .inp(w754), .val(w755));

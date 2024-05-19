@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This checks various variable selects using the indexed select operators
 //  +: and -: for both big and little endian vectors.
 module top;

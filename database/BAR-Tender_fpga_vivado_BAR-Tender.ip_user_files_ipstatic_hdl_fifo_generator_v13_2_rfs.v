@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/defparam/BAR-Tender
+// License: MIT License
+
 `pragma protect begin_protected
 `pragma protect version = 1
 `pragma protect encrypt_agent = "XILINX"

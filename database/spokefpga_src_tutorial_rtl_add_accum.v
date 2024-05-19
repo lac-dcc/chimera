@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 module add_accum( clock, reset, x, valid, accumsum );
     input clock;
     input reset;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 //-----------------------------------------------------
 // Design Name : ram_sp_sr_sw
 // File Name   : ram_sp_sr_sw.v

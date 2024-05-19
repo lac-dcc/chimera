@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /***************************************************
  Vendor          : QuickLogic Corp.
  Aurora Version  : AU 1.0.0 			

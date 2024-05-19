@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 4-bit modulo 16 binary counter with parallel load, asynchronous clear
 
 module ttl_74161 #(parameter WIDTH = 4, DELAY_RISE = 0, DELAY_FALL = 0)

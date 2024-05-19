@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* Crash.v - reproduces a simulation-time crash (PLI assertion failure)
 
 Copyright: Bluespec, Inc. 2010

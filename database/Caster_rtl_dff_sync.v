@@ -1,4 +1,7 @@
-// Copyright Modos / Wenting Zhang 2023
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
+// Copyright Wenting Zhang 2024
 //
 // This source describes Open Hardware and is licensed under the CERN-OHL-P v2
 //

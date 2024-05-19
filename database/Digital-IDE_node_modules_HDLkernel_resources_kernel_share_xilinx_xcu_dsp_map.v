@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$__MUL27X18 (input [26:0] A, input [17:0] B, output [44:0] Y);
 	parameter A_SIGNED = 0;
 	parameter B_SIGNED = 0;

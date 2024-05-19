@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 `default_nettype none
 module serv_rf_ram_if
   #(//Data width. Adjust to preferred width of SRAM data interface

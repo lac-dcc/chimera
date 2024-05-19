@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Reference Book: FPGA Prototyping By Verilog Examples Xilinx Spartan-3 Version

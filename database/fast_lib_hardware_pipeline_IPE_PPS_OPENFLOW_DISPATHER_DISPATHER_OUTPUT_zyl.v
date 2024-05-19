@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 /*main function
 1)receiving packet from input module and ppc module,and forwarding packets to rdma module
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 `timescale 1ns / 10ps
 // algorithm file = 'ulpsh_s2_main_JB4_BMI160_AK09911_PD.alg'
 // UlpshType = S2_1KDM

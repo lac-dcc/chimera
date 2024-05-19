@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module phase_acc(clr,en,rst,valid_out1,clk,add_sub,sel,D,Q);
     parameter DATASIZE=16;
     input  clr,en,rst,clk,add_sub,sel,valid_out1;

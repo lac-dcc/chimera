@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 module helloworldwriter(
 	input clock,
 	input reset,

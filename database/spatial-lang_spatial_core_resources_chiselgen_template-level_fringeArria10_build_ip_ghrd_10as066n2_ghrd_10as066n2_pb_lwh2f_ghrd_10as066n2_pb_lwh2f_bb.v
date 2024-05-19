@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_pb_lwh2f #(
 		parameter DATA_WIDTH        = 32,
 		parameter SYMBOL_WIDTH      = 8,

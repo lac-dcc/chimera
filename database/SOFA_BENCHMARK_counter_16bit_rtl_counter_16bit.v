@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 //
 // Copyright (c) 2020 QuickLogic Corporation.  All Rights Reserved.
 //

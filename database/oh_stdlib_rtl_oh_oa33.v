@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Or-And (oa33) Gate                                              #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

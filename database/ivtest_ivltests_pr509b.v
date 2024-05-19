@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module whoever_wrote_this_should_be_shot ( Q, D, G );
     output   Q;
     input    D, G;

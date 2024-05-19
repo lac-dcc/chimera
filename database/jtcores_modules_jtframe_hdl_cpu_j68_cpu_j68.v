@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Copyright 2011-2018 Frederic Requin
 //
 // The J68 core:

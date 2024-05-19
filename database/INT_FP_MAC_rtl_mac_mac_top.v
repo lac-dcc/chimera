@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 // No pipelined MAC(Multiplier accumulator)
 // Version: 1.0 
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/secworks/trng
+// License: BSD 2-Clause "Simplified" License
+
 //======================================================================
 //
 // tb_mixer.v

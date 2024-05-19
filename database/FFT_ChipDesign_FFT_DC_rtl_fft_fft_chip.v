@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VenciFreeman/FFT_ChipDesign
+// License: Mozilla Public License 2.0
+
 module fft_chip(clk,rst_n,data_in,data_out);
 
 input clk,rst_n;

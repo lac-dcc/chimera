@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 //////////////////////////////////////////////////////////////////////
 ////                                                              ////
 //// WISHBONE SD Card Controller IP Core                          ////

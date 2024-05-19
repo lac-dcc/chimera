@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test #(
   parameter integer i1 = 1.0, i2 = 2,
   parameter [7:0]   v1 = 3.0, v2 = 4,

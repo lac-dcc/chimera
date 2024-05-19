@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lvd2/ay-3-8910_reverse_engineered
+// License: GNU General Public License v3.0
+
 // (c) 2019 deathsoft, lvd
 
 // This verilog model of the AY chip was made from the transistor-level schematics

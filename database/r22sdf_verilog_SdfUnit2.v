@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nanamake/r22sdf
+// License: MIT License
+
 //----------------------------------------------------------------------
 //  SdfUnit2: Radix-2 SDF Dedicated for Twiddle Resolution M = 2
 //----------------------------------------------------------------------

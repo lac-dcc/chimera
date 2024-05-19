@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -156,7 +159,9 @@ jtoutrun_obj_draw u_draw(
     .bf_data   ( buf_data       ),
     .bf_we     ( buf_we         ),
     .bf_addr   ( buf_addr       ),
-    .debug_bus ( debug_bus      )
+    // Debug
+    .debug_bus ( debug_bus      ),
+    .late      (                )
 );
 
 reg [8:0] hobj;
@@ -164,7 +169,7 @@ localparam [8:0] HOBJ_START = 9'haa-PXL_DLY; //a6
 localparam [8:0] FLIP_START = 9'hc0-HOBJ_START;
 
 always @(posedge clk) begin
-    if( !LHBL ) hobj <= (flip ? (9'h1ff+FLIP_START) : HOBJ_START); // + {debug_bus[7], debug_bus};
+    if( !LHBL ) hobj <= (flip ? (FLIP_START-9'd1) : HOBJ_START); // + {debug_bus[7], debug_bus};
     else if(pxl_cen) hobj<= flip ? hobj-1'd1 : hobj+1'd1;
 end
 

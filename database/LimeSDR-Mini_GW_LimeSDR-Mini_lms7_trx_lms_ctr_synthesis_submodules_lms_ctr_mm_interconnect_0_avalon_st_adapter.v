@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-Mini_GW
+// License: Apache License 2.0
+
 // lms_ctr_mm_interconnect_0_avalon_st_adapter.v
 
 // This file was auto-generated from altera_avalon_st_adapter_hw.tcl.  If you edit it your changes

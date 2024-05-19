@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // ghrd_10as066n2_emif_hps_altera_emif_a10_hps_171_or5co3i.v
 
 // This file was auto-generated from altera_emif_a10_hps_hw.tcl.  If you edit it your changes

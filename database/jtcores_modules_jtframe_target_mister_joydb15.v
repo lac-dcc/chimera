@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 //Control module for DB15 Splitter of Antonio Villena by Aitor Pelaez (NeuroRulez)
 //Based on the ZXDOS module written by me too.
 //

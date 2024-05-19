@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Converted from T65 VHDL code using GHDL 3.0.0-dev (v2.0.0-1267-gd82550423) [Dunoon edition]
 module t65_alu
   (input  [1:0] mode,

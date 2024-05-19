@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This is a simple test for the for...join_any syntax. There is a
  * fork statement to start a bunch of threads. We wait for none of

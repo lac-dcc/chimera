@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/archlabo/Frix
+// License: BSD 2-Clause "Simplified" License
+
 // megafunction wizard: %ALTPLL%
 // GENERATION: STANDARD
 // VERSION: WM1.0

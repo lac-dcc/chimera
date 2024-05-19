@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Check behaviour with variable array indices on LHS of procedural
 // continuous (net) assignment. This should be rejected by the compiler.
 module top;

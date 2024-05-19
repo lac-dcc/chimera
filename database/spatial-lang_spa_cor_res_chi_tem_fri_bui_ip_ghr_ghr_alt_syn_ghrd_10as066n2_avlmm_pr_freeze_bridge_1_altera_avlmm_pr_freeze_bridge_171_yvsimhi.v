@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // ghrd_10as066n2_avlmm_pr_freeze_bridge_1_altera_avlmm_pr_freeze_bridge_171_yvsimhi.v
 
 // This file was auto-generated from altera_avlmm_pr_freeze_bridge_hw.tcl.  If you edit it your changes

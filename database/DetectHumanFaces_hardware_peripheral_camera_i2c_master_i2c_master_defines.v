@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 /////////////////////////////////////////////////////////////////////
 ////                                                             ////
 ////  WISHBONE rev.B2 compliant I2C Master controller defines    ////

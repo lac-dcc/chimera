@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/icezum
+// License: GNU General Public License v3.0
+
 //------------------------------------------------------------------
 //-- Test: Testing the pushbuttons sw1 and sw2. They are wired
 //-- directly to led0 and led7 respectivelly

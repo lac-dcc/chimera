@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // Computer_System_System_PLL.v
 
 // This file was auto-generated from altera_up_avalon_sys_sdram_pll_hw.tcl.  If you edit it your changes

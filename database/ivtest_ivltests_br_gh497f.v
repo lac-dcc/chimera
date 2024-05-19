@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // The IEEE standard allows the out-of-bounds part-selects to be flagged as
 // compile-time errors. If they are not, this test should pass.
 module top;

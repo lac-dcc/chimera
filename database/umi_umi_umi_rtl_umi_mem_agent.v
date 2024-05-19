@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeroasiccorp/umi
+// License: Apache License 2.0
+
 /*******************************************************************************
  * Copyright 2020 Zero ASIC Corporation
  *
@@ -16,10 +19,7 @@
  * ----
  *
  * Documentation:
- * - Implements a simple memory array for use in simulation
- *
- * Known limitation/bugs:
- * - Transaction cannot cross the DW boundary
+ * - Implements a simple memory array
  *
  ******************************************************************************/
 
@@ -267,20 +267,20 @@ module umi_mem_agent
               .CTRLW (CTRLW),            // Width of asic ctrl interface
               .TESTW (128)               // Width of asic test interface
               )
-   la_spram_i(// Outputs
-              .dout             (mem_rddata[DW-1:0]),
-              // Inputs
-              .clk              (clk),
-              .ce               (1'b1),
-              .we               (mem_we),
-              .wmask            (mem_wmask[DW-1:0]),
-              .addr             (mem_addr[$clog2(DW/8)+:$clog2(RAMDEPTH)]),
-              .din              (mem_wrdata),
-              .vss              (1'b0),
-              .vdd              (1'b1),
-              .vddio            (1'b1),
-              .ctrl             (sram_ctrl),
-              .test             (128'h0));
+   la_spram(// Outputs
+            .dout             (mem_rddata[DW-1:0]),
+            // Inputs
+            .clk              (clk),
+            .ce               (1'b1),
+            .we               (mem_we),
+            .wmask            (mem_wmask[DW-1:0]),
+            .addr             (mem_addr[$clog2(DW/8)+:$clog2(RAMDEPTH)]),
+            .din              (mem_wrdata),
+            .vss              (1'b0),
+            .vdd              (1'b1),
+            .vddio            (1'b1),
+            .ctrl             (sram_ctrl),
+            .test             (128'h0));
 
    assign loc_rddata = mem_rddata >> (8*loc_addr_r[$clog2(DW/8)-1:0]);
 

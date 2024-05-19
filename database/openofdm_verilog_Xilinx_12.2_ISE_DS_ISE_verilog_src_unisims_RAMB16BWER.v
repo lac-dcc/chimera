@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/sandia/RAMB16BWER.v,v 1.28.24.1 2010/03/29 22:55:36 wloo Exp $
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2008 Xilinx, Inc.

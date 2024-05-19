@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel
+// License: Apache License 2.0
+
 module gpio_logic_high(
  `ifdef USE_POWER_PINS
          inout vccd1,

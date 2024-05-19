@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/trun/fpgaboy
+// License: MIT License
+
 //
 // TV80 8-Bit Microprocessor Core
 // Based on the VHDL T80 core by Daniel Wallner (jesus@opencores.org)

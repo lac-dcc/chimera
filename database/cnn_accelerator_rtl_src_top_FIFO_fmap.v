@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/XueTianyu24/cnn_accelerator
+// License: MIT License
+
 module FIFO_fmap
 ( 	
     input  clk,

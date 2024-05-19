@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module pow_5_en_single_cycle_struct
 # (
     parameter w = 8

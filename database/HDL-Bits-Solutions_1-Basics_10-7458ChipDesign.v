@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 module top_module ( 
     //designing a  7458  chip
     input p1a, p1b, p1c, p1d, p1e, p1f,

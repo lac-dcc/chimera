@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 `define TimeExpire 32'd50000000
 `define countdownTime 8'd10
 

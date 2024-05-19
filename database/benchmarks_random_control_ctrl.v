@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lsils/benchmarks
+// License: MIT License
+
 module top ( 
     \opcode[0] , \opcode[1] , \opcode[2] , \opcode[3] , \opcode[4] ,
     \op_ext[0] , \op_ext[1] ,

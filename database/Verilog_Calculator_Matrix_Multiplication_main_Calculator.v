@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pontazaricardo/Verilog_Calculator_Matrix_Multiplication
+// License: Mozilla Public License 2.0
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-MD-FPGA
+// License: GNU General Public License v2.0
+
 `timescale 1ns/1ns
 
 module MD_Run();

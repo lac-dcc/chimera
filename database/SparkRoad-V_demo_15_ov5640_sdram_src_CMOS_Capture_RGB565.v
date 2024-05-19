@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 `timescale 1ns/1ns
 module CMOS_Capture_RGB565(
 	//global clock

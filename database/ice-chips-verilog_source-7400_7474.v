@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // Dual D flip-flop with set and clear; positive-edge-triggered
 
 // Note: Preset_bar is synchronous, not asynchronous as specified in datasheet for this device,

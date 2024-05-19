@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/esa-tu-darmstadt/tapasco
+// License: GNU Lesser General Public License v3.0
+
 //
 // Copyright (C) 2014 David de la Chevallerie, TU Darmstadt
 //

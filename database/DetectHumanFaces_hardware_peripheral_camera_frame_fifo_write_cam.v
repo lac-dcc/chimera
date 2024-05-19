@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 //利用fifo进行cmos得到的16位数的写入。在对应的地址写过一帧后，对该帧是否写入的标志赋值。
 //读出的部分是持续读出（对该帧是否写入的标志）特定内容，进而可以在cmos写请求函数中对地址index产生影响。
 `timescale 1ns/1ps

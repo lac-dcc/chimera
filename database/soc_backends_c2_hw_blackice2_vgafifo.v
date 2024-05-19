@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 /////////////////////////////////////////////////////////////////////
 ////                                                             ////
 ////  WISHBONE rev.B2 compliant VGA/LCD Core; Dual Clocked Fifo  ////

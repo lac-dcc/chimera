@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/The-OpenROAD-Project/OpenROAD
+// License: BSD 3-Clause "New" or "Revised" License
+
 module top (in1,
     in2,
     clk1,

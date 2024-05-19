@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-FixedPoint
+// License: GNU General Public License v3.0
+
 
 //--------------------------------------------------------------------------------------------------------
 // Modules : fxp_zoom, fxp_add, fxp_addsub, fxp_mul, fxp_mul_pipe, fxp_div, fxp_div_pipe, fxp_sqrt, fxp_sqrt_pipe, fxp2float, fxp2float_pipe, float2fxp, float2fxp_pipe

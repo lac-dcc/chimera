@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/gzzyyxh/Quafu
+// License: MIT License
+
 // megafunction wizard: %ROM: 1-PORT%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0

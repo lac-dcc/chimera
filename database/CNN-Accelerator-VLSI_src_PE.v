@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lirui-shanghaitech/CNN-Accelerator-VLSI
+// License: Apache License 2.0
+
 module PE (clk, rst_n, ifm_input0, ifm_input1, ifm_input2, ifm_input3, 
             wgt_input0, wgt_input1, wgt_input2, wgt_input3, p_sum);
 

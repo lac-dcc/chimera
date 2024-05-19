@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Check if the FSM is working properly.
 
 // From the base PPU sources only a minimalistic set is used: PCLK, H/V counters with decoders and the FSM itself.

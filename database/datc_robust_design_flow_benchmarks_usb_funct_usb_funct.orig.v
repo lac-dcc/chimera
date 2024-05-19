@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jinwookjungs/datc_robust_design_flow
+// License: GNU General Public License v3.0
+
 module usb_funct (
 x185140,
 x6157,

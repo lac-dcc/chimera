@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : pool_unit.v
 //  Created On    : 2018-01-02 18:58:30

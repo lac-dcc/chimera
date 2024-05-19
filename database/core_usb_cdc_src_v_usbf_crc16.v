@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_usb_cdc
+// License: GNU Lesser General Public License v2.1
+
 //-----------------------------------------------------------------
 //                       USB CDC Device
 //                            V0.1

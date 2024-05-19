@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 module s27_unrolled_4 (G1_3, G2_4, DFF_1_Q_reg_Q_0, G1_4, G2_2, G3_1, G1_2, G3_0, G0_4, G0_3, G1_0, G3_3, G1_1, G0_2, DFF_2_Q_reg_Q_0, G0_1, G3_4, G3_2, DFF_0_Q_reg_Q_0, G2_0, G2_1, G2_3, G0_0, G17_3, G17_2, DFF_0_Q_reg_D_4, G17_0, DFF_2_Q_reg_D_4, DFF_1_Q_reg_D_4, G17_1, G17_4);
   input G1_3;
   input G2_4;

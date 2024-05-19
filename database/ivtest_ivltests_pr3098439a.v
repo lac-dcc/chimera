@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This file extends the original bug test case to explore all the
 // forms of a signed left shift that are treated as special cases.
 module test;

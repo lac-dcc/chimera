@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // -------------------------------------------------------------------------
 //Reed-Solomon decoder
 //Copyright (C) Wed May 22 09:59:27 2002

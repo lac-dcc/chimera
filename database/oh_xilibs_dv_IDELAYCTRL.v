@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 /*An empty IDELAYCTRL model*/
 module IDELAYCTRL (/*AUTOARG*/
    // Outputs

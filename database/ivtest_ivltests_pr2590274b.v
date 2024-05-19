@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // We want to print a warning if we find a delay that comes from the
 // default timescale (1s) and then one from a given timescale.
 // Basically we want to have either the case of no timescales or

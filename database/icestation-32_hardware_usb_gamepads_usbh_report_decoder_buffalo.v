@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // "BUFFALO Classic USB Gamepad"
 
 `default_nettype none

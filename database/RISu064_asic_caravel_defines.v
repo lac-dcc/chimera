@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zephray/RISu064
+// License: MIT License
+
 // SPDX-FileCopyrightText: 2020 Efabless Corporation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

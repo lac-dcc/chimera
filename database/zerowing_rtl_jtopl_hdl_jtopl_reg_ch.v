@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /* This file is part of JTOPL
 
     JTOPL program is free software: you can redistribute it and/or modify
@@ -19,55 +22,98 @@
 
 */
 
-module jtopl_reg_ch#( parameter
-    CHCSRW = 10
-) (
-    input                   rst,
-    input                   clk,
-    input                   cen,
-    input                   zero,
-    input                   rhy_en,
-    input             [4:0] rhy_kon,
-    input            [17:0] slot,
+module jtopl_reg_ch(
+    input             rst,
+    input             clk,
+    input             cen,
+    input             zero,
+    input             rhy_en,
+    input       [4:0] rhy_kon,
+    input      [17:0] slot,
 
-    input             [1:0] group,
-    input      [CHCSRW-1:0] chcfg_inmux,
+    input       [3:0] up_ch,
+    input             up_fnumhi,
+    input             up_fnumlo,
+    input             up_fbcon,
+    input       [7:0] din,
 
-    output reg [CHCSRW-1:0] chcfg,
-    output reg              rhy_oen,    // high for rhythm operators if rhy_en is set
-    output                  rhyon_csr
+    input       [1:0] group,
+    input       [2:0] sub,
+    output reg        keyon,
+    output reg  [2:0] block,
+    output reg  [9:0] fnum,
+    output reg  [2:0] fb,
+    output reg        con,
+    output reg        rhy_oen,    // high for rhythm operators if rhy_en is set
+    output            rhyon_csr
 );
 
 // Rhythm key-on CSR
 localparam BD=4, SD=3, TOM=2, TC=1, HH=0;
 
-reg  [CHCSRW-1:0] chcfg0_in, chcfg1_in, chcfg2_in;
-wire [CHCSRW-1:0] chcfg0_out, chcfg1_out, chcfg2_out;
-
 reg  [5:0] rhy_csr;
+
+reg  [8:0] reg_keyon, reg_con;
+reg  [2:0] reg_block[8:0];
+reg  [2:0] reg_fb   [8:0];
+reg  [9:0] reg_fnum [8:0];
+reg  [3:0] cur, i;
 
 assign rhyon_csr = rhy_csr[5];
 
-always @(*) begin
-    case( group )
-        default: chcfg = chcfg0_out;
-        2'd1: chcfg = chcfg1_out;
-        2'd2: chcfg = chcfg2_out;
-    endcase
-    chcfg0_in = group==2'b00 ? chcfg_inmux : chcfg0_out;
-    chcfg1_in = group==2'b01 ? chcfg_inmux : chcfg1_out;
-    chcfg2_in = group==2'b10 ? chcfg_inmux : chcfg2_out;
+always @* casez( {group,sub} )
+    5'o00 : cur = 1;
+    5'o01 : cur = 2;
+    5'o02 : cur = 0;
+    5'o03 : cur = 1;
+    5'o04 : cur = 2;
+    5'o05 : cur = 3;
+    5'o10 : cur = 4;
+    5'o11 : cur = 5;
+    5'o12 : cur = 3;
+    5'o13 : cur = 4;
+    5'o14 : cur = 5;
+    5'o15 : cur = 6;
+    5'o20 : cur = 7;
+    5'o21 : cur = 8;
+    5'o22 : cur = 6;
+    5'o23 : cur = 7;
+    5'o24 : cur = 8;
+    5'o25 : cur = 0;
+    default: cur = 4'hx;
+endcase
+
+always @(posedge clk, posedge rst) begin
+    if( rst ) begin
+        keyon <= 0;
+        block <= 0;
+        fnum  <= 0;
+        fb    <= 0;
+        con   <= 0;
+    end else if(cen) begin
+        keyon <= reg_keyon[cur];
+        block <= reg_block[cur];
+        fnum  <= reg_fnum [cur];
+        fb    <= reg_fb   [cur];
+        con   <= reg_con  [cur];
+    end
 end
 
-`ifdef SIMULATION
-reg  [CHCSRW-1:0] chsnap0, chsnap1,chsnap2;
-
-always @(posedge clk) if(zero) begin
-    chsnap0 <= chcfg0_out;
-    chsnap1 <= chcfg1_out;
-    chsnap2 <= chcfg2_out;
+always @(posedge clk, posedge rst) begin
+    if( rst ) begin
+        reg_keyon <= 0;
+        reg_con   <= 0;
+        for( i=0; i<9; i=i+1 ) begin
+            reg_block[i] <= 0;
+            reg_fnum [i] <= 0;
+        end
+    end else if(cen) begin
+        i = 0;
+        if( up_fnumlo ) reg_fnum[up_ch][7:0] <= din;
+        if( up_fnumhi ) { reg_keyon[up_ch], reg_block[up_ch], reg_fnum[up_ch][9:8] } <= din[5:0];
+        if( up_fbcon  ) { reg_fb[up_ch], reg_con[up_ch] } <= din[3:0];
+    end
 end
-`endif
 
 always @(posedge clk, posedge rst) begin
     if( rst ) begin
@@ -84,28 +130,5 @@ always @(posedge clk, posedge rst) begin
     end
 end
 
-jtopl_sh_rst #(.width(CHCSRW),.stages(3)) u_group0(
-    .clk    ( clk        ),
-    .cen    ( cen        ),
-    .rst    ( rst        ),
-    .din    ( chcfg0_in  ),
-    .drop   ( chcfg0_out )
-);
-
-jtopl_sh_rst #(.width(CHCSRW),.stages(3)) u_group1(
-    .clk    ( clk        ),
-    .cen    ( cen        ),
-    .rst    ( rst        ),
-    .din    ( chcfg1_in  ),
-    .drop   ( chcfg1_out )
-);
-
-jtopl_sh_rst #(.width(CHCSRW),.stages(3)) u_group2(
-    .clk    ( clk        ),
-    .cen    ( cen        ),
-    .rst    ( rst        ),
-    .din    ( chcfg2_in  ),
-    .drop   ( chcfg2_out )
-);
 
 endmodule

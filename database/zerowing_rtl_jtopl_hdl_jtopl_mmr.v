@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -88,15 +91,36 @@ localparam [7:0] REG_TESTYM  = 8'h01,
 reg  [ 7:0] selreg;       // selected register
 reg  [ 7:0] din_copy;
 reg         csm, effect;
+reg  [ 3:0] sel_ch;
 reg  [ 1:0] sel_group;     // group to update
 reg  [ 2:0] sel_sub;       // subslot to update
-reg         up_fnumlo, up_fnumhi, up_fbcon, 
+reg         up_fnumlo, up_fnumhi, up_fbcon,
             up_mult, up_ksl_tl, up_ar_dr, up_sl_rr,
             up_wav;
 reg         wave_mode,     // 1 if waveform selection is enabled (OPL2)
             csm_en,
             note_sel;      // keyboard split, not implemented
 reg  [ 4:0] rhy_kon;
+
+`ifdef SIMULATION
+always @(posedge clk) if( write && rst ) begin
+    $display("WARNING [JTOPL]: detected write request while in reset.\nThis is likely a glue-logic error in the CPU-FM module.");
+    $finish;
+end
+
+integer fdump,line_cnt=0;
+initial begin
+    fdump=$fopen("opl_wr.log","w");
+    if( fdump==0 ) begin
+        $display("Cannot create opl_wr.log");
+        $finish;
+    end
+end
+always @(posedge write) if(addr) begin
+    $fdisplay(fdump,"%d,%X,%X",line_cnt,selreg,din);
+    line_cnt <= line_cnt+1;
+end
+`endif
 
 // this runs at clk speed, no clock gating here
 // if I try to make this an async rst it fails to map it
@@ -105,6 +129,7 @@ always @(posedge clk) begin
     if( rst ) begin
         selreg    <= 8'h0;
         sel_group <= 2'd0;
+        sel_ch    <= 0;
         sel_sub   <= 3'd0;
         // Updaters
         up_fbcon  <= 0;
@@ -135,7 +160,7 @@ always @(posedge clk) begin
         // WRITE IN REGISTERS
         if( write ) begin
             if( !addr ) begin
-                selreg <= din;  
+                selreg <= din;
             end else begin
                 // Global registers
                 din_copy  <= din;
@@ -179,7 +204,7 @@ always @(posedge clk) begin
                         3'b111: up_wav    <= OPL_TYPE!=1;
                         default:;
                     endcase
-                end                
+                end
                 // Channel registers
                 if( selreg[3:0]<=4'd8) begin
                     case( selreg[7:4] )
@@ -196,6 +221,7 @@ always @(posedge clk) begin
                     // Channels 3-5 -> group 1
                     // Channels 6-8 -> group 2
                     // other        -> group 3 - ignored
+                    sel_ch    <= selreg[3:0];
                     sel_group <= selreg[3:0] < 4'd3 ? 2'd0 :
                                  selreg[3:0] < 4'd6 ? 2'd1 :
                                  selreg[3:0] < 4'd9 ? 2'd2 : 2'd3;
@@ -228,13 +254,14 @@ jtopl_reg #(.OPL_TYPE(OPL_TYPE)) u_reg(
     .group      ( group         ),
     .op         ( op            ),
     .slot       ( slot          ),
-    
+
+    .sel_ch     ( sel_ch        ),
     .sel_group  ( sel_group     ),     // group to update
     .sel_sub    ( sel_sub       ),     // subslot to update
 
     .rhy_en     ( rhy_en        ),
     .rhy_kon    ( rhy_kon       ),
-    
+
     //input           csm,
     //input           flag_A,
     //input           overflow_A,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 // https://github.com/jbush001/NyuziProcessor/blob/master/hardware/core/synchronizer.sv
 //
 // Copyright 2011-2015 Jeff Bush

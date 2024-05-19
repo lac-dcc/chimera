@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 /*
 
 Copyright 2019, The Regents of the University of California.

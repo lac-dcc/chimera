@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 `timescale 1ns/1ps
 /*
 t2pb[31:0]  [28]cut marking [27]cut numb [26]aging marking [25]identity

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simonmonk/prog_fpgas
+// License: MIT License
+
 module wav_player(
     input CLK,
     input switch_play,

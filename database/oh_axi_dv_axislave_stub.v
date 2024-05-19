@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module axislave_stub (/*AUTOARG*/
    // Outputs
    s_axi_arready, s_axi_awready, s_axi_bid, s_axi_bresp, s_axi_bvalid,

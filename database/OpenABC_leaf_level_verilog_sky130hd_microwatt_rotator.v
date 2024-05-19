@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module rotator(rs, ra, shift, insn, is_32bit, right_shift, arith, clear_left, clear_right, sign_ext_rs, result, carry_out);
   wire [31:0] _000_;
   wire [31:0] _001_;

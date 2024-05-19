@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module example;
     wire    y;
     reg     p01, p01g, s01, s01g;

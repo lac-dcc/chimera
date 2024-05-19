@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module evidence;
    reg [4:0] y = 5'h10;
    initial begin

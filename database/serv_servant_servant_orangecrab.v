@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 `default_nettype none
 module servant_orangecrab
 (
@@ -71,7 +74,7 @@ module servant_orangecrab
         .CLKOS2(),          // secondary output
         .CLKOS3(),          // secondary output
         .LOCK(pll_locked),  // lock indicator
-        .INTLOCK(),         // internal lock indictor
+        .INTLOCK(),         // internal lock indicator
         .REFCLK(),          // output of ref select mux
         .CLKINTFB()         // internal fb
     );

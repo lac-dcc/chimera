@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eminfedar/fedar-f1-rv64im
+// License: MIT License
+
 module Encoder_4 (
     input [3:0] in,
     output reg [1:0] out

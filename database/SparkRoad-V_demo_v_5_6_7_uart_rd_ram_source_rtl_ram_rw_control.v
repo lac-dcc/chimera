@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 module ram_rw_control
 (
 	input 	wire			clk_25m,		//外部输入25MHz时钟信号

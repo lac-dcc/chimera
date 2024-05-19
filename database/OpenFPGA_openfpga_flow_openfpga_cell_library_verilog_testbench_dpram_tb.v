@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------------------------------
 // Design Name : dual_port_ram_tb
 // File Name   : memory_wrapper_tb.v

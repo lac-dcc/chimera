@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This program block demonstrates that initial and final blocks
 // work, and that program variables work as well.
 program main;

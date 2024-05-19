@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module CPU(clk,reset,clk_ip,Pr_IP,Pr_RD,CPU_We,CPU_ADDR,CPU_WD);
 //input
     input clk;

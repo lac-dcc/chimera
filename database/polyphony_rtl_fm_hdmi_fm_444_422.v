@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Kenji-Ishimaru/polyphony
+// License: MIT License
+
 module fm_444_422 (
   clk_v,
   rst_x,

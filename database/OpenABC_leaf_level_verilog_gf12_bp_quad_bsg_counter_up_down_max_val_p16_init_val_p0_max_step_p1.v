@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_counter_up_down_max_val_p16_init_val_p0_max_step_p1
 (
   clk_i,

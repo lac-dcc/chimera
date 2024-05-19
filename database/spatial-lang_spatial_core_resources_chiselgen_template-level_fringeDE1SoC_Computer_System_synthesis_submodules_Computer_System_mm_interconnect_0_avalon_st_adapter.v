@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // Computer_System_mm_interconnect_0_avalon_st_adapter.v
 
 // This file was auto-generated from altera_avalon_st_adapter_hw.tcl.  If you edit it your changes

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/synlig
+// License: Apache License 2.0
+
 module prim_secded_64_57_enc (
   input        [56:0] data_i,
   output logic [63:0] data_o

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/suyashmahar/RISC-processor
+// License: MIT License
+
 //emacsclient -n +[line number] [file name]
 `timescale 1ns / 1ps
 

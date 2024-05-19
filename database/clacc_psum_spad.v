@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/taoyilee/clacc
+// License: MIT License
+
 module psum_spad(clk, addr, we, data_port);
 	// 24 * 16bit
 	input clk;

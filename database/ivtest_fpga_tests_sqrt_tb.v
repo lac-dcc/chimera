@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
  /*
   * This module is a test bench for the sqrt32 module. It runs some
   * test input values through the sqrt32 module, and checks that the

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA
+// License: Apache License 2.0
+
 //author: давным давно, в далекой-далекой галактике...
 `timescale 1ns / 1ns
 module delay_rg

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module multiplexer (in,out);
 input [3:0]in;
 output [6:0]out;

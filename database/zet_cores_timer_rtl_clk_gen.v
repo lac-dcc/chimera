@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  Phase accumulator clock generator:
  *   Output Frequency Fo = Fc * N / 2^bits

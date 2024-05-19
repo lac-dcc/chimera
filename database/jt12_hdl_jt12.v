@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt12
+// License: GNU General Public License v3.0
+
 /* This file is part of JT12.
 
 
@@ -77,7 +80,6 @@ jt12_top u_jt12(
     // Unused YM2203
     .IOA_in         ( 8'b0          ),
     .IOB_in         ( 8'b0          ),
-    .debug_view     (               ),
     .IOA_out        (               ),
     .IOB_out        (               ),
     .IOA_oe         (               ),

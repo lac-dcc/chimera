@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-Mini_GW
+// License: Apache License 2.0
+
 /*
  * Copyright (c) 2013, Stefan Kristiansson <stefan.kristiansson@saunalahti.fi>
  * All rights reserved.

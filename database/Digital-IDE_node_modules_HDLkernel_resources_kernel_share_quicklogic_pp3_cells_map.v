@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$_MUX8_ (
   A, B, C, D, E, F, G, H, S, T, U, Y
 );

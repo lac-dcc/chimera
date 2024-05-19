@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/johan92/yafpgatetris
+// License: MIT License
+
 `timescale 1ns/10ps
 module  pll_0002(
 

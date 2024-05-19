@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////////////////////////////////
 ////                                                             ////
 ////  Non-restoring signed by unsigned divider                   ////

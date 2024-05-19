@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 /*
  * servile_arbiter.v : I/D arbiter for the servile convenience wrapper.
  *  Relies on the fact that not ibus and dbus are active at the same time.

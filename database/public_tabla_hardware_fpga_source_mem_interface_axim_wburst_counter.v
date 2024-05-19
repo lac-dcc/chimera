@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 module wburst_counter #(
   parameter integer WBURST_COUNTER_LEN    = 16,
   parameter integer WBURST_LEN            = 4,

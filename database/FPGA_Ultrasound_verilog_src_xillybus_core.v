@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/waynezv/FPGA_Ultrasound
+// License: GNU General Public License v3.0
+
 module xillybus_core
   (
   input  M_AXI_ACP_ARREADY_w,

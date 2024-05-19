@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ika-musume/IKAOPM
+// License: BSD 2-Clause "Simplified" License
+
 module IKAOPM_timer (
     //master clock
     input   wire            i_EMUCLK, //emulator master clock

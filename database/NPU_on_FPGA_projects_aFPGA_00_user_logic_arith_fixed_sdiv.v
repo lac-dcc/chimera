@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 module fixed_sdiv
 #(parameter	DATA_WIDTH = 32,    // 数据位宽
   parameter	FRAC_WIDTH = 16,	// 小数部分

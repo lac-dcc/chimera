@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_counter_up_down_variable_max_val_p64_init_val_p64_max_step_p64
 (
   clk_i,

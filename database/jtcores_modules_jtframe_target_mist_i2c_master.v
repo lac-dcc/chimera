@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // taken and tweaked from MiSTer sys/
 module i2c_master
 (
@@ -55,7 +58,7 @@ end
 
 assign I2C_RDATA = rdata;
 
-always @(posedge CLK) begin
+always @(posedge CLK) begin : b0
 	reg old_clk;
 	reg old_st;
 	reg rd;

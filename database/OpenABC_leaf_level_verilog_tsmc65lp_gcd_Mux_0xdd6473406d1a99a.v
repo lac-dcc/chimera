@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module Mux_0xdd6473406d1a99a
 (
   input  wire [   0:0] clk,

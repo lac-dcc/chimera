@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module double_to_unsigned_int_tb;
   reg clk;
   reg [63:0] double_to_unsigned_int_a;

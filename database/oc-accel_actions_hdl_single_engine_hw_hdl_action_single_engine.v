@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OpenCAPI/oc-accel
+// License: Apache License 2.0
+
 /*
  * Copyright 2019 International Business Machines
  *

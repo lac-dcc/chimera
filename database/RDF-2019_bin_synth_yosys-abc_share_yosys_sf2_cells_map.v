@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module  \$_DFF_N_ (input D, C, output Q);
   SLE _TECHMAP_REPLACE_ (.D(D), .CLK(!C), .EN(1'b1), .ALn(1'b1), .ADn(1'b1), .SLn(1'b1), .SD(1'b0), .LAT(1'b0), .Q(Q));
 endmodule

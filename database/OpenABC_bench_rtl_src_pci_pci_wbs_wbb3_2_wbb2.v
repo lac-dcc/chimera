@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 //////////////////////////////////////////////////////////////////////
 ////                                                              ////
 ////  File name "pci_wbs_wbb3_2_wbb2.v"                           ////

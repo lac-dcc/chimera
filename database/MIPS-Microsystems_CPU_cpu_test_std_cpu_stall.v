@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module stall(
     input [31:0] Instr_ID, Instr_EX, Instr_MEM,
     input [4:0] RegA3_EX, RegA3_MEM,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-----------------------------------------------------------------------------
 //-- Divisor de frecuencia entre 3
 //-- (c) BQ. August 2015. written by Juan Gonzalez (obijuan)

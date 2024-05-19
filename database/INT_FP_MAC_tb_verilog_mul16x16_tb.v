@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module mul16x16_tb ();
 reg  [15:0] a;
 reg  [15:0] b;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 // anabellek_denetleyici.v
 `timescale 1ns / 1ps
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 module loopback_tb;
 
   parameter READ_ADDR_BASE_0    = 32'h10000000;

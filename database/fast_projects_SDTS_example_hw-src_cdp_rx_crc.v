@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //139 to rx crc,16 FIFO;
 //by jzc 20101020;
 `timescale 1ns/1ns

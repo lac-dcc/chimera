@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* hashvariant-C.v needs salsa-B.v - pipelined 2x clock speed (interleaving hashes)
 *
 * Copyright (c) 2013 kramble

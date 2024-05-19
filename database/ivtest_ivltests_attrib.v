@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This test program is mostly about the parser parsing the attribute
 // attached to the main.dut.Q reg below.
 

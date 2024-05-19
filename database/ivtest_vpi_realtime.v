@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 `timescale 1 ms / 1 ps
 module test;
     initial begin

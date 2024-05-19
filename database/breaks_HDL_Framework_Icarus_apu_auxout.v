@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Simple DAC
 
 module AUX (AUX_A, AUX_B, AOut, BOut);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // Konami 007452 "VRC&DMP"
 // Reverse-engineered from silicon - See schematic
 // furrtek 2021

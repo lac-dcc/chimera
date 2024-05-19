@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/embmicro/mojo-base-project
+// License: MIT License
+
 module avr_interface #(
     parameter CLK_RATE = 50000000,
     parameter SERIAL_BAUD_RATE = 500000

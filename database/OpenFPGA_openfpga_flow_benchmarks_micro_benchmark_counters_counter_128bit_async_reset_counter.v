@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 ///////////////////////////////////////////
 //  Functionality: Counter with asynchronous reset
 //  Author:        Xifan Tang

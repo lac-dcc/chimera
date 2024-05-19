@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 module Gowin_PLLVR (clkout, clkin, lock_o, reset, reset_p, clkfb, clkoutd_o, fdiv, idiv, odiv);
 
 output wire clkout;

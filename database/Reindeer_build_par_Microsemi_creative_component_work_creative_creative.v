@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/PulseRain/Reindeer
+// License: Apache License 2.0
+
 //////////////////////////////////////////////////////////////////////
 // Created by SmartDesign Sat Dec 22 16:32:38 2018
 // Version: v11.9 SP1 11.9.1.0

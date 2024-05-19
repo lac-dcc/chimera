@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$__NX_MUL36X36 (input [35:0] A, input [35:0] B, output [71:0] Y);
 
 	parameter A_WIDTH = 36;

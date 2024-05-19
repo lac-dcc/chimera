@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/secworks/aes
+// License: BSD 2-Clause "Simplified" License
+
 //======================================================================
 //
 // aes_inv_sbox.v

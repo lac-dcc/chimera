@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rj45/rj32
+// License: MIT License
+
 /******************************************************************************
    From: https://github.com/RichardPar/SDRAM_Controller_Verilog
    Orignal source: https://github.com/alchitry/Alchitry-Labs/

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hipersys-team/lightning
+// License: MIT License
+
 // Language: Verilog 2001
 
 

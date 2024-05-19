@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 //8-bit Shift register with shift_enable
 
 module shift_reg

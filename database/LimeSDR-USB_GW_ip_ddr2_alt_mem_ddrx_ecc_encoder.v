@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-USB_GW
+// License: Apache License 2.0
+
 //altera message_off 10036
 
 `timescale 1 ps / 1 ps

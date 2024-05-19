@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lucysrausch/colorlight-led-cube
+// License: GNU General Public License v3.0
+
 module udp_panel_writer
                       #(parameter PORT_MSB = 16'h66)
                        (input  wire          clock,

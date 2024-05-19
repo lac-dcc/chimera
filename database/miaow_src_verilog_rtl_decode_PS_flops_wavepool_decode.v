@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module PS_flops_wavepool_decode (
  wave_instr_pc,
  wave_instr_valid,

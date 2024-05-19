@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module testbench;
   // This should give us a vector of [-1:0] (A == 0).
   parameter A = $clog2(1);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 ///////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 1995/2004 Xilinx, Inc.
 // All Right Reserved.

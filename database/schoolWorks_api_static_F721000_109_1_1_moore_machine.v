@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 `define TimeExpire 32'd25000000
 module clk_div (clk,rst,counter,div_clk);
 input clk,rst;

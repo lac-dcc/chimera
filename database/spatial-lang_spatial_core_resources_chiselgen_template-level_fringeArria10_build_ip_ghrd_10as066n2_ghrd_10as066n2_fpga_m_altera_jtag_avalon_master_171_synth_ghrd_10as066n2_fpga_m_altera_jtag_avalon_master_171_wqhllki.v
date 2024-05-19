@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // ghrd_10as066n2_fpga_m_altera_jtag_avalon_master_171_wqhllki.v
 
 // This file was auto-generated from altera_jtag_avalon_master_hw.tcl.  If you edit it your changes

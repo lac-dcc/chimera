@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marceluda/rp_lock-in_pid
+// License: GNU General Public License v3.0
+
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015

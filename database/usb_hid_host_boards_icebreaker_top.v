@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nand2mario/usb_hid_host
+// License: Apache License 2.0
+
 //
 // Example using the usb_hid_host core, for iCEBreaker board
 // based on the icesugar-pro example by nand2mario, 9/2023

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module Reg_8bit(Q,D,load,clk,rst);
 
 output	[7:0]Q;

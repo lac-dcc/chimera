@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/colognechip/gatemate_ila
+// License: GNU General Public License v3.0
+
 // last changed 15.11.2016
 
 //	single_error | double_error  | condition

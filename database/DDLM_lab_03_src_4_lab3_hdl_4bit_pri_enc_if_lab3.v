@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b4_pri_enc_if(
    input [15:0] encoder_in,
    output reg [3:0] binary_out,

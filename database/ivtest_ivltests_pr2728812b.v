@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 `timescale 1ns/1ns
 
 // Run this with -pRECURSIVE_MOD_LIMIT=5 to keep the output file small.

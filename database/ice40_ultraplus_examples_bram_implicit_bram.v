@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 //this should be transformed into a bram when doing a synthesis in yosys 0.8
 //and it should be equivalent to the explicit_bram.v
 

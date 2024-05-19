@@ -1,8 +1,0 @@
-`undef XSDB_SLV_DIS
-`undef FPGA
-`undef SYNTHESIS
-`undef DESIGNWARE_NOEXIST
-`undef VLIB_BYPASS_POWER_CG
-`undef NV_FPGA_SYSTEM
-`undef NV_FPGA_FIFOGEN
-`undef NV_FPGA_UNIT

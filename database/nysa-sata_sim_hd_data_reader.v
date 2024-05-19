@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 module hd_data_reader (
     input           clk,
     input           rst,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/time-sleuth
+// License: MIT License
+
 typedef struct packed {
     reg [7:0] id;
     

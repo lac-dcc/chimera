@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module mux_2_to_1 (out, in, select);
 
   parameter WIDTH = 1;

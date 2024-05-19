@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/im-tomu/fomu-workshop
+// License: Apache License 2.0
+
 module clkgen (
   input  wire       clk,
   output wire [2:0] cnt

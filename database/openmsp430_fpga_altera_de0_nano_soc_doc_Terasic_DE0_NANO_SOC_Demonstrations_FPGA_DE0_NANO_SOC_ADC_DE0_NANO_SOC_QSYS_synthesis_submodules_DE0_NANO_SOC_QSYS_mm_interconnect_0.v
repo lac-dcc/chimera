@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 // DE0_NANO_SOC_QSYS_mm_interconnect_0.v
 
 // This file was auto-generated from altera_mm_interconnect_hw.tcl.  If you edit it your changes

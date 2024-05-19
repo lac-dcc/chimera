@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 `define SYNTHESIS 1
 `define VIVADO 1  // for 7-series and above
 `define HIGH_SPEED 1  // Minimum DDR3-1600 operating frequency >= 303MHz

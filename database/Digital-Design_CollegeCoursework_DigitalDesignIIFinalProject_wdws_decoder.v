@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 /******************************************************************
  Title       : wdws_decoder.v	     		 
  Design      : Walk/Don't Walk Light Decoder (*Sensor Mode)

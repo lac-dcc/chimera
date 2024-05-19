@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 `timescale 100ns/100ps
 module dummy;
   parameter [1:0] ipval = 2;

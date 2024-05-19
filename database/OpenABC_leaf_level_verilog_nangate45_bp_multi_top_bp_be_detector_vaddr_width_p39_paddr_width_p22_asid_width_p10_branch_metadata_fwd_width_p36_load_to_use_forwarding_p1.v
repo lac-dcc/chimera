@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_be_detector_vaddr_width_p39_paddr_width_p22_asid_width_p10_branch_metadata_fwd_width_p36_load_to_use_forwarding_p1
 (
   clk_i,

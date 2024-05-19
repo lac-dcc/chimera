@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // When triggered, turn the output to maximum and start fading to black
 
 // by teknohog

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b11_seven_seg(
   input [3:0] binary_in,
   output reg [6:0] hex_out

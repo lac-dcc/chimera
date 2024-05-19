@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 //-----------------------------------------------------
 // Design Name : mux_using_case
 // File Name   : mux_using_case.v

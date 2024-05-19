@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // DECO VSC30
 // RE and HDL by furrtek 05/2022
 // Chip provided by Caius

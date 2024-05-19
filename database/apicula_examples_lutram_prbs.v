@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 // Author: Niels A. Moseley, n.a.moseley@moseleyinstruments.com
 
 `default_nettype none

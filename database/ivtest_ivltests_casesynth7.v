@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Incomplete case statements in asynchronous logic are dangerous in
 // synthesisable code, as in real hardware the inferred latch will be
 // sensitive to glitches as the case select value changes. Check that

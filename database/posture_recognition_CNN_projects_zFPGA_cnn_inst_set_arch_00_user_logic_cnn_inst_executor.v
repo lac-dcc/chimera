@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // CNN指令集架构的执行器
 module cnn_inst_executor
 #(parameter	DATA_WIDTH = 32,    // 数据位宽

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 module cmos_8_16bit(
 	input              rst,
 	input              pclk,

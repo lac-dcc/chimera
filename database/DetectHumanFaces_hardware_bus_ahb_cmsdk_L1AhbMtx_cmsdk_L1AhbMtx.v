@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 //-----------------------------------------------------------------------------
 // The confidential and proprietary information contained in this file may
 // only be used by a person authorised under and to the extent permitted

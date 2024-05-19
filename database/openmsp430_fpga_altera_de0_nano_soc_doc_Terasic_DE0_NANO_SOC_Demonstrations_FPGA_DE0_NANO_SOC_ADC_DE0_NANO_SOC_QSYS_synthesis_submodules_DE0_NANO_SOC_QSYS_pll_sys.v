@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 `timescale 1ns/10ps
 module  DE0_NANO_SOC_QSYS_pll_sys(
 

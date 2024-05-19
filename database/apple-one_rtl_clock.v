@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alangarf/apple-one
+// License: Apache License 2.0
+
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
 // distributed with this work for additional information

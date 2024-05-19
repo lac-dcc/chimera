@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg [10*8-1:0] str [2:0];
   reg [31:0] idx [2:0];

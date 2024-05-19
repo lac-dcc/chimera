@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module \$__M9K_ALTSYNCRAM_SINGLEPORT_FULL (CLK2, CLK3, A1ADDR, A1DATA, A1EN, B1ADDR, B1DATA, B1EN);
 
    parameter CFG_ABITS = 8;

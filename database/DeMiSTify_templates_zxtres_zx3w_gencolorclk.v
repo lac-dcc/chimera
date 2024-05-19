@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 //////////////////////////////////////////////////////////////////////////////////
 //    This file is gencolorclk
 //    Creation date is 21:39:48 07/31/2020 by Miguel Angel Rodriguez Jodar

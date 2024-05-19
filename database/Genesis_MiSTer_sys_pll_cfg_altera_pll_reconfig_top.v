@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Genesis_MiSTer
+// License: GNU General Public License v3.0
+
 // (C) 2001-2017 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module sum_and_max
 #(parameter DATA_WIDTH=8,
 parameter LENGTH=10)

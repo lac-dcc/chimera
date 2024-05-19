@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 `timescale 1ns/10ps
 module  vga_pll_0002(
 

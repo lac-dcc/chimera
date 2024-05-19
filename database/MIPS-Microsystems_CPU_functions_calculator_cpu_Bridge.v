@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module Bridge(We,IRQ_Timer,IRQ_UART,IRQ_Switch,IRQ_Key,ADDR,WD,Timer_RD,UART_RD,Switch_RD,LED_RD,Tube_RD,Key_RD,Pr_IP,Pr_RD,PrWe,CS,Pr_ADDR,Pr_WD,UART_ADDR);
 //input
     input We;                //whether to write peripheral devices

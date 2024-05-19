@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //Blitter fill logic
 //The fill logic module has 2 modes,inclusive fill and exclusive fill.
 //Both share the same xor operation but in inclusive fill mode,

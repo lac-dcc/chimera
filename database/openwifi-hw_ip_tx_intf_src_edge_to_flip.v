@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 // Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 
 module edge_to_flip

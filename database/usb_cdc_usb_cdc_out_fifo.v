@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ulixxe/usb_cdc
+// License: MIT License
+
 //  USB 2.0 full speed OUT FIFO.
 //  Written in verilog 2001
 

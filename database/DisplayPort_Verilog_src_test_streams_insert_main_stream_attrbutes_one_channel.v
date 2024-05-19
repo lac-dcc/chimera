@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hamsternz/DisplayPort_Verilog
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // ./src/test_streams/insert_main_stream_attrbutes_one_channel.v : 
 //

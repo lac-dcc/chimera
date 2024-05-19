@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 `default_nettype none
 // Two PLLs, one dynamic - frequencies are switched by pressing key2
 //                           / press key2

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/The-OpenROAD-Project/OpenROAD
+// License: BSD 3-Clause "New" or "Revised" License
+
 // reg4 but with reversed bus order for in
 module reg5 (out,
     clk,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module wishbone_debug_master(clk, rst, dmi_addr, dmi_din, dmi_req, dmi_wr, \wb_in.dat , \wb_in.ack , \wb_in.stall , dmi_dout, dmi_ack, \wb_out.adr , \wb_out.dat , \wb_out.sel , \wb_out.cyc , \wb_out.stb , \wb_out.we );
   wire _00_;
   wire _01_;

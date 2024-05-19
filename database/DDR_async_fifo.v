@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 // Credits to:
 // https://github.com/jbush001/NyuziProcessor/blob/master/hardware/fpga/common/async_fifo.sv
 // https://github.com/ZipCPU/website/blob/master/examples/afifo.v

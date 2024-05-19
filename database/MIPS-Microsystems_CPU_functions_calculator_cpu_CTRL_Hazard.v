@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module HARZARD_CTRL(A1_D,A2_D,ALU_B_Sel_D,both_D,single_D,md_D,A1_E,A2_E,A3_E,RFWe_E,Ready_E,load_E,Start,Busy,A1_M,A2_M,A3_M,RFWe_M,load_M,A3_W,RFWe_W,RS_D_Sel,RT_D_Sel,RS_E_Sel,RT_E_Sel,RS_M_Sel,RT_M_Sel,stall);
 //Input
 //D

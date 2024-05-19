@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/Neogeo_MiSTer_old
+// License: GNU General Public License v2.0
+
 //
 // TV80 8-Bit Microprocessor Core
 // Based on the VHDL T80 core by Daniel Wallner (jesus@opencores.org)

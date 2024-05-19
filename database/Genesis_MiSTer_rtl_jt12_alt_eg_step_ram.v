@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Genesis_MiSTer
+// License: GNU General Public License v3.0
+
 /*
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical  |

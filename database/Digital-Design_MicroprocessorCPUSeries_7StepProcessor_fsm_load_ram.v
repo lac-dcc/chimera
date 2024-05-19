@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // Created by David J. Marion
 // Date: 5.2.2023
 // Updated: 6.7.2023 for CPU_B (added a reset input)

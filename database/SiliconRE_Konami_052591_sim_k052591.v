@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // Konami 052591 PMC model
 // 2023 furrtek
 // For simulation only

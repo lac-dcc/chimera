@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // It looks a little sloppy, but if you'd seen the silicon, you'd understand why.
 
 module ApuPadsLogic(

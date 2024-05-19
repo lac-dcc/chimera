@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module FS_Top (isCorner, compare, refAddr, refPixel, adjPixel, thres, scoreValue, wren);
 	input isCorner; // Corner 확인
 	input [31:0] compare; // DARK, BRIGHT, SIMILAR 값

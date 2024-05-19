@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/DreamcastHDMI
+// License: MIT License
+
 // megafunction wizard: %ALTPLL_RECONFIG%
 // GENERATION: STANDARD
 // VERSION: WM1.0

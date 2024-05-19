@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 ////
 //// The following was written to illustrate a bug in iverilog.
 //// In particular, this little lovely produces a 202 MB vvp file.

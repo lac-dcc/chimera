@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 // The lfsr example
 // Using polynomials with max-len lfsr value 
 // f(x)=x^8+x^6+x^5+x^4=1

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module ALU( // @[:freechips.rocketchip.system.TinyConfig.fir@123304.2]
   input  [3:0]  io_fn, // @[:freechips.rocketchip.system.TinyConfig.fir@123307.4]
   input  [31:0] io_in2, // @[:freechips.rocketchip.system.TinyConfig.fir@123307.4]

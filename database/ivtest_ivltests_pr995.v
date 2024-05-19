@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test runs the random number generator to make sure
  * it follows the standard algorithm. It is based on the bug

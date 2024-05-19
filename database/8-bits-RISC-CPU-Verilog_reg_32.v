@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/liuqdev/8-bits-RISC-CPU-Verilog
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 module reg_32(in, data, write, read, addr, clk);

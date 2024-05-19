@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MahmouodMagdi/Clock-Domain-Crossing-Synchronizers
+// License: MIT License
+
 module MUX_2X1 (
 
 	input  wire in0,

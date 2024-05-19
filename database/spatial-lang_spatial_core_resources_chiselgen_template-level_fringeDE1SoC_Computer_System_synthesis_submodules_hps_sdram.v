@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // hps_sdram.v
 
 // This file was auto-generated from altera_mem_if_hps_emif_hw.tcl.  If you edit it your changes

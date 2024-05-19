@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 module interim_buffer #(
     parameter addrLen = 6,
 	parameter dataLen = 32,

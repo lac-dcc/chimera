@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module MAIN_CTRL(Ins,RD1,RD2,AO,NPCOp,EXTOp,ALUOp,MDOp,RF_A3_Sel,RF_WD_Sel,ALU_B_Sel,PC_Sel,RD_RAW_Sel,RFWe,DMWe,CP0We,load,both,single,Ready_E,byte_op,half_op,unsigned_op,Start,md,lwr,mfc0,eret,undef,branch,flow_sus,EXL_Clr);
 //interface
 	input [31:0] Ins;

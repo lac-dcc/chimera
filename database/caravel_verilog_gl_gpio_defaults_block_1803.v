@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel
+// License: Apache License 2.0
+
 module gpio_defaults_block_1803 (VGND,
     VPWR,
     gpio_defaults);

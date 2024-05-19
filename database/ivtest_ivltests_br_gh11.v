@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Taken from GitHub issue 11 : Syntax error on operator attributes.
 
 module test(input [3:0] a, b, output [3:0] y1, y2, y3);

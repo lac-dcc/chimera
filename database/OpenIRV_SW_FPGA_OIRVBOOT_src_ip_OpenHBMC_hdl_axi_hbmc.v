@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OVGN/OpenIRV
+// License: Apache License 2.0
+
 /* 
  * ----------------------------------------------------------------------------
  *  Project:  OpenHBMC

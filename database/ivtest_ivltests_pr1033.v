@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * Test case showing the failure of the 'less than or equal' operator (note
  * that the 'greather than or equal' comparison also fails) on two signed

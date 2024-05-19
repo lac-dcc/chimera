@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/fpu
+// License: MIT License
+
 //IEEE Floating Point to Integer Converter (Double Precision)
 //Copyright (C) Jonathan P Dawson 2014
 //2014-01-11

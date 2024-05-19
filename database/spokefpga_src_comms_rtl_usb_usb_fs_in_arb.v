@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 module usb_fs_in_arb #(
   parameter NUM_IN_EPS = 1
 ) (

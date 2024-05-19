@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/raymondrc/FPGA-SM3-HASH
+// License: MIT License
+
 /*
  * File: barrel_shifter.v
  * Project: rtl

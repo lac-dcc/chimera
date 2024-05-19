@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module example;
     reg  [2:0] rhs;
     wire [5:0] lhs = - rhs;

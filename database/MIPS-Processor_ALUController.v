@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module ALUControlUnit (Operation, FuncField, ALUOp);
 	input [5:0] FuncField;
 	input [1:0] ALUOp;

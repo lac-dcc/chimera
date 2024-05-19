@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 module jtag_driver #(
     parameter DMI_ADDR_BITS = 6,
     parameter DMI_DATA_BITS = 32,

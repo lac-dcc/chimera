@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This program doesn't do anything, and shouldn't be run. This is
  * only to check that the null target can see the ternary operator.

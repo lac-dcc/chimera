@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_mux_width_p1_els_p4_harden_p1_balanced_p1
 (
   data_i,

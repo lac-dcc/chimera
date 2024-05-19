@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module designware_mult (clock, reset, in0, in1, out);
 
 parameter IN0_BIT_WIDTH = 16;

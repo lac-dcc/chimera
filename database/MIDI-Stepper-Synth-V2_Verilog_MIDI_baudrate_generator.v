@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jzkmath/MIDI-Stepper-Synth-V2
+// License: GNU General Public License v3.0
+
 /*Imagine that the baud rate you want to work with is 9600. The clock of my
 FPGA is 50MHz. If we want the "TICKS" to ahev 16 times the frequency of the UART signal
 we need a frequency 16 times the 9600Hz. 

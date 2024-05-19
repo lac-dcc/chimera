@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // dpram_inf_256x32.v
 // 2015, rok.krajnc@gmail.com
 // inferrable dual-port memory

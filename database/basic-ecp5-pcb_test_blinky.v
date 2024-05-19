@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/mattvenn/basic-ecp5-pcb
+// License: Creative Commons Zero v1.0 Universal
+
 `default_nettype none
 module top(
     input wire clk,

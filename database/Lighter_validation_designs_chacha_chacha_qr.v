@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AUCOHL/Lighter
+// License: Apache License 2.0
+
 //======================================================================
 //
 // chacha_qr.v

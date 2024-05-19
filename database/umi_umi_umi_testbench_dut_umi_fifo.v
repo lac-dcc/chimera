@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeroasiccorp/umi
+// License: Apache License 2.0
+
 module dut_umi_fifo
   #(parameter TARGET   = "DEFAULT", // synthesis target
     parameter MONITOR  = 1,         // turn on umi monitor

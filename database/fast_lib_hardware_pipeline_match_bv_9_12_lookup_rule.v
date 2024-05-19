@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 `timescale 1ns/1ps
 /*
 ACTION[15:0] [15] encap LISP head pkt [15]disencap lisp head pk t[13]replce MAC ADDR [12]transmit port number   [11:8]resv [7:0]output port number

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 module aq_axi_master_cam(
   // Reset, Clock
   input           ARESETN,

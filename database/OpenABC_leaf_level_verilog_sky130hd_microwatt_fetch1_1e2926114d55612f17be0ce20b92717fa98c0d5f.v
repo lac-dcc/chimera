@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module fetch1_1e2926114d55612f17be0ce20b92717fa98c0d5f(clk, rst, stall_in, flush_in, inval_btc, stop_in, alt_reset_in, \w_in.redirect , \w_in.virt_mode , \w_in.priv_mode , \w_in.big_endian , \w_in.mode_32bit , \w_in.redirect_nia , \w_in.br_nia , \w_in.br_last , \w_in.br_taken , \d_in.redirect , \d_in.redirect_nia , \i_out.req , \i_out.virt_mode , \i_out.priv_mode , \i_out.big_endian , \i_out.stop_mark , \i_out.predicted , \i_out.pred_ntaken , \i_out.nia , log_out);
   wire _00_;
   wire _01_;

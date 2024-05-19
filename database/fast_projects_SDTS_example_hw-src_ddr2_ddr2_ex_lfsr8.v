@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //
 module ddr2_ex_lfsr8 (
 clk, reset_n, enable, pause, load, data, ldata);

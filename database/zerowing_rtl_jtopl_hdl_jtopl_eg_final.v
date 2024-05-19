@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -31,15 +34,16 @@ module jtopl_eg_final(
     output reg [9:0] eg_limited
 );
 
-reg [ 5:0] am_final;
-reg [11:0] sum_eg_tl;
-reg [11:0] sum_eg_tl_am;
-reg [ 8:0] ksl_dB;
-reg [ 6:0] ksl_lut[0:15];
-reg [ 7:0] ksl_base;
+reg  [ 5:0] am_final;
+reg  [11:0] sum_eg_tl;
+reg  [11:0] sum_eg_tl_am;
+reg  [ 8:0] ksl_dB;
+reg  [ 6:0] ksl_lut[0:15];
+wire [ 7:0] ksl_base;
+
+assign ksl_base = {1'b0, ksl_lut[fnum]}- { 1'b0, 4'd8-{1'b0,block}, 3'b0 };
 
 always @(*) begin
-    ksl_base = {1'b0, ksl_lut[fnum]}- { 1'b0, 4'd8-{1'b0,block}, 3'b0 };
     if( ksl_base[7] || ksl==2'b0 ) begin
         ksl_dB = 9'd0;
     end else begin

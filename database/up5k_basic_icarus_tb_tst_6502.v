@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // tb_tst_6502.v - testbench for test 6502 core
 // 02-11-19 E. Brombaugh
 

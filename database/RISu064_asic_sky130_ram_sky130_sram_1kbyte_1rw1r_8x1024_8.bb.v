@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zephray/RISu064
+// License: MIT License
+
 // OpenRAM SRAM model
 // Words: 1024
 // Word size: 8

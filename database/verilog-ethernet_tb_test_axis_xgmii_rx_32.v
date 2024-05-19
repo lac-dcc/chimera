@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alexforencich/verilog-ethernet
+// License: MIT License
+
 /*
 
 Copyright (c) 2015-2017 Alex Forencich

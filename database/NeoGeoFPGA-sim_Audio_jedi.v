@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neogeodev/NeoGeoFPGA-sim
+// License: GNU General Public License v3.0
+
 module jedi_lut (
 	output reg [15:0] dout,
 	input [13:0] address

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module eth_crc (Clk, Reset, Data, Enable, Initialize, Crc, CrcError);
 
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // This module is originally from this repo:
 // https://github.com/emard/ulx3s-misc/tree/master/examples/audio/hdl
 

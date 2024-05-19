@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 //manualy using the bram to implement a small memory
 
 module explicit_bram(input wire clk, input wire rd_en, input wire wr_en, input wire [7:0] rd_addr, input wire [7:0] wr_addr, input wire [15:0] data_in, output reg [15:0] data_out, output reg valid_out);

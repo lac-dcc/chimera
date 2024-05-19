@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/vipinkmenon/neuralNetwork
+// License: MIT License
+
 module ReLU  #(parameter dataWidth=16,weightIntWidth=4) (
     input           clk,
     input   [2*dataWidth-1:0]   x,

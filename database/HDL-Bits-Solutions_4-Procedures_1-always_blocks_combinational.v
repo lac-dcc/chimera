@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 // synthesis verilog_input_version verilog_2001
 module top_module(
     input a, 

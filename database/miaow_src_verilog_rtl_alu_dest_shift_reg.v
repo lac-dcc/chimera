@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dest_shift_reg (
  alu_vgpr_dest_data,
  alu_sgpr_dest_data,

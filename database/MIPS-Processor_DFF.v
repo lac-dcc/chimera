@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module dff_async_clear(q, d, clk, reset);
 	input d, reset, clk;
 	output q;

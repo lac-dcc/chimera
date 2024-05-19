@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // Divide 16-bit Celsius X 9 temperature by a constant of 5
 // and output an 8-bit value
 //

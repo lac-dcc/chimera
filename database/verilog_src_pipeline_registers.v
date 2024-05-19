@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/seldridge/verilog
+// License: Apache License 2.0
+
 // Copyright 2018 Schuyler Eldridge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

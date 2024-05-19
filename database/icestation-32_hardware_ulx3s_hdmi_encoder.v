@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // This module provides HDMI suitable output from VGA-like input
 // Original repo: https://github.com/emard/ulx3s_zx_spectrum/blob/master/src/hdmi.v
 

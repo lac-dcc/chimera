@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 module slave_receive # (
 	parameter comm_clk_frequency = 100000000,
 	parameter baud_rate = 115200

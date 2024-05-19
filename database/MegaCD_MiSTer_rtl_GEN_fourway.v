@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/MegaCD_MiSTer
+// License: GNU General Public License v3.0
+
 // Copyright (c) 2019 Sorgelig
 //
 // All rights reserved

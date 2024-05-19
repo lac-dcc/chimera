@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/NeoGeo_MiSTer
+// License: GNU General Public License v2.0
+
 // NeoGeo logic definition
 // Copyright (C) 2018 Sean Gonsalves
 // Rewrite to fully synchronous logic by (C) 2023 Gyorgy Szombathelyi

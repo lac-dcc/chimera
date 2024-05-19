@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/HeLiangHIT/polyphase_filter_prj
+// License: MIT License
+
 //***********************************************************
 //频、相可调，任意波形信号发生器系统设计
 //实现频率、相位可调，正弦波，方波，锯齿波，三角波信号发生

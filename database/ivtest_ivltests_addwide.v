@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // (c) Alex.Perry@qm.com - 2002, Quantum Magnetics Inc, San Diego CA
 // This source file is licensed under the GNU public license version 2.0
 // All other rights reserved.

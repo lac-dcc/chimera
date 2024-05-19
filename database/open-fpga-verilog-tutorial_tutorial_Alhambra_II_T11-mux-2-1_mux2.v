@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-----------------------------------------------------------------------------
 //-- mux2.v  Secuenciador de dos estados con multiplexor
 //-- Sacar por los leds dos datos de 4 bits alternativamente para generar una

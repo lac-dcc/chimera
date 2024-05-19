@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-pong
+// License: MIT License
+
 //
 // bridge host/target command handler
 // 2022 Analogue

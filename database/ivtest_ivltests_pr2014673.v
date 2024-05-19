@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // I ran this with "iverilog -y. bugreport.v -s bugreport && ./a.out"
 // on Icarus Verilog version 0.9.devel (s20080429)
 // and got "Bug observed: Got xxxxx, expected 0004b."

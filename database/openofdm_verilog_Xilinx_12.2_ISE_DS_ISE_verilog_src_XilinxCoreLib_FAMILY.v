@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /* $Header: /devl/xcs/repo/env/Databases/ip/src/com/xilinx/ip/unisim/simulation/FAMILY.v,v 1.19 2008/09/08 20:10:25 akennedy Exp $
 --
 -- Description - 

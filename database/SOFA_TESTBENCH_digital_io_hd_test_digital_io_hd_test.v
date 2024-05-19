@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 //-------------------------------------------
 //  Verilog Testbench for Verifying a digital I/O cell
 //  Description: This test is applicable to the embedded I/O cell

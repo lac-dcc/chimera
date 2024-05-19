@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/adumont/hrm-cpu
+// License: GNU General Public License v3.0
+
 `default_nettype none
 
 // Use of `define allows override from iverilog using -Dkey=value

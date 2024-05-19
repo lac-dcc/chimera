@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 `timescale 1 ns / 1 ps
 module testbench;
 

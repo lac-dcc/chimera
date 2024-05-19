@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter weq1 = 2'b01 ==? 2'b01;
   parameter weq2 = 2'b01 ==? 2'b00;

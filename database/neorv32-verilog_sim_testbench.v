@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stnolting/neorv32-verilog
+// License: BSD 3-Clause "New" or "Revised" License
+
 // simple testbench to check the default NEORV32 Verilog wrapper
 // checks for the initial UART output of the bootloader ("NEORV32")
 

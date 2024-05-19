@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 module top (
 	fpga_clk_50,
   //	fpga_reset_n,

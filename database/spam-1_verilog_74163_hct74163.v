@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Johnlon/spam-1
+// License: Mozilla Public License 2.0
+
 // License: Mozilla Public License : Version 2.0
 // Author : John Lonergan
 `ifndef  V_74163

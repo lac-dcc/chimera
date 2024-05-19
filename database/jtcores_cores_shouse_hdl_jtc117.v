@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -218,8 +221,8 @@ module jtc117_unit(
 
     reg pre_o;
 
-    always @(posedge clk, posedge rst) begin
-        if( rst ) begin
+    always @(posedge clk) begin
+        if( rst | !wdogn ) begin
             orstn  <= 0;
             firq_n <= 1;
             oirq   <= 0;
@@ -231,6 +234,7 @@ module jtc117_unit(
             banks[6] <= 10'h180; banks[7] <= 10'h3FF;
             wdog_cnt <= 0;
             pre_o    <= 0;
+            if (vb_edge) wdogn    <= 1;
         end else begin
             oirq  <= 0;
             obank <= 0;

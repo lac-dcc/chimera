@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module Tube(clk,reset,We,ADDR,Tube_WD,digital_tube0,digital_tube1,digital_tube2,digital_Sel0,digital_Sel1,digital_Sel2,Tube_RD);
 //input     
     input clk;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 `timescale 1 ns / 1 ns
 module short(inout [7:0] p, input en);
 	assign p = en ? 8'h55 : 8'hzz;

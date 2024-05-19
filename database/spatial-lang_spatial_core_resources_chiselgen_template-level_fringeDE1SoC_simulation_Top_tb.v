@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module Top_tb;
 	reg clk, reset_n;
 	reg [15:0] addr;

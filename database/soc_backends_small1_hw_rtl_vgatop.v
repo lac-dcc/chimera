@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 
 // Must synthesize into 3 * 8x2048 brams
 module vram(input clk,

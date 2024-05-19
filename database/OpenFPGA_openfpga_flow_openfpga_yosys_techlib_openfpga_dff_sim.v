@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 (* abc9_flop, lib_whitebox *)
 module dff(
     output reg Q,

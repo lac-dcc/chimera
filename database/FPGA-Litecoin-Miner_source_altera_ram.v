@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // altera_ram.v this now takes parameter ADDRBITS to set size
 // Use ADDRBITS = 10 for 1024 words, 9 for 512 (halfram)
 // NB since I HAVE edited this file (contrary to the warning

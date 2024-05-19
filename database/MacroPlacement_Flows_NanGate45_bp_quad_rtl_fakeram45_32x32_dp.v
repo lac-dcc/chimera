@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TILOS-AI-Institute/MacroPlacement
+// License: BSD 3-Clause "New" or "Revised" License
+
 // Dummy dual port memory using two single port memories
 module fakeram_32x32_dp
 (

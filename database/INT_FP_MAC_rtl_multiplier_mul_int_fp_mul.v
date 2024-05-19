@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module int_fp_mul (
 `ifdef PIPLINE
     input         clk,

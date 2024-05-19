@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module LUT1(output F, input I0);
 	parameter [1:0] INIT = 0;
 	assign F = I0 ? INIT[1] : INIT[0];

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/sergeykhbr/riscv_vhdl
+// License: Apache License 2.0
+
 //*****************************************************************************
 // (c) Copyright 2008 - 2013 Xilinx, Inc. All rights reserved.
 //

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 `default_nettype none
 module serv_csr
   #(
@@ -94,7 +97,7 @@ module serv_csr
        During a mstatus CSR access instruction it's assigned when
         bit 3 gets updated
 
-       These conditions are all mutually exclusibe
+       These conditions are all mutually exclusive
        */
       if ((i_trap & i_cnt_done) | i_mstatus_en & i_cnt3 & i_en | i_mret)
 	mstatus_mie <= !i_trap & (i_mret ?  mstatus_mpie : csr_in[B]);

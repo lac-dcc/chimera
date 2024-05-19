@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Testing the Envelope Unit.
 
 // The simulation of LFO generation is artificially tweaked to trigger more frequently.

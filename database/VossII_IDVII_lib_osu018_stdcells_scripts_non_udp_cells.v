@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 // Modified version of OSU's TSMC 18nm stdcell library.
 
 module dummy(A, B, C, D, EN, Y, YC, YS);

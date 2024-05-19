@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module OBUFDS_GTE3_ADV #(
   `ifdef XIL_TIMING //Simprim 
   parameter LOC = "UNPLACED",  

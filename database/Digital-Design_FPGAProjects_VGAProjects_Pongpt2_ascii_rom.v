@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // *************************************************************
 // Created by David J. Marion aka FPGA Dude
 // A ROM containing patterns for ASCII values.

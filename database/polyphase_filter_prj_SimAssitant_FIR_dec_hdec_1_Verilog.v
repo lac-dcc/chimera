@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/HeLiangHIT/polyphase_filter_prj
+// License: MIT License
+
 /*---------------------------------------------------------------------------*
 * This solution is produced by FIR Filter Generator (FFG) based on the       *
 * Radix-2^r Multiple-Constant-Multiplication (MCM) algorithm developed       *

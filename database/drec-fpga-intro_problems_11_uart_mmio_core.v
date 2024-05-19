@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viktor-prutyanov/drec-fpga-intro
+// License: GNU General Public License v2.0
+
 module core #(
     parameter START_PC = 32'h0,
     parameter ROM_ADDR_WIDTH = 5

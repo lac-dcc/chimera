@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module queue_param_1r_1w(
                         in_wr_en,
                         in_wr_addr,

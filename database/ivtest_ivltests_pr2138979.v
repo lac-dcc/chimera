@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This program is based on pr2138979. In particular, the signed
 // expressions are sign-extended before the '|' is evaluated. This
 // behavior is verified by modelsim and ncverilog. (It appears that

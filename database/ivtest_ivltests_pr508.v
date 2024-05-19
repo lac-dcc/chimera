@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This trivial example tickled PR508, where the thread
  * pointer in the event was uninitialized. This should

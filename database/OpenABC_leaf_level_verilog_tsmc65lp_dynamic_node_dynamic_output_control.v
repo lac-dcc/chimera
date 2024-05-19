@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dynamic_output_control(thanks_a, thanks_b, thanks_c, thanks_d, thanks_x, valid_out, current_route, ec_wants_to_send_but_cannot, clk, reset, route_req_a_in, route_req_b_in, route_req_c_in, route_req_d_in, route_req_x_in, tail_a_in, tail_b_in, tail_c_in, tail_d_in, tail_x_in, valid_out_temp, default_ready, space_avail);
 
 // begin port declarations

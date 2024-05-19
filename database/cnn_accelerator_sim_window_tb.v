@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/XueTianyu24/cnn_accelerator
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

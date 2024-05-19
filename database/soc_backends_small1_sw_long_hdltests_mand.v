@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 module mand_core (input clk,
                   input               reset,
                   input [31:0]        cx0,

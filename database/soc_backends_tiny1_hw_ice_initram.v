@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 // Must be generated:
 //
 //  ram4k_low_low     0     .. 2047

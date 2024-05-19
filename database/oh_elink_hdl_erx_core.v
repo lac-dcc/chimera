@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module erx_core (/*AUTOARG*/
    // Outputs
    rx_rd_wait, rx_wr_wait, idelay_value, load_taps, rxrd_access,

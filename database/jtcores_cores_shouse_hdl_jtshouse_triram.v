@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,7 +53,7 @@ module jtshouse_triram(
     input      [ 7:0] debug_bus
 );
 
-wire [ 7:0] xdout, alt_din, xdin, p_bdin;
+wire [ 7:0] xdout, xdin, p_bdin;
 wire [10:0] xaddr;
 wire        xwe, bwe;
 wire        xsel;
@@ -62,11 +65,8 @@ assign xaddr = xsel ? saddr : mcu_addr;
 assign xdout = xsel ? sdout : mcu_dout;
 assign bwe   = bus_cs & ~brnw;
 
-assign mcu_din = alt_din;   // see https://github.com/jotego/jtcores/issues/410
-
-// Needed to boot up
-assign alt_din = xaddr==0 /*&& !debug_bus[0]*/ ? 8'ha6 : xdin;
-assign bdin    = baddr==0 /*&& !debug_bus[1]*/ ? 8'ha6 : p_bdin;
+assign mcu_din = xdin;
+assign bdin = p_bdin;
 
 `ifdef SIMULATION
 wire flag_cs  = bus_cs && baddr==0;
@@ -97,9 +97,9 @@ always @(posedge clk, negedge srst_n) begin
         {cwa,cwd} <= 0;
     end else begin
         if(xwe) {awa, awd }<={xaddr,xdout};
-        if(snd_cs &  srnw)    {sra,srd}<={saddr,alt_din};
+        if(snd_cs &  srnw)    {sra,srd}<={saddr,xdin};
         if(snd_cs & ~srnw)    {swa,swd}<={saddr,sdout};
-        if(mcu_cs &  mcu_rnw) {cra,crd}<={mcu_addr,alt_din};
+        if(mcu_cs &  mcu_rnw) {cra,crd}<={mcu_addr,xdin};
         if(mcu_cs & ~mcu_rnw) {cwa,cwd}<={mcu_addr,mcu_dout};
     end
 end
@@ -120,13 +120,13 @@ jtframe_dual_ram #(.AW(11)) u_ram(
     .clk0   ( clk   ),
     .data0  ( bdout ),
     .addr0  ( baddr ),
-    .we0    ( bwe   ),
+    .we0    ( bwe ),
     .q0     ( p_bdin  ),
     // Port 1
     .clk1   ( clk   ),
     .data1  ( xdout ),
     .addr1  ( xaddr ),
-    .we1    ( xwe   ),
+    .we1    ( xwe && (xaddr !=0 || xdout == 8'ha6 || xsel) ), // see https://github.com/jotego/jtcores/issues/410
     .q1     ( xdin  )
 );
 

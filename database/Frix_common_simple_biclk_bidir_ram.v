@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/archlabo/Frix
+// License: BSD 2-Clause "Simplified" License
+
 /*
  * Copyright (c) 2014, Aleksander Osman
  * All rights reserved.

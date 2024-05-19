@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module pr_region_default_Top_0 (
 		input  wire         clock,                  //       clock.clk
 		output wire [5:0]   io_M_AXI_0_AWID,        //  io_M_AXI_0.awid

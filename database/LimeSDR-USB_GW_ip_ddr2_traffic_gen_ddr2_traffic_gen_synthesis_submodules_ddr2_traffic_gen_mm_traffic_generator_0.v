@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-USB_GW
+// License: Apache License 2.0
+
 // ddr2_traffic_gen_mm_traffic_generator_0.v
 
 // This file was auto-generated from altera_avalon_mm_traffic_generator_hw.tcl.  If you edit it your changes

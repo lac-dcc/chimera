@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -33,13 +36,16 @@ module jtopl_eg_step(
 );
 
 reg  [6:0]   pre_rate;
+wire [1:0]   shby;
+
+assign shby = ksr ? 2'd1 : 2'd3;
 
 always @(*) begin : pre_rate_calc
     if( base_rate == 5'd0 )
         pre_rate = 7'd0;
     else
         pre_rate = { 1'b0, base_rate, 1'b0 } +  // base_rate LSB is always zero except for RR
-            ({ 3'b0, keycode } >> (ksr ? 1 : 3));
+            ({ 3'b0, keycode } >> shby);
 end
 
 always @(*)

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Verify that a zero width signal replication is handled correctly.
 module top;
   reg pass;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/icezum
+// License: GNU General Public License v3.0
+
 //------------------------------------------------------------------
 //-- Test: Testing external ir sensors
 //-- They are directly connected to led0 and led1 respectivelly

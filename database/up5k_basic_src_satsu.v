@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // satu.v: saturate isz to osz for signed to unsigned data
 // 2005-06-15 E. Brombaugh
 // 2005-09-07 E. Brombaugh - backported FPGA architecture changes

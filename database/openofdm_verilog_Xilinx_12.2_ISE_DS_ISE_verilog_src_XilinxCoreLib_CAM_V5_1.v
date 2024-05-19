@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /****************************************************************************
  * $RCSfile: CAM_V5_1.v,v $ $Revision: 1.11 $ $Date: 2008/09/08 20:07:04 $
  * **************************************************************************

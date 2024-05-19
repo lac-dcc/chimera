@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module full_adder (cin, a,b, sum, cout);
 input cin,a,b;
 output sum,cout;

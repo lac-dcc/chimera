@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 module parse_act_ram_ip #(
     parameter ADDR_BITS = 5,
     parameter DATA_BITS = 160

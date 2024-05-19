@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,6 +27,8 @@ module jtkchamp_main(
 
     input       [ 7:0] joystick1,
     input       [ 7:0] joystick2,
+    input       [ 7:0] joystick3,
+    input       [ 7:0] joystick4,
     input       [ 1:0] game_start,
     input       [ 1:0] coin,
     input              dip_pause,
@@ -113,8 +118,12 @@ end
 
 always @* begin
     ctrl_1p = { joystick1[7:4], joystick1[2], joystick1[3], joystick1[1:0] };
-    if( link_joys ) ctrl_1p[7:4] = { joystick2[2], joystick2[3], joystick2[1:0] };
     ctrl_2p = { joystick2[7:4], joystick2[2], joystick2[3], joystick2[1:0] };
+    if( link_joys ) begin
+        ctrl_1p[7:4] = { joystick2[2], joystick2[3], joystick2[1:0] };
+        ctrl_2p      = { joystick4[2], joystick4[3], joystick4[1:0],
+                         joystick3[2], joystick3[3], joystick3[1:0] };
+    end
 end
 
 always @(posedge clk) begin

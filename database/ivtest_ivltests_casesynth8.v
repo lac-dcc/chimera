@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // We don't (currently) support a case statement where both the case select
 // and one or more case items are variables in asynchronous logic synthesis.
 // Check the compiler handles and rejects this code.

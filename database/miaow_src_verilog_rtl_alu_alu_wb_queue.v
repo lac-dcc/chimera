@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module alu_wb_queue(
                   in_rfa_queue_entry_serviced,
                   in_vgpr_dest_data,

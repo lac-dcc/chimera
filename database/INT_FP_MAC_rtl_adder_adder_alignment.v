@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module alignment (
 	input  [14:0] bigger, 
 	input  [14:0] smaller,

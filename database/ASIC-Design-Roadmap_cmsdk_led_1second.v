@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/ASIC-Design-Roadmap
+// License: MIT License
+
 // 1second_test 
 `timescale 1 ns / 1 ns
 

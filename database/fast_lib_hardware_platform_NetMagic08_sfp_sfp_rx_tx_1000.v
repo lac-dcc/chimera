@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //rgmii-gmii,gmii-139,rx check,rx gen
 `timescale 1ns/1ns
 module sfp_rx_tx_1000(

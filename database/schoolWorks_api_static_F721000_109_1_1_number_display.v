@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module number_display (select,out1, out2, out3);
 input [1:0]select;
 output [6:0]out1;

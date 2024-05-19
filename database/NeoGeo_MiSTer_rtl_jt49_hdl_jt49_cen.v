@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/NeoGeo_MiSTer
+// License: GNU General Public License v2.0
+
 /*  This file is part of JT49.
 
     JT49 is free software: you can redistribute it and/or modify

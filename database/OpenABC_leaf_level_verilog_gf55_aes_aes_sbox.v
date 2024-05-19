@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module aes_sbox(a,d);
 input	[7:0]	a;
 output	[7:0]	d;

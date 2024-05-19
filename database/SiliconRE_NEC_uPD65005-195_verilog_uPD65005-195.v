@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // NEC uPD65005-195 PC-Engine multitap
 // Based on silicon
 // 2023 Sean Gonsalves

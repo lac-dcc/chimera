@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/Neogeo_MiSTer_old
+// License: GNU General Public License v2.0
+
 `timescale 1ns/10ps
 module  pll_0002(
 

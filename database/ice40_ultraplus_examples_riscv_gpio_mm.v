@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 /*registers:
    0x0 LEDS (first 3 bits)
 */

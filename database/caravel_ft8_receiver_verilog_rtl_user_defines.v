@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Radio-Stack/caravel_ft8_receiver
+// License: Apache License 2.0
+
 // SPDX-FileCopyrightText: 2020 Efabless Corporation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

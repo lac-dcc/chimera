@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 // Note the Verilog-1995 module declaration syntax here:
 module top_module(clk, reset, in, out);
     input clk;

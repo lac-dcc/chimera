@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // File ../../../../usb11_phy_vhdl/usb_rx_phy.vhd translated with vhd2vl v3.0 VHDL to Verilog RTL translator
 // vhd2vl settings:
 //  * Verilog Module Declaration Style: 2001

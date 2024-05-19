@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 /*
  * Copyright (c) 2012, Stefan Kristiansson <stefan.kristiansson@saunalahti.fi>
  * All rights reserved.

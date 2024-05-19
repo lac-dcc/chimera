@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 // A video pipeline for MiST. Just insert between the core video output and the VGA pins
 // Provides an optional scandoubler, a rotateable OSD and (optional) RGb->YPbPr conversion
 

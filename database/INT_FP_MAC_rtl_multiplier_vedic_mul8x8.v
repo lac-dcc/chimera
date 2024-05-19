@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module mul8x8(
 	input  [ 7:0] a,
 	input  [ 7:0] b,

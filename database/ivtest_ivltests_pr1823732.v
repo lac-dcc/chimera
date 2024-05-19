@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 //
 // The output from the display should be:
 //   i is '1'; j is '111'; k is '0'

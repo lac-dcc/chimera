@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/bluespec/Piccolo
+// License: Apache License 2.0
+
 
 // Copyright (c) 2000-2009 Bluespec, Inc.
 

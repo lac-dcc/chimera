@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_jpeg
+// License: Apache License 2.0
+
 //-----------------------------------------------------------------
 //                      Baseline JPEG Decoder
 //                             V0.1

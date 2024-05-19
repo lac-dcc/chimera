@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/yosys-f4pga-plugins
+// License: Apache License 2.0
+
 // Copyright (C) 2019-2022 The SymbiFlow Authors
 //
 // Use of this source code is governed by a ISC-style

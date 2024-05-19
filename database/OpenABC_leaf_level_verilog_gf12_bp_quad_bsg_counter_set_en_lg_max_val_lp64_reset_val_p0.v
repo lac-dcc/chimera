@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_counter_set_en_lg_max_val_lp64_reset_val_p0
 (
   clk_i,

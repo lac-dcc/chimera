@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/gsmecher/minimax
+// License: BSD 3-Clause "New" or "Revised" License
+
 /*
  * Minimax: microcoded RISC-V
  *

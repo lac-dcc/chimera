@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/denandz/lpc_sniffer_tpm
+// License: GNU General Public License v3.0
+
 module top #(parameter CLOCK_FREQ = 33_000_000, parameter BAUD_RATE = 2000000)
 (
 	input [3:0] lpc_ad,

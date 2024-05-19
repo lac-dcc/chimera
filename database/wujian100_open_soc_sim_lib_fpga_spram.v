@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/T-head-Semi/wujian100_open
+// License: MIT License
+
 /*
 Copyright (c) 2019 Alibaba Group Holding Limited
 

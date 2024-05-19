@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module syscon_100000000_4096_0_0_0_589433b711fb88bdee7cbb7d486960b51e4c8efd(clk, rst, \wishbone_in.adr , \wishbone_in.dat , \wishbone_in.sel , \wishbone_in.cyc , \wishbone_in.stb , \wishbone_in.we , \wishbone_out.dat , \wishbone_out.ack , \wishbone_out.stall , dram_at_0, core_reset, soc_reset);
   wire _00_;
   wire _01_;

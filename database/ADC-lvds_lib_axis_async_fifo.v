@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/ADC-lvds
+// License: GNU General Public License v3.0
+
 /*
 
 Copyright (c) 2014-2018 Alex Forencich

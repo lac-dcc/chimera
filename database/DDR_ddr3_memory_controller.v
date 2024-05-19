@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 // Credit : https://github.com/MartinGeisse/esdk2/blob/master/simsyn/orange-crab/src/mahdl/name/martingeisse/esdk/riscv/orange_crab/ddr3/RamController.mahdl
 
 

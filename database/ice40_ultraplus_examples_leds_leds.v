@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 //light up the leds according to a counter to cycle through every one
 
 module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);

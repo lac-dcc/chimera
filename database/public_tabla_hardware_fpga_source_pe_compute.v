@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 `timescale 1ns/1ps
 `ifdef FPGA
 	`include "inst.vh"

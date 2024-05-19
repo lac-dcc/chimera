@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/odin2985/FPGA-CNN-accelerator-based-on-systolic-array
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 module PE #(parameter	N = 8)
 	 (

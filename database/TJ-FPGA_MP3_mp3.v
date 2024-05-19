@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DinoMax00/TJ-FPGA_MP3
+// License: MIT License
+
 //---------- module for VS1003B control ------------
 // ---------------- author : Dino ------------------
 module mp3(

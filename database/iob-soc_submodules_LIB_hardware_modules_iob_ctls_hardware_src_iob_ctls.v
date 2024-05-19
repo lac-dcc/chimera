@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/IObundle/iob-soc
+// License: MIT License
+
 /*****************************************************************************
 
   Description: IOB_CTLS Count Trailing/Leading Symbols

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // stereo volume control
 // channel 1&2 --> left
 // channel 0&3 --> right

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DreamSourceLab/DSLogic-hdl
+// License: GNU General Public License v2.0
+
 // file: in_dcm.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

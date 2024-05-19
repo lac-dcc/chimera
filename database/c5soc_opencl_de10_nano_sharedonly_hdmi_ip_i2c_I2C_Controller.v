@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 // --------------------------------------------------------------------
 // Copyright (c) 2005 by Terasic Technologies Inc. 
 // --------------------------------------------------------------------

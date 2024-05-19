@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module issue_tb();
    parameter MAX_INFLIGHT_TB = 8;
    parameter STORED_INSTR_INFO_LENGTH = (1 + 6 + 1 + 9 + 1 + 10 + 1 + 6  + 1 + 9 + 1 + 10);

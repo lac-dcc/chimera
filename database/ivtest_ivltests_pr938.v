@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This tests is based on PR#938. Check here that the
  * IEEE1364-2001 format for port declarations works for

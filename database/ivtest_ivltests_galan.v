@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
 Steve,
       I have small 8bit CPU working in Iverilog, it works if I

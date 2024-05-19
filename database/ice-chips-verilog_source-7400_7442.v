@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // BCD to decimal one-of-ten decoder
 
 module ttl_7442 #(parameter WIDTH_OUT = 10, WIDTH_IN = $clog2(WIDTH_OUT),

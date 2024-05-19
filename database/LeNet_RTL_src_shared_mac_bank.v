@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : shared_mac_bank.v
 //  Created On    : 2017-12-29 19:17:28

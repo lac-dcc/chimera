@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Check the operation of the video signal generator (digital and analog part)
 
 `timescale 1ns/1ns

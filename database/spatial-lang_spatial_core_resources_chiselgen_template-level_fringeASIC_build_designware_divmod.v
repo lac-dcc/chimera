@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module designware_divmod(clock, reset, dividend, divisor, quot_out, rem_out);
 
 parameter DIVIDEND_BIT_WIDTH = 16;

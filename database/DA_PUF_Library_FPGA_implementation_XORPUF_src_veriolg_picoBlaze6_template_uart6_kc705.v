@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 //
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Copyright © 2011-2014, Xilinx, Inc.

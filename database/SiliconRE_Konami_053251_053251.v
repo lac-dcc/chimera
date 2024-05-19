@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 /* Copyright (C) 2020 Sean Gonsalves
 
 Foobar is free software: you can redistribute it and/or modify

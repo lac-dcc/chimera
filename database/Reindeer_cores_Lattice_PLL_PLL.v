@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/PulseRain/Reindeer
+// License: Apache License 2.0
+
 `timescale 1 ns / 1 ps
 module PLL (CLKI, RST, CLKOP, LOCK)/* synthesis NGD_DRC_MASK=1 */;
     input wire CLKI;

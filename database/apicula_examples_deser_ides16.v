@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 `default_nettype none
 module top(input wire clk_i,
 	input wire nrst_i,

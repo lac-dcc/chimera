@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nand2mario/usb_hid_host
+// License: Apache License 2.0
+
 // f_pfd = f_in / refclk_div
 // f_vco = f_pfd * feedback_div * output_div
 // f_out = f_vco / output_div

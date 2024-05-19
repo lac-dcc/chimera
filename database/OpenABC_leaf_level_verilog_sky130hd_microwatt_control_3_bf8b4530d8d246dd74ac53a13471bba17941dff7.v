@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module control_3_bf8b4530d8d246dd74ac53a13471bba17941dff7(clk, rst, \complete_in.tag , \complete_in.valid , valid_in, repeated, flush_in, busy_in, deferred, sgl_pipe_in, stop_mark_in, gpr_write_valid_in, gpr_write_in, gpr_a_read_valid_in, gpr_a_read_in, gpr_b_read_valid_in, gpr_b_read_in, gpr_c_read_valid_in, gpr_c_read_in, \execute_next_tag.tag , \execute_next_tag.valid , \execute_next_cr_tag.tag , \execute_next_cr_tag.valid , cr_read_in, cr_write_in, valid_out, stall_out, stopped_out, gpr_bypass_a, gpr_bypass_b, gpr_bypass_c, cr_bypass, \instr_tag_out.tag , \instr_tag_out.valid );
   wire [9:0] _000_;
   wire [9:0] _001_;

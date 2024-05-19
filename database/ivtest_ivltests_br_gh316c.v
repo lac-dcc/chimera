@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module dut(input EN, input DIR, inout A, inout B);
 
 assign A = EN && DIR == 0 ? B : 1'bz;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //Reg_access每隔0.1s，完整读一次四个电口是否link，并把link状态给port_link输出。其中，clk为12.5MHZ。
 //功能描述：Reg_access模块把reg_enb置为高，reg_op[1:0] 置为10，phy_addr[4:0]
 //置为00000，reg_addr[4:0] 置为00001，

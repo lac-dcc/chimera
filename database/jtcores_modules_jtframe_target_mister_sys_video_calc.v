@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 ///////////////////////////////////////////////////////////////////////
 // Copyright (c) 2017-2020 Alexey Melnikov
 //

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$__NEXUS_DPR16X4 (CLK1, A1ADDR, A1DATA, B1ADDR, B1DATA, B1EN);
 	parameter [63:0] INIT = 64'b0;
 	parameter CLKPOL2 = 1;

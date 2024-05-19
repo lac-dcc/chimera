@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 `timescale 1ns/1ps
 /*
 pkt_Metadata[359:0] [359]discard; [358] to cm; [357]long pkt [356]no pkt body;[355]dispart marting ;[354]dispart id;[353:352]recv;[351:336]identify;[335:0]ingress rloc_src eid_dst metadata_parser

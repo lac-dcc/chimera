@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 
 module ram_p #(parameter ADDR_WIDTH = 4,
 						 DATA_WIDTH = 8)

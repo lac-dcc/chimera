@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module wishbone_arbiter_4(clk, rst, wb_masters_in, \wb_slave_in.dat , \wb_slave_in.ack , \wb_slave_in.stall , wb_masters_out, \wb_slave_out.adr , \wb_slave_out.dat , \wb_slave_out.sel , \wb_slave_out.cyc , \wb_slave_out.stb , \wb_slave_out.we );
   wire [103:0] _00_;
   wire [103:0] _01_;

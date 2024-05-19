@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/IObundle/iob-soc
+// License: MIT License
+
 // file: clock_wizard.v
 // 
 // (c) Copyright 2008 - 2013 Xilinx, Inc. All rights reserved.

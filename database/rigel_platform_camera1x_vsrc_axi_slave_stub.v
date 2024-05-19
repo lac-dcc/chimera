@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 module axi_slave_stub(
 
     output S2M_AXI_ACLK,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module id(
     input clk, reset, RFWr_WB,
     input [31:0] Instr_ID,

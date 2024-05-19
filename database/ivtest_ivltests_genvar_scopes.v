@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module genvar_scopes();
 
 // This test is designed to check that genvars can be declared

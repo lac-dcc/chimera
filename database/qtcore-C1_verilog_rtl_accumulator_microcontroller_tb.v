@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kiwih/qtcore-C1
+// License: Apache License 2.0
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: New York University

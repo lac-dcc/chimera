@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 module servant_gpio
   (input wire i_wb_clk,
    input wire i_wb_dat,

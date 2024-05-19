@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 
 module outputNetwork  #(parameter K=10,X=K-1,M=K-1,S=0) (in,out);
 

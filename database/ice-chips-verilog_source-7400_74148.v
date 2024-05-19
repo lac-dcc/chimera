@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 8-line to 3-line priority encoder
 
 module ttl_74148 #(parameter WIDTH_IN = 8, WIDTH_OUT = 3, DELAY_RISE = 0, DELAY_FALL = 0)

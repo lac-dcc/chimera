@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module sgpr( 
 	     lsu_source1_addr,
 	     lsu_source2_addr,

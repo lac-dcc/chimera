@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 /*WARNING: ONLY SAME EDGE SUPPORTED FOR NOW*/
 //D1,D2 sampled on rising edge of C 
 module ODDR (/*AUTOARG*/

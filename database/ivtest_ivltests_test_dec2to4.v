@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This module generate enable and two-bit selector for verifying a 2-to-4 decoder
 
 module stimulus #(parameter M = 8, T = 10) (

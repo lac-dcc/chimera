@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Check the DUTY signal generation, depending on the different Duty register settings and Duty counter values
 
 // The generation of the FLOAD signal (to iterate the Duty counter) is artificially accelerated.

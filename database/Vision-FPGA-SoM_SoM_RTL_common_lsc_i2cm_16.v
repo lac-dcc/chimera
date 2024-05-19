@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 `timescale 1ns / 100ps
 
 module lsc_i2cm_16(

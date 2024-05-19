@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // 这个模块用于实现exp()指数运算
 // 还是基于cordic算法
 module int_cordic_exp_rtl

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/openlogicbit
+// License: Apache License 2.0
+
 //*****************************************************************************
 // (c) Copyright 2009-10 Xilinx, Inc. All rights reserved.
 //

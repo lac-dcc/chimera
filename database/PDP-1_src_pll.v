@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 // megafunction wizard: %PLL Intel FPGA IP v20.1%
 // GENERATION: XML
 // pll.v

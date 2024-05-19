@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-NFC
+// License: GNU General Public License v3.0
+
 
 module uart_rx_parser #(
     parameter CLK_DIV = 108  // UART baud rate = clk freq/(4*CLK_DIV), modify CLK_DIV to change the UART baud

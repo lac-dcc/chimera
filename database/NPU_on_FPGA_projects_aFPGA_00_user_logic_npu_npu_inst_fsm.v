@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 // CNN指令集架构的执行器
 module npu_inst_fsm
 #(parameter	DATA_WIDTH = 32,    // 数据位宽

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module lab7_3
 
 #(parameter DATA_WIDTH=4, parameter ADDR_WIDTH=6)

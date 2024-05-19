@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module shift_reg
 
 #(parameter DATA_WIDTH=8,

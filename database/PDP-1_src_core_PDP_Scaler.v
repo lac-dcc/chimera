@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 module Scaler_pdp (
 	input main_clk,                                              /* Main Clock input, 1280 x 1024 @ 60 Hz is 108 MHz pixel clock */
 	input clk,                                                   /* VGA Scaller Clock input, 1280 x 1024 @ 60 Hz is 108 MHz pixel clock */

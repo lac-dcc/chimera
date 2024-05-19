@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 /* Aligns data before writing.
  * Incoming data is aligned to lsb's
  */ 

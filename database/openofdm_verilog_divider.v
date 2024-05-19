@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /*
 * xianjun.jiao@imec.be; putaoshu@msn.com
 * DELAY: 36 cycles -- this is old parameter

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //rgmii to gmii,gmii to rgmii;
 //by jzc 20100919;
  `timescale 1ns/1ns

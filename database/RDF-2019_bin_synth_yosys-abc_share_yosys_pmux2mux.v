@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module \$pmux (A, B, S, Y);
 
 wire [1023:0] _TECHMAP_DO_ = "proc; clean";

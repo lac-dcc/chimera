@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-de1
+// License: GNU General Public License v3.0
+
 /********************************************/
 /* qmem_bridge.v                            */
 /* QMEM 32-to-16 bit async bridge           */

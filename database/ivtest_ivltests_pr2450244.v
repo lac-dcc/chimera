@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module main;
   parameter [15:0] a = 16'h8421;
   reg [3:0] b, c;

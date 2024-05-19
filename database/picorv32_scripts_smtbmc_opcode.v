@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/picorv32
+// License: ISC License
+
 function opcode_jump;
 	input [31:0] opcode;
 	begin

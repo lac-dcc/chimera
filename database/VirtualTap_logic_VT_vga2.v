@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/VirtualTap
+// License: GNU General Public License v2.0
+
 // VIRTUALTAP Rev. C CPLD logic
 // Version 2-VGA, for Max V 5M240ZT100
 // (C) 2018 Sean "furrtek" Gonsalves

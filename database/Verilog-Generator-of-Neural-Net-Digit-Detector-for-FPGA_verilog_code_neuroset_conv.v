@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA
+// License: Apache License 2.0
+
 module conv(clk, Y1, prov, matrix, matrix2, i, w1, w2, w3, w4, w5, w6, w7, w8, w9,w11, w12, w13, w14, w15, w16, w17, w18, w19, conv_en, dense_en);
 parameter SIZE=23;
 input clk;

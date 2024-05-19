@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 class test_t;
    typedef enum bit [1:0] { U, V } uv_t;

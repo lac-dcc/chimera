@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  Single channel counter of 8254 timer simplified for Zet SoC
  *  Copyright (c) 2010  YS <ys05@mail.ru>

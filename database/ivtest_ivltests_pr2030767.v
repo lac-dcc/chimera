@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg signed [63:0] a = 64'h12345678abcdabcd;
   reg signed [63:0] b = 64'h1234;

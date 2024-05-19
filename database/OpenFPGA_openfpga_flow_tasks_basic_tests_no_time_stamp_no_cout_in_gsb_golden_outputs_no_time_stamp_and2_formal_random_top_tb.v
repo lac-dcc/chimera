@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-------------------------------------------
 //	FPGA Synthesizable Verilog Netlist
 //	Description: FPGA Verilog Testbench for Formal Top-level netlist of Design: and2
@@ -47,7 +50,7 @@ module and2_top_formal_verification_random_tb;
 	initial begin
 		clk[0] <= 1'b0;
 		while(1) begin
-			#0.4866067469
+			#0.5400847197
 			clk[0] <= !clk[0];
 		end
 	end
@@ -106,7 +109,7 @@ initial begin
 	$timeformat(-9, 2, "ns", 20);
 	$display("Simulation start");
 // ----- Can be changed by the user for his/her need -------
-	#6.812494755
+	#7.561185837
 	if(nb_error == 0) begin
 		$display("Simulation Succeed");
 	end else begin

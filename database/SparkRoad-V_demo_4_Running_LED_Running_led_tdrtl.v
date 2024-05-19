@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 // Verilog netlist created by TD v4.6.12906
 // Thu Aug  8 16:54:13 2019
 

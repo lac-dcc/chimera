@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module NMS_Top (clock, nReset, refAddr, refPixel, scoreData, scoreAddr, outAddr, outPixel);
 	input clock;
 	input nReset;

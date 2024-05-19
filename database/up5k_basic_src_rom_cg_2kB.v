@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // rom_cg_2kB.v - 2k byte ROM with video character generator contents
 // 03-11-18 E. Brombaugh
 

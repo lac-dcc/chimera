@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* From PR#722
  * If bounds checking is in a 16bit field, this will crash.
  */

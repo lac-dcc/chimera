@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module mips(clk_in,sys_rstn,uart_rxd,dip_switch7,dip_switch6,dip_switch5,dip_switch4,dip_switch3,dip_switch2,dip_switch1,dip_switch0,user_key,uart_txd,led_light,digital_tube0,digital_tube1,digital_tube2,digital_tube_sel0,digital_tube_sel1,digital_tube_sel2,PC,t3);
 //input
     input clk_in;

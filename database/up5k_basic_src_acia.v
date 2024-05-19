@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // acia.v - strippped-down version of MC6850 ACIA with home-made TX/RX
 // 03-02-19 E. Brombaugh
 

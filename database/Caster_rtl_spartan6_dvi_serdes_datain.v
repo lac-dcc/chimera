@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
 // dvi_serdes_datain.v
 // DVI TMDS data receiver based on XAPP495.
 // This file is not covered under CERN-OHL-P.

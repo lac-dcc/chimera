@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module ibex_alu (
 	operator_i,
 	operand_a_i,

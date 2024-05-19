@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 `timescale 1ns/1ps
 
 module dot11_tx_tb;

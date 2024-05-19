@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Ahmad Darabiha
 // last updated Aug, 2002
 // this is the design for chip#0 of 

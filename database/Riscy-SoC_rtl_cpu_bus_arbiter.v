@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AleksandarKostovic/Riscy-SoC
+// License: MIT License
+
 `ifndef BUS_ARBITER
 `define BUS_ARBITER
 

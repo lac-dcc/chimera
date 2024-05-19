@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel
+// License: Apache License 2.0
+
 module mprj_io_buffer (VPWR,
     VGND,
     mgmt_gpio_in,

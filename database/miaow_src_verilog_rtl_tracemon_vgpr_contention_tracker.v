@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 //                              -*- Mode: Verilog -*-
 // Filename        : vgpr_contention_tracker.v
 // Description     : Implements a contention tracker for the vgpr register file

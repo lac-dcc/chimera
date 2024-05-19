@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* dcomp1.v - this is a fragment of a larger program, which would
  * dynamicly compute a more interesting value for the phdelay variable.
  *

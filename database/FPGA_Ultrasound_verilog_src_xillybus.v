@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/waynezv/FPGA_Ultrasound
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 10ps
 
 module xillybus(GPIO_LED, quiesce, MIO, PS_SRSTB, PS_CLK, PS_PORB, DDR_Clk,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // acia_rx.v - asynchronous serial receive submodule
 // 06-02-19 E. Brombaugh
 

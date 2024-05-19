@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lucysrausch/colorlight-led-cube
+// License: GNU General Public License v3.0
+
 // Description of the LED panel:
 // http://bikerglen.com/projects/lighting/led-panel-1up/#The_LED_Panel
 //

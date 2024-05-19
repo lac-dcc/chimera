@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module mrx_protocol (/*AUTOARG*/
    // Outputs
    fifo_access, fifo_packet,

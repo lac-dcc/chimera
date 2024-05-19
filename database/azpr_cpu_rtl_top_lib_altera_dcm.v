@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zhangly/azpr_cpu
+// License: MIT License
+
 // megafunction wizard: %ALTPLL%
 // GENERATION: STANDARD
 // VERSION: WM1.0

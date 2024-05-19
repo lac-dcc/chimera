@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/FPGA_Book_Experiments
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module greater_than_2bit(

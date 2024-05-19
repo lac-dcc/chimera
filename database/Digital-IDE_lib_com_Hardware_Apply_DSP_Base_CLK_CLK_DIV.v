@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 /*
 奇数倍分频：奇数倍分频常常在论坛上有人问起,实际上,奇数倍分频有两种实现方法：
 首先,完全可以通过计数器来实现,如进行三分频,通过待分频时钟 上升沿触发计数器进行模三计数,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 // Description     : x^5+x^2+1 USB CRC5 
 
 module crc_ser

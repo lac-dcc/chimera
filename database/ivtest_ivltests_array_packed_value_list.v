@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This tests assigning value lists to packed arrays
 //
 // This file ONLY is placed into the Public Domain, for any use,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 module Gowin_rPLL (clkout, clkin, lock_o, reset, reset_p, clkfb, clkoutd_o, fdiv, idiv);
 output wire clkout;
 output wire lock_o;

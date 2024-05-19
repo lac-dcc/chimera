@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Ultra(TM) in wire load mode
 // Version   : K-2015.06

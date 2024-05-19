@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,11 +44,12 @@ module jtcontra_sound(
     // Sound output
     output signed [15:0] fm,
     output signed [ 8:0] pcm,
-    output        [ 9:0] psg,
+    output        [ 7:0] psga, psgb, psgc,
+    output               psga_rcen, psgb_rcen, psgc_rcen,
     output        [ 7:0] st_dout
 );
 `ifndef NOSOUND
-wire        [ 7:0]  cpu_dout, ram_dout, fm_dout, porta, pre_a, pre_b, pre_c;
+wire        [ 7:0]  cpu_dout, ram_dout, fm_dout, porta, portb, pre_a, pre_b, pre_c;
 wire        [15:0]  A;
 reg         [ 7:0]  cpu_din, pcm_latch;
 wire                m1_n, mreq_n, rd_n, wr_n, int_n, iorq_n, rfsh_n;
@@ -64,7 +68,8 @@ wire signed [ 8:0]  pcm_snd;
 assign rom_addr  = A[14:0];
 assign irq_ack   = !m1_n && !iorq_n;
 assign comb_rst  = ~pcm_rstn | rst;
-assign st_dout   = porta;
+assign st_dout   = porta | portb;
+assign {psga_rcen, psgb_rcen, psgc_rcen}=porta[2:0];
 
 always @(*) begin
     mem_acc  = !mreq_n && rfsh_n;
@@ -159,19 +164,19 @@ jt03 u_fm(
     .addr       ( A[0]       ),
     .cs_n       ( ~fm_cs     ),
     .wr_n       ( wr_n       ),
-    .psg_snd    ( psg        ),
+    .psg_A      ( psga       ),
+    .psg_B      ( psgb       ),
+    .psg_C      ( psgc       ),
     .fm_snd     ( fm         ),
     .snd_sample (            ),
     .dout       ( fm_dout    ),
+    .IOA_out    ( porta      ),
+    .IOB_out    ( portb      ),
     // unused outputs
+    .psg_snd    (            ),
     .irq_n      (            ),
-    .psg_A      (            ),
-    .psg_B      (            ),
-    .psg_C      (            ),
     .IOA_in     ( 8'd0       ),
     .IOB_in     ( 8'd0       ),
-    .IOA_out    ( porta      ),
-    .IOB_out    (            ),
     .IOA_oe     (            ),
     .IOB_oe     (            ),
     .debug_view (            ),

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module pmu(clk, rst, \p_in.mfspr , \p_in.mtspr , \p_in.spr_num , \p_in.spr_val , \p_in.tbbits , \p_in.pmm_msr , \p_in.pr_msr , \p_in.run , \p_in.nia , \p_in.addr , \p_in.addr_v , \p_in.occur , \p_out.spr_val , \p_out.intr );
   wire _000_;
   wire _001_;

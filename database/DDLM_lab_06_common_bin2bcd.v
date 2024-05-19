@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module bin2bcd 
 #(  parameter IN_WIDTH = 10,
               DIGITS   = 4

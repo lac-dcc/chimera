@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // DE1 external clocks and resets
 // 2013, rok.krajnc@gmail.com
 

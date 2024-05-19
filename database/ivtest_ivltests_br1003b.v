@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 timeunit 100ps / 10ps;
 
 task delay(output [63:0] t);

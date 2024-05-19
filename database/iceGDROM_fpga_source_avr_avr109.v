@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeldin/iceGDROM
+// License: GNU General Public License v3.0
+
 // To use:
 
 // avrdude -c butterfly_mk -p ucr2 -b <baudrate> -P <serial port> -U flash:w:<fn>

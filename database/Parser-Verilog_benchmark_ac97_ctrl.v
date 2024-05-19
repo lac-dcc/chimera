@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OpenTimer/Parser-Verilog
+// License: MIT License
+
 module ac97_ctrl (
 x1542,
 x1203,

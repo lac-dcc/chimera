@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test();
   wire [2:0] var1 = 3'bx01; // Incorrect results 101 vs x01.
   wire [2:0] var2 = 3'bx10; // Incorrect results 010 vs x10.

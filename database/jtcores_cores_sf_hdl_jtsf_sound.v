@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,7 +41,7 @@ module jtsf_sound #(
 
     // Sound output
     output signed [15:0] fm_l, fm_r,
-    output signed [12:0] pcm
+    output signed [11:0] pcm0, pcm1
 );
 `ifndef NOSOUND
 wire               cen1p5, adpcm_sample;
@@ -117,7 +120,8 @@ jtsf_adpcm u_adpcmcpu(
     .rom2_data  ( rom2_data     ),
     .rom2_ok    ( rom2_ok       ),
     // Sound output
-    .snd        ( pcm           ),
+    .pcm0       ( pcm0          ),
+    .pcm1       ( pcm1          ),
     .sample     ( adpcm_sample  )
 );
 `else
@@ -127,6 +131,7 @@ jtsf_adpcm u_adpcmcpu(
     assign rom2_cs   = 0;
     assign fm_l      = 0;
     assign fm_r      = 0;
-    assign pcm       = 0;
+    assign pcm0      = 0;
+    assign pcm1      = 0;
 `endif
 endmodule

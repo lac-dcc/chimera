@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module RVCExpander( // @[:freechips.rocketchip.system.TinyConfig.fir@116562.2]
   input  [31:0] io_in, // @[:freechips.rocketchip.system.TinyConfig.fir@116565.4]
   output [31:0] io_out_bits, // @[:freechips.rocketchip.system.TinyConfig.fir@116565.4]

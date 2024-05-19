@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 
 `define SB_DFF_REG reg Q = 0
 // `define SB_DFF_REG reg Q

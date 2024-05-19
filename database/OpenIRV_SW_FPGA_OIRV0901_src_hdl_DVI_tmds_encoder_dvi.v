@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OVGN/OpenIRV
+// License: Apache License 2.0
+
 // Project F: Display TMDS Encoder for DVI
 // (C)2019 Will Green, Open source hardware released under the MIT License
 // Learn more at https://projectf.io

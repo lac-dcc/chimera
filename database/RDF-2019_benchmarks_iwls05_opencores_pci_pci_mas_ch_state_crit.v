@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 //////////////////////////////////////////////////////////////////////
 ////                                                              ////
 ////  File name "mas_ch_state_crit.v"                             ////

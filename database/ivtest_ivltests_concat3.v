@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Explore how procedural concatenations work in various contexts.
 // Some of the checks are specific to the 1364-2005 standard.
 //

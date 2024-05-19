@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module RF(clk,reset,RFWe,Ins,A3,RF_WD,WPC,RD1,RD2,t3);

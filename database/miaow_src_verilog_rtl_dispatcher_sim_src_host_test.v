@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 // add check for wg out of inflight wg buffer
 module host_test (/*AUTOARG*/
    // Outputs

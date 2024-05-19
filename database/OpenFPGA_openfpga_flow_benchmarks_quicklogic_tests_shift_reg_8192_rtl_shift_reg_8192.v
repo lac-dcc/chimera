@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------------------------------//
 // Design Name : Shift_reg
 // File Name   : Shift_reg_8192.v

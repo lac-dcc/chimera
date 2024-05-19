@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 module byte2bcd(
 	input  [7:0] bin_in,
 	output [11:0] bcd_out

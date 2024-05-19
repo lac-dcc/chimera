@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module erx (/*AUTOARG*/
    // Outputs
    rx_active, rxo_wr_wait_p, rxo_wr_wait_n, rxo_rd_wait_p,

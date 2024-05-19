@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // A few simple tests of translating parameters to generics
 module top();
   wire [7:0] v1, v2, v3;

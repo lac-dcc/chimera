@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "top" written by ABC on Thu Feb 21 17:22:32 2019
 
 module elliptic ( clock, 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 // -----------------------------------------------------------------------------
 // title          : Sensor Manager Main Routine
 // project        : ULP Sensor Hub

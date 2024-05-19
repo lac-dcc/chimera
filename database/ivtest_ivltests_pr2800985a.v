@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * Do some run time checks with $ferror(). We can not count on the return
  * code or the strings to be the same on different machines so we can only

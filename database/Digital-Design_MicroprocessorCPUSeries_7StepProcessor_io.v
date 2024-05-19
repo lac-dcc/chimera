@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // Written by David J. Marion for CPU_B (New 7-Step Processor Design)
 // Date: 6.6.2023
 

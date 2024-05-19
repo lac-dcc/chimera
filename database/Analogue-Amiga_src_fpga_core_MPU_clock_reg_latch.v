@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // This is a reg over two clock domains
 
 module clock_reg_latch #(parameter data_size=32 )(

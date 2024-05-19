@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module group_ripple_carry_adder
 # (
     parameter BLOCK_COUNT = 2,

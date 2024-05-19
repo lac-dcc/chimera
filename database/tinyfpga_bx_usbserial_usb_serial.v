@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/tinyfpga_bx_usbserial
+// License: Apache License 2.0
+
 module width_adapter #(
   parameter [31:0] INPUT_WIDTH = 8,
   parameter [31:0] OUTPUT_WIDTH = 1

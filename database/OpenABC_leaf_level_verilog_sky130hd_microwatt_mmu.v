@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module mmu(clk, rst, \l_in.valid , \l_in.tlbie , \l_in.slbia , \l_in.mtspr , \l_in.iside , \l_in.load , \l_in.priv , \l_in.sprn , \l_in.addr , \l_in.rs , \d_in.stall , \d_in.done , \d_in.err , \d_in.data , \l_out.done , \l_out.err , \l_out.invalid , \l_out.badtree , \l_out.segerr , \l_out.perm_error , \l_out.rc_error , \l_out.sprval , \d_out.valid , \d_out.tlbie , \d_out.doall , \d_out.tlbld , \d_out.addr , \d_out.pte , \i_out.tlbld , \i_out.tlbie , \i_out.doall , \i_out.addr , \i_out.pte );
   wire [63:0] _000_;
   wire _001_;

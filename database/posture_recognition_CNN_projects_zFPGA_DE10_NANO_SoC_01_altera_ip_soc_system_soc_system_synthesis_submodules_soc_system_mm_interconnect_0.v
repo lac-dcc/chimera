@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // soc_system_mm_interconnect_0.v
 
 // This file was auto-generated from altera_mm_interconnect_hw.tcl.  If you edit it your changes

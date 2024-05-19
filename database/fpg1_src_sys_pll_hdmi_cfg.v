@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 // megafunction wizard: %Altera PLL Reconfig v17.0%
 // GENERATION: XML
 // pll_hdmi_cfg.v

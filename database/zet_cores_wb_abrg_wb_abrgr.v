@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  Wishbone asynchronous bridge with TGA and WE regslice
  *  Copyright (C) 2010  Zeus Gomez Marmolejo <zeus@aluzina.org>

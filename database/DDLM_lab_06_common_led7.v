@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 /*
     This module switch on 7-seg leds as a hex data
     so you need to wire-up data with needed hex halfbyte

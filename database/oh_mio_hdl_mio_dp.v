@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module mio_dp (/*AUTOARG*/
    // Outputs
    tx_full, tx_prog_full, tx_empty, rx_full, rx_prog_full, rx_empty,

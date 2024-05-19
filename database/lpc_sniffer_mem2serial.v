@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 module mem2serial #(parameter AW = 8)
 	(
 		output reg read_clock_enable,

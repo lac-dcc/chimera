@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 /* dual port memory */
 
 module buffer #(parameter AW = 8, parameter DW = 8)

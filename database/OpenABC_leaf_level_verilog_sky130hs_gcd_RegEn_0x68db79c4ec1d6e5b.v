@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module RegEn_0x68db79c4ec1d6e5b
 (
   input  wire [   0:0] clk,

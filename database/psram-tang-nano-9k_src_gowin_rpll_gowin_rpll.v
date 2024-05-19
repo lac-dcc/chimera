@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zf3/psram-tang-nano-9k
+// License: Apache License 2.0
+
 //Copyright (C)2014-2022 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: IP file

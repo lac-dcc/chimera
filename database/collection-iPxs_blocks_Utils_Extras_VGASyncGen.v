@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/sergicuen/collection-iPxs
+// License: GNU General Public License v2.0
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Ridotech
 // Engineer: Juan Manuel Rico

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 `timescale 1ns / 1ps
 module key_extract #(
     parameter C_S_AXIS_DATA_WIDTH = 512,

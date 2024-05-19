@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jmahler/mips-cpu
+// License: GNU General Public License v3.0
+
 /*
  * cla_full_adder - 1 bit full adder for carry lookahead
  */

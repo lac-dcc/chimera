@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 module jt7400( // ref: 74??00
     input       in1,  // pin: 1
     input       in2,  // pin: 2

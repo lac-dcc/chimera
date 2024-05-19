@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/aib-phy-hardware
+// License: Apache License 2.0
+
 // SPDX-License-Identifier: Apache-2.0
 // Copyright (C) 2019 Intel Corporation. 
 // Verilog for library verilog/final_custom created by Liberate 13.1.3 on Thu Nov 20 18:25:10 MST 2014 for SDF version 3.0

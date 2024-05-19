@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 //Here product of sum is used.
 
 module top_module(

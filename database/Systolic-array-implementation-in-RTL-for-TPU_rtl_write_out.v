@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 //-----this module is for weiting data out------
 
 module write_out#(

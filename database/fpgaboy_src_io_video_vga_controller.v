@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/trun/fpgaboy
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 // vga controller module that generates signals to drive a monitor

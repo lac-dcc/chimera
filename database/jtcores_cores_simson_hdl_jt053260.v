@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTKCPU.
     JTKCPU program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,8 +56,10 @@ module jt053260 (
     input             [ 7:0] romd_data,
     output                   romd_cs,
 
-    output reg signed [13:0] snd_l,
-    output reg signed [13:0] snd_r,
+    // external YM2151 or YM3012-compatible devices
+    input      signed [15:0] aux_l, aux_r,
+    output reg signed [15:0] snd_l,
+    output reg signed [15:0] snd_r,
     output                   sample
     // unsupported pins
     // input               st1,
@@ -65,6 +70,7 @@ module jt053260 (
     // output              cen_e,    // M6809 clock
     // output              cen_q     // M6809 clock
 );
+    wire signed [15:0] pre_l, pre_r;
     reg    [ 7:0] pm2s[0:1];
     reg    [ 7:0] ps2m[0:1];
 
@@ -74,7 +80,7 @@ module jt053260 (
     reg    [ 2:0] ch0_pan, ch1_pan, ch2_pan, ch3_pan;
 
     wire          ch0_sample, ch1_sample, ch2_sample, ch3_sample;
-    wire signed [11:0] ch0_snd_l, ch1_snd_l, ch2_snd_l, ch3_snd_l,
+    wire signed [15:0] ch0_snd_l, ch1_snd_l, ch2_snd_l, ch3_snd_l,
                        ch0_snd_r, ch1_snd_r, ch2_snd_r, ch3_snd_r;
 
     reg    [ 6:0] pan0_l, pan0_r, pan1_l, pan1_r,
@@ -88,9 +94,25 @@ module jt053260 (
                     { addr[5:3]==4, addr[5:3]==3, addr[5:3]==2, addr[5:3]==1 };
     assign tst_nx = tst_rd & ~tst_rdl;
 
-    function [13:0] acc( input [11:0] c0, c1, c2, c3 );
-        acc = { {2{c0[11]}}, c0 } + { {2{c1[11]}}, c1 } + { {2{c2[11]}}, c2 } + { {2{c3[11]}}, c3 };
-    endfunction
+    jtframe_limsum u_suml(
+        .rst    ( rst       ),
+        .clk    ( clk       ),
+        .cen    ( cen       ),
+        .parts  ( {ch0_snd_l, ch1_snd_l, ch2_snd_l, ch3_snd_l, aux_l} ),
+        .en     ( 5'h1f     ),
+        .sum    ( pre_l     ),
+        .peak   (           )
+    );
+
+    jtframe_limsum u_sumr(
+        .rst    ( rst       ),
+        .clk    ( clk       ),
+        .cen    ( cen       ),
+        .parts  ( {ch0_snd_r, ch1_snd_r, ch2_snd_r, ch3_snd_r, aux_r} ),
+        .en     ( 5'h1f     ),
+        .sum    ( pre_r     ),
+        .peak   (           )
+    );
 
     always @(posedge clk, posedge rst) begin
         if( rst ) begin
@@ -98,8 +120,8 @@ module jt053260 (
             snd_r   <= 0;
         end else begin
             if( mode[1] ) begin
-                snd_l <= acc( ch0_snd_l, ch1_snd_l, ch2_snd_l, ch3_snd_l );
-                snd_r <= acc( ch0_snd_r, ch1_snd_r, ch2_snd_r, ch3_snd_r );
+                snd_l <= pre_l;
+                snd_r <= pre_r;
             end else if(cen) begin // fade out
                 snd_l <= snd_l >>> 1;
                 snd_r <= snd_r >>> 1;
@@ -323,8 +345,8 @@ module jt053260_channel(
 
     output reg        [20:0] rom_addr,
     output reg               rom_cs,
-    output reg signed [11:0] snd_l,
-    output reg signed [11:0] snd_r,
+    output reg signed [15:0] snd_l,
+    output reg signed [15:0] snd_r,
     output                   over,
     output                   sample
 );
@@ -395,8 +417,8 @@ module jt053260_channel(
     always @(posedge clk) begin
         vol_l <= volume * pan_l;
         vol_r <= volume * pan_r;
-        snd_l <= mul_l[15-:12];
-        snd_r <= mul_r[15-:12];
+        snd_l <= mul_l;
+        snd_r <= mul_r;
         if( !keyon ) begin
             snd_l <= snd_l >>> 1;
             snd_r <= snd_r >>> 1;
@@ -417,7 +439,8 @@ module jt053260_channel(
             if( cnt_up ) cnt <= cnt - 1'd1;
             if( !keyon ) begin
                 if(!tst_en || we) begin
-                    rom_addr <= start+21'd1; // skip first byte for ADPCM
+                    // the first byte is not ADPCM data
+                    rom_addr <= start+{20'd0,~tst_en};
                 end else if( tst_en && tst_nx ) begin
                     rom_addr <= rom_addr+1'd1;
                 end

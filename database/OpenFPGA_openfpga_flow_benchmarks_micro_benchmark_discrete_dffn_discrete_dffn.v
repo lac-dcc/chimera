@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: A FF with inverted clk. This is useful to test if an FPGA supports clock generation internally or an FPGA supports negative-edged clock
 //  Author:        Xifan Tang

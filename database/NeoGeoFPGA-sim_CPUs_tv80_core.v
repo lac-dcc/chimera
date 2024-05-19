@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neogeodev/NeoGeoFPGA-sim
+// License: GNU General Public License v3.0
+
 //
 // TV80 8-Bit Microprocessor Core
 // Based on the VHDL T80 core by Daniel Wallner (jesus@opencores.org)

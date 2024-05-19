@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test;
   reg fail = 1'b0;
   reg [3:0] bus = 4'b0;

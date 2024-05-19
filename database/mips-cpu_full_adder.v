@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jmahler/mips-cpu
+// License: GNU General Public License v3.0
+
 `ifndef _full_adder
 `define _full_adder
 

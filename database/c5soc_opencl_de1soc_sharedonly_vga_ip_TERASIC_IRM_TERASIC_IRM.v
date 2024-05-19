@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 module TERASIC_IRM(
 	clk,  // must be 50 MHZ
 	reset_n,

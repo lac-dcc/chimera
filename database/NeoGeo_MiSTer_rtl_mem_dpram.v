@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/NeoGeo_MiSTer
+// License: GNU General Public License v2.0
+
 module dpram #(parameter ADDRWIDTH=8, DATAWIDTH=8, NUMWORDS=1<<ADDRWIDTH, MEM_INIT_FILE="")
 (
 	input	                 clock_a,

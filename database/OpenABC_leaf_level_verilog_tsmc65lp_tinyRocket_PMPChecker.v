@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module PMPChecker( // @[:freechips.rocketchip.system.TinyConfig.fir@103215.2]
   input         io_pmp_0_cfg_l, // @[:freechips.rocketchip.system.TinyConfig.fir@103218.4]
   input  [1:0]  io_pmp_0_cfg_a, // @[:freechips.rocketchip.system.TinyConfig.fir@103218.4]

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module FD_Reg (clock, nReset, readen, regAddr, sramData, refPixel, adjPixel, thres);
 	input clock;
 	input nReset;

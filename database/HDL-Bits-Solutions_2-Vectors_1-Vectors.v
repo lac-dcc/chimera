@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 module top_module ( 
     input wire [2:0] vec,
     output wire [2:0] outv,

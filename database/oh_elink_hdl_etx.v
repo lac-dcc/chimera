@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module etx(/*AUTOARG*/
    // Outputs
    tx_active, txo_lclk_p, txo_lclk_n, txo_frame_p, txo_frame_n,

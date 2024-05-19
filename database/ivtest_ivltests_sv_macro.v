@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 
 `define FOO(val=42, text="42") do_foo(val, text)

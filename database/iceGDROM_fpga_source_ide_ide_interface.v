@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeldin/iceGDROM
+// License: GNU General Public License v3.0
+
 module ide_interface (
 		      inout[15:0] dd,
 		      input[2:0]  da,

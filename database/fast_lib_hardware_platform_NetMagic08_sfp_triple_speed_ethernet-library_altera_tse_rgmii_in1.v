@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 // megafunction wizard: %ALTDDIO_IN%
 // GENERATION: STANDARD
 // VERSION: WM1.0

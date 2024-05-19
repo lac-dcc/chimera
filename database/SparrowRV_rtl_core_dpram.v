@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 /*
 dpram生成一个不完全的双端口RAM，数据位宽为32位，en使能，we写使能，wem字节写使能
 端口a只读，端口b可读可写

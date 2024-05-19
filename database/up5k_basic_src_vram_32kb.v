@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // vram_32kb.v - 32k byte inferred RAM for video
 // 05-16-18 E. Brombaugh
 

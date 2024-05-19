@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module sys_array_fetcher
 
 #(parameter DATA_WIDTH=8,

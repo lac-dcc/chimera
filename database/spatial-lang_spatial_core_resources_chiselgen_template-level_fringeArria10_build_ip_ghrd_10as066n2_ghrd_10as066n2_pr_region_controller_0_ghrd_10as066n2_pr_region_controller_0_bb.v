@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_pr_region_controller_0 (
 		input  wire        avl_csr_read,                   //        avl_csr.read
 		input  wire        avl_csr_write,                  //               .write

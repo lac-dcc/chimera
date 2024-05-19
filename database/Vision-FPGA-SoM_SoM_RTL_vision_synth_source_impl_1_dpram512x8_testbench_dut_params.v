@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 localparam FAMILY = "iCE40UP";
 localparam MEM_ID = "dpram512x8";
 localparam MEM_SIZE = "36,512";

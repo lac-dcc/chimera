@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module counter_4bit_2clock(clk0, rst, clk1, q0, q1);
 
     input clk0;

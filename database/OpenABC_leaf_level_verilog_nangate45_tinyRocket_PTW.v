@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module PTW( // @[:freechips.rocketchip.system.TinyConfig.fir@115493.2]
   output        io_requestor_0_pmp_0_cfg_l, // @[:freechips.rocketchip.system.TinyConfig.fir@115496.4]
   output [1:0]  io_requestor_0_pmp_0_cfg_a, // @[:freechips.rocketchip.system.TinyConfig.fir@115496.4]

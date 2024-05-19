@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Genesis_MiSTer
+// License: GNU General Public License v3.0
+
 // A simple OSD implementation. Can be hooked up between a cores
 // VGA output and the physical VGA pins
 

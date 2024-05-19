@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module reg_128x32b_3r_2w_fpga
 (/*AUTOARG*/
    // Outputs

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test is based on PR#913 in the test suite. The
  * idea is to wait for the start integer to become true.

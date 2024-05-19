@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-pong
+// License: MIT License
+
 // megafunction wizard: %PLL Intel FPGA IP v21.1%
 // GENERATION: XML
 // mf_pllbase.v

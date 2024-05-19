@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES1.
     JTCORES1 program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -83,7 +86,7 @@ module jtcps1_scroll(
     input      [ 7:0]  debug_bus
 );
 
-reg         pre_start, sub_start, busy, done;
+reg         pre_start, sub_start, busy; // , done;
 wire [10:0] buf_data;
 wire [ 8:0] buf_addr;
 wire        buf_wr;
@@ -196,13 +199,13 @@ always @(posedge clk, posedge rst) begin
         sub_start <= 1'b0;
         pre_start <= 1'b0;
         req_start <= 1'b0;
-        done      <= 1'b0;
+        // done      <= 1'b0;
         last_HB   <= 1'b0;
         last_start<= 1'b0;
         rd_half   <= 1'b0;
         wr_half   <= 1'b1;
     end else begin
-        done       <= 1'b0;
+        // done       <= 1'b0;
         last_HB    <= HB;
         last_start <= start;
         if( start && !last_start ) begin
@@ -240,7 +243,7 @@ always @(posedge clk, posedge rst) begin
                 end
                 3'b100: begin
                     if( sub_done ) begin
-                        done <= 1'b1;
+                        // done <= 1'b1;
                         busy <= 1'b0;
                         wr_half   <= ~wr_half;
                     end

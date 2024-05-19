@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 module ssram_sim
 (
 	// SRAM

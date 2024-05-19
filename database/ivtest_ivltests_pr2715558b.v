@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* The original test case submitted for pr2715558 should not have
    given the the results the bug reporter expected (see pr2986806).
    This is a reworked version that does give those results.

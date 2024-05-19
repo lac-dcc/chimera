@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTFRAME.
       JTFRAME program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -32,6 +35,9 @@ module jtframe_kabuki(
     output reg [ 7:0] dout
 );
 
+parameter LATCH=0;
+
+reg  [ 7:0] dec;
 reg  [15:0] addr_hit;
 reg  [87:0] kabuki_keys;
 reg         en_cpy, last_we;
@@ -80,20 +86,27 @@ always @(posedge clk) begin
         (addr + addr_key); // OP
 end
 
+generate
+    if( LATCH )
+        always @(posedge clk) dout <= dec;
+    else
+        always @* dout = dec;
+endgenerate
+
 always @(*) begin
-    dout = din;
+    dec = din;
     if( !mreq_n && !rd_n && en_cpy ) begin
-        dout  = bitswap1( dout, swap_key1[15:0], addr_hit[7:0] );
-        dout  = { dout[6:0], dout[7] };
+        dec  = bitswap1( dec, swap_key1[15:0], addr_hit[7:0] );
+        dec  = { dec[6:0], dec[7] };
 
-        dout  = bitswap2( dout, swap_key1[31:16], addr_hit[7:0] );
-        dout  = dout ^ xor_key;
-        dout  = { dout[6:0], dout[7] };
+        dec  = bitswap2( dec, swap_key1[31:16], addr_hit[7:0] );
+        dec  = dec ^ xor_key;
+        dec  = { dec[6:0], dec[7] };
 
-        dout  = bitswap2( dout, swap_key2[15:0], addr_hit[15:8] );
-        dout  = { dout[6:0], dout[7] };
+        dec  = bitswap2( dec, swap_key2[15:0], addr_hit[15:8] );
+        dec  = { dec[6:0], dec[7] };
 
-        dout  = bitswap1( dout, swap_key2[31:16], addr_hit[15:8] );
+        dec  = bitswap1( dec, swap_key2[31:16], addr_hit[15:8] );
     end
 end
 

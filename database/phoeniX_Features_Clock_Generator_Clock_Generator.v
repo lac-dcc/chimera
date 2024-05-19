@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/phoeniX-Digital-Design/phoeniX
+// License: GNU General Public License v3.0
+
 module Clock_Generator 
 #(
     parameter DIVIDER = 10

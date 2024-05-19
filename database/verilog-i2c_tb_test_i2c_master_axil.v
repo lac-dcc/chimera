@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alexforencich/verilog-i2c
+// License: MIT License
+
 /*
 
 Copyright (c) 2019 Alex Forencich

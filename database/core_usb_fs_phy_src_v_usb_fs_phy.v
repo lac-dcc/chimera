@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_usb_fs_phy
+// License: GNU Lesser General Public License v2.1
+
 //-----------------------------------------------------------------
 //                     USB Full Speed (12mbps) Phy
 //                              V0.2

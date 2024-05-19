@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module Controller(
 	output reg [11:0] control_signals,
 	input [3:0] opcode,

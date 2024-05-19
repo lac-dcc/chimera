@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // This is based on the iCE40 SPRAM cell in the yosys techlibs
 
 module spram_256k (

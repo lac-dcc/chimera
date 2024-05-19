@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simonmonk/prog_fpgas
+// License: MIT License
+
 module data_selector(
     input A,
     input B,

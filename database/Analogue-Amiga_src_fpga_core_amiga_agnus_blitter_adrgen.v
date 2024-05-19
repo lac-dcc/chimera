@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // Blitter address generator
 // It can increment or decrement selected pointer register or add or substract any selected modulo register
 

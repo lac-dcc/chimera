@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Contains the implementation of the address bus output terminals and the ABH/ABL registers where the actual address value is stored.
 // Memo: The 6502 processor sets the address for the next operation during the PHI1 phase (together with R/W mode).
 

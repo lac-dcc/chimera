@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/vortexgpgpu/vortex
+// License: Apache License 2.0
+
 /* verilog_rtl_memcomp Version: c0.1.0-EAC */
 /* common_memcomp Version: c0.1.2-EAC */
 /* lang compiler Version: 4.5.1-EAC Nov  6 2014 16:10:45 */

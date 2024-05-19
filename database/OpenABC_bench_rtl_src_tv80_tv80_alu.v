@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 //
 // TV80 8-Bit Microprocessor Core
 // Based on the VHDL T80 core by Daniel Wallner (jesus@opencores.org)

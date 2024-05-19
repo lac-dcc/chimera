@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scarv/xcrypto
+// License: MIT License
+
 
 //
 // module: xc_sha3

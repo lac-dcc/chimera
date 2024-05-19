@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-pong
+// License: MIT License
+
 `timescale 1ns/10ps
 module  mf_pllbase_0002(
 

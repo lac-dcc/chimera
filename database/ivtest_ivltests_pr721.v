@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module port_test(a);
   parameter p_w=1<<5;  // 32
   parameter c_w=p_w>>4;//  2  (<--- here)

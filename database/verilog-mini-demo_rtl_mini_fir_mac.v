@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ic7x24/verilog-mini-demo
+// License: MIT License
+
 // ================================================================ 
 // Verilog Mini Demo Project 
 //  

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/wuxx/Colorlight-FPGA-Projects
+// License: Apache License 2.0
+
 // Pong VGA game
 // (c) fpga4fun.com
 // https://www.fpga4fun.com/PongGame.html

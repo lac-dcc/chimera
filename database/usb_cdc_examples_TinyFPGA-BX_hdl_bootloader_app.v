@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ulixxe/usb_cdc
+// License: MIT License
+
 // APP module shall implement an example of bootloader.
 // APP shall provide access to tinyprog to the FLASH.
 

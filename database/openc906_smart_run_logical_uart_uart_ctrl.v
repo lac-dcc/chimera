@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/T-head-Semi/openc906
+// License: Apache License 2.0
+
 /*Copyright 2020-2021 T-Head Semiconductor Co., Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");

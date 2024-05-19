@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 `define REG_DELAY 1
 
 module ansireg(input clk, reset, input [7:0] d, output reg [7:0] q );

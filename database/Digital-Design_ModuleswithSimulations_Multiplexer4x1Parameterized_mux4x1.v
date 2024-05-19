@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 
 // This Verilog module contains a parameterized 4x1 multiplexer

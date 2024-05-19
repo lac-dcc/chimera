@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //input control module;
 //by jzc 20101022;
 `timescale 1ns/1ns

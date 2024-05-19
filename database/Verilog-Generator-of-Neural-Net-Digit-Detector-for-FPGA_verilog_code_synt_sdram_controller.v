@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA
+// License: Apache License 2.0
+
 /**
  * simple controller for ISSI IS42S16160G-7 SDRAM found in De0 Nano
  *  16Mbit x 16 data bit bus (32 megabytes)

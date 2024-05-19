@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OpenTimer/Parser-Verilog
+// License: MIT License
+
 module wb_dma (
 x6157,
 x5755,

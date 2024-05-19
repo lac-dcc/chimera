@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b2_mux_2_1_sel
 (
     input  [1:0] d0,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 
 module inputNetwork #(parameter N = 64, nSHIFT = 0)(x,y);
 

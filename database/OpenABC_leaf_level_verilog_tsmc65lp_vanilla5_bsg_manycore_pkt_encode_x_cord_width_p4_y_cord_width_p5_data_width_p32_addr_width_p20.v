@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_manycore_pkt_encode_x_cord_width_p4_y_cord_width_p5_data_width_p32_addr_width_p20
 (
   clk_i,

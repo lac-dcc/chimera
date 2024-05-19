@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-pong
+// License: MIT License
+
 // megafunction wizard: %ALTDDIO_BIDIR%
 // GENERATION: STANDARD
 // VERSION: WM1.0

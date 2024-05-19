@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  Linear mode graphics for VGA
  *  Copyright (C) 2010  Zeus Gomez Marmolejo <zeus@aluzina.org>

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ika-musume/IKAOPM
+// License: BSD 2-Clause "Simplified" License
+
 module IKAOPM_reg #(parameter USE_BRAM_FOR_D32REG = 0, parameter FULLY_SYNCHRONOUS = 1) (
     //master clock
     input   wire            i_EMUCLK, //emulator master clock

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/mattvenn/wokwi-verilog-gds-test
+// License: Apache License 2.0
+
 `define default_netname none
 
 module buffer_cell (

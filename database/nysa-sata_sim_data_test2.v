@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 module data_test2 (
   input                 rst,            //reset
   input                 clk,

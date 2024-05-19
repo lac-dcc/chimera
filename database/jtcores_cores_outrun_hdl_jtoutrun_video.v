@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +19,9 @@
     Version: 1.0
     Date: 10-7-2022 */
 
-module jtoutrun_video(
+module jtoutrun_video #(
+    parameter CW = `JTFRAME_COLORW
+)(
     input              rst,
     input              clk,
     input              pxl2_cen,  // pixel clock enable (2x)
@@ -102,9 +107,9 @@ module jtoutrun_video(
     output     [ 8:0]  hdump,
     output     [ 8:0]  vdump,
     output     [ 8:0]  vrender,
-    output     [ 4:0]  red,
-    output     [ 4:0]  green,
-    output     [ 4:0]  blue,
+    output   [CW-1:0]  red,
+    output   [CW-1:0]  green,
+    output   [CW-1:0]  blue,
 
 `ifdef JTFRAME_LF_BUFFER
     output     [ 8:0]  ln_addr,
@@ -221,7 +226,7 @@ jtoutrun_road u_road(
     .ioctl_addr ( ioctl_addr )
 );
 /* verilator tracing_off */
-jts16_tilemap #(.MODEL(1)) u_tilemap(
+jts16_tilemap #(.MODEL(1),.SCR2_DLY(10'd10)) u_tilemap(
     .rst        ( rst       ),
     .clk        ( clk       ),
     .pxl2_cen   ( pxl2_cen  ),
@@ -229,7 +234,6 @@ jts16_tilemap #(.MODEL(1)) u_tilemap(
 
     .dip_pause  ( dip_pause ),
     .char_cs    ( char_cs   ),
-    .pal_cs     ( pal_cs    ),
     .cpu_addr   ( cpu_addr[12:1] ),
     .cpu_dout   ( cpu_dout  ),
     .dswn       ( main_dswn ),

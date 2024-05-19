@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* fopen2 - test $fopen and $fclose system tasks */
 
 module fopen2;

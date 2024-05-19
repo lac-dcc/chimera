@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This module generates M pairs of N-1 bits unsigned numbers A, B
 // and also serialises them starting from LSB bits between
 // activation of active-high reset signal

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Here are two examples of $strobe failing. It appears that thread data
 // is being cleaned up too soon for the $strobe to access it.
 module test;

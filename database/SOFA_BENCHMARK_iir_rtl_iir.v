@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 module iir (clk, reset, start, din, params, dout, ready,iir_start,iir_done);
 input clk, reset, start;
 input [7:0] din;

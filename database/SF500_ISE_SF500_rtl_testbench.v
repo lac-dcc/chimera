@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jbilander/SF500
+// License: Creative Commons Attribution Share Alike 4.0 International
+
 `timescale 1ns / 1ps
 
 module testbench;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hamsternz/DisplayPort_Verilog
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // insert_main_stream_attrbutes_four_channels.v : 
 //

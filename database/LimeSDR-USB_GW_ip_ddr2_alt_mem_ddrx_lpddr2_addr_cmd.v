@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-USB_GW
+// License: Apache License 2.0
+
 ///////////////////////////////////////////////////////////////////////////////
 // Title         : LPDDR2 controller address and command decoder
 //

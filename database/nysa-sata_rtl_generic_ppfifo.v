@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 /*
 Distributed under the MIT licesnse.
 Copyright (c) 2011 Dave McCoy (dave.mccoy@cospandesign.com)

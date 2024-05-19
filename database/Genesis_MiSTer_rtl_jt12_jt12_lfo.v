@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Genesis_MiSTer
+// License: GNU General Public License v3.0
+
 /*  This file is part of jt12.
 
     jt12 is free software: you can redistribute it and/or modify

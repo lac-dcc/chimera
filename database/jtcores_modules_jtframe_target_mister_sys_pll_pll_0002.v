@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 `ifndef SDRAM_SHIFT
 // 5ns works with both 32 and 128 MB modules
 // valid values for 48 MHz

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/vipinkmenon/neuralNetwork
+// License: MIT License
+
 module maxFinder #(parameter numInput=10,parameter inputWidth=16)(
 input           i_clk,
 input [(numInput*inputWidth)-1:0]   i_data,

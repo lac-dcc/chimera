@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simonmonk/prog_fpgas
+// License: MIT License
+
 module servo(
     input CLK,
     input [15:0] pulse_len,  // microseconds

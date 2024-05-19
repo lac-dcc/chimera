@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_mem_2r1w_sync_synth_width_p64_els_p32_read_write_same_addr_p1_harden_p0
 (
   clk_i,

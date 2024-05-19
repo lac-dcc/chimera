@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 // receive: byte2 | byte1 | byte0 | opcode/status
 //read all the data, but can write only the two bytes as opcode contains metadata
 

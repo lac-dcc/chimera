@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/IODRP2_MCB.v,v 1.14 2009/11/05 16:59:56 robh Exp $
 ///////////////////////////////////////////////////////
 //  Copyright (c) 2008 Xilinx Inc.

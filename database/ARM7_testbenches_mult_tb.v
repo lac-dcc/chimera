@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chsasank/ARM7
+// License: MIT License
+
 module mult_test;
 parameter N = 7;
 

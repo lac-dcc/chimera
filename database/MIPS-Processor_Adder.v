@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module halfAdder(sum,carry,in1,in2);
 	input in1, in2;
 	output sum, carry;

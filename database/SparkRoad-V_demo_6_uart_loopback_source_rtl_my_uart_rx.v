@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 module my_uart_rx
 (
 	input			clk,		//25MHzÖ÷Ê±ÖÓ

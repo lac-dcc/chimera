@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/MiSTerLaggy_MiSTer
+// License: GNU General Public License v2.0
+
 //============================================================================
 //
 //  Copyright (C) 2017-2020 Sorgelig

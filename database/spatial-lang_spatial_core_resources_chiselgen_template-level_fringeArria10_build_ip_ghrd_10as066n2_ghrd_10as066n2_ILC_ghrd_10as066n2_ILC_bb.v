@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_ILC (
 		input  wire [5:0]  avmm_addr,   // avalon_slave.address
 		input  wire [31:0] avmm_wrdata, //             .writedata

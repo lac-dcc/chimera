@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Template_MiSTer
+// License: GNU General Public License v2.0
+
 module scanlines #(parameter v2=0)
 (
 	input             clk,

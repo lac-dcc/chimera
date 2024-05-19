@@ -1,8 +1,0 @@
-`define XSDB_SLV_DIS
-`define FPGA
-`define SYNTHESIS
-`define DESIGNWARE_NOEXIST
-`define VLIB_BYPASS_POWER_CG
-`define NV_FPGA_SYSTEM
-`define NV_FPGA_FIFOGEN
-`define NV_FPGA_UNIT

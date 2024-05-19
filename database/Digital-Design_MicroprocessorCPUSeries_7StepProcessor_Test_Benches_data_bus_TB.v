@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 1ps
 // TEST BENCH for data_bus.v
 // Comments: Device Under Test (data_bus.v) is (** Verified **)

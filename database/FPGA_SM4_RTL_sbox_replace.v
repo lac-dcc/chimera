@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/raymondrc/FPGA_SM4
+// License: GNU General Public License v3.0
+
 `timescale 1ns / 100ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

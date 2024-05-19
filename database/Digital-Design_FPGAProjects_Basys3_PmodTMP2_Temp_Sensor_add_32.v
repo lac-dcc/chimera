@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // Add a constant value of 32 to obtain the Fahrenheit temperature
 //
 // Written by David Marion

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Testing the output of a square wave generator.
 
 // From the main APU "honestly" simulated: ACLK and LFO, the length counter and the whole sound channel block.

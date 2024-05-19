@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/synlig
+// License: Apache License 2.0
+
 // Source: http://www.asic-world.com/tidbits/verilog_fsm.html
 //-----------------------------------------------------
 // This is FSM demo program using always block

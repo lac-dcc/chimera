@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 module tiny1_core(
                   input         clk, // clock
                   input         rst, // reset (neg)

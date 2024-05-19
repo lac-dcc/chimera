@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Common elements of APU circuitry
 
 module RegisterBit (ACLK1, ena, d, q, nq);

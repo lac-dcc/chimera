@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/albertxie/iverilog-tutorial
+// License: MIT License
+
 // very standard Verilog module
 module simple(A, B);
 

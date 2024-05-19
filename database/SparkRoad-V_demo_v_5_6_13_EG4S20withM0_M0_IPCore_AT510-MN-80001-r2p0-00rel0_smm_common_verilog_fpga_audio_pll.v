@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 module audio_pll (
     input  wire          ref_audio,      // Oscillator #24.576MHz
     input  wire          reset_n,        // reset

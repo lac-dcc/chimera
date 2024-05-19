@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This is a reuced version of PR#990, that captures the essence.
  * Or at least the bug being reported.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viduraakalanka/HDL-Bits-Solutions
+// License: The Unlicense
+
 module top_module (
     input      cpu_overheated,
     output reg shut_off_computer,

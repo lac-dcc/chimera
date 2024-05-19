@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/glbl.v,v 1.11 2005/03/15 02:06:36 nandinip Exp $
 
 `timescale  1 ps / 1 ps

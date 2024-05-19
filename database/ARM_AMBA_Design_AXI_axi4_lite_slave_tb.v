@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lucky-wfw/ARM_AMBA_Design
+// License: GNU General Public License v3.0
+
 //--------------------------------------------------------------------------
 // Module Name: axi4_lite_slave_tb
 // The testbench of axi4_lite_slave

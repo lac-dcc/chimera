@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // When registering a simulation time callback, some simulators interpret
 // the specified time value as relative to the current simulation time. To
 // support this case, define the macro CB_TIME_IS_RELATIVE when compiling

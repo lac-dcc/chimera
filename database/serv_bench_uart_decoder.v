@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 module uart_decoder
   #(parameter BAUD_RATE = 115200)
    (input rx);

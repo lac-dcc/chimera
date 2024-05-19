@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 // megafunction wizard: %LPM_MUX%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This module instantiates the fa4 entity, which in turn
  * instantiates other entities. This demonstrates hierarchical

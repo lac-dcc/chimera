@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 // BASYS3 PROGRAMLAYICI UART
 // Programlayici icin tek cikis da verilebilirdi. Ayni anda 8 FPGA'yi programlayabilirsiniz.
 // 

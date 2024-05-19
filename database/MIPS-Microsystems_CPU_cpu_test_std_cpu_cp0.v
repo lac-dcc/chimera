@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `define IE SR[0]
 `define EXL SR[1]
 `define IM SR[15:10]

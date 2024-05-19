@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module top (KEY, LEDR);
 
     input wire [3:0] KEY;       // DE-series pushbuttons

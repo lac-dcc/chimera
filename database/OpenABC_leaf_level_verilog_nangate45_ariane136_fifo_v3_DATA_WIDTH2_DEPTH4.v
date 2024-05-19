@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module fifo_v3_DATA_WIDTH2_DEPTH4
 (
   clk_i,

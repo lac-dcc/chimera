@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 module avalon_x_avalon
 #(  parameter   ADDR_WIDTH = 32,
     parameter   DATA_WIDTH = 32

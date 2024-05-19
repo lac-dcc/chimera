@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module pow_n_en_pipe_always
 # (
     parameter w = 8, n = 5

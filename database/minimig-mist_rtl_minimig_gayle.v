@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // Copyright 2008, 2009 by Jakub Bednarski
 //
 // This file is part of Minimig

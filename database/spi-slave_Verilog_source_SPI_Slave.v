@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nandland/spi-slave
+// License: MIT License
+
 ///////////////////////////////////////////////////////////////////////////////
 // Description: SPI (Serial Peripheral Interface) Slave
 //              Creates slave based on input configuration.

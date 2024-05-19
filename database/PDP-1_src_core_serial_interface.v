@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 module serial_controller (
 	input 						clk,				// 50mhz
 	input							serial_clock, 	//	2.5mhz for the transport

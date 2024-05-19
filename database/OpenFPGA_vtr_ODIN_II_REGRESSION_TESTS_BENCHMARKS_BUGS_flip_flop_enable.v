@@ -1,0 +1,35 @@
+// This program was cloned from: https://github.com/haojunliu/OpenFPGA
+// License: BSD 2-Clause "Simplified" License
+
+module edge_testing (d0,clk, resetn, en,q0);
+
+input clk;
+input resetn;
+input en;
+input d0;
+output q0;
+
+posedge_reg_sync_reset zzxx_posedge_reg_sync_reset_zzxx (d2,clk,resetn,en,q2);
+
+endmodule
+
+
+module posedge_reg_sync_reset(d,clk,resetn,en,q);
+
+
+input clk;
+input resetn;
+input en;
+input d;
+output  q;
+reg q;
+
+always @(posedge clk )		
+begin
+	if (resetn==0)
+		q<=0;
+	else if (en==1)
+		q<=d;
+end
+
+endmodule

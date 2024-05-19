@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // this is the 32 colour colour table
 // because this module also supports EHB (extra half brite) mode,
 // it actually has a 6bit colour select input

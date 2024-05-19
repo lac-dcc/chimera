@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/johan92/yafpgatetris
+// License: MIT License
+
 // ============================================================================
 // Copyright (c) 2012 by Terasic Technologies Inc.
 // ============================================================================

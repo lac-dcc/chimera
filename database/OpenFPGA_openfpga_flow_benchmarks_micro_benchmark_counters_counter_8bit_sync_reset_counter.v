@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module counter(clk_counter, q_counter, rst_counter);
 
     input clk_counter;

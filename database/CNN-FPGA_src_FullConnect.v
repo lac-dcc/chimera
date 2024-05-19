@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/QShen3/CNN-FPGA
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

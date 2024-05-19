@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 // ==========================================================================
 // CRC Generation Unit - Linear Feedback Shift Register implementation
 // (c) Kay Gorontzi, GHSi.de, distributed under the terms of LGPL

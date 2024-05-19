@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/MCB.v,v 1.12.10.1 2010/05/27 17:36:50 vandanad Exp $
 ///////////////////////////////////////////////////////
 //  Copyright (c) 2008 Xilinx Inc.

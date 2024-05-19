@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/XueTianyu24/cnn_accelerator
+// License: MIT License
+
 // 全连接层，例化一个此模块相当隐藏层的一个神经元
 // 计算前需要192个时钟周期加载权重矩阵
 // 192 x cycle + (192/6) x cycle + 4 x cycle + cycle

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * Verify that the various non-blocking assignments support a delay
  * that is greater than 32 bits. The top delays are in seconds and

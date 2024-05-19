@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-RMII-SMII
+// License: GNU General Public License v3.0
+
 
 //--------------------------------------------------------------------------------------------------------
 // Module  : tb_smii_phy_if

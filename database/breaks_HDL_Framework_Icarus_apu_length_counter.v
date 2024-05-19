@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Synthetic Length Counter testing
 
 // Doing a full run at the ACLK frequency for LFO2 would be too long, so we simulate more frequent triggering of LFO2

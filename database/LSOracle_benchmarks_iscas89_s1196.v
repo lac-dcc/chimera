@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 //# 14 inputs
 //# 14 outputs
 //# 18 D-type flipflops

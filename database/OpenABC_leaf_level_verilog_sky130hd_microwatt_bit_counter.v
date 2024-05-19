@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bit_counter(clk, rs, count_right, do_popcnt, is_32bit, datalen, result);
   reg [63:0] _000_;
   reg [64:0] _001_;

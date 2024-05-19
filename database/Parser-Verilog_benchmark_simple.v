@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/OpenTimer/Parser-Verilog
+// License: MIT License
+
 module simple (
 inp1,
 inp2,

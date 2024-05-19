@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // Created for CPU_B
 // Written by David J. Marion
 // Date: 6.2.2023

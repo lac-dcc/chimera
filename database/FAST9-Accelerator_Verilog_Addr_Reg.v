@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module Addr_Reg (refAddr, posAddr, posReaden, position, isMatching);
 	input [14:0] refAddr; // 특징점 주소
 	input [3:0] posAddr; // 레지스터 주소

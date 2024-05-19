@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b1_enc_assign(
    input [15:0] in,
    output [3:0] binary_out,

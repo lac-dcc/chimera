@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b8_4bit_dec_assign_logic(in,out,enable);
   input enable;
   input [3:0] in;

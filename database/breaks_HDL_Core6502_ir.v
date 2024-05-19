@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 // TBD: The IR register here is implemented a bit unfairly. 
 // The real IR uses dual-rails for the clock, and the Enable (FETCH) input is made as a tristate.

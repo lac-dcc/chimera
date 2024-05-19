@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hipersys-team/lightning
+// License: MIT License
+
 /*
 
 Project:  Lightning: A Reconfigurable Photonic-Electronic SmartNIC for Fast and Energy-Efficient Inference

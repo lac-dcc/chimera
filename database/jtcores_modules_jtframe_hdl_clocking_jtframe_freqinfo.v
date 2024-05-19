@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTFRAME.
     JTFRAME program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,7 +21,7 @@
 
 module jtframe_freqinfo #(parameter
     KHZ   = 1,      // set to 1 to output kHz, set to 0 to output Hz
-    MFREQ = 48_000, // clk input frequency in kHz
+    MFREQ = `JTFRAME_MCLK/1000, // clk input frequency in kHz
     DIGITS = 4      // count up to 9999 kHz, change to 5 for 10MHz and above
 )(
     input             rst,
@@ -28,10 +31,15 @@ module jtframe_freqinfo #(parameter
     output reg [DIGITS*4-1:0] fworst  // worst case registered (BCD)
 );
 
+localparam BW=$clog2(MFREQ-1);
+
 wire cnt_event;
 wire cen, ms;
+reg  [BW-1:0] freq_cnt;
+wire [DIGITS*4-1:0] fout_cnt;
+reg         pulse_l;
 
-assign ms = freq_cnt == MFREQ-1;
+assign ms = freq_cnt == MFREQ[BW-1:0]-1'd1;
 
 generate
     if( KHZ==1 )
@@ -52,10 +60,6 @@ generate
 endgenerate
 
 // Frequency reporting
-reg  [15:0] freq_cnt;
-wire [DIGITS*4-1:0] fout_cnt;
-reg         pulse_l;
-
 assign cnt_event = pulse & ~pulse_l;
 
 always @(posedge clk, posedge rst) begin
@@ -74,7 +78,7 @@ always @(posedge clk, posedge rst) begin
     end
 end
 
-jtframe_bcd_cnt #(.DIGITS(DIGITS)) u_bcd(
+jtframe_bcd_cnt #(.DIGITS(DIGITS),.WRAP(0)) u_bcd(
     .rst        ( rst       ),
     .clk        ( clk       ),
     .clr        ( ms        ),

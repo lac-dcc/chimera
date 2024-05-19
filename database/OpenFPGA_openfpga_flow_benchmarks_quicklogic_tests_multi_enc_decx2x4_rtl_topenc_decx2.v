@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 
 module top(clock,reset,datain,dataout,datain1,dataout1);
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abnoname/iceZ0mb1e
+// License: MIT License
+
 //
 // iceZ0mb1e - FPGA 8-Bit TV80 SoC for Lattice iCE40
 // with complete open-source toolchain flow using yosys and SDCC

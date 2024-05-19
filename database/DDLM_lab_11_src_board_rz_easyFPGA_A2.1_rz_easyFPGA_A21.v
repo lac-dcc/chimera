@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module rz_easyFPGA_A21(
 	input       CLK100MHZ,
 	input       KEY0,

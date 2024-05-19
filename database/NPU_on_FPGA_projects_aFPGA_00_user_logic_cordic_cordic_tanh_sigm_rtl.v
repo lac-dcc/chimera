@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 // 这个模块用于实现tanh()双曲正切运算
 // 还是基于cordic算法
 module cordic_tanh_sigm_rtl

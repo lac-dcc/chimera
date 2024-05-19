@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CMU-SAFARI/SoftMC
+// License: MIT License
+
 //-----------------------------------------------------------------------------
 //
 // (c) Copyright 2009-2011 Xilinx, Inc. All rights reserved.

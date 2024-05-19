@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/DreamcastHDMI
+// License: MIT License
+
 // http://www.fpga4fun.com/CrossClockDomain2.html
 
 module Flag_CrossDomain(

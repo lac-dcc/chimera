@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module unsigned_mult_80 (out, a, b);
 output [40:0] out;
 wire [80:0] mult_wire;

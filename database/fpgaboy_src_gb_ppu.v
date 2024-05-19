@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/trun/fpgaboy
+// License: MIT License
+
 `default_nettype none
 `timescale 1ns / 1ps
 

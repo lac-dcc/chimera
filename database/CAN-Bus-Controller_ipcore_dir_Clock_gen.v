@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Tommydag/CAN-Bus-Controller
+// License: MIT License
+
 // file: Clock_gen.v
 // 
 // (c) Copyright 2008 - 2011 Xilinx, Inc. All rights reserved.

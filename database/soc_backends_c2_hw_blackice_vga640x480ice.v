@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/combinatorylogic/soc
+// License: MIT License
+
 module vga640x480ice(input  clk,      // system clock
                      input         clk25mhz,
                      input         rst,

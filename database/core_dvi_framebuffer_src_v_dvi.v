@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ultraembedded/core_dvi_framebuffer
+// License: MIT License
+
 //-----------------------------------------------------------------
 //                      DVI / HDMI Framebuffer
 //                              V0.1

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module DBMEM (matReaden, dbValue);
 	input matReaden;
 	output [287:0] dbValue;

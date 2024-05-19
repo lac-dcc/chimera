@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /**************************************************************************
 *
 *    File Name:  MT48LC16M16A2.V  

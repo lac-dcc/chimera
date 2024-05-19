@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/efabless/caravel
+// License: Apache License 2.0
+
 // module that has registers used for debug
 module debug_regs (    
     input wb_clk_i,

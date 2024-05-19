@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AndresNavarro82/vt52-fpga
+// License: GNU General Public License v3.0
+
 /**
  * Keymap ROM (2KB, maps keycodes to ASCII chars)
  * This could be a RAM to allow keymap modifications, but not for now

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b2_mux_3_1_case_latch
 (
     input      [1:0] d0, d1, d2, 

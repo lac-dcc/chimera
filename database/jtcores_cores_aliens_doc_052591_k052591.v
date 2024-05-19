@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Konami 052591 PMC model
 // 2023 furrtek
 // For simulation only

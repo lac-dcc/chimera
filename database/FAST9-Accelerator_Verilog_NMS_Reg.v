@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module NMS_Reg (clock, nReset, readen, regAddr, scoreData, refScore, adjScore);
 	input clock;
 	input nReset;

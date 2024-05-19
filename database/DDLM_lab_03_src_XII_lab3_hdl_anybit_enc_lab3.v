@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b12_anybit_enc (in,enc_out,enable);
 	parameter OUT_SIZE = 4; // configure this parameter only to get amount of output bits
 	parameter IN_SIZE = 1<<OUT_SIZE; // input bits are calculated like 2^(output bits)

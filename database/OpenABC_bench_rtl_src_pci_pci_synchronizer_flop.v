@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 //===========================================================================
 // $Id: pci_synchronizer_flop.v,v 1.1 2003/08/14 13:08:58 simons Exp $
 //

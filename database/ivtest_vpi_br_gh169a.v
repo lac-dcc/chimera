@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module dut1(input wire i1, output reg o1);
 
 always @* o1 = i1;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module mul4x4(
 	input  [3:0] a,
 	input  [3:0] b,

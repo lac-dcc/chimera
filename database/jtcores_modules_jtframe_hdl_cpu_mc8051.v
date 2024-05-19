@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Translation to verilog of Oregano's 8051 core
 /* verilator tracing_on */
 

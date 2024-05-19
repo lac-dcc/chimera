@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module erx_fifo (/*AUTOARG*/
    // Outputs
    rxwr_access, rxwr_packet, rxrd_access, rxrd_packet, rxrr_access,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 `define SALU_SOPP_FORMAT 8'h01
 `define SALU_SOP1_FORMAT 8'h02
 `define SALU_SOPC_FORMAT 8'h04

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-MD-FPGA
+// License: GNU General Public License v2.0
+
 module ym3438_prescaler(
 	input MCLK,
 	input PHI,

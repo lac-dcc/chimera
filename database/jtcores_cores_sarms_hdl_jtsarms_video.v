@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -188,7 +191,8 @@ jt1943_scroll #(
     .AS8MASK    ( 1'b0        ),
     .ROM_AW     ( SCRW        ),
     .PALETTE    ( 0           ),
-    .LAYOUT     ( LAYOUT      )
+    .LAYOUT     ( LAYOUT      ),
+    .MAPCACHE   ( 0           )
 ) u_scroll (
     .rst          ( rst           ),
     .clk          ( clk           ),

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 /*
  * convenc - convolutional encoder implementation with generator polynomials, g0 = 133 and g1 = 171, of rate R = 1/2
  *

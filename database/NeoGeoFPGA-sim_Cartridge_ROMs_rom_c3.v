@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neogeodev/NeoGeoFPGA-sim
+// License: GNU General Public License v3.0
+
 `timescale 1ns/1ns
 
 // 250ns 2048k*16bit (4096kB) ROM

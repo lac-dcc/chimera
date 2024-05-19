@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nanamake/r22sdf
+// License: MIT License
+
 //----------------------------------------------------------------------
 //  FFT: 128-Point FFT Using Radix-2^2 Single-Path Delay Feedback
 //----------------------------------------------------------------------

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-------------------------------------------------------------------
 //-- counter4_tb.v
 //-- Banco de pruebas para el contador de 4 bits con prescaler

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This will not generate a RE if these are calling the correct warning.
 module top;
   integer res;

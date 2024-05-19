@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/buttercutter/DDR
+// License: GNU General Public License v3.0
+
 // Credits : https://github.com/YosysHQ/yosys-bigsim/blob/master/openmsp430/rtl/omsp_clock_gate.v
 
 module clock_gate (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 (* blackbox *) module AND2_X1 (A1, A2, ZN);
   input A1;
   input A2;

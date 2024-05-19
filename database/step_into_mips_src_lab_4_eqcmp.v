@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lvyufeng/step_into_mips
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

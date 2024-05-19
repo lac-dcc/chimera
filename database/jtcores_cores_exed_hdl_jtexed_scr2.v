@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,7 +54,7 @@ module jtexed_scr2 #(parameter
 
 reg  [15:0] heff, hadv;
 reg  [ 9:0] Hfix;
-wire [15:0] hpos_adj = hpos + HOFFSET;
+wire [15:0] hpos_adj = hpos + HOFFSET[15:0];
 
 wire hflip = map2_data[6]^flip;
 wire vflip = ~(map2_data[7]^~flip);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : conv1_pulling1_ram.v
 //  Created On    : 2017-12-28 14:56:33

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module top (CLOCK_50, KEY, GPIO);
 
     input CLOCK_50;        // DE-series switches

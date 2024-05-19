@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 module do_not_parse_0(G2, G3);
     input G2;
     output G3;

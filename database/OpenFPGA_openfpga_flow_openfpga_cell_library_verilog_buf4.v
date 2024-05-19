@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // ----- Verilog module for buf4 -----
 module buf4(in,
             out);

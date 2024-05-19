@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pmezydlo/BeagleWire
+// License: GNU General Public License v2.0
+
 module sdram_controller (
     input  [HADDR_WIDTH-1:0]   wr_addr,
     input  [7:0]               wr_data,

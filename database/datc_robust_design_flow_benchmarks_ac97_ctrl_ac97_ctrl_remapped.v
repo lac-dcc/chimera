@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jinwookjungs/datc_robust_design_flow
+// License: GNU General Public License v3.0
+
 // Latch-mapped netlist written by map_latches.py, 2019-06-04 13:24:08
 // Written ISPD/ICCAD/TAU contest Verilog format. 
 //    Input file:  ac97_ctrl/ac97_ctrl_remapped.v

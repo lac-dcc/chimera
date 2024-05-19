@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/fpgasystems/caribou
+// License: GNU General Public License v3.0
+
 //*****************************************************************************
 // (c) Copyright 2009 - 2013 Xilinx, Inc. All rights reserved.
 //

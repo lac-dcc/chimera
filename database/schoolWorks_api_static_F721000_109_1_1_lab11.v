@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module lab11(clk,rst,keypad_row,keypad_col,dot_row,dot_col,seven_seg);
 	input clk,rst;
 	output [3:0] keypad_row;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for SF bug 947 : Procedural continuous assignment
 // affects other structural connections to source vector.
 

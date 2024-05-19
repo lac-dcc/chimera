@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module b9_6bit_dec_mips_maindec(input wire [5:0] op,
                output wire   memtoreg, memwrite, 
                output wire   branch, alusrc, 

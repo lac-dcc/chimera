@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // xilinx_ram.v - inferring the ram seems to work fine
 
 module ram # ( parameter ADDRBITS=10 ) (

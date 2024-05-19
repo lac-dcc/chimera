@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 4-bit magnitude comparator
 
 module ttl_7485 #(parameter WIDTH_IN = 4, DELAY_RISE = 0, DELAY_FALL = 0)

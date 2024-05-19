@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Template_MiSTer
+// License: GNU General Public License v2.0
+
 // megafunction wizard: %Altera PLL v17.0%
 // GENERATION: XML
 // pll_hdmi.v

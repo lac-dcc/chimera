@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 module counter(count, reset, enable, clk);
 output [3:0] count;
 input reset, enable, clk;

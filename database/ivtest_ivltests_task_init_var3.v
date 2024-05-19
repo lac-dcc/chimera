@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module automatic test();
 
 task static accumulate1(input integer value, output integer result);

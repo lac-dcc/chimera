@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module IR(IR_out,IR_in,load,clk,rst);
 
 output reg	[7:0]IR_out;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyfpga/TinyFPGA-B-Series
+// License: GNU General Public License v3.0
+
 // The OUT Protocol Engine receives data from the host.
 module usb_fs_out_pe #(
   parameter NUM_OUT_EPS = 1,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MaxXSoft/Fuxi
+// License: GNU General Public License v3.0
+
 // a Verilog wrapper module of Fuxi
 module FuxiWrapper(
   input         clk,

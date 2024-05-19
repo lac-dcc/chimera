@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ulixxe/usb_cdc
+// License: MIT License
+
 // FIFO_IF module shall implement an interface for MCUs to USB_CDC FIFO.
 // FIFO_IF shall:
 //   - Store FIFO consumed OUT data into an internal 8bit buffer waiting

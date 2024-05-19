@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 
 module adder_unit#(parameter WIDTH=9)
 (//input declarations

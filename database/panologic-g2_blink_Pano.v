@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tomverbeure/panologic-g2
+// License: Apache License 2.0
+
 module top(
 	input SYSCLK,
 	output LED_RED,

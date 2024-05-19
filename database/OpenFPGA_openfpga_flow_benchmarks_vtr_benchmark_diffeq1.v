@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
  module diffeq_paj_convert (Xinport, Yinport, Uinport, Aport, DXport, Xoutport, Youtport, Uoutport, clk, reset);
     input[31:0] Xinport; 
     input[31:0] Yinport; 

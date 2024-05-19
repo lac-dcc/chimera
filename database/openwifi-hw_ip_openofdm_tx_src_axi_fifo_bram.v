@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 //
 // Copyright 2012-2014 Ettus Research LLC
 // Copyright 2018 Ettus Research, a National Instruments Company

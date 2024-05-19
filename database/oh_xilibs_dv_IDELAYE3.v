@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module IDELAYE3 #(
   `ifdef XIL_TIMING
   parameter LOC = "UNPLACED",  

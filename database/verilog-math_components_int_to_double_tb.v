@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module int_to_double_tb;
   reg clk;
   reg [63:0] int_to_double_a;

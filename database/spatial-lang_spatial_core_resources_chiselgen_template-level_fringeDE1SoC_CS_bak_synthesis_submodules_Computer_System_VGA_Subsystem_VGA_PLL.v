@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // Computer_System_VGA_Subsystem_VGA_PLL.v
 
 // This file was auto-generated from altera_up_avalon_video_pll_hw.tcl.  If you edit it your changes

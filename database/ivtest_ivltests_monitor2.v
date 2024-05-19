@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
   I seem to have found a problem with the $monitor task/events.
   (this is probably related to bug 399)

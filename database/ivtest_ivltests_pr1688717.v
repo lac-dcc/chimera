@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module bar;
    reg [24:1] original = 24'h123456;
    reg [8:1]  second, minus_indexed, plus_indexed;

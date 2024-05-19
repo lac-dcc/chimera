@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /* This file is part of JTOPL
 
     JTOPL program is free software: you can redistribute it and/or modify
@@ -35,6 +38,7 @@ module jtopll_reg(
     output    [17:0] slot,        // hot one encoding of active slot
 
     // Register update
+    input      [3:0] sel_ch,
     input      [1:0] sel_group,   // group to update
     input      [2:0] sel_sub,     // subslot to update
 
@@ -77,7 +81,6 @@ localparam CH=9;
 reg  [ 5:0] rhy_csr;
 wire        rhy_oen, rhyon_csr;
 wire [ 2:0] subslot;
-wire        match;
 wire [ 3:0] vol_I;     // channel volume
 
 wire [ 5:0] tl_I;
@@ -91,7 +94,6 @@ wire [ 3:0] inst_I;
 wire [ 4:0] inst_sel;
 
 assign wavsel_I[1] = 0;
-assign match = { group, subslot } == { sel_group, sel_sub};
 
 jtopl_slot_cnt u_slot_cnt(
     .rst    ( rst       ),
@@ -165,32 +167,13 @@ jtopl_sh_rst #(.width(2+1+6),.stages(3)) u_iv(
 );
 
 // Memory for CH registers
-localparam KONW   = 1,
-           SUSENW = 1,
-           FNUMW  = 9,
-           BLOCKW = 3,
-           INSTW  = 4,
-           VOLW   = 4;
-localparam CHCSRW = SUSENW+KONW+FNUMW+BLOCKW+INSTW+VOLW;
-
-wire [CHCSRW-1:0] chcfg, chcfg_inmux;
-wire              sus_en, keyon_csr, con_csr;
-wire       up_fnumlo_ch = up_fnumlo & match,
-           up_fnumhi_ch = up_fnumhi & match,
-           up_inst_ch   = up_inst   & match;
-
-assign chcfg_inmux = {
-    up_fnumhi_ch ? din[5:0] : { sus_en, keyon_csr, block_I, fnum_I[8] },
-    up_fnumlo_ch ? din      : fnum_I[7:0],
-    up_inst_ch   ? din      : { inst_I, vol_I }
-};
+wire sus_en, pre_keyon;
 
 assign con_I   = rhy_oen && !slot[12]; // slot 12 = BD, which uses modulation
                 // slots 13/14 as rhythm, need to be added in the accumulator, so con_I is set to 1
-assign { sus_en, keyon_csr, block_I, fnum_I[8:0], inst_I, vol_I } = chcfg;
-assign keyon_I = rhy_oen ? rhyon_csr : keyon_csr;
+assign keyon_I = rhy_oen ? rhyon_csr : pre_keyon;
 
-jtopl_reg_ch#(CHCSRW) u_reg_ch(
+jtopll_reg_ch u_reg_ch(
     .rst         ( rst          ),
     .clk         ( clk          ),
     .cen         ( cen          ),
@@ -198,9 +181,21 @@ jtopl_reg_ch#(CHCSRW) u_reg_ch(
     .rhy_en      ( rhy_en       ),
     .rhy_kon     ( rhy_kon      ),
     .slot        ( slot         ),
+
+    .din         ( din          ),
+    .up_ch       ( sel_ch       ),
+    .up_fnumhi   ( up_fnumhi    ),
+    .up_fnumlo   ( up_fnumlo    ),
+    .up_inst     ( up_inst      ),
+
     .group       ( group        ),
-    .chcfg_inmux ( chcfg_inmux  ),
-    .chcfg       ( chcfg        ),
+    .sub         ( subslot      ),
+    .fnum        ( fnum_I       ),
+    .block       ( block_I      ),
+    .inst        ( inst_I       ),
+    .vol         ( vol_I        ),
+    .sus         ( sus_en       ),
+    .keyon       ( pre_keyon    ),
     .rhy_oen     ( rhy_oen      ),
     .rhyon_csr   ( rhyon_csr    )
 );

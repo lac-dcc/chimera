@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module pr_region_default_mm_bridge_0 #(
 		parameter DATA_WIDTH        = 32,
 		parameter SYMBOL_WIDTH      = 8,

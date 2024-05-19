@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VeriGOOD-ML/public
+// License: Apache License 2.0
+
 `timescale 1ns/1ps
 module zynq_wrapper_mem_test #(
   parameter integer READ_ADDR_BASE_0  = 32'h00000000,

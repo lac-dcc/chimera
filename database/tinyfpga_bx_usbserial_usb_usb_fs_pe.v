@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/tinyfpga_bx_usbserial
+// License: Apache License 2.0
+
 module usb_fs_pe #(
   parameter [4:0] NUM_OUT_EPS = 1,
   parameter [4:0] NUM_IN_EPS = 1

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CMU-SAFARI/SoftMC
+// License: MIT License
+
 `timescale 1ns/1ns
 //----------------------------------------------------------------------------
 // This software is Copyright © 2012 The Regents of the University of 

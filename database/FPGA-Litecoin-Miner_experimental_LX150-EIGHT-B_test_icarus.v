@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // Testbench for ltcminer_icarus.v
 
 `timescale 1ns/1ps

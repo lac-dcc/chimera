@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module stimulus (output reg A, B);
   reg unsigned [1:0] stimulus_count = 2'b0;
 

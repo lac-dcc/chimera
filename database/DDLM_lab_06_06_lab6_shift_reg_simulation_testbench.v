@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 // Testbench for shift_reg module
 
 `timescale 1ns/1ns

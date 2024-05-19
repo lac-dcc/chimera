@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //////////////////////////////////////////////////////////////////////
 // Created by SmartDesign Tue Jan 16 17:22:21 2018
 // Version: v11.8 11.8.0.26

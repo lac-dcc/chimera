@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module eqne(output wire eq1, output wire ne1,
 	    output wire eq2, output wire ne2,
 	    output wire eq5, output wire ne5,

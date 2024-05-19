@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module divider(clk, rst, \d_in.valid , \d_in.dividend , \d_in.divisor , \d_in.is_signed , \d_in.is_32bit , \d_in.is_extended , \d_in.is_modulus , \d_in.neg_result , \d_out.valid , \d_out.write_reg_data , \d_out.overflow );
   wire [128:0] _00_;
   wire _01_;

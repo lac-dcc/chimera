@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // $ iverilog -Wall simpler.v -o simpler
 // $ vvp simpler
 // simpler:37: syntax error

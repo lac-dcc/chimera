@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module ZeroComparator_0x422b1f52edd46a85
 (
   input  wire [   0:0] clk,

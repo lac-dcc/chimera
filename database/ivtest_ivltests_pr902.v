@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * What matters here is the size of the display, which should reflect
  * the size of 20, which is written with an _ character. Weird, but

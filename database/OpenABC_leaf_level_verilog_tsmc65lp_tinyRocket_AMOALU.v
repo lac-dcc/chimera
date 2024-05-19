@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module AMOALU( // @[:freechips.rocketchip.system.TinyConfig.fir@105905.2]
   input  [4:0]  io_cmd, // @[:freechips.rocketchip.system.TinyConfig.fir@105908.4]
   input  [31:0] io_lhs, // @[:freechips.rocketchip.system.TinyConfig.fir@105908.4]

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 `define SIMILAR 2'b00
 `define DARK 2'b01
 `define BRIGHT 2'b10

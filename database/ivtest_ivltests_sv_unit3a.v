@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 int num1 = 101; string str1 = "unit1";
 int num2 = 102; string str2 = "unit1";
 int num3 = 103; string str3 = "unit1";

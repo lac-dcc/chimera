@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nand2mario/usb_hid_host
+// License: Apache License 2.0
+
 module usb_hid_host_rom(clk, adr, data);
 	input clk;
 	input [13:0] adr;

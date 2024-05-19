@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 module cam_simple #(
     parameter DATA_WIDTH = 64,
     parameter ADDR_WIDTH = 5,

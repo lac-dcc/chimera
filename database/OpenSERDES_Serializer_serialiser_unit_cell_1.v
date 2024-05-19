@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SparcLab/OpenSERDES
+// License: GNU General Public License v3.0
+
 module serializer_unit_cell_1 (CLK, RESET,SERIAL_OUT,READY,INTERNAL_FINISH,COMPLETE,PAR_IN1,PAR_IN2,PAR_IN3,PAR_IN4,PAR_IN5,PAR_IN6,PAR_IN7,PAR_IN8,COUNT,SAMPLE_COUNT);
  
  input CLK,RESET,READY;

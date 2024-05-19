@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module carry_lookahead_adder
 # (
     parameter WIDTH = 8

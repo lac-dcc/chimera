@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 `define SM3_INPT_DW_32
 `define INPT_DW    32
 `define INPT_DW1        (`INPT_DW - 1)

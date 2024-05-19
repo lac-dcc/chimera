@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lmxyy/Computer-Architecture-Task-2
+// License: MIT License
+
 //È«¾Ö
 `define RstEnable 1'b1
 `define RstDisable 1'b0

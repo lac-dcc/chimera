@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This tests literal values, from verilog 2001 and SystemVerilog
 //
 // This file ONLY is placed into the Public Domain, for any use,

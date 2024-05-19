@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: 2-input AND + 2-input OR 
 //                 This benchmark is designed to test fracturable LUTs

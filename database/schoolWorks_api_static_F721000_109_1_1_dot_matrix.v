@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module dot_matrix(clk,rst,btn_left,btn_right,move_left, move_right, dot_row,dot_col);
 	input clk,rst,btn_left,btn_right;
 	output reg [7:0] dot_row;

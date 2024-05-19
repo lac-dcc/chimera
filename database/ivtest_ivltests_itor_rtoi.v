@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This does not check that $itor() and $rtoi() can actually be called in
  * a constant context (e.g. a parameter assignment). This was done so that

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 module usb_fs_rx (
   // A 48MHz clock is required to recover the clock from the incoming data. 
   input clk_48mhz,

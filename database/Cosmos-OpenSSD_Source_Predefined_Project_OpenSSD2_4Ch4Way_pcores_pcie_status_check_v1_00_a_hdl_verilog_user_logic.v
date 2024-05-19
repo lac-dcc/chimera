@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Cosmos-OpenSSD/Cosmos-OpenSSD
+// License: GNU General Public License v3.0
+
 //////////////////////////////////////////////////////////////////////////////////
 // user_logic.v for Cosmos OpenSSD
 // Copyright (c) 2014 Hanyang University ENC Lab.

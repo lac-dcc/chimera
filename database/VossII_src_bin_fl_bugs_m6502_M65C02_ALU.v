@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright 2009-2013 by Michael A. Morris, dba M. A. Morris & Associates

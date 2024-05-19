@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SI-RISCV/e200_opensource
+// License: Apache License 2.0
+
 // Divide clock by 256, used to generate 32.768 kHz clock for AON block
 module clkdivider
 (

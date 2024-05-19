@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-de1
+// License: GNU General Public License v3.0
+
 // Copyright (C) 1991-2011 Altera Corporation
 // This simulation model contains highly confidential and
 // proprietary information of Altera and is being provided

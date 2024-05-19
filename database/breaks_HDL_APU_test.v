@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 // Debugging mechanisms of the 2A03G APU revision (so called "Test Mode").
 

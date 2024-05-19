@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simonmonk/prog_fpgas
+// License: MIT License
+
 module servo_tester(
     input CLK,
     output CONTROL_PIN

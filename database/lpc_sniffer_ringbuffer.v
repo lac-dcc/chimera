@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 module ringbuffer #(parameter AW = 8, DW = 48)
 	(
 		input reset,

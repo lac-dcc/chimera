@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // stereo volume control
 // channel 0&3 --> left
 // channel 1&2 --> right

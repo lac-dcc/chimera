@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SparcLab/OpenSERDES
+// License: GNU General Public License v3.0
+
 module deserialiser_unit_cell_1 (CLK,RESET,READY, SERIAL_IN, PAR_IN1,PAR_IN2,PAR_IN3,PAR_IN4,PAR_IN5,PAR_IN6,PAR_IN7,PAR_IN8,
 COMPLETE,INTERNAL_FINISH,COUNT,SAMPLE_COUNT,OUT);
 input CLK,RESET,READY,SERIAL_IN;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module Controller(L_R0,L_R1,L_R2,L_R3,L_PC,Inc_PC,
 Sel_Bus1,L_IR,L_ADD_R,L_R_Y,L_R_Z,Sel_Bus2,write,
 zero,instruction,nclk,rst);

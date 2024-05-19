@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module kk_timing (A, B, C, D, E, F);
 
  input A, B, D, E, F;

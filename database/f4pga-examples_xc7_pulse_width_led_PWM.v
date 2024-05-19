@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/f4pga-examples
+// License: Apache License 2.0
+
 module PWM (
     input wire clk,
     input wire [13:0] width,

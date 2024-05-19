@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 module \$__TRELLIS_DPR16X4 (CLK1, A1ADDR, A1DATA, B1ADDR, B1DATA, B1EN);
 	parameter [63:0] INIT = 64'bx;
 	parameter CLKPOL2 = 1;

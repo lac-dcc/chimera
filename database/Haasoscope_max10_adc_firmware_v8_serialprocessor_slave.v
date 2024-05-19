@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 // from http://www.sparxeng.com/blog/software/communicating-with-your-cyclone-ii-fpga-over-serial-port-part-3-number-crunching
 
 module processor_slave(clk, rxReady, rxData, txBusy, txStart, txData, readdata, newgotdata, gotdata);

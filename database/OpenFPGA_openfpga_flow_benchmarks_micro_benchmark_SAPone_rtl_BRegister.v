@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module BRegister(
 	output reg [7:0] BRegister_out,
 	input [7:0] BRegister_in,

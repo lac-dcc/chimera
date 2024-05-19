@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/ISERDES2.v,v 1.25 2009/11/19 20:04:35 robh Exp $
 //////////////////////////////////////////////////////
 //  Copyright (c) 2008 Xilinx Inc.

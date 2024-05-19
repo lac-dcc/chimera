@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 /*************************************************************************
 * 作者：吴文强
 * 日期：2019/06/11

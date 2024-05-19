@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/time-sleuth
+// License: MIT License
+
 module edge_detect(
     input async_sig,
     input clk,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/colognechip/gatemate_ila
+// License: GNU General Public License v3.0
+
 
 module RM_GF28SLP_2P_512x20_c2 (//inputs port 
                                  A_CLK_I,

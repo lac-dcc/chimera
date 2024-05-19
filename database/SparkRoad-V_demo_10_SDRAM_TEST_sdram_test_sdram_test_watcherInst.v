@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 module CFG_INT_WRAPPER(jtdi, jtck, jrstn, jrti, jscan, jshift, jupdate, jtdo, status, control);
 	localparam DEFAULT_CTRL_LEN = 25;
 	localparam DEFAULT_STAT_LEN = 18;

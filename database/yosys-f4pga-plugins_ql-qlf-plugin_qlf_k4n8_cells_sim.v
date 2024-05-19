@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/yosys-f4pga-plugins
+// License: Apache License 2.0
+
 // Copyright 2020-2022 F4PGA Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

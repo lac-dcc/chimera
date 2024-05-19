@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // 流水线整型cordic旋转模块，能够输出向量的模 & 角度
 module int_cordic_core
 #(parameter	DATA_WIDTH = 32,    // 数据位宽

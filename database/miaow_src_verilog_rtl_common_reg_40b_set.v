@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module reg_40b_set (out, in, wr_en, clk, set);
 
   output [39:0] out;

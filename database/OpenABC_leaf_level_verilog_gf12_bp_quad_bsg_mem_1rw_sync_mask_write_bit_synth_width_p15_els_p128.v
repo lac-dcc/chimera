@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_mem_1rw_sync_mask_write_bit_synth_width_p15_els_p128
 (
   clk_i,

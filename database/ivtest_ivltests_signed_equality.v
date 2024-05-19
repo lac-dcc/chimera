@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter seeq1 = 6'sb111000 === 4'sb1000;
   parameter seeqx = 6'sbxxx000 === 4'sbx000;

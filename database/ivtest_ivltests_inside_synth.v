@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This tests the latching of an output that isn't really an output,
  * but an intermediate symbol that is only used in some clauses.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* hashvariant-A.v - uses RAM to reduce register count by eliminating X0Save, X1Save
 *
 * Copyright (c) 2013 kramble

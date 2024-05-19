@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jzkmath/MIDI-Stepper-Synth-V2
+// License: GNU General Public License v3.0
+
 /*
 MIDI_vel by Jonathan Kayne, December 2018
 This module controls how many stepper motors recieve the clock signal.

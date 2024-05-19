@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 
 // Used for 32 bit data axi ports like GP0/GP1
 module axi_master32_stub(

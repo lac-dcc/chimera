@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 // pwm_heartbeat_mode.v
 `timescale 1ns / 1ps
 

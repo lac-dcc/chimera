@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  GPIO module to deal with LEDs and switches
  *  Copyright (C) 2010  Zeus Gomez Marmolejo <zeus@aluzina.org>

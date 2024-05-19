@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg pass, pass_f1, pass_f2, pass_f3, pass_f4, pass_f5;
   reg [8*30:1] res;

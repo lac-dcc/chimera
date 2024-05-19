@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CMU-SAFARI/SoftMC
+// License: MIT License
+
 //----------------------------------------------------------------------------
 // This software is Copyright © 2012 The Regents of the University of 
 // California. All Rights Reserved.

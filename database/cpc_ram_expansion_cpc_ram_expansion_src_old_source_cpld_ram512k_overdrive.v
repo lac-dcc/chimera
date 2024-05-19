@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/revaldinho/cpc_ram_expansion
+// License: GNU General Public License v3.0
+
 /*
  * This code is part of the cpc_ram_expansion set of Amstrad CPC peripherals.
  * https://github.com/revaldinho/cpc_ram_expansion

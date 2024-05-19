@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zf3/psram-tang-nano-9k
+// License: Apache License 2.0
+
 module uart_tx_V2(
     input wire clk,
     input wire [7:0] din,

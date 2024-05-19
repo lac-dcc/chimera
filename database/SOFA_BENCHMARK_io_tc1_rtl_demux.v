@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 module demux_1x512 (in,sel,out);
 input in;
 input [8:0] sel;

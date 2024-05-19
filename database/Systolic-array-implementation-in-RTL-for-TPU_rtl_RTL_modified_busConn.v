@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 // Macros for talking with different address spaces
 `define CONTROL_OFFSET 2'b00
 `define INPUT_OFFSET 2'b01

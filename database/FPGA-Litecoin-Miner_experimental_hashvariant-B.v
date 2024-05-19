@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 /* hashvariant-B.v needs salsa-B.v - pipelined 2x clock speed (NOT interleaving hashes, that will be hashvariant-C)
 
 Final hash and golden_nonce_match are at 362,080 nS

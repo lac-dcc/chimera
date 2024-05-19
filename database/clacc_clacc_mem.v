@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/taoyilee/clacc
+// License: MIT License
+
 `define CYCLE      30
 `define SDFFILE    "./IPF.sdf"	  
 `define End_CYCLE  10000000

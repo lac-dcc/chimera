@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module romb
 #(parameter DATA_WIDTH=8, 
 parameter SIZE=16)

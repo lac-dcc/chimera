@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/thinkoco/c5soc_opencl
+// License: Apache License 2.0
+
 module altera_edge_detector #(
 parameter PULSE_EXT = 0, // 0, 1 = edge detection generate single cycle pulse, >1 = pulse extended for specified clock cycle
 parameter EDGE_TYPE = 0, // 0 = falling edge, 1 or else = rising edge

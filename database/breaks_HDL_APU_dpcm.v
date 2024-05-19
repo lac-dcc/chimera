@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 // At first glance you might get lost here, but in fact there is nothing complicated: there is a control circuit (which includes a number of subcircuits), counters for sampling, a counter for addressing, and an output circuit.
 

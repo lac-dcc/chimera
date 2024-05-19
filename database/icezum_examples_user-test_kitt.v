@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/icezum
+// License: GNU General Public License v3.0
+
 `default_nettype none
 
 module kitt (input wire clk,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // 6502, which can only simulate reading and writing APU registers from the register dump history
 
 // https://github.com/emu-russia/breaknes/blob/main/BreaksAPU/NSFPlayerInterop/Fake6502.cpp

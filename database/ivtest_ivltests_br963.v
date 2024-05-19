@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for br962 - based on test case provided in bug report
 module qtest;
   parameter width = 32;

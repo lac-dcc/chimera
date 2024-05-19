@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // NES HDL Descrption. Based on KiCad schematics by Redherring32
 
 module NES (CLK, CIC_CLK, AUDIO_Out, VIDEO_Out);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Tristate Buffer                                                 #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

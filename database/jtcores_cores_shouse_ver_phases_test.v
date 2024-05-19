@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // phase signals in schematic sheet 8A
 
 `timescale 1ns/1ps

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 module usb_serial_ctrl_ep #(
   parameter MAX_IN_PACKET_SIZE = 32,
   parameter MAX_OUT_PACKET_SIZE = 32

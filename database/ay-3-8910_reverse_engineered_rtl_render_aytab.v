@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lvd2/ay-3-8910_reverse_engineered
+// License: GNU General Public License v3.0
+
 module aytab
 (
 	input  wire [ 3:0] in,

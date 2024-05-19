@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 
 module ixor_apuf #(parameter N1=16, N2=N1+1, K1=2, K2=2, POS=N1/2)(
 	clk,

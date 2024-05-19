@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/NeoGeo_MiSTer
+// License: GNU General Public License v2.0
+
 // simulate registers with async clocks in the 'clock' domain
 // has a delay of one clock
 

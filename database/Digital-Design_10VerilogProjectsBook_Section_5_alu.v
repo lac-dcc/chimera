@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 
 module alu #(parameter W = 32)(
 	input  	   [1:0]   opcode,

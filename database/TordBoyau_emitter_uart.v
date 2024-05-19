@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/BrunoLevy/TordBoyau
+// License: BSD 3-Clause "New" or "Revised" License
+
 module corescore_emitter_uart
   #(
     parameter clk_freq_hz = 0,

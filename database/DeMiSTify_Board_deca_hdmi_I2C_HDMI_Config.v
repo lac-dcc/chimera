@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 // Original Terasic Module from HDMI TX example
 //
 // Added comments and some registers from https://github.com/chriz2600/DreamcastHDMI/blob/develop/Core/source/adv7513/ADV7513.v

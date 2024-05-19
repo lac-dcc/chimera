@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module pi2c (/*AUTOARG*/
    // Outputs
    i2c_sda_i, i2c_scl_i,

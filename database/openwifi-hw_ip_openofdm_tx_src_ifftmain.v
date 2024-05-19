@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Filename:	ifftmain.v

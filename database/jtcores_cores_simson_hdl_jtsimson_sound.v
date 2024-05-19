@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,15 +59,13 @@ module jtsimson_sound(
     output          pcmd_cs,
     input           pcmd_ok,
     // Sound output
-    output signed [15:0] fm_l,  fm_r,
-    output signed [13:0] pcm_l, pcm_r,
+    output signed [15:0] snd_l, snd_r,
     // Debug
     input    [ 7:0] debug_bus,
     output   [ 7:0] st_dout
 );
 `ifndef NOSOUND
-localparam  [ 7:0]  FMGAIN=8'h08;
-
+wire signed [15:0]  fm_l,  fm_r;
 wire        [ 7:0]  cpu_dout, ram_dout, fm_dout, st_pcm, pcm_dout;
 wire        [15:0]  A;
 reg         [ 7:0]  cpu_din;
@@ -165,11 +166,11 @@ jt51 u_jt51(
     .irq_n      (           ),
     // Low resolution output (same as real chip)
     .sample     ( sample    ),
-    .left       (           ),
-    .right      (           ),
+    .left       ( fm_l      ),
+    .right      ( fm_r      ),
     // Full resolution output
-    .xleft      ( fm_l      ),
-    .xright     ( fm_r      )
+    .xleft      (           ),
+    .xright     (           )
 );
 /* verilator tracing_off */
 jt053260 u_pcm(
@@ -212,8 +213,10 @@ jt053260 u_pcm(
     .romd_cs    ( pcmd_cs   ),
     // .romd_ok    ( pcmd_ok   ),
     // sound output - raw
-    .snd_l      ( pcm_l     ),
-    .snd_r      ( pcm_r     ),
+    .aux_l      ( fm_l      ),
+    .aux_r      ( fm_r      ),
+    .snd_l      ( snd_l     ),
+    .snd_r      ( snd_r     ),
     .sample     (           )
 );
 `else
@@ -223,8 +226,6 @@ assign  pcma_addr= 0, pcmb_addr=0, pcmc_addr=0, pcmd_addr=0;
 assign  rom_addr = 0;
 assign  snd_l    = 0;
 assign  snd_r    = 0;
-initial peak     = 0;
-assign  sample   = 0;
 assign  st_dout  = 0;
 assign  main_din = 0;
 `endif

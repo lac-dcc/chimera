@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt49
+// License: GNU General Public License v3.0
+
 /*  This file is part of JT49.
 
     JT49 is free software: you can redistribute it and/or modify
@@ -46,9 +49,10 @@ module jt49 ( // note that input ports are not multiplexed
     output           IOB_oe
 );
 
-parameter [1:0] COMP=2'b00;
+parameter [2:0] COMP=3'b000;
+parameter       YM2203_LUMPED=0;
 parameter       CLKDIV=3;
-wire [1:0] comp = COMP;
+wire [2:0] comp = COMP;
 
 reg  [7:0] regarray[15:0];
 wire [7:0] port_A, port_B;
@@ -168,7 +172,10 @@ always @(posedge clk) if( clk_en ) begin
     logC <= !Cmix ? 5'd0 : (use_envC ? envelope : volC );
 end
 
-reg [9:0] acc;
+reg  [9:0] acc;
+wire [9:0] elin;
+
+assign elin = {2'd0,lin};
 
 always @(posedge clk, negedge rst_n) begin
     if( !rst_n ) begin
@@ -180,7 +187,9 @@ always @(posedge clk, negedge rst_n) begin
         sound  <= 10'd0;
     end else if(clk_en) begin
         acc_st <= { acc_st[2:0], acc_st[3] };
-        acc <= acc + {2'b0,lin};
+        // Lumping the channel outputs for YM2203 will cause only the higher
+        // voltage to pass throuh, as the outputs seem to use a source follower.
+        acc    <= YM2203_LUMPED==1 ? (acc>elin ? acc : elin) : acc + elin;
         case( acc_st )
             4'b0001: begin
                 log   <= logA;

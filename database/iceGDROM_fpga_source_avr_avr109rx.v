@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeldin/iceGDROM
+// License: GNU General Public License v3.0
+
 module avr109rx (
 		 input rst,
 		 input clk,

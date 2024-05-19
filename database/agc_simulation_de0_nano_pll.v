@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/virtualagc/agc_simulation
+// License: MIT License
+
 // megafunction wizard: %ALTPLL%
 // GENERATION: STANDARD
 // VERSION: WM1.0

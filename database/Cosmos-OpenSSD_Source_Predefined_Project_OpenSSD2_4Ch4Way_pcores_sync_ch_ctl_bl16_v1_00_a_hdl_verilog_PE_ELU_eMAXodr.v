@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Cosmos-OpenSSD/Cosmos-OpenSSD
+// License: GNU General Public License v3.0
+
 //////////////////////////////////////////////////////////////////////////////////
 // PE_ELU_eMAXodr.v for Cosmos OpenSSD
 // Copyright (c) 2015 Hanyang University ENC Lab.

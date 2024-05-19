@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // megafunction wizard: %PLL Intel FPGA IP v20.1%
 // GENERATION: XML
 // pll.v

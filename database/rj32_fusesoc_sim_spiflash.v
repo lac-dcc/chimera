@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rj45/rj32
+// License: MIT License
+
 /*
  *  PicoSoC - A simple example SoC using PicoRV32
  *

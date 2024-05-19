@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SpinalHDL/VexRiscvSoftcoreContest2018
+// License: Apache License 2.0
+
 // ***********************************************************************/
 // Microsemi Corporation Proprietary and Confidential
 // Copyright 2013 Microsemi Corporation.  All rights reserved.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 // Up-down counter_tb
 `timescale 1ns/1ns
 module testbench;

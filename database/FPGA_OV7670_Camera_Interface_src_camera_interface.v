@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/FPGA_OV7670_Camera_Interface
+// License: MIT License
+
 `timescale 1ns / 1ps
 
   module camera_interface(

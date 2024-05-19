@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Three basic tests in here:
 // 1. bit must be initialised before any initial or always block
 // 2. assignments to (unsigned) bits with random numbers

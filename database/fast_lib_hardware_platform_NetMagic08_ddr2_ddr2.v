@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 // megafunction wizard: %DDR2 High Performance Controller v10.0%
 // GENERATION: XML
 

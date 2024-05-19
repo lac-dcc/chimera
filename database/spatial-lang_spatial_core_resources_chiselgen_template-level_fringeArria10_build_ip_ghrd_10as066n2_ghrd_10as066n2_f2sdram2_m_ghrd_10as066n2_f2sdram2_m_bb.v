@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_f2sdram2_m (
 		input  wire        clk_clk,              //          clk.clk
 		input  wire        clk_reset_reset,      //    clk_reset.reset

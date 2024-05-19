@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stnolting/neorv32-verilog
+// License: BSD 3-Clause "New" or "Revised" License
+
 // Simulation UART receiver
 // Outputs printable characters to the simulator console; uses Linux-style line breaks
 // Character data is also returned to the top entity for further processing

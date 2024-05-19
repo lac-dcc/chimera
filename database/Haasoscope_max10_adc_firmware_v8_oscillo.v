@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 module oscillo(clk, startTrigger, clk_flash, data_flash1, data_flash2, data_flash3, data_flash4, pwr1, pwr2, shdn_out, spen_out, trig_in, trig_out, rden, rdaddress, 
 data_ready, wraddress_triggerpoint, imthelast, imthefirst,rollingtrigger,trigDebug,triggerpoint,downsample,
 trigthresh,trigchannels,triggertype,triggertot,format_sdin_out,div_sclk_out,outsel_cs_out,clk_spi,SPIsend,SPIsenddata,

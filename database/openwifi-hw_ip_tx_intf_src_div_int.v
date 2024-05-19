@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/open-sdr/openwifi-hw
+// License: GNU Affero General Public License v3.0
+
 // Project F: Division (Integer)
 // (C)2021 Will Green, Open source hardware released under the MIT License
 //

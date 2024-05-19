@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/airin711/Verilog-caches
+// License: MIT License
+
 // Cache Memory (default : 8way 4word)                                //
 // cache configuration can be changed by change and cache_config port //
 // i_  means input port                                               //

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/niklasekstrom/flickerfixer
+// License: Creative Commons Zero v1.0 Universal
+
 module seg7_lut(
    output reg [6:0] hex,
    input [3:0] value

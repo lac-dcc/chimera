@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------------------------------
 // Design Name : pipelined_8bit_adder_top_formal_verification_random_tb
 // File Name   : pipelined_8bit_adder.v

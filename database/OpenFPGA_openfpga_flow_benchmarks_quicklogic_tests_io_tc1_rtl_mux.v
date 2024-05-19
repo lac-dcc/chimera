@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module mux_512x1 (in,sel,out);
 input [511:0] in;
 input [8:0]sel;

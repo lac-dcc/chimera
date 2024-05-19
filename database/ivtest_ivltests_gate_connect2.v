@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Test behaviour when a multi-bit expression is used as the input of
 // a singleton array of a primitive gate. The standard is explicit
 // that this should be treated as an error.

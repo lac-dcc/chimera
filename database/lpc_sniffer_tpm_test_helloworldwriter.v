@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/denandz/lpc_sniffer_tpm
+// License: GNU General Public License v3.0
+
 module helloworldwriter(
 	input clock,
 	input reset,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lastweek/fpga_readings
+// License: Apache License 2.0
+
 /*
  * Hello world of this arty-a7 board: a simple LED program, whenever you change
  * the switch or push the button, several LEDs will be illuminated.

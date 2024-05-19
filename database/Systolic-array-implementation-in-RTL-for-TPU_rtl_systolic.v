@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 //----for systolic array, we have 32x32 output, 32x32 weight buffer, 32x32
 //data buffer
 

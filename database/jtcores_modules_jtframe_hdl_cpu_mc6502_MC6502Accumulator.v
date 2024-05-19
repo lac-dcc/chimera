@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 // Copyright (c) 2014 Takashi Toyoshima <toyoshim@gmail.com>.
 // All rights reserved.  Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pmezydlo/BeagleWire
+// License: GNU General Public License v2.0
+
 module gpmc_sync (input                    clk,
                   // GPMC INTERFACE
                   inout  [15:0]            gpmc_ad,

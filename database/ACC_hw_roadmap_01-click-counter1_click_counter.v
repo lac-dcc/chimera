@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/ACC
+// License: GNU General Public License v3.0
+
 module main (input clk,
              input rst,
              output c0,

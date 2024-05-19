@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 module dyn_pll_ctrl # (parameter SPEED_MHZ = 25, parameter SPEED_LIMIT = 100, parameter SPEED_MIN = 25, parameter OSC_MHZ = 100)
 	(clk,
 	clk_valid,

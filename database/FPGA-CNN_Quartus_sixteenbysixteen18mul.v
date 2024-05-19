@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 `define WIDTH 9
 `define COUNTER_WIDTH_SIXTEEN_BY_SIXTEEN 8
 module sixteenbysixteen18mul (

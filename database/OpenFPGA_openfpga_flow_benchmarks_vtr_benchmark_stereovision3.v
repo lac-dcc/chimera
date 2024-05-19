@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // originally created by Marcus van Ierssel
 // modified by Ahmad Darabiha, Feb. 2002
 // this circuit receives the rgbvideo  signal

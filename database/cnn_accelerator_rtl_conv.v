@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/XueTianyu24/cnn_accelerator
+// License: MIT License
+
 // 计算速度：
 // 25clk：缓存权重  | 6个卷积模块需要 150 clk 缓存权重，因为只有一个存储卷积权重的FIFO
 // 162个clk用于权重和图像数据装载

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ika-musume/IKAOPM
+// License: BSD 2-Clause "Simplified" License
+
 module IKAOPM #(parameter FULLY_SYNCHRONOUS = 1, parameter FAST_RESET = 0,
                 parameter USE_BRAM = 0) (
     //chip clock

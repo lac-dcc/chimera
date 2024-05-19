@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/revaldinho/cpc_ram_expansion
+// License: GNU General Public License v3.0
+
 module cpld_sixrom(dip, reset_b,adr15,adr14,adr13,ioreq_b,mreq_b,romen_b,wr_b,rd_b,data,romdis,rom01cs_b,rom23cs_b, rom45cs_b,  clk, romoe_b, roma14);
 
 

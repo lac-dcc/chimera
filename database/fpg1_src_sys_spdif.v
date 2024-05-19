@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 //-----------------------------------------------------------------
 //                        SPDIF Transmitter
 //                              V0.1

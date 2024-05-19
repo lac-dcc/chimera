@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kramble/FPGA-Litecoin-Miner
+// License: GNU General Public License v3.0
+
 // sim_ram.v - identical to xilinx_ram.v (use for altera simulation to avoid
 // the need to specify library path for the altsyncram)
 

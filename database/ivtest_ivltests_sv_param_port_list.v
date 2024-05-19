@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module mod #(
   parameter  A = 1,
   localparam B = A + 1,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bridge(wb__dat_w, wb__dat_r, wb__sel, wb__cyc, wb__stb, wb__we, wb__ack, rst, clk, csr__addr, csr__r_stb, csr__w_stb, csr__w_data, csr__r_data, wb__adr);
   reg \$auto$verilog_backend.cc:2083:dump_module$1  = 0;
   wire \$1 ;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DexWen/FFT_Verilog
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

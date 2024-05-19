@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/BrunoLevy/TordBoyau
+// License: BSD 3-Clause "New" or "Revised" License
+
 /*
  *  The PLL, that generates the internal clock (high freq) from the 
  * external one (lower freq).

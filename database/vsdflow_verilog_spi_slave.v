@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kunalg123/vsdflow
+// License: Apache License 2.0
+
 `define COMMAND  2'b00
 `define ADDRESS  2'b01
 `define DATA     2'b10

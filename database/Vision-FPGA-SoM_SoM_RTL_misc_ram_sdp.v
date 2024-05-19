@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 /*
  * ram_sdp.v
  *

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 `define DTM_OP_NOP        2'b00
 `define DTM_OP_READ       2'b01
 `define DTM_OP_WRITE      2'b10

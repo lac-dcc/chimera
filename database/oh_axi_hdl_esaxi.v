@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module esaxi (/*autoarg*/
    // Outputs
    wr_access, wr_packet, rd_access, rd_packet, rr_wait, s_axi_arready,

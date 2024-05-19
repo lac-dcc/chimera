@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eminfedar/fedar-f1-rv64im
+// License: MIT License
+
 module ALU(
     input [63:0] X,
     input [63:0] Y,

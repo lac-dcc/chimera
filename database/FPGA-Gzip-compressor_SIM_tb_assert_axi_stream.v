@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-Gzip-compressor
+// License: GNU General Public License v3.0
+
 
 module tb_assert_axi_stream #(
     parameter   ASSERT_SENDER_NOT_CHANGE_WHEN_HANDSHAKE_FAILED   = 1,

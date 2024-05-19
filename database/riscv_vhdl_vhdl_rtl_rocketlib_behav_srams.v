@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/sergeykhbr/riscv_vhdl
+// License: Apache License 2.0
+
 
 module _T_146_ext(
   input W0_clk,

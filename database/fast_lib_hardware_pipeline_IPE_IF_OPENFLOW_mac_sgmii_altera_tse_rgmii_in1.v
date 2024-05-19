@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 // (C) 2001-2015 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 

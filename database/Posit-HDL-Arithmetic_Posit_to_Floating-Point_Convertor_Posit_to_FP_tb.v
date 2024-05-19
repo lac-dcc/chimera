@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/manish-kj/Posit-HDL-Arithmetic
+// License: BSD 3-Clause "New" or "Revised" License
+
 `timescale 1ns / 1ps
 module Posit_to_FP_tb_v;
 

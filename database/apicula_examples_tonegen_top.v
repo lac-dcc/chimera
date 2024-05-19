@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 // Top level of signal generator
 //
 // Author: Niels A. Moseley, n.a.moseley@moseleyinstruments.com

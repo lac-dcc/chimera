@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stillwater-sc/RISC-V-TensorCore
+// License: MIT License
+
 module sc_sram (
   input logic clk,
   input logic nrst,

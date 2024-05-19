@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Icarus has a number of places where it can calculate %.
 module top;
   parameter out0 = 64'shF333333333333392 % 3'sd3;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  This module sends commands to the PS2 interface
  *  Copyright (C) 2010  Donna Polehn <dpolehn@verizon.net>

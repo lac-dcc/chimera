@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/icezum
+// License: GNU General Public License v3.0
+
 //------------------------------------------------------------------
 //-- Test: Turning all the icezum leds on
 //------------------------------------------------------------------

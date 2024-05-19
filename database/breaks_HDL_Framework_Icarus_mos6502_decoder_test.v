@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Go through all 6502 decoder values and output them to CSV.
 
 `timescale 1ns/1ns

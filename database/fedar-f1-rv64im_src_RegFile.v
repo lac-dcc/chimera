@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eminfedar/fedar-f1-rv64im
+// License: MIT License
+
 module RegFile(
     input [4:0]R1,
     input [4:0]R2,

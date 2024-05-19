@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zeldin/iceGDROM
+// License: GNU General Public License v3.0
+
 module ide_data_buffer(input clk,
 		       input rst,
 		       input[7:0] read_addr,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 module incif_1uint32_CEtable__0x0759af78(input CLK, input CE, input [32:0] process_input, output [31:0] process_output);
 parameter INSTANCE_NAME="INST";
   wire [31:0] unnamedcast7797USEDMULTIPLEcast;assign unnamedcast7797USEDMULTIPLEcast = (process_input[31:0]); 

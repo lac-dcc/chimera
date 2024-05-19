@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module \$pmux (A, B, S, Y);
 
 wire [1023:0] _TECHMAP_DO_ = "proc; clean";

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // A number of tests require simulation of the ACLK phase pattern.
 // To avoid dragging the entire APU - this module contains the minimum number of modules needed to generate ACLK1/#ACLK2 signals.
 

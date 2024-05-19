@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 module top();
   wire gen_000_;
   wire gen_001_;

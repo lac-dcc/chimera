@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SparcLab/OpenSERDES
+// License: GNU General Public License v3.0
+
 /* Verilog module written by vlog2Verilog (qflow) */
 /* With explicit power connections */
 /* With case-insensitive names (SPICE-compatible) */

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 module  mux4(
     din_0      , // Mux first input
     din_1      , // Mux Second input

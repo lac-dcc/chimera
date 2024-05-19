@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //ps2 key to amiga key mapper using blockram
 //this module also handles the osd_ctrl signals
 

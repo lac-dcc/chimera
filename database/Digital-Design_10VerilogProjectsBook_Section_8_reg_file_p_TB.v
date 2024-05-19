@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 
 module reg_file_p_TB;
 	parameter ADDR_WIDTH = 4;

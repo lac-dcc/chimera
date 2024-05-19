@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 
 //Cells still in this file have INCOMPLETE simulation models, need to finish them
 

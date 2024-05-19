@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ehw-fit/evoapproxlib
+// License: MIT License
+
 /***
 * This code is a part of EvoApproxLib library (ehw.fit.vutbr.cz/approxlib) distributed under The MIT License.
 * When used, please cite the following article(s): Z. Vasicek and L. Sekanina, "Evolutionary Approach to Approximate Digital Circuits Design" in IEEE Transactions on Evolutionary Computation, vol. 19, no. 3, pp. 432-444, June 2015. doi: 10.1109/TEVC.2014.2336175 

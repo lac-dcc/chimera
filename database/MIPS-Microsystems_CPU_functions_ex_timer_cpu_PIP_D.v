@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module DReg(clk,reset,stall,branch,Ins,PC,ExcCode,Ins_D,PC_D,ExcCode_D,BD_D);

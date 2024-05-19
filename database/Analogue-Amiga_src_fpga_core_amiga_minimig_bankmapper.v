@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 //This module maps physical 512KB blocks of every memory chip to different memory ranges in Amiga
 //
 // Since we currently have 8M for non-fastram, this was simplified to

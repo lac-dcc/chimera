@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/wuxx/Colorlight-FPGA-Projects
+// License: Apache License 2.0
+
 module blink (
     input      clk_i,
     output     P2_3,  P2_4,  P2_5,  P2_6,

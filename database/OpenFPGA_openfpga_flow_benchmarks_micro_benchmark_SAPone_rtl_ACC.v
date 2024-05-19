@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module ACC(
 	output [7:0] acc_out1,
 	output [7:0] acc_out2,

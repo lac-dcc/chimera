@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_cce_dir_lru_extract_tag_sets_per_row_p2_row_width_p496_num_lce_p8_lce_assoc_p8_rows_per_set_p4_tag_width_p28
 (
   row_i,

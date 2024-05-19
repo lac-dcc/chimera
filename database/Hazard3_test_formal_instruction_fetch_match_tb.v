@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Wren6991/Hazard3
+// License: Apache License 2.0
+
 // Just instantiate the DUT and constrain error/stall responses to be
 // sensible. Properties are hooked up inside the processor.
 

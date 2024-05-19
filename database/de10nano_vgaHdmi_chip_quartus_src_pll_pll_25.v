@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nhasbun/de10nano_vgaHdmi_chip
+// License: MIT License
+
 // megafunction wizard: %Altera PLL v17.0%
 // GENERATION: XML
 // pll_25.v

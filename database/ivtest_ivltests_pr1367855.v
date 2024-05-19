@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // test.v program starts here
 // This program is based on iverilog report [ 1367855 ] vvp simulation error
 module test();

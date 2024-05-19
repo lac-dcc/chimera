@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AugustinJose1221/FPGA-Build
+// License: MIT License
+
 module top_tb();
 
 reg  clk, rst_n, l_start, r_start, l_clear, r_clear;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 // megafunction wizard: %Unique Chip ID Intel FPGA IP v18.0%
 // GENERATION: XML
 // uniqueid2.v

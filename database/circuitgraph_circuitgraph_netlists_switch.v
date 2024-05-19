@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/circuitgraph/circuitgraph
+// License: MIT License
+
 module switch(in_0,in_1,out_0,out_1,key);
   input in_0,in_1;
   input key;

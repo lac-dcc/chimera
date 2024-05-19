@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 module RAMB16_S1_S1(
   input WEA,
   input ENA,

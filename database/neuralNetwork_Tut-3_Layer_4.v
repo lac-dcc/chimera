@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/vipinkmenon/neuralNetwork
+// License: MIT License
+
 module Layer_4 #(parameter NN = 30,numWeight=784,dataWidth=16,layerNum=1,sigmoidSize=10,weightIntWidth=4,actType="relu")
     (
     input           clk,

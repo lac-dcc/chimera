@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module IntXbar_4( // @[:freechips.rocketchip.system.TinyConfig.fir@102861.2]
   input   auto_int_in_2_0, // @[:freechips.rocketchip.system.TinyConfig.fir@102864.4]
   input   auto_int_in_1_0, // @[:freechips.rocketchip.system.TinyConfig.fir@102864.4]

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TheSUPERCD/8bit_MicroComputer_Verilog
+// License: MIT License
+
 `timescale 1ns/1ps
 module RAM(input clk, input [3:0] address, input write_enable, input read_enable, inout [7:0] data);
 reg [7:0] Memory[15:0];

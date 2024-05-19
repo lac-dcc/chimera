@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Verify that the width is only propagated for a vector multiply.
 // The second (real valued) multiply should not set the expression
 // width to 1.

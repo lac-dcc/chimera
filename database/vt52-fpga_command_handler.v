@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AndresNavarro82/vt52-fpga
+// License: GNU General Public License v3.0
+
 // TODO define constants for the control chars
 module command_handler
   #(parameter ROWS = 24,

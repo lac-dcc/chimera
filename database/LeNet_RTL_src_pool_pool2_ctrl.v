@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : pool2_ctrl.v
 //  Created On    : 2017-12-28 14:23:21

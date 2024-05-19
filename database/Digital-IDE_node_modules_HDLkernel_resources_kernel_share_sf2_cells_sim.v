@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 // https://coredocs.s3.amazonaws.com/Libero/12_0_0/Tool/sf2_mlg.pdf
 
 module AND2 (

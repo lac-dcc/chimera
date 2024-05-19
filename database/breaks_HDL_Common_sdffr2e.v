@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Flop with a single CLK phase used to keep and load at the same time.  (+RESET x2)
 
 module sdffr2e(d, en, res1, res2, phi_keep, q, nq);

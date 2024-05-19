@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // Hex inverter
 
 module ttl_7404 #(parameter BLOCKS = 6, DELAY_RISE = 0, DELAY_FALL = 0)

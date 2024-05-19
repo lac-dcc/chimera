@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 /* Using an oscilloscope you can see on pins tlvds_p and tlvds_n the signal with changing polarity.
 * You can also use a 100 Ohm resistor and two LEDs connected in opposite directions between these pins.
 */

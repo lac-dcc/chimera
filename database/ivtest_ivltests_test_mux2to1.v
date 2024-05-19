@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This module generate all 8 inputs for three boolean variables
 
 module stimulus #(parameter M = 8, T = 10) (

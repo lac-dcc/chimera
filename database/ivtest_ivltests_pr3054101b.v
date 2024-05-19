@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Check the various variable bit selects (LSB > MSB).
 module top;
   parameter [-4:-1] ap = 4'h1;

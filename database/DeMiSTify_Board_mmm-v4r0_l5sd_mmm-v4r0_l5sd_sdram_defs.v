@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 `define DEMISTIFY 1
 `define DEMISTIFY_HDMI 1
 `define SDRAM_ROWBITS 13

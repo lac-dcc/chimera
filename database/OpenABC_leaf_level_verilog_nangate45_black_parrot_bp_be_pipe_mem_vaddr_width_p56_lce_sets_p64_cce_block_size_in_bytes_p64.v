@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bp_be_pipe_mem_vaddr_width_p56_lce_sets_p64_cce_block_size_in_bytes_p64
 (
   clk_i,

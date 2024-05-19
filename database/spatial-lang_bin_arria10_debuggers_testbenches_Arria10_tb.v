@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module Arria10_tb;
   reg clk;                    // in
   reg reset;                  // in

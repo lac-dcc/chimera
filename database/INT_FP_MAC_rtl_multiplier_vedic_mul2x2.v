@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/erihsu/INT_FP_MAC
+// License: MIT License
+
 module mul2x2(
 	input  [1:0] a,
 	input  [1:0] b,

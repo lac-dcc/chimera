@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //Blitter minterm function generator
 //The minterm function generator takes <ain>,<bin> and <cin> 
 //and checks every logic combination against the LF control byte.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WillGreen/timetoexplore
+// License: MIT License
+
 // FPGA VGA Graphics Part 2: 640x360 60Hz VGA Driver
 // (C)2018-2019 Will Green - Licensed under the MIT License
 // Learn more at https://timetoexplore.net/blog/arty-fpga-vga-verilog-02

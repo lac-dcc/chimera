@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-Mini_GW
+// License: Apache License 2.0
+
 // factory_mm_interconnect_0.v
 
 // This file was auto-generated from altera_mm_interconnect_hw.tcl.  If you edit it your changes

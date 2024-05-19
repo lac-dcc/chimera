@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module ornor7(output wire O_OR, output wire O_NOR,
 	      input wire I0, I1, I2, I3, I4, I5, I6);
 

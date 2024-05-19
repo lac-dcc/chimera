@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MaxXSoft/Fuxi
+// License: GNU General Public License v3.0
+
 `define APB_INSTRUCTION_ADDR	(3'b000)
 `define APB_DATA_ADDR			(3'b100)
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module OPENROAD_CLKGATE (CK, E, GCK);
   input CK;
   input E;

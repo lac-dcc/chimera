@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module PPU(RnW, D, RS, n_DBE, EXT, CLK, n_INT, ALE, AD, A, n_RD, n_WR, n_RES, VOut);
 

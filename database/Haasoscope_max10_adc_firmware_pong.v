@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 module pong(clk, vga_h_sync, vga_v_sync, vga_R, vga_G, vga_B, PaddlePosition);
 input clk;
 input [7:0] PaddlePosition;

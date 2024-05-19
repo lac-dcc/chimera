@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VenciFreeman/FFT_ChipDesign
+// License: Mozilla Public License 2.0
+
 //**********************************************************
 // Author: Luo Tian, copyright 2020
 // e-mail: luotian12345@sjtu.edu.cn

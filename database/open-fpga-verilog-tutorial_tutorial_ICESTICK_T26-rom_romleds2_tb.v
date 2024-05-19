@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-------------------------------------------------------------------
 //-- romled2_tb.v
 //-- Banco de pruebas para el secuenciador de luces, implementado con

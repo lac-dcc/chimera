@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jt12
+// License: GNU General Public License v3.0
+
 // Hybrid PWM / Sigma Delta converter
 //
 // Uses 5-bit PWM, wrapped within a 10-bit Sigma Delta, with the intention of

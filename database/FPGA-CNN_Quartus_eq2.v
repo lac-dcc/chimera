@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 //This module implements the Y = 1/2*{|X+1|-|X-1|} equation
 // Here X is the initial X.
 

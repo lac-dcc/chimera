@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module mixed_width_case();
 
 function [2:0] lookup1(input signed [2:0] value);

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Typical asynchronous Reset-Set FF based on two looped nor elements.	(nor-4 to reset)
 
 module rsff_2_4 (res1, res2, res3, s, q, nq);

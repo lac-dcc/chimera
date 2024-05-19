@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "TOP" written by ABC on Mon Feb  4 10:08:03 2019
 
 module alu4 (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 // https://coredocs.s3.amazonaws.com/Libero/12_0_0/Tool/sf2_mlg.pdf
 
 module ADD2 (

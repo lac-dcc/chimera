@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // This module interfaces Minimig's synchronous bus to the 68SEC000 CPU
 //
 // cycle exact CIA interface:

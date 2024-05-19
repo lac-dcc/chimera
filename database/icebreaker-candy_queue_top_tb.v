@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kbob/icebreaker-candy
+// License: GNU General Public License v3.0
+
 `default_nettype none
 
 module top_tb();

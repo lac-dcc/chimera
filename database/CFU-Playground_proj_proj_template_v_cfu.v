@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/google/CFU-Playground
+// License: Apache License 2.0
+
 // Copyright 2021 The CFU-Playground Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

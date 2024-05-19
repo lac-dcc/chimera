@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 module serv_bufreg #(
       parameter [0:0] MDU = 0,
       parameter W = 1,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hipersys-team/lightning
+// License: MIT License
+
 // Asymmetric port RAM
 // Read Wider than Write. Read Statement in loop
 // (c) Xilinx, Inc. 2023

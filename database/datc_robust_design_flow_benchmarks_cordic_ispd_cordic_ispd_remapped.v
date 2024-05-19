@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jinwookjungs/datc_robust_design_flow
+// License: GNU General Public License v3.0
+
 // Latch-mapped netlist written by map_latches.py, 2017-08-22 08:02:33
 // Written ISPD/ICCAD/TAU contest Verilog format. 
 //    Input file:  cordic_ispd/cordic_ispd_remapped.v

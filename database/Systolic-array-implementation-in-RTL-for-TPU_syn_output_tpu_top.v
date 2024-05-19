@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 
 module addr_sel ( clk, addr_serial_num, sram_raddr_w0, sram_raddr_w1, 
         sram_raddr_d0, sram_raddr_d1 );

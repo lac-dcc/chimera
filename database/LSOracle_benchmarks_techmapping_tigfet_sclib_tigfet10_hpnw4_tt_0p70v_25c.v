@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 // Verilog for library /research/ece/lnis/USERS/gauchi/TIGFET/TIGFET-10nm-model/liberate/lib/sclib_tigfet10_hpnw4_tt_0p70v_25c created by Liberate 19.2.1.591 on Tue Oct 26 22:10:02 MDT 2021 for SDF version 2.1
 
 // type: AND2_F1 

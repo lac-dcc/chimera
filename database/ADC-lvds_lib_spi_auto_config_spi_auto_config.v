@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/ADC-lvds
+// License: GNU General Public License v3.0
+
 module spi_auto_config(
 
     input             clk,

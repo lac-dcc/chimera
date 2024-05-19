@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtopl
+// License: GNU General Public License v3.0
+
 module test(
     input                 keyon_now,
     input                 keyoff_now,

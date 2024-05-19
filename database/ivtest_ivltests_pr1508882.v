@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test is based on pr1508882. The output from the test module
  * should produce a 5 bit result, and the widths of the vectors are

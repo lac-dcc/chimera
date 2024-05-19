@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_dipsw_pio (
 		input  wire        clk,        //                 clk.clk
 		input  wire [3:0]  in_port,    // external_connection.export

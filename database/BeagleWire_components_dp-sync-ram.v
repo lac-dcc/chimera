@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pmezydlo/BeagleWire
+// License: GNU General Public License v2.0
+
 module dp_sync_ram(input                    rst,
                    input                    clk,
                    // PORT 0

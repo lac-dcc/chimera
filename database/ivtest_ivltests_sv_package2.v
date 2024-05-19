@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 // This tests SystemVerilog packages. Make sure that names that
 // are the same is different packages can be references properly

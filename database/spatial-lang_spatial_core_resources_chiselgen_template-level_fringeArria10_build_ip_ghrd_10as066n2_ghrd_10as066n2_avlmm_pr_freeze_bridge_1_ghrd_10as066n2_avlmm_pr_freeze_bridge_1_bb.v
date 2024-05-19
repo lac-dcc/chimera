@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_avlmm_pr_freeze_bridge_1 (
 		input  wire        clock,                               //            clock.clk
 		input  wire        freeze_conduit_freeze,               //   freeze_conduit.freeze

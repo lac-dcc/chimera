@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lirui-shanghaitech/CNN-Accelerator-VLSI
+// License: Apache License 2.0
+
 module PE_FSM (clk, rst_n, start_conv, start_again, cfg_ci, cfg_co, 
             ifm_read, wgt_read, p_valid_output, last_chanel_output, end_conv
 );

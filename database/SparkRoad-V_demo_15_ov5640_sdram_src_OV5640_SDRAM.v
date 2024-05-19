@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 module OV5640_SDRAM(
 	clk_in,
 	reset_n,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Cosmos-OpenSSD/Cosmos-OpenSSD
+// License: GNU General Public License v3.0
+
 /*******************************************************************************
 *     This file is owned and controlled by Xilinx and must be used solely      *
 *     for design, simulation, implementation and creation of design files      *

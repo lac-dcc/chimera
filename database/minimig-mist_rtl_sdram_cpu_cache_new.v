@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 // cpu_cache_new.v
 // 2015, rok.krajnc@gmail.com
 // this is a 2-way set-associative cache

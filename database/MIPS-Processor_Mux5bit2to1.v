@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neelkshah/MIPS-Processor
+// License: GNU General Public License v3.0
+
 module bit5_2to1mux(out, select, in1, in2);
 	input [4:0] in1, in2;
 	output [4:0] out;

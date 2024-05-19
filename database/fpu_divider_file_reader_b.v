@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/fpu
+// License: MIT License
+
 //name : file_reader_b
 //tag : c components
 //output : output_z:16

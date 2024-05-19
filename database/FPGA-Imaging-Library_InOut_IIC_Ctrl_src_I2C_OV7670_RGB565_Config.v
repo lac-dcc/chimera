@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dtysky/FPGA-Imaging-Library
+// License: GNU Lesser General Public License v2.1
+
 module	I2C_OV7670_RGB565_Config
 (
 	input		[7:0]	LUT_INDEX,

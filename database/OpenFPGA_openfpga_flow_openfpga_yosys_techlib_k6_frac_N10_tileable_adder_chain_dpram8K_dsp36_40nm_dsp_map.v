@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 module mult_36x36 (
   input [0:35] A,
   input [0:35] B,

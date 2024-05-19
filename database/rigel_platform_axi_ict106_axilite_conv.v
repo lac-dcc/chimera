@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 //`timescale 1ps/1ps
 
 module ict106_axilite_conv #

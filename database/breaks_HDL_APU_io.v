@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // APU I/O interface.
 
 // It is moved to a separate module so as not to be confused with the other pads.

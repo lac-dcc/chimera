@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
  /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify

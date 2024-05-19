@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module bug();
   localparam signed [31:0] n1 = 32'h8000_0000;
   localparam signed [31:0] d1 = 32'hFFFF_FFFF;

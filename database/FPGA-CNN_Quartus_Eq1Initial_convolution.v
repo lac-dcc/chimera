@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 `define COUNTER_WIDTH 4
 module convolution#(parameter WIDTH = 9)
 (

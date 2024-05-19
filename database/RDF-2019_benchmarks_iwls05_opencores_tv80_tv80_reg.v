@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ieee-ceda-datc/RDF-2019
+// License: MIT License
+
 //
 // TV80 8-Bit Microprocessor Core
 // Based on the VHDL T80 core by Daniel Wallner (jesus@opencores.org)

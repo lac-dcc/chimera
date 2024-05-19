@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 module register_mux( mux_out, in0, in1, in2, in3, in4, in5, in6, in7, select);
   output reg [15:0]	mux_out; 
   input  [15:0] 	in0, in1, in2, in3, in4, in5, in6, in7;

@@ -1,4 +1,7 @@
-// Copyright Modos / Wenting Zhang 2023
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
+// Copyright Wenting Zhang 2024
 //
 // This source describes Open Hardware and is licensed under the CERN-OHL-P v2
 //
@@ -54,7 +57,7 @@ module memif(
     );
 
     localparam BYTE_PER_WORD = 16; // 128 bit bus
-    localparam BURST_LENGTH = 16; // Should be at least 2
+    localparam BURST_LENGTH = 8; // Should be at least 2
     localparam BYTE_PER_CMD = BYTE_PER_WORD * BURST_LENGTH;
 
     // WR state machine

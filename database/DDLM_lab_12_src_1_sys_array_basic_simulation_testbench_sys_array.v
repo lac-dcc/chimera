@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 `timescale 1 ns / 100 ps
 module testbench_sys_array
 #(parameter DATA_WIDTH=8,

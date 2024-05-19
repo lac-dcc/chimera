@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This just tests the compiler accepts the syntax. It needs to be improved
 // when deferred assumeions are supported.
 module test();

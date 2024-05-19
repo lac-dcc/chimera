@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 // Module onebyone takes in the A template, B template, input, initial Y, I template and initial X 
 // Output of the equation is Xout (output of eq1 module) and Yout (output of eq2)
 

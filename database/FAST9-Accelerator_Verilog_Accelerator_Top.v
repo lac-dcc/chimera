@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ISKU/FAST9-Accelerator
+// License: MIT License
+
 module Accelerator_Top (clock, nReset, position, isMatching);
 	input clock;
 	input nReset;

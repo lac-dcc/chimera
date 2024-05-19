@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 parameter num1 = 201, str1 = "unit2";
 parameter num2 = 202, str2 = "unit2";
 parameter num3 = 203, str3 = "unit2";

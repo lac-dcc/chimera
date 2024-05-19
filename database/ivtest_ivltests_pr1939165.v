@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * Copyright (c) 2008 Gyorgy Jeney (nog@sdf.lonestar.org)
  *

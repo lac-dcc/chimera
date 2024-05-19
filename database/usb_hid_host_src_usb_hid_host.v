@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nand2mario/usb_hid_host
+// License: Apache License 2.0
+
 // Usb_hid_host: A compact USB HID host core.
 //
 // nand2mario, 8/2023, based on work by hi631

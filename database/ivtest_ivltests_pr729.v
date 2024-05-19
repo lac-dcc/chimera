@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module main;
   parameter p_real      = 1.2345 ;
   parameter p_real_x2   = p_real * 2 ; // <-- here

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TeamVoss/VossII
+// License: Apache License 2.0
+
 
 module b222 (BCLK, WR_MRAM, VADR, MMU_DIN, rd_addr, rd_result);
 

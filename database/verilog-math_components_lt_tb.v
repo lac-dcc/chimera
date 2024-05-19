@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/verilog-math
+// License: MIT License
+
 module lt_tb;
   reg clk;
   reg [31:0] lt_a;

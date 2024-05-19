@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // ghrd_10as066n2_pr_region_controller_0_altera_pr_region_controller_171_lvntgla.v
 
 // This file was auto-generated from altera_pr_region_controller_hw.tcl.  If you edit it your changes

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/johan92/yafpgatetris
+// License: MIT License
+
 // megafunction wizard: %FIFO%
 // GENERATION: STANDARD
 // VERSION: WM1.0

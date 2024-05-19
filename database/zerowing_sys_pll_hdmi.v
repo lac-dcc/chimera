@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 // megafunction wizard: %PLL Intel FPGA IP v20.1%
 // GENERATION: XML
 // pll_hdmi.v

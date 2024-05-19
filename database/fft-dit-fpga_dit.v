@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/benreynwar/fft-dit-fpga
+// License: MIT License
+
 // Copyright (c) 2012 Ben Reynwar
 // Released under MIT License (see LICENSE.txt)
 

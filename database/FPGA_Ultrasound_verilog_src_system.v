@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/waynezv/FPGA_Ultrasound
+// License: GNU General Public License v3.0
+
 module system
   (
     processing_system7_0_MIO,

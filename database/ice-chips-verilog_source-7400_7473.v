@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // Dual J-K flip-flop with clear; negative-edge-triggered
 
 module ttl_7473 #(parameter BLOCKS = 2, DELAY_RISE = 0, DELAY_FALL = 0)

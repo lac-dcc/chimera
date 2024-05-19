@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/eminfedar/fedar-f1-rv64im
+// License: MIT License
+
 module RAM(
     input [9:0] ADDRESS,
     input [63:0] DATA_IN,

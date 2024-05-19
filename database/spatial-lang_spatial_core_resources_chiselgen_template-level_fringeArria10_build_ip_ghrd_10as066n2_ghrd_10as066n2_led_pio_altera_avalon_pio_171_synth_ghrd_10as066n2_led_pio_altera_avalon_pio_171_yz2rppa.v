@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 //Legal Notice: (C)2018 Altera Corporation. All rights reserved.  Your
 //use of Altera Corporation's design tools, logic functions and other
 //software and tools, and its AMPP partner logic functions, and any

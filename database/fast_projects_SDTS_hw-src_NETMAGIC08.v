@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //UM which is the only module users may redefined;
 //packets are forward between port2 and port3 in passthrough mode;
 //NMAC packets are input from port1;

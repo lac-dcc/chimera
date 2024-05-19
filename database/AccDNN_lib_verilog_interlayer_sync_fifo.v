@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/IBM/AccDNN
+// License: Apache License 2.0
+
 `timescale 1ns/100ps
 
 module interlayer_sync_fifo

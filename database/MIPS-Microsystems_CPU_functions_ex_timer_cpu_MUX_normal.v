@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module MUX_PC(PC_Sel_D,PC_Sel_M,ADD4,NPC,EPC,NextPC);
 //interface
 	input [31:0] PC_Sel_D;

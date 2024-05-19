@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 /*-----------------------------------------------------------------------------
 CM_FIFO_autodrain
 	This module will auto-drain (read from) the CM FIFO when RingBufferMode

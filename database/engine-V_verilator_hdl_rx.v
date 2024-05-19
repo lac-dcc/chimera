@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/micro-FPGA/engine-V
+// License: Apache License 2.0
+
 `timescale 1ns / 1ps
 /* UART Receiver module 
  * Receives the serial signal on the rx pin.  Uses 4 posedge's

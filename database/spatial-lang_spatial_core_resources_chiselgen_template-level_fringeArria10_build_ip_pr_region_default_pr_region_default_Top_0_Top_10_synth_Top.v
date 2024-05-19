@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // Top.v
 
 // This file was auto-generated as a prototype implementation of a module

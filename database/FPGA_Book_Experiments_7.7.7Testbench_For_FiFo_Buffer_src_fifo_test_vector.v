@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AngeloJacobo/FPGA_Book_Experiments
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module fifo_test_vector #(parameter W=4,B=8)

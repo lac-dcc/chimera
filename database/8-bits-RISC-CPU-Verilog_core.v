@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/liuqdev/8-bits-RISC-CPU-Verilog
+// License: MIT License
+
 module core(clk, rst);	// Top-level entity(except core-tb)
 input clk, rst;
 

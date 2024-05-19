@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scluconn/DA_PUF_Library
+// License: MIT License
+
 
 module xor_apuf #(parameter N=16,K=8)(clk,tigSignal,c,respReady,respBitA,respBit);
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/micro-FPGA/engine-V
+// License: Apache License 2.0
+
 module mf8_pcs(Clk, Reset_n, Offs_In, Pause, RJmp, NPC, PC);
 	input			Clk;
 	input			Reset_n;

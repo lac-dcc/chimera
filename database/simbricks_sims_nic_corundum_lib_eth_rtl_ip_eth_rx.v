@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 /*
 
 Copyright (c) 2014-2018 Alex Forencich

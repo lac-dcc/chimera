@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //disk dma engine
 //DMA cycle allocation is as specified in the HRM
 //optionally 4 refresh slots are used for higher transfer speed

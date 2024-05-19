@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module p #(parameter a = 1, b = 2) ();
 
   typedef logic [b:a] vector_t;

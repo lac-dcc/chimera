@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/wuxx/Colorlight-FPGA-Projects
+// License: Apache License 2.0
+
 module hvsync_generator(clk, vga_h_sync, vga_v_sync, inDisplayArea, CounterX, CounterY);
 input clk;
 output vga_h_sync, vga_v_sync;

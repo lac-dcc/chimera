@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_mesh_router_dor_decoder_x_cord_width_p1_y_cord_width_p1_dirs_lp5_XY_order_p0
 (
   clk_i,

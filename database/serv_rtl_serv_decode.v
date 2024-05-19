@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 `default_nettype none
 module serv_decode
   #(parameter [0:0] PRE_REGISTER = 1,

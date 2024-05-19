@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 // sprite priority logic module
 // this module checks the playfields and sprites video status and
 // determines if playfield or sprite data must be sent to the video output

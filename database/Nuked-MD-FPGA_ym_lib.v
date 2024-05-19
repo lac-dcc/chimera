@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-MD-FPGA
+// License: GNU General Public License v2.0
+
 // ym3438, ym7101, fc1004 common cells
 
 module ym_sr_bit #(parameter SR_LENGTH = 1)

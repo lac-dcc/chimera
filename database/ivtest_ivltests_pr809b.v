@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module main;
    wire [1:0] a2, b2;
    wire [2:0] a3, b3;

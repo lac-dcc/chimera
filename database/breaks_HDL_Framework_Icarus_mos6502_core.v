@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Checking the core under simple conditions.
 // We organize a minimal computing system, the so called BogusSystem. This system has only 6502 and 64 Kbytes of memory with a loaded dump.
 // The core runs for N cycles and we see how alive it is.

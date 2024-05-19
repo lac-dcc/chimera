@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 //GMII interface:1 byte to 139bits data,output to crc;
 //by jzc 20101020;
 `timescale 1ns/1ns

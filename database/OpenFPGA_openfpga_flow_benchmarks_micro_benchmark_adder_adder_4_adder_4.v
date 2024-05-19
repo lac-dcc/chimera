@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Creating a scaleable adder
 
 module adder_4(cout, sum, a, b, cin);

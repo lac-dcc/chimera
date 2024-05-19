@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neogeodev/NeoGeoFPGA-sim
+// License: GNU General Public License v3.0
+
 // NeoGeo logic definition (simulation only)
 // Copyright (C) 2018 Sean Gonsalves
 //

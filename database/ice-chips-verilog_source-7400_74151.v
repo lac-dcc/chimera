@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 8-input multiplexer
 
 module ttl_74151 #(parameter WIDTH_IN = 8, WIDTH_SELECT = $clog2(WIDTH_IN),

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/enjoy-digital/usb3_pipe
+// License: BSD 2-Clause "Simplified" License
+
 // 1024x8b ram (1 write / 1 read / 2 clocks)
 // read latency: 1 clock
 

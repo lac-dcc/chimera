@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/tinyfpga_bx_usbserial
+// License: Apache License 2.0
+
 // The IN Protocol Engine sends data to the host.
 module usb_fs_in_pe #(
   parameter NUM_IN_EPS = 11,

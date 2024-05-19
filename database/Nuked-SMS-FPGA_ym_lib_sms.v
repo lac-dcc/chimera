@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-SMS-FPGA
+// License: GNU General Public License v2.0
+
 module ymn_sr_bit #(parameter SR_LENGTH = 1)
 	(
 	input MCLK,

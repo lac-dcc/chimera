@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-de1
+// License: GNU General Public License v3.0
+
 /********************************************/
 /* soc_tb.v                                 */
 /* DE1 skeleton testbench                   */

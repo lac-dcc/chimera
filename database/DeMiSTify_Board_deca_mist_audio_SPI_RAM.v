@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/robinsonb5/DeMiSTify
+// License: GNU General Public License v3.0
+
 `timescale 1 ps / 1 ps
 module SPI_RAM (
 	address,

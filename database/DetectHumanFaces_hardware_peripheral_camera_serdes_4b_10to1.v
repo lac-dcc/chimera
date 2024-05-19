@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 `timescale 1ns/1ps
 
 module serdes_4b_10to1 (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /*  This file is part of JTOPL.
 
     JTOPL is free software: you can redistribute it and/or modify
@@ -33,12 +36,13 @@ module jtopl_pg_sum (
     output reg  [ 9:0] phase_op
 );
 
-reg [21:0] phinc_mul;
-reg [ 4:0] factor[0:15];
+wire [21:0] phinc_mul;
+reg  [ 4:0] factor[0:15];
+
+assign phinc_mul = {5'b0, phinc_pure} * factor[mul];
 
 always @(*) begin
-    phinc_mul = { 5'b0, phinc_pure} * factor[mul];
-    phase_out = pg_rst ? 'd0 : (phase_in + phinc_mul[19:1]);
+    phase_out = pg_rst ? 19'd0 : (phase_in + phinc_mul[19:1]);
     phase_op  = phase_out[18:9];
 end
 

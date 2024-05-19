@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 /*******************************************************************************
  * Function:  Packet-->Memory Mapped Transaction Converter
  * Author:    Andreas Olofsson

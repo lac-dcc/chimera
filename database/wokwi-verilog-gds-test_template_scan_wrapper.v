@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/mattvenn/wokwi-verilog-gds-test
+// License: Apache License 2.0
+
 `default_nettype none
 /*
 `ifdef COCOTB

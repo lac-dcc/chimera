@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/NeoGeo_MiSTer
+// License: GNU General Public License v2.0
+
 // NeoGeo logic definition
 // MiSTer RTC to uPD4990
 //

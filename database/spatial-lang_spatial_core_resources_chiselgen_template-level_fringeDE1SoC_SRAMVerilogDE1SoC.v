@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module SRAMVerilogDE1SoC
 #(
     parameter WORDS = 1024,

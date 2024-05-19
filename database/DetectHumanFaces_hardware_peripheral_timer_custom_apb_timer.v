@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WalkerLau/DetectHumanFaces
+// License: MIT License
+
 module custom_apb_timer #(
 	parameter ADDRWIDTH = 12,
   parameter CLK_FREQ  = 32'd50000000

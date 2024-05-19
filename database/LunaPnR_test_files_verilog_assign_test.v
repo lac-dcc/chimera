@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/asicsforthemasses/LunaPnR
+// License: GNU General Public License v3.0
+
 // test to verify assign statements
 
 module testmodule(x1,x2,x3,x4,y1,y2,y3,y4);

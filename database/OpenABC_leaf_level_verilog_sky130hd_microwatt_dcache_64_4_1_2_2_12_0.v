@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module dcache_64_4_1_2_2_12_0(
 
 `ifdef USE_POWER_PINS

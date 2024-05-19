@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 `define IDLE       3'b000
 `define STATE_RD   3'b001
 `define STATE_EX1  3'b010

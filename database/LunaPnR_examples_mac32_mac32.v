@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/asicsforthemasses/LunaPnR
+// License: GNU General Public License v3.0
+
 // SPDX-FileCopyrightText: 2021-2024 Niels Moseley <asicsforthemasses@gmail.com>
 //
 // SPDX-License-Identifier: GPL-3.0-only

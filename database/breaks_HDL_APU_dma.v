@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Sprite DMA
 
 // This component acts as a small DMA controller, which besides sprite DMA also handles address bus arbitration and processor readiness control (RDY).

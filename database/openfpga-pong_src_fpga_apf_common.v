@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-pong
+// License: MIT License
+
 // Software License Agreement
 
 // The software supplied herewith by Analogue Enterprises Limited (the "Company”),

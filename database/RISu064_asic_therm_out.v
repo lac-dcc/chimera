@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zephray/RISu064
+// License: MIT License
+
 `default_nettype none
 
 module therm_out(

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module bar(clk, rst, inp, out);
   (* this_is_clock = 1 *)
   input  wire clk;

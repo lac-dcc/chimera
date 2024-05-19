@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 /* 1280 x 1024 @ 60 Hz constants  */
 
 //`define   h_front_porch          11'd48

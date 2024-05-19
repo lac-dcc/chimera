@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/stan/IODELAY2.v,v 1.25 2010/01/28 19:46:31 robh Exp $
 ///////////////////////////////////////////////////////
 //  Copyright (c) 2008 Xilinx Inc.

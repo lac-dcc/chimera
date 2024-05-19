@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // From the book: "But How Do It Know?" pg. 52
 // Written by: J. Clark Scott
 //

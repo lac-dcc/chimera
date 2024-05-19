@@ -1,0 +1,15 @@
+// This program was cloned from: https://github.com/ekb0412/100DaysofRTL
+// License: Apache License 2.0
+
+`timescale 1ns / 1ps
+
+module tb_nor;
+    reg Vin1, Vin2;
+    wire Vout;
+    nor_gate dut(Vin1, Vin2, Vout);
+    initial Vin1= 1'b0;
+    initial Vin2= 1'b0;
+    initial forever #50 Vin1 = ~Vin1;
+    initial forever #100 Vin2 = ~Vin2;
+    initial #600 $finish;
+endmodule

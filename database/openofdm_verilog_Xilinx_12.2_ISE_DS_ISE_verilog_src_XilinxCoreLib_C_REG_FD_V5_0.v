@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /* $Id: C_REG_FD_V5_0.v,v 1.17 2008/09/08 20:05:56 akennedy Exp $
 --
 -- Filename - C_REG_FD_V5_0.v

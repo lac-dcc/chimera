@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Copyright (c) 2002 Michael Ruff (mruff at chiaro.com)
 //		    Michael Runyan (mrunyan at chiaro.com)
 //

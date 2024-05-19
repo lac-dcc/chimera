@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Copyright C(O) 2004 Burnell G West
 // The following text may be utilized and / or reproduced by anybody for
 // any reason.

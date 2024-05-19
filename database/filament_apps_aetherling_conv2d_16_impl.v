@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cucapra/filament
+// License: MIT License
+
 module stupleToSSeq_tInt_n3 (
     input [7:0] I_0,
     input [7:0] I_1,

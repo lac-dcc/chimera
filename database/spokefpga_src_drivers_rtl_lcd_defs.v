@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 
 localparam LCD_COMMAND_NONE = 0,
            LCD_COMMAND_CONFIGURE = 1,

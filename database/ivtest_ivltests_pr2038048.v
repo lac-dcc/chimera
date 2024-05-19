@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Copyright 2008, Martin Whitaker.
 // This file may be freely copied for any purpose.
 

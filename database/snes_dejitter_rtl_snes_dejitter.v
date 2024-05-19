@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marqs85/snes_dejitter
+// License: MIT License
+
 // MIT License
 // 
 // Copyright (c) 2017-2018 Markus Hiienkari

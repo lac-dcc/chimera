@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 /*
  *  PS2 Mouse without FIFO buffer
  *  Copyright (C) 2010  Donna Polehn <dpolehn@verizon.net>

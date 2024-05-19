@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Note: The for is translated to a begin/while is it tests the while.
 
 module main;

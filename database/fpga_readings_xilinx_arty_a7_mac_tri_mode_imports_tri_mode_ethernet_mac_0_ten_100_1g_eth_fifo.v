@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lastweek/fpga_readings
+// License: Apache License 2.0
+
 //------------------------------------------------------------------------------
 // Title      : 10/100/1G Ethernet FIFO
 // Version    : 1.2

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 module fpu_tb ();
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)

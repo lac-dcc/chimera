@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "TOP" written by ABC on Mon Feb  4 17:31:22 2019
 
 module ex1010 ( 

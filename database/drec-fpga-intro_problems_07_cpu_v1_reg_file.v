@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/viktor-prutyanov/drec-fpga-intro
+// License: GNU General Public License v2.0
+
 module reg_file(
     input clk,
     input [4:0]raddr0,   /* Read address #0 */

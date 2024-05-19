@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/secworks/sha1
+// License: BSD 2-Clause "Simplified" License
+
 //======================================================================
 //
 // Tb_sha1_w_mem.v

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Kenji-Ishimaru/polyphony
+// License: MIT License
+
 `define PP_HDMI_NEG_OUT
 
 module fm_hdmi (

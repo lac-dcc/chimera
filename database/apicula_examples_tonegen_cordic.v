@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 // pipelined CORDIC algorithm to calculate sin/cos pair from a given angle (0..1)
 // Author: Niels A. Moseley
 //

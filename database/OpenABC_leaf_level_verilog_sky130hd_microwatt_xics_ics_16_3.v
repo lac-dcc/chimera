@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module xics_ics_16_3(clk, rst, \wb_in.adr , \wb_in.dat , \wb_in.sel , \wb_in.cyc , \wb_in.stb , \wb_in.we , int_level_in, \wb_out.dat , \wb_out.ack , \wb_out.stall , \icp_out.src , \icp_out.pri );
   wire _0000_;
   wire _0001_;

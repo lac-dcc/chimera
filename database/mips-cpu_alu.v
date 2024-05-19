@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jmahler/mips-cpu
+// License: GNU General Public License v3.0
+
 `ifndef _alu
 `define _alu
 

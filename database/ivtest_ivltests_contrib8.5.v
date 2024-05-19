@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 //
 // Copyright (c) 1999 Steve Wilson (stevew@home.com)
 // Based on code contributed by Peter Monta (pmonta@imedia.com)

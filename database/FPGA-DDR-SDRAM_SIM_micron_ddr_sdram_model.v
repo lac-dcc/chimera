@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-DDR-SDRAM
+// License: GNU General Public License v3.0
+
 /****************************************************************************************
 *  Description:  Micron SDRAM DDR (Double Data Rate)
 *

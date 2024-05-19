@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function:  A Padring IO Domain                                            #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #

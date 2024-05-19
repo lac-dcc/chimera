@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module multi_n2_ext2
 #(
 	parameter	D_WIDTH	= 8

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 module rstc (
     input wire clk,
     input wire hard_rst_n,  //硬件复位，低电平有效

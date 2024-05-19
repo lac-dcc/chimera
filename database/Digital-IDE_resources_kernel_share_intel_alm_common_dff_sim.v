@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 // The four D flip-flops (DFFs) in a Cyclone V/10GX Adaptive Logic Module (ALM)
 // act as one-bit memory cells that can be placed very flexibly (wherever there's
 // an ALM); each flop is represented by a MISTRAL_FF cell.

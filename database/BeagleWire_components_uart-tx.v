@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pmezydlo/BeagleWire
+// License: GNU General Public License v2.0
+
 module uart_tx (input    [15:0]   data_in,
                 input    [15:0]   clk_div,
                 input             wr_en,

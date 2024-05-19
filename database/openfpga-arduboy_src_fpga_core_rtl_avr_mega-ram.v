@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/agg23/openfpga-arduboy
+// License: GNU General Public License v3.0
+
 /*
  * This IPs is the RAM memory for the Atmel MEGA CPU implementation.
  * 

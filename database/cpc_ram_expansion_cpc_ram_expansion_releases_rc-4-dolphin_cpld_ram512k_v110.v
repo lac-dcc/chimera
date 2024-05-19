@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/revaldinho/cpc_ram_expansion
+// License: GNU General Public License v3.0
+
 /* cpld_ram512K_v110
  * 
  * ==============================================================================

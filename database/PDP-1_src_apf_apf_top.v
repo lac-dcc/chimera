@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 // Software License Agreement
 
 // The software supplied herewith by Analogue Enterprises Limited (the "Company”),

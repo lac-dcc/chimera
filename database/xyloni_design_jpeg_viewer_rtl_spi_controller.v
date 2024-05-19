@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 `define WFIFO_DEPTH_256 8'd2 //256*DEPTH
 `define RFIFO_DEPTH_256 8'd2
 //`define DBG_MODE

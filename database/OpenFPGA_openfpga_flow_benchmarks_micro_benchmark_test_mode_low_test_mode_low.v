@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //////////////////////////////////////
 //                                  //
 //    2x2 Test-modes Low density    //

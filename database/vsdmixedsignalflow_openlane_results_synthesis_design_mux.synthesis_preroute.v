@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/praharshapm/vsdmixedsignalflow
+// License: Apache License 2.0
+
 module design_mux (CSB,
     RST,
     SCK,

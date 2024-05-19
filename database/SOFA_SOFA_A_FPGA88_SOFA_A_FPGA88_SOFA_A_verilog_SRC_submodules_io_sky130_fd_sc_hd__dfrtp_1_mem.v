@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 //Generated from netlist by SpyDrNet
 //netlist name: FPGA88_SOFA_A
 module io_sky130_fd_sc_hd__dfrtp_1_mem

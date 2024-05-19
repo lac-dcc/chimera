@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 module ring_counter (clk,out_carry,carryin,carryout,delayin,start,out_delay);
 input clk;
 output reg [7:0] out_carry;

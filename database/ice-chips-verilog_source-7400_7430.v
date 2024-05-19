@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 8-input NAND gate
 
 module ttl_7430 #(parameter WIDTH_IN = 8, DELAY_RISE = 0, DELAY_FALL = 0)

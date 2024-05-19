@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test;
    parameter foo = 5;
    initial $display("%m foo = %d", foo);

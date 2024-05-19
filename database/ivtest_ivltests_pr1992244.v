@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   wire [15:0] number =16'h20;
   wire shift_cmp = (number == (1 << 5));

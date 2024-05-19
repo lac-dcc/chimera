@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 module io_tc1 (mux_in, demux_out,mux_sel, demux_sel);
 input [0:511] mux_in;
 input [8:0]mux_sel; 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/The-OpenROAD-Project/OpenROAD
+// License: BSD 3-Clause "New" or "Revised" License
+
 (* noblackbox *) module sky130_ef_sc_hd__decap_12 ();
 
     

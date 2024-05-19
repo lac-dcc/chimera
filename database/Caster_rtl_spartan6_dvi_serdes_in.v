@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
 // dvi_serdes_in.v
 // DVI 1:10 TMDS deserializer based on XAPP495.
 // This file is not covered under CERN-OHL-P.

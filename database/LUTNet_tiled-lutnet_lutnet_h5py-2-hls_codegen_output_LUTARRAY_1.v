@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/awai54st/LUTNet
+// License: BSD 2-Clause "Simplified" License
+
 `timescale 1 ns / 1 ps
 
 module LUTARRAY_1 (

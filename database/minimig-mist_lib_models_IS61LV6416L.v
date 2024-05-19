@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //[Disclaimer] Integrated Silicon Solutions Inc. ("ISSI") hereby grants the
 // user of this model a non-exclusive, nontransferable
 // license to use this model under the following terms.

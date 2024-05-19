@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/trcwm/Speech256
+// License: GNU Lesser General Public License v3.0
+
 
 // This file was auto-generated,
 // do not modify by hand!

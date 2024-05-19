@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 `timescale 1ns/1ns
 module pkt_input_ctrl(
                     	     clk,

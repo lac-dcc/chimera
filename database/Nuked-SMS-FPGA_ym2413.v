@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-SMS-FPGA
+// License: GNU General Public License v2.0
+
 /*
  * Copyright (C) 2023 nukeykt
  *
@@ -35,7 +38,9 @@ module ym2413
 	output [1:0] DATA_o,
 	output DATA_d,
 	output [9:0] RO,
-	output [9:0] MO
+	output [9:0] MO,
+	//extra
+	output dac_clk_o
 	);
 	
 	wire reset = ~IC;
@@ -1476,7 +1481,8 @@ module ym2413
 	assign DATA_o = { ch_dbg[8], pg_dbg[0] };
 	
 	assign DATA_d = ~dbg_read;
-	
+
+	assign dac_clk_o = dac_clk;
 endmodule
 
 module reg_handler

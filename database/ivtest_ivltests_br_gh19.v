@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for GitHub issue 19 : Icarus only using the lowest 32
 // bits of right shift operand.
 

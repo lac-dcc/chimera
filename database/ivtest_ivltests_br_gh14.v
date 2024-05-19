@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for GitHub issue 14 : Bug in processing 1'b1 >= |1'bx.
 
 module bug();

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: A register driven by a combinational logic with reset signal
 //  Author:        Xifan Tang

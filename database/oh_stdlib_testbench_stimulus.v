@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 // A stimulus file provides inputs signals to the design under test (DUT).
 // This stimulus module is designed to be compatible with verilog simulators,
 // emulators, and FPGA prototyping. This is akin to a simple test vector generator

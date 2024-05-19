@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 10-line to 4-line priority encoder
 
 module ttl_74147 #(parameter WIDTH_IN = 9, WIDTH_OUT = 4, DELAY_RISE = 0, DELAY_FALL = 0)

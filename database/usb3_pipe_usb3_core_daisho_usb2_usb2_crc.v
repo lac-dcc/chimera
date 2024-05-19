@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/enjoy-digital/usb3_pipe
+// License: BSD 2-Clause "Simplified" License
+
 
 //
 // usb 2.0 crc5, crc16

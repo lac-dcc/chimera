@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 module top_module (
     input [4:0] a, b, c, d, e, f,
     output [7:0] w, x, y, z );//

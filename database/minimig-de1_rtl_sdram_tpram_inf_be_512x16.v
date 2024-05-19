@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-de1
+// License: GNU General Public License v3.0
+
 // tpram_inf_be_512x16.v
 // 2013, rok.krajnc@gmail.com
 // inferrable two-port memory with byte-enables

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test ();
    parameter fuse_a_msb = 4;
    parameter fuse_q_msb = (2**(fuse_a_msb+1))-1;

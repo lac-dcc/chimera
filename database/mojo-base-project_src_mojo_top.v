@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/embmicro/mojo-base-project
+// License: MIT License
+
 module mojo_top(
     // 50MHz clock input
     input clk,

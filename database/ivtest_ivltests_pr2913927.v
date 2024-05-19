@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   // We expect <integer_width> bits for the zero or mone parameters. The
   // big test must also be at least <integer_width>, but Icarus currently

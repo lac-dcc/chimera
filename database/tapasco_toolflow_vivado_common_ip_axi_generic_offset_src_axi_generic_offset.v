@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/esa-tu-darmstadt/tapasco
+// License: GNU Lesser General Public License v3.0
+
 /*
  * AXI offset. Set highest address bit to zero.
  *

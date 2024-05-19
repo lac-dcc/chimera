@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olgirard/openmsp430
+// License: BSD 3-Clause "New" or "Revised" License
+
 /*******************************************************************************
 *     This file is owned and controlled by Xilinx and must be used solely      *
 *     for design, simulation, implementation and creation of design files      *

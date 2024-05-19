@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 //2048 words deep, 16 bits wide, fifo
 //data is written into the fifo when wr=1
 //reading is more or less asynchronous if you read during the rising edge of clk

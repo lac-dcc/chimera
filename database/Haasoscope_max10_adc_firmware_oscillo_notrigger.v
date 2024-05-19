@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 module oscillo(clk, RxD, TxD, clk_flash, data_flash);
 input clk;
 input RxD;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTFRAME.
     JTFRAME program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,14 +36,14 @@ module jtframe_rsthold(
 `endif    
 );
 
-reg hold24, hold48;
-
 always @(negedge clk)   rst_h   <= rst   || hold;
 `ifdef JTFRAME_CLK24
+reg hold24;
 always @(posedge clk24) hold24  <= hold;
 always @(negedge clk24) rst24_h <= rst24 || hold24; `endif
 `ifdef JTFRAME_CLK48
+reg hold48;
 always @(posedge clk48) hold48  <= hold;
-always @(negedge clk48) rst48_h <= rst48 || hold; `endif
+always @(negedge clk48) rst48_h <= rst48 || hold48; `endif
 
 endmodule

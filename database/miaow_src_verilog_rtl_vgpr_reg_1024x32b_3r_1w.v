@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/VerticalResearchGroup/miaow
+// License: BSD 3-Clause "New" or "Revised" License
+
 //rd0 - 128/64/32 bits wide (can be unaligned)
 //rd1 - 32 bits wide
 //rd2 - 32 bits wide

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/zephray/RISu064
+// License: MIT License
+
 //
 // RISu64
 // Copyright 2022 Wenting Zhang

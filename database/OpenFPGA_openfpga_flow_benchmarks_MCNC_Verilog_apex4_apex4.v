@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "TOP" written by ABC on Mon Feb  4 17:25:42 2019
 
 module apex4 ( 

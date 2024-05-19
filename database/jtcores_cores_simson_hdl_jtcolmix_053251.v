@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -89,8 +92,10 @@ always @* begin
 end
 
 function opaque( input full, input [7:0] col );
+begin
     opaque = ~|col[3:0];
     if(full) opaque = opaque & ~|col[7:4];
+end
 endfunction
 
 `ifdef SIMULATION

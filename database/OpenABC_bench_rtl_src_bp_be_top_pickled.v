@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 // Name: Black Parrot Back-end (BE) Only
 //
 // Description: Back-end of a 64-bit RISC-V Core with Cache Coherence Directory.

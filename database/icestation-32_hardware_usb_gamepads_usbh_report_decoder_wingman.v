@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dan-rodrigues/icestation-32
+// License: MIT License
+
 // 046d:c20a Logitech, Inc. WingMan RumblePad
 
 `default_nettype none

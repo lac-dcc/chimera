@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/pwmarcz/fpga-chip8
+// License: MIT License
+
 module utils;
   task assert_true;
     input x;

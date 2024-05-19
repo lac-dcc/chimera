@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 /******************************************************************
  Title       : light_fsm.v	     		 
  Design      : 10 State Finite State Machine (*Timer Mode)	 

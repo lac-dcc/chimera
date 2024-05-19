@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MahmouodMagdi/Clock-Domain-Crossing-Synchronizers
+// License: MIT License
+
 module FIFO_Write_Pointer #(
 
 	parameter ADDR_WIDTH = 4

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   reg [15:0] out_16;
   reg [31:0] in_32, in_32x, ck_32, ck_32x, out_32, out_32x;

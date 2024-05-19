@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 module cmd_parser
 #(	
 	parameter	UART_DATA_WIDTH = 8,    // uart 数据位宽

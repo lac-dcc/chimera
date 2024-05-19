@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // A unit test for checking APU Clock Trees.
 
 // The idea is simple. We start a negedge counter for the CLK and check the transit of child clocks.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module itlb_vaddr_width_p56_paddr_width_p22_eaddr_width_p64_btb_indx_width_p9_bht_indx_width_p5_ras_addr_width_p22_asid_width_p10_ppn_start_bit_p12_tag_width_p10
 (
   clk_i,

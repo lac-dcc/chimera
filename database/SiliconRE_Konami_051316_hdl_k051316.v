@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/furrtek/SiliconRE
+// License: GNU General Public License v2.0
+
 // Konami 051316 "PSAC"
 // Based on silicon
 // 2022 Sean Gonsalves

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/fpgasystems/caribou
+// License: GNU General Public License v3.0
+
 //---------------------------------------------------------------------------
 //--  Copyright 2015 - 2017 Systems Group, ETH Zurich
 //-- 

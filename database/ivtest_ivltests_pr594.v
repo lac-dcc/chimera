@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test;
    parameter NBytes = 21;
    parameter  Message = "0H1d2j3i4k 5R6i7k8d9["; // Message to send

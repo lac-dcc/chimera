@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-de1
+// License: GNU General Public License v3.0
+
 // ps2mouse.v
 // ps2 mouse model
 // 2014, rok.krajnc@gmail.com

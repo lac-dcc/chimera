@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/archlabo/Frix
+// License: BSD 2-Clause "Simplified" License
+
 // Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2014.1 (win64) Build 881834 Fri Apr  4 14:15:54 MDT 2014

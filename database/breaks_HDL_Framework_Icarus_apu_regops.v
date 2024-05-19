@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Testing register operations
 
 // Simply go through the addresses in the APU address space and display the VCD of all RegOps signals.

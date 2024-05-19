@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 // TEST BENCH for ir.v
 // Comments: Device Under Test (ir.v) is (** VERIFIED **)
 // --------------------------------------------------------------------------------------

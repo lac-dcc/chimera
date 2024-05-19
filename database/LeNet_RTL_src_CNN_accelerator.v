@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/yztong/LeNet_RTL
+// License: MIT License
+
 //==================================================================================================
 //  Filename      : CNN_accelerator.v
 //  Created On    : 2018-01-25 13:32:28

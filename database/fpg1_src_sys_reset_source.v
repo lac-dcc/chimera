@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 // reset_source.v
 
 // This file was auto-generated as a prototype implementation of a module

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* This test checks two thing:
  *
  *   The first is that the AND arguments are padded if one is

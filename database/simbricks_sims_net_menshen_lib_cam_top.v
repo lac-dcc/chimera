@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 module cam_top #(
     parameter C_DEPTH = 16,
     parameter ADDR_BITS = 4,

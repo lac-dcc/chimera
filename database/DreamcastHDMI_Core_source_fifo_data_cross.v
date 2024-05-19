@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chriz2600/DreamcastHDMI
+// License: MIT License
+
 
 module data_cross(
     input clkIn,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 //SPI interface module (8 bits)
 //this is a slave module, clock is controlled by host
 //clock is high when bus is idle

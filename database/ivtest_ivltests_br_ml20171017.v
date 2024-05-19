@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test(output [7:0] dataout[1:0]);
 
 assign dataout[0] = 8'h55;

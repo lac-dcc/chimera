@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 `default_nettype none
 module servant_sim
   (input wire	      wb_clk,

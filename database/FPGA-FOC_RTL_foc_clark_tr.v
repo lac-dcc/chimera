@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WangXuan95/FPGA-FOC
+// License: GNU General Public License v3.0
+
 
 //--------------------------------------------------------------------------------------------------------
 // 模块： clark_tr 

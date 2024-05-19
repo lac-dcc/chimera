@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 `timescale 1ns / 1ns // timescale time_unit/time_presicion
 
 `define cavlc_idle_bit     				0

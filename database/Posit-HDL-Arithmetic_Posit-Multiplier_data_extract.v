@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/manish-kj/Posit-HDL-Arithmetic
+// License: BSD 3-Clause "New" or "Revised" License
+
 module data_extract(in, rc, regime, exp, mant, Lshift);
 
 function [31:0] log2;

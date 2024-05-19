@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module bn_select_8_1_case
 #(parameter DATA_WIDTH=8)
 (

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/DinoMax00/TJ-FPGA_MP3
+// License: MIT License
+
 //---------- detect and show volume change -----------------
 // ------------- author : Dino ----------------------------
 module vol_control(

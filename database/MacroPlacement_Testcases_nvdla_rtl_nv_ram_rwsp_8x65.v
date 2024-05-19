@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TILOS-AI-Institute/MacroPlacement
+// License: BSD 3-Clause "New" or "Revised" License
+
 module nv_ram_rwsp_8x65 (
   clk,
   ra,

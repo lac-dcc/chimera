@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/hrvach/fpg1
+// License: MIT License
+
 // A simple OSD implementation. Can be hooked up between a cores
 // VGA output and the physical VGA pins
 

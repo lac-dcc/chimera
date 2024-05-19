@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Mazamars312/Analogue-Amiga
+// License: GNU General Public License v3.0
+
 
 //  3-tap IIR filter for 2 channels. 
 //  Copyright (C) 2020 Sorgelig

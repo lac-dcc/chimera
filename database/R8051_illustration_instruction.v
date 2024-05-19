@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/risclite/R8051
+// License: Apache License 2.0
+
 //ARITHMETIC OPERATIONS
 //ADD
 function add_a_rn(input [7:0] i);  add_a_rn = (i[7:3]==5'b00101); endfunction

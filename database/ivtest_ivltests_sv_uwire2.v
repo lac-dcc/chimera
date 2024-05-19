@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 
 // This simple program tests that a variable can be assigned
 // party by continuous assignment, and partly by behavioral

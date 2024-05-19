@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/NPU_on_FPGA
+// License: BSD 2-Clause "Simplified" License
+
 //----------------------------------------------------------------------------------------------------------
 //	FILE: 		cordic_rot.v
 // 	AUTHOR:		Xudong Chen

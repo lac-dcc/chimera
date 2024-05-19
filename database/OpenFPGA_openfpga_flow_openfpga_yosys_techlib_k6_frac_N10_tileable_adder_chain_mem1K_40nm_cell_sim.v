@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 //-----------------------------
 // Dual-port RAM 128x8 bit (1Kbit)
 // Core logic

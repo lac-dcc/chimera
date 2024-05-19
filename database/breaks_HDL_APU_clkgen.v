@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module ACLKGen(PHI1, PHI2, ACLK1, nACLK2, RES);
 

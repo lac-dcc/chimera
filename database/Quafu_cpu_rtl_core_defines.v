@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/gzzyyxh/Quafu
+// License: MIT License
+
 //全局
 `define RstEnable 1'b1
 `define RstDisable 1'b0

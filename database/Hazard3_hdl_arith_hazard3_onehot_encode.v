@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Wren6991/Hazard3
+// License: Apache License 2.0
+
 /*****************************************************************************\
 |                         Copyright (C) 2022 Luke Wren                        |
 |                     SPDX-License-Identifier: Apache-2.0                     |

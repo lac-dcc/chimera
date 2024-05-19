@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module CLK_Sample # (
 	parameter PHASE_WIDTH = 32
 ) (

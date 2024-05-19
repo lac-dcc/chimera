@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "s298.bench" written by ABC on Tue Mar  5 10:03:54 2019
 
 module s298 ( clock, 

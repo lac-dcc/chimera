@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/corescore
+// License: Apache License 2.0
+
 module corescore_polarfire
 (
  input wire  i_clk,

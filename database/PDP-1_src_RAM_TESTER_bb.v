@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/spacemen3/PDP-1
+// License: MIT License
+
 // megafunction wizard: %RAM: 1-PORT%VBB%
 // GENERATION: STANDARD
 // VERSION: WM1.0

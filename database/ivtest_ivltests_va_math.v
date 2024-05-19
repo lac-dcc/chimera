@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter pabsi = $abs(-1);
   parameter pabsr = $abs(-1.5);

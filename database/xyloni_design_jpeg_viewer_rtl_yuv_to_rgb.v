@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module yuv_to_rgb
 #(
 	parameter	Y_PRECISION	= 8,

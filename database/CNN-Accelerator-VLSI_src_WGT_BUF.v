@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lirui-shanghaitech/CNN-Accelerator-VLSI
+// License: Apache License 2.0
+
 module WGT_BUF (clk, rst_n, wgt_input, wgt_read, wgt_buf0, wgt_buf1, wgt_buf2, wgt_buf3);
 
 input clk;

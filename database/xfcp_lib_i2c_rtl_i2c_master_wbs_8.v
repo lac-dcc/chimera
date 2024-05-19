@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alexforencich/xfcp
+// License: MIT License
+
 /*
 
 Copyright (c) 2016-2017 Alex Forencich

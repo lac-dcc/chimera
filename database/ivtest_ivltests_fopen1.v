@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* Copyright (C) 2000 Stephen G. Tell
  *
  * This program is free software; you can redistribute it and/or modify

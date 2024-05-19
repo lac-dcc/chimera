@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jameshegarty/rigel
+// License: MIT License
+
 // This should blink at a rate of ~ second
 
 // 12mhz/(56000hz) = 214/2 = 107

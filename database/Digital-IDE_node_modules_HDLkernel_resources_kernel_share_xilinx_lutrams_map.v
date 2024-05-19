@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 
 module \$__XILINX_RAM16X1D (CLK1, A1ADDR, A1DATA, B1ADDR, B1DATA, B1EN);
 	parameter [15:0] INIT = 16'bx;

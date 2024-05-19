@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jzkmath/MIDI-Stepper-Synth-V2
+// License: GNU General Public License v3.0
+
 module MIDI_ShiftReg(Clk, Rst_n, Rx, RxData, RxDone, State);
 	input Clk, Rst_n, Rx;
 	output reg [23:0] RxData;

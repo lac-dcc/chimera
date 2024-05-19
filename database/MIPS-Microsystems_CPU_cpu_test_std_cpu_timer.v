@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `define IDLE 2'b00
 `define LOAD 2'b01
 `define CNT  2'b10

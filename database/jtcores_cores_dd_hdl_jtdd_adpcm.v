@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,10 +47,9 @@ module jtdd_adpcm(
 
 reg [9:0] cnt;
 reg [3:0] din;
-(*keep*) reg [7:0] addr0, addr1;
-(*keep*) reg       ad_rst, start;
+reg [7:0] addr0, addr1;
+reg       ad_rst, start;
 wire     over = addr0 == addr1;
-(*keep*) reg fail;
 
 always @(posedge clk, posedge rst) begin
     if(rst) begin
@@ -75,7 +77,6 @@ always @(posedge clk, posedge rst) begin
         if(rom_ok) din  <= !cnt[0] ? rom_data[7:4] : rom_data[3:0];
         if( !ad_rst ) begin
             if( sample ) begin
-                fail <= !rom_ok;
                 cnt  <= cnt + 10'd1;
                 if(&cnt) addr0 <= addr0+8'd1;
             end

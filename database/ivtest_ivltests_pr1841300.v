@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // PR1841300
 // The output should be:
 // a is '14'; b is 'fffffff4'; c is 'fffffff4'

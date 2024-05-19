@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kiwih/qtcore-C1
+// License: Apache License 2.0
+
 module alu (
     input wire [7:0] A,
     input wire [7:0] B,

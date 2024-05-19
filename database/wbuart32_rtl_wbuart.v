@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ZipCPU/wbuart32
+// License: GNU General Public License v3.0
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Filename: 	wbuart.v

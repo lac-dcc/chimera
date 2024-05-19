@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emeb/up5k_basic
+// License: MIT License
+
 // ram_32kb.v - 32k byte inferred RAM
 // 03-11-18 E. Brombaugh
 

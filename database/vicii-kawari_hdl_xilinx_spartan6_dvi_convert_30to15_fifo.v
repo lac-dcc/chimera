@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/randyrossi/vicii-kawari
+// License: GNU General Public License v3.0
+
 module convert_30to15_fifo(
   input  wire rst,   // reset
   input  wire clk,   // clock input

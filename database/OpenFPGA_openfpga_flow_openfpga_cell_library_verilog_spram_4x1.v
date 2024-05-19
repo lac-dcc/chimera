@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // SPRAM 4x1 for implementation in LUT4-RAM
 // Asynchronous reading
 

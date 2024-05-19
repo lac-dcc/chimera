@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /* $Id: C_GATE_BIT_BUS_V4_0.v,v 1.11 2008/09/08 20:05:46 akennedy Exp $
 --
 -- Filename - C_GATE_BIT_BUS_V4_0.v

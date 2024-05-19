@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module modname;
 `define macro1(arg1) $display(`"arg1`");
 `define macro2(arg1=d1, arg2) $display(`"arg1 arg2`");

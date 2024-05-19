@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/compsec-snu/difuzz-rtl
+// License: BSD 3-Clause "New" or "Revised" License
+
 `define READY_S 0
 `define PENDING_S 1
 `define BUSY_S 2

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // (C) 2001-2014 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 

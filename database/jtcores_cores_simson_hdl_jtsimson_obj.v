@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,6 +24,7 @@ module jtsimson_obj(
     input             clk,
 
     input             paroda,
+    input             simson,
 
     input             pxl_cen,
     input             pxl2_cen,
@@ -127,6 +131,7 @@ jt053246 u_scan(    // sprite logic
     .pxl_cen    ( pxl_cen   ),
 
     .k44_en     ( paroda    ),
+    .simson     ( simson    ),
     // CPU interface
     .cs         ( reg_cs    ),
     .cpu_we     ( cpu_we    ),

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lynxis/lpc_sniffer
+// License: GNU General Public License v3.0
+
 module top #(parameter CLOCK_FREQ = 33_000_000, parameter BAUD_RATE = 921600)
 (
 	input [3:0] lpc_ad,

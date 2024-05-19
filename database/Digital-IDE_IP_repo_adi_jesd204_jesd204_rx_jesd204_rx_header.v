@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 //
 // The ADI JESD204 Core is released under the following license, which is
 // different than all other HDL cores in this repository.

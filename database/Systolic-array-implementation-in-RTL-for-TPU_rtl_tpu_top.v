@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/Systolic-array-implementation-in-RTL-for-TPU
+// License: MIT License
+
 module tpu_top#(
 	parameter ARRAY_SIZE = 8,
 	parameter SRAM_DATA_WIDTH = 32,

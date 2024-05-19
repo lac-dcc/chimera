@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ika-musume/IKAOPM
+// License: BSD 2-Clause "Simplified" License
+
 module IKAOPM_pg #(parameter USE_BRAM_FOR_PHASEREG = 0) (
     //master clock
     input   wire            i_EMUCLK, //emulator master clock

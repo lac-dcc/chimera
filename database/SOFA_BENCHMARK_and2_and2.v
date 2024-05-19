@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/SOFA
+// License: MIT License
+
 /////////////////////////////////////////
 //  Functionality: 2-input AND 
 //  Author:        Xifan Tang

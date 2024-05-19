@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/serv
+// License: ISC License
+
 /*
  * servile_rf_mem_if.v : Arbiter to allow a shared SRAM for RF and memory accesses. RF is mapped to the highest 128 bytes of the memory. Requires 8-bit RF accesses.
  *

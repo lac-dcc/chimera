@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lastweek/fpga_readings
+// License: Apache License 2.0
+
 // -----------------------------------------------------------------------------
 // Description: This testbench will exercise the ports of the MAC core
 //              to demonstrate the functionality.

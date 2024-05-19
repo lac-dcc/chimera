@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AugustinJose1221/FPGA-Build
+// License: MIT License
+
 /*
 MODULE OVERVIEW:
 Function of this module:

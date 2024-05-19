@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FAST-Switch/fast
+// License: Apache License 2.0
+
 // mac_core_0002.v
 
 // This file was auto-generated from altera_eth_tse_hw.tcl.  If you edit it your changes

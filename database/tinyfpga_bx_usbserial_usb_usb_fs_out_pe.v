@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/tinyfpga_bx_usbserial
+// License: Apache License 2.0
+
 // The OUT Protocol Engine receives data from the host.
 module usb_fs_out_pe #(
   parameter NUM_OUT_EPS = 1,

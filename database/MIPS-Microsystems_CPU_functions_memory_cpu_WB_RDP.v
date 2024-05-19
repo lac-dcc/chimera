@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module RDP(byte_op,half_op,unsigned_op,lwr,byte_addr,RD_RAW,V2,RD); //RD's processor
 //input
     input byte_op;

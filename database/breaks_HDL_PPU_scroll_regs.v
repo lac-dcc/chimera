@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 
 module ScrollRegs(
 	n_W0, n_W5_1, n_W5_2, n_W6_1, n_W6_2, n_DBE, RC, CPU_DB,

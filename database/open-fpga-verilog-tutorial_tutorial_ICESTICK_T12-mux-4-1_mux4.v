@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-----------------------------------------------------------------------------
 //-- Secuenciador de 4 estados usando un multiplexor de 4 a 1
 //-- (C) BQ. August 2015. Written by Juan Gonzalez (obijuan)

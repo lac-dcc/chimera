@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 // Async Active Low Reset DFF
 module  \$_DFFE_PN0P_ (input D, C, R, E, output Q);
    parameter _TECHMAP_WIREINIT_Q_ = 1'bx;

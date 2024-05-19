@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -126,7 +129,7 @@ always @(posedge clk, posedge rst) begin
     end
 end
 
-jtframe_limsum #(.W(12),.K(2)) u_limsum(
+jtframe_limsum #(.WI(12),.K(2)) u_limsum(
     .rst    ( rst   ),
     .clk    ( clk   ),
     .cen    ( 1'b1  ),

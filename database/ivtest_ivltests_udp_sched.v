@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This test tries to assure that all synchronous UDP outputs are
  * scheduled before any non-blocking assignment event. The reason

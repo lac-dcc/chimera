@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MiSTer-devel/Genesis_MiSTer
+// License: GNU General Public License v3.0
+
 `timescale 1ns/10ps
 module  pll_0002(
 

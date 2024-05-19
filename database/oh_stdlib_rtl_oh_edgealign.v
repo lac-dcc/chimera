@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Aligns positive edge of slow clock to fast clock                #
 //#           !!!Assumes clocks are aligned and synchronous!!!                #

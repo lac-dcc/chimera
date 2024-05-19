@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 
 module Ram_1w_1rs #(
         parameter integer wordCount = 0,

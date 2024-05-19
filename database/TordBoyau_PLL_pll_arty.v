@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/BrunoLevy/TordBoyau
+// License: BSD 3-Clause "New" or "Revised" License
+
 /*
  * freq = (CLKFBOUT_MULT * 1000) / (CLKIN1_PERIOD * DIVCLK_DIVIDE)
  * freq sould be in [800 - 1600]

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /*****************************************************************************
  * $Id: BLKMEMSP_V4_0.v,v 1.17 2008/09/08 20:06:34 akennedy Exp $
  *****************************************************************************

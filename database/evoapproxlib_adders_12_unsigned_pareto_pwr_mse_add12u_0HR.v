@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ehw-fit/evoapproxlib
+// License: MIT License
+
 /***
 * This code is a part of EvoApproxLib library (ehw.fit.vutbr.cz/approxlib) distributed under The MIT License.
 * When used, please cite the following article(s):  

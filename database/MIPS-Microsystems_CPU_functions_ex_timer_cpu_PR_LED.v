@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module LED(clk,reset,LEDWe,LED_WD,LED_RD,lights);
 //input
     input clk;

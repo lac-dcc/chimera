@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/marmolejo/zet
+// License: GNU General Public License v3.0
+
 // IS61LV25616 Asynchronous SRAM, 256K x 16 = 4M; speed: 10ns.
 // Note; 1) Please include "+define+ OEb" in running script if you want to check
 //          timing in the case of OE_ being set.

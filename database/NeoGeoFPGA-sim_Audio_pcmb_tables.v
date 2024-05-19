@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/neogeodev/NeoGeoFPGA-sim
+// License: GNU General Public License v3.0
+
 module pcmb_tables(
 		input [3:0] TABLE_B1_ADDR,
 		output reg [4:0] TABLE_B1_OUT,

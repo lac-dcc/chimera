@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/racerxdl/LVDS-7-to-1-Serializer
+// License: MIT License
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Darkborderman/schoolWorks
+// License: BSD 2-Clause "Simplified" License
+
 module adder_substractor (a,b,select,out);
 input [3:0]a;
 input [3:0]b;

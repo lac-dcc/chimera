@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/picorv32
+// License: ISC License
+
 module testbench(
 	input clk, mem_ready_0, mem_ready_1,
 	input [31:0] mem_rdata

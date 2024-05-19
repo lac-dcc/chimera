@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-USB_GW
+// License: Apache License 2.0
+
 // -----------------------------------------------------------
 // Legal Notice: (C)2007 Altera Corporation. All rights reserved.  Your
 // use of Altera Corporation's design tools, logic functions and other

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/chipsalliance/f4pga-examples
+// License: Apache License 2.0
+
 module top (
     input clk,
     output [3:0] led

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/KASIRGA-KIZIL/tekno-kizil
+// License: GNU General Public License v3.0
+
 // Tag denetleyici
 // Ayni anda iki farkli adresteki tag'leri okumak icin 2 tane 256 satirlik RAM'i kontrol eder
 // RAM'lerden birisi tek adresleri oteki cift olan adresleri depolamak icin kullanilir.

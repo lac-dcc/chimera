@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nanamake/r22sdf
+// License: MIT License
+
 //----------------------------------------------------------------------
 //  TwiddleConvert4: Convert Twiddle Value to Reduce Table Size to 1/4
 //----------------------------------------------------------------------

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 `define  JTFRAME_DIALEMU_LEFT 0
 
 module test;

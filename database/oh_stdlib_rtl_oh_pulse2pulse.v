@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#############################################################################
 //# Function: Clock domain one cycle pulse transfer                           #
 //            !!"din" pulse width must be 2x greater than clkout width!!!     #

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lsils/benchmarks
+// License: MIT License
+
 module top ( 
     \dest_x[0] , \dest_x[1] , \dest_x[2] , \dest_x[3] , \dest_x[4] ,
     \dest_x[5] , \dest_x[6] , \dest_x[7] , \dest_x[8] , \dest_x[9] ,

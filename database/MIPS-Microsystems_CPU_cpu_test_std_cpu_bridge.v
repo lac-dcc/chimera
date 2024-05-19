@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module bridge(
     input [31:0] PrAddr,
     input [31:0] PrWD,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // Regression test for GitHub issue 9 : Efficiency of verinum and vpp_net
 // pow() functions.
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/verimake-team/SparkRoad-V
+// License: MIT License
+
 /*============================================================================
 *
 *  LOGIC CORE:          TFT驱动模块		

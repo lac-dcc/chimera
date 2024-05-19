@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-------------------------------------------------------------------
 //-- tones_tb.v
 //-- Banco de pruebas para el generador de 4 tonos

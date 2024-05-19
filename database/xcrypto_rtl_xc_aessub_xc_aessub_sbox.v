@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scarv/xcrypto
+// License: MIT License
+
 
 //
 // Implement a single 1-byte lookup for the AES SBox or inverse SBox

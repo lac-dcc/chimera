@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/phoeniX-Digital-Design/phoeniX
+// License: GNU General Public License v3.0
+
 // AXI4 lite signals:
 // axi_aclk     Input   Clock signal. 
 // axi_aresetn  Input   Active-Low synchronous reset signal

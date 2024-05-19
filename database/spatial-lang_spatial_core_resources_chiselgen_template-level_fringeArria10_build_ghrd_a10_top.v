@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 // This is a generated system top level RTL file.
 // Parameters are taken by 'create_ghrd_top.tcl' in order to
 // generate appropriate RTL top based on system requirement.

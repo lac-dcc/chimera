@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cxdzyq1110/posture_recognition_CNN
+// License: GNU General Public License v3.0
+
 // hps_sdram.v
 
 // This file was auto-generated from altera_mem_if_hps_emif_hw.tcl.  If you edit it your changes

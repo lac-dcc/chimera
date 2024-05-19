@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/stanford-ppl/spatial-lang
+// License: MIT License
+
 module ghrd_10as066n2_emif_hps (
 		input  wire          global_reset_n, // global_reset_reset_sink.reset_n
 		input  wire [4095:0] hps_to_emif,    //    hps_emif_conduit_end.hps_to_emif

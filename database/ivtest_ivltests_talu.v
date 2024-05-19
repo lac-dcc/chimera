@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* talu - a verilog test,
  * illustrating problems I had in fragments of an ALU from an 8-bit micro
  */

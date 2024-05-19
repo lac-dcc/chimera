@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 localparam num1 = 101, str1 = "unit1";
 localparam num2 = 102, str2 = "unit1";
 localparam num3 = 103, str3 = "unit1";

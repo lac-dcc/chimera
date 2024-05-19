@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "top" written by ABC on Mon Feb  4 17:32:32 2019
 
 module frisc (  

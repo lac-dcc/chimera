@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module Line_Shift_RAM #(
 	parameter  RAM_Length = 640,	//640*480
     parameter  DATA_WIDTH = 8

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tinyvision-ai-inc/Vision-FPGA-SoM
+// License: MIT License
+
 //Public domain: Copied from http://billauer.co.il/reg_fifo.html.
 //Modified by Olof Kindgren to provide streaming interface
 module stream_fifo_if

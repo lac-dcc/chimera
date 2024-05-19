@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/brianbennett/fpga_nes
+// License: BSD 2-Clause "Simplified" License
+
 /***************************************************************************************************
 ** fpga_nes/hw/src/cpu/apu/apu_frame_counter.v
 *

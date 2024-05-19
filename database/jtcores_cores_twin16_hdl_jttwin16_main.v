@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 /*  This file is part of JTCORES.
     JTCORES program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -268,8 +271,7 @@ jtframe_68kdtack_cen #(.W(5),.RECOVERY(1)) u_dtack(
     .wait3      ( 1'b0      ),
     // Frequency report
     .fave       (           ),
-    .fworst     (           ),
-    .frst       (           )
+    .fworst     (           )
 );
 
 jtframe_m68k u_cpu(

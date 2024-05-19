@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/FLIX-V
+// License: GNU Lesser General Public License v2.1
+
 /*
  *  tx_uart - a simple tx uart
  *

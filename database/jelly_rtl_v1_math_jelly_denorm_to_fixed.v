@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ryuz/jelly
+// License: MIT License
+
 // ---------------------------------------------------------------------------
 //  Jelly  -- The platform for real-time computing
 //   math

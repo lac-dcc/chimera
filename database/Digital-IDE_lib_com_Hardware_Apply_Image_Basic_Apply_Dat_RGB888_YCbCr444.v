@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 `timescale 1ns/1ns
 module RGB888_YCbCr444 (
 	//global clock

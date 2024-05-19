@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module connect(inout [1:0] c);
 
 tran(c[0], c[1]);

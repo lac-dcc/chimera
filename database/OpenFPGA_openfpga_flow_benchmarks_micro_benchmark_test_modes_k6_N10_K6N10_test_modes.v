@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 ////////////////////////////////////////////////////////
 //                                                    //
 //    Benchmark using all modes of k8 architecture    //

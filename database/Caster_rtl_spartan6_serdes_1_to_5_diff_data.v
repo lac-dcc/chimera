@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Modos-Labs/Caster
+// License: CERN Open Hardware Licence Version 2 - Permissive
+
 //////////////////////////////////////////////////////////////////////////////
 //
 //  Xilinx, Inc. 2010                 www.xilinx.com

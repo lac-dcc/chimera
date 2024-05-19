@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter py = 8'sb10101010 >> 3'sb110;
   parameter pz = 8'sb10101010 >>> 3'sb110;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Johnlon/spam-1
+// License: Mozilla Public License 2.0
+
 // License: Mozilla Public License : Version 2.0
 // Author : John Lonergan
 // https://media.digikey.com/pdf/Data%20Sheets/NXP%20PDFs/74HC(T)670.pdf

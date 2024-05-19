@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 module IQ_MIXED #(
 	//LO_OUTPUR_parameter
     parameter LO_WIDTH     = 12,

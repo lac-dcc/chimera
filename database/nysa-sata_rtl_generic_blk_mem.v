@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/CospanDesign/nysa-sata
+// License: MIT License
+
 //library ieee;
 //use ieee.std_logic_1164.all;
 //use ieee.std_logic_unsigned.all;

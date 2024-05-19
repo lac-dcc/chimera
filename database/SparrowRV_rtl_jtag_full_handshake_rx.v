@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 // 数据接收端模块
 // 跨时钟域传输，全(四次)握手协议
 // req = 1

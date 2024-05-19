@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 // $Header: /devl/xcs/repo/env/Databases/CAEInterfaces/verunilibs/data/blanc/EFUSE_USR.v,v 1.3 2009/08/21 23:55:39 harikr Exp $
 ///////////////////////////////////////////////////////
 //  Copyright (c) 2009 Xilinx Inc.

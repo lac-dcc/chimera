@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AUCOHL/Lighter
+// License: Apache License 2.0
+
 module rf_64x64 (
 	input			HCLK,							// System clock
 	input			WR,

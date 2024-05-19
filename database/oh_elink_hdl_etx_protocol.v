@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 //#####################################################################
 //# This module converts the packet interface to a 64bit wide format 
 //# suitable for sending out to a parallel to serial shift register.

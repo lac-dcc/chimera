@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/WillGreen/timetoexplore
+// License: MIT License
+
 // FPGA VGA Graphics Part 3: Top Module (background only)
 // (C)2018 Will Green - Licensed under the MIT License
 // Learn more at https://timetoexplore.net/blog/arty-fpga-vga-verilog-03

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This causes GHDL to fail with 'port "p" cannot be read'
 // since the code generator does not yet identify p as an
 // internal signal as well as a port.

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/ulixxe/usb_cdc
+// License: MIT License
+
 
 module SB_RAM256x16
   #(parameter INIT_0 = 256'h0000000000000000000000000000000000000000000000000000000000000000,

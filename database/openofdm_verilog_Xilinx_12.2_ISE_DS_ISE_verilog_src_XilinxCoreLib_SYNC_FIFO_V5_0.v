@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 /*********************************************************************************
 $RCSfile: SYNC_FIFO_V5_0.v,v $ $Revision: 1.12 $ $Date: 2008/09/08 20:09:59 $
 **********************************************************************************

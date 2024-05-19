@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/dawsonjon/FPGA-TX
+// License: MIT License
+
 module user_design(clk, rst, exception, input_rs232_rx, input_gps_rx, input_gps_count, input_rs232_rx_stb, input_gps_rx_stb, input_gps_count_stb, input_rs232_rx_ack, input_gps_rx_ack, input_gps_count_ack, output_tx_ctl, output_rs232_tx, output_leds, output_gps_tx, output_tx_freq, output_tx_am, output_tx_ctl_stb, output_rs232_tx_stb, output_leds_stb, output_gps_tx_stb, output_tx_freq_stb, output_tx_am_stb, output_tx_ctl_ack, output_rs232_tx_ack, output_leds_ack, output_gps_tx_ack, output_tx_freq_ack, output_tx_am_ack);
   input  clk;
   input  rst;

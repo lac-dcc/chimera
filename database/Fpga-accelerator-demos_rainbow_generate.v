@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YutongChenVictor/Fpga-accelerator-demos
+// License: MIT License
+
 module rainbow_generate(
     input           	  clk     ,
     input           	  rst_n   ,

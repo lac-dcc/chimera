@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/waynezv/FPGA_Ultrasound
+// License: GNU General Public License v3.0
+
 // Jagadeesh Vasudevamurthy data_acquis_controller_X99.v
 // Please do not remove the header
 // Char array passed is as follows

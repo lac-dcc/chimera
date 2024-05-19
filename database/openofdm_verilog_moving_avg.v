@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jhshi/openofdm
+// License: Apache License 2.0
+
 module moving_avg
 #(
     parameter DATA_WIDTH = 32,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/NYU-MLDA/OpenABC
+// License: BSD 3-Clause "New" or "Revised" License
+
 module bsg_mesh_stitch_width_p130_x_max_p2_y_max_p1
 (
   outs_i,

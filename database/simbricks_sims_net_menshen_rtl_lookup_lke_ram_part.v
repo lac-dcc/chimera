@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/simbricks/simbricks
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module lke_ram_part #(

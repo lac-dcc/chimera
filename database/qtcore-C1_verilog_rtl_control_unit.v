@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/kiwih/qtcore-C1
+// License: Apache License 2.0
+
 module control_unit (
     input wire clk,                     // Clock input
     input wire rst,                     // Reset input

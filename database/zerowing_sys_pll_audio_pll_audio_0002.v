@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 `timescale 1ns/10ps
 module  pll_audio_0002(
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // ----- Verilog module for OR2 -----
 module OR2(a,
            b,

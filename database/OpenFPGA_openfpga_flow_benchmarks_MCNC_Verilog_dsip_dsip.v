@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/OpenFPGA
+// License: MIT License
+
 // Benchmark "top" written by ABC on Tue Mar  5 10:01:57 2019
 
 module dsip ( clock, 

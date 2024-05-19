@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/nukeykt/Nuked-SMS-FPGA
+// License: GNU General Public License v2.0
+
 /*
  * Copyright (C) 2023 nukeykt
  *

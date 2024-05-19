@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/diaoenmao/FPGA-CNN
+// License: MIT License
+
 // This module implements the equation Xnew = A*Y + B*U + I
 // It takes in the A template, B template, I template, U input, Y matrix and gives the output which is Ynew
 // The values are defined to be 9 bits since we want it to be signed.

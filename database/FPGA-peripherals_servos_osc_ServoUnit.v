@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGAwars/FPGA-peripherals
+// License: GNU General Public License v2.0
+
 `default_nettype none
 
 //-- Servo test

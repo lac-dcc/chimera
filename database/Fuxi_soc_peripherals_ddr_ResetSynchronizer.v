@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/MaxXSoft/Fuxi
+// License: GNU General Public License v3.0
+
 // from https://github.com/trivialmips/nontrivial-mips
 // modified by: MaxXing, 2019-11
 

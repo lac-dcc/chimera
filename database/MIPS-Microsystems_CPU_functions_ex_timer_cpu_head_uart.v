@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 //`define LINE_H      1'b1
 //`define LINE_L      1'b0
 //`define LINE_IDLE   1'b1

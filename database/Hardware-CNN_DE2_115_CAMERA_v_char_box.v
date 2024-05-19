@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/alan4186/Hardware-CNN
+// License: MIT License
+
 module char_box(
   input [11:0] gray,
   input [15:0] iX_Cont,

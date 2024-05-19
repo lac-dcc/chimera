@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jinwookjungs/datc_robust_design_flow
+// License: GNU General Public License v3.0
+
 // Written by verilog_parser.py of OpenDesign Flow Database.
 // Date: 2019-06-04 13:24:09
 // Format: ICCAD2015 placement contest

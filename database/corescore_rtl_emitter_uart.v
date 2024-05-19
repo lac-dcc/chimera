@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/olofk/corescore
+// License: Apache License 2.0
+
 /*
  * emitter_uart.v : Simple UA(R)T used as emitter in CoreScore
  *

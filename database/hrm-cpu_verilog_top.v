@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/adumont/hrm-cpu
+// License: GNU General Public License v3.0
+
 `ifndef __TOP_MODULE__
 `define __TOP_MODULE__
 

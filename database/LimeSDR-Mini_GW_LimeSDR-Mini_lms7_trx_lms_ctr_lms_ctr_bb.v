@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-Mini_GW
+// License: Apache License 2.0
+
 
 module lms_ctr (
 	clk_clk,

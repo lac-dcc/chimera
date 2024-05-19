@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 `timescale 1ns/1ns
 module Bit_Erosion_Detector #(
 	parameter	[10:0]	IMG_HDISP = 11'd640,	//640*480

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/scale-lab/OpenPhySyn
+// License: BSD 3-Clause "New" or "Revised" License
+
 module Constants(input clock, input [5:0] io_wide_bus, output reduced, output [2: 0] out);
 
   reg reduce_it;

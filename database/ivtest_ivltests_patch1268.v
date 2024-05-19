@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 // This is a regression test for the bug fixed in patch tracker #1268.
 module test();
 

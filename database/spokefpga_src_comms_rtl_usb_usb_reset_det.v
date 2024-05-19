@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/davidthings/spokefpga
+// License: Apache License 2.0
+
 // detects USB port reset signal from host
 module usb_reset_det (
 	  input clk,

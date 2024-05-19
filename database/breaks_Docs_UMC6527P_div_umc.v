@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 module div_umc (  port_x, port_y, port_nCLK, port_b, port_a, port_c, port_tmp2);
 
 	inout wire port_x;

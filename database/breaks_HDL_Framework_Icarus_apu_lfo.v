@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/emu-russia/breaks
+// License: Creative Commons Zero v1.0 Universal
+
 // Bogus low-frequency oscillation signal generator.
 
 // It is used to speed up tests, so you don't have to wait half a year for real #LFO1/2 signals to be triggered.

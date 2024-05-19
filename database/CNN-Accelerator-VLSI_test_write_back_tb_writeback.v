@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lirui-shanghaitech/CNN-Accelerator-VLSI
+// License: Apache License 2.0
+
 ///==------------------------------------------------------------------==///
 /// testbench of write back controller
 ///==------------------------------------------------------------------==///

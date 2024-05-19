@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Yvan-xy/verilog-doc
+// License: GNU General Public License v2.0
+
 module top_module ( 
     input p1a, p1b, p1c, p1d, p1e, p1f,
     output p1y,

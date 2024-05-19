@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module pow_5_multi_cycle_always
 # (
     parameter w = 8

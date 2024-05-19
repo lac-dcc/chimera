@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/damdoy/ice40_ultraplus_examples
+// License: Mozilla Public License 2.0
+
 module calc_dsp(input clk, output correct);
    reg [3:0] state;
    reg out_val;

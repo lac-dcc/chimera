@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Kenji-Ishimaru/polyphony
+// License: MIT License
+
 //=======================================================================
 //                        Project Polyphony
 //

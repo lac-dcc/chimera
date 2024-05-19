@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 module testbench;
 
     localparam [4:0] n_pipe_stages = 16;

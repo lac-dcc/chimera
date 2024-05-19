@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/myriadrf/LimeSDR-USB_GW
+// License: Apache License 2.0
+
 // lms_ctr_nios2_cpu.v
 
 // This file was auto-generated from altera_nios2_hw.tcl.  If you edit it your changes

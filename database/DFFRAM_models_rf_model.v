@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/AUCOHL/DFFRAM
+// License: Apache License 2.0
+
 /*
     Copyright ©2020-2022 The American University in Cairo
 

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Obijuan/open-fpga-verilog-tutorial
+// License: GNU General Public License v2.0
+
 //-------------------------------------------------------------------
 //-- Ejemplo de uso de un registro de desplazamiento de 4 bits
 //-- para generar una secuencia de rotacion de bits

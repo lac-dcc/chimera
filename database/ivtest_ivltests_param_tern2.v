@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /*
  * This example is a distillation of the essence of PR#993.
  * Or at least the essence that led to a bug report.

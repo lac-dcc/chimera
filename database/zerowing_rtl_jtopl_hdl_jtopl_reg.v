@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/va7deo/zerowing
+// License: GNU General Public License v2.0
+
 /* This file is part of JTOPL
 
     JTOPL program is free software: you can redistribute it and/or modify
@@ -31,6 +34,7 @@ module jtopl_reg(
     output           op,          // 0 for modulator operators
     output    [17:0] slot,        // hot one encoding of active slot
     
+    input      [3:0] sel_ch,      // channel to update
     input      [1:0] sel_group,   // group to update
     input      [2:0] sel_sub,     // subslot to update
 
@@ -80,33 +84,21 @@ parameter OPL_TYPE=1;
 localparam CH=9;
 
 wire [2:0] subslot;
-wire       match;
-
                
-// channel data
-wire [2:0] fb_in   = din[3:1];
-wire       con_in  = din[0];
-
-wire       up_fnumlo_ch = up_fnumlo & match, 
-           up_fnumhi_ch = up_fnumhi & match, 
-           up_fbcon_ch  = up_fbcon  & match,
-           update_op_I  = !write && sel_group == group && sel_sub == subslot;
-
+wire       update_op_I  = !write && sel_group == group && sel_sub == subslot;
 reg        update_op_II, update_op_III, update_op_IV;
 
-assign match = { group, subslot } == { sel_group, sel_sub};
-
 jtopl_slot_cnt u_slot_cnt(
-    .rst    ( rst   ),
-    .clk    ( clk   ),
-    .cen    ( cen   ),
+    .rst        ( rst       ),
+    .clk        ( clk       ),
+    .cen        ( cen       ),
 
     // Pipeline order
-    .zero   ( zero  ),
-    .group  ( group ),
-    .op     ( op    ),   // 0 for modulator operators
-    .subslot(subslot),
-    .slot   ( slot  )    // hot one encoding of active slot
+    .zero       ( zero      ),
+    .group      ( group     ),
+    .op         ( op        ),   // 0 for modulator operators
+    .subslot    ( subslot   ),
+    .slot       ( slot      )    // hot one encoding of active slot
 );
 
 always @(posedge clk) begin
@@ -129,7 +121,7 @@ wire              en_sus, rhy_oen;
 // Sustained is disabled in rhythm mode for channels in group 2 (i.e. 6,7,8)
 assign            en_sus_I = rhy_oen ? 1'b0 : en_sus;
 
-jtopl_csr #(.LEN(CH*2),.W(OPCFGW)) u_csr(
+jtopl_csr #(.LEN(CH*2),.W(OPCFGW), .OPL_TYPE(OPL_TYPE)) u_csr(
     .rst            ( rst           ),
     .clk            ( clk           ),
     .cen            ( cen           ),
@@ -157,31 +149,15 @@ generate
         assign wavsel_I = shift_out[OPCFGW-1:OPCFGW-2] & {2{wave_mode}};
 endgenerate
 
-
 // Memory for CH registers
-localparam KONW   =  1,
-           FNUMW  = 10,
-           BLOCKW =  3,
-           FBW    =  3,
-           CONW   =  1;
-localparam CHCSRW = KONW+FNUMW+BLOCKW+FBW+CONW;
-
-wire [CHCSRW-1:0] chcfg, chcfg_inmux;
-wire              keyon_csr, con_csr, rhyon_csr;
+wire              pre_keyon, pre_con, rhyon_csr;
 wire              disable_con;
 
-assign chcfg_inmux = {
-    up_fnumhi_ch ? din[5:0] : { keyon_csr, block_I, fnum_I[9:8] },
-    up_fnumlo_ch ? din      : fnum_I[7:0],
-    up_fbcon_ch  ? { fb_in, con_in } : { fb_I, con_csr }
-};
-
 assign disable_con = rhy_oen && !slot[12] && !slot[13];
-assign con_I       = !rhy_en || !disable_con ? con_csr : 1'b1;
-assign { keyon_csr, block_I, fnum_I, fb_I, con_csr } = chcfg;
-assign keyon_I = rhy_oen ? rhyon_csr : keyon_csr;
+assign con_I       = !rhy_en || !disable_con ? pre_con : 1'b1;
+assign keyon_I = rhy_oen ? rhyon_csr : pre_keyon;
 
-jtopl_reg_ch#(CHCSRW) u_reg_ch(
+jtopl_reg_ch u_reg_ch(
     .rst         ( rst          ),
     .clk         ( clk          ),
     .cen         ( cen          ),
@@ -189,9 +165,20 @@ jtopl_reg_ch#(CHCSRW) u_reg_ch(
     .rhy_en      ( rhy_en       ),
     .rhy_kon     ( rhy_kon      ),
     .slot        ( slot         ),
+
+    .din         ( din          ),
+    .up_ch       ( sel_ch       ),
+    .up_fnumhi   ( up_fnumhi    ),
+    .up_fnumlo   ( up_fnumlo    ),
+    .up_fbcon    ( up_fbcon     ),
+
     .group       ( group        ),
-    .chcfg_inmux ( chcfg_inmux  ),
-    .chcfg       ( chcfg        ),
+    .sub         ( subslot      ),
+    .fnum        ( fnum_I       ),
+    .block       ( block_I      ),
+    .con         ( pre_con      ),
+    .fb          ( fb_I         ),
+    .keyon       ( pre_keyon    ),
     .rhy_oen     ( rhy_oen      ),
     .rhyon_csr   ( rhyon_csr    )
 );

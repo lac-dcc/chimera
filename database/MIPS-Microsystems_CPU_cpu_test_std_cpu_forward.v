@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 module forward(
     input [31:0] Instr_ID, Instr_EX, Instr_MEM, Instr_WB,
     input [4:0] RegA3_EX, RegA3_MEM, RegA3_WB,

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/picorv32
+// License: ISC License
+
 module testbench(input clk, mem_ready_0, mem_ready_1);
 	// set this to 1 to test generation of counter examples
 	localparam ENABLE_COUNTERS = 0;

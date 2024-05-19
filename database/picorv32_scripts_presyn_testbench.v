@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/picorv32
+// License: ISC License
+
 module testbench;
 	reg clk = 1;
 	always #5 clk = ~clk;

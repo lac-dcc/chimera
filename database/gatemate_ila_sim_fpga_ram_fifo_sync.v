@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/colognechip/gatemate_ila
+// License: GNU General Public License v3.0
+
 // Company           :   RacyICs GmbH
 // Author            :   scholze,pilz,winter
 // E-Mail            :   winter@racyics.de

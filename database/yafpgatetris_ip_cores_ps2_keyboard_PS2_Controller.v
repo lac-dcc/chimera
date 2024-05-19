@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/johan92/yafpgatetris
+// License: MIT License
+
 /*****************************************************************************
  *                                                                           *
  * Module:       Altera_UP_PS2                                               *

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/cjhonlyone/NandFlashController
+// License: GNU General Public License v3.0
+
 /*
 
 Copyright (c) 2018 Alex Forencich

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/jotego/jtcores
+// License: GNU General Public License v3.0
+
 module t8243_core_1
   (input  clk_i,
    input  clk_rise_en_i,

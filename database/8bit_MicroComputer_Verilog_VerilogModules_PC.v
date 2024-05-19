@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TheSUPERCD/8bit_MicroComputer_Verilog
+// License: MIT License
+
 `timescale 1ns/1ps
 module PC(input clk, input rst, input enable, input [3:0] jmploc, input jmp, output reg [3:0] count);
 wire CLK;

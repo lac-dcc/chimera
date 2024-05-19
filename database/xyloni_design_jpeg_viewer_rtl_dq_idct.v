@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Efinix-Inc/xyloni
+// License: MIT License
+
 module dq_idct
 #(
 	parameter	NUM_ACCUMULATOR		= 3,

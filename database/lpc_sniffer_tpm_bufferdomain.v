@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/denandz/lpc_sniffer_tpm
+// License: GNU General Public License v3.0
+
 module bufferdomain #(parameter AW = 8)
 	(
 		input [AW-1:0] input_data,

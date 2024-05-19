@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module WReg(clk,reset,Ins,V1,V2,AO,byte_addr,RD,HI,LO,PC,PC8,CP0_RD,Ins_W,V1_W,V2_W,AO_W,byte_addr_W,RD_W,HI_W,LO_W,PC_W,PC8_W,CP0_RD_W);

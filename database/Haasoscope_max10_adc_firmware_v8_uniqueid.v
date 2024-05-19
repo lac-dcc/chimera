@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/drandyhaas/Haasoscope
+// License: MIT License
+
 // megafunction wizard: %Altera Unique Chip ID v15.0%
 // GENERATION: XML
 // uniqueid.v

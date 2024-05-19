@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/rkrajnc/minimig-mist
+// License: GNU General Public License v3.0
+
 /********************************************/
 /* qmem_sram.v                              */
 /* A QMEM (32bit) to SRAM (16bit) interface */

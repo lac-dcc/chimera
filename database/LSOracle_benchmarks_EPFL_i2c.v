@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lnis-uofu/LSOracle
+// License: MIT License
+
 module i2c ( 
     pi000, pi001, pi002, pi003, pi004, pi005, pi006, pi007, pi008, pi009,
     pi010, pi011, pi012, pi013, pi014, pi015, pi016, pi017, pi018, pi019,

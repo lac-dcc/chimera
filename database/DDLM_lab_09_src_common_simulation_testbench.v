@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/RomeoMe5/DDLM
+// License: MIT License
+
 /*
  * Digital Design Lab Manual
  * Lab #9

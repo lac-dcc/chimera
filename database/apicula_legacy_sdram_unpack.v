@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/YosysHQ/apicula
+// License: MIT License
+
 module top(R1C32_IOA);
 inout R1C32_IOA;
 wire R6C16_GBO1;

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/abdelazeem201/ASIC-Design-Roadmap
+// License: MIT License
+
 
 module MY_DESIGN ( Cin1, Cin2, Cout, data1, data2, sel, clk, out1, out2, out3);
   input [4:0] Cin1, Cin2, data1, data2;

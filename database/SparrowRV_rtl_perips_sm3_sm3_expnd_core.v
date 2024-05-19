@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/xiaowuzxc/SparrowRV
+// License: MIT License
+
 `define SM3_EXPND_PRE_LOAD_REG
 `define SM3_INPT_DW_32
 `define INPT_DW    32

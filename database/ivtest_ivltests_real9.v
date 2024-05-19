@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 /* real9.v
  * This tests comparison of a real variable with integer constants.
  */

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/FPGADude/Digital-Design
+// License: GNU General Public License v3.0
+
 /*****************************************************
  Title       : decoder_3x8.v	     		 
  Design      : A 3x8 Decoder

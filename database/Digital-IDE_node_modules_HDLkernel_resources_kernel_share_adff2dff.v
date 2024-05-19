@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/Nitcloud/Digital-IDE
+// License: GNU General Public License v3.0
+
 (* techmap_celltype = "$adff" *)
 module adff2dff (CLK, ARST, D, Q);
 	parameter WIDTH = 1;

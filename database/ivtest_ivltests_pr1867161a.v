@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module test;
   /* The base+b calculation uses %load/vp0 and this will cause invalid
    * results when the sum of base+b is larger than what will fit

@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/SilenceX12138/MIPS-Microsystems
+// License: MIT License
+
 `timescale 1ns / 1ps
 
 module EReg(clk,reset,stall,Ins,V1,V2,Ext,PC,PC8,ExcCode,BD,Ins_E,V1_E,V2_E,Ext_E,PC_E,PC8_E,ExcCode_E,BD_E);

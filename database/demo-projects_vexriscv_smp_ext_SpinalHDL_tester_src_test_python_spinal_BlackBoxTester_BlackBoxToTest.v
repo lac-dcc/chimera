@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/openXC7/demo-projects
+// License: BSD 3-Clause "New" or "Revised" License
+
 module BlackBoxToTest
 #(parameter aWidth=0, parameter bWidth=0)
 (

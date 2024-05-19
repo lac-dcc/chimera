@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/TimRudy/ice-chips-verilog
+// License: GNU General Public License v3.0
+
 // 4-bit BCD decade counter with parallel load, synchronous clear
 
 module ttl_74162 #(parameter WIDTH = 4, DELAY_RISE = 0, DELAY_FALL = 0)

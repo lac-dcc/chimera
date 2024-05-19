@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/aolofsson/oh
+// License: MIT License
+
 module etx_fifo(/*AUTOARG*/
    // Outputs
    txrd_wait, txwr_wait, txrr_wait, txrd_fifo_access,

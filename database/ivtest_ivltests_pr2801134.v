@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/steveicarus/ivtest
+// License: GNU General Public License v2.0
+
 module top;
   parameter a_res = 16'b000001xx0xxx0xxx;
   parameter o_res = 16'b01xx1111x1xxx1xx;

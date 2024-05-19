@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/tomtor/HDL-deflate
+// License: GNU General Public License v3.0
+
 
 module chip (
 	output	LED_R,

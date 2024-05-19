@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/phoeniX-Digital-Design/phoeniX
+// License: GNU General Public License v3.0
+
 `define OPCODES
     `define LOAD        7'b00_000_11
     `define LOAD_FP     7'b00_001_11

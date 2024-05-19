@@ -1,3 +1,6 @@
+// This program was cloned from: https://github.com/lsils/benchmarks
+// License: MIT License
+
 module top ( 
     \priority[0] , \priority[1] , \priority[2] , \priority[3] ,
     \priority[4] , \priority[5] , \priority[6] , \priority[7] ,
