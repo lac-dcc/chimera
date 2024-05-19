@@ -30,6 +30,6 @@ fi
 for i in $(seq 0 $5); do
     file="verilog_file_$i.v"
 
-    "$2" "$3" "$4" > "$file" 2>/dev/null
+    "$2" "$3" "$4" > "$4_gram_$file" 2>/dev/null
     
 done

@@ -15,6 +15,10 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
     finishIDContext();
   }
 
+  if (node->getElement() == " <<`define-tokens>> ") {
+    node->setElement("<<`define-tokens>>\n");
+  }
+
   if (isStartingToken(node->getElement())) {
     
 
@@ -686,6 +690,7 @@ void IdentifierRenamingVisitor::visit(Qualified_id *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Genericidentifier *node) {
+  
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -952,9 +957,11 @@ void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
+  createIDContext(ContextType::defining_id);
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Trailing_decl_assignment_opt *node) {

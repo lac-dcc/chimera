@@ -717,7 +717,7 @@ void ReplaceConstantsVisitor::visit(Delay_value *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 
-  node->setElement("0");
+  node->setElement("8");
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1852,6 +1852,7 @@ void ReplaceConstantsVisitor::visit(Macro_formals_list_opt *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_stringliteral *node) {
+  node->setElement("");
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }

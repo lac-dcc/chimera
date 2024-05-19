@@ -501,7 +501,7 @@ private:
     std::string t;
   };
 
-  enum ContextType { expr = 0, decl, module };
+  enum ContextType { expr = 0, decl, module, defining_id };
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers;
@@ -596,6 +596,23 @@ private:
     auto c = rand() % options.size();
     if(debug)
       std::cerr << "Using var: " << options[c] << std::endl;
+    if(contexts.top() == ContextType::defining_id){
+      if(debug)
+        std::cerr << "Defining ID, C= " << c << std::endl;
+
+      if(c == 0)
+        return createNewID(type);
+
+      if(c == options.size()-1)
+        c--;
+      if(debug)
+        std::cerr << "Defining ID, C= " << c << std::endl;
+      
+     
+      return options[c];
+    }
+
+    
     return options[c];
   }
 
