@@ -2,8 +2,13 @@
 # in a given directory. The script will move all invalid programs to a separate
 # directory and keep the valid ones.
 
-set target_dir "../database/invalid_programs"
-set database_dir "../database"
+if {![info exists target_dir]} {
+  set target_dir "../database/invalid_programs"
+}
+
+if {![info exists database_dir]} {
+  set database_dir "../database"
+}
 
 file mkdir $target_dir
 
