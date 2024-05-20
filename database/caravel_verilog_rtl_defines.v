@@ -1,4 +1,4 @@
-// This program was cloned from: https://github.com/efabless/caravel
+// This program was cloned from: https://github.com/ernylcin/caravel
 // License: Apache License 2.0
 
 // SPDX-FileCopyrightText: 2020 Efabless Corporation
@@ -37,9 +37,6 @@
 `define ANALOG_PADS_2 6
 
 `define ANALOG_PADS (`ANALOG_PADS_1 + `ANALOG_PADS_2)
-
-// Number of GPIO pads defined in the caravel openframe layout
-`define OPENFRAME_IO_PADS 44
 
 // Size of soc_mem_synth
 
