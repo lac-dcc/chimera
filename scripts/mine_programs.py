@@ -62,7 +62,7 @@ def copy_verilog_files(repo, repo_path, target_dir, ext):
         split = split[split.index(repo.name):]
 
         filename = os.path.join(target_dir, '_'.join(split))
-        filename = re.sub(r'[ |$|&|#|\||"|\'|>|<|*|;|=|^|`|!|?]', '', filename)
+        filename = re.sub(r'[ |$|&|#|\||"|\'|>|<|*|;|,|=|^|`|!|?]', '', filename)
         filename = re.sub(r'[(|)|\[|\]|{|}]', '_', filename)
 
         if len(filename) > os.pathconf('/', 'PC_NAME_MAX'):
@@ -213,4 +213,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
