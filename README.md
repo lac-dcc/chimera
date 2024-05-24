@@ -17,7 +17,7 @@ Below we list two examples of issues reported in this way:
 ChiBench contains only programs that were originally distributed with some license.
 Thus, each program in the ChiBench suite contains, as a header comment, the original license of that specification, plus a link to the repository from where that code was obtained.
 Notice that these programs might use different licenses, given that they were extracted from different projects.
-On May 24th, 2024, the following licenses were used among the benchmarks in the ChiBench collection:
+On May 24th, 2024, the following licenses were used among the repositories mined to build the ChiBench collection:
 
 <p align="right">
 <img alt="jotai drawing" src="./assets/images/Licenses.png" width="50%" height="auto"/>
