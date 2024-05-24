@@ -19,7 +19,10 @@ Thus, each program in the ChiBench suite contains, as a header comment, the orig
 Notice that these programs might use different licenses, given that they were extracted from different projects.
 On May 24th, 2024, the following licenses were used among the benchmarks in the ChiBench collection:
 
+<p align="right">
 <img alt="jotai drawing" src="./assets/images/Licenses.png" width="50%" height="auto"/>
+</br>
+</p>
 
 ## Acknowledgment
 
