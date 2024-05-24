@@ -19,10 +19,32 @@ Thus, each program in the ChiBench suite contains, as a header comment, the orig
 Notice that these programs might use different licenses, given that they were extracted from different projects.
 On May 24th, 2024, the following licenses were used among the repositories mined to build the ChiBench collection:
 
-<p align="right">
-<img alt="jotai drawing" src="./assets/images/Licenses.png" width="50%" height="auto"/>
-</br>
-</p>
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 50%">
+
+| License | # |
+|---------|---|
+|Apache License 2.0|341|
+|MIT License|331|
+|GNU General Public License v3.0|159|
+|GNU General Public License v2.0|37|
+|BSD 3-Clause "New" or "Revised" License|37|
+|BSD 2-Clause "Simplified" License|27|
+|GNU Lesser General Public License v2.1|10|
+|Creative Commons Zero v1.0 Universal|9|
+|The Unlicense|7|
+|GNU Lesser General Public License v3.0|5|
+|Mozilla Public License 2.0|5|
+|ISC License|5|
+|Creative Commons Attribution Share Alike 4.0 International|4|
+|CERN Open Hardware Licence Version 2 - Permissive|3|
+|GNU Affero General Public License v3.0|3|
+|Creative Commons Attribution 4.0 International|2|
+|CERN Open Hardware Licence Version 2 - Strongly Reciprocal|1|
+|CERN Open Hardware Licence Version 2 - Weakly Reciprocal|1|
+
+</div>
 
 ## Acknowledgment
 
