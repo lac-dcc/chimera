@@ -7,6 +7,14 @@ void ReplaceConstantsVisitor::visit(Node *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Terminal *node) {
+  if(node->getElement() == " <<`define-tokens>> "){//fix timescale_unit
+    node->setElement(" 0\n");
+  }else if(node->getElement() == " (timescale_unit) "){
+    node->setElement(" ps\n");
+  } else if(node->getElement() == " <<default-text>> "){
+    node->setElement(" \"\" \n");
+  }
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -717,7 +725,7 @@ void ReplaceConstantsVisitor::visit(Delay_value *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 
-  node->setElement("8");
+  node->setElement(" 1 ");
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -741,7 +749,7 @@ void ReplaceConstantsVisitor::visit(Delay_identifier *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
 
-  node->setElement("'0ps");
+  node->setElement("1ps");
 
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1626,6 +1634,7 @@ void ReplaceConstantsVisitor::visit(Tk_bindigits *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Macronumericwidth *node) {
+  node->setElement(" 1");
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1852,7 +1861,7 @@ void ReplaceConstantsVisitor::visit(Macro_formals_list_opt *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_stringliteral *node) {
-  node->setElement("");
+  node->setElement("\"\"");
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }

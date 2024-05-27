@@ -70,7 +70,8 @@ def __build_funcs(ast_classes):
 
 
 terms_to_replace = [ "Tk_decnumber", "Tk_realtime", "Tk_timeliteral","Tk_unbasednumber","Tk_hexbase","Tk_hexdigits",
-                        "Tk_decdigits","Tk_xzdigits","Tk_binbase","Tk_bindigits","Tk_octbase","Tk_octdigits", "TK_StringLiteral"]
+                        "Tk_decdigits","Tk_xzdigits","Tk_binbase","Tk_bindigits","Tk_octbase","Tk_octdigits", "TK_StringLiteral",
+                        "TK_EvalStringLiteral"]
 
 
 def __create_func_visitor(e:CppClass):
@@ -88,10 +89,10 @@ def __create_func_visitor(e:CppClass):
         f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("\'d");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     elif e.name == "Tk_timeliteral":
         f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("\'0ps");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
+    elif e.name == "TK_StringLiteral" or e.name == "TK_EvalStringLiteral":
+        f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("\"\"");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     elif e.name in terms_to_replace:
         f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("0");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
-    elif e.name == "TK_StringLiteral":
-        f.implementation_handle = lambda s,cpp: cpp('\nnode->setElement("");\n\nfor(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     else:
         f.implementation_handle = lambda s,cpp: cpp('for(std::shared_ptr<Node>& child: node->getChildren()){\nchild->accept(*this);\n}')
     

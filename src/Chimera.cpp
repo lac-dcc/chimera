@@ -211,10 +211,12 @@ int main(int argc, char **argv) {
 
   replaceConstants(head);
 
-  if (flags.count("printtree"))
-    dumpSyntaxTree(head);
+  
 
   renameVars(head);
+
+  if (flags.count("printtree"))
+    dumpSyntaxTree(head);
   codeGen(head);
 
   return 0;

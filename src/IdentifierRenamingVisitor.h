@@ -500,11 +500,14 @@ private:
     std::string name;
     std::string t;
   };
+  std::string defId="";
+  std::string defType="";
 
   enum ContextType { expr = 0, decl, module, defining_id };
 
-  std::stack<ContextType> contexts;
-  std::vector<std::shared_ptr<Var>> identifiers;
+  std::stack<std::shared_ptr<ContextType>> contexts;
+  std::vector<std::shared_ptr<Var>> identifiers;//vars declared
+  std::vector<std::shared_ptr<Var>> to_define;//vars used but not declared
   std::stack<int> scopeLimit;
 
   bool isStartingToken(std::string t) {
@@ -540,48 +543,89 @@ private:
     }
   }
 
-  std::string createNewID(std::string t) {
+  Var createNewID(std::string t) {
 
     Var v;
+    std::string ret;
+    for ( auto c = this->to_define.begin(); c != to_define.end(); c++) {
+        
+        if ((*c).get()->name == t){
+          
+          to_define.erase(c);
+          identifiers.push_back(*c);
+          return *(*c);
+        }
+      }
+
     if (t == "module") {
       v.name = " module_" + std::to_string(varID++);
+      ret = v.name;
+    } else if(t=="PP"){
+      ret = "id_" + std::to_string(varID++) + " ";
+      v.name = " `" + ret;
     } else {
-      v.name = " id_" + std::to_string(varID++);
+      v.name = " id_" + std::to_string(varID++) + " ";
+      ret = v.name;
     }
     if(debug)
       std::cerr << "Var name: " << v.name << std::endl;
     v.t = t;
     identifiers.push_back(std::make_shared<Var>(v));
-
-    return v.name;
+    Var r;
+    r.name = ret;
+    r.t = t;
+    return r;
   }
 
-  void createIDContext(ContextType t) {
-    if(debug)
-      std::cerr << "Creating context: " << t << std::endl;
-    contexts.push(t);
+  void createIDContext(ContextType t, bool force=false) {
+    
+    if( contexts.empty() || (*contexts.top() != ContextType::defining_id || force)){
+      if(debug)
+        std::cerr << "Creating context: " << t << std::endl;
+
+      contexts.push(std::make_shared<ContextType>(t));
+    }
   }
 
-  void finishIDContext() {
-    contexts.pop();
+  void finishIDContext(bool force=false) {
+    if(contexts.empty())
+      return;
+    
+    if(*contexts.top() != ContextType::defining_id || force){
+      if(debug)
+        std::cerr << "Removing Context" << std::endl;
+      contexts.pop();
+    }
   }
-
+  
   std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
-    if(debug)
-      std::cerr << "Context: " << contexts.top()
-              << " Context Size: " << contexts.size() << std::endl;
 
-    if (contexts.top() == ContextType::module) {
+    if(type == "PP"){//pre-processor TODO: map to enum
+      auto id = createNewID("PP");
+      
+      return id.name;
+    }
+    
+    if(debug){
+      if(!contexts.empty())
+        std::cerr << "Context: " << *contexts.top()
+                << " Context Size: " << (int)contexts.size() << std::endl;
+    }
+
+    if (*contexts.top() == ContextType::module) {
 
       contexts.pop();
-      contexts.push(ContextType::decl);
-      return createNewID("module");
+      createIDContext(ContextType::decl);
+      return createNewID("module").name;
     }
-    if (contexts.top() == ContextType::decl) {
+
+    if (*contexts.top() == ContextType::decl) {
       if(debug)
         std::cerr << "Creating new ID for type: " << type << std::endl;
-      return createNewID(type);
+
+      return createNewID(type).name;
     }
+
     if(debug)
       std::cerr << "Trying to use previous created ID" << std::endl;
 
@@ -590,28 +634,34 @@ private:
       if ((*id).get()->t == type)
         options.push_back((*id).get()->name);
     }
-    if (options.size() == 0)
-      return createNewID(type);
+    
 
-    auto c = rand() % options.size();
-    if(debug)
-      std::cerr << "Using var: " << options[c] << std::endl;
-    if(contexts.top() == ContextType::defining_id){
-      if(debug)
-        std::cerr << "Defining ID, C= " << c << std::endl;
+    if (options.empty()){
+      auto id = createNewID(type);
+      to_define.push_back(std::make_shared<Var>(id));
 
-      if(c == 0)
-        return createNewID(type);
-
-      if(c == options.size()-1)
-        c--;
-      if(debug)
-        std::cerr << "Defining ID, C= " << c << std::endl;
-      
-     
-      return options[c];
+      return id.name;
     }
 
+    auto c = rand() % options.size();
+
+    if(*contexts.top() == ContextType::defining_id){
+      if(debug)
+        std::cerr << "should not use: " << this->defId << "or " << this->defType << std::endl;
+      if(options[c] == defId || options[c] == defType){
+        std::cerr << "prev C: " << c;
+        c = rand() % options.size();
+        std::cerr << "new C: " << c << std::endl;
+      }
+      
+      if(options[c] == defId || options[c] == defType){
+        auto ne = createNewID(type);
+        to_define.push_back(std::make_shared<Var>(ne));
+        return ne.name;
+      }
+    }
+    if(debug)
+      std::cerr << "Using var: " << options[c] << std::endl;
     
     return options[c];
   }

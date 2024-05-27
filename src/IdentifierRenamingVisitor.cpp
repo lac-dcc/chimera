@@ -470,19 +470,26 @@ void IdentifierRenamingVisitor::visit(Inc_or_dec_expression *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Lpvalue *node) {
-  createIDContext(ContextType::expr);
+  
+    createIDContext(ContextType::expr);
+  
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  finishIDContext();
+  
+    finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Expression *node) {
-  createIDContext(ContextType::expr);
+  
+    createIDContext(ContextType::expr);
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  finishIDContext();
+
+  
+    finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Assign_modify_statement *node) {
@@ -958,10 +965,15 @@ void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
 
 void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
   createIDContext(ContextType::defining_id);
+  if(!identifiers.empty()){
+    this->defId = this->identifiers.back()->name;
+    this->defType = this->identifiers.back()->t;
+  }
+
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
-  finishIDContext();
+  finishIDContext(true);
 }
 
 void IdentifierRenamingVisitor::visit(Trailing_decl_assignment_opt *node) {
@@ -1883,6 +1895,7 @@ void IdentifierRenamingVisitor::visit(Preprocess_include_argument *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Pp_identifier *node) {
+  node->setElement(placeID("PP"));
   for (std::shared_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
