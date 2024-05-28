@@ -5,8 +5,8 @@
 
 # Check if directory argument is provided
 
-if [ $# -ne 5 ]; then
-    >&2 echo "Usage: $0 <directory> <chimera_executable> <json_file> <n_gram> <number of programs to generate>"
+if [ $# -ne 6 ]; then
+    >&2 echo "Usage: $0 <directory> <chimera_executable> <json_file> <n_gram> <number of programs to generate> <path_to_formatter>"
     exit 1
 fi
 
@@ -27,9 +27,19 @@ if [ ! -f "$3" ]; then
 fi
 
 
-for i in $(seq 0 $5); do
+for (( i=1; i<=$5; i++ )) do
     file="verilog_file_$i.v"
 
-    "$2" "$3" "$4" > "$4_gram_$file" 2>/dev/null
+    "$2" "$3" "$4" > "${4}_gram_${file}" 2>/dev/null
+
+    #format file
+    "$6" "--inplace" "--failsafe_success=false"  "${4}_gram_${file}"
+
+    if [ $? -ne 0 ]
+    then
+        ((i--))
+   
+        rm "${4}_gram_${file}"
+    fi
     
 done

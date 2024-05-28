@@ -649,9 +649,11 @@ private:
       if(debug)
         std::cerr << "should not use: " << this->defId << "or " << this->defType << std::endl;
       if(options[c] == defId || options[c] == defType){
-        std::cerr << "prev C: " << c;
+        if(debug)
+          std::cerr << "prev C: " << c;
         c = rand() % options.size();
-        std::cerr << "new C: " << c << std::endl;
+        if(debug)
+          std::cerr << "new C: " << c << std::endl;
       }
       
       if(options[c] == defId || options[c] == defType){
