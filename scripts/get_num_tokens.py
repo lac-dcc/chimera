@@ -20,7 +20,9 @@ def main():
         print(f'{i}: Running for {file}', file=sys.stderr)
         proc = run([args.verible_parser_executable,
                    '--printtokens', file], capture_output=True)
-        print(f'{file},{len(proc.stdout.splitlines()[2:])}', flush=False)
+        
+        # Subtract one token to ignore the EOF token
+        print(f'{file},{len(proc.stdout.splitlines()[2:]) - 1}', flush=False)
 
 
 if __name__ == '__main__':
