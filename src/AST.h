@@ -13,22 +13,22 @@ class Node {
 public:
   virtual void accept(Visitor &visitor) = 0;
 
-  std::vector<std::shared_ptr<Node>> getChildren();
+  const std::vector<std::unique_ptr<Node>> &getChildren();
 
-  void setChildren(std::vector<std::shared_ptr<Node>> children);
+  void setChildren(std::vector<std::unique_ptr<Node>> &&children);
 
-  std::shared_ptr<Node> getParent();
+  Node *getParent();
 
-  void setParent(std::shared_ptr<Node> parent);
+  void setParent(Node *parent);
 
   std::string getElement();
 
   void setElement(std::string element);
 
 private:
-  std::vector<std::shared_ptr<Node>> children;
+  std::vector<std::unique_ptr<Node>> children;
 
-  std::shared_ptr<Node> parent;
+  Node *parent;
 
   std::string element;
 };
@@ -3895,6 +3895,6 @@ public:
 private:
 };
 extern std::map<std::string,
-                std::function<std::shared_ptr<Node>(const std::string &)>>
+                std::function<std::unique_ptr<Node>(const std::string &)>>
     classMap;
 #endif

@@ -33,7 +33,7 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
 static std::vector<std::string> chooseProds(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const std::string& context, std::mt19937 &gen) {
+    const std::string &context, std::mt19937 &gen) {
   std::vector<std::string> productionsStr;
   std::vector<double> productionsCount;
 
@@ -53,7 +53,7 @@ static std::vector<std::string> chooseProds(
   return breakRuleInProds(productionsStr[d(gen)]);
 }
 
-static std::string getNodeContext(std::shared_ptr<Node> node, const int n) {
+static std::string getNodeContext(Node *node, const int n) {
   std::string context = "";
 
   int depth = 0;
@@ -71,15 +71,15 @@ static std::string getNodeContext(std::shared_ptr<Node> node, const int n) {
   return context;
 }
 
-static std::shared_ptr<Node> buildSyntaxTree(
+static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
     const int n) {
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
-  std::stack<std::shared_ptr<Node>> stack;
-  stack.push(head);
+  std::stack<Node *> stack;
+  stack.push(head.get());
 
   std::random_device rd;
   std::mt19937 gen(rd());
@@ -91,20 +91,20 @@ static std::shared_ptr<Node> buildSyntaxTree(
     std::string context = getNodeContext(curr, n);
     auto prods = chooseProds(map, context, gen);
 
-    std::vector<std::shared_ptr<Node>> children;
+    std::vector<std::unique_ptr<Node>> children;
     context = getNodeContext(curr, n - 1);
     if (!context.empty())
       context += separator;
     for (std::string prod : prods) {
-      std::shared_ptr<Node> child;
+      std::unique_ptr<Node> child;
 
       if (prod[0] == '\'' || prod[0] == '\"') {
         prod.erase(0, 1);
         prod.erase(prod.size() - 1);
 
-        child = std::make_shared<Terminal>(" " + prod + " ");
+        child = std::make_unique<Terminal>(" " + prod + " ");
       } else if (prod == "%empty") {
-        child = std::make_shared<Terminal>("");
+        child = std::make_unique<Terminal>("");
       } else {
         auto aux = prod;
         std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
@@ -113,12 +113,12 @@ static std::shared_ptr<Node> buildSyntaxTree(
           child = classMap[aux](" " + prod + " ");
         } else {
           child = classMap[aux](prod);
-          stack.push(child);
+          stack.push(child.get());
         }
       }
 
       child->setParent(curr);
-      children.push_back(child);
+      children.push_back(std::move(child));
     }
 
     curr->setChildren(std::move(children));
@@ -127,25 +127,25 @@ static std::shared_ptr<Node> buildSyntaxTree(
   return head;
 }
 
-static void codeGen(std::shared_ptr<Node> head) {
+static void codeGen(Node *head) {
   CodeGenVisitor visitor;
-  head.get()->accept(visitor);
+  head->accept(visitor);
 }
 
-static void replaceConstants(std::shared_ptr<Node> head) {
+static void replaceConstants(Node *head) {
   ReplaceConstantsVisitor visitor;
-  head.get()->accept(visitor);
+  head->accept(visitor);
 }
 
-static void renameVars(std::shared_ptr<Node> head) {
+static void renameVars(Node *head) {
   IdentifierRenamingVisitor visitor;
-  head.get()->accept(visitor);
+  head->accept(visitor);
 }
 
-static void dumpSyntaxTree(std::shared_ptr<Node> head) {
-  std::cerr << head.get()->getElement() << " ->";
-  for (auto &child : head.get()->getChildren()) {
-    dumpSyntaxTree(child);
+static void dumpSyntaxTree(Node *head) {
+  std::cerr << head->getElement() << " ->";
+  for (auto &child : head->getChildren()) {
+    dumpSyntaxTree(child.get());
   }
   std::cerr << "\n";
 }
@@ -209,15 +209,13 @@ int main(int argc, char **argv) {
 
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>());
 
-  replaceConstants(head);
+  replaceConstants(head.get());
 
-  
-
-  renameVars(head);
+  renameVars(head.get());
 
   if (flags.count("printtree"))
-    dumpSyntaxTree(head);
-  codeGen(head);
+    dumpSyntaxTree(head.get());
+  codeGen(head.get());
 
   return 0;
 }
