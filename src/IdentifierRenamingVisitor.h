@@ -502,7 +502,7 @@ private:
   std::string defId = "";
   std::string defType = "";
 
-  enum ContextType { expr = 0, decl, module, defining_id };
+  enum ContextType { expr = 0, decl, module, defining_id, defining_type };
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared
@@ -597,31 +597,12 @@ private:
     }
   }
 
-  std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
-    if (type == "PP") {                   // pre-processor TODO: map to enum
-      auto id = createNewID("PP");
-
-      return id.name;
-    }
-
-    if (debug) {
-      if (!contexts.empty())
+  std::string findID(std::string type){
+    
+    if(debug){
+      if(!contexts.empty())
         std::cerr << "Context: " << contexts.top()
-                  << " Context Size: " << (int)contexts.size() << std::endl;
-    }
-
-    if (contexts.top() == ContextType::module) {
-
-      contexts.pop();
-      createIDContext(ContextType::decl);
-      return createNewID("module").name;
-    }
-
-    if (contexts.top() == ContextType::decl) {
-      if (debug)
-        std::cerr << "Creating new ID for type: " << type << std::endl;
-
-      return createNewID(type).name;
+                << " Context Size: " << (int)contexts.size() << std::endl;
     }
 
     if (debug)
@@ -664,6 +645,36 @@ private:
       std::cerr << "Using var: " << options[c] << std::endl;
 
     return options[c];
+  }
+  
+  std::string placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
+    if(debug)
+      std::cerr << "Placing id" << std::endl;
+    if(!contexts.empty() && contexts.top() == ContextType::defining_type)
+      return createNewID("type").name;
+    
+    if (!contexts.empty() && contexts.top() == ContextType::module) {
+
+      contexts.pop();
+      createIDContext(ContextType::decl);
+      return createNewID("module").name;
+    }
+
+    if (!contexts.empty() && contexts.top() == ContextType::decl) {
+      if(debug)
+        std::cerr << "Creating new ID for type: " << type << std::endl;
+
+      return createNewID(type).name;
+    }
+
+    if(type == "PP"){//pre-processor TODO: map to enum
+      auto id = createNewID("PP");
+      
+      return id.name;
+    }
+
+    return findID(type);
+    
   }
 
 public:

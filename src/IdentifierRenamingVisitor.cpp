@@ -833,6 +833,7 @@ void IdentifierRenamingVisitor::visit(System_tf_call *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Systemtfidentifier *node) {
+  node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -924,9 +925,14 @@ void IdentifierRenamingVisitor::visit(Const_opt *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Instantiation_type *node) {
+
+  
+  createIDContext(ContextType::defining_type);
+  
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(
@@ -951,9 +957,15 @@ void IdentifierRenamingVisitor::visit(
 }
 
 void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
+  createIDContext(ContextType::defining_id);
+  if(!identifiers.empty()){
+    this->defId = this->identifiers.back()->name;
+    this->defType = this->identifiers.back()->t;
+  }
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  finishIDContext(true);
 }
 
 void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
@@ -1375,9 +1387,16 @@ void IdentifierRenamingVisitor::visit(Trailing_assign_opt *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Port_expression_opt *node) {
+  createIDContext(ContextType::defining_id);
+  if(!identifiers.empty()){
+    this->defId = this->identifiers.back()->name;
+    this->defType = this->identifiers.back()->t;
+  }
+
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  finishIDContext(true);
 }
 
 void IdentifierRenamingVisitor::visit(Trailing_assign *node) {
