@@ -74,15 +74,23 @@ static std::string getNodeContext(Node *node, const int n) {
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n) {
+    const int n,
+    std::random_device::result_type seed) {
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
   std::stack<Node *> stack;
   stack.push(head.get());
 
-  std::random_device rd;
-  std::mt19937 gen(rd());
+  if (seed == 0) {
+    std::random_device rd;
+    seed = rd();
+
+    if (debug) {
+      std::cerr << "Seed: " << seed << std::endl;
+    }
+  }
+  std::mt19937 gen(seed);
 
   while (!stack.empty()) {
     auto curr = stack.top();
@@ -159,8 +167,9 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
     ("p,printtree", "Prints productions chains.")
-    ("d,debug", "Prints debug messages.") // Needs to improve
-    ("v,verbose", "Verbose output")//Needs to implement
+    ("d,debug", "Prints debug messages.")
+    ("v,verbose", "Verbose output") //Needs to implement
+    ("s,seed", "Set the seed for randomization", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
   // clang-format on
 
@@ -207,7 +216,8 @@ int main(int argc, char **argv) {
   auto map = data.get<
       std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
 
-  auto head = buildSyntaxTree(map, flags["n-value"].as<int>());
+  auto seed = flags.count("seed") ? flags["seed"].as<std::random_device::result_type>() : 0;
+  auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
   replaceConstants(head.get());
 
