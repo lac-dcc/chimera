@@ -25,7 +25,7 @@ total=$(($(ls $1/ -l | wc -l)))
 total=$(($total-1))
 >&2 echo "total of programs: $total"
 
-mkdir "$1/verible_invalid_programs"
+mkdir -p "$1/verible_invalid_programs"
 for file in  "$1"/*.v; do
     >&2 echo "Analyzing $count/$total: $file"
     "$2" "$file"
