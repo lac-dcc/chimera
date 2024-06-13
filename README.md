@@ -18,15 +18,17 @@ If you need help to set up the scripts to do this kind of exploration, feel free
 
 ## Technical Report
 
-The process of constructing and curating this collection of benchmarks is described on this [technical report](./assets/docs/ChiBenchReport.pdf).
+The process of constructing and curating this collection of benchmarks is described on this [technical report](https://arxiv.org/abs/2406.06550).
 Cite it as:
 
 ```
-@techreport{citation-key,
-    author = "Rafael Sumitani and Joao Amorim and Augusto Mafra and Mirlaine Crepalde and Fernando M Quintao Pereira",
-    title = "ChiBench: a Benchmark Suite for Testing Electronic Design Automation Tools",
-    institution = "UFMG",
-    year = "2024"
+@misc{Sumitani24,
+  title={ChiBench: a Benchmark Suite for Testing Electronic Design Automation Tools}, 
+  author={Rafael Sumitani and João Victor Amorim and Augusto Mafra and Mirlaine Crepalde and Fernando Magno Quintão Pereira},
+  year={2024},
+  eprint={2406.06550},
+  archivePrefix={arXiv},
+  primaryClass={cs.AR}
 }
 ```
 
