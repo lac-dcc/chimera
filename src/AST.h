@@ -1,9 +1,9 @@
 #ifndef CHIMERA_AST_H
 #define CHIMERA_AST_H
 #include <functional>
-#include <map>
 #include <memory>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 class Visitor;
@@ -3926,7 +3926,9 @@ public:
 
 private:
 };
-extern std::map<std::string,
-                std::function<std::unique_ptr<Node>(const std::string &)>>
+
+extern std::unordered_map<
+    std::string, std::function<std::unique_ptr<Node>(const std::string &)>>
     classMap;
+
 #endif
