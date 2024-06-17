@@ -1,5 +1,6 @@
-#include "Visitor.h"
+#include "CodeGenVisitor.h"
 #include "AST.h"
+#include <iostream>
 
 void CodeGenVisitor::visit(Node *node) {
   if (node->getChildren().empty()) {
@@ -22,7 +23,18 @@ void CodeGenVisitor::visit(Trailing_decl_assignment_opt *node) {
   }
 }
 
-void CodeGenVisitor::visit(Any_port_list_trailing_comma *node) {
+void CodeGenVisitor::visit(Any_port_list_trailing_comma_named *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(Any_port_list_trailing_comma_positional *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -89,17 +101,6 @@ void CodeGenVisitor::visit(Statement_or_null_list_opt *node) {
 }
 
 void CodeGenVisitor::visit(Class_declaration_extends_opt *node) {
-
-  if (node->getChildren().empty()) {
-    std::cout << node->getElement();
-  } else {
-    for (const std::unique_ptr<Node> &child : node->getChildren()) {
-      child->accept(*this);
-    }
-  }
-}
-
-void CodeGenVisitor::visit(Any_port *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -947,17 +948,6 @@ void CodeGenVisitor::visit(Tk_unbasednumber *node) {
   }
 }
 
-void CodeGenVisitor::visit(Port_declaration_noattr *node) {
-
-  if (node->getChildren().empty()) {
-    std::cout << node->getElement();
-  } else {
-    for (const std::unique_ptr<Node> &child : node->getChildren()) {
-      child->accept(*this);
-    }
-  }
-}
-
 void CodeGenVisitor::visit(Escapedidentifier *node) {
 
   if (node->getChildren().empty()) {
@@ -1325,7 +1315,18 @@ void CodeGenVisitor::visit(Module_parameter_port_list_preprocessor_last *node) {
   }
 }
 
-void CodeGenVisitor::visit(Any_port_list_item_last *node) {
+void CodeGenVisitor::visit(Any_port_list_item_last_named *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(Any_port_list_item_last_positional *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -1347,7 +1348,18 @@ void CodeGenVisitor::visit(Localparam_assign *node) {
   }
 }
 
-void CodeGenVisitor::visit(Any_port_list *node) {
+void CodeGenVisitor::visit(Any_port_list_named *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(Any_port_list_positional *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -2866,7 +2878,19 @@ void CodeGenVisitor::visit(Case_items *node) {
 }
 
 void CodeGenVisitor::visit(
-    List_of_ports_or_port_declarations_trailing_comma *node) {
+    List_of_ports_or_port_declarations_trailing_comma_ansi *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(
+    List_of_ports_or_port_declarations_trailing_comma_non_ansi *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -2888,7 +2912,18 @@ void CodeGenVisitor::visit(Property_implication_expr *node) {
   }
 }
 
-void CodeGenVisitor::visit(List_of_ports_or_port_declarations *node) {
+void CodeGenVisitor::visit(List_of_ports_or_port_declarations_ansi *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(List_of_ports_or_port_declarations_non_ansi *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -2955,17 +2990,6 @@ void CodeGenVisitor::visit(Shift_expr *node) {
 }
 
 void CodeGenVisitor::visit(Case_item *node) {
-
-  if (node->getChildren().empty()) {
-    std::cout << node->getElement();
-  } else {
-    for (const std::unique_ptr<Node> &child : node->getChildren()) {
-      child->accept(*this);
-    }
-  }
-}
-
-void CodeGenVisitor::visit(Port_or_port_declaration *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -3075,7 +3099,18 @@ void CodeGenVisitor::visit(Procedural_assertion_statement *node) {
   }
 }
 
-void CodeGenVisitor::visit(Port_declaration *node) {
+void CodeGenVisitor::visit(Port_declaration_ansi *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(Port_declaration_non_ansi *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();
@@ -4384,7 +4419,20 @@ void CodeGenVisitor::visit(Udp_input_sym *node) {
   }
 }
 
-void CodeGenVisitor::visit(List_of_ports_or_port_declarations_item_last *node) {
+void CodeGenVisitor::visit(
+    List_of_ports_or_port_declarations_item_last_ansi *node) {
+
+  if (node->getChildren().empty()) {
+    std::cout << node->getElement();
+  } else {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      child->accept(*this);
+    }
+  }
+}
+
+void CodeGenVisitor::visit(
+    List_of_ports_or_port_declarations_item_last_non_ansi *node) {
 
   if (node->getChildren().empty()) {
     std::cout << node->getElement();

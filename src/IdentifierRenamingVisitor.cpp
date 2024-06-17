@@ -1,174 +1,174 @@
 #include "IdentifierRenamingVisitor.h"
-
+#include <iostream>
 
 bool IdentifierRenamingVisitor::isStartingToken(std::string t) {
-    return t == " begin " || t == " module ";
-  }
+  return t == " begin " || t == " module ";
+}
 
-  bool IdentifierRenamingVisitor::isFnishingToken(std::string t) {
-    return t == " end " || t == " endmodule ";
-  }
+bool IdentifierRenamingVisitor::isFnishingToken(std::string t) {
+  return t == " end " || t == " endmodule ";
+}
 
-  void IdentifierRenamingVisitor::startNewScope() {
-    scopeLimit.push(identifiers.size()); // start of new context
-  }
+void IdentifierRenamingVisitor::startNewScope() {
+  scopeLimit.push(identifiers.size()); // start of new context
+}
 
-  void IdentifierRenamingVisitor::finishScope() {
-    if (debug)
-      std::cerr << "finishing scope" << std::endl;
-    if (!scopeLimit.empty()) {
-      if (debug) {
-        std::cerr << "scope not empty" << std::endl;
-        std::cerr << "limit: " << scopeLimit.top()
-                  << "scope size: " << scopeLimit.size()
-                  << " size identifiers: " << identifiers.size() << std::endl;
-      }
-
-      for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
-        if (debug)
-          std::cerr << "Removing: " << identifiers.back().get()->name
-                    << std::endl;
-        identifiers.pop_back();
-      }
-      scopeLimit.pop();
-    }
-  }
-
-  IdentifierRenamingVisitor::Var IdentifierRenamingVisitor::createNewID(std::string t) {
-    Var v;
-    std::string ret;
-    for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
-
-      if ((*c).get()->name == t) {
-
-        to_define.erase(c);
-        identifiers.push_back(*c);
-        return *(*c);
-      }
+void IdentifierRenamingVisitor::finishScope() {
+  if (debug)
+    std::cerr << "finishing scope" << std::endl;
+  if (!scopeLimit.empty()) {
+    if (debug) {
+      std::cerr << "scope not empty" << std::endl;
+      std::cerr << "limit: " << scopeLimit.top()
+                << "scope size: " << scopeLimit.size()
+                << " size identifiers: " << identifiers.size() << std::endl;
     }
 
-    if (t == "module") {
-      v.name = " module_" + std::to_string(varID++);
-      ret = v.name;
-    } else if (t == "PP") {
-      ret = "id_" + std::to_string(varID++) + " ";
-      v.name = " `" + ret;
-    } else {
-      v.name = " id_" + std::to_string(varID++) + " ";
-      ret = v.name;
-    }
-    if (debug)
-      std::cerr << "Var name: " << v.name << std::endl;
-    v.t = t;
-    identifiers.push_back(std::make_shared<Var>(v));
-    Var r;
-    r.name = ret;
-    r.t = t;
-    return r;
-  }
-
-  void IdentifierRenamingVisitor::createIDContext(ContextType t, bool force) {
-
-    if (contexts.empty() ||
-        (contexts.top() != ContextType::DEFINING_ID || force)) {
+    for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
       if (debug)
-        std::cerr << "Creating context: " << t << std::endl;
-
-      contexts.push(t);
-    }
-  }
-
-  void IdentifierRenamingVisitor::finishIDContext(bool force) {
-    if (contexts.empty())
-      return;
-
-    if (contexts.top() != ContextType::DEFINING_ID || force) {
-      if (debug)
-        std::cerr << "Removing Context" << std::endl;
-      contexts.pop();
-    }
-  }
-
-  std::string IdentifierRenamingVisitor::findID(std::string type){
-    
-    if(debug){
-      if(!contexts.empty())
-        std::cerr << "Context: " << contexts.top()
-                << " Context Size: " << (int)contexts.size() << std::endl;
-    }
-
-    if (debug)
-      std::cerr << "Trying to use previous created ID" << std::endl;
-
-    std::vector<std::string> options;
-    for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
-      if ((*id).get()->t == type)
-        options.push_back((*id).get()->name);
-    }
-
-    if (options.empty()) {
-      auto id = createNewID(type);
-      to_define.push_back(std::make_shared<Var>(id));
-
-      return id.name;
-    }
-
-    auto c = rand() % options.size();
-
-    if (contexts.top() == ContextType::DEFINING_ID) {
-      if (debug)
-        std::cerr << "should not use: " << this->defId << "or " << this->defType
+        std::cerr << "Removing: " << identifiers.back().get()->name
                   << std::endl;
-      if (options[c] == defId || options[c] == defType) {
-        if (debug)
-          std::cerr << "prev C: " << c;
-        c = rand() % options.size();
-        if (debug)
-          std::cerr << "new C: " << c << std::endl;
-      }
-
-      if (options[c] == defId || options[c] == defType) {
-        auto ne = createNewID(type);
-        to_define.push_back(std::make_shared<Var>(ne));
-        return ne.name;
-      }
+      identifiers.pop_back();
     }
+    scopeLimit.pop();
+  }
+}
+
+IdentifierRenamingVisitor::Var
+IdentifierRenamingVisitor::createNewID(std::string t) {
+  Var v;
+  std::string ret;
+  for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
+
+    if ((*c).get()->name == t) {
+
+      to_define.erase(c);
+      identifiers.push_back(*c);
+      return *(*c);
+    }
+  }
+
+  if (t == "module") {
+    v.name = " module_" + std::to_string(varID++);
+    ret = v.name;
+  } else if (t == "PP") {
+    ret = "id_" + std::to_string(varID++) + " ";
+    v.name = " `" + ret;
+  } else {
+    v.name = " id_" + std::to_string(varID++) + " ";
+    ret = v.name;
+  }
+  if (debug)
+    std::cerr << "Var name: " << v.name << std::endl;
+  v.t = t;
+  identifiers.push_back(std::make_shared<Var>(v));
+  Var r;
+  r.name = ret;
+  r.t = t;
+  return r;
+}
+
+void IdentifierRenamingVisitor::createIDContext(ContextType t, bool force) {
+
+  if (contexts.empty() ||
+      (contexts.top() != ContextType::DEFINING_ID || force)) {
     if (debug)
-      std::cerr << "Using var: " << options[c] << std::endl;
+      std::cerr << "Creating context: " << t << std::endl;
 
-    return options[c];
+    contexts.push(t);
   }
-  
-  std::string IdentifierRenamingVisitor::placeID(std::string type) { // SymbolIdentifier, EscapedIdentifier
-    if(debug)
-      std::cerr << "Placing id" << std::endl;
-    if(!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
-      return createNewID("type").name;
-    
-    if (!contexts.empty() && contexts.top() == ContextType::MODULE) {
+}
 
-      contexts.pop();
-      createIDContext(ContextType::DECL);
-      return createNewID("module").name;
-    }
+void IdentifierRenamingVisitor::finishIDContext(bool force) {
+  if (contexts.empty())
+    return;
 
-    if (!contexts.empty() && contexts.top() == ContextType::DECL) {
-      if(debug)
-        std::cerr << "Creating new ID for type: " << type << std::endl;
+  if (contexts.top() != ContextType::DEFINING_ID || force) {
+    if (debug)
+      std::cerr << "Removing Context" << std::endl;
+    contexts.pop();
+  }
+}
 
-      return createNewID(type).name;
-    }
+std::string IdentifierRenamingVisitor::findID(std::string type) {
 
-    if(type == "PP"){//pre-processor TODO: map to enum
-      auto id = createNewID("PP");
-      
-      return id.name;
-    }
-
-    return findID(type);
-    
+  if (debug) {
+    if (!contexts.empty())
+      std::cerr << "Context: " << contexts.top()
+                << " Context Size: " << (int)contexts.size() << std::endl;
   }
 
+  if (debug)
+    std::cerr << "Trying to use previous created ID" << std::endl;
+
+  std::vector<std::string> options;
+  for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
+    if ((*id).get()->t == type)
+      options.push_back((*id).get()->name);
+  }
+
+  if (options.empty()) {
+    auto id = createNewID(type);
+    to_define.push_back(std::make_shared<Var>(id));
+
+    return id.name;
+  }
+
+  auto c = rand() % options.size();
+
+  if (contexts.top() == ContextType::DEFINING_ID) {
+    if (debug)
+      std::cerr << "should not use: " << this->defId << "or " << this->defType
+                << std::endl;
+    if (options[c] == defId || options[c] == defType) {
+      if (debug)
+        std::cerr << "prev C: " << c;
+      c = rand() % options.size();
+      if (debug)
+        std::cerr << "new C: " << c << std::endl;
+    }
+
+    if (options[c] == defId || options[c] == defType) {
+      auto ne = createNewID(type);
+      to_define.push_back(std::make_shared<Var>(ne));
+      return ne.name;
+    }
+  }
+  if (debug)
+    std::cerr << "Using var: " << options[c] << std::endl;
+
+  return options[c];
+}
+
+std::string IdentifierRenamingVisitor::placeID(
+    std::string type) { // SymbolIdentifier, EscapedIdentifier
+  if (debug)
+    std::cerr << "Placing id" << std::endl;
+  if (!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
+    return createNewID("type").name;
+
+  if (!contexts.empty() && contexts.top() == ContextType::MODULE) {
+
+    contexts.pop();
+    createIDContext(ContextType::DECL);
+    return createNewID("module").name;
+  }
+
+  if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+    if (debug)
+      std::cerr << "Creating new ID for type: " << type << std::endl;
+
+    return createNewID(type).name;
+  }
+
+  if (type == "PP") { // pre-processor TODO: map to enum
+    auto id = createNewID("PP");
+
+    return id.name;
+  }
+
+  return findID(type);
+}
 
 void IdentifierRenamingVisitor::visit(Node *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
@@ -1096,9 +1096,8 @@ void IdentifierRenamingVisitor::visit(Const_opt *node) {
 
 void IdentifierRenamingVisitor::visit(Instantiation_type *node) {
 
-  
   createIDContext(ContextType::DEFINING_TYPE);
-  
+
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1128,7 +1127,7 @@ void IdentifierRenamingVisitor::visit(
 
 void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
-  if(!identifiers.empty()){
+  if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
     this->defType = this->identifiers.back()->t;
   }
@@ -1169,19 +1168,28 @@ void IdentifierRenamingVisitor::visit(Any_port_list_positional *node) {
   }
 }
 
-void IdentifierRenamingVisitor::visit(Any_port_list_item_last *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list_item_last_named *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void IdentifierRenamingVisitor::visit(Any_port_list_trailing_comma *node) {
+void IdentifierRenamingVisitor::visit(
+    Any_port_list_item_last_positional *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void IdentifierRenamingVisitor::visit(Any_port *node) {
+void IdentifierRenamingVisitor::visit(
+    Any_port_list_trailing_comma_named *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(
+    Any_port_list_trailing_comma_positional *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1553,12 +1561,6 @@ void IdentifierRenamingVisitor::visit(
   }
 }
 
-void IdentifierRenamingVisitor::visit(Port_or_port_declaration *node) {
-  for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
 void IdentifierRenamingVisitor::visit(Port *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1591,7 +1593,7 @@ void IdentifierRenamingVisitor::visit(Trailing_assign_opt *node) {
 
 void IdentifierRenamingVisitor::visit(Port_expression_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
-  if(!identifiers.empty()){
+  if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
     this->defType = this->identifiers.back()->t;
   }

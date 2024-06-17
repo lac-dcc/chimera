@@ -1254,36 +1254,53 @@ Trailing_decl_assignment_opt::Trailing_decl_assignment_opt(
   this->setElement(element);
 }
 
-void Any_port_list::accept(Visitor &visitor) {
+void Any_port_list_named::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-Any_port_list::Any_port_list(std::string element) {
+Any_port_list_named::Any_port_list_named(std::string element) {
   this->setElement(element);
 }
 
-void Any_port_list_item_last::accept(Visitor &visitor) {
+void Any_port_list_item_last_named::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-Any_port_list_item_last::Any_port_list_item_last(std::string element) {
+Any_port_list_item_last_named::Any_port_list_item_last_named(std::string element) {
   this->setElement(element);
 }
 
-void Any_port_list_trailing_comma::accept(Visitor &visitor) {
+void Any_port_list_trailing_comma_named::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-Any_port_list_trailing_comma::Any_port_list_trailing_comma(
+Any_port_list_trailing_comma_named::Any_port_list_trailing_comma_named(
     std::string element) {
   this->setElement(element);
 }
 
-void Any_port::accept(Visitor &visitor) {
+void Any_port_list_positional::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-Any_port::Any_port(std::string element) {
+Any_port_list_positional::Any_port_list_positional(std::string element) {
+  this->setElement(element);
+}
+
+void Any_port_list_item_last_positional::accept(Visitor &visitor) {
+  visitor.visit(this);
+}
+
+Any_port_list_item_last_positional::Any_port_list_item_last_positional(std::string element) {
+  this->setElement(element);
+}
+
+void Any_port_list_trailing_comma_positional::accept(Visitor &visitor) {
+  visitor.visit(this);
+}
+
+Any_port_list_trailing_comma_positional::Any_port_list_trailing_comma_positional(
+    std::string element) {
   this->setElement(element);
 }
 
@@ -1717,39 +1734,59 @@ Identifier_optional_unpacked_dimensions::
   this->setElement(element);
 }
 
-void List_of_ports_or_port_declarations::accept(Visitor &visitor) {
+void List_of_ports_or_port_declarations_ansi::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-List_of_ports_or_port_declarations::List_of_ports_or_port_declarations(
+List_of_ports_or_port_declarations_ansi::List_of_ports_or_port_declarations_ansi(
     std::string element) {
   this->setElement(element);
 }
 
-void List_of_ports_or_port_declarations_item_last::accept(Visitor &visitor) {
+void List_of_ports_or_port_declarations_non_ansi::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-List_of_ports_or_port_declarations_item_last::
-    List_of_ports_or_port_declarations_item_last(std::string element) {
+List_of_ports_or_port_declarations_non_ansi::List_of_ports_or_port_declarations_non_ansi(
+    std::string element) {
   this->setElement(element);
 }
 
-void List_of_ports_or_port_declarations_trailing_comma::accept(
+void List_of_ports_or_port_declarations_item_last_ansi::accept(Visitor &visitor) {
+  visitor.visit(this);
+}
+
+List_of_ports_or_port_declarations_item_last_ansi::
+    List_of_ports_or_port_declarations_item_last_ansi(std::string element) {
+  this->setElement(element);
+}
+
+void List_of_ports_or_port_declarations_item_last_non_ansi::accept(Visitor &visitor) {
+  visitor.visit(this);
+}
+
+List_of_ports_or_port_declarations_item_last_non_ansi::
+    List_of_ports_or_port_declarations_item_last_non_ansi(std::string element) {
+  this->setElement(element);
+}
+
+void List_of_ports_or_port_declarations_trailing_comma_ansi::accept(
     Visitor &visitor) {
   visitor.visit(this);
 }
 
-List_of_ports_or_port_declarations_trailing_comma::
-    List_of_ports_or_port_declarations_trailing_comma(std::string element) {
+List_of_ports_or_port_declarations_trailing_comma_ansi::
+    List_of_ports_or_port_declarations_trailing_comma_ansi(std::string element) {
   this->setElement(element);
 }
 
-void Port_or_port_declaration::accept(Visitor &visitor) {
+void List_of_ports_or_port_declarations_trailing_comma_non_ansi::accept(
+    Visitor &visitor) {
   visitor.visit(this);
 }
 
-Port_or_port_declaration::Port_or_port_declaration(std::string element) {
+List_of_ports_or_port_declarations_trailing_comma_non_ansi::
+    List_of_ports_or_port_declarations_trailing_comma_non_ansi(std::string element) {
   this->setElement(element);
 }
 
@@ -1761,11 +1798,19 @@ Port::Port(std::string element) {
   this->setElement(element);
 }
 
-void Port_declaration::accept(Visitor &visitor) {
+void Port_declaration_ansi::accept(Visitor &visitor) {
   visitor.visit(this);
 }
 
-Port_declaration::Port_declaration(std::string element) {
+Port_declaration_ansi::Port_declaration_ansi(std::string element) {
+  this->setElement(element);
+}
+
+void Port_declaration_non_ansi::accept(Visitor &visitor) {
+  visitor.visit(this);
+}
+
+Port_declaration_non_ansi::Port_declaration_non_ansi(std::string element) {
   this->setElement(element);
 }
 
@@ -2574,14 +2619,6 @@ void Dynamic_array_new::accept(Visitor &visitor) {
 }
 
 Dynamic_array_new::Dynamic_array_new(std::string element) {
-  this->setElement(element);
-}
-
-void Port_declaration_noattr::accept(Visitor &visitor) {
-  visitor.visit(this);
-}
-
-Port_declaration_noattr::Port_declaration_noattr(std::string element) {
   this->setElement(element);
 }
 
@@ -4703,27 +4740,38 @@ std::map<std::string, std::function<std::unique_ptr<Node>(const std::string &)>>
              const std::string &f) -> std::unique_ptr<Node> {
            return std::make_unique<Trailing_decl_assignment_opt>(f);
          }},
-        {"any_port_list",
+        {"any_port_list_named",
          [](const std::string &f) -> std::
                                       unique_ptr<Node> {
-                                        return std::make_unique<Any_port_list>(
+                                        return std::make_unique<Any_port_list_named>(
                                             f);
                                       }},
-        {"any_port_list_item_last",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_item_last>(f);
-         }},
-        {"any_port_list_trailing_comma",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_trailing_comma>(f);
-         }},
-        {"any_port",
+        {"any_port_list_positional",
          [](const std::string &f) -> std::
                                       unique_ptr<Node> {
-                                        return std::make_unique<Any_port>(f);
+                                        return std::make_unique<Any_port_list_positional>(
+                                            f);
                                       }},
+        {"any_port_list_item_last_named",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<Any_port_list_item_last_named>(f);
+         }},
+        {"any_port_list_item_last_positional",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<Any_port_list_item_last_positional>(f);
+         }},
+        {"any_port_list_trailing_comma_named",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<Any_port_list_trailing_comma_named>(f);
+         }},
+        {"any_port_list_trailing_comma_positional",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<Any_port_list_trailing_comma_positional>(f);
+         }},
         {"port_named",
          [](const std::string &f) -> std::
                                       unique_ptr<Node> {
@@ -5004,38 +5052,56 @@ std::map<std::string, std::function<std::unique_ptr<Node>(const std::string &)>>
              const std::string &f) -> std::unique_ptr<Node> {
            return std::make_unique<Identifier_optional_unpacked_dimensions>(f);
          }},
-        {"list_of_ports_or_port_declarations",
+        {"list_of_ports_or_port_declarations_ansi",
          [](
              const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_ports_or_port_declarations>(f);
+           return std::make_unique<List_of_ports_or_port_declarations_ansi>(f);
          }},
-        {"list_of_ports_or_port_declarations_item_last",
+        {"list_of_ports_or_port_declarations_non_ansi",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<List_of_ports_or_port_declarations_non_ansi>(f);
+         }},
+        {"list_of_ports_or_port_declarations_item_last_ansi",
          [](
              const std::string &f) -> std::unique_ptr<Node> {
            return std::make_unique<
-               List_of_ports_or_port_declarations_item_last>(f);
+               List_of_ports_or_port_declarations_item_last_ansi>(f);
          }},
-        {"list_of_ports_or_port_declarations_trailing_comma",
+        {"list_of_ports_or_port_declarations_item_last_non_ansi",
          [](
              const std::string &f) -> std::unique_ptr<Node> {
            return std::make_unique<
-               List_of_ports_or_port_declarations_trailing_comma>(f);
+               List_of_ports_or_port_declarations_item_last_non_ansi>(f);
          }},
-        {"port_or_port_declaration",
+        {"list_of_ports_or_port_declarations_trailing_comma_ansi",
          [](
              const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_or_port_declaration>(f);
+           return std::make_unique<
+               List_of_ports_or_port_declarations_trailing_comma_ansi>(f);
+         }},
+        {"list_of_ports_or_port_declarations_trailing_comma_non_ansi",
+         [](
+             const std::string &f) -> std::unique_ptr<Node> {
+           return std::make_unique<
+               List_of_ports_or_port_declarations_trailing_comma_non_ansi>(f);
          }},
         {"port",
          [](const std::string &f) -> std::
                                       unique_ptr<Node> {
                                         return std::make_unique<Port>(f);
                                       }},
-        {"port_declaration",
+        {"port_declaration_ansi",
          [](const std::string &f)
              -> std::
                  unique_ptr<Node> {
-                   return std::make_unique<Port_declaration>(f);
+                   return std::make_unique<Port_declaration_ansi>(f);
+                 }},
+        {"port_declaration_non_ansi",
+         [](const std::string &f)
+             -> std::
+                 unique_ptr<Node> {
+                   return std::make_unique<Port_declaration_non_ansi>(f);
                  }},
         {"port_expression",
          [](const std::string &f)
@@ -5569,11 +5635,6 @@ std::map<std::string, std::function<std::unique_ptr<Node>(const std::string &)>>
          [](
              const std::string &f) -> std::unique_ptr<Node> {
            return std::make_unique<Dynamic_array_new>(f);
-         }},
-        {"port_declaration_noattr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_declaration_noattr>(f);
          }},
         {"var_or_net_type_opt",
          [](

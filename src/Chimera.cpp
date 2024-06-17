@@ -1,4 +1,5 @@
 #include "AST.h"
+#include "CodeGenVisitor.h"
 #include "ConstantsReplacerVisitor.h"
 #include "IdentifierRenamingVisitor.h"
 #include "Visitor.h"
@@ -74,8 +75,7 @@ static std::string getNodeContext(Node *node, const int n) {
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n,
-    std::random_device::result_type seed) {
+    const int n, std::random_device::result_type seed) {
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
@@ -216,7 +216,9 @@ int main(int argc, char **argv) {
   auto map = data.get<
       std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
 
-  auto seed = flags.count("seed") ? flags["seed"].as<std::random_device::result_type>() : 0;
+  auto seed = flags.count("seed")
+                  ? flags["seed"].as<std::random_device::result_type>()
+                  : 0;
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
   replaceConstants(head.get());

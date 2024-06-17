@@ -21,7 +21,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "")
 
-add_executable(Chimera Chimera.cpp Visitor.cpp AST.cpp ConstantsReplacerVisitor.cpp IdentifierRenamingVisitor.cpp)
+add_executable(Chimera Chimera.cpp AST.cpp CodeGenVisitor.cpp ConstantsReplacerVisitor.cpp IdentifierRenamingVisitor.cpp)
 
 target_link_libraries(Chimera PRIVATE nlohmann_json::nlohmann_json)
 target_link_libraries(Chimera PRIVATE cxxopts::cxxopts)
