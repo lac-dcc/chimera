@@ -158,7 +158,8 @@ class Gate_instance_or_register_variable;
 class Decl_dimensions_opt;
 class Any_port_list_opt;
 class Trailing_decl_assignment_opt;
-class Any_port_list;
+class Any_port_list_named;
+class Any_port_list_positional;
 class Any_port_list_item_last;
 class Any_port_list_trailing_comma;
 class Any_port;
@@ -215,12 +216,15 @@ class Var_type;
 class List_of_port_identifiers;
 class Port_net_type;
 class Identifier_optional_unpacked_dimensions;
-class List_of_ports_or_port_declarations;
-class List_of_ports_or_port_declarations_item_last;
-class List_of_ports_or_port_declarations_trailing_comma;
-class Port_or_port_declaration;
+class list_of_ports_or_port_declarations_ansi;
+class list_of_ports_or_port_declarations_non_ansi;
+class List_of_ports_or_port_declarations_item_last_ansi;
+class List_of_ports_or_port_declarations_item_last_non_ansi;
+class List_of_ports_or_port_declarations_trailing_comma_ansi;
+class List_of_ports_or_port_declarations_trailing_comma_non_ansi;
 class Port;
-class Port_declaration;
+class Port_declaration_ansi;
+class Port_declaration_non_ansi;
 class Port_expression;
 class Trailing_assign_opt;
 class Port_expression_opt;
@@ -321,7 +325,6 @@ class Generate_if;
 class Generate_case_items;
 class Class_new;
 class Dynamic_array_new;
-class Port_declaration_noattr;
 class Var_or_net_type_opt;
 class Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt;
 class Type_identifier_followed_by_id;
@@ -797,7 +800,8 @@ public:
 
   virtual void visit(Trailing_decl_assignment_opt *node);
 
-  virtual void visit(Any_port_list *node);
+  virtual void visit(Any_port_list_named *node);
+  virtual void visit(Any_port_list_positional *node);
 
   virtual void visit(Any_port_list_item_last *node);
 
@@ -911,17 +915,25 @@ public:
 
   virtual void visit(Identifier_optional_unpacked_dimensions *node);
 
-  virtual void visit(List_of_ports_or_port_declarations *node);
+  virtual void visit(list_of_ports_or_port_declarations_ansi *node);
 
-  virtual void visit(List_of_ports_or_port_declarations_item_last *node);
+  virtual void visit(list_of_ports_or_port_declarations_non_ansi *node);
 
-  virtual void visit(List_of_ports_or_port_declarations_trailing_comma *node);
+  virtual void visit(List_of_ports_or_port_declarations_item_last_ansi *node);
 
-  virtual void visit(Port_or_port_declaration *node);
+  virtual void visit(List_of_ports_or_port_declarations_item_last_non_ansi *node);
+
+  virtual void visit(List_of_ports_or_port_declarations_trailing_comma_ansi *node);
+
+  virtual void visit(List_of_ports_or_port_declarations_trailing_comma_non_ansi *node);
+
+  
 
   virtual void visit(Port *node);
 
-  virtual void visit(Port_declaration *node);
+  virtual void visit(Port_declaration_ansi *node);
+
+  virtual void visit(Port_declaration_non_ansi *node);
 
   virtual void visit(Port_expression *node);
 
@@ -1122,8 +1134,6 @@ public:
   virtual void visit(Class_new *node);
 
   virtual void visit(Dynamic_array_new *node);
-
-  virtual void visit(Port_declaration_noattr *node);
 
   virtual void visit(Var_or_net_type_opt *node);
 

@@ -1157,7 +1157,13 @@ void IdentifierRenamingVisitor::visit(Trailing_decl_assignment_opt *node) {
   }
 }
 
-void IdentifierRenamingVisitor::visit(Any_port_list *node) {
+void IdentifierRenamingVisitor::visit(Any_port_list_named *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(Any_port_list_positional *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1506,21 +1512,42 @@ void IdentifierRenamingVisitor::visit(
 }
 
 void IdentifierRenamingVisitor::visit(
-    List_of_ports_or_port_declarations *node) {
+    List_of_ports_or_port_declarations_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(
-    List_of_ports_or_port_declarations_item_last *node) {
+    List_of_ports_or_port_declarations_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(
-    List_of_ports_or_port_declarations_trailing_comma *node) {
+    List_of_ports_or_port_declarations_item_last_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(
+    List_of_ports_or_port_declarations_item_last_non_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(
+    List_of_ports_or_port_declarations_trailing_comma_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(
+    List_of_ports_or_port_declarations_trailing_comma_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1538,7 +1565,13 @@ void IdentifierRenamingVisitor::visit(Port *node) {
   }
 }
 
-void IdentifierRenamingVisitor::visit(Port_declaration *node) {
+void IdentifierRenamingVisitor::visit(Port_declaration_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void IdentifierRenamingVisitor::visit(Port_declaration_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -2166,12 +2199,6 @@ void IdentifierRenamingVisitor::visit(Class_new *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Dynamic_array_new *node) {
-  for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void IdentifierRenamingVisitor::visit(Port_declaration_noattr *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }

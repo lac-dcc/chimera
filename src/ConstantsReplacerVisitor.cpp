@@ -937,7 +937,13 @@ void ReplaceConstantsVisitor::visit(Trailing_decl_assignment_opt *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Any_port_list *node) {
+void ReplaceConstantsVisitor::visit(Any_port_list_named *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void ReplaceConstantsVisitor::visit(Any_port_list_positional *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1283,27 +1289,41 @@ void ReplaceConstantsVisitor::visit(
   }
 }
 
-void ReplaceConstantsVisitor::visit(List_of_ports_or_port_declarations *node) {
+void ReplaceConstantsVisitor::visit(list_of_ports_or_port_declarations_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void ReplaceConstantsVisitor::visit(list_of_ports_or_port_declarations_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void ReplaceConstantsVisitor::visit(
-    List_of_ports_or_port_declarations_item_last *node) {
+    List_of_ports_or_port_declarations_item_last_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void ReplaceConstantsVisitor::visit(
-    List_of_ports_or_port_declarations_trailing_comma *node) {
+    List_of_ports_or_port_declarations_item_last_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_or_port_declaration *node) {
+void ReplaceConstantsVisitor::visit(
+    List_of_ports_or_port_declarations_trailing_comma_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void ReplaceConstantsVisitor::visit(
+    List_of_ports_or_port_declarations_trailing_comma_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1315,7 +1335,13 @@ void ReplaceConstantsVisitor::visit(Port *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Port_declaration *node) {
+void ReplaceConstantsVisitor::visit(Port_declaration_ansi *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->accept(*this);
+  }
+}
+
+void ReplaceConstantsVisitor::visit(Port_declaration_non_ansi *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1945,12 +1971,6 @@ void ReplaceConstantsVisitor::visit(Class_new *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Dynamic_array_new *node) {
-  for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    child->accept(*this);
-  }
-}
-
-void ReplaceConstantsVisitor::visit(Port_declaration_noattr *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
