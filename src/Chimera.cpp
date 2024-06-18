@@ -152,7 +152,7 @@ static void renameVars(Node *head) {
 
 static bool isAnsi(Node * head){
   bool ansi = false;
-  if(head->getElement() == "listof_ports_or_port_declarations_ansi")
+  if(head->getElement() == "list_of_ports_or_port_declarations_ansi")
     ansi = true;
 
   for(int i = 0; i < (int) head->getChildren().size() && !ansi; i++){
@@ -163,38 +163,51 @@ static bool isAnsi(Node * head){
 
 static int countNumberPorts(Node * head){
   int count = 0;
-  if(head->getElement() == "port_declaration_ansi")
+
+  if(head->getElement() == "port_declaration_non_ansi")
     count += 1;
 
-  for(int i = 0; i < (int) head->getChildren().size(); i++){
-    count += isAnsi(head->getChildren()[i].get());
+  for(auto const& c: head->getChildren()){
+    count += countNumberPorts(c.get());
   }
   return count;
 }
 
-static void renameNonAnsiPorts(Node * head, int counter, int n){
-  if(head->getElement() == "SymbolIdentifier"){
-    head->setElement(" id" + std::to_string(counter) + " ");
+static int renameNonAnsiPorts(Node * head, int counter, int n){
+  if(head->getElement() == " SymbolIdentifier " && counter == 0){
+    counter++;
+
+  }else if(head->getElement() == " SymbolIdentifier "){
+    auto s = " id_" + std::to_string(counter) + " ";
+    if(debug)
+      std::cerr << "Renaming ID to " << s << std::endl;
+    head->setElement(s);
     counter++;
   }
 
   if(counter <= n){
     for(const auto & c: head->getChildren()){
-      renameNonAnsiPorts(c.get(), counter, n);
+      counter = renameNonAnsiPorts(c.get(), counter, n);
     }
   }
+  return counter;
 }
 
 static bool matchNonAnsiPorts(Node * head, int n){
   bool done = false;
+  
   if(head->getElement() == "module_item_list_opt"){
-    for(int i = 0; i < n; i++){
+    if(debug)
+      std::cerr << "Matching non ansi ports" << std::endl;
+    
+    for(int i = 1; i <= n; i++){
       int choice = rand() % 2;
 
       std::string prod;
 
-      prod = (choice) ? "input id" +std::tostring(i) + " " : "output id" + std::to_string(i) + " ";
-
+      prod = (choice) ? "input id_" + std::to_string(i) + "; " : "output id_" + std::to_string(i) + "; ";
+      if(debug)
+        std::cerr << "Creating child: " << prod;
       auto child = std::make_unique<Terminal>(prod);
       head->insertChildToBegin(std::move(child));
     }
@@ -210,6 +223,8 @@ static bool matchNonAnsiPorts(Node * head, int n){
 
 static void declareNonAnsiPorts(Node * head){
   if(!isAnsi(head)){
+    if(debug)
+      std::cerr << "Code is not ansi" << std::endl;
     auto count = countNumberPorts(head);
     renameNonAnsiPorts(head, 0, count);
     matchNonAnsiPorts(head,count);
@@ -289,7 +304,7 @@ int main(int argc, char **argv) {
 
   replaceConstants(head.get());
   declareNonAnsiPorts(head.get());
-  renameVars(head.get());
+  //renameVars(head.get());
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());

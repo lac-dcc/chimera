@@ -10,9 +10,11 @@ class Visitor;
 
 class Node {
 public:
+
   virtual void accept(Visitor &visitor) = 0;
 
   const std::vector<std::unique_ptr<Node>> &getChildren();
+  void insertChildToBegin(std::unique_ptr<Node>);
 
   void setChildren(std::vector<std::unique_ptr<Node>> &&children);
 
