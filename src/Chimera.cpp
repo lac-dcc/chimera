@@ -150,6 +150,72 @@ static void renameVars(Node *head) {
   head->accept(visitor);
 }
 
+static bool isAnsi(Node * head){
+  bool ansi = false;
+  if(head->getElement() == "listof_ports_or_port_declarations_ansi")
+    ansi = true;
+
+  for(int i = 0; i < (int) head->getChildren().size() && !ansi; i++){
+    ansi |= isAnsi(head->getChildren()[i].get());
+  }
+  return ansi;
+}
+
+static int countNumberPorts(Node * head){
+  int count = 0;
+  if(head->getElement() == "port_declaration_ansi")
+    count += 1;
+
+  for(int i = 0; i < (int) head->getChildren().size(); i++){
+    count += isAnsi(head->getChildren()[i].get());
+  }
+  return count;
+}
+
+static void renameNonAnsiPorts(Node * head, int counter, int n){
+  if(head->getElement() == "SymbolIdentifier"){
+    head->setElement(" id" + std::to_string(counter) + " ");
+    counter++;
+  }
+
+  if(counter <= n){
+    for(const auto & c: head->getChildren()){
+      renameNonAnsiPorts(c.get(), counter, n);
+    }
+  }
+}
+
+static bool matchNonAnsiPorts(Node * head, int n){
+  bool done = false;
+  if(head->getElement() == "module_item_list_opt"){
+    for(int i = 0; i < n; i++){
+      int choice = rand() % 2;
+
+      std::string prod;
+
+      prod = (choice) ? "input id" +std::tostring(i) + " " : "output id" + std::to_string(i) + " ";
+
+      auto child = std::make_unique<Terminal>(prod);
+      head->insertChildToBegin(std::move(child));
+    }
+    done = true;
+  }
+
+  for(int i = 0; i<(int) head->getChildren().size() && ! done; i++){
+      done |= matchNonAnsiPorts(head->getChildren()[i].get(), n);
+    }
+
+  return done;
+}
+
+static void declareNonAnsiPorts(Node * head){
+  if(!isAnsi(head)){
+    auto count = countNumberPorts(head);
+    renameNonAnsiPorts(head, 0, count);
+    matchNonAnsiPorts(head,count);
+  }
+}
+
 static void dumpSyntaxTree(Node *head) {
   std::cerr << head->getElement() << " ->";
   for (auto &child : head->getChildren()) {
@@ -222,7 +288,7 @@ int main(int argc, char **argv) {
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
   replaceConstants(head.get());
-
+  declareNonAnsiPorts(head.get());
   renameVars(head.get());
 
   if (flags.count("printtree"))
