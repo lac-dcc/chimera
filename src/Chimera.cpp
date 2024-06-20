@@ -191,6 +191,7 @@ static int renameNonAnsiPorts(Node * head, int counter, int n){
       counter = renameNonAnsiPorts(c.get(), counter, n);
     }
   }
+  
   return counter;
 }
 
@@ -228,6 +229,8 @@ static int declareNonAnsiPorts(Node * head){
     if(debug)
       std::cerr << "Code is not ansi" << std::endl;
     count = countNumberPorts(head);
+    if(debug)
+      std::cerr << count << " vars found" << std::endl;
     renameNonAnsiPorts(head, 0, count);
     matchNonAnsiPorts(head,count);
   }
@@ -305,12 +308,16 @@ int main(int argc, char **argv) {
                   : 0;
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
+  
+
   replaceConstants(head.get());
   int n = declareNonAnsiPorts(head.get());
-  renameVars(head.get(), n);
+  renameVars(head.get(), n); 
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
+
+  
   codeGen(head.get());
 
   return 0;

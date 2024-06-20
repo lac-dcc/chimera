@@ -143,7 +143,7 @@
     "cond_expr": 55205455
   },
   "cond_expr": {
-    "port_declaration_non_ansi": 55205455,
+    "logor_expr": 55205455,
     "logor_expr '?' expression ':' cond_expr": 321412
   },
   "logor_expr": {
