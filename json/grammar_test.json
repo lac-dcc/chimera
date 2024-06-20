@@ -1,1 +1,1768 @@
-{"source_text": {"description_list": 10000}, "description_list": {"description_list description": 31393, "description": 10000}, "description": {"module_or_interface_declaration": 25502, "package_item_no_pp": 8339, "preprocessor_action": 7516, "package_declaration": 15, "udp_primitive": 19, "bind_directive": 2}, "module_or_interface_declaration": {"module_start lifetime_opt symbol_or_label module_package_import_list_opt module_parameter_port_list_opt module_port_list_opt module_attribute_foreign_opt ';' module_item_list_opt module_end label_opt": 25509}, "label_opt": {"%empty": 1474093, "':' symbol_or_label": 3493}, "module_end": {"\"endmodule\"": 25496, "\"endprogram\"": 13}, "module_item_list_opt": {"module_item_list": 25369, "%empty": 140}, "module_item_list": {"module_item_list module_item": 15328492, "module_item": 25369}, "module_item": {"non_port_module_item": 15206910, "module_port_declaration": 146717, "preprocessor_action": 234}, "non_port_module_item": {"module_or_generate_item": 15204666, "specify_block": 227, "generate_region": 1981, "timeunits_declaration": 29, "module_or_interface_declaration": 7}, "module_or_generate_item": {"module_common_item": 3007406, "data_declaration_or_module_instantiation": 11945179, "any_param_declaration": 26430, "gate_instantiation": 247000, "parameter_override": 4219, "type_declaration": 17, "package_import_declaration": 7}, "module_common_item": {"always_construct": 220805, "initial_construct": 3769, "module_or_generate_item_declaration": 1687752, "continuous_assign": 1090156, "conditional_generate_construct": 3852, "loop_generate_construct": 1020, "final_construct": 4, "system_tf_call ';'": 48}, "always_construct": {"always_any statement": 220805}, "statement": {"statement_item": 1245170, "reference_or_call ';'": 1821}, "statement_item": {"seq_block": 719813, "procedural_timing_control_statement": 229780, "assignment_statement ';'": 290203, "subroutine_call ';'": 27503, "nonblocking_assignment": 437056, "conditional_statement": 365121, "case_statement": 12609, "procedural_continuous_assignment": 634, "loop_statement": 3050, "blocking_assignment": 320, "par_block": 32, "disable_statement": 48, "procedural_assertion_statement": 67, "wait_statement": 470, "event_trigger": 54, "jump_statement": 4}, "seq_block": {"begin block_item_or_statement_or_null_list_opt end": 719813}, "end": {"\"end\" label_opt": 725242}, "block_item_or_statement_or_null_list_opt": {"block_item_or_statement_or_null_list": 540737, "%empty": 179494}, "block_item_or_statement_or_null_list": {"block_item_or_statement_or_null_list block_item_or_statement_or_null": 304688, "block_item_or_statement_or_null": 540737}, "block_item_or_statement_or_null": {"statement_item": 841592, "block_item_decl": 3096, "reference ';'": 725, "';'": 10, "unqualified_id ':' statement_item": 2}, "procedural_timing_control_statement": {"delay1 statement_or_null": 8422, "event_control statement_or_null": 221358}, "statement_or_null": {"';'": 5782, "statement": 1022413}, "delay1": {"'#' delay_value_simple": 24614, "'#' '(' delay_value ')'": 692}, "delay_value_simple": {"TK_DecNumber": 15785, "delay_identifier": 9476, "TK_RealTime": 181, "TK_TimeLiteral": 2}, "assignment_statement": {"assignment_statement_no_expr": 293555, "inc_or_dec_expression": 33}, "assignment_statement_no_expr": {"lpvalue '=' expression": 293498, "assign_modify_statement": 57}, "expression": {"equiv_impl_expr": 55205455}, "equiv_impl_expr": {"cond_expr": 55205455}, "cond_expr": {"logor_expr": 55205455, "logor_expr '?' expression ':' cond_expr": 321412}, "logor_expr": {"logand_expr": 55526867, "logor_expr \"||\" logand_expr": 27711}, "logand_expr": {"matches_expr": 55554578, "logand_expr \"&&\" bitor_expr": 74090}, "matches_expr": {"with_exprs_suffix": 55554578}, "with_exprs_suffix": {"bitor_expr": 55554578}, "bitor_expr": {"xor_expr": 55628668, "bitor_expr '|' xor_expr": 95645}, "xor_expr": {"bitand_expr": 55724313, "xor_expr '^' bitand_expr": 21652, "xor_expr \"~^\" bitand_expr": 74}, "bitand_expr": {"caseeq_expr": 55746039, "bitand_expr '&' caseeq_expr": 312341}, "caseeq_expr": {"logeq_expr": 56058380, "caseeq_expr \"!==\" logeq_expr": 7161, "caseeq_expr \"===\" logeq_expr": 3273}, "logeq_expr": {"comp_expr": 56068814, "logeq_expr \"==\" comp_expr": 102451, "logeq_expr \"!=\" comp_expr": 21225, "logeq_expr \"!=?\" comp_expr": 1, "logeq_expr \"==?\" comp_expr": 1}, "comp_expr": {"shift_expr": 56192492, "comp_expr \">=\" shift_expr": 2719, "comp_expr \"<=\" shift_expr": 3671, "comp_expr '>' shift_expr": 4162, "comp_expr '<' shift_expr": 7101}, "shift_expr": {"add_expr": 56210145, "shift_expr \"<<\" add_expr": 2845, "shift_expr \">>\" add_expr": 2325, "shift_expr \">>>\" add_expr": 407}, "add_expr": {"mul_expr": 56215722, "add_expr '+' mul_expr": 30859, "add_expr '-' mul_expr": 62394}, "mul_expr": {"pow_expr": 56308975, "mul_expr '*' pow_expr": 25983, "mul_expr '/' pow_expr": 4898, "mul_expr '%' pow_expr": 1465}, "pow_expr": {"unary_expr": 56341321, "pow_expr \"**\" unary_expr": 1737}, "unary_expr": {"unary_prefix_expr": 56343058}, "unary_prefix_expr": {"inc_or_dec_or_primary_expr": 56343058, "unary_op unary_prefix_expr": 246727}, "inc_or_dec_or_primary_expr": {"postfix_expression": 56343055, "inc_or_dec_expression": 3}, "postfix_expression": {"expr_primary": 5827377, "reference_or_call": 50515678}, "expr_primary": {"expr_primary_no_groups": 5206071, "expr_primary_braces": 121826, "expr_primary_parens": 506808, "assignment_pattern_expression": 31}, "expr_primary_no_groups": {"number": 5126094, "string_literal": 65185, "system_tf_call": 11264, "TK_RealTime": 3492, "\"null\"": 4, "cast": 28, "'$'": 2, "TK_TimeLiteral": 2}, "number": {"constant_dec_number based_number": 1348356, "TK_DecNumber": 3770409, "based_number": 7303, "TK_UnBasedNumber": 43}, "based_number": {"bin_based_number": 796370, "hex_based_number": 421740, "dec_based_number": 136475, "oct_based_number": 1074}, "bin_based_number": {"TK_BinBase TK_BinDigits": 796370}, "constant_dec_number": {"TK_DecNumber": 1347870, "MacroNumericWidth": 486}, "lpvalue": {"reference": 1814313, "range_list_in_braces": 10378}, "reference": {"local_root": 64169252, "reference select_variable_dimension": 2319444, "reference hierarchy_extension": 11543}, "local_root": {"type_or_id_root": 64169252}, "type_or_id_root": {"class_id": 64169251, "implicit_class_handle": 1}, "class_id": {"unqualified_id": 64229277, "qualified_id": 2}, "unqualified_id": {"GenericIdentifier parameter_value_opt": 64616037}, "parameter_value_opt": {"%empty": 64578829, "parameters": 37208}, "GenericIdentifier": {"SymbolIdentifier": 123584732, "EscapedIdentifier": 1754465, "KeywordIdentifier": 205}, "begin": {"\"begin\" label_opt": 725242}, "always_any": {"\"always\"": 220634, "\"always_ff\"": 151, "\"always_comb\"": 19, "\"always_latch\"": 1}, "initial_construct": {"\"initial\" statement": 3769}, "subroutine_call": {"system_tf_call": 27503}, "system_tf_call": {"SystemTFIdentifier": 9792, "SystemTFIdentifier call_base": 29023}, "hex_based_number": {"TK_HexBase TK_HexDigits": 421740}, "call_base": {"'(' argument_list_opt ')'": 34154}, "argument_list_opt": {"any_argument_list": 33710, "%empty": 444}, "any_argument_list": {"any_argument_list_item_last": 71872, "any_argument_list_trailing_comma": 60}, "any_argument_list_item_last": {"any_argument_list_trailing_comma any_argument": 38163, "any_argument": 33709}, "any_argument": {"expression": 71852, "parameter_value_byname": 20}, "reference_or_call": {"reference": 50514317, "reference_or_call_base": 3181, "reference '.' builtin_array_method": 1}, "any_argument_list_trailing_comma": {"any_argument_list ','": 38222, "','": 1}, "string_literal": {"TK_StringLiteral": 65204, "TK_EvalStringLiteral": 3}, "data_declaration_or_module_instantiation": {"instantiation_base ';'": 11948246, "lifetime const_opt instantiation_base ';'": 6}, "instantiation_base": {"instantiation_type non_anonymous_gate_instance_or_register_variable_list": 11946308, "reference_or_call_base": 1944}, "non_anonymous_gate_instance_or_register_variable_list": {"non_anonymous_gate_instance_or_register_variable": 11947231, "non_anonymous_gate_instance_or_register_variable_list ',' gate_instance_or_register_variable": 93380}, "non_anonymous_gate_instance_or_register_variable": {"GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 11824749, "GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 122482}, "any_port_list_opt": {"any_port_list_positional": 249488, "any_port_list_named": 11721355, "%empty": 100986}, "any_port_list_positional": {"any_port_list_item_last_positional": 682377, "any_port_list_trailing_comma_positional": 169}, "any_port_list_item_last_positional": {"any_port_list_trailing_comma_positional expression": 432890, "expression": 249487}, "any_port_list_trailing_comma_positional": {"any_port_list_positional ','": 433058, "','": 1}, "decl_dimensions_opt": {"%empty": 15950187, "decl_dimensions": 76976}, "instantiation_type": {"data_type": 11947231}, "data_type": {"reference": 11824786, "data_type_base": 122532}, "module_or_generate_item_declaration": {"package_or_generate_item_declaration": 1687136, "genvar_declaration": 616}, "package_or_generate_item_declaration": {"net_declaration": 1685866, "task_declaration": 541, "function_declaration": 935, "class_declaration": 12, "';'": 23, "dpi_import_export": 5}, "net_declaration": {"net_type net_variable_or_decl_assigns ';'": 1354334, "net_type data_type_or_implicit net_variable_or_decl_assigns ';'": 331469, "net_type delay3 net_variable_or_decl_assigns ';'": 57, "\"trireg\" charge_strength_opt decl_dimensions_opt delay3_opt list_of_identifiers ';'": 6}, "net_variable_or_decl_assigns": {"net_variable_or_decl_assign": 1685860, "net_variable_or_decl_assigns ',' net_variable_or_decl_assign": 1400984}, "net_variable_or_decl_assign": {"net_variable": 3067389, "net_decl_assign": 19455}, "net_variable": {"GenericIdentifier decl_dimensions_opt": 3067389}, "net_type": {"\"wire\"": 1724487, "\"tri0\"": 340, "\"tri1\"": 173, "\"tri\"": 17, "\"triand\"": 1, "\"supply0\"": 1793, "\"supply1\"": 1793, "\"wand\"": 4, "\"wor\"": 3}, "data_type_or_implicit": {"decl_dimensions delay3_or_drive_opt": 330852, "signing decl_dimensions_opt delay3_or_drive_opt": 616, "GenericIdentifier decl_dimensions_opt delay3_or_drive_opt": 1}, "delay3_or_drive_opt": {"%empty": 331427, "delay3": 42}, "decl_dimensions": {"decl_variable_dimension": 528597, "decl_dimensions decl_variable_dimension": 129}, "decl_variable_dimension": {"'[' expression ':' expression ']'": 528672, "'[' expression_or_null_list_opt ']'": 54}, "trailing_decl_assignment_opt": {"%empty": 197835, "trailing_decl_assignment": 17970}, "data_type_base": {"data_type_primitive": 122532}, "data_type_primitive": {"data_type_primitive_scalar decl_dimensions_opt": 130759}, "data_type_primitive_scalar": {"integer_vector_type signed_unsigned_opt": 126946, "integer_atom_type signed_unsigned_opt": 3367, "non_integer_type": 321, "\"event\"": 36, "\"string\"": 54, "struct_data_type": 12, "enum_data_type": 23}, "signed_unsigned_opt": {"%empty": 325322, "signing": 940}, "integer_vector_type": {"\"reg\"": 121945, "\"logic\"": 4920, "\"bit\"": 81}, "gate_instance_or_register_variable": {"GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 93304, "GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 78}, "module_attribute_foreign_opt": {"%empty": 25509}, "module_port_list_opt": {"'(' list_of_ports_or_port_declarations_opt ')'": 24597, "%empty": 912}, "list_of_ports_or_port_declarations_opt": {"%empty": 443, "list_of_ports_or_port_declarations_non_ansi": 15269, "list_of_ports_or_port_declarations_ansi": 8885}, "module_parameter_port_list_opt": {"%empty": 22941, "'#' '(' module_parameter_port_list ')'": 2578, "'#' '(' ')'": 2}, "module_package_import_list_opt": {"%empty": 25508, "package_import_list": 1}, "symbol_or_label": {"GenericIdentifier": 29002}, "lifetime_opt": {"%empty": 27009, "lifetime": 20}, "module_start": {"\"module\"": 25495, "\"program\"": 13, "\"macromodule\"": 1}, "package_item_no_pp": {"timescale_directive": 3820, "misc_directive": 1729, "package_or_generate_item_declaration": 246, "type_declaration": 11, "timeunits_declaration": 4, "any_param_declaration": 2602, "data_declaration": 5, "package_import_declaration": 3}, "timescale_directive": {"\"`timescale\" time_literal '/' time_literal": 3820}, "time_literal": {"TK_TimeLiteral": 5306, "TK_DecNumber \"(timescale_unit)\"": 2334}, "any_port_list_named": {"any_port_list_item_last_named": 45105109}, "any_port_list_item_last_named": {"any_port_list_trailing_comma_named port_named": 33383754, "port_named": 11721355}, "port_named": {"'.' member_name '(' expression ')'": 45093190, "'.' member_name '(' ')'": 11913, "\".*\"": 3, "'.' member_name": 3}, "member_name": {"GenericIdentifier": 45180611, "builtin_array_method": 753}, "any_port_list_trailing_comma_named": {"any_port_list_named ','": 33383754}, "select_variable_dimension": {"'[' expression ':' expression ']'": 275875, "'[' expression_or_null_list_opt ']'": 2035252, "'[' expression \"+:\" expression ']'": 7920, "'[' expression \"-:\" expression ']'": 397}, "expr_primary_braces": {"range_list_in_braces": 108465, "'{' value_range '{' expression_list_proper '}' '}'": 13361}, "range_list_in_braces": {"'{' open_range_list '}'": 118843}, "open_range_list": {"open_range_list ',' value_range": 1660034, "value_range": 118843}, "value_range": {"expression": 1792238}, "parameters": {"'#' '(' parameter_value_byname_list ')'": 35965, "'#' '(' parameter_expr_list ')'": 1226, "'#' TK_DecNumber": 6, "'#' '(' ')'": 11}, "parameter_value_byname_list": {"parameter_value_byname_list_item_last": 76083}, "parameter_value_byname_list_item_last": {"parameter_value_byname": 35965, "parameter_value_byname_list_trailing_comma parameter_value_byname": 40118}, "parameter_value_byname": {"'.' member_name '(' parameter_expr ')'": 76072, "'.' member_name '(' ')'": 31}, "parameter_expr": {"expression": 128051}, "expression_or_null_list_opt": {"expression_opt": 2035306}, "expression_opt": {"expression": 2038676, "%empty": 15}, "module_port_declaration": {"port_direction signed_unsigned_opt decl_dimensions delay3_opt list_of_identifiers_unpacked_dimensions ';'": 64409, "dir var_type signed_unsigned_opt decl_dimensions_opt list_of_port_identifiers ';'": 754, "port_direction signed_unsigned_opt list_of_module_item_identifiers ';'": 79572, "port_direction port_net_type signed_unsigned_opt decl_dimensions_opt list_of_identifiers_unpacked_dimensions ';'": 1980, "port_direction signed_unsigned_opt unqualified_id decl_dimensions_opt list_of_identifiers_unpacked_dimensions ';'": 2}, "list_of_identifiers_unpacked_dimensions": {"identifier_optional_unpacked_dimensions": 66391, "list_of_identifiers_unpacked_dimensions ',' identifier_optional_unpacked_dimensions": 4205}, "identifier_optional_unpacked_dimensions": {"GenericIdentifier decl_dimensions_opt": 106416}, "delay3_opt": {"%empty": 1152455, "delay3": 2116}, "port_direction": {"dir": 270620}, "dir": {"\"output\"": 105117, "\"input\"": 163633, "\"inout\"": 2624}, "list_of_ports_or_port_declarations_non_ansi": {"list_of_ports_or_port_declarations_item_last_non_ansi": 186791}, "list_of_ports_or_port_declarations_item_last_non_ansi": {"list_of_ports_or_port_declarations_trailing_comma_non_ansi port_declaration_non_ansi": 171522, "port_declaration_non_ansi": 15269}, "port_declaration_non_ansi": {"port": 186791}, "port": {"port_expression trailing_assign_opt": 186637, "'.' member_name '(' port_expression_opt ')'": 154}, "trailing_assign_opt": {"%empty": 312748, "trailing_assign": 19463}, "port_expression": {"port_reference": 186789, "'{' port_reference_list '}'": 2}, "port_reference": {"unqualified_id decl_dimensions_opt": 186795}, "list_of_ports_or_port_declarations_trailing_comma_non_ansi": {"list_of_ports_or_port_declarations_non_ansi ','": 171522}, "continuous_assign": {"\"assign\" drive_strength_opt delay3_opt cont_assign_list ';'": 1090156}, "cont_assign_list": {"cont_assign": 1090156, "cont_assign_list ',' cont_assign": 597}, "cont_assign": {"lpvalue '=' expression": 1090753}, "drive_strength_opt": {"%empty": 1090038, "drive_strength": 118}, "expr_primary_parens": {"'(' expr_mintypmax ')'": 506812}, "expr_mintypmax": {"expr_mintypmax_trans_set": 506812}, "expr_mintypmax_trans_set": {"expr_mintypmax_generalized": 506812}, "expr_mintypmax_generalized": {"property_expr_or_assignment_list": 506812}, "property_expr_or_assignment_list": {"property_expr_or_assignment": 506812}, "property_expr_or_assignment": {"property_expr": 506812}, "property_expr": {"sequence_expr": 506812}, "sequence_expr": {"property_implication_expr": 506812}, "property_implication_expr": {"property_prefix_expr": 506812}, "property_prefix_expr": {"property_if_else_expr": 506812}, "property_if_else_expr": {"simple_sequence_expr": 506812}, "simple_sequence_expr": {"sequence_or_expr": 506812}, "sequence_or_expr": {"sequence_and_expr": 506812}, "sequence_and_expr": {"sequence_unary_expr": 506812}, "sequence_unary_expr": {"sequence_intersect_expr": 506812}, "sequence_intersect_expr": {"sequence_within_expr": 506812}, "sequence_within_expr": {"sequence_throughout_expr": 506812}, "sequence_throughout_expr": {"sequence_delay_range_expr": 506812}, "sequence_delay_range_expr": {"sequence_delay_repetition_list": 506812}, "sequence_delay_repetition_list": {"sequence_expr_primary": 506812}, "sequence_expr_primary": {"sequence_repetition_expr": 506812}, "sequence_repetition_expr": {"expression_or_dist boolean_abbrev_opt": 506812}, "boolean_abbrev_opt": {"%empty": 506812}, "expression_or_dist": {"expression dist_opt": 506812}, "dist_opt": {"%empty": 506812}, "unary_op": {"'~'": 203817, "\"~&\"": 323, "'!'": 33674, "\"~|\"": 243, "'|'": 3497, "'-'": 2045, "'&'": 2956, "'^'": 130, "\"~^\"": 19, "'+'": 23}, "nonblocking_assignment": {"lpvalue \"<=\" delay_or_event_control_opt expression ';'": 437056}, "delay_or_event_control_opt": {"%empty": 420450, "delay_or_event_control": 16606}, "event_control": {"'@' '(' event_expression_list ')'": 204337, "'@' '(' '*' ')'": 16136, "'@' '*'": 884, "'@' hierarchy_event_identifier": 10}, "event_expression_list": {"event_expression": 204337, "event_expression_list \"or\" event_expression": 98772, "event_expression_list ',' event_expression": 1009}, "event_expression": {"edge_operator expression": 253758, "expression": 50360}, "edge_operator": {"\"negedge\"": 6173, "\"posedge\"": 248390, "\"edge\"": 1}, "net_decl_assign": {"GenericIdentifier '=' expression": 19455}, "dec_based_number": {"TK_DecBase TK_DecDigits": 136452, "TK_DecBase TK_XZDigits": 23}, "conditional_statement": {"unique_priority_opt \"if\" expression_in_parens statement_or_null \"else\" statement_or_null": 108177, "unique_priority_opt \"if\" expression_in_parens statement_or_null": 256944}, "expression_in_parens": {"'(' expression ')'": 368849}, "unique_priority_opt": {"%empty": 377728, "\"unique\"": 1, "\"priority\"": 1}, "delay3": {"'#' delay_value_simple": 570, "'#' '(' delay_value ',' delay_value ')'": 20, "'#' '(' delay_value ')'": 1690, "'#' '(' delay_value ',' delay_value ',' delay_value ')'": 6}, "list_of_ports_or_port_declarations_ansi": {"list_of_ports_or_port_declarations_item_last_ansi": 124633}, "list_of_ports_or_port_declarations_item_last_ansi": {"list_of_ports_or_port_declarations_trailing_comma_ansi port_declaration_ansi": 113549, "list_of_ports_or_port_declarations_trailing_comma_ansi class_id trailing_assign_opt": 2199, "port_declaration_ansi": 8885}, "port_declaration_ansi": {"port_direction var_or_net_type_opt data_type_or_implicit_basic_followed_by_id_and_dimensions_opt trailing_assign_opt": 122431, "type_identifier_followed_by_id decl_dimensions_opt trailing_assign_opt": 2, "data_type_primitive GenericIdentifier decl_dimensions_opt trailing_assign_opt": 1}, "data_type_or_implicit_basic_followed_by_id_and_dimensions_opt": {"data_type_primitive class_id decl_dimensions_opt": 7956, "type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt": 66372, "decl_dimensions class_id decl_dimensions_opt": 49308, "signing decl_dimensions_opt class_id decl_dimensions_opt": 534, "\"void\" class_id decl_dimensions_opt": 12}, "var_or_net_type_opt": {"%empty": 81971, "net_type": 40460}, "list_of_ports_or_port_declarations_trailing_comma_ansi": {"list_of_ports_or_port_declarations_ansi ','": 115748}, "type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt": {"unqualified_id decl_dimensions_opt": 66356, "unqualified_id decl_dimensions_opt class_id decl_dimensions_opt": 16}, "preprocessor_action": {"\"`define\" PP_Identifier \"<<`define-tokens>>\"": 7433, "\"`include\" preprocess_include_argument": 22, "\"`define\" PP_Identifier '(' macro_formals_list_opt ')' \"<<`define-tokens>>\"": 163, "\"`undef\" PP_Identifier": 136}, "misc_directive": {"\"`default_nettype\" net_type_or_none": 1086, "\"`endcelldefine\"": 131, "\"`celldefine\"": 130, "\"`resetall\"": 378, "\"`uselib\"": 2, "\"`end_keywords\"": 1, "\"`begin_keywords\" TK_StringLiteral": 1}, "net_type_or_none": {"GenericIdentifier": 773, "net_type": 313}, "case_statement": {"unique_priority_opt case_any '(' expression ')' case_items \"endcase\"": 12609}, "case_items": {"case_items case_item": 307812, "case_item": 12609}, "case_item": {"\"default\" ':' statement_or_null": 9748, "expression_list_proper ':' statement_or_null": 310654, "\"default\" statement_or_null": 19}, "expression_list_proper": {"expression": 324484, "expression_list_proper ',' expression": 5843}, "case_any": {"\"case\"": 11348, "\"casex\"": 107, "\"casez\"": 1154}, "any_param_declaration": {"\"localparam\" param_type_followed_by_id_and_dimensions_opt trailing_assign ',' localparam_assign_list ';'": 451, "\"localparam\" param_type_followed_by_id_and_dimensions_opt trailing_assign ';'": 13685, "\"parameter\" param_type_followed_by_id_and_dimensions_opt trailing_assign ';'": 14716, "\"parameter\" param_type_followed_by_id_and_dimensions_opt trailing_assign ',' parameter_assign_list ';'": 211}, "localparam_assign_list": {"localparam_assign_list ',' localparam_assign": 1748, "localparam_assign": 451}, "localparam_assign": {"GenericIdentifier '=' expression": 2199}, "trailing_assign": {"'=' parameter_expr parameter_value_ranges_opt": 48526}, "parameter_value_ranges_opt": {"%empty": 49888}, "param_type_followed_by_id_and_dimensions_opt": {"bit_logic_opt signed_unsigned_opt unqualified_id decl_dimensions_opt": 40970, "bit_logic_opt signed_unsigned_opt decl_dimensions GenericIdentifier decl_dimensions_opt": 6097, "integer_atom_type signed_unsigned_opt decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 907, "non_integer_type decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 349}, "bit_logic_opt": {"%empty": 47066, "bit_logic": 1}, "module_parameter_port_list": {"module_parameter_port_list_item_last": 19260}, "module_parameter_port_list_item_last": {"module_parameter_port_list_trailing_comma module_parameter_port": 16682, "module_parameter_port": 2578}, "module_parameter_port": {"parameter_opt param_type_followed_by_id_and_dimensions_opt trailing_assign_opt": 19260}, "parameter_opt": {"\"parameter\"": 17856, "%empty": 1375, "\"localparam\"": 29}, "module_parameter_port_list_trailing_comma": {"module_parameter_port_list ','": 16682}, "list_of_port_identifiers": {"GenericIdentifier": 708, "list_of_port_identifiers ',' GenericIdentifier": 50, "GenericIdentifier '=' expression": 46}, "var_type": {"\"reg\"": 754}, "list_of_module_item_identifiers": {"unqualified_id decl_dimensions_opt": 79572, "list_of_module_item_identifiers ',' identifier_optional_unpacked_dimensions": 35820}, "trailing_decl_assignment": {"'=' expression": 17969, "'=' class_new": 1}, "signing": {"\"signed\"": 2028, "\"unsigned\"": 62}, "gate_instantiation": {"gatetype primitive_gate_instance_list ';'": 246803, "\"pullup\" primitive_gate_instance_list ';'": 38, "\"pulldown\" primitive_gate_instance_list ';'": 19, "gatetype delay3 primitive_gate_instance_list ';'": 57, "switchtype primitive_gate_instance_list ';'": 66, "switchtype delay3 primitive_gate_instance_list ';'": 14, "gatetype drive_strength primitive_gate_instance_list ';'": 3}, "primitive_gate_instance_list": {"primitive_gate_instance": 247000, "primitive_gate_instance_list ',' primitive_gate_instance": 2}, "primitive_gate_instance": {"GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 236216, "'(' any_port_list_opt ')'": 10786}, "gatetype": {"\"or\"": 14052, "\"and\"": 94421, "\"not\"": 82984, "\"buf\"": 1849, "\"bufif0\"": 131, "\"xor\"": 4783, "\"nand\"": 28454, "\"xnor\"": 11387, "\"nor\"": 8738, "\"bufif1\"": 39, "\"notif0\"": 8, "\"notif1\"": 17}, "specify_block": {"\"specify\" specify_item_list_opt \"endspecify\"": 227}, "specify_item_list_opt": {"specify_item_list": 225, "%empty": 2}, "specify_item_list": {"specify_item_list specify_item": 9582, "specify_item": 225}, "specify_item": {"\"specparam\" specparam_decl ';'": 155, "specify_simple_path_decl ';'": 8754, "\"$recovery\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 16, "\"$setup\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 175, "\"if\" '(' expression ')' specify_simple_path_decl ';'": 212, "\"if\" '(' expression ')' specify_edge_path_decl ';'": 28, "specify_edge_path_decl ';'": 149, "\"$width\" '(' spec_reference_event ',' delay_value ',' expression spec_notifier_opt ')' ';'": 23, "\"$hold\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 95, "\"$removal\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 4, "\"$setuphold\" '(' spec_reference_event ',' spec_reference_event ',' delay_value ',' delay_value spec_notifier_opt ')' ';'": 120, "\"$period\" '(' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 10, "\"$width\" '(' spec_reference_event ',' delay_value ')' ';'": 63, "\"ifnone\" specify_simple_path_decl ';'": 3}, "specparam_decl": {"specparam_list": 155}, "specparam_list": {"specparam": 155, "specparam_list ',' specparam": 346}, "specparam": {"GenericIdentifier '=' expression": 145, "GenericIdentifier '=' expression ':' expression ':' expression": 356}, "specify_simple_path_decl": {"specify_simple_path '=' '(' delay_value_list ')'": 8720, "specify_simple_path '=' delay_value_simple": 249}, "delay_value_list": {"delay_value_list ',' delay_value": 8909, "delay_value": 8886}, "delay_value": {"expression ':' expression ':' expression": 14992, "expression": 5869}, "specify_simple_path": {"'(' specify_path_identifiers spec_polarity \"*>\" specify_path_identifiers ')'": 426, "'(' specify_path_identifiers spec_polarity \"=>\" specify_path_identifiers ')'": 8543}, "specify_path_identifiers": {"GenericIdentifier": 10933, "GenericIdentifier '[' expr_primary ']'": 7359, "specify_path_identifiers ',' GenericIdentifier": 3}, "spec_polarity": {"%empty": 9145, "'+'": 1}, "generate_region": {"\"generate\" generate_item_list_opt \"endgenerate\"": 1981}, "generate_item_list_opt": {"generate_item_list": 7392, "%empty": 18}, "generate_item_list": {"generate_item": 7392, "generate_item_list generate_item": 15755}, "generate_item": {"module_or_generate_item": 25592, "generate_block": 5429, "preprocessor_action": 3}, "conditional_generate_construct": {"generate_if generate_item \"else\" generate_item": 2654, "\"case\" '(' expression ')' generate_case_items \"endcase\"": 124, "generate_if generate_item": 1074}, "generate_block": {"begin generate_item_list_opt end": 5429}, "generate_if": {"\"if\" expression_in_parens": 3728}, "generate_case_items": {"generate_case_items generate_case_item": 351, "generate_case_item": 124}, "generate_case_item": {"expression_list_proper ':' generate_item": 450, "\"default\" ':' generate_item": 25}, "delay_or_event_control": {"delay1": 16884, "repeat_control event_control": 5, "event_control": 4}, "task_declaration": {"\"task\" lifetime_opt task_declaration_id tf_port_list_paren_opt ';' tf_item_or_statement_or_null_list_opt \"endtask\" label_opt": 547}, "tf_item_or_statement_or_null_list_opt": {"tf_item_or_statement_or_null_list": 547, "%empty": 3}, "tf_item_or_statement_or_null_list": {"tf_item_or_statement_or_null": 547, "tf_item_or_statement_or_null_list tf_item_or_statement_or_null": 1120}, "tf_item_or_statement_or_null": {"statement_or_null": 558, "task_item": 1109}, "tf_port_list_paren_opt": {"%empty": 421, "'(' tf_port_list_opt ')'": 134}, "task_declaration_id": {"GenericIdentifier": 547}, "procedural_continuous_assignment": {"\"deassign\" lpvalue ';'": 187, "\"assign\" lpvalue '=' expression ';'": 325, "\"force\" lpvalue '=' expression ';'": 93, "\"release\" lpvalue ';'": 29}, "hierarchy_extension": {"'.' unqualified_id": 11543}, "integer_atom_type": {"\"integer\"": 3895, "\"time\"": 220, "\"int\"": 142, "\"longint\"": 4, "\"shortint\"": 4, "\"byte\"": 9}, "parameter_value_byname_list_trailing_comma": {"parameter_value_byname_list ','": 40118}, "parameter_expr_list": {"parameter_expr": 1226, "parameter_expr_list ',' parameter_expr": 2227}, "loop_generate_construct": {"\"for\" '(' genvar_opt GenericIdentifier '=' expression ';' expression_opt ';' for_step_opt ')' generate_item": 1020}, "for_step_opt": {"for_step": 3385}, "for_step": {"assignment_statement": 3385}, "genvar_opt": {"%empty": 1012, "\"genvar\"": 8}, "genvar_declaration": {"\"genvar\" list_of_identifiers ';'": 616}, "list_of_identifiers": {"GenericIdentifier": 651, "list_of_identifiers ',' GenericIdentifier": 112}, "spec_notifier_opt": {"spec_notifier": 249, "%empty": 194}, "spec_notifier": {"',' reference": 249}, "spec_reference_event": {"edge_operator specify_terminal_descriptor \"&&&\" expression": 203, "edge_operator specify_terminal_descriptor": 426, "specify_terminal_descriptor": 287}, "specify_terminal_descriptor": {"reference": 916}, "loop_statement": {"\"for\" '(' for_initialization_opt ';' expression_opt ';' for_step_opt ')' statement_or_null": 2365, "\"forever\" statement_or_null": 155, "repeat_control statement_or_null": 331, "\"while\" '(' expression ')' statement_or_null": 196, "\"do\" statement_or_null \"while\" '(' expression ')' ';'": 3}, "for_initialization_opt": {"for_initialization": 2365}, "for_initialization": {"for_init_decl_or_assign": 2365}, "for_init_decl_or_assign": {"lpvalue '=' expression": 2337, "data_type GenericIdentifier '=' expression": 28}, "reference_or_call_base": {"reference call_base": 5125}, "function_declaration": {"\"function\" lifetime_opt function_return_type_and_id ';' function_item_list statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 549, "\"function\" lifetime_opt function_return_type_and_id '(' tf_port_list_opt ')' ';' block_item_or_statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 386, "\"function\" lifetime_opt function_return_type_and_id ';' statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 1}, "endfunction_label_opt": {"label_opt": 936}, "statement_or_null_list_opt": {"statement_or_null_list": 549, "%empty": 1}, "statement_or_null_list": {"statement_or_null": 549, "statement_or_null_list statement_or_null": 2}, "function_item_list": {"function_item_list function_item": 771, "function_item": 549}, "function_item": {"function_item_data_declaration": 451, "tf_port_declaration": 867, "any_param_declaration": 2}, "function_item_data_declaration": {"non_anonymous_instantiation_base ';'": 923}, "non_anonymous_instantiation_base": {"instantiation_type non_anonymous_gate_instance_or_register_variable_list": 923}, "tf_port_declaration": {"tf_port_direction signed_unsigned_opt decl_dimensions list_of_tf_variable_identifiers ';'": 955, "tf_port_direction signed_unsigned_opt list_of_tf_variable_identifiers ';'": 291, "tf_port_direction data_type_primitive list_of_tf_variable_identifiers ';'": 252}, "list_of_tf_variable_identifiers": {"tf_variable_identifier_first": 1498, "list_of_tf_variable_identifiers ',' tf_variable_identifier": 161}, "tf_variable_identifier_first": {"unqualified_id decl_dimensions_opt trailing_assign_opt": 1498}, "tf_port_direction": {"port_direction": 2226}, "function_return_type_and_id": {"data_type_or_implicit_basic_followed_by_id_and_dimensions_opt": 941}, "port_net_type": {"net_type": 1978, "\"logic\"": 2}, "non_integer_type": {"\"real\"": 668, "\"realtime\"": 2}, "block_item_decl": {"data_declaration_or_module_instantiation": 3073, "any_param_declaration": 23}, "parameter_override": {"\"defparam\" defparam_assign_list ';'": 4219}, "defparam_assign_list": {"defparam_assign_list ',' defparam_assign": 4493, "defparam_assign": 4219}, "defparam_assign": {"reference '=' expression": 8712}, "specify_edge_path_decl": {"specify_edge_path '=' delay_value_simple": 11, "specify_edge_path '=' '(' delay_value_list ')'": 166}, "specify_edge_path": {"'(' edge_operator specify_path_identifiers spec_polarity \"=>\" '(' specify_path_identifiers polarity_operator expression ')' ')'": 177}, "polarity_operator": {"':'": 39, "\"+:\"": 138}, "delay_identifier": {"delay_scope": 9476}, "delay_scope": {"GenericIdentifier": 9476}, "tf_variable_identifier": {"GenericIdentifier decl_dimensions_opt trailing_assign_opt": 161}, "drive_strength": {"'(' dr_strength0 ',' dr_strength1 ')'": 5, "'(' dr_strength1 ',' dr_strength0 ')'": 88, "'(' dr_strength1 ',' \"highz0\" ')'": 12, "'(' \"highz1\" ',' dr_strength0 ')'": 12, "'(' dr_strength0 ',' \"highz1\" ')'": 2, "'(' \"highz0\" ',' dr_strength1 ')'": 2}, "dr_strength1": {"\"pull1\"": 22, "\"weak1\"": 36, "\"strong1\"": 31, "\"supply1\"": 18}, "dr_strength0": {"\"pull0\"": 22, "\"strong0\"": 33, "\"weak0\"": 34, "\"supply0\"": 18}, "blocking_assignment": {"lpvalue '=' delay_or_event_control expression ';'": 287, "lpvalue '=' dynamic_array_new ';'": 18, "lpvalue '=' class_new ';'": 15}, "parameter_assign_list": {"parameter_assign_list ',' parameter_assign": 1151, "parameter_assign": 211}, "parameter_assign": {"GenericIdentifier '=' expression parameter_value_ranges_opt": 1362}, "par_block": {"\"fork\" label_opt block_item_or_statement_or_null_list_opt join_keyword label_opt": 32}, "join_keyword": {"\"join_any\"": 7, "\"join\"": 21, "\"join_none\"": 4}, "disable_statement": {"\"disable\" reference ';'": 47, "\"disable\" \"fork\" ';'": 1}, "procedural_assertion_statement": {"immediate_assertion_statement": 67}, "immediate_assertion_statement": {"simple_immediate_assertion_statement": 67}, "simple_immediate_assertion_statement": {"\"assert\" '(' expression ')' action_block": 46, "\"assume\" '(' expression ')' action_block": 21}, "action_block": {"statement_or_null": 58, "\"else\" statement_or_null": 9}, "task_item": {"tf_port_declaration": 631, "function_item_data_declaration": 472, "any_param_declaration": 6}, "tf_port_list_opt": {"tf_port_list": 504, "%empty": 16}, "tf_port_list": {"tf_port_list_item_last": 805}, "tf_port_list_item_last": {"tf_port_list_trailing_comma tf_port_item": 301, "tf_port_item": 504}, "tf_port_item": {"tf_port_direction_opt data_type_or_implicit_basic_followed_by_id_and_dimensions_opt tf_port_item_expr_opt": 805}, "tf_port_item_expr_opt": {"%empty": 796, "'=' expression": 9}, "tf_port_direction_opt": {"tf_port_direction": 728, "%empty": 77}, "tf_port_list_trailing_comma": {"tf_port_list ','": 301}, "dynamic_array_new": {"\"new\" '[' expression ']' '(' expression ')'": 7, "\"new\" '[' expression ']'": 11}, "assignment_pattern_expression": {"assignment_pattern": 31}, "assignment_pattern": {"\"'{\" '}'": 2, "\"'{\" expression_list_proper '}'": 9, "\"'{\" structure_or_array_pattern_expression_list '}'": 10, "\"'{\" expression '{' expression_list_proper '}' '}'": 10}, "wait_statement": {"\"wait\" '(' expression ')' statement_or_null": 470}, "repeat_control": {"\"repeat\" '(' expression ')'": 336}, "port_expression_opt": {"port_expression": 154}, "preprocess_include_argument": {"string_literal": 22}, "KeywordIdentifier": {"\"sample\"": 179, "\"flow\"": 4, "\"continuous\"": 20, "\"access\"": 2}, "class_new": {"\"new\"": 10, "\"new\" call_base": 6}, "class_declaration": {"TK_virtual_opt \"class\" lifetime_opt GenericIdentifier module_parameter_port_list_opt class_declaration_extends_opt implements_interface_list_opt ';' class_items_opt \"endclass\" label_opt": 12}, "class_items_opt": {"class_items": 9, "%empty": 3}, "class_items": {"class_items class_item": 16, "class_item": 9}, "class_item": {"function_declaration": 1, "task_declaration": 6, "data_type list_of_variable_decl_assignments ';'": 14, "class_constructor": 3, "type_declaration": 1}, "implicit_class_handle": {"\"this\"": 1}, "list_of_variable_decl_assignments": {"variable_decl_assignment": 14}, "variable_decl_assignment": {"GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 14}, "implements_interface_list_opt": {"%empty": 12}, "class_declaration_extends_opt": {"%empty": 11, "\"extends\" class_id": 1}, "TK_virtual_opt": {"%empty": 11, "\"virtual\"": 1}, "final_construct": {"\"final\" statement": 4}, "type_declaration": {"\"typedef\" data_type GenericIdentifier decl_dimensions_opt ';'": 29}, "struct_data_type": {"\"struct\" packed_signing_opt '{' struct_union_member_list '}'": 10, "\"union\" TK_tagged_opt packed_signing_opt '{' struct_union_member_list '}'": 2}, "struct_union_member_list": {"struct_union_member_list struct_union_member": 10, "struct_union_member": 12}, "struct_union_member": {"random_qualifier_opt data_type_or_implicit_followed_by_id_and_dimensions_opt trailing_assign_opt ';'": 22}, "data_type_or_implicit_followed_by_id_and_dimensions_opt": {"data_type_primitive GenericIdentifier decl_dimensions_opt": 18, "type_identifier_or_implicit_followed_by_id_and_dimensions_opt": 4}, "random_qualifier_opt": {"%empty": 22}, "packed_signing_opt": {"\"packed\" signed_unsigned_opt": 12}, "macro_formals_list_opt": {"macro_formals_list": 163}, "macro_formals_list": {"macro_formals_list ',' macro_formal_parameter": 56, "macro_formal_parameter": 163}, "macro_formal_parameter": {"PP_Identifier": 216, "PP_Identifier '=' \"<<default-text>>\"": 3}, "package_declaration": {"\"package\" lifetime_opt GenericIdentifier ';' package_item_list_opt \"endpackage\" label_opt": 15}, "package_item_list_opt": {"package_item_list": 14, "%empty": 1}, "package_item_list": {"package_item": 14, "package_item_list package_item": 68}, "package_item": {"package_item_no_pp": 81, "preprocessor_action": 1}, "udp_primitive": {"\"primitive\" GenericIdentifier '(' \"output\" TK_reg_opt GenericIdentifier udp_initial_expr_opt ',' udp_input_declaration_list ')' ';' udp_body \"endprimitive\" label_opt": 1, "\"primitive\" GenericIdentifier '(' udp_port_list ')' ';' udp_port_decls udp_init_opt udp_body \"endprimitive\" label_opt": 18}, "udp_body": {"\"table\" udp_entry_list \"endtable\"": 19}, "udp_entry_list": {"udp_comb_entry_list": 5, "udp_sequ_entry_list": 14}, "udp_comb_entry_list": {"udp_comb_entry_list udp_comb_entry": 13, "udp_comb_entry": 5}, "udp_comb_entry": {"udp_input_list ':' udp_output_sym ';'": 18}, "udp_output_sym": {"'0'": 79, "'1'": 73, "'x'": 12, "'-'": 77}, "udp_input_list": {"udp_input_sym": 241, "udp_input_list udp_input_sym": 1383}, "udp_input_sym": {"'1'": 309, "'0'": 314, "'x'": 52, "'?'": 1010, "'*'": 69, "'b'": 6, "'f'": 2, "'r'": 32, "'n'": 1, "'p'": 2, "'R'": 6, "'_'": 18, "'+'": 4, "'M'": 2, "'Q'": 4, "'%'": 16}, "udp_input_declaration_list": {"\"input\" GenericIdentifier": 1}, "udp_initial_expr_opt": {"%empty": 1}, "TK_reg_opt": {"%empty": 1}, "udp_init_opt": {"%empty": 11, "udp_initial": 7}, "udp_port_decls": {"udp_port_decls udp_port_decl": 43, "udp_port_decl": 18}, "udp_port_decl": {"\"input\" list_of_identifiers ';'": 29, "\"output\" GenericIdentifier ';'": 18, "\"reg\" GenericIdentifier ';'": 14}, "udp_port_list": {"udp_port_list ',' GenericIdentifier": 90, "GenericIdentifier": 18}, "type_identifier_or_implicit_followed_by_id_and_dimensions_opt": {"GenericIdentifier decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 4}, "TK_tagged_opt": {"%empty": 2}, "enum_data_type": {"\"enum\" data_type '{' enum_name_list '}'": 16, "\"enum\" '{' enum_name_list '}'": 7}, "enum_name_list": {"enum_name_list_item_last": 90}, "enum_name_list_item_last": {"enum_name_list_trailing_comma enum_name": 67, "enum_name": 23}, "enum_name": {"GenericIdentifier '=' expression": 14, "GenericIdentifier": 68, "GenericIdentifier '[' pos_neg_number ']' '=' expression": 3, "GenericIdentifier '[' pos_neg_number ':' pos_neg_number ']' '=' expression": 1, "GenericIdentifier '[' pos_neg_number ':' pos_neg_number ']'": 1, "GenericIdentifier '[' pos_neg_number ']'": 3}, "enum_name_list_trailing_comma": {"enum_name_list ','": 67}, "lifetime": {"\"automatic\"": 20, "\"static\"": 6}, "builtin_array_method": {"array_reduction_method": 751, "array_locator_method": 3}, "array_reduction_method": {"\"sum\"": 750, "\"product\"": 1}, "timeunits_declaration": {"\"timeunit\" TK_TimeLiteral ';'": 13, "\"timeprecision\" TK_TimeLiteral ';'": 13, "\"timeunit\" TK_TimeLiteral '/' TK_TimeLiteral ';'": 7}, "udp_sequ_entry_list": {"udp_sequ_entry_list udp_sequ_entry": 209, "udp_sequ_entry": 14}, "udp_sequ_entry": {"udp_input_list ':' udp_input_sym ':' udp_output_sym ';'": 223}, "event_trigger": {"\"->(trigger)\" reference ';'": 54}, "array_locator_method": {"\"min\"": 3}, "switchtype": {"\"tranif1\"": 8, "\"nmos\"": 23, "\"pmos\"": 16, "\"tranif0\"": 1, "\"cmos\"": 1, "\"rtran\"": 31}, "oct_based_number": {"TK_OctBase TK_OctDigits": 1074}, "type_identifier_followed_by_id": {"unqualified_id decl_dimensions_opt GenericIdentifier": 1, "unqualified_id '.' member_name decl_dimensions_opt GenericIdentifier": 1}, "cast": {"casting_type '\\'' '(' expression ')'": 28}, "casting_type": {"TK_DecNumber": 19, "reference": 5, "expr_primary_parens": 4}, "hierarchy_event_identifier": {"hierarchy_segment": 10}, "hierarchy_segment": {"GenericIdentifier select_dimensions_opt": 10}, "select_dimensions_opt": {"%empty": 10}, "package_import_declaration": {"\"import\" package_import_item_list ';'": 12}, "package_import_item_list": {"package_import_item": 12, "package_import_item_list ',' package_import_item": 1}, "package_import_item": {"scope_prefix '*'": 13}, "scope_prefix": {"GenericIdentifier \"::\"": 13}, "data_declaration": {"data_declaration_modifiers_opt data_declaration_base": 5}, "data_declaration_base": {"data_type_or_implicit_basic_followed_by_id_and_dimensions_opt trailing_decl_assignment_opt ';'": 5}, "data_declaration_modifiers_opt": {"const_opt var_opt lifetime_opt": 5}, "var_opt": {"%empty": 5}, "const_opt": {"%empty": 11}, "bind_directive": {"\"bind\" reference bind_instantiation ';'": 2}, "bind_instantiation": {"class_id gate_instance_or_register_variable_list": 2}, "gate_instance_or_register_variable_list": {"gate_instance_or_register_variable": 2}, "jump_statement": {"\"return\" expression ';'": 4}, "inc_or_dec_expression": {"\"++\" lpvalue": 2, "lpvalue \"++\"": 34}, "structure_or_array_pattern_expression_list": {"structure_or_array_pattern_expression": 10, "structure_or_array_pattern_expression_list ',' structure_or_array_pattern_expression": 8}, "structure_or_array_pattern_expression": {"structure_or_array_pattern_key ':' expression": 18}, "structure_or_array_pattern_key": {"\"default\"": 8, "expression": 10}, "class_constructor": {"class_constructor_prototype ';' tf_item_or_statement_or_null_list_opt \"endfunction\" endnew_opt": 3}, "endnew_opt": {"':' \"new\"": 2, "%empty": 1}, "class_constructor_prototype": {"\"function\" \"new\" tf_port_list_paren_opt": 3}, "port_reference_list": {"port_reference_list ',' port_reference": 4, "port_reference": 2}, "assign_modify_statement": {"lpvalue \"+=\" expression": 20, "lpvalue TK_LS_EQ expression": 7, "lpvalue TK_RS_EQ expression": 5, "lpvalue \"^=\" expression": 3, "lpvalue \"|=\" expression": 3, "lpvalue \"&=\" expression": 3, "lpvalue \"%=\" expression": 3, "lpvalue \"/=\" expression": 3, "lpvalue \"*=\" expression": 3, "lpvalue \"-=\" expression": 6, "lpvalue TK_RSS_EQ expression": 1}, "charge_strength_opt": {"%empty": 6}, "udp_initial": {"\"initial\" GenericIdentifier '=' number ';'": 7}, "pos_neg_number": {"number": 10}, "package_import_list": {"package_import_list package_import_declaration": 1, "package_import_declaration": 1}, "dpi_import_export": {"dpi_import_item": 5}, "dpi_import_item": {"\"import\" dpi_spec_string dpi_import_property_opt method_prototype ';'": 5}, "method_prototype": {"function_prototype": 5}, "function_prototype": {"\"function\" lifetime_opt function_return_type_and_id tf_port_list_paren_opt": 5}, "dpi_import_property_opt": {"%empty": 5}, "dpi_spec_string": {"TK_StringLiteral": 5}, "qualified_id": {"unqualified_id \"::\" unqualified_id": 2}, "bit_logic": {"\"bit\"": 1}}
+{
+  "source_text": {
+    "description_list": 10000
+  },
+  "description_list": {
+    "description_list description": 31393,
+    "description": 10000
+  },
+  "description": {
+    "module_or_interface_declaration": 25502,
+    "package_item_no_pp": 8339,
+    "preprocessor_action": 7516,
+    "package_declaration": 15,
+    "udp_primitive": 19,
+    "bind_directive": 2
+  },
+  "module_or_interface_declaration": {
+    "module_start lifetime_opt symbol_or_label module_package_import_list_opt module_parameter_port_list_opt module_port_list_opt module_attribute_foreign_opt ';' module_item_list_opt module_end label_opt": 25509
+  },
+  "label_opt": {
+    "%empty": 1474093,
+    "':' symbol_or_label": 3493
+  },
+  "module_end": {
+    "\"endmodule\"": 25496,
+    "\"endprogram\"": 13
+  },
+  "module_item_list_opt": {
+    "module_item_list": 25369,
+    "%empty": 140
+  },
+  "module_item_list": {
+    "module_item_list module_item": 15328492,
+    "module_item": 25369
+  },
+  "module_item": {
+    "non_port_module_item": 15206910,
+    "module_port_declaration": 146717,
+    "preprocessor_action": 234
+  },
+  "non_port_module_item": {
+    "module_or_generate_item": 15204666,
+    "specify_block": 227,
+    "generate_region": 1981,
+    "timeunits_declaration": 29,
+    "module_or_interface_declaration": 7
+  },
+  "module_or_generate_item": {
+    "module_common_item": 3007406,
+    "data_declaration_or_module_instantiation": 11945179,
+    "any_param_declaration": 26430,
+    "gate_instantiation": 247000,
+    "parameter_override": 4219,
+    "type_declaration": 17,
+    "package_import_declaration": 7
+  },
+  "module_common_item": {
+    "always_construct": 220805,
+    "initial_construct": 3769,
+    "module_or_generate_item_declaration": 1687752,
+    "continuous_assign": 1090156,
+    "conditional_generate_construct": 3852,
+    "loop_generate_construct": 1020,
+    "final_construct": 4,
+    "system_tf_call ';'": 48
+  },
+  "always_construct": {
+    "always_any statement": 220805
+  },
+  "statement": {
+    "statement_item": 1245170,
+    "reference_or_call ';'": 1821
+  },
+  "statement_item": {
+    "seq_block": 719813,
+    "procedural_timing_control_statement": 229780,
+    "assignment_statement ';'": 290203,
+    "subroutine_call ';'": 27503,
+    "nonblocking_assignment": 437056,
+    "conditional_statement": 365121,
+    "case_statement": 12609,
+    "procedural_continuous_assignment": 634,
+    "loop_statement": 3050,
+    "blocking_assignment": 320,
+    "par_block": 32,
+    "disable_statement": 48,
+    "procedural_assertion_statement": 67,
+    "wait_statement": 470,
+    "event_trigger": 54,
+    "jump_statement": 4
+  },
+  "seq_block": {
+    "begin block_item_or_statement_or_null_list_opt end": 719813
+  },
+  "end": {
+    "\"end\" label_opt": 725242
+  },
+  "block_item_or_statement_or_null_list_opt": {
+    "block_item_or_statement_or_null_list": 540737,
+    "%empty": 179494
+  },
+  "block_item_or_statement_or_null_list": {
+    "block_item_or_statement_or_null_list block_item_or_statement_or_null": 304688,
+    "block_item_or_statement_or_null": 540737
+  },
+  "block_item_or_statement_or_null": {
+    "statement_item": 841592,
+    "block_item_decl": 3096,
+    "reference ';'": 725,
+    "';'": 10,
+    "unqualified_id ':' statement_item": 2
+  },
+  "procedural_timing_control_statement": {
+    "delay1 statement_or_null": 8422,
+    "event_control statement_or_null": 221358
+  },
+  "statement_or_null": {
+    "';'": 5782,
+    "statement": 1022413
+  },
+  "delay1": {
+    "'#' delay_value_simple": 24614,
+    "'#' '(' delay_value ')'": 692
+  },
+  "delay_value_simple": {
+    "TK_DecNumber": 15785,
+    "delay_identifier": 9476,
+    "TK_RealTime": 181,
+    "TK_TimeLiteral": 2
+  },
+  "assignment_statement": {
+    "assignment_statement_no_expr": 293555,
+    "inc_or_dec_expression": 33
+  },
+  "assignment_statement_no_expr": {
+    "lpvalue '=' expression": 293498,
+    "assign_modify_statement": 57
+  },
+  "expression": {
+    "equiv_impl_expr": 55205455
+  },
+  "equiv_impl_expr": {
+    "cond_expr": 55205455
+  },
+  "cond_expr": {
+    "port_declaration_non_ansi": 55205455,
+    "logor_expr '?' expression ':' cond_expr": 321412
+  },
+  "logor_expr": {
+    "logand_expr": 55526867,
+    "logor_expr \"||\" logand_expr": 27711
+  },
+  "logand_expr": {
+    "matches_expr": 55554578,
+    "logand_expr \"&&\" bitor_expr": 74090
+  },
+  "matches_expr": {
+    "with_exprs_suffix": 55554578
+  },
+  "with_exprs_suffix": {
+    "bitor_expr": 55554578
+  },
+  "bitor_expr": {
+    "xor_expr": 55628668,
+    "bitor_expr '|' xor_expr": 95645
+  },
+  "xor_expr": {
+    "bitand_expr": 55724313,
+    "xor_expr '^' bitand_expr": 21652,
+    "xor_expr \"~^\" bitand_expr": 74
+  },
+  "bitand_expr": {
+    "caseeq_expr": 55746039,
+    "bitand_expr '&' caseeq_expr": 312341
+  },
+  "caseeq_expr": {
+    "logeq_expr": 56058380,
+    "caseeq_expr \"!==\" logeq_expr": 7161,
+    "caseeq_expr \"===\" logeq_expr": 3273
+  },
+  "logeq_expr": {
+    "comp_expr": 56068814,
+    "logeq_expr \"==\" comp_expr": 102451,
+    "logeq_expr \"!=\" comp_expr": 21225,
+    "logeq_expr \"!=?\" comp_expr": 1,
+    "logeq_expr \"==?\" comp_expr": 1
+  },
+  "comp_expr": {
+    "shift_expr": 56192492,
+    "comp_expr \">=\" shift_expr": 2719,
+    "comp_expr \"<=\" shift_expr": 3671,
+    "comp_expr '>' shift_expr": 4162,
+    "comp_expr '<' shift_expr": 7101
+  },
+  "shift_expr": {
+    "add_expr": 56210145,
+    "shift_expr \"<<\" add_expr": 2845,
+    "shift_expr \">>\" add_expr": 2325,
+    "shift_expr \">>>\" add_expr": 407
+  },
+  "add_expr": {
+    "mul_expr": 56215722,
+    "add_expr '+' mul_expr": 30859,
+    "add_expr '-' mul_expr": 62394
+  },
+  "mul_expr": {
+    "pow_expr": 56308975,
+    "mul_expr '*' pow_expr": 25983,
+    "mul_expr '/' pow_expr": 4898,
+    "mul_expr '%' pow_expr": 1465
+  },
+  "pow_expr": {
+    "unary_expr": 56341321,
+    "pow_expr \"**\" unary_expr": 1737
+  },
+  "unary_expr": {
+    "unary_prefix_expr": 56343058
+  },
+  "unary_prefix_expr": {
+    "inc_or_dec_or_primary_expr": 56343058,
+    "unary_op unary_prefix_expr": 246727
+  },
+  "inc_or_dec_or_primary_expr": {
+    "postfix_expression": 56343055,
+    "inc_or_dec_expression": 3
+  },
+  "postfix_expression": {
+    "expr_primary": 5827377,
+    "reference_or_call": 50515678
+  },
+  "expr_primary": {
+    "expr_primary_no_groups": 5206071,
+    "expr_primary_braces": 121826,
+    "expr_primary_parens": 506808,
+    "assignment_pattern_expression": 31
+  },
+  "expr_primary_no_groups": {
+    "number": 5126094,
+    "string_literal": 65185,
+    "system_tf_call": 11264,
+    "TK_RealTime": 3492,
+    "\"null\"": 4,
+    "cast": 28,
+    "'$'": 2,
+    "TK_TimeLiteral": 2
+  },
+  "number": {
+    "constant_dec_number based_number": 1348356,
+    "TK_DecNumber": 3770409,
+    "based_number": 7303,
+    "TK_UnBasedNumber": 43
+  },
+  "based_number": {
+    "bin_based_number": 796370,
+    "hex_based_number": 421740,
+    "dec_based_number": 136475,
+    "oct_based_number": 1074
+  },
+  "bin_based_number": {
+    "TK_BinBase TK_BinDigits": 796370
+  },
+  "constant_dec_number": {
+    "TK_DecNumber": 1347870,
+    "MacroNumericWidth": 486
+  },
+  "lpvalue": {
+    "reference": 1814313,
+    "range_list_in_braces": 10378
+  },
+  "reference": {
+    "local_root": 64169252,
+    "reference select_variable_dimension": 2319444,
+    "reference hierarchy_extension": 11543
+  },
+  "local_root": {
+    "type_or_id_root": 64169252
+  },
+  "type_or_id_root": {
+    "class_id": 64169251,
+    "implicit_class_handle": 1
+  },
+  "class_id": {
+    "unqualified_id": 64229277,
+    "qualified_id": 2
+  },
+  "unqualified_id": {
+    "GenericIdentifier parameter_value_opt": 64616037
+  },
+  "parameter_value_opt": {
+    "%empty": 64578829,
+    "parameters": 37208
+  },
+  "GenericIdentifier": {
+    "SymbolIdentifier": 123584732,
+    "EscapedIdentifier": 1754465,
+    "KeywordIdentifier": 205
+  },
+  "begin": {
+    "\"begin\" label_opt": 725242
+  },
+  "always_any": {
+    "\"always\"": 220634,
+    "\"always_ff\"": 151,
+    "\"always_comb\"": 19,
+    "\"always_latch\"": 1
+  },
+  "initial_construct": {
+    "\"initial\" statement": 3769
+  },
+  "subroutine_call": {
+    "system_tf_call": 27503
+  },
+  "system_tf_call": {
+    "SystemTFIdentifier": 9792,
+    "SystemTFIdentifier call_base": 29023
+  },
+  "hex_based_number": {
+    "TK_HexBase TK_HexDigits": 421740
+  },
+  "call_base": {
+    "'(' argument_list_opt ')'": 34154
+  },
+  "argument_list_opt": {
+    "any_argument_list": 33710,
+    "%empty": 444
+  },
+  "any_argument_list": {
+    "any_argument_list_item_last": 71872,
+    "any_argument_list_trailing_comma": 60
+  },
+  "any_argument_list_item_last": {
+    "any_argument_list_trailing_comma any_argument": 38163,
+    "any_argument": 33709
+  },
+  "any_argument": {
+    "expression": 71852,
+    "parameter_value_byname": 20
+  },
+  "reference_or_call": {
+    "reference": 50514317,
+    "reference_or_call_base": 3181,
+    "reference '.' builtin_array_method": 1
+  },
+  "any_argument_list_trailing_comma": {
+    "any_argument_list ','": 38222,
+    "','": 1
+  },
+  "string_literal": {
+    "TK_StringLiteral": 65204,
+    "TK_EvalStringLiteral": 3
+  },
+  "data_declaration_or_module_instantiation": {
+    "instantiation_base ';'": 11948246,
+    "lifetime const_opt instantiation_base ';'": 6
+  },
+  "instantiation_base": {
+    "instantiation_type non_anonymous_gate_instance_or_register_variable_list": 11946308,
+    "reference_or_call_base": 1944
+  },
+  "non_anonymous_gate_instance_or_register_variable_list": {
+    "non_anonymous_gate_instance_or_register_variable": 11947231,
+    "non_anonymous_gate_instance_or_register_variable_list ',' gate_instance_or_register_variable": 93380
+  },
+  "non_anonymous_gate_instance_or_register_variable": {
+    "GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 11824749,
+    "GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 122482
+  },
+  "any_port_list_opt": {
+    "any_port_list_positional": 249488,
+    "any_port_list_named": 11721355,
+    "%empty": 100986
+  },
+  "any_port_list_positional": {
+    "any_port_list_item_last_positional": 682377,
+    "any_port_list_trailing_comma_positional": 169
+  },
+  "any_port_list_item_last_positional": {
+    "any_port_list_trailing_comma_positional expression": 432890,
+    "expression": 249487
+  },
+  "any_port_list_trailing_comma_positional": {
+    "any_port_list_positional ','": 433058,
+    "','": 1
+  },
+  "decl_dimensions_opt": {
+    "%empty": 15950187,
+    "decl_dimensions": 76976
+  },
+  "instantiation_type": {
+    "data_type": 11947231
+  },
+  "data_type": {
+    "reference": 11824786,
+    "data_type_base": 122532
+  },
+  "module_or_generate_item_declaration": {
+    "package_or_generate_item_declaration": 1687136,
+    "genvar_declaration": 616
+  },
+  "package_or_generate_item_declaration": {
+    "net_declaration": 1685866,
+    "task_declaration": 541,
+    "function_declaration": 935,
+    "class_declaration": 12,
+    "';'": 23,
+    "dpi_import_export": 5
+  },
+  "net_declaration": {
+    "net_type net_variable_or_decl_assigns ';'": 1354334,
+    "net_type data_type_or_implicit net_variable_or_decl_assigns ';'": 331469,
+    "net_type delay3 net_variable_or_decl_assigns ';'": 57,
+    "\"trireg\" charge_strength_opt decl_dimensions_opt delay3_opt list_of_identifiers ';'": 6
+  },
+  "net_variable_or_decl_assigns": {
+    "net_variable_or_decl_assign": 1685860,
+    "net_variable_or_decl_assigns ',' net_variable_or_decl_assign": 1400984
+  },
+  "net_variable_or_decl_assign": {
+    "net_variable": 3067389,
+    "net_decl_assign": 19455
+  },
+  "net_variable": {
+    "GenericIdentifier decl_dimensions_opt": 3067389
+  },
+  "net_type": {
+    "\"wire\"": 1724487,
+    "\"tri0\"": 340,
+    "\"tri1\"": 173,
+    "\"tri\"": 17,
+    "\"triand\"": 1,
+    "\"supply0\"": 1793,
+    "\"supply1\"": 1793,
+    "\"wand\"": 4,
+    "\"wor\"": 3
+  },
+  "data_type_or_implicit": {
+    "decl_dimensions delay3_or_drive_opt": 330852,
+    "signing decl_dimensions_opt delay3_or_drive_opt": 616,
+    "GenericIdentifier decl_dimensions_opt delay3_or_drive_opt": 1
+  },
+  "delay3_or_drive_opt": {
+    "%empty": 331427,
+    "delay3": 42
+  },
+  "decl_dimensions": {
+    "decl_variable_dimension": 528597,
+    "decl_dimensions decl_variable_dimension": 129
+  },
+  "decl_variable_dimension": {
+    "'[' expression ':' expression ']'": 528672,
+    "'[' expression_or_null_list_opt ']'": 54
+  },
+  "trailing_decl_assignment_opt": {
+    "%empty": 197835,
+    "trailing_decl_assignment": 17970
+  },
+  "data_type_base": {
+    "data_type_primitive": 122532
+  },
+  "data_type_primitive": {
+    "data_type_primitive_scalar decl_dimensions_opt": 130759
+  },
+  "data_type_primitive_scalar": {
+    "integer_vector_type signed_unsigned_opt": 126946,
+    "integer_atom_type signed_unsigned_opt": 3367,
+    "non_integer_type": 321,
+    "\"event\"": 36,
+    "\"string\"": 54,
+    "struct_data_type": 12,
+    "enum_data_type": 23
+  },
+  "signed_unsigned_opt": {
+    "%empty": 325322,
+    "signing": 940
+  },
+  "integer_vector_type": {
+    "\"reg\"": 121945,
+    "\"logic\"": 4920,
+    "\"bit\"": 81
+  },
+  "gate_instance_or_register_variable": {
+    "GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 93304,
+    "GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 78
+  },
+  "module_attribute_foreign_opt": {
+    "%empty": 25509
+  },
+  "module_port_list_opt": {
+    "'(' list_of_ports_or_port_declarations_opt ')'": 24597,
+    "%empty": 912
+  },
+  "list_of_ports_or_port_declarations_opt": {
+    "%empty": 443,
+    "list_of_ports_or_port_declarations_non_ansi": 15269,
+    "list_of_ports_or_port_declarations_ansi": 8885
+  },
+  "module_parameter_port_list_opt": {
+    "%empty": 22941,
+    "'#' '(' module_parameter_port_list ')'": 2578,
+    "'#' '(' ')'": 2
+  },
+  "module_package_import_list_opt": {
+    "%empty": 25508,
+    "package_import_list": 1
+  },
+  "symbol_or_label": {
+    "GenericIdentifier": 29002
+  },
+  "lifetime_opt": {
+    "%empty": 27009,
+    "lifetime": 20
+  },
+  "module_start": {
+    "\"module\"": 25495,
+    "\"program\"": 13,
+    "\"macromodule\"": 1
+  },
+  "package_item_no_pp": {
+    "timescale_directive": 3820,
+    "misc_directive": 1729,
+    "package_or_generate_item_declaration": 246,
+    "type_declaration": 11,
+    "timeunits_declaration": 4,
+    "any_param_declaration": 2602,
+    "data_declaration": 5,
+    "package_import_declaration": 3
+  },
+  "timescale_directive": {
+    "\"`timescale\" time_literal '/' time_literal": 3820
+  },
+  "time_literal": {
+    "TK_TimeLiteral": 5306,
+    "TK_DecNumber \"(timescale_unit)\"": 2334
+  },
+  "any_port_list_named": {
+    "any_port_list_item_last_named": 45105109
+  },
+  "any_port_list_item_last_named": {
+    "any_port_list_trailing_comma_named port_named": 33383754,
+    "port_named": 11721355
+  },
+  "port_named": {
+    "'.' member_name '(' expression ')'": 45093190,
+    "'.' member_name '(' ')'": 11913,
+    "\".*\"": 3,
+    "'.' member_name": 3
+  },
+  "member_name": {
+    "GenericIdentifier": 45180611,
+    "builtin_array_method": 753
+  },
+  "any_port_list_trailing_comma_named": {
+    "any_port_list_named ','": 33383754
+  },
+  "select_variable_dimension": {
+    "'[' expression ':' expression ']'": 275875,
+    "'[' expression_or_null_list_opt ']'": 2035252,
+    "'[' expression \"+:\" expression ']'": 7920,
+    "'[' expression \"-:\" expression ']'": 397
+  },
+  "expr_primary_braces": {
+    "range_list_in_braces": 108465,
+    "'{' value_range '{' expression_list_proper '}' '}'": 13361
+  },
+  "range_list_in_braces": {
+    "'{' open_range_list '}'": 118843
+  },
+  "open_range_list": {
+    "open_range_list ',' value_range": 1660034,
+    "value_range": 118843
+  },
+  "value_range": {
+    "expression": 1792238
+  },
+  "parameters": {
+    "'#' '(' parameter_value_byname_list ')'": 35965,
+    "'#' '(' parameter_expr_list ')'": 1226,
+    "'#' TK_DecNumber": 6,
+    "'#' '(' ')'": 11
+  },
+  "parameter_value_byname_list": {
+    "parameter_value_byname_list_item_last": 76083
+  },
+  "parameter_value_byname_list_item_last": {
+    "parameter_value_byname": 35965,
+    "parameter_value_byname_list_trailing_comma parameter_value_byname": 40118
+  },
+  "parameter_value_byname": {
+    "'.' member_name '(' parameter_expr ')'": 76072,
+    "'.' member_name '(' ')'": 31
+  },
+  "parameter_expr": {
+    "expression": 128051
+  },
+  "expression_or_null_list_opt": {
+    "expression_opt": 2035306
+  },
+  "expression_opt": {
+    "expression": 2038676,
+    "%empty": 15
+  },
+  "module_port_declaration": {
+    "port_direction signed_unsigned_opt decl_dimensions delay3_opt list_of_identifiers_unpacked_dimensions ';'": 64409,
+    "dir var_type signed_unsigned_opt decl_dimensions_opt list_of_port_identifiers ';'": 754,
+    "port_direction signed_unsigned_opt list_of_module_item_identifiers ';'": 79572,
+    "port_direction port_net_type signed_unsigned_opt decl_dimensions_opt list_of_identifiers_unpacked_dimensions ';'": 1980,
+    "port_direction signed_unsigned_opt unqualified_id decl_dimensions_opt list_of_identifiers_unpacked_dimensions ';'": 2
+  },
+  "list_of_identifiers_unpacked_dimensions": {
+    "identifier_optional_unpacked_dimensions": 66391,
+    "list_of_identifiers_unpacked_dimensions ',' identifier_optional_unpacked_dimensions": 4205
+  },
+  "identifier_optional_unpacked_dimensions": {
+    "GenericIdentifier decl_dimensions_opt": 106416
+  },
+  "delay3_opt": {
+    "%empty": 1152455,
+    "delay3": 2116
+  },
+  "port_direction": {
+    "dir": 270620
+  },
+  "dir": {
+    "\"output\"": 105117,
+    "\"input\"": 163633,
+    "\"inout\"": 2624
+  },
+  "list_of_ports_or_port_declarations_non_ansi": {
+    "list_of_ports_or_port_declarations_item_last_non_ansi": 186791
+  },
+  "list_of_ports_or_port_declarations_item_last_non_ansi": {
+    "list_of_ports_or_port_declarations_trailing_comma_non_ansi port_declaration_non_ansi": 171522,
+    "port_declaration_non_ansi": 15269
+  },
+  "port_declaration_non_ansi": {
+    "port": 186791
+  },
+  "port": {
+    "port_expression trailing_assign_opt": 186637,
+    "'.' member_name '(' port_expression_opt ')'": 154
+  },
+  "trailing_assign_opt": {
+    "%empty": 312748,
+    "trailing_assign": 19463
+  },
+  "port_expression": {
+    "port_reference": 186789,
+    "'{' port_reference_list '}'": 2
+  },
+  "port_reference": {
+    "unqualified_id decl_dimensions_opt": 186795
+  },
+  "list_of_ports_or_port_declarations_trailing_comma_non_ansi": {
+    "list_of_ports_or_port_declarations_non_ansi ','": 171522
+  },
+  "continuous_assign": {
+    "\"assign\" drive_strength_opt delay3_opt cont_assign_list ';'": 1090156
+  },
+  "cont_assign_list": {
+    "cont_assign": 1090156,
+    "cont_assign_list ',' cont_assign": 597
+  },
+  "cont_assign": {
+    "lpvalue '=' expression": 1090753
+  },
+  "drive_strength_opt": {
+    "%empty": 1090038,
+    "drive_strength": 118
+  },
+  "expr_primary_parens": {
+    "'(' expr_mintypmax ')'": 506812
+  },
+  "expr_mintypmax": {
+    "expr_mintypmax_trans_set": 506812
+  },
+  "expr_mintypmax_trans_set": {
+    "expr_mintypmax_generalized": 506812
+  },
+  "expr_mintypmax_generalized": {
+    "property_expr_or_assignment_list": 506812
+  },
+  "property_expr_or_assignment_list": {
+    "property_expr_or_assignment": 506812
+  },
+  "property_expr_or_assignment": {
+    "property_expr": 506812
+  },
+  "property_expr": {
+    "sequence_expr": 506812
+  },
+  "sequence_expr": {
+    "property_implication_expr": 506812
+  },
+  "property_implication_expr": {
+    "property_prefix_expr": 506812
+  },
+  "property_prefix_expr": {
+    "property_if_else_expr": 506812
+  },
+  "property_if_else_expr": {
+    "simple_sequence_expr": 506812
+  },
+  "simple_sequence_expr": {
+    "sequence_or_expr": 506812
+  },
+  "sequence_or_expr": {
+    "sequence_and_expr": 506812
+  },
+  "sequence_and_expr": {
+    "sequence_unary_expr": 506812
+  },
+  "sequence_unary_expr": {
+    "sequence_intersect_expr": 506812
+  },
+  "sequence_intersect_expr": {
+    "sequence_within_expr": 506812
+  },
+  "sequence_within_expr": {
+    "sequence_throughout_expr": 506812
+  },
+  "sequence_throughout_expr": {
+    "sequence_delay_range_expr": 506812
+  },
+  "sequence_delay_range_expr": {
+    "sequence_delay_repetition_list": 506812
+  },
+  "sequence_delay_repetition_list": {
+    "sequence_expr_primary": 506812
+  },
+  "sequence_expr_primary": {
+    "sequence_repetition_expr": 506812
+  },
+  "sequence_repetition_expr": {
+    "expression_or_dist boolean_abbrev_opt": 506812
+  },
+  "boolean_abbrev_opt": {
+    "%empty": 506812
+  },
+  "expression_or_dist": {
+    "expression dist_opt": 506812
+  },
+  "dist_opt": {
+    "%empty": 506812
+  },
+  "unary_op": {
+    "'~'": 203817,
+    "\"~&\"": 323,
+    "'!'": 33674,
+    "\"~|\"": 243,
+    "'|'": 3497,
+    "'-'": 2045,
+    "'&'": 2956,
+    "'^'": 130,
+    "\"~^\"": 19,
+    "'+'": 23
+  },
+  "nonblocking_assignment": {
+    "lpvalue \"<=\" delay_or_event_control_opt expression ';'": 437056
+  },
+  "delay_or_event_control_opt": {
+    "%empty": 420450,
+    "delay_or_event_control": 16606
+  },
+  "event_control": {
+    "'@' '(' event_expression_list ')'": 204337,
+    "'@' '(' '*' ')'": 16136,
+    "'@' '*'": 884,
+    "'@' hierarchy_event_identifier": 10
+  },
+  "event_expression_list": {
+    "event_expression": 204337,
+    "event_expression_list \"or\" event_expression": 98772,
+    "event_expression_list ',' event_expression": 1009
+  },
+  "event_expression": {
+    "edge_operator expression": 253758,
+    "expression": 50360
+  },
+  "edge_operator": {
+    "\"negedge\"": 6173,
+    "\"posedge\"": 248390,
+    "\"edge\"": 1
+  },
+  "net_decl_assign": {
+    "GenericIdentifier '=' expression": 19455
+  },
+  "dec_based_number": {
+    "TK_DecBase TK_DecDigits": 136452,
+    "TK_DecBase TK_XZDigits": 23
+  },
+  "conditional_statement": {
+    "unique_priority_opt \"if\" expression_in_parens statement_or_null \"else\" statement_or_null": 108177,
+    "unique_priority_opt \"if\" expression_in_parens statement_or_null": 256944
+  },
+  "expression_in_parens": {
+    "'(' expression ')'": 368849
+  },
+  "unique_priority_opt": {
+    "%empty": 377728,
+    "\"unique\"": 1,
+    "\"priority\"": 1
+  },
+  "delay3": {
+    "'#' delay_value_simple": 570,
+    "'#' '(' delay_value ',' delay_value ')'": 20,
+    "'#' '(' delay_value ')'": 1690,
+    "'#' '(' delay_value ',' delay_value ',' delay_value ')'": 6
+  },
+  "list_of_ports_or_port_declarations_ansi": {
+    "list_of_ports_or_port_declarations_item_last_ansi": 124633
+  },
+  "list_of_ports_or_port_declarations_item_last_ansi": {
+    "list_of_ports_or_port_declarations_trailing_comma_ansi port_declaration_ansi": 113549,
+    "list_of_ports_or_port_declarations_trailing_comma_ansi class_id trailing_assign_opt": 2199,
+    "port_declaration_ansi": 8885
+  },
+  "port_declaration_ansi": {
+    "port_direction var_or_net_type_opt data_type_or_implicit_basic_followed_by_id_and_dimensions_opt trailing_assign_opt": 122431,
+    "type_identifier_followed_by_id decl_dimensions_opt trailing_assign_opt": 2,
+    "data_type_primitive GenericIdentifier decl_dimensions_opt trailing_assign_opt": 1
+  },
+  "data_type_or_implicit_basic_followed_by_id_and_dimensions_opt": {
+    "data_type_primitive class_id decl_dimensions_opt": 7956,
+    "type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt": 66372,
+    "decl_dimensions class_id decl_dimensions_opt": 49308,
+    "signing decl_dimensions_opt class_id decl_dimensions_opt": 534,
+    "\"void\" class_id decl_dimensions_opt": 12
+  },
+  "var_or_net_type_opt": {
+    "%empty": 81971,
+    "net_type": 40460
+  },
+  "list_of_ports_or_port_declarations_trailing_comma_ansi": {
+    "list_of_ports_or_port_declarations_ansi ','": 115748
+  },
+  "type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt": {
+    "unqualified_id decl_dimensions_opt": 66356,
+    "unqualified_id decl_dimensions_opt class_id decl_dimensions_opt": 16
+  },
+  "preprocessor_action": {
+    "\"`define\" PP_Identifier \"<<`define-tokens>>\"": 7433,
+    "\"`include\" preprocess_include_argument": 22,
+    "\"`define\" PP_Identifier '(' macro_formals_list_opt ')' \"<<`define-tokens>>\"": 163,
+    "\"`undef\" PP_Identifier": 136
+  },
+  "misc_directive": {
+    "\"`default_nettype\" net_type_or_none": 1086,
+    "\"`endcelldefine\"": 131,
+    "\"`celldefine\"": 130,
+    "\"`resetall\"": 378,
+    "\"`uselib\"": 2,
+    "\"`end_keywords\"": 1,
+    "\"`begin_keywords\" TK_StringLiteral": 1
+  },
+  "net_type_or_none": {
+    "GenericIdentifier": 773,
+    "net_type": 313
+  },
+  "case_statement": {
+    "unique_priority_opt case_any '(' expression ')' case_items \"endcase\"": 12609
+  },
+  "case_items": {
+    "case_items case_item": 307812,
+    "case_item": 12609
+  },
+  "case_item": {
+    "\"default\" ':' statement_or_null": 9748,
+    "expression_list_proper ':' statement_or_null": 310654,
+    "\"default\" statement_or_null": 19
+  },
+  "expression_list_proper": {
+    "expression": 324484,
+    "expression_list_proper ',' expression": 5843
+  },
+  "case_any": {
+    "\"case\"": 11348,
+    "\"casex\"": 107,
+    "\"casez\"": 1154
+  },
+  "any_param_declaration": {
+    "\"localparam\" param_type_followed_by_id_and_dimensions_opt trailing_assign ',' localparam_assign_list ';'": 451,
+    "\"localparam\" param_type_followed_by_id_and_dimensions_opt trailing_assign ';'": 13685,
+    "\"parameter\" param_type_followed_by_id_and_dimensions_opt trailing_assign ';'": 14716,
+    "\"parameter\" param_type_followed_by_id_and_dimensions_opt trailing_assign ',' parameter_assign_list ';'": 211
+  },
+  "localparam_assign_list": {
+    "localparam_assign_list ',' localparam_assign": 1748,
+    "localparam_assign": 451
+  },
+  "localparam_assign": {
+    "GenericIdentifier '=' expression": 2199
+  },
+  "trailing_assign": {
+    "'=' parameter_expr parameter_value_ranges_opt": 48526
+  },
+  "parameter_value_ranges_opt": {
+    "%empty": 49888
+  },
+  "param_type_followed_by_id_and_dimensions_opt": {
+    "bit_logic_opt signed_unsigned_opt unqualified_id decl_dimensions_opt": 40970,
+    "bit_logic_opt signed_unsigned_opt decl_dimensions GenericIdentifier decl_dimensions_opt": 6097,
+    "integer_atom_type signed_unsigned_opt decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 907,
+    "non_integer_type decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 349
+  },
+  "bit_logic_opt": {
+    "%empty": 47066,
+    "bit_logic": 1
+  },
+  "module_parameter_port_list": {
+    "module_parameter_port_list_item_last": 19260
+  },
+  "module_parameter_port_list_item_last": {
+    "module_parameter_port_list_trailing_comma module_parameter_port": 16682,
+    "module_parameter_port": 2578
+  },
+  "module_parameter_port": {
+    "parameter_opt param_type_followed_by_id_and_dimensions_opt trailing_assign_opt": 19260
+  },
+  "parameter_opt": {
+    "\"parameter\"": 17856,
+    "%empty": 1375,
+    "\"localparam\"": 29
+  },
+  "module_parameter_port_list_trailing_comma": {
+    "module_parameter_port_list ','": 16682
+  },
+  "list_of_port_identifiers": {
+    "GenericIdentifier": 708,
+    "list_of_port_identifiers ',' GenericIdentifier": 50,
+    "GenericIdentifier '=' expression": 46
+  },
+  "var_type": {
+    "\"reg\"": 754
+  },
+  "list_of_module_item_identifiers": {
+    "unqualified_id decl_dimensions_opt": 79572,
+    "list_of_module_item_identifiers ',' identifier_optional_unpacked_dimensions": 35820
+  },
+  "trailing_decl_assignment": {
+    "'=' expression": 17969,
+    "'=' class_new": 1
+  },
+  "signing": {
+    "\"signed\"": 2028,
+    "\"unsigned\"": 62
+  },
+  "gate_instantiation": {
+    "gatetype primitive_gate_instance_list ';'": 246803,
+    "\"pullup\" primitive_gate_instance_list ';'": 38,
+    "\"pulldown\" primitive_gate_instance_list ';'": 19,
+    "gatetype delay3 primitive_gate_instance_list ';'": 57,
+    "switchtype primitive_gate_instance_list ';'": 66,
+    "switchtype delay3 primitive_gate_instance_list ';'": 14,
+    "gatetype drive_strength primitive_gate_instance_list ';'": 3
+  },
+  "primitive_gate_instance_list": {
+    "primitive_gate_instance": 247000,
+    "primitive_gate_instance_list ',' primitive_gate_instance": 2
+  },
+  "primitive_gate_instance": {
+    "GenericIdentifier decl_dimensions_opt '(' any_port_list_opt ')'": 236216,
+    "'(' any_port_list_opt ')'": 10786
+  },
+  "gatetype": {
+    "\"or\"": 14052,
+    "\"and\"": 94421,
+    "\"not\"": 82984,
+    "\"buf\"": 1849,
+    "\"bufif0\"": 131,
+    "\"xor\"": 4783,
+    "\"nand\"": 28454,
+    "\"xnor\"": 11387,
+    "\"nor\"": 8738,
+    "\"bufif1\"": 39,
+    "\"notif0\"": 8,
+    "\"notif1\"": 17
+  },
+  "specify_block": {
+    "\"specify\" specify_item_list_opt \"endspecify\"": 227
+  },
+  "specify_item_list_opt": {
+    "specify_item_list": 225,
+    "%empty": 2
+  },
+  "specify_item_list": {
+    "specify_item_list specify_item": 9582,
+    "specify_item": 225
+  },
+  "specify_item": {
+    "\"specparam\" specparam_decl ';'": 155,
+    "specify_simple_path_decl ';'": 8754,
+    "\"$recovery\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 16,
+    "\"$setup\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 175,
+    "\"if\" '(' expression ')' specify_simple_path_decl ';'": 212,
+    "\"if\" '(' expression ')' specify_edge_path_decl ';'": 28,
+    "specify_edge_path_decl ';'": 149,
+    "\"$width\" '(' spec_reference_event ',' delay_value ',' expression spec_notifier_opt ')' ';'": 23,
+    "\"$hold\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 95,
+    "\"$removal\" '(' spec_reference_event ',' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 4,
+    "\"$setuphold\" '(' spec_reference_event ',' spec_reference_event ',' delay_value ',' delay_value spec_notifier_opt ')' ';'": 120,
+    "\"$period\" '(' spec_reference_event ',' delay_value spec_notifier_opt ')' ';'": 10,
+    "\"$width\" '(' spec_reference_event ',' delay_value ')' ';'": 63,
+    "\"ifnone\" specify_simple_path_decl ';'": 3
+  },
+  "specparam_decl": {
+    "specparam_list": 155
+  },
+  "specparam_list": {
+    "specparam": 155,
+    "specparam_list ',' specparam": 346
+  },
+  "specparam": {
+    "GenericIdentifier '=' expression": 145,
+    "GenericIdentifier '=' expression ':' expression ':' expression": 356
+  },
+  "specify_simple_path_decl": {
+    "specify_simple_path '=' '(' delay_value_list ')'": 8720,
+    "specify_simple_path '=' delay_value_simple": 249
+  },
+  "delay_value_list": {
+    "delay_value_list ',' delay_value": 8909,
+    "delay_value": 8886
+  },
+  "delay_value": {
+    "expression ':' expression ':' expression": 14992,
+    "expression": 5869
+  },
+  "specify_simple_path": {
+    "'(' specify_path_identifiers spec_polarity \"*>\" specify_path_identifiers ')'": 426,
+    "'(' specify_path_identifiers spec_polarity \"=>\" specify_path_identifiers ')'": 8543
+  },
+  "specify_path_identifiers": {
+    "GenericIdentifier": 10933,
+    "GenericIdentifier '[' expr_primary ']'": 7359,
+    "specify_path_identifiers ',' GenericIdentifier": 3
+  },
+  "spec_polarity": {
+    "%empty": 9145,
+    "'+'": 1
+  },
+  "generate_region": {
+    "\"generate\" generate_item_list_opt \"endgenerate\"": 1981
+  },
+  "generate_item_list_opt": {
+    "generate_item_list": 7392,
+    "%empty": 18
+  },
+  "generate_item_list": {
+    "generate_item": 7392,
+    "generate_item_list generate_item": 15755
+  },
+  "generate_item": {
+    "module_or_generate_item": 25592,
+    "generate_block": 5429,
+    "preprocessor_action": 3
+  },
+  "conditional_generate_construct": {
+    "generate_if generate_item \"else\" generate_item": 2654,
+    "\"case\" '(' expression ')' generate_case_items \"endcase\"": 124,
+    "generate_if generate_item": 1074
+  },
+  "generate_block": {
+    "begin generate_item_list_opt end": 5429
+  },
+  "generate_if": {
+    "\"if\" expression_in_parens": 3728
+  },
+  "generate_case_items": {
+    "generate_case_items generate_case_item": 351,
+    "generate_case_item": 124
+  },
+  "generate_case_item": {
+    "expression_list_proper ':' generate_item": 450,
+    "\"default\" ':' generate_item": 25
+  },
+  "delay_or_event_control": {
+    "delay1": 16884,
+    "repeat_control event_control": 5,
+    "event_control": 4
+  },
+  "task_declaration": {
+    "\"task\" lifetime_opt task_declaration_id tf_port_list_paren_opt ';' tf_item_or_statement_or_null_list_opt \"endtask\" label_opt": 547
+  },
+  "tf_item_or_statement_or_null_list_opt": {
+    "tf_item_or_statement_or_null_list": 547,
+    "%empty": 3
+  },
+  "tf_item_or_statement_or_null_list": {
+    "tf_item_or_statement_or_null": 547,
+    "tf_item_or_statement_or_null_list tf_item_or_statement_or_null": 1120
+  },
+  "tf_item_or_statement_or_null": {
+    "statement_or_null": 558,
+    "task_item": 1109
+  },
+  "tf_port_list_paren_opt": {
+    "%empty": 421,
+    "'(' tf_port_list_opt ')'": 134
+  },
+  "task_declaration_id": {
+    "GenericIdentifier": 547
+  },
+  "procedural_continuous_assignment": {
+    "\"deassign\" lpvalue ';'": 187,
+    "\"assign\" lpvalue '=' expression ';'": 325,
+    "\"force\" lpvalue '=' expression ';'": 93,
+    "\"release\" lpvalue ';'": 29
+  },
+  "hierarchy_extension": {
+    "'.' unqualified_id": 11543
+  },
+  "integer_atom_type": {
+    "\"integer\"": 3895,
+    "\"time\"": 220,
+    "\"int\"": 142,
+    "\"longint\"": 4,
+    "\"shortint\"": 4,
+    "\"byte\"": 9
+  },
+  "parameter_value_byname_list_trailing_comma": {
+    "parameter_value_byname_list ','": 40118
+  },
+  "parameter_expr_list": {
+    "parameter_expr": 1226,
+    "parameter_expr_list ',' parameter_expr": 2227
+  },
+  "loop_generate_construct": {
+    "\"for\" '(' genvar_opt GenericIdentifier '=' expression ';' expression_opt ';' for_step_opt ')' generate_item": 1020
+  },
+  "for_step_opt": {
+    "for_step": 3385
+  },
+  "for_step": {
+    "assignment_statement": 3385
+  },
+  "genvar_opt": {
+    "%empty": 1012,
+    "\"genvar\"": 8
+  },
+  "genvar_declaration": {
+    "\"genvar\" list_of_identifiers ';'": 616
+  },
+  "list_of_identifiers": {
+    "GenericIdentifier": 651,
+    "list_of_identifiers ',' GenericIdentifier": 112
+  },
+  "spec_notifier_opt": {
+    "spec_notifier": 249,
+    "%empty": 194
+  },
+  "spec_notifier": {
+    "',' reference": 249
+  },
+  "spec_reference_event": {
+    "edge_operator specify_terminal_descriptor \"&&&\" expression": 203,
+    "edge_operator specify_terminal_descriptor": 426,
+    "specify_terminal_descriptor": 287
+  },
+  "specify_terminal_descriptor": {
+    "reference": 916
+  },
+  "loop_statement": {
+    "\"for\" '(' for_initialization_opt ';' expression_opt ';' for_step_opt ')' statement_or_null": 2365,
+    "\"forever\" statement_or_null": 155,
+    "repeat_control statement_or_null": 331,
+    "\"while\" '(' expression ')' statement_or_null": 196,
+    "\"do\" statement_or_null \"while\" '(' expression ')' ';'": 3
+  },
+  "for_initialization_opt": {
+    "for_initialization": 2365
+  },
+  "for_initialization": {
+    "for_init_decl_or_assign": 2365
+  },
+  "for_init_decl_or_assign": {
+    "lpvalue '=' expression": 2337,
+    "data_type GenericIdentifier '=' expression": 28
+  },
+  "reference_or_call_base": {
+    "reference call_base": 5125
+  },
+  "function_declaration": {
+    "\"function\" lifetime_opt function_return_type_and_id ';' function_item_list statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 549,
+    "\"function\" lifetime_opt function_return_type_and_id '(' tf_port_list_opt ')' ';' block_item_or_statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 386,
+    "\"function\" lifetime_opt function_return_type_and_id ';' statement_or_null_list_opt \"endfunction\" endfunction_label_opt": 1
+  },
+  "endfunction_label_opt": {
+    "label_opt": 936
+  },
+  "statement_or_null_list_opt": {
+    "statement_or_null_list": 549,
+    "%empty": 1
+  },
+  "statement_or_null_list": {
+    "statement_or_null": 549,
+    "statement_or_null_list statement_or_null": 2
+  },
+  "function_item_list": {
+    "function_item_list function_item": 771,
+    "function_item": 549
+  },
+  "function_item": {
+    "function_item_data_declaration": 451,
+    "tf_port_declaration": 867,
+    "any_param_declaration": 2
+  },
+  "function_item_data_declaration": {
+    "non_anonymous_instantiation_base ';'": 923
+  },
+  "non_anonymous_instantiation_base": {
+    "instantiation_type non_anonymous_gate_instance_or_register_variable_list": 923
+  },
+  "tf_port_declaration": {
+    "tf_port_direction signed_unsigned_opt decl_dimensions list_of_tf_variable_identifiers ';'": 955,
+    "tf_port_direction signed_unsigned_opt list_of_tf_variable_identifiers ';'": 291,
+    "tf_port_direction data_type_primitive list_of_tf_variable_identifiers ';'": 252
+  },
+  "list_of_tf_variable_identifiers": {
+    "tf_variable_identifier_first": 1498,
+    "list_of_tf_variable_identifiers ',' tf_variable_identifier": 161
+  },
+  "tf_variable_identifier_first": {
+    "unqualified_id decl_dimensions_opt trailing_assign_opt": 1498
+  },
+  "tf_port_direction": {
+    "port_direction": 2226
+  },
+  "function_return_type_and_id": {
+    "data_type_or_implicit_basic_followed_by_id_and_dimensions_opt": 941
+  },
+  "port_net_type": {
+    "net_type": 1978,
+    "\"logic\"": 2
+  },
+  "non_integer_type": {
+    "\"real\"": 668,
+    "\"realtime\"": 2
+  },
+  "block_item_decl": {
+    "data_declaration_or_module_instantiation": 3073,
+    "any_param_declaration": 23
+  },
+  "parameter_override": {
+    "\"defparam\" defparam_assign_list ';'": 4219
+  },
+  "defparam_assign_list": {
+    "defparam_assign_list ',' defparam_assign": 4493,
+    "defparam_assign": 4219
+  },
+  "defparam_assign": {
+    "reference '=' expression": 8712
+  },
+  "specify_edge_path_decl": {
+    "specify_edge_path '=' delay_value_simple": 11,
+    "specify_edge_path '=' '(' delay_value_list ')'": 166
+  },
+  "specify_edge_path": {
+    "'(' edge_operator specify_path_identifiers spec_polarity \"=>\" '(' specify_path_identifiers polarity_operator expression ')' ')'": 177
+  },
+  "polarity_operator": {
+    "':'": 39,
+    "\"+:\"": 138
+  },
+  "delay_identifier": {
+    "delay_scope": 9476
+  },
+  "delay_scope": {
+    "GenericIdentifier": 9476
+  },
+  "tf_variable_identifier": {
+    "GenericIdentifier decl_dimensions_opt trailing_assign_opt": 161
+  },
+  "drive_strength": {
+    "'(' dr_strength0 ',' dr_strength1 ')'": 5,
+    "'(' dr_strength1 ',' dr_strength0 ')'": 88,
+    "'(' dr_strength1 ',' \"highz0\" ')'": 12,
+    "'(' \"highz1\" ',' dr_strength0 ')'": 12,
+    "'(' dr_strength0 ',' \"highz1\" ')'": 2,
+    "'(' \"highz0\" ',' dr_strength1 ')'": 2
+  },
+  "dr_strength1": {
+    "\"pull1\"": 22,
+    "\"weak1\"": 36,
+    "\"strong1\"": 31,
+    "\"supply1\"": 18
+  },
+  "dr_strength0": {
+    "\"pull0\"": 22,
+    "\"strong0\"": 33,
+    "\"weak0\"": 34,
+    "\"supply0\"": 18
+  },
+  "blocking_assignment": {
+    "lpvalue '=' delay_or_event_control expression ';'": 287,
+    "lpvalue '=' dynamic_array_new ';'": 18,
+    "lpvalue '=' class_new ';'": 15
+  },
+  "parameter_assign_list": {
+    "parameter_assign_list ',' parameter_assign": 1151,
+    "parameter_assign": 211
+  },
+  "parameter_assign": {
+    "GenericIdentifier '=' expression parameter_value_ranges_opt": 1362
+  },
+  "par_block": {
+    "\"fork\" label_opt block_item_or_statement_or_null_list_opt join_keyword label_opt": 32
+  },
+  "join_keyword": {
+    "\"join_any\"": 7,
+    "\"join\"": 21,
+    "\"join_none\"": 4
+  },
+  "disable_statement": {
+    "\"disable\" reference ';'": 47,
+    "\"disable\" \"fork\" ';'": 1
+  },
+  "procedural_assertion_statement": {
+    "immediate_assertion_statement": 67
+  },
+  "immediate_assertion_statement": {
+    "simple_immediate_assertion_statement": 67
+  },
+  "simple_immediate_assertion_statement": {
+    "\"assert\" '(' expression ')' action_block": 46,
+    "\"assume\" '(' expression ')' action_block": 21
+  },
+  "action_block": {
+    "statement_or_null": 58,
+    "\"else\" statement_or_null": 9
+  },
+  "task_item": {
+    "tf_port_declaration": 631,
+    "function_item_data_declaration": 472,
+    "any_param_declaration": 6
+  },
+  "tf_port_list_opt": {
+    "tf_port_list": 504,
+    "%empty": 16
+  },
+  "tf_port_list": {
+    "tf_port_list_item_last": 805
+  },
+  "tf_port_list_item_last": {
+    "tf_port_list_trailing_comma tf_port_item": 301,
+    "tf_port_item": 504
+  },
+  "tf_port_item": {
+    "tf_port_direction_opt data_type_or_implicit_basic_followed_by_id_and_dimensions_opt tf_port_item_expr_opt": 805
+  },
+  "tf_port_item_expr_opt": {
+    "%empty": 796,
+    "'=' expression": 9
+  },
+  "tf_port_direction_opt": {
+    "tf_port_direction": 728,
+    "%empty": 77
+  },
+  "tf_port_list_trailing_comma": {
+    "tf_port_list ','": 301
+  },
+  "dynamic_array_new": {
+    "\"new\" '[' expression ']' '(' expression ')'": 7,
+    "\"new\" '[' expression ']'": 11
+  },
+  "assignment_pattern_expression": {
+    "assignment_pattern": 31
+  },
+  "assignment_pattern": {
+    "\"'{\" '}'": 2,
+    "\"'{\" expression_list_proper '}'": 9,
+    "\"'{\" structure_or_array_pattern_expression_list '}'": 10,
+    "\"'{\" expression '{' expression_list_proper '}' '}'": 10
+  },
+  "wait_statement": {
+    "\"wait\" '(' expression ')' statement_or_null": 470
+  },
+  "repeat_control": {
+    "\"repeat\" '(' expression ')'": 336
+  },
+  "port_expression_opt": {
+    "port_expression": 154
+  },
+  "preprocess_include_argument": {
+    "string_literal": 22
+  },
+  "KeywordIdentifier": {
+    "\"sample\"": 179,
+    "\"flow\"": 4,
+    "\"continuous\"": 20,
+    "\"access\"": 2
+  },
+  "class_new": {
+    "\"new\"": 10,
+    "\"new\" call_base": 6
+  },
+  "class_declaration": {
+    "TK_virtual_opt \"class\" lifetime_opt GenericIdentifier module_parameter_port_list_opt class_declaration_extends_opt implements_interface_list_opt ';' class_items_opt \"endclass\" label_opt": 12
+  },
+  "class_items_opt": {
+    "class_items": 9,
+    "%empty": 3
+  },
+  "class_items": {
+    "class_items class_item": 16,
+    "class_item": 9
+  },
+  "class_item": {
+    "function_declaration": 1,
+    "task_declaration": 6,
+    "data_type list_of_variable_decl_assignments ';'": 14,
+    "class_constructor": 3,
+    "type_declaration": 1
+  },
+  "implicit_class_handle": {
+    "\"this\"": 1
+  },
+  "list_of_variable_decl_assignments": {
+    "variable_decl_assignment": 14
+  },
+  "variable_decl_assignment": {
+    "GenericIdentifier decl_dimensions_opt trailing_decl_assignment_opt": 14
+  },
+  "implements_interface_list_opt": {
+    "%empty": 12
+  },
+  "class_declaration_extends_opt": {
+    "%empty": 11,
+    "\"extends\" class_id": 1
+  },
+  "TK_virtual_opt": {
+    "%empty": 11,
+    "\"virtual\"": 1
+  },
+  "final_construct": {
+    "\"final\" statement": 4
+  },
+  "type_declaration": {
+    "\"typedef\" data_type GenericIdentifier decl_dimensions_opt ';'": 29
+  },
+  "struct_data_type": {
+    "\"struct\" packed_signing_opt '{' struct_union_member_list '}'": 10,
+    "\"union\" TK_tagged_opt packed_signing_opt '{' struct_union_member_list '}'": 2
+  },
+  "struct_union_member_list": {
+    "struct_union_member_list struct_union_member": 10,
+    "struct_union_member": 12
+  },
+  "struct_union_member": {
+    "random_qualifier_opt data_type_or_implicit_followed_by_id_and_dimensions_opt trailing_assign_opt ';'": 22
+  },
+  "data_type_or_implicit_followed_by_id_and_dimensions_opt": {
+    "data_type_primitive GenericIdentifier decl_dimensions_opt": 18,
+    "type_identifier_or_implicit_followed_by_id_and_dimensions_opt": 4
+  },
+  "random_qualifier_opt": {
+    "%empty": 22
+  },
+  "packed_signing_opt": {
+    "\"packed\" signed_unsigned_opt": 12
+  },
+  "macro_formals_list_opt": {
+    "macro_formals_list": 163
+  },
+  "macro_formals_list": {
+    "macro_formals_list ',' macro_formal_parameter": 56,
+    "macro_formal_parameter": 163
+  },
+  "macro_formal_parameter": {
+    "PP_Identifier": 216,
+    "PP_Identifier '=' \"<<default-text>>\"": 3
+  },
+  "package_declaration": {
+    "\"package\" lifetime_opt GenericIdentifier ';' package_item_list_opt \"endpackage\" label_opt": 15
+  },
+  "package_item_list_opt": {
+    "package_item_list": 14,
+    "%empty": 1
+  },
+  "package_item_list": {
+    "package_item": 14,
+    "package_item_list package_item": 68
+  },
+  "package_item": {
+    "package_item_no_pp": 81,
+    "preprocessor_action": 1
+  },
+  "udp_primitive": {
+    "\"primitive\" GenericIdentifier '(' \"output\" TK_reg_opt GenericIdentifier udp_initial_expr_opt ',' udp_input_declaration_list ')' ';' udp_body \"endprimitive\" label_opt": 1,
+    "\"primitive\" GenericIdentifier '(' udp_port_list ')' ';' udp_port_decls udp_init_opt udp_body \"endprimitive\" label_opt": 18
+  },
+  "udp_body": {
+    "\"table\" udp_entry_list \"endtable\"": 19
+  },
+  "udp_entry_list": {
+    "udp_comb_entry_list": 5,
+    "udp_sequ_entry_list": 14
+  },
+  "udp_comb_entry_list": {
+    "udp_comb_entry_list udp_comb_entry": 13,
+    "udp_comb_entry": 5
+  },
+  "udp_comb_entry": {
+    "udp_input_list ':' udp_output_sym ';'": 18
+  },
+  "udp_output_sym": {
+    "'0'": 79,
+    "'1'": 73,
+    "'x'": 12,
+    "'-'": 77
+  },
+  "udp_input_list": {
+    "udp_input_sym": 241,
+    "udp_input_list udp_input_sym": 1383
+  },
+  "udp_input_sym": {
+    "'1'": 309,
+    "'0'": 314,
+    "'x'": 52,
+    "'?'": 1010,
+    "'*'": 69,
+    "'b'": 6,
+    "'f'": 2,
+    "'r'": 32,
+    "'n'": 1,
+    "'p'": 2,
+    "'R'": 6,
+    "'_'": 18,
+    "'+'": 4,
+    "'M'": 2,
+    "'Q'": 4,
+    "'%'": 16
+  },
+  "udp_input_declaration_list": {
+    "\"input\" GenericIdentifier": 1
+  },
+  "udp_initial_expr_opt": {
+    "%empty": 1
+  },
+  "TK_reg_opt": {
+    "%empty": 1
+  },
+  "udp_init_opt": {
+    "%empty": 11,
+    "udp_initial": 7
+  },
+  "udp_port_decls": {
+    "udp_port_decls udp_port_decl": 43,
+    "udp_port_decl": 18
+  },
+  "udp_port_decl": {
+    "\"input\" list_of_identifiers ';'": 29,
+    "\"output\" GenericIdentifier ';'": 18,
+    "\"reg\" GenericIdentifier ';'": 14
+  },
+  "udp_port_list": {
+    "udp_port_list ',' GenericIdentifier": 90,
+    "GenericIdentifier": 18
+  },
+  "type_identifier_or_implicit_followed_by_id_and_dimensions_opt": {
+    "GenericIdentifier decl_dimensions_opt GenericIdentifier decl_dimensions_opt": 4
+  },
+  "TK_tagged_opt": {
+    "%empty": 2
+  },
+  "enum_data_type": {
+    "\"enum\" data_type '{' enum_name_list '}'": 16,
+    "\"enum\" '{' enum_name_list '}'": 7
+  },
+  "enum_name_list": {
+    "enum_name_list_item_last": 90
+  },
+  "enum_name_list_item_last": {
+    "enum_name_list_trailing_comma enum_name": 67,
+    "enum_name": 23
+  },
+  "enum_name": {
+    "GenericIdentifier '=' expression": 14,
+    "GenericIdentifier": 68,
+    "GenericIdentifier '[' pos_neg_number ']' '=' expression": 3,
+    "GenericIdentifier '[' pos_neg_number ':' pos_neg_number ']' '=' expression": 1,
+    "GenericIdentifier '[' pos_neg_number ':' pos_neg_number ']'": 1,
+    "GenericIdentifier '[' pos_neg_number ']'": 3
+  },
+  "enum_name_list_trailing_comma": {
+    "enum_name_list ','": 67
+  },
+  "lifetime": {
+    "\"automatic\"": 20,
+    "\"static\"": 6
+  },
+  "builtin_array_method": {
+    "array_reduction_method": 751,
+    "array_locator_method": 3
+  },
+  "array_reduction_method": {
+    "\"sum\"": 750,
+    "\"product\"": 1
+  },
+  "timeunits_declaration": {
+    "\"timeunit\" TK_TimeLiteral ';'": 13,
+    "\"timeprecision\" TK_TimeLiteral ';'": 13,
+    "\"timeunit\" TK_TimeLiteral '/' TK_TimeLiteral ';'": 7
+  },
+  "udp_sequ_entry_list": {
+    "udp_sequ_entry_list udp_sequ_entry": 209,
+    "udp_sequ_entry": 14
+  },
+  "udp_sequ_entry": {
+    "udp_input_list ':' udp_input_sym ':' udp_output_sym ';'": 223
+  },
+  "event_trigger": {
+    "\"->(trigger)\" reference ';'": 54
+  },
+  "array_locator_method": {
+    "\"min\"": 3
+  },
+  "switchtype": {
+    "\"tranif1\"": 8,
+    "\"nmos\"": 23,
+    "\"pmos\"": 16,
+    "\"tranif0\"": 1,
+    "\"cmos\"": 1,
+    "\"rtran\"": 31
+  },
+  "oct_based_number": {
+    "TK_OctBase TK_OctDigits": 1074
+  },
+  "type_identifier_followed_by_id": {
+    "unqualified_id decl_dimensions_opt GenericIdentifier": 1,
+    "unqualified_id '.' member_name decl_dimensions_opt GenericIdentifier": 1
+  },
+  "cast": {
+    "casting_type '\\'' '(' expression ')'": 28
+  },
+  "casting_type": {
+    "TK_DecNumber": 19,
+    "reference": 5,
+    "expr_primary_parens": 4
+  },
+  "hierarchy_event_identifier": {
+    "hierarchy_segment": 10
+  },
+  "hierarchy_segment": {
+    "GenericIdentifier select_dimensions_opt": 10
+  },
+  "select_dimensions_opt": {
+    "%empty": 10
+  },
+  "package_import_declaration": {
+    "\"import\" package_import_item_list ';'": 12
+  },
+  "package_import_item_list": {
+    "package_import_item": 12,
+    "package_import_item_list ',' package_import_item": 1
+  },
+  "package_import_item": {
+    "scope_prefix '*'": 13
+  },
+  "scope_prefix": {
+    "GenericIdentifier \"::\"": 13
+  },
+  "data_declaration": {
+    "data_declaration_modifiers_opt data_declaration_base": 5
+  },
+  "data_declaration_base": {
+    "data_type_or_implicit_basic_followed_by_id_and_dimensions_opt trailing_decl_assignment_opt ';'": 5
+  },
+  "data_declaration_modifiers_opt": {
+    "const_opt var_opt lifetime_opt": 5
+  },
+  "var_opt": {
+    "%empty": 5
+  },
+  "const_opt": {
+    "%empty": 11
+  },
+  "bind_directive": {
+    "\"bind\" reference bind_instantiation ';'": 2
+  },
+  "bind_instantiation": {
+    "class_id gate_instance_or_register_variable_list": 2
+  },
+  "gate_instance_or_register_variable_list": {
+    "gate_instance_or_register_variable": 2
+  },
+  "jump_statement": {
+    "\"return\" expression ';'": 4
+  },
+  "inc_or_dec_expression": {
+    "\"++\" lpvalue": 2,
+    "lpvalue \"++\"": 34
+  },
+  "structure_or_array_pattern_expression_list": {
+    "structure_or_array_pattern_expression": 10,
+    "structure_or_array_pattern_expression_list ',' structure_or_array_pattern_expression": 8
+  },
+  "structure_or_array_pattern_expression": {
+    "structure_or_array_pattern_key ':' expression": 18
+  },
+  "structure_or_array_pattern_key": {
+    "\"default\"": 8,
+    "expression": 10
+  },
+  "class_constructor": {
+    "class_constructor_prototype ';' tf_item_or_statement_or_null_list_opt \"endfunction\" endnew_opt": 3
+  },
+  "endnew_opt": {
+    "':' \"new\"": 2,
+    "%empty": 1
+  },
+  "class_constructor_prototype": {
+    "\"function\" \"new\" tf_port_list_paren_opt": 3
+  },
+  "port_reference_list": {
+    "port_reference_list ',' port_reference": 4,
+    "port_reference": 2
+  },
+  "assign_modify_statement": {
+    "lpvalue \"+=\" expression": 20,
+    "lpvalue TK_LS_EQ expression": 7,
+    "lpvalue TK_RS_EQ expression": 5,
+    "lpvalue \"^=\" expression": 3,
+    "lpvalue \"|=\" expression": 3,
+    "lpvalue \"&=\" expression": 3,
+    "lpvalue \"%=\" expression": 3,
+    "lpvalue \"/=\" expression": 3,
+    "lpvalue \"*=\" expression": 3,
+    "lpvalue \"-=\" expression": 6,
+    "lpvalue TK_RSS_EQ expression": 1
+  },
+  "charge_strength_opt": {
+    "%empty": 6
+  },
+  "udp_initial": {
+    "\"initial\" GenericIdentifier '=' number ';'": 7
+  },
+  "pos_neg_number": {
+    "number": 10
+  },
+  "package_import_list": {
+    "package_import_list package_import_declaration": 1,
+    "package_import_declaration": 1
+  },
+  "dpi_import_export": {
+    "dpi_import_item": 5
+  },
+  "dpi_import_item": {
+    "\"import\" dpi_spec_string dpi_import_property_opt method_prototype ';'": 5
+  },
+  "method_prototype": {
+    "function_prototype": 5
+  },
+  "function_prototype": {
+    "\"function\" lifetime_opt function_return_type_and_id tf_port_list_paren_opt": 5
+  },
+  "dpi_import_property_opt": {
+    "%empty": 5
+  },
+  "dpi_spec_string": {
+    "TK_StringLiteral": 5
+  },
+  "qualified_id": {
+    "unqualified_id \"::\" unqualified_id": 2
+  },
+  "bit_logic": {
+    "\"bit\"": 1
+  }
+}

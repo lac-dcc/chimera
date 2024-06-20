@@ -37,6 +37,7 @@ private:
   std::string placeID(std::string type);
 
 public:
+  void initialize(int id);
   virtual void visit(Node *node) override;
 
   virtual void visit(Terminal *node) override;

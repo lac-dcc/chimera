@@ -1,6 +1,17 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
 
+void IdentifierRenamingVisitor::initialize(int id){
+  this->varID = id + 1;
+  std::cerr<< "varID: " << varID << std::endl;
+  for(int i = 1; i<=id;i++){
+    Var var;
+    var.name =  " id_" + std::to_string(i) + " ";
+    var.t = "logic";
+    this->identifiers.push_back(std::make_shared<Var>(var));
+  }
+}
+
 bool IdentifierRenamingVisitor::isStartingToken(std::string t) {
   return t == " begin " || t == " module ";
 }
@@ -887,20 +898,24 @@ void IdentifierRenamingVisitor::visit(Parameters *node) {
 
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
   // discover possible type of symbol
-  node->setElement(placeID("logic"));
+  if(node->getElement() == " SymbolIdentifier ")
+    node->setElement(placeID("logic"));
+
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
-  node->setElement(placeID("logic"));
+  if(node->getElement() == " MacroIdentifier ")
+    node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
 }
 
 void IdentifierRenamingVisitor::visit(Escapedidentifier *node) {
+  if(node->getElement() == " EscapedIdentifier ")
   node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1003,7 +1018,8 @@ void IdentifierRenamingVisitor::visit(System_tf_call *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Systemtfidentifier *node) {
-  node->setElement(placeID("logic"));
+  if(node->getElement() == " SystemtfIdentifier ")
+    node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -2105,7 +2121,8 @@ void IdentifierRenamingVisitor::visit(Preprocess_include_argument *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Pp_identifier *node) {
-  node->setElement(placeID("PP"));
+  if(node->getElement() == " Pp_Identifier ")
+    node->setElement(placeID("PP"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
