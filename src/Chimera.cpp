@@ -147,6 +147,18 @@ static std::unique_ptr<Node> buildSyntaxTree(
   return head;
 }
 
+static void findNodes(Node *head, std::vector<Node*> &modules, std::vector<Node*> &portDeclarations ){
+  if(head->getElement() == "module_or_interface_declaration"){
+    modules.push_back(head);
+  } else if(head->getElement() == "module_port_declaration"){
+    portDeclarations.push_back(head);
+  }
+
+  for(const auto & c: head->getChildren()){
+    findNodes(c.get(), modules, portDeclarations);
+  }
+}
+
 static void codeGen(Node *head) {
   CodeGenVisitor visitor;
   head->accept(visitor);
@@ -321,9 +333,16 @@ int main(int argc, char **argv) {
                   : 0;
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
+  std::vector<Node*> modules, portDeclarations;
+
+  findNodes(head.get(), modules, portDeclarations);
+
   replaceConstants(head.get());
-  int n = declareNonAnsiPorts(head.get());
-  renameVars(head.get(), n);
+  
+  for(const auto & m : modules){
+    int n = declareNonAnsiPorts(m);
+    renameVars(m, n);  
+  }
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
