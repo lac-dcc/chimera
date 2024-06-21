@@ -10,7 +10,6 @@ class Visitor;
 
 class Node {
 public:
-
   virtual void accept(Visitor &visitor) = 0;
 
   const std::vector<std::unique_ptr<Node>> &getChildren();
@@ -3929,8 +3928,9 @@ public:
 private:
 };
 
-extern std::unordered_map<
-    std::string, std::function<std::unique_ptr<Node>(const std::string &)>>
-    classMap;
+using ClassMap =
+    std::unordered_map<std::string,
+                       std::function<std::unique_ptr<Node>(std::string &&)>>;
+extern ClassMap classMap;
 
 #endif

@@ -1,10 +1,11 @@
 #include "AST.h"
 #include "Visitor.h"
+#include <utility>
 
 const std::vector<std::unique_ptr<Node>> &Node::getChildren() {
   return this->children;
 }
-void Node::insertChildToBegin(std::unique_ptr<Node> child){
+void Node::insertChildToBegin(std::unique_ptr<Node> child) {
   this->children.insert(children.begin(), std::move(child));
 }
 
@@ -25,7 +26,7 @@ std::string Node::getElement() {
 }
 
 void Node::setElement(std::string element) {
-  this->element = element;
+  this->element = std::move(element);
 }
 
 void Terminal::accept(Visitor &visitor) {
@@ -4006,2318 +4007,1758 @@ Clocking_item_list_opt::Clocking_item_list_opt(std::string element) {
   this->setElement(element);
 }
 
-std::unordered_map<std::string,
-                   std::function<std::unique_ptr<Node>(const std::string &)>>
-    classMap = {
-        {"terminal",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Terminal>(f);
-         }},
-        {"source_text",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Source_text>(f);
-         }},
-        {"description_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Description_list>(f);
-         }},
-        {"description",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Description>(f);
-         }},
-        {"module_or_interface_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_or_interface_declaration>(f);
-         }},
-        {"package_item_no_pp",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_item_no_pp>(f);
-         }},
-        {"preprocessor_action",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Preprocessor_action>(f);
-         }},
-        {"udp_primitive",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Udp_primitive>(f);
-         }},
-        {"package_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_declaration>(f);
-         }},
-        {"module_start",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_start>(f);
-         }},
-        {"lifetime_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Lifetime_opt>(f);
-         }},
-        {"symbol_or_label",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Symbol_or_label>(f);
-         }},
-        {"module_package_import_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_package_import_list_opt>(f);
-         }},
-        {"module_parameter_port_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_parameter_port_list_opt>(f);
-         }},
-        {"module_port_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_port_list_opt>(f);
-         }},
-        {"module_attribute_foreign_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_attribute_foreign_opt>(f);
-         }},
-        {"module_item_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_item_list_opt>(f);
-         }},
-        {"module_end",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_end>(f);
-         }},
-        {"label_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Label_opt>(f);
-         }},
-        {"module_item_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_item_list>(f);
-         }},
-        {"module_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_item>(f);
-         }},
-        {"non_port_module_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Non_port_module_item>(f);
-         }},
-        {"module_port_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_port_declaration>(f);
-         }},
-        {"module_block",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_block>(f);
-         }},
-        {"module_item_directive",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_item_directive>(f);
-         }},
-        {"module_or_generate_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_or_generate_item>(f);
-         }},
-        {"generate_region",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Generate_region>(f);
-         }},
-        {"specify_block",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_block>(f);
-         }},
-        {"timeunits_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Timeunits_declaration>(f);
-         }},
-        {"module_common_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_common_item>(f);
-         }},
-        {"data_declaration_or_module_instantiation",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_declaration_or_module_instantiation>(f);
-         }},
-        {"any_param_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_param_declaration>(f);
-         }},
-        {"parameter_override",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_override>(f);
-         }},
-        {"gate_instantiation",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Gate_instantiation>(f);
-         }},
-        {"type_declaration",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Type_declaration>(f); }},
-        {"package_import_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_import_declaration>(f);
-         }},
-        {"always_construct",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Always_construct>(f); }},
-        {"initial_construct",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Initial_construct>(f);
-         }},
-        {"module_or_generate_item_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_or_generate_item_declaration>(f);
-         }},
-        {"continuous_assign",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Continuous_assign>(f);
-         }},
-        {"loop_generate_construct",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Loop_generate_construct>(f);
-         }},
-        {"conditional_generate_construct",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Conditional_generate_construct>(f);
-         }},
-        {"assertion_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Assertion_item>(f); }},
-        {"final_construct",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Final_construct>(f);
-                 }},
-        {"always_any",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Always_any>(f);
-                                      }},
-        {"statement",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Statement>(f);
-                                      }},
-        {"statement_item",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Statement_item>(
-                                            f);
-                                      }},
-        {"reference_or_call",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Reference_or_call>(f);
-         }},
-        {"unqualified_id",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Unqualified_id>(
-                                            f);
-                                      }},
-        {"procedural_timing_control_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Procedural_timing_control_statement>(f);
-         }},
-        {"assignment_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assignment_statement>(f);
-         }},
-        {"seq_block",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Seq_block>(f);
-                                      }},
-        {"subroutine_call",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Subroutine_call>(f);
-                 }},
-        {"conditional_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Conditional_statement>(f);
-         }},
-        {"nonblocking_assignment",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Nonblocking_assignment>(f);
-         }},
-        {"case_statement",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Case_statement>(
-                                            f);
-                                      }},
-        {"loop_statement",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Loop_statement>(
-                                            f);
-                                      }},
-        {"par_block",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Par_block>(f);
-                                      }},
-        {"blocking_assignment",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Blocking_assignment>(f);
-         }},
-        {"wait_statement",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Wait_statement>(
-                                            f);
-                                      }},
-        {"procedural_assertion_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Procedural_assertion_statement>(f);
-         }},
-        {"procedural_continuous_assignment",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Procedural_continuous_assignment>(f);
-         }},
-        {"event_trigger",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Event_trigger>(
-                                            f);
-                                      }},
-        {"disable_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Disable_statement>(f);
-         }},
-        {"jump_statement",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Jump_statement>(
-                                            f);
-                                      }},
-        {"macrogenericitem",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Macrogenericitem>(f);
-                 }},
-        {"delay1",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Delay1>(f);
-                                      }},
-        {"statement_or_null",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Statement_or_null>(f);
-         }},
-        {"event_control",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Event_control>(
-                                            f);
-                                      }},
-        {"cycle_delay",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Cycle_delay>(f);
-                                      }},
-        {"assignment_statement_no_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assignment_statement_no_expr>(f);
-         }},
-        {"inc_or_dec_expression",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Inc_or_dec_expression>(f);
-         }},
-        {"lpvalue",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Lpvalue>(f);
-                                      }},
-        {"expression",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Expression>(f);
-                                      }},
-        {"assign_modify_statement",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assign_modify_statement>(f);
-         }},
-        {"equiv_impl_expr",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Equiv_impl_expr>(f);
-                 }},
-        {"cond_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Cond_expr>(f);
-                                      }},
-        {"logor_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Logor_expr>(f);
-                                      }},
-        {"logand_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Logand_expr>(f);
-                                      }},
-        {"matches_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Matches_expr>(
-                                            f);
-                                      }},
-        {"bitor_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Bitor_expr>(f);
-                                      }},
-        {"with_exprs_suffix",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<With_exprs_suffix>(f);
-         }},
-        {"xor_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Xor_expr>(f);
-                                      }},
-        {"bitand_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Bitand_expr>(f);
-                                      }},
-        {"caseeq_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Caseeq_expr>(f);
-                                      }},
-        {"logeq_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Logeq_expr>(f);
-                                      }},
-        {"comp_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Comp_expr>(f);
-                                      }},
-        {"shift_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Shift_expr>(f);
-                                      }},
-        {"open_range_list",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Open_range_list>(f);
-                 }},
-        {"add_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Add_expr>(f);
-                                      }},
-        {"mul_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Mul_expr>(f);
-                                      }},
-        {"pow_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Pow_expr>(f);
-                                      }},
-        {"unary_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Unary_expr>(f);
-                                      }},
-        {"unary_prefix_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Unary_prefix_expr>(f);
-         }},
-        {"unary_op",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Unary_op>(f);
-                                      }},
-        {"inc_or_dec_or_primary_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Inc_or_dec_or_primary_expr>(f);
-         }},
-        {"postfix_expression",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Postfix_expression>(f);
-         }},
-        {"expr_primary",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Expr_primary>(
-                                            f);
-                                      }},
-        {"reference",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Reference>(f);
-                                      }},
-        {"reference_or_call_base",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Reference_or_call_base>(f);
-         }},
-        {"builtin_array_method",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Builtin_array_method>(f);
-         }},
-        {"local_root",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Local_root>(f);
-                                      }},
-        {"select_variable_dimension",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Select_variable_dimension>(f);
-         }},
-        {"hierarchy_extension",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Hierarchy_extension>(f);
-         }},
-        {"type_or_id_root",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Type_or_id_root>(f);
-                 }},
-        {"class_id",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Class_id>(f);
-                                      }},
-        {"implicit_class_handle",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Implicit_class_handle>(f);
-         }},
-        {"qualified_id",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Qualified_id>(
-                                            f);
-                                      }},
-        {"genericidentifier",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Genericidentifier>(f);
-         }},
-        {"parameter_value_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_opt>(f);
-         }},
-        {"parameters",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Parameters>(f);
-                                      }},
-        {"symbolidentifier",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Symbolidentifier>(f);
-                 }},
-        {"macroidentifier",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Macroidentifier>(f);
-                 }},
-        {"escapedidentifier",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Escapedidentifier>(f);
-         }},
-        {"keywordidentifier",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Keywordidentifier>(f);
-         }},
-        {"range_list_in_braces",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Range_list_in_braces>(f);
-         }},
-        {"delay_value_simple",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Delay_value_simple>(f);
-         }},
-        {"delay_value",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Delay_value>(f);
-                                      }},
-        {"tk_decnumber",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_decnumber>(
-                                            f);
-                                      }},
-        {"tk_realtime",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_realtime>(f);
-                                      }},
-        {"delay_identifier",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Delay_identifier>(f);
-                 }},
-        {"tk_timeliteral",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_timeliteral>(
-                                            f);
-                                      }},
-        {"begin",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Begin>(f);
-                                      }},
-        {"block_item_or_statement_or_null_list_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Block_item_or_statement_or_null_list_opt>(f);
-         }},
-        {"end",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<End>(f);
-                                      }},
-        {"block_item_or_statement_or_null_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Block_item_or_statement_or_null_list>(f);
-         }},
-        {"block_item_or_statement_or_null",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Block_item_or_statement_or_null>(f);
-         }},
-        {"block_item_decl",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Block_item_decl>(f);
-                 }},
-        {"system_tf_call",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<System_tf_call>(
-                                            f);
-                                      }},
-        {"systemtfidentifier",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Systemtfidentifier>(f);
-         }},
-        {"call_base",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Call_base>(f);
-                                      }},
-        {"expr_primary_no_groups",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expr_primary_no_groups>(f);
-         }},
-        {"expr_primary_parens",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expr_primary_parens>(f);
-         }},
-        {"expr_primary_braces",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expr_primary_braces>(f);
-         }},
-        {"assignment_pattern_expression",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assignment_pattern_expression>(f);
-         }},
-        {"number",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Number>(f);
-                                      }},
-        {"string_literal",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<String_literal>(
-                                            f);
-                                      }},
-        {"cast",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Cast>(f);
-                                      }},
-        {"constant_dec_number",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Constant_dec_number>(f);
-         }},
-        {"based_number",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Based_number>(
-                                            f);
-                                      }},
-        {"tk_unbasednumber",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Tk_unbasednumber>(f);
-                 }},
-        {"instantiation_base",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Instantiation_base>(f);
-         }},
-        {"lifetime",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Lifetime>(f);
-                                      }},
-        {"const_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Const_opt>(f);
-                                      }},
-        {"instantiation_type",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Instantiation_type>(f);
-         }},
-        {"non_anonymous_gate_instance_or_register_variable_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Non_anonymous_gate_instance_or_register_variable_list>(f);
-         }},
-        {"non_anonymous_gate_instance_or_register_variable",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Non_anonymous_gate_instance_or_register_variable>(f);
-         }},
-        {"gate_instance_or_register_variable",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Gate_instance_or_register_variable>(f);
-         }},
-        {"decl_dimensions_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Decl_dimensions_opt>(f);
-         }},
-        {"any_port_list_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_opt>(f);
-         }},
-        {"trailing_decl_assignment_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Trailing_decl_assignment_opt>(f);
-         }},
-        {"any_port_list_named",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_named>(f);
-         }},
-        {"any_port_list_positional",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_positional>(f);
-         }},
-        {"any_port_list_item_last_named",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_item_last_named>(f);
-         }},
-        {"any_port_list_item_last_positional",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_item_last_positional>(f);
-         }},
-        {"any_port_list_trailing_comma_named",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_trailing_comma_named>(f);
-         }},
-        {"any_port_list_trailing_comma_positional",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_port_list_trailing_comma_positional>(f);
-         }},
-        {"port_named",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Port_named>(f);
-                                      }},
-        {"member_name",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Member_name>(f);
-                                      }},
-        {"decl_dimensions",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Decl_dimensions>(f);
-                 }},
-        {"data_type",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Data_type>(f);
-                                      }},
-        {"data_type_base",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Data_type_base>(
-                                            f);
-                                      }},
-        {"package_or_generate_item_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_or_generate_item_declaration>(f);
-         }},
-        {"genvar_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Genvar_declaration>(f);
-         }},
-        {"clocking_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Clocking_declaration>(f);
-         }},
-        {"net_declaration",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Net_declaration>(f);
-                 }},
-        {"task_declaration",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Task_declaration>(f);
-                 }},
-        {"function_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Function_declaration>(f);
-         }},
-        {"class_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_declaration>(f);
-         }},
-        {"dpi_import_export",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Dpi_import_export>(f);
-         }},
-        {"specparam_declaration",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specparam_declaration>(f);
-         }},
-        {"net_type",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Net_type>(f);
-                                      }},
-        {"data_type_or_implicit",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_type_or_implicit>(f);
-         }},
-        {"net_variable_or_decl_assigns",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Net_variable_or_decl_assigns>(f);
-         }},
-        {"delay3",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Delay3>(f);
-                                      }},
-        {"charge_strength_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Charge_strength_opt>(f);
-         }},
-        {"delay3_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Delay3_opt>(f);
-                                      }},
-        {"list_of_identifiers",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_identifiers>(f);
-         }},
-        {"net_variable_or_decl_assign",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Net_variable_or_decl_assign>(f);
-         }},
-        {"net_variable",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Net_variable>(
-                                            f);
-                                      }},
-        {"net_decl_assign",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Net_decl_assign>(f);
-                 }},
-        {"delay3_or_drive_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Delay3_or_drive_opt>(f);
-         }},
-        {"signing",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Signing>(f);
-                                      }},
-        {"decl_variable_dimension",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Decl_variable_dimension>(f);
-         }},
-        {"expression_or_null_list_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expression_or_null_list_opt>(f);
-         }},
-        {"data_type_primitive",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_type_primitive>(f);
-         }},
-        {"trailing_decl_assignment",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Trailing_decl_assignment>(f);
-         }},
-        {"data_type_primitive_scalar",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_type_primitive_scalar>(f);
-         }},
-        {"integer_vector_type",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Integer_vector_type>(f);
-         }},
-        {"signed_unsigned_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Signed_unsigned_opt>(f);
-         }},
-        {"integer_atom_type",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Integer_atom_type>(f);
-         }},
-        {"enum_data_type",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Enum_data_type>(
-                                            f);
-                                      }},
-        {"non_integer_type",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Non_integer_type>(f);
-                 }},
-        {"struct_data_type",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Struct_data_type>(f);
-                 }},
-        {"list_of_ports_or_port_declarations_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_ports_or_port_declarations_opt>(f);
-         }},
-        {"module_parameter_port_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_parameter_port_list>(f);
-         }},
-        {"package_import_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_import_list>(f);
-         }},
-        {"timescale_directive",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Timescale_directive>(f);
-         }},
-        {"misc_directive",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Misc_directive>(
-                                            f);
-                                      }},
-        {"data_declaration",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Data_declaration>(f);
-                 }},
-        {"time_literal",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Time_literal>(
-                                            f);
-                                      }},
-        {"expression_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Expression_opt>(
-                                            f);
-                                      }},
-        {"port_direction",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Port_direction>(
-                                            f);
-                                      }},
-        {"list_of_identifiers_unpacked_dimensions",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_identifiers_unpacked_dimensions>(f);
-         }},
-        {"list_of_module_item_identifiers",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_module_item_identifiers>(f);
-         }},
-        {"dir",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Dir>(f);
-                                      }},
-        {"var_type",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Var_type>(f);
-                                      }},
-        {"list_of_port_identifiers",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_port_identifiers>(f);
-         }},
-        {"port_net_type",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Port_net_type>(
-                                            f);
-                                      }},
-        {"identifier_optional_unpacked_dimensions",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Identifier_optional_unpacked_dimensions>(f);
-         }},
-        {"list_of_ports_or_port_declarations_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_ports_or_port_declarations_ansi>(f);
-         }},
-        {"list_of_ports_or_port_declarations_non_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_ports_or_port_declarations_non_ansi>(
-               f);
-         }},
-        {"list_of_ports_or_port_declarations_item_last_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               List_of_ports_or_port_declarations_item_last_ansi>(f);
-         }},
-        {"list_of_ports_or_port_declarations_item_last_non_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               List_of_ports_or_port_declarations_item_last_non_ansi>(f);
-         }},
-        {"list_of_ports_or_port_declarations_trailing_comma_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               List_of_ports_or_port_declarations_trailing_comma_ansi>(f);
-         }},
-        {"list_of_ports_or_port_declarations_trailing_comma_non_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               List_of_ports_or_port_declarations_trailing_comma_non_ansi>(f);
-         }},
-        {"port",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Port>(f);
-                                      }},
-        {"port_declaration_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_declaration_ansi>(f);
-         }},
-        {"port_declaration_non_ansi",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_declaration_non_ansi>(f);
-         }},
-        {"port_expression",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Port_expression>(f);
-                 }},
-        {"trailing_assign_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Trailing_assign_opt>(f);
-         }},
-        {"port_expression_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_expression_opt>(f);
-         }},
-        {"trailing_assign",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Trailing_assign>(f);
-                 }},
-        {"port_reference",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Port_reference>(
-                                            f);
-                                      }},
-        {"port_reference_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Port_reference_list>(f);
-         }},
-        {"unique_priority_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Unique_priority_opt>(f);
-         }},
-        {"expression_in_parens",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expression_in_parens>(f);
-         }},
-        {"delay_or_event_control_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Delay_or_event_control_opt>(f);
-         }},
-        {"delay_or_event_control",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Delay_or_event_control>(f);
-         }},
-        {"event_expression_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Event_expression_list>(f);
-         }},
-        {"hierarchy_event_identifier",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Hierarchy_event_identifier>(f);
-         }},
-        {"event_expression",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Event_expression>(f);
-                 }},
-        {"edge_operator",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Edge_operator>(
-                                            f);
-                                      }},
-        {"drive_strength_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Drive_strength_opt>(f);
-         }},
-        {"cont_assign_list",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Cont_assign_list>(f);
-                 }},
-        {"cont_assign",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Cont_assign>(f);
-                                      }},
-        {"drive_strength",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Drive_strength>(
-                                            f);
-                                      }},
-        {"expr_mintypmax",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Expr_mintypmax>(
-                                            f);
-                                      }},
-        {"expr_mintypmax_trans_set",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expr_mintypmax_trans_set>(f);
-         }},
-        {"expr_mintypmax_generalized",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expr_mintypmax_generalized>(f);
-         }},
-        {"property_expr_or_assignment_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_expr_or_assignment_list>(f);
-         }},
-        {"property_expr_or_assignment",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_expr_or_assignment>(f);
-         }},
-        {"property_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Property_expr>(
-                                            f);
-                                      }},
-        {"sequence_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Sequence_expr>(
-                                            f);
-                                      }},
-        {"property_implication_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_implication_expr>(f);
-         }},
-        {"property_prefix_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_prefix_expr>(f);
-         }},
-        {"property_if_else_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_if_else_expr>(f);
-         }},
-        {"simple_sequence_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Simple_sequence_expr>(f);
-         }},
-        {"sequence_or_expr",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Sequence_or_expr>(f);
-                 }},
-        {"sequence_and_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_and_expr>(f);
-         }},
-        {"sequence_unary_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_unary_expr>(f);
-         }},
-        {"sequence_intersect_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_intersect_expr>(f);
-         }},
-        {"sequence_within_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_within_expr>(f);
-         }},
-        {"sequence_throughout_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_throughout_expr>(f);
-         }},
-        {"sequence_delay_range_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_delay_range_expr>(f);
-         }},
-        {"sequence_delay_repetition_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_delay_repetition_list>(f);
-         }},
-        {"sequence_expr_primary",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_expr_primary>(f);
-         }},
-        {"sequence_repetition_expr",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Sequence_repetition_expr>(f);
-         }},
-        {"expression_or_dist",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expression_or_dist>(f);
-         }},
-        {"boolean_abbrev_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Boolean_abbrev_opt>(f);
-         }},
-        {"dist_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Dist_opt>(f);
-                                      }},
-        {"value_range",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Value_range>(f);
-                                      }},
-        {"expression_list_proper",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Expression_list_proper>(f);
-         }},
-        {"streaming_concatenation",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Streaming_concatenation>(f);
-         }},
-        {"bin_based_number",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Bin_based_number>(f);
-                 }},
-        {"dec_based_number",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Dec_based_number>(f);
-                 }},
-        {"hex_based_number",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Hex_based_number>(f);
-                 }},
-        {"oct_based_number",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Oct_based_number>(f);
-                 }},
-        {"tk_binbase",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_binbase>(f);
-                                      }},
-        {"tk_bindigits",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_bindigits>(
-                                            f);
-                                      }},
-        {"macronumericwidth",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Macronumericwidth>(f);
-         }},
-        {"tk_decbase",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_decbase>(f);
-                                      }},
-        {"tk_decdigits",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_decdigits>(
-                                            f);
-                                      }},
-        {"tk_xzdigits",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_xzdigits>(f);
-                                      }},
-        {"case_any",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Case_any>(f);
-                                      }},
-        {"case_items",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Case_items>(f);
-                                      }},
-        {"case_item",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Case_item>(f);
-                                      }},
-        {"preprocessor_directive",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Preprocessor_directive>(f);
-         }},
-        {"param_type_followed_by_id_and_dimensions_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Param_type_followed_by_id_and_dimensions_opt>(f);
-         }},
-        {"parameter_assign_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_assign_list>(f);
-         }},
-        {"localparam_assign_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Localparam_assign_list>(f);
-         }},
-        {"type_assignment_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Type_assignment_list>(f);
-         }},
-        {"parameter_expr",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Parameter_expr>(
-                                            f);
-                                      }},
-        {"parameter_value_ranges_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_ranges_opt>(f);
-         }},
-        {"bit_logic_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Bit_logic_opt>(
-                                            f);
-                                      }},
-        {"bit_logic",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Bit_logic>(f);
-                                      }},
-        {"parameter_assign",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Parameter_assign>(f);
-                 }},
-        {"tk_hexbase",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_hexbase>(f);
-                                      }},
-        {"tk_hexdigits",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Tk_hexdigits>(
-                                            f);
-                                      }},
-        {"generate_item_list_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Generate_item_list_opt>(f);
-         }},
-        {"generate_item_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Generate_item_list>(f);
-         }},
-        {"generate_item",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Generate_item>(
-                                            f);
-                                      }},
-        {"generate_block",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Generate_block>(
-                                            f);
-                                      }},
-        {"genvar_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Genvar_opt>(f);
-                                      }},
-        {"for_step_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<For_step_opt>(
-                                            f);
-                                      }},
-        {"for_step",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<For_step>(f);
-                                      }},
-        {"for_initialization_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<For_initialization_opt>(f);
-         }},
-        {"repeat_control",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Repeat_control>(
-                                            f);
-                                      }},
-        {"for_initialization",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<For_initialization>(f);
-         }},
-        {"for_init_decl_or_assign",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<For_init_decl_or_assign>(f);
-         }},
-        {"parameter_expr_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_expr_list>(f);
-         }},
-        {"parameter_value_byname_list",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_byname_list>(f);
-         }},
-        {"preprocess_include_argument",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Preprocess_include_argument>(f);
-         }},
-        {"pp_identifier",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Pp_identifier>(
-                                            f);
-                                      }},
-        {"macro_formals_list_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Macro_formals_list_opt>(f);
-         }},
-        {"tk_stringliteral",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Tk_stringliteral>(f);
-                 }},
-        {"parameter_value_byname_list_item_last",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_byname_list_item_last>(f);
-         }},
-        {"parameter_value_byname_list_trailing_comma",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_byname_list_trailing_comma>(
-               f);
-         }},
-        {"parameter_value_byname",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Parameter_value_byname>(f);
-         }},
-        {"module_parameter_port_list_item_last",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_parameter_port_list_item_last>(f);
-         }},
-        {"module_parameter_port_list_preprocessor_last",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Module_parameter_port_list_preprocessor_last>(f);
-         }},
-        {"module_parameter_port_list_trailing_comma",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_parameter_port_list_trailing_comma>(
-               f);
-         }},
-        {"module_parameter_port",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Module_parameter_port>(f);
-         }},
-        {"parameter_opt",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Parameter_opt>(
-                                            f);
-                                      }},
-        {"type_assignment",
-         [](const std::string &f)
-             -> std::
-                 unique_ptr<Node> {
-                   return std::make_unique<Type_assignment>(f);
-                 }},
-        {"generate_if",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Generate_if>(f);
-                                      }},
-        {"generate_case_items",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Generate_case_items>(f);
-         }},
-        {"class_new",
-         [](const std::string &f) -> std::
-                                      unique_ptr<Node> {
-                                        return std::make_unique<Class_new>(f);
-                                      }},
-        {"dynamic_array_new",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Dynamic_array_new>(f);
-         }},
-        {"var_or_net_type_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Var_or_net_type_opt>(f);
-         }},
-        {"data_type_or_implicit_basic_followed_by_id_and_dimensions_opt",
-         [](
-             const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt>(
-               f);
-         }},
-        {"type_identifier_followed_by_id",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Type_identifier_followed_by_id>(f);
-         }},
-        {"type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt>(
-               f);
-         }},
-        {"defparam_assign_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Defparam_assign_list>(f);
-         }},
-        {"defparam_assign",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Defparam_assign>(f); }},
-        {"localparam_assign",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Localparam_assign>(f);
-         }},
-        {"argument_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Argument_list_opt>(f);
-         }},
-        {"any_argument_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_argument_list>(f);
-         }},
-        {"any_argument_list_item_last",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_argument_list_item_last>(f);
-         }},
-        {"any_argument_list_trailing_comma",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Any_argument_list_trailing_comma>(f);
-         }},
-        {"any_argument",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Any_argument>(f); }},
-        {"task_declaration_id",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Task_declaration_id>(f);
-         }},
-        {"tf_port_list_paren_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_list_paren_opt>(f);
-         }},
-        {"tf_item_or_statement_or_null_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_item_or_statement_or_null_list_opt>(f);
-         }},
-        {"tf_item_or_statement_or_null_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_item_or_statement_or_null_list>(f);
-         }},
-        {"tf_item_or_statement_or_null",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_item_or_statement_or_null>(f);
-         }},
-        {"task_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Task_item>(f); }},
-        {"tf_port_list_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tf_port_list_opt>(f); }},
-        {"scope_or_if_res",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Scope_or_if_res>(f); }},
-        {"array_reduction_method",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Array_reduction_method>(f);
-         }},
-        {"array_locator_method",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Array_locator_method>(f);
-         }},
-        {"gatetype",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Gatetype>(f); }},
-        {"primitive_gate_instance_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Primitive_gate_instance_list>(f);
-         }},
-        {"switchtype",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Switchtype>(f); }},
-        {"dr_strength1",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Dr_strength1>(f); }},
-        {"dr_strength0",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Dr_strength0>(f); }},
-        {"primitive_gate_instance",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Primitive_gate_instance>(f);
-         }},
-        {"delay_scope",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Delay_scope>(f); }},
-        {"join_keyword",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Join_keyword>(f); }},
-        {"function_return_type_and_id",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Function_return_type_and_id>(f);
-         }},
-        {"endfunction_label_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Endfunction_label_opt>(f);
-         }},
-        {"function_item_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Function_item_list>(f);
-         }},
-        {"statement_or_null_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Statement_or_null_list_opt>(f);
-         }},
-        {"tf_port_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tf_port_list>(f); }},
-        {"tf_port_list_item_last",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_list_item_last>(f);
-         }},
-        {"tf_port_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tf_port_item>(f); }},
-        {"tf_port_list_trailing_comma",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_list_trailing_comma>(f);
-         }},
-        {"tf_port_direction_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_direction_opt>(f);
-         }},
-        {"tf_port_item_expr_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_item_expr_opt>(f);
-         }},
-        {"tf_port_direction",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_direction>(f);
-         }},
-        {"generate_case_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Generate_case_item>(f);
-         }},
-        {"net_type_or_none",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Net_type_or_none>(f); }},
-        {"pull01",
-         [](const std::string &f)
-             -> std::unique_ptr<Node> { return std::make_unique<Pull01>(f); }},
-        {"statement_or_null_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Statement_or_null_list>(f);
-         }},
-        {"function_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Function_item>(f); }},
-        {"function_item_data_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Function_item_data_declaration>(f);
-         }},
-        {"tf_port_declaration",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_port_declaration>(f);
-         }},
-        {"non_anonymous_instantiation_base",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Non_anonymous_instantiation_base>(f);
-         }},
-        {"list_of_tf_variable_identifiers",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_tf_variable_identifiers>(f);
-         }},
-        {"tf_variable_identifier_first",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_variable_identifier_first>(f);
-         }},
-        {"tf_variable_identifier",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tf_variable_identifier>(f);
-         }},
-        {"tk_octbase",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_octbase>(f); }},
-        {"tk_octdigits",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_octdigits>(f); }},
-        {"specify_item_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_item_list_opt>(f);
-         }},
-        {"specify_item_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_item_list>(f);
-         }},
-        {"specify_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Specify_item>(f); }},
-        {"specify_simple_path_decl",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_simple_path_decl>(f);
-         }},
-        {"spec_reference_event",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Spec_reference_event>(f);
-         }},
-        {"spec_notifier_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Spec_notifier_opt>(f);
-         }},
-        {"specify_edge_path_decl",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_edge_path_decl>(f);
-         }},
-        {"specparam_decl",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Specparam_decl>(f); }},
-        {"specify_simple_path",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_simple_path>(f);
-         }},
-        {"delay_value_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Delay_value_list>(f); }},
-        {"specify_path_identifiers",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_path_identifiers>(f);
-         }},
-        {"spec_polarity",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Spec_polarity>(f); }},
-        {"spec_notifier",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Spec_notifier>(f); }},
-        {"specify_terminal_descriptor",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_terminal_descriptor>(f);
-         }},
-        {"edge_descriptor_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Edge_descriptor_list>(f);
-         }},
-        {"casting_type",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Casting_type>(f); }},
-        {"udp_port_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_port_list>(f); }},
-        {"udp_port_decls",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_port_decls>(f); }},
-        {"udp_init_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_init_opt>(f); }},
-        {"udp_body",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_body>(f); }},
-        {"tk_reg_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_reg_opt>(f); }},
-        {"udp_initial_expr_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Udp_initial_expr_opt>(f);
-         }},
-        {"udp_input_declaration_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Udp_input_declaration_list>(f);
-         }},
-        {"udp_entry_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_entry_list>(f); }},
-        {"udp_sequ_entry_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Udp_sequ_entry_list>(f);
-         }},
-        {"udp_comb_entry_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Udp_comb_entry_list>(f);
-         }},
-        {"udp_sequ_entry",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_sequ_entry>(f); }},
-        {"udp_input_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_input_list>(f); }},
-        {"udp_input_sym",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_input_sym>(f); }},
-        {"udp_output_sym",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_output_sym>(f); }},
-        {"udp_initial",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_initial>(f); }},
-        {"udp_port_decl",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_port_decl>(f); }},
-        {"specify_edge_path",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Specify_edge_path>(f);
-         }},
-        {"polarity_operator",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Polarity_operator>(f);
-         }},
-        {"immediate_assertion_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Immediate_assertion_statement>(f);
-         }},
-        {"simple_immediate_assertion_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Simple_immediate_assertion_statement>(f);
-         }},
-        {"deferred_immediate_assertion_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Deferred_immediate_assertion_statement>(f);
-         }},
-        {"action_block",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Action_block>(f); }},
-        {"enum_name_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Enum_name_list>(f); }},
-        {"enum_name_list_item_last",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Enum_name_list_item_last>(f);
-         }},
-        {"enum_name_list_trailing_comma",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Enum_name_list_trailing_comma>(f);
-         }},
-        {"enum_name",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Enum_name>(f); }},
-        {"pos_neg_number",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Pos_neg_number>(f); }},
-        {"macroiditem",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Macroiditem>(f); }},
-        {"data_declaration_modifiers_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_declaration_modifiers_opt>(f);
-         }},
-        {"data_declaration_base",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Data_declaration_base>(f);
-         }},
-        {"var_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<Node> { return std::make_unique<Var_opt>(f); }},
-        {"specparam_list",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Specparam_list>(f); }},
-        {"specparam",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Specparam>(f); }},
-        {"concurrent_assertion_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Concurrent_assertion_item>(f);
-         }},
-        {"block_identifier_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Block_identifier_opt>(f);
-         }},
-        {"concurrent_assertion_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Concurrent_assertion_statement>(f);
-         }},
-        {"assert_property_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assert_property_statement>(f);
-         }},
-        {"assume_property_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assume_property_statement>(f);
-         }},
-        {"cover_property_statement",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Cover_property_statement>(f);
-         }},
-        {"property_spec",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Property_spec>(f); }},
-        {"event_control_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Event_control_opt>(f);
-         }},
-        {"property_spec_disable_iff_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_spec_disable_iff_opt>(f);
-         }},
-        {"package_item_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_item_list_opt>(f);
-         }},
-        {"package_item_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_item_list>(f);
-         }},
-        {"package_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Package_item>(f); }},
-        {"tk_virtual_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_virtual_opt>(f); }},
-        {"class_declaration_extends_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_declaration_extends_opt>(f);
-         }},
-        {"implements_interface_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Implements_interface_list_opt>(f);
-         }},
-        {"class_items_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Class_items_opt>(f); }},
-        {"class_items",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Class_items>(f); }},
-        {"class_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Class_item>(f); }},
-        {"method_qualifier_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Method_qualifier_list_opt>(f);
-         }},
-        {"method_prototype",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Method_prototype>(f); }},
-        {"class_constructor",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_constructor>(f);
-         }},
-        {"list_of_variable_decl_assignments",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<List_of_variable_decl_assignments>(f);
-         }},
-        {"class_item_qualifier_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_item_qualifier_list_opt>(f);
-         }},
-        {"method_property_qualifier_list_not_starting_with_virtual",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Method_property_qualifier_list_not_starting_with_virtual>(f);
-         }},
-        {"task_prototype",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Task_prototype>(f); }},
-        {"function_prototype",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Function_prototype>(f);
-         }},
-        {"class_constructor_prototype",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_constructor_prototype>(f);
-         }},
-        {"endnew_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Endnew_opt>(f); }},
-        {"variable_decl_assignment",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Variable_decl_assignment>(f);
-         }},
-        {"macro_formals_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Macro_formals_list>(f);
-         }},
-        {"macro_formal_parameter",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Macro_formal_parameter>(f);
-         }},
-        {"hierarchy_segment",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Hierarchy_segment>(f);
-         }},
-        {"select_dimensions_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Select_dimensions_opt>(f);
-         }},
-        {"dpi_import_item",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Dpi_import_item>(f); }},
-        {"dpi_spec_string",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Dpi_spec_string>(f); }},
-        {"dpi_import_property_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Dpi_import_property_opt>(f);
-         }},
-        {"udp_comb_entry",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Udp_comb_entry>(f); }},
-        {"tk_ls_eq",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_ls_eq>(f); }},
-        {"tk_rss_eq",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_rss_eq>(f); }},
-        {"tk_rs_eq",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_rs_eq>(f); }},
-        {"packed_signing_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Packed_signing_opt>(f);
-         }},
-        {"struct_union_member_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Struct_union_member_list>(f);
-         }},
-        {"tk_tagged_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Tk_tagged_opt>(f); }},
-        {"struct_union_member",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Struct_union_member>(f);
-         }},
-        {"random_qualifier_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Random_qualifier_opt>(f);
-         }},
-        {"data_type_or_implicit_followed_by_id_and_dimensions_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Data_type_or_implicit_followed_by_id_and_dimensions_opt>(f);
-         }},
-        {"type_identifier_or_implicit_followed_by_id_and_dimensions_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<
-               Type_identifier_or_implicit_followed_by_id_and_dimensions_opt>(
-               f);
-         }},
-        {"assignment_pattern",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Assignment_pattern>(f);
-         }},
-        {"structure_or_array_pattern_expression_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Structure_or_array_pattern_expression_list>(
-               f);
-         }},
-        {"structure_or_array_pattern_expression",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Structure_or_array_pattern_expression>(f);
-         }},
-        {"structure_or_array_pattern_key",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Structure_or_array_pattern_key>(f);
-         }},
-        {"package_import_item_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_import_item_list>(f);
-         }},
-        {"package_import_item",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Package_import_item>(f);
-         }},
-        {"scope_prefix",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Scope_prefix>(f); }},
-        {"tk_edge_descriptor",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Tk_edge_descriptor>(f);
-         }},
-        {"property_qualifier",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Property_qualifier>(f);
-         }},
-        {"class_item_qualifier",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Class_item_qualifier>(f);
-         }},
-        {"final_or_zero",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Final_or_zero>(f); }},
-        {"stream_operator",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Stream_operator>(f); }},
-        {"slice_size_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Slice_size_opt>(f); }},
-        {"stream_expression_list",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Stream_expression_list>(f);
-         }},
-        {"stream_expression",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Stream_expression>(f);
-         }},
-        {"identifier_opt",
-         [](const std::string &f)
-             -> std::unique_ptr<
-                 Node> { return std::make_unique<Identifier_opt>(f); }},
-        {"clocking_item_list_opt",
-         [](const std::string &f) -> std::unique_ptr<Node> {
-           return std::make_unique<Clocking_item_list_opt>(f);
-         }},
+ClassMap classMap = {
+    {"terminal",
+     [](std::string &&f) {
+       return std::make_unique<Terminal>(f);
+     }},
+    {"source_text",
+     [](std::string &&f) {
+       return std::make_unique<Source_text>(f);
+     }},
+    {"description_list",
+     [](std::string &&f) {
+       return std::make_unique<Description_list>(f);
+     }},
+    {"description",
+     [](std::string &&f) {
+       return std::make_unique<Description>(f);
+     }},
+    {"module_or_interface_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Module_or_interface_declaration>(f);
+     }},
+    {"package_item_no_pp",
+     [](std::string &&f) {
+       return std::make_unique<Package_item_no_pp>(f);
+     }},
+    {"preprocessor_action",
+     [](std::string &&f) {
+       return std::make_unique<Preprocessor_action>(f);
+     }},
+    {"udp_primitive",
+     [](std::string &&f) {
+       return std::make_unique<Udp_primitive>(f);
+     }},
+    {"package_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Package_declaration>(f);
+     }},
+    {"module_start",
+     [](std::string &&f) {
+       return std::make_unique<Module_start>(f);
+     }},
+    {"lifetime_opt",
+     [](std::string &&f) {
+       return std::make_unique<Lifetime_opt>(f);
+     }},
+    {"symbol_or_label",
+     [](std::string &&f) {
+       return std::make_unique<Symbol_or_label>(f);
+     }},
+    {"module_package_import_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Module_package_import_list_opt>(f);
+     }},
+    {"module_parameter_port_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port_list_opt>(f);
+     }},
+    {"module_port_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Module_port_list_opt>(f);
+     }},
+    {"module_attribute_foreign_opt",
+     [](std::string &&f) {
+       return std::make_unique<Module_attribute_foreign_opt>(f);
+     }},
+    {"module_item_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Module_item_list_opt>(f);
+     }},
+    {"module_end",
+     [](std::string &&f) {
+       return std::make_unique<Module_end>(f);
+     }},
+    {"label_opt",
+     [](std::string &&f) {
+       return std::make_unique<Label_opt>(f);
+     }},
+    {"module_item_list",
+     [](std::string &&f) {
+       return std::make_unique<Module_item_list>(f);
+     }},
+    {"module_item",
+     [](std::string &&f) {
+       return std::make_unique<Module_item>(f);
+     }},
+    {"non_port_module_item",
+     [](std::string &&f) {
+       return std::make_unique<Non_port_module_item>(f);
+     }},
+    {"module_port_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Module_port_declaration>(f);
+     }},
+    {"module_block",
+     [](std::string &&f) {
+       return std::make_unique<Module_block>(f);
+     }},
+    {"module_item_directive",
+     [](std::string &&f) {
+       return std::make_unique<Module_item_directive>(f);
+     }},
+    {"module_or_generate_item",
+     [](std::string &&f) {
+       return std::make_unique<Module_or_generate_item>(f);
+     }},
+    {"generate_region",
+     [](std::string &&f) {
+       return std::make_unique<Generate_region>(f);
+     }},
+    {"specify_block",
+     [](std::string &&f) {
+       return std::make_unique<Specify_block>(f);
+     }},
+    {"timeunits_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Timeunits_declaration>(f);
+     }},
+    {"module_common_item",
+     [](std::string &&f) {
+       return std::make_unique<Module_common_item>(f);
+     }},
+    {"data_declaration_or_module_instantiation",
+     [](std::string &&f) {
+       return std::make_unique<Data_declaration_or_module_instantiation>(f);
+     }},
+    {"any_param_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Any_param_declaration>(f);
+     }},
+    {"parameter_override",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_override>(f);
+     }},
+    {"gate_instantiation",
+     [](std::string &&f) {
+       return std::make_unique<Gate_instantiation>(f);
+     }},
+    {"type_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Type_declaration>(f);
+     }},
+    {"package_import_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Package_import_declaration>(f);
+     }},
+    {"always_construct",
+     [](std::string &&f) {
+       return std::make_unique<Always_construct>(f);
+     }},
+    {"initial_construct",
+     [](std::string &&f) {
+       return std::make_unique<Initial_construct>(f);
+     }},
+    {"module_or_generate_item_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Module_or_generate_item_declaration>(f);
+     }},
+    {"continuous_assign",
+     [](std::string &&f) {
+       return std::make_unique<Continuous_assign>(f);
+     }},
+    {"loop_generate_construct",
+     [](std::string &&f) {
+       return std::make_unique<Loop_generate_construct>(f);
+     }},
+    {"conditional_generate_construct",
+     [](std::string &&f) {
+       return std::make_unique<Conditional_generate_construct>(f);
+     }},
+    {"assertion_item",
+     [](std::string &&f) {
+       return std::make_unique<Assertion_item>(f);
+     }},
+    {"final_construct",
+     [](std::string &&f) {
+       return std::make_unique<Final_construct>(f);
+     }},
+    {"always_any",
+     [](std::string &&f) {
+       return std::make_unique<Always_any>(f);
+     }},
+    {"statement",
+     [](std::string &&f) {
+       return std::make_unique<Statement>(f);
+     }},
+    {"statement_item",
+     [](std::string &&f) {
+       return std::make_unique<Statement_item>(f);
+     }},
+    {"reference_or_call",
+     [](std::string &&f) {
+       return std::make_unique<Reference_or_call>(f);
+     }},
+    {"unqualified_id",
+     [](std::string &&f) {
+       return std::make_unique<Unqualified_id>(f);
+     }},
+    {"procedural_timing_control_statement",
+     [](std::string &&f) {
+       return std::make_unique<Procedural_timing_control_statement>(f);
+     }},
+    {"assignment_statement",
+     [](std::string &&f) {
+       return std::make_unique<Assignment_statement>(f);
+     }},
+    {"seq_block",
+     [](std::string &&f) {
+       return std::make_unique<Seq_block>(f);
+     }},
+    {"subroutine_call",
+     [](std::string &&f) {
+       return std::make_unique<Subroutine_call>(f);
+     }},
+    {"conditional_statement",
+     [](std::string &&f) {
+       return std::make_unique<Conditional_statement>(f);
+     }},
+    {"nonblocking_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Nonblocking_assignment>(f);
+     }},
+    {"case_statement",
+     [](std::string &&f) {
+       return std::make_unique<Case_statement>(f);
+     }},
+    {"loop_statement",
+     [](std::string &&f) {
+       return std::make_unique<Loop_statement>(f);
+     }},
+    {"par_block",
+     [](std::string &&f) {
+       return std::make_unique<Par_block>(f);
+     }},
+    {"blocking_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Blocking_assignment>(f);
+     }},
+    {"wait_statement",
+     [](std::string &&f) {
+       return std::make_unique<Wait_statement>(f);
+     }},
+    {"procedural_assertion_statement",
+     [](std::string &&f) {
+       return std::make_unique<Procedural_assertion_statement>(f);
+     }},
+    {"procedural_continuous_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Procedural_continuous_assignment>(f);
+     }},
+    {"event_trigger",
+     [](std::string &&f) {
+       return std::make_unique<Event_trigger>(f);
+     }},
+    {"disable_statement",
+     [](std::string &&f) {
+       return std::make_unique<Disable_statement>(f);
+     }},
+    {"jump_statement",
+     [](std::string &&f) {
+       return std::make_unique<Jump_statement>(f);
+     }},
+    {"macrogenericitem",
+     [](std::string &&f) {
+       return std::make_unique<Macrogenericitem>(f);
+     }},
+    {"delay1",
+     [](std::string &&f) {
+       return std::make_unique<Delay1>(f);
+     }},
+    {"statement_or_null",
+     [](std::string &&f) {
+       return std::make_unique<Statement_or_null>(f);
+     }},
+    {"event_control",
+     [](std::string &&f) {
+       return std::make_unique<Event_control>(f);
+     }},
+    {"cycle_delay",
+     [](std::string &&f) {
+       return std::make_unique<Cycle_delay>(f);
+     }},
+    {"assignment_statement_no_expr",
+     [](std::string &&f) {
+       return std::make_unique<Assignment_statement_no_expr>(f);
+     }},
+    {"inc_or_dec_expression",
+     [](std::string &&f) {
+       return std::make_unique<Inc_or_dec_expression>(f);
+     }},
+    {"lpvalue",
+     [](std::string &&f) {
+       return std::make_unique<Lpvalue>(f);
+     }},
+    {"expression",
+     [](std::string &&f) {
+       return std::make_unique<Expression>(f);
+     }},
+    {"assign_modify_statement",
+     [](std::string &&f) {
+       return std::make_unique<Assign_modify_statement>(f);
+     }},
+    {"equiv_impl_expr",
+     [](std::string &&f) {
+       return std::make_unique<Equiv_impl_expr>(f);
+     }},
+    {"cond_expr",
+     [](std::string &&f) {
+       return std::make_unique<Cond_expr>(f);
+     }},
+    {"logor_expr",
+     [](std::string &&f) {
+       return std::make_unique<Logor_expr>(f);
+     }},
+    {"logand_expr",
+     [](std::string &&f) {
+       return std::make_unique<Logand_expr>(f);
+     }},
+    {"matches_expr",
+     [](std::string &&f) {
+       return std::make_unique<Matches_expr>(f);
+     }},
+    {"bitor_expr",
+     [](std::string &&f) {
+       return std::make_unique<Bitor_expr>(f);
+     }},
+    {"with_exprs_suffix",
+     [](std::string &&f) {
+       return std::make_unique<With_exprs_suffix>(f);
+     }},
+    {"xor_expr",
+     [](std::string &&f) {
+       return std::make_unique<Xor_expr>(f);
+     }},
+    {"bitand_expr",
+     [](std::string &&f) {
+       return std::make_unique<Bitand_expr>(f);
+     }},
+    {"caseeq_expr",
+     [](std::string &&f) {
+       return std::make_unique<Caseeq_expr>(f);
+     }},
+    {"logeq_expr",
+     [](std::string &&f) {
+       return std::make_unique<Logeq_expr>(f);
+     }},
+    {"comp_expr",
+     [](std::string &&f) {
+       return std::make_unique<Comp_expr>(f);
+     }},
+    {"shift_expr",
+     [](std::string &&f) {
+       return std::make_unique<Shift_expr>(f);
+     }},
+    {"open_range_list",
+     [](std::string &&f) {
+       return std::make_unique<Open_range_list>(f);
+     }},
+    {"add_expr",
+     [](std::string &&f) {
+       return std::make_unique<Add_expr>(f);
+     }},
+    {"mul_expr",
+     [](std::string &&f) {
+       return std::make_unique<Mul_expr>(f);
+     }},
+    {"pow_expr",
+     [](std::string &&f) {
+       return std::make_unique<Pow_expr>(f);
+     }},
+    {"unary_expr",
+     [](std::string &&f) {
+       return std::make_unique<Unary_expr>(f);
+     }},
+    {"unary_prefix_expr",
+     [](std::string &&f) {
+       return std::make_unique<Unary_prefix_expr>(f);
+     }},
+    {"unary_op",
+     [](std::string &&f) {
+       return std::make_unique<Unary_op>(f);
+     }},
+    {"inc_or_dec_or_primary_expr",
+     [](std::string &&f) {
+       return std::make_unique<Inc_or_dec_or_primary_expr>(f);
+     }},
+    {"postfix_expression",
+     [](std::string &&f) {
+       return std::make_unique<Postfix_expression>(f);
+     }},
+    {"expr_primary",
+     [](std::string &&f) {
+       return std::make_unique<Expr_primary>(f);
+     }},
+    {"reference",
+     [](std::string &&f) {
+       return std::make_unique<Reference>(f);
+     }},
+    {"reference_or_call_base",
+     [](std::string &&f) {
+       return std::make_unique<Reference_or_call_base>(f);
+     }},
+    {"builtin_array_method",
+     [](std::string &&f) {
+       return std::make_unique<Builtin_array_method>(f);
+     }},
+    {"local_root",
+     [](std::string &&f) {
+       return std::make_unique<Local_root>(f);
+     }},
+    {"select_variable_dimension",
+     [](std::string &&f) {
+       return std::make_unique<Select_variable_dimension>(f);
+     }},
+    {"hierarchy_extension",
+     [](std::string &&f) {
+       return std::make_unique<Hierarchy_extension>(f);
+     }},
+    {"type_or_id_root",
+     [](std::string &&f) {
+       return std::make_unique<Type_or_id_root>(f);
+     }},
+    {"class_id",
+     [](std::string &&f) {
+       return std::make_unique<Class_id>(f);
+     }},
+    {"implicit_class_handle",
+     [](std::string &&f) {
+       return std::make_unique<Implicit_class_handle>(f);
+     }},
+    {"qualified_id",
+     [](std::string &&f) {
+       return std::make_unique<Qualified_id>(f);
+     }},
+    {"genericidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Genericidentifier>(f);
+     }},
+    {"parameter_value_opt",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_opt>(f);
+     }},
+    {"parameters",
+     [](std::string &&f) {
+       return std::make_unique<Parameters>(f);
+     }},
+    {"symbolidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Symbolidentifier>(f);
+     }},
+    {"macroidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Macroidentifier>(f);
+     }},
+    {"escapedidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Escapedidentifier>(f);
+     }},
+    {"keywordidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Keywordidentifier>(f);
+     }},
+    {"range_list_in_braces",
+     [](std::string &&f) {
+       return std::make_unique<Range_list_in_braces>(f);
+     }},
+    {"delay_value_simple",
+     [](std::string &&f) {
+       return std::make_unique<Delay_value_simple>(f);
+     }},
+    {"delay_value",
+     [](std::string &&f) {
+       return std::make_unique<Delay_value>(f);
+     }},
+    {"tk_decnumber",
+     [](std::string &&f) {
+       return std::make_unique<Tk_decnumber>(f);
+     }},
+    {"tk_realtime",
+     [](std::string &&f) {
+       return std::make_unique<Tk_realtime>(f);
+     }},
+    {"delay_identifier",
+     [](std::string &&f) {
+       return std::make_unique<Delay_identifier>(f);
+     }},
+    {"tk_timeliteral",
+     [](std::string &&f) {
+       return std::make_unique<Tk_timeliteral>(f);
+     }},
+    {"begin",
+     [](const std::string &f) {
+       return std::make_unique<Begin>(f);
+     }},
+    {"block_item_or_statement_or_null_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Block_item_or_statement_or_null_list_opt>(f);
+     }},
+    {"end",
+     [](const std::string &f) {
+       return std::make_unique<End>(f);
+     }},
+    {"block_item_or_statement_or_null_list",
+     [](std::string &&f) {
+       return std::make_unique<Block_item_or_statement_or_null_list>(f);
+     }},
+    {"block_item_or_statement_or_null",
+     [](std::string &&f) {
+       return std::make_unique<Block_item_or_statement_or_null>(f);
+     }},
+    {"block_item_decl",
+     [](std::string &&f) {
+       return std::make_unique<Block_item_decl>(f);
+     }},
+    {"system_tf_call",
+     [](std::string &&f) {
+       return std::make_unique<System_tf_call>(f);
+     }},
+    {"systemtfidentifier",
+     [](std::string &&f) {
+       return std::make_unique<Systemtfidentifier>(f);
+     }},
+    {"call_base",
+     [](std::string &&f) {
+       return std::make_unique<Call_base>(f);
+     }},
+    {"expr_primary_no_groups",
+     [](std::string &&f) {
+       return std::make_unique<Expr_primary_no_groups>(f);
+     }},
+    {"expr_primary_parens",
+     [](std::string &&f) {
+       return std::make_unique<Expr_primary_parens>(f);
+     }},
+    {"expr_primary_braces",
+     [](std::string &&f) {
+       return std::make_unique<Expr_primary_braces>(f);
+     }},
+    {"assignment_pattern_expression",
+     [](std::string &&f) {
+       return std::make_unique<Assignment_pattern_expression>(f);
+     }},
+    {"number",
+     [](std::string &&f) {
+       return std::make_unique<Number>(f);
+     }},
+    {"string_literal",
+     [](std::string &&f) {
+       return std::make_unique<String_literal>(f);
+     }},
+    {"cast",
+     [](const std::string &f) {
+       return std::make_unique<Cast>(f);
+     }},
+    {"constant_dec_number",
+     [](std::string &&f) {
+       return std::make_unique<Constant_dec_number>(f);
+     }},
+    {"based_number",
+     [](std::string &&f) {
+       return std::make_unique<Based_number>(f);
+     }},
+    {"tk_unbasednumber",
+     [](std::string &&f) {
+       return std::make_unique<Tk_unbasednumber>(f);
+     }},
+    {"instantiation_base",
+     [](std::string &&f) {
+       return std::make_unique<Instantiation_base>(f);
+     }},
+    {"lifetime",
+     [](std::string &&f) {
+       return std::make_unique<Lifetime>(f);
+     }},
+    {"const_opt",
+     [](std::string &&f) {
+       return std::make_unique<Const_opt>(f);
+     }},
+    {"instantiation_type",
+     [](std::string &&f) {
+       return std::make_unique<Instantiation_type>(f);
+     }},
+    {"non_anonymous_gate_instance_or_register_variable_list",
+     [](std::string &&f) {
+       return std::make_unique<
+           Non_anonymous_gate_instance_or_register_variable_list>(f);
+     }},
+    {"non_anonymous_gate_instance_or_register_variable",
+     [](std::string &&f) {
+       return std::make_unique<
+           Non_anonymous_gate_instance_or_register_variable>(f);
+     }},
+    {"gate_instance_or_register_variable",
+     [](std::string &&f) {
+       return std::make_unique<Gate_instance_or_register_variable>(f);
+     }},
+    {"decl_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<Decl_dimensions_opt>(f);
+     }},
+    {"any_port_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_opt>(f);
+     }},
+    {"trailing_decl_assignment_opt",
+     [](std::string &&f) {
+       return std::make_unique<Trailing_decl_assignment_opt>(f);
+     }},
+    {"any_port_list_named",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_named>(f);
+     }},
+    {"any_port_list_positional",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_positional>(f);
+     }},
+    {"any_port_list_item_last_named",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_item_last_named>(f);
+     }},
+    {"any_port_list_item_last_positional",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_item_last_positional>(f);
+     }},
+    {"any_port_list_trailing_comma_named",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_trailing_comma_named>(f);
+     }},
+    {"any_port_list_trailing_comma_positional",
+     [](std::string &&f) {
+       return std::make_unique<Any_port_list_trailing_comma_positional>(f);
+     }},
+    {"port_named",
+     [](std::string &&f) {
+       return std::make_unique<Port_named>(f);
+     }},
+    {"member_name",
+     [](std::string &&f) {
+       return std::make_unique<Member_name>(f);
+     }},
+    {"decl_dimensions",
+     [](std::string &&f) {
+       return std::make_unique<Decl_dimensions>(f);
+     }},
+    {"data_type",
+     [](std::string &&f) {
+       return std::make_unique<Data_type>(f);
+     }},
+    {"data_type_base",
+     [](std::string &&f) {
+       return std::make_unique<Data_type_base>(f);
+     }},
+    {"package_or_generate_item_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Package_or_generate_item_declaration>(f);
+     }},
+    {"genvar_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Genvar_declaration>(f);
+     }},
+    {"clocking_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Clocking_declaration>(f);
+     }},
+    {"net_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Net_declaration>(f);
+     }},
+    {"task_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Task_declaration>(f);
+     }},
+    {"function_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Function_declaration>(f);
+     }},
+    {"class_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Class_declaration>(f);
+     }},
+    {"dpi_import_export",
+     [](std::string &&f) {
+       return std::make_unique<Dpi_import_export>(f);
+     }},
+    {"specparam_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Specparam_declaration>(f);
+     }},
+    {"net_type",
+     [](std::string &&f) {
+       return std::make_unique<Net_type>(f);
+     }},
+    {"data_type_or_implicit",
+     [](std::string &&f) {
+       return std::make_unique<Data_type_or_implicit>(f);
+     }},
+    {"net_variable_or_decl_assigns",
+     [](std::string &&f) {
+       return std::make_unique<Net_variable_or_decl_assigns>(f);
+     }},
+    {"delay3",
+     [](std::string &&f) {
+       return std::make_unique<Delay3>(f);
+     }},
+    {"charge_strength_opt",
+     [](std::string &&f) {
+       return std::make_unique<Charge_strength_opt>(f);
+     }},
+    {"delay3_opt",
+     [](std::string &&f) {
+       return std::make_unique<Delay3_opt>(f);
+     }},
+    {"list_of_identifiers",
+     [](std::string &&f) {
+       return std::make_unique<List_of_identifiers>(f);
+     }},
+    {"net_variable_or_decl_assign",
+     [](std::string &&f) {
+       return std::make_unique<Net_variable_or_decl_assign>(f);
+     }},
+    {"net_variable",
+     [](std::string &&f) {
+       return std::make_unique<Net_variable>(f);
+     }},
+    {"net_decl_assign",
+     [](std::string &&f) {
+       return std::make_unique<Net_decl_assign>(f);
+     }},
+    {"delay3_or_drive_opt",
+     [](std::string &&f) {
+       return std::make_unique<Delay3_or_drive_opt>(f);
+     }},
+    {"signing",
+     [](std::string &&f) {
+       return std::make_unique<Signing>(f);
+     }},
+    {"decl_variable_dimension",
+     [](std::string &&f) {
+       return std::make_unique<Decl_variable_dimension>(f);
+     }},
+    {"expression_or_null_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Expression_or_null_list_opt>(f);
+     }},
+    {"data_type_primitive",
+     [](std::string &&f) {
+       return std::make_unique<Data_type_primitive>(f);
+     }},
+    {"trailing_decl_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Trailing_decl_assignment>(f);
+     }},
+    {"data_type_primitive_scalar",
+     [](std::string &&f) {
+       return std::make_unique<Data_type_primitive_scalar>(f);
+     }},
+    {"integer_vector_type",
+     [](std::string &&f) {
+       return std::make_unique<Integer_vector_type>(f);
+     }},
+    {"signed_unsigned_opt",
+     [](std::string &&f) {
+       return std::make_unique<Signed_unsigned_opt>(f);
+     }},
+    {"integer_atom_type",
+     [](std::string &&f) {
+       return std::make_unique<Integer_atom_type>(f);
+     }},
+    {"enum_data_type",
+     [](std::string &&f) {
+       return std::make_unique<Enum_data_type>(f);
+     }},
+    {"non_integer_type",
+     [](std::string &&f) {
+       return std::make_unique<Non_integer_type>(f);
+     }},
+    {"struct_data_type",
+     [](std::string &&f) {
+       return std::make_unique<Struct_data_type>(f);
+     }},
+    {"list_of_ports_or_port_declarations_opt",
+     [](std::string &&f) {
+       return std::make_unique<List_of_ports_or_port_declarations_opt>(f);
+     }},
+    {"module_parameter_port_list",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port_list>(f);
+     }},
+    {"package_import_list",
+     [](std::string &&f) {
+       return std::make_unique<Package_import_list>(f);
+     }},
+    {"timescale_directive",
+     [](std::string &&f) {
+       return std::make_unique<Timescale_directive>(f);
+     }},
+    {"misc_directive",
+     [](std::string &&f) {
+       return std::make_unique<Misc_directive>(f);
+     }},
+    {"data_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Data_declaration>(f);
+     }},
+    {"time_literal",
+     [](std::string &&f) {
+       return std::make_unique<Time_literal>(f);
+     }},
+    {"expression_opt",
+     [](std::string &&f) {
+       return std::make_unique<Expression_opt>(f);
+     }},
+    {"port_direction",
+     [](std::string &&f) {
+       return std::make_unique<Port_direction>(f);
+     }},
+    {"list_of_identifiers_unpacked_dimensions",
+     [](std::string &&f) {
+       return std::make_unique<List_of_identifiers_unpacked_dimensions>(f);
+     }},
+    {"list_of_module_item_identifiers",
+     [](std::string &&f) {
+       return std::make_unique<List_of_module_item_identifiers>(f);
+     }},
+    {"dir",
+     [](const std::string &f) {
+       return std::make_unique<Dir>(f);
+     }},
+    {"var_type",
+     [](std::string &&f) {
+       return std::make_unique<Var_type>(f);
+     }},
+    {"list_of_port_identifiers",
+     [](std::string &&f) {
+       return std::make_unique<List_of_port_identifiers>(f);
+     }},
+    {"port_net_type",
+     [](std::string &&f) {
+       return std::make_unique<Port_net_type>(f);
+     }},
+    {"identifier_optional_unpacked_dimensions",
+     [](std::string &&f) {
+       return std::make_unique<Identifier_optional_unpacked_dimensions>(f);
+     }},
+    {"list_of_ports_or_port_declarations_ansi",
+     [](std::string &&f) {
+       return std::make_unique<List_of_ports_or_port_declarations_ansi>(f);
+     }},
+    {"list_of_ports_or_port_declarations_non_ansi",
+     [](std::string &&f) {
+       return std::make_unique<List_of_ports_or_port_declarations_non_ansi>(f);
+     }},
+    {"list_of_ports_or_port_declarations_item_last_ansi",
+     [](std::string &&f) {
+       return std::make_unique<
+           List_of_ports_or_port_declarations_item_last_ansi>(f);
+     }},
+    {"list_of_ports_or_port_declarations_item_last_non_ansi",
+     [](std::string &&f) {
+       return std::make_unique<
+           List_of_ports_or_port_declarations_item_last_non_ansi>(f);
+     }},
+    {"list_of_ports_or_port_declarations_trailing_comma_ansi",
+     [](std::string &&f) {
+       return std::make_unique<
+           List_of_ports_or_port_declarations_trailing_comma_ansi>(f);
+     }},
+    {"list_of_ports_or_port_declarations_trailing_comma_non_ansi",
+     [](std::string &&f) {
+       return std::make_unique<
+           List_of_ports_or_port_declarations_trailing_comma_non_ansi>(f);
+     }},
+    {"port",
+     [](const std::string &f) {
+       return std::make_unique<Port>(f);
+     }},
+    {"port_declaration_ansi",
+     [](std::string &&f) {
+       return std::make_unique<Port_declaration_ansi>(f);
+     }},
+    {"port_declaration_non_ansi",
+     [](std::string &&f) {
+       return std::make_unique<Port_declaration_non_ansi>(f);
+     }},
+    {"port_expression",
+     [](std::string &&f) {
+       return std::make_unique<Port_expression>(f);
+     }},
+    {"trailing_assign_opt",
+     [](std::string &&f) {
+       return std::make_unique<Trailing_assign_opt>(f);
+     }},
+    {"port_expression_opt",
+     [](std::string &&f) {
+       return std::make_unique<Port_expression_opt>(f);
+     }},
+    {"trailing_assign",
+     [](std::string &&f) {
+       return std::make_unique<Trailing_assign>(f);
+     }},
+    {"port_reference",
+     [](std::string &&f) {
+       return std::make_unique<Port_reference>(f);
+     }},
+    {"port_reference_list",
+     [](std::string &&f) {
+       return std::make_unique<Port_reference_list>(f);
+     }},
+    {"unique_priority_opt",
+     [](std::string &&f) {
+       return std::make_unique<Unique_priority_opt>(f);
+     }},
+    {"expression_in_parens",
+     [](std::string &&f) {
+       return std::make_unique<Expression_in_parens>(f);
+     }},
+    {"delay_or_event_control_opt",
+     [](std::string &&f) {
+       return std::make_unique<Delay_or_event_control_opt>(f);
+     }},
+    {"delay_or_event_control",
+     [](std::string &&f) {
+       return std::make_unique<Delay_or_event_control>(f);
+     }},
+    {"event_expression_list",
+     [](std::string &&f) {
+       return std::make_unique<Event_expression_list>(f);
+     }},
+    {"hierarchy_event_identifier",
+     [](std::string &&f) {
+       return std::make_unique<Hierarchy_event_identifier>(f);
+     }},
+    {"event_expression",
+     [](std::string &&f) {
+       return std::make_unique<Event_expression>(f);
+     }},
+    {"edge_operator",
+     [](std::string &&f) {
+       return std::make_unique<Edge_operator>(f);
+     }},
+    {"drive_strength_opt",
+     [](std::string &&f) {
+       return std::make_unique<Drive_strength_opt>(f);
+     }},
+    {"cont_assign_list",
+     [](std::string &&f) {
+       return std::make_unique<Cont_assign_list>(f);
+     }},
+    {"cont_assign",
+     [](std::string &&f) {
+       return std::make_unique<Cont_assign>(f);
+     }},
+    {"drive_strength",
+     [](std::string &&f) {
+       return std::make_unique<Drive_strength>(f);
+     }},
+    {"expr_mintypmax",
+     [](std::string &&f) {
+       return std::make_unique<Expr_mintypmax>(f);
+     }},
+    {"expr_mintypmax_trans_set",
+     [](std::string &&f) {
+       return std::make_unique<Expr_mintypmax_trans_set>(f);
+     }},
+    {"expr_mintypmax_generalized",
+     [](std::string &&f) {
+       return std::make_unique<Expr_mintypmax_generalized>(f);
+     }},
+    {"property_expr_or_assignment_list",
+     [](std::string &&f) {
+       return std::make_unique<Property_expr_or_assignment_list>(f);
+     }},
+    {"property_expr_or_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Property_expr_or_assignment>(f);
+     }},
+    {"property_expr",
+     [](std::string &&f) {
+       return std::make_unique<Property_expr>(f);
+     }},
+    {"sequence_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_expr>(f);
+     }},
+    {"property_implication_expr",
+     [](std::string &&f) {
+       return std::make_unique<Property_implication_expr>(f);
+     }},
+    {"property_prefix_expr",
+     [](std::string &&f) {
+       return std::make_unique<Property_prefix_expr>(f);
+     }},
+    {"property_if_else_expr",
+     [](std::string &&f) {
+       return std::make_unique<Property_if_else_expr>(f);
+     }},
+    {"simple_sequence_expr",
+     [](std::string &&f) {
+       return std::make_unique<Simple_sequence_expr>(f);
+     }},
+    {"sequence_or_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_or_expr>(f);
+     }},
+    {"sequence_and_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_and_expr>(f);
+     }},
+    {"sequence_unary_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_unary_expr>(f);
+     }},
+    {"sequence_intersect_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_intersect_expr>(f);
+     }},
+    {"sequence_within_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_within_expr>(f);
+     }},
+    {"sequence_throughout_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_throughout_expr>(f);
+     }},
+    {"sequence_delay_range_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_delay_range_expr>(f);
+     }},
+    {"sequence_delay_repetition_list",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_delay_repetition_list>(f);
+     }},
+    {"sequence_expr_primary",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_expr_primary>(f);
+     }},
+    {"sequence_repetition_expr",
+     [](std::string &&f) {
+       return std::make_unique<Sequence_repetition_expr>(f);
+     }},
+    {"expression_or_dist",
+     [](std::string &&f) {
+       return std::make_unique<Expression_or_dist>(f);
+     }},
+    {"boolean_abbrev_opt",
+     [](std::string &&f) {
+       return std::make_unique<Boolean_abbrev_opt>(f);
+     }},
+    {"dist_opt",
+     [](std::string &&f) {
+       return std::make_unique<Dist_opt>(f);
+     }},
+    {"value_range",
+     [](std::string &&f) {
+       return std::make_unique<Value_range>(f);
+     }},
+    {"expression_list_proper",
+     [](std::string &&f) {
+       return std::make_unique<Expression_list_proper>(f);
+     }},
+    {"streaming_concatenation",
+     [](std::string &&f) {
+       return std::make_unique<Streaming_concatenation>(f);
+     }},
+    {"bin_based_number",
+     [](std::string &&f) {
+       return std::make_unique<Bin_based_number>(f);
+     }},
+    {"dec_based_number",
+     [](std::string &&f) {
+       return std::make_unique<Dec_based_number>(f);
+     }},
+    {"hex_based_number",
+     [](std::string &&f) {
+       return std::make_unique<Hex_based_number>(f);
+     }},
+    {"oct_based_number",
+     [](std::string &&f) {
+       return std::make_unique<Oct_based_number>(f);
+     }},
+    {"tk_binbase",
+     [](std::string &&f) {
+       return std::make_unique<Tk_binbase>(f);
+     }},
+    {"tk_bindigits",
+     [](std::string &&f) {
+       return std::make_unique<Tk_bindigits>(f);
+     }},
+    {"macronumericwidth",
+     [](std::string &&f) {
+       return std::make_unique<Macronumericwidth>(f);
+     }},
+    {"tk_decbase",
+     [](std::string &&f) {
+       return std::make_unique<Tk_decbase>(f);
+     }},
+    {"tk_decdigits",
+     [](std::string &&f) {
+       return std::make_unique<Tk_decdigits>(f);
+     }},
+    {"tk_xzdigits",
+     [](std::string &&f) {
+       return std::make_unique<Tk_xzdigits>(f);
+     }},
+    {"case_any",
+     [](std::string &&f) {
+       return std::make_unique<Case_any>(f);
+     }},
+    {"case_items",
+     [](std::string &&f) {
+       return std::make_unique<Case_items>(f);
+     }},
+    {"case_item",
+     [](std::string &&f) {
+       return std::make_unique<Case_item>(f);
+     }},
+    {"preprocessor_directive",
+     [](std::string &&f) {
+       return std::make_unique<Preprocessor_directive>(f);
+     }},
+    {"param_type_followed_by_id_and_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<Param_type_followed_by_id_and_dimensions_opt>(f);
+     }},
+    {"parameter_assign_list",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_assign_list>(f);
+     }},
+    {"localparam_assign_list",
+     [](std::string &&f) {
+       return std::make_unique<Localparam_assign_list>(f);
+     }},
+    {"type_assignment_list",
+     [](std::string &&f) {
+       return std::make_unique<Type_assignment_list>(f);
+     }},
+    {"parameter_expr",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_expr>(f);
+     }},
+    {"parameter_value_ranges_opt",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_ranges_opt>(f);
+     }},
+    {"bit_logic_opt",
+     [](std::string &&f) {
+       return std::make_unique<Bit_logic_opt>(f);
+     }},
+    {"bit_logic",
+     [](std::string &&f) {
+       return std::make_unique<Bit_logic>(f);
+     }},
+    {"parameter_assign",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_assign>(f);
+     }},
+    {"tk_hexbase",
+     [](std::string &&f) {
+       return std::make_unique<Tk_hexbase>(f);
+     }},
+    {"tk_hexdigits",
+     [](std::string &&f) {
+       return std::make_unique<Tk_hexdigits>(f);
+     }},
+    {"generate_item_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Generate_item_list_opt>(f);
+     }},
+    {"generate_item_list",
+     [](std::string &&f) {
+       return std::make_unique<Generate_item_list>(f);
+     }},
+    {"generate_item",
+     [](std::string &&f) {
+       return std::make_unique<Generate_item>(f);
+     }},
+    {"generate_block",
+     [](std::string &&f) {
+       return std::make_unique<Generate_block>(f);
+     }},
+    {"genvar_opt",
+     [](std::string &&f) {
+       return std::make_unique<Genvar_opt>(f);
+     }},
+    {"for_step_opt",
+     [](std::string &&f) {
+       return std::make_unique<For_step_opt>(f);
+     }},
+    {"for_step",
+     [](std::string &&f) {
+       return std::make_unique<For_step>(f);
+     }},
+    {"for_initialization_opt",
+     [](std::string &&f) {
+       return std::make_unique<For_initialization_opt>(f);
+     }},
+    {"repeat_control",
+     [](std::string &&f) {
+       return std::make_unique<Repeat_control>(f);
+     }},
+    {"for_initialization",
+     [](std::string &&f) {
+       return std::make_unique<For_initialization>(f);
+     }},
+    {"for_init_decl_or_assign",
+     [](std::string &&f) {
+       return std::make_unique<For_init_decl_or_assign>(f);
+     }},
+    {"parameter_expr_list",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_expr_list>(f);
+     }},
+    {"parameter_value_byname_list",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_byname_list>(f);
+     }},
+    {"preprocess_include_argument",
+     [](std::string &&f) {
+       return std::make_unique<Preprocess_include_argument>(f);
+     }},
+    {"pp_identifier",
+     [](std::string &&f) {
+       return std::make_unique<Pp_identifier>(f);
+     }},
+    {"macro_formals_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Macro_formals_list_opt>(f);
+     }},
+    {"tk_stringliteral",
+     [](std::string &&f) {
+       return std::make_unique<Tk_stringliteral>(f);
+     }},
+    {"parameter_value_byname_list_item_last",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_byname_list_item_last>(f);
+     }},
+    {"parameter_value_byname_list_trailing_comma",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_byname_list_trailing_comma>(f);
+     }},
+    {"parameter_value_byname",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_value_byname>(f);
+     }},
+    {"module_parameter_port_list_item_last",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port_list_item_last>(f);
+     }},
+    {"module_parameter_port_list_preprocessor_last",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port_list_preprocessor_last>(f);
+     }},
+    {"module_parameter_port_list_trailing_comma",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port_list_trailing_comma>(f);
+     }},
+    {"module_parameter_port",
+     [](std::string &&f) {
+       return std::make_unique<Module_parameter_port>(f);
+     }},
+    {"parameter_opt",
+     [](std::string &&f) {
+       return std::make_unique<Parameter_opt>(f);
+     }},
+    {"type_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Type_assignment>(f);
+     }},
+    {"generate_if",
+     [](std::string &&f) {
+       return std::make_unique<Generate_if>(f);
+     }},
+    {"generate_case_items",
+     [](std::string &&f) {
+       return std::make_unique<Generate_case_items>(f);
+     }},
+    {"class_new",
+     [](std::string &&f) {
+       return std::make_unique<Class_new>(f);
+     }},
+    {"dynamic_array_new",
+     [](std::string &&f) {
+       return std::make_unique<Dynamic_array_new>(f);
+     }},
+    {"var_or_net_type_opt",
+     [](std::string &&f) {
+       return std::make_unique<Var_or_net_type_opt>(f);
+     }},
+    {"data_type_or_implicit_basic_followed_by_id_and_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<
+           Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt>(f);
+     }},
+    {"type_identifier_followed_by_id",
+     [](std::string &&f) {
+       return std::make_unique<Type_identifier_followed_by_id>(f);
+     }},
+    {"type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<
+        Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt>(f);
+     }},
+    {"defparam_assign_list",
+     [](std::string &&f) { return std::make_unique<Defparam_assign_list>(f); }},
+    {"defparam_assign",
+     [](std::string &&f) { return std::make_unique<Defparam_assign>(f); }},
+    {"localparam_assign",
+     [](std::string &&f) { return std::make_unique<Localparam_assign>(f); }},
+    {"argument_list_opt",
+     [](std::string &&f) { return std::make_unique<Argument_list_opt>(f); }},
+    {"any_argument_list",
+     [](std::string &&f) { return std::make_unique<Any_argument_list>(f); }},
+    {"any_argument_list_item_last",
+     [](std::string &&f) {
+       return std::make_unique<Any_argument_list_item_last>(f);
+     }},
+    {"any_argument_list_trailing_comma",
+     [](std::string &&f) {
+       return std::make_unique<Any_argument_list_trailing_comma>(f);
+     }},
+    {"any_argument",
+     [](std::string &&f) { return std::make_unique<Any_argument>(f); }},
+    {"task_declaration_id",
+     [](std::string &&f) { return std::make_unique<Task_declaration_id>(f); }},
+    {"tf_port_list_paren_opt",
+     [](std::string &&f) {
+       return std::make_unique<Tf_port_list_paren_opt>(f);
+     }},
+    {"tf_item_or_statement_or_null_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Tf_item_or_statement_or_null_list_opt>(f);
+     }},
+    {"tf_item_or_statement_or_null_list",
+     [](std::string &&f) {
+       return std::make_unique<Tf_item_or_statement_or_null_list>(f);
+     }},
+    {"tf_item_or_statement_or_null",
+     [](std::string &&f) {
+       return std::make_unique<Tf_item_or_statement_or_null>(f);
+     }},
+    {"task_item",
+     [](std::string &&f) { return std::make_unique<Task_item>(f); }},
+    {"tf_port_list_opt",
+     [](std::string &&f) { return std::make_unique<Tf_port_list_opt>(f); }},
+    {"scope_or_if_res",
+     [](std::string &&f) { return std::make_unique<Scope_or_if_res>(f); }},
+    {"array_reduction_method",
+     [](std::string &&f) {
+       return std::make_unique<Array_reduction_method>(f);
+     }},
+    {"array_locator_method",
+     [](std::string &&f) { return std::make_unique<Array_locator_method>(f); }},
+    {"gatetype",
+     [](std::string &&f) { return std::make_unique<Gatetype>(f); }},
+    {"primitive_gate_instance_list",
+     [](std::string &&f) {
+       return std::make_unique<Primitive_gate_instance_list>(f);
+     }},
+    {"switchtype",
+     [](std::string &&f) { return std::make_unique<Switchtype>(f); }},
+    {"dr_strength1",
+     [](std::string &&f) { return std::make_unique<Dr_strength1>(f); }},
+    {"dr_strength0",
+     [](std::string &&f) { return std::make_unique<Dr_strength0>(f); }},
+    {"primitive_gate_instance",
+     [](std::string &&f) {
+       return std::make_unique<Primitive_gate_instance>(f);
+     }},
+    {"delay_scope",
+     [](std::string &&f) { return std::make_unique<Delay_scope>(f); }},
+    {"join_keyword",
+     [](std::string &&f) { return std::make_unique<Join_keyword>(f); }},
+    {"function_return_type_and_id",
+     [](std::string &&f) {
+       return std::make_unique<Function_return_type_and_id>(f);
+     }},
+    {"endfunction_label_opt",
+     [](std::string &&f) {
+       return std::make_unique<Endfunction_label_opt>(f);
+     }},
+    {"function_item_list",
+     [](std::string &&f) { return std::make_unique<Function_item_list>(f); }},
+    {"statement_or_null_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Statement_or_null_list_opt>(f);
+     }},
+    {"tf_port_list",
+     [](std::string &&f) { return std::make_unique<Tf_port_list>(f); }},
+    {"tf_port_list_item_last",
+     [](std::string &&f) {
+       return std::make_unique<Tf_port_list_item_last>(f);
+     }},
+    {"tf_port_item",
+     [](std::string &&f) { return std::make_unique<Tf_port_item>(f); }},
+    {"tf_port_list_trailing_comma",
+     [](std::string &&f) {
+       return std::make_unique<Tf_port_list_trailing_comma>(f);
+     }},
+    {"tf_port_direction_opt",
+     [](std::string &&f) {
+       return std::make_unique<Tf_port_direction_opt>(f);
+     }},
+    {"tf_port_item_expr_opt",
+     [](std::string &&f) {
+       return std::make_unique<Tf_port_item_expr_opt>(f);
+     }},
+    {"tf_port_direction",
+     [](std::string &&f) { return std::make_unique<Tf_port_direction>(f); }},
+    {"generate_case_item",
+     [](std::string &&f) { return std::make_unique<Generate_case_item>(f); }},
+    {"net_type_or_none",
+     [](std::string &&f) { return std::make_unique<Net_type_or_none>(f); }},
+    {"pull01",
+     [](std::string &&f) { return std::make_unique<Pull01>(f); }},
+    {"statement_or_null_list",
+     [](std::string &&f) {
+       return std::make_unique<Statement_or_null_list>(f);
+     }},
+    {"function_item",
+     [](std::string &&f) { return std::make_unique<Function_item>(f); }},
+    {"function_item_data_declaration",
+     [](std::string &&f) {
+       return std::make_unique<Function_item_data_declaration>(f);
+     }},
+    {"tf_port_declaration",
+     [](std::string &&f) { return std::make_unique<Tf_port_declaration>(f); }},
+    {"non_anonymous_instantiation_base",
+     [](std::string &&f) {
+       return std::make_unique<Non_anonymous_instantiation_base>(f);
+     }},
+    {"list_of_tf_variable_identifiers",
+     [](std::string &&f) {
+       return std::make_unique<List_of_tf_variable_identifiers>(f);
+     }},
+    {"tf_variable_identifier_first",
+     [](std::string &&f) {
+       return std::make_unique<Tf_variable_identifier_first>(f);
+     }},
+    {"tf_variable_identifier",
+     [](std::string &&f) {
+       return std::make_unique<Tf_variable_identifier>(f);
+     }},
+    {"tk_octbase",
+     [](std::string &&f) { return std::make_unique<Tk_octbase>(f); }},
+    {"tk_octdigits",
+     [](std::string &&f) { return std::make_unique<Tk_octdigits>(f); }},
+    {"specify_item_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Specify_item_list_opt>(f);
+     }},
+    {"specify_item_list",
+     [](std::string &&f) { return std::make_unique<Specify_item_list>(f); }},
+    {"specify_item",
+     [](std::string &&f) { return std::make_unique<Specify_item>(f); }},
+    {"specify_simple_path_decl",
+     [](std::string &&f) {
+       return std::make_unique<Specify_simple_path_decl>(f);
+     }},
+    {"spec_reference_event",
+     [](std::string &&f) { return std::make_unique<Spec_reference_event>(f); }},
+    {"spec_notifier_opt",
+     [](std::string &&f) { return std::make_unique<Spec_notifier_opt>(f); }},
+    {"specify_edge_path_decl",
+     [](std::string &&f) {
+       return std::make_unique<Specify_edge_path_decl>(f);
+     }},
+    {"specparam_decl",
+     [](std::string &&f) { return std::make_unique<Specparam_decl>(f); }},
+    {"specify_simple_path",
+     [](std::string &&f) { return std::make_unique<Specify_simple_path>(f); }},
+    {"delay_value_list",
+     [](std::string &&f) { return std::make_unique<Delay_value_list>(f); }},
+    {"specify_path_identifiers",
+     [](std::string &&f) {
+       return std::make_unique<Specify_path_identifiers>(f);
+     }},
+    {"spec_polarity",
+     [](std::string &&f) { return std::make_unique<Spec_polarity>(f); }},
+    {"spec_notifier",
+     [](std::string &&f) { return std::make_unique<Spec_notifier>(f); }},
+    {"specify_terminal_descriptor",
+     [](std::string &&f) {
+       return std::make_unique<Specify_terminal_descriptor>(f);
+     }},
+    {"edge_descriptor_list",
+     [](std::string &&f) { return std::make_unique<Edge_descriptor_list>(f); }},
+    {"casting_type",
+     [](std::string &&f) { return std::make_unique<Casting_type>(f); }},
+    {"udp_port_list",
+     [](std::string &&f) { return std::make_unique<Udp_port_list>(f); }},
+    {"udp_port_decls",
+     [](std::string &&f) { return std::make_unique<Udp_port_decls>(f); }},
+    {"udp_init_opt",
+     [](std::string &&f) { return std::make_unique<Udp_init_opt>(f); }},
+    {"udp_body",
+     [](std::string &&f) { return std::make_unique<Udp_body>(f); }},
+    {"tk_reg_opt",
+     [](std::string &&f) { return std::make_unique<Tk_reg_opt>(f); }},
+    {"udp_initial_expr_opt",
+     [](std::string &&f) { return std::make_unique<Udp_initial_expr_opt>(f); }},
+    {"udp_input_declaration_list",
+     [](std::string &&f) {
+       return std::make_unique<Udp_input_declaration_list>(f);
+     }},
+    {"udp_entry_list",
+     [](std::string &&f) { return std::make_unique<Udp_entry_list>(f); }},
+    {"udp_sequ_entry_list",
+     [](std::string &&f) { return std::make_unique<Udp_sequ_entry_list>(f); }},
+    {"udp_comb_entry_list",
+     [](std::string &&f) { return std::make_unique<Udp_comb_entry_list>(f); }},
+    {"udp_sequ_entry",
+     [](std::string &&f) { return std::make_unique<Udp_sequ_entry>(f); }},
+    {"udp_input_list",
+     [](std::string &&f) { return std::make_unique<Udp_input_list>(f); }},
+    {"udp_input_sym",
+     [](std::string &&f) { return std::make_unique<Udp_input_sym>(f); }},
+    {"udp_output_sym",
+     [](std::string &&f) { return std::make_unique<Udp_output_sym>(f); }},
+    {"udp_initial",
+     [](std::string &&f) { return std::make_unique<Udp_initial>(f); }},
+    {"udp_port_decl",
+     [](std::string &&f) { return std::make_unique<Udp_port_decl>(f); }},
+    {"specify_edge_path",
+     [](std::string &&f) { return std::make_unique<Specify_edge_path>(f); }},
+    {"polarity_operator",
+     [](std::string &&f) { return std::make_unique<Polarity_operator>(f); }},
+    {"immediate_assertion_statement",
+     [](std::string &&f) {
+       return std::make_unique<Immediate_assertion_statement>(f);
+     }},
+    {"simple_immediate_assertion_statement",
+     [](std::string &&f) {
+       return std::make_unique<Simple_immediate_assertion_statement>(f);
+     }},
+    {"deferred_immediate_assertion_statement",
+     [](std::string &&f) {
+       return std::make_unique<Deferred_immediate_assertion_statement>(f);
+     }},
+    {"action_block",
+     [](std::string &&f) { return std::make_unique<Action_block>(f); }},
+    {"enum_name_list",
+     [](std::string &&f) { return std::make_unique<Enum_name_list>(f); }},
+    {"enum_name_list_item_last",
+     [](std::string &&f) {
+       return std::make_unique<Enum_name_list_item_last>(f);
+     }},
+    {"enum_name_list_trailing_comma",
+     [](std::string &&f) {
+       return std::make_unique<Enum_name_list_trailing_comma>(f);
+     }},
+    {"enum_name",
+     [](std::string &&f) { return std::make_unique<Enum_name>(f); }},
+    {"pos_neg_number",
+     [](std::string &&f) { return std::make_unique<Pos_neg_number>(f); }},
+    {"macroiditem",
+     [](std::string &&f) { return std::make_unique<Macroiditem>(f); }},
+    {"data_declaration_modifiers_opt",
+     [](std::string &&f) {
+       return std::make_unique<Data_declaration_modifiers_opt>(f);
+     }},
+    {"data_declaration_base",
+     [](std::string &&f) {
+       return std::make_unique<Data_declaration_base>(f);
+     }},
+    {"var_opt",
+     [](std::string &&f) { return std::make_unique<Var_opt>(f); }},
+    {"specparam_list",
+     [](std::string &&f) { return std::make_unique<Specparam_list>(f); }},
+    {"specparam",
+     [](std::string &&f) { return std::make_unique<Specparam>(f); }},
+    {"concurrent_assertion_item",
+     [](std::string &&f) {
+       return std::make_unique<Concurrent_assertion_item>(f);
+     }},
+    {"block_identifier_opt",
+     [](std::string &&f) { return std::make_unique<Block_identifier_opt>(f); }},
+    {"concurrent_assertion_statement",
+     [](std::string &&f) {
+       return std::make_unique<Concurrent_assertion_statement>(f);
+     }},
+    {"assert_property_statement",
+     [](std::string &&f) {
+       return std::make_unique<Assert_property_statement>(f);
+     }},
+    {"assume_property_statement",
+     [](std::string &&f) {
+       return std::make_unique<Assume_property_statement>(f);
+     }},
+    {"cover_property_statement",
+     [](std::string &&f) {
+       return std::make_unique<Cover_property_statement>(f);
+     }},
+    {"property_spec",
+     [](std::string &&f) { return std::make_unique<Property_spec>(f); }},
+    {"event_control_opt",
+     [](std::string &&f) { return std::make_unique<Event_control_opt>(f); }},
+    {"property_spec_disable_iff_opt",
+     [](std::string &&f) {
+       return std::make_unique<Property_spec_disable_iff_opt>(f);
+     }},
+    {"package_item_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Package_item_list_opt>(f);
+     }},
+    {"package_item_list",
+     [](std::string &&f) { return std::make_unique<Package_item_list>(f); }},
+    {"package_item",
+     [](std::string &&f) { return std::make_unique<Package_item>(f); }},
+    {"tk_virtual_opt",
+     [](std::string &&f) { return std::make_unique<Tk_virtual_opt>(f); }},
+    {"class_declaration_extends_opt",
+     [](std::string &&f) {
+       return std::make_unique<Class_declaration_extends_opt>(f);
+     }},
+    {"implements_interface_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Implements_interface_list_opt>(f);
+     }},
+    {"class_items_opt",
+     [](std::string &&f) { return std::make_unique<Class_items_opt>(f); }},
+    {"class_items",
+     [](std::string &&f) { return std::make_unique<Class_items>(f); }},
+    {"class_item",
+     [](std::string &&f) { return std::make_unique<Class_item>(f); }},
+    {"method_qualifier_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Method_qualifier_list_opt>(f);
+     }},
+    {"method_prototype",
+     [](std::string &&f) { return std::make_unique<Method_prototype>(f); }},
+    {"class_constructor",
+     [](std::string &&f) { return std::make_unique<Class_constructor>(f); }},
+    {"list_of_variable_decl_assignments",
+     [](std::string &&f) {
+       return std::make_unique<List_of_variable_decl_assignments>(f);
+     }},
+    {"class_item_qualifier_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Class_item_qualifier_list_opt>(f);
+     }},
+    {"method_property_qualifier_list_not_starting_with_virtual",
+     [](std::string &&f) {
+       return std::make_unique<
+           Method_property_qualifier_list_not_starting_with_virtual>(f);
+     }},
+    {"task_prototype",
+     [](std::string &&f) { return std::make_unique<Task_prototype>(f); }},
+    {"function_prototype",
+     [](std::string &&f) { return std::make_unique<Function_prototype>(f); }},
+    {"class_constructor_prototype",
+     [](std::string &&f) {
+       return std::make_unique<Class_constructor_prototype>(f);
+     }},
+    {"endnew_opt",
+     [](std::string &&f) { return std::make_unique<Endnew_opt>(f); }},
+    {"variable_decl_assignment",
+     [](std::string &&f) {
+       return std::make_unique<Variable_decl_assignment>(f);
+     }},
+    {"macro_formals_list",
+     [](std::string &&f) { return std::make_unique<Macro_formals_list>(f); }},
+    {"macro_formal_parameter",
+     [](std::string &&f) {
+       return std::make_unique<Macro_formal_parameter>(f);
+     }},
+    {"hierarchy_segment",
+     [](std::string &&f) { return std::make_unique<Hierarchy_segment>(f); }},
+    {"select_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<Select_dimensions_opt>(f);
+     }},
+    {"dpi_import_item",
+     [](std::string &&f) { return std::make_unique<Dpi_import_item>(f); }},
+    {"dpi_spec_string",
+     [](std::string &&f) { return std::make_unique<Dpi_spec_string>(f); }},
+    {"dpi_import_property_opt",
+     [](std::string &&f) {
+       return std::make_unique<Dpi_import_property_opt>(f);
+     }},
+    {"udp_comb_entry",
+     [](std::string &&f) { return std::make_unique<Udp_comb_entry>(f); }},
+    {"tk_ls_eq",
+     [](std::string &&f) { return std::make_unique<Tk_ls_eq>(f); }},
+    {"tk_rss_eq",
+     [](std::string &&f) { return std::make_unique<Tk_rss_eq>(f); }},
+    {"tk_rs_eq",
+     [](std::string &&f) { return std::make_unique<Tk_rs_eq>(f); }},
+    {"packed_signing_opt",
+     [](std::string &&f) { return std::make_unique<Packed_signing_opt>(f); }},
+    {"struct_union_member_list",
+     [](std::string &&f) {
+       return std::make_unique<Struct_union_member_list>(f);
+     }},
+    {"tk_tagged_opt",
+     [](std::string &&f) { return std::make_unique<Tk_tagged_opt>(f); }},
+    {"struct_union_member",
+     [](std::string &&f) { return std::make_unique<Struct_union_member>(f); }},
+    {"random_qualifier_opt",
+     [](std::string &&f) { return std::make_unique<Random_qualifier_opt>(f); }},
+    {"data_type_or_implicit_followed_by_id_and_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<
+           Data_type_or_implicit_followed_by_id_and_dimensions_opt>(f);
+     }},
+    {"type_identifier_or_implicit_followed_by_id_and_dimensions_opt",
+     [](std::string &&f) {
+       return std::make_unique<
+           Type_identifier_or_implicit_followed_by_id_and_dimensions_opt>(f);
+     }},
+    {"assignment_pattern",
+     [](std::string &&f) { return std::make_unique<Assignment_pattern>(f); }},
+    {"structure_or_array_pattern_expression_list",
+     [](std::string &&f) {
+       return std::make_unique<Structure_or_array_pattern_expression_list>(f);
+     }},
+    {"structure_or_array_pattern_expression",
+     [](std::string &&f) {
+       return std::make_unique<Structure_or_array_pattern_expression>(f);
+     }},
+    {"structure_or_array_pattern_key",
+     [](std::string &&f) {
+       return std::make_unique<Structure_or_array_pattern_key>(f);
+     }},
+    {"package_import_item_list",
+     [](std::string &&f) {
+       return std::make_unique<Package_import_item_list>(f);
+     }},
+    {"package_import_item",
+     [](std::string &&f) { return std::make_unique<Package_import_item>(f); }},
+    {"scope_prefix",
+     [](std::string &&f) { return std::make_unique<Scope_prefix>(f); }},
+    {"tk_edge_descriptor",
+     [](std::string &&f) { return std::make_unique<Tk_edge_descriptor>(f); }},
+    {"property_qualifier",
+     [](std::string &&f) { return std::make_unique<Property_qualifier>(f); }},
+    {"class_item_qualifier",
+     [](std::string &&f) { return std::make_unique<Class_item_qualifier>(f); }},
+    {"final_or_zero",
+     [](std::string &&f) { return std::make_unique<Final_or_zero>(f); }},
+    {"stream_operator",
+     [](std::string &&f) { return std::make_unique<Stream_operator>(f); }},
+    {"slice_size_opt",
+     [](std::string &&f) { return std::make_unique<Slice_size_opt>(f); }},
+    {"stream_expression_list",
+     [](std::string &&f) {
+       return std::make_unique<Stream_expression_list>(f);
+     }},
+    {"stream_expression",
+     [](std::string &&f) { return std::make_unique<Stream_expression>(f); }},
+    {"identifier_opt",
+     [](std::string &&f) { return std::make_unique<Identifier_opt>(f); }},
+    {"clocking_item_list_opt",
+     [](std::string &&f) {
+       return std::make_unique<Clocking_item_list_opt>(f);
+     }},
 };
