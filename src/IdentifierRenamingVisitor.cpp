@@ -63,7 +63,7 @@ IdentifierRenamingVisitor::createNewID(std::string t) {
     v.name = " module_" + std::to_string(varID++);
     ret = v.name;
   } else if (t == "PP") {
-    ret = "id_" + std::to_string(varID++) + " ";
+    ret = "pp_" + std::to_string(varID++) + " ";
     v.name = " `" + ret;
   } else {
     v.name = " id_" + std::to_string(varID++) + " ";
@@ -204,10 +204,6 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 
     startNewScope();
 
-    if (node->getElement() == " module ") {
-      createIDContext(ContextType::MODULE);
-    }
-
   } else if (isFnishingToken(node->getElement())) {
 
     finishScope();
@@ -237,9 +233,11 @@ void IdentifierRenamingVisitor::visit(Description *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
+  createIDContext(ContextType::MODULE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Package_item_no_pp *node) {
@@ -2121,8 +2119,8 @@ void IdentifierRenamingVisitor::visit(Preprocess_include_argument *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Pp_identifier *node) {
-  if(node->getElement() == " Pp_Identifier ")
-    node->setElement(placeID("PP"));
+  
+  node->setElement(placeID("PP"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }

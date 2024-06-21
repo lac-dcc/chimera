@@ -343,6 +343,7 @@ int main(int argc, char **argv) {
     int n = declareNonAnsiPorts(m);
     renameVars(m, n);  
   }
+  renameVars(head.get(), 0);
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
