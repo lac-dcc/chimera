@@ -5,6 +5,11 @@
 const std::vector<std::unique_ptr<Node>> &Node::getChildren() {
   return this->children;
 }
+
+void Node::clearChildren() {
+  this->children.clear();
+}
+
 void Node::insertChildToBegin(std::unique_ptr<Node> child) {
   this->children.insert(children.begin(), std::move(child));
 }

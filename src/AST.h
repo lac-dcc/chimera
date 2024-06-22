@@ -15,6 +15,8 @@ public:
   const std::vector<std::unique_ptr<Node>> &getChildren();
   void insertChildToBegin(std::unique_ptr<Node>);
 
+  void clearChildren();
+
   void setChildren(std::vector<std::unique_ptr<Node>> &&children);
 
   Node *getParent();

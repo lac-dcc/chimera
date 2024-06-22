@@ -147,15 +147,22 @@ static std::unique_ptr<Node> buildSyntaxTree(
   return head;
 }
 
-static void findNodes(Node *head, std::vector<Node*> &modules, std::vector<Node*> &portDeclarations ){
-  if(head->getElement() == "module_or_interface_declaration"){
+static void findNodes(Node *head, std::vector<Node *> &modules,
+                      std::vector<Node *> &portDeclarations) {
+  if (head->getElement() == "module_or_interface_declaration") {
     modules.push_back(head);
-  } else if(head->getElement() == "module_port_declaration"){
+  } else if (head->getElement() == "module_port_declaration") {
     portDeclarations.push_back(head);
   }
 
-  for(const auto & c: head->getChildren()){
+  for (const auto &c : head->getChildren()) {
     findNodes(c.get(), modules, portDeclarations);
+  }
+}
+
+static void removePortDeclarations(std::vector<Node *> &portDeclarations) {
+  for (auto *decl : portDeclarations) {
+    decl->getParent()->clearChildren();
   }
 }
 
@@ -333,15 +340,17 @@ int main(int argc, char **argv) {
                   : 0;
   auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
 
-  std::vector<Node*> modules, portDeclarations;
+  std::vector<Node *> modules, portDeclarations;
 
   findNodes(head.get(), modules, portDeclarations);
 
+  removePortDeclarations(portDeclarations);
+
   replaceConstants(head.get());
-  
-  for(const auto & m : modules){
+
+  for (const auto &m : modules) {
     int n = declareNonAnsiPorts(m);
-    renameVars(m, n);  
+    renameVars(m, n);
   }
   renameVars(head.get(), 0);
 
