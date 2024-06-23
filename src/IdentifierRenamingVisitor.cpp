@@ -127,7 +127,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
   auto c = rand() % options.size();
 
-  if (contexts.top() == ContextType::DEFINING_ID) {
+  if (!contexts.empty() && contexts.top() == ContextType::DEFINING_ID) {
     if (debug)
       std::cerr << "should not use: " << this->defId << "or " << this->defType
                 << std::endl;
