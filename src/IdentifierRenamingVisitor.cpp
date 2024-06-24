@@ -3,7 +3,8 @@
 
 void IdentifierRenamingVisitor::initialize(int id){
   this->varID = id + 1;
-  std::cerr<< "varID: " << varID << std::endl;
+  if(debug)
+    std::cerr<< "varID: " << varID << std::endl;
   for(int i = 1; i<=id;i++){
     Var var;
     var.name =  " id_" + std::to_string(i) + " ";
