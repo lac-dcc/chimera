@@ -16,6 +16,7 @@
 
 using json = nlohmann::json;
 bool debug = false;
+bool printSeed = false;
 
 static constexpr char separator = '~';
 
@@ -98,7 +99,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     std::random_device rd;
     seed = rd();
 
-    if (debug) {
+    if (printSeed) {
       std::cerr << "Seed: " << seed << std::endl;
     }
   }
@@ -289,6 +290,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
     ("p,printtree", "Prints productions chains.")
+    ("printseed", "Prints the randomization seed.")
     ("d,debug", "Prints debug messages.")
     ("v,verbose", "Verbose output") //Needs to implement
     ("s,seed", "Set the seed for randomization", cxxopts::value<std::random_device::result_type>())
@@ -328,6 +330,9 @@ int main(int argc, char **argv) {
 
   if (flags.count("debug"))
     debug = true;
+  
+  if (flags.count("printseed"))
+    printSeed = true;
 
   std::ifstream f(flags["file"].as<std::string>());
 
