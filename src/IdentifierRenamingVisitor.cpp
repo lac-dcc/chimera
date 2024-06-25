@@ -1,8 +1,9 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
 
-void IdentifierRenamingVisitor::initialize(int id){
+IdentifierRenamingVisitor::IdentifierRenamingVisitor(int id, int modID){
   this->varID = id + 1;
+  this->moduleID = modID;
   if(debug)
     std::cerr<< "varID: " << varID << std::endl;
   for(int i = 1; i<=id;i++){
@@ -61,7 +62,7 @@ IdentifierRenamingVisitor::createNewID(std::string t) {
   }
 
   if (t == "module") {
-    v.name = " module_" + std::to_string(varID++);
+    v.name = " module_" + std::to_string(moduleID++);
     ret = v.name;
   } else if (t == "PP") {
     ret = "pp_" + std::to_string(varID++) + " ";

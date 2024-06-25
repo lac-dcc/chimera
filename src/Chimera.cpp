@@ -177,9 +177,9 @@ static void replaceConstants(Node *head) {
   head->accept(visitor);
 }
 
-static void renameVars(Node *head, int n) {
-  IdentifierRenamingVisitor visitor;
-  visitor.initialize(n);
+static void renameVars(Node *head, int n, int modID) {
+  IdentifierRenamingVisitor visitor(n, modID);
+
   head->accept(visitor);
 }
 
@@ -355,12 +355,12 @@ int main(int argc, char **argv) {
   removePortDeclarations(portDeclarations);
 
   replaceConstants(head.get());
-
+  int modID = 0;
   for (const auto &m : modules) {
     int n = declareNonAnsiPorts(m);
-    renameVars(m, n);
+    renameVars(m, n, modID++);
   }
-  renameVars(head.get(), 0);
+  renameVars(head.get(), 0, 0);
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
