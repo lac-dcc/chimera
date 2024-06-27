@@ -1,0 +1,12 @@
+module module_0 (
+    id_1,
+    id_2,
+    output logic [id_1 : id_2[1]] id_3,
+    id_4,
+    input logic [1  *  id_3[id_1] : id_3[id_1[id_2]]] id_5,
+    id_6,
+    id_7,
+    input [id_5 : id_6[id_4[1] |  id_5 : id_2]] id_8
+);
+  assign id_6[1] = id_5;
+endmodule
