@@ -1,0 +1,43 @@
+module module_0 (
+    input logic id_1,
+    input logic [id_1 : id_1] id_2,
+    output [id_1 : id_1] id_3,
+    output logic [id_1 : id_2] id_4,
+    input logic [id_2 : id_4] id_5,
+    input logic [id_1 : id_4] id_6,
+    id_7,
+    input logic [id_5 : id_2] id_8,
+    input id_9,
+    output id_10,
+    output [id_10 : id_1] id_11,
+    input [id_4 : id_7] id_12,
+    input [id_12 : id_6] id_13,
+    input id_14,
+    input id_15,
+    output id_16,
+    input id_17,
+    input logic id_18,
+    output id_19,
+    output logic [id_14 : id_10] id_20,
+    input logic id_21,
+    input logic id_22,
+    output logic id_23,
+    output id_24,
+    input id_25,
+    input [id_14 : 1] id_26,
+    input logic id_27,
+    input [id_1 : id_3] id_28,
+    input id_29,
+    input [id_9 : id_19] id_30,
+    output id_31,
+    input [id_29 : id_29] id_32
+);
+  id_33 id_34 (
+      .id_23(id_8),
+      .id_23(id_1),
+      .id_15(id_12),
+      .id_30(id_4),
+      .id_24(id_26),
+      .id_14(id_20)
+  );
+endmodule

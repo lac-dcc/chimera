@@ -1,0 +1,31 @@
+module module_0 (
+    output [1 'b0 : id_1] id_2,
+    input logic id_3,
+    input logic [id_2 : id_2] id_4,
+    output id_5,
+    input logic id_6,
+    output id_7,
+    input logic id_8,
+    input logic id_9,
+    input logic [id_9 : id_2[id_4]] id_10,
+    input [id_5[id_4] : id_8] id_11,
+    id_12,
+    output logic id_13,
+    output id_14,
+    input [id_13 : id_11] id_15,
+    output [id_13 : id_8] id_16,
+    input [id_14 : id_5] id_17,
+    input logic id_18,
+    input logic [1 : id_13] id_19,
+    input logic [id_9 : (  id_12  )] id_20,
+    input id_21,
+    input logic id_22,
+    output logic id_23,
+    input [id_13 : id_15] id_24,
+    input [id_8 : id_13] id_25,
+    input id_26,
+    input logic [id_18 : id_23] id_27,
+    input id_28
+);
+  assign id_19 = id_26;
+endmodule
