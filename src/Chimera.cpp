@@ -177,10 +177,10 @@ static void replaceConstants(Node *head) {
   head->accept(visitor);
 }
 
-static void renameVars(Node *head, int n, int modID) {
+static int renameVars(Node *head, int n, int modID) {
   IdentifierRenamingVisitor visitor(n, modID);
-
   head->accept(visitor);
+  return visitor.varID;
 }
 
 static bool isAnsi(Node *head) {
@@ -273,6 +273,18 @@ static int declareNonAnsiPorts(Node *head) {
   return count;
 }
 
+static void replaceTypes(Node *head, int& id){
+  if(head->getElement() == "gatetype" || head->getElement() == "net_type")
+    head->getChildren()[0].get()->setElement("id_" + std::to_string(id++));
+  else{
+    for(const auto &c : head->getChildren()){
+      replaceTypes(c.get(), id);
+    }
+  }
+
+  
+}
+
 static void dumpSyntaxTree(Node *head) {
   std::cerr << head->getElement() << " ->";
   for (auto &child : head->getChildren()) {
@@ -358,7 +370,8 @@ int main(int argc, char **argv) {
   int modID = 0;
   for (const auto &m : modules) {
     int n = declareNonAnsiPorts(m);
-    renameVars(m, n, modID++);
+    int lastID = renameVars(m, n, modID++);
+    replaceTypes(m, lastID);
   }
   renameVars(head.get(), 0, 0);
 
