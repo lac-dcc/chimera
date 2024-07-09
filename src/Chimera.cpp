@@ -281,8 +281,18 @@ static void replaceTypes(Node *head, int& id){
       replaceTypes(c.get(), id);
     }
   }
+}
 
-  
+//find ids used in a place where their value should be constant
+static void findConstantIDs(Node* head, std::vector<std::string> idsFound, bool isIndex = false){
+  if(head->getElement() == "decl_variable_dimension")
+    isIndex = true;
+
+  else if(head->getElement().find("id"))
+    idsFound.push_back(head->getElement());
+
+  for(const auto& c : head->getChildren())
+    findConstantIDs(head, idsFound, isIndex);
 }
 
 static void dumpSyntaxTree(Node *head) {
