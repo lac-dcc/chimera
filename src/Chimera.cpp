@@ -283,13 +283,12 @@ static void replaceTypes(Node *head, int& id){
   }
 }
 
-static Node* findParameterList(Node* head){
-  for(const auto& c: head->getChildren()){
+static Node* findParameterList(Node* moduleHead){
+  for(const auto& c: moduleHead->getChildren()){
     if(c->getElement() == "module_parameter_port_list_opt")
       return c.get();
-    else
-      findParameterList(c.get()); 
   }
+
   return NULL;
 }
 
@@ -298,18 +297,22 @@ static void findConstantIDs(Node* head, std::vector<std::string>& idsFound, bool
   if(head->getElement() == "decl_variable_dimension")
     isIndex = true;
 
-  else if(head->getElement().find("id"))
+  else if(isIndex && head->getElement().find("id"))
     idsFound.push_back(head->getElement());
 
   for(const auto& c : head->getChildren())
-    findConstantIDs(head, idsFound, isIndex);
+    findConstantIDs(c.get(), idsFound, isIndex);
 }
 
 static void addConstantIDsToParameterList(Node* head){
-  auto parameterList = findParameterList(head);//Can be null
-
+  if(head->getElement() != "module_or_interface_declaration")
+    return;
+  
   std::vector<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
+
+  auto parameterList = findParameterList(head);//Can be null
+  
   //test if parameter list is empty or not
   //add ids to parameterList
   //remove declaration of these ids
