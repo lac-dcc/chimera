@@ -310,6 +310,7 @@ static void addConstantIDsToParameterList(Node* head){
 
   std::vector<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
+  //test if parameter list is empty or not
   //add ids to parameterList
   //remove declaration of these ids
 }
