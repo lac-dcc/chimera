@@ -283,8 +283,18 @@ static void replaceTypes(Node *head, int& id){
   }
 }
 
+static Node* findParameterList(Node* head){
+  for(const auto& c: head->getChildren()){
+    if(c->getElement() == "module_parameter_port_list_opt")
+      return c.get();
+    else
+      findParameterList(c.get()); 
+  }
+  return NULL;
+}
+
 //find ids used in a place where their value should be constant
-static void findConstantIDs(Node* head, std::vector<std::string> idsFound, bool isIndex = false){
+static void findConstantIDs(Node* head, std::vector<std::string>& idsFound, bool isIndex = false){
   if(head->getElement() == "decl_variable_dimension")
     isIndex = true;
 
@@ -293,6 +303,15 @@ static void findConstantIDs(Node* head, std::vector<std::string> idsFound, bool 
 
   for(const auto& c : head->getChildren())
     findConstantIDs(head, idsFound, isIndex);
+}
+
+static void addConstantIDsToParameterList(Node* head){
+  auto parameterList = findParameterList(head);//Can be null
+
+  std::vector<std::string> constantIDs;
+  findConstantIDs(head, constantIDs);
+  //add ids to parameterList
+  //remove declaration of these ids
 }
 
 static void dumpSyntaxTree(Node *head) {
