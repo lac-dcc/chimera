@@ -14,11 +14,12 @@ void Node::insertChildToBegin(std::unique_ptr<Node> child) {
   this->children.insert(children.begin(), std::move(child));
 }
 
-void Node::insertChildToEnd(std::unique_ptr<Node> child){
+void Node::insertChildToEnd(std::unique_ptr<Node> child) {
   this->children.insert(children.end(), std::move(child));
 }
 
-void Node::insertChild(std::unique_ptr<Node> child, std::vector<std::unique_ptr<Node>>::const_iterator it) {
+void Node::insertChild(std::unique_ptr<Node> child,
+                       std::vector<std::unique_ptr<Node>>::const_iterator it) {
   this->children.insert(it, std::move(child));
 }
 

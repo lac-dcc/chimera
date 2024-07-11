@@ -10,10 +10,10 @@
 #include <iostream>
 #include <nlohmann/json.hpp>
 #include <random>
+#include <set>
 #include <stack>
 #include <unordered_map>
 #include <vector>
-#include<set>
 
 using json = nlohmann::json;
 bool debug = false;
@@ -207,21 +207,26 @@ static int countNumberPorts(Node *head) {
   return count;
 }
 
-static int renameNonAnsiPorts(Node *head, int counter, int n, bool isdecl=false) {
+static int renameNonAnsiPorts(Node *head, int counter, int n,
+                              bool isdecl = false) {
   isdecl |= head->getElement() == "port_reference";
-  if ((head->getElement() == " SymbolIdentifier " || head->getElement() == " EscapedIdentifier " || head->getElement() == " KeywordIdentifier ") && counter == 0) {
+  if ((head->getElement() == " SymbolIdentifier " ||
+       head->getElement() == " EscapedIdentifier " ||
+       head->getElement() == " KeywordIdentifier ") &&
+      counter == 0) {
     counter++;
-  
-  
 
-  } else if ((head->getElement() == " SymbolIdentifier " || head->getElement() == " EscapedIdentifier " || head->getElement() == " KeywordIdentifier ") && isdecl) {
+  } else if ((head->getElement() == " SymbolIdentifier " ||
+              head->getElement() == " EscapedIdentifier " ||
+              head->getElement() == " KeywordIdentifier ") &&
+             isdecl) {
     auto s = " id_" + std::to_string(counter) + " ";
     if (debug)
       std::cerr << "Renaming ID to " << s << std::endl;
     head->setElement(std::move(s));
     counter++;
   }
-  
+
   if (counter <= n) {
     for (const auto &c : head->getChildren()) {
       counter = renameNonAnsiPorts(c.get(), counter, n, isdecl);
@@ -274,83 +279,85 @@ static int declareNonAnsiPorts(Node *head) {
   return count;
 }
 
-static void replaceTypes(Node *head, int& id){
-  if(head->getElement() == "gatetype" || head->getElement() == "net_type")
+static void replaceTypes(Node *head, int &id) {
+  if (head->getElement() == "gatetype" || head->getElement() == "net_type")
     head->getChildren()[0].get()->setElement("id_" + std::to_string(id++));
-  else{
-    for(const auto &c : head->getChildren()){
+  else {
+    for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
     }
   }
 }
 
-static Node* findParameterList(Node* moduleHead){
-  for(const auto& c: moduleHead->getChildren()){
-    if(c->getElement() == "module_parameter_port_list_opt")
+static Node *findParameterList(Node *moduleHead) {
+  for (const auto &c : moduleHead->getChildren()) {
+    if (c->getElement() == "module_parameter_port_list_opt")
       return c.get();
   }
 
-  return NULL;
+  return nullptr;
 }
 
-//find ids used in a place where their value should be constant
-static void findConstantIDs(Node* head, std::set<std::string>& idsFound, bool isIndex = false){
-  if(head->getElement() == "decl_variable_dimension" || head->getElement() == "select_variable_dimension")
+// find ids used in a place where their value should be constant
+static void findConstantIDs(Node *head, std::set<std::string> &idsFound,
+                            bool isIndex = false) {
+  if (head->getElement() == "decl_variable_dimension" ||
+      head->getElement() == "select_variable_dimension")
     isIndex = true;
 
-  else if(isIndex && head->getElement().find("id")!= std::string::npos && head->getChildren().size() == 0){
+  else if (isIndex && head->getElement().find("id") != std::string::npos &&
+           head->getChildren().size() == 0) {
     idsFound.insert(head->getElement());
   }
 
-  for(const auto& c : head->getChildren())
+  for (const auto &c : head->getChildren())
     findConstantIDs(c.get(), idsFound, isIndex);
 }
 
-static void createParameterList(Node* parameterList){
-
+static void createParameterList(Node *parameterList) {
   std::vector<std::unique_ptr<Node>> children;
 
-  children.push_back(std::make_unique<Terminal>(" # "));
-  children.push_back(std::make_unique<Terminal>(" ( "));
+  children.push_back(std::make_unique<Terminal>(" #( "));
   children.push_back(std::make_unique<Terminal>(" ) "));
 
   parameterList->setChildren(std::move(children));
 }
 
-static void addParametersToList(Node* parameterList, const std::set<std::string>& constantIds){
+static void addParametersToList(Node *parameterList,
+                                const std::set<std::string> &constantIds) {
   std::string list = "";
-  int i = 0;
-  for(auto id:constantIds){
-    
-    list += "parameter " + id +" = 32'd" + std::to_string(rand() % 100);
-    std::string end = (i <(int) constantIds.size() - 1) ? ", " : "";
-    list += end;
-    i++;
+  for (auto id : constantIds) {
+    list += "parameter " + id + " = 32'd" + std::to_string(rand() % 100) + ",";
   }
-  parameterList->getChildren()[parameterList->getChildren().size() - 1].get()->setElement(list);
-  parameterList->insertChildToEnd(std::make_unique<Terminal>(" ) "));
+  list.pop_back();
+  list += " ) ";
+
+  parameterList->getChildren()[parameterList->getChildren().size() - 1]
+      .get()->setElement(list);
 }
 
-static void addConstantIDsToParameterList(Node* head){
-  
+static void addConstantIDsToParameterList(Node *head) {
   std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
 
-  auto parameterList = findParameterList(head);//Can't be null
-  assert(parameterList != NULL);
-  
-  if(parameterList->getChildren().size() <= 1){
-    createParameterList(parameterList);    
-  }
-  else if(parameterList->getChildren().size() > 3){
-    parameterList->insertChild( std::make_unique<Terminal>(" , "),
-      std::next(parameterList->getChildren().begin(), parameterList->getChildren().size() - 1));
+  if (constantIDs.empty())
+    return;
 
+  auto parameterList = findParameterList(head); // Can't be null
+  assert(parameterList != nullptr);
+
+  if (parameterList->getChildren().size() <= 1) {
+    createParameterList(parameterList);
+  } else if (parameterList->getChildren().size() > 3) {
+    parameterList->insertChild(
+        std::make_unique<Terminal>(" , "),
+        std::next(parameterList->getChildren().begin(),
+                  parameterList->getChildren().size() - 1));
   }
 
   addParametersToList(parameterList, constantIDs);
-  
-  //remove declaration of these ids
+
+  // remove declaration of these ids
 }
 
 static void dumpSyntaxTree(Node *head) {
@@ -410,7 +417,7 @@ int main(int argc, char **argv) {
 
   if (flags.count("debug"))
     debug = true;
-  
+
   if (flags.count("printseed"))
     printSeed = true;
 
@@ -443,7 +450,6 @@ int main(int argc, char **argv) {
     replaceTypes(m, lastID);
   }
   renameVars(head.get(), 0, 0);
-  
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
