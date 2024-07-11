@@ -209,18 +209,20 @@ static int countNumberPorts(Node *head) {
 }
 
 static int renameNonAnsiPorts(Node *head, int counter, int n,
-                              bool isdecl = false) {
+                              bool isdecl = false, bool isDimension = false) {
   isdecl |= head->getElement() == "port_reference";
+  isDimension |= head->getElement() == "decl_dimensions_opt";
+
   if ((head->getElement() == " SymbolIdentifier " ||
        head->getElement() == " EscapedIdentifier " ||
        head->getElement() == " KeywordIdentifier ") &&
       counter == 0) {
     counter++;
 
-  } else if ((head->getElement() == " SymbolIdentifier " ||
+  } else if (isdecl && ! isDimension &&  (head->getElement() == " SymbolIdentifier " ||
               head->getElement() == " EscapedIdentifier " ||
-              head->getElement() == " KeywordIdentifier ") &&
-             isdecl) {
+              head->getElement() == " KeywordIdentifier ") 
+             ) {
     auto s = " id_" + std::to_string(counter) + " ";
     if (debug)
       std::cerr << "Renaming ID to " << s << std::endl;
@@ -230,7 +232,7 @@ static int renameNonAnsiPorts(Node *head, int counter, int n,
 
   if (counter <= n) {
     for (const auto &c : head->getChildren()) {
-      counter = renameNonAnsiPorts(c.get(), counter, n, isdecl);
+      counter = renameNonAnsiPorts(c.get(), counter, n, isdecl, isDimension);
     }
   }
 
