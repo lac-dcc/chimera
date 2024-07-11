@@ -1,14 +1,16 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
 
-IdentifierRenamingVisitor::IdentifierRenamingVisitor(int id, int modID){
+IdentifierRenamingVisitor::IdentifierRenamingVisitor(
+    int id, int modID, std::unordered_map<std::string, Node *> &declMap) {
   this->varID = id + 1;
   this->moduleID = modID;
-  if(debug)
-    std::cerr<< "varID: " << varID << std::endl;
-  for(int i = 1; i<=id;i++){
+  this->declMap = &declMap;
+  if (debug)
+    std::cerr << "varID: " << varID << std::endl;
+  for (int i = 1; i <= id; i++) {
     Var var;
-    var.name =  " id_" + std::to_string(i) + " ";
+    var.name = " id_" + std::to_string(i) + " ";
     var.t = "logic";
     this->identifiers.push_back(std::make_shared<Var>(var));
   }
@@ -18,7 +20,7 @@ bool IdentifierRenamingVisitor::isStartingToken(std::string t) {
   return t == " begin " || t == " module ";
 }
 
-bool IdentifierRenamingVisitor::isFnishingToken(std::string t) {
+bool IdentifierRenamingVisitor::isFinishingToken(std::string t) {
   return t == " end " || t == " endmodule ";
 }
 
@@ -206,7 +208,7 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 
     startNewScope();
 
-  } else if (isFnishingToken(node->getElement())) {
+  } else if (isFinishingToken(node->getElement())) {
 
     finishScope();
   }
@@ -898,8 +900,15 @@ void IdentifierRenamingVisitor::visit(Parameters *node) {
 
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
   // discover possible type of symbol
-  if(node->getElement() == " SymbolIdentifier ")
-    node->setElement(placeID("logic"));
+  if (node->getElement() == " SymbolIdentifier ") {
+    auto id = placeID("logic");
+
+    if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+      (*this->declMap)[id] = node;
+    }
+
+    node->setElement(id);
+  }
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -907,7 +916,7 @@ void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
-  if(node->getElement() == " MacroIdentifier ")
+  if (node->getElement() == " MacroIdentifier ")
     node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -915,8 +924,16 @@ void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Escapedidentifier *node) {
-  if(node->getElement() == " EscapedIdentifier ")
-  node->setElement(placeID("logic"));
+  if (node->getElement() == " EscapedIdentifier ") {
+    auto id = placeID("logic");
+
+    if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+      (*this->declMap)[id] = node;
+    }
+
+    node->setElement(id);
+  }
+
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1018,7 +1035,7 @@ void IdentifierRenamingVisitor::visit(System_tf_call *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Systemtfidentifier *node) {
-  if(node->getElement() == " SystemtfIdentifier ")
+  if (node->getElement() == " SystemtfIdentifier ")
     node->setElement(placeID("logic"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -2121,7 +2138,7 @@ void IdentifierRenamingVisitor::visit(Preprocess_include_argument *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Pp_identifier *node) {
-  
+
   node->setElement(placeID("PP"));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);

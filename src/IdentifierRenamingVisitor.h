@@ -25,7 +25,7 @@ private:
   std::vector<std::shared_ptr<Var>> to_define;   // vars used but not declared
   std::stack<int> scopeLimit;
   bool isStartingToken(std::string t);
-  bool isFnishingToken(std::string t);
+  bool isFinishingToken(std::string t);
   void startNewScope();
   void finishScope();
   Var createNewID(std::string t);
@@ -33,11 +33,13 @@ private:
   void finishIDContext(bool force = false);
   std::string findID(std::string type);
   std::string placeID(std::string type);
+  std::unordered_map<std::string, Node *> *declMap;
 
 public:
   int varID = 0;
   int moduleID = 0;
-  IdentifierRenamingVisitor(int id, int modID);
+  IdentifierRenamingVisitor(int id, int modID,
+                            std::unordered_map<std::string, Node *> &declMap);
   virtual void visit(Node *node) override;
 
   virtual void visit(Terminal *node) override;

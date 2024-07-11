@@ -178,8 +178,9 @@ static void replaceConstants(Node *head) {
   head->accept(visitor);
 }
 
-static int renameVars(Node *head, int n, int modID) {
-  IdentifierRenamingVisitor visitor(n, modID);
+static int renameVars(Node *head, int n, int modID,
+                      std::unordered_map<std::string, Node *> &declMap) {
+  IdentifierRenamingVisitor visitor(n, modID, declMap);
   head->accept(visitor);
   return visitor.varID;
 }
@@ -333,10 +334,25 @@ static void addParametersToList(Node *parameterList,
   list += " ) ";
 
   parameterList->getChildren()[parameterList->getChildren().size() - 1]
-      .get()->setElement(list);
+      .get()
+      ->setElement(list);
 }
 
-static void addConstantIDsToParameterList(Node *head) {
+static void
+renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
+                              std::set<std::string> &constantIDs) {
+  for (auto &id : constantIDs) {
+    if (declMap.find(id) != declMap.end()) {
+      std::string newId = id;
+      newId[0] = '_';
+      declMap[id]->setElement(" " + newId);
+    }
+  }
+}
+
+static void
+addConstantIDsToParameterList(Node *head,
+                              std::unordered_map<std::string, Node *> &declMap) {
   std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
 
@@ -357,7 +373,7 @@ static void addConstantIDsToParameterList(Node *head) {
 
   addParametersToList(parameterList, constantIDs);
 
-  // remove declaration of these ids
+  renameConstantIDsDeclarations(declMap, constantIDs);
 }
 
 static void dumpSyntaxTree(Node *head) {
@@ -443,13 +459,17 @@ int main(int argc, char **argv) {
 
   replaceConstants(head.get());
   int modID = 0;
+  std::unordered_map<std::string, Node *> declMap;
   for (const auto &m : modules) {
+    declMap.clear();
     int n = declareNonAnsiPorts(m);
-    int lastID = renameVars(m, n, modID++);
-    addConstantIDsToParameterList(m);
+    int lastID = renameVars(m, n, modID++, declMap);
+    addConstantIDsToParameterList(m, declMap);
     replaceTypes(m, lastID);
   }
-  renameVars(head.get(), 0, 0);
+
+  declMap.clear();
+  renameVars(head.get(), 0, 0, declMap);
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
