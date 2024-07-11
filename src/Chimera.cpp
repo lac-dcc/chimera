@@ -13,6 +13,7 @@
 #include <stack>
 #include <unordered_map>
 #include <vector>
+#include<set>
 
 using json = nlohmann::json;
 bool debug = false;
@@ -293,28 +294,62 @@ static Node* findParameterList(Node* moduleHead){
 }
 
 //find ids used in a place where their value should be constant
-static void findConstantIDs(Node* head, std::vector<std::string>& idsFound, bool isIndex = false){
-  if(head->getElement() == "decl_variable_dimension")
+static void findConstantIDs(Node* head, std::set<std::string>& idsFound, bool isIndex = false){
+  if(head->getElement() == "decl_variable_dimension" || head->getElement() == "select_variable_dimension")
     isIndex = true;
 
-  else if(isIndex && head->getElement().find("id"))
-    idsFound.push_back(head->getElement());
+  else if(isIndex && head->getElement().find("id")!= std::string::npos && head->getChildren().size() == 0){
+    idsFound.insert(head->getElement());
+  }
 
   for(const auto& c : head->getChildren())
     findConstantIDs(c.get(), idsFound, isIndex);
 }
 
+static void createParameterList(Node* parameterList){
+
+  std::vector<std::unique_ptr<Node>> children;
+
+  children.push_back(std::make_unique<Terminal>(" # "));
+  children.push_back(std::make_unique<Terminal>(" ( "));
+  children.push_back(std::make_unique<Terminal>(" ) "));
+
+  parameterList->setChildren(std::move(children));
+}
+
+static void addParametersToList(Node* parameterList, const std::set<std::string>& constantIds){
+  std::string list = "";
+  int i = 0;
+  for(auto id:constantIds){
+    
+    list += "parameter " + id +" = 32'd" + std::to_string(rand() % 100);
+    std::string end = (i <(int) constantIds.size() - 1) ? ", " : "";
+    list += end;
+    i++;
+  }
+  parameterList->getChildren()[parameterList->getChildren().size() - 1].get()->setElement(list);
+  parameterList->insertChildToEnd(std::make_unique<Terminal>(" ) "));
+}
+
 static void addConstantIDsToParameterList(Node* head){
-  if(head->getElement() != "module_or_interface_declaration")
-    return;
   
-  std::vector<std::string> constantIDs;
+  std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
 
-  auto parameterList = findParameterList(head);//Can be null
+  auto parameterList = findParameterList(head);//Can't be null
+  assert(parameterList != NULL);
   
-  //test if parameter list is empty or not
-  //add ids to parameterList
+  if(parameterList->getChildren().size() <= 1){
+    createParameterList(parameterList);    
+  }
+  else if(parameterList->getChildren().size() > 3){
+    parameterList->insertChild( std::make_unique<Terminal>(" , "),
+      std::next(parameterList->getChildren().begin(), parameterList->getChildren().size() - 1));
+
+  }
+
+  addParametersToList(parameterList, constantIDs);
+  
   //remove declaration of these ids
 }
 
@@ -404,9 +439,11 @@ int main(int argc, char **argv) {
   for (const auto &m : modules) {
     int n = declareNonAnsiPorts(m);
     int lastID = renameVars(m, n, modID++);
+    addConstantIDsToParameterList(m);
     replaceTypes(m, lastID);
   }
   renameVars(head.get(), 0, 0);
+  
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());

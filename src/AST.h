@@ -14,6 +14,9 @@ public:
 
   const std::vector<std::unique_ptr<Node>> &getChildren();
   void insertChildToBegin(std::unique_ptr<Node>);
+  void insertChildToEnd(std::unique_ptr<Node>);
+  void insertChild(std::unique_ptr<Node>, std::vector<std::unique_ptr<Node>>::const_iterator);
+  
 
   void clearChildren();
 
