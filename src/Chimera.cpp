@@ -378,6 +378,11 @@ addConstantIDsToParameterList(Node *head,
   renameConstantIDsDeclarations(declMap, constantIDs);
 }
 
+static void removeParameters(Node* head){
+  auto param = findParameterList(head);
+  param->clearChildren();
+}
+
 static void dumpSyntaxTree(Node *head) {
   std::cerr << head->getElement() << " ->";
   for (auto &child : head->getChildren()) {
@@ -465,6 +470,7 @@ int main(int argc, char **argv) {
   for (const auto &m : modules) {
     declMap.clear();
     int n = declareNonAnsiPorts(m);
+    removeParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
     addConstantIDsToParameterList(m, declMap);
     replaceTypes(m, lastID);
