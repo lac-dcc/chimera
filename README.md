@@ -12,6 +12,7 @@ Below we list three examples of issues reported in this way:
 * [2159](https://github.com/chipsalliance/verible/issues/2159): Verible's [obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) crashes when reading a program that only contains the pragma directive.
 * [2181](https://github.com/chipsalliance/verible/issues/2181): Verible's [parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) crashes instead of reporting syntax errors related to instantiation type.
 * [2189](https://github.com/chipsalliance/verible/issues/2189): Verible's [code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) crashes with syntactically valid input.
+* [5276](https://github.com/verilator/verilator/issues/5276): [Verilator](https://github.com/verilator/verilator)'s cc crashes with signal 9 on a very large program.
 
 If you ever use ChiBench to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
