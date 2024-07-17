@@ -209,7 +209,7 @@ static int countNumberPorts(Node *head) {
 }
 
 static int renameNonAnsiPorts(Node *head, int counter, int n,
-                              bool isdecl = false, bool isDimension = false) {
+                               std::unordered_map<std::string, Node *>& decl_map, bool isdecl = false, bool isDimension = false) {
   isdecl |= head->getElement() == "port_reference";
   isDimension |= head->getElement() == "decl_dimensions_opt";
 
@@ -224,22 +224,24 @@ static int renameNonAnsiPorts(Node *head, int counter, int n,
               head->getElement() == " KeywordIdentifier ") 
              ) {
     auto s = " id_" + std::to_string(counter) + " ";
+    decl_map[s] = head;
     if (debug)
       std::cerr << "Renaming ID to " << s << std::endl;
     head->setElement(std::move(s));
+
     counter++;
   }
 
   if (counter <= n) {
     for (const auto &c : head->getChildren()) {
-      counter = renameNonAnsiPorts(c.get(), counter, n, isdecl, isDimension);
+      counter = renameNonAnsiPorts(c.get(), counter, n,decl_map, isdecl, isDimension);
     }
   }
 
   return counter;
 }
 
-static bool matchNonAnsiPorts(Node *head, int n) {
+static bool matchNonAnsiPorts(Node *head, int n, std::unordered_map<std::string, Node *>& dir_map) {
   bool done = false;
 
   if (head->getElement() == "module_item_list_opt") {
@@ -249,36 +251,39 @@ static bool matchNonAnsiPorts(Node *head, int n) {
     for (int i = 1; i <= n; i++) {
       int choice = rand() % 2;
 
-      std::string prod;
+      
+      auto id = " id_" + std::to_string(i) + " ";
+      
+      auto dir = (choice) ? "input" : "output";
+      
+      auto childId = std::make_unique<Terminal>(id);
+      dir_map[id] = childId.get();
 
-      prod = (choice) ? "input id_" + std::to_string(i) + "; "
-                      : "output id_" + std::to_string(i) + "; ";
-      if (debug)
-        std::cerr << "Creating child: " << prod;
-      auto child = std::make_unique<Terminal>(prod);
-      head->insertChildToBegin(std::move(child));
+      auto childDir = std::make_unique<Terminal>(dir);
+      head->insertChildToBegin(std::make_unique<Terminal>("; "));
+      head->insertChildToBegin(std::move(childId));
+      head->insertChildToBegin(std::move(childDir));
     }
     done = true;
   }
 
   for (int i = 0; i < (int)head->getChildren().size() && !done; i++) {
-    done |= matchNonAnsiPorts(head->getChildren()[i].get(), n);
+    done |= matchNonAnsiPorts(head->getChildren()[i].get(), n, dir_map);
   }
 
   return done;
 }
 
-static int declareNonAnsiPorts(Node *head) {
+static int declareNonAnsiPorts(Node *head, std::unordered_map<std::string, Node *>& decl_map, std::unordered_map<std::string, Node *>& dir_map) {
   auto count = 0;
-  if (!isAnsi(head)) {
-    if (debug)
-      std::cerr << "Code is not ansi" << std::endl;
-    count = countNumberPorts(head);
-    if (debug)
-      std::cerr << count << " vars found" << std::endl;
-    renameNonAnsiPorts(head, 0, count);
-    matchNonAnsiPorts(head, count);
-  }
+  if (debug)
+    std::cerr << "Code is not ansi" << std::endl;
+  count = countNumberPorts(head);
+  if (debug)
+    std::cerr << count << " vars found" << std::endl;
+  renameNonAnsiPorts(head, 0, count, decl_map);
+  matchNonAnsiPorts(head, count, dir_map);
+  
   return count;
 }
 
@@ -342,19 +347,36 @@ static void addParametersToList(Node *parameterList,
 
 static void
 renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
+                              std::unordered_map<std::string, Node *> &dirMap,
                               std::set<std::string> &constantIDs) {
   for (auto &id : constantIDs) {
+    auto x = (declMap.find(id) != declMap.end());
+    
     if (declMap.find(id) != declMap.end()) {
       std::string newId = id;
+      if(newId[0] == ' '){
+        newId[0] = '_';
+        declMap[id]->setElement(" " + newId);
+      }
+      else{
+        declMap[id]->setElement(" _" + newId);
+      }
+      
+    }
+    x = (dirMap.find(id) != dirMap.end());
+    
+    if (dirMap.find(id) != dirMap.end()) {
+      std::string newId = id;
       newId[0] = '_';
-      declMap[id]->setElement(" " + newId);
+      dirMap[id]->setElement(" " + newId);
     }
   }
 }
 
 static void
 addConstantIDsToParameterList(Node *head,
-                              std::unordered_map<std::string, Node *> &declMap) {
+                              std::unordered_map<std::string, Node *> & declMap, bool ansi,
+                              std::unordered_map<std::string, Node *> & dirMap) {
   std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
 
@@ -375,7 +397,8 @@ addConstantIDsToParameterList(Node *head,
 
   addParametersToList(parameterList, constantIDs);
 
-  renameConstantIDsDeclarations(declMap, constantIDs);
+  renameConstantIDsDeclarations(declMap, dirMap, constantIDs);
+  
 }
 
 static void removeParameters(Node* head){
@@ -467,12 +490,18 @@ int main(int argc, char **argv) {
   replaceConstants(head.get());
   int modID = 0;
   std::unordered_map<std::string, Node *> declMap;
+  std::unordered_map<std::string, Node *> dirMap;
   for (const auto &m : modules) {
     declMap.clear();
-    int n = declareNonAnsiPorts(m);
+    dirMap.clear();
+    auto ansi = isAnsi(m);
+    int n = 0;
+    if(!ansi){
+      n = declareNonAnsiPorts(m, declMap, dirMap);
+    }
     removeParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
-    addConstantIDsToParameterList(m, declMap);
+    addConstantIDsToParameterList(m, declMap, ansi, dirMap);
     replaceTypes(m, lastID);
   }
 
