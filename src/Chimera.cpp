@@ -306,6 +306,37 @@ static Node *findParameterList(Node *moduleHead) {
   return nullptr;
 }
 
+static bool isId(const std::string& name){
+  return name == " SymbolIdentifier "
+        || name == " EscapedIdentifier "; 
+
+}
+static void renamePositionalPort(Node* curr, int& id, bool ismemberName=false){
+  ismemberName |= curr->getElement() == "member_name";
+  //std::cerr << "MEMBER: " << ismemberName << std::endl;
+
+  for(auto & c: curr->getChildren()){
+    renamePositionalPort(c.get(), id, ismemberName);
+  }
+
+  if(isId(curr->getElement()) && ismemberName){
+    curr->setElement(" id_" + std::to_string(id++) );
+  }
+}
+
+static void renamePositionalPorts(Node *head){
+  if(head->getElement() == "any_port_list_named"){
+    int i = 0;
+    for(auto & c: head->getChildren()){
+      renamePositionalPort(c.get(), i);
+    }
+
+  }
+for( auto &c : head->getChildren()){
+  renamePositionalPorts(c.get());
+}
+}
+
 // find ids used in a place where their value should be constant
 static void findConstantIDs(Node *head, std::set<std::string> &idsFound,
                             bool isIndex = false) {
@@ -488,6 +519,7 @@ int main(int argc, char **argv) {
   removePortDeclarations(portDeclarations);
 
   replaceConstants(head.get());
+  renamePositionalPorts(head.get());
   int modID = 0;
   std::unordered_map<std::string, Node *> declMap;
   std::unordered_map<std::string, Node *> dirMap;
@@ -515,3 +547,4 @@ int main(int argc, char **argv) {
 
   return 0;
 }
+;
