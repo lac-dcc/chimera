@@ -381,7 +381,7 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
                               std::unordered_map<std::string, Node *> &dirMap,
                               std::set<std::string> &constantIDs) {
   for (auto &id : constantIDs) {
-    auto x = (declMap.find(id) != declMap.end());
+    
     
     if (declMap.find(id) != declMap.end()) {
       std::string newId = id;
@@ -394,7 +394,7 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
       }
       
     }
-    x = (dirMap.find(id) != dirMap.end());
+    
     
     if (dirMap.find(id) != dirMap.end()) {
       std::string newId = id;
@@ -406,7 +406,7 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
 
 static void
 addConstantIDsToParameterList(Node *head,
-                              std::unordered_map<std::string, Node *> & declMap, bool ansi,
+                              std::unordered_map<std::string, Node *> & declMap,
                               std::unordered_map<std::string, Node *> & dirMap) {
   std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
@@ -533,7 +533,7 @@ int main(int argc, char **argv) {
     }
     removeParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
-    addConstantIDsToParameterList(m, declMap, ansi, dirMap);
+    addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
   }
 
