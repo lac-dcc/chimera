@@ -7,7 +7,7 @@
 ChiBench consists of a large collection of Verilog programs mined from open-source github repositories.
 The goal of this benchmark suite is to test and debug electronic design automation (EDA) tools, such as the [Jasper Formal Verification Platform](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification.html) or [Intel Quartus](https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html).
 To test your EDA tool, simply pass all the programs in the ChiBench collection to it, and see if it crashes.
-Below we list three examples of issues reported in this way:
+Below we list examples of issues reported in this way:
 
 * [2159](https://github.com/chipsalliance/verible/issues/2159): Verible's [obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) crashes when reading a program that only contains the pragma directive.
 * [2181](https://github.com/chipsalliance/verible/issues/2181): Verible's [parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) crashes instead of reporting syntax errors related to instantiation type.
