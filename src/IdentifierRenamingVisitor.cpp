@@ -6,14 +6,18 @@ IdentifierRenamingVisitor::IdentifierRenamingVisitor(
   this->varID = id + 1;
   this->moduleID = modID;
   this->declMap = &declMap;
+  
   if (debug)
     std::cerr << "varID: " << varID << std::endl;
   for (int i = 1; i <= id; i++) {
     Var var;
     var.name = " id_" + std::to_string(i) + " ";
-    var.t = "logic";
+    var.type = "logic";
+    var.dir = "";
+    
     this->identifiers.push_back(std::make_shared<Var>(var));
   }
+
 }
 
 bool IdentifierRenamingVisitor::isStartingToken(std::string t) {
@@ -41,7 +45,7 @@ void IdentifierRenamingVisitor::finishScope() {
 
     for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
       if (debug)
-        std::cerr << "Removing: " << identifiers.back().get()->name
+        std::cerr << "Removing: " << identifiers.back()->name
                   << std::endl;
       identifiers.pop_back();
     }
@@ -49,38 +53,41 @@ void IdentifierRenamingVisitor::finishScope() {
   }
 }
 
-IdentifierRenamingVisitor::Var
+Var
 IdentifierRenamingVisitor::createNewID(std::string t) {
   Var v;
-  std::string ret;
   for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
 
     if ((*c).get()->name == t) {
 
       to_define.erase(c);
+      
       identifiers.push_back(*c);
       return *(*c);
     }
   }
-
-  if (t == "module") {
+  if (t == "type"){
+    v.name = "type_" + std::to_string(typeID++);
+  }
+  else if (t == "module") {
     v.name = " module_" + std::to_string(moduleID++);
-    ret = v.name;
+    
   } else if (t == "PP") {
-    ret = "pp_" + std::to_string(varID++) + " ";
-    v.name = " `" + ret;
+    v.name = " `pp_" + std::to_string(varID++) + " ";
   } else {
     v.name = " id_" + std::to_string(varID++) + " ";
-    ret = v.name;
+    
   }
   if (debug)
     std::cerr << "Var name: " << v.name << std::endl;
-  v.t = t;
-  identifiers.push_back(std::make_shared<Var>(v));
-  Var r;
-  r.name = ret;
-  r.t = t;
-  return r;
+  v.type = t;
+
+    if(debug) 
+      std::cerr << "ID name: " << v.name << " type: " << v.type << std::endl;
+  auto r = std::make_shared<Var>(v);
+  identifiers.push_back(r);
+  
+  return *r.get();
 }
 
 void IdentifierRenamingVisitor::createIDContext(ContextType t, bool force) {
@@ -118,8 +125,11 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
   std::vector<std::string> options;
   for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
-    if ((*id).get()->t == type)
-      options.push_back((*id).get()->name);
+
+    if((type == "" && (*id)->type != "module" && (*id)->type != "type") || (*id)->type == type){
+      options.push_back((*id)->name);
+
+    } 
   }
 
   if (options.empty()) {
@@ -159,6 +169,14 @@ std::string IdentifierRenamingVisitor::placeID(
     std::string type) { // SymbolIdentifier, EscapedIdentifier
   if (debug)
     std::cerr << "Placing id" << std::endl;
+
+  if (type == "PP") { // pre-processor TODO: map to enum
+    auto id = createNewID("PP");
+    auto name = id.name;
+    name.erase(0,2);
+    return " " + name;
+  }
+
   if (!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
     return createNewID("type").name;
 
@@ -170,17 +188,13 @@ std::string IdentifierRenamingVisitor::placeID(
   }
 
   if (!contexts.empty() && contexts.top() == ContextType::DECL) {
-    if (debug)
-      std::cerr << "Creating new ID for type: " << type << std::endl;
-
-    return createNewID(type).name;
-  }
-
-  if (type == "PP") { // pre-processor TODO: map to enum
-    auto id = createNewID("PP");
+    std::string t;
+    auto id = createNewID(type);
 
     return id.name;
   }
+
+  
 
   return findID(type);
 }
@@ -198,13 +212,9 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 
   if (node->getElement() == " ] ") {
     finishIDContext();
-  }
-
-  if (node->getElement() == " <<`define-tokens>> ") {
+  } else if (node->getElement() == " <<`define-tokens>> ") {
     node->setElement("<<`define-tokens>>\n");
-  }
-
-  if (isStartingToken(node->getElement())) {
+  } else if (isStartingToken(node->getElement())) {
 
     startNewScope();
 
@@ -901,7 +911,7 @@ void IdentifierRenamingVisitor::visit(Parameters *node) {
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
   // discover possible type of symbol
   if (node->getElement() == " SymbolIdentifier ") {
-    auto id = placeID("logic");
+    auto id = placeID("");
 
     if (!contexts.empty() && contexts.top() == ContextType::DECL) {
       (*this->declMap)[id] = node;
@@ -917,7 +927,7 @@ void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
 
 void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
   if (node->getElement() == " MacroIdentifier ")
-    node->setElement(placeID("logic"));
+    node->setElement(placeID(""));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -925,7 +935,7 @@ void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
 
 void IdentifierRenamingVisitor::visit(Escapedidentifier *node) {
   if (node->getElement() == " EscapedIdentifier ") {
-    auto id = placeID("logic");
+    auto id = placeID("");
 
     if (!contexts.empty() && contexts.top() == ContextType::DECL) {
       (*this->declMap)[id] = node;
@@ -1036,7 +1046,7 @@ void IdentifierRenamingVisitor::visit(System_tf_call *node) {
 
 void IdentifierRenamingVisitor::visit(Systemtfidentifier *node) {
   if (node->getElement() == " SystemtfIdentifier ")
-    node->setElement(placeID("logic"));
+    node->setElement(placeID(""));
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
@@ -1161,8 +1171,9 @@ void IdentifierRenamingVisitor::visit(
 void IdentifierRenamingVisitor::visit(Decl_dimensions_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
   if (!identifiers.empty()) {
+    
     this->defId = this->identifiers.back()->name;
-    this->defType = this->identifiers.back()->t;
+    this->defType = this->identifiers.back()->type;
   }
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
@@ -1174,7 +1185,7 @@ void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
   if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
-    this->defType = this->identifiers.back()->t;
+    this->defType = this->identifiers.back()->type;
   }
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
@@ -1316,9 +1327,11 @@ void IdentifierRenamingVisitor::visit(Specparam_declaration *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Net_type *node) {
+  contexts.push(ContextType::TYPE_DECL);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     child->accept(*this);
   }
+  contexts.pop();
 }
 
 void IdentifierRenamingVisitor::visit(Data_type_or_implicit *node) {
@@ -1628,7 +1641,7 @@ void IdentifierRenamingVisitor::visit(Port_expression_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
   if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
-    this->defType = this->identifiers.back()->t;
+    this->defType = this->identifiers.back()->type;
   }
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {

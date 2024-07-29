@@ -9,16 +9,19 @@
 
 extern bool debug;
 
+struct Var {
+    std::string name;
+    std::string type;
+    std::string dir;
+  };
+
 class IdentifierRenamingVisitor : public Visitor {
 private:
-  struct Var {
-    std::string name;
-    std::string t;
-  };
+  
   std::string defId = "";
   std::string defType = "";
 
-  enum ContextType { EXPR = 0, DECL, MODULE, DEFINING_ID, DEFINING_TYPE };
+  enum ContextType { EXPR = 0, DECL, MODULE, DEFINING_ID, DEFINING_TYPE, TYPE_DECL };
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared
@@ -34,10 +37,12 @@ private:
   std::string findID(std::string type);
   std::string placeID(std::string type);
   std::unordered_map<std::string, Node *> *declMap;
+  std::unordered_map<std::string, std::unique_ptr<Var>> *typeMap;
 
 public:
   int varID = 0;
   int moduleID = 0;
+  int typeID = 0;
   IdentifierRenamingVisitor(int id, int modID,
                             std::unordered_map<std::string, Node *> &declMap);
   virtual void visit(Node *node) override;

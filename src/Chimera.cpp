@@ -274,7 +274,8 @@ static bool matchNonAnsiPorts(Node *head, int n, std::unordered_map<std::string,
   return done;
 }
 
-static int declareNonAnsiPorts(Node *head, std::unordered_map<std::string, Node *>& decl_map, std::unordered_map<std::string, Node *>& dir_map) {
+static int declareNonAnsiPorts(Node *head, std::unordered_map<std::string, Node *>& decl_map, 
+std::unordered_map<std::string, Node *>& dir_map) {
   auto count = 0;
   if (debug)
     std::cerr << "Code is not ansi" << std::endl;
@@ -288,9 +289,23 @@ static int declareNonAnsiPorts(Node *head, std::unordered_map<std::string, Node 
 }
 
 static void replaceTypes(Node *head, int &id) {
-  if (head->getElement() == "gatetype" || head->getElement() == "net_type")
-    head->getChildren()[0].get()->setElement("id_" + std::to_string(id++));
-  else {
+  if(head->getElement() == "decl_variable_dimension"){
+    head->clearChildren();
+    head->insertChildToBegin(std::make_unique<Terminal>(""));
+  }
+  if(head->getElement() == "integer_vector_type"){//removes reg, logic ...
+    head->getChildren()[0]->setElement("type_" + std::to_string(id++));
+  }
+  else if(head->getElement() == "udp_port_decl" and head->getChildren()[0]->getElement() == " reg "){
+    head->getChildren()[0]->setElement("type_" + std::to_string(id++));
+
+  } else if (head->getElement() == "gatetype" || head->getElement() == "net_type" || head->getElement() == "var_type")//removes wire ...
+    head->getChildren()[0]->setElement("type_" + std::to_string(id++));
+  else if(head->getElement() == " signed " || head->getElement() == " unsigned "){
+    head->setElement("");
+  }
+  
+  else{
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
     }
@@ -533,9 +548,12 @@ int main(int argc, char **argv) {
     }
     removeParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
+
     addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
   }
+
+
 
   declMap.clear();
   renameVars(head.get(), 0, 0, declMap);
