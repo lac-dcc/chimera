@@ -13,7 +13,9 @@ Below we list examples of issues reported in this way:
 * [2181](https://github.com/chipsalliance/verible/issues/2181): Verible's [parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) crashes instead of reporting syntax errors related to instantiation type.
 * [2189](https://github.com/chipsalliance/verible/issues/2189): Verible's [code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) crashes with syntactically valid input.
 * [5276](https://github.com/verilator/verilator/issues/5276): [Verilator](https://github.com/verilator/verilator)'s cc crashes with signal 9 on a very large program.
-
+* [5311](https://github.com/verilator/verilator/issues/5311): Verilator crashes when using time assignments.
+* [5312](https://github.com/verilator/verilator/issues/5312): Verilator crashes when calling a function created in "generate" block.
+  
 If you ever use ChiBench to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
 
