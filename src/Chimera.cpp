@@ -5,6 +5,7 @@
 #include "Visitor.h"
 #include <algorithm>
 #include <cxxopts.hpp>
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -487,6 +488,12 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   if (!flags.count("file")) {
     std::cerr << "Missing JSON file with probabilities." << std::endl;
     std::cerr << "Use --help for more information." << std::endl;
+    exit(1);
+  }
+
+  auto jsonFile = flags["file"].as<std::string>();
+  if (!std::filesystem::exists(jsonFile)) {
+    std::cerr << "'" << jsonFile << "' is not a valid file." << std::endl;
     exit(1);
   }
 
