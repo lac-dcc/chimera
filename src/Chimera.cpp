@@ -170,18 +170,18 @@ static void removePortDeclarations(std::vector<Node *> &portDeclarations) {
 
 static void codeGen(Node *head) {
   CodeGenVisitor visitor;
-  head->accept(visitor);
+  visitor.applyVisit(head);
 }
 
 static void replaceConstants(Node *head) {
   ReplaceConstantsVisitor visitor;
-  head->accept(visitor);
+  visitor.applyVisit(head);
 }
 
 static int renameVars(Node *head, int n, int modID,
                       std::unordered_map<std::string, Node *> &declMap) {
   IdentifierRenamingVisitor visitor(n, modID, declMap);
-  head->accept(visitor);
+  visitor.applyVisit(head);
   return visitor.varID;
 }
 
@@ -209,7 +209,8 @@ static int countNumberPorts(Node *head) {
 }
 
 static int renameNonAnsiPorts(Node *head, int counter, int n,
-                               std::unordered_map<std::string, Node *>& decl_map, bool isdecl = false, bool isDimension = false) {
+                              std::unordered_map<std::string, Node *> &decl_map,
+                              bool isdecl = false, bool isDimension = false) {
   isdecl |= head->getElement() == "port_reference";
   isDimension |= head->getElement() == "decl_dimensions_opt";
 
@@ -219,10 +220,10 @@ static int renameNonAnsiPorts(Node *head, int counter, int n,
       counter == 0) {
     counter++;
 
-  } else if (isdecl && ! isDimension &&  (head->getElement() == " SymbolIdentifier " ||
+  } else if (isdecl && !isDimension &&
+             (head->getElement() == " SymbolIdentifier " ||
               head->getElement() == " EscapedIdentifier " ||
-              head->getElement() == " KeywordIdentifier ") 
-             ) {
+              head->getElement() == " KeywordIdentifier ")) {
     auto s = " id_" + std::to_string(counter) + " ";
     decl_map[s] = head;
     if (debug)
@@ -234,14 +235,17 @@ static int renameNonAnsiPorts(Node *head, int counter, int n,
 
   if (counter <= n) {
     for (const auto &c : head->getChildren()) {
-      counter = renameNonAnsiPorts(c.get(), counter, n,decl_map, isdecl, isDimension);
+      counter = renameNonAnsiPorts(c.get(), counter, n, decl_map, isdecl,
+                                   isDimension);
     }
   }
 
   return counter;
 }
 
-static bool matchNonAnsiPorts(Node *head, int n, std::unordered_map<std::string, Node *>& dir_map) {
+static bool
+matchNonAnsiPorts(Node *head, int n,
+                  std::unordered_map<std::string, Node *> &dir_map) {
   bool done = false;
 
   if (head->getElement() == "module_item_list_opt") {
@@ -251,11 +255,10 @@ static bool matchNonAnsiPorts(Node *head, int n, std::unordered_map<std::string,
     for (int i = 1; i <= n; i++) {
       int choice = rand() % 2;
 
-      
       auto id = " id_" + std::to_string(i) + " ";
-      
+
       auto dir = (choice) ? "input" : "output";
-      
+
       auto childId = std::make_unique<Terminal>(id);
       dir_map[id] = childId.get();
 
@@ -274,8 +277,10 @@ static bool matchNonAnsiPorts(Node *head, int n, std::unordered_map<std::string,
   return done;
 }
 
-static int declareNonAnsiPorts(Node *head, std::unordered_map<std::string, Node *>& decl_map, 
-std::unordered_map<std::string, Node *>& dir_map) {
+static int
+declareNonAnsiPorts(Node *head,
+                    std::unordered_map<std::string, Node *> &decl_map,
+                    std::unordered_map<std::string, Node *> &dir_map) {
   auto count = 0;
   if (debug)
     std::cerr << "Code is not ansi" << std::endl;
@@ -284,28 +289,31 @@ std::unordered_map<std::string, Node *>& dir_map) {
     std::cerr << count << " vars found" << std::endl;
   renameNonAnsiPorts(head, 0, count, decl_map);
   matchNonAnsiPorts(head, count, dir_map);
-  
+
   return count;
 }
 
 static void replaceTypes(Node *head, int &id) {
-  if(head->getElement() == "decl_variable_dimension"){
+  if (head->getElement() == "decl_variable_dimension") {
     head->clearChildren();
     head->insertChildToBegin(std::make_unique<Terminal>(""));
   }
-  if(head->getElement() == "integer_vector_type"){//removes reg, logic ...
+  if (head->getElement() == "integer_vector_type") { // removes reg, logic ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
-  }
-  else if(head->getElement() == "udp_port_decl" and head->getChildren()[0]->getElement() == " reg "){
+  } else if (head->getElement() == "udp_port_decl" and
+             head->getChildren()[0]->getElement() == " reg ") {
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
 
-  } else if (head->getElement() == "gatetype" || head->getElement() == "net_type" || head->getElement() == "var_type")//removes wire ...
+  } else if (head->getElement() == "gatetype" ||
+             head->getElement() == "net_type" ||
+             head->getElement() == "var_type") // removes wire ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
-  else if(head->getElement() == " signed " || head->getElement() == " unsigned "){
+  else if (head->getElement() == " signed " ||
+           head->getElement() == " unsigned ") {
     head->setElement("");
   }
-  
-  else{
+
+  else {
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
     }
@@ -321,35 +329,33 @@ static Node *findParameterList(Node *moduleHead) {
   return nullptr;
 }
 
-static bool isId(const std::string& name){
-  return name == " SymbolIdentifier "
-        || name == " EscapedIdentifier "; 
-
+static bool isId(const std::string &name) {
+  return name == " SymbolIdentifier " || name == " EscapedIdentifier ";
 }
-static void renamePositionalPort(Node* curr, int& id, bool ismemberName=false){
+static void renamePositionalPort(Node *curr, int &id,
+                                 bool ismemberName = false) {
   ismemberName |= curr->getElement() == "member_name";
-  //std::cerr << "MEMBER: " << ismemberName << std::endl;
+  // std::cerr << "MEMBER: " << ismemberName << std::endl;
 
-  for(auto & c: curr->getChildren()){
+  for (auto &c : curr->getChildren()) {
     renamePositionalPort(c.get(), id, ismemberName);
   }
 
-  if(isId(curr->getElement()) && ismemberName){
-    curr->setElement(" id_" + std::to_string(id++) );
+  if (isId(curr->getElement()) && ismemberName) {
+    curr->setElement(" id_" + std::to_string(id++));
   }
 }
 
-static void renamePositionalPorts(Node *head){
-  if(head->getElement() == "any_port_list_named"){
+static void renamePositionalPorts(Node *head) {
+  if (head->getElement() == "any_port_list_named") {
     int i = 0;
-    for(auto & c: head->getChildren()){
+    for (auto &c : head->getChildren()) {
       renamePositionalPort(c.get(), i);
     }
-
   }
-for( auto &c : head->getChildren()){
-  renamePositionalPorts(c.get());
-}
+  for (auto &c : head->getChildren()) {
+    renamePositionalPorts(c.get());
+  }
 }
 
 // find ids used in a place where their value should be constant
@@ -396,21 +402,16 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
                               std::unordered_map<std::string, Node *> &dirMap,
                               std::set<std::string> &constantIDs) {
   for (auto &id : constantIDs) {
-    
-    
     if (declMap.find(id) != declMap.end()) {
       std::string newId = id;
-      if(newId[0] == ' '){
+      if (newId[0] == ' ') {
         newId[0] = '_';
         declMap[id]->setElement(" " + newId);
-      }
-      else{
+      } else {
         declMap[id]->setElement(" _" + newId);
       }
-      
     }
-    
-    
+
     if (dirMap.find(id) != dirMap.end()) {
       std::string newId = id;
       newId[0] = '_';
@@ -421,8 +422,8 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
 
 static void
 addConstantIDsToParameterList(Node *head,
-                              std::unordered_map<std::string, Node *> & declMap,
-                              std::unordered_map<std::string, Node *> & dirMap) {
+                              std::unordered_map<std::string, Node *> &declMap,
+                              std::unordered_map<std::string, Node *> &dirMap) {
   std::set<std::string> constantIDs;
   findConstantIDs(head, constantIDs);
 
@@ -444,10 +445,9 @@ addConstantIDsToParameterList(Node *head,
   addParametersToList(parameterList, constantIDs);
 
   renameConstantIDsDeclarations(declMap, dirMap, constantIDs);
-  
 }
 
-static void removeParameters(Node* head){
+static void removeParameters(Node *head) {
   auto param = findParameterList(head);
   param->clearChildren();
 }
@@ -543,7 +543,7 @@ int main(int argc, char **argv) {
     dirMap.clear();
     auto ansi = isAnsi(m);
     int n = 0;
-    if(!ansi){
+    if (!ansi) {
       n = declareNonAnsiPorts(m, declMap, dirMap);
     }
     removeParameters(m);
@@ -552,8 +552,6 @@ int main(int argc, char **argv) {
     addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
   }
-
-
 
   declMap.clear();
   renameVars(head.get(), 0, 0, declMap);
