@@ -487,7 +487,26 @@ constraintSet TypeInferenceVisitor::visit(Non_anonymous_gate_instance_or_registe
 
 constraintSet TypeInferenceVisitor::visit(Udp_comb_entry *node){}
 
-constraintSet TypeInferenceVisitor::visit(Delay3 *node){}
+constraintSet TypeInferenceVisitor::visit(Delay3 *node){
+    auto t = freshType();
+    
+
+    if(node->getChildren().size() == 2){
+        auto d = applyVisit(node->getChildren()[1].get(), t);
+        d.insert(std::make_pair(t, "scalar"));
+        return d;
+        
+    }else if(node->getChildren().size() >= 4){
+        auto d = applyVisit(node->getChildren()[2].get(), t);
+
+        if(node->getChildren().size() > 4){
+            auto d1 = applyVisit(node->getChildren()[4].get(), t);
+            d.insert(d1.begin(), d1.end());
+        }
+        d.insert(std::make_pair(t, "scalar"));
+        return d;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Inc_or_dec_or_primary_expr *node){}
 
@@ -517,7 +536,13 @@ constraintSet TypeInferenceVisitor::visit(Data_type_primitive_scalar *node){}
 
 constraintSet TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list *node){}
 
-constraintSet TypeInferenceVisitor::visit(Conditional_statement *node){}
+constraintSet TypeInferenceVisitor::visit(Conditional_statement *node){
+    auto t  = freshType();
+
+    auto d = applyVisit(node->getChildren()[2], t);
+
+    return d;
+}
 
 constraintSet TypeInferenceVisitor::visit(Specparam_decl *node){}
 
@@ -569,7 +594,17 @@ constraintSet TypeInferenceVisitor::visit(Oct_based_number *node){}
 
 constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node){}
 
-constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node){}
+constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node){
+    auto t = freshType();
+
+    auto d1 = applyVisit(node->getChildren()[0].get(), t);
+    auto d2 = applyVisit(node->getChildren()[2].get(), t);
+
+    d1.insert(d2.begin(), d2.end());
+
+    return d1;
+
+}
 
 constraintSet TypeInferenceVisitor::visit(Expression_list_proper *node){}
 
@@ -603,7 +638,18 @@ constraintSet TypeInferenceVisitor::visit(Delay3_or_drive_opt *node){}
 
 constraintSet TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list_opt *node){}
 
-constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node){}
+constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node){
+
+    auto t = freshType();
+
+    auto d1 = applyVisit(node->getChildren()[0].get(), t);
+    auto d2 = applyVisit(node->getChildren()[2].get(), t);
+
+    d1.insert(d2.begin(), d2.end());
+
+    return d1;
+
+}
 
 constraintSet TypeInferenceVisitor::visit(Always_any *node){}
 
@@ -735,7 +781,13 @@ constraintSet TypeInferenceVisitor::visit(Data_declaration *node){}
 
 constraintSet TypeInferenceVisitor::visit(Expression *node){}
 
-constraintSet TypeInferenceVisitor::visit(Cont_assign *node){}
+constraintSet TypeInferenceVisitor::visit(Cont_assign *node){
+    auto f = freshType();
+    auto d1 = applyVisit(node->getChildren()[0].get(), f);
+    auto d2 = applyVisit(node->getChildren()[2].get(), f);
+    d1.insert(d2.begin(), d2.end());
+    return d1;
+}
 
 constraintSet TypeInferenceVisitor::visit(Delay_or_event_control_opt *node){}
 
