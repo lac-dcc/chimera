@@ -6,7 +6,7 @@
 #include <string>
 #include <utility>
 
-using constraintSet = std::unordered_set<std::pair<std::string&, std::string&>>;
+using constraintSet = std::unordered_set<std::pair<std::string, std::string>>;
 
 class TypeInferenceVisitor : public Visitor<constraintSet>{
 public:
