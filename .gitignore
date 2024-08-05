@@ -8,3 +8,5 @@ jgproject*/
 build/
 .vscode/
 generated_programs/
+size_test/
+sample_database/
