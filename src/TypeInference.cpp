@@ -14,18 +14,17 @@ constraintSet TypeInferenceVisitor::visit(Sequence_delay_range_expr *node, std::
 constraintSet TypeInferenceVisitor::visit(Port *node, std::string& type){
     auto t = freshType();
 
-    constraintSet d1;
-    constraintSet d2;
+    constraintSet constraintsPortExpression;
+    constraintSet constraintsTrailingAssignOpt;
     if(node->getChildren().size() == 2){
-        d1 = applyVisit(node->getChildren()[0].get(), t);
-        d2 = applyVisit(node->getChildren()[1].get(), t);
+        constraintsPortExpression = applyVisit(node->getChildren()[0].get(), t);
+        constraintsTrailingAssignOpt = applyVisit(node->getChildren()[1].get(), t);
+        constraintsPortExpression.insert(constraintsTrailingAssignOpt.begin(), constraintsTrailingAssignOpt.end());
+        return constraintsPortExpression;
     }
     else{
-        d2 = applyVisit(node->getChildren()[3].get(), t);
+        return applyVisit(node->getChildren()[3].get(), t);
     }
-
-    d1.insert(d2.begin(), d2.end());
-    return d1;
 }
 
 constraintSet TypeInferenceVisitor::visit(Specify_simple_path *node, std::string& type){}
@@ -41,24 +40,26 @@ constraintSet TypeInferenceVisitor::visit(Dpi_import_export *node, std::string& 
 constraintSet TypeInferenceVisitor::visit(For_initialization_opt *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node, std::string& type){
-    auto t = freshType();
 
-    constraintSet d1;
-    constraintSet d2;
+    if(node->getChildren().size() > 1){
+        if( node->getChildren()[1]->getElement() == " = "){
+            auto constraintsGenericIdentifier = applyVisit(node->getChildren()[0].get(), type);
+            auto constraintsExpression = applyVisit(node->getChildren()[2].get(), type);
 
-    if(node->getChildren()[1]->getElement() == " = "){
-        d1 = applyVisit(node->getChildren()[0].get(), type);
-        d2 = applyVisit(node->getChildren()[2].get(), type);
-        d1.insert(d2.begin(), d2.end());
-    }else{
-        for(auto& c : node->getChildren()){
-            d2 = applyVisit(c.get(), type);
+            constraintsGenericIdentifier.insert(constraintsExpression.begin(), constraintsExpression.end());
 
-            d1.insert(d2.begin(), d2.end());
+            return constraintsGenericIdentifier;
+        }else{
+            auto constraintsListOfPortIdentifiers = applyVisit(node->getChildren()[1].get(), type);
+            auto constraintsGenericIdentifier = applyVisit(node->getChildren()[2].get(), type);
+            
+            constraintsListOfPortIdentifiers.insert(constraintsGenericIdentifier.begin(), constraintsGenericIdentifier.end());
+
+            return constraintsListOfPortIdentifiers;
         }
+    }else{
+        return applyVisit(node->getChildren()[0].get());
     }
-    return d1;
-
 }
 
 constraintSet TypeInferenceVisitor::visit(Non_integer_type *node, std::string& type){}
@@ -202,7 +203,30 @@ constraintSet TypeInferenceVisitor::visit(Logeq_expr *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Module_common_item *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Primitive_gate_instance *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Primitive_gate_instance *node, std::string& type){
+    auto t = freshType();
+
+    if(node->getChildren().size() == 3){
+        
+        std::string x("anonymous gate");
+        
+        auto constraintsAnyPortList = applyVisit(node->getChildren()[1].get(), t);
+        constraintsAnyPortList.insert({type, x});
+
+        return constraintsAnyPortList;
+    }else{
+        std::string x("gate");
+        std::string y("integer");
+        auto constraintsGenericIdentifier = applyVisit(node->getChildren()[0].get(), x);
+        auto constraintsDeclDimensions = applyVisit(node->getChildren()[1].get(), y);
+        auto constraintsAnyPortList = applyVisit(node->getChildren()[3].get(), t);
+
+        constraintsGenericIdentifier.insert(constraintsDeclDimensions.begin(), constraintsDeclDimensions.end());
+        constraintsGenericIdentifier.insert(constraintsAnyPortList.begin(), constraintsAnyPortList.end());
+
+        return constraintsGenericIdentifier;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Data_type_or_implicit *node, std::string& type){}
 
@@ -530,21 +554,20 @@ constraintSet TypeInferenceVisitor::visit(Delay3 *node, std::string& type){
     auto t = freshType();
     
     constraintSet d;
-
+    std::string x("const scalar");
     if(node->getChildren().size() == 2){
-        d = applyVisit(node->getChildren()[1].get(), t);
-        d.insert(std::make_pair(t, "scalar"));
+        
+        d = applyVisit(node->getChildren()[1].get(), x);
         
     }else if(node->getChildren().size() >= 4){
-        d = applyVisit(node->getChildren()[2].get(), t);
+        d = applyVisit(node->getChildren()[2].get(), x);
 
         if(node->getChildren().size() > 4){
-            auto d1 = applyVisit(node->getChildren()[4].get(), t);
+            auto d1 = applyVisit(node->getChildren()[4].get(), x);
             d.insert(d1.begin(), d1.end());
         }
-        d.insert(std::make_pair(t, "scalar"));
+        
     }
-
     return d;
 }
 
@@ -577,23 +600,22 @@ constraintSet TypeInferenceVisitor::visit(Data_type_primitive_scalar *node, std:
 constraintSet TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Conditional_statement *node , std::string& type){
-    constraintSet d;
-    auto t = this->freshType();
+    
+    auto t = freshType();
 
-    for(int i = 0; i < node->getChildren().size(); i++){
-        constraintSet d1;
-        if(i == 2){
-            std::string x("scalar");
+    auto constraintsUniquePriorityOpt = applyVisit(node->getChildren()[0].get(), t);
+    std::string x("scalar");
+    auto constraintsExpressionInParens = applyVisit(node->getChildren()[2].get(),x);
+    constraintsUniquePriorityOpt.insert(constraintsExpressionInParens.begin(), constraintsExpressionInParens.end());
+    auto constraintsStatement =  applyVisit(node->getChildren()[3].get(), t);
+    constraintsUniquePriorityOpt.insert(constraintsStatement.begin(), constraintsStatement.end());
 
-            d1 = applyVisit(node->getChildren()[i].get(), x);
-        
-        }else{
-            d1 = applyVisit(node->getChildren()[i].get(), t);
-        }
-        d.insert(d1.begin(), d1.end());
+    if(node->getChildren().size() > 4){
+        auto constraintsStatementElse =  applyVisit(node->getChildren()[5].get(), t);
+    constraintsUniquePriorityOpt.insert(constraintsStatementElse.begin(), constraintsStatementElse.end());
     }
 
-    return d;
+    return constraintsUniquePriorityOpt;
 }
 
 constraintSet TypeInferenceVisitor::visit(Specparam_decl *node, std::string& type){}
@@ -649,12 +671,12 @@ constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node, std::string& 
 constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node, std::string& type){
     auto t = freshType();
 
-    auto d1 = applyVisit(node->getChildren()[0].get(), t);
-    auto d2 = applyVisit(node->getChildren()[2].get(), t);
+    auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), t);
+    auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t);
 
-    d1.insert(d2.begin(), d2.end());
+    constraintsLpvalue.insert(constraintsExpression.begin(), constraintsExpression.end());
 
-    return d1;
+    return constraintsLpvalue;
 
 }
 
@@ -694,12 +716,12 @@ constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node, std::string& ty
 
     auto t = freshType();
 
-    auto d1 = applyVisit(node->getChildren()[0].get(), t);
-    auto d2 = applyVisit(node->getChildren()[2].get(), t);
+    auto constraintsGenericIdentifier = applyVisit(node->getChildren()[0].get(), t);
+    auto constraintsExpression = applyVisit(node->getChildren()[2].get(), t);
 
-    d1.insert(d2.begin(), d2.end());
+    constraintsGenericIdentifier.insert(constraintsExpression.begin(), constraintsExpression.end());
 
-    return d1;
+    return constraintsGenericIdentifier;
 
 }
 
@@ -723,11 +745,11 @@ constraintSet TypeInferenceVisitor::visit(Non_anonymous_gate_instance_or_registe
 
 constraintSet TypeInferenceVisitor::visit(Localparam_assign *node, std::string& type){
     std::string x("const scalar");
-    auto d1 = applyVisit(node->getChildren()[0].get(), x);
-    auto d2 = applyVisit(node->getChildren()[2].get(), x);
-    d1.insert(d2.begin(), d2.end());
+    auto constraintsGenericIdentifier = applyVisit(node->getChildren()[0].get(), x);
+    auto constraintsExpression = applyVisit(node->getChildren()[2].get(), x);
+    constraintsGenericIdentifier.insert(constraintsExpression.begin(), constraintsExpression.end());
 
-    return d1;
+    return constraintsGenericIdentifier;
 }
 
 constraintSet TypeInferenceVisitor::visit(Class_items *node, std::string& type){}
@@ -842,10 +864,10 @@ constraintSet TypeInferenceVisitor::visit(Expression *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Cont_assign *node, std::string& type){
     auto f = freshType();
-    auto d1 = applyVisit(node->getChildren()[0].get(), f);
-    auto d2 = applyVisit(node->getChildren()[2].get(), f);
-    d1.insert(d2.begin(), d2.end());
-    return d1;
+    auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), f);
+    auto constraintsExpression = applyVisit(node->getChildren()[2].get(), f);
+    constraintsLpvalue.insert(constraintsExpression.begin(), constraintsExpression.end());
+    return constraintsLpvalue;
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_or_event_control_opt *node, std::string& type){}
@@ -863,9 +885,10 @@ constraintSet TypeInferenceVisitor::visit(Data_type_base *node, std::string& typ
 constraintSet TypeInferenceVisitor::visit(Trailing_assign *node, std::string& type){
     auto t = this->freshType();
 
-    auto d1 = applyVisit(node->getChildren()[1].get(), type);
-    auto d2 = applyVisit(node->getChildren()[2].get(), t);
-    return d1;
+    auto constraintsParameterExpr = applyVisit(node->getChildren()[1].get(), type);
+    auto constraintsParameterValueRangesOpt = applyVisit(node->getChildren()[2].get(), t);
+    constraintsParameterExpr.insert(constraintsParameterValueRangesOpt.begin(), constraintsParameterValueRangesOpt.end());
+    return constraintsParameterExpr;
 }
 
 constraintSet TypeInferenceVisitor::visit(Module_end *node, std::string& type){}
