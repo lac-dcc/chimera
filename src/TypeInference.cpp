@@ -11,7 +11,22 @@ constraintSet TypeInferenceVisitor::visit(Terminal *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Sequence_delay_range_expr *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Port *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Port *node, std::string& type){
+    auto t = freshType();
+
+    constraintSet d1;
+    constraintSet d2;
+    if(node->getChildren().size() == 2){
+        d1 = applyVisit(node->getChildren()[0].get(), t);
+        d2 = applyVisit(node->getChildren()[1].get(), t);
+    }
+    else{
+        d2 = applyVisit(node->getChildren()[3].get(), t);
+    }
+
+    d1.insert(d2.begin(), d2.end());
+    return d1;
+}
 
 constraintSet TypeInferenceVisitor::visit(Specify_simple_path *node, std::string& type){}
 
@@ -25,7 +40,26 @@ constraintSet TypeInferenceVisitor::visit(Dpi_import_export *node, std::string& 
 
 constraintSet TypeInferenceVisitor::visit(For_initialization_opt *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node, std::string& type){
+    auto t = freshType();
+
+    constraintSet d1;
+    constraintSet d2;
+
+    if(node->getChildren()[1]->getElement() == " = "){
+        d1 = applyVisit(node->getChildren()[0].get(), type);
+        d2 = applyVisit(node->getChildren()[2].get(), type);
+        d1.insert(d2.begin(), d2.end());
+    }else{
+        for(auto& c : node->getChildren()){
+            d2 = applyVisit(c.get(), type);
+
+            d1.insert(d2.begin(), d2.end());
+        }
+    }
+    return d1;
+
+}
 
 constraintSet TypeInferenceVisitor::visit(Non_integer_type *node, std::string& type){}
 
@@ -495,22 +529,23 @@ constraintSet TypeInferenceVisitor::visit(Udp_comb_entry *node, std::string& typ
 constraintSet TypeInferenceVisitor::visit(Delay3 *node, std::string& type){
     auto t = freshType();
     
+    constraintSet d;
 
     if(node->getChildren().size() == 2){
-        auto d = applyVisit(node->getChildren()[1].get(), t);
+        d = applyVisit(node->getChildren()[1].get(), t);
         d.insert(std::make_pair(t, "scalar"));
-        return d;
         
     }else if(node->getChildren().size() >= 4){
-        auto d = applyVisit(node->getChildren()[2].get(), t);
+        d = applyVisit(node->getChildren()[2].get(), t);
 
         if(node->getChildren().size() > 4){
             auto d1 = applyVisit(node->getChildren()[4].get(), t);
             d.insert(d1.begin(), d1.end());
         }
         d.insert(std::make_pair(t, "scalar"));
-        return d;
     }
+
+    return d;
 }
 
 constraintSet TypeInferenceVisitor::visit(Inc_or_dec_or_primary_expr *node, std::string& type){}
@@ -542,9 +577,21 @@ constraintSet TypeInferenceVisitor::visit(Data_type_primitive_scalar *node, std:
 constraintSet TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Conditional_statement *node , std::string& type){
-    auto t  = freshType();
+    constraintSet d;
+    auto t = this->freshType();
 
-    auto d = applyVisit(node->getChildren()[2], t);
+    for(int i = 0; i < node->getChildren().size(); i++){
+        constraintSet d1;
+        if(i == 2){
+            std::string x("scalar");
+
+            d1 = applyVisit(node->getChildren()[i].get(), x);
+        
+        }else{
+            d1 = applyVisit(node->getChildren()[i].get(), t);
+        }
+        d.insert(d1.begin(), d1.end());
+    }
 
     return d;
 }
@@ -674,7 +721,14 @@ constraintSet TypeInferenceVisitor::visit(Tk_hexdigits *node, std::string& type)
 
 constraintSet TypeInferenceVisitor::visit(Non_anonymous_gate_instance_or_register_variable *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Localparam_assign *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Localparam_assign *node, std::string& type){
+    std::string x("const scalar");
+    auto d1 = applyVisit(node->getChildren()[0].get(), x);
+    auto d2 = applyVisit(node->getChildren()[2].get(), x);
+    d1.insert(d2.begin(), d2.end());
+
+    return d1;
+}
 
 constraintSet TypeInferenceVisitor::visit(Class_items *node, std::string& type){}
 
@@ -806,7 +860,13 @@ constraintSet TypeInferenceVisitor::visit(Description *node, std::string& type){
 
 constraintSet TypeInferenceVisitor::visit(Data_type_base *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Trailing_assign *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Trailing_assign *node, std::string& type){
+    auto t = this->freshType();
+
+    auto d1 = applyVisit(node->getChildren()[1].get(), type);
+    auto d2 = applyVisit(node->getChildren()[2].get(), t);
+    return d1;
+}
 
 constraintSet TypeInferenceVisitor::visit(Module_end *node, std::string& type){}
 

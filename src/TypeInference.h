@@ -4,9 +4,9 @@
 #include "Visitor.h"
 #include <unordered_set>
 #include <string>
-#include <utility>
+#include <set>
 
-using constraintSet = std::unordered_set<std::pair<std::string, std::string>>;
+using constraintSet = std::set<std::pair<std::string, std::string>>;
 
 class TypeInferenceVisitor : public Visitor<constraintSet, std::string&>{
 public:
