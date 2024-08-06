@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  reg  id_2  ;  input  id_3  ;  table  M  0  ?  0  :  b  :  -  ;  _  M  n  Q  _  :  %  :  0  ;  endtable  endprimitive  :  id_2  macromodule  automatic  module_0 import  continuous  ::  *  ;  import  id_1  ::  *  ;  ;  specify  endspecify  endprogram  package  static  id_3  ;  endpackage 

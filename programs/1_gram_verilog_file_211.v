@@ -1,0 +1,1 @@
+ primitive  id_1  (  flow  )  ;  reg  continuous  ;  initial  id_1  = 'o0 ;  table  p  p  :  -  ;  r  R  M  :  0  ;  b  :  -  ;  r  M  :  x  ;  x  :  -  ;  endtable  endprimitive 

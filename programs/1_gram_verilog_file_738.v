@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  continuous  ,  input  id_1  )  ;  table  b  :  b  :  0  ;  x  *  r  ?  1  :  0  :  0  ;  _  :  1  :  x  ;  endtable  endprimitive  :  sample 

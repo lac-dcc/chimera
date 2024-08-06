@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  access  )  ;  table  n  M  x  :  f  :  1  ;  %  :  f  :  0  ;  endtable  endprimitive 

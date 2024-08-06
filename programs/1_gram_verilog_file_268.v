@@ -1,0 +1,2 @@
+task automatic sample ();
+endtask

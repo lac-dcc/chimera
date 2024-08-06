@@ -1,0 +1,1 @@
+ primitive  id_1  (  flow  )  ;  output  id_2  ;  input  id_3  ,  id_4  ,  flow  ,  id_5  ,  id_6  ,  id_7  ;  reg  id_8  ;  initial  access  = 'b0 ;  table  Q  f  %  :  -  ;  f  1  :  -  ;  ?  x  :  0  ;  endtable  endprimitive  :  continuous 

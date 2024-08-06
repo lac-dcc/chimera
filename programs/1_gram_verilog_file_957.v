@@ -1,0 +1,1 @@
+ primitive  sample  (  output  id_1  ,  input  id_1  )  ;  table  M  :  -  ;  endtable  endprimitive  package  static  id_1  ;  import  continuous  ::  *  ,  id_1  ::  *  ,  id_1  ::  *  ,  id_1  ::  *  ;  `undef  pp_2  endpackage  :  id_1 

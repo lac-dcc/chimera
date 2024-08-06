@@ -1,0 +1,1 @@
+ primitive  continuous  (  output  id_1  ,  input  id_1  )  ;  table  f  R  :  x  ;  M  :  x  ;  endtable  endprimitive  macromodule  automatic  access  import  module_0 ::  *  ,  access  ::  *  ;  ;  endprogram  :  id_1 

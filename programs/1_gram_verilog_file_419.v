@@ -1,0 +1,1 @@
+ primitive  continuous  (  flow  )  ;  output  sample  ;  input  access  ,  flow  ,  id_1  ;  table  b  :  b  :  x  ;  Q  :  n  :  x  ;  endtable  endprimitive  module  static  module_0 import  access  ::  *  ,  id_1  ::  *  ;  ;  endmodule  :  id_2 

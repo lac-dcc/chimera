@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  flow  ,  input  continuous  )  ;  table  R  p  R  :  %  :  -  ;  r  ?  +  +  _  0  :  f  :  0  ;  0  b  :  n  :  -  ;  endtable  endprimitive 

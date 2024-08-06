@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  b  _  0  :  0  :  0  ;  %  x  :  _  :  1  ;  endtable  endprimitive  :  id_1  bind  id_1  ::  continuous  id_1  id_1  =  new  ;  bind  this  continuous  id_1  ; 

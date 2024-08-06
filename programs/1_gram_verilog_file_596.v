@@ -1,0 +1,1 @@
+ primitive  continuous  (  output  id_1  ,  input  flow  )  ;  table  Q  b  :  0  :  0  ;  endtable  endprimitive 

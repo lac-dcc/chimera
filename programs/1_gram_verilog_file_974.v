@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  _  :  x  ;  endtable  endprimitive  primitive  id_1  (  sample  )  ;  input  flow  ,  continuous  ,  id_2  ,  id_3  ;  table  _  :  %  :  1  ;  endtable  endprimitive  package  static  id_2  ;  endpackage 

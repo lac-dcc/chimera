@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  flow  ,  input  id_1  )  ;  table  r  Q  +  r  :  x  ;  endtable  endprimitive  program  static  module_0 ;  `undef  pp_2  endprogram 

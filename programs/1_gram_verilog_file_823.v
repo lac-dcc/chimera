@@ -1,0 +1,1 @@
+ primitive  sample  (  id_1  )  ;  reg  flow  ;  table  1  :  1  :  0  ;  r  r  Q  :  %  :  x  ;  endtable  endprimitive  `include ""

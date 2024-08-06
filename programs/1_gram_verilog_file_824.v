@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  ,  id_1  )  ;  output  id_2  ;  input  id_3  ;  reg  id_4  ;  reg  continuous  ;  table  r  :  b  :  -  ;  b  :  p  :  0  ;  %  Q  Q  f  :  ?  :  x  ;  endtable  endprimitive  :  id_3 

@@ -1,0 +1,2 @@
+ bind  this  id_1  id_1  =  new  (  )  ;  package  static  id_1  ;  endpackage  bind  id_1  ::  id_1  .  id_1  #  (  .  id_1  (  )  ,  .  min  (  )  ,  .  sum  (  )  ,  .  sum  (  )  ,  .  sample  (  )  ,  .  product  (  )  )  sample  #  (  )  id_1  ;  bind  this  access  #  1  access  ;  `include  macromodule  flow  (  )  ;  endprogram  :  module_0 program  flow  import  sample  ::  *  ,  module_1 ::  *  ;  import  id_1  ::  *  ;  ;  `define  pp_2  0
+ endmodule 

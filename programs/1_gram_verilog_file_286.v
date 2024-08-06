@@ -1,0 +1,1 @@
+ package  id_1  ;  endpackage  :  id_1  primitive  sample  (  output  id_1  ,  input  id_1  )  ;  table  n  :  1  :  0  ;  r  :  0  :  -  ;  M  :  r  :  0  ;  endtable  endprimitive 

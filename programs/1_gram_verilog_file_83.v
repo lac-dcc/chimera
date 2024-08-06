@@ -1,0 +1,1 @@
+ primitive  id_1  (  continuous  ,  id_1  ,  id_1  )  ;  output  id_2  ;  table  %  p  :  -  ;  Q  :  1  ;  *  :  x  ;  b  :  x  ;  +  :  0  ;  %  M  ?  :  1  ;  ?  :  x  ;  endtable  endprimitive  package  id_1  ;  `undef  pp_3  endpackage 

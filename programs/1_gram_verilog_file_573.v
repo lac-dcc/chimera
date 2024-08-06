@@ -1,0 +1,1 @@
+ program  module_0 ;  endmodule  :  flow  primitive  id_1  (  id_1  )  ;  output  continuous  ;  table  n  _  :  0  ;  endtable  endprimitive  :  continuous  primitive  id_1  (  output  continuous  ,  input  id_1  )  ;  table  1  f  :  x  ;  endtable  endprimitive 

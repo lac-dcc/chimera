@@ -1,0 +1,1 @@
+ primitive  flow  (  output  sample  ,  input  id_1  )  ;  table  p  0  Q  :  1  ;  b  Q  *  :  0  ;  endtable  endprimitive  :  id_1 

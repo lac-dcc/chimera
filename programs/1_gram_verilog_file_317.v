@@ -1,0 +1,1 @@
+ bind  this  [  :  ]  id_1  #  1  id_1  =  new  ;  macromodule  module_0 #( parameter  id_1  = 32'd99 )  (  {  _id_1  ,  id_2  }  )  ; input _id_1 ;  endmodule  primitive  id_1  (  flow  )  ;  reg  continuous  ;  table  f  r  :  x  :  0  ;  endtable  endprimitive 

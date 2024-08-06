@@ -1,0 +1,3 @@
+ `define  pp_1  (  pp_2  =  "" 
+ )  0
+ module  access  import  continuous  ::  *  ;  import  flow  ::  *  ,  module_0 ::  *  ;  import  id_4  ::  *  ;  (  .  product  (  {  sample  }  )  ,  .  sum  (  {  id_1  #  (  )  }  )  ,  {  id_2  ,  id_3  }  =  )  ; input id_3 ; output id_2 ; input id_1 ;  endmodule  program  automatic  module_1 ;  endmodule  :  access  `undef  pp_3  primitive  `pp_3  (  output  access  ,  input  continuous  )  ;  table  M  :  x  ;  +  x  :  0  ;  endtable  endprimitive  :  `pp_3  program  module_2 import  flow  ::  *  ;  import  flow  ::  *  ;  ;  endprogram  :  id_1 

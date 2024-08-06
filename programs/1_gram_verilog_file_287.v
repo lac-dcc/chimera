@@ -1,0 +1,1 @@
+ macromodule  module_0 import  id_1  ::  *  ,  continuous  ::  *  ,  id_2  ::  *  ,  id_3  ::  *  ,  id_4  ::  *  ;  (  )  ;  endmodule  :  id_5  primitive  id_1  (  sample  )  ;  reg  id_2  ;  initial  id_1  = 'd0 ;  table  p  f  :  -  ;  x  :  1  ;  1  :  0  ;  %  :  1  ;  M  :  x  ;  *  :  0  ;  endtable  endprimitive  :  sample 

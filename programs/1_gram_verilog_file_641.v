@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  flow  ,  input  access  )  ;  table  Q  ?  p  n  :  M  :  1  ;  0  :  1  :  x  ;  x  :  f  :  1  ;  endtable  endprimitive  package  id_1  ;  endpackage 

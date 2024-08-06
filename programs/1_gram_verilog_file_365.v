@@ -1,0 +1,2 @@
+macromodule flow;
+endprogram

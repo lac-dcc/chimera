@@ -1,0 +1,2 @@
+ primitive  id_1  (  id_1  )  ;  output  continuous  ;  input  id_2  ;  input  id_3  ,  id_4  ,  access  ,  id_5  ;  output  id_6  ;  initial  id_2  = 0 ;  table  +  :  x  ;  p  :  0  ;  endtable  endprimitive  package  sample  ;  endpackage  primitive  id_3  (  continuous  )  ;  input  flow  ;  output  id_7  ;  input  id_8  ;  initial  id_5  = 'b0 ;  table  p  0  :  x  :  1  ;  %  :  Q  :  x  ;  M  M  f  Q  :  0  :  1  ;  M  :  r  :  1  ;  endtable  endprimitive  `define  pp_9  (  pp_10  =  "" 
+ ,  pp_11  )  0

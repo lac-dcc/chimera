@@ -1,0 +1,1 @@
+ package  static  sample  ;  endpackage  :  access  bind  this  .  id_1  id_1  ::  continuous  #  (  ,  )  id_1  [  :  ]  (  ,  ,  )  ;  module  automatic  module_0 ;  endprogram  macromodule  automatic  module_1 import  continuous  ::  *  ;  ;  endprogram  :  flow 

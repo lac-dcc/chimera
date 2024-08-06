@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  input  id_2  ;  table  Q  :  p  :  -  ;  M  :  b  :  0  ;  f  Q  :  0  :  1  ;  *  *  f  n  +  :  f  :  1  ;  Q  :  b  :  x  ;  *  x  :  M  :  -  ;  endtable  endprimitive  :  access 

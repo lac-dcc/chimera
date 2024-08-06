@@ -1,0 +1,1 @@
+ primitive  access  (  id_1  ,  id_1  )  ;  input  continuous  ;  initial  sample  =  1  ;  table  p  :  0  ;  n  Q  *  r  *  :  -  ;  endtable  endprimitive  bind  this  .  id_1  .  id_1  continuous  ::  id_1  flow  [  ]  (  .  sum  ,  .  continuous  (  )  ,  .  sample  (  )  ,  .  min  )  ;  `define  pp_2  0

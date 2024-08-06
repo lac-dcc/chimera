@@ -1,0 +1,2 @@
+ package  automatic  id_1  ;  `timescale 1ps /  1  ps
+ endpackage  :  id_1  module  automatic  flow  import  module_0 ::  *  ;  #( parameter  id_1  = 32'd16,parameter  id_2  = 32'd2 )  (  flow  #  (  ,  )  =  ,  .  min  (  _id_1  )  )  ; output _id_2 ; input _id_1 ;  endmodule 

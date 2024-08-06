@@ -1,0 +1,1 @@
+ package  static  id_1  ;  `uselib  endpackage  program  static  module_0 (  .  min  (  {  access  ,  id_1  #  (  )  }  )  ,  {  id_2  ,  id_3  #  (  ,  )  }  ,  .  min  (  {  id_2  #  1  ,  id_1  }  )  )  ; input id_3 ; output id_2 ; input id_1 ;  endmodule 

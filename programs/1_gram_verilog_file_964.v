@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  ,  id_1  )  ;  output  id_2  ;  initial  access  =  1'o0 ;  table  M  1  b  +  f  :  x  ;  endtable  endprimitive  package  automatic  access  ;  endpackage 

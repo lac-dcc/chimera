@@ -1,0 +1,1 @@
+ module  module_0 (  )  ;  endmodule  primitive  sample  (  output  id_1  ,  input  id_1  )  ;  table  M  :  ?  :  0  ;  R  b  :  0  :  1  ;  endtable  endprimitive 

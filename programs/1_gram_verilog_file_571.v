@@ -1,0 +1,1 @@
+ primitive  continuous  (  access  ,  flow  ,  id_1  ,  id_1  )  ;  reg  id_2  ;  table  R  0  %  R  :  0  :  -  ;  M  :  ?  :  0  ;  %  :  ?  :  1  ;  endtable  endprimitive  macromodule  module_0 ;  endmodule  :  id_1 

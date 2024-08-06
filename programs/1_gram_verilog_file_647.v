@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  output  id_2  ;  initial  id_2  =  1  ;  table  f  :  0  ;  b  _  :  -  ;  endtable  endprimitive  event  [  ]  id_1  ; 

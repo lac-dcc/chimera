@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  reg  access  ;  table  Q  R  M  0  :  x  ;  endtable  endprimitive  :  flow 

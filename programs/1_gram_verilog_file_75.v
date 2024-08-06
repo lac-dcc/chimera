@@ -1,0 +1,3 @@
+ primitive  id_1  (  flow  )  ;  output  id_2  ;  input  id_3  ;  output  id_4  ;  table  M  _  :  -  ;  *  :  1  ;  R  :  -  ;  endtable  endprimitive  :  id_1  primitive  id_2  (  id_3  ,  id_1  ,  access  )  ;  reg  sample  ;  table  p  :  0  ;  *  M  ?  :  0  ;  Q  %  p  :  x  ;  endtable  endprimitive  :  flow  package  automatic  id_3  ;  `define  pp_5  (  pp_6  ,  pp_7  ,  pp_8  )  0
+ `timescale 1ps /  1  ps
+ endpackage  :  id_1  bind  `pp_6  #  1  ::  id_4  #  (  .  access  (  )  ,  .  sample  (  )  ,  .  `pp_7  (  )  )  .  id_3  continuous  #  (  )  `pp_6  ; 

@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  sample  ,  input  sample  )  ;  table  b  f  1  :  p  :  x  ;  0  :  x  :  1  ;  _  :  _  :  x  ;  endtable  endprimitive 

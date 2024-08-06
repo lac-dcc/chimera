@@ -1,0 +1,1 @@
+ bind  this  id_1  ::  id_1  flow  =  new  ;  primitive  id_1  (  sample  ,  id_1  ,  id_1  )  ;  input  id_2  ;  initial  id_1  =  1  ;  table  M  0  :  x  ;  M  0  1  0  :  x  ;  ?  :  1  ;  _  0  1  :  1  ;  endtable  endprimitive  :  access  macromodule  module_0 ;  `undef  pp_3  endprogram 

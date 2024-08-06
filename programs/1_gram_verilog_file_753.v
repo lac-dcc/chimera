@@ -1,0 +1,1 @@
+ primitive  id_1  (  access  ,  id_1  )  ;  reg  id_2  ;  output  id_3  ;  initial  id_2  = 0 ;  table  n  :  f  :  0  ;  %  :  %  :  0  ;  endtable  endprimitive  :  id_3  macromodule  automatic  module_0 (  id_1  .  id_2  access  =  )  ;  endmodule  :  id_3  package  automatic  id_2  ;  endpackage  :  id_1 

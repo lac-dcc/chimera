@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  _  1  :  r  :  -  ;  1  ?  *  M  :  _  :  x  ;  endtable  endprimitive  :  id_1 

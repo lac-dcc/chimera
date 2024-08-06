@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  flow  ,  input  continuous  )  ;  table  1  f  :  1  ;  endtable  endprimitive  primitive  id_1  (  sample  )  ;  reg  id_2  ;  input  continuous  ;  table  %  f  :  1  ;  Q  Q  :  x  ;  r  :  1  ;  Q  :  1  ;  b  +  :  x  ;  +  :  x  ;  endtable  endprimitive 

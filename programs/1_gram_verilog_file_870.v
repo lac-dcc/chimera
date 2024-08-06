@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  ,  id_1  ,  id_1  )  ;  input  id_2  ,  id_3  ;  input  id_4  ;  table  r  :  M  :  -  ;  endtable  endprimitive  package  automatic  continuous  ;  endpackage  :  access 

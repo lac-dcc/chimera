@@ -1,0 +1,1 @@
+ primitive  sample  (  id_1  ,  sample  )  ;  input  sample  ,  flow  ,  id_2  ;  output  access  ;  input  access  ;  initial  id_1  =  1  ;  table  x  :  _  :  0  ;  n  +  :  p  :  0  ;  Q  :  *  :  0  ;  endtable  endprimitive  :  id_2 

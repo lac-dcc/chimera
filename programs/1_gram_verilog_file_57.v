@@ -1,0 +1,2 @@
+ package  automatic  sample  ;  endpackage  import  flow  ::  *  ,  id_1  ::  *  ;  macromodule  static  module_0 import  id_1  ::  *  ;  import  access  ::  *  ;  import  sample  ::  *  ,  sample  ::  *  ;  import  access  ::  *  ;  ;  endmodule  `define  pp_2  (  pp_3  )  0
+ primitive  access  (  output  `pp_2  ,  input  `pp_2  )  ;  table  Q  p  :  Q  :  1  ;  n  :  n  :  0  ;  _  x  +  *  +  :  *  :  x  ;  endtable  endprimitive 

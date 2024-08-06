@@ -1,0 +1,1 @@
+ program  automatic  module_0 (  output  id_1  ,  id_2  ::  id_3  )  ;  endprogram  primitive  id_1  (  sample  ,  id_1  )  ;  reg  id_2  ;  table  ?  :  -  ;  M  :  1  ;  endtable  endprimitive 

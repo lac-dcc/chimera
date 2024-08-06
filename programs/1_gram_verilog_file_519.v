@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  continuous  )  ;  table  x  _  :  -  ;  1  M  :  0  ;  endtable  endprimitive 

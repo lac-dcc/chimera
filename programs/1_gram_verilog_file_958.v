@@ -1,0 +1,1 @@
+ package  id_1  ;  endpackage  primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  R  _  0  b  :  M  :  x  ;  f  :  *  :  1  ;  endtable  endprimitive 

@@ -1,0 +1,1 @@
+ import  continuous  ::  *  ,  id_1  ::  *  ;  primitive  id_1  (  output  sample  ,  input  id_1  )  ;  table  M  x  %  :  x  ;  endtable  endprimitive  :  id_1 

@@ -1,0 +1,2 @@
+ package  sample  ;  endpackage  primitive  id_1  (  id_1  ,  id_1  ,  id_1  ,  flow  ,  id_1  ,  access  )  ;  reg  access  ;  table  b  ?  ?  M  :  ?  :  1  ;  %  r  +  b  M  M  b  :  ?  :  1  ;  endtable  endprimitive  macromodule  continuous  import  module_0 ::  *  ;  (  )  ;  module  module_1 ;  endprogram  endmodule  :  id_1  bind  this  id_2  id_2  (  )  ;  package  automatic  id_2  ;  endpackage  :  id_2  package  automatic  id_2  ;  `define  pp_3  0
+ endpackage 

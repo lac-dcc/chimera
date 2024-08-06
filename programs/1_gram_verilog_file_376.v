@@ -1,0 +1,1 @@
+ primitive  sample  (  continuous  ,  id_1  ,  id_1  ,  id_1  ,  continuous  )  ;  reg  access  ;  table  f  _  0  :  %  :  -  ;  p  :  _  :  0  ;  M  p  :  b  :  1  ;  ?  p  :  1  :  0  ;  endtable  endprimitive  :  continuous 

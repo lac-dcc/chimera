@@ -1,0 +1,1 @@
+ primitive  sample  (  id_1  ,  access  ,  flow  )  ;  input  id_2  ,  id_3  ,  id_4  ,  sample  ;  reg  sample  ;  reg  id_5  ;  initial  id_2  =  1'h0 ;  table  r  :  1  ;  1  _  :  x  ;  endtable  endprimitive 

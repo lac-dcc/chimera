@@ -1,0 +1,1 @@
+ primitive  continuous  (  output  flow  ,  input  continuous  )  ;  table  ?  1  x  :  r  :  1  ;  Q  M  *  R  x  1  Q  n  *  *  +  b  0  +  r  :  p  :  1  ;  endtable  endprimitive 

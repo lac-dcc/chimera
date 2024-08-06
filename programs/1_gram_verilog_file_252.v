@@ -1,0 +1,1 @@
+ primitive  sample  (  output  access  ,  input  sample  )  ;  table  n  M  ?  :  1  ;  endtable  endprimitive  primitive  sample  (  output  sample  ,  input  id_1  )  ;  table  n  :  x  :  -  ;  endtable  endprimitive  :  id_1 

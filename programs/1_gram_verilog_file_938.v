@@ -1,0 +1,2 @@
+ primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  b  _  0  0  :  _  :  0  ;  x  :  n  :  0  ;  0  +  0  ?  :  r  :  x  ;  endtable  endprimitive  package  flow  ;  endpackage  package  static  id_1  ;  `define  pp_2  (  pp_3  ,  pp_4  )  0
+ import  id_1  ::  *  ,  `pp_3  ::  *  ,  id_1  ::  *  ;  endpackage 

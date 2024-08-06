@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  0  :  x  ;  1  f  :  -  ;  M  :  1  ;  1  :  x  ;  endtable  endprimitive  :  id_1  module  automatic  module_0 ;  endmodule  :  id_1 

@@ -1,0 +1,1 @@
+ package  id_1  ;  endpackage  :  id_1  primitive  id_1  (  output  access  ,  input  id_1  )  ;  table  f  :  -  ;  f  :  1  ;  %  :  1  ;  R  Q  Q  M  :  1  ;  endtable  endprimitive  `end_keywords 

@@ -1,0 +1,1 @@
+ bind  this  [  ]  .  id_1  #  (  .  sum  (  )  )  .  id_1  [  ]  [  -:  ]  continuous  id_1  [  ]  (  )  ;  program  static  flow  import  sample  ::  *  ,  module_0 ::  *  ;  import  id_1  ::  *  ;  import  sample  ::  *  ;  (  )  ;  endprogram  :  id_2  macromodule  automatic  module_1 import  continuous  ::  *  ,  id_1  ::  *  ,  id_2  ::  *  ;  ;  endmodule  :  flow 

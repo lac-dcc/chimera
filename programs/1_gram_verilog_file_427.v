@@ -1,0 +1,2 @@
+ macromodule  module_0 import  sample  ::  *  ;  ;  `define  pp_1  0
+ endmodule  macromodule  module_1 (  )  ;  specify  specparam  id_1  =  ,  id_2  =  ,  id_3  =  ;  $hold  (  negedge  this  [  -:  ]  &&&  ,  edge  access  #  1  ,  ,  continuous  #  1  )  ;  endspecify  timeprecision 1ps ;  endprogram 

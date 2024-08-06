@@ -1,0 +1,1 @@
+ module  continuous  import  access  ::  *  ,  module_0 ::  *  ;  import  id_1  ::  *  ;  ;  endprogram  primitive  id_1  (  output  id_1  ,  input  id_1  )  ;  table  *  :  x  :  1  ;  endtable  endprimitive  :  id_1  program  module_1 (  )  ;  `undef  pp_2  endprogram  `include 

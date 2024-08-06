@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  sample  ,  input  id_1  )  ;  table  M  :  -  ;  0  :  -  ;  p  :  0  ;  endtable  endprimitive  timeunit 1ps / 1ps ;  program  static  module_0 (  )  ;  `include "" endprogram  :  id_1 

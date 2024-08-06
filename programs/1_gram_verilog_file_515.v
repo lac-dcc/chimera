@@ -1,0 +1,1 @@
+ primitive  id_1  (  flow  ,  id_1  )  ;  input  id_2  ;  table  n  :  Q  :  0  ;  endtable  endprimitive  :  id_2  typedef  this  access  ; 

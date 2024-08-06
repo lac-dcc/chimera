@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  sample  ,  input  access  )  ;  table  M  :  0  ;  +  %  :  x  ;  M  :  x  ;  endtable  endprimitive  :  id_1  `include 

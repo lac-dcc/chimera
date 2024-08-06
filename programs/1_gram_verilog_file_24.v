@@ -1,0 +1,3 @@
+ program  automatic  module_0 import  id_1  ::  *  ;  ;  endmodule  :  access  primitive  id_1  (  output  flow  ,  input  id_1  )  ;  table  0  :  -  ;  R  R  1  0  :  -  ;  +  M  :  x  ;  R  :  x  ;  %  :  1  ;  endtable  endprimitive  :  continuous  macromodule  automatic  module_1 ;  `define  pp_2  (  pp_3  ,  pp_4  =  "" 
+ )  0
+ `include "" endprogram  :  continuous  primitive  `pp_2  (  access  )  ;  output  id_5  ;  output  id_6  ;  output  id_7  ;  output  id_8  ;  input  continuous  ;  reg  id_9  ;  initial  id_9  =  1 'h0 ;  table  p  ?  Q  x  Q  :  _  :  -  ;  ?  +  R  :  *  :  x  ;  endtable  endprimitive 

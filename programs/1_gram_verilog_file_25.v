@@ -1,0 +1,1 @@
+ macromodule  automatic  sample  import  module_0 ::  *  ,  id_1  ::  *  ,  id_2  ::  *  ,  flow  ::  *  ,  id_3  ::  *  ;  ;  endmodule  :  flow  primitive  id_1  (  sample  )  ;  reg  access  ;  table  M  M  1  :  0  ;  %  :  1  ;  endtable  endprimitive  :  id_1  `resetall 

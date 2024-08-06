@@ -22,6 +22,9 @@ bool printSeed = false;
 
 static constexpr char separator = '~';
 
+std::map<std::string,int> productionsUse; 
+const int MAX_USES = 1000; 
+
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
   std::vector<std::string> result;
@@ -44,7 +47,8 @@ static std::vector<std::string> chooseProds(
   int sum = 0;
   for (const auto &[prod, prodCount] : map.at(context)) {
     productionsStr.push_back(prod);
-    productionsCount.push_back(prodCount);
+    // productionsCount.push_back(prodCount);
+    productionsCount.push_back(0); 
     sum += prodCount;
   }
 
@@ -52,9 +56,18 @@ static std::vector<std::string> chooseProds(
     count /= sum;
   }
 
-  std::discrete_distribution<> d(productionsCount.begin(),
-                                 productionsCount.end());
-  return breakRuleInProds(productionsStr[d(gen)]);
+  // std::discrete_distribution<> d(productionsCount.begin(),
+  //                                productionsCount.end());
+
+  std::uniform_int_distribution<int> d(0, productionsStr.size()-1);
+
+  std::string production = productionsStr[d(gen)]; 
+  if(productionsUse[production] > MAX_USES){
+    return std::vector<std::string>(); 
+  }
+  productionsUse[production] += 1; 
+  // std::cerr << "cheguei\n";
+  return breakRuleInProds(production);
 }
 
 static std::string getNodeContext(Node *node, const int n) {
@@ -91,6 +104,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
     const int n, std::random_device::result_type seed) {
+
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 

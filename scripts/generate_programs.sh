@@ -30,16 +30,16 @@ fi
 for (( i=1; i<=$5; i++ )) do
     file="verilog_file_$i.v"
 
-    "$2" "--printseed" "$3" "$4" > "${4}_gram_${file}"
+    "$2" "--printseed" "$3" "$4" > "${1}${4}_gram_${file}"
 
     #format file
-    "$6" "--inplace" "--failsafe_success=false"  "${4}_gram_${file}"
+    "$6" "--inplace" "--failsafe_success=false"  "${1}${4}_gram_${file}"
 
-    if [ $? -ne 0 ]
-    then
-        ((i--))
+    # if [ $? -ne 0 ]
+    # then
+    #     ((i--))
    
-        rm "${4}_gram_${file}"
-    fi
+    #     rm "${1}${4}_gram_${file}"
+    # fi
     
 done

@@ -1,0 +1,1 @@
+ package  automatic  id_1  ;  endpackage  primitive  id_1  (  continuous  ,  continuous  ,  id_1  ,  id_1  )  ;  input  id_2  ,  access  ;  reg  id_3  ;  table  *  x  _  :  f  :  0  ;  _  :  +  :  -  ;  b  Q  :  %  :  0  ;  0  :  f  :  x  ;  f  r  :  R  :  1  ;  endtable  endprimitive 

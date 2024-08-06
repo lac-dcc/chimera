@@ -1,0 +1,2 @@
+ package  sample  ;  `timescale 1ps /  1  ps
+ `undef  pp_1  endpackage  :  `pp_1  primitive  `pp_1  (  `pp_1  )  ;  input  id_2  ,  id_3  ;  input  id_4  ,  id_5  ;  table  p  :  *  :  -  ;  endtable  endprimitive  :  id_5  `undef  pp_6 

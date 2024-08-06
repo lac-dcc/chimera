@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  ,  id_1  )  ;  input  id_2  ;  input  id_3  ,  sample  ,  access  ,  id_4  ;  table  1  :  M  :  0  ;  Q  :  r  :  1  ;  endtable  endprimitive  module  flow  import  access  ::  *  ;  ;  endprogram  :  continuous 

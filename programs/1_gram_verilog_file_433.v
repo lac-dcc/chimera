@@ -1,0 +1,1 @@
+ primitive  sample  (  output  id_1  ,  input  continuous  )  ;  table  _  Q  :  1  ;  endtable  endprimitive 

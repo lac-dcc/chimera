@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  access  )  ;  table  Q  :  1  :  x  ;  *  :  x  :  1  ;  endtable  endprimitive  :  sample 

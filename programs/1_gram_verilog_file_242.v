@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  access  )  ;  table  1  :  0  ;  endtable  endprimitive  `undef  pp_2  primitive  sample  (  output  `pp_2  ,  input  id_1  )  ;  table  M  Q  x  :  f  :  0  ;  M  :  %  :  x  ;  R  f  M  %  +  f  _  _  1  :  ?  :  0  ;  endtable  endprimitive  :  id_1 

@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  input  id_2  ;  initial  id_2  =  1  ;  table  p  f  0  0  :  0  ;  _  :  1  ;  endtable  endprimitive  :  sample  primitive  id_1  (  id_1  ,  id_1  )  ;  input  id_3  ,  access  ;  output  id_4  ;  reg  id_5  ;  initial  id_5  =  1'd0 ;  table  b  :  0  ;  endtable  endprimitive  :  id_4  `define  pp_6  0

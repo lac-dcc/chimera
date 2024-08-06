@@ -1,0 +1,3 @@
+ macromodule  module_0 import  id_1  ::  *  ;  (  id_2  #  (  )  .  id_3  id_4  )  ;  program  static  module_1 import  id_5  ::  *  ,  id_6  ::  *  ;  ;  `define  pp_1  0
+ endmodule  `define  pp_2  (  pp_3  )  0
+ endmodule  :  id_10  primitive  `pp_2  (  output  `pp_2  ,  input  `pp_3  )  ;  table  M  f  f  :  R  :  x  ;  %  n  p  :  Q  :  x  ;  0  f  :  0  :  x  ;  1  ?  *  :  R  :  -  ;  endtable  endprimitive 

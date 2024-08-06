@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  id_1  ,  input  access  )  ;  table  _  :  0  ;  Q  :  x  ;  +  0  ?  b  :  1  ;  endtable  endprimitive  :  id_1  `undef  pp_2 

@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  output  id_2  ;  input  flow  ,  id_3  ,  id_4  ;  output  id_5  ;  table  M  r  ?  p  r  :  R  :  0  ;  endtable  endprimitive  :  id_4  `undef  pp_6  `undef  pp_7 

@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  output  id_2  ;  initial  continuous  = 0 ;  table  n  R  1  n  M  :  n  :  -  ;  f  :  n  :  -  ;  ?  x  +  :  n  :  1  ;  endtable  endprimitive  :  flow  typedef  integer  unsigned  id_2  ; 

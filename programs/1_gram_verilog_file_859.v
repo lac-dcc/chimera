@@ -1,0 +1,1 @@
+ bind  this  flow  #  (  )  ::  id_1  #  (  )  flow  ;  primitive  sample  (  id_1  ,  access  )  ;  input  id_2  ,  id_3  ;  input  id_4  ,  id_5  ;  initial  id_4  = 0 ;  table  M  b  p  p  :  1  ;  b  :  x  ;  endtable  endprimitive 

@@ -1,0 +1,2 @@
+package automatic flow;
+endpackage

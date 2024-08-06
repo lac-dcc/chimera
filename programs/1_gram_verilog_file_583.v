@@ -1,0 +1,1 @@
+ primitive  id_1  (  continuous  ,  id_1  )  ;  input  sample  ,  id_2  ,  id_3  ,  id_4  ,  id_5  ,  id_6  ,  access  ;  table  %  :  x  ;  p  Q  b  p  0  :  -  ;  M  1  M  0  :  x  ;  x  :  0  ;  endtable  endprimitive 

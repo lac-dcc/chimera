@@ -1,0 +1,1 @@
+ primitive  sample  (  id_1  ,  access  )  ;  input  id_2  ;  initial  continuous  =  1'b0 ;  table  f  :  b  :  x  ;  endtable  endprimitive  :  id_1  primitive  sample  (  flow  ,  id_2  ,  id_1  )  ;  reg  id_3  ;  input  id_4  ;  table  b  :  n  :  0  ;  f  ?  b  n  f  b  :  _  :  x  ;  %  :  0  :  -  ;  endtable  endprimitive  :  id_1 

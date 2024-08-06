@@ -1,0 +1,2 @@
+ primitive  access  (  id_1  ,  sample  ,  id_1  )  ;  output  continuous  ;  output  flow  ;  reg  continuous  ;  output  id_2  ;  initial  id_2  =  1  ;  table  Q  r  :  x  ;  1  n  :  0  ;  endtable  endprimitive  :  id_1  `timescale 1ps /  1  ps
+ import  id_1  ::  *  ,  id_1  ::  *  ; 

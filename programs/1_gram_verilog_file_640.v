@@ -1,0 +1,1 @@
+ program  static  module_0 (  flow  .  min  id_1  ,  sample  ::  id_2  )  ;  endmodule  primitive  id_1  (  output  sample  ,  input  id_1  )  ;  table  M  :  -  ;  endtable  endprimitive 

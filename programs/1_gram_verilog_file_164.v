@@ -1,0 +1,1 @@
+ primitive  flow  (  output  id_1  ,  input  id_1  )  ;  table  R  p  _  %  +  R  *  :  Q  :  0  ;  *  ?  n  x  f  *  _  p  :  %  :  -  ;  endtable  endprimitive 

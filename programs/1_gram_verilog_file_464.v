@@ -1,0 +1,1 @@
+ program  module_0 (  {  sample  #  (  .  sum  (  )  )  }  =  ,  {  continuous  #  (  ,  ,  ,  )  }  =  )  ; output id_2 ; input id_1 ;  `include "" endmodule  :  id_3 

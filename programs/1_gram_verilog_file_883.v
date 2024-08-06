@@ -1,0 +1,1 @@
+ primitive  id_1  (  output  flow  ,  input  flow  )  ;  table  r  M  M  n  :  ?  :  1  ;  endtable  endprimitive  :  id_1 

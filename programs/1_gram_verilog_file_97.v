@@ -1,0 +1,1 @@
+ primitive  id_1  (  id_1  )  ;  input  id_2  ,  id_3  ,  sample  ;  initial  continuous  = 0 ;  table  R  :  *  :  x  ;  %  :  n  :  -  ;  ?  _  0  _  :  ?  :  x  ;  Q  0  :  _  :  0  ;  f  :  0  :  0  ;  ?  %  M  R  f  :  +  :  -  ;  endtable  endprimitive  bind  this  .  id_2  access  #  (  )  ::  access  #  1  id_3  ; 

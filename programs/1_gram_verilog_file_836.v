@@ -1,0 +1,1 @@
+ primitive  continuous  (  id_1  )  ;  reg  id_2  ;  table  _  +  %  :  -  ;  0  p  1  1  :  -  ;  n  %  :  0  ;  ?  %  n  :  0  ;  x  :  -  ;  endtable  endprimitive 

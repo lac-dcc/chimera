@@ -1,0 +1,1 @@
+ primitive  flow  (  output  id_1  ,  input  id_1  )  ;  table  Q  M  r  :  -  ;  endtable  endprimitive  :  id_1  primitive  access  (  output  sample  ,  input  access  )  ;  table  +  f  b  1  :  0  ;  r  n  :  -  ;  f  f  :  x  ;  endtable  endprimitive  package  automatic  id_1  ;  endpackage  :  id_1 

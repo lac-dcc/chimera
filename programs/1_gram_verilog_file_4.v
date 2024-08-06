@@ -1,0 +1,3 @@
+ `define  pp_1  (  pp_2  =  "" 
+ ,  pp_3  )  0
+ function  automatic  reg  [  ]  [  :  ]  `pp_3  #  (  )  (  )  ;  localparam  signed  `pp_2  #  (  )  [  ]  =  ;  endfunction  :  `pp_1  import  flow  ::  *  ;  program  static  module_0 import  flow  ::  *  ,  id_3  ::  *  ;  import  flow  ::  *  ;  import  id_4  ::  *  ;  import  id_5  ::  *  ;  (  id_1  #  (  .  continuous  (  )  ,  .  continuous  (  )  )  =  ,  .  continuous  (  {  continuous  }  )  )  ; output id_2 ; input id_1 ;  endmodule  macromodule  static  module_1 (  inout  id_1  =  )  ;  endprogram  :  sample  timeunit 1ps ; 
