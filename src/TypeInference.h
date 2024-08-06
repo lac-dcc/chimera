@@ -10,7 +10,8 @@ using constraintSet = std::unordered_set<std::pair<std::string, std::string>>;
 
 class TypeInferenceVisitor : public Visitor<constraintSet, std::string&>{
 public:
-
+  uint typeCounter = 0;
+  std::string TypeInferenceVisitor::freshType();
   virtual constraintSet visit(Node *node, std::string& type) override;
 
   virtual constraintSet visit(Terminal *node, std::string& type) override;

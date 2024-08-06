@@ -1,5 +1,10 @@
 #include "TypeInference.h"
 
+
+std::string TypeInferenceVisitor::freshType(){
+    return "TV_" + std::to_string(this->typeCounter++);
+}
+
 constraintSet TypeInferenceVisitor::visit(Node *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Terminal *node, std::string& type){}
