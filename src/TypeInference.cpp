@@ -480,7 +480,22 @@ constraintSet TypeInferenceVisitor::visit(List_of_ports_or_port_declarations_ite
 
 constraintSet TypeInferenceVisitor::visit(Data_type_or_implicit_followed_by_id_and_dimensions_opt *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Xor_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Xor_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    std::string t = "scalar";
+    if (children.size() == 1) {
+        auto constraintsBitAndExpr = applyVisit(children[0].get(), t);
+        constraintsBitAndExpr.insert({t, type});
+        return constraintsBitAndExpr;
+    } else {
+        auto constraintsXorExpr = applyVisit(children[0].get(), t);
+        auto constraintsBitAndExpr = applyVisit(children[2].get(), t);
+        constraintsXorExpr.insert(constraintsBitAndExpr.begin(), constraintsBitAndExpr.end());
+        constraintsXorExpr.insert({t, type});
+
+        return constraintsXorExpr;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Dec_based_number *node, std::string& type){}
 
@@ -702,18 +717,50 @@ constraintSet TypeInferenceVisitor::visit(Specparam *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Port_expression_opt *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Cond_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Cond_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    if (children.size() == 1) {
+        return applyVisit(children[0].get(), type);
+    } else {
+        std::string s = "scalar";
+        auto constraintsLogOrExpr = applyVisit(children[0].get(), s);
+
+        auto t = this->freshType();
+        auto constraintsExpression = applyVisit(children[2].get(), t);
+        auto constraintsCondExpr = applyVisit(children[4].get(), t); 
+
+        constraintsLogOrExpr.insert(constraintsExpression.begin(), constraintsExpression.end());
+        constraintsLogOrExpr.insert(constraintsCondExpr.begin(), constraintsCondExpr.end());
+        constraintsLogOrExpr.insert({t, type});
+
+        return constraintsLogOrExpr;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Tk_reg_opt *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Logor_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Logor_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    std::string t = "scalar";
+    if (children.size() == 1) {
+        auto constraintsLogAndExpr = applyVisit(children[0].get(), t);
+        constraintsLogAndExpr.insert({t, type});
+        return ;
+    } else {
+        auto constraintsLogOrExpr = applyVisit(children[0].get(), t);
+        auto constraintsLogAndExpr = applyVisit(children[2].get(), t);
+        constraintsLogOrExpr.insert(constraintsLogAndExpr.begin(), constraintsLogAndExpr.end());
+        constraintsLogOrExpr.insert({t, type});
+
+        return constraintsLogOrExpr;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Delay3_or_drive_opt *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list_opt *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node, std::string& type){
-
     auto t = freshType();
 
     auto constraintsGenericIdentifier = applyVisit(node->getChildren()[0].get(), t);
@@ -818,7 +865,21 @@ constraintSet TypeInferenceVisitor::visit(Sequence_throughout_expr *node, std::s
 
 constraintSet TypeInferenceVisitor::visit(Property_expr_or_assignment_list *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Bitor_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Bitor_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    std::string t = "scalar";
+    if (children.size() == 1) {
+        auto constraintsXorExpr = applyVisit(children[0].get(), t);
+        constraintsXorExpr.insert({t, type});
+        return constraintsXorExpr;
+    } else {
+        auto constraintsBitOrExpr = applyVisit(children[0].get(), t);
+        auto constraintsXorExpr = applyVisit(children[2].get(), t);
+        constraintsBitOrExpr.insert(constraintsXorExpr.begin(), constraintsXorExpr.end());
+        constraintsBitOrExpr.insert({t, type});
+        return constraintsBitOrExpr;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Tf_port_list *node, std::string& type){}
 
@@ -830,7 +891,16 @@ constraintSet TypeInferenceVisitor::visit(Statement *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Dr_strength1 *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Assign_modify_statement *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Assign_modify_statement *node, std::string& type) {
+    const auto& children = node->getChildren();
+    auto t = this->freshType();
+    auto constraintsLpValue = applyVisit(children[0].get(), t);
+    std::string s = "scalar";
+    auto constraintsExpression = applyVisit(children[2].get(), s);
+    
+    constraintsLpValue.insert(constraintsExpression.begin(), constraintsExpression.end());
+    return constraintsLpValue;
+}
 
 constraintSet TypeInferenceVisitor::visit(Udp_port_decls *node, std::string& type){}
 
@@ -905,7 +975,18 @@ constraintSet TypeInferenceVisitor::visit(Port_named *node, std::string& type){}
 
 constraintSet TypeInferenceVisitor::visit(Udp_output_sym *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Assignment_statement_no_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Assignment_statement_no_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    if (children.size() == 1) {
+        return applyVisit(children[0].get(), type);
+    } else {
+        auto t = this->freshType();
+        auto constraintsLpValue = applyVisit(children[0].get(), t);
+        auto constraintsExpression = applyVisit(children[2].get(), t);
+        constraintsLpValue.insert(constraintsExpression.begin(), constraintsExpression.end());
+        return constraintsLpValue;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Any_port_list_item_last_positional *node, std::string& type){}
 
@@ -951,7 +1032,22 @@ constraintSet TypeInferenceVisitor::visit(Macro_formals_list *node, std::string&
 
 constraintSet TypeInferenceVisitor::visit(Const_opt *node, std::string& type){}
 
-constraintSet TypeInferenceVisitor::visit(Logand_expr *node, std::string& type){}
+constraintSet TypeInferenceVisitor::visit(Logand_expr *node, std::string& type) {
+    const auto& children = node->getChildren();
+    std::string t = "scalar";
+    if (children.size() == 1) {
+        auto constraintsMatchesExpr = applyVisit(children[0].get(), t);
+        constraintsMatchesExpr.insert({t, type});
+        return constraintsMatchesExpr;
+    } else {
+        auto constraintsLogAndExpr = applyVisit(children[0].get(), t);
+        auto constraintsBitOrExpr = applyVisit(children[2].get(), t);
+        constraintsLogAndExpr.insert(constraintsBitOrExpr.begin(), constraintsBitOrExpr.end());
+        constraintsLogAndExpr.insert({t, type});
+
+        return constraintsLogAndExpr;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Event_expression *node, std::string& type){}
 
