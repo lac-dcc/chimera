@@ -23,7 +23,7 @@ enum class CanonicalTypes : typeId {
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
   typeId typeCounter =
-      static_cast<uint64_t>(CanonicalTypes::FIRST_FRESH_TYPE);
+      static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 
   typeId TypeInferenceVisitor::freshType();
 
