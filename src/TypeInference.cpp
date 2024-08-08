@@ -63,7 +63,7 @@ constraintSet TypeInferenceVisitor::visit(Port *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Specify_simple_path *node,
                                           typeId type) {
-  
+  return defaultVisitor(node, type);
                                           }
 
 constraintSet TypeInferenceVisitor::visit(Event_control *node, typeId type) {
@@ -120,6 +120,7 @@ constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Non_integer_type *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Parameter_value_ranges_opt *node,
@@ -197,7 +198,9 @@ constraintSet TypeInferenceVisitor::visit(Tf_variable_identifier_first *node,
 
 constraintSet TypeInferenceVisitor::visit(
     Type_identifier_or_implicit_basic_followed_by_id_and_dimensions_opt *node,
-    typeId type){};
+    typeId type){
+  return defaultVisitor(node, type);
+}
 
 constraintSet TypeInferenceVisitor::visit(Type_or_id_root *node, typeId type) {
   return defaultVisitor(node, type);
@@ -443,6 +446,7 @@ constraintSet TypeInferenceVisitor::visit(Function_item_list *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Type_declaration *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_body *node, typeId type) {
@@ -582,6 +586,7 @@ constraintSet TypeInferenceVisitor::visit(Any_argument_list *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_value_list *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Module_port_declaration *node,
@@ -626,6 +631,7 @@ constraintSet TypeInferenceVisitor::visit(Tf_port_item_expr_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Cont_assign_list *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet
@@ -686,6 +692,7 @@ constraintSet TypeInferenceVisitor::visit(Unary_prefix_expr *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_identifier *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet
@@ -790,6 +797,7 @@ constraintSet TypeInferenceVisitor::visit(Systemtfidentifier *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_unbasednumber *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions_opt *node,
@@ -834,6 +842,7 @@ constraintSet TypeInferenceVisitor::visit(Type_identifier_followed_by_id *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Method_prototype *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Tf_port_item *node, typeId type) {
@@ -918,6 +927,7 @@ TypeInferenceVisitor::visit(Module_parameter_port_list_item_last *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Hex_based_number *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Hierarchy_event_identifier *node,
@@ -1134,6 +1144,7 @@ constraintSet TypeInferenceVisitor::visit(Xor_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Dec_based_number *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Loop_statement *node, typeId type) {
@@ -1405,7 +1416,12 @@ constraintSet TypeInferenceVisitor::visit(Postfix_expression *node,
   return applyVisit(node->getChildren().front().get(), type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Symbolidentifier *node, typeId type) {
+constraintSet TypeInferenceVisitor::visit(Symbolidentifier *node, typeId type) {//id
+  constraintSet d;
+  auto s = node->getElement();
+  s.erase(std::remove(s.begin(), s.end(), ' '), s.end());
+  d.insert({s, type});
+  return d;
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_input_sym *node, typeId type) {
@@ -1489,6 +1505,7 @@ constraintSet TypeInferenceVisitor::visit(Statement_or_null_list *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Task_declaration *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Data_declaration_base *node,
