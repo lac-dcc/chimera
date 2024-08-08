@@ -20,9 +20,11 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node * node, typeId type){
 }
 constraintSet TypeInferenceVisitor::identifierVisitor(Node * node, typeId type){
   constraintSet d;
-  auto s = node->getElement();
-  s.erase(std::remove(s.begin(), s.end(), ' '), s.end());
-  d.insert({s, type});
+  auto t = freshType();
+  identifierMap[t] = node->getElement();
+  
+  d.insert({t, type});
+  
   return d;
 }
 

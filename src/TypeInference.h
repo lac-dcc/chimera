@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <set>
 #include <string>
+#include <map>
 
 using typeId = std::uint64_t;
 using constraintSet = std::set<std::pair<typeId, typeId>>;
@@ -25,6 +26,7 @@ private:
   
   typeId typeCounter =
       static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
+  std::map<typeId, std::string> identifierMap;
 
   typeId TypeInferenceVisitor::freshType();
 
