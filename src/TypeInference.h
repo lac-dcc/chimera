@@ -27,6 +27,8 @@ private:
 
   typeId TypeInferenceVisitor::freshType();
 
+  constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType, typeId exprType, typeId actualType);
+
 public:
   virtual constraintSet visit(Node *node, typeId type) override;
 
