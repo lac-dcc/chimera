@@ -16,7 +16,7 @@ enum class CanonicalTypes : typeId {
   LOGIC,
   ANONYMOUS_GATE,
   GATE,
-  INTEGER,
+  VECTOR,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 

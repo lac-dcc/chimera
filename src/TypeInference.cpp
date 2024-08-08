@@ -49,7 +49,9 @@ constraintSet TypeInferenceVisitor::visit(Port *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Specify_simple_path *node,
-                                          typeId type) {}
+                                          typeId type) {
+  
+                                          }
 
 constraintSet TypeInferenceVisitor::visit(Event_control *node, typeId type) {}
 
@@ -90,7 +92,7 @@ constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node,
       return constraintsListOfPortIdentifiers;
     }
   } else {
-    return applyVisit(node->getChildren()[0].get());
+    return applyVisit(node->getChildren()[0].get(), type);
   }
 }
 
@@ -239,7 +241,23 @@ constraintSet TypeInferenceVisitor::visit(Pow_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(For_init_decl_or_assign *node,
-                                          typeId type) {}
+                                          typeId type) {
+  if(node->getChildren().size() == 3){
+    auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), type);
+    auto constraintsExp = applyVisit(node->getChildren()[2].get(), type);
+
+    constraintsLpValue.insert(constraintsExp.begin(), constraintsExp.end());
+
+    return constraintsLpValue;
+  }else{
+    auto constraintsGenId = applyVisit(node->getChildren()[1].get(), type);
+    auto constraintsExp = applyVisit(node->getChildren()[3].get(), type);
+
+    constraintsGenId.insert(constraintsExp.begin(), constraintsExp.end());
+
+    return constraintsGenId;
+  }
+}
 
 constraintSet TypeInferenceVisitor::visit(Udp_initial *node, typeId type) {}
 
@@ -346,7 +364,7 @@ constraintSet TypeInferenceVisitor::visit(Primitive_gate_instance *node,
     return constraintsAnyPortList;
   } else {
     auto x = static_cast<typeId>(CanonicalTypes::GATE);
-    auto y = static_cast<typeId>(CanonicalTypes::INTEGER);
+    auto y = static_cast<typeId>(CanonicalTypes::SCALAR);
     auto constraintsGenericIdentifier =
         applyVisit(node->getChildren()[0].get(), x);
     auto constraintsDeclDimensions =
@@ -414,7 +432,18 @@ constraintSet TypeInferenceVisitor::visit(Module_port_declaration *node,
 
 constraintSet TypeInferenceVisitor::visit(Jump_statement *node, typeId type) {}
 
-constraintSet TypeInferenceVisitor::visit(Delay_value *node, typeId type) {}
+constraintSet TypeInferenceVisitor::visit(Delay_value *node, typeId type) {
+  auto constraintsExpression1 = applyVisit(node->getChildren()[0].get(), type);
+
+  if(node->getChildren().size() > 1){
+    auto cE2 = applyVisit(node->getChildren()[2].get(), type);
+    auto cE3 = applyVisit(node->getChildren()[4].get(), type);
+    constraintsExpression1.insert(cE2.begin(), cE2.end());
+    constraintsExpression1.insert(cE3.begin(), cE3.end());
+  }
+
+  return constraintsExpression1;
+}
 
 constraintSet TypeInferenceVisitor::visit(Sequence_or_expr *node, typeId type) {
   return applyVisit(node->getChildren().front().get(), type);
@@ -438,7 +467,17 @@ TypeInferenceVisitor::visit(Any_argument_list_trailing_comma *node,
 
 constraintSet
 TypeInferenceVisitor::visit(Procedural_continuous_assignment *node,
-                            typeId type) {}
+                            typeId type) {
+  auto t1 = freshType();
+  auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), t1);
+
+  if(node->getChildren().size() == 5){
+    auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t1);
+    constraintsLpValue.insert(constraintsExpression.begin(), constraintsExpression.end());
+  }
+
+  return constraintsLpValue;
+}
 
 constraintSet TypeInferenceVisitor::visit(Expression_or_dist *node,
                                           typeId type) {
@@ -762,7 +801,49 @@ constraintSet TypeInferenceVisitor::visit(Xor_expr *node, typeId type) {
 constraintSet TypeInferenceVisitor::visit(Dec_based_number *node, typeId type) {
 }
 
-constraintSet TypeInferenceVisitor::visit(Loop_statement *node, typeId type) {}
+constraintSet TypeInferenceVisitor::visit(Loop_statement *node, typeId type) {
+  auto x = static_cast<typeId>(CanonicalTypes::SCALAR);
+  auto y = freshType();
+  
+  if(node->getChildren()[0]->getElement() == " for "){
+    
+    auto constraintsInit = applyVisit(node->getChildren()[2].get(), x);
+    auto constraintsExpr = applyVisit(node->getChildren()[4].get(), x);
+    auto constraintsStep = applyVisit(node->getChildren()[6].get(), x);
+    auto constraintsStat = applyVisit(node->getChildren()[8].get(), y);
+
+    constraintsInit.insert(constraintsExpr.begin(), constraintsExpr.end());
+    constraintsInit.insert(constraintsStep.begin(), constraintsStep.end());
+    constraintsInit.insert(constraintsStat.begin(), constraintsStat.end());
+
+    return constraintsInit;
+
+  }else if(node->getChildren().size() == 2){
+    return applyVisit(node->getChildren()[1].get(), y);
+
+  } else if(node->getChildren()[0].get()->getElement() == " while "){
+    auto constraintsExpr = applyVisit(node->getChildren()[2].get(), x);
+    auto constraintsStat = applyVisit(node->getChildren()[4].get(), y);
+
+    constraintsExpr.insert(constraintsStat.begin(), constraintsStat.end());
+    return constraintsExpr;
+
+  }else if(node->getChildren()[0].get()->getElement() == " do "){
+    auto constraintsStat = applyVisit(node->getChildren()[1].get(), y);
+    auto constraintsExpr = applyVisit(node->getChildren()[4].get(), x);
+
+    constraintsExpr.insert(constraintsStat.begin(), constraintsStat.end());
+    return constraintsExpr;
+  }else if(node->getChildren()[0].get()->getElement() == " foreach "){
+    auto z = freshType();
+
+    auto constraintsRef = applyVisit(node->getChildren()[2].get(), y);
+    auto constraintsStat = applyVisit(node->getChildren()[4].get(), z);
+
+    constraintsRef.insert(constraintsStat.begin(), constraintsStat.end());
+    return constraintsRef;
+  }
+}
 
 constraintSet
 TypeInferenceVisitor::visit(Data_declaration_or_module_instantiation *node,
@@ -809,7 +890,37 @@ constraintSet TypeInferenceVisitor::visit(Spec_notifier *node, typeId type) {}
 constraintSet TypeInferenceVisitor::visit(Block_item_or_statement_or_null *node,
                                           typeId type) {}
 
-constraintSet TypeInferenceVisitor::visit(Specify_item *node, typeId type) {}
+constraintSet TypeInferenceVisitor::visit(Specify_item *node, typeId type) {
+    if(node->getChildren().size() == 2){
+      return applyVisit(node->getChildren()[0].get(), type);
+    } else if(node->getChildren()[0]->getElement() == " if "){
+      auto t1 = freshType();
+      auto t2 = static_cast<typeId>(CanonicalTypes::SCALAR);
+      auto constraintsExpression = applyVisit(node->getChildren()[2].get(), t2);
+      auto constraintPath =  applyVisit(node->getChildren()[4].get(), t1);
+      constraintsExpression.insert(constraintPath.begin(), constraintPath.end());
+      return constraintsExpression;
+
+    }else if(node->getChildren()[0]->getElement() == " specparam "){
+      return applyVisit(node->getChildren()[1].get(), type);
+
+    }else if(node->getChildren().size() == 7){
+      auto t1 = freshType();
+      auto constraintsSpecReferenceEvent = applyVisit(node->getChildren()[2].get(), t1);
+      auto constraintDelayValue =  applyVisit(node->getChildren()[4].get(), t1);
+      constraintsSpecReferenceEvent.insert(constraintDelayValue.begin(), constraintDelayValue.end());
+      return constraintsSpecReferenceEvent;
+
+    }else{
+      auto t1 = freshType();
+      auto constraintsSpecReferenceEvent1 = applyVisit(node->getChildren()[2].get(), t1);
+      auto constraintsSpecReferenceEvent2 = applyVisit(node->getChildren()[4].get(), t1);
+      auto constraintDelayValue =  applyVisit(node->getChildren()[6].get(), t1);
+      constraintsSpecReferenceEvent1.insert(constraintDelayValue.begin(), constraintDelayValue.end());
+      constraintsSpecReferenceEvent1.insert(constraintsSpecReferenceEvent2.begin(), constraintsSpecReferenceEvent2.end());
+      return constraintsSpecReferenceEvent1;
+    }
+}
 
 constraintSet TypeInferenceVisitor::visit(Any_param_declaration *node,
                                           typeId type) {}
@@ -1072,7 +1183,14 @@ constraintSet TypeInferenceVisitor::visit(Dr_strength0 *node, typeId type) {}
 constraintSet TypeInferenceVisitor::visit(Unique_priority_opt *node,
                                           typeId type) {}
 
-constraintSet TypeInferenceVisitor::visit(Specparam *node, typeId type) {}
+constraintSet TypeInferenceVisitor::visit(Specparam *node, typeId type) {
+  auto constraintsGenericId = applyVisit(node->getChildren()[0].get(), type);
+  auto constraintsExpression = applyVisit(node->getChildren()[2].get(), type);
+
+  constraintsGenericId.insert(constraintsExpression.begin(), constraintsExpression.end());
+
+  return constraintsGenericId;
+}
 
 constraintSet TypeInferenceVisitor::visit(Port_expression_opt *node,
                                           typeId type) {}
@@ -1469,7 +1587,26 @@ constraintSet TypeInferenceVisitor::visit(Boolean_abbrev_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Specify_path_identifiers *node,
-                                          typeId type) {}
+                                          typeId type) {
+  if(node->getChildren().size() == 4){
+    auto x = static_cast<typeId>(CanonicalTypes::VECTOR);
+    auto y = static_cast<typeId>(CanonicalTypes::SCALAR);
+    auto constraintsGenericId = applyVisit(node->getChildren()[0].get(), x);
+    auto constraintsExpPrimary = applyVisit(node->getChildren()[2].get(), y);
+    constraintsGenericId.insert(constraintsExpPrimary.begin(), constraintsExpPrimary.end());
+    return constraintsGenericId;
+  }else{
+    auto t = freshType();
+    auto d1 = applyVisit(node->getChildren()[0].get(), t);
+
+    if(node->getChildren().size() > 1){
+      auto t1 = freshType();
+      auto d2 = applyVisit(node->getChildren()[0].get(), t1);
+      d1.insert(d2.begin(), d2.end());
+      return d1;
+    }
+  }
+}
 
 constraintSet TypeInferenceVisitor::visit(Tf_port_direction *node,
                                           typeId type) {}
@@ -1525,7 +1662,9 @@ constraintSet TypeInferenceVisitor::visit(Source_text *node, typeId type) {
   return applyVisit(node->getChildren().front().get(), type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId type) {}
+constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId type) {
+  
+}
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId type) {}
 
