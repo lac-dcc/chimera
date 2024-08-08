@@ -30,6 +30,7 @@ private:
 
   constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType, typeId exprType, typeId actualType);
   constraintSet defaultVisitor(Node * node, typeId type);
+  constraintSet identifierVisitor(Node * node, typeId type);
 
 public:
   virtual constraintSet visit(Node *node, typeId type) override;

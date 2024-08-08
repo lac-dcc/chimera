@@ -18,6 +18,13 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node * node, typeId type){
   }
   return d;
 }
+constraintSet TypeInferenceVisitor::identifierVisitor(Node * node, typeId type){
+  constraintSet d;
+  auto s = node->getElement();
+  s.erase(std::remove(s.begin(), s.end(), ' '), s.end());
+  d.insert({s, type});
+  return d;
+}
 
 constraintSet TypeInferenceVisitor::binaryExpr(Node *lhs, Node *rhs,
                                                typeId operandType,
@@ -276,7 +283,7 @@ constraintSet TypeInferenceVisitor::visit(Label_opt *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Escapedidentifier *node,
                                           typeId type) {
-  return defaultVisitor(node, type);
+  return identifierVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Generate_item *node, typeId type) {
@@ -469,7 +476,7 @@ constraintSet TypeInferenceVisitor::visit(Par_block *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Keywordidentifier *node,
                                           typeId type) {
-  return defaultVisitor(node, type);
+  return identifierVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Logeq_expr *node, typeId type) {
@@ -1417,11 +1424,7 @@ constraintSet TypeInferenceVisitor::visit(Postfix_expression *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Symbolidentifier *node, typeId type) {//id
-  constraintSet d;
-  auto s = node->getElement();
-  s.erase(std::remove(s.begin(), s.end(), ' '), s.end());
-  d.insert({s, type});
-  return d;
+  return identifierVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_input_sym *node, typeId type) {
@@ -1607,6 +1610,7 @@ constraintSet TypeInferenceVisitor::visit(Shift_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Oct_based_number *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node,
@@ -1867,6 +1871,7 @@ constraintSet TypeInferenceVisitor::visit(Continuous_assign *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Parameter_assign *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_value_simple *node,
@@ -2069,6 +2074,7 @@ constraintSet TypeInferenceVisitor::visit(Generate_case_item *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Data_declaration *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Expression *node, typeId type) {
@@ -2208,6 +2214,7 @@ constraintSet TypeInferenceVisitor::visit(Function_declaration *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Net_type_or_none *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Class_declaration_extends_opt *node,
@@ -2296,6 +2303,7 @@ constraintSet TypeInferenceVisitor::visit(Logand_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Event_expression *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_entry_list *node, typeId type) {
@@ -2327,7 +2335,7 @@ constraintSet TypeInferenceVisitor::visit(Source_text *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId type) {
-  
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId type) {
@@ -2586,6 +2594,7 @@ constraintSet TypeInferenceVisitor::visit(Property_spec_disable_iff_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Macrogenericitem *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Module_block *node, typeId type) {
