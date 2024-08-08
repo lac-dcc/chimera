@@ -22,12 +22,14 @@ enum class CanonicalTypes : typeId {
 
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
+  
   typeId typeCounter =
       static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 
   typeId TypeInferenceVisitor::freshType();
 
   constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType, typeId exprType, typeId actualType);
+  constraintSet defaultVisitor(Node * node, typeId type);
 
 public:
   virtual constraintSet visit(Node *node, typeId type) override;
