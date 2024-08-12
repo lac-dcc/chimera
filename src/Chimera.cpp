@@ -559,7 +559,6 @@ int main(int argc, char **argv) {
 
     addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
-    inferTypes(m);
   }
 
   declMap.clear();
