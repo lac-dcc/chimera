@@ -230,7 +230,8 @@ constraintSet TypeInferenceVisitor::visit(Dpi_import_item *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_realtime *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::FLOAT_SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Case_item *node, typeId type) {
@@ -508,11 +509,13 @@ constraintSet TypeInferenceVisitor::visit(Specparam_list *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_binbase *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_stringliteral *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::STRING);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Var_opt *node, typeId type) {
@@ -614,7 +617,8 @@ constraintSet TypeInferenceVisitor::visit(Sequence_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_hexbase *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_expr *node, typeId type) {
@@ -640,11 +644,14 @@ constraintSet TypeInferenceVisitor::visit(Specify_block *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_decnumber *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t  = static_cast<typeId>(CanonicalTypes::SCALAR);
+  
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_decbase *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t  = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_implication_expr *node,
@@ -890,7 +897,8 @@ constraintSet TypeInferenceVisitor::visit(Systemtfidentifier *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_unbasednumber *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions_opt *node,
@@ -1097,7 +1105,7 @@ constraintSet TypeInferenceVisitor::visit(Drive_strength_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_timeliteral *node, typeId type) {
-  return defaultVisitor(node, type);
+  return constraintSet();
 }
 
 constraintSet TypeInferenceVisitor::visit(Value_range *node, typeId type) {
@@ -1193,7 +1201,8 @@ constraintSet TypeInferenceVisitor::visit(Join_keyword *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_bindigits *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Event_trigger *node, typeId type) {
@@ -1940,7 +1949,8 @@ constraintSet TypeInferenceVisitor::visit(Sequence_repetition_expr *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_hexdigits *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(
@@ -2427,7 +2437,8 @@ constraintSet TypeInferenceVisitor::visit(Tf_port_direction *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_decdigits *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(End *node, typeId type) {
@@ -2443,7 +2454,8 @@ constraintSet TypeInferenceVisitor::visit(Tk_tagged_opt *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_xzdigits *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Gatetype *node, typeId type) {
@@ -2586,7 +2598,8 @@ TypeInferenceVisitor::visit(Gate_instance_or_register_variable_list *node,
 
 constraintSet TypeInferenceVisitor::visit(Tk_evalstringliteral *node,
                                           typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::STRING);
+  return constraintSet({{t,type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_or_event_control *node,

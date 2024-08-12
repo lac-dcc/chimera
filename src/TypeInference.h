@@ -22,6 +22,8 @@ enum class CanonicalTypes : typeId {
   ANONYMOUS_GATE,
   GATE,
   VECTOR,
+  FLOAT_SCALAR,
+  STRING,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
