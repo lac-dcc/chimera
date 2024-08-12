@@ -86,8 +86,13 @@ void TypeInferenceVisitor::addToMap(typeId t, const std::string& id){
 
 constraintSet TypeInferenceVisitor::identifierVisitor(Node *node, typeId type) {
   constraintSet d;
-  auto t = freshType();
-  addToMap(t, node->getElement());
+  typeId t;
+  if(idToTypeIdMap.find(node->getElement()) != idToTypeIdMap.end()){
+    t = idToTypeIdMap[node->getElement()];
+  }else{
+    t = freshType();
+    addToMap(t, node->getElement());
+  }
 
   d.insert({t, type});
 
