@@ -557,9 +557,9 @@ int main(int argc, char **argv) {
     removeParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
 
-    addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
     inferTypes(m);
+    addConstantIDsToParameterList(m, declMap, dirMap);
   }
 
   declMap.clear();
