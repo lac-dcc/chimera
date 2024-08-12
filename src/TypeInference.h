@@ -30,7 +30,6 @@ void inferTypes(Node *head);
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
   typeId typeCounter = static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
-  std::unordered_map<typeId, std::string> identifierMap;
 
   constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType,
                            typeId exprType, typeId actualType);
@@ -38,6 +37,7 @@ private:
   constraintSet identifierVisitor(Node *node, typeId type);
 
 public:
+  std::unordered_map<typeId, std::string> identifierMap;
   typeId freshType();
 
   virtual constraintSet visit(Node *node, typeId type) override;

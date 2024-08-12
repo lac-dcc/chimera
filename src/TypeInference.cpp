@@ -46,11 +46,16 @@ void inferTypes(Node *head) {
   canonicalize(eq);
 
   for (const auto &[type, eqTypes] : eq) {
-    std::cout << type << ": { ";
-    for (const auto &otherType : eqTypes) {
-      std::cout << otherType << " ";
+    std::cerr << type;
+    if (visitor.identifierMap.find(type) != visitor.identifierMap.end()) {
+      std::cerr << " (" << visitor.identifierMap.at(type) << ")";
     }
-    std::cout << "}\n";
+
+    std::cerr << ": { ";
+    for (const auto &otherType : eqTypes) {
+      std::cerr << otherType << " ";
+    }
+    std::cerr << "}\n";
   }
 }
 
