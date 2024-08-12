@@ -2,6 +2,7 @@
 #include "CodeGenVisitor.h"
 #include "ConstantsReplacerVisitor.h"
 #include "IdentifierRenamingVisitor.h"
+#include "TypeInference.h"
 #include "Visitor.h"
 #include <algorithm>
 #include <cxxopts.hpp>
@@ -558,6 +559,7 @@ int main(int argc, char **argv) {
 
     addConstantIDsToParameterList(m, declMap, dirMap);
     replaceTypes(m, lastID);
+    inferTypes(m);
   }
 
   declMap.clear();

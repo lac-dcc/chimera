@@ -441,6 +441,7 @@ constraintSet TypeInferenceVisitor::visit(Tf_port_list_paren_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Struct_data_type *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_sequ_entry *node, typeId type) {
@@ -506,6 +507,7 @@ constraintSet TypeInferenceVisitor::visit(Tk_binbase *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_stringliteral *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Var_opt *node, typeId type) {
@@ -1164,6 +1166,7 @@ constraintSet TypeInferenceVisitor::visit(Decl_variable_dimension *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Tf_port_list_opt *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Endfunction_label_opt *node,
@@ -1249,6 +1252,7 @@ constraintSet TypeInferenceVisitor::visit(Parameter_opt *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Module_item_list *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Genericidentifier *node,
@@ -1328,6 +1332,7 @@ constraintSet TypeInferenceVisitor::visit(Loop_statement *node, typeId type) {
     constraintsRef.insert(constraintsStat.begin(), constraintsStat.end());
     return constraintsRef;
   }
+  return defaultVisitor(node, type);
 }
 
 constraintSet
@@ -1507,17 +1512,7 @@ constraintSet TypeInferenceVisitor::visit(Signed_unsigned_opt *node,
 
 constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable_list *node, typeId type) {
-  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  auto f = freshType();
-
-  auto constraintsId = applyVisit(node->getChildren()[0].get(), f);
-  auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
-  auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), f);
-
-  constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
-  constraintsId.insert(constraintsAssignment.begin(), constraintsAssignment.end());
-
-  return constraintsId;
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_comb_entry *node, typeId type) {
@@ -1811,6 +1806,7 @@ TypeInferenceVisitor::visit(Simple_immediate_assertion_statement *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Description_list *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Dr_strength0 *node, typeId type) {
@@ -1944,7 +1940,18 @@ constraintSet TypeInferenceVisitor::visit(Tk_hexdigits *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node, typeId type) {
-  return defaultVisitor(node, type);
+  
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  auto f = freshType();
+
+  auto constraintsId = applyVisit(node->getChildren()[0].get(), f);
+  auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
+  auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), f);
+
+  constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
+  constraintsId.insert(constraintsAssignment.begin(), constraintsAssignment.end());
+
+  return constraintsId;
 }
 
 constraintSet TypeInferenceVisitor::visit(Localparam_assign *node,
@@ -1970,6 +1977,7 @@ constraintSet TypeInferenceVisitor::visit(Expression_in_parens *node,
 
 constraintSet TypeInferenceVisitor::visit(
     List_of_ports_or_port_declarations_trailing_comma_ansi *node, typeId type) {
+      return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Port_reference *node, typeId type) {
@@ -1977,7 +1985,7 @@ constraintSet TypeInferenceVisitor::visit(Port_reference *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Dist_opt *node, typeId type) {
-  return constraintSet();
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Caseeq_expr *node, typeId type) {
@@ -2042,6 +2050,7 @@ TypeInferenceVisitor::visit(Package_or_generate_item_declaration *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Bin_based_number *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Loop_generate_construct *node,
@@ -2401,6 +2410,7 @@ constraintSet TypeInferenceVisitor::visit(Specify_path_identifiers *node,
       return d1;
     }
   }
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Tf_port_direction *node,
@@ -2526,6 +2536,7 @@ constraintSet TypeInferenceVisitor::visit(Trailing_decl_assignment *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Always_construct *node, typeId type) {
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Genvar_opt *node, typeId type) {
