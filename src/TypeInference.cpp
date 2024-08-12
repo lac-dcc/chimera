@@ -1946,10 +1946,13 @@ constraintSet TypeInferenceVisitor::visit(
 
   auto constraintsId = applyVisit(node->getChildren()[0].get(), f);
   auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
-  auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), f);
+  if(node->getChildren().size() == 3){
+    auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), f);
+    constraintsId.insert(constraintsAssignment.begin(), constraintsAssignment.end());
+  }
 
   constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
-  constraintsId.insert(constraintsAssignment.begin(), constraintsAssignment.end());
+  
 
   return constraintsId;
 }
