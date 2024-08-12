@@ -47,8 +47,8 @@ void inferTypes(Node *head) {
 
   for (const auto &[type, eqTypes] : eq) {
     std::cerr << type;
-    if (visitor.IdToTypeIdMap.find(type) != visitor.IdToTypeIdMap.end()) {
-      std::cerr << " (" << visitor.IdToTypeIdMap.at(type) << ")";
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
+      std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
     }
 
     std::cerr << ": { ";
