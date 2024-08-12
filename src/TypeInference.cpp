@@ -47,8 +47,8 @@ void inferTypes(Node *head) {
 
   for (const auto &[type, eqTypes] : eq) {
     std::cerr << type;
-    if (visitor.identifierMap.find(type) != visitor.identifierMap.end()) {
-      std::cerr << " (" << visitor.identifierMap.at(type) << ")";
+    if (visitor.IdToTypeIdMap.find(type) != visitor.IdToTypeIdMap.end()) {
+      std::cerr << " (" << visitor.IdToTypeIdMap.at(type) << ")";
     }
 
     std::cerr << ": { ";
@@ -76,15 +76,25 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node *node, typeId type) {
   }
   return d;
 }
+
+void TypeInferenceVisitor::addToMap(typeId t, const std::string& id){
+
+  this->typeIdToIdMap[t] = id;
+  this->idToTypeIdMap[id] = t;
+}
+
+
 constraintSet TypeInferenceVisitor::identifierVisitor(Node *node, typeId type) {
   constraintSet d;
   auto t = freshType();
-  identifierMap[t] = node->getElement();
+  addToMap(t, node->getElement());
 
   d.insert({t, type});
 
   return d;
 }
+
+
 
 constraintSet TypeInferenceVisitor::binaryExpr(Node *lhs, Node *rhs,
                                                typeId operandType,
@@ -109,7 +119,7 @@ constraintSet TypeInferenceVisitor::visit(Terminal *node, typeId type) {
     constraintSet d;
     
     auto t = freshType();
-    identifierMap[t] = node->getElement();
+    addToMap(t, node->getElement());
     d.insert({type, t});
     return d;
   }
