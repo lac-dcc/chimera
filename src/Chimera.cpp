@@ -313,8 +313,8 @@ static void replaceTypes(Node *head, int &id) {
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
     head->setElement("");
-  }
-
+  }else if(head->getElement() == " string " )
+    head->setElement("type_" + std::to_string(id++));
   else {
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
