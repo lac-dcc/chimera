@@ -1,7 +1,6 @@
 #include "TypeInference.h"
 #include <iostream>
 
-
 static bool isCanonicalType(typeId type) {
   return type < static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 }
@@ -1070,7 +1069,40 @@ constraintSet TypeInferenceVisitor::visit(Array_locator_method *node,
 
 constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node,
                                           typeId type) {
-  return defaultVisitor(node, type);
+  
+  auto t = freshType();
+  if(node->getChildren()[0]->getElement() == "port_direction"){
+    
+    auto portDir = applyVisit(node->getChildren()[0].get(), t);
+    auto vType = applyVisit(node->getChildren()[1].get(), t);
+    auto dType = applyVisit(node->getChildren()[2].get(), t);
+    auto assign = applyVisit(node->getChildren()[3].get(), t);
+
+    portDir.insert(vType.begin(), vType.end());
+    portDir.insert(dType.begin(), dType.end());
+    portDir.insert(assign.begin(), assign.end());
+
+    return portDir;
+
+  }else if(node->getChildren().size() == 3){
+    auto constraintsTypeId = applyVisit(node->getChildren()[0].get(), t);
+    auto dimensions = applyVisit(node->getChildren()[1].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto assign = applyVisit(node->getChildren()[2].get(), t);
+    constraintsTypeId.insert(dimensions.begin(), dimensions.end());
+    constraintsTypeId.insert(assign.begin(), assign.end());
+    return constraintsTypeId;
+  }else{
+    auto dPrimitive = applyVisit(node->getChildren()[0].get(), t);
+    auto GenId = applyVisit(node->getChildren()[1].get(), t);
+    auto dimensions = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto assign = applyVisit(node->getChildren()[3].get(), t);
+
+    dPrimitive.insert(GenId.begin(), GenId.end());
+    dPrimitive.insert(dimensions.begin(), dimensions.end());
+    dPrimitive.insert(assign.begin(), assign.end());
+    return dPrimitive;
+  }
+  return constraintSet();
 }
 
 constraintSet TypeInferenceVisitor::visit(Bitand_expr *node, typeId type) {
@@ -2240,7 +2272,7 @@ constraintSet TypeInferenceVisitor::visit(Final_construct *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Member_name *node, typeId type) {
-  return defaultVisitor(node, type);
+  return constraintSet();
 }
 
 constraintSet TypeInferenceVisitor::visit(Class_declaration *node,
@@ -2345,7 +2377,8 @@ constraintSet TypeInferenceVisitor::visit(Statement_or_null_list_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Port_named *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = freshType();
+  return defaultVisitor(node, t);
 }
 
 constraintSet TypeInferenceVisitor::visit(Udp_output_sym *node, typeId type) {
