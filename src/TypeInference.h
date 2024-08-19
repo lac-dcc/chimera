@@ -27,7 +27,7 @@ enum class CanonicalTypes : typeId {
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
-void inferTypes(Node *head);
+bool inferTypes(Node *head);
 
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
@@ -46,6 +46,7 @@ private:
 public:
   std::unordered_map<typeId, std::string> typeIdToIdMap;
   std::unordered_map<std::string, typeId> idToTypeIdMap;
+  std::unordered_map<std::string, Node*> varMap;
 
   void addToMap(typeId t, const std::string& id);
 
