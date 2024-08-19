@@ -62,7 +62,6 @@ bool inferTypes(Node *head) {
   }
 
   for (const auto &[type, eqTypes] : eq) {
-    std::cerr << type;
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()
     && visitor.typeIdToIdMap.at(type).find("type") != std::string::npos) {//means it is a type_X identifier
