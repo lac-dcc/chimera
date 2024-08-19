@@ -512,28 +512,9 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   return flags;
 }
 
-int main(int argc, char **argv) {
-  auto flags = parseArgs(argc, argv);
+bool generateProgram(int seed, int n, std::unordered_map<std::string, std::unordered_map<std::string, int>> map, bool printTree){
 
-  if (flags.count("debug"))
-    debug = true;
-
-  if (flags.count("printseed"))
-    printSeed = true;
-
-  std::ifstream f(flags["file"].as<std::string>());
-
-  std::string json_str((std::istreambuf_iterator<char>(f)),
-                       std::istreambuf_iterator<char>());
-  json data = json::parse(json_str);
-  f.close();
-  auto map = data.get<
-      std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
-
-  auto seed = flags.count("seed")
-                  ? flags["seed"].as<std::random_device::result_type>()
-                  : 0;
-  auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
+  auto head = buildSyntaxTree(map, n, seed);
 
   std::vector<Node *> modules, portDeclarations;
 
@@ -558,17 +539,51 @@ int main(int argc, char **argv) {
     int lastID = renameVars(m, n, modID++, declMap);
 
     replaceTypes(m, lastID);
-    inferTypes(m);
+    auto isProgramCorrect = inferTypes(m);
+    if(!isProgramCorrect){
+      return false;
+    }
     addConstantIDsToParameterList(m, declMap, dirMap);
   }
 
   declMap.clear();
   renameVars(head.get(), 0, 0, declMap);
 
-  if (flags.count("printtree"))
+  if (printTree)
     dumpSyntaxTree(head.get());
 
   codeGen(head.get());
+  return true;
+}
 
+int main(int argc, char **argv) {
+  auto flags = parseArgs(argc, argv);
+
+  if (flags.count("debug"))
+    debug = true;
+
+  if (flags.count("printseed"))
+    printSeed = true;
+
+  std::ifstream f(flags["file"].as<std::string>());
+
+  std::string json_str((std::istreambuf_iterator<char>(f)),
+                       std::istreambuf_iterator<char>());
+  json data = json::parse(json_str);
+  f.close();
+  auto map = data.get<
+      std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
+
+
+  auto seed = flags.count("seed")
+                  ? flags["seed"].as<std::random_device::result_type>()
+                  : 0;
+  auto n = flags["n-value"].as<int>();
+  bool generatedCorrectProgram = false;
+
+  while(!generatedCorrectProgram){
+    generatedCorrectProgram = generateProgram(seed, n, map, flags.count("printtree"));
+  }
+  
   return 0;
 }
