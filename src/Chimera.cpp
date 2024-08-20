@@ -473,8 +473,9 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("p,printtree", "Prints productions chains.")
     ("printseed", "Prints the randomization seed.")
     ("d,debug", "Prints debug messages.")
-    ("v,verbose", "Verbose output") //Needs to implement
-    ("s,seed", "Set the seed for randomization", cxxopts::value<std::random_device::result_type>())
+    ("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
+    ("v,verbose", "Verbose output.") //Needs to implement
+    ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
   // clang-format on
 
@@ -580,8 +581,12 @@ int main(int argc, char **argv) {
                   : 0;
   auto n = flags["n-value"].as<int>();
   bool generatedCorrectProgram = false;
+  bool allow = false;
 
-  while(!generatedCorrectProgram){
+  if (flags.count("allow-ambiguous"))
+    allow = true;
+
+  while(allow || !generatedCorrectProgram ){
     generatedCorrectProgram = generateProgram(seed, n, map, flags.count("printtree"));
   }
   

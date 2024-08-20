@@ -60,6 +60,7 @@ bool inferTypes(Node *head) {
     }
     std::cerr << "}\n";
   }
+  bool isCorrect = true;
 
   for (const auto &[type, eqTypes] : eq) {
 
@@ -68,7 +69,7 @@ bool inferTypes(Node *head) {
       auto id = visitor.typeIdToIdMap.at(type);
       if(eqTypes.size() > 1){
         //should we print something?
-        return false;
+        isCorrect = false;
       }
       if(!eqTypes.empty()){
           auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(),0));
@@ -95,7 +96,7 @@ bool inferTypes(Node *head) {
       }
     }
   }
-  return true;
+  return isCorrect;
 }
 
 typeId TypeInferenceVisitor::freshType() {
