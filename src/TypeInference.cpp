@@ -78,17 +78,25 @@ bool inferTypes(Node *head) {
             switch(t){
               case CanonicalTypes::SCALAR:
               case CanonicalTypes::CONST_SCALAR:
+              case CanonicalTypes::VECTOR:
                 n->setElement(" wire ");
                 break;
-
+              case CanonicalTypes::BIT:
+              case CanonicalTypes::LOGIC:
+                n->setElement(" logic ");
+                break;
+        
               case CanonicalTypes::FLOAT_SCALAR:
                 n->setElement(" real ");
                 break;
 
               case CanonicalTypes::STRING:
                 n->setElement(" string ");
+              case CanonicalTypes::ANONYMOUS_GATE:
+              
                 break;
               default:
+                n->setElement(" wire ");
                 break;
               
             }
