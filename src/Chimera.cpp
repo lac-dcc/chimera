@@ -313,7 +313,7 @@ static void replaceTypes(Node *head, int &id) {
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
     head->setElement("");
-  }else if(head->getElement() == " string " )
+  } else if (head->getElement() == " string ")
     head->setElement("type_" + std::to_string(id++));
   else {
     for (const auto &c : head->getChildren()) {
@@ -513,7 +513,10 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   return flags;
 }
 
-bool generateProgram(int seed, int n, std::unordered_map<std::string, std::unordered_map<std::string, int>> map, bool printTree){
+bool generateProgram(
+    int seed, int n,
+    std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
+    bool printTree) {
 
   auto head = buildSyntaxTree(map, n, seed);
 
@@ -541,7 +544,7 @@ bool generateProgram(int seed, int n, std::unordered_map<std::string, std::unord
 
     replaceTypes(m, lastID);
     auto isProgramCorrect = inferTypes(m);
-    if(!isProgramCorrect){
+    if (!isProgramCorrect) {
       return false;
     }
     addConstantIDsToParameterList(m, declMap, dirMap);
@@ -575,7 +578,6 @@ int main(int argc, char **argv) {
   auto map = data.get<
       std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
 
-
   auto seed = flags.count("seed")
                   ? flags["seed"].as<std::random_device::result_type>()
                   : 0;
@@ -586,9 +588,10 @@ int main(int argc, char **argv) {
   if (flags.count("allow-ambiguous"))
     allow = true;
 
-  while(allow || !generatedCorrectProgram ){
-    generatedCorrectProgram = generateProgram(seed, n, map, flags.count("printtree"));
+  while (allow || !generatedCorrectProgram) {
+    generatedCorrectProgram =
+        generateProgram(seed, n, map, flags.count("printtree"));
   }
-  
+
   return 0;
 }

@@ -33,22 +33,17 @@ class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
   typeId typeCounter = static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 
-  
-
-  
-
   constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType,
                            typeId exprType, typeId actualType);
   constraintSet defaultVisitor(Node *node, typeId type);
   constraintSet identifierVisitor(Node *node, typeId type);
-  
 
 public:
   std::unordered_map<typeId, std::string> typeIdToIdMap;
   std::unordered_map<std::string, typeId> idToTypeIdMap;
-  std::unordered_map<std::string, Node*> varMap;
+  std::unordered_map<std::string, Node *> varMap;
 
-  void addToMap(typeId t, const std::string& id);
+  void addToMap(typeId t, const std::string &id);
 
   typeId freshType();
 

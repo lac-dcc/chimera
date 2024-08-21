@@ -44,14 +44,12 @@ bool inferTypes(Node *head) {
   unify(constraintVec, eq);
   canonicalize(eq);
 
-  //replace infered types
+  // replace infered types
 
   for (const auto &[type, eqTypes] : eq) {
     std::cerr << type;
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
       std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
-      
-
     }
 
     std::cerr << ": { ";
@@ -64,43 +62,43 @@ bool inferTypes(Node *head) {
 
   for (const auto &[type, eqTypes] : eq) {
 
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()
-    && visitor.typeIdToIdMap.at(type).find("type") != std::string::npos) {//means it is a type_X identifier
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
+        visitor.typeIdToIdMap.at(type).find("type") !=
+            std::string::npos) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
-      if(eqTypes.size() > 1){
-        //should we print something?
+      if (eqTypes.size() > 1) {
+        // should we print something?
         isCorrect = false;
       }
-      if(!eqTypes.empty()){
-          auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(),0));
-          if(visitor.varMap.find(id) != visitor.varMap.end()){
-            auto n = visitor.varMap.at(id);
-            switch(t){
-              case CanonicalTypes::SCALAR:
-              case CanonicalTypes::CONST_SCALAR:
-              case CanonicalTypes::VECTOR:
-                n->setElement(" wire ");
-                break;
-              case CanonicalTypes::BIT:
-              case CanonicalTypes::LOGIC:
-                n->setElement(" logic ");
-                break;
-        
-              case CanonicalTypes::FLOAT_SCALAR:
-                n->setElement(" real ");
-                break;
+      if (!eqTypes.empty()) {
+        auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
+        if (visitor.varMap.find(id) != visitor.varMap.end()) {
+          auto n = visitor.varMap.at(id);
+          switch (t) {
+          case CanonicalTypes::SCALAR:
+          case CanonicalTypes::CONST_SCALAR:
+          case CanonicalTypes::VECTOR:
+            n->setElement(" wire ");
+            break;
+          case CanonicalTypes::BIT:
+          case CanonicalTypes::LOGIC:
+            n->setElement(" logic ");
+            break;
 
-              case CanonicalTypes::STRING:
-                n->setElement(" string ");
-              case CanonicalTypes::ANONYMOUS_GATE:
-              
-                break;
-              default:
-                n->setElement(" wire ");
-                break;
-              
-            }
+          case CanonicalTypes::FLOAT_SCALAR:
+            n->setElement(" real ");
+            break;
+
+          case CanonicalTypes::STRING:
+            n->setElement(" string ");
+          case CanonicalTypes::ANONYMOUS_GATE:
+
+            break;
+          default:
+            n->setElement(" wire ");
+            break;
           }
+        }
       }
     }
   }
@@ -125,31 +123,27 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node *node, typeId type) {
   return d;
 }
 
-void TypeInferenceVisitor::addToMap(typeId t, const std::string& id){
+void TypeInferenceVisitor::addToMap(typeId t, const std::string &id) {
 
   this->typeIdToIdMap[t] = id;
   this->idToTypeIdMap[id] = t;
 }
 
-
 constraintSet TypeInferenceVisitor::identifierVisitor(Node *node, typeId type) {
   constraintSet d;
   typeId t;
-  if(idToTypeIdMap.find(node->getElement()) != idToTypeIdMap.end()){
+  if (idToTypeIdMap.find(node->getElement()) != idToTypeIdMap.end()) {
     t = idToTypeIdMap[node->getElement()];
-  }else{
+  } else {
     t = freshType();
     addToMap(t, node->getElement());
   }
   varMap[node->getElement()] = node;
 
-
   d.insert({t, type});
 
   return d;
 }
-
-
 
 constraintSet TypeInferenceVisitor::binaryExpr(Node *lhs, Node *rhs,
                                                typeId operandType,
@@ -169,7 +163,7 @@ constraintSet TypeInferenceVisitor::visit(Node *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Terminal *node, typeId type) {
-  if(node->getElement().find("type") != std::string::npos){
+  if (node->getElement().find("type") != std::string::npos) {
     constraintSet d;
     auto t = freshType();
 
@@ -298,7 +292,7 @@ constraintSet TypeInferenceVisitor::visit(Dpi_import_item *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Tk_realtime *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::FLOAT_SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Case_item *node, typeId type) {
@@ -577,12 +571,12 @@ constraintSet TypeInferenceVisitor::visit(Specparam_list *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Tk_binbase *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_stringliteral *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::STRING);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Var_opt *node, typeId type) {
@@ -685,7 +679,7 @@ constraintSet TypeInferenceVisitor::visit(Sequence_expr *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Tk_hexbase *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_expr *node, typeId type) {
@@ -711,14 +705,14 @@ constraintSet TypeInferenceVisitor::visit(Specify_block *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_decnumber *node, typeId type) {
-  auto t  = static_cast<typeId>(CanonicalTypes::SCALAR);
-  
-  return constraintSet({{t,type}});
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_decbase *node, typeId type) {
-  auto t  = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_implication_expr *node,
@@ -925,9 +919,12 @@ TypeInferenceVisitor::visit(Parameter_value_byname_list_item_last *node,
 
 constraintSet TypeInferenceVisitor::visit(Conditional_generate_construct *node,
                                           typeId type) {
-  if(node->getChildren().size() == 6){
-    auto constraintsExp = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
-    auto constraintsItems = applyVisit(node->getChildren()[4].get(), freshType());
+  if (node->getChildren().size() == 6) {
+    auto constraintsExp =
+        applyVisit(node->getChildren()[2].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsItems =
+        applyVisit(node->getChildren()[4].get(), freshType());
 
     constraintsExp.insert(constraintsItems.begin(), constraintsItems.end());
     return constraintsExp;
@@ -965,7 +962,7 @@ constraintSet TypeInferenceVisitor::visit(Systemtfidentifier *node,
 
 constraintSet TypeInferenceVisitor::visit(Tk_unbasednumber *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions_opt *node,
@@ -979,52 +976,63 @@ constraintSet TypeInferenceVisitor::visit(Class_items_opt *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Enum_name *node, typeId type) {
   auto t = freshType();
-  if(node->getChildren().size() == 1){
-    
+  if (node->getChildren().size() == 1) {
+
     return applyVisit(node->getChildren().front().get(), type);
-  }
-  else if(node->getChildren().size() == 3){
-    
+  } else if (node->getChildren().size() == 3) {
+
     auto constraintsId = applyVisit(node->getChildren()[0].get(), t);
     auto constraintsExp = applyVisit(node->getChildren()[2].get(), t);
 
     constraintsId.insert(constraintsExp.begin(), constraintsExp.end());
     return constraintsId;
-  }else if(node->getChildren().size() == 4){
+  } else if (node->getChildren().size() == 4) {
 
-    
     auto constraintsId = applyVisit(node->getChildren()[0].get(), t);
-    auto constraintsNum = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum =
+        applyVisit(node->getChildren()[2].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
 
     constraintsId.insert(constraintsNum.begin(), constraintsNum.end());
     return constraintsId;
-  }else if(node->getChildren().size() == 6 && node->getChildren()[4]->getElement() == " = "){
-    
+  } else if (node->getChildren().size() == 6 &&
+             node->getChildren()[4]->getElement() == " = ") {
+
     auto constraintsId = applyVisit(node->getChildren()[0].get(), t);
-    auto constraintsNum = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum =
+        applyVisit(node->getChildren()[2].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
     auto constraintsExp = applyVisit(node->getChildren()[5].get(), t);
 
     constraintsId.insert(constraintsNum.begin(), constraintsNum.end());
     constraintsId.insert(constraintsExp.begin(), constraintsExp.end());
     return constraintsId;
 
-  }else if(node->getChildren().size() == 8){
-    
+  } else if (node->getChildren().size() == 8) {
+
     auto constraintsId = applyVisit(node->getChildren()[0].get(), t);
-    auto constraintsNum1 = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
-    auto constraintsNum2 = applyVisit(node->getChildren()[4].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum1 =
+        applyVisit(node->getChildren()[2].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum2 =
+        applyVisit(node->getChildren()[4].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
     auto constraintsExp = applyVisit(node->getChildren()[7].get(), t);
 
     constraintsId.insert(constraintsNum1.begin(), constraintsNum1.end());
     constraintsId.insert(constraintsNum2.begin(), constraintsNum2.end());
     constraintsId.insert(constraintsExp.begin(), constraintsExp.end());
-    
+
     return constraintsId;
-  }else{
+  } else {
 
     auto constraintsId = applyVisit(node->getChildren()[0].get(), t);
-    auto constraintsNum1 = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
-    auto constraintsNum2 = applyVisit(node->getChildren()[4].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum1 =
+        applyVisit(node->getChildren()[2].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto constraintsNum2 =
+        applyVisit(node->getChildren()[4].get(),
+                   static_cast<typeId>(CanonicalTypes::SCALAR));
 
     constraintsId.insert(constraintsNum1.begin(), constraintsNum1.end());
     constraintsId.insert(constraintsNum2.begin(), constraintsNum2.end());
@@ -1122,10 +1130,10 @@ constraintSet TypeInferenceVisitor::visit(Array_locator_method *node,
 
 constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node,
                                           typeId type) {
-  
+
   auto t = freshType();
-  if(node->getChildren()[0]->getElement() == "port_direction"){
-    
+  if (node->getChildren()[0]->getElement() == "port_direction") {
+
     auto portDir = applyVisit(node->getChildren()[0].get(), t);
     auto vType = applyVisit(node->getChildren()[1].get(), t);
     auto dType = applyVisit(node->getChildren()[2].get(), t);
@@ -1137,17 +1145,19 @@ constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node,
 
     return portDir;
 
-  }else if(node->getChildren().size() == 3){
+  } else if (node->getChildren().size() == 3) {
     auto constraintsTypeId = applyVisit(node->getChildren()[0].get(), t);
-    auto dimensions = applyVisit(node->getChildren()[1].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto dimensions = applyVisit(node->getChildren()[1].get(),
+                                 static_cast<typeId>(CanonicalTypes::SCALAR));
     auto assign = applyVisit(node->getChildren()[2].get(), t);
     constraintsTypeId.insert(dimensions.begin(), dimensions.end());
     constraintsTypeId.insert(assign.begin(), assign.end());
     return constraintsTypeId;
-  }else{
+  } else {
     auto dPrimitive = applyVisit(node->getChildren()[0].get(), t);
     auto GenId = applyVisit(node->getChildren()[1].get(), t);
-    auto dimensions = applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+    auto dimensions = applyVisit(node->getChildren()[2].get(),
+                                 static_cast<typeId>(CanonicalTypes::SCALAR));
     auto assign = applyVisit(node->getChildren()[3].get(), t);
 
     dPrimitive.insert(GenId.begin(), GenId.end());
@@ -1302,7 +1312,7 @@ constraintSet TypeInferenceVisitor::visit(Join_keyword *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Tk_bindigits *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Event_trigger *node, typeId type) {
@@ -1995,7 +2005,7 @@ TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list_opt *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node, typeId type) {
-  
+
   auto constraintsGenericIdentifier =
       applyVisit(node->getChildren()[0].get(), type);
   auto constraintsExpression = applyVisit(node->getChildren()[2].get(), type);
@@ -2049,24 +2059,24 @@ constraintSet TypeInferenceVisitor::visit(Sequence_repetition_expr *node,
 
 constraintSet TypeInferenceVisitor::visit(Tk_hexdigits *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node, typeId type) {
-  
+
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  
 
   auto constraintsId = applyVisit(node->getChildren()[0].get(), type);
   auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
-  if(node->getChildren().size() == 3){
+  if (node->getChildren().size() == 3) {
     auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), type);
-    constraintsId.insert(constraintsAssignment.begin(), constraintsAssignment.end());
+    constraintsId.insert(constraintsAssignment.begin(),
+                         constraintsAssignment.end());
   }
 
-  constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
-  
+  constraintsId.insert(constraintsDimensions.begin(),
+                       constraintsDimensions.end());
 
   return constraintsId;
 }
@@ -2094,7 +2104,7 @@ constraintSet TypeInferenceVisitor::visit(Expression_in_parens *node,
 
 constraintSet TypeInferenceVisitor::visit(
     List_of_ports_or_port_declarations_trailing_comma_ansi *node, typeId type) {
-      return defaultVisitor(node, type);
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Port_reference *node, typeId type) {
@@ -2189,7 +2199,8 @@ constraintSet TypeInferenceVisitor::visit(Parameter_expr *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Repeat_control *node, typeId type) {
-  return applyVisit(node->getChildren()[2].get(), static_cast<typeId>(CanonicalTypes::SCALAR));
+  return applyVisit(node->getChildren()[2].get(),
+                    static_cast<typeId>(CanonicalTypes::SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Packed_signing_opt *node,
@@ -2445,7 +2456,7 @@ constraintSet TypeInferenceVisitor::visit(Assignment_statement_no_expr *node,
   if (children.size() == 1) {
     return applyVisit(children[0].get(), t);
   } else {
-    
+
     auto constraintsLpValue = applyVisit(children[0].get(), t);
     auto constraintsExpression = applyVisit(children[2].get(), t);
     constraintsLpValue.insert(constraintsExpression.begin(),
@@ -2538,7 +2549,7 @@ constraintSet TypeInferenceVisitor::visit(Tf_port_direction *node,
 
 constraintSet TypeInferenceVisitor::visit(Tk_decdigits *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(End *node, typeId type) {
@@ -2555,7 +2566,7 @@ constraintSet TypeInferenceVisitor::visit(Tk_tagged_opt *node, typeId type) {
 
 constraintSet TypeInferenceVisitor::visit(Tk_xzdigits *node, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Gatetype *node, typeId type) {
@@ -2699,7 +2710,7 @@ TypeInferenceVisitor::visit(Gate_instance_or_register_variable_list *node,
 constraintSet TypeInferenceVisitor::visit(Tk_evalstringliteral *node,
                                           typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::STRING);
-  return constraintSet({{t,type}});
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Delay_or_event_control *node,
