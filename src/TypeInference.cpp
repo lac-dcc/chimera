@@ -31,7 +31,9 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
     newSet.insert(type1);
 
     for (auto &type : newSet) {
-      eq[type].insert(newSet.begin(), newSet.end());
+      if(type >= static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE)){
+        eq[type].insert(newSet.begin(), newSet.end());
+      }
     }
   }
 }
@@ -91,7 +93,8 @@ bool inferTypes(Node *head) {
 
               case CanonicalTypes::STRING:
                 n->setElement(" string ");
-
+                break;
+                
               case CanonicalTypes::GATE:
               case CanonicalTypes::ANONYMOUS_GATE:
               

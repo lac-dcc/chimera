@@ -91,22 +91,15 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n, std::random_device::result_type seed) {
+    const int n, std::mt19937 gen) {
+
+  
+
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
   std::stack<Node *> stack;
   stack.push(head.get());
-
-  if (seed == 0) {
-    std::random_device rd;
-    seed = rd();
-
-    if (printSeed) {
-      std::cerr << "Seed: " << seed << std::endl;
-    }
-  }
-  std::mt19937 gen(seed);
 
   while (!stack.empty()) {
     auto curr = stack.top();
@@ -513,12 +506,11 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   return flags;
 }
 
-bool generateProgram(
-    int seed, int n,
+bool generateProgram(int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
-    bool printTree) {
+    std::unique_ptr<Node>& head, std::mt19937 gen) {
 
-  auto head = buildSyntaxTree(map, n, seed);
+  head = buildSyntaxTree(map, n, gen);
 
   std::vector<Node *> modules, portDeclarations;
 
@@ -554,10 +546,6 @@ bool generateProgram(
   declMap.clear();
   renameVars(head.get(), 0, 0, declMap);
 
-  if (printTree)
-    dumpSyntaxTree(head.get());
-
-  codeGen(head.get());
   return isCorrect;
 }
 
@@ -589,9 +577,32 @@ int main(int argc, char **argv) {
   if (flags.count("allow-ambiguous"))
     allow = true;
 
+  std::unique_ptr<Node> head;
+  std::random_device rd;
+
+  if (seed == 0) {
+    
+    seed = rd();
+    
+  }
+
+  
+  
+
   do{
-    generatedCorrectProgram = generateProgram(seed, n, map, flags.count("printtree"));
+
+    if (printSeed) {
+      std::cerr << "Seed: " << seed << std::endl;
+    }
+    std::mt19937 gen(seed);
+    generatedCorrectProgram = generateProgram(n, map, head, gen);
+    seed = rd();
   }while(!allow && !generatedCorrectProgram );
+
+  if ( flags.count("printtree"))
+    dumpSyntaxTree(head.get());
+
+  codeGen(head.get());
   
   return 0;
 }
