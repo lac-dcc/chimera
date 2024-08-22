@@ -525,6 +525,7 @@ bool generateProgram(
   findNodes(head.get(), modules, portDeclarations);
 
   removePortDeclarations(portDeclarations);
+  bool isCorrect = true;
 
   replaceConstants(head.get());
   renamePositionalPorts(head.get());
@@ -544,8 +545,8 @@ bool generateProgram(
 
     replaceTypes(m, lastID);
     auto isProgramCorrect = inferTypes(m);
-    if (!isProgramCorrect) {
-      return false;
+    if(!isProgramCorrect){
+      isCorrect = false;
     }
     addConstantIDsToParameterList(m, declMap, dirMap);
   }
@@ -557,7 +558,7 @@ bool generateProgram(
     dumpSyntaxTree(head.get());
 
   codeGen(head.get());
-  return true;
+  return isCorrect;
 }
 
 int main(int argc, char **argv) {
@@ -588,10 +589,9 @@ int main(int argc, char **argv) {
   if (flags.count("allow-ambiguous"))
     allow = true;
 
-  while (allow || !generatedCorrectProgram) {
-    generatedCorrectProgram =
-        generateProgram(seed, n, map, flags.count("printtree"));
-  }
-
+  do{
+    generatedCorrectProgram = generateProgram(seed, n, map, flags.count("printtree"));
+  }while(!allow && !generatedCorrectProgram );
+  
   return 0;
 }

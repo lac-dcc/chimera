@@ -89,16 +89,22 @@ bool inferTypes(Node *head) {
             n->setElement(" real ");
             break;
 
-          case CanonicalTypes::STRING:
-            n->setElement(" string ");
-          case CanonicalTypes::ANONYMOUS_GATE:
+              case CanonicalTypes::STRING:
+                n->setElement(" string ");
 
-            break;
-          default:
-            n->setElement(" wire ");
-            break;
+              case CanonicalTypes::GATE:
+              case CanonicalTypes::ANONYMOUS_GATE:
+              
+                break;
+              case CanonicalTypes::REG:
+                n->setElement(" reg ");
+                break;
+              default:
+                n->setElement(" wire ");
+                break;
+              
+            }
           }
-        }
       }
     }
   }
@@ -797,6 +803,7 @@ constraintSet
 TypeInferenceVisitor::visit(Procedural_continuous_assignment *node,
                             typeId type) {
   auto t1 = freshType();
+
   auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), t1);
 
   if (node->getChildren().size() == 5) {
@@ -1890,7 +1897,8 @@ constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node,
 
 constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node,
                                           typeId type) {
-  auto t = freshType();
+  auto t = freshType();//REG
+  
 
   auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), t);
   auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t);
@@ -2066,6 +2074,7 @@ constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node, typeId type) {
 
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  auto t1 = static_cast<typeId>(CanonicalTypes::GATE);
 
   auto constraintsId = applyVisit(node->getChildren()[0].get(), type);
   auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
@@ -2074,9 +2083,15 @@ constraintSet TypeInferenceVisitor::visit(
     constraintsId.insert(constraintsAssignment.begin(),
                          constraintsAssignment.end());
   }
+  else{
+    auto f = freshType();
+    auto portList = applyVisit(node->getChildren()[3].get(), f);
+    constraintsId.insert(portList.begin(), portList.end());
+    constraintsId.insert({{t1, type}});
+  }
 
-  constraintsId.insert(constraintsDimensions.begin(),
-                       constraintsDimensions.end());
+  constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
+  
 
   return constraintsId;
 }

@@ -24,6 +24,7 @@ enum class CanonicalTypes : typeId {
   VECTOR,
   FLOAT_SCALAR,
   STRING,
+  REG,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
