@@ -1039,7 +1039,7 @@ public:
   virtual R applyVisit(Node *node, T arg) {
     switch (node->type) {
     case NodeType::TERMINAL:
-      return visit(dynamic_cast<Terminal *>(node));
+      return visit(dynamic_cast<Terminal *>(node), arg);
     case NodeType::SEQUENCE_DELAY_RANGE_EXPR:
       return visit(dynamic_cast<Sequence_delay_range_expr *>(node), arg);
     case NodeType::PORT:

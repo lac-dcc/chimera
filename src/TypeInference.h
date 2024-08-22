@@ -22,10 +22,13 @@ enum class CanonicalTypes : typeId {
   ANONYMOUS_GATE,
   GATE,
   VECTOR,
+  FLOAT_SCALAR,
+  STRING,
+  REG,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
-void inferTypes(Node *head);
+bool inferTypes(Node *head);
 
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
@@ -37,7 +40,12 @@ private:
   constraintSet identifierVisitor(Node *node, typeId type);
 
 public:
-  std::unordered_map<typeId, std::string> identifierMap;
+  std::unordered_map<typeId, std::string> typeIdToIdMap;
+  std::unordered_map<std::string, typeId> idToTypeIdMap;
+  std::unordered_map<std::string, Node *> varMap;
+
+  void addToMap(typeId t, const std::string &id);
+
   typeId freshType();
 
   virtual constraintSet visit(Node *node, typeId type) override;

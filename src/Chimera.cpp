@@ -91,22 +91,15 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n, std::random_device::result_type seed) {
+    const int n, std::mt19937 gen) {
+
+  
+
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
   std::stack<Node *> stack;
   stack.push(head.get());
-
-  if (seed == 0) {
-    std::random_device rd;
-    seed = rd();
-
-    if (printSeed) {
-      std::cerr << "Seed: " << seed << std::endl;
-    }
-  }
-  std::mt19937 gen(seed);
 
   while (!stack.empty()) {
     auto curr = stack.top();
@@ -313,8 +306,8 @@ static void replaceTypes(Node *head, int &id) {
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
     head->setElement("");
-  }
-
+  } else if (head->getElement() == " string ")
+    head->setElement("type_" + std::to_string(id++));
   else {
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
@@ -473,8 +466,9 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("p,printtree", "Prints productions chains.")
     ("printseed", "Prints the randomization seed.")
     ("d,debug", "Prints debug messages.")
-    ("v,verbose", "Verbose output") //Needs to implement
-    ("s,seed", "Set the seed for randomization", cxxopts::value<std::random_device::result_type>())
+    ("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
+    ("v,verbose", "Verbose output.") //Needs to implement
+    ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
   // clang-format on
 
@@ -512,6 +506,49 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   return flags;
 }
 
+bool generateProgram(int n,
+    std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
+    std::unique_ptr<Node>& head, std::mt19937 gen) {
+
+  head = buildSyntaxTree(map, n, gen);
+
+  std::vector<Node *> modules, portDeclarations;
+
+  findNodes(head.get(), modules, portDeclarations);
+
+  removePortDeclarations(portDeclarations);
+  bool isCorrect = true;
+
+  replaceConstants(head.get());
+  renamePositionalPorts(head.get());
+  int modID = 0;
+  std::unordered_map<std::string, Node *> declMap;
+  std::unordered_map<std::string, Node *> dirMap;
+  for (const auto &m : modules) {
+    declMap.clear();
+    dirMap.clear();
+    auto ansi = isAnsi(m);
+    int n = 0;
+    if (!ansi) {
+      n = declareNonAnsiPorts(m, declMap, dirMap);
+    }
+    removeParameters(m);
+    int lastID = renameVars(m, n, modID++, declMap);
+
+    replaceTypes(m, lastID);
+    auto isProgramCorrect = inferTypes(m);
+    if(!isProgramCorrect){
+      isCorrect = false;
+    }
+    addConstantIDsToParameterList(m, declMap, dirMap);
+  }
+
+  declMap.clear();
+  renameVars(head.get(), 0, 0, declMap);
+
+  return isCorrect;
+}
+
 int main(int argc, char **argv) {
   auto flags = parseArgs(argc, argv);
 
@@ -533,41 +570,39 @@ int main(int argc, char **argv) {
   auto seed = flags.count("seed")
                   ? flags["seed"].as<std::random_device::result_type>()
                   : 0;
-  auto head = buildSyntaxTree(map, flags["n-value"].as<int>(), seed);
+  auto n = flags["n-value"].as<int>();
+  bool generatedCorrectProgram = false;
+  bool allow = false;
 
-  std::vector<Node *> modules, portDeclarations;
+  if (flags.count("allow-ambiguous"))
+    allow = true;
 
-  findNodes(head.get(), modules, portDeclarations);
+  std::unique_ptr<Node> head;
+  std::random_device rd;
 
-  removePortDeclarations(portDeclarations);
-
-  replaceConstants(head.get());
-  renamePositionalPorts(head.get());
-  int modID = 0;
-  std::unordered_map<std::string, Node *> declMap;
-  std::unordered_map<std::string, Node *> dirMap;
-  for (const auto &m : modules) {
-    declMap.clear();
-    dirMap.clear();
-    auto ansi = isAnsi(m);
-    int n = 0;
-    if (!ansi) {
-      n = declareNonAnsiPorts(m, declMap, dirMap);
-    }
-    removeParameters(m);
-    int lastID = renameVars(m, n, modID++, declMap);
-
-    addConstantIDsToParameterList(m, declMap, dirMap);
-    replaceTypes(m, lastID);
+  if (seed == 0) {
+    
+    seed = rd();
+    
   }
 
-  declMap.clear();
-  renameVars(head.get(), 0, 0, declMap);
+  
+  
 
-  if (flags.count("printtree"))
+  do{
+
+    if (printSeed) {
+      std::cerr << "Seed: " << seed << std::endl;
+    }
+    std::mt19937 gen(seed);
+    generatedCorrectProgram = generateProgram(n, map, head, gen);
+    seed = rd();
+  }while(!allow && !generatedCorrectProgram );
+
+  if ( flags.count("printtree"))
     dumpSyntaxTree(head.get());
 
   codeGen(head.get());
-
+  
   return 0;
 }
