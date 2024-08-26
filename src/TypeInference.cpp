@@ -266,7 +266,8 @@ constraintSet TypeInferenceVisitor::visit(List_of_port_identifiers *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Non_integer_type *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto t = static_cast<typeId>(CanonicalTypes::FLOAT_SCALAR);
+  return constraintSet({{t, type}});
 }
 
 constraintSet TypeInferenceVisitor::visit(Parameter_value_ranges_opt *node,
@@ -299,7 +300,7 @@ constraintSet TypeInferenceVisitor::visit(Dpi_import_item *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Tk_realtime *node, typeId type) {
-  auto t = static_cast<typeId>(CanonicalTypes::FLOAT_SCALAR);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
   return constraintSet({{t, type}});
 }
 

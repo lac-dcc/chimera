@@ -19,7 +19,6 @@
 
 using json = nlohmann::json;
 bool debug = false;
-bool printSeed = false;
 
 static constexpr char separator = '~';
 
@@ -91,7 +90,7 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n, std::mt19937 gen) {
+    const int n, std::mt19937& gen) {
 
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
@@ -517,7 +516,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 bool generateProgram(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
-    std::unique_ptr<Node> &head, std::mt19937 gen) {
+    std::unique_ptr<Node> &head, std::mt19937& gen) {
 
   head = buildSyntaxTree(map, n, gen);
 
@@ -565,8 +564,8 @@ int main(int argc, char **argv) {
   if (flags.count("debug"))
     debug = true;
 
-  if (flags.count("printseed"))
-    printSeed = true;
+  bool printSeed = flags.count("printseed") != 0;
+  bool verbose = flags.count("verbose") != 0;
 
   std::ifstream f(flags["file"].as<std::string>());
 
@@ -594,14 +593,22 @@ int main(int argc, char **argv) {
     seed = rd();
   }
 
+  unsigned int finalSeed = seed;
   do {
-    if (printSeed) {
-      std::cerr << "Seed: " << seed << std::endl;
-    }
     std::mt19937 gen(seed);
     generatedCorrectProgram = generateProgram(n, map, head, gen);
+    if (verbose && printSeed) {
+      std::cerr << "Seed: " << seed << std::endl;
+    }
+
+    if (allow || generatedCorrectProgram)
+      finalSeed = seed;
+
     seed = rd();
   } while (!allow && !generatedCorrectProgram);
+
+  if (printSeed)
+    std::cout << "// Seed: " << finalSeed << "\n";
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
