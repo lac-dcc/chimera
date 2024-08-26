@@ -31,7 +31,7 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
     newSet.insert(type1);
 
     for (auto &type : newSet) {
-      if(type >= static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE)){
+      if (type >= static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE)) {
         eq[type].insert(newSet.begin(), newSet.end());
       }
     }
@@ -91,23 +91,22 @@ bool inferTypes(Node *head) {
             n->setElement(" real ");
             break;
 
-              case CanonicalTypes::STRING:
-                n->setElement(" string ");
-                break;
-                
-              case CanonicalTypes::GATE:
-              case CanonicalTypes::ANONYMOUS_GATE:
-              
-                break;
-              case CanonicalTypes::REG:
-                n->setElement(" reg ");
-                break;
-              default:
-                n->setElement(" wire ");
-                break;
-              
-            }
+          case CanonicalTypes::STRING:
+            n->setElement(" string ");
+            break;
+
+          case CanonicalTypes::GATE:
+          case CanonicalTypes::ANONYMOUS_GATE:
+
+            break;
+          case CanonicalTypes::REG:
+            n->setElement(" reg ");
+            break;
+          default:
+            n->setElement(" wire ");
+            break;
           }
+        }
       }
     }
   }
@@ -1900,8 +1899,7 @@ constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node,
 
 constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node,
                                           typeId type) {
-  auto t = freshType();//REG
-  
+  auto t = freshType(); // REG
 
   auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), t);
   auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t);
@@ -2085,16 +2083,15 @@ constraintSet TypeInferenceVisitor::visit(
     auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), type);
     constraintsId.insert(constraintsAssignment.begin(),
                          constraintsAssignment.end());
-  }
-  else{
+  } else {
     auto f = freshType();
     auto portList = applyVisit(node->getChildren()[3].get(), f);
     constraintsId.insert(portList.begin(), portList.end());
     constraintsId.insert({{t1, type}});
   }
 
-  constraintsId.insert(constraintsDimensions.begin(), constraintsDimensions.end());
-  
+  constraintsId.insert(constraintsDimensions.begin(),
+                       constraintsDimensions.end());
 
   return constraintsId;
 }

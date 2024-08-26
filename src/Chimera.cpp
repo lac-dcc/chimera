@@ -93,8 +93,6 @@ static std::unique_ptr<Node> buildSyntaxTree(
         &map,
     const int n, std::mt19937 gen) {
 
-  
-
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
@@ -506,9 +504,10 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   return flags;
 }
 
-bool generateProgram(int n,
+bool generateProgram(
+    int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
-    std::unique_ptr<Node>& head, std::mt19937 gen) {
+    std::unique_ptr<Node> &head, std::mt19937 gen) {
 
   head = buildSyntaxTree(map, n, gen);
 
@@ -537,7 +536,7 @@ bool generateProgram(int n,
 
     replaceTypes(m, lastID);
     auto isProgramCorrect = inferTypes(m);
-    if(!isProgramCorrect){
+    if (!isProgramCorrect) {
       isCorrect = false;
     }
     addConstantIDsToParameterList(m, declMap, dirMap);
@@ -581,28 +580,22 @@ int main(int argc, char **argv) {
   std::random_device rd;
 
   if (seed == 0) {
-    
     seed = rd();
-    
   }
 
-  
-  
-
-  do{
-
+  do {
     if (printSeed) {
       std::cerr << "Seed: " << seed << std::endl;
     }
     std::mt19937 gen(seed);
     generatedCorrectProgram = generateProgram(n, map, head, gen);
     seed = rd();
-  }while(!allow && !generatedCorrectProgram );
+  } while (!allow && !generatedCorrectProgram);
 
-  if ( flags.count("printtree"))
+  if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
 
   codeGen(head.get());
-  
+
   return 0;
 }
