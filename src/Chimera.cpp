@@ -413,6 +413,16 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
   }
 }
 
+static void removeBodyParameters(Node * head){
+  if(head->type == NodeType::ANY_PARAM_DECLARATION){
+    head->clearChildren();
+  }else{
+    for(auto& c: head->getChildren()){
+      removeBodyParameters(c.get());
+    }
+  }
+}
+
 static void
 addConstantIDsToParameterList(Node *head,
                               std::unordered_map<std::string, Node *> &declMap,
@@ -425,7 +435,7 @@ addConstantIDsToParameterList(Node *head,
 
   auto parameterList = findParameterList(head); // Can't be null
   assert(parameterList != nullptr);
-
+  
   if (parameterList->getChildren().size() <= 1) {
     createParameterList(parameterList);
   } else if (parameterList->getChildren().size() > 3) {
@@ -532,6 +542,7 @@ bool generateProgram(
       n = declareNonAnsiPorts(m, declMap, dirMap);
     }
     removeParameters(m);
+    removeBodyParameters(m);
     int lastID = renameVars(m, n, modID++, declMap);
 
     replaceTypes(m, lastID);
