@@ -10,7 +10,7 @@ static bool isRegType(typeId type) {
 }
 
 static bool isWireType(typeId type) {
-  return type == static_cast<typeId>(CanonicalTypes::VECTOR);
+  return type == static_cast<typeId>(CanonicalTypes::WIRE);
 }
 
 static bool isScalarType(typeId type) {
@@ -42,9 +42,9 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
     }
 
     if (isWireType(type0) && isScalarType(type1)) {
-      type1 = static_cast<typeId>(CanonicalTypes::VECTOR);
+      type1 = static_cast<typeId>(CanonicalTypes::WIRE);
     } else if (isScalarType(type0) && isWireType(type1)) {
-      type0 = static_cast<typeId>(CanonicalTypes::VECTOR);
+      type0 = static_cast<typeId>(CanonicalTypes::WIRE);
     }
 
     auto &constraints0 = eq[type0];
