@@ -286,25 +286,30 @@ declareNonAnsiPorts(Node *head,
 }
 
 static void replaceTypes(Node *head, int &id) {
-  if (head->getElement() == "decl_variable_dimension") {
+  if (head->type == NodeType::DECL_VARIABLE_DIMENSION) {
     head->clearChildren();
     head->insertChildToBegin(std::make_unique<Terminal>(""));
   }
-  if (head->getElement() == "integer_vector_type") { // removes reg, logic ...
+  else if (head->type == NodeType::INTEGER_VECTOR_TYPE) { // removes reg, logic ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
-  } else if (head->getElement() == "udp_port_decl" and
+  } else if (head->type == NodeType::UDP_PORT_DECL &&
              head->getChildren()[0]->getElement() == " reg ") {
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
 
-  } else if (head->getElement() == "gatetype" ||
-             head->getElement() == "net_type" ||
-             head->getElement() == "var_type") // removes wire ...
+  } else if (head->type == NodeType::GATETYPE ||
+             head->type == NodeType::NET_TYPE ||
+             head->type == NodeType::VAR_TYPE) // removes wire ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
+
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
+
     head->setElement("");
-  } else if (head->getElement() == " string ")
+
+  } else if (head->getElement() == " string "){
+
     head->setElement("type_" + std::to_string(id++));
+  }
   else {
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
