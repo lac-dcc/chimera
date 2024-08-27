@@ -5,6 +5,19 @@ static bool isCanonicalType(typeId type) {
   return type < static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 }
 
+static bool isRegType(typeId type) {
+  return type == static_cast<typeId>(CanonicalTypes::REG);
+}
+
+static bool isWireType(typeId type) {
+  return type == static_cast<typeId>(CanonicalTypes::WIRE);
+}
+
+static bool isScalarType(typeId type) {
+  return type == static_cast<typeId>(CanonicalTypes::SCALAR) ||
+         type == static_cast<typeId>(CanonicalTypes::CONST_SCALAR);
+}
+
 static void canonicalize(equivalenceMap &eq) {
   for (auto &[_, eqClass] : eq) {
     for (auto it = eqClass.begin(), end = eqClass.end(); it != end;) {
@@ -21,6 +34,18 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
   for (auto &[type0, type1] : constraints) {
     if (type0 == type1)
       continue;
+
+    if (isRegType(type0) && isScalarType(type1)) {
+      type1 = static_cast<typeId>(CanonicalTypes::REG);
+    } else if (isScalarType(type0) && isRegType(type1)) {
+      type0 = static_cast<typeId>(CanonicalTypes::REG);
+    }
+
+    if (isWireType(type0) && isScalarType(type1)) {
+      type1 = static_cast<typeId>(CanonicalTypes::WIRE);
+    } else if (isScalarType(type0) && isWireType(type1)) {
+      type0 = static_cast<typeId>(CanonicalTypes::WIRE);
+    }
 
     auto &constraints0 = eq[type0];
     auto &constraints1 = eq[type1];
