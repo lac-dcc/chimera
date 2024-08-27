@@ -90,7 +90,7 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
-    const int n, std::mt19937& gen) {
+    const int n, std::mt19937 &gen) {
 
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
@@ -289,8 +289,8 @@ static void replaceTypes(Node *head, int &id) {
   if (head->type == NodeType::DECL_VARIABLE_DIMENSION) {
     head->clearChildren();
     head->insertChildToBegin(std::make_unique<Terminal>(""));
-  }
-  else if (head->type == NodeType::INTEGER_VECTOR_TYPE) { // removes reg, logic ...
+  } else if (head->type ==
+             NodeType::INTEGER_VECTOR_TYPE) { // removes reg, logic ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
   } else if (head->type == NodeType::UDP_PORT_DECL &&
              head->getChildren()[0]->getElement() == " reg ") {
@@ -306,11 +306,10 @@ static void replaceTypes(Node *head, int &id) {
 
     head->setElement("");
 
-  } else if (head->getElement() == " string "){
+  } else if (head->getElement() == " string ") {
 
     head->setElement("type_" + std::to_string(id++));
-  }
-  else {
+  } else {
     for (const auto &c : head->getChildren()) {
       replaceTypes(c.get(), id);
     }
@@ -417,11 +416,11 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
   }
 }
 
-static void removeBodyParameters(Node * head){
-  if(head->type == NodeType::ANY_PARAM_DECLARATION){
+static void removeBodyParameters(Node *head) {
+  if (head->type == NodeType::ANY_PARAM_DECLARATION) {
     head->clearChildren();
-  }else{
-    for(auto& c: head->getChildren()){
+  } else {
+    for (auto &c : head->getChildren()) {
       removeBodyParameters(c.get());
     }
   }
@@ -439,7 +438,7 @@ addConstantIDsToParameterList(Node *head,
 
   auto parameterList = findParameterList(head); // Can't be null
   assert(parameterList != nullptr);
-  
+
   if (parameterList->getChildren().size() <= 1) {
     createParameterList(parameterList);
   } else if (parameterList->getChildren().size() > 3) {
@@ -521,7 +520,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 bool generateProgram(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
-    std::unique_ptr<Node> &head, std::mt19937& gen) {
+    std::unique_ptr<Node> &head, std::mt19937 &gen) {
 
   head = buildSyntaxTree(map, n, gen);
 
