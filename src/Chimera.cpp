@@ -425,6 +425,20 @@ static void removeBodyParameters(Node *head) {
     }
   }
 }
+static void removeAssignmentsInPorts(Node* head){
+  if(head->type == NodeType::PORT_DECLARATION_ANSI || head->type == NodeType::PORT_DECLARATION_NON_ANSI){
+
+    for(auto &c : head->getChildren()){
+      if(c->type == NodeType::TRAILING_ASSIGN_OPT){
+        c->clearChildren();
+      }
+    }
+    
+  }else{
+    for(auto &c : head->getChildren())
+      removeAssignmentsInPorts(c.get());
+  }
+}
 
 static void
 addConstantIDsToParameterList(Node *head,
@@ -546,6 +560,7 @@ bool generateProgram(
     }
     removeParameters(m);
     removeBodyParameters(m);
+    removeAssignmentsInPorts(m);
     int lastID = renameVars(m, n, modID++, declMap);
 
     replaceTypes(m, lastID);
