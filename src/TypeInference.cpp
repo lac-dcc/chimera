@@ -47,8 +47,8 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
       type0 = static_cast<typeId>(CanonicalTypes::WIRE);
     }
 
-    if ((isRegType(type0) && isScalarType(type1)) ||
-     (isRegType(type1) && isScalarType(type0) )) {
+    if ((isRegType(type0) && isWireType(type1)) ||
+     (isRegType(type1) && isWireType(type0) )) {
       type0 = type1 = static_cast<typeId>(CanonicalTypes::LOGIC);
     }
 
@@ -251,7 +251,7 @@ constraintSet TypeInferenceVisitor::visit(Event_control *node, typeId type) {
 constraintSet TypeInferenceVisitor::visit(String_literal *node, typeId type) {
   auto literal = defaultVisitor(node, type);
   literal.insert({{type, static_cast<typeId>(CanonicalTypes::STRING)}});
-  
+
   return literal;
 }
 
