@@ -47,6 +47,11 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
       type0 = static_cast<typeId>(CanonicalTypes::WIRE);
     }
 
+    if ((isRegType(type0) && isWireType(type1)) ||
+        (isRegType(type1) && isWireType(type0))) {
+      type0 = type1 = static_cast<typeId>(CanonicalTypes::LOGIC);
+    }
+
     auto &constraints0 = eq[type0];
     auto &constraints1 = eq[type1];
 
@@ -102,12 +107,14 @@ bool inferTypes(Node *head) {
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
           auto n = visitor.varMap.at(id);
           switch (t) {
-          case CanonicalTypes::SCALAR:
-          case CanonicalTypes::CONST_SCALAR:
+
           case CanonicalTypes::VECTOR:
             n->setElement(" wire ");
             break;
           case CanonicalTypes::BIT:
+
+          case CanonicalTypes::SCALAR:
+          case CanonicalTypes::CONST_SCALAR:
           case CanonicalTypes::LOGIC:
             n->setElement(" logic ");
             break;
@@ -128,7 +135,7 @@ bool inferTypes(Node *head) {
             n->setElement(" reg ");
             break;
           default:
-            n->setElement(" wire ");
+            n->setElement(" logic ");
             break;
           }
         }
@@ -242,7 +249,10 @@ constraintSet TypeInferenceVisitor::visit(Event_control *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(String_literal *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto literal = defaultVisitor(node, type);
+  literal.insert({{type, static_cast<typeId>(CanonicalTypes::STRING)}});
+
+  return literal;
 }
 
 constraintSet TypeInferenceVisitor::visit(Charge_strength_opt *node,
@@ -2236,7 +2246,8 @@ constraintSet TypeInferenceVisitor::visit(Udp_primitive *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Parameter_expr *node, typeId type) {
-  return defaultVisitor(node, type);
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Repeat_control *node, typeId type) {
