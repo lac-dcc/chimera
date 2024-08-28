@@ -3,6 +3,10 @@
 #include "AST.h"
 #include "Visitor.h"
 
+/**
+ * @class ReplaceConstantsVisitor
+ * @brief Visitor for replacing constants in the AST.
+ */
 class ReplaceConstantsVisitor : public Visitor<void> {
 public:
   virtual void visit(Terminal *node) override;

@@ -4,6 +4,16 @@
 #include "AST.h"
 #include "Visitor.h"
 
+/**
+ * @brief This class is a visitor that traverses the abstract syntax tree (AST)
+ * representing the source code. It defines virtual member functions for each
+ * type of node in the AST, allowing subclasses to implement specific actions
+ * for each node type.
+ *
+ * The visitor pattern is used to decouple the traversal logic from the actual
+ * node implementations. This makes it easier to add new node types or modify
+ * the traversal behavior without affecting the underlying AST structure.
+ */
 class CodeGenVisitor : public Visitor<void> {
 public:
   virtual void visit(Tk_octdigits *node) override;

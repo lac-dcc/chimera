@@ -6,6 +6,10 @@
 #include <unordered_map>
 #include <vector>
 
+/**
+ * @enum NodeType
+ * @brief Enumeration of node types used in the AST.
+ */
 enum class NodeType {
   TERMINAL,
   BASE_NODE,
@@ -500,6 +504,13 @@ enum class NodeType {
   CLASS_ITEM_QUALIFIER_LIST_OPT,
 };
 
+/**
+ * @class Node
+ * @brief Represents a node in the abstract syntax tree (AST).
+ *
+ * This class defines the basic properties and operations for a node in a tree.
+ * It includes methods to manage its children, parent, and element data.
+ */
 class Node {
 public:
   NodeType type = NodeType::BASE_NODE;
@@ -535,6 +546,15 @@ private:
   std::string element;
 };
 
+/**
+ * @class Terminal
+ * @brief Represents a terminal node in abstract syntax tree.
+ *
+ * This class extends the `Node` class to represent a terminal node, which has
+ * no children.
+ *
+ * @see Node
+ */
 class Terminal : public Node {
 public:
   Terminal(std::string element);

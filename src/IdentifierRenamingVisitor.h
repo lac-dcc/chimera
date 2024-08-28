@@ -15,6 +15,10 @@ struct Var {
   std::string dir;
 };
 
+/**
+ * @class IdentifierRenamingVisitor
+ * @brief Visitor for renaming identifiers in the AST.
+ */
 class IdentifierRenamingVisitor : public Visitor<void> {
 private:
   std::string defId = "";
