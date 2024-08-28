@@ -3,6 +3,16 @@
 
 #include "AST.h"
 
+/**
+ * @brief A generic visitor for traversing and processing nodes in an abstract syntax tree (AST).
+ *
+ * This template class defines a `visit` function that takes a `Node` pointer and dispatches it to the appropriate
+ * virtual `visit` function based on the node's type. This allows visitors to implement specific actions for different
+ * node types without requiring knowledge of the exact node hierarchy.
+ *
+ * @tparam R The return type of the visitor's `visit` functions.
+ * @tparam T The type of the data associated with the nodes. This is optional and defaults to `void*`.
+ */
 template <typename R, typename T = void *> class Visitor {
 public:
   virtual R applyVisit(Node *node) {

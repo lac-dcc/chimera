@@ -30,22 +30,89 @@ enum class CanonicalTypes : typeId {
 
 bool inferTypes(Node *head);
 
+/**
+ * @brief A visitor for performing type inference on an abstract syntax tree
+ * (AST).
+ *
+ * This class extends the `Visitor` template class and implements `visit`
+ * functions for various node types. It keeps track of type identifiers,
+ * constraints, and variable mappings during the traversal.
+ */
 class TypeInferenceVisitor : public Visitor<constraintSet, typeId> {
 private:
+  /**
+   * A counter for generating fresh type identifiers.
+   */
   typeId typeCounter = static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 
+  /**
+   * Processes binary expressions and generates constraints based on the
+   * operands and expected types.
+   *
+   * @param lhs The left-hand side operand.
+   * @param rhs The right-hand side operand.
+   * @param operandType The expected type of the operands.
+   * @param exprType The expected type of the expression.
+   * @param actualType The actual type of the expression.
+   * @return A constraint set representing the type constraints derived from the
+   * binary expression.
+   */
   constraintSet binaryExpr(Node *lhs, Node *rhs, typeId operandType,
                            typeId exprType, typeId actualType);
+
+  /**
+   * The default visitor implementation for nodes that don't have specific
+   * `visit` functions.
+   *
+   * @param node The node to visit.
+   * @param type The expected type of the node.
+   * @return A constraint set representing the type constraints derived from the
+   * node.
+   */
   constraintSet defaultVisitor(Node *node, typeId type);
+
+  /**
+   * The visitor implementation for identifier nodes.
+   *
+   * @param node The identifier node.
+   * @param type The expected type of the identifier.
+   * @return A constraint set representing the type constraints derived from the
+   * identifier.
+   */
   constraintSet identifierVisitor(Node *node, typeId type);
 
 public:
+  /**
+   * @brief
+   * A map from type identifiers to their corresponding string representations.
+   */
   std::unordered_map<typeId, std::string> typeIdToIdMap;
+
+  /**
+   * @brief
+   * A map from string representations to their corresponding type identifiers.
+   */
   std::unordered_map<std::string, typeId> idToTypeIdMap;
+
+  /**
+   * @brief A map from variable names to their corresponding nodes.
+   */
   std::unordered_map<std::string, Node *> varMap;
 
+  /**
+   * @brief Adds a type identifier and its corresponding string representation
+   * to the maps.
+   *
+   * @param t The type identifier.
+   * @param id The string representation.
+   */
   void addToMap(typeId t, const std::string &id);
 
+  /**
+   * @brief Generates a fresh type identifier.
+   *
+   * @return A new type identifier.
+   */
   typeId freshType();
 
   virtual constraintSet visit(Node *node, typeId type) override;
