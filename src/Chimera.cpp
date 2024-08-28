@@ -427,7 +427,7 @@ static void removeBodyParameters(Node *head) {
 }
 static void removeAssignmentsInPorts(Node *head) {
   if (head->type == NodeType::PORT_DECLARATION_ANSI ||
-      head->type == NodeType::PORT_DECLARATION_NON_ANSI) {
+      head->type == NodeType::PORT) {
 
     for (auto &c : head->getChildren()) {
       if (c->type == NodeType::TRAILING_ASSIGN_OPT) {
