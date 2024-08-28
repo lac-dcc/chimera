@@ -249,7 +249,10 @@ constraintSet TypeInferenceVisitor::visit(Event_control *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(String_literal *node, typeId type) {
-  return defaultVisitor(node, type);
+  auto literal = defaultVisitor(node, type);
+  literal.insert({{type, static_cast<typeId>(CanonicalTypes::STRING)}});
+  
+  return literal;
 }
 
 constraintSet TypeInferenceVisitor::visit(Charge_strength_opt *node,
