@@ -48,7 +48,7 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
     }
 
     if ((isRegType(type0) && isWireType(type1)) ||
-     (isRegType(type1) && isWireType(type0) )) {
+        (isRegType(type1) && isWireType(type0))) {
       type0 = type1 = static_cast<typeId>(CanonicalTypes::LOGIC);
     }
 
@@ -107,7 +107,7 @@ bool inferTypes(Node *head) {
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
           auto n = visitor.varMap.at(id);
           switch (t) {
-          
+
           case CanonicalTypes::VECTOR:
             n->setElement(" wire ");
             break;
@@ -2246,7 +2246,8 @@ constraintSet TypeInferenceVisitor::visit(Udp_primitive *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Parameter_expr *node, typeId type) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Repeat_control *node, typeId type) {
