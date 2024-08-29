@@ -349,8 +349,7 @@ constraintSet TypeInferenceVisitor::visit(Property_if_else_expr *node,
 }
 
 constraintSet
-TypeInferenceVisitor::visit(Non_anonymous_instantiation_base *node,
-                            typeId) {
+TypeInferenceVisitor::visit(Non_anonymous_instantiation_base *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
@@ -570,8 +569,7 @@ TypeInferenceVisitor::visit(Parameter_value_byname_list_trailing_comma *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Inc_or_dec_expression *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Inc_or_dec_expression *node, typeId) {
   const auto &children = node->getChildren();
   auto operandType = static_cast<typeId>(CanonicalTypes::SCALAR);
   if (children[0].get()->type == NodeType::TERMINAL) {
@@ -838,8 +836,7 @@ TypeInferenceVisitor::visit(Any_argument_list_trailing_comma *node,
 }
 
 constraintSet
-TypeInferenceVisitor::visit(Procedural_continuous_assignment *node,
-                            typeId) {
+TypeInferenceVisitor::visit(Procedural_continuous_assignment *node, typeId) {
   auto t1 = freshType();
 
   auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), t1);
@@ -1173,8 +1170,7 @@ constraintSet TypeInferenceVisitor::visit(Array_locator_method *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node, typeId) {
 
   auto t = freshType();
   if (node->getChildren()[0]->getElement() == "port_direction") {
@@ -1614,8 +1610,7 @@ constraintSet TypeInferenceVisitor::visit(Specify_item *node, typeId type) {
   }
 }
 
-constraintSet TypeInferenceVisitor::visit(Any_param_declaration *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Any_param_declaration *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
@@ -1782,8 +1777,7 @@ TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Conditional_statement *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Conditional_statement *node, typeId) {
 
   auto t = freshType();
 
@@ -2085,8 +2079,7 @@ constraintSet TypeInferenceVisitor::visit(Task_declaration_id *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Instantiation_base *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Instantiation_base *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
@@ -2132,8 +2125,7 @@ constraintSet TypeInferenceVisitor::visit(
   return constraintsId;
 }
 
-constraintSet TypeInferenceVisitor::visit(Localparam_assign *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Localparam_assign *node, typeId) {
   auto x = static_cast<typeId>(CanonicalTypes::CONST_SCALAR);
   auto constraintsGenericIdentifier =
       applyVisit(node->getChildren()[0].get(), x);
@@ -2565,8 +2557,7 @@ constraintSet TypeInferenceVisitor::visit(Class_declaration_extends_opt *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Boolean_abbrev_opt *,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Boolean_abbrev_opt *, typeId) {
   return constraintSet();
 }
 
@@ -2759,12 +2750,10 @@ TypeInferenceVisitor::visit(Gate_instance_or_register_variable_list *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Tk_evalstringliteral *,
-                                          typeId type) {
+constraintSet TypeInferenceVisitor::visit(Tk_evalstringliteral *, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::STRING);
   return constraintSet({{t, type}});
 }
-
 
 constraintSet TypeInferenceVisitor::visit(Delay_or_event_control *node,
                                           typeId type) {
