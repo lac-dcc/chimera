@@ -109,6 +109,7 @@ bool inferTypes(Node *head) {
           switch (t) {
 
           case CanonicalTypes::VECTOR:
+          case CanonicalTypes::WIRE:
             n->setElement(" wire ");
             break;
           case CanonicalTypes::BIT:
@@ -837,12 +838,12 @@ TypeInferenceVisitor::visit(Any_argument_list_trailing_comma *node,
 
 constraintSet
 TypeInferenceVisitor::visit(Procedural_continuous_assignment *node, typeId) {
-  auto t1 = freshType();
+  typeId type = static_cast<typeId>(CanonicalTypes::REG);
 
-  auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), t1);
+  auto constraintsLpValue = applyVisit(node->getChildren()[0].get(), type);
 
   if (node->getChildren().size() == 5) {
-    auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t1);
+    auto constraintsExpression = applyVisit(node->getChildren()[3].get(), type);
     constraintsLpValue.insert(constraintsExpression.begin(),
                               constraintsExpression.end());
   }
@@ -1286,8 +1287,9 @@ constraintSet TypeInferenceVisitor::visit(Enum_data_type *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Blocking_assignment *node,
-                                          typeId type) {
+constraintSet TypeInferenceVisitor::visit(Blocking_assignment *node, typeId) {
+  auto type = static_cast<typeId>(CanonicalTypes::REG);
+
   return defaultVisitor(node, type);
 }
 
@@ -1929,10 +1931,10 @@ constraintSet TypeInferenceVisitor::visit(Hierarchy_segment *node,
 
 constraintSet TypeInferenceVisitor::visit(Nonblocking_assignment *node,
                                           typeId) {
-  auto t = freshType(); // REG
+  auto type = static_cast<typeId>(CanonicalTypes::REG);
 
-  auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), t);
-  auto constraintsExpression = applyVisit(node->getChildren()[3].get(), t);
+  auto constraintsLpvalue = applyVisit(node->getChildren()[0].get(), type);
+  auto constraintsExpression = applyVisit(node->getChildren()[3].get(), type);
 
   constraintsLpvalue.insert(constraintsExpression.begin(),
                             constraintsExpression.end());
@@ -2195,8 +2197,9 @@ constraintSet TypeInferenceVisitor::visit(Expr_mintypmax *node, typeId type) {
   return applyVisit(node->getChildren().front().get(), type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Continuous_assign *node,
-                                          typeId type) {
+constraintSet TypeInferenceVisitor::visit(Continuous_assign *node, typeId) {
+  auto type = static_cast<typeId>(CanonicalTypes::WIRE);
+
   return defaultVisitor(node, type);
 }
 
@@ -2690,8 +2693,8 @@ constraintSet TypeInferenceVisitor::visit(Case_statement *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Assignment_statement *node,
-                                          typeId type) {
+constraintSet TypeInferenceVisitor::visit(Assignment_statement *node, typeId) {
+  auto type = static_cast<typeId>(CanonicalTypes::REG);
   return defaultVisitor(node, type);
 }
 
