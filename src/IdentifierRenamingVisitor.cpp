@@ -42,7 +42,7 @@ void IdentifierRenamingVisitor::finishScope() {
                 << " size identifiers: " << identifiers.size() << std::endl;
     }
 
-    for (int i = 0; i < scopeLimit.top() && !identifiers.empty(); i++) {
+    while (identifiers.size() > scopeLimit.top()) {
       if (debug)
         std::cerr << "Removing: " << identifiers.back()->name << std::endl;
       identifiers.pop_back();

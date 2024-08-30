@@ -36,7 +36,7 @@ private:
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared
   std::vector<std::shared_ptr<Var>> to_define;   // vars used but not declared
-  std::stack<int> scopeLimit;
+  std::stack<std::size_t> scopeLimit;
   bool isStartingToken(std::string t);
   bool isFinishingToken(std::string t);
   void startNewScope();
