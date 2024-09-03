@@ -568,10 +568,8 @@ bool generateProgram(
     
     addConstantIDsToParameterList(m, declMap, dirMap);
 
-    auto isProgramCorrect = inferTypes(m);
-    if (!isProgramCorrect) {
-      isCorrect = false;
-    }
+    isCorrect = inferTypes(m);
+    
     
   }
 
