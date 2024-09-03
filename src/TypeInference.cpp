@@ -500,7 +500,7 @@ constraintSet TypeInferenceVisitor::visit(
 
 constraintSet TypeInferenceVisitor::visit(Module_parameter_port_list_opt *node,
                                           typeId type) {
-  return defaultVisitor(node, type);
+  return defaultVisitor(node, type); //static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_prefix_expr *node,

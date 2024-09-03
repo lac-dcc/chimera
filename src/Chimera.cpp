@@ -565,11 +565,14 @@ bool generateProgram(
     int lastID = renameVars(m, n, modID++, declMap);
 
     replaceTypes(m, lastID);
+    
+    addConstantIDsToParameterList(m, declMap, dirMap);
+
     auto isProgramCorrect = inferTypes(m);
     if (!isProgramCorrect) {
       isCorrect = false;
     }
-    addConstantIDsToParameterList(m, declMap, dirMap);
+    
   }
 
   declMap.clear();
