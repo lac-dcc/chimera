@@ -118,17 +118,19 @@ bool inferTypes(Node *head) {
       }
     }
   }
-  for (const auto &[type, eqTypes] : eq) {
-    std::cerr << type;
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
-      std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
-    }
+  if (debug) {
+    for (const auto &[type, eqTypes] : eq) {
+      std::cerr << type;
+      if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
+        std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
+      }
 
-    std::cerr << ": { ";
-    for (const auto &otherType : eqTypes) {
-      std::cerr << otherType << " ";
+      std::cerr << ": { ";
+      for (const auto &otherType : eqTypes) {
+        std::cerr << otherType << " ";
+      }
+      std::cerr << "}\n";
     }
-    std::cerr << "}\n";
   }
   return isCorrect;
 }

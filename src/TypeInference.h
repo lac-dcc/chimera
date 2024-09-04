@@ -9,6 +9,8 @@
 #include <unordered_set>
 #include <vector>
 
+extern bool debug;
+
 using typeId = std::uint64_t;
 using constraintSet = std::set<std::pair<typeId, typeId>>;
 using constraintVector = std::vector<std::pair<typeId, typeId>>;

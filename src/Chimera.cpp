@@ -386,13 +386,12 @@ static void addParametersToList(Node *parameterList,
     parameterList->insertChildToEnd(std::move(node));
     auto node2 = std::make_unique<Symbolidentifier>(id);
     parameterList->insertChildToEnd(std::move(node2));
-    auto node3 = std::make_unique<Terminal>("=");
-    parameterList->insertChildToEnd(std::move(node3));
-    auto node4 =
-        std::make_unique<Terminal>("32'd" + std::to_string(rand() % 100));
-    parameterList->insertChildToEnd(std::move(node4));
-    auto node5 = std::make_unique<Terminal>(",");
-    parameterList->insertChildToEnd(std::move(node5));
+    node = std::make_unique<Terminal>("=");
+    parameterList->insertChildToEnd(std::move(node));
+    node = std::make_unique<Terminal>("32'd" + std::to_string(rand() % 100));
+    parameterList->insertChildToEnd(std::move(node));
+    node = std::make_unique<Terminal>(",");
+    parameterList->insertChildToEnd(std::move(node));
   }
 
   parameterList->getChildren()[parameterList->getChildren().size() - 1]
