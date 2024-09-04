@@ -381,16 +381,23 @@ static void createParameterList(Node *parameterList) {
 
 static void addParametersToList(Node *parameterList,
                                 const std::set<std::string> &constantIds) {
-  std::string list = "";
   for (auto id : constantIds) {
-    list += "parameter " + id + " = 32'd" + std::to_string(rand() % 100) + ",";
+    auto node = std::make_unique<Terminal>("parameter");
+    parameterList->insertChildToEnd(std::move(node));
+    auto node2 = std::make_unique<Symbolidentifier>(id);
+    parameterList->insertChildToEnd(std::move(node2));
+    auto node3 = std::make_unique<Terminal>("=");
+    parameterList->insertChildToEnd(std::move(node3));
+    auto node4 =
+        std::make_unique<Terminal>("32'd" + std::to_string(rand() % 100));
+    parameterList->insertChildToEnd(std::move(node4));
+    auto node5 = std::make_unique<Terminal>(",");
+    parameterList->insertChildToEnd(std::move(node5));
   }
-  list.pop_back();
-  list += " ) ";
 
   parameterList->getChildren()[parameterList->getChildren().size() - 1]
       .get()
-      ->setElement(list);
+      ->setElement(")");
 }
 
 static void
@@ -565,12 +572,10 @@ bool generateProgram(
     int lastID = renameVars(m, n, modID++, declMap);
 
     replaceTypes(m, lastID);
-    
+
     addConstantIDsToParameterList(m, declMap, dirMap);
 
     isCorrect = inferTypes(m);
-    
-    
   }
 
   declMap.clear();

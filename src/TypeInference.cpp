@@ -5,19 +5,6 @@ static bool isCanonicalType(typeId type) {
   return type < static_cast<typeId>(CanonicalTypes::FIRST_FRESH_TYPE);
 }
 
-static bool isRegType(typeId type) {
-  return type == static_cast<typeId>(CanonicalTypes::REG);
-}
-
-static bool isWireType(typeId type) {
-  return type == static_cast<typeId>(CanonicalTypes::WIRE);
-}
-
-static bool isScalarType(typeId type) {
-  return type == static_cast<typeId>(CanonicalTypes::SCALAR) ||
-         type == static_cast<typeId>(CanonicalTypes::CONST_SCALAR);
-}
-
 static void canonicalize(equivalenceMap &eq) {
   for (auto &[_, eqClass] : eq) {
     for (auto it = eqClass.begin(), end = eqClass.end(); it != end;) {
@@ -34,23 +21,6 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
   for (auto &[type0, type1] : constraints) {
     if (type0 == type1)
       continue;
-
-    if (isRegType(type0) && isScalarType(type1)) {
-      type1 = static_cast<typeId>(CanonicalTypes::REG);
-    } else if (isScalarType(type0) && isRegType(type1)) {
-      type0 = static_cast<typeId>(CanonicalTypes::REG);
-    }
-
-    if (isWireType(type0) && isScalarType(type1)) {
-      type1 = static_cast<typeId>(CanonicalTypes::WIRE);
-    } else if (isScalarType(type0) && isWireType(type1)) {
-      type0 = static_cast<typeId>(CanonicalTypes::WIRE);
-    }
-
-    if ((isRegType(type0) && isWireType(type1)) ||
-        (isRegType(type1) && isWireType(type0))) {
-      type0 = type1 = static_cast<typeId>(CanonicalTypes::LOGIC);
-    }
 
     auto &constraints0 = eq[type0];
     auto &constraints1 = eq[type1];
@@ -78,21 +48,26 @@ bool inferTypes(Node *head) {
 
   // replace infered types
 
-  for (const auto &[type, eqTypes] : eq) {
-    std::cerr << type;
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
-      std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
-    }
-
-    std::cerr << ": { ";
-    for (const auto &otherType : eqTypes) {
-      std::cerr << otherType << " ";
-    }
-    std::cerr << "}\n";
-  }
   bool isCorrect = true;
 
-  for (const auto &[type, eqTypes] : eq) {
+  for (auto &[type, eqTypes] : eq) {
+
+    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
+        eqTypes.count(static_cast<typeId>(CanonicalTypes::REG))) {
+      eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
+    }
+
+    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
+        eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
+      eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
+    }
+    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::REG)) &&
+        eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
+
+      eqTypes.erase(static_cast<typeId>(CanonicalTypes::REG));
+      eqTypes.erase(static_cast<typeId>(CanonicalTypes::WIRE));
+      eqTypes.insert(static_cast<typeId>(CanonicalTypes::LOGIC));
+    }
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
         visitor.typeIdToIdMap.at(type).find("type") !=
@@ -142,6 +117,18 @@ bool inferTypes(Node *head) {
         }
       }
     }
+  }
+  for (const auto &[type, eqTypes] : eq) {
+    std::cerr << type;
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
+      std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
+    }
+
+    std::cerr << ": { ";
+    for (const auto &otherType : eqTypes) {
+      std::cerr << otherType << " ";
+    }
+    std::cerr << "}\n";
   }
   return isCorrect;
 }
@@ -500,7 +487,8 @@ constraintSet TypeInferenceVisitor::visit(
 
 constraintSet TypeInferenceVisitor::visit(Module_parameter_port_list_opt *node,
                                           typeId) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Property_prefix_expr *node,
