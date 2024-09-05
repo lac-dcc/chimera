@@ -115,7 +115,12 @@ bool inferTypes(Node *head) {
             break;
           }
         }
+      } else if(visitor.varMap.find(id) != visitor.varMap.end()){
+        auto n = visitor.varMap.at(id);
+        n->setElement(" logic ");
       }
+
+
     }
   }
   if (debug) {
