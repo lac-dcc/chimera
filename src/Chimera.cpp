@@ -374,7 +374,6 @@ static void createParameterList(Node *parameterList) {
   std::vector<std::unique_ptr<Node>> children;
 
   children.push_back(std::make_unique<Terminal>(" #( "));
-  children.push_back(std::make_unique<Terminal>(" ) "));
 
   parameterList->setChildren(std::move(children));
 }
