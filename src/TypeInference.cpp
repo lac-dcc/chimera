@@ -69,19 +69,18 @@ bool inferTypes(Node *head) {
       eqTypes.insert(static_cast<typeId>(CanonicalTypes::LOGIC));
     }
 
-  if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
-        (visitor.typeIdToIdMap.at(type).find("type") !=
-            std::string::npos || visitor.typeIdToIdMap.at(type).find("id") !=
-            std::string::npos ) && eqTypes.size() > 1){
-              isCorrect = false;
-            }
-    
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
+        (visitor.typeIdToIdMap.at(type).find("type") != std::string::npos ||
+         visitor.typeIdToIdMap.at(type).find("id") != std::string::npos) &&
+        eqTypes.size() > 1) {
+      isCorrect = false;
+    }
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
         visitor.typeIdToIdMap.at(type).find("type") !=
             std::string::npos) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
-      
+
       if (!eqTypes.empty()) {
         auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
