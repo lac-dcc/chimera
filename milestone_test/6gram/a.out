@@ -1,0 +1,34 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (devel)" "(s20221226-554-g25a84d5cf)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x614000000240 .scope module, "module_0" "module_0" 2 3;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 1 "id_1";
+    .port_info 1 /OUTPUT 1 "id_2";
+    .port_info 2 /INPUT 1 "id_3";
+    .port_info 3 /INPUT 1 "id_4";
+    .port_info 4 /INPUT 1 "id_5";
+    .port_info 5 /INPUT 1 "id_6";
+o0x79d49dc7c808 .functor BUFZ 1, c4<z>; HiZ drive
+v0x60d0000005f0_0 .net "id_1", 0 0, o0x79d49dc7c808;  0 drivers
+L_0x79d49dc31808 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x60d0000006c0_0 .net "id_2", 0 0, L_0x79d49dc31808;  1 drivers
+o0x79d49dc7c868 .functor BUFZ 1, c4<z>; HiZ drive
+v0x60d000000790_0 .net "id_3", 0 0, o0x79d49dc7c868;  0 drivers
+o0x79d49dc7c898 .functor BUFZ 1, c4<z>; HiZ drive
+v0x60d000000860_0 .net "id_4", 0 0, o0x79d49dc7c898;  0 drivers
+o0x79d49dc7c8c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x60d000000930_0 .net "id_5", 0 0, o0x79d49dc7c8c8;  0 drivers
+o0x79d49dc7c8f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x60d000000a00_0 .net "id_6", 0 0, o0x79d49dc7c8f8;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "./6_gram_verilog_file_2432.v";
