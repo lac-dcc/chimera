@@ -9,16 +9,6 @@ The goal of this benchmark suite is to test and debug electronic design automati
 To test your EDA tool, simply pass all the programs in the ChiBench collection to it, and see if it crashes.
 Below we list examples of issues reported in this way:
 
-* [2159](https://github.com/chipsalliance/verible/issues/2159): Verible's [obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) crashes when reading a program that only contains the pragma directive.
-* [2181](https://github.com/chipsalliance/verible/issues/2181): Verible's [parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) crashes instead of reporting syntax errors related to instantiation type.
-* [2189](https://github.com/chipsalliance/verible/issues/2189): Verible's [code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) crashes with syntactically valid input.
-* [2233](https://github.com/chipsalliance/verible/issues/2233): Verible's [parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) incorrectly accepts Verilog code with mismatched program and endmodule keywords. 
-* [5276](https://github.com/verilator/verilator/issues/5276): [Verilator](https://github.com/verilator/verilator)'s cc crashes with signal 9 on a very large program.
-* [5311](https://github.com/verilator/verilator/issues/5311): Verilator crashes when using time assignments.
-* [5312](https://github.com/verilator/verilator/issues/5312): Verilator crashes when calling a function created in "generate" block.
-
-
-
 | Issue | Tool | Description |
 |:-----:|:----:| :-------------:|
 |   [2159](https://github.com/chipsalliance/verible/issues/2159)  |   [Verible's Obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) |     Crashes when reading a program that only contains the pragma directive.        |
