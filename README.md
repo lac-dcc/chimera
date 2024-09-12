@@ -16,6 +16,20 @@ Below we list examples of issues reported in this way:
 * [5276](https://github.com/verilator/verilator/issues/5276): [Verilator](https://github.com/verilator/verilator)'s cc crashes with signal 9 on a very large program.
 * [5311](https://github.com/verilator/verilator/issues/5311): Verilator crashes when using time assignments.
 * [5312](https://github.com/verilator/verilator/issues/5312): Verilator crashes when calling a function created in "generate" block.
+
+
+
+| Issue | Tool | Description |
+|:-----:|:----:| :-------------:|
+|   [2159](https://github.com/chipsalliance/verible/issues/2159)  |   [Verible's Obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) |     Crashes when reading a program that only contains the pragma directive.        |
+|   [2181](https://github.com/chipsalliance/verible/issues/2181)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Crashes instead of reporting syntax errors related to instantiation type.          |
+|   [2189](https://github.com/chipsalliance/verible/issues/2189)  |  [Verible's code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) |     Crashes with syntactically valid input.        |
+|   [2233](https://github.com/chipsalliance/verible/issues/2233)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Incorrectly accepts Verilog code with mismatched program and endmodule keywords.          |
+|   [5276](https://github.com/verilator/verilator/issues/5276)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes with signal 9 on a very large program.        |
+|   [5311](https://github.com/verilator/verilator/issues/5311)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when using time assignments.        |
+|   [5312](https://github.com/verilator/verilator/issues/5312)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when calling a function created in "generate" block.        |
+|   [1171](https://github.com/steveicarus/iverilog/issues/1171)  |  [Iverilog](https://github.com/steveicarus/iverilog) |     Freezes while analyzing programs.        |
+|   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
   
 If you ever use ChiBench to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
