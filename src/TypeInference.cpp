@@ -38,6 +38,44 @@ static void unify(constraintVector &constraints, equivalenceMap &eq) {
   }
 }
 
+void printTypeInferenceDebug(equivalenceMap &eq,
+                             TypeInferenceVisitor &visitor) {
+  if (!debug) {
+    return;
+  }
+  for (const auto &[type, eqTypes] : eq) {
+    std::cerr << type;
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
+      std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
+    }
+
+    std::cerr << ": { ";
+    for (const auto &otherType : eqTypes) {
+      std::cerr << otherType << " ";
+    }
+    std::cerr << "}\n";
+  }
+}
+
+void unifyScalarOperations(std::unordered_set<typeId> &eqTypes) {
+  if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
+      eqTypes.count(static_cast<typeId>(CanonicalTypes::REG))) {
+    eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
+  }
+
+  if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
+      eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
+    eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
+  }
+  if (eqTypes.count(static_cast<typeId>(CanonicalTypes::REG)) &&
+      eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
+
+    eqTypes.erase(static_cast<typeId>(CanonicalTypes::REG));
+    eqTypes.erase(static_cast<typeId>(CanonicalTypes::WIRE));
+    eqTypes.insert(static_cast<typeId>(CanonicalTypes::LOGIC));
+  }
+}
+
 bool inferTypes(Node *head) {
   TypeInferenceVisitor visitor;
   auto constraints = visitor.applyVisit(head, visitor.freshType());
@@ -52,22 +90,7 @@ bool inferTypes(Node *head) {
 
   for (auto &[type, eqTypes] : eq) {
 
-    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
-        eqTypes.count(static_cast<typeId>(CanonicalTypes::REG))) {
-      eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
-    }
-
-    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::SCALAR)) &&
-        eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
-      eqTypes.erase(static_cast<typeId>(CanonicalTypes::SCALAR));
-    }
-    if (eqTypes.count(static_cast<typeId>(CanonicalTypes::REG)) &&
-        eqTypes.count(static_cast<typeId>(CanonicalTypes::WIRE))) {
-
-      eqTypes.erase(static_cast<typeId>(CanonicalTypes::REG));
-      eqTypes.erase(static_cast<typeId>(CanonicalTypes::WIRE));
-      eqTypes.insert(static_cast<typeId>(CanonicalTypes::LOGIC));
-    }
+    unifyScalarOperations(eqTypes);
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
         (visitor.typeIdToIdMap.at(type).find("type") != std::string::npos ||
@@ -125,20 +148,9 @@ bool inferTypes(Node *head) {
       }
     }
   }
-  if (debug) {
-    for (const auto &[type, eqTypes] : eq) {
-      std::cerr << type;
-      if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end()) {
-        std::cerr << " (" << visitor.typeIdToIdMap.at(type) << ")";
-      }
 
-      std::cerr << ": { ";
-      for (const auto &otherType : eqTypes) {
-        std::cerr << otherType << " ";
-      }
-      std::cerr << "}\n";
-    }
-  }
+  printTypeInferenceDebug(eq, visitor);
+
   return isCorrect;
 }
 
