@@ -375,6 +375,13 @@ constraintSet TypeInferenceVisitor::visit(Class_id *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Reference *node, typeId type) {
+
+  if (node->getChildren().size() == 2) {
+    if (node->getChildren()[1]->type == NodeType::SELECT_VARIABLE_DIMENSION) {
+      return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::VECTOR));
+    }
+  }
+
   return defaultVisitor(node, type);
 }
 
@@ -1371,9 +1378,9 @@ constraintSet TypeInferenceVisitor::visit(Event_trigger *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Dynamic_array_new *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Dynamic_array_new *node, typeId) {
+  auto t = static_cast<typeId>(CanonicalTypes::VECTOR);
+  return defaultVisitor(node, t);
 }
 
 constraintSet TypeInferenceVisitor::visit(Matches_expr *node, typeId type) {
@@ -1763,7 +1770,9 @@ constraintSet TypeInferenceVisitor::visit(Specify_terminal_descriptor *node,
 constraintSet TypeInferenceVisitor::visit(Select_variable_dimension *node,
                                           typeId) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
+  // auto t1 = static_cast<typeId>(CanonicalTypes::VECTOR);
   return defaultVisitor(node, t);
+  // return constraintSet({{{t, t1}}});
 }
 
 constraintSet
@@ -2689,8 +2698,9 @@ constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
-constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId) {
+  auto t = static_cast<typeId>(CanonicalTypes::VECTOR);
+  return defaultVisitor(node, t);
 }
 
 constraintSet TypeInferenceVisitor::visit(Constant_dec_number *node,
