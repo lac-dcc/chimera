@@ -1770,9 +1770,7 @@ constraintSet TypeInferenceVisitor::visit(Specify_terminal_descriptor *node,
 constraintSet TypeInferenceVisitor::visit(Select_variable_dimension *node,
                                           typeId) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  // auto t1 = static_cast<typeId>(CanonicalTypes::VECTOR);
   return defaultVisitor(node, t);
-  // return constraintSet({{{t, t1}}});
 }
 
 constraintSet
