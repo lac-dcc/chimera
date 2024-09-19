@@ -10,7 +10,7 @@ To test your EDA tool, simply pass all the programs in the ChiBench collection t
 Below we list examples of issues reported in this way:
 
 | Issue | Tool | Description |
-|:-----:|:----:| :-------------:|
+|:-----:|:----| :-------------|
 |   [2159](https://github.com/chipsalliance/verible/issues/2159)  |   [Verible's Obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) |     Crashes when reading a program that only contains the pragma directive.        |
 |   [2181](https://github.com/chipsalliance/verible/issues/2181)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Crashes instead of reporting syntax errors related to instantiation type.          |
 |   [2189](https://github.com/chipsalliance/verible/issues/2189)  |  [Verible's code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) |     Crashes with syntactically valid input.        |
