@@ -7,6 +7,12 @@
 #include <vector>
 
 /**
+ * @enum PortDir
+ * @brief Enumeration of the direction of the ports.
+ */
+enum class PortDir : short { INPUT, OUTPUT, INOUT };
+
+/**
  * @enum NodeType
  * @brief Enumeration of node types used in the AST.
  */

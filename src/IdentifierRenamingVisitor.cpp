@@ -2,19 +2,20 @@
 #include <iostream>
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
-    int id, int modID, std::unordered_map<std::string, Node *> &declMap) {
-  this->varID = id + 1;
+    int modID, std::unordered_map<std::string, Node *> &declMap,
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
+  this->varID = directionMap.size();
   this->moduleID = modID;
   this->declMap = &declMap;
 
   if (debug)
     std::cerr << "varID: " << varID << std::endl;
-  for (int i = 1; i <= id; i++) {
-    Var var;
-    var.name = " id_" + std::to_string(i) + " ";
-    var.type = "logic";
-    var.dir = "";
 
+  for (auto &c : directionMap) {
+    Var var;
+    var.name = std::move(c.first);
+    var.type = "";
+    var.dir = c.second.second;
     this->identifiers.push_back(std::make_shared<Var>(var));
   }
 }
@@ -116,11 +117,22 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   if (debug)
     std::cerr << "Trying to use previous created ID" << std::endl;
 
+  auto isAssign = false;
+  auto isExpr = !contexts.empty() && contexts.top() == ContextType::EXPR;
+
+  if (!contexts.empty() && contexts.top() == ContextType::ASSIGNMENT) {
+    contexts.pop();
+    isAssign = true;
+  }
+
   std::vector<std::string> options;
   for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
 
-    if ((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
-        (*id)->type == type) {
+    if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
+         (*id)->type == type) &&
+        (!isAssign || (*id)->dir != PortDir::INPUT) &&
+        (!isExpr || (*id)->dir != PortDir::OUTPUT)) {
+
       options.push_back((*id)->name);
     }
   }
@@ -238,8 +250,8 @@ void IdentifierRenamingVisitor::visit(Module_or_generate_item *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Lpvalue *node) {
-
   createIDContext(ContextType::EXPR);
+  createIDContext(ContextType::ASSIGNMENT);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -336,6 +348,15 @@ void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
     this->defId = this->identifiers.back()->name;
     this->defType = this->identifiers.back()->type;
   }
+
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext(true);
+}
+
+void IdentifierRenamingVisitor::visit(Delay_or_event_control_opt *node) {
+  createIDContext(ContextType::EXPR);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
