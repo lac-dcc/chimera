@@ -573,7 +573,7 @@ bool generateProgram(
 
     addConstantIDsToParameterList(m, declMap, dirMap);
 
-    isCorrect = inferTypes(m);
+    isCorrect &= inferTypes(m);
   }
 
   declMap.clear();

@@ -28,7 +28,7 @@ def main():
     args = parser.parse_args()
 
     with open(args.results_csv, 'w') as file:
-        print('n_gram,valid_ratio,valid_avg,valid_median,valid_max,valid_min,invalid_avg,invalid_median,invalid_max,invalid_min', file=file)
+        print('n_gram,valid_ratio,valid_sum,valid_avg,valid_median,valid_max,valid_min,invalid_avg,invalid_median,invalid_max,invalid_min', file=file)
 
     for n in range(1, 7):
         print(f'---------------{n}GRAM---------------', file=sys.stderr)
@@ -49,7 +49,7 @@ def main():
         invalid = df[df['invalid'] == True]['num_tokens']
 
         with open(args.results_csv, 'a') as file:
-            print(f'{n},{100*(len(valid)/len(df)):.4f},{valid.mean():.2f},{valid.median()},{valid.max()},{valid.min()},{invalid.mean():.2f},{invalid.median()},{invalid.max()},{invalid.min()}', file=file)
+            print(f'{n},{100*(len(valid)/len(df)):.4f},{valid.sum():.2f},{valid.mean():.2f},{valid.median()},{valid.max()},{valid.min()},{invalid.mean():.2f},{invalid.median()},{invalid.max()},{invalid.min()}', file=file)
 
 
 if __name__ == '__main__':
