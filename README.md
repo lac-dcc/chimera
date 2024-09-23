@@ -18,7 +18,6 @@ Below we list examples of issues reported in this way:
 |   [5276](https://github.com/verilator/verilator/issues/5276)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes with signal 9 on a very large program.        |
 |   [5311](https://github.com/verilator/verilator/issues/5311)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when using time assignments.        |
 |   [5312](https://github.com/verilator/verilator/issues/5312)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when calling a function created in "generate" block.        |
-|   [1171](https://github.com/steveicarus/iverilog/issues/1171)  |  [Iverilog](https://github.com/steveicarus/iverilog) |     Freezes while analyzing programs.        |
 |   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
   
 If you ever use ChiBench to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
