@@ -246,11 +246,11 @@ static bool matchNonAnsiPorts(
       std::cerr << "Matching non ansi ports" << std::endl;
 
     for (int i = 1; i <= n; i++) {
-      PortDir choice = static_cast<PortDir>((short)rand() % 3);
+      PortDir choice = static_cast<PortDir>((unsigned short)rand() % 3);
 
       auto id = " id_" + std::to_string(i) + " ";
 
-      auto dir = "";
+      std::string dir = "";
 
       switch (choice) {
       case PortDir::INPUT:
@@ -260,6 +260,7 @@ static bool matchNonAnsiPorts(
         dir = "output";
         break;
       case PortDir::INOUT:
+      default:
         dir = "inout";
         break;
       }
