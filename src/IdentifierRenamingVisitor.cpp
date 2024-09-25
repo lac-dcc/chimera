@@ -131,8 +131,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
          (*id)->type == type) &&
         ((isAssign && (*id)->dir != PortDir::INPUT) ||
-        (isExpr && (*id)->dir != PortDir::OUTPUT)
-        || (!isAssign && !isExpr))) {
+         (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
 
       options.push_back((*id)->name);
     }

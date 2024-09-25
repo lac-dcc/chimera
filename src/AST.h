@@ -10,7 +10,7 @@
  * @enum PortDir
  * @brief Enumeration of the direction of the ports.
  */
-enum class PortDir : unsigned short { INPUT=0, OUTPUT=1, INOUT=2 };
+enum class PortDir : unsigned short { INPUT = 0, OUTPUT = 1, INOUT = 2 };
 
 /**
  * @enum NodeType
