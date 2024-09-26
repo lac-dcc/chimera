@@ -1,2 +1,5 @@
-// Seed: 2483998077
-`define pp_1 0
+// Seed: 3287517699
+module module_0;
+  integer id_0;
+  always #1 SystemTFIdentifier;
+endmodule

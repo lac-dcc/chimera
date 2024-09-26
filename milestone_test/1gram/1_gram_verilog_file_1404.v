@@ -1,3 +1,7 @@
-// Seed: 1435604863
-`default_nettype id_1
-parameter id_1[1 : id_2[1]] = "" == id_1;
+// Seed: 640259663
+module module_0 (
+    output id_0,
+    input logic id_1,
+    input id_2
+);
+endmodule

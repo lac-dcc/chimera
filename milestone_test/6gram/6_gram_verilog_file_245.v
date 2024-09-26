@@ -1,33 +1,40 @@
-// Seed: 2458004447
-module module_0 #(
-    parameter id_14 = 32'd68
-) (
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    input reg id_4,
+// Seed: 2299553288
+module module_0 (
+    input logic id_0,
+    output logic id_1,
+    input id_2,
+    input id_3,
+    input id_4,
     input id_5,
-    output logic id_6,
-    output id_7,
+    input id_6,
+    output logic id_7,
     output id_8,
     input logic id_9,
-    output logic id_10,
+    input id_10,
     input id_11,
     input id_12,
-    input id_13,
-    input _id_14,
-    input logic id_15,
-    output logic id_16,
-    output id_17
+    input logic id_13,
+    output id_14
+    , id_15, id_16
 );
-  specify
-    (posedge id_18 => (id_19 +: "")) = ("", id_12);
-  endspecify
+  logic id_17, id_18, id_19;
   logic id_20;
-  always @(id_14 or posedge 1) begin
-    id_20[id_14 : 1] = 1;
-    id_8 <= 1;
-    id_4 <= ~id_9;
-  end
+  defparam id_21.id_22 = id_16;
+  logic id_23;
+  logic id_24;
+  assign id_17 = 1'b0;
+  assign id_23 = id_16;
+  logic id_25, id_26;
+  logic id_27;
+  type_39(
+      id_4, 1 + 1 - 1, id_23
+  ); type_40(
+      1'b0 == 1, id_15
+  );
+  type_41 id_28 (
+      .id_0(id_18),
+      .id_1(1),
+      .id_2(id_3[1] - 1),
+      .id_3(1)
+  );
 endmodule
-`resetall

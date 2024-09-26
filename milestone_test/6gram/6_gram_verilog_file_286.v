@@ -1,10 +1,8 @@
-// Seed: 2414575569
-`define pp_1 0
-`default_nettype `pp_1 `timescale 1ps / 1ps
-module module_0 (
-    output id_1,
-    output id_2,
-    output id_3
-);
-  always @(posedge 1'h0 or id_2) id_2 = 1;
+// Seed: 2373985302
+`timescale 1 ps / 1ps
+module module_0 ();
+  initial begin
+    {1, 1, 1} <= 1 + id_0;
+    id_0 <= 1;
+  end
 endmodule

@@ -1,12 +1,6 @@
-// Seed: 3877970403
-module module_0 ();
-  always begin
-    if (id_1) id_1 <= id_1;
-    #id_2 begin
-      id_1 <= id_1;
-      id_1 <= 1;
-      id_1 <= id_2 | 1'b0;
-    end
-  end
-  logic id_4;
+// Seed: 3228905156
+module module_0;
+  assign id_0 = id_0;
+  logic id_1;
+  assign id_2 = 1;
 endmodule

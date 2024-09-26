@@ -1,19 +1,18 @@
-// Seed: 2371039428
-`timescale 1ps / 1ps
-module module_0 (
-    output reg id_2
-);
-  initial begin
-    logic id_3;
-    id_2 <= 1;
-    id_2 <= 1'b0;
-  end
+// Seed: 528665665
+`timescale 1 ps / 1 ps
+module module_0;
+  assign id_0 = id_0;
+  reg id_1;
   always @(posedge id_1) begin
-    id_1 <= id_1;
+    id_0 <= (id_1);
   end
-  type_6(
-      1, 1, 1, 1
-  );
+  always @(negedge id_1) begin
+    id_0 <= id_0 == id_0;
+  end
+  always @(negedge 1 or posedge id_1) begin
+    SystemTFIdentifier;
+  end
+  logic id_2;
   assign id_1 = 1;
-  assign id_2 = id_2;
+  integer id_3;
 endmodule

@@ -1,3 +1,4 @@
-// Seed: 861669263
-`define pp_1 0
-`resetall
+// Seed: 441280747
+`define pp_0 0
+`timescale 1ps / 1ps
+parameter `pp_0 = 1;

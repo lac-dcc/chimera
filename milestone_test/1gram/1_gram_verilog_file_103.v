@@ -1,2 +1,3 @@
-// Seed: 3259636763
-`default_nettype wire
+// Seed: 620468241
+`define pp_0 0
+`define pp_1 0

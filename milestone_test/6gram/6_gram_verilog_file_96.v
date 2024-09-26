@@ -1,2 +1,2 @@
-// Seed: 3418888521
-typedef logic id_1;
+// Seed: 1279487383
+`default_nettype wire

@@ -1,8 +1,8 @@
-// Seed: 1896687105
-module module_0;
-  logic id_1;
-  assign id_1 = 1;
-  string id_2;
-  logic  id_3;
-  assign id_2 = "";
+// Seed: 1515114550
+module module_0 (
+    id_1,
+    id_2
+);
+  inout id_2;
+  inout id_1;
 endmodule

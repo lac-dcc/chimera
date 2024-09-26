@@ -1,11 +1,10 @@
-// Seed: 2582199335
-module module_0 (
-    input  logic id_1,
-    output logic id_3
-);
-  type_9(
-      id_2, id_2, 1'b0
-  );
-  logic id_4;
-  logic id_6;
+// Seed: 2549002199
+`timescale 1 ps / 1ps `timescale 1ps / 1ps
+module module_0;
+  always @(1'b0 or negedge 1'd0) begin
+    id_0 <= id_0;
+    id_0 = id_0;
+    id_0 = id_0 ^ 1;
+    id_0 <= "";
+  end
 endmodule

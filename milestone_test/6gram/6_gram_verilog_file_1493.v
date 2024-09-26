@@ -1,23 +1,16 @@
-// Seed: 64252582
-`timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_10 = 32'd67
-) (
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    input logic _id_10,
-    input logic id_11
+// Seed: 1432375915
+`define pp_4 0
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  defparam id_12.id_13 = 1;
-  assign id_10 = 1 - 1'b0 ? id_10[1] : id_10;
-  always @(negedge 1) begin
-    SystemTFIdentifier(1);
-    if (1'b0) id_8 = id_11[id_10 : 1];
-  end
+  input id_4;
+  output id_3;
+  input id_2;
+  output id_1;
+  logic id_4;
+  logic id_5;
+  defparam id_6.id_7 = 1;
 endmodule

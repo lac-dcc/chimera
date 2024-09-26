@@ -1,5 +1,4 @@
-// Seed: 3668301278
-`timescale 1 ps / 1 ps
-module module_0;
-  logic id_1;
-endmodule
+// Seed: 918140105
+`define pp_0 0
+`default_nettype `pp_0 `timescale 1ps / 1ps
+`define pp_1 0

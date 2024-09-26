@@ -1,2 +1,2 @@
-// Seed: 766307478
-`default_nettype id_1
+// Seed: 390218603
+`define pp_0 0

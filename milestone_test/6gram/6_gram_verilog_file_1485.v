@@ -1,2 +1,2 @@
-// Seed: 3037527785
-`default_nettype wire
+// Seed: 1194838124
+`resetall

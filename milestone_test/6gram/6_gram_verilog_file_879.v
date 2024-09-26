@@ -1,11 +1,12 @@
-// Seed: 3325010829
+// Seed: 840716951
 module module_0 (
+    input logic id_0,
     input logic id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4
+    input id_2,
+    inout id_3,
+    input id_4,
+    input id_5
 );
-  always @(1'b0 or posedge id_4) begin
-    id_3 = 1;
-  end
+  logic id_6;
+  assign id_3 = 1 ? id_3 : "";
 endmodule

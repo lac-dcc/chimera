@@ -1,13 +1,16 @@
-// Seed: 2557600317
+// Seed: 3997047996
+`timescale 1ps / 1ps
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input id_0,
+    input id_1,
+    input logic id_2,
+    output logic id_3,
+    input id_4,
+    output id_5
 );
-  input id_3;
-  output id_2;
-  input id_1;
-  assign id_2 = 1;
-  logic id_4;
-  assign id_2[sample] = id_4;
+  wire  id_6;
+  logic id_7;
+  assign id_6[1] = id_1;
+  logic id_8;
+  always @('d0 or posedge 1) id_6 = id_4;
 endmodule

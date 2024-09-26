@@ -1,16 +1,14 @@
-// Seed: 3923280683
-module module_0 #(
-    parameter id_5 = 32'd35
-) (
-    output id_1,
-    input logic id_2
-    , id_3, id_4
+// Seed: 2090179807
+module module_0 (
+    input logic id_0,
+    input id_1,
+    input id_2,
+    output id_3,
+    input logic id_4,
+    output logic id_5
 );
-  assign id_1 = 1;
-  logic _id_5;
-  always @(negedge !id_4) begin
-    if (1 != 1) begin
-      id_3[id_5] <= 1;
-    end else id_2 = 1'h0;
+  logic id_6;
+  always @(posedge 1'b0) begin
+    id_5 = id_6 && 1 && 1 == id_0;
   end
 endmodule

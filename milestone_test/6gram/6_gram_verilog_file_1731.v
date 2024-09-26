@@ -1,19 +1,17 @@
-// Seed: 2260247182
-`timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_7 = 32'd16
-) (
-    output id_2,
-    input  id_3
+// Seed: 1713981234
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_4;
-  logic id_5 = id_1[1], id_6;
-  type_1 _id_7 (
-      1,
-      1 == id_1,
-      1,
-      1'b0
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_3;
+  type_7(
+      1'h0, 1, 1'b0
   );
-  logic id_8;
-  assign id_6 = id_3[id_7];
+  assign id_2 = 1;
+  logic id_4;
+  logic id_5;
 endmodule

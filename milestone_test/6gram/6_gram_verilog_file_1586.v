@@ -1,11 +1,12 @@
-// Seed: 3214181184
+// Seed: 3384396275
+`timescale 1ps / 1 ps
 module module_0 (
-    input id_1,
-    input id_2,
-    input logic id_3,
-    output logic id_4
+    id_1,
+    id_2
 );
-  always @(*) if (1) id_1 <= 1;
-  assign id_2 = 1;
-  logic id_5;
+  input id_2;
+  output id_1;
+  type_2(
+      1'b0, 1'h0, 1
+  );
 endmodule

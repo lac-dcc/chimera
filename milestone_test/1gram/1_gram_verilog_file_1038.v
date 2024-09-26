@@ -1,2 +1,2 @@
-// Seed: 4006201806
-`define pp_1 0
+// Seed: 1337358996
+typedef reg id_0;

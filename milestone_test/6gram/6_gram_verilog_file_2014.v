@@ -1,14 +1,15 @@
-// Seed: 1335865359
+// Seed: 2201673510
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input id_0,
+    input logic id_1,
+    input id_2,
+    input id_3,
+    input id_4,
+    output logic id_5
 );
-  input id_3;
-  input id_2;
-  output id_1;
-  initial begin
-    id_1 = 1;
-    id_1 <= 1;
-  end
+  logic id_6;
+  logic id_7;
+  logic id_8;
+  logic id_9;
 endmodule
+`default_nettype wire

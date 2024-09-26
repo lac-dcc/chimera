@@ -1,13 +1,12 @@
-// Seed: 3133648988
+// Seed: 624561358
 `timescale 1ps / 1 ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  input id_3;
-  output id_2;
-  input id_1;
-  assign id_2 = 1'h0;
-  logic id_4;
+module module_0;
+  assign id_0 = 1;
+  generate
+    assign id_0 = 1'b0;
+    for (genvar id_1 = id_1; id_1[1-1]; id_0 = 1) begin
+      logic id_2;
+    end
+  endgenerate
+  string id_3 = "";
 endmodule

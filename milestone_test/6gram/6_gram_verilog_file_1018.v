@@ -1,31 +1,38 @@
-// Seed: 1909272428
-`timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_1 = 32'd63
-) (
-    input  _id_1,
-    output id_2
+// Seed: 3792466184
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  assign id_1[id_1] = id_1;
-  type_20(
-      1'b0, id_1, 1'b0 !== id_3[1]
+  input id_13;
+  output id_12;
+  output id_11;
+  inout id_10;
+  inout id_9;
+  inout id_8;
+  output id_7;
+  inout id_6;
+  input id_5;
+  output id_4;
+  output id_3;
+  inout id_2;
+  input id_1;
+  logic id_13;
+  logic id_14;
+  type_0 id_15 (
+      .id_0(1),
+      .id_1(1'b0),
+      .id_2((1'b0)),
+      .id_3(1)
   );
-  reg
-      id_4,
-      id_5,
-      id_6,
-      id_7,
-      id_8,
-      id_9,
-      id_10,
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19;
-  always @(*) if (1) if (1 && id_17 === 'd0 != id_12) id_18 <= #1{id_10, id_18, id_9};
 endmodule

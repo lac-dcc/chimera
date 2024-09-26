@@ -1,23 +1,23 @@
-// Seed: 928435445
-module module_0 #(
-    parameter id_3 = 32'd93
-);
-  type_4 id_1 (.id_0(id_2[id_3][1]));
+// Seed: 3011628751
+module module_0 ();
+  defparam id_0[1] = 1;
+  logic id_1, id_2, id_3;
 endmodule
+`default_nettype id_4
 module module_1 (
-    output logic id_1,
+    output id_0,
+    output id_1,
     output logic id_2,
-    output id_3,
+    input logic id_3,
     output logic id_4,
-    input logic id_5,
-    input id_6
+    output logic id_5,
+    output id_6,
+    output logic id_7
 );
-  id_7(
-      id_3, 1, 1'h0 + 1
-  );
-  logic id_8;
-  assign id_5 = id_2;
-  type_14(
-      1
+  logic id_8, id_9, id_10;
+  assign id_9 = 1;
+  logic id_11;
+  type_19(
+      id_10, 1
   );
 endmodule

@@ -1,3 +1,8 @@
-// Seed: 1370866456
-`define pp_1 0
-`timescale 1ps / 1ps
+// Seed: 2224289241
+module module_0 (
+    input id_0,
+    input logic id_1
+);
+  logic id_2;
+  assign id_2 = id_0;
+endmodule

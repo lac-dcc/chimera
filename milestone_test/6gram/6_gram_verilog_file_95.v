@@ -1,9 +1,3 @@
-// Seed: 2578712278
-module module_0 (
-    id_1,
-    id_2
-);
-  output id_2;
-  input id_1;
-  assign id_1 = 1 - {1 & id_1, 1};
-endmodule
+// Seed: 3015710805
+`timescale 1ps / 1ps
+`define pp_0 0

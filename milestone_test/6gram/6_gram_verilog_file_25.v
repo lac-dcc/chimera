@@ -1,16 +1,13 @@
-// Seed: 3912436012
-module module_0 #(
-    parameter id_2 = 32'd96
-) (
-    inout id_1,
-    output _id_2,
-    output logic id_3,
-    input id_4,
-    output id_5
-);
-  assign id_1 = id_5[id_2-id_2 : 1] + id_5;
-  logic id_6, id_7;
-  logic id_8;
-  logic id_9;
-  assign id_5 = id_6;
+// Seed: 1675037007
+module module_0 ();
+  wire id_1;
+  assign id_1[1] = id_1;
+  type_6 id_3 (
+      .id_0(id_1),
+      .id_1(),
+      .id_2(id_2),
+      .id_3(id_1)
+  );
+  logic id_4;
+  assign id_1 = !id_0;
 endmodule

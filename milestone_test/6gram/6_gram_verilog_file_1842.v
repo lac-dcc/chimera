@@ -1,12 +1,14 @@
-// Seed: 793412978
-localparam id_1 = id_1;
-`timescale 1ps / 1ps
-`define pp_2 0
+// Seed: 1356030882
+`timescale 1 ps / 1ps
 module module_0 (
-    output id_1,
-    output logic id_2,
-    output id_3
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_4, id_5;
-  assign id_1 = id_2;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  type_3(
+      1'b0, 1 + id_2, 1
+  );
 endmodule

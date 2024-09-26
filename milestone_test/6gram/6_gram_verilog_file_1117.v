@@ -1,10 +1,3 @@
-// Seed: 3003897026
-module module_0 (
-    id_1,
-    id_2
-);
-  output id_2;
-  output id_1;
-  always @(posedge id_1) id_1 <= id_1[1] & 1;
-  logic id_3;
-endmodule
+// Seed: 877151207
+`define pp_0 0
+`define pp_1 0

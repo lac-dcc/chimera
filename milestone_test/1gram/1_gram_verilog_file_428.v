@@ -1,2 +1,6 @@
-// Seed: 1525527475
-`default_nettype id_1
+// Seed: 1526069567
+module module_0 ();
+  logic id_0;
+  assign id_1 = ~1'b0;
+  logic id_2;
+endmodule

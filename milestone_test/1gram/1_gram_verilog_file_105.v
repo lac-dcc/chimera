@@ -1,2 +1,3 @@
-// Seed: 2553981219
-`default_nettype wire `timescale 1ps / 1ps
+// Seed: 758907888
+`define pp_0 0
+`define pp_1 0

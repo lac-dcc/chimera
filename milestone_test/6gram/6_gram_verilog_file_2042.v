@@ -1,17 +1,21 @@
-// Seed: 473706111
-`define pp_1 0
-`resetall `timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_3 = 32'd21
+// Seed: 2273020987
+module module_0 (
+    output id_0,
+    input logic id_1,
+    input id_2,
+    input id_3,
+    input logic id_4,
+    input logic id_5,
+    input logic id_6,
+    input logic id_7,
+    output logic id_8,
+    input logic id_9,
+    input logic id_10,
+    output logic id_11,
+    output logic id_12
 );
-  defparam id_1.id_2 = 1;
-  logic _id_3;
-  assign #1 id_2 = id_2[id_3+:1];
-  always @(posedge id_2 or posedge id_1) begin
-    SystemTFIdentifier;
-  end
-  always @(posedge 1 or posedge 1'b0)
-    if (1) id_2 <= id_2;
-    else id_3[1] <= 1;
-  assign id_3 = 1;
+  type_24 id_13 (
+      .id_0(1 - 1),
+      .id_1(id_6)
+  );
 endmodule

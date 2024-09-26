@@ -1,42 +1,34 @@
-// Seed: 3907758928
-module module_0 #(
-    parameter id_1 = 32'd62,
-    parameter id_2 = 32'd23,
-    parameter id_4 = 32'd67,
-    parameter id_5 = 32'd35,
-    parameter id_8 = 32'd29
-) (
-    _id_1,
-    _id_2,
-    id_3,
-    _id_4
+// Seed: 1662847214
+`timescale 1 ps / 1ps
+module module_0 (
+    input logic id_0,
+    output id_1,
+    input id_2,
+    output id_3,
+    input logic id_4
+    , id_26,
+    input logic id_5,
+    input logic id_6,
+    input id_7,
+    input id_8
+    , id_27,
+    input logic id_9,
+    input id_10,
+    output id_11,
+    input id_12,
+    inout logic id_13,
+    output id_14,
+    output logic id_15,
+    input id_16,
+    output id_17,
+    input id_18,
+    output id_19,
+    output id_20,
+    input id_21,
+    input id_22,
+    input id_23,
+    output id_24,
+    output logic id_25
 );
-  input _id_4;
-  input id_3;
-  output _id_2;
-  input _id_1;
-  logic _id_5;
-  always @((1) or posedge SystemTFIdentifier(~id_2[1]
-  ))
-  begin
-    if (id_5) id_4[1'b0] <= (1'b0 < 1'b0);
-    else begin
-      id_3 = 1;
-    end
-  end
-  logic id_6;
-  type_12(
-      1, 1, 1, id_3
-  );
-  assign id_5[id_4] = id_5;
-  logic id_7;
-  logic _id_8 = 1'b0 == 1;
-  always @(posedge 1'b0 or posedge 1) id_5[id_5 : id_2] = 1;
-  reg id_9 = id_3;
-  initial begin
-    id_9[id_2 : id_8] <= "";
-    id_1 <= !id_1;
-    id_3 <= id_3[id_1];
-    id_1 = 1;
-  end
+  always @(posedge 1 or 1) if (id_23[1]) id_25 = id_6;
 endmodule

@@ -1,4 +1,4 @@
-// Seed: 3436539712
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
+// Seed: 3139834045
+module module_0;
+  assign id_0 = 1;
+endmodule

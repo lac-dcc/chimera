@@ -1,25 +1,16 @@
-// Seed: 4257799653
-`timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_1 = 32'd11,
-    parameter id_2 = 32'd68,
-    parameter id_6 = 32'd67
-) ();
-  assign id_1 = &id_1;
-  type_7(
-      {id_2{1}}, 1, id_3
-  );
-  type_8 id_4 (
-      .id_0(id_1),
-      .id_1(id_2 <= id_3),
-      .id_2(1),
-      .id_3(id_3[1])
-  );
-  always @(posedge id_2[id_1]) begin
-    #1;
-    id_2 = 1'b0;
+// Seed: 1348835868
+module module_0 ();
+  assign id_0 = 1;
+  initial begin
+    id_0 <= 1;
+    if (id_0) if (id_0) id_0 <= id_0;
   end
-  defparam id_5._id_6 = id_5[id_1[1 : ~id_2#(
-      .id_6(id_6[1 : ~id_2])
-  )]] + id_2; timeunit 1ps;
+  logic id_1;
+  reg   id_2;
+  assign id_0 = id_2;
+  always @(posedge 1)
+    if (id_1) id_0 <= 1;
+    else begin
+      id_0 <= 1;
+    end
 endmodule

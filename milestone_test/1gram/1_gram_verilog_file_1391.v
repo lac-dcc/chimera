@@ -1,19 +1,10 @@
-// Seed: 1868901168
-`define pp_1 0
+// Seed: 3099157724
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input logic id_0,
+    input logic id_1
 );
-  input id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  assign id_2 = id_6 || id_3;
+  logic id_2 = id_2;
+  logic id_3;
+  logic id_4;
 endmodule
 `define pp_2 0

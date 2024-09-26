@@ -1,28 +1,32 @@
-// Seed: 3380924722
-module module_0 #(
-    parameter id_3 = 32'd26,
-    parameter id_4 = 32'd40,
-    parameter id_5 = 32'd26
-) (
-    id_1,
-    id_2,
-    _id_3,
-    _id_4,
-    _id_5,
-    id_6
+// Seed: 1286658517
+module module_0 (
+    input id_0,
+    input id_1,
+    input id_2,
+    output id_3,
+    input logic id_4,
+    input id_5,
+    input logic id_6,
+    output id_7,
+    output id_8,
+    input id_9,
+    input id_10,
+    input id_11,
+    input id_12,
+    input id_13,
+    output logic id_14,
+    output logic id_15,
+    input id_16,
+    input id_17,
+    output logic id_18
 );
-  input id_6;
-  input _id_5;
-  input _id_4;
-  input _id_3;
-  output id_2;
-  input id_1;
-  assign id_2 = 1;
-  type_8(
-      1'h0, id_6[1-id_3], 1
+  logic id_19;
+  type_27 id_20 (
+      .id_0(id_2),
+      .id_1(id_4),
+      .id_2(1),
+      .id_3(~id_6),
+      .id_4(id_11)
   );
-  always @(negedge id_5) begin
-    id_4[id_5+:id_4[id_5[1'b0]]] = id_1;
-  end
-  logic id_7;
+  assign id_8 = id_11;
 endmodule

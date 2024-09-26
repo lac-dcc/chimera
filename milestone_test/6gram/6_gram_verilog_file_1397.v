@@ -1,2 +1,9 @@
-// Seed: 1846874997
-`timescale 1ps / 1ps `default_nettype wire
+// Seed: 2409262099
+module module_0;
+  assign id_0 = 1 + id_0 + 1 + 1;
+  assign id_0 = 1;
+  logic id_1;
+  assign id_0 = 1;
+  assign id_0 = 1'b0;
+  assign id_0 = (id_0);
+endmodule

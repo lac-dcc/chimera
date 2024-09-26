@@ -1,54 +1,47 @@
-// Seed: 525781754
-module module_0 #(
-    parameter id_1 = 32'd96,
-    parameter id_2 = 32'd81,
-    parameter id_3 = 32'd5,
-    parameter id_4 = 32'd25
-) (
-    _id_1,
-    _id_2,
-    _id_3,
-    _id_4,
-    id_5
+// Seed: 3952456235
+`timescale 1 ps / 1ps
+module module_0 (
+    input id_0,
+    input reg id_1,
+    output reg id_2,
+    output id_3,
+    input logic id_4,
+    input logic id_5,
+    input id_6,
+    output id_7,
+    output id_8,
+    input reg id_9,
+    input id_10,
+    input id_11,
+    input id_12,
+    input logic id_13,
+    input id_14
 );
-  input id_5;
-  input _id_4;
-  input _id_3;
-  output _id_2;
-  input _id_1;
-  type_8(
-      1 >= id_5, 1, id_4, 1, id_3[{1, 1, {1, id_1, id_4?id_3 : 1, 1, 1}}] * 1 - 1
+  assign id_3 = id_5 || 1;
+  type_22(
+      id_2, id_1, 1'b0
   );
-  always @(posedge id_3)
-    if (id_5) begin
-      if (1) begin
-        id_1 <= id_2;
-        id_4 = 1;
-        if (id_5) id_4 <= 1;
-        else if (id_3.id_4((1))) id_4 <= id_2 << id_3;
+  generate
+    for (id_15 = 1'h0; 1; id_15 = (1)) begin
+      always @(posedge id_1, 1) begin
+        id_3 <= 1;
       end
-    end else begin
-      id_1[(id_3)] <= 1;
-      id_5[1] <= id_3 & id_2[1 : id_3];
-      if (id_5) begin
-        if (id_1 - id_3) id_3 = id_2;
-      end else id_1 = 1;
+      always @(posedge id_9)
+        if (1) id_8 = 1;
+        else begin
+          if (id_1) begin
+            if (id_6) begin
+              if (id_1)
+                if (id_4) id_7 <= id_9;
+                else SystemTFIdentifier(1);
+              else begin
+                id_2 = {id_6{id_0}};
+                #1 id_2 = 1;
+              end
+            end
+          end else id_7 <= 1;
+        end
     end
-  assign id_3 = id_2 ? id_4 ^ 1 : id_4[id_3];
-  logic id_6;
-  assign id_3#(
-      .id_3(id_3),
-      .id_1(1),
-      .id_4(id_5),
-      .id_4(id_4),
-      .id_1((id_6[id_1 : id_2[1]]) - 1),
-      .id_5(id_4),
-      .id_4(1),
-      .id_3(id_4)
-  ) [1] = id_4;
-  logic id_7;
-  always @(posedge 1 - 1 or posedge 1) begin
-    #1;
-    SystemTFIdentifier();
-  end
+  endgenerate
+  assign id_2 = 1;
 endmodule

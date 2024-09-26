@@ -1,10 +1,3 @@
-// Seed: 994198050
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  input id_3;
-  output id_2;
-  input id_1;
-endmodule
+// Seed: 1026015610
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0 `timescale 1ps / 1ps

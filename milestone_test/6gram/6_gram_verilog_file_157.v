@@ -1,28 +1,17 @@
-// Seed: 199456312
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_2 = 32'd73,
-    parameter id_5 = 32'd76
-) (
+// Seed: 3823948491
+module module_0 (
     id_1,
-    _id_2,
+    id_2,
     id_3,
     id_4,
-    _id_5
+    id_5,
+    id_6
 );
-  input _id_5;
-  input id_4;
-  output id_3;
-  output _id_2;
-  output id_1;
-  reg   id_6;
-  logic id_7;
-  always @(id_3 or 1'b0) begin
-    id_2 <= 0 * "";
-  end
-  always @(posedge id_1) begin
-    if (1 * SystemTFIdentifier(id_3) + 1'b0) begin
-      id_6[id_5[id_2]] <= 1;
-    end
-  end
+  output id_6;
+  inout id_5;
+  inout id_4;
+  inout id_3;
+  inout id_2;
+  input id_1;
+  defparam id_6.id_7 = id_5;
 endmodule

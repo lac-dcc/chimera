@@ -1,10 +1,13 @@
-// Seed: 500062775
+// Seed: 3444994443
 module module_0 (
+    input id_0,
     input logic id_1,
-    output id_2,
-    output id_3,
-    input id_4
-    , id_5, id_6,
-    input id_7
+    output reg id_2,
+    input logic id_3,
+    input logic id_4,
+    output logic id_5
 );
+  always @(posedge (id_1))
+    if (1) id_2 <= id_0;
+    else id_2 <= id_0;
 endmodule

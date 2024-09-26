@@ -1,6 +1,10 @@
-// Seed: 4194584309
-`define pp_1 0
-wire id_2, id_3;
-`define pp_4 0
-`timescale 1ps / 1ps
-`define pp_5 0
+// Seed: 1213882360
+module module_0 (
+    id_1,
+    id_2
+);
+  inout id_2;
+  input id_1;
+  assign id_2 = !id_1;
+  logic id_2 = id_2;
+endmodule

@@ -1,14 +1,9 @@
-// Seed: 1297490440
-module module_0 (
-    input id_1,
-    output reg id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    output id_7
-);
-  always @(*) begin
-    id_2 <= id_6(1);
-  end
+// Seed: 777037720
+module module_0 ();
+  assign id_0 = 1;
+  type_4(
+      1, id_1, id_2, id_1
+  );
+  logic id_3;
+  assign id_3 = 1;
 endmodule

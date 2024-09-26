@@ -1,23 +1,16 @@
-// Seed: 648299558
-`endcelldefine
+// Seed: 650584018
+`define pp_5 0
+`define pp_6 0
+`define pp_7 0
+`define pp_8 0
+`define pp_9 0
+`resetall `timescale 1ps / 1ps
 module module_0 (
+    output logic id_0,
+    input id_1,
     input id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    output id_10
-    , id_11,
-    input logic id_12,
-    output id_13,
-    inout id_14,
-    input id_15,
-    input logic id_16,
-    output id_17
+    output logic id_3,
+    output logic id_4
 );
-  logic id_18;
-  logic id_19;
+  logic id_5;
 endmodule

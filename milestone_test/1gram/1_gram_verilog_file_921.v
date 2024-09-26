@@ -1,2 +1,2 @@
-// Seed: 1597170156
-`default_nettype id_1
+// Seed: 3666178545
+`resetall

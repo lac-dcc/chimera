@@ -1,4 +1,8 @@
-// Seed: 32140019
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
+// Seed: 3145361291
+module module_0 (
+    id_1,
+    id_2
+);
+  inout id_2;
+  inout id_1;
+endmodule

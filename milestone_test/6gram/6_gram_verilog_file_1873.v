@@ -1,24 +1,18 @@
-// Seed: 1168326069
+// Seed: 1938867678
 module module_0 (
-    output logic id_1,
+    input logic id_0,
+    output logic id_1
+    , id_10,
     input id_2,
     input logic id_3,
-    input id_4,
-    input logic id_5,
+    input logic id_4,
+    output reg id_5,
     input id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    output logic id_12,
-    output id_13,
-    input logic id_14,
-    input logic id_15,
-    input logic id_16,
-    input id_17,
-    output id_18
+    output id_7,
+    input logic id_8,
+    output logic id_9
 );
-  logic id_19;
-  logic id_20;
+  always @(posedge 1 or negedge 1 - id_2) begin : id_11
+    id_5 <= 1;
+  end
 endmodule

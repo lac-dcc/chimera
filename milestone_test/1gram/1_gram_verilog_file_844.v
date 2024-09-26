@@ -1,2 +1,3 @@
-// Seed: 3580272614
-localparam id_1 = 1;
+// Seed: 1100469635
+`define pp_0 0
+`define pp_1 0

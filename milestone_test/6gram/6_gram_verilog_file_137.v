@@ -1,26 +1,31 @@
-// Seed: 867672206
-module module_0 #(
-    parameter id_1 = 32'd40,
-    parameter id_2 = 32'd26
-) ();
-  logic _id_1;
-  type_6 _id_2 (
-      .id_0(1'b0),
-      .id_1(id_1),
-      .id_2(1'b0),
-      .id_3(1 + 1),
-      .id_4(id_1[1]),
-      .id_5(id_1[id_1 : id_1]),
-      .id_6(id_3 <= 1),
-      .id_7(1),
-      .id_8(1)
+// Seed: 2884302435
+module module_0 (
+    input id_0,
+    input id_1,
+    output logic id_2,
+    input id_3,
+    output logic id_4,
+    output logic id_5,
+    input id_6,
+    output id_7,
+    input id_8
+    , id_14,
+    output id_9,
+    input id_10,
+    input logic id_11,
+    output logic id_12,
+    input id_13
+);
+  type_22 id_15 (
+      .id_0(1 - id_13),
+      .id_1(id_3),
+      .id_2(id_11),
+      .id_3(id_10),
+      .id_4(1'b0),
+      .id_5(id_7)
   );
-  type_7 id_4 (
-      .id_0(id_3),
-      .id_1(id_3[1/id_2 : id_1[id_2]])
-  );
-  assign id_1[id_1[1 : 1]-1] = 1;
-  type_8(
-      1'b0, 1, id_2
-  );
+  reg id_16;
+  always @(posedge id_0) begin
+    id_16 <= 1;
+  end
 endmodule

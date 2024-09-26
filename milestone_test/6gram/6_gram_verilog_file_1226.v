@@ -1,10 +1,8 @@
-// Seed: 2547104534
-`timescale 1ps / 1ps
+// Seed: 2030014825
+`default_nettype id_0 `timescale 1ps / 1ps
 module module_0 (
-    id_1,
-    id_2
+    input  id_0,
+    output id_1
 );
-  output id_2;
-  input id_1;
-  logic id_3;
+  assign id_1[1] = id_0[1'b0];
 endmodule

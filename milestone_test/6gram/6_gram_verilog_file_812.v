@@ -1,15 +1,11 @@
-// Seed: 511673511
+// Seed: 3348551257
 module module_0 (
     id_1,
     id_2,
     id_3
 );
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_4;
-  specify
-    (posedge id_5 => (id_6 +: id_5)) = (id_6[1], id_6);
-    specparam id_7 = 1;
-  endspecify
+  inout id_3;
+  inout id_2;
+  inout id_1;
+  assign id_3 = id_3;
 endmodule

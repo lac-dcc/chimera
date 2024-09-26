@@ -1,26 +1,24 @@
-// Seed: 1526610757
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_7 = 32'd17,
-    parameter id_8 = 32'd97,
-    parameter id_9 = 32'd71
-) ();
-  type_11 id_2 (
-      .id_0(1),
-      .id_1(id_1[1] < id_3)
+// Seed: 3700904673
+module module_0 (
+    input logic id_0,
+    output logic id_1,
+    output id_2,
+    output logic id_3,
+    input id_4,
+    input logic id_5,
+    output logic id_6,
+    output id_7,
+    input logic id_8,
+    input id_9,
+    input id_10,
+    input logic id_11,
+    output id_12
+);
+  logic id_13;
+  logic id_14, id_15;
+  type_25(
+      1, (id_1 == id_0), 1
   );
-  logic id_4;
-  reg   id_5;
-  reg   id_6;
-  logic _id_7;
-  reg   _id_8 = id_6;
-  logic _id_9 = id_6 && 1 + 1 && id_7[id_9[id_8 : id_7]] && 1 && 1;
-  logic id_10 = 1;
-  always #0 begin
-    SystemTFIdentifier(id_9);
-    id_5 <= id_1;
-    id_6 <= id_1;
-    id_10 = 1;
-    id_1 <= id_9;
-  end
+  logic id_16;
+  assign id_2 = 1;
 endmodule

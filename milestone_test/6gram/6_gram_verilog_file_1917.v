@@ -1,3 +1,2 @@
-// Seed: 3191097824
-module module_0;
-endmodule
+// Seed: 3621376007
+`default_nettype wire

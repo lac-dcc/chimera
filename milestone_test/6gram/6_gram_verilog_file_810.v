@@ -1,21 +1,20 @@
-// Seed: 3618812373
+// Seed: 3404938316
 module module_0 (
-    output id_1,
-    input id_2
-    , id_3,
-    output id_4,
+    input logic id_0,
+    input logic id_1,
+    input id_2,
+    input id_3,
+    output logic id_4,
     output id_5,
-    output logic id_6,
-    output logic id_7,
+    input id_6,
+    input logic id_7,
     output logic id_8,
-    input id_9,
+    input logic id_9,
     input id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input id_15,
-    output id_16
+    input id_11,
+    input logic id_12,
+    input logic id_13,
+    input logic id_14
 );
+  logic id_15, id_16;
 endmodule
-`endcelldefine

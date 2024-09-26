@@ -1,53 +1,56 @@
-// Seed: 2353717205
-module module_0 #(
-    parameter id_4 = 32'd67,
-    parameter id_7 = 32'd93
-) (
+// Seed: 2695794384
+module module_0 (
     id_1,
     id_2,
     id_3,
-    _id_4,
-    id_5
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12#(.id_13(id_14)),
+    id_15,
+    id_15,
+    id_16
 );
-  input id_5;
-  input _id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  logic id_6 = 1;
-  assign id_5 = id_2;
-  always id_6 = 1;
-  type_19 _id_7 (id_6);
-  logic id_8 = 1'h0;
-  logic id_9;
-  type_22(
-      1, id_5[id_4], 1'h0
+  input id_15;
+  inout id_14;
+  output id_13;
+  inout id_12;
+  output id_11;
+  inout id_10;
+  input id_9;
+  input id_8;
+  input id_7;
+  inout id_6;
+  output id_5;
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  type_27 id_17 (
+      1,
+      1,
+      (id_12 | 1)
   );
-  logic id_10 = 1;
-  assign id_1[id_7] = 1;
-  logic id_11, id_12, id_13;
-  assign id_3 = id_2;
-  type_25(
-      .id_0(1'h0), .id_1(1)
+  assign id_3 = 1'h0 * 1;
+  always if (1) id_5 <= 1;
+  logic id_18, id_19;
+  logic id_20, id_21;
+  defparam id_22 = id_14, id_23 = 1;
+  always id_12 <= 1'h0;
+  type_30(
+      .id_0(id_13), .id_1(1)
+  ); type_31(
+      .id_0(id_15), .id_1(1), .id_2(id_7), .id_3(1), .id_4(), .id_5(id_1), .id_6(1)
+  ); type_32(
+      .id_0(1), .id_1(id_9), .id_2(1)
   );
-  integer id_14 (
-      .id_0 (id_11),
-      .id_1 (id_9[1 : 1]),
-      .id_2 (id_5[1]),
-      .id_3 (1'h0),
-      .id_4 (id_12),
-      .id_5 (id_2),
-      .id_6 ((id_2)),
-      .id_7 (1),
-      .id_8 (id_1),
-      .id_9 (1),
-      .id_10(id_13),
-      .id_11(id_9),
-      .id_12(id_9)
-  );
-  assign id_14 = 1;
-  logic id_15;
-  assign id_3 = id_12;
-  integer id_16 = 1, id_17;
-  assign id_11 = 1;
+  logic id_24;
+  logic id_25, id_26;
 endmodule
+`define pp_15 0
+`default_nettype wire

@@ -1,29 +1,24 @@
-// Seed: 1158323482
+// Seed: 694251023
 module module_0 (
+    output id_0,
     input id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
+    output logic id_2,
+    input logic id_3,
+    output id_4
+    , id_13,
     input id_5,
-    output logic id_6,
-    output id_7,
-    input id_8,
+    input id_6,
+    input id_7,
+    output logic id_8,
     output id_9,
-    output logic id_10
-    , id_11,
+    output logic id_10,
+    input id_11,
     output logic id_12
 );
-  assign id_7 = id_5;
-  logic id_13;
   logic id_14;
-  assign id_13 = id_11;
-  logic id_15;
-  type_24 id_16 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(""),
-      .id_3(id_6),
-      .id_4(id_5)
+  type_22 id_15 (
+      .id_0((id_11)),
+      .id_1(id_8)
   );
-  always @(id_14) id_5 <= 1'b0;
+  assign id_13 = 1 && 1 == 1;
 endmodule

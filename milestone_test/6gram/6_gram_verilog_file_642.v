@@ -1,29 +1,15 @@
-// Seed: 1705014718
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_1 = 32'd56,
-    parameter id_4 = 32'd73
-) (
-    _id_1,
-    id_2,
-    id_3,
-    _id_4,
-    id_5,
-    id_6
+// Seed: 249190357
+module module_0 (
+    output id_0,
+    output id_1,
+    output id_2,
+    input logic id_3,
+    output logic id_4,
+    output id_5,
+    input id_6,
+    output id_7
 );
-  output id_6;
-  input id_5;
-  output _id_4;
-  input id_3;
-  input id_2;
-  input _id_1;
-  always @(posedge 1 or negedge 1)
-    if (id_3) id_3 <= id_3;
-    else begin
-      id_1 <= (id_4 ? id_5 : 1);
-      id_4[1] = "";
-      id_4 <= 1;
-      id_1 <= id_6[id_1];
-      id_2 <= id_5[id_4 : 1'b0];
-    end
+  assign id_0 = id_6;
+  logic id_8 = 1'b0 & 1 * (1);
+  logic id_9;
 endmodule

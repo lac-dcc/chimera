@@ -1,46 +1,30 @@
-// Seed: 10910492
-module module_0 #(
-    parameter id_11 = 32'd22,
-    parameter id_12 = 32'd58
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+// Seed: 1502420052
+`timescale 1 ps / 1ps
+module module_0 (
+    input logic id_0,
+    output logic id_1,
+    output id_2,
+    input logic id_3,
+    input reg id_4,
+    input id_5,
+    input logic id_6,
+    input logic id_7,
+    output reg id_8,
+    inout id_9,
+    output id_10
 );
-  input id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  always @(id_8 or 1 or 1 + id_3 or posedge 1) begin
-    id_10 = 1;
+  logic id_11;
+  reg   id_12;
+  reg   id_13;
+  logic id_14;
+  initial begin
+    id_9 = 1'b0;
+    id_8 <= ~id_9;
+    id_14 = id_13 == 1'd0;
+    @(id_14);
+    id_1 = 1;
+    id_2 = ("") >> id_7;
+    id_12 <= id_4;
+    if (id_6) id_13 <= #1 1'h0;
   end
-  logic _id_11;
-  always @(id_8) SystemTFIdentifier;
-  assign id_4 = 1'd0;
-  logic _id_12;
-  logic id_13;
-  reg   id_14;
-  always @(1 or(id_12[id_12[id_11 : 1]])) id_14 <= !id_9;
-  logic id_15;
-  assign id_13[1] = id_10;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  logic id_19 = id_18;
-  assign id_13 = id_15 - 1;
-  logic id_20 = 1'h0;
-  logic id_21;
 endmodule

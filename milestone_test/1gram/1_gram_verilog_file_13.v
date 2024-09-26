@@ -1,5 +1,2 @@
-// Seed: 2620985951
-module module_0;
-  logic id_1;
-  logic id_2;
-endmodule
+// Seed: 2709374517
+`define pp_0 0

@@ -1,30 +1,37 @@
-// Seed: 3739329229
+// Seed: 1657154733
+`timescale 1ps / 1 ps
 module module_0 (
-    input id_1,
-    input id_2,
-    output id_3,
-    input reg id_4,
-    output reg id_5,
-    input id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  reg id_7;
-  always @(1 !== id_2) begin
-    @(negedge 1)
-    SystemTFIdentifier(
-        1 + 1, id_7, id_1 == 1, 1'b0, id_4, 1'b0, id_1, id_5, id_5 & 1, 1, id_6);
-    id_4["" : 1]  = "" <= id_2;
-    id_7[1 : (1)] = id_6;
-    id_6 <= 1'h0;
-    id_5 = id_3;
-    id_3 <= !id_6;
-    id_4 <= id_5;
-    id_1 = id_3;
-    id_2 <= 1;
-    id_4 <= 1'h0;
-    id_2 <= {1, 1'h0};
-    id_2 <= id_3;
-    if (1) begin : id_8
-      SystemTFIdentifier;
-    end
-  end
+  inout id_14;
+  input id_13;
+  inout id_12;
+  input id_11;
+  input id_10;
+  inout id_9;
+  output id_8;
+  output id_7;
+  output id_6;
+  input id_5;
+  inout id_4;
+  inout id_3;
+  output id_2;
+  output id_1;
+  assign id_2 = 1;
+  logic id_14 = 1;
+  assign id_14 = 1'd0;
+  assign id_9  = id_11;
 endmodule

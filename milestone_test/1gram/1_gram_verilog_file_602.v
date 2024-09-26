@@ -1,37 +1,28 @@
-// Seed: 3919290619
-`define pp_1 0
-`define pp_2 0
-module module_0 ();
-  assign id_1 = id_1 != {id_1, id_1, id_1, 1, 1, id_1, 1 * 1, !id_1, (1)};
-  integer id_2;
-  logic   id_3;
-  logic   id_4;
-  logic   id_5;
-  logic   id_6;
-  type_19(
-      id_5 - id_4
-  ); type_20(
-      1, id_5, 1'b0
+// Seed: 221915753
+module module_0 (
+    input logic id_0,
+    input id_1,
+    output id_2,
+    output reg id_3,
+    input id_4,
+    input logic id_5,
+    output id_6,
+    input id_7,
+    inout id_8,
+    output id_9,
+    input logic id_10,
+    input logic id_11,
+    input logic id_12,
+    output logic id_13,
+    output id_14,
+    input logic id_15
+);
+  assign id_6 = 1 ? 1 : 1;
+  logic id_16;
+  logic id_17, id_18, id_19, id_20, id_21;
+  assign id_9 = id_19;
+  type_32(
+      .id_0(1'd0), .id_1(id_18), .id_2(1), .id_3(!{"" & 1{id_12}}), .id_4(1), .id_5(1), .id_6(id_17)
   );
-  genvar id_7;
-  specify
-    if (1) (posedge id_8 => (id_9 +: 1'd0)) = (SystemTFIdentifier);
-  endspecify
-  always SystemTFIdentifier;
-  type_21 id_10 (id_1 & 1);
-  for (id_11 = 1; 1'b0; id_4 = id_7) begin
-    initial id_2 <= id_1 - id_9;
-    type_0 id_12 (
-        1,
-        1,
-        id_8,
-        1,
-        id_1[!1],
-        id_4,
-        id_9
-    );
-  end
-  logic id_13;
-  assign id_3 = 1;
-  logic id_14;
+  always id_3 <= 1;
 endmodule

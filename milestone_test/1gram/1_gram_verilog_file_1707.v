@@ -1,4 +1,3 @@
-// Seed: 1480356924
-module module_0;
-  assign id_1 = 1;
-endmodule
+// Seed: 609809503
+`define pp_0 0
+`timescale 1ps / 1ps

@@ -1,2 +1,6 @@
-// Seed: 360445914
-parameter id_1[1 : id_2[id_3]] = 1;
+// Seed: 1041161545
+module module_0;
+  logic id_0;
+endmodule
+`define pp_0 0
+`define pp_1 0

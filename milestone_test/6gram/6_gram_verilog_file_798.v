@@ -1,27 +1,45 @@
-// Seed: 1934116300
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_1 = 32'd30,
-    parameter id_2 = 32'd62,
-    parameter id_3 = 32'd23,
-    parameter id_4 = 32'd67
-) (
-    output _id_2,
-    input _id_3,
-    input logic _id_4,
-    output id_5
+// Seed: 180125814
+`define pp_22 0
+`define pp_23 0
+module module_0 (
+    output logic id_0,
+    input logic id_1,
+    input logic id_2,
+    output id_3,
+    input logic id_4,
+    output id_5,
+    input logic id_6,
+    input logic id_7,
+    output id_8,
+    input logic id_9,
+    output id_10
+    , id_22,
+    input logic id_11,
+    input logic id_12
+    , id_23,
+    input id_13
+    , id_24,
+    input id_14,
+    output logic id_15,
+    input id_16,
+    input id_17,
+    input id_18,
+    output id_19,
+    output id_20,
+    output logic id_21
 );
-  always @(*) begin
-    if (~id_4) begin
-      case (id_3 - 1)
-        1'b0: id_5 <= id_2;
-        id_5, id_4, 1, id_3 == 1, 1, 1'd0, id_1[id_4[id_3]&id_3 : 1], id_5[id_1[1 : id_2]*1], 1'b0:
-        id_4 = id_5[id_4] == id_3[id_4 : 1];
-        ~id_4: id_2 <= 1;
-        id_3: begin
-          id_1 <= id_3;
-        end
-      endcase
-    end
-  end
+  logic id_25 = 1;
+endmodule
+`timescale 1ps / 1 ps
+module module_1 (
+    input id_0,
+    output logic id_1,
+    output logic id_2,
+    input logic id_3,
+    output id_4
+);
+  type_25(
+      id_1, id_2, 1
+  );
+  assign id_15[1] = id_9;
 endmodule

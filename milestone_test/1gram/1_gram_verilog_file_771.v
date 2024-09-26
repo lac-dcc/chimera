@@ -1,4 +1,11 @@
-// Seed: 4124077944
-`default_nettype id_1
-`define pp_2 0
-`define pp_3 0
+// Seed: 2869011882
+`define pp_1 0
+module module_0 (
+    id_1
+);
+  input id_1;
+  type_0 id_1 (
+      1'b0,
+      1
+  );
+endmodule

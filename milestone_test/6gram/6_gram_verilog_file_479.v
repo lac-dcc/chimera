@@ -1,9 +1,11 @@
-// Seed: 4044647141
+// Seed: 1057542377
 module module_0 (
-    input logic id_2,
+    output id_0,
+    input logic id_1,
+    output logic id_2,
     input id_3,
     output id_4
 );
   logic id_5;
-  logic id_6 = id_2;
+  assign id_4 = 1;
 endmodule

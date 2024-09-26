@@ -1,21 +1,4 @@
-// Seed: 4130108086
-`timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
-);
-  output id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  assign id_5 = 1 ? 1 : 1;
-  initial SystemTFIdentifier(id_6);
-endmodule
+// Seed: 697848798
+`timescale 1ps / 1 ps
+`define pp_0 0
+`timescale 1 ps / 1 ps `default_nettype wire

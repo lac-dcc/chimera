@@ -1,18 +1,15 @@
-// Seed: 3761673931
-module module_0 (
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    output id_8
-);
-  type_15 id_9 (
-      .id_0(),
-      .id_1(id_3),
-      .id_2(id_1[1]),
-      .id_3(1)
+// Seed: 2407851336
+`timescale 1 ps / 1ps
+module module_0;
+  logic id_0;
+  logic id_1;
+  type_9(
+      1, id_0, 1
   );
-  logic id_10 = !id_10, id_11;
+  assign id_1 = id_1;
+  logic id_2 = 1;
+  logic id_3;
+  logic id_4;
+  logic id_5 = id_2 && "" == id_2(1);
+  logic id_6 = id_6;
 endmodule

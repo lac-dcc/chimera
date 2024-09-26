@@ -1,24 +1,55 @@
-// Seed: 1607266689
-`timescale 1 ps / 1ps
-module module_0 #(
-    parameter id_2 = 32'd48
+// Seed: 2600724265
+`default_nettype id_7
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25
 );
-  type_7(
-      1, 1 - 1, id_1, 1
-  );
-  logic id_3;
-  assign id_2[1] = 1;
-  task id_4;
-    begin
-      id_4 = id_4[1&id_2 : 1];
-      id_2 <= id_4;
-    end
-  endtask
-  assign id_4 = 1;
-  logic id_5;
-  always @(posedge 1) begin
-    id_2 <= id_2 ? 1 : 1;
-  end
-  logic id_6;
-  assign id_5 = 1;
+  inout id_25;
+  input id_24;
+  input id_23;
+  output id_22;
+  output id_21;
+  output id_20;
+  output id_19;
+  output id_18;
+  input id_17;
+  input id_16;
+  output id_15;
+  output id_14;
+  output id_13;
+  output id_12;
+  inout id_11;
+  input id_10;
+  output id_9;
+  input id_8;
+  inout id_7;
+  input id_6;
+  input id_5;
+  input id_4;
+  inout id_3;
+  inout id_2;
+  inout id_1;
 endmodule

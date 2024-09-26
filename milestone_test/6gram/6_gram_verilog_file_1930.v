@@ -1,31 +1,19 @@
-// Seed: 2936890494
-module module_0 #(
-    parameter id_4 = 32'd4
-) (
-    output logic id_1,
-    output id_2,
-    output id_3,
-    input _id_4
+// Seed: 218037497
+`timescale 1 ps / 1 ps
+module module_0 (
+    input logic id_0,
+    input logic id_1
+    , id_6,
+    input id_2,
+    input id_3,
+    input id_4
+    , id_7,
+    output logic id_5
 );
-  assign id_2[id_4] = 1;
-  logic id_5;
-  logic id_6 = 1;
-  logic id_7;
-  logic id_8;
-  assign id_8 = id_7;
-  assign id_8[id_4[1]] = 1 ? {id_5, id_5} : id_3;
-  logic id_9;
-  reg   id_10 = 1;
-  always @(1'b0) id_10 <= 1;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3
-);
-  output id_3;
-  output id_2;
-  output id_1;
-  logic id_4 = 1'b0 == id_2;
-  logic id_5;
+  reg id_8;
+  reg id_9;
+  always_comb @(posedge id_2 != id_9 or posedge id_3) begin
+    if (id_7) id_8 <= 1;
+    else id_9 <= id_4;
+  end
 endmodule

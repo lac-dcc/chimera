@@ -1,6 +1,7 @@
-// Seed: 2062702839
-`timescale 1ps / 1 ps
-module module_0 ();
-  logic id_1;
-  logic id_2;
+// Seed: 1996505465
+module module_0;
+  assign id_0[{""{1}}] = 1'd0;
+  always @(posedge id_0) begin
+    if (1'd0) id_1 <= 1;
+  end
 endmodule

@@ -1,13 +1,19 @@
-// Seed: 3979085355
-module module_0 #(
-    parameter id_1 = 32'd27
-) ();
-  assign id_1 = id_1[1];
-  logic id_2;
-  assign id_2[id_1] = 1;
-  assign id_1 = id_1;
-  logic id_3;
-  logic id_4;
-  assign id_4 = {id_3[1]{id_3}};
-  assign id_2 = 1;
+// Seed: 1310753967
+module module_0 (
+    output id_0,
+    input logic id_1,
+    output id_2,
+    input id_3,
+    input id_4,
+    output logic id_5,
+    input logic id_6,
+    input logic id_7,
+    input logic id_8,
+    input logic id_9,
+    input id_10,
+    inout id_11
+);
+  assign id_2 = ~id_10;
+  logic id_12;
+  timeprecision 1ps;
 endmodule

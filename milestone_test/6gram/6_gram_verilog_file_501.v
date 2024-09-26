@@ -1,17 +1,25 @@
-// Seed: 1093085048
-module module_0 #(
-    parameter id_1 = 32'd10,
-    parameter id_2 = 32'd42
-) ();
-  always @(negedge 1) begin
-    id_1 <= id_1[id_1];
-    if (1) begin
-      id_1 <= 1'h0;
-      #1;
-    end
+// Seed: 2706733458
+module module_0 (
+    output id_0,
+    input id_1,
+    input id_2,
+    input id_3
+    , id_16,
+    output id_4,
+    output reg id_5,
+    input logic id_6,
+    output logic id_7,
+    output id_8,
+    output id_9,
+    input id_10,
+    input logic id_11,
+    input logic id_12,
+    input id_13,
+    output logic id_14,
+    output id_15
+);
+  initial begin
+    if (id_12 && id_2) id_5 <= 1;
+    id_9 = 1;
   end
-  genvar _id_2;
-  assign id_2 = id_2 && 1;
-  defparam id_3.id_4 = id_3;
-  assign id_4 = id_4[id_2] == 1'd0;
 endmodule

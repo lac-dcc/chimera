@@ -1,25 +1,27 @@
-// Seed: 3432235693
-module module_0 #(
-    parameter id_1 = 32'd19
+// Seed: 969547215
+`timescale 1ps / 1ps
+module module_0 (
+    output logic id_0,
+    output logic id_1,
+    output id_2,
+    output logic id_3,
+    input id_4,
+    output logic id_5,
+    input id_6,
+    input id_7,
+    output id_8,
+    input id_9,
+    output id_10,
+    input id_11,
+    input id_12,
+    input id_13
+    , id_18,
+    output id_14,
+    output id_15,
+    input id_16,
+    input id_17
 );
-  logic id_2;
-  assign id_1[1] = 1;
-  assign id_1[id_1[1 : 1]] = 1;
-  generate
-    if (id_1) begin : id_3
-      logic id_4;
-      defparam id_5.id_6 = id_1;
-    end else begin
-      assign id_1 = id_1 == 1;
-      type_0 id_7 (
-          .id_0(id_2),
-          .id_1(1'b0),
-          .id_2(""),
-          .id_3(id_1 & 1'b0),
-          .id_4(id_8[1]),
-          .id_5(id_2),
-          .id_6(id_1)
-      );
-    end
-  endgenerate
+  defparam id_19.id_20 = id_19[1];
+  logic id_21 = 1;
+  assign id_15 = 1;
 endmodule

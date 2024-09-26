@@ -1,13 +1,10 @@
-// Seed: 2360686822
+// Seed: 2766816871
+`define pp_2 0
 module module_0 (
-    output id_2,
-    input reg id_3,
-    input id_4,
-    output logic id_5,
-    input logic id_6,
-    output logic id_7
+    input logic id_0,
+    output id_1
 );
-  always @(posedge 1) begin
-    id_3 <= 1 % id_5;
-  end
+  type_3(
+      id_0, id_1, id_1
+  );
 endmodule

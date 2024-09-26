@@ -1,69 +1,37 @@
-// Seed: 2891297671
-module module_0 #(
-    parameter id_1 = 32'd46,
-    parameter id_2 = 32'd29,
-    parameter id_4 = 32'd13
+// Seed: 830408846
+program module_0 (
+    output logic id_0,
+    output id_1,
+    input id_2,
+    input id_3,
+    input id_4,
+    input logic id_5,
+    output logic id_6,
+    output id_7,
+    input id_8,
+    output reg id_9,
+    output id_10,
+    input id_11,
+    output id_12,
+    input logic id_13,
+    input id_14,
+    input logic id_15,
+    input id_16,
+    input logic id_17,
+    input id_18,
+    input logic id_19
 );
-  assign id_1[1] = 1;
-  assign id_1 = id_1[1'h0 : 1] | 1'b0;
-  logic _id_2;
-  initial begin
-    id_1 <= id_1 == 1;
-    SystemTFIdentifier(id_1, id_1 * id_2 + 1, 1);
-    id_2 <= 1;
-    if ('b0) id_1 <= 1;
-    else begin
-      if (id_1) begin
-        SystemTFIdentifier(1, 1);
-        if (1) id_2 <= id_1;
-        else begin : id_3
-          if (1) begin
-            SystemTFIdentifier;
-          end
-          if (id_1) begin
-            id_2 <= id_1;
-            id_2 <= 1;
-            id_3 <= id_3;
-          end
-        end
-      end else if (1 & id_2) id_2 <= 1'd0;
-      else begin
-        id_1 <= 1;
-        id_2 <= id_1 - (id_1 / 1);
-        id_2 <= id_2;
-        begin
-          SystemTFIdentifier(1'b0, id_2[id_1], 1, id_1, 1'd0);
-          id_1 <= id_1;
-        end
-        if (id_2) begin
-          id_2 = id_2;
-          id_1 <= 1;
-        end else id_1 = id_1;
-        id_2 <= 1;
-        id_1 <= id_2[id_1[1]] == 1;
-        id_1 <= 1'h0;
-        id_1 <= id_1[id_2];
-        id_1 <= 1;
-        id_2[1&1] = 1;
-        #1;
-        id_2 = id_1;
-        id_2[1'b0 : 1] = 1;
-        id_1 = 1;
-        id_2 = 1;
-        id_1 = id_2;
-        id_2 <= id_1;
-      end
-    end
+  reg id_20, id_21, id_22;
+  logic id_23;
+  always @(*) begin
+    id_9 <= id_20;
   end
-  assign id_2 = 1 ? 1 : 1 * id_2;
-  type_7(
-      1, 1, 1
-  );
-  logic _id_4;
-  assign id_4[id_4] = id_1["" : id_4];
-  type_9(
-      1, id_1, 1
-  );
-  assign id_1 = 1'b0;
-  logic id_5;
-endmodule
+  always @(1 or id_21) id_7 = id_19;
+  logic id_24;
+  logic id_25;
+  assign id_23 = {1{1}} && 1'b0;
+  logic id_26;
+  always @(id_14 or posedge 1 - 1) begin
+    id_0 = id_19;
+  end
+endprogram

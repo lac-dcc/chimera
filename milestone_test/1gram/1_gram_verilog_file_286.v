@@ -1,3 +1,2 @@
-// Seed: 1815409221
-module module_0 ();
-endmodule
+// Seed: 2449422874
+`define pp_0 0

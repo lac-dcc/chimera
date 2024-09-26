@@ -1,6 +1,3 @@
-// Seed: 47843756
-module module_0 (
-    input logic id_1,
-    output id_2
-);
-endmodule
+// Seed: 387846491
+`define pp_0 0
+`define pp_1 0

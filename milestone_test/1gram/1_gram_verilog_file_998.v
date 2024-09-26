@@ -1,7 +1,2 @@
-// Seed: 3241102217
-module module_0 ();
-  type_2(
-      .id_0(id_1), .id_1(~id_1)
-  );
-  assign id_1 = id_1;
-endmodule
+// Seed: 2080858189
+`define pp_0 0

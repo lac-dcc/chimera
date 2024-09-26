@@ -1,13 +1,13 @@
-// Seed: 841443735
-`default_nettype id_1 `timescale 1ps / 1ps
-module module_0 #(
-    parameter id_2 = 32'd92
-) ();
-  type_5(
-      1'd0, 1'h0 - 1, id_1
-  );
-  logic _id_2;
-  logic id_3 = 1 == id_3[1'b0==1 : id_2] - 1;
-  logic id_4;
-  assign id_1[1 : 1] = id_2;
+// Seed: 2394906717
+`define pp_6 0
+module module_0 (
+    output id_0,
+    input logic id_1,
+    input logic id_2,
+    input logic id_3,
+    output logic id_4,
+    output id_5
+);
+  logic id_6;
+  logic id_7, id_8;
 endmodule

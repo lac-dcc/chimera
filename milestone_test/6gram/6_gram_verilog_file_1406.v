@@ -1,21 +1,21 @@
-// Seed: 4180644732
-module module_0 #(
-    parameter id_7 = 32'd92
-) (
-    input logic id_1,
-    output id_2,
-    output logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output logic _id_7,
-    input id_8,
-    output logic id_9,
-    output id_10
-    , id_11
-);
-  assign id_9 = 1;
-  assign id_10[id_7] = 1'b0;
-  logic id_12;
-  assign id_2 = 1'b0;
+// Seed: 2756147784
+module module_0;
+  assign id_0 = 1'h0;
+  logic id_1 = 1;
+  always @(*) begin
+    id_1 = id_1;
+  end
+  assign id_1 = 1 ? id_0 - id_0 : 1;
+  logic id_2 = id_2;
+  type_8 id_3 (
+      .id_0(id_1),
+      .id_1(id_0),
+      .id_2(1),
+      .id_3(1),
+      .id_4(id_1),
+      .id_5(1)
+  );
+  logic id_4;
+  assign id_2 = id_0;
+  integer id_6;
 endmodule

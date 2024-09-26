@@ -1,32 +1,16 @@
-// Seed: 2698899017
-`timescale 1ps / 1 ps
-module module_0 #(
-    parameter id_1 = 32'd23
+// Seed: 3358217795
+`celldefine `default_nettype id_3
+module module_0 (
+    input id_0,
+    output logic id_1,
+    inout logic id_2,
+    input logic id_3,
+    input id_4,
+    output id_5,
+    output id_6
 );
-  logic _id_1 = 1 - 1 * id_1;
-  always @(id_1 or posedge id_1) begin
-    id_1 <= 1;
-    SystemTFIdentifier(id_1);
-    case (1)
-      id_1: begin
-        id_1 <= 1;
-        id_1[1+id_1[1] : id_1[id_1]] <= #1 1;
-        if (id_1) if (1) id_1 <= 1;
-      end
-      1: id_1 = 1;
-      1: begin
-        id_1 <= id_1;
-        id_1 = id_1[id_1];
-        id_1 <= 1;
-        SystemTFIdentifier(id_1);
-        SystemTFIdentifier;
-      end
-    endcase
+  initial begin
+    id_2 = id_4;
   end
-  initial
-    if (id_1 || 1) begin
-      for (id_1 = id_1; 1; id_1 = 'b0 - 1) begin
-        id_1 <= 1 - id_1 ? 1 : 1;
-      end
-    end
+  logic id_7;
 endmodule

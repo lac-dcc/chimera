@@ -1,2 +1,2 @@
-// Seed: 1982195211
-`undef pp_1
+// Seed: 2948413832
+`define pp_0 0

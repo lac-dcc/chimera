@@ -1,14 +1,25 @@
-// Seed: 1106513140
+// Seed: 437382056
 module module_0 (
+    input logic id_0
+    , id_10,
     input id_1,
-    input id_2,
-    output logic id_3
+    output logic id_2,
+    input logic id_3,
+    output logic id_4
+    , id_11,
+    input logic id_5,
+    input logic id_6,
+    output id_7,
+    input id_8,
+    output logic id_9
 );
-  type_8(
-      id_1, 1, 1
+  logic id_12;
+  logic id_13;
+  logic id_14;
+  logic id_15 = id_15;
+  logic id_16;
+  logic id_17;
+  type_31(
+      id_14, id_9, id_10
   );
-  logic id_4;
-  always @(1 or id_1) id_1 <= 1;
-  logic id_5;
-  logic id_6 = id_2;
 endmodule

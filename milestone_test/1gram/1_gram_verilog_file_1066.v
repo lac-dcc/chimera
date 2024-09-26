@@ -1,3 +1,10 @@
-// Seed: 1509706366
-`define pp_1 0
-`default_nettype wire
+// Seed: 4170008145
+module module_0 (
+    output logic id_0,
+    input logic id_1,
+    inout id_2,
+    output id_3,
+    input logic id_4
+);
+  logic id_5;
+endmodule

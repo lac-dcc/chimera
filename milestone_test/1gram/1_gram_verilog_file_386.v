@@ -1,109 +1,79 @@
-// Seed: 3372553278
-module module_0 #(
-    parameter id_10 = 32'd27,
-    parameter id_2  = 32'd36,
-    parameter id_4  = 32'd5,
-    parameter id_6  = 32'd46
-) (
-    output logic id_1
+// Seed: 3119871240
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19
 );
-  assign id_1 = id_1;
-  assign id_1 = id_1;
-  assign id_1 = 1;
-  logic _id_2, id_3;
-  logic _id_4;
-  assign id_1 = 1;
-  initial #1 id_2 = (id_4 | id_3) - id_3;
-  reg   id_5;
-  logic _id_6 = 1;
-  generate
-    assign id_1 = 1;
-    assign id_2 = 1'b0;
-    begin
-      begin
-        logic id_7, id_8;
-      end
-      type_32(
-          1
-      );
-      assign id_6[1/id_6 : id_2] = id_2.id_1;
-      string id_9 = "";
-      assign id_9[1] = (id_2);
-    end
-  endgenerate
-  logic _id_10;
-  always id_5 <= 1;
-  reg id_11;
-  assign id_2 = 1'b0 - 1;
-  type_35 id_12 (
-      1 + id_5,
-      id_11,
-      1,
-      1,
-      1'b0,
-      id_11[1'd0-id_4] ? !1 - id_13 : ({id_2, id_1, id_3, 1'h0, id_10} ^ 1),
-      id_4
+  inout id_19;
+  output id_18;
+  output id_17;
+  output id_16;
+  input id_15;
+  inout id_14;
+  output id_13;
+  inout id_12;
+  output id_11;
+  inout id_10;
+  input id_9;
+  input id_8;
+  input id_7;
+  inout id_6;
+  output id_5;
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_19, id_20;
+  type_23(
+      id_3
   );
-  type_36(
-      .id_0(id_12)
-  );
-  assign id_11 = 1;
-  type_37(
-      id_1
-  );
-  logic id_14 (
-      1,
-      id_1,
-      1,
-      id_10[1'b0],
-      id_13,
-      1,
-      1
-  );
-  logic id_15;
-  assign id_4 = id_14;
-  always id_13 <= id_4;
-  assign id_1[id_6!=id_10==1] = {1, id_2, id_5, 1 && id_4, 1'b0} - id_4;
-  always @(1'd0) id_3 = 1;
-  assign id_13 = (1'b0);
-  logic id_16, id_17;
-  assign id_13 = 1;
-  logic id_18;
-  assign id_17 = 1'b0;
-  logic id_19;
-  logic id_20;
-  logic id_21, id_22;
-  integer id_23 (
-      1 & 1,
-      1,
-      (1),
-      id_18,
-      1'b0 !== {1 - 1},
-      id_18[1 : 1]
-  );
-  logic id_24;
-  assign id_13 = 1;
-  logic id_25;
-  logic id_26;
+  assign id_18 = ~1;
+  logic id_21;
+  assign id_14 = 1'b0;
 endmodule
 module module_1 (
-    output id_2#(
-        .id_3(id_3),
-        .id_4(id_3),
-        .id_5(id_3),
-        .id_6(1),
-        .id_7(id_2),
-        .id_8(id_1)
-    ),
-    output id_9,
+    input id_0,
+    input id_1,
+    input id_2,
+    output id_3,
+    output logic id_4,
+    input id_5,
+    output id_6,
+    input id_7,
+    input id_8,
+    input id_9,
     output id_10,
     output id_11,
-    input logic id_12,
-    output logic id_13,
+    input id_12,
+    output id_13,
     output logic id_14
+    , id_24,
+    input id_15,
+    input id_16,
+    input logic id_17,
+    output logic id_18,
+    output logic id_19,
+    input logic id_20,
+    input logic id_21,
+    input logic id_22,
+    input id_23
 );
-  assign id_5 = id_14 ** 1'b0 + id_7[1];
-  logic id_15;
-  assign id_12 = !id_9;
+  logic id_25;
+  logic id_26 = id_1;
 endmodule
-`define pp_1 0

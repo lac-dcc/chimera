@@ -1,18 +1,14 @@
-// Seed: 2279370068
-module module_0 (
-    input logic id_1,
-    input id_2,
-    output id_3,
-    output id_4
-);
-  assign id_1 = 1'h0;
-  type_8(
-      id_3 - 1, 1, id_1
-  );
-  logic id_5;
-  type_0 id_6 (
-      .id_0(1),
-      .id_1(1'b0),
-      .id_2(id_2 * 1 - id_3)
-  );
+// Seed: 3348710768
+module module_0 ();
+  assign id_0 = 1;
+  reg id_1;
+  always @(*) begin
+    SystemTFIdentifier(1);
+    id_1 <= 1;
+    SystemTFIdentifier("" - id_1);
+    if (id_1) begin
+      SystemTFIdentifier(1);
+    end else if (id_1 !== ~id_1) assign id_1 = id_1;
+    else id_1 <= !id_0;
+  end
 endmodule

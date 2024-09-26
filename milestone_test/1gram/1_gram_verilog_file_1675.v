@@ -1,2 +1,3 @@
-// Seed: 3605542367
-`define pp_1 0
+// Seed: 3033761493
+`resetall
+`define pp_0 0

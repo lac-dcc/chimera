@@ -1,3 +1,10 @@
-// Seed: 930511843
-`define pp_1 0
-`define pp_2 0
+// Seed: 4099511948
+module module_0 ();
+  assign id_0 = id_0 * id_0;
+  logic id_1;
+  type_4 id_2 (
+      1,
+      1,
+      1
+  );
+endmodule

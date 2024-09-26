@@ -1,25 +1,21 @@
-// Seed: 3133416294
-module module_0 #(
-    parameter id_1 = 32'd43,
-    parameter id_7 = 32'd35
-) (
-    output logic _id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input logic id_5
-    , id_6
-);
-  assign id_1[id_1] = 1;
-  type_14(
-      (id_4), id_5[1], 1
+// Seed: 2469579431
+`timescale 1ps / 1 ps
+module module_0;
+  logic id_0 = 1 - (1);
+  type_11 id_3 (
+      .id_0(id_1),
+      .id_1(1),
+      .id_2(id_1 - id_4 - id_1),
+      .id_3(),
+      .id_4(1 > id_0),
+      .id_5(1),
+      .id_6(id_4),
+      .id_7(1)
   );
-  assign id_4[1] = id_3[1];
-  assign id_3 = id_6[1];
-  logic _id_7;
-  assign id_5[~id_7] = 1;
-  logic id_8;
-  logic id_9, id_10;
-  logic id_11;
-  assign id_5 = 1;
+  wire id_5;
+  assign id_0 = 1;
+  specify
+    (id_6 => id_7) = (1  : id_5[1] : 1, id_4  : 1  : 1);
+    $setup(posedge id_8, posedge id_9, id_9);
+  endspecify
 endmodule

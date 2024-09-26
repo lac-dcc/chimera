@@ -1,2 +1,2 @@
-// Seed: 1233576673
-`default_nettype id_1
+// Seed: 362775335
+`timescale 1ps / 1 ps

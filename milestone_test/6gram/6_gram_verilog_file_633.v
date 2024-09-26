@@ -1,36 +1,30 @@
-// Seed: 1595578460
-`timescale 1ps / 1ps
+// Seed: 432805693
 module module_0 (
-    input id_1,
-    output id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    output logic id_11,
-    input id_12,
-    input logic id_13,
-    input logic id_14,
-    input logic id_15,
-    input logic id_16,
-    output id_17
-    , id_18,
-    input id_19,
-    input logic id_20,
-    input reg id_21,
-    output logic id_22,
-    input id_23,
-    input id_24,
-    input id_25,
-    output id_26
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  logic id_27;
-  initial begin
-    id_1 = (id_3);
-    id_21 <= id_10;
+  inout id_9;
+  inout id_8;
+  inout id_7;
+  input id_6;
+  output id_5;
+  inout id_4;
+  input id_3;
+  output id_2;
+  input id_1;
+  always @(id_1) begin
+    id_2 <= 1;
   end
+  logic id_9;
+  logic id_10;
+  assign id_8 = 1;
+  logic id_11;
+  assign id_9 = id_1;
 endmodule

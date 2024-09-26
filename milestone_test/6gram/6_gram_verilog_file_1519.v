@@ -1,67 +1,33 @@
-// Seed: 4118387940
-module module_0 #(
-    parameter id_1 = 32'd17,
-    parameter id_2 = 32'd96,
-    parameter id_3 = 32'd24,
-    parameter id_4 = 32'd43,
-    parameter id_5 = 32'd70
-) (
-    input logic _id_2
-    , _id_3,
-    output _id_4
+// Seed: 2145961955
+`timescale 1 ps / 1ps
+module module_0 (
+    output id_0,
+    input id_1,
+    input id_2,
+    input id_3,
+    input id_4,
+    input id_5,
+    input reg id_6,
+    input id_7,
+    output reg id_8
 );
-  assign id_3[(1'b0)] = (id_1) && id_1;
-  type_9(
-      id_5, 1, 1
-  );
-  always @(posedge 1 or id_2) begin
-    if (1 && id_4) begin
-      id_5 <= id_2;
-    end else begin
-      id_5 <= 1;
-      #(1);
-      if (1'b0) begin
-        if (1) begin
-          #1;
-          id_1 <= id_1;
-          id_1 = id_1;
-          id_3 <= id_4;
-        end else begin
-          id_2 <= "";
-        end
-        id_4[id_3[1 : id_5] : 1] <= 1;
+  reg id_9;
+  always @(negedge id_7) begin
+    id_9 <= 1;
+    id_8 <= id_1;
+    if (id_2) id_8 <= #1 id_5;
+    else if (1) id_8 <= id_6;
+    else if (id_9)
+      if (id_1 && 1) id_8 <= #1 id_3;
+      else if (id_6) begin
+        id_8 = 1;
+      end else begin
+        id_0 <= 1'b0;
       end
-      id_1 = 1;
-      id_4 <= id_3;
-      id_4 <= 1;
-      #1 SystemTFIdentifier;
-      id_3 = 1;
-      id_2 <= id_5;
-      SystemTFIdentifier(1, 1);
-      id_3[1 : 1] = 1;
-      id_1 <= 1;
-      id_4 <= id_2;
-      id_5 = 1;
-      SystemTFIdentifier(id_1, id_3[id_5]);
-      id_2 = id_2;
-      SystemTFIdentifier(
-      1,
-      id_2,
-      1 == 1,
-      1,
-      1,
-      "",
-      id_2[id_4],
-      id_2[id_1#(
-      .id_4(1),
-      .id_1(id_2)
-      )],
-                         id_2[id_2 : 1], 1, 1, 1, id_2[(1)], id_4, 1);
-      id_6(1'b0);
-    end
   end
-  assign id_5 = 1;
-  assign id_1[id_2[1 : 1==id_2]] = id_2;
-  logic id_7;
-  assign id_3[id_3] = 1;
+  logic id_10;
+  assign id_9 = id_9;
+  assign id_8 = id_4;
+  logic id_11;
+  timeprecision 1ps;
 endmodule

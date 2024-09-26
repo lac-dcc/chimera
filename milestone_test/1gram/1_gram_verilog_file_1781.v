@@ -1,6 +1,3 @@
-// Seed: 2721978964
-module module_0;
-  logic id_1 = id_1;
-  assign id_1 = id_1;
-endmodule
-`timescale 1ps / 1ps
+// Seed: 1745399880
+`define pp_0 0
+localparam `pp_0 = 1'h0;

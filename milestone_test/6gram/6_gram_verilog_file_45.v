@@ -1,22 +1,22 @@
-// Seed: 2890453273
+// Seed: 1600167952
 `timescale 1ps / 1 ps
 module module_0 (
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    output id_9
-    , id_10
+    output logic id_0,
+    output logic id_1,
+    output id_2,
+    output logic id_3
 );
-  type_16 id_11 (
-      1,
-      id_5,
-      1'b0 - 1
+  logic id_4;
+  logic id_5;
+  assign id_3 = id_4 * 1;
+  type_12 id_6 (
+      .id_0(1),
+      .id_1(id_3),
+      .id_2((1)),
+      .id_3(1),
+      .id_4(1'b0),
+      .id_5(id_2),
+      .id_6(1),
+      .id_7(id_0)
   );
-  assign id_8 = id_10.id_3;
-  logic id_12;
-  initial id_10 = 1;
 endmodule

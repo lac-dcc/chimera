@@ -1,32 +1,31 @@
-// Seed: 3060945073
-`define pp_1 0
-module module_0;
-endmodule
-`define pp_2 0
-module module_1 (
-    input id_1,
-    output logic id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
+// Seed: 799365436
+`define pp_18 0
+module module_0 (
+    output id_0,
+    output id_1,
+    input logic id_2,
+    input id_3,
+    input id_4,
+    output id_5,
+    input logic id_6,
+    output id_7,
+    output logic id_8,
+    output id_9,
+    input id_10,
     output logic id_11,
-    input id_12,
+    output logic id_12
+    , id_18 = 1,
     input logic id_13,
     input id_14,
     input id_15,
     input logic id_16,
-    output id_17
+    input id_17
 );
-  logic id_18, id_19 = 1 == 1, id_20;
-  logic id_21, id_22;
-  type_33(
-      id_7, 1, id_17, (id_7)
+  logic id_19;
+  type_30 id_20 (
+      .id_0({id_1{1'b0 ? (id_17) : id_18}}),
+      .id_1(1),
+      .id_2(1)
   );
-  assign id_9  = id_10;
-  assign id_11 = id_19;
-  logic id_23, id_24;
-endmodule
-`define pp_3 0
+  assign id_5 = id_4;
+endmodule : id_21

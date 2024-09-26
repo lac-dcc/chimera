@@ -1,22 +1,13 @@
-// Seed: 1088512310
-`timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  input id_3;
-  input id_2;
-  output id_1;
-  integer id_4 (
-      .id_0(1),
-      .id_1(~id_2),
-      .id_2(),
-      .id_3(id_2),
-      .id_4(id_2),
-      .id_5(id_1),
-      .id_6(id_1),
-      .id_7(id_1[""]),
-      .id_8(1)
-  );
+// Seed: 362864057
+localparam id_0 = 1;
+`default_nettype id_0 `timescale 1ps / 1 ps
+module module_0 ();
+  always @(*) begin
+    SystemTFIdentifier;
+  end
+  assign id_0 = "";
+  string id_1;
+  always @(1) begin
+    id_0 = id_1;
+  end
 endmodule

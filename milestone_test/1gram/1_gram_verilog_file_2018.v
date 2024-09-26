@@ -1,3 +1,2 @@
-// Seed: 236411069
-wire id_1;
-`define pp_2 0
+// Seed: 1058419326
+parameter id_0 = id_0;

@@ -1,19 +1,4 @@
-// Seed: 1350303696
-module module_0;
-  type_3(
-      .id_0(1),
-      .id_1(id_1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1),
-      .id_5((id_1)),
-      .id_6(1),
-      .id_7(id_1 << {1}),
-      .id_8(1)
-  );
-  always id_1 <= (1);
-  always id_1 <= {1, !1};
-  logic id_2 (id_1);
-  assign id_1 = 1 - 1 - 1;
-  assign id_2 = 1;
-endmodule
+// Seed: 4009712421
+parameter id_0 = 1;
+timeprecision 1ps;
+`define pp_1 0

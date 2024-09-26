@@ -1,64 +1,47 @@
-// Seed: 254675175
-module module_0 #(
-    parameter id_1 = 32'd14,
-    parameter id_2 = 32'd67,
-    parameter id_3 = 32'd34,
-    parameter id_4 = 32'd64,
-    parameter id_5 = 32'd43,
-    parameter id_6 = 32'd50
-) (
-    input _id_1,
-    output logic _id_2,
-    input _id_3,
-    output logic _id_4,
-    inout _id_5,
-    output logic _id_6
+// Seed: 3888098447
+module module_0 (
+    input logic id_0,
+    input logic id_1,
+    output id_2,
+    output id_3,
+    output logic id_4,
+    input logic id_5,
+    output id_6,
+    output id_7,
+    input logic id_8,
+    output id_9,
+    input id_10,
+    output id_11,
+    input logic id_12,
+    input wire id_13,
+    input logic id_14
 );
-  always @(posedge "" - !id_4 or id_5(1
-  ))
-  begin
-    @(posedge 1) id_4[1 : 1] = id_5;
-    id_1 <= 1;
-    if (id_2) begin
-      SystemTFIdentifier(id_6, id_6);
-      id_2 = 1'b0 == !id_2;
-      id_1 <= id_4[id_3 : id_3] & id_4;
-      id_4 <= id_4 + id_5[id_5 :&id_5];
-      wait (1);
-      id_1[id_6] = id_6;
-      @(negedge id_6)
-      if (id_1) begin
-        id_3 <= 1;
-      end
-      id_5 <= 1'b0;
-      #1;
-      SystemTFIdentifier(1'b0, 1);
-      @(id_2[1+:1]) id_5 = 1;
-      id_2 = 1;
-      if (1) id_3 = 1'b0;
-      @(posedge 1 - 1);
-      id_3[id_3[{1-1}]] <= id_1;
-      #1 id_4 = 1;
-      id_5 = 1;
-      #1;
-      if (id_4) begin
-        id_4[{1, id_1["" : id_6[id_1]]}] <= id_2;
-      end
-      id_5 = id_4;
-      #1;
-      id_4 <= #1 1;
-      id_3[id_4] = id_4;
-      id_2 = {1, id_5};
-      if (1) begin
-        id_3 <= #id_7 id_1;
-        id_3 <= 1;
-      end
-    end
-    if (1)
-      if (1) id_3[{1, id_4, id_1[1'b0 : 1], id_2, 1, id_3, 1'b0+id_5}] <= 1;
-      else id_1 <= id_6[id_3 : 1'h0];
-    else begin
-      id_6 <= (id_3);
-    end
+  always @(id_5) begin
+    id_11 <= id_13[1];
   end
+  assign id_9 = 1;
+  type_25 id_15 (
+      .id_0(id_4),
+      .id_1(id_0 - id_10),
+      .id_2(1),
+      .id_3("")
+  );
+  always @(posedge 1) begin
+    id_7 <= 1;
+  end
+  type_26 id_16 (
+      .id_0 (id_4),
+      .id_1 (1),
+      .id_2 (id_9),
+      .id_3 (1 >= id_12),
+      .id_4 (1),
+      .id_5 (1),
+      .id_6 ((id_13)),
+      .id_7 (),
+      .id_8 (id_0),
+      .id_9 (id_1),
+      .id_10(id_4),
+      .id_11(id_5),
+      .id_12(id_15)
+  );
 endmodule

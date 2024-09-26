@@ -1,8 +1,12 @@
-// Seed: 158822611
+// Seed: 3650820744
 module module_0;
+  logic id_0;
+  always #1 begin
+    id_0 = id_0;
+  end
   logic id_1;
-  logic id_2 = 1;
-  assign id_1 = 1'b0;
+  logic id_2;
+  assign id_2 = 1 & id_1;
   logic id_3;
-  assign id_1 = id_3 || id_1 ? id_1 : (id_2[1'd0] ? id_3 : 1);
+  assign id_3 = id_1;
 endmodule

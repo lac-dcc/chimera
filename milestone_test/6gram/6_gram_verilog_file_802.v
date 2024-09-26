@@ -1,49 +1,22 @@
-// Seed: 2679252416
-module module_0 #(
-    parameter id_1 = 32'd29,
-    parameter id_2 = 32'd2
+// Seed: 3768719351
+module module_0 (
+    input id_0,
+    input id_1,
+    input logic id_2,
+    input id_3,
+    output logic id_4,
+    input id_5,
+    input id_6,
+    input id_7,
+    output id_8,
+    input id_9,
+    input logic id_10,
+    input id_11,
+    output logic id_12,
+    output logic id_13
 );
-  always @(posedge id_1) begin
-    id_1 = 1;
-    if (id_1) begin
-      if (1) begin
-        if (id_1) begin
-          id_1 <= 1 ^ 1;
-          id_1 <= 1;
-        end else id_1[id_1 : {id_1}] <= id_1;
-      end else begin
-        id_1[1] <= 1;
-      end
-    end
-  end
-  assign id_1 = 1;
-  logic _id_2 = 1;
-  assign id_1[1] = 1 && id_2 ? id_1[id_1 : id_2] : 1 ? id_2 : id_2;
-  always @(posedge id_2 or posedge id_2) begin
-    SystemTFIdentifier();
-    case (1)
-      1:  id_1 = id_2 ? 1 : 'd0 !== id_1;
-      1: begin
-        id_1 <= 1;
-      end
-      "": id_2 = #1 1;
-      default: begin
-        id_2 = (1 - id_2);
-      end
-    endcase
-  end
-  logic id_3;
-  type_7 id_4 (
-      .id_0(0),
-      .id_1(),
-      .id_2(1),
-      .id_3(),
-      .id_4(1),
-      .id_5(""),
-      .id_6(1),
-      .id_7(1),
-      .id_8(1'b0),
-      .id_9(id_1)
-  );
-  logic id_5;
+  assign id_8 = id_9 ? id_2 : 1'h0;
+  logic id_14 = 1;
+  assign id_14 = id_9 && 1;
+  assign id_13 = 1;
 endmodule

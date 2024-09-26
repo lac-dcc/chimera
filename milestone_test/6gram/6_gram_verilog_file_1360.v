@@ -1,20 +1,17 @@
-// Seed: 2467422669
-module module_0 #(
-    parameter id_6 = 32'd62
-) (
-    output reg id_1,
-    input id_2,
+// Seed: 4039907306
+module module_0 (
+    input id_0,
+    input id_1,
+    input logic id_2,
     input id_3,
-    output id_4,
-    input id_5,
-    output _id_6
+    input id_4,
+    input logic id_5,
+    input id_6,
+    output logic id_7,
+    output id_8
 );
-  reg   id_7;
-  logic id_8;
-  assign id_7[1] = 1;
-  always @(posedge 1, posedge id_5) begin
-    id_7 <= id_1[id_6];
-    id_4 <= id_7;
-    id_3 <= 1'b0;
-  end
+  logic id_9;
+  logic id_10;
+  assign id_10 = id_6 && 1;
 endmodule
+`resetall

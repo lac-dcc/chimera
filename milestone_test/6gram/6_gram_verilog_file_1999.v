@@ -1,44 +1,33 @@
-// Seed: 1272469067
-module module_0 #(
-    parameter id_1 = 32'd27
-);
-  logic _id_1 = 1;
-  assign id_1[id_1 : 1|id_1] = 1;
-  type_4(
-      1'b0, 1'd0, id_2[1]
-  );
-  always @* begin
-    if (1) begin
-      id_1 = id_2;
-    end
-    if (1'b0) id_2 = 1 * id_1;
-    else begin
-      id_1 = id_2;
-    end
-  end
-endmodule
-module module_1 #(
-    parameter id_2 = 32'd58,
-    parameter id_3 = 32'd69
-) (
+// Seed: 2316763015
+module module_0 (
     id_1,
-    _id_2,
-    _id_3,
-    id_4
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  output id_4;
-  input _id_3;
-  input _id_2;
+  output id_7;
+  output id_6;
+  output id_5;
+  inout id_4;
+  input id_3;
+  output id_2;
   output id_1;
-  always @(posedge id_4) begin
-    id_2 = 1;
+  assign id_2 = id_3[1];
+  reg id_7;
+  logic id_8, id_9;
+  assign id_6 = id_3;
+  always @(posedge 1'b0 or posedge id_4 - 1) begin
+    id_7 <= ~id_4;
   end
-  logic id_5;
-  always @(id_4 or 1) begin
-    id_4 <= ((id_2 || id_3 || "" || 1'h0));
-  end
-  assign #1 id_1[id_3] = id_5[id_3-id_2[1] : id_3] << id_5;
-  always @(negedge 1) begin
-    if (id_1) id_3 <= id_3;
-  end
+  logic id_10;
+  function id_11;
+    input logic id_12;
+    id_5 = 'b0;
+  endfunction
+  logic id_13;
+  logic id_14;
+  logic id_15;
 endmodule

@@ -1,22 +1,24 @@
-// Seed: 3862574038
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+// Seed: 827704335
+`timescale 1ps / 1ps
+module module_0 ();
+  type_4(
+      (id_0) * 1
+  );
+  logic id_1;
+  logic id_2, id_3 = 1;
+  initial id_0 = 1;
+endmodule
+`define pp_6 0
+module module_1 (
+    input logic id_0,
+    output logic id_1,
+    output id_2,
+    input id_3,
+    input logic id_4,
+    inout id_5
 );
-  output id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  assign id_7 = 1 - "";
-  assign id_3 = id_6;
+  logic id_6;
+  assign id_2 = 1;
+  logic id_7;
+  assign id_1 = 1;
 endmodule

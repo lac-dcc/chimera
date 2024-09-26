@@ -1,13 +1,19 @@
-// Seed: 918457725
+// Seed: 3026091766
+`timescale 1ps / 1ps
 module module_0 (
-    input logic id_1,
-    input logic id_2,
-    input id_3,
-    output logic id_4,
-    output reg id_5,
-    input id_6,
-    input id_7,
-    output logic id_8
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  always @* id_5 <= 1;
+  output id_6;
+  inout id_5;
+  input id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  assign id_2 = 1;
+  logic id_6, id_7;
 endmodule

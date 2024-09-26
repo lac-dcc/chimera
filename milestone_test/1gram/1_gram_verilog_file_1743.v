@@ -1,2 +1,2 @@
-// Seed: 3084370837
-import id_1::*;
+// Seed: 3347300483
+`define pp_0 0

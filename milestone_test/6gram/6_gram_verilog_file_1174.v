@@ -1,39 +1,26 @@
-// Seed: 269382986
-module module_0 #(
-    parameter id_1 = 32'd68,
-    parameter id_2 = 32'd67,
-    parameter id_4 = 32'd29
+// Seed: 545648178
+module module_0 (
+    output logic id_0,
+    output logic id_1,
+    output id_2,
+    input id_3,
+    input logic id_4,
+    input id_5,
+    input logic id_6,
+    input id_7,
+    output id_8,
+    input string id_9,
+    input id_10,
+    input logic id_11,
+    input id_12,
+    input id_13,
+    output id_14
 );
-  generate
-    for (_id_1 = 1; id_1; id_1 = 1) begin
-      if (id_1) begin
-        type_5 id_3 (
-            .id_0(),
-            .id_1(id_2[id_2[id_4 : id_2]]),
-            .id_2(id_1),
-            .id_3(1),
-            .id_4(id_2),
-            .id_5(id_1),
-            .id_6(1),
-            .id_7(id_1),
-            .id_8(1),
-            .id_9((id_2 ? id_4 : 1'b0))
-        );
-      end else begin
-      end
-    end
-  endgenerate
-  assign id_1[id_1] = id_1 / id_1;
-endmodule
-module module_1 (
-    input reg id_1,
-    output id_2
-);
-  assign id_2 = 1;
-  always @(posedge id_2) begin
-    id_2 <= 1'b0 - 1;
-  end
-  always @(1 or posedge 1) begin
-    id_1 <= 1 & id_1;
-  end
+  type_25(
+      "", id_9, id_2
+  );
+  logic id_15;
+  logic id_16;
+  logic id_17 = ~id_5;
+  logic id_18 = id_10;
 endmodule

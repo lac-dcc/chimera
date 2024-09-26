@@ -1,11 +1,14 @@
-// Seed: 1758655840
+// Seed: 2048650844
+`define pp_3 0
+`timescale 1 ps / 1 ps
 module module_0 (
-    output id_1,
-    input  id_2,
-    output id_3
+    id_1,
+    id_2,
+    id_3
 );
-  initial begin
-    SystemTFIdentifier(1, 1);
-    SystemTFIdentifier(1, id_3);
-  end
+  inout id_3;
+  input id_2;
+  inout id_1;
+  wire  id_3 = id_3[1];
+  logic id_4 = id_2;
 endmodule

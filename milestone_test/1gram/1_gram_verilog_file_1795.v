@@ -1,51 +1,46 @@
-// Seed: 1047230128
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_4 = 32'd67,
-    parameter id_7 = 32'd35
-) (
-    input id_2,
-    input id_3,
-    input logic _id_4,
-    output reg id_5,
-    output id_6,
-    output logic _id_7,
-    input reg id_8
+// Seed: 3370249691
+module module_0 (
+    output id_0,
+    output id_1,
+    inout id_2,
+    output logic id_3,
+    input id_4
 );
-  reg   id_9;
-  logic id_10;
-  reg   id_11;
-  assign id_1 = id_5;
-  assign id_9 = 1;
-  initial begin
-    begin
-      begin
-        begin
-          begin
-            if (id_10) id_7 = 1;
-            id_11 = 1'b0;
-            begin
-              id_5 = ~id_8;
-            end
-          end
-        end
-      end
-      @(id_10) id_3 = 1;
-    end
-    id_4 <= 1;
-    id_6 <= 1;
-    @(negedge 1) id_8[id_4][id_7] <= 1;
-    #1 id_2 <= id_1;
-    @(posedge 'd0) begin
-      begin
-        if (1'b0) id_9 <= id_11;
-        else begin
-          #1 id_1 <= id_3["" : 1'b0];
-        end
-        id_6 = id_11;
-        id_7 <= id_5;
-      end
-    end
-    id_11.id_1 <= #1 1'b0;
-  end
+  assign id_2 = 1'b0 - 1'b0;
+  logic id_5;
+  logic id_6, id_7;
+  type_14(
+      .id_0(id_4),
+      .id_1(id_2),
+      .id_2({1{1}}),
+      .id_3(id_6),
+      .id_4((1)),
+      .id_5(1),
+      .id_6(1),
+      .id_7(id_1),
+      .id_8(1),
+      .id_9(1),
+      .id_10(id_3),
+      .id_11(1),
+      .id_12(1),
+      .id_13(1'h0),
+      .id_14(1),
+      .id_15(id_3 + 1),
+      .id_16(id_5),
+      .id_17(id_2.id_6),
+      .id_18(1),
+      .id_19(id_1),
+      .id_20(id_1 && 1'b0),
+      .id_21(1)
+  );
+  type_15
+      id_8 (
+          1,
+          1,
+          1'b0,
+          1,
+          id_3
+      ),
+      id_9;
+  logic id_10 = id_4 ? ~1 >= id_7 : 1;
 endmodule

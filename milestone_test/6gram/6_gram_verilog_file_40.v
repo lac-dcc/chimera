@@ -1,24 +1,21 @@
-// Seed: 2833590901
-module module_0 #(
-    parameter id_2 = 32'd29,
-    parameter id_4 = 32'd82,
-    parameter id_7 = 32'd30
-) (
-    output id_1,
-    input _id_2,
-    input id_3,
-    output _id_4,
-    input logic id_5,
-    output id_6
+// Seed: 3443072029
+module module_0 (
+    input logic id_0,
+    input id_1,
+    input logic id_2,
+    output id_3,
+    input id_4,
+    input id_5,
+    input logic id_6,
+    output id_7
+    , id_10,
+    output logic id_8,
+    output id_9
 );
-  type_9(
-      id_5, 1
-  );
-  assign id_2 = id_6;
-  assign id_3 = id_5[id_4];
-  assign id_5 = 1;
-  logic _id_7;
-  assign id_1 = 1'b0 + 1 ? 1 : id_7 ? !id_4 : 1;
-  assign id_6 = 1;
-  assign id_5 = id_5[id_4|{id_7{1-id_2}} : 'b0];
+  logic id_11;
+  initial begin
+    @(negedge id_10) id_7 = id_6;
+    cover (id_5);
+    if ((1) && 1'b0) SystemTFIdentifier(1);
+  end
 endmodule

@@ -1,10 +1,2 @@
-// Seed: 3389444488
-module module_0 (
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output logic id_4,
-    input logic id_5
-);
-  logic id_6;
-endmodule
+// Seed: 2825692254
+`default_nettype id_0 `timescale 1ps / 1ps `default_nettype wire

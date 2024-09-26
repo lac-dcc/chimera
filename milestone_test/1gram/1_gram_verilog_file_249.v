@@ -1,9 +1,2 @@
-// Seed: 3696061077
-module module_0 (
-    id_1,
-    id_2
-);
-  output id_2;
-  input id_1;
-  logic id_3, id_4, id_5;
-endmodule
+// Seed: 2061545216
+`timescale 1ps / 1ps

@@ -1,4 +1,2 @@
-// Seed: 115069305
-module module_0 ();
-  assign id_1 = 1;
-endmodule
+// Seed: 1450096184
+`timescale 1ps / 1ps `timescale 1 ps / 1ps

@@ -1,9 +1,24 @@
-// Seed: 2250041715
-module module_0 #(
-    parameter id_1 = 32'd11
+// Seed: 4077397309
+`timescale 1 ps / 1 ps `timescale 1ps / 1ps
+module module_0 (
+    input id_0,
+    output id_1,
+    input logic id_2,
+    output id_3,
+    output id_4,
+    input id_5,
+    input logic id_6,
+    input logic id_7,
+    input logic id_8,
+    input id_9,
+    input id_10,
+    output id_11,
+    output logic id_12,
+    input logic id_13
 );
-  always @(1'b0, posedge id_1) begin
-    id_1 = id_1;
-    id_1[id_1 : 1] <= id_1[id_1 : id_1[1]*id_1-1&1'b0];
-  end
+  type_22 id_14 (
+      .id_0(1 < 1),
+      .id_1(id_10)
+  );
+  logic id_15;
 endmodule

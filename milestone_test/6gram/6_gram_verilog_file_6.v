@@ -1,2 +1,4 @@
-// Seed: 1707265454
-`default_nettype wire
+// Seed: 2792616570
+module module_0;
+  logic id_0;
+endmodule

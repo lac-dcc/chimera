@@ -1,8 +1,11 @@
-// Seed: 3379074134
-module module_0;
-  always @(1)
-    if (id_1) id_1 <= 1'b0;
-    else id_1[1] <= 1'b0;
+// Seed: 1544822331
+`timescale 1 ps / 1 ps
+module module_0 (
+    id_1,
+    id_2
+);
+  output id_2;
+  output id_1;
   logic id_2;
-  assign id_1 = id_1 ? id_1 : id_1;
+  assign id_2 = 1;
 endmodule

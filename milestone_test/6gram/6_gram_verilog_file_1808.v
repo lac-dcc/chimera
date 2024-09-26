@@ -1,9 +1,12 @@
-// Seed: 783756367
-`timescale 1 ps / 1ps
-module module_0;
-  logic id_2 = id_1;
+// Seed: 3600786969
+`timescale 1ps / 1 ps
+module module_0 (
+    output logic id_0,
+    input id_1,
+    output id_2
+);
+  assign id_2[1] = 1;
+  assign id_0 = 1 - 1;
   logic id_3;
-  logic id_4;
-  logic id_5;
-  logic id_6 = id_4, id_7;
+  assign id_2[1'b0] = 1;
 endmodule

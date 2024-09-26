@@ -1,26 +1,19 @@
-// Seed: 2571031619
-module module_0 #(
-    parameter id_10 = 32'd63,
-    parameter id_11 = 32'd26,
-    parameter id_6  = 32'd40
-) (
-    input id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    inout _id_6,
-    output id_7,
-    input id_8,
-    input logic id_9
+// Seed: 3589325339
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic _id_10;
-  assign id_7 = 1;
-  if (id_5) logic _id_11;
-  logic id_12, id_13;
-  assign id_12[(id_6&id_11&1) : 1-id_10[1]] = 1;
-  type_19(
-      id_9
-  );
+  inout id_4;
+  inout id_3;
+  inout id_2;
+  inout id_1;
+  logic id_4;
+  assign id_4 = !1;
+  assign id_3 = 1 + 1;
+  always id_1 = id_2;
+  logic id_5;
+  logic id_6;
+  logic id_7;
 endmodule
-`define pp_1 0

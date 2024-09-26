@@ -1,16 +1,18 @@
-// Seed: 2302632162
-`define pp_1 0
-`timescale 1 ps / 1ps `default_nettype `pp_1 `timescale 1 ps / 1ps
-module module_0 #(
-    parameter id_2 = 32'd2,
-    parameter id_3 = 32'd17
-) ();
-  assign id_1 = id_1[1 : 1];
-  logic _id_2;
-  always @(posedge 1) begin
-    id_2 = 1 ? 1 : 1;
-  end
-  type_6 id_4 (.id_0(1));
-  assign id_2[1'b0] = id_2[id_2];
-  assign id_1 = id_3[id_3];
+// Seed: 1136710638
+`timescale 1 ps / 1ps
+`define pp_4 0
+`timescale 1ps / 1ps
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output id_4;
+  inout id_3;
+  input id_2;
+  input id_1;
+  logic id_4;
+  logic id_5;
+  assign id_5 = id_4;
 endmodule

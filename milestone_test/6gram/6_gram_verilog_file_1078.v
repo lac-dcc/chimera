@@ -1,15 +1,39 @@
-// Seed: 4271813455
-`timescale 1ps / 1ps
-module module_0 #(
-    parameter id_2 = 32'd35
-) (
-    output logic id_1,
-    input _id_2,
-    input id_3,
-    input logic id_4,
-    output id_5
+// Seed: 348121587
+`timescale 1ps / 1ps `timescale 1ps / 1ps
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  always @(1'b0 or posedge id_4[1] - 1) begin
-    #1 id_3 = (id_5[id_2]);
-  end
+  inout id_14;
+  output id_13;
+  inout id_12;
+  output id_11;
+  inout id_10;
+  input id_9;
+  input id_8;
+  input id_7;
+  inout id_6;
+  output id_5;
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_14;
+  logic id_15;
+  logic id_16;
+  type_19(
+      1, 1, 1'd0, 1
+  );
 endmodule

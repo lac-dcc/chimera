@@ -1,2 +1,3 @@
-// Seed: 2354278384
-`define pp_1 0
+// Seed: 2495264259
+`default_nettype id_0
+localparam id_0 = 1'b0;

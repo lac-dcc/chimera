@@ -1,27 +1,14 @@
-// Seed: 1050284086
-module module_0 #(
-    parameter id_5 = 32'd27
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    _id_5,
-    id_6
+// Seed: 2691323020
+module module_0 (
+    output id_0,
+    output id_1,
+    input logic id_2,
+    input id_3,
+    input id_4,
+    input logic id_5,
+    input id_6,
+    input id_7,
+    output logic id_8,
+    output id_9
 );
-  input id_6;
-  input _id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  logic id_7;
-  assign id_4 = 1;
-  initial begin
-    repeat (1) begin
-      id_5 <= #1 1'b0;
-      id_6 <= 1;
-      id_4[id_5 : 1] = 1;
-    end
-  end
 endmodule

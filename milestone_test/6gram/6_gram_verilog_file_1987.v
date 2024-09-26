@@ -1,8 +1,4 @@
-// Seed: 3334441072
-`define pp_1 0
-`timescale 1ps / 1 ps
-`define pp_2 0
-`timescale 1 ps / 1ps
+// Seed: 4139375669
 module module_0 (
     id_1,
     id_2,
@@ -17,18 +13,12 @@ module module_0 (
   output id_7;
   input id_6;
   input id_5;
-  input id_4;
+  output id_4;
   input id_3;
-  output id_2;
-  input id_1;
-  logic id_9 (
-      id_3,
-      id_8,
-      1'b0,
-      1
-  );
-  logic id_10, id_11;
-  string id_12 = "";
-  reg id_13;
-  always @(posedge id_10) id_13 <= id_9;
+  input id_2;
+  output id_1;
+  logic id_8;
+  assign id_1 = !id_5;
+  assign id_4 = id_3;
+  assign #id_9 id_1[1'b0] = 'b0;
 endmodule

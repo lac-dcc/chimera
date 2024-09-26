@@ -1,51 +1,24 @@
-// Seed: 3491071710
-module module_0 #(
-    parameter id_1 = 32'd62,
-    parameter id_5 = 32'd23,
-    parameter id_9 = 32'd67
-) (
-    _id_1,
-    id_2,
-    id_3,
-    id_4,
-    _id_5,
-    id_6,
-    id_7,
-    id_8,
-    _id_9,
-    id_10,
-    id_11
+// Seed: 2401393486
+`timescale 1ps / 1ps `timescale 1ps / 1ps
+module module_0 (
+    input id_0,
+    input id_1,
+    input id_2,
+    input id_3,
+    output logic id_4,
+    input logic id_5,
+    output logic id_6,
+    output logic id_7,
+    output logic id_8,
+    output id_9
+    , id_16,
+    input id_10,
+    input logic id_11,
+    input logic id_12,
+    inout id_13,
+    output id_14,
+    output id_15
 );
-  output id_11;
-  input id_10;
-  input _id_9;
-  output id_8;
-  output id_7;
-  input id_6;
-  input _id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input _id_1;
-  assign id_4 = id_6;
-  always @(posedge 1, posedge id_8#(.id_4(1),
-      .id_7(id_2[id_1[id_9] : 1])
-  ))
-  begin
-    id_11 = ~id_1;
-  end
-  genvar id_12;
-  type_18(
-      1'b0, id_4, 1
-  ); defparam id_13.id_14 = 1'b0 - id_9[id_5];
-  always @(1 or posedge 1) begin
-    SystemTFIdentifier;
-  end
-  logic id_15;
-  logic id_16;
-  assign id_10 = id_6;
-  logic id_17;
-  type_21(
-      1, 1, 1'b0
-  );
+  assign id_6 = 1 ? id_0 - id_11 : 1;
+  assign id_9[1'b0] = id_2;
 endmodule

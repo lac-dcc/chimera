@@ -1,13 +1,9 @@
-// Seed: 4145127896
-module module_0 (
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    output id_5,
-    input logic id_6,
-    input id_7
-    , id_8,
-    output id_9
-);
-  logic id_10;
+// Seed: 4262596043
+module module_0;
+  type_4 id_0 (
+      .id_0(id_1[(1)]),
+      .id_1(1)
+  );
+  logic id_2;
+  logic id_3;
 endmodule

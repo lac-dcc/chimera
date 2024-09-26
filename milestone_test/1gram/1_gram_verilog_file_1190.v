@@ -1,11 +1,2 @@
-// Seed: 455280901
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  input id_3;
-  output id_2;
-  input id_1;
-  logic id_4;
-endmodule
+// Seed: 3882655676
+wire id_0 = "" !== 1'b0, id_1;

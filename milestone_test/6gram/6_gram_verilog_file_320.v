@@ -1,22 +1,30 @@
-// Seed: 4019992340
-`define pp_1 0
+// Seed: 1608122996
 module module_0 (
-    input  id_2,
-    output id_3
+    output reg id_0,
+    input id_1,
+    output id_2,
+    input id_3,
+    output id_4,
+    output id_5,
+    input id_6,
+    output wire id_7
 );
-  logic id_4;
-  logic id_5;
-  assign id_5 = 1 && id_3, id_2[1] = 1'd0;
-  logic id_6;
-  logic id_7;
-  logic id_8;
+  reg id_8;
+  initial begin
+    #1;
+    id_5 = 1;
+    id_8 <= id_1 - 1;
+    id_0 <= id_3;
+  end
   logic id_9;
-  type_18(
-      "", 1, id_10[1]
-  );
-  genvar id_11;
-  assign id_8 = id_4;
-  logic id_12;
-  assign id_9[""] = 1;
-  assign id_11 = 1'b0;
+  assign id_5 = 1;
+  assign id_7[1] = 1;
+  assign id_4 = (id_3 - 1);
+  logic id_10;
+  logic id_11 = 1;
+  reg id_12 = (id_3), id_13 = id_1;
+  assign id_7[1] = 1;
+  logic id_14 = 1;
+  logic id_15;
+  assign id_0 = 1;
 endmodule

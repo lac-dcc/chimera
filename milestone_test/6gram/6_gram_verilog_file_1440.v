@@ -1,22 +1,25 @@
-// Seed: 167046043
-module module_0 #(
-    parameter id_1 = 32'd32
+// Seed: 2244417564
+`timescale 1ps / 1ps
+module module_0 (
+    input logic id_0,
+    output id_1,
+    output logic id_2,
+    input logic id_3,
+    output id_4,
+    input logic id_5,
+    output id_6,
+    output id_7,
+    output logic id_8,
+    output logic id_9,
+    output id_10,
+    input id_11,
+    output logic id_12,
+    input id_13,
+    input logic id_14,
+    output logic id_15,
+    input id_16,
+    output logic id_17,
+    input id_18
 );
-  assign id_1[1'd0] = 1;
-  type_7(
-      id_2, 1, id_2
-  );
-  assign id_1[id_1] = id_1;
-  logic id_3;
-  always @(*) begin
-    id_2 = #id_4 1;
-    id_1 = 1;
-  end
-  type_9 id_5 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1)
-  );
-  logic id_6;
+  logic id_19;
 endmodule

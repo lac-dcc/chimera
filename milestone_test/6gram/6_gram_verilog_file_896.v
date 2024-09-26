@@ -1,16 +1,25 @@
-// Seed: 3841720388
-module module_0 #(
-    parameter id_4 = 32'd12
-) (
-    output id_2,
-    output id_3,
-    input logic _id_4,
-    input logic id_5,
-    input id_6
-    , id_7,
-    output logic id_8
+// Seed: 3981575550
+`timescale 1ps / 1ps
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_1[id_4] = id_4[1] ? 1 : 1;
-  logic id_9;
-  logic id_10;
+  input id_3;
+  inout id_2;
+  input id_1;
+  logic id_3 = id_2 - 1;
+  reg   id_4;
+  logic id_5, id_6;
+  assign id_5 = id_1;
+  always @(1'b0 or posedge 1'b0) begin
+    if (1) begin
+      case (id_6)
+        1: id_2 <= id_4;
+        default: id_3 = (1 == id_1);
+      endcase
+    end else begin
+      SystemTFIdentifier;
+    end
+  end
 endmodule

@@ -1,2 +1,10 @@
-// Seed: 1494405923
-`default_nettype id_1
+// Seed: 777642817
+`timescale 1ps / 1ps
+module module_0 (
+    id_1,
+    id_2
+);
+  inout id_2;
+  output id_1;
+  assign id_2 = 1'h0;
+endmodule

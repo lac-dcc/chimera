@@ -1,7 +1,12 @@
-// Seed: 2788791585
-module module_0 #(
-    parameter id_1 = 32'd93
+// Seed: 3579302749
+module module_0 (
+    input real id_0,
+    input logic id_1,
+    input id_2
 );
-  assign id_1["">=id_1] = id_1;
-  assign id_1 = id_1;
+  type_5(
+      1'b0, 1, (1'b0)
+  );
+  assign id_3 = id_1;
+  assign id_3 = 1 == 1;
 endmodule

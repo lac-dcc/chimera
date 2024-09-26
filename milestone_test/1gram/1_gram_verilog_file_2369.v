@@ -1,2 +1,0 @@
-// Seed: 3725312821
-`timescale 1 ps / 1ps

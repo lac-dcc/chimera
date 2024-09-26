@@ -1,9 +1,2 @@
-// Seed: 558441630
-`resetall
-module module_0 (
-    output id_1,
-    inout logic id_2,
-    output logic id_3,
-    output logic id_4
-);
-endmodule
+// Seed: 1736161878
+`timescale 1 ps / 1ps

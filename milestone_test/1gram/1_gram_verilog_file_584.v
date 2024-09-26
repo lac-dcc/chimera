@@ -1,7 +1,5 @@
-// Seed: 1097514095
-module module_0 #(
-    parameter id_12 = 32'd95
-) (
+// Seed: 1141987335
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -13,46 +11,32 @@ module module_0 #(
     id_9,
     id_10,
     id_11,
-    _id_12,
-    id_13
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
+  output id_16;
+  input id_15;
+  inout id_14;
   output id_13;
-  input _id_12;
+  inout id_12;
   output id_11;
-  input id_10;
+  inout id_10;
   input id_9;
   input id_8;
   input id_7;
-  output id_6;
-  input id_5;
+  inout id_6;
+  output id_5;
   output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  reg id_14, id_15;
-  logic id_16;
-  type_26(
-      id_14
-  );
-  assign id_3[1'h0] = 1;
-  always
-    if (1) id_10 <= id_5;
-    else
-      for (id_12[1 : id_12] = id_15; id_2; id_14 = 1) begin
-        id_12 <= id_15;
-        #1 SystemTFIdentifier(1);
-        if (id_15) forever id_3 <= {"" - id_4};
-        SystemTFIdentifier(1);
-        id_9.id_16 = id_7;
-        if (id_2 - 1);
-      end
-  logic id_17;
-  logic id_18;
-  logic id_19 (
-      1,
-      1,
-      id_1
-  );
-  assign id_16[1 : 1] = 1'd0 - 1;
-  logic id_20, id_21, id_22, id_23;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  assign {1, id_3} = id_8;
+  always id_6 <= id_10;
+  assign id_2 = id_2;
+  generate
+    logic id_16, id_17, id_18 = 1'b0, id_19;
+  endgenerate
 endmodule

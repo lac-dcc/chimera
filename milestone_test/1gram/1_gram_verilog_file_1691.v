@@ -1,2 +1,3 @@
-// Seed: 2664537969
-`timescale 1 ps / 1ps
+// Seed: 2831394468
+`define pp_0 0
+`define pp_1 0

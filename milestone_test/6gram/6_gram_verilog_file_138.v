@@ -1,39 +1,24 @@
-// Seed: 2624422323
-module module_0 #(
-    parameter id_1 = 32'd27
-) (
-    _id_1,
-    id_2,
-    id_3
+// Seed: 1648922789
+`include ""
+module module_0 (
+    input id_0,
+    output logic id_1,
+    input logic id_2,
+    output id_3,
+    input logic id_4,
+    input logic id_5,
+    input id_6,
+    input id_7,
+    input id_8,
+    input logic id_9,
+    input id_10
 );
-  input id_3;
-  output id_2;
-  input _id_1;
-  assign id_2[id_1] = 1'b0;
-  type_13 id_4 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1'h0)
+  logic id_11;
+  type_21(
+      1, 1
   );
-  type_14(
-      1 - id_1, 1 - id_2, 1
-  );
-  type_0 id_5 (
-      .id_0(1),
-      .id_1(1)
-  );
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  logic id_9;
-  always @(posedge 1) begin
-    SystemTFIdentifier;
-  end
-  generate
-    for (id_10 = 1; id_9; id_8 = 1'b0 < 1'h0) begin : id_11
-      logic id_12;
-    end
-  endgenerate
+  logic id_12;
+  logic id_13 = id_13;
+  logic id_14;
+  logic id_15;
 endmodule

@@ -1,15 +1,17 @@
-// Seed: 3533145678
-`timescale 1ps / 1ps
+// Seed: 87415396
 module module_0 (
-    input reg id_2,
-    input id_3,
-    output reg id_4
+    output id_0,
+    input logic id_1,
+    input id_2,
+    output id_3,
+    output logic id_4,
+    output id_5
 );
-  always @(id_2[1'b0] or 1 or id_2 or id_2 or posedge 1 or id_4) begin
-    id_1 <= id_3;
-  end
-  always @(1, id_1 or id_3 or 1'd0 or negedge id_3)
-    if (1 == 1) begin
-      id_2 = id_1;
-    end
+  logic id_6;
+  assign id_4 = 1 - 1'h0;
+  assign id_6#(
+      .id_2(id_2),
+      .id_2(~(id_1))
+  ) = id_2;
+  assign id_5 = id_6;
 endmodule
