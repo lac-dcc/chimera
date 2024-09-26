@@ -87,6 +87,9 @@ bool inferTypes(Node *head) {
   // replace infered types
 
   bool isCorrect = true;
+  std::vector<std::string> wireEquivalents = {
+      " wire ",    " tri ",     " tri0 ", " tri1 ",
+      " supply0 ", " supply1 ", " wor ",  " wand "};
 
   for (auto &[type, eqTypes] : eq) {
 
@@ -112,31 +115,8 @@ bool inferTypes(Node *head) {
 
           case CanonicalTypes::VECTOR:
           case CanonicalTypes::WIRE:
-            n->setElement(" wire ");
-            break;
-          case CanonicalTypes::TRI:
-            n->setElement(" tri ");
-            break;
-          case CanonicalTypes::TRI0:
-            n->setElement(" tri0 ");
-            break;
-          case CanonicalTypes::TRI1:
-            n->setElement(" tri1 ");
-            break;
-          case CanonicalTypes::SUPPLY0:
-            n->setElement(" supply0 ");
-            break;
-          case CanonicalTypes::SUPPLY1:
-            n->setElement(" supply1 ");
-            break;
-          case CanonicalTypes::WOR:
-            n->setElement(" wor ");
-            break;
-          case CanonicalTypes::WAND:
-            n->setElement(" wand ");
-            break;
-          case CanonicalTypes::UWIRE:
-            n->setElement(" uwire ");
+            // selecting a random net_type
+            n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
             break;
           case CanonicalTypes::BIT:
             n->setElement(" bit ");
