@@ -115,7 +115,8 @@ bool inferTypes(Node *head) {
             n->setElement(" wire ");
             break;
           case CanonicalTypes::BIT:
-
+            n->setElement(" bit ");
+            break;
           case CanonicalTypes::SCALAR:
           case CanonicalTypes::CONST_SCALAR:
           case CanonicalTypes::LOGIC:
