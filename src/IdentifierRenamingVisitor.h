@@ -12,7 +12,7 @@ extern bool debug;
 struct Var {
   std::string name;
   std::string type;
-  std::string dir;
+  PortDir dir;
 };
 
 /**
@@ -30,7 +30,8 @@ private:
     MODULE,
     DEFINING_ID,
     DEFINING_TYPE,
-    TYPE_DECL
+    TYPE_DECL,
+    ASSIGNMENT
   };
 
   std::stack<ContextType> contexts;
@@ -53,8 +54,11 @@ public:
   int varID = 0;
   int moduleID = 0;
   int typeID = 0;
-  IdentifierRenamingVisitor(int id, int modID,
-                            std::unordered_map<std::string, Node *> &declMap);
+
+  IdentifierRenamingVisitor(
+      int modID, std::unordered_map<std::string, Node *> &declMap,
+      std::unordered_map<std::string, std::pair<Node *, PortDir>>
+          &directionMap);
 
   virtual void visit(Terminal *node) override;
 
@@ -81,6 +85,8 @@ public:
   virtual void visit(Decl_dimensions_opt *node) override;
 
   virtual void visit(Any_port_list_opt *node) override;
+
+  virtual void visit(Delay_or_event_control_opt *node) override;
 
   virtual void visit(Net_declaration *node) override;
 

@@ -170,9 +170,10 @@ static void replaceConstants(Node *head) {
   visitor.applyVisit(head);
 }
 
-static int renameVars(Node *head, int n, int modID,
-                      std::unordered_map<std::string, Node *> &declMap) {
-  IdentifierRenamingVisitor visitor(n, modID, declMap);
+static int renameVars(
+    Node *head, int modID, std::unordered_map<std::string, Node *> &declMap,
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
+  IdentifierRenamingVisitor visitor(modID, declMap, directionMap);
   visitor.applyVisit(head);
   return visitor.varID;
 }
@@ -235,9 +236,9 @@ static int renameNonAnsiPorts(Node *head, int counter, int n,
   return counter;
 }
 
-static bool
-matchNonAnsiPorts(Node *head, int n,
-                  std::unordered_map<std::string, Node *> &dir_map) {
+static bool matchNonAnsiPorts(
+    Node *head, int n, std::unordered_map<std::string, Node *> &dir_map,
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
   bool done = false;
 
   if (head->getElement() == "module_item_list_opt") {
@@ -245,16 +246,30 @@ matchNonAnsiPorts(Node *head, int n,
       std::cerr << "Matching non ansi ports" << std::endl;
 
     for (int i = 1; i <= n; i++) {
-      int choice = rand() % 2;
+      PortDir choice = static_cast<PortDir>((unsigned short)rand() % 3);
 
       auto id = " id_" + std::to_string(i) + " ";
 
-      auto dir = (choice) ? "input" : "output";
+      std::string dir = "";
+
+      switch (choice) {
+      case PortDir::INPUT:
+        dir = "input";
+        break;
+      case PortDir::OUTPUT:
+        dir = "output";
+        break;
+      case PortDir::INOUT:
+      default:
+        dir = "inout";
+        break;
+      }
 
       auto childId = std::make_unique<Terminal>(id);
       dir_map[id] = childId.get();
 
       auto childDir = std::make_unique<Terminal>(dir);
+      directionMap[id] = {childDir.get(), choice};
       head->insertChildToBegin(std::make_unique<Terminal>("; "));
       head->insertChildToBegin(std::move(childId));
       head->insertChildToBegin(std::move(childDir));
@@ -263,16 +278,17 @@ matchNonAnsiPorts(Node *head, int n,
   }
 
   for (int i = 0; i < (int)head->getChildren().size() && !done; i++) {
-    done |= matchNonAnsiPorts(head->getChildren()[i].get(), n, dir_map);
+    done |= matchNonAnsiPorts(head->getChildren()[i].get(), n, dir_map,
+                              directionMap);
   }
 
   return done;
 }
 
-static int
-declareNonAnsiPorts(Node *head,
-                    std::unordered_map<std::string, Node *> &decl_map,
-                    std::unordered_map<std::string, Node *> &dir_map) {
+static void declareNonAnsiPorts(
+    Node *head, std::unordered_map<std::string, Node *> &decl_map,
+    std::unordered_map<std::string, Node *> &dir_map,
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
   auto count = 0;
   if (debug)
     std::cerr << "Code is not ansi" << std::endl;
@@ -280,9 +296,7 @@ declareNonAnsiPorts(Node *head,
   if (debug)
     std::cerr << count << " vars found" << std::endl;
   renameNonAnsiPorts(head, 0, count, decl_map);
-  matchNonAnsiPorts(head, count, dir_map);
-
-  return count;
+  matchNonAnsiPorts(head, count, dir_map, directionMap);
 }
 
 static void replaceTypes(Node *head, int &id) {
@@ -536,6 +550,86 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 
   return flags;
 }
+PortDir currentDir = PortDir::INPUT;
+
+static void setDir(Node *head) {
+  auto currPort = head->getChildren()[0]->getChildren()[0]->getElement();
+
+  if (currPort == " output ")
+    currentDir = PortDir::OUTPUT;
+  else if (currPort == " input ")
+    currentDir = PortDir::INPUT;
+  else if (currPort == " inout ")
+    currentDir = PortDir::INOUT;
+}
+
+static std::string getID(Node *head, int &counter,
+                         std::unordered_map<std::string, Node *> &decl_map) {
+  if (head->type == NodeType::GENERICIDENTIFIER) {
+
+    auto s = " id_" + std::to_string(counter++) + " ";
+    decl_map[s] = head->getChildren()[0].get();
+
+    if (debug)
+      std::cerr << "Renaming ID to " << s << std::endl;
+
+    head->getChildren()[0]->setElement(std::move(s));
+
+    return head->getChildren()[0]->getElement();
+  } else if (head->type == NodeType::CLASS_ID) {
+
+    return getID(head->getChildren()[0]->getChildren()[0].get(), counter,
+                 decl_map); // accesses GenericIdentifier directly
+
+  } else if (head->type == NodeType::UNQUALIFIED_ID) {
+    return getID(head->getChildren()[0].get(), counter, decl_map);
+
+  } else if (head->type == NodeType::PORT_DECLARATION_ANSI) {
+
+    if (head->getChildren()[0]->type == NodeType::PORT_DIRECTION) {
+      return getID(head->getChildren()[2].get(), counter, decl_map);
+    } else if (head->getChildren()[0]->type ==
+               NodeType::TYPE_IDENTIFIER_FOLLOWED_BY_ID) {
+      return getID(head->getChildren()[0].get(), counter, decl_map);
+    } else if (head->getChildren()[0]->type == NodeType::DATA_TYPE_PRIMITIVE) {
+      return getID(head->getChildren()[1].get(), counter, decl_map);
+    }
+
+  } else if (
+      head->type ==
+      NodeType::DATA_TYPE_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
+
+    if (head->getChildren().size() == 1) {
+      return getID(head->getChildren()[0]->getChildren()[0].get(), counter,
+                   decl_map); // accesses unqualified_id directly
+    } else if (head->getChildren()[0]->type ==
+               NodeType::SIGNING) { // id is in class_id in third position
+      return getID(head->getChildren()[2].get(), counter, decl_map);
+    } else { // id is in class_id production in the second position
+      return getID(head->getChildren()[1].get(), counter, decl_map);
+    }
+  }
+  return NULL;
+}
+
+static void findAnsiDeclarations(
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap,
+    Node *head, std::unordered_map<std::string, Node *> &decl_map,
+    int &counter) {
+  // port_declaration_ansi
+  //  direction in port_direction child
+  if (head->type == NodeType::PORT_DECLARATION_ANSI) {
+    if (head->getChildren()[0].get()->type == NodeType::PORT_DIRECTION) {
+      setDir(head->getChildren()[0].get());
+      auto id = getID(head, counter, decl_map);
+      directionMap[id] = {head, currentDir};
+    }
+  }
+
+  for (const auto &c : head->getChildren()) {
+    findAnsiDeclarations(directionMap, c.get(), decl_map, counter);
+  }
+}
 
 bool generateProgram(
     int n,
@@ -556,18 +650,21 @@ bool generateProgram(
   int modID = 0;
   std::unordered_map<std::string, Node *> declMap;
   std::unordered_map<std::string, Node *> dirMap;
+  std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
   for (const auto &m : modules) {
     declMap.clear();
     dirMap.clear();
     auto ansi = isAnsi(m);
-    int n = 0;
     if (!ansi) {
-      n = declareNonAnsiPorts(m, declMap, dirMap);
+      declareNonAnsiPorts(m, declMap, dirMap, directionMap);
+    } else {
+      int counter = 0;
+      findAnsiDeclarations(directionMap, m, declMap, counter);
     }
     removeParameters(m);
     removeBodyParameters(m);
     removeAssignmentsInPorts(m);
-    int lastID = renameVars(m, n, modID++, declMap);
+    int lastID = renameVars(m, modID++, declMap, directionMap);
 
     replaceTypes(m, lastID);
 
@@ -577,7 +674,8 @@ bool generateProgram(
   }
 
   declMap.clear();
-  renameVars(head.get(), 0, 0, declMap);
+  dirMap.clear();
+  renameVars(head.get(), 0, declMap, directionMap);
 
   return isCorrect;
 }
