@@ -114,6 +114,30 @@ bool inferTypes(Node *head) {
           case CanonicalTypes::WIRE:
             n->setElement(" wire ");
             break;
+          case CanonicalTypes::TRI:
+            n->setElement(" tri ");
+            break;
+          case CanonicalTypes::TRI0:
+            n->setElement(" tri0 ");
+            break;
+          case CanonicalTypes::TRI1:
+            n->setElement(" tri1 ");
+            break;
+          case CanonicalTypes::SUPPLY0:
+            n->setElement(" supply0 ");
+            break;
+          case CanonicalTypes::SUPPLY1:
+            n->setElement(" supply1 ");
+            break;
+          case CanonicalTypes::WOR:
+            n->setElement(" wor ");
+            break;
+          case CanonicalTypes::WAND:
+            n->setElement(" wand ");
+            break;
+          case CanonicalTypes::UWIRE:
+            n->setElement(" uwire ");
+            break;
           case CanonicalTypes::BIT:
             n->setElement(" bit ");
             break;
