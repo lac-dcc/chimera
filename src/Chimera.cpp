@@ -2,6 +2,7 @@
 #include "CodeGenVisitor.h"
 #include "ConstantsReplacerVisitor.h"
 #include "IdentifierRenamingVisitor.h"
+#include "LivenessVisitor.h"
 #include "TypeInference.h"
 #include "Visitor.h"
 #include <algorithm>
@@ -631,16 +632,17 @@ static void findAnsiDeclarations(
   }
 }
 
-bool generateProgram(
+void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
-    std::unique_ptr<Node> &head, std::mt19937 &gen) {
+    std::unique_ptr<Node> &head, std::mt19937 &gen,
+    std::vector<std::unique_ptr<Module>> &modules) {
 
   head = buildSyntaxTree(map, n, gen);
 
-  std::vector<Node *> modules, portDeclarations;
+  std::vector<Node *> moduleHeads, portDeclarations;
 
-  findNodes(head.get(), modules, portDeclarations);
+  findNodes(head.get(), moduleHeads, portDeclarations);
 
   removePortDeclarations(portDeclarations);
   bool isCorrect = true;
@@ -651,9 +653,12 @@ bool generateProgram(
   std::unordered_map<std::string, Node *> declMap;
   std::unordered_map<std::string, Node *> dirMap;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
-  for (const auto &m : modules) {
+
+  for (auto &m : moduleHeads) {
+
     declMap.clear();
     dirMap.clear();
+    directionMap.clear();
     auto ansi = isAnsi(m);
     if (!ansi) {
       declareNonAnsiPorts(m, declMap, dirMap, directionMap);
@@ -671,13 +676,37 @@ bool generateProgram(
     addConstantIDsToParameterList(m, declMap, dirMap);
 
     isCorrect &= inferTypes(m);
+    if (isCorrect) {
+      auto mod = std::make_unique<Module>();
+      mod->moduleHead = m->getParent()->extractChild(m);
+      mod->directionMap = std::move(directionMap);
+
+      modules.push_back(std::move(mod));
+    }
   }
 
   declMap.clear();
   dirMap.clear();
+  directionMap.clear();
   renameVars(head.get(), 0, declMap, directionMap);
+}
 
-  return isCorrect;
+static int measureSize(Node *head, int &size) {
+  if (head->getChildren().size() == 0) {
+    size++;
+  } else {
+    for (const auto &c : head->getChildren()) {
+      return measureSize(c.get(), size);
+    }
+  }
+}
+
+static int measureSize(std::vector<std::unique_ptr<Node>> &heads) {
+  int size = 0;
+  for (const auto &h : heads) {
+    measureSize(h.get(), size);
+  }
+  return size;
 }
 
 int main(int argc, char **argv) {
@@ -716,26 +745,34 @@ int main(int argc, char **argv) {
   }
 
   unsigned int finalSeed = seed;
+  std::mt19937 gen(seed);
+
+  std::vector<std::unique_ptr<Module>>
+      createdModules; // modules that were created
+  std::vector<std::unique_ptr<Module>>
+      usedModules; // modules already processed that will be in the output
+                   // program
   do {
-    std::mt19937 gen(seed);
-    generatedCorrectProgram = generateProgram(n, map, head, gen);
+
+    createdModules.clear();
+    generateModules(n, map, head, gen,
+                    createdModules); // populates createdModules with type
+                                     // inference checked modules
+    // analyze matching modules
+
     if (verbose && printSeed) {
       std::cerr << "Seed: " << seed << std::endl;
     }
-
-    if (allow || generatedCorrectProgram)
-      finalSeed = seed;
-
-    seed = rd();
-  } while (!allow && !generatedCorrectProgram);
+  } while (false); // measureSize(usedModules) < TARGET_SIZE
 
   if (printSeed)
     std::cout << "// Seed: " << finalSeed << "\n";
 
   if (flags.count("printtree"))
     dumpSyntaxTree(head.get());
-
-  codeGen(head.get());
+  for (const auto &m : createdModules) {
+    codeGen(m->moduleHead.get());
+  }
 
   return 0;
 }
