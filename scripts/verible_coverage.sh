@@ -1,17 +1,30 @@
 #!/bin/bash
 
+# This script is used to obtain coverage for Verible's tools. It can support
+# both verible-verilog-syntax and verible-verilog-obfuscate. In order to make it
+# work properly, you must compile the target Verible tool with Clang's
+# source-based coverage (https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
+
+# "Incremental" means that all considered files contribute to coverage. Thus, if
+# the script is run without the -i argument, the output will tell the coverage
+# that is obtained by running the Verible tool for each individual file.
+
+# The script outputs the results in CSV format to the standard output.
+
 display_usage() {
   >&2 echo "\
-Usage: $0 <_verible_tool_executable> [-h|--help] [-f|--file FILE] [-i|--incremental]
+Usage: $0 <_verible_tool_executable> [-h|--help] [-d|--dir DIRECTORY] [-f|--file FILE] [-i|--incremental]
 
 Options:
-  -f, --file FILE     Specifies a file with a list of paths to be used for coverage instead of getting programs from "../database".
-  -i, --incremental   Indicates that coverate should start at the first program and keep previous profilings for the next coverages.
-  -h, --help          Display this help message and exit.\
+  -d, --dir DIRECTORY  Specifies the directory where files used for coverage will be taken from. Default is "../database"
+  -f, --file FILE      Specifies a file with a list of paths to be used for coverage instead of getting programs from a directory.
+  -i, --incremental    Indicates that coverate should start at the first program and keep previous profilings for the next coverages.
+  -h, --help           Display this help message and exit.\
 "
 }
 
 incremental=false
+target_dir="../database"
 
 # Argument parsing
 while [[ $# -gt 0 ]]; do
@@ -19,6 +32,14 @@ while [[ $# -gt 0 ]]; do
   -i | --incremental)
     incremental=true
     shift
+    ;;
+  -d | --dir)
+    if [ $# -lt 2 -o ! -d "$2" ]; then
+      >&2 echo "Invalid value for \"$1\" option"
+      exit 1
+    fi
+    target_dir=$2
+    shift 2
     ;;
   -f | --file)
     if [ $# -lt 2 -o ! -f "$2" ]; then
@@ -68,20 +89,19 @@ printf "file,line_coverage,branch_coverage"
 printf "\n"
 
 profdata_files=()
+prev_profdata=""
 run_coverage() {
   >&2 echo "$1"
 
   profraw_file="$(basename "$1").profraw"
-  profdata_file="$2.profdata"
+  profdata_file="$(basename "$1").profdata"
 
   if [ $is_obfuscate = true ]; then
     LLVM_PROFILE_FILE=$profraw_file "$verible_exe" < "$1" > /dev/null 2>&1
   else
-    LLVM_PROFILE_FILE=$profraw_file "$verible_exe" "$1"
+    LLVM_PROFILE_FILE=$profraw_file "$verible_exe" "$1" > /dev/null 2>&1
   fi
 
-  ((prev = $2 - 1))
-  prev_profdata="$prev.profdata"
   if [ $incremental = true ] && [ -f "$prev_profdata" ]; then
     llvm-profdata merge -sparse "$profraw_file" "$prev_profdata" -o "$profdata_file"
   else
@@ -107,6 +127,7 @@ run_coverage() {
   elif [ -f "$prev_profdata" ]; then
     rm "$prev_profdata"
   fi
+  prev_profdata=$profdata_file
 }
 
 run_coverage_for_program() {
@@ -119,7 +140,7 @@ run_coverage_for_program() {
 
 i=1
 if [ -z "$file" ]; then
-  for input in ../database/*.v; do
+  for input in $target_dir/*.v; do
     run_coverage_for_program "$input" "$i"
     ((i++))
   done
