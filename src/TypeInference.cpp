@@ -88,8 +88,8 @@ bool inferTypes(Node *head) {
 
   bool isCorrect = true;
   std::vector<std::string> wireEquivalents = {
-      " wire ",    " tri ",     " tri0 ", " tri1 ",
-      " supply0 ", " supply1 ", " wor ",  " wand "};
+      " wire ",    " tri ", " tri0 ", " tri1 ", " supply0 ",
+      " supply1 ", " wor ", " wand ", " uwire "};
 
   for (auto &[type, eqTypes] : eq) {
 

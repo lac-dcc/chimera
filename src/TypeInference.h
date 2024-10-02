@@ -28,14 +28,6 @@ enum class CanonicalTypes : typeId {
   STRING,
   REG,
   WIRE,
-  TRI,
-  TRI0,
-  TRI1,
-  SUPPLY0,
-  SUPPLY1,
-  WOR,
-  WAND,
-  UWIRE,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
