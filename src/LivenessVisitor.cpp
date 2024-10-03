@@ -7,6 +7,12 @@ static bool isFinishingToken(const std::string &t) {
   return t == " end " || t == " endmodule ";
 }
 
+void LivenessVisitor::defaultVisitor(Node* node){
+    for(auto &c: node->getChildren()){
+      applyVisit(c.get());
+    }
+};
+
 void LivenessVisitor::visit(Terminal *node) {
   if (isStartingToken(node->getElement())) {
 
@@ -22,12 +28,21 @@ void LivenessVisitor::visit(Terminal *node) {
   }
 }
 
-void LivenessVisitor::defaultVisitor(Node* node){
-    std::set<std::string> setFromVec(this->identifiersInScope.begin(), this->identifiersInScope.end());
-    this->liveness[node] = setFromVec;
-};
+   void LivenessVisitor::visit(Module_item *node){
+    defaultVisitor(node);
+    ProgramPoint pp;
+    pp.programPoint = node;
+    pp.liveness = std::set<std::string>(identifiersInScope.begin(), identifiersInScope.end());
 
-void LivenessVisitor::visit(Genericidentifier *node) {}
+    programPoints.push_back(std::move(pp));
+   };
+
+void LivenessVisitor::visit(Genericidentifier *node) {
+  if(node->getChildren()[0]->type != NodeType::KEYWORDIDENTIFIER 
+  && node->getChildren()[0]->getElement().find("module") == std::string::npos){
+    identifiersInScope.push_back(node->getChildren()[0]->getElement());
+  }
+}
 
    void LivenessVisitor::visit(Node *node){
     defaultVisitor(node);
@@ -579,9 +594,7 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
     defaultVisitor(node);
    };
 
-   void LivenessVisitor::visit(Decl_dimensions_opt *node){
-    defaultVisitor(node);
-   };
+   void LivenessVisitor::visit(Decl_dimensions_opt*){};
 
    void LivenessVisitor::visit(Class_items_opt *node){
     defaultVisitor(node);
@@ -603,9 +616,6 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
     defaultVisitor(node);
    };
 
-   void LivenessVisitor::visit(Module_item *node){
-    defaultVisitor(node);
-   };
 
    void LivenessVisitor::visit(Statement_item *node){
     defaultVisitor(node);
@@ -1087,9 +1097,7 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
     defaultVisitor(node);
    };
 
-   void LivenessVisitor::visit(Any_port_list_opt *node){
-    defaultVisitor(node);
-   };
+   void LivenessVisitor::visit(Any_port_list_opt*){};
 
    void LivenessVisitor::visit(Macronumericwidth *node){
     defaultVisitor(node);
@@ -1358,9 +1366,7 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
     defaultVisitor(node);
    };
 
-   void LivenessVisitor::visit(Parameter{
-    defaultVisitor(node);
-   } *node){
+   void LivenessVisitor::visit(Parameter_override *node){
     defaultVisitor(node);
    };
 
@@ -1445,7 +1451,9 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
    };
 
    void LivenessVisitor::visit(Udp_port_decls *node){
+    context.push(IdentifierRenamingVisitor::ContextType::DECL);
     defaultVisitor(node);
+    context.pop();
    };
 
    void LivenessVisitor::visit(Integer_vector_type *node){
@@ -1500,9 +1508,7 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
     defaultVisitor(node);
    };
 
-   void LivenessVisitor::visit(Expression *node){
-    defaultVisitor(node);
-   };
+   void LivenessVisitor::visit(Expression*){};
 
    void LivenessVisitor::visit(Cont_assign *node){
     defaultVisitor(node);
@@ -1629,7 +1635,9 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
    };
 
    void LivenessVisitor::visit(Net_declaration *node){
+    context.push(IdentifierRenamingVisitor::ContextType::DECL);
     defaultVisitor(node);
+    context.pop();
    };
 
    void LivenessVisitor::visit(Tk_tagged_opt *node){
@@ -1931,7 +1939,7 @@ void LivenessVisitor::visit(Genericidentifier *node) {}
    };
 
    void LivenessVisitor::visit(
-      Method_property_qualifier_list_not_starting_with_ *node){
+      Method_property_qualifier_list_not_starting_with_virtual *node){
         defaultVisitor(node);
       };
 

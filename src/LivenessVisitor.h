@@ -3,15 +3,24 @@
 
 #include "AST.h"
 #include "Visitor.h"
+#include "IdentifierRenamingVisitor.h"
+#include "TypeInference.h"
 #include <stack>
 #include <vector>
 #include <set>
+
+class ProgramPoint{
+public:
+  Node* programPoint;
+  std::set<std::string> liveness;
+};
 
 class Module {
 public:
   std::unique_ptr<Node> moduleHead;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
-  std::unordered_map<Node *, std::set<std::string>> liveness;
+  std::vector<ProgramPoint> programPoints;
+  std::unordered_map<std::string, CanonicalTypes> idToType;
 };
 
 /**
@@ -20,12 +29,15 @@ public:
  */
 class LivenessVisitor : public Visitor<void> {
 public:
-  std::unordered_map<Node *, std::set<std::string>>& liveness;
+  
   std::vector<std::string> identifiersInScope;
   std::stack<size_t> scopeLimit;
+  std::vector<ProgramPoint>& programPoints;
+  std::stack<IdentifierRenamingVisitor::ContextType> context;
 
-  LivenessVisitor(std::unordered_map<Node *, std::set<std::string>>& l) 
-  : liveness(l) {}
+  LivenessVisitor(std::vector<ProgramPoint>& PP):programPoints(PP){
+    programPoints.clear();
+  }
 
   void defaultVisitor(Node* node);
 

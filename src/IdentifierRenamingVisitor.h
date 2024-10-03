@@ -20,10 +20,7 @@ struct Var {
  * @brief Visitor for renaming identifiers in the AST.
  */
 class IdentifierRenamingVisitor : public Visitor<void> {
-private:
-  std::string defId = "";
-  std::string defType = "";
-
+public:
   enum ContextType {
     EXPR = 0,
     DECL,
@@ -33,6 +30,12 @@ private:
     TYPE_DECL,
     ASSIGNMENT
   };
+  
+private:
+  std::string defId = "";
+  std::string defType = "";
+
+
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared

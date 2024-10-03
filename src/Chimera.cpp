@@ -653,6 +653,7 @@ void generateModules(
   std::unordered_map<std::string, Node *> declMap;
   std::unordered_map<std::string, Node *> dirMap;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
+  
 
   for (auto &m : moduleHeads) {
 
@@ -674,12 +675,13 @@ void generateModules(
     replaceTypes(m, lastID);
 
     addConstantIDsToParameterList(m, declMap, dirMap);
-
-    isCorrect &= inferTypes(m);
+    std::unordered_map<std::string, CanonicalTypes> idToType;
+    isCorrect &= inferTypes(m, idToType);
     if (isCorrect) {
       auto mod = std::make_unique<Module>();
       mod->moduleHead = m->getParent()->extractChild(m);
       mod->directionMap = std::move(directionMap);
+      mod->idToType = idToType;
 
       modules.push_back(std::move(mod));
     }
@@ -691,12 +693,12 @@ void generateModules(
   renameVars(head.get(), 0, declMap, directionMap);
 }
 
-static int measureSize(Node *head, int &size) {
+static void measureSize(Node *head, int &size) {
   if (head->getChildren().size() == 0) {
     size++;
   } else {
     for (const auto &c : head->getChildren()) {
-      return measureSize(c.get(), size);
+      measureSize(c.get(), size);
     }
   }
 }
@@ -707,6 +709,14 @@ static int measureSize(std::vector<std::unique_ptr<Node>> &heads) {
     measureSize(h.get(), size);
   }
   return size;
+}
+
+static std::string findCompatibleId(std::set<std::string>& idsCallerModule, std::unordered_map<std::string, std::pair<Node *, PortDir>>& directionMapCaller, std::unordered_map<std::string, CanonicalTypes>& typeMapCaller, CanonicalTypes type, PortDir dir){
+  for(const auto id : idsCallerModule){
+    if(directionMapCaller[id].second == dir && typeMapCaller[id] == type)
+      return id;
+  }
+  return "";
 }
 
 int main(int argc, char **argv) {
@@ -758,7 +768,33 @@ int main(int argc, char **argv) {
     generateModules(n, map, head, gen,
                     createdModules); // populates createdModules with type
                                      // inference checked modules
-    // analyze matching modules
+    for(auto& m : createdModules){
+      LivenessVisitor lv(m->programPoints);
+      lv.applyVisit(m->moduleHead.get());
+    }
+
+    auto& m = createdModules[rand() % createdModules.size()];//pick a random module
+
+    auto pp = m->programPoints[rand() % m->programPoints.size()];//pick a random program point inside m
+
+    for(const auto & m2: createdModules){
+      if(m2 != m){
+        bool compatible = true;
+
+        std::vector<std::string> chosenIds;
+
+        for(auto [x, y] : m2->directionMap){
+          auto id = findCompatibleId(pp.liveness, m->directionMap, m->idToType, m2->idToType[x], y.second);
+          if(id != ""){
+            chosenIds.push_back(id);
+          }else{
+            compatible = false;
+            break;
+          }
+        }
+
+      }
+    }
 
     if (verbose && printSeed) {
       std::cerr << "Seed: " << seed << std::endl;

@@ -76,7 +76,7 @@ void unifyScalarOperations(std::unordered_set<typeId> &eqTypes) {
   }
 }
 
-bool inferTypes(Node *head) {
+bool inferTypes(Node *head, std::unordered_map<std::string, CanonicalTypes>& idToType) {
   TypeInferenceVisitor visitor;
   auto constraints = visitor.applyVisit(head, visitor.freshType());
   constraintVector constraintVec(constraints.begin(), constraints.end());
@@ -87,7 +87,7 @@ bool inferTypes(Node *head) {
   // replace infered types
 
   bool isCorrect = true;
-
+  
   for (auto &[type, eqTypes] : eq) {
 
     unifyScalarOperations(eqTypes);
@@ -103,11 +103,13 @@ bool inferTypes(Node *head) {
         visitor.typeIdToIdMap.at(type).find("type") !=
             std::string::npos) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
-
+      
       if (!eqTypes.empty()) {
         auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
+        idToType[id] = t;
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
           auto n = visitor.varMap.at(id);
+
           switch (t) {
 
           case CanonicalTypes::VECTOR:
