@@ -91,17 +91,21 @@ bool inferTypes(Node *head, std::unordered_map<std::string, CanonicalTypes>& idT
   for (auto &[type, eqTypes] : eq) {
 
     unifyScalarOperations(eqTypes);
+  auto isType = visitor.typeIdToIdMap.at(type).find("type") != std::string::npos;
+  auto isId = visitor.typeIdToIdMap.at(type).find("id") != std::string::npos;
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
-        (visitor.typeIdToIdMap.at(type).find("type") != std::string::npos ||
-         visitor.typeIdToIdMap.at(type).find("id") != std::string::npos) &&
-        eqTypes.size() > 1) {
+        (isType || isId) && eqTypes.size() > 1) {
       isCorrect = false;
     }
 
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
-        visitor.typeIdToIdMap.at(type).find("type") !=
-            std::string::npos) { // means it is a type_X identifier
+    if(isId){
+      auto id = visitor.typeIdToIdMap.at(type);
+      idToType[id] = (eqTypes.empty()) ? CanonicalTypes::DEFAULT_TYPE 
+                                       : static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
+    }
+
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() && isType) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
       
       if (!eqTypes.empty()) {

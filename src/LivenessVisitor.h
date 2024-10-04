@@ -18,6 +18,7 @@ public:
 class Module {
 public:
   std::unique_ptr<Node> moduleHead;
+  Node* moduleName;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
   std::vector<ProgramPoint> programPoints;
   std::unordered_map<std::string, CanonicalTypes> idToType;

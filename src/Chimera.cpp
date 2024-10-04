@@ -632,6 +632,16 @@ static void findAnsiDeclarations(
   }
 }
 
+static bool findModuleName(Node* head, Node* name){
+  if(head->type == NodeType::GENERICIDENTIFIER && head->getChildren()[0]->getElement().find("module")!= std::string::npos){
+    name = head->getChildren()[0].get(); 
+  }else{
+    for(const auto& c: head->getChildren()){
+      findModuleName(c.get(), name);
+    }
+  }
+}
+
 void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -656,7 +666,8 @@ void generateModules(
   
 
   for (auto &m : moduleHeads) {
-
+    
+    
     declMap.clear();
     dirMap.clear();
     directionMap.clear();
@@ -682,6 +693,7 @@ void generateModules(
       mod->moduleHead = m->getParent()->extractChild(m);
       mod->directionMap = std::move(directionMap);
       mod->idToType = idToType;
+      findModuleName(m, mod->moduleName);
 
       modules.push_back(std::move(mod));
     }
@@ -711,12 +723,27 @@ static int measureSize(std::vector<std::unique_ptr<Node>> &heads) {
   return size;
 }
 
-static std::string findCompatibleId(std::set<std::string>& idsCallerModule, std::unordered_map<std::string, std::pair<Node *, PortDir>>& directionMapCaller, std::unordered_map<std::string, CanonicalTypes>& typeMapCaller, CanonicalTypes type, PortDir dir){
-  for(const auto id : idsCallerModule){
-    if(directionMapCaller[id].second == dir && typeMapCaller[id] == type)
+static std::string findCompatibleId(std::set<std::string>& idsCallerModule, 
+std::unordered_map<std::string, std::pair<Node *, PortDir>>& directionMapCaller, 
+std::unordered_map<std::string, CanonicalTypes>& typeMapCaller, CanonicalTypes type, PortDir dir){
+  for(const auto& id : idsCallerModule){
+
+    if(typeMapCaller[id] == type && ( directionMapCaller.find(id) == directionMapCaller.end() 
+    || directionMapCaller[id].second == dir))
       return id;
   }
   return "";
+}
+
+static void callModule(ProgramPoint& caller, std::string callee, std::vector<std::string>& chosenIds){
+  Node* parent =  caller.programPoint->getParent();
+  int pos = 0;
+
+  auto newNode = 
+
+  while(parent->getChildren()[pos].get() != caller.programPoint)
+    pos++;
+  
 }
 
 int main(int argc, char **argv) {
@@ -762,6 +789,7 @@ int main(int argc, char **argv) {
   std::vector<std::unique_ptr<Module>>
       usedModules; // modules already processed that will be in the output
                    // program
+
   do {
 
     createdModules.clear();
@@ -777,7 +805,7 @@ int main(int argc, char **argv) {
 
     auto pp = m->programPoints[rand() % m->programPoints.size()];//pick a random program point inside m
 
-    for(const auto & m2: createdModules){
+    for(auto & m2: createdModules){
       if(m2 != m){
         bool compatible = true;
 
@@ -788,10 +816,20 @@ int main(int argc, char **argv) {
           if(id != ""){
             chosenIds.push_back(id);
           }else{
-            compatible = false;
-            break;
+            //maybe include a primitive module
+            continue;
           }
         }
+        m->moduleName->setElement("module_" + std::to_string(usedModules.size()));
+
+        usedModules.push_back(std::move(m));
+        createdModules.erase(std::remove(createdModules.begin(), createdModules.end(), m), createdModules.end());
+
+        m2->moduleName->setElement("module_" + std::to_string(usedModules.size()));
+        usedModules.push_back(std::move(m2));
+        createdModules.erase(std::remove(createdModules.begin(), createdModules.end(), m2), createdModules.end());
+
+        callModule(pp, m2->moduleName(), chosenIds);
 
       }
     }
