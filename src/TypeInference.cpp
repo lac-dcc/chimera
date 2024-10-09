@@ -76,7 +76,8 @@ void unifyScalarOperations(std::unordered_set<typeId> &eqTypes) {
   }
 }
 
-bool inferTypes(Node *head, std::unordered_map<std::string, CanonicalTypes>& idToType) {
+bool inferTypes(Node *head,
+                std::unordered_map<std::string, CanonicalTypes> &idToType) {
   TypeInferenceVisitor visitor;
   auto constraints = visitor.applyVisit(head, visitor.freshType());
   constraintVector constraintVec(constraints.begin(), constraints.end());
@@ -87,27 +88,34 @@ bool inferTypes(Node *head, std::unordered_map<std::string, CanonicalTypes>& idT
   // replace infered types
 
   bool isCorrect = true;
-  
+
   for (auto &[type, eqTypes] : eq) {
 
     unifyScalarOperations(eqTypes);
-  auto isType = visitor.typeIdToIdMap.at(type).find("type") != std::string::npos;
-  auto isId = visitor.typeIdToIdMap.at(type).find("id") != std::string::npos;
+    auto isType =
+        visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
+        visitor.typeIdToIdMap.at(type).find("type") != std::string::npos;
 
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
-        (isType || isId) && eqTypes.size() > 1) {
+    auto isId =
+        visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
+        visitor.typeIdToIdMap.at(type).find("id") != std::string::npos;
+
+    if ((isType || isId) && eqTypes.size() > 1) {
       isCorrect = false;
     }
 
-    if(isId){
+    if (isId) {
       auto id = visitor.typeIdToIdMap.at(type);
-      idToType[id] = (eqTypes.empty()) ? CanonicalTypes::DEFAULT_TYPE 
-                                       : static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
+      idToType[id] =
+          (eqTypes.empty())
+              ? CanonicalTypes::DEFAULT_TYPE
+              : static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
     }
 
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() && isType) { // means it is a type_X identifier
+    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
+        isType) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
-      
+
       if (!eqTypes.empty()) {
         auto t = static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
         idToType[id] = t;

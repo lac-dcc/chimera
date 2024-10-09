@@ -30,12 +30,10 @@ public:
     TYPE_DECL,
     ASSIGNMENT
   };
-  
+
 private:
   std::string defId = "";
   std::string defType = "";
-
-
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared

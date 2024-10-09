@@ -2,26 +2,28 @@
 #define CHIMERA_LIVENESS_H
 
 #include "AST.h"
-#include "Visitor.h"
 #include "IdentifierRenamingVisitor.h"
 #include "TypeInference.h"
+#include "Visitor.h"
+#include <set>
 #include <stack>
 #include <vector>
-#include <set>
 
-class ProgramPoint{
+class ProgramPoint {
 public:
-  Node* programPoint;
+  Node *programPoint;
   std::set<std::string> liveness;
 };
 
 class Module {
 public:
-  std::unique_ptr<Node> moduleHead;
-  Node* moduleName;
+  std::shared_ptr<Node> moduleHead;
+  Node *moduleName;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
+  std::vector<std::pair<std::string, PortDir>> portList;
   std::vector<ProgramPoint> programPoints;
   std::unordered_map<std::string, CanonicalTypes> idToType;
+  bool isSelected = false;
 };
 
 /**
@@ -30,17 +32,16 @@ public:
  */
 class LivenessVisitor : public Visitor<void> {
 public:
-  
   std::vector<std::string> identifiersInScope;
   std::stack<size_t> scopeLimit;
-  std::vector<ProgramPoint>& programPoints;
+  std::vector<ProgramPoint> &programPoints;
   std::stack<IdentifierRenamingVisitor::ContextType> context;
 
-  LivenessVisitor(std::vector<ProgramPoint>& PP):programPoints(PP){
+  LivenessVisitor(std::vector<ProgramPoint> &PP) : programPoints(PP) {
     programPoints.clear();
   }
 
-  void defaultVisitor(Node* node);
+  void defaultVisitor(Node *node);
 
   virtual void visit(Terminal *node) override;
 

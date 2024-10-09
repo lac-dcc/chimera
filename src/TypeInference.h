@@ -32,7 +32,8 @@ enum class CanonicalTypes : typeId {
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 
-bool inferTypes(Node *head,std::unordered_map<std::string, CanonicalTypes>& idToType);
+bool inferTypes(Node *head,
+                std::unordered_map<std::string, CanonicalTypes> &idToType);
 
 /**
  * @brief A visitor for performing type inference on an abstract syntax tree
