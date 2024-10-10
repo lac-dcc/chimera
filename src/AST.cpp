@@ -9,6 +9,17 @@ void Node::clearChildren() {
   this->children.clear();
 }
 
+std::unique_ptr<Node> Node::extractChild(Node *child) {
+  for (auto it = children.begin(); it != children.end(); ++it) {
+    if (it->get() == child) {
+      std::unique_ptr<Node> extractedNode = std::move(*it);
+      children.erase(it);
+      return extractedNode;
+    }
+  }
+  return nullptr;
+}
+
 void Node::insertChildToBegin(std::unique_ptr<Node> child) {
   this->children.insert(children.begin(), std::move(child));
 }

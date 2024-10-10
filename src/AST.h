@@ -544,6 +544,8 @@ public:
 
   void setElement(std::string element);
 
+  std::unique_ptr<Node> extractChild(Node *);
+
 private:
   std::vector<std::unique_ptr<Node>> children;
 
