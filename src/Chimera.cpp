@@ -513,10 +513,11 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   options.add_options()
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
+    ("t,target-size", "Target size for the generated programs", cxxopts::value<int>()->default_value("100"))
     ("p,printtree", "Prints productions chains.")
     ("printseed", "Prints the randomization seed.")
     ("d,debug", "Prints debug messages.")
-    ("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
+    //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
     ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
@@ -714,7 +715,7 @@ void generateModules(
 }
 
 static void measureSize(Node *head, int &size) {
-  if (head->getChildren().size() == 0) {
+  if (head->getChildren().empty() && head->getElement().size() > 0) {
     size++;
   } else {
     for (const auto &c : head->getChildren()) {
@@ -797,11 +798,6 @@ int main(int argc, char **argv) {
                   ? flags["seed"].as<std::random_device::result_type>()
                   : 0;
   auto n = flags["n-value"].as<int>();
-  bool generatedCorrectProgram = false;
-  bool allow = false;
-
-  if (flags.count("allow-ambiguous"))
-    allow = true;
 
   std::unique_ptr<Node> head;
   std::random_device rd;
@@ -818,7 +814,7 @@ int main(int argc, char **argv) {
   std::vector<std::shared_ptr<Module>>
       usedModules; // modules already processed that will be in the output
                    // program
-  int TARGET_SIZE = 500;
+  int TARGET_SIZE = flags["target-size"].as<int>();
 
   do {
     do {
