@@ -639,7 +639,7 @@ static void findAnsiDeclarations(
 }
 
 static void findModuleName(Node *head, Node *&name) {
-  if (head->type == NodeType::GENERICIDENTIFIER &&
+  if (head->type == NodeType::GENERICIDENTIFIER && !head->getChildren().empty() &&
       head->getChildren()[0]->getElement().find("module") !=
           std::string::npos) {
     name = head->getChildren()[0].get();
@@ -695,7 +695,9 @@ void generateModules(
 
     addConstantIDsToParameterList(m, declMap, dirMap);
     std::unordered_map<std::string, CanonicalTypes> idToType;
-    isCorrect &= inferTypes(m, idToType);
+
+    isCorrect = inferTypes(m, idToType);
+
     if (isCorrect) {
       auto mod = std::make_shared<Module>();
       mod->moduleHead = m->getParent()->extractChild(m);
@@ -715,7 +717,7 @@ void generateModules(
 }
 
 static void measureSize(Node *head, int &size) {
-  if (head->getChildren().empty() && head->getElement().size() > 0) {
+  if (head->getChildren().empty() && !head->getElement().empty()) {
     size++;
   } else {
     for (const auto &c : head->getChildren()) {
@@ -748,10 +750,11 @@ findCompatibleId(std::vector<std::string> &idsCallerModule,
                  CanonicalTypes type, PortDir dir) {
   for (const auto &id : idsCallerModule) {
 
-    if ( isCompatible(typeMapCaller[id], type) &&
-        (directionMapCaller.find(id) == directionMapCaller.end() ||
-         directionMapCaller[id].second == dir ||
-         directionMapCaller[id].second == PortDir::INOUT))
+    if ( typeMapCaller.find(id)!= typeMapCaller.end() 
+        && isCompatible(typeMapCaller[id], type) 
+        && (directionMapCaller.find(id) == directionMapCaller.end() 
+        || directionMapCaller[id].second == dir 
+        || directionMapCaller[id].second == PortDir::INOUT))
       return id;
   }
   return "";
