@@ -20,11 +20,12 @@ void LivenessVisitor::visit(Terminal *node) {
 
   } else if (isFinishingToken(node->getElement())) {
 
-    while (!scopeLimit.empty() && identifiersInScope.size() > scopeLimit.top()) {
+    while (!scopeLimit.empty() &&
+           identifiersInScope.size() > scopeLimit.top()) {
 
       identifiersInScope.pop_back();
     }
-    if(!scopeLimit.empty())
+    if (!scopeLimit.empty())
       scopeLimit.pop();
   }
 }

@@ -639,7 +639,8 @@ static void findAnsiDeclarations(
 }
 
 static void findModuleName(Node *head, Node *&name) {
-  if (head->type == NodeType::GENERICIDENTIFIER && !head->getChildren().empty() &&
+  if (head->type == NodeType::GENERICIDENTIFIER &&
+      !head->getChildren().empty() &&
       head->getChildren()[0]->getElement().find("module") !=
           std::string::npos) {
     name = head->getChildren()[0].get();
@@ -734,10 +735,10 @@ static int measureSize(std::vector<std::shared_ptr<Module>> &heads) {
   return size;
 }
 
-static bool isCompatible(CanonicalTypes t1, CanonicalTypes t2){
-  auto isWireAndDefault = 
-  (t1 == CanonicalTypes::SCALAR || t1 == CanonicalTypes::DEFAULT_TYPE)
-  && (t2 == CanonicalTypes::SCALAR || t2 == CanonicalTypes::DEFAULT_TYPE);
+static bool isCompatible(CanonicalTypes t1, CanonicalTypes t2) {
+  auto isWireAndDefault =
+      (t1 == CanonicalTypes::SCALAR || t1 == CanonicalTypes::DEFAULT_TYPE) &&
+      (t2 == CanonicalTypes::SCALAR || t2 == CanonicalTypes::DEFAULT_TYPE);
 
   return t1 == t2 || isWireAndDefault;
 }
@@ -750,11 +751,11 @@ findCompatibleId(std::vector<std::string> &idsCallerModule,
                  CanonicalTypes type, PortDir dir) {
   for (const auto &id : idsCallerModule) {
 
-    if ( typeMapCaller.find(id)!= typeMapCaller.end() 
-        && isCompatible(typeMapCaller[id], type) 
-        && (directionMapCaller.find(id) == directionMapCaller.end() 
-        || directionMapCaller[id].second == dir 
-        || directionMapCaller[id].second == PortDir::INOUT))
+    if (typeMapCaller.find(id) != typeMapCaller.end() &&
+        isCompatible(typeMapCaller[id], type) &&
+        (directionMapCaller.find(id) == directionMapCaller.end() ||
+         directionMapCaller[id].second == dir ||
+         directionMapCaller[id].second == PortDir::INOUT))
       return id;
   }
   return "";
