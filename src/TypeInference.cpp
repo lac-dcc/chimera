@@ -1214,7 +1214,8 @@ constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node, typeId) {
   if (node->getChildren()[0]->type == NodeType::PORT_DIRECTION) {
 
     auto portDir = applyVisit(node->getChildren()[0].get(), t);
-    auto vType = applyVisit(node->getChildren()[1].get(), static_cast<typeId>(CanonicalTypes::WIRE));
+    auto vType = applyVisit(node->getChildren()[1].get(),
+                            static_cast<typeId>(CanonicalTypes::WIRE));
     auto dType = applyVisit(node->getChildren()[2].get(), t);
     auto assign = applyVisit(node->getChildren()[3].get(), t);
 
