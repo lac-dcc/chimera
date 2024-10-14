@@ -36,14 +36,14 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
 }
 
 static std::vector<std::string> chooseProds(
-    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
-        &map,
-    const std::string &context, std::mt19937 &gen) {
+    std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &rule_counts_map,
+    const std::string &context, std::mt19937 &gen, const int decayFactor) {
   std::vector<std::string> productionsStr;
   std::vector<double> productionsCount;
 
   int sum = 0;
-  for (const auto &[prod, prodCount] : map.at(context)) {
+  for (const auto &[prod, prodCount] : rule_counts_map[context]) {
     productionsStr.push_back(prod);
     productionsCount.push_back(prodCount);
     sum += prodCount;
@@ -55,7 +55,17 @@ static std::vector<std::string> chooseProds(
 
   std::discrete_distribution<> d(productionsCount.begin(),
                                  productionsCount.end());
-  return breakRuleInProds(productionsStr[d(gen)]);
+
+  int chosenIndex = d(gen);
+  int chosenRuleCount = (productionsCount[chosenIndex] * sum);
+  const std::string &chosenRule = productionsStr[chosenIndex];
+  std::cout << "chosen rule: " << chosenRule << "\n";
+
+  if (decayFactor && (chosenRuleCount > decayFactor)) {
+    rule_counts_map[context][chosenRule] -= decayFactor;
+  }
+
+  return breakRuleInProds(chosenRule);
 }
 
 static std::string getNodeContext(Node *node, const int n) {
@@ -89,9 +99,9 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
 }
 
 static std::unique_ptr<Node> buildSyntaxTree(
-    const std::unordered_map<std::string, std::unordered_map<std::string, int>>
-        &map,
-    const int n, std::mt19937 &gen) {
+    std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &rule_counts_map,
+    const int n, std::mt19937 &gen, const int decayFactor) {
 
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
@@ -104,7 +114,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     stack.pop();
 
     std::string context = getNodeContext(curr, n);
-    auto prods = chooseProds(map, context, gen);
+    auto prods = chooseProds(rule_counts_map, context, gen, decayFactor);
 
     std::vector<std::unique_ptr<Node>> children;
     context = getNodeContext(curr, n - 1);
@@ -124,7 +134,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
         auto aux = prod;
         std::transform(aux.begin(), aux.end(), aux.begin(), tolower);
 
-        if (map.find(context + prod) == map.end()) {
+        if (rule_counts_map.find(context + prod) == rule_counts_map.end()) {
           child = getNodeOrFail(aux, " " + prod + " ");
         } else {
           child = getNodeOrFail(aux, std::move(prod));
@@ -520,6 +530,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
     ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
+    ("decay-factor", "Decay factor for probabilities.", cxxopts::value<int>()->default_value("0"))
     ("h,help", "Display usage");
   // clang-format on
 
@@ -534,6 +545,11 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   if (!flags.count("file")) {
     std::cerr << "Missing JSON file with probabilities." << std::endl;
     std::cerr << "Use --help for more information." << std::endl;
+    exit(1);
+  }
+
+  if (flags["decay-factor"].as<int>() < 0) {
+    std::cerr << "--decay-factor must be greater than 0." << std::endl;
     exit(1);
   }
 
@@ -653,11 +669,12 @@ static void findModuleName(Node *head, Node *&name) {
 
 void generateModules(
     int n,
-    std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
+    std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &rule_counts_map,
     std::unique_ptr<Node> &head, std::mt19937 &gen,
-    std::vector<std::shared_ptr<Module>> &modules) {
+    std::vector<std::shared_ptr<Module>> &modules, const int decayFactor) {
 
-  head = buildSyntaxTree(map, n, gen);
+  head = buildSyntaxTree(rule_counts_map, n, gen, decayFactor);
 
   std::vector<Node *> moduleHeads, portDeclarations;
 
@@ -675,7 +692,6 @@ void generateModules(
   std::vector<std::pair<std::string, PortDir>> portList;
 
   for (auto &m : moduleHeads) {
-
     declMap.clear();
     dirMap.clear();
     directionMap.clear();
@@ -795,7 +811,7 @@ int main(int argc, char **argv) {
                        std::istreambuf_iterator<char>());
   json data = json::parse(json_str);
   f.close();
-  auto map = data.get<
+  auto rule_counts_map = data.get<
       std::unordered_map<std::string, std::unordered_map<std::string, int>>>();
 
   auto seed = flags.count("seed")
@@ -819,12 +835,13 @@ int main(int argc, char **argv) {
       usedModules; // modules already processed that will be in the output
                    // program
   int TARGET_SIZE = flags["target-size"].as<int>();
+  int decayFactor = flags["decay-factor"].as<int>();
 
   do {
     do {
-      generateModules(n, map, head, gen,
-                      createdModules); // populates createdModules with type
-                                       // inference checked modules
+      generateModules(n, rule_counts_map, head, gen, createdModules,
+                      decayFactor); // populates createdModules with
+                                    // type inference checked modules
     } while (createdModules.empty());
 
     for (auto &m : createdModules) {
