@@ -872,12 +872,12 @@ int main(int argc, char **argv) {
                                         std::to_string(usedModules.size()));
 
               if (m_it != createdModules.end()) {
-                // Move `m` to `usedModules` and erase it from `createdModules`
+                // Move m to usedModules
                 usedModules.push_back(std::move(*m_it));
               }
             }
 
-            if (!m2->isSelected) {
+            if (!m2->isSelected) {//If not in usedModules rename and add it 
               m2->isSelected = true;
               m2->moduleName->setElement("module_" +
                                          std::to_string(usedModules.size()));

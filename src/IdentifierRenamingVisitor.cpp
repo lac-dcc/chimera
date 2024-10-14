@@ -80,6 +80,9 @@ Var IdentifierRenamingVisitor::createNewID(std::string t) {
 
   if (debug)
     std::cerr << "ID name: " << v.name << " type: " << v.type << std::endl;
+
+  v.dir = PortDir::NONE;
+
   auto r = std::make_shared<Var>(v);
   identifiers.push_back(r);
 
