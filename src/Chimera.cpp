@@ -877,7 +877,7 @@ int main(int argc, char **argv) {
               }
             }
 
-            if (!m2->isSelected) {//If not in usedModules rename and add it 
+            if (!m2->isSelected) { // If not in usedModules rename and add it
               m2->isSelected = true;
               m2->moduleName->setElement("module_" +
                                          std::to_string(usedModules.size()));
