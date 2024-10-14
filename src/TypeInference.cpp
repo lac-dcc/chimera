@@ -128,6 +128,8 @@ bool inferTypes(Node *head,
           switch (t) {
 
           case CanonicalTypes::VECTOR:
+            n->setElement(" logic [7:0] ");
+            break;
           case CanonicalTypes::WIRE:
             // selecting a random net_type
             n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
@@ -1209,10 +1211,10 @@ constraintSet TypeInferenceVisitor::visit(Array_locator_method *node,
 constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node, typeId) {
 
   auto t = freshType();
-  if (node->getChildren()[0]->getElement() == "port_direction") {
+  if (node->getChildren()[0]->type == NodeType::PORT_DIRECTION) {
 
     auto portDir = applyVisit(node->getChildren()[0].get(), t);
-    auto vType = applyVisit(node->getChildren()[1].get(), t);
+    auto vType = applyVisit(node->getChildren()[1].get(), static_cast<typeId>(CanonicalTypes::WIRE));
     auto dType = applyVisit(node->getChildren()[2].get(), t);
     auto assign = applyVisit(node->getChildren()[3].get(), t);
 
