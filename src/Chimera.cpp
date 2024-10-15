@@ -639,11 +639,17 @@ static void findAnsiDeclarations(
 }
 
 static void findModuleName(Node *head, Node *&name) {
+
   if (head->type == NodeType::GENERICIDENTIFIER &&
-      !head->getChildren().empty() &&
-      head->getChildren()[0]->getElement().find("module") !=
-          std::string::npos) {
-    name = head->getChildren()[0].get();
+      !head->getChildren().empty()) {
+    if (head->getChildren()[0]->getElement().find("module") !=
+        std::string::npos) {
+      name = head->getChildren()[0].get();
+    } else if (head->getChildren()[0]->type == NodeType::KEYWORDIDENTIFIER) {
+      name = head->getChildren()[0]
+                 ->getChildren()[0]
+                 .get(); // accesses the terminal child of keywordIdentifier
+    }
   } else {
     for (const auto &c : head->getChildren()) {
       findModuleName(c.get(), name);
@@ -819,6 +825,9 @@ int main(int argc, char **argv) {
       usedModules; // modules already processed that will be in the output
                    // program
   int TARGET_SIZE = flags["target-size"].as<int>();
+  if (verbose && printSeed) {
+    std::cerr << "Seed: " << seed << "\n" << std::flush;
+  }
 
   do {
     do {
@@ -894,13 +903,10 @@ int main(int argc, char **argv) {
       }
     }
 
-    if (verbose && printSeed) {
-      std::cerr << "Seed: " << seed << std::endl;
-    }
   } while (measureSize(usedModules) < TARGET_SIZE);
 
   if (printSeed)
-    std::cout << "// Seed: " << finalSeed << "\n";
+    std::cout << "// Seed: " << finalSeed << std::endl;
 
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
