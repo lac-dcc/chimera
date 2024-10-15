@@ -655,11 +655,17 @@ static void findAnsiDeclarations(
 }
 
 static void findModuleName(Node *head, Node *&name) {
+
   if (head->type == NodeType::GENERICIDENTIFIER &&
-      !head->getChildren().empty() &&
-      head->getChildren()[0]->getElement().find("module") !=
-          std::string::npos) {
-    name = head->getChildren()[0].get();
+      !head->getChildren().empty()) {
+    if (head->getChildren()[0]->getElement().find("module") !=
+        std::string::npos) {
+      name = head->getChildren()[0].get();
+    } else if (head->getChildren()[0]->type == NodeType::KEYWORDIDENTIFIER) {
+      name = head->getChildren()[0]
+                 ->getChildren()[0]
+                 .get(); // accesses the terminal child of keywordIdentifier
+    }
   } else {
     for (const auto &c : head->getChildren()) {
       findModuleName(c.get(), name);
@@ -836,6 +842,9 @@ int main(int argc, char **argv) {
                    // program
   int TARGET_SIZE = flags["target-size"].as<int>();
   int decayFactor = flags["decay-factor"].as<int>();
+  if (verbose && printSeed) {
+    std::cerr << "Seed: " << seed << std::endl;
+  }
 
   do {
     do {
@@ -889,12 +898,12 @@ int main(int argc, char **argv) {
                                         std::to_string(usedModules.size()));
 
               if (m_it != createdModules.end()) {
-                // Move `m` to `usedModules` and erase it from `createdModules`
+                // Move m to usedModules
                 usedModules.push_back(std::move(*m_it));
               }
             }
 
-            if (!m2->isSelected) {
+            if (!m2->isSelected) { // If not in usedModules rename and add it
               m2->isSelected = true;
               m2->moduleName->setElement("module_" +
                                          std::to_string(usedModules.size()));
@@ -911,13 +920,10 @@ int main(int argc, char **argv) {
       }
     }
 
-    if (verbose && printSeed) {
-      std::cerr << "Seed: " << seed << std::endl;
-    }
   } while (measureSize(usedModules) < TARGET_SIZE);
 
   if (printSeed)
-    std::cout << "// Seed: " << finalSeed << "\n";
+    std::cout << "// Seed: " << finalSeed << std::endl;
 
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
