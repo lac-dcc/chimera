@@ -826,7 +826,7 @@ int main(int argc, char **argv) {
                    // program
   int TARGET_SIZE = flags["target-size"].as<int>();
   if (verbose && printSeed) {
-    std::cerr << "Seed: " << seed << "\n" << std::flush;
+    std::cerr << "Seed: " << seed << std::endl;
   }
 
   do {
