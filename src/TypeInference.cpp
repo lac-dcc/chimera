@@ -166,7 +166,6 @@ bool inferTypes(Node *head,
             n->setElement(" reg ");
             break;
           case CanonicalTypes::INTEGER:
-            // selecting a random net_type
             n->setElement(
                 integerEquivalents[rand() % integerEquivalents.size()]);
             break;
