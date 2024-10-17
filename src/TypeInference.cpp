@@ -146,6 +146,8 @@ bool inferTypes(Node *head,
             break;
           case CanonicalTypes::SCALAR:
           case CanonicalTypes::CONST_SCALAR:
+          n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
+            break;
           case CanonicalTypes::LOGIC:
             n->setElement(" logic ");
             break;
