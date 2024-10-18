@@ -146,6 +146,8 @@ bool inferTypes(Node *head,
             break;
           case CanonicalTypes::SCALAR:
           case CanonicalTypes::CONST_SCALAR:
+            n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
+            break;
           case CanonicalTypes::LOGIC:
             n->setElement(" logic ");
             break;
@@ -170,13 +172,13 @@ bool inferTypes(Node *head,
                 integerEquivalents[rand() % integerEquivalents.size()]);
             break;
           default:
-            n->setElement(" logic ");
+            n->setElement(" wire ");
             break;
           }
         }
       } else if (visitor.varMap.find(id) != visitor.varMap.end()) {
         auto n = visitor.varMap.at(id);
-        n->setElement(" logic ");
+        n->setElement(" wire ");
       }
     }
   }
