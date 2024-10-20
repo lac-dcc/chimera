@@ -852,11 +852,11 @@ int main(int argc, char **argv) {
       for (auto it = createdModules.begin(); it != createdModules.end();) {
         auto &m2 = *it;
         auto rng = std::default_random_engine{};
+        std::vector<std::string> availableIds(pp.liveness.begin(),
+                                              pp.liveness.end());
         if (m2 != m) {
           bool compatible = true;
           std::vector<std::string> chosenIds;
-          std::vector<std::string> availableIds(pp.liveness.begin(),
-                                                pp.liveness.end());
 
           for (auto [x, y] : m2->portList) {
             std::shuffle(availableIds.begin(), availableIds.end(), rng);
@@ -899,6 +899,37 @@ int main(int argc, char **argv) {
             break;
           }
         }
+
+        std::vector<std::string> chosenIds;
+        PortDir currentPortDir = PortDir::OUTPUT;
+        for (const auto &id : availableIds) {
+          if (m->directionMap[id].second == currentPortDir ||
+              m->directionMap[id].second == PortDir::INOUT) {
+            chosenIds.push_back(id);
+            currentPortDir = PortDir::INPUT;
+          }
+        }
+
+        m->moduleName->setElement("module_" +
+                                  std::to_string(usedModules.size()));
+        if (chosenIds.size() == 2) {
+          std::vector<std::string> primitiveNames = {"not", "buf"};
+          m2->moduleName->setElement(
+              primitiveNames[rand() % primitiveNames.size()]);
+        } else if (chosenIds.size() == 3) {
+          std::vector<std::string> primitiveNames = {
+              "and",  "or",     "xor",    "nand",   "nor",
+              "xnor", "bufif1", "bufif0", "notif1", "notif0"};
+          m2->moduleName->setElement(
+              primitiveNames[rand() % primitiveNames.size()]);
+        } else if (chosenIds.size() >= 3) {
+          std::vector<std::string> primitiveNames = {"and",  "or",  "xor",
+                                                     "nand", "nor", "xnor"};
+          m2->moduleName->setElement(
+              primitiveNames[rand() % primitiveNames.size()]);
+        }
+
+        callModule(pp, m2->moduleName->getElement(), chosenIds);
         ++it;
       }
     }
