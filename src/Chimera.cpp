@@ -807,6 +807,88 @@ static void callModule(ProgramPoint &caller, std::string callee,
   parent->insertChild(std::make_unique<Terminal>(call),
                       std::next(parent->getChildren().begin(), pos + 1));
 }
+static bool endsWith(const std::string &str, const std::string &pattern) {
+  // Check if the string is shorter than the pattern
+  if (str.length() < pattern.length()) {
+    return false;
+  }
+  // Compare the substring from the end of the string
+  return str.rfind(pattern) == (str.length() - pattern.length());
+}
+
+static double estimatePrimitiveModuleProbability(
+    int n_gram,
+    std::unordered_map<std::string, std::unordered_map<std::string, int>>
+        &grammar) {
+
+  double sum = 0;
+  double prob = 0;
+
+  if (n_gram == 1) {
+
+    for (auto &[p1, p2] : grammar["module_or_generate_item"]) {
+      if (p1 == "gate_instantiation") {
+        prob = p2;
+      }
+      sum += p2;
+    }
+
+  } else {
+    for (auto &[p1, p2] : grammar) {
+      if (endsWith(p1, "module_or_generate_item")) {
+        for (auto &[p3, p4] : p2) {
+          if (p3 == "gate_instantiation") {
+            prob += p4;
+          }
+          sum += p4;
+        }
+      }
+    }
+  }
+
+  return prob / sum;
+}
+
+static void callPrimitiveModule(Module *m,
+                                std::vector<std::string> &availableIds,
+                                ProgramPoint &pp) {
+  std::vector<std::string> chosenIds;
+  std::string name = "";
+  PortDir currentPortDir = PortDir::OUTPUT;
+
+  for (const auto &id : availableIds) {
+    if (m->directionMap[id].second == currentPortDir ||
+        m->directionMap[id].second == PortDir::INOUT) {
+      chosenIds.push_back(id);
+      currentPortDir = PortDir::INPUT;
+    }
+  }
+
+  std::vector<std::string> primitiveNames;
+
+  switch (chosenIds.size()) {
+  case 2:
+    primitiveNames = {"not", "buf"};
+    break;
+  case 3:
+    primitiveNames = {"and",  "or",     "xor",    "nand",   "nor",
+                      "xnor", "bufif1", "bufif0", "notif1", "notif0"};
+
+    break;
+  default:
+
+    if (chosenIds.size() >= 3) {
+      primitiveNames = {"and", "or", "xor", "nand", "nor", "xnor"};
+    } else {
+
+      return;
+    }
+
+    break;
+  }
+  name = primitiveNames[rand() % primitiveNames.size()];
+  callModule(pp, name, chosenIds);
+}
 
 int main(int argc, char **argv) {
   auto flags = parseArgs(argc, argv);
@@ -846,8 +928,16 @@ int main(int argc, char **argv) {
   std::vector<std::shared_ptr<Module>>
       usedModules; // modules already processed that will be in the output
                    // program
+
   int TARGET_SIZE = flags["target-size"].as<int>();
   int decayFactor = flags["decay-factor"].as<int>();
+
+  double PRIMITIVE_MODULE_PROBABILITY =
+      estimatePrimitiveModuleProbability(n, map);
+  if (debug)
+    std::cerr << "Probability of adding a primitive module: "
+              << PRIMITIVE_MODULE_PROBABILITY << std::endl;
+
   if (verbose && printSeed) {
     std::cerr << "Seed: " << seed << std::endl;
   }
@@ -875,11 +965,11 @@ int main(int argc, char **argv) {
       for (auto it = createdModules.begin(); it != createdModules.end();) {
         auto &m2 = *it;
         auto rng = std::default_random_engine{};
+        std::vector<std::string> availableIds(pp.liveness.begin(),
+                                              pp.liveness.end());
         if (m2 != m) {
           bool compatible = true;
           std::vector<std::string> chosenIds;
-          std::vector<std::string> availableIds(pp.liveness.begin(),
-                                                pp.liveness.end());
 
           for (auto [x, y] : m2->portList) {
             std::shuffle(availableIds.begin(), availableIds.end(), rng);
@@ -898,6 +988,22 @@ int main(int argc, char **argv) {
             // Find the iterator for `m`
             auto m_it =
                 std::find(createdModules.begin(), createdModules.end(), m);
+
+            if (!m2->isSelected) { // If not in usedModules rename and add it
+              m2->isSelected = true;
+              m2->moduleName->setElement("module_" +
+                                         std::to_string(usedModules.size()));
+
+              usedModules.push_back(m2);
+            }
+            callModule(pp, m2->moduleName->getElement(), chosenIds);
+
+            if (rand() / (double)RAND_MAX < PRIMITIVE_MODULE_PROBABILITY) {
+              auto primitiveProgramPoint =
+                  m->programPoints[rand() % m->programPoints.size()];
+              callPrimitiveModule(m.get(), availableIds, primitiveProgramPoint);
+            }
+
             if (!m->isSelected) {
               m->isSelected = true;
               m->moduleName->setElement("module_" +
@@ -909,19 +1015,11 @@ int main(int argc, char **argv) {
               }
             }
 
-            if (!m2->isSelected) { // If not in usedModules rename and add it
-              m2->isSelected = true;
-              m2->moduleName->setElement("module_" +
-                                         std::to_string(usedModules.size()));
-
-              usedModules.push_back(m2);
-            }
-            callModule(pp, m2->moduleName->getElement(), chosenIds);
-
             createdModules.erase(m_it);
             break;
           }
         }
+
         ++it;
       }
     }

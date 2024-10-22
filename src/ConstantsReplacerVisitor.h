@@ -40,5 +40,7 @@ public:
   virtual void visit(Tk_octbase *node) override;
 
   virtual void visit(Tk_octdigits *node) override;
+
+  virtual void visit(Systemtfidentifier *node) override;
 };
 #endif

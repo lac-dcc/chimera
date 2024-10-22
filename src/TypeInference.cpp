@@ -92,6 +92,13 @@ bool inferTypes(Node *head,
       " wire ",    " tri ", " tri0 ", " tri1 ", " supply0 ",
       " supply1 ", " wor ", " wand ", " uwire "};
 
+  std::vector<std::string> integerEquivalents = {
+      " integer ", " int ", " shortint ", " longint ", " byte ", " time ",
+  };
+
+  std::vector<std::string> realEquivalents = {" real ", " shortreal ",
+                                              " realtime "};
+
   for (auto &[type, eqTypes] : eq) {
 
     unifyScalarOperations(eqTypes);
@@ -139,12 +146,14 @@ bool inferTypes(Node *head,
             break;
           case CanonicalTypes::SCALAR:
           case CanonicalTypes::CONST_SCALAR:
+            n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
+            break;
           case CanonicalTypes::LOGIC:
             n->setElement(" logic ");
             break;
 
           case CanonicalTypes::FLOAT_SCALAR:
-            n->setElement(" real ");
+            n->setElement(realEquivalents[rand() % realEquivalents.size()]);
             break;
 
           case CanonicalTypes::STRING:
@@ -158,14 +167,18 @@ bool inferTypes(Node *head,
           case CanonicalTypes::REG:
             n->setElement(" reg ");
             break;
+          case CanonicalTypes::INTEGER:
+            n->setElement(
+                integerEquivalents[rand() % integerEquivalents.size()]);
+            break;
           default:
-            n->setElement(" logic ");
+            n->setElement(" wire ");
             break;
           }
         }
       } else if (visitor.varMap.find(id) != visitor.varMap.end()) {
         auto n = visitor.varMap.at(id);
-        n->setElement(" logic ");
+        n->setElement(" wire ");
       }
     }
   }
@@ -800,13 +813,12 @@ constraintSet TypeInferenceVisitor::visit(Property_implication_expr *node,
   return applyVisit(node->getChildren().front().get(), type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Bit_logic_opt *node, typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Bit_logic_opt *node, typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::BIT));
 }
 
-constraintSet TypeInferenceVisitor::visit(Integer_atom_type *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Integer_atom_type *node, typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::INTEGER));
 }
 
 constraintSet TypeInferenceVisitor::visit(Lifetime *node, typeId type) {
@@ -2415,8 +2427,8 @@ TypeInferenceVisitor::visit(Module_or_generate_item_declaration *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Final_construct *node, typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Final_construct *node, typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::REG));
 }
 
 constraintSet TypeInferenceVisitor::visit(Member_name *, typeId) {
