@@ -20,9 +20,7 @@
 
 using json = nlohmann::json;
 bool debug = false;
-std::unordered_map<std::string, int> productionRuleUses;
 
-static constexpr int MAX_RULE_USES = 1000;
 static constexpr char separator = '~';
 
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
@@ -35,19 +33,6 @@ static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   }
 
   return result;
-}
-
-static size_t
-leastSeenProductionRuleIndex(const std::vector<std::string> &productionsStr) {
-  int minCount = productionRuleUses[productionsStr[0]];
-  size_t minIndex = 0;
-  for (size_t index = 1; index < productionsStr.size(); ++index) {
-    if (productionRuleUses[productionsStr[index]] < minCount) {
-      minIndex = index;
-    }
-  }
-
-  return minIndex;
 }
 
 static std::vector<std::string> chooseProds(
@@ -64,26 +49,25 @@ static std::vector<std::string> chooseProds(
     sum += prodCount;
   }
 
-  for (double &count : productionsCount) {
-    count /= sum;
+  int maxCount = -1;
+  size_t maxCountIndex = 0;
+  for (size_t i = 0; i < productionsCount.size(); ++i) {
+    if (productionsCount[i] > maxCount) {
+      maxCountIndex = i;
+      maxCount = productionsCount[i];
+    }
+    productionsCount[i] /= sum;
   }
 
   std::discrete_distribution<> d(productionsCount.begin(),
                                  productionsCount.end());
 
   size_t chosenIndex = d(gen);
-  if (productionRuleUses[productionsStr[chosenIndex]] > MAX_RULE_USES) {
-    chosenIndex = leastSeenProductionRuleIndex(productionsStr);
-  }
-
   const std::string &chosenRule = productionsStr[chosenIndex];
-  productionRuleUses[chosenRule]++;
-
-  std::cout << "chosen rule: " << chosenRule << "\n";
-  std::cout << "count: " << productionRuleUses[chosenRule] << "\n\n";
-
+  // std::cout << "chosen rule: " << chosenRule << "\n";
   int chosenRuleCount = (productionsCount[chosenIndex] * sum);
-  if (decayFactor && (chosenRuleCount > decayFactor)) {
+  if (decayFactor && chosenIndex == maxCountIndex &&
+      (chosenRuleCount > decayFactor)) {
     rule_counts_map[context][chosenRule] -= decayFactor;
   }
 
