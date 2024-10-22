@@ -933,7 +933,7 @@ int main(int argc, char **argv) {
   int decayFactor = flags["decay-factor"].as<int>();
 
   double PRIMITIVE_MODULE_PROBABILITY =
-      estimatePrimitiveModuleProbability(n, map);
+      estimatePrimitiveModuleProbability(n, rule_counts_map);
   if (debug)
     std::cerr << "Probability of adding a primitive module: "
               << PRIMITIVE_MODULE_PROBABILITY << std::endl;
