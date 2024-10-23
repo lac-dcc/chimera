@@ -76,18 +76,7 @@ void unifyScalarOperations(std::unordered_set<typeId> &eqTypes) {
   }
 }
 
-bool inferTypes(Node *head,
-                std::unordered_map<std::string, CanonicalTypes> &idToType) {
-  TypeInferenceVisitor visitor;
-  auto constraints = visitor.applyVisit(head, visitor.freshType());
-  constraintVector constraintVec(constraints.begin(), constraints.end());
-  equivalenceMap eq;
-  unify(constraintVec, eq);
-  canonicalize(eq);
-
-  // replace infered types
-
-  bool isCorrect = true;
+std::string getType(CanonicalTypes t){
   std::vector<std::string> wireEquivalents = {
       " wire ",    " tri ", " tri0 ", " tri1 ", " supply0 ",
       " supply1 ", " wor ", " wand ", " uwire "};
@@ -98,6 +87,69 @@ bool inferTypes(Node *head,
 
   std::vector<std::string> realEquivalents = {" real ", " shortreal ",
                                               " realtime "};
+  std::string idType = "";
+  switch (t) {
+
+          case CanonicalTypes::VECTOR:
+            idType = " logic [7:0] ";
+            break;
+          case CanonicalTypes::WIRE:
+            // selecting a random net_type
+            idType = wireEquivalents[rand() % wireEquivalents.size()];
+            break;
+          case CanonicalTypes::BIT:
+            idType = " bit ";
+            break;
+          case CanonicalTypes::SCALAR:
+          case CanonicalTypes::CONST_SCALAR:
+            idType = wireEquivalents[rand() % wireEquivalents.size()];
+            break;
+          case CanonicalTypes::LOGIC:
+            idType = " logic ";
+            break;
+
+          case CanonicalTypes::FLOAT_SCALAR:
+            idType = realEquivalents[rand() % realEquivalents.size()];
+            break;
+
+          case CanonicalTypes::STRING:
+            idType = " string ";
+            break;
+
+          case CanonicalTypes::GATE:
+          case CanonicalTypes::ANONYMOUS_GATE:
+
+            break;
+          case CanonicalTypes::REG:
+            idType = " reg ";
+            break;
+          case CanonicalTypes::INTEGER:
+            idType = 
+                integerEquivalents[rand() % integerEquivalents.size()];
+            break;
+          default:
+            idType = " wire ";
+            break;
+          }
+
+  return idType;
+}
+
+bool inferTypes(Node *head,
+                std::unordered_map<std::string, CanonicalTypes> &idToType,
+                std::vector<std::pair<std::string, std::string>>& undeclaredIds) {
+  TypeInferenceVisitor visitor;
+  auto constraints = visitor.applyVisit(head, visitor.freshType());
+  constraintVector constraintVec(constraints.begin(), constraints.end());
+  std::set<typeId> addedIds;
+  equivalenceMap eq;
+  unify(constraintVec, eq);
+  canonicalize(eq);
+
+  // replace infered types
+
+  bool isCorrect = true;
+  printTypeInferenceDebug(eq, visitor);
 
   for (auto &[type, eqTypes] : eq) {
 
@@ -116,10 +168,32 @@ bool inferTypes(Node *head,
 
     if (isId) {
       auto id = visitor.typeIdToIdMap.at(type);
-      idToType[id] =
-          (eqTypes.empty())
+      auto idType = (eqTypes.empty())
               ? CanonicalTypes::DEFAULT_TYPE
               : static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
+
+      idToType[id] =idType;
+
+      bool isExplDeclared = false;
+
+      for(auto& [c1,c2] : constraintVec){//checks if id is explictly declared
+
+        
+        isExplDeclared = (c1 == type && (visitor.typeIdToIdMap.find(c2) != visitor.typeIdToIdMap.end() &&
+        visitor.typeIdToIdMap.at(c2).find("type"))) 
+        ||
+        (c2 == type && (visitor.typeIdToIdMap.find(c1) != visitor.typeIdToIdMap.end() &&
+        visitor.typeIdToIdMap.at(c1).find("type")));
+
+        if(isExplDeclared)
+          break;
+        
+        
+      }
+      if(!isExplDeclared && addedIds.find(type) == addedIds.end()){
+        addedIds.insert(type);
+        undeclaredIds.push_back({id, getType(idType)});
+      }
     }
 
     if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
@@ -131,50 +205,8 @@ bool inferTypes(Node *head,
         idToType[id] = t;
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
           auto n = visitor.varMap.at(id);
-
-          switch (t) {
-
-          case CanonicalTypes::VECTOR:
-            n->setElement(" logic [7:0] ");
-            break;
-          case CanonicalTypes::WIRE:
-            // selecting a random net_type
-            n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
-            break;
-          case CanonicalTypes::BIT:
-            n->setElement(" bit ");
-            break;
-          case CanonicalTypes::SCALAR:
-          case CanonicalTypes::CONST_SCALAR:
-            n->setElement(wireEquivalents[rand() % wireEquivalents.size()]);
-            break;
-          case CanonicalTypes::LOGIC:
-            n->setElement(" logic ");
-            break;
-
-          case CanonicalTypes::FLOAT_SCALAR:
-            n->setElement(realEquivalents[rand() % realEquivalents.size()]);
-            break;
-
-          case CanonicalTypes::STRING:
-            n->setElement(" string ");
-            break;
-
-          case CanonicalTypes::GATE:
-          case CanonicalTypes::ANONYMOUS_GATE:
-
-            break;
-          case CanonicalTypes::REG:
-            n->setElement(" reg ");
-            break;
-          case CanonicalTypes::INTEGER:
-            n->setElement(
-                integerEquivalents[rand() % integerEquivalents.size()]);
-            break;
-          default:
-            n->setElement(" wire ");
-            break;
-          }
+        n->setElement(getType(t));
+          
         }
       } else if (visitor.varMap.find(id) != visitor.varMap.end()) {
         auto n = visitor.varMap.at(id);
@@ -182,8 +214,6 @@ bool inferTypes(Node *head,
       }
     }
   }
-
-  printTypeInferenceDebug(eq, visitor);
 
   return isCorrect;
 }
@@ -1226,14 +1256,15 @@ constraintSet TypeInferenceVisitor::visit(Port_declaration_ansi *node, typeId) {
   if (node->getChildren()[0]->type == NodeType::PORT_DIRECTION) {
 
     auto portDir = applyVisit(node->getChildren()[0].get(), t);
-    auto vType = applyVisit(node->getChildren()[1].get(),
-                            static_cast<typeId>(CanonicalTypes::WIRE));
+    auto vType = applyVisit(node->getChildren()[1].get(),t);
+
     auto dType = applyVisit(node->getChildren()[2].get(), t);
     auto assign = applyVisit(node->getChildren()[3].get(), t);
 
     portDir.insert(vType.begin(), vType.end());
     portDir.insert(dType.begin(), dType.end());
     portDir.insert(assign.begin(), assign.end());
+    portDir.insert({t, static_cast<typeId>(CanonicalTypes::WIRE)});
 
     return portDir;
 

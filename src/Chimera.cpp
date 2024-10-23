@@ -657,6 +657,21 @@ static void findModuleName(Node *head, Node *&name) {
   }
 }
 
+static void explicitlyDeclareIds(std::vector<std::pair<std::string, std::string>>& idsAndTypes, ProgramPoint& pp){
+  Node* parent = pp.programPoint->getParent();
+  size_t pos = 0;
+  while (pos < parent->getChildren().size() &&
+         parent->getChildren()[pos].get() != pp.programPoint)
+    pos++;
+
+  for(auto& [id,t] : idsAndTypes){
+    std::string decl = t + " " + id + ";\n";
+
+    parent->insertChild(std::make_unique<Terminal>(decl),
+                      std::next(parent->getChildren().begin(), pos + 1));
+  }
+}
+
 void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -679,6 +694,8 @@ void generateModules(
   std::unordered_map<std::string, Node *> dirMap;
   std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
   std::vector<std::pair<std::string, PortDir>> portList;
+  std::vector<std::pair<std::string, std::string>> undeclaredIds;
+
 
   for (auto &m : moduleHeads) {
 
@@ -686,6 +703,7 @@ void generateModules(
     dirMap.clear();
     directionMap.clear();
     portList.clear();
+    undeclaredIds.clear();
     auto ansi = isAnsi(m);
     if (!ansi) {
       declareNonAnsiPorts(m, declMap, dirMap, directionMap, portList);
@@ -703,7 +721,7 @@ void generateModules(
     addConstantIDsToParameterList(m, declMap, dirMap);
     std::unordered_map<std::string, CanonicalTypes> idToType;
 
-    isCorrect = inferTypes(m, idToType);
+    isCorrect = inferTypes(m, idToType, undeclaredIds);
 
     if (isCorrect) {
       auto mod = std::make_shared<Module>();
@@ -712,6 +730,11 @@ void generateModules(
       mod->portList = std::move(portList);
       mod->idToType = idToType;
       findModuleName(m, mod->moduleName);
+
+      LivenessVisitor lv(mod->programPoints);
+      lv.applyVisit(mod->moduleHead.get());
+       if(!mod->programPoints.empty())
+        explicitlyDeclareIds(undeclaredIds, mod->programPoints[0]);
 
       modules.push_back(std::move(mod));
     }
@@ -725,6 +748,7 @@ void generateModules(
 
 static void measureSize(Node *head, int &size) {
   if (head->getChildren().empty() && !head->getElement().empty()) {
+    
     size++;
   } else {
     for (const auto &c : head->getChildren()) {
@@ -925,11 +949,6 @@ int main(int argc, char **argv) {
                       createdModules); // populates createdModules with type
                                        // inference checked modules
     } while (createdModules.empty());
-
-    for (auto &m : createdModules) {
-      LivenessVisitor lv(m->programPoints);
-      lv.applyVisit(m->moduleHead.get());
-    }
 
     auto &m =
         createdModules[rand() % createdModules.size()]; // pick a random module
