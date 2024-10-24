@@ -228,7 +228,7 @@ typeId TypeInferenceVisitor::freshType() {
 }
 
 constraintSet TypeInferenceVisitor::defaultVisitor(Node *node, typeId type) {
-  constraintSet d;
+  constraintSet d = {{}};
   for (auto &c : node->getChildren()) {
     auto d1 = applyVisit(c.get(), type);
     d.insert(d1.begin(), d1.end());
@@ -820,7 +820,7 @@ constraintSet TypeInferenceVisitor::visit(Task_item *node, typeId type) {
 constraintSet TypeInferenceVisitor::visit(
     Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node,
     typeId type) {
-  return defaultVisitor(node, type);
+  return {{}};
 }
 
 constraintSet TypeInferenceVisitor::visit(Specify_block *node, typeId type) {

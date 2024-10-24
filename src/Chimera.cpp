@@ -249,8 +249,10 @@ static bool matchNonAnsiPorts(
 
     for (int i = 1; i <= n; i++) {
       PortDir choice = static_cast<PortDir>((unsigned short)rand() % 3);
+      std::string iStr = std::to_string(i);
 
-      auto id = " id_" + std::to_string(i) + " ";
+      auto id = " id_" + iStr + " ";
+      auto type = " type_" + iStr + " ";
 
       std::string dir = "";
 
@@ -274,8 +276,11 @@ static bool matchNonAnsiPorts(
       directionMap[id] = {childDir.get(), choice};
       portList.push_back({id, choice});
 
+      auto childType = std::make_unique<Terminal>(type);
+
       head->insertChildToBegin(std::make_unique<Terminal>("; "));
       head->insertChildToBegin(std::move(childId));
+      head->insertChildToBegin(std::move(childType));
       head->insertChildToBegin(std::move(childDir));
     }
     done = true;
@@ -426,9 +431,10 @@ renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
       std::string newId = id;
       if (newId[0] == ' ') {
         newId[0] = '_';
-        declMap[id]->setElement(" " + newId);
+        declMap.at(id)->setElement(" " + newId);
+        
       } else {
-        declMap[id]->setElement(" _" + newId);
+        declMap.at(id)->setElement(" _" + newId);
       }
     }
 
@@ -622,14 +628,22 @@ static void findAnsiDeclarations(
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap,
     Node *head, std::unordered_map<std::string, Node *> &decl_map, int &counter,
     std::vector<std::pair<std::string, PortDir>> &portList) {
-  // port_declaration_ansi
-  //  direction in port_direction child
+  int i = 0;
   if (head->type == NodeType::PORT_DECLARATION_ANSI) {
     if (head->getChildren()[0].get()->type == NodeType::PORT_DIRECTION) {
       setDir(head->getChildren()[0].get());
       auto id = getID(head, counter, decl_map);
       directionMap[id] = {head, currentDir};
       portList.push_back({id, currentDir});
+
+      auto netType = head->getChildren()[1].get(); 
+
+      if(netType->getChildren()[0]->getElement().empty()){
+        netType->getChildren()[0]->setElement(" type_" +  std::to_string(i++) + " ");
+
+      }
+      head->getChildren()[2]->clearChildren();
+      head->getChildren()[2]->insertChildToBegin(std::make_unique<Terminal>(""));
     }
   }
 
@@ -654,21 +668,6 @@ static void findModuleName(Node *head, Node *&name) {
     for (const auto &c : head->getChildren()) {
       findModuleName(c.get(), name);
     }
-  }
-}
-
-static void explicitlyDeclareIds(std::vector<std::pair<std::string, std::string>>& idsAndTypes, ProgramPoint& pp){
-  Node* parent = pp.programPoint->getParent();
-  size_t pos = 0;
-  while (pos < parent->getChildren().size() &&
-         parent->getChildren()[pos].get() != pp.programPoint)
-    pos++;
-
-  for(auto& [id,t] : idsAndTypes){
-    std::string decl = t + " " + id + ";\n";
-
-    parent->insertChild(std::make_unique<Terminal>(decl),
-                      std::next(parent->getChildren().begin(), pos + 1));
   }
 }
 
@@ -733,8 +732,6 @@ void generateModules(
 
       LivenessVisitor lv(mod->programPoints);
       lv.applyVisit(mod->moduleHead.get());
-       if(!mod->programPoints.empty())
-        explicitlyDeclareIds(undeclaredIds, mod->programPoints[0]);
 
       modules.push_back(std::move(mod));
     }
