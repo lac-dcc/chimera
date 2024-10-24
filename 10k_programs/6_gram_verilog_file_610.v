@@ -1,0 +1,17 @@
+// Seed: 3069487803
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output id_5;
+  output id_4;
+  input id_3;
+  inout id_2;
+  output id_1;
+  always @(1 or posedge 1) begin
+    id_4 = 1;
+  end
+endmodule

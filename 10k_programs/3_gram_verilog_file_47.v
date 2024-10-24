@@ -1,0 +1,58 @@
+// Seed: 1167348319
+`define pp_48 0
+module module_0 (
+    output logic id_0,
+    input logic id_1,
+    output id_2,
+    input logic id_3,
+    input logic id_4,
+    output logic id_5,
+    input id_6,
+    output logic id_7,
+    output logic id_8,
+    input id_9,
+    output id_10,
+    input id_11,
+    output logic id_12,
+    input id_13,
+    input id_14,
+    output id_15,
+    output id_16,
+    input id_17,
+    input logic id_18
+    , id_48,
+    output id_19,
+    input id_20,
+    input id_21,
+    input id_22,
+    input id_23,
+    input logic id_24,
+    output id_25,
+    output id_26,
+    input id_27,
+    output logic id_28,
+    input logic id_29,
+    output id_30#(
+        .id_49(1),
+        .id_50(1)
+    ),
+    input id_31,
+    input logic id_32,
+    input id_33,
+    output id_34,
+    output logic id_35,
+    input id_36,
+    output id_37,
+    output id_38,
+    output logic id_39,
+    input logic id_40,
+    input id_41,
+    input id_42,
+    input logic id_43,
+    input logic id_44,
+    output id_45,
+    input id_46,
+    output logic id_47
+);
+  assign id_37 = id_33;
+endmodule
