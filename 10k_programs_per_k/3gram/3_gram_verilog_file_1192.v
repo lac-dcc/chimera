@@ -1,0 +1,10 @@
+// Seed: 3642835413
+`default_nettype wire
+module module_0 (
+    id_1,
+    id_2
+);
+  input id_2;
+  inout id_1;
+  assign id_1 = 1;
+endmodule

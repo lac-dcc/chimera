@@ -1,0 +1,5 @@
+// Seed: 4232487662
+`timescale 1ps / 1ps
+module module_0 ();
+  logic id_1;
+endmodule

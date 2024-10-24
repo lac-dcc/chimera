@@ -1,0 +1,35 @@
+// Seed: 2971283039
+module module_0 (
+    output id_0,
+    input id_1,
+    output id_2,
+    input id_3,
+    output logic id_4,
+    input logic id_5,
+    input id_6,
+    input id_7,
+    output logic id_8,
+    input logic id_9,
+    input id_10,
+    output logic id_11,
+    input id_12,
+    output logic id_13,
+    input id_14,
+    input logic id_15,
+    input id_16,
+    input logic id_17,
+    input logic id_18,
+    input id_19,
+    output id_20,
+    input logic id_21,
+    input logic id_22,
+    input logic id_23,
+    output id_24,
+    input id_25,
+    input id_26,
+    output id_27,
+    input id_28,
+    input id_29
+);
+  assign id_27[1'h0] = 1;
+endmodule

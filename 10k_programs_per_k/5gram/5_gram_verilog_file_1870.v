@@ -1,0 +1,20 @@
+// Seed: 1427846310
+module module_0 (
+    input logic id_0,
+    input id_1,
+    output id_2,
+    input id_3,
+    input id_4,
+    input id_5,
+    input reg id_6
+);
+  logic id_7;
+  logic id_8;
+  reg   id_9;
+  always @(negedge id_4) begin
+    id_9 = id_9;
+    id_9 <= #1 id_6;
+    SystemTFIdentifier;
+  end
+  logic id_10;
+endmodule

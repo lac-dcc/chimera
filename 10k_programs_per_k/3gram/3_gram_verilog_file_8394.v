@@ -1,0 +1,9 @@
+// Seed: 356537755
+`define pp_2 0
+module module_0 (
+    input id_0,
+    input id_1
+);
+  logic id_2, id_3;
+  logic id_4;
+endmodule

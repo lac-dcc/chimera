@@ -1,0 +1,43 @@
+// Seed: 3382855464
+package id_0;
+  parameter integer id_0 = id_0 - id_0 - id_0;
+  localparam id_0 = id_0;
+  parameter id_0 = id_0;
+  localparam [id_0[id_0] : ""] id_0 = id_0 == id_0 < !1'b0;
+  localparam id_0 = 1 >= id_0 == 1;
+  parameter id_0 = (id_0);
+  parameter id_0 = id_0 ? id_0[id_0 : id_0] : 1;
+  localparam id_0 = 1;
+  parameter id_0 = id_0;
+  localparam id_0 = id_0;
+  parameter id_0 = 1 == 1'b0;
+  localparam [1 : id_0[1]] id_0 = id_0;
+  localparam id_0 = id_0 | 1;
+  localparam id_0 = id_0;
+  typedef reg [id_1 : !  id_1] id_0;
+  localparam [1 'b0 : ~  id_1] id_0 = 1;
+  parameter id_0 = 1;
+  localparam [1 : id_0] id_0 = id_1;
+  localparam id_0 = id_1;
+  import id_1::*;
+  localparam id_0 = id_1;
+  typedef reg id_0;
+  localparam id_1 = id_0;
+  localparam id_1 = 1;
+  id_1;
+  localparam id_0 = 1;
+  function [1 : id_1] id_1;
+    input [id_1 : id_0] id_0;
+    input [1 : 1  <=  1 'b0] id_0, id_1;
+    id_0 <= id_1;
+  endfunction
+  localparam integer id_0 = id_1;
+  localparam id_0 = 1;
+  localparam id_0 = "";
+  typedef reg [id_0 : id_0] id_1;
+  localparam id_0 = id_1;
+  localparam id_0 = 1;
+  localparam id_1 = 1;
+  localparam id_1 = 1'd0;
+  localparam id_0 = id_1;
+endpackage

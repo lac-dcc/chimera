@@ -1,0 +1,12 @@
+// Seed: 233153059
+`timescale 1ps / 1ps
+module module_0 (
+    output id_0,
+    input  id_1
+);
+  logic id_2;
+  assign id_0 = id_2;
+  always @(1) begin
+    id_0 = 1;
+  end
+endmodule

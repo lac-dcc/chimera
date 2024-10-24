@@ -1,0 +1,12 @@
+// Seed: 2068406985
+module module_0 (
+    input logic id_0,
+    input id_1,
+    input id_2,
+    input id_3,
+    output logic id_4,
+    input id_5,
+    output logic id_6
+);
+  logic id_7;
+endmodule

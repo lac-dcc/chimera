@@ -1,0 +1,30 @@
+// Seed: 4124272490
+module module_0 (
+    input id_0,
+    input logic id_1,
+    input logic id_2
+    , id_6,
+    output logic id_3,
+    input logic id_4,
+    input id_5
+);
+  logic id_7 = id_2;
+  tri1  id_8;
+  assign id_8[1] = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input id_6;
+  inout id_5;
+  inout id_4;
+  inout id_3;
+  inout id_2;
+  inout id_1;
+  logic id_7;
+endmodule

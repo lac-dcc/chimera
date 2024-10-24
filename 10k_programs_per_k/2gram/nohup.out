@@ -1,0 +1,2555 @@
+2_gram_verilog_file_2.v: 2_gram_verilog_file_2.v:2:220-224: syntax error at token "logic"
+2_gram_verilog_file_2.v:2:645-650: syntax error at token "assign"
+2_gram_verilog_file_2.v:2:673-681: syntax error at token "endmodule"
+
+2_gram_verilog_file_3.v: 2_gram_verilog_file_3.v:2:374-378: syntax error at token "logic"
+2_gram_verilog_file_3.v:2:668-673: syntax error at token "assign"
+2_gram_verilog_file_3.v:2:709-717: syntax error at token "endmodule"
+
+2_gram_verilog_file_16.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:39-43:; problematic formatter output is
+// Seed: 3749500564
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_16.v: 2_gram_verilog_file_16.v:2:101-105: syntax error at token "logic"
+2_gram_verilog_file_16.v:2:136-144: syntax error at token "endmodule"
+
+2_gram_verilog_file_16.v: 2_gram_verilog_file_16.v:2:230-234: syntax error at token "logic"
+2_gram_verilog_file_16.v:2:536-544: syntax error at token "endmodule"
+
+2_gram_verilog_file_31.v: 2_gram_verilog_file_31.v:2:78-82: syntax error at token "logic"
+2_gram_verilog_file_31.v:2:202-210: syntax error at token "endmodule"
+
+2_gram_verilog_file_34.v: 2_gram_verilog_file_34.v:2:116-120: syntax error at token "logic"
+2_gram_verilog_file_34.v:2:317: syntax error at token "("
+2_gram_verilog_file_34.v:2:392-397: syntax error at token "assign"
+2_gram_verilog_file_34.v:2:415-423: syntax error at token "endmodule"
+
+2_gram_verilog_file_58.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 631884174
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_82.v: 2_gram_verilog_file_82.v:2:109-115: syntax error at token "integer"
+2_gram_verilog_file_82.v:2:289-294: syntax error at token "assign"
+2_gram_verilog_file_82.v:2:312-320: syntax error at token "endmodule"
+
+2_gram_verilog_file_96.v: 2_gram_verilog_file_96.v:2:222-226: syntax error at token "logic"
+2_gram_verilog_file_96.v:2:283-288: syntax error at token "assign"
+2_gram_verilog_file_96.v:2:489-494: syntax error at token "assign"
+2_gram_verilog_file_96.v:2:513-521: syntax error at token "endmodule"
+
+2_gram_verilog_file_114.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:82-86:; problematic formatter output is
+// Seed: 2297736794
+`define pp_0 0
+`timescale 1ps / 1ps `timescale 1ps / 1ps `timescale 1 ps / 1ps `default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_116.v: 2_gram_verilog_file_116.v:2:52-56: syntax error at token "logic"
+2_gram_verilog_file_116.v:2:163: syntax error at token "("
+2_gram_verilog_file_116.v:2:190-198: syntax error at token "endmodule"
+
+2_gram_verilog_file_120.v: 2_gram_verilog_file_120.v:3:165-169: syntax error at token "logic"
+2_gram_verilog_file_120.v:3:563-568: syntax error at token "assign"
+2_gram_verilog_file_120.v:3:594: syntax error at token "("
+2_gram_verilog_file_120.v:3:651-656: syntax error at token "always"
+2_gram_verilog_file_120.v:3:682-684: syntax error at token "end"
+2_gram_verilog_file_120.v:3:811-816: syntax error at token "assign"
+2_gram_verilog_file_120.v:3:835-843: syntax error at token "endmodule"
+
+2_gram_verilog_file_122.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2432138551
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_135.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2892573327
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+`define pp_2 0
+`define pp_3 0
+<<EOF>>
+2_gram_verilog_file_196.v: 2_gram_verilog_file_196.v:2:139-143: syntax error at token "logic"
+2_gram_verilog_file_196.v:2:241-249: syntax error at token "endmodule"
+
+2_gram_verilog_file_199.v: 2_gram_verilog_file_199.v:2:53-59: syntax error at token "integer"
+2_gram_verilog_file_199.v:2:569-574: syntax error at token "assign"
+2_gram_verilog_file_199.v:2:608-616: syntax error at token "endmodule"
+
+2_gram_verilog_file_212.v: 2_gram_verilog_file_212.v:3:116-120: syntax error at token "logic"
+2_gram_verilog_file_212.v:3:520-525: syntax error at token "assign"
+2_gram_verilog_file_212.v:3:544-552: syntax error at token "endmodule"
+
+2_gram_verilog_file_248.v: 2_gram_verilog_file_248.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_248.v:2:103: syntax error at token "("
+2_gram_verilog_file_248.v:2:118-126: syntax error at token "endmodule"
+
+2_gram_verilog_file_261.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 810358070
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_262.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2772835212
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_291.v: 2_gram_verilog_file_291.v:2:156-160: syntax error at token "logic"
+2_gram_verilog_file_291.v:2:207-212: syntax error at token "assign"
+2_gram_verilog_file_291.v:2:230-238: syntax error at token "endmodule"
+
+2_gram_verilog_file_292.v: 2_gram_verilog_file_292.v:2:295-299: syntax error at token "logic"
+2_gram_verilog_file_292.v:2:712-720: syntax error at token "endmodule"
+
+2_gram_verilog_file_333.v: 2_gram_verilog_file_333.v:2:118-122: syntax error at token "logic"
+2_gram_verilog_file_333.v:2:171-179: syntax error at token "endmodule"
+
+2_gram_verilog_file_361.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_4" at 12:18-22:; problematic formatter output is
+// Seed: 1195558766
+`define pp_4 0
+`timescale 1ps / 1 ps
+`define pp_5 0
+`timescale 1 ps / 1ps
+module module_0 (
+    input  logic id_0,
+    output logic id_1
+);
+  logic id_2;
+endmodule
+`default_nettype `pp_4
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output id_3;
+  input id_2;
+  input id_1;
+endmodule
+<<EOF>>
+2_gram_verilog_file_368.v: 2_gram_verilog_file_368.v:3:36-40: syntax error at token "logic"
+2_gram_verilog_file_368.v:3:183-188: syntax error at token "assign"
+2_gram_verilog_file_368.v:3:216: syntax error at token "("
+2_gram_verilog_file_368.v:3:231-239: syntax error at token "endmodule"
+
+2_gram_verilog_file_395.v: 2_gram_verilog_file_395.v:3:130-134: syntax error at token "logic"
+2_gram_verilog_file_395.v:3:258: syntax error at token "("
+2_gram_verilog_file_395.v:3:328-335: syntax error at token "defparam"
+2_gram_verilog_file_395.v:3:367-375: syntax error at token "endmodule"
+
+2_gram_verilog_file_427.v: 2_gram_verilog_file_427.v:2:194-198: syntax error at token "logic"
+2_gram_verilog_file_427.v:2:247-255: syntax error at token "endmodule"
+
+2_gram_verilog_file_461.v: 2_gram_verilog_file_461.v:2:115-119: syntax error at token "logic"
+2_gram_verilog_file_461.v:2:376-381: syntax error at token "assign"
+2_gram_verilog_file_461.v:2:454-462: syntax error at token "endmodule"
+
+2_gram_verilog_file_497.v: 2_gram_verilog_file_497.v:2:144-148: syntax error at token "logic"
+2_gram_verilog_file_497.v:2:311-319: syntax error at token "endmodule"
+
+2_gram_verilog_file_510.v: 2_gram_verilog_file_510.v:2:150-154: syntax error at token "logic"
+2_gram_verilog_file_510.v:2:241-249: syntax error at token "endmodule"
+2_gram_verilog_file_510.v:3:85-90: syntax error at token "assign"
+2_gram_verilog_file_510.v:3:108-116: syntax error at token "endmodule"
+
+2_gram_verilog_file_531.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3476601506
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_544.v: 2_gram_verilog_file_544.v:4:43-47: syntax error at token "logic"
+2_gram_verilog_file_544.v:4:233-238: syntax error at token "assign"
+2_gram_verilog_file_544.v:4:261-266: syntax error at token "always"
+2_gram_verilog_file_544.v:4:289-297: syntax error at token "endmodule"
+
+2_gram_verilog_file_558.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 6:18-22:; problematic formatter output is
+// Seed: 1555948692
+`define pp_0 0
+`timescale 1ps / 1ps `timescale 1 ps / 1 ps
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+`define pp_3 0
+`default_nettype wire
+<<EOF>>
+2_gram_verilog_file_674.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 1344509442
+`timescale 1ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_732.v: 2_gram_verilog_file_732.v:4:37-41: syntax error at token "`pp_1"
+2_gram_verilog_file_732.v:4:70-75: syntax error at token "output"
+2_gram_verilog_file_732.v:4:87-91: syntax error at token "input"
+2_gram_verilog_file_732.v:4:112-116: syntax error at token "input"
+2_gram_verilog_file_732.v:4:155-159: syntax error at token "table"
+2_gram_verilog_file_732.v:4:177: syntax error at token "0"
+2_gram_verilog_file_732.v:4:210: syntax error at token "?"
+2_gram_verilog_file_732.v:4:231: syntax error at token "?"
+2_gram_verilog_file_732.v:4:249: syntax error at token "1"
+2_gram_verilog_file_732.v:4:276: syntax error at token "?"
+2_gram_verilog_file_732.v:4:306: syntax error at token "?"
+2_gram_verilog_file_732.v:4:321-328: syntax error at token "endtable"
+
+2_gram_verilog_file_830.v: 2_gram_verilog_file_830.v:2:115-119: syntax error at token "logic"
+2_gram_verilog_file_830.v:2:306-314: syntax error at token "endmodule"
+
+2_gram_verilog_file_833.v: 2_gram_verilog_file_833.v:5:394-398: syntax error at token "logic"
+2_gram_verilog_file_833.v:5:778: syntax error at token "("
+2_gram_verilog_file_833.v:5:860-868: syntax error at token "endmodule"
+
+2_gram_verilog_file_871.v: 2_gram_verilog_file_871.v:2:210-212: syntax error at token "reg"
+2_gram_verilog_file_871.v:2:249-254: syntax error at token "always"
+2_gram_verilog_file_871.v:2:342-344: syntax error at token "end"
+2_gram_verilog_file_871.v:2:386-387: syntax error at token "<="
+2_gram_verilog_file_871.v:2:396: syntax error at token "#"
+2_gram_verilog_file_871.v:2:478-480: syntax error at token "end"
+2_gram_verilog_file_871.v:2:527-532: syntax error at token "assign"
+2_gram_verilog_file_871.v:2:584-592: syntax error at token "endmodule"
+
+2_gram_verilog_file_871.v: 2_gram_verilog_file_871.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_871.v:2:356: syntax error at token "("
+2_gram_verilog_file_871.v:2:391-396: syntax error at token "assign"
+2_gram_verilog_file_871.v:2:415-423: syntax error at token "endmodule"
+
+2_gram_verilog_file_894.v: 2_gram_verilog_file_894.v:2:768-772: syntax error at token "logic"
+2_gram_verilog_file_894.v:2:970-975: syntax error at token "assign"
+2_gram_verilog_file_894.v:2:996-1001: syntax error at token "assign"
+2_gram_verilog_file_894.v:3:2-7: syntax error at token "assign"
+2_gram_verilog_file_894.v:3:67-75: syntax error at token "endmodule"
+
+2_gram_verilog_file_936.v: 2_gram_verilog_file_936.v:2:54-58: syntax error at token "logic"
+2_gram_verilog_file_936.v:2:675-683: syntax error at token "endmodule"
+
+2_gram_verilog_file_941.v: 2_gram_verilog_file_941.v:3:126-130: syntax error at token "logic"
+2_gram_verilog_file_941.v:3:169-177: syntax error at token "endmodule"
+
+2_gram_verilog_file_951.v: 2_gram_verilog_file_951.v:2:419: syntax error at token "#"
+
+2_gram_verilog_file_966.v: 2_gram_verilog_file_966.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_966.v:2:110-115: syntax error at token "assign"
+2_gram_verilog_file_966.v:2:165-166: syntax error at token "if"
+2_gram_verilog_file_966.v:2:201-203: syntax error at token "end"
+2_gram_verilog_file_966.v:2:395-397: syntax error at token "end"
+2_gram_verilog_file_966.v:2:1159-1164: syntax error at token "assign"
+2_gram_verilog_file_966.v:2:1183-1188: syntax error at token "assign"
+2_gram_verilog_file_966.v:2:1206-1214: syntax error at token "endmodule"
+
+2_gram_verilog_file_969.v: 2_gram_verilog_file_969.v:2:208-212: syntax error at token "logic"
+2_gram_verilog_file_969.v:2:243-248: syntax error at token "assign"
+2_gram_verilog_file_969.v:2:269-274: syntax error at token "assign"
+2_gram_verilog_file_969.v:2:292-297: syntax error at token "assign"
+2_gram_verilog_file_969.v:2:318-323: syntax error at token "always"
+2_gram_verilog_file_969.v:2:372-380: syntax error at token "endmodule"
+
+2_gram_verilog_file_994.v: 2_gram_verilog_file_994.v:5:29-33: syntax error at token "`pp_2"
+
+2_gram_verilog_file_1007.v: 2_gram_verilog_file_1007.v:3:154-157: syntax error at token "wand"
+2_gram_verilog_file_1007.v:3:317-322: syntax error at token "assign"
+2_gram_verilog_file_1007.v:3:340-345: syntax error at token "assign"
+2_gram_verilog_file_1007.v:3:389-397: syntax error at token "endmodule"
+
+2_gram_verilog_file_1007.v: 2_gram_verilog_file_1007.v:2:208-212: syntax error at token "logic"
+2_gram_verilog_file_1007.v:2:243-251: syntax error at token "endmodule"
+
+2_gram_verilog_file_1013.v: 2_gram_verilog_file_1013.v:2:36-42: syntax error at token "integer"
+2_gram_verilog_file_1013.v:2:146: syntax error at token "("
+2_gram_verilog_file_1013.v:2:193-195: syntax error at token "for"
+2_gram_verilog_file_1013.v:2:216: syntax error at token "1"
+2_gram_verilog_file_1013.v:2:237: syntax error at token ")"
+2_gram_verilog_file_1013.v:2:270-272: syntax error at token "end"
+2_gram_verilog_file_1013.v:2:306-311: syntax error at token "always"
+2_gram_verilog_file_1013.v:2:333-338: syntax error at token "assign"
+2_gram_verilog_file_1013.v:2:365-373: syntax error at token "endmodule"
+
+2_gram_verilog_file_1059.v: 2_gram_verilog_file_1059.v:2:116-120: syntax error at token "logic"
+2_gram_verilog_file_1059.v:2:205-213: syntax error at token "endmodule"
+
+2_gram_verilog_file_1112.v: 2_gram_verilog_file_1112.v:3:76-80: syntax error at token "logic"
+2_gram_verilog_file_1112.v:3:124: syntax error at token "("
+2_gram_verilog_file_1112.v:3:136-141: syntax error at token "assign"
+2_gram_verilog_file_1112.v:3:175-180: syntax error at token "assign"
+2_gram_verilog_file_1112.v:3:210-218: syntax error at token "endmodule"
+2_gram_verilog_file_1112.v:4:493-498: syntax error at token "assign"
+2_gram_verilog_file_1112.v:4:520-528: syntax error at token "endmodule"
+
+2_gram_verilog_file_1119.v: 2_gram_verilog_file_1119.v:4:76-80: syntax error at token "logic"
+2_gram_verilog_file_1119.v:4:240-245: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:301-306: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:327-332: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:353-358: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:402: syntax error at token "("
+2_gram_verilog_file_1119.v:4:417-422: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:440-445: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:479: syntax error at token "("
+2_gram_verilog_file_1119.v:4:545-552: syntax error at token "generate"
+2_gram_verilog_file_1119.v:4:589-594: syntax error at token "assign"
+2_gram_verilog_file_1119.v:4:622-632: syntax error at token "endgenerate"
+2_gram_verilog_file_1119.v:4:741-746: syntax error at token "always"
+2_gram_verilog_file_1119.v:4:811-816: syntax error at token "always"
+2_gram_verilog_file_1119.v:4:835-843: syntax error at token "endmodule"
+
+2_gram_verilog_file_1141.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 557563751
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_1160.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 5:18-22:; problematic formatter output is
+// Seed: 2922892084
+`timescale 1ps / 1ps
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_1263.v: 2_gram_verilog_file_1263.v:2:138-142: syntax error at token "logic"
+2_gram_verilog_file_1263.v:2:401-406: syntax error at token "assign"
+2_gram_verilog_file_1263.v:2:443-451: syntax error at token "endmodule"
+
+2_gram_verilog_file_1312.v: 2_gram_verilog_file_1312.v:2:389-393: syntax error at token "logic"
+2_gram_verilog_file_1312.v:2:457: syntax error at token "("
+2_gram_verilog_file_1312.v:2:486-494: syntax error at token "endmodule"
+
+2_gram_verilog_file_1372.v: 2_gram_verilog_file_1372.v:2:206-210: syntax error at token "logic"
+2_gram_verilog_file_1372.v:2:606-611: syntax error at token "assign"
+2_gram_verilog_file_1372.v:2:669-677: syntax error at token "endmodule"
+2_gram_verilog_file_1372.v:3:28-33: syntax error at token "always"
+2_gram_verilog_file_1372.v:3:79-81: syntax error at token "end"
+2_gram_verilog_file_1372.v:3:274-279: syntax error at token "assign"
+2_gram_verilog_file_1372.v:3:308-313: syntax error at token "assign"
+2_gram_verilog_file_1372.v:3:346: syntax error at token "("
+2_gram_verilog_file_1372.v:3:426: syntax error at token "("
+2_gram_verilog_file_1372.v:3:482-487: syntax error at token "assign"
+2_gram_verilog_file_1372.v:3:591-596: syntax error at token "assign"
+2_gram_verilog_file_1372.v:3:618-626: syntax error at token "endmodule"
+
+2_gram_verilog_file_1405.v: 2_gram_verilog_file_1405.v:2:450-454: syntax error at token "logic"
+2_gram_verilog_file_1405.v:2:1187-1192: syntax error at token "assign"
+2_gram_verilog_file_1405.v:2:1214-1219: syntax error at token "assign"
+2_gram_verilog_file_1405.v:2:1255-1260: syntax error at token "assign"
+2_gram_verilog_file_1405.v:2:1282-1287: syntax error at token "always"
+2_gram_verilog_file_1405.v:2:1327-1335: syntax error at token "endmodule"
+
+2_gram_verilog_file_1411.v: 2_gram_verilog_file_1411.v:2:206-210: syntax error at token "logic"
+2_gram_verilog_file_1411.v:2:659-664: syntax error at token "assign"
+2_gram_verilog_file_1411.v:2:687-695: syntax error at token "endmodule"
+
+2_gram_verilog_file_1431.v: 2_gram_verilog_file_1431.v:2:76-80: syntax error at token "logic"
+2_gram_verilog_file_1431.v:2:164-169: syntax error at token "assign"
+2_gram_verilog_file_1431.v:2:187-192: syntax error at token "assign"
+2_gram_verilog_file_1431.v:2:213-218: syntax error at token "assign"
+2_gram_verilog_file_1431.v:2:252-257: syntax error at token "assign"
+2_gram_verilog_file_1431.v:2:333: syntax error at token "("
+2_gram_verilog_file_1431.v:2:423-431: syntax error at token "endmodule"
+
+2_gram_verilog_file_1437.v: 2_gram_verilog_file_1437.v:3:102-106: syntax error at token "logic"
+2_gram_verilog_file_1437.v:3:252-257: syntax error at token "always"
+2_gram_verilog_file_1437.v:3:284-292: syntax error at token "endmodule"
+
+2_gram_verilog_file_1442.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 3:18-22:; problematic formatter output is
+// Seed: 3464717483
+`define pp_1 0
+`default_nettype `pp_1
+module module_0 (
+    id_1
+);
+  output id_1;
+  logic id_1, id_2;
+  logic id_3;
+  logic id_4;
+  logic id_5;
+  logic id_6;
+  logic id_7;
+  type_2 id_8 (
+      .id_0 (id_1),
+      .id_1 (1),
+      .id_2 (id_7 == id_5),
+      .id_3 (1),
+      .id_4 (1),
+      .id_5 (1 - id_2),
+      .id_6 (id_7),
+      .id_7 (id_3),
+      .id_8 (id_4),
+      .id_9 (1),
+      .id_10(1),
+      .id_11(id_3),
+      .id_12(id_1),
+      .id_13({1{1'h0}}),
+      .id_14(1),
+      .id_15(1),
+      .id_16(id_3),
+      .id_17(1)
+  );
+  logic id_9, id_10;
+  type_3 id_11 (
+      .id_0(),
+      .id_1(),
+      .id_2(1)
+  );
+endmodule
+<<EOF>>
+2_gram_verilog_file_1442.v: 2_gram_verilog_file_1442.v:2:271-275: syntax error at token "logic"
+2_gram_verilog_file_1442.v:2:325-333: syntax error at token "endmodule"
+
+2_gram_verilog_file_1445.v: 2_gram_verilog_file_1445.v:2:404-408: syntax error at token "logic"
+2_gram_verilog_file_1445.v:2:730-735: syntax error at token "assign"
+2_gram_verilog_file_1445.v:2:757-764: syntax error at token "defparam"
+2_gram_verilog_file_1445.v:2:793-801: syntax error at token "endmodule"
+
+2_gram_verilog_file_1482.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_2" at 6:39-43:; problematic formatter output is
+// Seed: 4083604783
+parameter id_0 = id_0[id_0 : id_0];
+`define pp_1 0
+`define pp_2 0
+`define pp_3 0
+`timescale 1ps / 1ps `default_nettype `pp_2
+<<EOF>>
+2_gram_verilog_file_1499.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1405600407
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_1544.v: 2_gram_verilog_file_1544.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_1544.v:2:151-156: syntax error at token "assign"
+2_gram_verilog_file_1544.v:2:187: syntax error at token "("
+2_gram_verilog_file_1544.v:2:371-379: syntax error at token "endmodule"
+
+2_gram_verilog_file_1627.v: 2_gram_verilog_file_1627.v:2:131-135: syntax error at token "logic"
+2_gram_verilog_file_1627.v:2:212-220: syntax error at token "endmodule"
+
+2_gram_verilog_file_1640.v: 2_gram_verilog_file_1640.v:2:851-854: syntax error at token "real"
+2_gram_verilog_file_1640.v:2:932: syntax error at token "("
+2_gram_verilog_file_1640.v:2:975-983: syntax error at token "endmodule"
+
+2_gram_verilog_file_1654.v: 2_gram_verilog_file_1654.v:2:269-273: syntax error at token "logic"
+2_gram_verilog_file_1654.v:2:338-343: syntax error at token "assign"
+2_gram_verilog_file_1654.v:2:378-386: syntax error at token "endmodule"
+
+2_gram_verilog_file_1694.v: 2_gram_verilog_file_1694.v:2:166-172: syntax error at token "integer"
+2_gram_verilog_file_1694.v:2:187-192: syntax error at token "assign"
+2_gram_verilog_file_1694.v:2:209-214: syntax error at token "assign"
+2_gram_verilog_file_1694.v:2:251-256: syntax error at token "always"
+2_gram_verilog_file_1694.v:2:289-291: syntax error at token "end"
+
+2_gram_verilog_file_1719.v: 2_gram_verilog_file_1719.v:2:85-89: syntax error at token "logic"
+2_gram_verilog_file_1719.v:2:169-177: syntax error at token "endmodule"
+
+2_gram_verilog_file_1815.v: 2_gram_verilog_file_1815.v:2:400-404: syntax error at token "logic"
+2_gram_verilog_file_1815.v:2:774: syntax error at token "("
+2_gram_verilog_file_1815.v:2:949-957: syntax error at token "endmodule"
+
+2_gram_verilog_file_1830.v: 2_gram_verilog_file_1830.v:3:257-261: syntax error at token "logic"
+2_gram_verilog_file_1830.v:3:326-331: syntax error at token "assign"
+2_gram_verilog_file_1830.v:3:370-375: syntax error at token "always"
+2_gram_verilog_file_1830.v:3:431-433: syntax error at token "end"
+2_gram_verilog_file_1830.v:3:459-467: syntax error at token "endmodule"
+
+2_gram_verilog_file_1848.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2556944246
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+`define pp_2 0
+<<EOF>>
+2_gram_verilog_file_1915.v: 2_gram_verilog_file_1915.v:3:268-274: syntax error at token "integer"
+2_gram_verilog_file_1915.v:3:767-775: syntax error at token "endmodule"
+
+2_gram_verilog_file_1949.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 834561392
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_1953.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_3" at 10:18-22:; problematic formatter output is
+// Seed: 753461440
+`define pp_0 0
+`define pp_1 0
+`define pp_2 0
+`timescale 1ps / 1 ps `default_nettype wire
+`define pp_3 0
+`define pp_4 0
+`timescale 1ps / 1ps `timescale 1ps / 1ps
+`define pp_5 0
+`default_nettype `pp_3
+<<EOF>>
+2_gram_verilog_file_1964.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:60-64:; problematic formatter output is
+// Seed: 3071581415
+`define pp_0 0
+`timescale 1ps / 1ps `timescale 1ps / 1ps `default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_1971.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2442908551
+`timescale 1ps / 1ps `timescale 1 ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_1980.v: 2_gram_verilog_file_1980.v:2:52-56: syntax error at token "logic"
+2_gram_verilog_file_1980.v:2:71-76: syntax error at token "assign"
+2_gram_verilog_file_1980.v:2:346-354: syntax error at token "endmodule"
+
+2_gram_verilog_file_2014.v: 2_gram_verilog_file_2014.v:3:475-479: syntax error at token "logic"
+2_gram_verilog_file_2014.v:3:629-634: syntax error at token "always"
+2_gram_verilog_file_2014.v:3:676-679: syntax error at token "else"
+2_gram_verilog_file_2014.v:3:739-741: syntax error at token "end"
+2_gram_verilog_file_2014.v:3:778-783: syntax error at token "assign"
+2_gram_verilog_file_2014.v:3:808-813: syntax error at token "assign"
+2_gram_verilog_file_2014.v:3:832-840: syntax error at token "endmodule"
+
+2_gram_verilog_file_2021.v: 2_gram_verilog_file_2021.v:2:78-82: syntax error at token "logic"
+2_gram_verilog_file_2021.v:2:136-142: syntax error at token "specify"
+2_gram_verilog_file_2021.v:2:182-183: syntax error at token "if"
+2_gram_verilog_file_2021.v:2:290: syntax error at token "("
+2_gram_verilog_file_2021.v:2:322-331: syntax error at token "endspecify"
+
+2_gram_verilog_file_2026.v: 2_gram_verilog_file_2026.v:2:366-370: syntax error at token "logic"
+2_gram_verilog_file_2026.v:2:502-510: syntax error at token "endmodule"
+
+2_gram_verilog_file_2057.v: 2_gram_verilog_file_2057.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_2057.v:2:185-193: syntax error at token "endmodule"
+
+2_gram_verilog_file_2061.v: 2_gram_verilog_file_2061.v:2:428-432: syntax error at token "logic"
+2_gram_verilog_file_2061.v:2:504: syntax error at token "("
+2_gram_verilog_file_2061.v:2:574-581: syntax error at token "defparam"
+2_gram_verilog_file_2061.v:2:648-656: syntax error at token "endmodule"
+
+2_gram_verilog_file_2163.v: 2_gram_verilog_file_2163.v:2:67-69: syntax error at token "reg"
+2_gram_verilog_file_2163.v:2:133-138: syntax error at token "assign"
+2_gram_verilog_file_2163.v:2:171-176: syntax error at token "always"
+2_gram_verilog_file_2163.v:2:267-275: syntax error at token "endmodule"
+
+2_gram_verilog_file_2236.v: 2_gram_verilog_file_2236.v:2:75-79: syntax error at token "logic"
+2_gram_verilog_file_2236.v:2:200-205: syntax error at token "assign"
+2_gram_verilog_file_2236.v:2:268-276: syntax error at token "endmodule"
+2_gram_verilog_file_2236.v:2:333: syntax error at token "("
+2_gram_verilog_file_2236.v:2:464-472: syntax error at token "endmodule"
+
+2_gram_verilog_file_2236.v: 2_gram_verilog_file_2236.v:2:538-542: syntax error at token "logic"
+
+2_gram_verilog_file_2263.v: 2_gram_verilog_file_2263.v:5:821-825: syntax error at token "logic"
+2_gram_verilog_file_2263.v:5:936-944: syntax error at token "endmodule"
+
+2_gram_verilog_file_2343.v: 2_gram_verilog_file_2343.v:2:157-161: syntax error at token "logic"
+2_gram_verilog_file_2343.v:2:481-486: syntax error at token "assign"
+2_gram_verilog_file_2343.v:2:523-528: syntax error at token "assign"
+2_gram_verilog_file_2343.v:2:577-585: syntax error at token "endmodule"
+
+2_gram_verilog_file_2366.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 4:18-22:; problematic formatter output is
+// Seed: 47773512
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_2366.v: 2_gram_verilog_file_2366.v:3:61-65: syntax error at token "logic"
+2_gram_verilog_file_2366.v:3:1026: syntax error at token "("
+2_gram_verilog_file_2366.v:3:1081-1086: syntax error at token "assign"
+2_gram_verilog_file_2366.v:3:1132-1137: syntax error at token "assign"
+2_gram_verilog_file_2366.v:3:1177-1182: syntax error at token "assign"
+2_gram_verilog_file_2366.v:3:1224-1229: syntax error at token "assign"
+2_gram_verilog_file_2366.v:3:1265-1270: syntax error at token "assign"
+2_gram_verilog_file_2366.v:3:1311-1319: syntax error at token "endmodule"
+
+2_gram_verilog_file_2369.v: 2_gram_verilog_file_2369.v:2:70-74: syntax error at token "logic"
+2_gram_verilog_file_2369.v:2:285: syntax error at token "("
+2_gram_verilog_file_2369.v:2:314: syntax error at token "("
+2_gram_verilog_file_2369.v:2:343-348: syntax error at token "assign"
+2_gram_verilog_file_2369.v:2:370-378: syntax error at token "endmodule"
+
+2_gram_verilog_file_2381.v: 2_gram_verilog_file_2381.v:4:592-596: syntax error at token "logic"
+2_gram_verilog_file_2381.v:4:821-826: syntax error at token "assign"
+2_gram_verilog_file_2381.v:4:873: syntax error at token "("
+2_gram_verilog_file_2381.v:4:934: syntax error at token "("
+2_gram_verilog_file_2381.v:4:965-973: syntax error at token "endmodule"
+
+2_gram_verilog_file_2383.v: 2_gram_verilog_file_2383.v:4:242-246: syntax error at token "logic"
+2_gram_verilog_file_2383.v:4:514-522: syntax error at token "endmodule"
+
+2_gram_verilog_file_2432.v: 2_gram_verilog_file_2432.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_2432.v:2:126-131: syntax error at token "always"
+2_gram_verilog_file_2432.v:2:187-189: syntax error at token "end"
+2_gram_verilog_file_2432.v:2:218-226: syntax error at token "endmodule"
+
+2_gram_verilog_file_2443.v: 2_gram_verilog_file_2443.v:2:361-365: syntax error at token "logic"
+2_gram_verilog_file_2443.v:2:813-818: syntax error at token "always"
+2_gram_verilog_file_2443.v:2:1082-1087: syntax error at token "assign"
+2_gram_verilog_file_2443.v:2:1127-1135: syntax error at token "endmodule"
+
+2_gram_verilog_file_2462.v: 2_gram_verilog_file_2462.v:3:69-73: syntax error at token "logic"
+2_gram_verilog_file_2462.v:3:152-157: syntax error at token "assign"
+2_gram_verilog_file_2462.v:3:178-186: syntax error at token "endmodule"
+2_gram_verilog_file_2462.v:3:220-225: syntax error at token "output"
+2_gram_verilog_file_2462.v:3:251-259: syntax error at token "endmodule"
+
+2_gram_verilog_file_2500.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1964790549
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2539.v: 2_gram_verilog_file_2539.v:2:246-250: syntax error at token "logic"
+2_gram_verilog_file_2539.v:2:492-497: syntax error at token "assign"
+2_gram_verilog_file_2539.v:2:540: syntax error at token "("
+2_gram_verilog_file_2539.v:2:691-699: syntax error at token "endmodule"
+
+2_gram_verilog_file_2551.v: 2_gram_verilog_file_2551.v:2:157-161: syntax error at token "logic"
+2_gram_verilog_file_2551.v:2:232-239: syntax error at token "defparam"
+2_gram_verilog_file_2551.v:2:371-376: syntax error at token "always"
+2_gram_verilog_file_2551.v:2:403-405: syntax error at token "end"
+2_gram_verilog_file_2551.v:2:439: syntax error at token "("
+2_gram_verilog_file_2551.v:2:482-490: syntax error at token "endmodule"
+
+2_gram_verilog_file_2588.v: 2_gram_verilog_file_2588.v:2:741-745: syntax error at token "logic"
+2_gram_verilog_file_2588.v:2:903: syntax error at token "("
+2_gram_verilog_file_2588.v:2:1231-1239: syntax error at token "endmodule"
+
+2_gram_verilog_file_2590.v: 2_gram_verilog_file_2590.v:2:63-67: syntax error at token "logic"
+2_gram_verilog_file_2590.v:2:114-119: syntax error at token "assign"
+2_gram_verilog_file_2590.v:2:149-154: syntax error at token "assign"
+2_gram_verilog_file_2590.v:2:245-253: syntax error at token "endmodule"
+
+2_gram_verilog_file_2592.v: 2_gram_verilog_file_2592.v:2:525: syntax error at token "#"
+
+2_gram_verilog_file_2666.v: 2_gram_verilog_file_2666.v:2:99-103: syntax error at token "logic"
+2_gram_verilog_file_2666.v:2:118-126: syntax error at token "endmodule"
+
+2_gram_verilog_file_2723.v: 2_gram_verilog_file_2723.v:2:125-129: syntax error at token "logic"
+2_gram_verilog_file_2723.v:2:219-227: syntax error at token "endmodule"
+2_gram_verilog_file_2723.v:3:28-33: syntax error at token "assign"
+2_gram_verilog_file_2723.v:3:86-91: syntax error at token "assign"
+2_gram_verilog_file_2723.v:3:109-114: syntax error at token "always"
+2_gram_verilog_file_2723.v:3:139: syntax error at token "("
+2_gram_verilog_file_2723.v:3:157-165: syntax error at token "endmodule"
+2_gram_verilog_file_2723.v:3:263-271: syntax error at token "endmodule"
+
+2_gram_verilog_file_2778.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3821093959
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2845.v: 2_gram_verilog_file_2845.v:3:181-185: syntax error at token "logic"
+2_gram_verilog_file_2845.v:3:515: syntax error at token "("
+2_gram_verilog_file_2845.v:3:741-746: syntax error at token "assign"
+2_gram_verilog_file_2845.v:3:805-813: syntax error at token "endmodule"
+
+2_gram_verilog_file_2872.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3095871916
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2893.v: 2_gram_verilog_file_2893.v:2:90-92: syntax error at token "reg"
+2_gram_verilog_file_2893.v:2:543-551: syntax error at token "endmodule"
+
+2_gram_verilog_file_2905.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2779969229
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2907.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1502512739
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2929.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3864846174
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_2965.v: 2_gram_verilog_file_2965.v:2:92-96: syntax error at token "logic"
+2_gram_verilog_file_2965.v:2:117: syntax error at token "("
+2_gram_verilog_file_2965.v:2:150-155: syntax error at token "assign"
+2_gram_verilog_file_2965.v:2:197: syntax error at token "("
+2_gram_verilog_file_2965.v:2:221-229: syntax error at token "endmodule"
+
+2_gram_verilog_file_3025.v: 2_gram_verilog_file_3025.v:2:267-271: syntax error at token "logic"
+2_gram_verilog_file_3025.v:2:822-830: syntax error at token "endmodule"
+
+2_gram_verilog_file_3047.v: 2_gram_verilog_file_3047.v:4:85-89: syntax error at token "logic"
+2_gram_verilog_file_3047.v:4:195: syntax error at token "("
+2_gram_verilog_file_3047.v:4:241-249: syntax error at token "endmodule"
+
+2_gram_verilog_file_3058.v: 2_gram_verilog_file_3058.v:2:109-115: syntax error at token "integer"
+2_gram_verilog_file_3058.v:2:275: syntax error at token "("
+2_gram_verilog_file_3058.v:2:304-309: syntax error at token "assign"
+2_gram_verilog_file_3058.v:2:336-341: syntax error at token "assign"
+2_gram_verilog_file_3058.v:2:385: syntax error at token "("
+2_gram_verilog_file_3058.v:2:581-589: syntax error at token "endmodule"
+
+2_gram_verilog_file_3092.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3504148798
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3123.v: 2_gram_verilog_file_3123.v:2:224-228: syntax error at token "logic"
+2_gram_verilog_file_3123.v:2:418: syntax error at token "("
+2_gram_verilog_file_3123.v:2:650-658: syntax error at token "endmodule"
+
+2_gram_verilog_file_3126.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3762727983
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_3130.v: 2_gram_verilog_file_3130.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_3130.v:2:741-746: syntax error at token "assign"
+2_gram_verilog_file_3130.v:2:768-773: syntax error at token "assign"
+2_gram_verilog_file_3130.v:2:864-869: syntax error at token "assign"
+2_gram_verilog_file_3130.v:2:971-979: syntax error at token "endmodule"
+
+2_gram_verilog_file_3151.v: 2_gram_verilog_file_3151.v:3:36-40: syntax error at token "logic"
+2_gram_verilog_file_3151.v:3:230-238: syntax error at token "endmodule"
+2_gram_verilog_file_3151.v:3:290-294: syntax error at token "inout"
+2_gram_verilog_file_3151.v:3:303-307: syntax error at token "inout"
+2_gram_verilog_file_3151.v:3:316-321: syntax error at token "output"
+2_gram_verilog_file_3151.v:3:331-339: syntax error at token "endmodule"
+
+2_gram_verilog_file_3155.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 462460340
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3158.v: 2_gram_verilog_file_3158.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_3158.v:2:1077-1082: syntax error at token "assign"
+2_gram_verilog_file_3158.v:2:1105-1110: syntax error at token "always"
+2_gram_verilog_file_3158.v:2:1178-1183: syntax error at token "assign"
+2_gram_verilog_file_3158.v:2:1219-1227: syntax error at token "endmodule"
+
+2_gram_verilog_file_3183.v: 2_gram_verilog_file_3183.v:2:393-397: syntax error at token "logic"
+2_gram_verilog_file_3183.v:2:654-659: syntax error at token "assign"
+2_gram_verilog_file_3183.v:2:678-686: syntax error at token "endmodule"
+
+2_gram_verilog_file_3203.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3186060538
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3238.v: 2_gram_verilog_file_3238.v:2:264-268: syntax error at token "logic"
+2_gram_verilog_file_3238.v:2:326-331: syntax error at token "assign"
+2_gram_verilog_file_3238.v:2:423: syntax error at token "("
+2_gram_verilog_file_3238.v:2:464-469: syntax error at token "assign"
+2_gram_verilog_file_3238.v:2:509-514: syntax error at token "assign"
+2_gram_verilog_file_3238.v:2:536-544: syntax error at token "endmodule"
+
+2_gram_verilog_file_3248.v: 2_gram_verilog_file_3248.v:2:279-283: syntax error at token "logic"
+2_gram_verilog_file_3248.v:2:482-487: syntax error at token "always"
+2_gram_verilog_file_3248.v:2:556-558: syntax error at token "end"
+2_gram_verilog_file_3248.v:2:579-581: syntax error at token "end"
+
+2_gram_verilog_file_3284.v: 2_gram_verilog_file_3284.v:2:254-258: syntax error at token "logic"
+2_gram_verilog_file_3284.v:2:392-397: syntax error at token "assign"
+2_gram_verilog_file_3284.v:2:415-423: syntax error at token "endmodule"
+
+2_gram_verilog_file_3309.v: 2_gram_verilog_file_3309.v:2:111-115: syntax error at token "logic"
+2_gram_verilog_file_3309.v:2:289: syntax error at token "("
+2_gram_verilog_file_3309.v:2:355-360: syntax error at token "assign"
+2_gram_verilog_file_3309.v:2:447-455: syntax error at token "endmodule"
+2_gram_verilog_file_3309.v:2:507-511: syntax error at token "inout"
+2_gram_verilog_file_3309.v:2:520-524: syntax error at token "input"
+2_gram_verilog_file_3309.v:2:533-537: syntax error at token "input"
+2_gram_verilog_file_3309.v:2:564-572: syntax error at token "endmodule"
+
+2_gram_verilog_file_3349.v: 2_gram_verilog_file_3349.v:2:360-363: syntax error at token "real"
+2_gram_verilog_file_3349.v:2:619: syntax error at token "("
+2_gram_verilog_file_3349.v:2:658-666: syntax error at token "endmodule"
+
+2_gram_verilog_file_3360.v: 2_gram_verilog_file_3360.v:2:321-325: syntax error at token "logic"
+2_gram_verilog_file_3360.v:2:518-523: syntax error at token "assign"
+2_gram_verilog_file_3360.v:2:554-562: syntax error at token "endmodule"
+
+2_gram_verilog_file_3383.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3138911633
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3415.v: 2_gram_verilog_file_3415.v:3:52-56: syntax error at token "logic"
+2_gram_verilog_file_3415.v:3:230: syntax error at token "("
+2_gram_verilog_file_3415.v:3:279-284: syntax error at token "assign"
+2_gram_verilog_file_3415.v:3:340-345: syntax error at token "assign"
+2_gram_verilog_file_3415.v:3:373-378: syntax error at token "assign"
+2_gram_verilog_file_3415.v:3:413-418: syntax error at token "assign"
+2_gram_verilog_file_3415.v:3:483-491: syntax error at token "endmodule"
+
+2_gram_verilog_file_3446.v: 2_gram_verilog_file_3446.v:3:51-54: syntax error at token "wand"
+2_gram_verilog_file_3446.v:3:69-74: syntax error at token "assign"
+2_gram_verilog_file_3446.v:3:107-115: syntax error at token "endmodule"
+
+2_gram_verilog_file_3447.v: 2_gram_verilog_file_3447.v:2:159-163: syntax error at token "logic"
+2_gram_verilog_file_3447.v:2:384-389: syntax error at token "assign"
+2_gram_verilog_file_3447.v:2:407-415: syntax error at token "endmodule"
+2_gram_verilog_file_3447.v:2:488: syntax error at token "("
+2_gram_verilog_file_3447.v:2:546-554: syntax error at token "endmodule"
+
+2_gram_verilog_file_3456.v: 2_gram_verilog_file_3456.v:4:117-121: syntax error at token "logic"
+2_gram_verilog_file_3456.v:4:200: syntax error at token "("
+2_gram_verilog_file_3456.v:4:215-223: syntax error at token "endmodule"
+
+2_gram_verilog_file_3519.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3086527141
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_3536.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 3940646910
+`timescale 1ps / 1ps `timescale 1ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+module module_0;
+  logic id_0;
+endmodule
+<<EOF>>
+2_gram_verilog_file_3541.v: 2_gram_verilog_file_3541.v:2:142-146: syntax error at token "logic"
+2_gram_verilog_file_3541.v:2:547-555: syntax error at token "endmodule"
+
+2_gram_verilog_file_3630.v: 2_gram_verilog_file_3630.v:4:120-124: syntax error at token "logic"
+2_gram_verilog_file_3630.v:4:267-275: syntax error at token "endmodule"
+
+2_gram_verilog_file_3660.v: 2_gram_verilog_file_3660.v:2:1006-1010: syntax error at token "logic"
+2_gram_verilog_file_3660.v:2:1152-1157: syntax error at token "assign"
+2_gram_verilog_file_3660.v:2:1206-1214: syntax error at token "endmodule"
+
+2_gram_verilog_file_3665.v: 2_gram_verilog_file_3665.v:2:93-97: syntax error at token "logic"
+2_gram_verilog_file_3665.v:2:512-520: syntax error at token "endmodule"
+
+2_gram_verilog_file_3672.v: 2_gram_verilog_file_3672.v:3:217-221: syntax error at token "logic"
+2_gram_verilog_file_3672.v:3:586-591: syntax error at token "assign"
+2_gram_verilog_file_3672.v:3:614-622: syntax error at token "endmodule"
+
+2_gram_verilog_file_3764.v: 2_gram_verilog_file_3764.v:2:211-215: syntax error at token "logic"
+2_gram_verilog_file_3764.v:2:705-713: syntax error at token "endmodule"
+
+2_gram_verilog_file_3826.v: 2_gram_verilog_file_3826.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_3826.v:2:265-270: syntax error at token "assign"
+2_gram_verilog_file_3826.v:2:295-303: syntax error at token "endmodule"
+
+2_gram_verilog_file_3834.v: 2_gram_verilog_file_3834.v:4:83-89: syntax error at token "longint"
+2_gram_verilog_file_3834.v:4:104-109: syntax error at token "assign"
+2_gram_verilog_file_3834.v:4:127-135: syntax error at token "endmodule"
+
+2_gram_verilog_file_3835.v: 2_gram_verilog_file_3835.v:2:156-160: syntax error at token "logic"
+2_gram_verilog_file_3835.v:2:286-291: syntax error at token "assign"
+2_gram_verilog_file_3835.v:2:348-353: syntax error at token "always"
+2_gram_verilog_file_3835.v:2:380-382: syntax error at token "end"
+2_gram_verilog_file_3835.v:3:57-62: syntax error at token "assign"
+2_gram_verilog_file_3835.v:3:80-85: syntax error at token "assign"
+2_gram_verilog_file_3835.v:3:103-108: syntax error at token "assign"
+2_gram_verilog_file_3835.v:3:143-151: syntax error at token "endmodule"
+2_gram_verilog_file_3835.v:4:41-46: syntax error at token "assign"
+2_gram_verilog_file_3835.v:4:67-72: syntax error at token "assign"
+2_gram_verilog_file_3835.v:4:94-99: syntax error at token "assign"
+2_gram_verilog_file_3835.v:4:117-125: syntax error at token "endmodule"
+
+2_gram_verilog_file_3877.v: 2_gram_verilog_file_3877.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_3877.v:2:183-188: syntax error at token "assign"
+2_gram_verilog_file_3877.v:2:209-214: syntax error at token "always"
+2_gram_verilog_file_3877.v:2:243-245: syntax error at token "end"
+2_gram_verilog_file_3877.v:2:281: syntax error at token "("
+2_gram_verilog_file_3877.v:2:296-301: syntax error at token "assign"
+2_gram_verilog_file_3877.v:2:343-348: syntax error at token "assign"
+2_gram_verilog_file_3877.v:2:366-374: syntax error at token "endmodule"
+
+2_gram_verilog_file_3887.v: 2_gram_verilog_file_3887.v:2:242-246: syntax error at token "logic"
+2_gram_verilog_file_3887.v:2:380-386: syntax error at token "specify"
+2_gram_verilog_file_3887.v:2:422: syntax error at token "("
+2_gram_verilog_file_3887.v:2:509-518: syntax error at token "endspecify"
+2_gram_verilog_file_3887.v:2:731-739: syntax error at token "endmodule"
+
+2_gram_verilog_file_3893.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 21:40-44:; problematic formatter output is
+// Seed: 1234889320
+`define pp_0 0
+module module_0;
+  always begin
+    if (1 - 1 | id_0) begin
+      id_0 = id_1;
+      id_1 <= 1;
+      id_0 = id_1;
+      type_0 id_2 (.id_0());
+    end else begin
+      if (id_3) id_0 <= 1;
+    end
+  end
+  type_7(
+      id_4, id_4
+  ); type_8(
+      id_5, 1'h0
+  );
+  logic id_6;
+endmodule
+`default_nettype wire `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3903.v: 2_gram_verilog_file_3903.v:2:262-266: syntax error at token "logic"
+2_gram_verilog_file_3903.v:2:348-353: syntax error at token "assign"
+2_gram_verilog_file_3903.v:2:371-376: syntax error at token "assign"
+2_gram_verilog_file_3903.v:2:399-404: syntax error at token "assign"
+2_gram_verilog_file_3903.v:2:422-430: syntax error at token "endmodule"
+
+2_gram_verilog_file_3939.v: 2_gram_verilog_file_3939.v:2:69-73: syntax error at token "logic"
+2_gram_verilog_file_3939.v:2:531-539: syntax error at token "endmodule"
+
+2_gram_verilog_file_3950.v: 2_gram_verilog_file_3950.v:2:131-135: syntax error at token "logic"
+2_gram_verilog_file_3950.v:2:666-671: syntax error at token "assign"
+2_gram_verilog_file_3950.v:2:707: syntax error at token "("
+2_gram_verilog_file_3950.v:2:754-759: syntax error at token "assign"
+2_gram_verilog_file_3950.v:2:800-808: syntax error at token "endmodule"
+2_gram_verilog_file_3950.v:2:1499-1504: syntax error at token "assign"
+2_gram_verilog_file_3950.v:2:1526-1534: syntax error at token "endmodule"
+
+2_gram_verilog_file_3956.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3002184763
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3973.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:41-45:; problematic formatter output is
+// Seed: 3926850149
+`define pp_0 0
+`default_nettype `pp_0 `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_3992.v: 2_gram_verilog_file_3992.v:3:143-147: syntax error at token "logic"
+2_gram_verilog_file_3992.v:3:385-393: syntax error at token "endmodule"
+
+2_gram_verilog_file_3996.v: 2_gram_verilog_file_3996.v:3:194-198: syntax error at token "logic"
+2_gram_verilog_file_3996.v:3:277-285: syntax error at token "endmodule"
+
+2_gram_verilog_file_3998.v: 2_gram_verilog_file_3998.v:2:100-104: syntax error at token "logic"
+2_gram_verilog_file_3998.v:2:204: syntax error at token "("
+2_gram_verilog_file_3998.v:2:281: syntax error at token "("
+2_gram_verilog_file_3998.v:2:371-376: syntax error at token "assign"
+2_gram_verilog_file_3998.v:2:414-422: syntax error at token "endmodule"
+2_gram_verilog_file_3998.v:3:98-106: syntax error at token "endmodule"
+
+2_gram_verilog_file_4033.v: 2_gram_verilog_file_4033.v:3:133-137: syntax error at token "logic"
+2_gram_verilog_file_4033.v:3:326-331: syntax error at token "assign"
+2_gram_verilog_file_4033.v:3:488-496: syntax error at token "endmodule"
+
+2_gram_verilog_file_4086.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:39-43:; problematic formatter output is
+// Seed: 984425781
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4113.v: 2_gram_verilog_file_4113.v:3:53-57: syntax error at token "logic"
+2_gram_verilog_file_4113.v:3:403: syntax error at token "("
+2_gram_verilog_file_4113.v:3:418-426: syntax error at token "endmodule"
+
+2_gram_verilog_file_4216.v: 2_gram_verilog_file_4216.v:2:149-153: syntax error at token "logic"
+2_gram_verilog_file_4216.v:2:315: syntax error at token "("
+2_gram_verilog_file_4216.v:2:382-390: syntax error at token "endmodule"
+
+2_gram_verilog_file_4242.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 4264806726
+`timescale 1 ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4273.v: 2_gram_verilog_file_4273.v:2:80-86: syntax error at token "integer"
+2_gram_verilog_file_4273.v:2:281-286: syntax error at token "assign"
+2_gram_verilog_file_4273.v:2:391-399: syntax error at token "endmodule"
+
+2_gram_verilog_file_4297.v: 2_gram_verilog_file_4297.v:5:42-46: syntax error at token "logic"
+2_gram_verilog_file_4297.v:5:701-709: syntax error at token "endmodule"
+2_gram_verilog_file_4297.v:5:1003-1011: syntax error at token "endmodule"
+
+2_gram_verilog_file_4325.v: 2_gram_verilog_file_4325.v:2:54-58: syntax error at token "logic"
+2_gram_verilog_file_4325.v:2:311-319: syntax error at token "endmodule"
+
+2_gram_verilog_file_4330.v: 2_gram_verilog_file_4330.v:2:75-79: syntax error at token "logic"
+2_gram_verilog_file_4330.v:2:284-289: syntax error at token "assign"
+2_gram_verilog_file_4330.v:2:307-312: syntax error at token "assign"
+2_gram_verilog_file_4330.v:2:367-375: syntax error at token "endmodule"
+
+2_gram_verilog_file_4371.v: 2_gram_verilog_file_4371.v:2:109-113: syntax error at token "logic"
+2_gram_verilog_file_4371.v:2:537-542: syntax error at token "always"
+2_gram_verilog_file_4371.v:2:561-566: syntax error at token "assign"
+2_gram_verilog_file_4371.v:2:602-610: syntax error at token "endmodule"
+
+2_gram_verilog_file_4392.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1655477974
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4444.v: 2_gram_verilog_file_4444.v:2:656-660: syntax error at token "logic"
+2_gram_verilog_file_4444.v:2:822: syntax error at token "("
+2_gram_verilog_file_4444.v:2:837-842: syntax error at token "always"
+2_gram_verilog_file_4444.v:2:885-893: syntax error at token "endmodule"
+2_gram_verilog_file_4444.v:3:60-64: syntax error at token "inout"
+2_gram_verilog_file_4444.v:3:73-78: syntax error at token "output"
+2_gram_verilog_file_4444.v:3:87-91: syntax error at token "inout"
+2_gram_verilog_file_4444.v:3:100-105: syntax error at token "output"
+2_gram_verilog_file_4444.v:3:131-136: syntax error at token "always"
+2_gram_verilog_file_4444.v:3:188-193: syntax error at token "assign"
+2_gram_verilog_file_4444.v:3:212-217: syntax error at token "assign"
+2_gram_verilog_file_4444.v:3:245-252: syntax error at token "generate"
+2_gram_verilog_file_4444.v:3:272-282: syntax error at token "endgenerate"
+2_gram_verilog_file_4444.v:3:346-351: syntax error at token "always"
+2_gram_verilog_file_4444.v:3:401-403: syntax error at token "end"
+
+2_gram_verilog_file_4484.v: 2_gram_verilog_file_4484.v:2:165-169: syntax error at token "logic"
+2_gram_verilog_file_4484.v:2:242-250: syntax error at token "endmodule"
+
+2_gram_verilog_file_4545.v: 2_gram_verilog_file_4545.v:2:104-108: syntax error at token "logic"
+2_gram_verilog_file_4545.v:2:878-883: syntax error at token "assign"
+2_gram_verilog_file_4545.v:2:956: syntax error at token "("
+2_gram_verilog_file_4545.v:2:1087-1095: syntax error at token "endmodule"
+
+2_gram_verilog_file_4561.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3216025111
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_4598.v: 2_gram_verilog_file_4598.v:2:76-80: syntax error at token "logic"
+2_gram_verilog_file_4598.v:2:198-203: syntax error at token "assign"
+2_gram_verilog_file_4598.v:2:224-232: syntax error at token "endmodule"
+
+2_gram_verilog_file_4602.v: 2_gram_verilog_file_4602.v:2:106-110: syntax error at token "logic"
+2_gram_verilog_file_4602.v:2:205-210: syntax error at token "assign"
+2_gram_verilog_file_4602.v:2:284-292: syntax error at token "endmodule"
+
+2_gram_verilog_file_4614.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3732444813
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4616.v: 2_gram_verilog_file_4616.v:2:561-565: syntax error at token "logic"
+2_gram_verilog_file_4616.v:2:1121: syntax error at token "("
+2_gram_verilog_file_4616.v:2:1266-1274: syntax error at token "endmodule"
+
+2_gram_verilog_file_4695.v: 2_gram_verilog_file_4695.v:2:230-234: syntax error at token "logic"
+2_gram_verilog_file_4695.v:2:884: syntax error at token "("
+2_gram_verilog_file_4695.v:2:896-904: syntax error at token "endmodule"
+
+2_gram_verilog_file_4700.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 342603711
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4708.v: 2_gram_verilog_file_4708.v:2:140-144: syntax error at token "logic"
+2_gram_verilog_file_4708.v:2:266-274: syntax error at token "endmodule"
+
+2_gram_verilog_file_4718.v: 2_gram_verilog_file_4718.v:2:183-187: syntax error at token "logic"
+2_gram_verilog_file_4718.v:2:413-418: syntax error at token "assign"
+2_gram_verilog_file_4718.v:2:457-462: syntax error at token "assign"
+2_gram_verilog_file_4718.v:2:531-536: syntax error at token "always"
+2_gram_verilog_file_4718.v:2:563-565: syntax error at token "end"
+2_gram_verilog_file_4718.v:2:773-781: syntax error at token "endmodule"
+
+2_gram_verilog_file_4724.v: 2_gram_verilog_file_4724.v:2:69-73: syntax error at token "logic"
+2_gram_verilog_file_4724.v:2:120-125: syntax error at token "assign"
+2_gram_verilog_file_4724.v:2:143-148: syntax error at token "assign"
+2_gram_verilog_file_4724.v:2:179: syntax error at token "("
+2_gram_verilog_file_4724.v:2:526: syntax error at token "("
+2_gram_verilog_file_4724.v:2:598-606: syntax error at token "endmodule"
+
+2_gram_verilog_file_4747.v: 2_gram_verilog_file_4747.v:3:13-17: syntax error at token "`pp_0"
+2_gram_verilog_file_4747.v:3:61-65: syntax error at token "table"
+2_gram_verilog_file_4747.v:3:86: syntax error at token "n"
+2_gram_verilog_file_4747.v:3:104: syntax error at token "?"
+2_gram_verilog_file_4747.v:3:125: syntax error at token "0"
+2_gram_verilog_file_4747.v:3:161: syntax error at token "x"
+2_gram_verilog_file_4747.v:3:182: syntax error at token "?"
+2_gram_verilog_file_4747.v:3:200: syntax error at token "0"
+2_gram_verilog_file_4747.v:3:221: syntax error at token "n"
+2_gram_verilog_file_4747.v:3:239-246: syntax error at token "endtable"
+
+2_gram_verilog_file_4756.v: 2_gram_verilog_file_4756.v:2:133-137: syntax error at token "logic"
+2_gram_verilog_file_4756.v:2:152-160: syntax error at token "endmodule"
+
+2_gram_verilog_file_4765.v: 2_gram_verilog_file_4765.v:3:35-37: syntax error at token "reg"
+2_gram_verilog_file_4765.v:3:156-161: syntax error at token "always"
+2_gram_verilog_file_4765.v:3:183-191: syntax error at token "endmodule"
+
+2_gram_verilog_file_4783.v: 2_gram_verilog_file_4783.v:2:422-426: syntax error at token "logic"
+2_gram_verilog_file_4783.v:2:624-633: syntax error at token "endprogram"
+
+2_gram_verilog_file_4785.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1050082726
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4785.v: 2_gram_verilog_file_4785.v:4:198-202: syntax error at token "logic"
+2_gram_verilog_file_4785.v:4:754-759: syntax error at token "assign"
+2_gram_verilog_file_4785.v:4:831-836: syntax error at token "assign"
+2_gram_verilog_file_4785.v:4:938: syntax error at token "("
+2_gram_verilog_file_4785.v:4:950-955: syntax error at token "assign"
+2_gram_verilog_file_4785.v:4:978-986: syntax error at token "endmodule"
+
+2_gram_verilog_file_4809.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 64604728
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_4899.v: 2_gram_verilog_file_4899.v:2:36-39: syntax error at token "real"
+2_gram_verilog_file_4899.v:2:412-417: syntax error at token "assign"
+2_gram_verilog_file_4899.v:2:439-447: syntax error at token "endmodule"
+
+2_gram_verilog_file_4919.v: 2_gram_verilog_file_4919.v:2:134-138: syntax error at token "logic"
+2_gram_verilog_file_4919.v:2:645-650: syntax error at token "assign"
+2_gram_verilog_file_4919.v:2:672-680: syntax error at token "endmodule"
+
+2_gram_verilog_file_4923.v: 2_gram_verilog_file_4923.v:2:139-143: syntax error at token "logic"
+2_gram_verilog_file_4923.v:2:204: syntax error at token "("
+2_gram_verilog_file_4923.v:2:219-227: syntax error at token "endmodule"
+
+2_gram_verilog_file_4942.v: 2_gram_verilog_file_4942.v:4:37-41: syntax error at token "logic"
+2_gram_verilog_file_4942.v:4:330-335: syntax error at token "assign"
+2_gram_verilog_file_4942.v:4:371-379: syntax error at token "endmodule"
+
+2_gram_verilog_file_4971.v: 2_gram_verilog_file_4971.v:2:163-167: syntax error at token "logic"
+2_gram_verilog_file_4971.v:2:456: syntax error at token "("
+2_gram_verilog_file_4971.v:2:468-476: syntax error at token "endmodule"
+
+2_gram_verilog_file_4978.v: 2_gram_verilog_file_4978.v:2:521-525: syntax error at token "logic"
+2_gram_verilog_file_4978.v:2:762-770: syntax error at token "endmodule"
+
+2_gram_verilog_file_4988.v: 2_gram_verilog_file_4988.v:2:58-62: syntax error at token "logic"
+2_gram_verilog_file_4988.v:2:194: syntax error at token "("
+2_gram_verilog_file_4988.v:2:209-217: syntax error at token "endmodule"
+
+2_gram_verilog_file_4992.v: 2_gram_verilog_file_4992.v:2:315-319: syntax error at token "logic"
+2_gram_verilog_file_4992.v:2:595-600: syntax error at token "assign"
+2_gram_verilog_file_4992.v:2:780-788: syntax error at token "endmodule"
+
+2_gram_verilog_file_4994.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 830164553
+`timescale 1 ps / 1 ps
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_4999.v: 2_gram_verilog_file_4999.v:2:191-195: syntax error at token "logic"
+2_gram_verilog_file_4999.v:2:278-286: syntax error at token "endmodule"
+
+2_gram_verilog_file_5016.v: 2_gram_verilog_file_5016.v:2:128-132: syntax error at token "logic"
+2_gram_verilog_file_5016.v:2:367-375: syntax error at token "endmodule"
+
+2_gram_verilog_file_5020.v: 2_gram_verilog_file_5020.v:2:78-82: syntax error at token "logic"
+2_gram_verilog_file_5020.v:2:226-234: syntax error at token "endmodule"
+
+2_gram_verilog_file_5027.v: 2_gram_verilog_file_5027.v:2:239-241: syntax error at token "reg"
+2_gram_verilog_file_5027.v:2:342-347: syntax error at token "assign"
+2_gram_verilog_file_5027.v:2:383: syntax error at token "("
+2_gram_verilog_file_5027.v:2:511-516: syntax error at token "always"
+2_gram_verilog_file_5027.v:2:558-566: syntax error at token "endmodule"
+
+2_gram_verilog_file_5065.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:18-22:; problematic formatter output is
+// Seed: 673437466
+`define pp_0 0
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_5072.v: 2_gram_verilog_file_5072.v:2:140-141: syntax error at token "\'"
+
+2_gram_verilog_file_5074.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 633023156
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_5106.v: 2_gram_verilog_file_5106.v:2:563-566: syntax error at token "tri1"
+2_gram_verilog_file_5106.v:2:858-863: syntax error at token "assign"
+2_gram_verilog_file_5106.v:2:960-968: syntax error at token "endmodule"
+2_gram_verilog_file_5106.v:2:1065-1069: syntax error at token "input"
+2_gram_verilog_file_5106.v:2:1078-1083: syntax error at token "output"
+2_gram_verilog_file_5106.v:2:1092-1096: syntax error at token "inout"
+2_gram_verilog_file_5106.v:2:1105-1109: syntax error at token "input"
+2_gram_verilog_file_5106.v:2:1118-1123: syntax error at token "output"
+2_gram_verilog_file_5106.v:2:1132-1136: syntax error at token "input"
+2_gram_verilog_file_5106.v:2:1145-1149: syntax error at token "inout"
+2_gram_verilog_file_5106.v:2:1158-1163: syntax error at token "output"
+2_gram_verilog_file_5106.v:2:1190-1195: syntax error at token "assign"
+2_gram_verilog_file_5106.v:2:1225-1233: syntax error at token "endmodule"
+
+2_gram_verilog_file_5117.v: 2_gram_verilog_file_5117.v:2:178-184: syntax error at token "integer"
+2_gram_verilog_file_5117.v:2:323-328: syntax error at token "assign"
+2_gram_verilog_file_5117.v:2:353: syntax error at token "("
+2_gram_verilog_file_5117.v:2:372: syntax error at token "("
+2_gram_verilog_file_5117.v:2:387-392: syntax error at token "assign"
+2_gram_verilog_file_5117.v:2:427-435: syntax error at token "endmodule"
+
+2_gram_verilog_file_5124.v: 2_gram_verilog_file_5124.v:2:261-265: syntax error at token "logic"
+2_gram_verilog_file_5124.v:2:471-476: syntax error at token "assign"
+2_gram_verilog_file_5124.v:2:494-502: syntax error at token "endmodule"
+
+2_gram_verilog_file_5175.v: 2_gram_verilog_file_5175.v:3:58-62: syntax error at token "`pp_0"
+
+2_gram_verilog_file_5178.v: 2_gram_verilog_file_5178.v:2:39-42: syntax error at token "tri1"
+2_gram_verilog_file_5178.v:2:153-158: syntax error at token "assign"
+2_gram_verilog_file_5178.v:2:223-231: syntax error at token "endmodule"
+
+2_gram_verilog_file_5202.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 6:18-22:; problematic formatter output is
+// Seed: 1600033629
+`timescale 1ps / 1 ps
+`define pp_0 0
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_5220.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:39-43:; problematic formatter output is
+// Seed: 2173495516
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0
+`define pp_1 0
+`define pp_2 0
+<<EOF>>
+2_gram_verilog_file_5222.v: 2_gram_verilog_file_5222.v:2:124-128: syntax error at token "logic"
+2_gram_verilog_file_5222.v:2:395-400: syntax error at token "assign"
+2_gram_verilog_file_5222.v:2:419-424: syntax error at token "assign"
+2_gram_verilog_file_5222.v:2:446-451: syntax error at token "always"
+2_gram_verilog_file_5222.v:2:486-489: syntax error at token "else"
+2_gram_verilog_file_5222.v:2:518-520: syntax error at token "end"
+
+2_gram_verilog_file_5230.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_2" at 6:18-22:; problematic formatter output is
+// Seed: 2291911571
+`define pp_0 0
+`define pp_1 0
+`define pp_2 0
+`define pp_3 0
+`default_nettype `pp_2
+<<EOF>>
+2_gram_verilog_file_5254.v: 2_gram_verilog_file_5254.v:4:188-192: syntax error at token "logic"
+2_gram_verilog_file_5254.v:4:207-212: syntax error at token "assign"
+2_gram_verilog_file_5254.v:4:233-238: syntax error at token "assign"
+2_gram_verilog_file_5254.v:4:309-317: syntax error at token "endmodule"
+2_gram_verilog_file_5254.v:4:860-865: syntax error at token "assign"
+2_gram_verilog_file_5254.v:4:888-893: syntax error at token "assign"
+2_gram_verilog_file_5254.v:4:958-963: syntax error at token "assign"
+2_gram_verilog_file_5254.v:4:981-989: syntax error at token "endmodule"
+
+2_gram_verilog_file_5262.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:39-43:; problematic formatter output is
+// Seed: 661113143
+`timescale 1ps / 1ps
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_5271.v: 2_gram_verilog_file_5271.v:4:328-332: syntax error at token "logic"
+2_gram_verilog_file_5271.v:4:383-391: syntax error at token "endmodule"
+2_gram_verilog_file_5271.v:5:215-219: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:229-233: syntax error at token "input"
+2_gram_verilog_file_5271.v:5:243-248: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:258-263: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:273-278: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:288-293: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:303-308: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:318-322: syntax error at token "input"
+2_gram_verilog_file_5271.v:5:332-336: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:346-350: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:360-364: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:374-379: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:388-393: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:402-407: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:416-420: syntax error at token "input"
+2_gram_verilog_file_5271.v:5:429-433: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:442-447: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:456-460: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:469-474: syntax error at token "output"
+2_gram_verilog_file_5271.v:5:483-487: syntax error at token "inout"
+2_gram_verilog_file_5271.v:5:497-502: syntax error at token "assign"
+2_gram_verilog_file_5271.v:5:524-529: syntax error at token "always"
+2_gram_verilog_file_5271.v:5:581-589: syntax error at token "endmodule"
+
+2_gram_verilog_file_5290.v: 2_gram_verilog_file_5290.v:2:60-64: syntax error at token "logic"
+2_gram_verilog_file_5290.v:2:192-200: syntax error at token "endmodule"
+
+2_gram_verilog_file_5291.v: 2_gram_verilog_file_5291.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_5291.v:2:554-559: syntax error at token "assign"
+2_gram_verilog_file_5291.v:2:608: syntax error at token "("
+2_gram_verilog_file_5291.v:2:705: syntax error at token "("
+2_gram_verilog_file_5291.v:2:985-990: syntax error at token "assign"
+2_gram_verilog_file_5291.v:2:1043-1048: syntax error at token "assign"
+2_gram_verilog_file_5291.v:2:1066-1071: syntax error at token "assign"
+2_gram_verilog_file_5291.v:2:1089-1094: syntax error at token "always"
+2_gram_verilog_file_5291.v:2:1121-1123: syntax error at token "end"
+2_gram_verilog_file_5291.v:2:1301-1309: syntax error at token "endmodule"
+2_gram_verilog_file_5291.v:4:33-37: syntax error at token "inout"
+2_gram_verilog_file_5291.v:4:61: syntax error at token "("
+2_gram_verilog_file_5291.v:4:460-468: syntax error at token "endmodule"
+
+2_gram_verilog_file_5306.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:62-66:; problematic formatter output is
+// Seed: 3018415846
+`define pp_0 0
+`default_nettype `pp_0 `timescale 1ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_5361.v: 2_gram_verilog_file_5361.v:4:194-198: syntax error at token "logic"
+2_gram_verilog_file_5361.v:4:278-283: syntax error at token "assign"
+2_gram_verilog_file_5361.v:4:342-347: syntax error at token "assign"
+2_gram_verilog_file_5361.v:4:403-408: syntax error at token "assign"
+2_gram_verilog_file_5361.v:4:442-450: syntax error at token "endmodule"
+
+2_gram_verilog_file_5361.v: 2_gram_verilog_file_5361.v:2:70-74: syntax error at token "logic"
+2_gram_verilog_file_5361.v:2:161-166: syntax error at token "assign"
+2_gram_verilog_file_5361.v:2:203-211: syntax error at token "endmodule"
+
+2_gram_verilog_file_5373.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 5:18-22:; problematic formatter output is
+// Seed: 1580576920
+`timescale 1ps / 1ps
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+`define pp_2 0
+<<EOF>>
+2_gram_verilog_file_5418.v: 2_gram_verilog_file_5418.v:2:144-148: syntax error at token "logic"
+2_gram_verilog_file_5418.v:2:922-927: syntax error at token "assign"
+2_gram_verilog_file_5418.v:2:959: syntax error at token "("
+2_gram_verilog_file_5418.v:2:1029-1037: syntax error at token "endmodule"
+
+2_gram_verilog_file_5431.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 4:18-22:; problematic formatter output is
+// Seed: 473968754
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_5464.v: 2_gram_verilog_file_5464.v:2:348-352: syntax error at token "logic"
+2_gram_verilog_file_5464.v:2:513-518: syntax error at token "always"
+2_gram_verilog_file_5464.v:2:570-572: syntax error at token "end"
+2_gram_verilog_file_5464.v:2:599-607: syntax error at token "endmodule"
+
+2_gram_verilog_file_5467.v: 2_gram_verilog_file_5467.v:2:196-200: syntax error at token "logic"
+2_gram_verilog_file_5467.v:2:248-253: syntax error at token "always"
+2_gram_verilog_file_5467.v:2:286-288: syntax error at token "end"
+2_gram_verilog_file_5467.v:2:331-336: syntax error at token "assign"
+2_gram_verilog_file_5467.v:2:893: syntax error at token "("
+2_gram_verilog_file_5467.v:2:959-967: syntax error at token "endmodule"
+
+2_gram_verilog_file_5486.v: 2_gram_verilog_file_5486.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_5486.v:2:107: syntax error at token "("
+2_gram_verilog_file_5486.v:2:302-310: syntax error at token "endmodule"
+
+2_gram_verilog_file_5492.v: 2_gram_verilog_file_5492.v:2:73-77: syntax error at token "logic"
+2_gram_verilog_file_5492.v:2:109-114: syntax error at token "always"
+2_gram_verilog_file_5492.v:2:140-142: syntax error at token "end"
+2_gram_verilog_file_5492.v:2:240-245: syntax error at token "assign"
+2_gram_verilog_file_5492.v:2:363-371: syntax error at token "endmodule"
+
+2_gram_verilog_file_5505.v: 2_gram_verilog_file_5505.v:2:294-298: syntax error at token "logic"
+2_gram_verilog_file_5505.v:2:588-596: syntax error at token "endmodule"
+
+2_gram_verilog_file_5513.v: 2_gram_verilog_file_5513.v:2:387-391: syntax error at token "logic"
+2_gram_verilog_file_5513.v:2:650-658: syntax error at token "endmodule"
+
+2_gram_verilog_file_5520.v: 2_gram_verilog_file_5520.v:3:201: syntax error at token "#"
+
+2_gram_verilog_file_5529.v: 2_gram_verilog_file_5529.v:2:52-55: syntax error at token "enum"
+2_gram_verilog_file_5529.v:2:318-326: syntax error at token "endmodule"
+
+2_gram_verilog_file_5548.v: 2_gram_verilog_file_5548.v:2:70-74: syntax error at token "logic"
+2_gram_verilog_file_5548.v:2:805-810: syntax error at token "assign"
+2_gram_verilog_file_5548.v:2:905: syntax error at token "("
+2_gram_verilog_file_5548.v:2:937-942: syntax error at token "always"
+2_gram_verilog_file_5548.v:2:973-975: syntax error at token "end"
+2_gram_verilog_file_5548.v:2:1049-1054: syntax error at token "assign"
+2_gram_verilog_file_5548.v:2:1084: syntax error at token "("
+2_gram_verilog_file_5548.v:2:1096-1101: syntax error at token "assign"
+2_gram_verilog_file_5548.v:2:1140-1148: syntax error at token "endmodule"
+
+2_gram_verilog_file_5548.v: 2_gram_verilog_file_5548.v:3:805-809: syntax error at token "logic"
+2_gram_verilog_file_5548.v:3:1029: syntax error at token "("
+2_gram_verilog_file_5548.v:3:1096-1104: syntax error at token "endmodule"
+
+2_gram_verilog_file_5554.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 299656608
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_5564.v: 2_gram_verilog_file_5564.v:2:254-258: syntax error at token "logic"
+2_gram_verilog_file_5564.v:2:304: syntax error at token "("
+2_gram_verilog_file_5564.v:2:348-356: syntax error at token "endmodule"
+
+2_gram_verilog_file_5614.v: 2_gram_verilog_file_5614.v:3:93-97: syntax error at token "logic"
+2_gram_verilog_file_5614.v:3:487: syntax error at token "("
+2_gram_verilog_file_5614.v:3:503-508: syntax error at token "assign"
+2_gram_verilog_file_5614.v:3:610: syntax error at token "("
+2_gram_verilog_file_5614.v:3:716-721: syntax error at token "assign"
+2_gram_verilog_file_5614.v:3:864: syntax error at token "("
+2_gram_verilog_file_5614.v:3:905-910: syntax error at token "assign"
+2_gram_verilog_file_5614.v:3:937-945: syntax error at token "endmodule"
+
+2_gram_verilog_file_5664.v: 2_gram_verilog_file_5664.v:5:306-310: syntax error at token "logic"
+2_gram_verilog_file_5664.v:5:351: syntax error at token "("
+2_gram_verilog_file_5664.v:5:381-389: syntax error at token "endmodule"
+
+2_gram_verilog_file_5736.v: 2_gram_verilog_file_5736.v:2:109-113: syntax error at token "logic"
+2_gram_verilog_file_5736.v:2:670-675: syntax error at token "assign"
+2_gram_verilog_file_5736.v:2:822-827: syntax error at token "always"
+2_gram_verilog_file_5736.v:2:901-903: syntax error at token "end"
+2_gram_verilog_file_5736.v:2:965: syntax error at token "("
+2_gram_verilog_file_5736.v:2:1270-1275: syntax error at token "assign"
+2_gram_verilog_file_5736.v:2:1329: syntax error at token "("
+2_gram_verilog_file_5736.v:2:1616-1624: syntax error at token "endmodule"
+
+2_gram_verilog_file_5736.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2600735937
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_5765.v: 2_gram_verilog_file_5765.v:5:239-243: syntax error at token "logic"
+2_gram_verilog_file_5765.v:5:276-284: syntax error at token "endmodule"
+
+2_gram_verilog_file_5805.v: 2_gram_verilog_file_5805.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_5805.v:2:196-201: syntax error at token "assign"
+2_gram_verilog_file_5805.v:2:222-227: syntax error at token "assign"
+2_gram_verilog_file_5805.v:2:245-253: syntax error at token "endmodule"
+
+2_gram_verilog_file_5815.v: 2_gram_verilog_file_5815.v:2:328-332: syntax error at token "logic"
+2_gram_verilog_file_5815.v:2:414-419: syntax error at token "assign"
+2_gram_verilog_file_5815.v:2:437-442: syntax error at token "assign"
+2_gram_verilog_file_5815.v:2:465-473: syntax error at token "endmodule"
+2_gram_verilog_file_5815.v:2:660-665: syntax error at token "assign"
+2_gram_verilog_file_5815.v:2:778-783: syntax error at token "assign"
+2_gram_verilog_file_5815.v:2:1073-1081: syntax error at token "endmodule"
+2_gram_verilog_file_5815.v:2:1278-1282: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1292-1297: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1307-1311: syntax error at token "input"
+2_gram_verilog_file_5815.v:2:1321-1325: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1335-1339: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1349-1353: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1363-1368: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1378-1383: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1393-1398: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1408-1413: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1422-1426: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1435-1439: syntax error at token "input"
+2_gram_verilog_file_5815.v:2:1448-1452: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1461-1465: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1474-1478: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1487-1492: syntax error at token "output"
+2_gram_verilog_file_5815.v:2:1501-1505: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1514-1518: syntax error at token "inout"
+2_gram_verilog_file_5815.v:2:1528-1533: syntax error at token "assign"
+2_gram_verilog_file_5815.v:2:1561-1569: syntax error at token "endmodule"
+
+2_gram_verilog_file_5820.v: 2_gram_verilog_file_5820.v:2:93-97: syntax error at token "logic"
+2_gram_verilog_file_5820.v:2:144-152: syntax error at token "endmodule"
+
+2_gram_verilog_file_5822.v: 2_gram_verilog_file_5822.v:2:360-363: syntax error at token "real"
+2_gram_verilog_file_5822.v:2:1102-1107: syntax error at token "assign"
+2_gram_verilog_file_5822.v:2:1162-1167: syntax error at token "always"
+2_gram_verilog_file_5822.v:2:1223-1231: syntax error at token "endmodule"
+
+2_gram_verilog_file_5882.v: 2_gram_verilog_file_5882.v:2:52-56: syntax error at token "logic"
+2_gram_verilog_file_5882.v:2:252-260: syntax error at token "endmodule"
+
+2_gram_verilog_file_5886.v: 2_gram_verilog_file_5886.v:3:78-82: syntax error at token "logic"
+2_gram_verilog_file_5886.v:3:247-255: syntax error at token "endmodule"
+
+2_gram_verilog_file_5929.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 4:40-44:; problematic formatter output is
+// Seed: 1936667287
+`define pp_0 0
+`define pp_1 0
+`default_nettype wire `default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_5958.v: 2_gram_verilog_file_5958.v:3:126-130: syntax error at token "`pp_0"
+2_gram_verilog_file_5958.v:3:170-171: syntax error at token "if"
+2_gram_verilog_file_5958.v:3:206-209: syntax error at token "else"
+2_gram_verilog_file_5958.v:3:336-337: syntax error at token "<="
+2_gram_verilog_file_5958.v:3:393: syntax error at token "("
+2_gram_verilog_file_5958.v:3:565-566: syntax error at token "<="
+2_gram_verilog_file_5958.v:3:581-582: syntax error at token "<="
+2_gram_verilog_file_5958.v:3:638-639: syntax error at token "<="
+2_gram_verilog_file_5958.v:3:651-653: syntax error at token "end"
+2_gram_verilog_file_5958.v:3:682-683: syntax error at token "<="
+2_gram_verilog_file_5958.v:3:696-706: syntax error at token "endfunction"
+
+2_gram_verilog_file_5975.v: 2_gram_verilog_file_5975.v:2:222-226: syntax error at token "logic"
+
+2_gram_verilog_file_6013.v: 2_gram_verilog_file_6013.v:3:200-204: syntax error at token "logic"
+2_gram_verilog_file_6013.v:3:274: syntax error at token "("
+2_gram_verilog_file_6013.v:3:310-315: syntax error at token "assign"
+2_gram_verilog_file_6013.v:3:333-338: syntax error at token "always"
+2_gram_verilog_file_6013.v:3:366-368: syntax error at token "end"
+2_gram_verilog_file_6013.v:3:413: syntax error at token "("
+2_gram_verilog_file_6013.v:3:1000-1005: syntax error at token "assign"
+2_gram_verilog_file_6013.v:3:1037: syntax error at token "("
+2_gram_verilog_file_6013.v:3:1156-1164: syntax error at token "endmodule"
+
+2_gram_verilog_file_6033.v: 2_gram_verilog_file_6033.v:2:37-41: syntax error at token "logic"
+2_gram_verilog_file_6033.v:2:210-215: syntax error at token "always"
+2_gram_verilog_file_6033.v:2:279: syntax error at token "("
+2_gram_verilog_file_6033.v:2:303-305: syntax error at token "end"
+2_gram_verilog_file_6033.v:2:325-333: syntax error at token "endmodule"
+
+2_gram_verilog_file_6039.v: 2_gram_verilog_file_6039.v:3:59-63: syntax error at token "logic"
+2_gram_verilog_file_6039.v:3:222-229: syntax error at token "defparam"
+2_gram_verilog_file_6039.v:3:281: syntax error at token "("
+2_gram_verilog_file_6039.v:3:320-325: syntax error at token "assign"
+2_gram_verilog_file_6039.v:3:343-351: syntax error at token "endmodule"
+
+2_gram_verilog_file_6043.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 6:18-22:; problematic formatter output is
+// Seed: 1298380939
+module module_0 ();
+  logic id_0;
+endmodule
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_6050.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 4:18-22:; problematic formatter output is
+// Seed: 3660206279
+localparam id_0 = (id_0);
+`define pp_1 0
+`default_nettype `pp_1
+`define pp_2 0
+`define pp_3 0
+`timescale 1ps / 1ps `default_nettype `pp_3
+<<EOF>>
+2_gram_verilog_file_6062.v: 2_gram_verilog_file_6062.v:2:323-327: syntax error at token "logic"
+2_gram_verilog_file_6062.v:2:487-492: syntax error at token "assign"
+2_gram_verilog_file_6062.v:2:524-532: syntax error at token "endmodule"
+
+2_gram_verilog_file_6081.v: 2_gram_verilog_file_6081.v:2:259-263: syntax error at token "logic"
+2_gram_verilog_file_6081.v:2:321-329: syntax error at token "endmodule"
+
+2_gram_verilog_file_6114.v: 2_gram_verilog_file_6114.v:2:82-86: syntax error at token "logic"
+2_gram_verilog_file_6114.v:2:124-129: syntax error at token "assign"
+2_gram_verilog_file_6114.v:2:159-167: syntax error at token "endmodule"
+
+2_gram_verilog_file_6120.v: 2_gram_verilog_file_6120.v:2:233-239: syntax error at token "integer"
+2_gram_verilog_file_6120.v:2:255-260: syntax error at token "assign"
+2_gram_verilog_file_6120.v:2:379: syntax error at token "("
+2_gram_verilog_file_6120.v:2:514-522: syntax error at token "endmodule"
+
+2_gram_verilog_file_6127.v: 2_gram_verilog_file_6127.v:2:289-293: syntax error at token "logic"
+2_gram_verilog_file_6127.v:2:350-355: syntax error at token "assign"
+2_gram_verilog_file_6127.v:2:376-381: syntax error at token "assign"
+2_gram_verilog_file_6127.v:2:430: syntax error at token "("
+2_gram_verilog_file_6127.v:2:451-459: syntax error at token "endmodule"
+
+2_gram_verilog_file_6139.v: 2_gram_verilog_file_6139.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_6139.v:2:175-183: syntax error at token "endmodule"
+2_gram_verilog_file_6139.v:2:725-733: syntax error at token "endmodule"
+
+2_gram_verilog_file_6142.v: 2_gram_verilog_file_6142.v:2:84-88: syntax error at token "logic"
+2_gram_verilog_file_6142.v:3:2-7: syntax error at token "assign"
+2_gram_verilog_file_6142.v:3:27-32: syntax error at token "always"
+2_gram_verilog_file_6142.v:3:79-81: syntax error at token "end"
+2_gram_verilog_file_6142.v:3:118-126: syntax error at token "endmodule"
+
+2_gram_verilog_file_6150.v: *** Some token partitions failed to complete within the search limit:
+>>[defparam id_10 . id_11 = id_8 , id_12 . id_13 = id_8 , id_14 . id_15 = id_15 , id_16 . id_17 = 1 , id_18 . id_19 = 1 , id_20 . id_21 = 1 'b 0 , id_22 . id_23 = id_19 , id_24 . id_25 = 1 - ( id_16 ) , id_26 . id_27 = id_26 , id_28 . id_29 = 1 , id_30 . id_31 = id_30 , id_32 . id_33 = id_9 , id_34 . id_35 = id_22 , id_36 . id_37 = 1 , id_38 . id_39 = id_24 , id_40 . id_41 = 1 , id_42 . id_43 = id_17 , id_44 . id_45 = id_2 + id_42 , id_46 . id_47 = ( 1 ) , id_48 . id_49 = id_11 , id_50 . id_51 = 1 , id_52 . id_53 = id_39 ;], policy: uninitialized, (origin: "defparam")
+*** end of partially formatted partition list
+[other error status]
+2_gram_verilog_file_6158.v: 2_gram_verilog_file_6158.v:2:37-41: syntax error at token "logic"
+2_gram_verilog_file_6158.v:2:509-517: syntax error at token "endmodule"
+
+2_gram_verilog_file_6288.v: 2_gram_verilog_file_6288.v:5:349-353: syntax error at token "logic"
+2_gram_verilog_file_6288.v:5:387-395: syntax error at token "endmodule"
+
+2_gram_verilog_file_6291.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 713932758
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_6316.v: 2_gram_verilog_file_6316.v:2:664-668: syntax error at token "logic"
+2_gram_verilog_file_6316.v:2:845-850: syntax error at token "assign"
+2_gram_verilog_file_6316.v:2:882-887: syntax error at token "assign"
+2_gram_verilog_file_6316.v:2:927-932: syntax error at token "assign"
+2_gram_verilog_file_6316.v:2:955-963: syntax error at token "endmodule"
+
+2_gram_verilog_file_6331.v: 2_gram_verilog_file_6331.v:2:83-87: syntax error at token "logic"
+2_gram_verilog_file_6331.v:2:166: syntax error at token "("
+2_gram_verilog_file_6331.v:2:202-207: syntax error at token "assign"
+2_gram_verilog_file_6331.v:2:244-249: syntax error at token "assign"
+2_gram_verilog_file_6331.v:2:305-313: syntax error at token "endmodule"
+
+2_gram_verilog_file_6393.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:18-22:; problematic formatter output is
+// Seed: 2265654627
+`timescale 1ps / 1 ps
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_6401.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 813783818
+`timescale 1ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_6420.v: 2_gram_verilog_file_6420.v:2:420-424: syntax error at token "logic"
+2_gram_verilog_file_6420.v:2:712-719: syntax error at token "defparam"
+2_gram_verilog_file_6420.v:2:748-756: syntax error at token "endmodule"
+
+2_gram_verilog_file_6422.v: 2_gram_verilog_file_6422.v:2:42-45: syntax error at token "id_8"
+2_gram_verilog_file_6422.v:2:207: syntax error at token "("
+2_gram_verilog_file_6422.v:2:466-474: syntax error at token "endmodule"
+
+2_gram_verilog_file_6431.v: 2_gram_verilog_file_6431.v:2:157-161: syntax error at token "logic"
+2_gram_verilog_file_6431.v:2:770-775: syntax error at token "assign"
+2_gram_verilog_file_6431.v:2:809-817: syntax error at token "endmodule"
+
+2_gram_verilog_file_6539.v: 2_gram_verilog_file_6539.v:2:886-890: syntax error at token "logic"
+2_gram_verilog_file_6539.v:2:1032: syntax error at token "("
+2_gram_verilog_file_6539.v:2:1123: syntax error at token "("
+2_gram_verilog_file_6539.v:2:1252-1257: syntax error at token "assign"
+2_gram_verilog_file_6539.v:2:1315-1320: syntax error at token "assign"
+2_gram_verilog_file_6539.v:2:1338-1346: syntax error at token "endmodule"
+
+2_gram_verilog_file_6540.v: 2_gram_verilog_file_6540.v:2:441-445: syntax error at token "logic"
+2_gram_verilog_file_6540.v:2:724-729: syntax error at token "assign"
+2_gram_verilog_file_6540.v:2:761-769: syntax error at token "endmodule"
+2_gram_verilog_file_6540.v:2:986-994: syntax error at token "endmodule"
+2_gram_verilog_file_6540.v:2:1090: syntax error at token "("
+2_gram_verilog_file_6540.v:2:1119-1127: syntax error at token "endmodule"
+
+2_gram_verilog_file_6595.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3523345020
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_6613.v: 2_gram_verilog_file_6613.v:2:153-157: syntax error at token "logic"
+2_gram_verilog_file_6613.v:2:579-587: syntax error at token "endmodule"
+
+2_gram_verilog_file_6613.v: 2_gram_verilog_file_6613.v:3:114-118: syntax error at token "logic"
+2_gram_verilog_file_6613.v:3:149-154: syntax error at token "assign"
+2_gram_verilog_file_6613.v:3:175-183: syntax error at token "endmodule"
+2_gram_verilog_file_6613.v:4:126-131: syntax error at token "output"
+2_gram_verilog_file_6613.v:4:140-144: syntax error at token "inout"
+2_gram_verilog_file_6613.v:4:153-158: syntax error at token "output"
+2_gram_verilog_file_6613.v:4:167-171: syntax error at token "inout"
+2_gram_verilog_file_6613.v:4:180-184: syntax error at token "input"
+2_gram_verilog_file_6613.v:4:193-197: syntax error at token "input"
+2_gram_verilog_file_6613.v:4:206-210: syntax error at token "input"
+2_gram_verilog_file_6613.v:4:219-223: syntax error at token "inout"
+2_gram_verilog_file_6613.v:4:232-237: syntax error at token "output"
+2_gram_verilog_file_6613.v:4:261: syntax error at token "("
+2_gram_verilog_file_6613.v:4:303-311: syntax error at token "endmodule"
+
+2_gram_verilog_file_6660.v: 2_gram_verilog_file_6660.v:2:37-41: syntax error at token "logic"
+2_gram_verilog_file_6660.v:2:624: syntax error at token "("
+2_gram_verilog_file_6660.v:2:660-665: syntax error at token "always"
+2_gram_verilog_file_6660.v:2:688-693: syntax error at token "assign"
+2_gram_verilog_file_6660.v:2:734-742: syntax error at token "endmodule"
+
+2_gram_verilog_file_6666.v: 2_gram_verilog_file_6666.v:2:107-111: syntax error at token "logic"
+2_gram_verilog_file_6666.v:2:206-211: syntax error at token "assign"
+2_gram_verilog_file_6666.v:2:413-421: syntax error at token "endmodule"
+
+2_gram_verilog_file_6693.v: 2_gram_verilog_file_6693.v:3:243-246: syntax error at token "real"
+2_gram_verilog_file_6693.v:3:262-270: syntax error at token "endmodule"
+
+2_gram_verilog_file_6698.v: 2_gram_verilog_file_6698.v:3:108-112: syntax error at token "logic"
+2_gram_verilog_file_6698.v:3:143-151: syntax error at token "endmodule"
+
+2_gram_verilog_file_6810.v: 2_gram_verilog_file_6810.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_6810.v:2:521: syntax error at token "("
+2_gram_verilog_file_6810.v:2:881-886: syntax error at token "genvar"
+2_gram_verilog_file_6810.v:2:916-921: syntax error at token "assign"
+2_gram_verilog_file_6810.v:2:951: syntax error at token "("
+2_gram_verilog_file_6810.v:2:986-994: syntax error at token "endmodule"
+
+2_gram_verilog_file_6856.v: 2_gram_verilog_file_6856.v:2:206-210: syntax error at token "logic"
+2_gram_verilog_file_6856.v:2:492-497: syntax error at token "assign"
+2_gram_verilog_file_6856.v:2:515-520: syntax error at token "assign"
+2_gram_verilog_file_6856.v:2:538-543: syntax error at token "genvar"
+2_gram_verilog_file_6856.v:2:556-561: syntax error at token "always"
+2_gram_verilog_file_6856.v:2:590-595: syntax error at token "assign"
+2_gram_verilog_file_6856.v:2:620: syntax error at token "("
+2_gram_verilog_file_6856.v:2:693: syntax error at token "("
+2_gram_verilog_file_6856.v:2:779-787: syntax error at token "endmodule"
+
+2_gram_verilog_file_6873.v: 2_gram_verilog_file_6873.v:3:37-41: syntax error at token "logic"
+2_gram_verilog_file_6873.v:3:449: syntax error at token "("
+2_gram_verilog_file_6873.v:3:511-516: syntax error at token "assign"
+2_gram_verilog_file_6873.v:3:535-543: syntax error at token "endmodule"
+
+2_gram_verilog_file_6897.v: 2_gram_verilog_file_6897.v:2:306-310: syntax error at token "logic"
+2_gram_verilog_file_6897.v:2:377-382: syntax error at token "always"
+2_gram_verilog_file_6897.v:2:400-403: syntax error at token "nmos"
+2_gram_verilog_file_6897.v:2:427-435: syntax error at token "endmodule"
+
+2_gram_verilog_file_6901.v: 2_gram_verilog_file_6901.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_6901.v:2:240-245: syntax error at token "assign"
+2_gram_verilog_file_6901.v:2:266-274: syntax error at token "endmodule"
+
+2_gram_verilog_file_6921.v: 2_gram_verilog_file_6921.v:3:85-89: syntax error at token "logic"
+2_gram_verilog_file_6921.v:3:323: syntax error at token "("
+2_gram_verilog_file_6921.v:3:415: syntax error at token "("
+2_gram_verilog_file_6921.v:3:440-448: syntax error at token "endmodule"
+
+2_gram_verilog_file_6939.v: 2_gram_verilog_file_6939.v:2:143-147: syntax error at token "logic"
+2_gram_verilog_file_6939.v:2:583-588: syntax error at token "assign"
+2_gram_verilog_file_6939.v:2:617: syntax error at token "("
+2_gram_verilog_file_6939.v:2:681-686: syntax error at token "assign"
+2_gram_verilog_file_6939.v:2:715: syntax error at token "("
+2_gram_verilog_file_6939.v:2:755: syntax error at token "("
+2_gram_verilog_file_6939.v:2:800-805: syntax error at token "assign"
+2_gram_verilog_file_6939.v:2:827-832: syntax error at token "assign"
+2_gram_verilog_file_6939.v:2:854-859: syntax error at token "assign"
+2_gram_verilog_file_6939.v:2:890-895: syntax error at token "genvar"
+2_gram_verilog_file_6939.v:2:908-916: syntax error at token "endmodule"
+
+2_gram_verilog_file_6994.v: 2_gram_verilog_file_6994.v:2:37-41: syntax error at token "logic"
+2_gram_verilog_file_6994.v:2:467-472: syntax error at token "always"
+2_gram_verilog_file_6994.v:2:525-528: syntax error at token "else"
+2_gram_verilog_file_6994.v:2:605-607: syntax error at token "end"
+2_gram_verilog_file_6994.v:2:649-657: syntax error at token "endmodule"
+
+2_gram_verilog_file_7045.v: 2_gram_verilog_file_7045.v:3:222-226: syntax error at token "logic"
+2_gram_verilog_file_7045.v:3:489-494: syntax error at token "assign"
+2_gram_verilog_file_7045.v:3:533-538: syntax error at token "assign"
+2_gram_verilog_file_7045.v:3:560-568: syntax error at token "endmodule"
+2_gram_verilog_file_7045.v:3:1134-1139: syntax error at token "assign"
+2_gram_verilog_file_7045.v:3:1188-1193: syntax error at token "assign"
+2_gram_verilog_file_7045.v:3:1265-1273: syntax error at token "endmodule"
+
+2_gram_verilog_file_7069.v: 2_gram_verilog_file_7069.v:3:118-122: syntax error at token "logic"
+2_gram_verilog_file_7069.v:3:177-182: syntax error at token "always"
+2_gram_verilog_file_7069.v:3:215-217: syntax error at token "end"
+
+2_gram_verilog_file_7085.v: 2_gram_verilog_file_7085.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_7085.v:2:180: syntax error at token "("
+2_gram_verilog_file_7085.v:2:682: syntax error at token "("
+2_gram_verilog_file_7085.v:2:707: syntax error at token "("
+2_gram_verilog_file_7085.v:2:853-861: syntax error at token "endmodule"
+
+2_gram_verilog_file_7086.v: 2_gram_verilog_file_7086.v:4:60-64: syntax error at token "logic"
+2_gram_verilog_file_7086.v:4:453-458: syntax error at token "assign"
+2_gram_verilog_file_7086.v:4:493-501: syntax error at token "endmodule"
+
+2_gram_verilog_file_7115.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2409139085
+`timescale 1ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+module module_0;
+  type_3(
+      id_0, 1
+  );
+  assign id_0 = 1;
+  logic id_1;
+  logic id_2;
+endmodule
+`timescale 1ps / 1ps
+<<EOF>>
+2_gram_verilog_file_7119.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1877315172
+`define pp_0 0
+`default_nettype `pp_0
+module module_0;
+  assign id_0[1 : 1] = {id_0{id_0}};
+  logic id_1;
+  logic id_2;
+  logic id_3;
+  assign id_3 = ({1{1}});
+  type_8 id_4 (
+      .id_0 (1'h0),
+      .id_1 (1),
+      .id_2 (id_0),
+      .id_3 (id_2),
+      .id_4 (1),
+      .id_5 (id_3),
+      .id_6 (id_1),
+      .id_7 (),
+      .id_8 (1),
+      .id_9 (id_0),
+      .id_10(1),
+      .id_11(id_3)
+  );
+  type_9(
+      id_1 - "" & 1, 1'd0
+  );
+endmodule
+<<EOF>>
+2_gram_verilog_file_7127.v: 2_gram_verilog_file_7127.v:2:192-196: syntax error at token "logic"
+2_gram_verilog_file_7127.v:2:218: syntax error at token "("
+2_gram_verilog_file_7127.v:2:233-238: syntax error at token "assign"
+2_gram_verilog_file_7127.v:2:272: syntax error at token "("
+2_gram_verilog_file_7127.v:2:302-310: syntax error at token "endmodule"
+
+2_gram_verilog_file_7131.v: 2_gram_verilog_file_7131.v:2:195-199: syntax error at token "logic"
+2_gram_verilog_file_7131.v:2:360-365: syntax error at token "assign"
+2_gram_verilog_file_7131.v:2:384-392: syntax error at token "endmodule"
+
+2_gram_verilog_file_7196.v: 2_gram_verilog_file_7196.v:2:370-374: syntax error at token "logic"
+2_gram_verilog_file_7196.v:2:539-544: syntax error at token "assign"
+2_gram_verilog_file_7196.v:2:566-571: syntax error at token "assign"
+2_gram_verilog_file_7196.v:2:602: syntax error at token "("
+2_gram_verilog_file_7196.v:2:829-837: syntax error at token "endmodule"
+
+2_gram_verilog_file_7207.v: 2_gram_verilog_file_7207.v:2:75-79: syntax error at token "logic"
+2_gram_verilog_file_7207.v:2:817-825: syntax error at token "endmodule"
+
+2_gram_verilog_file_7258.v: 2_gram_verilog_file_7258.v:3:677-681: syntax error at token "logic"
+2_gram_verilog_file_7258.v:3:1274-1279: syntax error at token "assign"
+2_gram_verilog_file_7258.v:3:1301-1309: syntax error at token "endmodule"
+
+2_gram_verilog_file_7308.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_2" at 9:18-22:; problematic formatter output is
+// Seed: 1601987706
+`timescale 1ps / 1ps
+`define pp_2 0
+module module_0 (
+    input logic id_0
+);
+endmodule
+`define pp_3 0
+`default_nettype `pp_2
+module module_1 (
+    input logic id_0,
+    output id_1
+);
+endmodule
+<<EOF>>
+2_gram_verilog_file_7309.v: 2_gram_verilog_file_7309.v:2:61-65: syntax error at token "logic"
+2_gram_verilog_file_7309.v:2:209-217: syntax error at token "endmodule"
+
+2_gram_verilog_file_7388.v: 2_gram_verilog_file_7388.v:2:86-90: syntax error at token "logic"
+2_gram_verilog_file_7388.v:2:296-303: syntax error at token "defparam"
+2_gram_verilog_file_7388.v:2:335-340: syntax error at token "assign"
+2_gram_verilog_file_7388.v:2:376-384: syntax error at token "endmodule"
+
+2_gram_verilog_file_7396.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 1379329861
+`resetall
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_7428.v: 2_gram_verilog_file_7428.v:2:213-217: syntax error at token "logic"
+2_gram_verilog_file_7428.v:2:258: syntax error at token "("
+2_gram_verilog_file_7428.v:2:354: syntax error at token "("
+2_gram_verilog_file_7428.v:2:428: syntax error at token "("
+2_gram_verilog_file_7428.v:2:495-500: syntax error at token "always"
+2_gram_verilog_file_7428.v:2:531: syntax error at token "("
+2_gram_verilog_file_7428.v:2:560-568: syntax error at token "endmodule"
+
+2_gram_verilog_file_7455.v: 2_gram_verilog_file_7455.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_7455.v:2:160-167: syntax error at token "generate"
+2_gram_verilog_file_7455.v:2:364-374: syntax error at token "endgenerate"
+2_gram_verilog_file_7455.v:2:404-409: syntax error at token "assign"
+2_gram_verilog_file_7455.v:2:454-462: syntax error at token "endmodule"
+
+2_gram_verilog_file_7479.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1278758413
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_7489.v: 2_gram_verilog_file_7489.v:2:213-217: syntax error at token "logic"
+2_gram_verilog_file_7489.v:2:288: syntax error at token "("
+2_gram_verilog_file_7489.v:2:466-471: syntax error at token "assign"
+2_gram_verilog_file_7489.v:2:540-548: syntax error at token "endmodule"
+
+2_gram_verilog_file_7501.v: 2_gram_verilog_file_7501.v:3:155-161: syntax error at token "integer"
+2_gram_verilog_file_7501.v:3:176-181: syntax error at token "always"
+2_gram_verilog_file_7501.v:3:193-201: syntax error at token "endmodule"
+
+2_gram_verilog_file_7527.v: 2_gram_verilog_file_7527.v:2:78-82: syntax error at token "logic"
+2_gram_verilog_file_7527.v:2:292-297: syntax error at token "assign"
+2_gram_verilog_file_7527.v:2:319-324: syntax error at token "assign"
+2_gram_verilog_file_7527.v:2:343-348: syntax error at token "assign"
+2_gram_verilog_file_7527.v:2:446: syntax error at token "("
+2_gram_verilog_file_7527.v:2:461-466: syntax error at token "assign"
+2_gram_verilog_file_7527.v:2:515-523: syntax error at token "endmodule"
+
+2_gram_verilog_file_7599.v: 2_gram_verilog_file_7599.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_7599.v:2:194: syntax error at token "("
+2_gram_verilog_file_7599.v:2:223-228: syntax error at token "assign"
+2_gram_verilog_file_7599.v:2:255-260: syntax error at token "assign"
+2_gram_verilog_file_7599.v:2:310-318: syntax error at token "endmodule"
+
+2_gram_verilog_file_7635.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1927513394
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_7642.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:41-45:; problematic formatter output is
+// Seed: 897685600
+`define pp_0 0
+`default_nettype `pp_0 `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_7655.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 4125985060
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_7727.v: 2_gram_verilog_file_7727.v:2:347-351: syntax error at token "logic"
+2_gram_verilog_file_7727.v:2:1236-1241: syntax error at token "assign"
+2_gram_verilog_file_7727.v:2:1263-1271: syntax error at token "endmodule"
+
+2_gram_verilog_file_7747.v: 2_gram_verilog_file_7747.v:2:76-80: syntax error at token "logic"
+2_gram_verilog_file_7747.v:2:398-403: syntax error at token "assign"
+2_gram_verilog_file_7747.v:2:455: syntax error at token "("
+2_gram_verilog_file_7747.v:2:479-487: syntax error at token "endmodule"
+
+2_gram_verilog_file_7753.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 4:39-43:; problematic formatter output is
+// Seed: 30655859
+`define pp_0 0
+`define pp_1 0
+`timescale 1ps / 1ps `default_nettype `pp_1
+`define pp_2 0
+<<EOF>>
+2_gram_verilog_file_7761.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2183372676
+`define pp_0 0
+`default_nettype `pp_0
+`define pp_1 0
+<<EOF>>
+2_gram_verilog_file_7761.v: 2_gram_verilog_file_7761.v:3:258-262: syntax error at token "logic"
+2_gram_verilog_file_7761.v:3:1041-1046: syntax error at token "always"
+2_gram_verilog_file_7761.v:3:1076-1078: syntax error at token "end"
+
+2_gram_verilog_file_7799.v: 2_gram_verilog_file_7799.v:2:60-64: syntax error at token "logic"
+2_gram_verilog_file_7799.v:2:249-254: syntax error at token "assign"
+2_gram_verilog_file_7799.v:2:275-283: syntax error at token "endmodule"
+
+2_gram_verilog_file_7861.v: 2_gram_verilog_file_7861.v:2:98-102: syntax error at token "logic"
+2_gram_verilog_file_7861.v:2:129: syntax error at token "("
+2_gram_verilog_file_7861.v:2:171-179: syntax error at token "endmodule"
+
+2_gram_verilog_file_7861.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2820830486
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_7895.v: 2_gram_verilog_file_7895.v:2:150-154: syntax error at token "logic"
+2_gram_verilog_file_7895.v:2:754-762: syntax error at token "endmodule"
+
+2_gram_verilog_file_7914.v: 2_gram_verilog_file_7914.v:2:92-96: syntax error at token "logic"
+2_gram_verilog_file_7914.v:2:120-128: syntax error at token "endmodule"
+
+2_gram_verilog_file_7953.v: 2_gram_verilog_file_7953.v:2:152-156: syntax error at token "logic"
+2_gram_verilog_file_7953.v:2:433-438: syntax error at token "assign"
+2_gram_verilog_file_7953.v:2:483-488: syntax error at token "always"
+2_gram_verilog_file_7953.v:2:520-522: syntax error at token "end"
+
+2_gram_verilog_file_7955.v: 2_gram_verilog_file_7955.v:2:232-236: syntax error at token "logic"
+2_gram_verilog_file_7955.v:2:526-531: syntax error at token "assign"
+2_gram_verilog_file_7955.v:2:680-685: syntax error at token "assign"
+2_gram_verilog_file_7955.v:2:707-715: syntax error at token "endmodule"
+
+2_gram_verilog_file_7960.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:18-22:; problematic formatter output is
+// Seed: 3542908643
+`default_nettype id_0
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_7980.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:40-44:; problematic formatter output is
+// Seed: 3245614092
+`define pp_0 0
+`timescale 1 ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8056.v: 2_gram_verilog_file_8056.v:2:473-477: syntax error at token "logic"
+2_gram_verilog_file_8056.v:2:510-518: syntax error at token "endmodule"
+
+2_gram_verilog_file_8085.v: 2_gram_verilog_file_8085.v:2:37-41: syntax error at token "logic"
+2_gram_verilog_file_8085.v:2:72-77: syntax error at token "always"
+2_gram_verilog_file_8085.v:2:102-104: syntax error at token "end"
+
+2_gram_verilog_file_8121.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 1689686900
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8123.v: 2_gram_verilog_file_8123.v:2:124-128: syntax error at token "logic"
+2_gram_verilog_file_8123.v:2:339-344: syntax error at token "assign"
+2_gram_verilog_file_8123.v:2:362-367: syntax error at token "assign"
+2_gram_verilog_file_8123.v:2:390-395: syntax error at token "assign"
+2_gram_verilog_file_8123.v:2:416-421: syntax error at token "assign"
+2_gram_verilog_file_8123.v:2:543: syntax error at token "("
+2_gram_verilog_file_8123.v:2:613: syntax error at token "("
+2_gram_verilog_file_8123.v:2:638: syntax error at token "("
+2_gram_verilog_file_8123.v:2:678: syntax error at token "("
+2_gram_verilog_file_8123.v:2:808-816: syntax error at token "endmodule"
+
+2_gram_verilog_file_8147.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:18-22:; problematic formatter output is
+// Seed: 2125105956
+`define pp_0 0
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_8167.v: 2_gram_verilog_file_8167.v:2:90-92: syntax error at token "reg"
+2_gram_verilog_file_8167.v:2:162-167: syntax error at token "always"
+2_gram_verilog_file_8167.v:2:199-200: syntax error at token "<="
+2_gram_verilog_file_8167.v:2:212: syntax error at token "#"
+2_gram_verilog_file_8167.v:2:221: syntax error at token "@"
+2_gram_verilog_file_8167.v:2:236-238: syntax error at token "end"
+
+2_gram_verilog_file_8168.v: 2_gram_verilog_file_8168.v:2:323-327: syntax error at token "logic"
+2_gram_verilog_file_8168.v:2:597-602: syntax error at token "assign"
+2_gram_verilog_file_8168.v:2:625-633: syntax error at token "endmodule"
+
+2_gram_verilog_file_8168.v: 2_gram_verilog_file_8168.v:7:61-65: syntax error at token "logic"
+2_gram_verilog_file_8168.v:7:323-331: syntax error at token "endmodule"
+
+2_gram_verilog_file_8189.v: 2_gram_verilog_file_8189.v:3:199-203: syntax error at token "logic"
+2_gram_verilog_file_8189.v:3:242-247: syntax error at token "assign"
+2_gram_verilog_file_8189.v:3:265-270: syntax error at token "assign"
+2_gram_verilog_file_8189.v:3:288-296: syntax error at token "endmodule"
+
+2_gram_verilog_file_8192.v: 2_gram_verilog_file_8192.v:2:84-88: syntax error at token "logic"
+2_gram_verilog_file_8192.v:2:970-975: syntax error at token "assign"
+2_gram_verilog_file_8192.v:2:998-1006: syntax error at token "endmodule"
+
+2_gram_verilog_file_8206.v: 2_gram_verilog_file_8206.v:2:86-90: syntax error at token "logic"
+2_gram_verilog_file_8206.v:2:169: syntax error at token "("
+2_gram_verilog_file_8206.v:2:211-216: syntax error at token "assign"
+2_gram_verilog_file_8206.v:2:259-264: syntax error at token "assign"
+2_gram_verilog_file_8206.v:2:285-290: syntax error at token "assign"
+2_gram_verilog_file_8206.v:2:311-319: syntax error at token "endmodule"
+
+2_gram_verilog_file_8268.v: 2_gram_verilog_file_8268.v:4:456-460: syntax error at token "logic"
+2_gram_verilog_file_8268.v:4:684-689: syntax error at token "always"
+2_gram_verilog_file_8268.v:4:765-770: syntax error at token "assign"
+2_gram_verilog_file_8268.v:4:805-810: syntax error at token "always"
+2_gram_verilog_file_8268.v:4:880-883: syntax error at token "else"
+2_gram_verilog_file_8268.v:4:912-914: syntax error at token "end"
+2_gram_verilog_file_8268.v:4:950-952: syntax error at token "end"
+
+2_gram_verilog_file_8323.v: 2_gram_verilog_file_8323.v:2:327-331: syntax error at token "logic"
+2_gram_verilog_file_8323.v:2:637-642: syntax error at token "assign"
+2_gram_verilog_file_8323.v:2:661-666: syntax error at token "assign"
+2_gram_verilog_file_8323.v:2:700-708: syntax error at token "endmodule"
+
+2_gram_verilog_file_8337.v: 2_gram_verilog_file_8337.v:2:92-96: syntax error at token "logic"
+2_gram_verilog_file_8337.v:2:286-294: syntax error at token "endmodule"
+
+2_gram_verilog_file_8356.v: 2_gram_verilog_file_8356.v:2:75-79: syntax error at token "logic"
+2_gram_verilog_file_8356.v:2:512-520: syntax error at token "endmodule"
+
+2_gram_verilog_file_8390.v: 2_gram_verilog_file_8390.v:2:118-122: syntax error at token "logic"
+2_gram_verilog_file_8390.v:2:440-445: syntax error at token "assign"
+2_gram_verilog_file_8390.v:2:518: syntax error at token "("
+2_gram_verilog_file_8390.v:2:533-538: syntax error at token "assign"
+2_gram_verilog_file_8390.v:2:560-565: syntax error at token "assign"
+2_gram_verilog_file_8390.v:2:638-643: syntax error at token "assign"
+2_gram_verilog_file_8390.v:2:684-692: syntax error at token "endmodule"
+
+2_gram_verilog_file_8431.v: 2_gram_verilog_file_8431.v:3:140-144: syntax error at token "logic"
+2_gram_verilog_file_8431.v:3:186-191: syntax error at token "always"
+2_gram_verilog_file_8431.v:3:216-218: syntax error at token "end"
+
+2_gram_verilog_file_8441.v: 2_gram_verilog_file_8441.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_8441.v:2:756-761: syntax error at token "assign"
+2_gram_verilog_file_8441.v:2:784-789: syntax error at token "assign"
+2_gram_verilog_file_8441.v:2:831: syntax error at token "("
+2_gram_verilog_file_8441.v:2:871: syntax error at token "("
+2_gram_verilog_file_8441.v:2:1152-1160: syntax error at token "endmodule"
+
+2_gram_verilog_file_8452.v: 2_gram_verilog_file_8452.v:2:182-186: syntax error at token "logic"
+2_gram_verilog_file_8452.v:2:563-568: syntax error at token "assign"
+2_gram_verilog_file_8452.v:2:585-590: syntax error at token "assign"
+2_gram_verilog_file_8452.v:2:625-633: syntax error at token "endmodule"
+
+2_gram_verilog_file_8458.v: 2_gram_verilog_file_8458.v:2:603-607: syntax error at token "logic"
+2_gram_verilog_file_8458.v:2:640-645: syntax error at token "assign"
+2_gram_verilog_file_8458.v:2:664-669: syntax error at token "assign"
+2_gram_verilog_file_8458.v:2:699: syntax error at token "("
+2_gram_verilog_file_8458.v:2:711-719: syntax error at token "endmodule"
+
+2_gram_verilog_file_8471.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 38117509
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8488.v: 2_gram_verilog_file_8488.v:2:77-81: syntax error at token "logic"
+2_gram_verilog_file_8488.v:2:112-117: syntax error at token "assign"
+2_gram_verilog_file_8488.v:2:202-210: syntax error at token "endmodule"
+
+2_gram_verilog_file_8488.v: 2_gram_verilog_file_8488.v:2:193-197: syntax error at token "logic"
+2_gram_verilog_file_8488.v:2:228-233: syntax error at token "assign"
+2_gram_verilog_file_8488.v:2:294-299: syntax error at token "assign"
+2_gram_verilog_file_8488.v:2:326-331: syntax error at token "assign"
+2_gram_verilog_file_8488.v:2:478-486: syntax error at token "endmodule"
+
+2_gram_verilog_file_8492.v: 2_gram_verilog_file_8492.v:2:98-102: syntax error at token "logic"
+2_gram_verilog_file_8492.v:2:150-157: syntax error at token "defparam"
+2_gram_verilog_file_8492.v:2:225-230: syntax error at token "assign"
+2_gram_verilog_file_8492.v:2:306: syntax error at token "("
+2_gram_verilog_file_8492.v:2:354-362: syntax error at token "endmodule"
+
+2_gram_verilog_file_8497.v: 2_gram_verilog_file_8497.v:2:60-64: syntax error at token "logic"
+2_gram_verilog_file_8497.v:2:196-204: syntax error at token "endmodule"
+
+2_gram_verilog_file_8500.v: 2_gram_verilog_file_8500.v:2:99-103: syntax error at token "logic"
+2_gram_verilog_file_8500.v:2:141-149: syntax error at token "endmodule"
+
+2_gram_verilog_file_8513.v: 2_gram_verilog_file_8513.v:2:155-159: syntax error at token "logic"
+2_gram_verilog_file_8513.v:2:213-218: syntax error at token "assign"
+2_gram_verilog_file_8513.v:2:242-247: syntax error at token "assign"
+2_gram_verilog_file_8513.v:2:284-289: syntax error at token "assign"
+2_gram_verilog_file_8513.v:2:347-352: syntax error at token "assign"
+2_gram_verilog_file_8513.v:2:381: syntax error at token "("
+2_gram_verilog_file_8513.v:2:396-404: syntax error at token "endmodule"
+
+2_gram_verilog_file_8524.v: 2_gram_verilog_file_8524.v:2:360-364: syntax error at token "logic"
+2_gram_verilog_file_8524.v:2:736-741: syntax error at token "always"
+2_gram_verilog_file_8524.v:2:764-772: syntax error at token "endmodule"
+
+2_gram_verilog_file_8530.v: 2_gram_verilog_file_8530.v:2:639-643: syntax error at token "logic"
+2_gram_verilog_file_8530.v:2:756-764: syntax error at token "endmodule"
+
+2_gram_verilog_file_8533.v: 2_gram_verilog_file_8533.v:2:85-89: syntax error at token "logic"
+2_gram_verilog_file_8533.v:2:137-145: syntax error at token "endmodule"
+
+2_gram_verilog_file_8542.v: 2_gram_verilog_file_8542.v:3:109-113: syntax error at token "logic"
+2_gram_verilog_file_8542.v:3:151-156: syntax error at token "assign"
+2_gram_verilog_file_8542.v:3:177-182: syntax error at token "always"
+2_gram_verilog_file_8542.v:3:236-244: syntax error at token "endmodule"
+
+2_gram_verilog_file_8549.v: 2_gram_verilog_file_8549.v:2:100-104: syntax error at token "logic"
+2_gram_verilog_file_8549.v:2:236-241: syntax error at token "always"
+2_gram_verilog_file_8549.v:2:289-297: syntax error at token "endmodule"
+
+2_gram_verilog_file_8556.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 790405943
+`default_nettype wire
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8562.v: 2_gram_verilog_file_8562.v:2:93-97: syntax error at token "logic"
+2_gram_verilog_file_8562.v:2:323-328: syntax error at token "assign"
+2_gram_verilog_file_8562.v:2:380-388: syntax error at token "endmodule"
+2_gram_verilog_file_8562.v:2:534-538: syntax error at token "input"
+2_gram_verilog_file_8562.v:2:548-552: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:562-566: syntax error at token "input"
+2_gram_verilog_file_8562.v:2:576-580: syntax error at token "input"
+2_gram_verilog_file_8562.v:2:590-594: syntax error at token "input"
+2_gram_verilog_file_8562.v:2:603-607: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:616-620: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:629-633: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:642-646: syntax error at token "input"
+2_gram_verilog_file_8562.v:2:655-659: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:668-673: syntax error at token "output"
+2_gram_verilog_file_8562.v:2:682-687: syntax error at token "output"
+2_gram_verilog_file_8562.v:2:696-700: syntax error at token "inout"
+2_gram_verilog_file_8562.v:2:733-741: syntax error at token "endmodule"
+
+2_gram_verilog_file_8587.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 825575624
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8605.v: 2_gram_verilog_file_8605.v:2:169-173: syntax error at token "logic"
+2_gram_verilog_file_8605.v:2:204-209: syntax error at token "always"
+2_gram_verilog_file_8605.v:2:271-273: syntax error at token "end"
+2_gram_verilog_file_8605.v:2:356-361: syntax error at token "assign"
+2_gram_verilog_file_8605.v:2:383-388: syntax error at token "assign"
+2_gram_verilog_file_8605.v:2:407-412: syntax error at token "assign"
+2_gram_verilog_file_8605.v:2:438: syntax error at token "("
+2_gram_verilog_file_8605.v:2:459-467: syntax error at token "endmodule"
+
+2_gram_verilog_file_8621.v: 2_gram_verilog_file_8621.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_8621.v:2:207-212: syntax error at token "assign"
+2_gram_verilog_file_8621.v:2:240-248: syntax error at token "endmodule"
+
+2_gram_verilog_file_8685.v: 2_gram_verilog_file_8685.v:2:224-228: syntax error at token "logic"
+2_gram_verilog_file_8685.v:2:268-273: syntax error at token "assign"
+2_gram_verilog_file_8685.v:2:357-365: syntax error at token "endmodule"
+
+2_gram_verilog_file_8699.v: 2_gram_verilog_file_8699.v:2:115-119: syntax error at token "logic"
+2_gram_verilog_file_8699.v:2:293: syntax error at token "("
+2_gram_verilog_file_8699.v:2:350-358: syntax error at token "endmodule"
+
+2_gram_verilog_file_8703.v: 2_gram_verilog_file_8703.v:2:579-583: syntax error at token "logic"
+2_gram_verilog_file_8703.v:2:669-674: syntax error at token "assign"
+2_gram_verilog_file_8703.v:2:734-739: syntax error at token "assign"
+2_gram_verilog_file_8703.v:2:795: syntax error at token "("
+2_gram_verilog_file_8703.v:2:888-893: syntax error at token "assign"
+2_gram_verilog_file_8703.v:2:916-924: syntax error at token "endmodule"
+
+2_gram_verilog_file_8721.v: 2_gram_verilog_file_8721.v:2:62-66: syntax error at token "logic"
+2_gram_verilog_file_8721.v:2:630-635: syntax error at token "assign"
+2_gram_verilog_file_8721.v:2:676-681: syntax error at token "always"
+2_gram_verilog_file_8721.v:2:713-718: syntax error at token "assign"
+2_gram_verilog_file_8721.v:2:740-748: syntax error at token "endmodule"
+
+2_gram_verilog_file_8733.v: 2_gram_verilog_file_8733.v:2:146-150: syntax error at token "logic"
+2_gram_verilog_file_8733.v:2:188-196: syntax error at token "endmodule"
+
+2_gram_verilog_file_8749.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3871414966
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8768.v: 2_gram_verilog_file_8768.v:2:158-162: syntax error at token "logic"
+2_gram_verilog_file_8768.v:2:265-273: syntax error at token "endmodule"
+2_gram_verilog_file_8768.v:2:330-338: syntax error at token "endmodule"
+
+2_gram_verilog_file_8815.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:39-43:; problematic formatter output is
+// Seed: 101198623
+`define pp_0 0
+`timescale 1ps / 1ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_8845.v: 2_gram_verilog_file_8845.v:2:115-119: syntax error at token "logic"
+2_gram_verilog_file_8845.v:2:166-174: syntax error at token "endmodule"
+
+2_gram_verilog_file_8893.v: 2_gram_verilog_file_8893.v:2:245-249: syntax error at token "logic"
+2_gram_verilog_file_8893.v:2:652-660: syntax error at token "endmodule"
+
+2_gram_verilog_file_8913.v: 2_gram_verilog_file_8913.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_8913.v:2:451: syntax error at token "("
+2_gram_verilog_file_8913.v:2:485-493: syntax error at token "endmodule"
+
+2_gram_verilog_file_8931.v: 2_gram_verilog_file_8931.v:3:164-168: syntax error at token "logic"
+2_gram_verilog_file_8931.v:3:429-434: syntax error at token "assign"
+2_gram_verilog_file_8931.v:3:452-457: syntax error at token "assign"
+2_gram_verilog_file_8931.v:3:510-515: syntax error at token "always"
+2_gram_verilog_file_8931.v:3:627-632: syntax error at token "assign"
+2_gram_verilog_file_8931.v:3:690-698: syntax error at token "endmodule"
+
+2_gram_verilog_file_8938.v: 2_gram_verilog_file_8938.v:3:119-123: syntax error at token "logic"
+2_gram_verilog_file_8938.v:3:493: syntax error at token "("
+2_gram_verilog_file_8938.v:3:537-542: syntax error at token "always"
+2_gram_verilog_file_8938.v:3:581-584: syntax error at token "else"
+2_gram_verilog_file_8938.v:3:671-676: syntax error at token "assign"
+2_gram_verilog_file_8938.v:3:714-722: syntax error at token "endmodule"
+
+2_gram_verilog_file_8959.v: 2_gram_verilog_file_8959.v:3:93-97: syntax error at token "logic"
+2_gram_verilog_file_8959.v:3:215-223: syntax error at token "endmodule"
+
+2_gram_verilog_file_8962.v: 2_gram_verilog_file_8962.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_8962.v:2:171-179: syntax error at token "endmodule"
+
+2_gram_verilog_file_8968.v: 2_gram_verilog_file_8968.v:2:170-174: syntax error at token "logic"
+2_gram_verilog_file_8968.v:2:388-393: syntax error at token "assign"
+2_gram_verilog_file_8968.v:2:421-429: syntax error at token "endmodule"
+
+2_gram_verilog_file_9012.v: 2_gram_verilog_file_9012.v:2:231-235: syntax error at token "logic"
+2_gram_verilog_file_9012.v:2:268-273: syntax error at token "assign"
+2_gram_verilog_file_9012.v:2:291-296: syntax error at token "assign"
+2_gram_verilog_file_9012.v:2:315-323: syntax error at token "endmodule"
+
+2_gram_verilog_file_9016.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3329431044
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9028.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 2509278092
+`timescale 1ps / 1ps
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9153.v: 2_gram_verilog_file_9153.v:2:53-57: syntax error at token "logic"
+2_gram_verilog_file_9153.v:2:72-80: syntax error at token "endmodule"
+
+2_gram_verilog_file_9169.v: 2_gram_verilog_file_9169.v:2:52-56: syntax error at token "logic"
+2_gram_verilog_file_9169.v:2:202: syntax error at token "("
+2_gram_verilog_file_9169.v:2:230-238: syntax error at token "endmodule"
+
+2_gram_verilog_file_9176.v: 2_gram_verilog_file_9176.v:4:126-130: syntax error at token "logic"
+2_gram_verilog_file_9176.v:4:293: syntax error at token "("
+2_gram_verilog_file_9176.v:4:330-338: syntax error at token "endmodule"
+
+2_gram_verilog_file_9181.v: 2_gram_verilog_file_9181.v:3:391-395: syntax error at token "logic"
+2_gram_verilog_file_9181.v:3:744: syntax error at token "("
+2_gram_verilog_file_9181.v:3:762-767: syntax error at token "genvar"
+2_gram_verilog_file_9181.v:3:787: syntax error at token "("
+2_gram_verilog_file_9181.v:3:811-816: syntax error at token "assign"
+2_gram_verilog_file_9181.v:3:1010: syntax error at token "("
+2_gram_verilog_file_9181.v:3:1070: syntax error at token "("
+2_gram_verilog_file_9181.v:3:1122-1130: syntax error at token "endmodule"
+
+2_gram_verilog_file_9203.v: 2_gram_verilog_file_9203.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_9203.v:2:198-203: syntax error at token "assign"
+2_gram_verilog_file_9203.v:2:221-229: syntax error at token "endmodule"
+
+2_gram_verilog_file_9214.v: 2_gram_verilog_file_9214.v:3:241-245: syntax error at token "logic"
+2_gram_verilog_file_9214.v:3:309-317: syntax error at token "endmodule"
+
+2_gram_verilog_file_9233.v: 2_gram_verilog_file_9233.v:2:145-149: syntax error at token "logic"
+2_gram_verilog_file_9233.v:2:162-166: syntax error at token "logic"
+2_gram_verilog_file_9233.v:2:179-183: syntax error at token "logic"
+2_gram_verilog_file_9233.v:2:189: syntax error at token "}"
+
+2_gram_verilog_file_9269.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 2307689877
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9269.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:18-22:; problematic formatter output is
+// Seed: 2838175575
+`timescale 1 ps / 1ps `default_nettype id_0
+`define pp_1 0
+`define pp_2 0
+`default_nettype `pp_1
+`define pp_3 0
+<<EOF>>
+2_gram_verilog_file_9291.v: 2_gram_verilog_file_9291.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_9291.v:2:165: syntax error at token "("
+2_gram_verilog_file_9291.v:2:180-188: syntax error at token "endmodule"
+
+2_gram_verilog_file_9341.v: 2_gram_verilog_file_9341.v:2:386-390: syntax error at token "logic"
+2_gram_verilog_file_9341.v:2:595: syntax error at token "("
+2_gram_verilog_file_9341.v:2:648-653: syntax error at token "always"
+2_gram_verilog_file_9341.v:2:712-717: syntax error at token "assign"
+2_gram_verilog_file_9341.v:2:747: syntax error at token "("
+2_gram_verilog_file_9341.v:2:771-776: syntax error at token "always"
+2_gram_verilog_file_9341.v:2:795: syntax error at token "("
+2_gram_verilog_file_9341.v:2:976-984: syntax error at token "endmodule"
+
+2_gram_verilog_file_9393.v: 2_gram_verilog_file_9393.v:3:185-189: syntax error at token "logic"
+2_gram_verilog_file_9393.v:3:816-824: syntax error at token "endmodule"
+2_gram_verilog_file_9393.v:3:858-863: syntax error at token "output"
+2_gram_verilog_file_9393.v:3:873-878: syntax error at token "assign"
+2_gram_verilog_file_9393.v:3:917-922: syntax error at token "assign"
+2_gram_verilog_file_9393.v:3:941-949: syntax error at token "endmodule"
+
+2_gram_verilog_file_9399.v: 2_gram_verilog_file_9399.v:2:170-172: syntax error at token "reg"
+2_gram_verilog_file_9399.v:2:365-370: syntax error at token "always"
+2_gram_verilog_file_9399.v:2:403-408: syntax error at token "assign"
+2_gram_verilog_file_9399.v:2:452-457: syntax error at token "assign"
+2_gram_verilog_file_9399.v:2:516-521: syntax error at token "always"
+2_gram_verilog_file_9399.v:2:550-552: syntax error at token "end"
+
+2_gram_verilog_file_9411.v: 2_gram_verilog_file_9411.v:3:190-194: syntax error at token "logic"
+2_gram_verilog_file_9411.v:3:351-359: syntax error at token "endmodule"
+2_gram_verilog_file_9411.v:3:809-817: syntax error at token "endmodule"
+
+2_gram_verilog_file_9416.v: 2_gram_verilog_file_9416.v:6:93-97: syntax error at token "logic"
+2_gram_verilog_file_9416.v:6:412-417: syntax error at token "assign"
+2_gram_verilog_file_9416.v:6:455-460: syntax error at token "always"
+2_gram_verilog_file_9416.v:6:488-495: syntax error at token "generate"
+2_gram_verilog_file_9416.v:6:515-525: syntax error at token "endgenerate"
+2_gram_verilog_file_9416.v:6:1101-1109: syntax error at token "endmodule"
+
+2_gram_verilog_file_9419.v: 2_gram_verilog_file_9419.v:2:209-213: syntax error at token "logic"
+2_gram_verilog_file_9419.v:2:406: syntax error at token "("
+2_gram_verilog_file_9419.v:2:448-456: syntax error at token "endmodule"
+
+2_gram_verilog_file_9452.v: 2_gram_verilog_file_9452.v:3:115-119: syntax error at token "logic"
+2_gram_verilog_file_9452.v:3:337-345: syntax error at token "endmodule"
+
+2_gram_verilog_file_9477.v: 2_gram_verilog_file_9477.v:3:53-57: syntax error at token "logic"
+2_gram_verilog_file_9477.v:3:300-305: syntax error at token "assign"
+2_gram_verilog_file_9477.v:3:452-457: syntax error at token "always"
+2_gram_verilog_file_9477.v:3:487-489: syntax error at token "end"
+2_gram_verilog_file_9477.v:3:519-527: syntax error at token "endmodule"
+
+2_gram_verilog_file_9500.v: 2_gram_verilog_file_9500.v:2:69-73: syntax error at token "logic"
+2_gram_verilog_file_9500.v:2:429: syntax error at token "("
+2_gram_verilog_file_9500.v:2:542: syntax error at token "("
+2_gram_verilog_file_9500.v:2:571-576: syntax error at token "always"
+2_gram_verilog_file_9500.v:2:712-717: syntax error at token "assign"
+2_gram_verilog_file_9500.v:2:752-760: syntax error at token "endmodule"
+
+2_gram_verilog_file_9525.v: 2_gram_verilog_file_9525.v:2:60-64: syntax error at token "logic"
+2_gram_verilog_file_9525.v:2:149: syntax error at token "("
+2_gram_verilog_file_9525.v:2:170-178: syntax error at token "endmodule"
+2_gram_verilog_file_9525.v:3:172-177: syntax error at token "assign"
+2_gram_verilog_file_9525.v:3:198-203: syntax error at token "assign"
+2_gram_verilog_file_9525.v:3:224-232: syntax error at token "endmodule"
+
+2_gram_verilog_file_9554.v: 2_gram_verilog_file_9554.v:3:377-381: syntax error at token "logic"
+2_gram_verilog_file_9554.v:3:543-548: syntax error at token "always"
+2_gram_verilog_file_9554.v:3:586: syntax error at token "1"
+2_gram_verilog_file_9554.v:3:612: syntax error at token ")"
+2_gram_verilog_file_9554.v:3:645-647: syntax error at token "end"
+
+2_gram_verilog_file_9557.v: 2_gram_verilog_file_9557.v:2:205-209: syntax error at token "logic"
+2_gram_verilog_file_9557.v:2:264: syntax error at token "("
+2_gram_verilog_file_9557.v:2:342: syntax error at token "("
+2_gram_verilog_file_9557.v:2:622-627: syntax error at token "always"
+2_gram_verilog_file_9557.v:2:653: syntax error at token "("
+2_gram_verilog_file_9557.v:2:777-785: syntax error at token "endmodule"
+
+2_gram_verilog_file_9575.v: 2_gram_verilog_file_9575.v:2:131-135: syntax error at token "logic"
+2_gram_verilog_file_9575.v:2:242-247: syntax error at token "assign"
+2_gram_verilog_file_9575.v:2:277-282: syntax error at token "assign"
+2_gram_verilog_file_9575.v:2:304-309: syntax error at token "assign"
+2_gram_verilog_file_9575.v:2:330-335: syntax error at token "always"
+2_gram_verilog_file_9575.v:2:393-401: syntax error at token "endmodule"
+
+2_gram_verilog_file_9579.v: 2_gram_verilog_file_9579.v:2:530-534: syntax error at token "logic"
+2_gram_verilog_file_9579.v:2:710-718: syntax error at token "endmodule"
+
+2_gram_verilog_file_9588.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:40-44:; problematic formatter output is
+// Seed: 2224807862
+`define pp_0 0
+`timescale 1ps / 1 ps `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9604.v: 2_gram_verilog_file_9604.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_9604.v:2:273-281: syntax error at token "endmodule"
+
+2_gram_verilog_file_9640.v: 2_gram_verilog_file_9640.v:5:369-373: syntax error at token "logic"
+2_gram_verilog_file_9640.v:5:909-917: syntax error at token "endmodule"
+
+2_gram_verilog_file_9649.v: 2_gram_verilog_file_9649.v:2:261-265: syntax error at token "logic"
+2_gram_verilog_file_9649.v:2:665-673: syntax error at token "endmodule"
+
+2_gram_verilog_file_9700.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 679506647
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9710.v: 2_gram_verilog_file_9710.v:2:36-40: syntax error at token "logic"
+2_gram_verilog_file_9710.v:2:380: syntax error at token "("
+2_gram_verilog_file_9710.v:2:411: syntax error at token "("
+2_gram_verilog_file_9710.v:2:426-434: syntax error at token "endmodule"
+
+2_gram_verilog_file_9716.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_1" at 5:39-43:; problematic formatter output is
+// Seed: 3244257302
+`timescale 1ps / 1 ps
+`define pp_0 0
+`define pp_1 0
+`timescale 1ps / 1ps `default_nettype `pp_1
+<<EOF>>
+2_gram_verilog_file_9742.v: 2_gram_verilog_file_9742.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_9742.v:2:152-157: syntax error at token "assign"
+2_gram_verilog_file_9742.v:2:200-208: syntax error at token "endmodule"
+
+2_gram_verilog_file_9751.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 3:18-22:; problematic formatter output is
+// Seed: 3752409014
+`define pp_0 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9769.v: 2_gram_verilog_file_9769.v:2:204-208: syntax error at token "logic"
+2_gram_verilog_file_9769.v:2:513-514: syntax error at token "if"
+2_gram_verilog_file_9769.v:2:584: syntax error at token "("
+2_gram_verilog_file_9769.v:2:667-675: syntax error at token "endmodule"
+
+2_gram_verilog_file_9780.v: 2_gram_verilog_file_9780.v:2:221-225: syntax error at token "logic"
+2_gram_verilog_file_9780.v:2:307: syntax error at token "("
+2_gram_verilog_file_9780.v:2:350: syntax error at token "("
+2_gram_verilog_file_9780.v:2:384-392: syntax error at token "endmodule"
+
+2_gram_verilog_file_9835.v: 2_gram_verilog_file_9835.v:3:169-173: syntax error at token "logic"
+2_gram_verilog_file_9835.v:3:413-421: syntax error at token "endmodule"
+
+2_gram_verilog_file_9841.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_12" at 31:18-23:; problematic formatter output is
+// Seed: 2788491825
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
+);
+  inout id_12;
+  output id_11;
+  inout id_10;
+  input id_9;
+  input id_8;
+  input id_7;
+  inout id_6;
+  output id_5;
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_12;
+endmodule
+`define pp_12 0
+`default_nettype `pp_12
+`define pp_13 0
+<<EOF>>
+2_gram_verilog_file_9849.v: 2_gram_verilog_file_9849.v:2:195-199: syntax error at token "logic"
+2_gram_verilog_file_9849.v:2:440-448: syntax error at token "endmodule"
+
+2_gram_verilog_file_9914.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:18-22:; problematic formatter output is
+// Seed: 4133419600
+`define pp_0 0
+`define pp_1 0
+`default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9944.v: Error lex/parsing-ing formatted output.  Please file a bug.
+First error: token: "`pp_0" at 4:41-45:; problematic formatter output is
+// Seed: 327193247
+`resetall
+`define pp_0 0
+`default_nettype `pp_0 `default_nettype `pp_0
+<<EOF>>
+2_gram_verilog_file_9945.v: 2_gram_verilog_file_9945.v:2:59-63: syntax error at token "logic"
+2_gram_verilog_file_9945.v:2:649-657: syntax error at token "endmodule"
+

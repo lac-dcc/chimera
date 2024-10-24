@@ -1,0 +1,36 @@
+// Seed: 1095291911
+`timescale 1ps / 1ps `timescale 1 ps / 1 ps
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  input id_8;
+  input id_7;
+  inout id_6;
+  output id_5;
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_8;
+endmodule
+`timescale 1ps / 1ps
+`define pp_8 0
+`define pp_9 0
+`define pp_10 0
+module module_1 ();
+  logic id_8;
+  assign id_6 = 1'b0;
+  logic id_9;
+  type_12(
+      id_7[1], 1'd0 - id_2, id_5
+  );
+  assign id_3[1][1] = 1;
+  always @(1);
+endmodule

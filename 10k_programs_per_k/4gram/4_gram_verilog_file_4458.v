@@ -1,0 +1,18 @@
+// Seed: 2732947203
+`timescale 1ps / 1ps `timescale 1ps / 1ps
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output id_4;
+  inout id_3;
+  inout id_2;
+  output id_1;
+  logic id_4;
+endmodule
+`timescale 1ps / 1ps
+`define pp_4 0
+`define pp_5 0
+`default_nettype id_4

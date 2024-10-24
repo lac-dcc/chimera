@@ -1,0 +1,4 @@
+// Seed: 749741773
+module module_0;
+  logic id_0 = (1);
+endmodule
