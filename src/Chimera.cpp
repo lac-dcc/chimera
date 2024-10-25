@@ -711,8 +711,6 @@ void generateModules(
       directionMap; // maps the direction(in, out, inout) of the ids
   std::vector<std::pair<std::string, PortDir>>
       portList; // list of ports for a module
-  std::vector<std::pair<std::string, std::string>>
-      undeclaredIds; // list of ids implicitly declared
 
   for (auto &m : moduleHeads) {
 
@@ -720,7 +718,6 @@ void generateModules(
     dirMap.clear();
     directionMap.clear();
     portList.clear();
-    undeclaredIds.clear();
     auto ansi = isAnsi(m);
     if (!ansi) {
       declareNonAnsiPorts(m, declMap, dirMap, directionMap, portList);
@@ -740,7 +737,7 @@ void generateModules(
     addConstantIDsToParameterList(m, declMap, dirMap);
     std::unordered_map<std::string, CanonicalTypes> idToType;
 
-    isCorrect = inferTypes(m, idToType, undeclaredIds);
+    isCorrect = inferTypes(m, idToType);
 
     if (isCorrect) {
       auto mod = std::make_shared<Module>();

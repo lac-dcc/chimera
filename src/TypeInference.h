@@ -34,8 +34,7 @@ enum class CanonicalTypes : typeId {
 };
 
 bool inferTypes(
-    Node *head, std::unordered_map<std::string, CanonicalTypes> &idToType,
-    std::vector<std::pair<std::string, std::string>> &undeclaredIds);
+    Node *head, std::unordered_map<std::string, CanonicalTypes> &idToType);
 
 /**
  * @brief A visitor for performing type inference on an abstract syntax tree

@@ -135,8 +135,7 @@ std::string getType(CanonicalTypes t) {
 }
 
 bool inferTypes(
-    Node *head, std::unordered_map<std::string, CanonicalTypes> &idToType,
-    std::vector<std::pair<std::string, std::string>> &undeclaredIds) {
+    Node *head, std::unordered_map<std::string, CanonicalTypes> &idToType) {
   TypeInferenceVisitor visitor;
   auto constraints = visitor.applyVisit(head, visitor.freshType());
   constraintVector constraintVec(constraints.begin(), constraints.end());
@@ -189,10 +188,6 @@ bool inferTypes(
 
         if (isExplDeclared)
           break;
-      }
-      if (!isExplDeclared && addedIds.find(type) == addedIds.end()) {
-        addedIds.insert(type);
-        undeclaredIds.push_back({id, getType(idType)});
       }
     }
 
