@@ -196,8 +196,7 @@ bool inferTypes(Node *head,
       }
     }
 
-    if (visitor.typeIdToIdMap.find(type) != visitor.typeIdToIdMap.end() &&
-        isType) { // means it is a type_X identifier
+    if (isType) { // means it is a type_X identifier
       auto id = visitor.typeIdToIdMap.at(type);
 
       if (!eqTypes.empty()) {
@@ -205,12 +204,17 @@ bool inferTypes(Node *head,
         idToType[id] = t;
         if (visitor.varMap.find(id) != visitor.varMap.end()) {
           auto n = visitor.varMap.at(id);
-        n->setElement(getType(t));
+          
+        auto idType = getType(t);
+
+        n->setElement(idType);
           
         }
       } else if (visitor.varMap.find(id) != visitor.varMap.end()) {
         auto n = visitor.varMap.at(id);
         n->setElement(" wire ");
+      }else{
+
       }
     }
   }
@@ -820,7 +824,7 @@ constraintSet TypeInferenceVisitor::visit(Task_item *node, typeId type) {
 constraintSet TypeInferenceVisitor::visit(
     Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node,
     typeId type) {
-  return {{}};
+  return defaultVisitor(node, type);
 }
 
 constraintSet TypeInferenceVisitor::visit(Specify_block *node, typeId type) {

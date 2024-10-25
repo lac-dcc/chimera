@@ -322,8 +322,9 @@ static void replaceTypes(Node *head, int &id) {
 
   } else if (head->type == NodeType::GATETYPE ||
              head->type == NodeType::NET_TYPE ||
-             head->type == NodeType::VAR_TYPE) // removes wire ...
+             head->type == NodeType::VAR_TYPE){ // removes wire ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
+  }
 
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
@@ -577,6 +578,7 @@ static void setDir(Node *head) {
 
 static std::string getID(Node *head, int &counter,
                          std::unordered_map<std::string, Node *> &decl_map) {
+  
   if (head->type == NodeType::GENERICIDENTIFIER) {
 
     auto s = " id_" + std::to_string(counter++) + " ";
@@ -588,6 +590,7 @@ static std::string getID(Node *head, int &counter,
     head->getChildren()[0]->setElement(std::move(s));
 
     return head->getChildren()[0]->getElement();
+
   } else if (head->type == NodeType::CLASS_ID) {
 
     return getID(head->getChildren()[0]->getChildren()[0].get(), counter,
@@ -627,28 +630,41 @@ static std::string getID(Node *head, int &counter,
 static void findAnsiDeclarations(
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap,
     Node *head, std::unordered_map<std::string, Node *> &decl_map, int &counter,
+    int &typeCounter,
     std::vector<std::pair<std::string, PortDir>> &portList) {
-  int i = 0;
+
   if (head->type == NodeType::PORT_DECLARATION_ANSI) {
     if (head->getChildren()[0].get()->type == NodeType::PORT_DIRECTION) {
+
       setDir(head->getChildren()[0].get());
+
       auto id = getID(head, counter, decl_map);
+
       directionMap[id] = {head, currentDir};
       portList.push_back({id, currentDir});
 
       auto netType = head->getChildren()[1].get(); 
 
       if(netType->getChildren()[0]->getElement().empty()){
-        netType->getChildren()[0]->setElement(" type_" +  std::to_string(i++) + " ");
+        netType->getChildren()[0]->setElement(" type_" +  std::to_string(typeCounter++) + " ");
 
       }
-      head->getChildren()[2]->clearChildren();
-      head->getChildren()[2]->insertChildToBegin(std::make_unique<Terminal>(""));
+      auto dataType = head->getChildren()[2].get();
+
+      for(auto& c : dataType->getChildren()){
+        if(c->type == NodeType::DECL_DIMENSIONS ||
+          c->type == NodeType::DECL_DIMENSIONS_OPT ||
+          c->type == NodeType::DATA_TYPE_PRIMITIVE){
+          c->clearChildren();
+          c->insertChildToBegin(std::make_unique<Terminal>(""));
+        }
+      }
+      
     }
   }
 
   for (const auto &c : head->getChildren()) {
-    findAnsiDeclarations(directionMap, c.get(), decl_map, counter, portList);
+    findAnsiDeclarations(directionMap, c.get(), decl_map, counter, typeCounter, portList);
   }
 }
 
@@ -689,11 +705,11 @@ void generateModules(
   replaceConstants(head.get());
   renamePositionalPorts(head.get());
   int modID = 0;
-  std::unordered_map<std::string, Node *> declMap;
-  std::unordered_map<std::string, Node *> dirMap;
-  std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;
-  std::vector<std::pair<std::string, PortDir>> portList;
-  std::vector<std::pair<std::string, std::string>> undeclaredIds;
+  std::unordered_map<std::string, Node *> declMap;//
+  std::unordered_map<std::string, Node *> dirMap;//maps an id to its definition
+  std::unordered_map<std::string, std::pair<Node *, PortDir>> directionMap;//maps the direction(in, out, inout) of the ids
+  std::vector<std::pair<std::string, PortDir>> portList;//list of ports for a module
+  std::vector<std::pair<std::string, std::string>> undeclaredIds;//list of ids implicitly declared
 
 
   for (auto &m : moduleHeads) {
@@ -708,7 +724,8 @@ void generateModules(
       declareNonAnsiPorts(m, declMap, dirMap, directionMap, portList);
     } else {
       int counter = 0;
-      findAnsiDeclarations(directionMap, m, declMap, counter, portList);
+      int typeCounter = 0;
+      findAnsiDeclarations(directionMap, m, declMap, counter, typeCounter, portList);
     }
     removeParameters(m);
     removeBodyParameters(m);
