@@ -134,8 +134,8 @@ std::string getType(CanonicalTypes t) {
   return idType;
 }
 
-bool inferTypes(
-    Node *head, std::unordered_map<std::string, CanonicalTypes> &idToType) {
+bool inferTypes(Node *head,
+                std::unordered_map<std::string, CanonicalTypes> &idToType) {
   TypeInferenceVisitor visitor;
   auto constraints = visitor.applyVisit(head, visitor.freshType());
   constraintVector constraintVec(constraints.begin(), constraints.end());
@@ -172,23 +172,6 @@ bool inferTypes(
               : static_cast<CanonicalTypes>(*std::next(eqTypes.begin(), 0));
 
       idToType[id] = idType;
-
-      bool isExplDeclared = false;
-
-      for (auto &[c1, c2] :
-           constraintVec) { // checks if id is explictly declared
-
-        isExplDeclared =
-            (c1 == type &&
-             (visitor.typeIdToIdMap.find(c2) != visitor.typeIdToIdMap.end() &&
-              visitor.typeIdToIdMap.at(c2).find("type"))) ||
-            (c2 == type &&
-             (visitor.typeIdToIdMap.find(c1) != visitor.typeIdToIdMap.end() &&
-              visitor.typeIdToIdMap.at(c1).find("type")));
-
-        if (isExplDeclared)
-          break;
-      }
     }
 
     if (isType) { // means it is a type_X identifier
@@ -207,7 +190,6 @@ bool inferTypes(
       } else if (visitor.varMap.find(id) != visitor.varMap.end()) {
         auto n = visitor.varMap.at(id);
         n->setElement(" wire ");
-      } else {
       }
     }
   }

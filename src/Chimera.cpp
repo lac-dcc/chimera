@@ -706,7 +706,7 @@ void generateModules(
   int modID = 0;
   std::unordered_map<std::string, Node *> declMap; //
   std::unordered_map<std::string, Node *> dirMap;  // maps an id to its
-                                                  // definition
+                                                   // definition
   std::unordered_map<std::string, std::pair<Node *, PortDir>>
       directionMap; // maps the direction(in, out, inout) of the ids
   std::vector<std::pair<std::string, PortDir>>
