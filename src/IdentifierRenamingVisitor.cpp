@@ -5,6 +5,8 @@ IdentifierRenamingVisitor::IdentifierRenamingVisitor(
     int modID, std::unordered_map<std::string, Node *> &declMap,
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
   this->varID = directionMap.size();
+  this->typeID = directionMap.size();
+
   this->moduleID = modID;
   this->declMap = &declMap;
 
