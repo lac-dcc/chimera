@@ -42,7 +42,9 @@ void LivenessVisitor::visit(Module_item *node) {
 
 void LivenessVisitor::visit(Genericidentifier *node) {
   if (node->getChildren()[0]->type != NodeType::KEYWORDIDENTIFIER &&
-      node->getChildren()[0]->getElement().find("id") != std::string::npos) {
+      node->getChildren()[0]->getElement().find("id") != std::string::npos && 
+      node->getChildren()[0]->getElement().size() > 2 &&
+      node->getChildren()[0]->getElement()[1] != '_') {//"_" means excluded identifier
     identifiersInScope.push_back(node->getChildren()[0]->getElement());
   }
 }

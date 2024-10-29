@@ -380,19 +380,30 @@ static void renamePositionalPorts(Node *head) {
 }
 
 // find ids used in a place where their value should be constant
-static void findConstantIDs(Node *head, std::set<std::string> &idsFound,
-                            bool isIndex = false) {
-  if (head->getElement() == "decl_variable_dimension" ||
-      head->getElement() == "select_variable_dimension")
+static void findConstantIDs(Node *head, std::set<std::pair<std::string, bool>> &idsFound,
+                            bool isIndex = false, bool isParam = false) {
+  if (head->type == NodeType::DECL_VARIABLE_DIMENSION||
+      head->type == NodeType::SELECT_VARIABLE_DIMENSION)
     isIndex = true;
 
-  else if (isIndex && head->getElement().find("id") != std::string::npos &&
+  else if ((isIndex || isParam) && head->getElement().find("id") != std::string::npos &&
            head->getChildren().size() == 0) {
-    idsFound.insert(head->getElement());
+    bool shouldRename = true;
+
+    if(isParam)
+      shouldRename = false;
+
+    idsFound.insert({head->getElement(), shouldRename});
   }
 
-  for (const auto &c : head->getChildren())
-    findConstantIDs(c.get(), idsFound, isIndex);
+  for (const auto &c : head->getChildren()){
+   
+    if(head->type == NodeType::DEFPARAM_ASSIGN && 
+    c->type == NodeType::REFERENCE)
+      findConstantIDs(c.get(), idsFound, isIndex, true);
+    else
+      findConstantIDs(c.get(), idsFound, isIndex, isParam);
+  }
 }
 
 static void createParameterList(Node *parameterList) {
@@ -404,8 +415,8 @@ static void createParameterList(Node *parameterList) {
 }
 
 static void addParametersToList(Node *parameterList,
-                                const std::set<std::string> &constantIds) {
-  for (auto id : constantIds) {
+                                const std::set<std::pair<std::string, bool>> &constantIds) {
+  for (auto& [id, _] : constantIds) {
     auto node = std::make_unique<Terminal>("parameter");
     parameterList->insertChildToEnd(std::move(node));
     auto node2 = std::make_unique<Symbolidentifier>(id);
@@ -426,9 +437,10 @@ static void addParametersToList(Node *parameterList,
 static void
 renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
                               std::unordered_map<std::string, Node *> &dirMap,
-                              std::set<std::string> &constantIDs) {
-  for (auto &id : constantIDs) {
-    if (declMap.find(id) != declMap.end()) {
+                              std::set<std::pair<std::string, bool>> &constantIDs) {
+  for (auto &[id, shouldRename] : constantIDs) {
+    
+    if (shouldRename && declMap.find(id) != declMap.end()) {
       std::string newId = id;
       if (newId[0] == ' ') {
         newId[0] = '_';
@@ -476,7 +488,7 @@ static void
 addConstantIDsToParameterList(Node *head,
                               std::unordered_map<std::string, Node *> &declMap,
                               std::unordered_map<std::string, Node *> &dirMap) {
-  std::set<std::string> constantIDs;
+  std::set<std::pair<std::string, bool>> constantIDs;
   findConstantIDs(head, constantIDs);
 
   if (constantIDs.empty())
