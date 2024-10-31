@@ -1,56 +1,66 @@
-// Seed: 1032639050
+// Seed: 1817099258
 module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output logic id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    input logic id_18,
-    input id_19,
-    input id_20
-    , id_47,
-    input id_21
-    , id_48,
-    input id_22,
-    input id_23,
-    output logic id_24,
-    input logic id_25,
-    output logic id_26,
-    output id_27,
-    input id_28,
-    input id_29,
-    input id_30,
-    output logic id_31,
-    input id_32,
-    output logic id_33
-    , id_49,
-    output id_34,
-    input logic id_35,
-    inout logic id_36,
-    input id_37,
-    input logic id_38,
-    input logic id_39,
-    output logic id_40,
-    input id_41,
-    input logic id_42,
-    input logic id_43,
-    input logic id_44
-    , id_50,
-    output logic id_45
-    , id_51,
-    input id_46
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  id_13(
+      .id_0(id_9), .id_1(1), .id_2(1)
+  );
+  always @(1 or id_2) id_5 = id_4;
+  wire id_14;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
+);
+  inout wire id_13;
+  input wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_14;
+  module_0(
+      id_8, id_11, id_13, id_7, id_8, id_8, id_14, id_14, id_4, id_2, id_11, id_2
+  );
 endmodule

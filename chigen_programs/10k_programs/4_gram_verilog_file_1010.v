@@ -1,28 +1,20 @@
-// Seed: 3088880803
+// Seed: 455915363
 module module_0 (
-    id_1,
-    id_2
+    input tri1 id_0
 );
-  inout id_2;
-  inout id_1;
-  reg id_2;
-  reg id_3;
-  type_10(
-      1, id_2
-  ); type_11(
-      1, 1
+  wire  id_2  ,  id_3  ,  id_4  ,  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input tri1 id_1,
+    output supply1 id_2,
+    input supply1 id_3,
+    output tri1 id_4,
+    output tri1 id_5,
+    input tri id_6
+);
+  assign id_0 = 1;
+  module_0(
+      id_3
   );
-  always #1
-    if (id_1) begin
-      #1;
-      id_3 <= id_2;
-      id_1 = #1 1;
-    end
-  logic id_4;
-  type_13(
-      SystemTFIdentifier(1), 1
-  );
-  logic id_5;
-  logic id_6;
-  logic id_7;
 endmodule

@@ -1,20 +1,34 @@
-// Seed: 3801484728
-`default_nettype id_7
-module module_0 (
-    output logic id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    output logic id_4
-    , id_13,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output logic id_9,
-    output id_10,
-    output id_11
-    , id_14,
-    output logic id_12
+// Seed: 1716348862
+module module_0 ();
+  integer id_1;
+  wire id_2;
+  assign id_1 = 1'b0 ? (~id_1) : 1 ? 1 : id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  reg   id_4 = (1'b0);
+  uwire id_5 = id_2;
+  always @(posedge 1 == (id_5 == id_1), posedge {{~id_4{1 == 1}},
+    id_5
+  })
+  begin
+    id_4 <= 1;
+  end
+  reg id_6;
+  module_0();
+  initial
+    #(id_5 > 1) begin
+      if (1)
+        if (1 == id_5) id_6 <= id_2 + id_3;
+        else id_6 <= 1 != id_4.id_2;
+      else begin
+        if (id_6) id_6 <= 1;
+      end
+    end
 endmodule

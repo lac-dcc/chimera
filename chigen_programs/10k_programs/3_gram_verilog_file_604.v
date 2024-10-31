@@ -1,34 +1,38 @@
-// Seed: 3658023094
+// Seed: 3250226005
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input id_4
-    , id_22,
-    output id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    input id_14,
-    output id_15,
-    output logic id_16,
-    output logic id_17,
-    output id_18,
-    input id_19,
-    input id_20,
-    input id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(posedge id_19) id_5 <= id_14 - 1'b0;
-  logic id_23;
-  logic id_24 = 1 - id_8;
-  type_34(
-      1 & 1, 1, id_9
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = id_5;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3 = 1 - 1;
+  always @(posedge 1 == 1 ^ 1);
+  always @(!id_2 or posedge 1'b0 + id_2);
+  assign id_5[1] = 1;
+  assign id_5 = id_5;
+  module_0(
+      id_4, id_1, id_4, id_4, id_4
   );
-  logic id_25;
 endmodule

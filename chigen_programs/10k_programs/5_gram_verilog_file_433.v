@@ -1,31 +1,34 @@
-// Seed: 1238839272
-`define pp_16 0
-`timescale 1ps / 1ps
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    input logic id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    output id_9,
-    input logic id_10
-    , id_16,
-    output logic id_11,
-    input logic id_12,
-    output id_13,
-    output logic id_14,
-    output id_15
+// Seed: 247040978
+module module_0;
+  uwire id_1 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_13 = 1;
-  wor id_17;
-  initial begin
-    id_17[1] <= 1;
-  end
-  assign id_17[1] = id_12;
-  logic id_18;
-  assign id_9[1] = id_16;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = 1'b0 ? id_2 : "";
+  bufif1 (id_1, id_2, id_3);
+  module_0();
+endmodule
+module module_0 (
+    output supply0 id_0,
+    input type_12 id_1,
+    output uwire id_2,
+    output supply0 id_3,
+    input supply1 id_4,
+    input supply0 id_5,
+    input tri0 id_6,
+    output tri id_7,
+    output supply0 id_8,
+    input tri id_9,
+    output tri id_10
+);
+  wand module_2 = (id_1);
+  module_0();
 endmodule

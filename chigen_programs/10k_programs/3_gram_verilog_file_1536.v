@@ -1,4 +1,4 @@
-// Seed: 60509324
+// Seed: 2422519850
 module module_0 (
     id_1,
     id_2,
@@ -29,36 +29,102 @@ module module_0 (
     id_27,
     id_28,
     id_29,
-    id_30
+    id_30,
+    id_31,
+    id_32,
+    id_33
 );
-  inout id_30;
-  inout id_29;
-  input id_28;
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
+  output wire id_33;
+  inout wire id_32;
+  inout wire id_31;
+  inout wire id_30;
+  output wire id_29;
+  inout wire id_28;
+  input wire id_27;
+  output wire id_26;
+  input wire id_25;
+  inout wire id_24;
+  input wire id_23;
+  output wire id_22;
+  input wire id_21;
+  input wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  id_34(
+      .id_0(id_28)
+  );
+  wire id_35;
+  assign id_13 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0(
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
+  assign id_2 = 1;
+  always @(posedge 1'b0) begin
+    if (1) begin
+      if (1'b0)
+        if (1 == 1) id_3 = id_3;
+        else begin
+          id_2 <= #1 id_2;
+        end
+      id_1 <= 1;
+    end else id_2 = 1 < 1;
+  end
 endmodule

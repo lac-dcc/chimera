@@ -1,38 +1,40 @@
-// Seed: 1142840923
-module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    output logic id_7,
-    input id_8,
-    input id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    output logic id_17,
-    input logic id_18,
-    output id_19,
-    output id_20,
-    input id_21,
-    input id_22,
-    input logic id_23,
-    input logic id_24,
-    output logic id_25
+// Seed: 2892991808
+module module_0;
+  uwire id_1;
+  assign id_1 = id_1 && id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  logic id_26;
-  logic id_27;
-  logic id_28;
-  assign id_26 = id_28 == 1 ? 1 : 1'b0;
-  assign id_19 = 1'b0;
-  assign id_20 = 1;
-  logic id_29;
-  logic id_30;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = id_4;
+  logic [7:0] id_8;
+  wire id_9;
+  module_0();
+  always @(id_8 or posedge id_6) id_8 = id_6[1'h0];
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  wire id_3;
+  id_4(
+      .id_0(1), .id_1(id_3)
+  );
+  assign id_1 = id_4;
+  module_0();
 endmodule

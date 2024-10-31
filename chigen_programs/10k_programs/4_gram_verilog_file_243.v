@@ -1,33 +1,68 @@
-// Seed: 3636178485
-`timescale 1 ps / 1ps
-module module_0 (
-    output logic id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    output id_6,
-    input logic id_7,
-    output logic id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input logic id_12
+// Seed: 2425113243
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    module_0,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  type_22(
-      1, 1 == 1
+  input wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  tri id_16 = (1);
+endmodule
+module module_0 (
+    input wand id_0,
+    input wire id_1,
+    input wand id_2,
+    output wand id_3,
+    input tri id_4,
+    input tri1 id_5,
+    input wor module_1,
+    input tri id_7,
+    input supply1 id_8
+    , id_11, id_12,
+    output tri id_9
+);
+  wire id_13;
+  wire id_14;
+  module_0(
+      id_12,
+      id_12,
+      id_14,
+      id_13,
+      id_12,
+      id_13,
+      id_11,
+      id_13,
+      id_11,
+      id_12,
+      id_14,
+      id_11,
+      id_14,
+      id_14,
+      id_14
   );
-  assign id_6 = 1;
-  always @(negedge id_5 - 1 or 1) begin
-    repeat (id_7) begin
-      SystemTFIdentifier(id_3);
-    end
-  end
-  assign id_0 = 1;
-  always @(posedge 1) begin
-    id_1 <= 1;
-  end
-  logic id_13;
-  logic id_14;
 endmodule

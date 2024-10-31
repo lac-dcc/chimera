@@ -1,30 +1,33 @@
-// Seed: 2765592010
-`timescale 1ps / 1ps
+// Seed: 2777154115
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6
+    id_5
 );
-  input id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  output id_1;
-  assign id_2 = 1;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  logic id_9, id_10;
-  supply0 id_11;
-  type_19(
-      id_9, 1'b0
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+  wire id_7;
+  assign #id_8 id_5 = 1'b0;
+endmodule
+module module_1 #(
+    parameter id_5 = 32'd90,
+    parameter id_6 = 32'd59
+) (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4 = id_1;
+  defparam id_5.id_6 = 1'h0; module_0(
+      id_3, id_2, id_4, id_2, id_3
   );
-  logic id_12 = id_6 != 1;
-  assign id_11[1] = 1;
-  always @(id_9 or 1 or 1 or 1 or posedge 1) id_10 = 1'h0;
-  logic id_13;
 endmodule

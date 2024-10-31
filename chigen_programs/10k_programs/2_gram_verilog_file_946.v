@@ -1,26 +1,36 @@
-// Seed: 3352215582
-`define pp_13 0
+// Seed: 2984792971
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    output logic id_8,
-    output id_9
-    , id_13,
-    output id_10,
-    input logic id_11,
-    output id_12
+    output tri id_0
 );
-  logic id_14 = 1, id_15;
-  logic id_16;
-  type_27(
-      id_10, 1, id_13
+endmodule
+module module_1 (
+    output tri0 id_0
+);
+  wire id_2;
+  module_0(
+      id_0
   );
-  logic id_17;
-  logic id_18;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri0 id_1,
+    input tri id_2,
+    input tri1 id_3,
+    output tri0 id_4,
+    input uwire id_5,
+    input tri0 id_6,
+    output supply0 id_7
+);
+  assign id_7 = 1'b0;
+  id_9 :
+  assert property (@(posedge id_3 >> 1 ? id_2 : id_5) id_0)
+  else;
+  assign id_4 = 1;
+  assign id_9 = id_2 | id_5;
+  module_0(
+      id_4
+  );
+  wire id_10, id_11;
+  supply1 id_12 = 1 ^ id_2;
+  always @(1'b0);
 endmodule

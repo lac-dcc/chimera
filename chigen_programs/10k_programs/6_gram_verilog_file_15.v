@@ -1,16 +1,30 @@
-// Seed: 807715351
-`timescale 1ps / 1 ps
-module module_0 (
-    input id_0,
-    input id_1,
-    output reg id_2
+// Seed: 1687205823
+module module_0;
+  always force id_1 = 1 * 1 < id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(posedge id_1 or posedge id_0 - id_1) begin
-    id_2 = id_1 ? (1'b0 == 1'h0 || id_0) : 1;
-  end
-  integer id_3;
-  assign id_2 = 1 || 1 > id_3;
-  always @(posedge 1'b0 or posedge id_3) begin
-    if (id_1 && 1) id_2 <= 1;
-  end
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
+  always @(negedge 1) $display;
+  tri0 id_7 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input  tri0  id_0,
+    output uwire id_1
+);
+  assign id_1 = 1;
+  wire id_3;
+  module_0();
+  always @(posedge id_3) $display;
 endmodule

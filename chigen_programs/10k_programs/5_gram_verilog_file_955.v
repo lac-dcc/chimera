@@ -1,20 +1,44 @@
-// Seed: 3283449297
-`default_nettype id_3
+// Seed: 1742546603
 module module_0 (
-    output id_0,
-    output logic id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    input id_5
-    , id_13,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    input id_12
+    input  uwire id_0,
+    output uwire id_1,
+    input  wor   id_2
+    , id_6,
+    input  tri   id_3,
+    output wand  id_4
 );
-  defparam id_14.id_15 = id_13;
+  assign id_1 = id_3 | 1;
+  reg id_7;
+  initial begin
+    id_7 <= id_6;
+  end
+  wire id_8;
+endmodule
+module module_1 (
+    output logic id_0
+    , id_5,
+    input wor id_1,
+    inout logic id_2,
+    output supply1 id_3
+);
+  always
+  fork
+    id_2 = 1 && 1;
+    begin
+      `define pp_6 0
+      if (1) begin
+        id_0 <= `pp_6 == 1;
+      end
+      id_2  <= 1'd0;
+      `pp_6 <= 1;
+      begin
+        `pp_6 <= 1;
+        id_2  <= 1 ^ 1;
+      end
+      `pp_6 = (`pp_6);
+    end
+  join : id_7
+  module_0(
+      id_1, id_3, id_1, id_1, id_3
+  );
 endmodule

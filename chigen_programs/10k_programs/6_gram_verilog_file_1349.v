@@ -1,35 +1,33 @@
-// Seed: 140659732
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`default_nettype `pp_12 `timescale 1ps / 1ps `timescale 1 ps / 1 ps
+// Seed: 2173288945
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    output wor id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    input wire id_3,
+    output supply1 id_4,
+    input wor id_5,
+    input tri0 id_6
 );
-  input id_9;
-  output id_8;
-  input id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  defparam id_9.id_10 = id_9;
+  wire id_8;
+  wire id_9;
+  timeprecision 1ps;
+endmodule
+module module_1 (
+    input wire id_0,
+    input supply0 id_1,
+    output tri id_2,
+    input tri1 id_3,
+    output logic id_4
+);
+  id_6(
+      .id_0(id_4), .id_1(1), .id_2(id_1#(.id_3(1))), .id_4({1'b0{id_0}}), .id_5(1'b0)
+  );
+  xnor (id_4, id_3, id_6, id_1, id_0);
+  module_0(
+      id_2, id_0, id_0, id_1, id_2, id_3, id_3
+  );
+  initial begin : id_7
+    id_4 <= $display;
+    wait (id_7);
+  end
 endmodule

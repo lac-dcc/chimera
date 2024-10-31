@@ -1,45 +1,31 @@
-// Seed: 1558191285
-`default_nettype wire
-task id_0(input id_0);
-  output reg id_0;
-  input [id_0 : id_0[id_0[id_0][1 'b0] : 1  ==  SystemTFIdentifier  *  id_0  *  id_0["" +:  id_0]]]
-      id_0;
-  reg [id_1 : id_1] id_0[id_0  <<  id_0 : 1][id_0 : 1];
-  begin
-    if (id_0)
-      if (1 * 1'b0) begin
-        id_0 <= id_0;
-        id_0 = id_1;
-      end
-  end
-  input id_0;
-  begin
-    id_0 <= id_1;
-    SystemTFIdentifier("");
-    id_0 <= (id_0[1==id_1][id_0 : id_1-(id_1)]);
-    id_1 = 1'b0;
-    if (id_1 || id_1[1'b0]) begin
-      id_1 <= 1;
-      SystemTFIdentifier(id_0);
-      id_1 <= 1'd0;
-      SystemTFIdentifier(1, id_0, (id_1), 1, 1'b0);
-    end else begin
-      if (1'h0) begin
-        id_1 = 1;
-        id_1[1] <= id_1[id_1] ? 1 : id_1 == 1;
-        id_0 <= id_0[id_1 : id_0];
-      end
-    end
-    id_1 = 1;
-    id_1({id_1{1'h0}});
-    id_0 = id_1 - id_1;
-    id_1 <= id_1;
-    SystemTFIdentifier();
-    if (1 - 1'h0) id_0 <= 1;
-    else begin
-      if (1'h0) begin
-        id_0 <= 1;
-      end
-    end
-  end
-endtask
+// Seed: 1618575423
+module module_0 ();
+  id_2(
+      id_1, id_3 == 1, 1, 1
+  );
+endmodule
+module module_4 (
+    output supply1 module_1,
+    inout wand id_1,
+    output uwire id_2,
+    output tri0 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    input supply1 id_6,
+    input supply1 id_7,
+    output wand id_8,
+    input tri1 id_9,
+    input tri1 id_10,
+    input tri0 id_11,
+    input supply1 id_12,
+    input wor id_13,
+    input tri id_14,
+    input tri id_15,
+    output wire id_16,
+    output supply0 id_17,
+    input wire id_18,
+    input tri0 id_19
+);
+  wire id_21;
+  module_0();
+endmodule

@@ -1,24 +1,25 @@
-// Seed: 2317539470
-`timescale 1 ps / 1ps
-module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    input id_5,
-    input real id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    output logic id_13,
-    output id_14,
-    input id_15,
-    input logic id_16,
-    input logic id_17
+// Seed: 2114471048
+module module_0;
+  wire id_1;
+  assign id_1 = 1 & 1'b0;
+  assign id_1 = id_1;
+  assign id_1 = 1'b0;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    output wire id_1,
+    output supply1 id_2,
+    output uwire id_3,
+    output wand id_4,
+    output supply0 id_5,
+    output tri0 id_6,
+    output tri id_7,
+    input tri id_8,
+    input supply0 id_9,
+    input tri0 id_10
+    , id_13,
+    output tri1 id_11
 );
-  defparam id_18.id_19 = 1;
+  module_0();
+  assign id_7 = 1;
 endmodule

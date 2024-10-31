@@ -1,36 +1,44 @@
-// Seed: 1109846536
-module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    input id_7
-    , id_20,
-    input logic id_8,
-    output logic id_9,
-    input id_10,
-    input id_11,
-    input logic id_12,
-    input logic id_13,
-    output id_14,
-    input uwire id_15,
-    output logic id_16,
-    input logic id_17,
-    input id_18,
-    output id_19
-);
-  always @(posedge id_18 & id_3 or negedge id_4) begin
-    if (1) id_19 = 1;
+// Seed: 1642550377
+module module_0;
+  initial begin
+    assume (1);
   end
-  assign id_19 = id_17 || id_15[1&&1];
-  defparam id_21.id_22 = 1; type_34(
-      1, id_13, 1'h0, 1'b0
-  );
-  logic id_23 = 1'b0;
-  assign id_21 = 1;
-  logic id_24;
-  logic id_25 = id_25;
+  uwire id_1, id_2;
+  assign id_1 = 1;
+endmodule
+module module_0 (
+    input tri id_0,
+    output logic id_1,
+    input wand id_2,
+    output logic id_3,
+    input tri1 id_4,
+    output logic id_5,
+    input uwire id_6,
+    input wire id_7,
+    input supply0 id_8,
+    output supply0 id_9,
+    output logic id_10,
+    input logic id_11,
+    input wor module_1,
+    output supply0 id_13,
+    output supply0 id_14,
+    output wor id_15
+);
+  initial begin
+    repeat (1) begin
+      id_1 <= 'b0 == ("");
+      #id_17
+      if (id_17 - id_12) id_3 <= 1'd0;
+      else id_5 <= 1;
+      #1 begin
+        id_10 <= id_11;
+      end
+      id_13 = id_8;
+      id_14 = 1 == id_7;
+      $display(1, id_6);
+    end
+  end
+  assign id_3 = 1;
+  module_0();
+  always disable id_18;
 endmodule

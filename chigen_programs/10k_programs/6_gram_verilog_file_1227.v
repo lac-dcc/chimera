@@ -1,17 +1,30 @@
-// Seed: 1788918185
-`timescale 1 ps / 1 ps
-module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output reg id_4,
-    input logic id_5,
-    output id_6
-);
-  logic id_7;
+// Seed: 101047273
+module module_0;
   initial begin
-    SystemTFIdentifier(id_1, 1, 1);
-    id_4 <= 1;
+    id_1 <= 1;
+    $display(1, 1);
+    id_1 <= (1 && id_1) < 1;
+    assume (1);
+  end
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output wor id_1,
+    output wire id_2,
+    input wand id_3,
+    output wor id_4
+);
+  wire  id_6;
+  wire  id_7;
+  uwire id_8;
+  module_0();
+  always @({!id_0,
+    id_8,
+    1,
+    1,
+    id_3
+  })
+  begin
+    wait ((id_3));
   end
 endmodule

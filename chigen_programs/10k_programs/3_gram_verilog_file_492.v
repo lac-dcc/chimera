@@ -1,24 +1,34 @@
-// Seed: 1131050178
-`timescale 1 ps / 1ps
-module module_0;
-  supply1 id_1;
-  always @(posedge 1) begin
-    SystemTFIdentifier(id_0);
-  end
-  wand  id_2;
-  logic id_3;
-  logic id_4;
-  assign id_4 = id_1[1];
-  logic id_5;
-  logic id_6, id_7;
-  defparam id_8.id_9 = {
-    id_4, id_3
-  };
-  type_18 id_10 (
-      id_4,
-      id_7
+// Seed: 2579920170
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  always @(negedge 1);
+  wire id_4;
+  wire id_5;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input wor id_1,
+    input uwire id_2,
+    output wire id_3,
+    output tri id_4,
+    input wand id_5,
+    input tri0 id_6
+    , id_14,
+    output wand id_7,
+    input tri0 id_8,
+    output tri id_9,
+    input wor id_10,
+    output supply1 id_11,
+    input uwire id_12
+);
+  wire id_15;
+  module_0(
+      id_14, id_15, id_15
   );
-  type_1 id_11 = id_10;
-  assign id_2[1] = id_4;
-  logic id_12 = (1);
 endmodule

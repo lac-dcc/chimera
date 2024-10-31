@@ -1,5 +1,30 @@
-// Seed: 261894223
+// Seed: 791799314
 module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  assign id_2 = id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  assign id_1 = 1 ? 1'b0 : 1;
+  module_0(
+      id_1, id_1
+  );
+  generate
+    assign id_2 = 1'b0;
+    for (id_3 = id_1; 'h0; id_3 = id_1 == id_3) begin
+      assign id_2 = 1;
+    end
+  endgenerate
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -8,46 +33,29 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_9
 );
-  input id_12;
-  output id_11;
-  input id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  input id_5;
-  input id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  reg id_12;
-  reg
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26;
-  assign id_15 = ~id_22;
-  always @((1) or posedge id_16) begin
-    id_11[1'b0 : 1^1] <= id_12;
-    if (1)
-      assert (id_12);
-      else begin
-        id_1 <= id_16;
-      end
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  always @(1) begin
+    if (id_8) begin
+      fork
+        id_4 <= 1 < id_3;
+        id_10;
+      join_any
+    end else begin
+      assume #1  ({1, id_4});
+      else;
+    end
   end
+  module_0(
+      id_8, id_3
+  );
 endmodule

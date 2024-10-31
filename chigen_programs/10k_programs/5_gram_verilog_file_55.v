@@ -1,21 +1,43 @@
-// Seed: 3999947314
+// Seed: 3072867627
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output logic id_2,
-    output id_3,
-    input reg id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    output reg id_9,
-    input id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    module_0,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  type_21(
-      id_10, 1, id_4, 1
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_12 = id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wor id_5 = id_2 == id_2;
+  module_0(
+      id_4, id_5, id_5, id_4, id_4, id_5, id_2, id_5, id_2, id_5, id_3
   );
-  always @(1'b0 or posedge &id_10) if (id_6) id_9 <= #1 id_4;
-  logic id_11, id_12, id_13;
-  assign id_9 = 1;
+  assign id_5 = 1;
 endmodule

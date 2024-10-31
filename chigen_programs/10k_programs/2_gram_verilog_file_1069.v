@@ -1,53 +1,50 @@
-// Seed: 3178307857
-`define pp_35 0
-`define pp_36 0
-module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    output logic id_13,
-    input id_14,
-    output id_15,
-    input logic id_16,
-    input id_17,
-    output logic id_18,
-    input logic id_19,
-    output id_20,
-    input id_21,
-    input logic id_22,
-    input id_23,
-    input id_24,
-    output id_25,
-    output logic id_26,
-    input logic id_27,
-    output id_28,
-    input logic id_29,
-    output id_30,
-    input id_31,
-    input logic id_32,
-    input logic id_33,
-    input logic id_34
-);
-  logic id_35;
-  logic id_36;
-  logic id_37;
-  assign id_36 = 1 * id_0 - 1;
-  logic id_38;
-  assign id_30 = id_5;
-  string id_39 = "";
-  generate
-    logic id_40;
-  endgenerate
-  assign id_3 = 1'b0;
+// Seed: 151301490
+module module_0;
+  assign id_1 = 1'b0;
+  id_3(
+      1
+  );
 endmodule
-`default_nettype id_37
+module module_1 (
+    input supply0 id_0
+);
+  wire id_2;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
+);
+  output wire id_16;
+  output wire id_15;
+  output wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_17;
+  module_0();
+endmodule

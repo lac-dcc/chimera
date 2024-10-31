@@ -1,26 +1,33 @@
-// Seed: 3790689331
-`define pp_17 0
-module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    input logic id_3,
-    input logic id_4,
-    output logic id_5,
-    output logic id_6,
-    input id_7,
-    inout id_8,
-    input id_9,
-    input id_10,
-    output logic id_11
-    , id_17,
-    output id_12,
-    output id_13,
-    input logic id_14,
-    output id_15,
-    input logic id_16
+// Seed: 2503470001
+module module_0 ();
+  wire id_1;
+  id_2(
+      .id_0(id_2), .id_1(id_3), .id_2(1), .id_3(id_1), .id_4(1), .id_5(id_3)
+  );
+endmodule
+module module_1 (
+    input wand id_0,
+    input wor id_1,
+    input wire id_2,
+    output supply0 id_3,
+    input wand id_4,
+    input tri id_5,
+    input tri1 id_6
 );
-  logic id_18;
-  assign id_11 = id_7;
-  logic id_19;
+  assign id_3 = 1;
+  wire id_8;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  tri id_4 = 1;
+  always @(*) id_3 = id_4;
+  assign id_1 = 1'b0;
+  module_0();
 endmodule

@@ -1,32 +1,31 @@
-// Seed: 3029858885
-`define pp_7 0
-`define pp_8 0
-localparam id_5 = 1'h0;
-`define pp_9 0
-`define pp_10 0
-`timescale 1ps / 1ps
-`define pp_11 0
-`timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
-);
-  output id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  always @(*) begin
-    id_7;
+// Seed: 1410835595
+module module_0;
+  reg id_1;
+  always_comb @(posedge id_1) begin
+    id_1 <= id_1 && 1;
   end
-  generate
-    assign id_7 = 1;
-  endgenerate
+endmodule
+module module_1 (
+    output tri  id_0,
+    output tri0 id_1,
+    output tri  id_2
+);
+  always @(negedge id_4) id_4 = id_4;
+  module_0();
+  assign id_0 = id_4;
+endmodule
+module module_2 (
+    input wor id_0
+    , id_8,
+    input uwire id_1,
+    output supply1 id_2,
+    input tri1 id_3,
+    output tri1 id_4,
+    output uwire id_5,
+    input tri0 id_6
+);
+  wire id_9;
+  assign id_2 = 1;
+  module_0();
+  wire id_10;
 endmodule

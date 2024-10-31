@@ -1,30 +1,33 @@
-// Seed: 2837048003
-`timescale 1ps / 1ps
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
-);
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  always begin
-    SystemTFIdentifier(id_7, id_3, id_6);
+// Seed: 1153308597
+module module_0;
+  id_1(
+      .id_0(1), .id_1(1)
+  );
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  always_comb @* begin
+    $display(id_1);
+    assert (id_1);
+    $display(1);
+    id_1 <= 1'd0;
+    disable id_2;
+    if (id_2) id_1 <= 1;
   end
+  tri1 id_3 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input  tri0 id_0,
+    output tri0 id_1
+);
+  wire id_3;
+  module_0();
+endmodule
+module module_3 (
+    output tri id_0,
+    input supply1 id_1
+);
+  wire id_3;
+  module_0();
 endmodule

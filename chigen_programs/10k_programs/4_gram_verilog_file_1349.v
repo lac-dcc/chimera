@@ -1,37 +1,29 @@
-// Seed: 3749817196
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    input id_16,
-    output id_17,
-    input logic id_18,
-    input id_19,
-    input id_20,
-    output id_21,
-    input id_22,
-    input id_23,
-    input logic id_24,
-    input id_25,
-    input logic id_26,
-    output id_27,
-    output logic id_28,
-    output id_29,
-    output id_30,
-    output id_31,
-    input id_32
+// Seed: 1255016171
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  generate
+    if (1) begin
+      wire id_7;
+    end else begin : id_8
+      if (1 | 1) begin
+        always @(posedge id_5 or posedge 1 == {id_8{1}}) $display(1'd0, id_5, 1, 1 > id_5.id_6);
+      end
+    end
+    assign id_2 = id_5;
+  endgenerate
+  module_0();
 endmodule

@@ -1,32 +1,26 @@
-// Seed: 2614998471
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout id_3;
-  output id_2;
-  output id_1;
-  always @(*)
-    if (1) id_3 <= id_3;
-    else begin
-      if (1'h0) id_3 <= id_3 != id_3;
-      SystemTFIdentifier;
-      SystemTFIdentifier(1'b0);
-    end
-  assign id_2 = 1;
-  reg id_3;
-  assign id_1 = id_3;
-  assign id_3 = id_3;
+// Seed: 2461593176
+module module_0;
+  assign id_1 = id_1 && 1;
+  assign id_1 = id_1;
+  tri  id_2 = 1;
+  wire id_3 = id_3;
+  assign id_1 = id_1;
+  wire id_4;
+  assign id_1 = 1;
 endmodule
-module module_1;
-  logic id_3;
-  type_11(
-      1'b0, 1, id_4
-  );
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  logic id_9;
+module module_0 #(
+    parameter id_7 = 32'd90,
+    parameter id_8 = 32'd54
+) (
+    input supply1 id_0,
+    output tri1 module_1,
+    output uwire id_2,
+    input tri1 id_3,
+    output wor id_4
+);
+  tri id_6;
+  assign id_4 = id_0 ? 1 : id_0;
+  defparam id_7.id_8 =
+  id_6++
+  ; module_0();
 endmodule

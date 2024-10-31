@@ -1,29 +1,32 @@
-// Seed: 2649718524
+// Seed: 3433426822
 module module_0 ();
-  reg   id_0;
-  logic id_1;
-  reg   id_2;
-  logic id_3;
-  assign id_2 = 1 < 1;
-  assign id_3 = 1 ? id_1 : 1;
-  reg   id_4;
-  logic id_5;
-  reg   id_6;
-  type_12 id_7 (
-      .id_0 (1'd0),
-      .id_1 (1),
-      .id_2 (1),
-      .id_3 (1),
-      .id_4 (1),
-      .id_5 (id_3),
-      .id_6 (id_2),
-      .id_7 (id_6),
-      .id_8 (1'b0),
-      .id_9 (id_1),
-      .id_10(1)
-  );
-  always @(1 or posedge 1) begin
-    id_0 <= id_6;
-    SystemTFIdentifier(id_4, id_6, 1, id_2);
+  reg  id_2;
+  wire id_3;
+  always @(negedge id_1) begin
+    forever id_2 <= 1;
+    #1;
+    id_1 <= 1;
+    id_2 <= 1;
   end
+  wire module_0;
+  module_2();
+endmodule
+module module_1 (
+    input wire id_0,
+    output wand id_1,
+    output supply1 id_2,
+    input wand id_3,
+    output tri id_4,
+    input tri1 id_5
+);
+  wire id_7;
+  wire id_8;
+  module_0(); id_9(
+      .id_0(id_4), .id_1(1)
+  );
+endmodule
+module module_2;
+  id_2(
+      .id_0(1), .id_1(id_1)
+  );
 endmodule

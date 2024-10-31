@@ -1,10 +1,28 @@
-// Seed: 2735418029
-`define pp_0 0
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`default_nettype `pp_2 `timescale 1ps / 1ps `default_nettype wire
+// Seed: 1261951761
+module module_0;
+  wire id_1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    output wire id_3,
+    output wand id_4,
+    output supply1 id_5,
+    input wand id_6,
+    input tri id_7,
+    input uwire id_8,
+    input wire id_9
+    , id_17,
+    input supply1 id_10,
+    input supply0 id_11,
+    output wor id_12,
+    output tri1 id_13,
+    output supply0 id_14,
+    output wand id_15
+);
+  wire id_18;
+  module_0();
+endmodule

@@ -1,2 +1,44 @@
-// Seed: 124160217
-`default_nettype id_0 `timescale 1ps / 1 ps
+// Seed: 2420559989
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+  wire id_7;
+  supply0 id_8 = 1;
+  final $display(id_3);
+  assign id_2 = 1;
+  wand id_9;
+  always_latch @(posedge 1) begin
+    @(*) force id_1 = 1;
+  end
+  assign id_9 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_5 = 1'b0;
+  wire id_7 = id_2;
+  module_0(
+      id_1, id_6, id_7, id_1, id_6
+  );
+endmodule

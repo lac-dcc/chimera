@@ -1,46 +1,39 @@
-// Seed: 1925063840
-`timescale 1 ps / 1 ps
+// Seed: 3921909365
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output logic id_4,
-    output id_5,
-    output logic id_6,
-    output id_7,
-    output id_8,
-    output logic id_9,
-    inout logic id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    input id_14,
-    output logic id_15,
-    input logic id_16,
-    input id_17,
-    input id_18,
-    input id_19,
-    output id_20,
-    output id_21,
-    input logic id_22,
-    output id_23,
-    input id_24,
-    input id_25,
-    output id_26,
-    input id_27,
-    input id_28,
-    input logic id_29,
-    input id_30,
-    output logic id_31,
-    output id_32,
-    output id_33,
-    input logic id_34,
-    output id_35,
-    input id_36,
-    input logic id_37,
-    output id_38,
-    input id_39
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_40;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always #(1) begin
+    $display(1);
+    id_4 <= 1;
+  end
+endmodule
+module module_1 #(
+    parameter id_3 = 32'd43,
+    parameter id_4 = 32'd91
+);
+  wire id_2;
+  defparam id_3.id_4 = 1; module_0(
+      id_2, id_2, id_2
+  );
+endmodule
+module module_2 (
+    output tri  id_0,
+    output tri0 id_1
+);
+  assign id_1 = 1;
+endmodule
+module module_3 (
+    input  wand id_0,
+    output wor  id_1
+);
+  wire id_3;
+  module_2(
+      id_1, id_1
+  );
+  pmos (id_0, id_1, 1);
 endmodule

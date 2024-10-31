@@ -1,5 +1,13 @@
-// Seed: 1536281095
+// Seed: 528141737
 module module_0 (
+    id_1
+);
+  output wire id_1;
+  id_2(
+      .id_0(id_1), .id_1(id_1), .id_2(1)
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -20,62 +28,32 @@ module module_0 (
     id_18,
     id_19,
     id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27
+    id_21
 );
-  input id_27;
-  input id_26;
-  input id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  input id_21;
-  output id_20;
-  input id_19;
-  input id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  input id_14;
-  input id_13;
-  output id_12;
-  inout id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  reg id_27;
-  type_33(
-      id_20, 1
+  input wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  output wire id_18;
+  output wire id_17;
+  input wire id_16;
+  input wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_22;
+  module_0(
+      id_20
   );
-  reg id_28 = id_22;
-  assign id_27 = id_13;
-  assign id_24 = "";
-  always @(id_22) begin
-    id_6[{1, 1}] = 'b0;
-  end
-  logic id_29;
-  always begin
-    if (id_3) begin
-      id_12 = id_9 < id_13;
-    end
-  end
-  assign id_12 = 1;
-  generate
-    logic id_30;
-    always @(posedge id_9 or 1) id_28 <= id_27;
-    logic id_31;
-    assign id_27 = {1{1'b0 & id_8}};
-  endgenerate
+  assign id_20 = id_3;
 endmodule

@@ -1,24 +1,35 @@
-// Seed: 770949736
-`define pp_5 0
-module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input id_4
-);
+// Seed: 1900731410
+module module_0;
+  wire id_2;
+  wire id_3;
+  wire id_4;
+  wire id_5;
 endmodule
-`define pp_6 0
-`timescale 1ps / 1 ps
-`define pp_7 0
 module module_1 (
-    input logic id_0,
-    input id_1,
-    output id_2
+    output wand id_0,
+    output supply1 id_1,
+    input wor id_2,
+    input wor id_3,
+    input uwire id_4,
+    input supply1 id_5,
+    output tri1 id_6,
+    output wor id_7,
+    input wor id_8,
+    output supply1 id_9,
+    output tri0 id_10
 );
-  always @(posedge 1'h0) begin
-    id_2 = id_0;
-  end
-  logic id_5 = 1, id_6;
+  wire id_12;
+  module_0();
 endmodule
-`resetall
+module module_2 (
+    input tri1  id_0,
+    input uwire id_1,
+    input wand  id_2,
+    input wor   id_3,
+    input tri0  id_4
+);
+  wire id_6;
+  wire id_7;
+  module_0();
+  wire id_8;
+endmodule

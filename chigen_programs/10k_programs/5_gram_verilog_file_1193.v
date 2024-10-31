@@ -1,24 +1,32 @@
-// Seed: 950669428
-`timescale 1 ps / 1 ps
-module module_0 (
-    output reg id_0,
-    output logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output logic id_6,
-    input logic id_7,
-    output id_8,
-    input logic id_9,
-    input id_10,
-    input id_11,
-    input logic id_12,
-    input logic id_13
+// Seed: 2881340557
+module module_0 ();
+  wire id_1;
+  timeprecision 1ps;
+endmodule
+module module_1 ();
+  generate
+    assign id_1 = id_1;
+  endgenerate
+  module_0();
+endmodule
+module module_2 (
+    input supply0 id_0,
+    output wor id_1,
+    output wire id_2,
+    output wand id_3,
+    input supply1 id_4,
+    input supply0 id_5,
+    output wand id_6,
+    output wor id_7,
+    input wand id_8,
+    output wand id_9,
+    input wire id_10,
+    input wire id_11,
+    output tri0 id_12,
+    output tri id_13,
+    input wand id_14,
+    input tri0 id_15
 );
-  always @(posedge id_10) id_0 <= 1;
-  supply1 id_14;
-  initial begin
-    id_14[1] <= id_10;
-  end
+  wire id_17;
+  module_0();
 endmodule

@@ -1,24 +1,35 @@
-// Seed: 833634074
-`resetall
-`define pp_5 0
-`timescale 1 ps / 1 ps
-`define pp_6 0
+// Seed: 1186373286
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input wire  id_0,
+    input uwire id_1,
+    input uwire id_2,
+    input tri   id_3
 );
-  inout id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  input id_1;
-  logic id_5, id_6;
-  logic id_7;
-  logic id_8;
-  logic id_9;
-  logic id_10;
-  logic id_11;
+  id_5(
+      .id_0(1), .id_1(1), .id_2(id_2), .id_3(id_3), .id_4(1), .id_5(id_6 >> id_3), .id_6(1)
+  );
+  assign id_6 = 1'b0 ^ 1;
+endmodule
+module module_1 (
+    input  logic id_0,
+    input  tri0  id_1,
+    input  uwire id_2,
+    output wand  id_3,
+    input  logic id_4,
+    output tri1  id_5,
+    output logic id_6
+);
+  assign id_6 = 1;
+  always
+    if (1)
+      if (1) id_6 <= id_0;
+      else id_5 = 1;
+    else return 1;
+  module_0(
+      id_1, id_1, id_1, id_2
+  );
+  assign id_3 = id_1;
+  always_latch begin
+    id_6 <= id_4;
+  end
 endmodule

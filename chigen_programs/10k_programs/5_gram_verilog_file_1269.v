@@ -1,46 +1,48 @@
-// Seed: 4103405945
-module module_0 (
+// Seed: 37607938
+module module_0;
+  always @({
+    (id_1 == (id_1)),
+    id_1
+  } or posedge 1'b0)
+    if ("") begin
+      id_1 <= id_1 / id_1;
+    end else id_1 <= #1 id_1;
+  wire id_2;
+endmodule
+module module_1 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_2
 );
-  output id_20;
-  output id_19;
-  input id_18;
-  inout id_17;
-  input id_16;
-  inout id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  output id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  assign id_12 = id_17;
-  assign id_5  = id_7[1 : 1<1];
+  output wire id_2;
+  output wire id_1;
+  generate
+    wor id_3;
+    if (id_3) begin
+      always @(1 or posedge 1) id_2 = id_2++;
+    end
+  endgenerate
+  wire id_4;
+  module_0();
+endmodule
+module module_0 (
+    output supply0 module_2,
+    input tri1 id_1,
+    input tri id_2,
+    output uwire id_3,
+    input wand id_4,
+    input wire id_5,
+    output supply1 id_6,
+    input supply0 id_7,
+    input wand id_8
+);
+  tri1 id_10 = 1;
+  assign id_3 = 1'b0 == 1;
+  id_11 :
+  assert property (@(posedge id_5 & 1'b0) 1 == "")
+  else $display((id_8), id_5, id_8, id_4);
+  module_0();
+  assign id_11 = 1 ? (1) : 1;
+  final begin
+    id_11 = id_1;
+  end
 endmodule

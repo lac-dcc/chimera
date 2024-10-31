@@ -1,52 +1,47 @@
-// Seed: 2452629002
-`define pp_41 0
+// Seed: 2249860501
 module module_0 (
-    input logic id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    output logic id_4
-    , id_41,
-    output id_5,
-    input id_6,
-    output logic id_7,
-    inout logic id_8,
-    input logic id_9,
-    output logic id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13,
-    output logic id_14,
-    output logic id_15,
-    input id_16,
-    input id_17,
-    input id_18,
-    output id_19,
-    output logic id_20,
-    input id_21,
-    input logic id_22,
-    input id_23
-    , id_42,
-    input id_24,
-    input id_25,
-    input id_26,
-    output id_27,
-    output id_28,
-    input logic id_29,
-    input id_30,
-    input id_31,
-    input logic id_32,
-    input id_33
-    , id_43,
-    input logic id_34,
-    input logic id_35,
-    input logic id_36,
-    input id_37,
-    input logic id_38,
-    input id_39,
-    input logic id_40
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  integer id_44;
-  assign id_7 = 1'h0;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_12, id_13 = id_4, id_14;
+  always
+    if ("") #1 id_2 = 1'd0;
+    else;
+  assign id_1 = 1 - 1'b0;
 endmodule
-`define pp_42 0
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_5;
+  module_0(
+      id_4, id_4, id_5, id_4, id_4, id_2, id_1, id_5, id_4, id_5, id_3
+  );
+  ;
+endmodule

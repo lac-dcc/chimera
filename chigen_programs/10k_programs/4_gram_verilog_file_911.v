@@ -1,41 +1,49 @@
-// Seed: 167161526
+// Seed: 3269337224
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    output wand  id_0
+    , id_5,
+    input  uwire id_1,
+    input  tri   id_2,
+    output uwire id_3
 );
-  inout id_13;
-  output id_12;
-  inout id_11;
-  inout id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  logic id_13 (
-      1,
-      1
+endmodule
+module module_1 (
+    output wor id_0,
+    output supply1 id_1,
+    inout tri id_2,
+    input supply1 id_3,
+    input uwire id_4,
+    input tri0 id_5,
+    output wire id_6
+    , id_28,
+    input supply0 id_7,
+    output wor id_8,
+    input tri0 id_9,
+    output supply0 id_10,
+    input wor id_11,
+    input tri id_12,
+    output tri1 id_13,
+    output tri0 id_14,
+    output wire id_15,
+    input wand id_16,
+    input tri0 id_17,
+    input wand id_18,
+    input wire id_19,
+    output wor id_20,
+    input tri0 id_21,
+    input supply1 id_22,
+    input tri1 id_23,
+    input uwire id_24,
+    input tri id_25,
+    input tri0 id_26
+);
+  tri id_29;
+  module_0(
+      id_8, id_5, id_26, id_20
+  ); id_30(
+      .id_0(""), .id_1(id_16), .id_2(1), .id_3((1)), .id_4(id_25)
   );
-  logic id_14;
-  always @(posedge 1) id_8 = 1;
-  always @(posedge id_2) id_6 = 1;
-  type_17(
-      id_10, 1
-  );
-  logic id_15;
+  generate
+    assign id_29 = 1;
+  endgenerate
 endmodule

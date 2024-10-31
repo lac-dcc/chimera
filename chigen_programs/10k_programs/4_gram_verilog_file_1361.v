@@ -1,21 +1,29 @@
-// Seed: 3752541666
+// Seed: 2247510563
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input logic id_3
-    , id_13,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    input logic id_9,
-    input id_10,
-    input id_11,
-    output id_12
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic   id_14;
-  integer id_15 = 1;
-  logic   id_16;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_2 = 1 == 1;
+  final $display(1);
+  specify
+    (id_6 => id_7) = 1;
+  endspecify
+endmodule
+module module_1 (
+    input  tri  id_0,
+    output wand id_1
+);
+  final $display;
+  wire id_3, id_4, id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12;
+  module_0(
+      id_10, id_4, id_8, id_5, id_6
+  );
 endmodule

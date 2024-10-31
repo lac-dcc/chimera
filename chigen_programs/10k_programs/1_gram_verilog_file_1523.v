@@ -1,21 +1,22 @@
-// Seed: 496478647
-`define pp_10 0
-`define pp_11 0
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2
-    , id_10,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input id_9
+// Seed: 1269767085
+module module_0;
+  assign id_1 = 1;
+  wire id_2, id_3, id_4;
+  assign id_3 = 1;
+  assign {id_3} = id_1;
+  assign {1, id_1} = 1;
+  wire id_5, id_6;
+endmodule
+module module_1 (
+    input  wand  id_0,
+    input  tri1  id_1,
+    input  tri   id_2,
+    input  uwire id_3,
+    output wand  id_4,
+    input  uwire id_5
 );
-  type_15 id_11 (
-      1 > {id_8 == id_8{id_1}},
-      1
-  );
+  assign id_4 = 1'b0;
+  wand id_7, id_8, id_9;
+  module_0();
+  assign id_7 = 1;
 endmodule

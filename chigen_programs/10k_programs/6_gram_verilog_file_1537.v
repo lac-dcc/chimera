@@ -1,30 +1,43 @@
-// Seed: 3223588910
-`timescale 1 ps / 1ps
+// Seed: 4108997243
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    output logic id_8,
-    input id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    input logic id_13,
-    output id_14
+    input supply1 id_0,
+    input tri id_1,
+    output wor id_2
 );
-  logic id_15;
-  type_0 id_16 (
-      id_12,
-      id_1,
-      1
+  uwire id_4;
+  assign id_2 = id_4;
+  wor id_5;
+  always force id_2 = id_5 == id_0 - 1;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input supply0 id_1,
+    output logic id_2,
+    output tri1 id_3,
+    output supply1 id_4,
+    input supply0 id_5,
+    output logic id_6,
+    input uwire id_7,
+    input tri id_8,
+    output wor id_9
+);
+  reg id_11;
+  logic id_12, id_13;
+  integer id_14;
+  always @(posedge 1 or id_7) begin
+    begin
+      id_6 <= #1 id_11;
+      id_14 = 1;
+    end
+  end
+  assign id_2 = id_12;
+  id_15(
+      .id_0(id_6), .id_1(1'b0), .id_2(1), .id_3(1), .id_4(1)
+  ); module_0(
+      id_8, id_0, id_4
   );
-  assign id_2 = id_15 - id_11;
-  assign id_7 = id_16;
-  assign id_0 = 1'b0;
-  defparam id_17.id_18 = id_1 == id_3[1] * id_18 + 1;
+  logic [7:0] id_16;
+  always @(1) begin
+    id_13 <= id_16[1 : 1] < 1 - id_7;
+  end
 endmodule

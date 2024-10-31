@@ -1,66 +1,73 @@
-// Seed: 1143165494
+// Seed: 2364395326
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    output logic id_5
-    , id_17,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    output logic id_12,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    input id_16
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_18;
-  reg   id_19;
-  always @(id_16 or 1) id_18 = id_17;
-  reg id_20;
-  assign id_5 = 1;
-  type_44(
-      1'd0, id_5, 1, 1 + id_3 + id_3, id_5, 1 | id_14
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  tri id_5;
+  assign id_3[""] = id_5;
+  integer id_6;
+  module_0(
+      id_5, id_6, id_6, id_4
   );
-  initial begin
-    id_19 <= 1;
-  end
-  assign id_17 = id_1;
-  logic id_21;
-  assign id_20 = 1;
-  always @(*) begin
-    id_0 <= id_20;
-  end
-  logic id_22;
-  reg   id_23;
-  logic id_24;
-  type_48(
-      id_4, 1
+  assign id_4 = id_6 - id_5;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
+);
+  input wire id_15;
+  input wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_16(
+      .id_0()
   );
-  generate
-    for (id_25 = 1; 1; id_20 = id_23) begin
-      logic id_26;
-    end
-  endgenerate
-  type_50(
-      (1), 1
+  wire id_17;
+  module_0(
+      id_1, id_5, id_2, id_5
   );
-  assign id_24 = {1 - id_19, id_13 * id_25, id_1};
-  logic id_27 = id_16;
-  type_51(
-      1, id_0
-  );
-  logic id_28;
-  logic id_29;
-  logic id_30 = id_16;
-  logic id_31;
-  logic id_32;
-  logic id_33;
-  assign id_17 = id_4;
-  assign id_18 = id_7 < id_31;
+  assign id_2 = 1 == id_3;
 endmodule

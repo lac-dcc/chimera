@@ -1,33 +1,32 @@
-// Seed: 204976730
+// Seed: 3706748965
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    id_5
 );
-  inout id_14;
-  output id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  logic id_14;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_4 = 1;
+  wire id_6;
+  wire id_7;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  tri1 id_3;
+  assign #1 id_1 = 1;
+  wor   id_4 = 1'b0 == 1;
+  uwire id_5;
+  always @(1 or negedge id_1) for (id_3 = 1; id_1; id_5 = id_1) @(posedge 1);
+  module_0(
+      id_4, id_4, id_5, id_4, id_4
+  );
 endmodule

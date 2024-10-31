@@ -1,16 +1,34 @@
-// Seed: 3520317111
+// Seed: 3867623979
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output logic id_2,
-    output logic id_3,
-    output id_4,
-    input id_5
+    input  tri1  id_0,
+    output wor   id_1,
+    output tri   id_2,
+    input  uwire id_3,
+    input  tri   id_4,
+    input  tri   id_5
+    , id_8,
+    input  wor   id_6
 );
-  always @(posedge 1 or posedge id_5) begin
-    id_4 = (id_5);
+  wire id_9;
+  nand (id_1, id_3, id_4, id_5, id_6, id_8, id_9);
+  module_2();
+endmodule
+module module_0 (
+    output tri0  id_0,
+    output tri   id_1,
+    input  uwire module_1,
+    output tri1  id_3,
+    input  tri1  id_4
+);
+  supply1 id_6;
+  always_ff @(*) begin
+    $display(id_6, 1);
   end
-  type_9(
-      id_5, 1
+  module_0(
+      id_4, id_3, id_3, id_4, id_4, id_4, id_4
   );
+endmodule
+module module_2;
+  tri0 id_2 = 1, id_3;
+  assign id_3 = 1 ? id_1 : 1'b0;
 endmodule

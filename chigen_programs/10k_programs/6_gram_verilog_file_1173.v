@@ -1,23 +1,37 @@
-// Seed: 615210801
-module module_0 (
+// Seed: 85143989
+module module_0 #(
+    parameter id_5 = 32'd7,
+    parameter id_6 = 32'd45
+);
+  assign id_1 = 1 == 1;
+  wire id_2;
+  module_2(); id_3(
+      id_4, id_4
+  ); defparam id_5.id_6 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8
+    id_6
 );
-  input id_8;
-  output id_7;
-  inout id_6;
-  input id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  always @((1'b0 - id_6) or posedge 1) begin
-    id_2 <= id_6;
-  end
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_3 = id_5;
+  module_0();
+endmodule
+module module_0;
+  wire module_2;
+  assign id_1 = 1 != 1;
+  id_3(
+      .id_0(1'h0 == 1), .id_1(1)
+  );
+  tri1 id_4 = 1'b0 || 1;
+  assign id_2 = id_3;
 endmodule

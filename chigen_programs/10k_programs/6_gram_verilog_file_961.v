@@ -1,19 +1,39 @@
-// Seed: 3305971665
-`define pp_4 0
-localparam id_3 = 1;
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`undef pp_10
+// Seed: 1580619358
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input id_3
+    id_1
 );
-  logic id_4;
-  logic id_5;
-  assign id_5 = 1'b0;
+  inout wire id_1;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wor  id_4;
+  wire id_5;
+  assign id_4 = 1'b0;
+  wire id_6;
+  module_0(
+      id_3
+  );
+  wire id_7;
+  wire id_8;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    input tri id_1,
+    output logic id_2,
+    input supply0 id_3
+);
+  wire id_5;
+  always @(id_1) id_2 <= 1'd0;
+  wire id_6;
+  wire id_7;
+  module_0(
+      id_5
+  );
+  assign id_2 = 1;
 endmodule

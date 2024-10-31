@@ -1,11 +1,35 @@
-// Seed: 1799021227
-`define pp_2 0
-`timescale 1 ps / 1ps `timescale 1ps / 1ps
-module module_0 (
-    output id_0,
-    output id_1
+// Seed: 1818002025
+module module_0;
+  assign id_1 = id_1;
+  always begin
+    id_1 = id_1;
+  end
+  assign id_1[1] = 1;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input  wand id_1,
+    output tri0 id_2,
+    input  wand id_3,
+    input  wire id_4
 );
-  logic id_3 = 1;
-  logic id_4;
-  always @(posedge id_3) id_0 <= #1 1 & 1'b0;
+  wire id_6;
+  module_0();
+endmodule
+module module_2 (
+    input tri0 id_0,
+    output supply1 id_1
+);
+  tri0 id_3 = id_3 - id_3;
+  module_0();
+endmodule
+module module_3 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  wire id_3;
+  module_0();
+  wire id_4;
 endmodule

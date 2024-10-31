@@ -1,5 +1,13 @@
-// Seed: 1213692883
-module module_0 (
+// Seed: 3440560255
+module module_0;
+  assign id_1 = id_1;
+  wire id_2, id_3;
+  assign id_3 = id_2;
+  wire  id_4 = id_4;
+  wire  id_5;
+  uwire id_6 = !id_1 < 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -7,32 +15,16 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_8
 );
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_14(
-      id_7
-  );
-  task id_11;
-    logic id_12;
-  endtask
-  type_16 id_13 (
-      1,
-      1,
-      1'h0
-  );
-  assign id_3 = "";
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_6 = id_4;
+  module_0();
 endmodule

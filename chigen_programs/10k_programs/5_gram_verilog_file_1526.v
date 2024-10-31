@@ -1,57 +1,30 @@
-// Seed: 741616737
-`timescale 1ps / 1ps
+// Seed: 2247250452
 module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    output logic id_4,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8,
-    output logic id_9,
-    input id_10,
-    output id_11,
-    output logic id_12,
-    output id_13,
-    output logic id_14,
-    input id_15,
-    input logic id_16,
-    output id_17,
-    output id_18,
-    output logic id_19,
-    output id_20,
-    output id_21,
-    input logic id_22,
-    input logic id_23,
-    input logic id_24,
-    output id_25,
-    input id_26
-    , id_49,
-    input id_27,
-    input id_28,
-    input logic id_29,
-    output id_30,
-    output id_31,
-    output logic id_32,
-    input logic id_33,
-    output id_34,
-    output logic id_35,
-    input id_36,
-    input logic id_37,
-    input logic id_38,
-    output logic id_39,
-    output id_40,
-    input id_41,
-    output id_42,
-    input id_43,
-    input id_44,
-    output logic id_45,
-    output logic id_46,
-    output id_47,
-    input logic id_48
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_50;
-  assign id_9 = 1;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_4;
+endmodule
+module module_0 (
+    input uwire id_0,
+    input wand id_1,
+    output supply1 id_2,
+    output wand id_3,
+    input wand id_4,
+    input uwire id_5,
+    input wire id_6,
+    input wor id_7,
+    input uwire id_8,
+    output uwire module_1
+);
+  wire id_11;
+  tri0 id_12 = 1 == 1;
+  module_0(
+      id_12, id_12, id_12
+  );
+  wire id_13;
 endmodule

@@ -1,5 +1,4 @@
-// Seed: 1023541905
-`define pp_18 0
+// Seed: 142471639
 module module_0 (
     id_1,
     id_2,
@@ -12,33 +11,33 @@ module module_0 (
     id_9,
     id_10,
     id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    id_12
 );
-  output id_18;
-  input id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  always @(posedge (1)) begin
-    id_18 <= #1 "";
-  end
+  inout wire id_12;
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_13;
+  assign id_5 = 1;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    input  supply1 id_0,
+    input  supply0 id_1,
+    output supply0 id_2
+);
+  wire id_4;
+  supply1 id_6 = id_0;
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
+  always disable id_7;
 endmodule

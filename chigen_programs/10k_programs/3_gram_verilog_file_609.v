@@ -1,5 +1,15 @@
-// Seed: 3143898008
-module module_0 (
+// Seed: 267912564
+module module_0 ();
+  supply1 id_1 = 1;
+  assign id_1 = 1;
+  tri id_2 = 1, id_3;
+  id_4(
+      id_1, id_1, ~1
+  );
+  wire id_5;
+  supply0 id_6 = 1, id_7;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -10,20 +20,27 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  input id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  always begin
-    id_3 <= 1;
-  end
+  input wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_16;
+  module_0();
 endmodule

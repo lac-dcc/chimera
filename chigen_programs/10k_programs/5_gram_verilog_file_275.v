@@ -1,22 +1,85 @@
-// Seed: 2025049801
-`default_nettype id_5
+// Seed: 591943687
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input id_4
-    , id_15,
-    output id_5,
-    input logic id_6,
-    output logic id_7,
-    output id_8,
-    input id_9,
-    output logic id_10,
-    output logic id_11,
-    input logic id_12,
-    input id_13,
-    output id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21
 );
-  logic id_16;
+  output wire id_21;
+  inout wire id_20;
+  output wire id_19;
+  input wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  output wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_22;
+endmodule
+module module_1 (
+    output wand id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    input wand id_4,
+    output tri1 id_5,
+    input tri1 id_6,
+    output wor id_7,
+    output tri0 id_8
+);
+  wire id_10, id_11;
+  wire id_12;
+  module_0(
+      id_10,
+      id_10,
+      id_12,
+      id_11,
+      id_12,
+      id_11,
+      id_11,
+      id_12,
+      id_11,
+      id_11,
+      id_12,
+      id_10,
+      id_12,
+      id_11,
+      id_10,
+      id_11,
+      id_11,
+      id_11,
+      id_12,
+      id_10,
+      id_12
+  );
+  wire id_13;
 endmodule

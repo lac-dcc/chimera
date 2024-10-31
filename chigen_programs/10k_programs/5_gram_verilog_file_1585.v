@@ -1,21 +1,29 @@
-// Seed: 1345470179
-`default_nettype id_1 `timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 2638580559
+module module_0;
+  wire id_2;
+  generate
+    assign id_1[1] = 1;
+  endgenerate
+  wire id_3;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input wand id_1,
+    input tri1 id_2
 );
-  inout id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  logic id_7;
-  logic id_8;
+  wor id_4;
+  module_0();
+  for (genvar id_5 = id_4 < 1; 1; id_5 = 1'b0)
+  id_6(
+      .id_0(1 && id_2),
+      .id_1(),
+      .id_2(1),
+      .id_3(),
+      .id_4(1'b0),
+      .id_5(id_2),
+      .id_6(id_0),
+      .id_7(id_2 * 1)
+  );
+  wand id_7 = id_0;
+  assign id_5 = 1;
 endmodule

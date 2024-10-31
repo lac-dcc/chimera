@@ -1,33 +1,51 @@
-// Seed: 627988148
+// Seed: 3690048425
 module module_0 (
-    output logic id_0,
-    output logic id_1,
-    output logic id_2,
-    input id_3,
-    output logic id_4
+    input  wand id_0,
+    input  tri1 id_1,
+    output wire id_2
 );
-  defparam id_5.id_6 = id_5; type_21(
-      1, 1, id_5
+  uwire id_4 = 1;
+  xnor (id_2, id_0, id_4, id_1);
+  module_2(
+      id_2, id_2
   );
-  assign id_2 = 1'b0;
-  tri   id_7;
-  logic id_8 = 1;
-  logic id_9;
-  assign id_0 = id_5;
-  logic id_10 = id_3;
-  assign id_7[1] = id_3;
-  type_26(
-      1, id_3, 1
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output wire id_1
+);
+  assign id_1 = id_0;
+  module_0(
+      id_0, id_0, id_1
   );
-  logic id_11;
-  type_27(
-      1, 1'h0, 1, 1'b0
+endmodule
+module module_2 (
+    output tri1  id_0,
+    output uwire id_1
+);
+  wire id_3;
+  wire id_4;
+  always @(posedge id_4, posedge id_4) begin
+    id_0 = 1;
+  end
+endmodule
+module module_3 (
+    input wand id_0,
+    output wire id_1,
+    input wor id_2,
+    output tri0 id_3,
+    output wand id_4,
+    input tri1 id_5,
+    input tri1 id_6,
+    input wor id_7,
+    output wand id_8,
+    output supply0 id_9,
+    input wand id_10
+    , id_13,
+    output tri1 id_11
+);
+  wire id_14;
+  module_2(
+      id_8, id_4
   );
-  assign id_7[1] = id_9;
-  logic id_12 = id_5, id_13;
-  assign id_0 = 1'h0;
-  logic id_14, id_15;
-  logic id_16;
-  assign id_16 = 1;
-  assign id_8  = 1;
 endmodule

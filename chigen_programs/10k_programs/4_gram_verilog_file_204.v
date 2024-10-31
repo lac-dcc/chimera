@@ -1,27 +1,32 @@
-// Seed: 2066488318
-`timescale 1ps / 1ps
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output logic id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output logic id_14
+// Seed: 3990752374
+module module_0;
+  always @(*) id_1 = 1;
+  reg id_2 = 1;
+  reg id_3;
+  assign id_1 = id_3;
+  always @(id_1 or id_2) begin
+    id_2 <= #1 1;
+    if (id_1)
+      if (1)
+        if (1) assign id_1 = 1;
+        else begin
+          $display(1, 1, id_3 - 1);
+        end
+      else id_1 <= 1'b0;
+  end
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  assign id_1 = 1;
-  logic id_15;
-  type_22(
-      id_11, 1, 1'd0 - id_14
+  inout wire id_2;
+  output wire id_1;
+  module_0();
+  tri id_3 = 1;
+  buf (id_1, id_2);
+  id_4(
+      .id_0(id_2), .id_1(1'b0), .id_2(id_3 - id_2)
   );
-  logic id_16;
-  logic id_17;
+  wire id_5;
 endmodule

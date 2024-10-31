@@ -1,64 +1,37 @@
-// Seed: 1760519340
-`define pp_22 0
-module module_0 (
-    input id_0,
-    output reg id_1,
-    output id_2,
-    output id_3,
-    input reg id_4
-);
-  assign id_2 = 1;
+// Seed: 601393555
+module module_0;
+  reg id_2;
   always begin
-    id_1 <= id_4;
-    logic id_5;
+    if (1)
+      if (1'b0) @(posedge id_1);
+      else begin
+        id_2 <= id_2;
+      end
+    id_1 = 0;
   end
-  assign id_3 = 1;
+  wire id_3;
 endmodule
-`define pp_23 0
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    input  tri0  id_0,
+    output uwire id_1
 );
-  output id_21;
-  output id_20;
-  output id_19;
-  output id_18;
-  input id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  output id_13;
-  output id_12;
-  output id_11;
-  input id_10;
-  inout id_9;
-  output id_8;
-  inout id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  assign id_16 = 1;
-  logic id_22;
+  module_0(); id_3 :
+  assert property (@((1)) id_3)
+  else;
+endmodule
+module module_2 (
+    output wand id_0,
+    input wor id_1,
+    input tri1 id_2,
+    output wor id_3,
+    input wor id_4,
+    input wire id_5,
+    input tri1 id_6,
+    output tri1 id_7,
+    output supply0 id_8,
+    input tri1 id_9,
+    input wand id_10,
+    input tri0 id_11
+);
+  module_0();
 endmodule

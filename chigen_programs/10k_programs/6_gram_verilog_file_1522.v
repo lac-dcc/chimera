@@ -1,35 +1,30 @@
-// Seed: 1231723210
+// Seed: 4187832653
 module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    input logic id_14,
-    input logic id_15,
-    input id_16,
-    output logic id_17,
-    output id_18,
-    input id_19,
-    output logic id_20,
-    output logic id_21,
-    input id_22,
-    output logic id_23,
-    input logic id_24,
-    input id_25,
-    input logic id_26,
-    input id_27
-    , id_29,
-    input logic id_28
+    output supply1 id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    output tri0 id_4,
+    output tri id_5,
+    output tri1 id_6,
+    output supply1 id_7
 );
-  integer id_30 = 1;
+  assign id_6 = id_1;
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri id_1,
+    input wand id_2,
+    inout wire id_3,
+    input uwire id_4,
+    input supply0 id_5,
+    input tri0 id_6,
+    input supply0 id_7,
+    output tri1 id_8
+);
+  always disable id_10;
+  nand (id_8, id_0, id_3, id_7, id_2, id_6);
+  module_0(
+      id_3, id_5, id_4, id_1, id_8, id_8, id_8, id_8
+  );
 endmodule

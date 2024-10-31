@@ -1,67 +1,45 @@
-// Seed: 3277950492
-package id_0;
-  typedef struct packed {
-    id_0 id_0;
-    id_0 id_0;
-  } id_0;
-  task id_0(input [id_0 : 1] id_0);
-    begin
-      case (1'b0)
-        id_0: id_0 <= 1;
-        id_0: id_0[1] <= #id_0 id_0;
-        id_0: begin
-          SystemTFIdentifier;
-          repeat (1) begin
-            for (id_0 = id_0; 1; id_0 = id_0[1]) begin
-              id_0 <= id_0;
-            end
-          end
-          id_0[1 : 1] <= 1;
-        end
-        {1, id_0, 1, id_0, id_0} : id_0 = id_0[id_0][1];
-        id_0: begin
-          if (id_0[id_0]) begin
-            if (1 == 1'b0) begin
-              if (id_0)
-                if (1) begin
-                  id_0[1] = {
-                    id_0,
-                    id_0[{1'b0!==id_0, id_0, id_0, 1'b0}] == id_0[id_0],
-                    id_0 && 1,
-                    id_0,
-                    id_0,
-                    id_0[id_0],
-                    id_0[id_0[1'b0]]
-                  };
-                  id_0 = 1;
-                  id_0 <= id_0;
-                  id_0 <= id_0;
-                end else begin
-                  if (id_0) SystemTFIdentifier(id_0, id_0);
-                  else SystemTFIdentifier(id_0, 1);
-                end
-            end
-          end else begin
-            #1;
-            if (id_0) begin
-              id_0[1] <= 1;
-              if (~id_0) begin
-                id_0[1'h0 : 1] = 1;
-              end else begin
-                id_0 <= 1;
-              end
-            end
-          end
-        end
-        id_0: begin
-          id_0 <= 1;
-        end
-        default: id_0 = id_0;
-      endcase
-    end
-    reg id_0;
-    begin
-      id_0 <= id_0;
-    end
-  endtask
-endpackage
+// Seed: 751525545
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5;
+  wire id_6;
+  assign id_2 = 1'b0 && 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  module_0(
+      id_2, id_3, id_10, id_3
+  );
+  assign id_4[1] = "";
+  wire id_12;
+endmodule

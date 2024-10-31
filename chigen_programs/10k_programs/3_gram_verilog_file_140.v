@@ -1,49 +1,33 @@
-// Seed: 35178275
-`define pp_41 0
-module module_0 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    output id_6,
-    input logic id_7,
-    output id_8,
-    input logic id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input logic id_13,
-    input id_14,
-    output id_15,
-    output logic id_16
-    , id_41,
-    input id_17,
-    input id_18,
-    input id_19,
-    input id_20
-    , id_42,
-    input logic id_21,
-    input logic id_22,
-    output id_23,
-    input id_24,
-    output id_25,
-    output logic id_26,
-    output id_27,
-    output id_28,
-    input id_29,
-    input id_30,
-    output logic id_31,
-    output id_32,
-    input id_33,
-    input logic id_34,
-    output id_35,
-    input logic id_36,
-    input id_37,
-    output id_38,
-    input id_39,
-    output id_40
+// Seed: 1380361574
+module module_0;
+  assign id_1 = id_1#(.id_1(1));
+  id_2(
+      .id_0(id_1), .id_1(1), .id_2(1)
+  );
+endmodule
+module module_1 (
+    output wand id_0,
+    input supply1 id_1,
+    output wire id_2,
+    output uwire id_3
 );
-  assign id_31 = id_14;
+  module_0();
+endmodule
+module module_2 #(
+    parameter id_6 = 32'd39,
+    parameter id_7 = 32'd69
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  logic [7:0] id_5;
+  module_0(); defparam id_6.id_7 = id_7;
+  assign id_5[1 : 1'b0] = 1;
+  wire id_8;
 endmodule

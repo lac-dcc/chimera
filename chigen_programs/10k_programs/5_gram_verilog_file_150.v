@@ -1,30 +1,36 @@
-// Seed: 340265366
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
+// Seed: 3861766323
 module module_0;
-  assign id_0 = 1;
-  logic id_1 = id_1;
-  logic id_2;
-  logic id_4;
-  logic id_5;
-  logic id_6;
-  logic id_7;
 endmodule
-`timescale 1ps / 1ps
 module module_1 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_4[1] = 1;
-  uwire id_4 = id_4;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3[1] = 1;
+  module_0();
+endmodule
+module module_2;
+  tri0 id_1 = 1;
+  assign id_1 = 1 > id_1;
+  module_0();
+endmodule
+module module_3;
+  wire id_1;
+  module_0();
+  wire id_2;
+endmodule
+module module_4 ();
+  wire id_1;
+  module_0();
 endmodule

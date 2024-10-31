@@ -1,21 +1,44 @@
-// Seed: 3555963210
-`timescale 1 ps / 1ps
+// Seed: 1251111246
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    output id_8,
-    input logic id_9,
-    output supply1 id_10,
-    input logic id_11,
-    output id_12,
-    output id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_14;
-  assign id_10[1] = id_3 ? 1 : id_11;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  always_ff @(negedge id_5) begin
+    assert (1 - !id_5);
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_10;
+  module_0(
+      id_7, id_6, id_10, id_10, id_9
+  );
+  assign id_7 = 1'h0;
+  assign id_8#(.id_8(id_3 ^ id_7)) = 1;
 endmodule

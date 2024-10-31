@@ -1,38 +1,30 @@
-// Seed: 1677012427
+// Seed: 3660608223
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10
-    , id_26,
-    input id_11,
-    input logic id_12,
-    output logic id_13
-    , id_27,
-    input logic id_14,
-    output id_15,
-    output id_16,
-    input logic id_17,
-    output id_18,
-    output logic id_19,
-    input id_20,
-    output id_21,
-    input logic id_22,
-    input id_23,
-    input logic id_24,
-    output id_25
+    output uwire id_0,
+    output tri   id_1,
+    output wand  id_2,
+    input  wand  id_3,
+    input  uwire id_4,
+    output wire  id_5,
+    output uwire id_6,
+    input  tri1  id_7,
+    input  wor   id_8
 );
-  type_42 id_28 (
-      .id_0(1),
-      .id_1(id_10),
-      .id_2(1'b0),
-      .id_3(1)
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input tri0 id_1,
+    input wire id_2,
+    output wor id_3
+);
+  reg id_5;
+  nor (id_3, id_1, id_0, id_5, id_2);
+  module_0(
+      id_3, id_3, id_3, id_0, id_0, id_3, id_3, id_0, id_1
   );
+  wor id_6 = id_0;
+  always_latch @(1)
+    @(1 == 1'b0 or posedge id_5) begin
+      id_5 <= 1;
+    end
 endmodule

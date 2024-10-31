@@ -1,32 +1,48 @@
-// Seed: 637162104
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`timescale 1ps / 1ps
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`default_nettype wire
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1 ps / 1 ps
+// Seed: 2329533320
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output wand id_0,
+    output wire id_1,
+    input supply0 id_2
 );
-  input id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  assign id_3 = (id_4) * id_4 - 1;
+endmodule
+module module_1 (
+    output wand id_0,
+    input wand id_1,
+    input uwire id_2,
+    input tri id_3,
+    output tri0 id_4,
+    input wire id_5,
+    input wor id_6
+    , id_35,
+    output wor id_7,
+    input tri0 id_8,
+    output supply1 id_9,
+    input wand id_10,
+    output wand id_11,
+    input supply0 id_12,
+    output tri1 id_13,
+    input wire id_14,
+    input wor id_15,
+    input wire id_16,
+    input tri0 id_17,
+    output tri1 id_18,
+    output tri0 id_19,
+    input supply1 id_20,
+    input wand id_21,
+    output tri1 id_22,
+    input tri id_23,
+    output uwire id_24,
+    input wand id_25,
+    input uwire id_26,
+    input wand id_27,
+    input tri1 id_28,
+    output tri0 id_29,
+    output supply1 id_30,
+    output tri id_31,
+    input uwire id_32,
+    input tri0 id_33
+);
+  module_0(
+      id_4, id_22, id_2
+  );
 endmodule

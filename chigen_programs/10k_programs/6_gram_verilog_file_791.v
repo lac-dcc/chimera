@@ -1,15 +1,22 @@
-// Seed: 3211557387
-`timescale 1ps / 1 ps
-module module_0 (
-    input  id_0,
-    input  id_1,
-    output id_2
+// Seed: 2968854784
+module module_0;
+  tri1 id_1 = {1'b0 == id_1, id_1};
+  initial id_1 = 1 <= 1;
+endmodule
+module module_1 (
+    output supply0 id_0,
+    output supply1 id_1,
+    input wand id_2,
+    output supply1 id_3,
+    output tri id_4
 );
-  reg id_3 = id_0.id_1;
-  always @(posedge id_1 or posedge id_3) begin
-    id_2[1] <= id_3;
-    if (id_3) begin
-      id_3 <= 1;
-    end else id_3 <= id_0;
-  end
+  wire id_6 = ~id_2;
+  module_0();
+  wor  id_7;
+  assign id_3 = id_7 != 1;
+endmodule
+module module_2;
+  id_2(
+      .id_0(1), .id_1(id_1.id_1), .id_2(1), .id_3(1)
+  ); module_0();
 endmodule

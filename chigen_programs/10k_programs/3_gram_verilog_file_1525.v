@@ -1,25 +1,60 @@
-// Seed: 1878638351
-`default_nettype wire
+// Seed: 2021978905
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    output logic id_6,
-    output logic id_7,
-    inout logic id_8,
-    output id_9,
-    input logic id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17
+    id_1,
+    id_2
 );
-  assign id_9 = ~id_8 && 1'b0;
-  assign id_0 = id_10;
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  always_comb @(1 | 1) disable id_6;
+  assign id_1 = (1);
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20
+);
+  inout wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(posedge 1 or posedge 1) disable id_21;
+  module_0(
+      id_21, id_16
+  );
 endmodule

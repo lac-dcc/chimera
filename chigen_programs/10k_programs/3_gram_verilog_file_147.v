@@ -1,21 +1,36 @@
-// Seed: 3046791495
+// Seed: 3011437589
 module module_0;
-  realtime id_0;
-  type_0 id_1 (
-      1,
-      1'b0,
-      1'b0,
-      id_2
+  id_1(
+      1, 1
   );
-  type_1 id_3 (
-      .id_0(id_0),
-      .id_1(1),
-      .id_2(id_2),
-      .id_3(id_0),
-      .id_4(id_0),
-      .id_5(1),
-      .id_6(1),
-      .id_7(1)
-  );
-  always @*;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  final begin
+    #id_5;
+  end
+  module_0();
+endmodule
+module module_2 (
+    input  wor  id_0,
+    output tri1 id_1,
+    input  wire id_2,
+    output wor  id_3,
+    input  wand id_4
+);
+  module_0();
+endmodule
+module module_3 ();
+  always_latch @(posedge id_1) id_1[1] = 1;
+  module_0();
+  wire id_2, id_3;
+  wire id_4;
 endmodule

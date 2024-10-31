@@ -1,20 +1,39 @@
-// Seed: 3231675922
-module module_0 (
-    output logic id_0
+// Seed: 1277544826
+module module_0;
+  module_2();
+endmodule
+module module_1;
+  module_0();
+endmodule
+module module_2;
+  wire id_1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_3 (
+    input supply1 id_0,
+    output logic id_1,
+    output logic id_2,
+    output logic id_3,
+    output tri0 id_4,
+    input tri0 void id_5,
+    input tri0 id_6
 );
-  defparam id_1 = 1'b0, id_2 = 1'd0, id_3 = 1;
-  logic id_4;
-  type_9(
-      id_1, 1 & id_3 | ""
-  );
-  always SystemTFIdentifier(id_3, id_1);
-  initial id_1 = id_1;
-  logic id_5;
-  integer id_6 (
-      id_3,
-      1 * id_4,
-      id_5,
-      id_3,
-      (1)
-  );
+  tri0 id_8 = id_5;
+  always #1
+    #id_9 begin
+      id_1 <= 1;
+      begin
+        begin
+          begin
+            id_3 <= "";
+          end
+        end
+      end
+      foreach (id_10) id_2 = new[1];
+    end
+  wand id_11 = id_8;
+  assign id_1 = id_9;
+  module_2();
+  wire id_12;
 endmodule

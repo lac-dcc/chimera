@@ -1,22 +1,78 @@
-// Seed: 1964963596
+// Seed: 3610848081
 module module_0 (
-    input reg id_0,
-    input id_1,
-    input reg id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  assign id_3 = 1;
-  type_11(
-      (id_0), 1'b0 == "", id_1
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_12;
+  wire id_13;
+  wire id_14, id_15, id_16;
+  always @(negedge 1'h0 or 1'b0)
+    if (id_1 & id_9 & 1) $display(1, {1'b0, 1});
+    else begin
+      id_1 <= 1;
+    end
+  always id_3 = #1 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  reg
+      id_8,
+      id_9,
+      id_10 = id_2[1'd0==""],
+      id_11,
+      id_12,
+      id_13,
+      id_14,
+      id_15,
+      id_16,
+      id_17,
+      id_18,
+      id_19,
+      id_20,
+      id_21,
+      id_22,
+      id_23;
+  module_0(
+      id_21, id_3, id_14, id_3, id_3, id_1, id_7, id_7, id_5, id_3, id_7
   );
-  assign id_4 = 1;
-  assign id_4 = id_2;
-  assign id_4 = id_0;
-  reg   id_5;
-  logic id_6;
-  logic id_7;
-  type_14 id_8 (.id_0());
-  always @(posedge id_2) begin
-    id_5 <= id_3;
-    id_5 <= id_4;
+  always @(id_5) begin
+    begin
+      id_4 += id_18;
+      id_15 <= 1;
+    end
   end
 endmodule

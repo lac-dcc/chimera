@@ -1,33 +1,35 @@
-// Seed: 1299644390
-`resetall
+// Seed: 3002049638
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    output logic id_4,
-    input logic id_5,
-    output logic id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    input id_11,
-    input logic id_12,
-    output id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    output id_18,
-    input id_19
+    id_1,
+    id_2,
+    id_3
 );
-  type_30(
-      1 ? 1 : 1'b0, 1, 1, id_18, 1
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  module_0(
+      id_1, id_1, id_1
   );
-  logic id_20;
-  type_32 id_21 (
-      .id_0(!id_4),
-      .id_1(1)
-  );
+  generate
+    if (0) begin
+      always @(posedge id_4) begin
+        id_3 <= id_4;
+      end
+    end else begin : id_6
+      assign id_2 = id_4;
+    end
+  endgenerate
 endmodule

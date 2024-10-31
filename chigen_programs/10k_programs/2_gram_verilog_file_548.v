@@ -1,27 +1,34 @@
-// Seed: 2219347868
+// Seed: 2813807061
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5#(id_6, (1) * 1'd0, 1),
-    id_7,
-    id_7
+    id_5,
+    id_6
 );
-  inout id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_8;
-  genvar id_9;
-  assign id_3[1] = 1;
-  logic id_10;
-  logic id_11;
-  assign id_1 = 1;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  integer id_7, id_8, id_9, id_10, id_11;
 endmodule
-`default_nettype id_7
-`define pp_8 0
-`timescale 1ps / 1ps
+module module_1 (
+    input wand id_0,
+    input tri1 id_1,
+    output wand id_2,
+    input tri0 id_3,
+    inout tri0 id_4,
+    output supply0 id_5,
+    output tri1 id_6
+);
+  wire id_8;
+  wire id_9;
+  module_0(
+      id_8, id_9, id_8, id_9, id_9, id_9
+  );
+  wire id_10;
+  assign id_4 = 1'b0;
+endmodule

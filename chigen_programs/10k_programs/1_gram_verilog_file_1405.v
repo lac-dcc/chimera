@@ -1,75 +1,60 @@
-// Seed: 3418962669
-`define pp_18 0
-`define pp_19 0
+// Seed: 1320532135
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    output logic id_3,
-    input id_4,
-    output logic id_5,
-    output id_6
+    output wor id_0,
+    output supply1 id_1,
+    output wor id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    input wor id_6,
+    input wire id_7,
+    input tri1 id_8,
+    output uwire id_9,
+    input supply1 id_10,
+    output wor id_11,
+    output tri id_12,
+    input tri0 id_13,
+    input uwire id_14,
+    output wor id_15,
+    input uwire id_16
 );
-  logic id_7;
-  assign id_5 = 1 - id_4;
-  logic id_8;
-  logic id_9;
+  wire id_18;
+  assign #id_19 id_9 = id_14 && 1'b0;
+  wire id_20;
+  supply1 id_21 = 1'b0 * 1'h0;
+  wire id_22;
+  assign id_11 = id_4;
 endmodule
 module module_1 (
-    output logic id_0,
-    input logic id_1,
-    output logic id_2,
-    output tri id_3,
-    input id_4,
-    input tri0 id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    input logic id_13,
-    output id_14,
-    input logic id_15,
-    input id_16,
-    input id_17
+    input supply1 id_0,
+    input wand id_1,
+    output tri1 id_2,
+    output wor id_3,
+    input supply1 id_4,
+    input supply0 id_5,
+    input tri0 id_6,
+    input supply1 id_7,
+    input tri1 id_8,
+    output supply0 id_9,
+    output wire id_10
 );
-  function id_18;
-    output id_19;
-    input id_20, id_21;
-    ;
-  endfunction
-  assign id_0 = id_1;
-  assign id_9 = id_4;
-  logic id_22;
-  type_38(
-      .id_0(id_9),
-      .id_1(),
-      .id_2(1),
-      .id_3(id_5),
-      .id_4(1'd0),
-      .id_5(1 & id_15),
-      .id_6(id_0 >= 1),
-      .id_7(1),
-      .id_8(id_21),
-      .id_9(1'b0),
-      .id_10(1),
-      .id_11(id_2)
-  );
-  logic id_23;
-  logic id_24, id_25;
-  type_41(
-      id_3[1], id_5
-  );
-  type_42 id_26 (
-      1,
-      1,
-      1
-  );
-  logic id_27;
-  logic id_28;
-  type_45(
-      .id_0(1'h0), .id_1((id_5[1]) && id_0), .id_2(id_16)
+  module_0(
+      id_2,
+      id_3,
+      id_2,
+      id_9,
+      id_7,
+      id_1,
+      id_8,
+      id_8,
+      id_0,
+      id_10,
+      id_1,
+      id_9,
+      id_9,
+      id_0,
+      id_4,
+      id_9,
+      id_7
   );
 endmodule

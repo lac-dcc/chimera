@@ -1,17 +1,21 @@
-// Seed: 2100215101
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 2606147198
+module module_0;
+  always @(posedge id_1) if (id_1) id_1 = id_1#(.id_1(1)) / 1;
+  assign id_1 = 1;
+  wire id_2;
+  wire id_3;
+  always @(posedge id_3 or id_3) force id_1 = {1{1}};
+  wire id_4;
+  wire id_5;
+  assign id_4 = id_2;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd77,
+    parameter id_5 = 32'd99
 );
-  output id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  always @(posedge 1 or posedge id_1) begin
-    id_2[1 : 1'b0] = id_2[1 : 1'd0];
-  end
+  assign id_1 = id_1 == 1;
+  module_0();
+  wire id_2;
+  tri1 id_3;
+  defparam id_4.id_5 = {id_3{1}};
 endmodule

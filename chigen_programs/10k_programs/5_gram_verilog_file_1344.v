@@ -1,13 +1,40 @@
-// Seed: 853381162
-`timescale 1 ps / 1ps
-module module_0;
-  logic id_0;
-  logic id_1;
-  logic id_2 = id_0;
-  always @(posedge id_2 && id_0 or posedge 1'b0) begin
-    SystemTFIdentifier(1, 1 - 1, 1);
+// Seed: 4222695256
+module module_0 (
+    output wor id_0,
+    output supply1 id_1,
+    input supply0 id_2,
+    input tri1 id_3,
+    output supply1 id_4,
+    input wand id_5,
+    input tri1 id_6
+);
+endmodule
+module module_1 (
+    output supply0 id_0
+    , id_7,
+    output wor id_1,
+    input supply0 id_2,
+    input supply1 id_3,
+    output logic id_4,
+    output supply1 id_5
+);
+  assign id_7 = id_3;
+  always_latch @(posedge 1) begin
+    id_4 <= 1;
   end
-  logic id_3;
-  logic id_4, id_5;
-  always @(1 or(id_1)) id_2 = 1;
+  module_0(
+      id_0, id_5, id_7, id_2, id_5, id_3, id_7
+  );
+endmodule
+module module_2 (
+    output wor   id_0,
+    output uwire id_1,
+    input  tri1  id_2
+);
+  generate
+    assign id_0 = 1'b0 ? (id_2) : 1'b0 !=? id_2;
+  endgenerate
+  module_0(
+      id_0, id_1, id_2, id_2, id_1, id_2, id_2
+  );
 endmodule

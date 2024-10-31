@@ -1,53 +1,34 @@
-// Seed: 1832248624
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    input logic id_8,
-    output id_9,
-    input logic id_10,
-    input logic id_11,
-    input logic id_12,
-    inout id_13,
-    output id_14,
-    input id_15,
-    output reg id_16,
-    output id_17,
-    input id_18,
-    output id_19,
-    input id_20,
-    input id_21,
-    input id_22,
-    input id_23,
-    input id_24,
-    input id_25
+// Seed: 2297487591
+module module_0 ();
+  initial begin
+    id_1 = (id_1 !== 1 * 1'b0);
+  end
+endmodule
+module module_1 (
+    output supply1 id_0,
+    output wand id_1,
+    input tri id_2,
+    output tri id_3,
+    input supply1 id_4,
+    input uwire id_5,
+    output supply0 id_6
 );
-  type_44(
-      id_20, 1, 'b0
+  wire id_8;
+  module_0();
+  wire id_9;
+  wire id_10;
+  wire id_11;
+  wire id_12;
+  assign id_8 = ~1'b0;
+  id_13(
+      .id_0(1 > ""),
+      .id_1(1),
+      .id_2(id_3),
+      .id_3(id_0),
+      .id_4(1'b0),
+      .id_5(1'd0 - 1'b0),
+      .id_6(id_9),
+      .id_7(id_8)
   );
-  task id_26;
-    input id_27;
-    begin
-      forever id_16 <= 1;
-    end
-  endtask
-  type_45(
-      1, id_15, 1
-  );
-  logic id_28 = id_23;
-  logic id_29;
-  generate
-    assign id_26 = 1;
-    if (1 || id_18) begin : id_30
-      logic id_31;
-      assign id_29 = id_23;
-    end
-  endgenerate
-  logic id_32 = 1'b0;
-  logic id_33;
+  wire id_14;
 endmodule

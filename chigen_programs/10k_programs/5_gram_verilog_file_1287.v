@@ -1,22 +1,42 @@
-// Seed: 1167998216
-`default_nettype wire `timescale 1ps / 1 ps
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    output id_9,
-    output id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    output logic id_14
-);
-  defparam id_15.id_16 = id_16;
-  type_0 id_17 (.id_0(1));
+// Seed: 570238222
+module module_0 ();
+  wire id_1 = id_1;
+  assign id_1 = id_1;
 endmodule
+module module_1;
+  always @(posedge 1) begin
+    id_1 <= 1;
+    id_1 = #id_2 1;
+    id_1 = id_1;
+  end
+  wor id_4 = 1 == 1;
+  assign id_4 = id_4;
+  module_0();
+  assign id_4 = id_4;
+  assign id_3 = $display(1);
+endmodule
+program module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  input wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = id_8;
+  module_0();
+endprogram

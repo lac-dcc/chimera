@@ -1,26 +1,53 @@
-// Seed: 3533075455
-`define pp_13 0
+// Seed: 1530234721
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    output logic id_9,
-    output id_10,
-    input id_11,
-    output id_12
+    id_1
 );
-  type_0 id_13 (
-      .id_0(id_6),
-      .id_1(id_8),
-      .id_2(~id_8 + 1'b0),
-      .id_3(),
-      .id_4(id_7)
+  output wire id_1;
+  wire id_3, id_4;
+  wire id_5;
+  wire id_6;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    module_1,
+    id_14
+);
+  input wire id_15;
+  input wire id_14;
+  output wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_10 = id_15;
+  wire id_16;
+  task id_17(input integer id_18, input id_19);
+    input id_20;
+    id_6 = 1;
+  endtask
+  wire id_21;
+  wire id_22;
+  module_0(
+      id_22
   );
-  logic id_14;
 endmodule

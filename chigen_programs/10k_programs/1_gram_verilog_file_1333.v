@@ -1,34 +1,34 @@
-// Seed: 324597400
-`timescale 1ps / 1ps
+// Seed: 2487484746
 module module_0 (
-    input id_0,
-    input id_1
+    input  uwire id_0,
+    output tri1  id_1
 );
-  assign id_2 = id_2;
-  logic id_3;
-  logic id_5;
-  if (id_5)
-    type_1 id_6 (
-        .id_0(1),
-        .id_1(1)
-    );
-  else logic id_7;
+  wire id_3;
+  supply1 id_4, id_5;
+  tri0 id_6;
+  always
+    if (1)
+      if (1 - id_4) begin
+        @(posedge 1) id_4 = id_0;
+        if (id_4 - 1'h0)
+          if (1 | id_4)
+            if (id_6)
+              if (1) id_1 = 1;
+              else $display;
+      end
 endmodule
-`define pp_3 0
 module module_1 (
-    id_1,
-    id_2
+    output uwire id_0,
+    output uwire id_1,
+    input  wire  id_2,
+    input  tri   id_3,
+    input  tri   id_4,
+    output tri0  id_5,
+    input  tri1  id_6,
+    input  tri0  id_7
 );
-  output id_2;
-  output id_1;
-  assign id_1 = id_0;
-  assign id_1 = 1;
-  type_5(
-      .id_0(id_2), .id_1(1), .id_2(id_2)
+  assign id_5 = 1;
+  module_0(
+      id_2, id_5
   );
-  logic id_3;
-  type_7(
-      1, 1, id_4
-  );
-  assign #1 id_4 = 1 & id_0;
 endmodule

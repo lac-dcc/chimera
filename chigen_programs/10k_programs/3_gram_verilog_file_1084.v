@@ -1,52 +1,35 @@
-// Seed: 2588688469
-`define pp_15 0
+// Seed: 1445824
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+    input  tri1 id_0,
+    input  tri0 id_1,
+    output wire id_2,
+    input  wire id_3
 );
-  input id_15;
-  output id_14;
-  inout id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  inout id_9;
-  output id_8;
-  output id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  assign id_2 = 1'b0;
-  always @(posedge id_5 or posedge 1'h0) begin
-    id_1 <= id_4;
-  end
-  logic id_15;
-  logic id_16;
-  always @(*) begin
-    case (id_6)
-      id_12: id_8 = 1;
-      default: begin
-        if (1) id_3 <= id_4;
-      end
-    endcase
-    id_14 = 'h0;
-  end
-  always #1 id_15 = 1;
+  tri id_5;
   assign id_5 = 1;
+  wire id_6;
+  wire id_7;
+  wire id_8;
+  wire id_9 = id_7, id_10, id_11;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  tri   id_1,
+    input  tri   id_2,
+    output uwire id_3,
+    output wor   id_4,
+    output tri   id_5,
+    output wand  id_6,
+    input  tri0  id_7
+    , id_13,
+    input  tri0  id_8,
+    input  uwire id_9,
+    output wor   id_10,
+    input  tri1  id_11
+);
+  wire id_14;
+  wire id_15;
+  module_0(
+      id_8, id_11, id_4, id_11
+  );
 endmodule

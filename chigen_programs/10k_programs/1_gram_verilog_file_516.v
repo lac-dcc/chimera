@@ -1,62 +1,30 @@
-// Seed: 2237165220
-`define pp_22 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+// Seed: 3566293909
+module module_0 ();
+  wire id_1, id_2, id_3;
+  assign id_1 = id_1;
+  assign id_3 = id_3;
+endmodule
+module module_1 (
+    input  tri   id_0,
+    output logic id_1,
+    input  logic id_2
 );
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_19.id_20 = id_10;
-  assign id_6[1==1].id_15 = 1;
-  type_24(
-      1, 1, 1, 1
-  );
-  logic id_22;
-  type_25(
-      id_13, 1, id_2, 1'b0, 1
-  );
-  logic id_23;
-  assign id_22 = 1;
-  assign id_10 = id_3;
-  always id_17 = 1;
+  always id_1 <= id_2;
+  module_0();
+endmodule
+module module_2 (
+    input  wand  id_0,
+    output uwire id_1,
+    input  tri0  id_2,
+    input  wand  id_3
+);
+  assign id_1 = 1;
+  module_0();
+  wire id_5;
+endmodule
+module module_3;
+  uwire id_1;
+  module_0();
+  wire  id_2;
+  assign id_1 = 1;
 endmodule

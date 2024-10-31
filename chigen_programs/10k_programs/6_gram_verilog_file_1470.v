@@ -1,21 +1,43 @@
-// Seed: 4202028591
-`timescale 1ps / 1 ps `default_nettype id_0 `timescale 1ps / 1ps
-module module_0;
-  assign id_0 = !id_0[1 : 1];
-  logic   id_2;
-  integer id_3 = id_3;
-  logic   id_4 = id_1;
-  logic   id_5;
-  type_12(
-      1, id_2 - 1'd0, id_2
-  );
-  logic id_6 = 1'd0;
-  logic id_7;
-  logic id_8;
-  logic id_9;
-  initial id_6 = 1'b0;
-  initial begin
-    id_4 = id_3 - 1;
-    id_3 = 1;
+// Seed: 1421765981
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  initial id_3 = $display;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always begin
+    id_3 <= 0;
+    id_7 = 1'b0;
   end
+  module_0(
+      id_1, id_2, id_7, id_4, id_7, id_2, id_2
+  );
 endmodule

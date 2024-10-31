@@ -1,35 +1,31 @@
-// Seed: 456210070
+// Seed: 3130387240
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+    input supply0 id_0,
+    input supply0 id_1
 );
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_6 = 1 ? 1 : id_12;
+  wire id_3;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    output tri1 id_1,
+    input supply1 id_2,
+    input uwire id_3,
+    output tri1 id_4
+);
+  supply1 id_6;
+  tri1 id_7;
+  id_8 :
+  assert property (@(posedge 1'b0) 1'b0)
+  else $display(1'b0, id_7);
+  wire id_9;
+  initial begin
+    $display(1);
+  end
+  assign id_6 = id_2 ? 1 : id_8;
+  module_0(
+      id_3, id_3
+  );
+  assign id_9 = id_9;
+  wire id_10;
+  tri  id_11 = id_7;
 endmodule

@@ -1,53 +1,53 @@
-// Seed: 3328957126
+// Seed: 1898719533
 module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output logic id_12,
-    output id_13,
-    output logic id_14,
-    input id_15,
-    output id_16,
-    output logic id_17,
-    input id_18,
-    input id_19,
-    input logic id_20,
-    output id_21,
-    input id_22
-    , id_28,
-    output id_23,
-    input id_24,
-    output id_25,
-    output logic id_26,
-    input logic id_27
+    output wor id_0,
+    input tri1 id_1,
+    output uwire id_2,
+    output supply0 id_3,
+    output wand id_4,
+    input tri0 id_5
 );
-  logic id_29, id_30;
-  logic id_31;
-  type_50 id_32 (
-      .id_0(id_15),
-      .id_1(1),
-      .id_2(1'b0),
-      .id_3(0 - 1),
-      .id_4(id_24),
-      .id_5(1),
-      .id_6(id_9),
-      .id_7(1)
+  wor id_7 = id_1 | 1 ? id_5 : id_5;
+endmodule
+module module_1 (
+    output wor id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input supply1 id_3,
+    input tri0 id_4,
+    input wire id_5,
+    output uwire id_6,
+    input wor id_7
+    , id_29,
+    input tri id_8,
+    input supply0 id_9,
+    input tri0 id_10,
+    output supply1 id_11,
+    inout wand id_12,
+    output tri id_13,
+    input tri1 id_14,
+    input tri0 id_15
+    , id_30,
+    output wor id_16,
+    input wire id_17,
+    output logic id_18,
+    input supply1 id_19,
+    output tri id_20,
+    input tri1 id_21,
+    output wire id_22,
+    output wor id_23,
+    output supply0 id_24,
+    input supply0 id_25,
+    input supply0 id_26,
+    input wor id_27
+);
+  tri1 id_31 = 1;
+  initial if (id_9) id_18 <= 1;
+  wire id_32;
+  assign id_20 = 1;
+  wire id_33;
+  module_0(
+      id_6, id_3, id_0, id_16, id_13, id_10
   );
-  type_51 id_33 (
-      .id_0(),
-      .id_1(1)
-  );
-  logic id_34;
-  logic id_35;
-  assign id_7 = id_3;
-  defparam id_36.id_37 = id_29 ^ (id_18);
+  wire id_34;
 endmodule

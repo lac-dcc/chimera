@@ -1,16 +1,41 @@
-// Seed: 2023262354
-`define pp_7 0
+// Seed: 2332681090
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input id_3
-    , id_7,
-    input id_4,
-    input logic id_5,
-    input logic id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  genvar id_8;
-  logic id_9;
-  assign id_9 = 1;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+endmodule
+module module_1;
+  id_2(
+      .id_0(id_3), .id_1(1)
+  );
+  wire id_4;
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
+endmodule
+module module_2 (
+    inout tri1 id_0,
+    input supply0 id_1,
+    output tri id_2,
+    input wire id_3,
+    input tri1 id_4
+);
+  wire id_6;
+  not (id_2, id_0);
+  module_0(
+      id_6, id_6, id_6, id_6, id_6, id_6, id_6
+  );
+  tri0 id_7 = 1'h0;
 endmodule

@@ -1,29 +1,46 @@
-// Seed: 2844984418
+// Seed: 4207678764
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    output id_6,
-    output logic id_7,
-    output logic id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    input id_13,
-    input logic id_14,
-    output id_15,
-    input id_16,
-    output logic id_17,
-    input logic id_18,
-    input logic id_19,
-    output id_20,
-    output logic id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  type_32(
-      1, 1 == 1, id_17
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  tri1 id_7 = id_5;
+  time id_8 (
+      .id_0 (id_6),
+      .id_1 (id_1),
+      .id_2 (1'b0),
+      .id_3 ((id_4 || $display)),
+      .id_4 (1),
+      .id_5 (1 == id_7),
+      .id_6 (1),
+      .id_7 (id_4),
+      .id_8 (1 | 1),
+      .id_9 (1),
+      .id_10(1),
+      .id_11(1),
+      .id_12(1'b0),
+      .id_13(id_1),
+      .id_14(id_5 / id_7)
+  );
+  wire id_9;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wire id_1,
+    input supply0 id_2
+);
+  initial id_4 <= 1'b0;
+  wire id_5;
+  module_0(
+      id_5, id_5, id_5, id_5, id_5, id_5
   );
 endmodule

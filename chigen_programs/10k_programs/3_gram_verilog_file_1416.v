@@ -1,17 +1,33 @@
-// Seed: 1727642906
-`define pp_7 0
+// Seed: 351393248
 module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6
+    output tri1  id_0,
+    output tri0  id_1,
+    input  wand  id_2,
+    input  tri0  id_3,
+    input  wire  id_4,
+    input  wand  id_5,
+    input  wire  id_6,
+    output tri0  id_7,
+    input  wand  id_8,
+    input  tri0  id_9,
+    input  tri   id_10,
+    input  wire  id_11,
+    input  tri   id_12,
+    input  tri0  id_13,
+    output uwire id_14
 );
-  assign id_4 = id_2;
-  logic id_7;
-  logic id_8;
-  logic id_9;
-  logic id_10;
+  wire id_16;
+endmodule
+module module_1 (
+    input wire id_0,
+    input wor  id_1
+);
+  id_3 :
+  assert property (@(negedge 1) id_1)
+  else id_3 = id_1 & 1;
+  module_0(
+      id_3, id_3, id_1, id_0, id_3, id_1, id_3, id_3, id_3, id_3, id_1, id_0, id_0, id_3, id_3
+  );
+  wire id_4;
+  wire id_5;
 endmodule

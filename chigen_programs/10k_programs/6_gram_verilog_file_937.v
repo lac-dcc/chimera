@@ -1,4 +1,4 @@
-// Seed: 1276538127
+// Seed: 3158448013
 module module_0 (
     id_1,
     id_2,
@@ -12,36 +12,38 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_13
 );
-  inout id_20;
-  inout id_19;
-  inout id_18;
-  output id_17;
-  output id_16;
-  output id_15;
-  output id_14;
-  inout id_13;
-  input id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  output id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  logic id_20 = 1'b0;
-  logic id_21;
-  logic id_22;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_3 = id_4;
+  always force id_2 = id_6 ~^ 1 - {id_10{id_7 * 1 + id_7}};
+  assign id_7 = 1'b0;
+endmodule
+module module_1 (
+    output tri0  id_0,
+    output logic id_1
+);
+  supply1 id_4;
+  always @(*) begin
+    id_3 <= id_3 >> 1'b0;
+    if (id_3) begin
+      id_4 = 1;
+    end
+    id_1 <= "";
+  end
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
 endmodule

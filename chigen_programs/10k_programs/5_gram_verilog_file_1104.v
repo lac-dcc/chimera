@@ -1,7 +1,8 @@
-// Seed: 12382210
-`define pp_22 0
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 3593919481
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -12,49 +13,25 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_11
 );
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  always @* begin
-    if (1 - 1'b0) id_19 <= ~id_20;
-    else begin
-      id_16 <= id_15;
-    end
-  end
-  type_23(
-      1, (id_11)
-  );
-  logic id_22;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = id_9;
+  always
+    repeat (id_8)
+      for (id_11 = 1; 1'b0; id_1++) begin
+        id_2 = #id_12 id_8;
+      end
+  module_0();
+  wor id_13 = id_1;
 endmodule

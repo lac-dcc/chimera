@@ -1,25 +1,29 @@
-// Seed: 1218163132
+// Seed: 468050169
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8,
-    input logic id_9
+    output tri  id_0,
+    input  wire id_1
 );
-  logic id_10;
-  logic id_11;
-  assign id_0 = id_3;
-  assign id_8 = SystemTFIdentifier;
-  assign id_5 = id_4;
-  logic id_12 = id_11;
-  logic id_13 = id_12;
-  generate
-    assign id_13 = id_6;
-    logic id_14, id_15;
-  endgenerate
+  wire id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri0 id_1,
+    input wor id_2,
+    input wor id_3,
+    input supply1 id_4,
+    output wand id_5
+    , id_15,
+    input wor id_6,
+    input wor id_7,
+    input tri0 id_8,
+    input wire id_9,
+    input wire id_10,
+    output wire id_11,
+    input wire id_12,
+    output tri0 id_13
+);
+  wire id_16, id_17;
+  module_0(
+      id_13, id_8
+  );
 endmodule

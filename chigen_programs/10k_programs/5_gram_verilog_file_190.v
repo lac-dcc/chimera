@@ -1,34 +1,44 @@
-// Seed: 4026839198
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+// Seed: 3450768205
+module module_0 ();
+  wire id_1;
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output tri  id_1,
+    input  tri0 id_2,
+    output tri  id_3,
+    input  tri0 id_4,
+    input  tri0 id_5,
+    input  tri0 id_6
 );
-  inout id_14;
-  output id_13;
-  output id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  input id_1;
-  logic id_14;
-  logic id_15 = id_9;
+  assign id_1 = 1;
+  module_0();
+endmodule
+module module_0 (
+    input supply0 id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    input uwire id_3,
+    output wand id_4,
+    output tri0 id_5,
+    inout uwire id_6,
+    output wor id_7
+    , id_14,
+    input tri0 id_8,
+    output wire id_9,
+    output wand id_10,
+    input wire id_11,
+    input wand id_12
+);
+  assign id_14 = id_11;
+  logic [7:0] id_15;
+  wire id_16;
+  module_0();
+  assign id_5 = 1;
+  assign id_7 = id_2 - 1;
+  for (id_17 = id_12; id_17; id_5 = id_1) begin : id_18
+    wire id_19;
+  end
+  wire module_2 = id_3;
+  wire id_20 = id_15[1==1];
 endmodule

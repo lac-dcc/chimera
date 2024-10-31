@@ -1,5 +1,4 @@
-// Seed: 3667261612
-`default_nettype id_2
+// Seed: 201376549
 module module_0 (
     id_1,
     id_2,
@@ -8,29 +7,45 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  output id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  logic id_8;
-  assign id_4 = 1;
-  always @(*) id_1 = 1;
-  type_14(
-      id_7, id_3
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_17;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  module_0(
+      id_4, id_4, id_4, id_4, id_3, id_4, id_2, id_4, id_3, id_1, id_4, id_4, id_4, id_4, id_1, id_1
   );
-  assign id_7 = id_2;
-  always @(*) begin
-    id_4 <= #1 "" & id_5;
-  end
-  logic id_9;
-  logic id_10;
-  assign id_9 = 1'b0;
-  logic id_11;
-  logic id_12;
 endmodule

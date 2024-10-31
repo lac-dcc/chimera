@@ -1,23 +1,35 @@
-// Seed: 3606051621
+// Seed: 503149478
 module module_0 (
-    output logic id_0,
-    output wire id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    output logic id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    output logic id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  assign id_3 = 1 <= id_6;
-  assign id_1[1] = id_11;
-  integer id_15;
-  logic   id_16;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_7;
+endmodule
+module module_1 (
+    output tri id_0,
+    input supply0 id_1,
+    input tri1 id_2,
+    input wand id_3,
+    input uwire id_4,
+    output tri id_5,
+    input wor id_6
+    , id_9,
+    output supply1 id_7
+);
+  wire id_10;
+  always_ff @(*) $display(id_4, 1'b0);
+  module_0(
+      id_10, id_10, id_10, id_9, id_9, id_9
+  );
+  wire id_11;
 endmodule

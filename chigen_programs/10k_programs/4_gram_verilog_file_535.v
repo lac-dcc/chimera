@@ -1,20 +1,32 @@
-// Seed: 4272749456
-`default_nettype wire
+// Seed: 3532191074
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6,
+    id_7
 );
-  inout id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17, id_18, id_19, id_20, id_21;
-  logic id_22, id_23;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_4 = 1 ? 1 : id_2 - id_6;
+endmodule
+module module_1;
+  assign id_1 = 1;
+  always @(posedge id_1 or posedge !id_1 - id_1) begin
+    id_1 <= id_1;
+    id_1 = #id_2 id_2;
+    id_2 <= 1;
+  end
+  wire id_3;
+  wire id_4;
+  module_0(
+      id_4, id_3, id_3, id_3, id_4, id_3, id_4
+  );
 endmodule

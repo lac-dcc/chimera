@@ -1,21 +1,51 @@
-// Seed: 2823624931
-`define pp_5 0
-parameter [`pp_5 : 1 'b0] id_1 = id_0[id_0[id_2[1 : id_2]]] ? id_2 : `pp_5;
-`define pp_6 0
-`define pp_7 0
-`timescale 1ps / 1ps `default_nettype wire `timescale 1ps / 1ps `timescale 1 ps / 1ps
-`define pp_8 0
+// Seed: 3591319065
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input reg id_2,
-    output id_3,
-    output id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  assign id_3 = 1;
-  initial begin
-    if (1) begin
-      id_4 <= id_2;
-    end
-  end
+  output wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_15;
+  assign id_3 = id_5;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input wor id_1,
+    input wire id_2,
+    output tri1 id_3,
+    input tri0 id_4,
+    output wire id_5
+    , id_8,
+    input tri0 id_6
+);
+  wire id_9;
+  id_10(
+      .id_0(id_6), .id_1()
+  ); module_0(
+      id_8, id_8, id_8, id_9, id_9, id_8, id_9, id_9, id_8, id_9, id_8, id_9, id_9, id_9
+  );
 endmodule

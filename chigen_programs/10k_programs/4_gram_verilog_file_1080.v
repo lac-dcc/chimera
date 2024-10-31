@@ -1,42 +1,37 @@
-// Seed: 1499367648
-localparam id_24 = 1;
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output logic id_2,
-    output id_3,
-    input logic id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10,
-    input logic id_11,
-    input id_12,
-    input logic id_13,
-    output id_14,
-    input logic id_15,
-    output id_16,
-    input id_17
-    , id_34,
-    input id_18,
-    output id_19,
-    output id_20,
-    output id_21,
-    input logic id_22,
-    output id_23,
-    output id_24,
-    input id_25,
-    input id_26,
-    output uwire id_27,
-    input id_28,
-    input id_29,
-    input logic id_30,
-    output logic id_31,
-    input logic id_32,
-    input id_33
+// Seed: 1916129231
+module module_0;
+  wand id_1;
+  assign id_1 = id_1;
+  id_2(
+      .id_0(1'h0),
+      .id_1(1),
+      .id_2(1),
+      .id_3(id_1),
+      .id_4(!id_1),
+      .id_5(id_1),
+      .id_6(1'b0),
+      .id_7(1),
+      .id_8(id_1),
+      .find(id_3)
+  );
+  wire id_4;
+  assign id_1 = module_0;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output tri0 id_1,
+    output tri0 id_2,
+    output wire id_3,
+    input supply1 id_4,
+    output supply1 id_5,
+    input supply0 id_6,
+    output supply0 id_7,
+    input tri id_8,
+    input supply0 id_9
 );
-  assign id_27[1] = id_4;
-  final SystemTFIdentifier(1);
+  assign id_7 = 1;
+  assign id_0 = 1;
+  wire id_11;
+  wire id_12;
+  module_0();
 endmodule

@@ -1,4 +1,4 @@
-// Seed: 2113416945
+// Seed: 2156167716
 module module_0 (
     id_1,
     id_2,
@@ -14,49 +14,33 @@ module module_0 (
     id_12,
     id_13
 );
-  input id_13;
-  inout id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  inout id_1;
-  logic
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29;
-  type_33(
-      1, id_19
+  input wire id_13;
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = "" != id_3;
+  wire id_14;
+  wire id_15;
+  supply0 id_16 = 1 == id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = (id_2++);
+  wor id_3 = 1;
+  module_0(
+      id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_2, id_3, id_3
   );
-  always @(id_17 or 1'b0) id_9 = id_13;
-  assign id_9 = id_26;
-  type_34 id_30 (
-      .id_0(id_21),
-      .id_1(""),
-      .id_2(1),
-      .id_3(id_9),
-      .id_4(1'b0)
-  );
-  logic id_31;
-  assign id_4 = 1;
 endmodule

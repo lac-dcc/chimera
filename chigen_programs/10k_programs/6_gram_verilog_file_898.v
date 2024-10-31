@@ -1,89 +1,37 @@
-// Seed: 2839766388
-`resetall `default_nettype id_24 `timescale 1ps / 1ps
+// Seed: 136281060
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_6;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29
+    id_7
 );
-  output id_29;
-  input id_28;
-  input id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  inout id_22;
-  input id_21;
-  output id_20;
-  input id_19;
-  inout id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  assign id_18 = 1;
-  logic id_29;
-  always @(posedge 1'b0) begin
-    if (1) begin
-      id_1 <= 1;
-      if (id_16) begin
-        if (1) id_12 <= id_14;
-      end
-    end
-  end
-  type_0 id_30 (
-      .id_0(),
-      .id_1(id_2),
-      .id_2(1 - id_4),
-      .id_3(1)
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  nor (id_6, id_7, id_3, id_2);
+  module_0(
+      id_7, id_6, id_6, id_3, id_6
   );
-  assign id_1 = id_17;
-  logic id_31;
-  initial begin
-    id_20 = id_4;
-    id_20 = 1 & 1'b0;
-    id_12 <= ~id_12;
-    if (1) begin
-      id_14 <= id_6;
-    end
-  end
 endmodule

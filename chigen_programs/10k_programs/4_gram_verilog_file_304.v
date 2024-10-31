@@ -1,33 +1,42 @@
-// Seed: 2668901723
-`timescale 1ps / 1ps
+// Seed: 3007999041
+module module_0 ();
+  assign id_1 = id_1 ? id_1 : 1;
+  id_3(
+      1, id_1, id_2, id_1, id_2
+  );
+  reg  id_4;
+  wire id_5;
+  wand id_6 = 1;
+  reg  id_7;
+  always @(1 or posedge id_1) id_4 <= id_7;
+endmodule
 module module_0 (
-    output id_0,
-    output tri id_1,
-    input id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    input id_6,
-    output reg id_7
+    input supply1 id_0,
+    output wor module_1,
+    input tri1 id_2,
+    input supply1 id_3,
+    output wand id_4,
+    output tri1 id_5,
+    input supply0 id_6,
+    output supply0 id_7,
+    input tri0 id_8,
+    output supply1 id_9,
+    output tri0 id_10
 );
-  type_19(
-      id_3, id_1
-  );
-  initial begin
-    id_7 <= #1 id_5;
-  end
-  logic id_8 = id_3[("")];
-  logic id_9;
-  assign id_1[1'b0] = id_8;
-  logic id_10;
-  assign id_4 = 1'b0;
-  logic id_11;
-  logic id_12;
-  type_0 id_13 (
-      .id_0(1'b0),
-      .id_1(id_4),
-      .id_2(id_2[0] - id_11)
-  );
-  logic id_14;
-  logic id_15;
+  wire id_12, id_13;
+  tri  id_14 = 1;
+  wire id_15 = id_13;
+  wire id_16;
+  tri1 id_17 = id_6 > (1);
+  assign id_13 = id_15;
+  assign id_14 = id_14 + 1;
+  assign id_7  = 1;
+  wire id_18;
+  id_19 :
+  assert property (@(posedge 1) 1'b0)
+  else $display;
+  wire id_20;
+  module_0();
+  wire id_21;
+  wire id_22;
 endmodule

@@ -1,25 +1,40 @@
-// Seed: 35134854
+// Seed: 559608244
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    output logic id_9,
-    output id_10,
-    output logic id_11,
-    input id_12,
-    output logic id_13,
-    output id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    input id_18
-    , id_19
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_20 = id_4;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_6;
+  assign id_5 = 1'b0;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output supply0 id_1,
+    output supply1 id_2,
+    output tri id_3,
+    input wor id_4
+    , id_6
+);
+  always @(posedge 1 == 1 - id_6) begin
+    $display;
+  end
+  module_0(
+      id_6, id_6, id_6, id_6, id_6
+  );
+endmodule
+module module_2 ();
+  uwire id_2;
+  wire  id_3;
+  assign id_3 = ~id_2;
+  assign id_2 = id_2;
+  module_0(
+      id_3, id_2, id_2, id_3, id_3
+  );
 endmodule

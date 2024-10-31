@@ -1,54 +1,55 @@
-// Seed: 2542847698
-`define pp_9 0
-`define pp_10 0
-`timescale 1ps / 1 ps
-`define pp_11 0
-`timescale 1ps / 1ps
-`define pp_12 0
-`celldefine
-`define pp_13 0
-`define pp_14 0
-`timescale 1 ps / 1ps
-`define pp_15 0
-`timescale 1 ps / 1ps `default_nettype wire
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1ps / 1ps
+// Seed: 2561009029
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8
+    output wand id_0,
+    output tri  id_1
 );
-  type_15 id_9 (
-      .id_0(1),
-      .id_1(1'b0 + 1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1'b0 == id_1 & id_8),
-      .id_5(1),
-      .id_6(1),
-      .id_7({id_2{1}}),
-      .id_8(1),
-      .id_9(id_0)
+endmodule
+module module_1 (
+    output tri  id_0,
+    input  tri1 id_1
+);
+  wire id_3;
+  wire id_4;
+  module_0(
+      id_0, id_0
   );
-  logic id_10 = id_6;
-  logic id_11;
-  assign id_5 = id_1;
-  initial begin
-    if (1) begin
-      id_4[1] <= 1;
-    end else id_11 = 1;
-  end
-  type_18(
-      1'b0, id_0, id_2
+  assign id_0 = 1;
+  wire id_5;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  wire id_6;
+endmodule
+module module_3 ();
+  wire id_1;
+  module_2(
+      id_1, id_1
   );
-  assign id_0 = id_2;
+endmodule
+module module_0 (
+    input supply0 id_0,
+    input supply1 id_1,
+    input supply0 id_2,
+    output tri1 id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    output wor module_4,
+    output tri0 id_7,
+    output supply1 id_8,
+    input tri0 id_9,
+    output tri id_10,
+    output tri1 id_11
+);
+  wire id_13;
+  wire id_14;
+  module_0(
+      id_11, id_11
+  );
 endmodule

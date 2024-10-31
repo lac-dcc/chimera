@@ -1,46 +1,38 @@
-// Seed: 3190557521
-`default_nettype id_15 `timescale 1 ps / 1ps
+// Seed: 2914512981
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    input logic id_4,
-    output id_5,
-    output logic id_6,
-    input id_7,
-    output id_8
-    , id_35,
-    output id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    input id_14,
-    input id_15,
-    output logic id_16,
-    output id_17,
-    input id_18,
-    output logic id_19
-    , id_36,
-    input logic id_20,
-    output id_21,
-    output logic id_22,
-    input id_23,
-    output logic id_24,
-    input logic id_25,
-    output id_26,
-    input id_27,
-    output id_28,
-    output id_29,
-    output id_30,
-    output logic id_31,
-    input logic id_32,
-    output id_33,
-    output id_34
+    id_1,
+    id_2
 );
-  logic id_37;
-  assign id_12[1]  = 1;
-  assign id_35[""] = 1'd0;
-  logic id_38, id_39, id_40, id_41, id_42, id_43, id_44;
+  output wire id_2;
+  input wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    output wor id_0,
+    input wor id_1,
+    input tri0 id_2
+    , id_7,
+    input supply0 id_3,
+    input tri id_4,
+    output logic id_5
+);
+  always id_5 = #id_8 1;
+  module_0(
+      id_7, id_7
+  );
+  assign id_5 = 1 != id_1;
+  wire id_9;
+endmodule
+module module_2 (
+    output uwire   id_0,
+    input  supply0 id_1,
+    input  logic   id_2
+);
+  wire id_4;
+  generate
+    always force id_4 = id_2;
+  endgenerate
+  module_0(
+      id_4, id_4
+  );
 endmodule

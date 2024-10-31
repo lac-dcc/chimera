@@ -1,24 +1,27 @@
-// Seed: 2465321016
-`define pp_13 0
-`timescale 1ps / 1ps
-`define pp_14 0
-`timescale 1 ps / 1 ps
+// Seed: 647290769
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    inout logic id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    input logic id_8,
-    output id_9,
-    input id_10,
-    output id_11,
-    output id_12
+    output wand id_0,
+    input supply1 id_1,
+    output tri1 id_2,
+    input wand id_3,
+    output supply0 id_4,
+    input supply1 id_5,
+    output tri1 id_6
 );
-  logic id_13;
-  logic id_14 = 1, id_15;
-  assign id_14 = id_15;
+  uwire id_8;
+  id_9(
+      id_1, id_6, 1
+  );
+  assign id_8 = 1;
+endmodule
+module module_1 (
+    input wire id_0,
+    input tri id_1,
+    input uwire id_2,
+    output supply0 id_3
+);
+  initial $display(id_2, 1, id_2, id_1, (id_2 && "" == 1'b0));
+  module_0(
+      id_3, id_2, id_3, id_2, id_3, id_1, id_3
+  );
 endmodule

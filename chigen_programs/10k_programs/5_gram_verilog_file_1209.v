@@ -1,10 +1,37 @@
-// Seed: 2536057267
-`define pp_21 0
-module module_0;
-  logic id_0;
+// Seed: 1007291542
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5, id_6, id_7;
+  task id_8;
+    input id_9;
+    output id_10;
+    begin
+      #1;
+    end
+  endtask
+  wire id_11;
 endmodule
-`timescale 1 ps / 1ps
 module module_1 (
+    output uwire id_0,
+    output tri id_1,
+    output tri1 id_2,
+    output supply0 id_3
+);
+  wire id_5;
+  module_0(
+      id_5, id_5, id_5, id_5
+  );
+  assign id_5 = id_5;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -12,47 +39,24 @@ module module_1 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    id_8
 );
-  inout id_21;
-  input id_20;
-  output id_19;
-  input id_18;
-  inout id_17;
-  output id_16;
-  input id_15;
-  output id_14;
-  input id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  input id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  logic id_21;
-  always @(1)
-    if (1'b0) id_14[1 : ("")] = id_4;
-    else begin
-      if (id_8[1]) id_3 <= 1'b0;
-    end
-  defparam id_22.id_23 = 1'b0;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_9;
+  wire id_10 = {id_4};
+  wire id_11 = id_4;
+  wire id_12 = ~(id_1);
+  module_0(
+      id_11, id_11, id_9, id_5
+  );
+  assign id_10 = ~id_3;
+  wire   id_13;
+  string id_14 = "";
 endmodule

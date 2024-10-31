@@ -1,4 +1,4 @@
-// Seed: 166695050
+// Seed: 2090654452
 module module_0 (
     id_1,
     id_2,
@@ -9,42 +9,25 @@ module module_0 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19
+    id_10
 );
-  input id_19;
-  inout id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  inout id_13;
-  output id_12;
-  input id_11;
-  inout id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  assign id_13 = 1;
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_8 = 0 ? id_6 : 1 === 1'b0;
 endmodule
-module module_1 (
-    output id_0,
-    output logic id_1,
-    input id_2
-);
-  logic id_20;
+module module_1;
+  wire id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
+  logic [7:0] id_2;
+  always @(posedge id_2) $display(id_2, id_2[1]);
 endmodule

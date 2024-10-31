@@ -1,36 +1,84 @@
-// Seed: 1985837512
+// Seed: 1749166051
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    output logic id_11,
-    input id_12
-    , id_13
+    input wand id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    inout tri0 id_3,
+    output wand id_4,
+    output wire id_5,
+    input supply0 id_6,
+    output uwire id_7,
+    input supply1 id_8,
+    input tri0 id_9,
+    output tri0 id_10,
+    input tri1 id_11,
+    output tri0 id_12,
+    input uwire id_13,
+    input tri1 id_14,
+    input wire id_15,
+    output tri id_16,
+    input tri1 id_17,
+    input uwire id_18,
+    input wire id_19,
+    input wand id_20,
+    input tri0 id_21,
+    output wor id_22,
+    output wand id_23,
+    input uwire id_24,
+    input supply1 id_25,
+    output supply0 id_26,
+    output wand id_27,
+    input wire id_28,
+    input supply0 id_29,
+    input tri1 id_30,
+    output uwire id_31
 );
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  assign id_5 = 1;
-  logic id_17;
-  logic id_18;
-  assign id_17 = id_4;
-  type_30 id_19 (
+  assign id_7  = id_14;
+  assign id_31 = 1;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input supply0 id_4,
+    input wire id_5,
+    input tri1 id_6,
+    inout supply0 id_7,
+    input wire id_8
+);
+  module_0(
+      id_3,
+      id_1,
+      id_1,
+      id_7,
+      id_0,
+      id_0,
+      id_6,
+      id_0,
+      id_3,
       id_2,
-      1,
-      1
-  );
-  logic id_20 (
-      1'h0 + 1,
-      id_18,
-      1,
-      id_15
+      id_7,
+      id_5,
+      id_7,
+      id_1,
+      id_3,
+      id_1,
+      id_7,
+      id_4,
+      id_8,
+      id_5,
+      id_2,
+      id_2,
+      id_7,
+      id_7,
+      id_2,
+      id_8,
+      id_0,
+      id_0,
+      id_3,
+      id_1,
+      id_8,
+      id_0
   );
 endmodule

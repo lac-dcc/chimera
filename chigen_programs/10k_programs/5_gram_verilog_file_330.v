@@ -1,5 +1,4 @@
-// Seed: 128946975
-`define pp_12 0
+// Seed: 2984604034
 module module_0 (
     id_1,
     id_2,
@@ -8,30 +7,33 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_8
 );
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_14 id_12 (
-      1 & 1,
-      id_4,
-      1
-  );
-  type_15(
-      1, 1 << 1, 1, id_11, (id_1), id_9, (id_13), 1'b0, id_1, 1, id_2, 1, 1
+  input wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_9;
+  generate
+    genvar id_10;
+    assign id_4 = 1 == id_10;
+  endgenerate
+  wire id_11;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  always @(1 or posedge 1) begin
+    id_2 = id_2 ==? id_1;
+  end
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_2, id_2, id_2
   );
 endmodule

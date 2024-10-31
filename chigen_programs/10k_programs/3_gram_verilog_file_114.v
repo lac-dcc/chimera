@@ -1,13 +1,28 @@
-// Seed: 3988163688
-`default_nettype id_0
+// Seed: 2047849723
 module module_0 (
-    input logic id_0,
-    input id_1
+    output uwire id_0,
+    output uwire id_1,
+    input wire id_2,
+    input wire id_3,
+    input tri0 id_4,
+    input supply0 id_5,
+    output wand id_6#(1),
+    input wand id_7,
+    input wand id_8,
+    input tri0 id_9
 );
-  assign id_2 = id_1 - 1'b0 == ~1;
-  reg id_4;
-  always @(1 or id_1 == id_2 - id_0 & 1) begin
-    id_4 <= 1;
-    id_4 <= id_3;
-  end
+endmodule
+module module_1 (
+    input  wor  id_0,
+    input  wire id_1,
+    output wand id_2,
+    output tri0 id_3,
+    output wand id_4,
+    input  tri0 id_5
+);
+  id_7(
+      .id_0(id_0), .id_1(id_4), .id_2(1), .id_3(id_5)
+  ); module_0(
+      id_3, id_2, id_5, id_0, id_5, id_0, id_4, id_1, id_0, id_5
+  );
 endmodule

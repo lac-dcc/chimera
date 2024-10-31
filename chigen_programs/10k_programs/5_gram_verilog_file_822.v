@@ -1,4 +1,4 @@
-// Seed: 1770208157
+// Seed: 2760368383
 module module_0 (
     id_1,
     id_2,
@@ -21,46 +21,73 @@ module module_0 (
     id_19,
     id_20,
     id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29
+    id_22
 );
-  input id_29;
-  inout id_28;
-  output id_27;
-  input id_26;
-  output id_25;
-  input id_24;
-  input id_23;
-  input id_22;
-  inout id_21;
-  input id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  input id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  logic id_29;
-  logic id_30;
-  assign id_14[1'b0-1'b0] = id_29 ? id_28 : id_7 ? 1 : id_3;
-  logic id_31 = 1;
+  input wire id_22;
+  input wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_23;
+  tri0 id_24 = 1, id_25;
+  wire id_26;
+endmodule
+module module_1 (
+    input tri id_0
+    , id_13,
+    input wand id_1,
+    input supply1 id_2,
+    output tri1 id_3,
+    input wor id_4,
+    output tri id_5,
+    output supply1 id_6,
+    input supply0 id_7,
+    output wand id_8,
+    output wire id_9,
+    output wand id_10,
+    output tri id_11
+);
+  integer id_14;
+  nor (id_8, id_1, id_7, id_14, id_4, id_2, id_0);
+  module_0(
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_14,
+      id_14,
+      id_13,
+      id_13,
+      id_14,
+      id_14,
+      id_14,
+      id_13,
+      id_14,
+      id_13
+  );
 endmodule

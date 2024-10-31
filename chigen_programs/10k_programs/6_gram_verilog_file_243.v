@@ -1,55 +1,44 @@
-// Seed: 2065960772
-`timescale 1ps / 1 ps
+// Seed: 2754600107
 module module_0 (
+    id_1
+);
+  inout wire id_1;
+  specify
+    (negedge id_2 => (id_3 +: id_1)) = (id_1 < 1, 1);
+  endspecify
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input supply0 id_3,
+    input uwire id_4
+);
+  assign id_6 = 1;
+  module_0(
+      id_6
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23
+    id_6
 );
-  inout id_23;
-  output id_22;
-  output id_21;
-  inout id_20;
-  inout id_19;
-  inout id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  input id_14;
-  inout id_13;
-  input id_12;
-  output id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  always begin
-    id_22 <= 0;
-    SystemTFIdentifier;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_7;
+  supply1 id_8;
+  module_0(
+      id_8
+  );
+  always @(posedge id_3 or posedge id_3) begin
+    id_8 = 1;
   end
 endmodule

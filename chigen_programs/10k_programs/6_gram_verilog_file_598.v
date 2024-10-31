@@ -1,92 +1,38 @@
-// Seed: 3585640611
-`define pp_35 0
-`default_nettype id_19 `default_nettype id_15
+// Seed: 3144544707
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35
+    output tri  id_0,
+    input  wire id_1,
+    output tri0 id_2,
+    output wand id_3
 );
-  input id_35;
-  input id_34;
-  input id_33;
-  inout id_32;
-  inout id_31;
-  inout id_30;
-  input id_29;
-  inout id_28;
-  output id_27;
-  output id_26;
-  inout id_25;
-  input id_24;
-  input id_23;
-  output id_22;
-  output id_21;
-  output id_20;
-  output id_19;
-  output id_18;
-  input id_17;
-  input id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  logic id_35;
-  logic id_36;
-  assign id_12[1] = 1 == 1'b0;
-  logic id_37 = id_10;
-  logic id_38;
-  type_44(
-      1, 1, id_7
+  wire id_5;
+  tri0 id_6 = 1'b0;
+  wire id_7, id_8, id_9;
+  tri id_10 = 1;
+endmodule
+module module_0 (
+    input tri0 id_0,
+    input tri0 id_1,
+    input tri id_2,
+    input supply0 id_3,
+    output wor id_4,
+    output wor id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    output tri0 id_8,
+    input wire id_9,
+    input supply1 id_10,
+    input supply1 module_1,
+    input supply0 id_12,
+    output supply0 id_13,
+    input wor id_14,
+    input wor id_15
+);
+  wire id_17;
+  always @(id_0) $display;
+  module_0(
+      id_5, id_10, id_5, id_5
   );
-  assign id_14[1'b0] = 1'b0;
-  logic id_39;
-  assign id_12[1'd0] = id_4;
-  logic id_40;
-  initial begin
-    #1 id_39 = 1'b0;
-    id_18 = id_33;
-  end
+  wire  id_18;
+  uwire id_19 = 1 - 1;
 endmodule

@@ -1,30 +1,30 @@
-// Seed: 2094183728
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
+// Seed: 2529974355
 module module_0 (
-    output logic id_0,
-    output logic id_1,
-    output id_2,
-    output logic id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    output logic id_7,
-    input logic id_8,
-    output id_9,
-    input logic id_10
+    output supply1 id_0,
+    output wand id_1
 );
-  type_20 id_11 (
-      .id_0(id_1),
-      .id_1(1)
-  );
+  assign id_1 = 1;
+  module_2();
 endmodule
-module module_1 ();
-  logic id_11 = 1;
-  type_16 id_12 (
-      .id_0(1),
-      .id_1(id_2)
+module module_1 (
+    output logic id_0,
+    output wand id_1,
+    input supply1 id_2,
+    input logic id_3,
+    input wand id_4,
+    output supply0 id_5,
+    input logic id_6,
+    output tri0 id_7
+);
+  always_latch @(posedge id_6) id_0 <= id_3;
+  module_0(
+      id_7, id_5
   );
-  logic id_13, id_14;
+  assign id_0 = id_2 ? id_6 : id_6;
+  final $display(id_3);
+endmodule
+module module_2;
+  id_2(
+      1'b0, id_3
+  );
 endmodule

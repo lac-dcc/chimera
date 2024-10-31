@@ -1,34 +1,47 @@
-// Seed: 1864013538
+// Seed: 2507265813
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output logic id_5,
-    output logic id_6,
-    output logic id_7,
-    output id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    input logic id_12,
-    input logic id_13,
-    output id_14,
-    output logic id_15,
-    input id_16,
-    output id_17,
-    input logic id_18,
-    input id_19,
-    input logic id_20,
-    output id_21,
-    input id_22,
-    input id_23
-    , id_28,
-    output id_24,
-    output id_25,
-    input id_26,
-    input id_27
+    id_1,
+    id_2,
+    id_3
 );
-  always @(posedge id_22);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  module_2(
+      id_3, id_3, id_4, id_3
+  );
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  assign {id_2, id_2} = id_2;
+  module_0(
+      id_2, id_1, id_1
+  );
+  wire id_3;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_4 = !1 + id_3;
+  always @(posedge 1 or posedge 1'h0) begin
+    id_3 = 1;
+  end
+  wire id_5;
+  id_6(
+      .id_0(id_2), .id_1(id_4), .id_2((id_1)), .id_3(id_5), .id_4(id_3)
+  );
+  wire id_8;
+  assign id_3 = 1;
 endmodule

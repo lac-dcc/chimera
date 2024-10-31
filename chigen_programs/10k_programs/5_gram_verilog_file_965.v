@@ -1,31 +1,35 @@
-// Seed: 1188201761
-`timescale 1ps / 1ps
+// Seed: 3957458167
 module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output logic id_7
-    , id_22,
-    output logic id_8,
-    input id_9,
-    input logic id_10,
-    output id_11,
-    output logic id_12,
-    input logic id_13,
-    input reg id_14,
-    output logic id_15,
-    output logic id_16,
-    output id_17,
-    output id_18,
-    output logic id_19
-    , id_23,
-    output id_20,
-    input logic id_21
+    input tri0 id_0,
+    input wor  id_1
 );
-  assign id_8 = id_5 * 1 == 1'b0;
-  always @((1) or posedge 1) id_11[1] <= id_14;
+  wire id_3, id_4;
+endmodule
+module module_0 (
+    output tri  id_0,
+    input  wand id_1
+);
+  tri0 sample;
+  buf (id_0, id_1);
+  module_0(
+      id_1, id_1
+  ); id_3(
+      .id_0(id_1),
+      .id_1(id_1),
+      .id_2(id_1),
+      .id_3(id_4++),
+      .id_4(1),
+      .id_5(1),
+      .id_6(1),
+      .id_7(id_4),
+      .id_8(id_1),
+      .id_9(id_1),
+      .id_10(1 == 1),
+      .id_11(1 == 1),
+      .id_12(id_1),
+      .id_13(1),
+      .id_14(1),
+      .id_15(module_1 - 1),
+      .id_16(~id_4)
+  );
 endmodule

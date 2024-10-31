@@ -1,18 +1,32 @@
-// Seed: 1810117638
-module module_0 (
-    input logic id_0,
-    output logic id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    input logic id_12,
-    output id_13
+// Seed: 672930633
+module module_0;
+  genvar id_1;
+  wire id_2;
+endmodule
+module module_1 (
+    input  wire  id_0,
+    output wand  id_1,
+    input  tri   id_2,
+    input  uwire id_3
 );
+  wire id_5;
+  module_0();
+endmodule
+module module_2 (
+    output wire id_0,
+    output wor  id_1
+);
+  assign id_1 = 1;
+  module_0();
+endmodule
+module module_3 (
+    output supply0 id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    input wor id_3,
+    output tri1 id_4,
+    input tri1 id_5
+);
+  wire id_7;
+  module_0();
 endmodule

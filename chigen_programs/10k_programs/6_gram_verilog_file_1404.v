@@ -1,21 +1,24 @@
-// Seed: 809195444
-module module_0 (
-    output reg id_0,
-    output id_1,
-    input id_2,
-    input reg id_3,
-    input logic id_4,
-    input id_5,
-    output wire id_6
+// Seed: 3348803459
+module module_0 ();
+  string id_1;
+  assign id_1 = "";
+endmodule
+module module_1 (
+    input wire id_0,
+    output uwire id_1,
+    input uwire id_2,
+    output supply0 id_3,
+    output wire id_4,
+    output tri0 id_5
 );
-  assign id_0 = id_3;
-  reg id_7 = 1 ^ id_3;
-  assign id_1[1] = id_2;
-  always @(posedge 1 or posedge id_3) begin
-    id_6[1] = id_2;
-    SystemTFIdentifier(id_2, 1, 1);
-    id_0 <= id_7;
+  assign id_4 = 1 % id_0 == 1;
+  module_0();
+  always @(posedge id_0 or negedge 1) begin
+    disable id_7;
   end
-  logic id_8;
-  logic id_9;
+  assign id_4 = id_2;
+  assign id_1 = id_2;
+  always @(posedge 1'b0) $display(id_0 == id_0);
+  assign id_1 = 1;
+  wire id_8;
 endmodule

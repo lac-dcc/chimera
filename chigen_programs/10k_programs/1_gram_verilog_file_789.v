@@ -1,75 +1,26 @@
-// Seed: 3068506198
-`default_nettype wire `timescale 1ps / 1ps
-module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    input logic id_12,
-    output logic id_13,
-    output id_14,
-    output id_15,
-    input logic id_16,
-    output logic id_17,
-    output id_18,
-    input logic id_19,
-    output id_20,
-    input id_21,
-    input id_22,
-    input logic id_23,
-    input id_24,
-    input logic id_25,
-    input id_26,
-    input id_27,
-    output id_28,
-    input id_29,
-    output id_30,
-    input id_31,
-    input logic id_32,
-    input id_33,
-    input id_34,
-    input id_35,
-    input logic id_36,
-    input id_37,
-    output logic id_38,
-    output logic id_39,
-    input id_40,
-    input logic id_41,
-    input id_42,
-    input id_43,
-    output logic id_44,
-    input logic id_45,
-    input id_46,
-    input logic id_47,
-    input id_48,
-    input id_49,
-    output id_50,
-    output id_51,
-    input id_52,
-    input logic id_53,
-    input id_54,
-    input logic id_55,
-    output logic id_56,
-    input id_57
-    , id_62,
-    inout id_58,
-    output id_59,
-    input logic id_60,
-    input id_61
-);
-  assign id_56 = id_7;
-  logic id_63;
-  logic id_64;
-  assign id_18 = id_60 || 1;
-  real id_65;
+// Seed: 3890567026
+module module_0;
+  assign id_1 = id_1;
+  always id_1 <= 1;
 endmodule
-`define pp_62 0
-`define pp_63 0
+module module_1 (
+    output tri id_0
+    , id_16,
+    input tri0 id_1,
+    input supply0 id_2,
+    output tri0 id_3,
+    input wor id_4,
+    input wor id_5,
+    input supply0 id_6,
+    output wand id_7,
+    input supply0 id_8,
+    input supply1 id_9,
+    input supply0 id_10,
+    input supply0 id_11,
+    input wand id_12,
+    input uwire id_13,
+    input supply0 id_14
+);
+  initial id_16 <= 1;
+  module_0();
+endmodule

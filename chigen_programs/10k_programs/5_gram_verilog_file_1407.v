@@ -1,25 +1,36 @@
-// Seed: 641676942
+// Seed: 3121219311
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output logic id_3,
-    output logic id_4,
-    output logic id_5,
-    output logic id_6,
-    output id_7,
-    input id_8,
-    output logic id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    output id_13,
-    output id_14,
-    output id_15,
-    input logic id_16,
-    input logic id_17
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic id_18;
-  logic id_19;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  always_ff @(posedge "" > id_8) id_1 = 1;
 endmodule
-`resetall
+module module_1 (
+    output wire id_0,
+    input  wand id_1,
+    input  wor  id_2
+);
+  wire id_4;
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
+  initial $display(1);
+  wire id_5;
+  id_6(
+      .id_0(id_4), .id_1(1)
+  );
+endmodule

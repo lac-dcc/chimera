@@ -1,32 +1,31 @@
-// Seed: 3564959748
+// Seed: 2788216368
 module module_0 (
-    output logic id_0,
-    output id_1
-    , id_13,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    output logic id_11,
-    input id_12
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  type_24(
-      id_9, 1, id_1, 1
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+endmodule
+macromodule module_1 ();
+  tri id_1, id_2;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_1
   );
-  logic id_14;
-  assign id_3 = id_13;
-  logic id_15 = id_6;
-  logic id_16;
-  always @(posedge id_8 or posedge id_10)
-    if (1 ? 1 | 1 : 1)
-      if (id_12 / 1) begin
-        id_1 <= 1;
-        @*;
-      end
-  logic id_17;
+  wire id_3;
+  if (1'b0) assign id_1 = 1;
+  else begin
+    wire id_4;
+    integer id_5;
+  end
+  wire id_6;
+  assign id_1 = 1;
+  assign id_3 = id_6;
 endmodule

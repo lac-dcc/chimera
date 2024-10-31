@@ -1,5 +1,4 @@
-// Seed: 1964024299
-`define pp_30 0
+// Seed: 2700873686
 module module_0 (
     id_1,
     id_2,
@@ -11,68 +10,34 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30
+    id_11
 );
-  inout id_30;
-  inout id_29;
-  input id_28;
-  input id_27;
-  inout id_26;
-  output id_25;
-  output id_24;
-  inout id_23;
-  output id_22;
-  inout id_21;
-  input id_20;
-  input id_19;
-  input id_18;
-  output id_17;
-  output id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  output id_11;
-  inout id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_30;
-  type_34(
-      id_28, 1, 1, id_13
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(*) id_11 = 1;
+  assign id_5 = 1'd0;
+  always @(posedge id_7) for (id_1 = 1; id_6; id_2 = id_2) id_9 = id_7;
+  assign id_2 = id_7;
+endmodule
+module module_1 (
+    input  tri1  id_0,
+    input  uwire id_1,
+    output wor   id_2
+);
+  tri0 id_4 = 1;
+  assign id_2 = 1;
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
   );
-  always @(posedge 1) begin
-    SystemTFIdentifier(id_2);
-  end
-  logic id_31 = 1'h0;
-  logic id_32;
-  initial begin
-    id_22 = id_26;
-    SystemTFIdentifier(id_27[""]);
-  end
+  wire id_5;
+  final $display(id_4);
 endmodule

@@ -1,23 +1,28 @@
-// Seed: 2183453982
-`timescale 1ps / 1ps `timescale 1ps / 1 ps
-module module_0 (
-    input id_0,
-    input id_1,
-    output reg id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output logic id_7
-);
-  type_15(
-      id_6, id_2 + 1'b0, ~id_4
-  );
-  logic id_8;
-  reg   id_9;
-  logic id_10;
-  initial begin
-    id_2 <= id_9;
-    id_2 = 1;
+// Seed: 1849545307
+module module_0;
+  reg id_1;
+  always @(posedge 1 or posedge 1'b0) begin
+    if ((id_1 == 1'b0)) begin
+      @(posedge id_1) id_1 <= #id_1 id_1;
+    end
   end
+  always @(1'b0 - 1) begin
+    $display;
+  end
+endmodule
+module module_1 (
+    output tri1  id_0,
+    input  wand  id_1
+    , id_8,
+    output uwire id_2,
+    input  tri0  id_3,
+    output tri0  id_4,
+    input  tri1  id_5,
+    output uwire id_6
+);
+  wire id_9;
+  module_0();
+  wire id_10;
+  wire id_11;
+  assign id_4 = 1;
 endmodule

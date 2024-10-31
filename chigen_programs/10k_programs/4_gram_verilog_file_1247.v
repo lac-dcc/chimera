@@ -1,42 +1,48 @@
-// Seed: 4252068459
+// Seed: 1473982456
 module module_0 (
-    input logic id_0
-    , id_19,
-    output logic id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11,
-    output id_12,
-    output logic id_13,
-    input id_14,
-    input id_15
-    , id_20,
-    input logic id_16,
-    input logic id_17,
-    input logic id_18
+    input supply1 id_0,
+    output tri id_1,
+    input supply1 id_2
 );
-  logic id_21;
-  type_39 id_22 (
-      .id_0(id_13),
-      .id_1(1)
-  );
-  type_40 id_23 (
-      .id_0(1 - id_6),
-      .id_1(id_8)
-  );
-  logic id_24 (
-      1,
-      1,
-      1,
-      1,
-      id_21,
-      1
+  assign id_1 = id_0;
+  wire id_4 = id_4;
+endmodule
+module module_1 (
+    input wire id_0,
+    output supply0 id_1,
+    input tri id_2,
+    input tri id_3,
+    input wor id_4,
+    output supply1 id_5
+    , id_26,
+    input tri0 id_6,
+    input tri id_7,
+    output wor id_8,
+    input tri0 id_9,
+    input uwire id_10,
+    input wand id_11,
+    output wand id_12,
+    output uwire id_13,
+    output wire id_14,
+    output logic id_15,
+    input supply0 id_16,
+    input tri1 id_17,
+    output tri1 id_18,
+    input uwire id_19,
+    input wand id_20,
+    input supply1 id_21,
+    output wire id_22,
+    input wand id_23,
+    input tri0 id_24
+);
+  always @(1'b0, {{1{id_21}},
+    1'b0
+  } or posedge 1)
+  begin
+    id_15 <= 1'd0;
+  end
+  tri0 id_27 = id_20;
+  module_0(
+      id_20, id_14, id_10
   );
 endmodule

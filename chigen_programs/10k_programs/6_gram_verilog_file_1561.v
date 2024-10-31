@@ -1,6 +1,10 @@
-// Seed: 2084912902
-`define pp_18 0
-module module_0 (
+// Seed: 614431508
+module module_0 ();
+  always @(1 or negedge id_1) begin
+    id_1 = 1'b0 >= 1;
+  end
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -8,37 +12,21 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    id_8
 );
-  input id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  assign id_16 = id_6 <= 1'b0;
-  logic id_18;
-  assign id_13 = id_11;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  tri0 id_9 = 1;
+  wire id_10;
+  assign id_7 = 1;
+  wire id_11;
+  wire id_12 = id_2;
+  wire id_13;
+  module_0();
 endmodule

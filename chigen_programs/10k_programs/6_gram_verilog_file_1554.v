@@ -1,30 +1,55 @@
-// Seed: 3777768192
-module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    output logic id_9,
-    input logic id_10,
-    output logic id_11,
-    input logic id_12,
-    output id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    output logic id_17,
-    output logic id_18,
-    input id_19,
-    output id_20
+// Seed: 3743596178
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_21;
-  type_31(
-      1 + id_10, 1, id_3 == 1 - id_2, id_19, id_17
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always @(id_2 or negedge 1'd0) begin
+    id_5 <= 1 == "" > id_2;
+  end
+  module_0();
+endmodule
+module module_2 (
+    output supply0 id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input wire id_3,
+    output supply1 id_4,
+    input tri1 id_5,
+    output tri id_6,
+    output wand id_7,
+    input tri0 id_8,
+    input wor id_9,
+    input supply0 id_10,
+    output supply1 id_11
+);
+  assign {1, id_5, id_5, 1'b0} = 1 ? 1 == id_5 : 1;
+  assign id_7 = 1'b0;
+endmodule
+module module_3 (
+    input supply1 id_0,
+    output uwire id_1,
+    input tri0 id_2,
+    input wor id_3,
+    input supply1 id_4,
+    input tri0 id_5,
+    input tri id_6,
+    output tri id_7,
+    input tri id_8,
+    input wand id_9,
+    input tri0 id_10
+);
+  wire id_12 = id_10;
+  module_2(
+      id_7, id_4, id_8, id_5, id_1, id_5, id_12, id_7, id_12, id_0, id_0, id_1
   );
-  logic id_22 = 1;
 endmodule

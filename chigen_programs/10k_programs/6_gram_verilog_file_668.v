@@ -1,28 +1,47 @@
-// Seed: 277135972
+// Seed: 44732293
 module module_0 (
-    output reg id_0
+    id_1,
+    id_2,
+    id_3
 );
-  always @(1) begin
-    if (1'b0) id_0 <= 1'b0;
-    else begin
-      if (1) begin
-        id_0 <= id_1;
-      end else begin
-        id_0 <= id_2;
-      end
-    end
-  end
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  wire id_5;
+  assign id_4 = id_2;
 endmodule
-module module_1 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    output id_4,
-    input logic id_5
+module module_1;
+  assign id_1 = 1'b0;
+  initial
+  fork : id_2
+  join : id_3
+  module_0(
+      id_3, id_2, id_2
+  );
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input tri id_1,
+    input supply0 id_2,
+    output tri id_3,
+    output wor id_4,
+    input wire id_5,
+    input tri id_6,
+    input supply0 id_7,
+    input tri0 id_8
 );
-  always @(negedge id_3) begin
-    id_4 = id_1 & 1;
-  end
-  logic id_6;
+  id_10(
+      .id_0(), .id_1(1)
+  );
+endmodule
+module module_3 (
+    input  wor  id_0,
+    input  tri1 id_1,
+    output wire id_2
+);
+  assign id_2 = 1;
+  module_2(
+      id_0, id_1, id_1, id_2, id_2, id_1, id_1, id_0, id_1
+  );
 endmodule

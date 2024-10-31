@@ -1,30 +1,30 @@
-// Seed: 948701661
-`timescale 1ps / 1ps
-module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    output logic id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11
-    , id_21,
-    input id_12,
-    output id_13,
-    output logic id_14,
-    input logic id_15
-    , id_22,
-    input id_16,
-    input id_17,
-    output id_18,
-    input logic id_19,
-    output id_20
+// Seed: 3283169225
+module module_0;
+  always @(~id_1 or negedge 1)
+    case (id_1)
+      1: id_1 <= (id_1 * id_1);
+      1: id_1 = 1'b0;
+      1: begin
+        #1;
+      end
+    endcase
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    output supply1 id_3
 );
-  logic id_23;
-  initial id_0 = id_2;
+  reg id_5;
+  module_0();
+  always #1 begin
+    #1
+    #1
+    if (1) id_5 <= #1 1;
+    else begin
+      #1;
+      id_5 <= 1;
+    end
+  end
+  assign id_5 = (1) << 1;
 endmodule

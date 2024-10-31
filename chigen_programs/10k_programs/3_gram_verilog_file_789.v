@@ -1,34 +1,38 @@
-// Seed: 323838633
+// Seed: 2568065079
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    output logic id_9
-    , id_18,
-    output id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17
+    output uwire   id_0,
+    input  uwire   id_1,
+    output supply0 id_2
 );
-  wire  id_19;
-  logic id_20;
-  always @(1);
-  logic id_21;
-  assign id_19[1] = 1;
-  type_34 id_22 (
-      id_18,
-      id_1,
-      1,
-      1
+  assign id_2 = id_1;
+  wand id_4;
+  wire id_5;
+  if ("") assign id_0 = 1;
+  else begin
+    uwire id_6 = 1;
+    logic [7:0] id_7;
+    `undef pp_8
+    assign id_2 = id_7[1];
+  end
+  wire id_9 = id_5;
+  assign id_4 = 1'h0;
+  id_10(
+      .id_0(1), .id_1(1)
+  );
+  wire id_11;
+  assign id_11 = 1'b0;
+endmodule
+module module_1 (
+    input  wor   id_0,
+    output uwire id_1,
+    inout  uwire id_2,
+    output tri   id_3,
+    output logic id_4
+);
+  initial begin
+    id_4 <= {1'b0{1}};
+  end
+  module_0(
+      id_3, id_2, id_2
   );
 endmodule

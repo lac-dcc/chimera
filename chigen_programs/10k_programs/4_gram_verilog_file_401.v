@@ -1,21 +1,54 @@
-// Seed: 40665350
-localparam id_0 = 1'd0;
-module module_0 (
-    input wire id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    inout id_7,
-    input id_8,
-    input id_9
-);
-  logic id_10;
-  assign id_7 = id_3 ? id_1 + 1 : ~id_0[1];
-  always @(1 - 1 or 1 * 0 - id_10 == id_2) begin
-    #1;
+// Seed: 3418958744
+module module_0;
+  reg id_2;
+  always @(posedge 1'b0 == id_1) begin
+    id_2 <= 1;
   end
-  logic id_11 = id_10 & 1'd0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2[1] = id_4 & id_3 != 1'b0;
+  wire id_5;
+  tri1 id_6 = id_6;
+  wor  id_7 = 1 + id_6;
+  wire id_8;
+  module_0();
+  wire id_9;
+endmodule
+module module_0 (
+    input wor id_0,
+    input supply1 id_1,
+    output uwire id_2,
+    input tri1 id_3,
+    input wire id_4,
+    input supply1 id_5,
+    input wor id_6,
+    input tri id_7,
+    output tri0 id_8,
+    input uwire id_9,
+    output wor id_10,
+    input uwire module_2,
+    input wire id_12,
+    output tri id_13,
+    output wand id_14,
+    output tri0 id_15,
+    output wand id_16,
+    input wor id_17,
+    output supply1 id_18
+);
+  wire id_20;
+  wire id_21;
+  wire id_22;
+  wire id_23;
+  id_24(
+      .id_0(1)
+  ); module_0();
 endmodule
