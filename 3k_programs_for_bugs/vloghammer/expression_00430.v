@@ -1,0 +1,75 @@
+module expression_00430(a0, a1, a2, a3, a4, a5, b0, b1, b2, b3, b4, b5, y);
+  input [3:0] a0;
+  input [4:0] a1;
+  input [5:0] a2;
+  input signed [3:0] a3;
+  input signed [4:0] a4;
+  input signed [5:0] a5;
+
+  input [3:0] b0;
+  input [4:0] b1;
+  input [5:0] b2;
+  input signed [3:0] b3;
+  input signed [4:0] b4;
+  input signed [5:0] b5;
+
+  wire [3:0] y0;
+  wire [4:0] y1;
+  wire [5:0] y2;
+  wire signed [3:0] y3;
+  wire signed [4:0] y4;
+  wire signed [5:0] y5;
+  wire [3:0] y6;
+  wire [4:0] y7;
+  wire [5:0] y8;
+  wire signed [3:0] y9;
+  wire signed [4:0] y10;
+  wire signed [5:0] y11;
+  wire [3:0] y12;
+  wire [4:0] y13;
+  wire [5:0] y14;
+  wire signed [3:0] y15;
+  wire signed [4:0] y16;
+  wire signed [5:0] y17;
+
+  output [89:0] y;
+  assign y = {y0,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15,y16,y17};
+
+  localparam [3:0] p0 = ((((-5'sd11)!=(5'd28))&(5'd2 ** (5'd9)))-({((-2'sd0)^(2'd1))}|{(3'sd2),(4'sd1),(-2'sd0)}));
+  localparam [4:0] p1 = {1{(4'd8)}};
+  localparam [5:0] p2 = {2{(&((2'sd1)+(5'd16)))}};
+  localparam signed [3:0] p3 = ((-3'sd3)<<<(-((4'sd5)&(5'd5))));
+  localparam signed [4:0] p4 = ((~&(5'd23))!==((3'd6)>=(5'd14)));
+  localparam signed [5:0] p5 = ((3'sd3)?(4'd0):(4'sd5));
+  localparam [3:0] p6 = {1{(4'sd6)}};
+  localparam [4:0] p7 = ((~|(~&(5'd11)))/(-5'sd12));
+  localparam [5:0] p8 = {((+(-4'sd5))?((4'd9)-(3'd5)):{(-2'sd1)})};
+  localparam signed [3:0] p9 = (^(&(4'd2)));
+  localparam signed [4:0] p10 = (&(({4{(3'sd0)}}^((3'sd0)>>>(5'd28)))>=(((-4'sd4)===(3'sd0))&&(&(3'd3)))));
+  localparam signed [5:0] p11 = ((((3'd7)==(-4'sd5))-(5'd8))||{(-5'sd13),{(-2'sd0),(3'sd2),(3'd7)}});
+  localparam [3:0] p12 = ({1{(3'd3)}}?{4{(4'd6)}}:((2'd2)?((4'sd1)?(-3'sd2):(2'd1)):(4'd12)));
+  localparam [4:0] p13 = (((5'd23)?(5'd27):(5'd31))/(5'd6));
+  localparam [5:0] p14 = {3{(4'd10)}};
+  localparam signed [3:0] p15 = {2{((4'd2 ** (3'd4))^~((5'sd7)<<(4'sd6)))}};
+  localparam signed [4:0] p16 = (-2'sd1);
+  localparam signed [5:0] p17 = ((-(3'd1))?(3'd7):(5'd19));
+
+  assign y0 = (~(^(3'd5)));
+  assign y1 = ((~&(((a2^p8)!=(-a2))>=(-2'sd0)))+(({(a1!==b4)}>{1{((-4'sd5))}})));
+  assign y2 = ((-(^(3'sd0)))-$signed(($signed($signed((a2!==b4)))<((b0|b1)>(a2/a1)))));
+  assign y3 = (~|{2{(|a4)}});
+  assign y4 = (((~|(a4?a2:p0))-$unsigned((-3'sd0)))?(-3'sd0):(|{(b0>>>b0),(3'd3)}));
+  assign y5 = ((~(p12/p4))^~$signed($signed(p14)));
+  assign y6 = $signed(({1{(&{p11,p14})}}?(($signed((^p11)))):(-(&$unsigned((+p13))))));
+  assign y7 = (2'sd0);
+  assign y8 = {3{(!a0)}};
+  assign y9 = (((b1!==b1)<=(b1>>p13))&((b0||p16)>>>(b5!==b4)));
+  assign y10 = (+(b5<<b5));
+  assign y11 = ((4'sd6)?(a2?a2:b4):(2'd3));
+  assign y12 = (4'd2 ** (~&{a1,p7}));
+  assign y13 = (+(~(~&((&((p17%p3)?(~&p8):(^p17)))?(+(~&(^(p17>=p15)))):((p7?p16:p9)?(p14?p1:p14):(p1?p5:p8))))));
+  assign y14 = {2{(p12?p13:p12)}};
+  assign y15 = {4{{2{p5}}}};
+  assign y16 = (((a2^b0)?(!b3):(b1?a4:a4))!=(~^((b4<b3)>=(a1?b2:b0))));
+  assign y17 = $signed((|((b5!=a5)?{b2,p16,p0}:{b2,b5})));
+endmodule

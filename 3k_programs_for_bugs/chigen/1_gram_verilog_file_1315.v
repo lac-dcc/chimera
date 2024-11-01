@@ -1,0 +1,75 @@
+// Seed: 2896679727
+module module_0 (
+    output tri0 id_0,
+    output tri0 id_1,
+    output wor  id_2,
+    input  tri0 id_3,
+    output wand id_4,
+    input  tri1 id_5,
+    input  tri0 id_6,
+    input  wor  id_7
+);
+  tri id_9, id_10 = 1;
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply1 id_1,
+    output tri0 id_2,
+    input wor id_3,
+    output supply1 id_4,
+    input wire id_5,
+    output tri1 id_6,
+    input uwire id_7,
+    input wor id_8,
+    input tri id_9,
+    input supply1 id_10,
+    output uwire id_11,
+    output wor id_12,
+    input tri1 id_13,
+    input wand id_14,
+    inout uwire id_15,
+    input tri1 id_16,
+    input supply1 id_17,
+    output supply1 id_18,
+    output wor id_19,
+    input tri id_20,
+    input tri0 id_21,
+    input uwire id_22,
+    input wor id_23,
+    input uwire id_24,
+    input wire id_25,
+    output tri id_26,
+    output wand id_27,
+    input tri0 id_28,
+    output wand id_29,
+    input tri1 id_30,
+    output wand id_31,
+    output tri0 id_32,
+    input tri0 id_33,
+    output supply0 id_34,
+    input tri1 id_35,
+    output wor id_36,
+    input tri id_37,
+    input wire id_38,
+    input uwire id_39,
+    input wand id_40,
+    output wand id_41,
+    input wor id_42,
+    output supply0 id_43,
+    input wand id_44,
+    output wor id_45,
+    input tri id_46,
+    input uwire id_47,
+    input supply0 id_48,
+    input supply0 id_49,
+    input supply1 id_50,
+    input supply0 id_51,
+    output tri1 id_52,
+    input supply1 id_53,
+    input tri1 id_54
+);
+  always_ff id_52 = 1;
+  module_0(
+      id_18, id_11, id_29, id_53, id_6, id_13, id_8, id_35
+  );
+endmodule
