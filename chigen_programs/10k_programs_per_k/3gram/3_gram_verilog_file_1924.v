@@ -1,28 +1,33 @@
-// Seed: 586360096
-module module_0 (
-    input logic id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    output id_5
-    , id_9,
-    output id_6,
-    output id_7,
-    input logic id_8
+// Seed: 860268072
+module module_0 ();
+  initial begin
+    id_1 <= 1;
+    id_1 = id_1;
+  end
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output tri0  id_1,
+    output logic id_2,
+    output tri0  id_3,
+    input  wor   id_4,
+    input  tri0  id_5,
+    output uwire id_6,
+    output wand  id_7,
+    input  tri   id_8,
+    output logic id_9,
+    input  logic id_10,
+    input  logic id_11
 );
-  always @(posedge (1) or 1) id_1 <= id_0 + id_3;
-  logic id_10;
-  time  id_11;
-  logic id_12 = 1'b0 - 1;
-  assign id_11 = id_10;
-  logic id_13;
-  assign id_5 = id_0;
-  always @(posedge 1) begin
-    if (1) id_7 = id_0;
+  tri0 id_13 = 1 & ~1;
+  module_0();
+  initial begin
+    #1 begin
+      id_9 <= #1 id_11;
+      if (1'h0) $display(id_8);
+      id_2 = id_11;
+      id_9 <= id_10;
+    end
   end
-  always @(posedge 1 or posedge id_9) begin
-    id_13 = id_13;
-  end
-  logic id_14 = 1;
+  integer id_14;
 endmodule

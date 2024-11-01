@@ -1,75 +1,31 @@
-// Seed: 2254200110
-`timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+// Seed: 2689282725
+macromodule module_0 (
+    input tri1 id_0
+    , id_10,
+    output supply1 id_1,
+    output tri0 id_2,
+    input supply0 id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input wire id_6,
+    input tri1 id_7,
+    output wire id_8
 );
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_2 = 1;
-  assign id_4 = id_2;
-  type_4(
-      id_1 == 1
-  );
+  assign id_10 = 1;
+  wire id_11;
+  wire id_12;
+  wire id_13;
+  wire id_14;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23
+    output wire  id_0,
+    output wor   id_1,
+    input  uwire id_2
 );
-  output id_23;
-  inout id_22;
-  inout id_21;
-  input id_20;
-  output id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  output id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  logic id_23;
-  logic id_24;
-  logic id_25;
-  always
-    if (1'd0) begin
-      id_12[1] = id_11;
-      id_16 <= id_1;
-    end
+  assign id_0 = 1;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_2, id_2, id_2, id_1
+  );
+  wire id_4;
+  assign id_4 = id_4 - id_2 | "";
 endmodule

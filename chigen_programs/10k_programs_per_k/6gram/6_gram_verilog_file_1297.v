@@ -1,25 +1,29 @@
-// Seed: 3780939854
-`timescale 1 ps / 1 ps
+// Seed: 1614389757
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wire id_0,
+    input wire id_1,
+    input tri0 id_2,
+    output wor id_3,
+    output tri0 id_4,
+    output supply1 id_5,
+    input wor id_6,
+    input wire id_7
 );
-  input id_3;
-  output id_2;
-  inout id_1;
-  reg id_3;
-  assign id_2 = id_3;
-  assign id_1 = 1;
-  integer id_4;
-  always @(posedge id_3)
-    if (1'h0) id_3 <= id_3;
-    else id_2 = id_3 ? id_1 : 1;
-  initial begin
-    id_3 <= 1;
-    @(negedge id_1) id_2 = 1'd0;
-  end
-  always @((id_3) or posedge 1'h0) begin
-    id_4 = 1'h0;
-  end
+  generate
+    for (id_9 = 1; 1; id_3 = id_0) begin : id_10
+      assign id_3 = id_6 == 1'd0;
+    end
+  endgenerate
+endmodule
+module module_1 (
+    input  tri   id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    input  tri0  id_3,
+    output wand  id_4
+);
+  assign id_4 = 1;
+  module_0(
+      id_3, id_3, id_2, id_4, id_4, id_4, id_0, id_0
+  );
 endmodule

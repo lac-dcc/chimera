@@ -1,29 +1,30 @@
-// Seed: 647133396
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    input id_11
-    , id_13,
-    input logic id_12
+// Seed: 3834788348
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    input  tri   id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    input  tri0  id_3,
+    output wand  id_4
 );
-  assign id_13 = 1 - id_9;
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  type_29(
-      1, id_6 + 1, id_7[""]
-  ); type_30(
-      1, id_0 != "", ""
+  wire id_6 = id_6, id_7;
+  module_0();
+endmodule
+module module_2 (
+    output supply1 id_0,
+    output tri0 id_1
+);
+  generate
+    case (id_3)
+      id_3: always @(posedge 1) if (1) deassign id_0;
+ else forever id_0 = id_3;
+      default:
+      tri1 id_4;
+    endcase
+  endgenerate
+  module_0(); id_5(
+      .id_0(id_1 - id_4), .id_1(id_6), .id_2(""), .id_3(id_7[1]), .id_4(1), .id_5(id_4), .id_6(id_4)
   );
-  logic id_17;
-  logic id_18 = id_11;
 endmodule

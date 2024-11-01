@@ -1,29 +1,36 @@
-// Seed: 2378563610
-`define pp_5 0
-`default_nettype id_2
-`define pp_6 0
-`define pp_7 0
-`timescale 1ps / 1 ps
-`define pp_8 0
+// Seed: 4150380128
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  string id_5 = id_2;
-  string id_6;
-  always @(negedge id_2 or posedge "") begin
-    if (1) begin
-      id_1 = 1;
-    end
-  end
-  string id_7 = id_6, id_8;
-  assign id_2 = id_7;
+  inout wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+endmodule
+macromodule module_1;
+  wire id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
 endmodule

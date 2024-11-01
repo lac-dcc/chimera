@@ -1,21 +1,30 @@
-// Seed: 3892756396
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    input id_11
-    , id_12
+// Seed: 3107143461
+module module_0;
+  timeunit 1ps;
+  assign id_1[~1] = 1;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input supply1 id_1,
+    output logic id_2
 );
-  assign id_12 = id_12;
-  logic id_13;
-  assign id_13 = 1;
-  defparam id_14.id_15 = 1;
+  logic id_4;
+  module_0();
+  reg   id_5;
+  id_6(
+      .id_0(1'h0),
+      .id_1(id_4 - |id_0),
+      .id_2(id_0),
+      .id_3({id_4{1}}),
+      .id_4(id_4),
+      .id_5(id_4),
+      .id_6(1'b0)
+  );
+  assign id_2 = id_4;
+  assign id_2 = 1;
+  always @(posedge 1'd0) begin
+    id_5 <= 1;
+    id_4 <= 1;
+    assert (id_4);
+  end
 endmodule

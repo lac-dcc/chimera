@@ -1,30 +1,25 @@
-// Seed: 4089349703
-module module_0 (
-    output id_0,
-    output id_1,
-    output id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input logic id_9,
-    output id_10
-);
-  assign id_1[{1'd0{1==1}}] = 1;
+// Seed: 4274898458
+module module_0;
+  assign id_1 = 1;
 endmodule
-module module_1 ();
-  assign id_10[1'b0] = 1'b0;
-  wor id_11;
-  assign id_2 = 1;
-  logic id_12;
-  logic id_13;
-  type_21(
-      1, id_11[1 : 1'b0]
-  );
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
+module module_1 (
+    input  tri   id_0,
+    input  wor   id_1,
+    output uwire id_2,
+    output tri0  id_3,
+    output wand  id_4
+);
+  assign id_3 = 1;
+  module_0(); id_6 :
+  assert property (@(posedge 1) 1)
+  else $display(1, id_1);
+endmodule
+module module_2 (
+    output supply1 id_0,
+    output tri1 id_1,
+    input supply1 id_2,
+    input wand id_3
+);
+  assign id_1 = 1'b0;
+  module_0();
 endmodule

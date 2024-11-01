@@ -1,34 +1,44 @@
-// Seed: 3771106113
-`define pp_7 0
-localparam id_2 = 1;
+// Seed: 370989560
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input reg id_2,
-    input logic id_3,
-    output logic id_4,
-    output logic id_5,
-    output id_6
+    output tri0 id_0,
+    output wand id_1,
+    input uwire id_2,
+    output tri0 id_3,
+    input supply0 id_4,
+    input wor id_5
 );
-  reg id_7;
-  assign id_5 = id_2 || id_1 || 1 || id_3 || 1'b0 || 1;
-  reg   id_8;
-  logic id_9;
-  always @(posedge 1 or posedge {{1'd0{id_3}} == 1, 1, id_8, !(id_2)} + 1 + 1) begin
-    SystemTFIdentifier(id_9 | id_1 | 1 & 1 | 1 | id_8);
-  end
-  initial begin
-    id_7 <= 1;
-  end
-  type_19(
-      (id_4), id_6[1]
+  wire id_7;
+  or (id_0, id_4, id_5, id_7);
+  module_2(
+      id_7, id_7, id_7, id_7
   );
-  assign id_6[1] = id_2;
-  always @(posedge (1)) begin
-    if (id_9) begin
-      id_8 <= id_2;
-    end
-  end
-  reg id_10 = id_8;
 endmodule
-`default_nettype id_8
+module module_1 (
+    input wire id_0,
+    output wire id_1,
+    input tri0 id_2,
+    input wire id_3
+    , id_8,
+    input wire id_4,
+    output tri0 id_5,
+    input supply0 id_6
+);
+  wire id_9;
+  module_0(
+      id_5, id_1, id_4, id_1, id_3, id_3
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1 = 1;
+  logic [7:0] id_5;
+  assign id_5[1] = id_2;
+endmodule

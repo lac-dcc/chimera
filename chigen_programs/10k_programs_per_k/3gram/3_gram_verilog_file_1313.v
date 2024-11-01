@@ -1,23 +1,31 @@
-// Seed: 1210576569
-`endcelldefine
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+// Seed: 3045053665
+module module_0;
+  wire id_1;
+  wire id_2, id_3;
+  integer id_4;
+  assign id_4 = 1'h0;
+endmodule
+module module_1 (
+    output logic id_0,
+    input  wand  id_1,
+    output tri1  id_2
 );
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  logic id_8;
-  always @(1 or posedge 1) if (id_3) SystemTFIdentifier(1);
+  wire id_4;
+  always @(posedge 'b0)
+    if (1 == 1) begin
+      id_0 <= 1;
+    end else begin : id_5
+      if ((id_1)) id_5 <= id_5;
+      else id_4 = id_1;
+    end
+  module_0();
+  wire id_6;
+  assign id_0 = 1;
+  assign id_0 = 1;
+  assign id_4 = 1;
+  initial begin
+    $display(id_1);
+  end
+  uwire id_7 = id_4;
+  wire  id_8;
 endmodule

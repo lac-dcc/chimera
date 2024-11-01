@@ -1,27 +1,34 @@
-// Seed: 162554201
-`define pp_7 0
+// Seed: 4204683481
 module module_0 (
-    input reg id_0,
-    output reg id_1,
-    inout logic id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    input id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  reg id_7;
-  always id_7 <= 1;
-  type_14(
-      id_0, 1, id_6
-  ); type_15(
-      1, id_1, id_3, ~1, id_0
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  id_6(
+      id_4
   );
-  logic id_8, id_9;
-  assign id_7 = id_6;
-  type_17(
-      .id_0(id_6), .id_1(1'b0), .id_2(id_0), .id_3(1 == id_3), .id_4(id_3)
-  );
-  always if (1'h0);
+  wire id_7, id_8;
 endmodule
-`timescale 1ps / 1ps
-`define pp_8 0
+module module_1 (
+    output tri0 id_0,
+    input wire id_1,
+    output wire id_2,
+    input wor id_3,
+    input tri0 id_4,
+    input supply1 id_5,
+    output wor id_6,
+    output supply1 id_7
+);
+  wire id_9, id_10;
+  module_0(
+      id_10, id_10, id_10, id_9, id_9
+  );
+endmodule

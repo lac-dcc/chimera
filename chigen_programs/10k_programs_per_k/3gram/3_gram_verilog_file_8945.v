@@ -1,26 +1,38 @@
-// Seed: 3570201804
-`define pp_20 0
+// Seed: 2320936390
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    output logic id_8,
-    output logic id_9,
-    output id_10,
-    output id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    input logic id_16,
-    input id_17,
-    output logic id_18,
-    output logic id_19
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_20;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wor id_6 = 1'b0;
+  supply0 id_7;
+  assign {1, id_6} = (id_7 % id_3);
+  assign id_5 = 1 == 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_6, id_7;
+  initial begin
+    id_3 <= 1;
+  end
+  module_0(
+      id_4, id_6, id_7, id_4, id_6
+  );
 endmodule

@@ -1,34 +1,44 @@
-// Seed: 1157462817
+// Seed: 3133148481
 module module_0 (
-    input id_0,
-    output reg id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    output id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  always @(1 or 1) begin
-    if (id_9) SystemTFIdentifier("");
-    else if (id_7) begin
-      if (1) begin
-        id_3 <= id_6;
-      end else begin
-        if (1) begin
-          SystemTFIdentifier;
-        end else begin
-          if (id_9) id_1 <= 1'b0;
-          else begin
-            id_1 <= 1 == 1;
-          end
-          SystemTFIdentifier(id_8, id_2 & id_6 >= 1 - 1);
-          id_10 = 1;
-        end
-      end
-    end else id_3 <= 1;
-  end
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_5;
+  module_2();
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_3[1] = 1;
+  module_0(
+      id_1, id_1, id_2, id_1
+  );
+endmodule
+module module_2;
+  wor id_1;
+  assign id_1 = id_1 & 1;
+  tri id_3 = 1'b0;
+endmodule
+module module_3 #(
+    parameter id_6 = 32'd22,
+    parameter id_7 = 32'd99
+) (
+    output supply1 id_0,
+    output tri0 id_1,
+    output tri0 id_2,
+    output tri0 id_3,
+    input wand id_4
+);
+  defparam id_6.id_7 = id_7; module_2();
 endmodule

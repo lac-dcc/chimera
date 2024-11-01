@@ -1,15 +1,26 @@
-// Seed: 581831289
-`define pp_4 0
-`timescale 1 ps / 1ps
-`define pp_5 0
-`define pp_6 0
-`timescale 1ps / 1 ps `timescale 1ps / 1 ps `default_nettype id_2
-`define pp_7 0
-module module_0 (
-    output id_0,
-    output logic id_1,
-    output logic id_2,
-    output logic id_3
+// Seed: 251460311
+module module_0 ();
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output wor id_1,
+    input tri id_2,
+    output tri id_3,
+    output supply1 id_4,
+    input supply0 id_5,
+    input wor id_6,
+    input wire id_7,
+    input uwire id_8,
+    output tri0 id_9,
+    input wand id_10,
+    input tri0 id_11,
+    output wand id_12,
+    input wire id_13,
+    input wor id_14
 );
-  logic id_5;
+  assign id_4 = id_8;
+  module_0();
+  wire id_16;
 endmodule

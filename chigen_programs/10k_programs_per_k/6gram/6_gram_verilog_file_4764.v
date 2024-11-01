@@ -1,24 +1,28 @@
-// Seed: 3405481833
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 1237864487
+module module_0;
+  always @(posedge id_1) $display;
+  assign id_1[1] = 1;
+endmodule
+module module_1 (
+    input wor id_0,
+    input wor id_1
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_7;
-  logic id_8, id_9;
-  assign id_1[1] = id_3;
-  always @(posedge 1'b0) begin
-    id_2 = 'b0 / id_9;
+  always @(1'b0 or 1) begin
+    assert (1);
   end
+  module_0();
+  assign id_3 = id_3;
+endmodule
+module module_2 (
+    input wor id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input wand id_3
+);
+  always @(1) begin
+    if (1 && 1) begin
+      cover (id_3);
+    end
+  end
+  module_0();
 endmodule

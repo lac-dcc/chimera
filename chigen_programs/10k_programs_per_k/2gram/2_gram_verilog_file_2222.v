@@ -1,32 +1,49 @@
-// Seed: 1363075542
-module module_0 (
-    output logic id_0,
-    output logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    inout logic id_8,
-    output logic id_9,
-    input id_10,
-    output logic id_11,
-    input logic id_12,
-    output logic id_13,
-    input id_14,
-    input id_15,
-    output logic id_16,
-    input id_17,
-    input id_18,
-    input id_19,
-    output id_20,
-    input logic id_21,
-    input logic id_22,
-    input id_23,
-    output id_24,
-    input id_25,
-    input logic id_26
+// Seed: 750087426
+module module_0 ();
+  id_1 :
+  assert property (@(posedge id_1 or id_1) 1 == id_1)
+  else
+    @(id_1 or posedge 1) begin
+      if (1) id_1 <= 1'd0;
+      else id_1 <= id_1;
+    end
+endmodule
+module module_1 (
+    input uwire id_0,
+    output wor id_1,
+    input uwire id_2,
+    input tri id_3,
+    output wand id_4,
+    input wire id_5,
+    input wor id_6
+    , id_20,
+    output wor id_7,
+    output uwire id_8,
+    output uwire id_9,
+    input uwire id_10,
+    output supply0 id_11,
+    output tri id_12,
+    output tri id_13,
+    output supply1 id_14,
+    output wire id_15,
+    input supply0 id_16,
+    output supply1 id_17,
+    input wand id_18
 );
-  logic id_27 = id_27;
+  supply1 id_21;
+  for (id_22 = 1; 1; id_12 = id_5) begin
+    assign id_8 = 1;
+  end
+  initial @(posedge 1'b0 or negedge 1);
+  if (id_21)
+    if (id_6) begin
+      wire id_23;
+    end else wire id_24;
+  assign id_7 = id_22;
+  module_0();
+  initial begin
+    #id_25;
+  end
+  assign id_21 = (1 - 1) + id_5;
+  wire id_26;
 endmodule

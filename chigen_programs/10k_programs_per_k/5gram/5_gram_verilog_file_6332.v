@@ -1,23 +1,28 @@
-// Seed: 4201715211
-`timescale 1 ps / 1ps
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    input logic id_11,
-    output logic id_12,
-    input logic id_13,
-    input id_14
+// Seed: 3008671621
+module module_0 ();
+  assign id_1 = 1'b0;
+  supply1 id_2;
+  id_3(
+      .id_0(id_4),
+      .id_1(1),
+      .id_2(1'b0),
+      .id_3(id_1),
+      .id_4(id_4),
+      .id_5(1),
+      .id_6(id_2++),
+      .id_7(1),
+      .id_8(1),
+      .id_9(1'b0 == 1)
+  );
+endmodule
+module module_1 (
+    output tri id_0,
+    output tri0 id_1,
+    output wor id_2,
+    input supply1 id_3
 );
-  assign id_12 = 1'b0;
-  assign id_10 = 1'd0;
-  assign id_12 = (1);
+  id_5 :
+  assert property (@(posedge 1) 1)
+  else $display(id_3);
+  module_0();
 endmodule

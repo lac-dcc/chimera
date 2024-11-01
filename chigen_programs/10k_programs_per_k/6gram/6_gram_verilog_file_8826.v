@@ -1,5 +1,12 @@
-// Seed: 4259284504
-module module_0 (
+// Seed: 1478071993
+module module_0;
+  assign id_1 = id_1;
+  wire id_2;
+  id_3(
+      .id_0(id_2), .id_1(id_1), .id_2(id_1)
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -7,15 +14,18 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8
+    id_8,
+    id_9
 );
-  output id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  inout id_2;
-  inout id_1;
-  assign id_2 = id_6;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_10, id_11;
+  module_0();
 endmodule

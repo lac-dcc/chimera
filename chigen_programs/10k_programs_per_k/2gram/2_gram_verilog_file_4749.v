@@ -1,4 +1,4 @@
-// Seed: 1083546073
+// Seed: 917209244
 module module_0 (
     id_1,
     id_2,
@@ -12,30 +12,36 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_13
 );
-  output id_17;
-  input id_16;
-  output id_15;
-  inout id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  initial id_11 <= id_2[SystemTFIdentifier];
-  logic id_17 = 1'b0;
+  output wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_5 = 1'h0;
+  initial
+    #1 begin
+      if (1) @(negedge 1'h0) #1 fork join_any
+      $display(1, id_6);
+    end
 endmodule
-`define pp_17 0
+module module_1 (
+    output tri  id_0,
+    output wand id_1,
+    input  wire id_2
+);
+  wire id_4;
+  nor (id_1, id_4, id_2);
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
+endmodule

@@ -1,35 +1,50 @@
-// Seed: 1030284065
+// Seed: 377766836
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    id_2
 );
-  inout id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  logic id_7;
-  logic id_8;
-  assign id_6 = 1 >> id_2;
-  logic id_9;
-  logic id_10;
-  logic id_11;
-  logic id_12, id_13;
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  type_26(
-      1 - id_10, id_10
+  input wire id_2;
+  inout wire id_1;
+  module_2();
+endmodule
+module module_1 (
+    output wire id_0,
+    input  tri0 id_1
+);
+  wire id_3;
+  module_0(
+      id_3, id_3
   );
-  logic id_17;
-  always @(id_15 or 1'h0 or 1, posedge 1'b0) begin
-    SystemTFIdentifier(1);
+endmodule
+module module_2;
+  assign id_1 = 1'b0;
+  final begin
+    id_1 <= id_1;
   end
+endmodule
+module module_3 (
+    input tri id_0,
+    input tri0 id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input tri id_4,
+    input uwire id_5,
+    input wire id_6,
+    input uwire id_7,
+    input tri1 id_8,
+    input wire id_9,
+    input wire id_10,
+    output tri id_11,
+    input tri1 id_12,
+    output tri0 id_13,
+    output supply1 id_14,
+    input wire id_15,
+    input wire id_16,
+    input wire id_17,
+    input wor id_18,
+    input uwire id_19,
+    input wor id_20
+);
+  wire id_22 = &id_5;
+  module_2();
 endmodule

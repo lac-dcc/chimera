@@ -1,14 +1,4 @@
-// Seed: 2564433333
-`define pp_14 0
-`define pp_15 0
-`celldefine
-`define pp_16 0
-`timescale 1ps / 1ps
-localparam id_4 = `pp_16;
-`define pp_17 0
-`timescale 1ps / 1 ps
-`define pp_18 0
-`define pp_19 0
+// Seed: 1219597698
 module module_0 (
     id_1,
     id_2,
@@ -16,38 +6,31 @@ module module_0 (
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    id_7
 );
-  output id_14;
-  input id_13;
-  output id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  output id_8;
-  output id_7;
-  inout id_6;
-  inout id_5;
-  input id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  logic  id_14;
-  string id_15 = "";
-  type_18(
-      id_5, id_6
-  ); type_19(
-      1, id_2, id_11
-  );
-  assign id_14 = 1;
-  type_20(
-      1'b0 && 1, 1
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_8;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input supply0 id_1,
+    input uwire id_2,
+    output tri1 id_3,
+    input wire id_4,
+    output tri1 id_5,
+    input wire id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input wire id_9
+);
+  wire id_11;
+  module_0(
+      id_11, id_11, id_11, id_11, id_11, id_11, id_11
   );
 endmodule

@@ -1,26 +1,39 @@
-// Seed: 2024813828
-`define pp_13 0
-module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9
-    , id_13,
-    input logic id_10,
-    output id_11,
-    input logic id_12
-);
+// Seed: 3144406060
+module module_0 ();
+  assign id_1[1'd0] = 1;
+  wire id_2;
 endmodule
-module module_1 ();
-  type_14(
-      id_0, 1
-  );
-  assign id_2[1] = 1;
-  logic id_13 = id_10;
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_5 = 0;
+  assign id_1 = 1;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = id_3[1];
+  logic [7:0] id_5;
+  assign id_5[1] = 1;
+  wire id_6;
+  module_0();
 endmodule

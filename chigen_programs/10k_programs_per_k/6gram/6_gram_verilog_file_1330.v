@@ -1,12 +1,31 @@
-// Seed: 3000585443
-`timescale 1 ps / 1ps
-module module_0 (
+// Seed: 32869457
+module module_0 ();
+  assign id_1 = 1 ? id_1 : 1 == "";
+  assign id_1 = id_1;
+  initial
+    forever
+      if (1)
+        for (id_1 = (1 || 1); id_1; id_1 = 1) begin
+          if ((id_1))
+            assert (id_1);
+            else id_1 <= id_1 & "" & 1;
+        end
+endmodule
+module module_1 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  input id_2;
-  output id_1;
-  logic id_2;
-  logic id_3 = 1'h0 || 1 - id_2 || 1 || 1;
-  logic id_4;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  initial id_5 = #1 1;
+  xnor (id_1, id_2, id_3, id_6);
+  module_0();
 endmodule

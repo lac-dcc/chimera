@@ -1,38 +1,30 @@
-// Seed: 3105281970
-`timescale 1ps / 1ps
+// Seed: 2950985177
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    input supply1 id_0,
+    input wand id_1,
+    input wand id_2,
+    input wire id_3
 );
-  inout id_12;
-  input id_11;
-  input id_10;
-  output id_9;
-  output id_8;
-  inout id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_12 = id_5;
-  logic id_13;
-  type_19(
-      |id_8, "", 1
+  assign id_5 = 1;
+  reg id_6;
+  always @(posedge 1 + id_5 or 1) begin
+    id_6 <= 1;
+  end
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input uwire id_1,
+    output tri0 id_2,
+    input wor id_3,
+    output tri0 id_4,
+    input uwire id_5,
+    input tri1 id_6,
+    output supply0 id_7,
+    output wand id_8
+);
+  assign id_7 = id_3 - 1'b0 & (1) | 1;
+  module_0(
+      id_3, id_1, id_1, id_3
   );
-  generate
-    logic id_14;
-    defparam id_15.id_16 = id_15;
-  endgenerate
+  assign id_7 = id_6;
 endmodule

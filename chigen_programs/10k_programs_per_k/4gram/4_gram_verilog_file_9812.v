@@ -1,63 +1,28 @@
-// Seed: 4125335647
+// Seed: 3304799414
+module module_0;
+  always @(posedge id_1) $display(1);
+  module_2();
+  wire id_4;
+  assign id_2 = id_4;
+endmodule
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    input id_14,
-    input logic id_15,
-    output id_16,
-    input id_17,
-    input logic id_18,
-    input id_19,
-    output id_20,
-    output id_21,
-    input id_22,
-    output logic id_23,
-    input id_24,
-    output logic id_25,
-    output logic id_26,
-    inout logic id_27,
-    input logic id_28,
-    input id_29,
-    input logic id_30,
-    input id_31,
-    output id_32,
-    input logic id_33,
-    input logic id_34,
-    input logic id_35,
-    output id_36,
-    output id_37
+    output wand id_0,
+    input uwire module_1,
+    input wor id_2,
+    input wire id_3,
+    output wire id_4,
+    output wand id_5,
+    input supply0 id_6,
+    input supply1 id_7,
+    output supply1 id_8,
+    input uwire id_9
 );
-  logic id_38;
-  logic id_39;
-  logic
-      id_40,
-      id_41,
-      id_42,
-      id_43,
-      id_44,
-      id_45,
-      id_46,
-      id_47,
-      id_48,
-      id_49,
-      id_50,
-      id_51,
-      id_52,
-      id_53,
-      id_54,
-      id_55,
-      id_56,
-      id_57;
+  wire id_11;
+  module_0();
+endmodule
+module module_2;
+  tri id_2, id_3, id_4, id_5, id_6, id_7, id_8, id_9, id_10 = 1'b0 == id_6;
+  assign id_5 = id_5 ? (id_5) : 1'b0;
+  wire id_11;
+  wire id_12;
 endmodule

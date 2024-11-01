@@ -1,21 +1,31 @@
-// Seed: 1941503219
-`timescale 1ps / 1 ps
-module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input logic id_9,
-    input id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    input logic id_14
+// Seed: 1554440827
+module module_0 ();
+  initial #1 release id_1;
+  wire id_4;
+  assign id_1 = 1;
+  assign id_3 = (1);
+  wire id_5;
+  wire id_6, id_7;
+endmodule
+module module_1 (
+    input  wand id_0,
+    output tri  id_1
 );
-  assign id_0 = 1'b0;
+  wire id_3 = id_3;
+  module_0();
+  assign id_1 = id_0;
+endmodule
+module module_2 (
+    output wor id_0,
+    input tri0 id_1,
+    output wire id_2,
+    input tri1 id_3,
+    input tri0 id_4,
+    input tri1 id_5
+    , id_8,
+    output supply1 id_6
+);
+  wire id_9;
+  always @* $display(1, 1, id_4);
+  module_0();
 endmodule

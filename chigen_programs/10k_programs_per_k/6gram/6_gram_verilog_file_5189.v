@@ -1,48 +1,49 @@
-// Seed: 3241421021
-module module_0 (
+// Seed: 2753163018
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_7
 );
-  inout id_17;
-  output id_16;
-  output id_15;
-  input id_14;
-  output id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  input id_1;
-  logic id_17;
-  logic id_18 = 1 == id_8;
-  logic id_19;
-  logic id_20;
-  type_27(
-      id_7, id_17, id_15
-  );
-  logic id_21, id_22;
-  assign id_13 = 1 || 1'b0;
-  logic id_23;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  uwire id_8 = 1'b0;
+  module_0();
+  initial begin
+    cover (1 >= 1);
+    id_2 <= 1'b0;
+  end
+endmodule
+module module_2 (
+    output wand id_0,
+    input tri id_1,
+    input supply1 id_2,
+    input logic id_3,
+    input uwire id_4,
+    input tri1 id_5,
+    input supply1 id_6,
+    output wand id_7
+);
+  reg id_9;
+  wor id_10;
+  module_0();
+  always @(posedge id_6 or posedge 1) begin
+    id_7 = id_10;
+    id_9 <= 1;
+    if (1) id_9 <= id_3;
+  end
+  wand id_11;
+  assign id_11 = id_10;
+  wire id_12;
 endmodule

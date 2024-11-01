@@ -1,39 +1,47 @@
-// Seed: 3346505362
-`timescale 1ps / 1 ps
-module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    output logic id_11,
-    input logic id_12,
-    output id_13,
-    output id_14,
-    output id_15,
-    input id_16,
-    input id_17,
-    output id_18,
-    input logic id_19
+// Seed: 62862805
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  assign id_1 = 1;
-  assign id_1 = ({id_4, 1});
-  type_0 id_20 (
-      .id_0(id_19),
-      .id_1(1)
-  );
-  logic id_21 = 1;
-  logic id_22;
-  type_32 id_23 (
-      .id_0(id_1),
-      .id_1(id_1)
-  );
-  logic id_24;
-  logic id_25;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_11;
+  module_0();
+  wire id_12;
+  assign id_11 = id_6;
+endmodule
+module module_0 (
+    input supply1 id_0,
+    output wire id_1,
+    output wor id_2,
+    input wor module_2,
+    input supply0 id_4,
+    input wire id_5
+);
+  initial begin
+    if (1)
+      if (id_4)
+        assume (id_3);
+        else $display;
+  end
+  module_0();
 endmodule

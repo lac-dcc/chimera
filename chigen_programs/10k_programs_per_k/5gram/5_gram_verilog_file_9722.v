@@ -1,26 +1,31 @@
-// Seed: 3402612163
+// Seed: 1103870906
 module module_0 (
-    output id_0,
-    output reg id_1,
-    input id_2
+    input supply1 id_0,
+    input tri0 id_1,
+    output wor id_2,
+    input wor module_0,
+    output supply1 id_4,
+    output wor id_5,
+    input wire id_6,
+    output tri1 id_7,
+    output tri id_8,
+    input supply1 id_9,
+    output uwire id_10,
+    input wor id_11
 );
-  genvar id_3;
-  assign sample = id_2;
-  always @(posedge 1'b0) begin
-    id_1 <= id_2 < id_3;
-  end
-  assign id_3 = 1;
-  logic id_4;
-  logic id_5;
-  logic id_6, id_7 = 1;
-  assign id_6 = id_4;
-  type_13(
-      (1), ~id_1, 1
-  );
-  integer id_8 (
-      .id_0(),
-      .id_1(id_6),
-      .id_2(1),
-      .id_3(id_2)
+  tri1 id_13 = id_3#(.id_1(1));
+  wire id_14;
+  wire id_15;
+endmodule
+module module_1 (
+    output wor   id_0,
+    input  tri0  id_1,
+    input  uwire id_2,
+    input  tri1  id_3,
+    input  uwire id_4
+);
+  assign id_0 = 1;
+  module_0(
+      id_3, id_3, id_0, id_3, id_0, id_0, id_2, id_0, id_0, id_4, id_0, id_1
   );
 endmodule

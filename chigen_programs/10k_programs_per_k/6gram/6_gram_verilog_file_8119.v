@@ -1,21 +1,30 @@
-// Seed: 1739427121
-module module_0 (
-    input reg id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output reg id_4
+// Seed: 235788431
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(negedge 1, id_1)
-    if (!id_2) id_4 <= 1'b0;
-    else begin
-      id_3 <= 1;
-      for (id_3 = id_1; id_2; id_4 = ~id_1) begin
-        id_4 = 1;
-      end
-    end
-  logic id_5;
-  assign id_3 = id_0;
-  logic id_6;
-  defparam id_7.id_8 = id_1;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(posedge id_5 or negedge 1) begin
+    $display(1, 1, id_5);
+    id_3 <= id_2 == 1;
+  end
+  wire id_6;
+  module_0();
+  assign id_4[1] = id_1 ? 1 == id_5 + 1 : 1;
+endmodule
+module module_2;
+  supply0 id_2;
+  reg id_3 = id_3;
+  initial forever id_3 <= id_2 != id_2;
+  module_0();
 endmodule

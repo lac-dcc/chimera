@@ -1,21 +1,42 @@
-// Seed: 1370085855
-`define pp_0 0
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`timescale 1ps / 1ps
-`define pp_7 0
-`timescale 1ps / 1 ps `timescale 1 ps / 1 ps
-module module_0;
-  logic id_1;
-  type_6(
-      id_0, 1, 1, id_0, id_0, id_2, 1
+// Seed: 1297108526
+module module_0 (
+    id_1,
+    module_0,
+    id_2
+);
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  supply1 id_4 = id_2 - 1'h0;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  module_0(
+      id_5, id_2, id_5
   );
-  assign id_2 = 1;
-  logic id_3;
-  assign id_1 = 1'b0;
-  int id_4;
+  always @(posedge 1 or 1'h0)
+    if (id_3) begin
+      id_4 -= 1;
+      wait (id_1);
+      id_6 = 1'b0;
+      id_6 = 1;
+      id_4 <= 1 | 1;
+      module_1 <= 1;
+      $display(id_7);
+      id_6 = id_2;
+    end else deassign {1, id_1, id_3};
 endmodule

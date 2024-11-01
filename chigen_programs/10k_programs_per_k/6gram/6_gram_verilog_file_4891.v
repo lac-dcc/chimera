@@ -1,38 +1,31 @@
-// Seed: 1991634435
-`define pp_12 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+// Seed: 2477575375
+module module_0;
+  generate
+    if (1) begin
+    end else begin
+      assign id_1 = 1;
+    end
+  endgenerate
+endmodule
+module module_1 #(
+    parameter id_10 = 32'd88,
+    parameter id_9  = 32'd74
+) (
+    input  tri0 id_0,
+    output tri  id_1
 );
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_13(
-      1, id_3
+  wire id_3, id_4;
+  wire id_5;
+  tri  id_6 = 1;
+  id_7(
+      .id_0((1)), .id_1(1), .id_2(1), .id_3(1)
   );
-  logic id_12;
-  initial begin
-    id_12 = id_12;
-    id_2  = id_2;
-    #1 id_1 = 1;
-  end
+  wire id_8;
+  assign id_1 = 1;
+  defparam id_9.id_10 = id_10; module_0();
+  wire id_11;
+  wire id_12;
+  wire id_13;
+  wire id_14;
+  wire id_15;
 endmodule

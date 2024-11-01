@@ -1,17 +1,25 @@
-// Seed: 2091258900
-`timescale 1 ps / 1 ps
+// Seed: 2505264854
 module module_0 (
-    output reg id_0,
-    output id_1
+    output tri0 id_0,
+    input  wor  id_1
 );
-  logic id_3;
-  always @(negedge 1) begin
-    id_2 <= (id_2) && id_2;
-    id_1 <= (1);
-    id_0 <= 1;
-  end
-  logic id_4;
-  logic id_5;
-  logic id_6;
-  logic id_7;
+  tri0 id_3;
+  assign id_3 = 1'b0;
+  wire id_4;
+  wire id_5 = id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output wand id_1,
+    output wor id_2,
+    output wor id_3,
+    output uwire id_4,
+    input supply1 id_5,
+    output tri1 id_6
+);
+  id_8(
+      .id_0((1'h0)), .id_1(1), .id_2(1'b0)
+  ); module_0(
+      id_2, id_5
+  );
 endmodule

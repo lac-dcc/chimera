@@ -1,35 +1,35 @@
-// Seed: 90205579
-`define pp_28 0
+// Seed: 2492556453
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    output id_9,
-    input logic id_10,
-    output logic id_11,
-    input id_12,
-    output logic id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    output id_17,
-    input logic id_18
-    , id_28,
-    input logic id_19,
-    input logic id_20,
-    input id_21,
-    output id_22,
-    output id_23,
-    input logic id_24,
-    output logic id_25,
-    input logic id_26,
-    input id_27
+    input  tri   id_0,
+    output uwire id_1,
+    output tri1  id_2,
+    input  tri0  id_3,
+    input  tri   id_4
 );
-  logic id_29;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    input  wor   id_1,
+    input  tri   id_2,
+    input  tri   id_3,
+    input  wand  id_4,
+    output wire  id_5,
+    output wire  id_6,
+    output tri1  id_7
+    , id_15,
+    input  wor   id_8,
+    output tri   id_9,
+    inout  uwire id_10,
+    input  tri0  id_11,
+    input  wor   id_12,
+    output tri1  id_13
+);
+  module_0(
+      id_8, id_6, id_9, id_4, id_4
+  );
+  initial begin
+    #1 begin
+      $display(id_3, (id_1), 1, id_1);
+    end
+  end
 endmodule

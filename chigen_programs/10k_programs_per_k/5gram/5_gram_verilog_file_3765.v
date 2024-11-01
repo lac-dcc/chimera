@@ -1,26 +1,37 @@
-// Seed: 993306071
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
+// Seed: 204265686
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input tri id_0,
+    input tri1 id_1,
+    input wor id_2,
+    input wand id_3,
+    input supply1 id_4,
+    input wand id_5,
+    input wire id_6
 );
-  input id_3;
-  input id_2;
-  input id_1;
-  initial begin
-    id_3 <= id_3 & 1 & 1 - id_3 & id_1;
-  end
+  wand id_8 = 1;
 endmodule
-`define pp_10 0
-`define pp_11 0
-localparam module_0 = `pp_7;
-`define pp_12 0
-`default_nettype id_13 `timescale 1ps / 1ps
-`define pp_14 0
+module module_1 (
+    output tri1  id_0,
+    input  wor   id_1,
+    output uwire id_2
+);
+  tri id_4 = 1 !== id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
+  always_ff @(1 == ~id_4 or posedge 1) id_4 = 1;
+  always_ff @(negedge 1) release id_0;
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input tri id_1,
+    output tri0 id_2
+    , id_6,
+    input wor id_3,
+    output wor id_4
+);
+  wire id_7;
+  module_0(
+      id_3, id_1, id_0, id_0, id_3, id_0, id_1
+  );
+endmodule

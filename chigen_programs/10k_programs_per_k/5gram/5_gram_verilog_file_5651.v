@@ -1,35 +1,46 @@
-// Seed: 1111916738
-`celldefine
+// Seed: 2664921791
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    input logic id_4,
-    output id_5,
-    output logic id_6,
-    output id_7
-    , id_24,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    input id_11,
-    output id_12,
-    output logic id_13,
-    input logic id_14,
-    output id_15,
-    input id_16
-    , id_25, id_26,
-    input logic id_17,
-    input id_18,
-    input logic id_19,
-    input logic id_20,
-    input logic id_21,
-    input id_22,
-    input id_23
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    module_0,
+    id_8,
+    id_9
 );
-  assign id_6 = 1;
-  logic id_27;
-  tri   id_28;
-  always @(1'b0) id_28[1 : 1|1] = id_8;
+  output wire id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_8 = 1'b0;
+  assign id_5 = id_7;
+  always @(negedge id_6) begin
+    id_5 = 1;
+  end
+  wire id_11;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input wor id_1,
+    output logic id_2,
+    input wire id_3,
+    input supply0 id_4
+);
+  tri id_6 = id_6;
+  for (id_7 = 1; 1; id_0 = id_7) always @(1) id_2 <= id_4 !=? {1, 1, 1 * id_4 + id_6 && id_7};
+  wire id_8;
+  module_0(
+      id_8, id_6, id_6, id_6, id_8, id_6, id_6, id_6, id_8, id_6
+  );
+  assign id_2 = id_7 == 1;
+  xnor (id_0, id_6, id_7, id_1, id_8, id_4);
 endmodule

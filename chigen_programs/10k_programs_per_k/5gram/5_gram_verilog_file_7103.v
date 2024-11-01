@@ -1,29 +1,98 @@
-// Seed: 3581778030
+// Seed: 1457433805
 module module_0 (
-    input logic id_0,
-    output logic id_1
-    , id_19,
-    input id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    output logic id_11,
-    input logic id_12,
-    input id_13,
-    output logic id_14,
-    input logic id_15,
-    output id_16,
-    output logic id_17
-    , id_20,
-    input logic id_18
+    output supply1 id_0,
+    output supply1 id_1,
+    input wand id_2,
+    input supply0 id_3,
+    input wand id_4,
+    output uwire id_5,
+    input tri0 id_6,
+    input supply1 id_7,
+    output tri id_8,
+    input supply0 id_9,
+    output supply0 id_10,
+    input wor id_11,
+    input uwire id_12,
+    output uwire id_13,
+    output wire id_14,
+    output uwire id_15,
+    input tri0 id_16,
+    input tri0 id_17,
+    input wor id_18,
+    input wand id_19,
+    output wor id_20
+    , id_23,
+    input supply0 id_21
 );
-  logic id_21;
-  logic id_22;
-  assign id_1 = id_3 - id_15 ? SystemTFIdentifier(1, 'b0) : id_0;
 endmodule
-`default_nettype wire
+module module_1 (
+    output wor id_0,
+    input tri id_1,
+    input wor id_2,
+    output uwire id_3,
+    output wand id_4,
+    input tri0 id_5,
+    input wor id_6,
+    output supply1 id_7,
+    output uwire id_8,
+    input supply0 id_9,
+    input tri id_10,
+    input tri id_11,
+    output wand id_12,
+    output wand id_13,
+    input supply1 id_14
+    , id_41,
+    input supply0 id_15,
+    output wand id_16,
+    output wand id_17,
+    input tri0 id_18,
+    output wand id_19,
+    input uwire id_20,
+    input wand id_21,
+    output wand id_22,
+    output wire id_23,
+    output tri id_24
+    , id_42, id_43,
+    output uwire id_25,
+    input uwire id_26,
+    input wire id_27,
+    output uwire id_28,
+    output uwire id_29,
+    input uwire id_30,
+    output supply0 id_31,
+    output wand id_32,
+    input tri id_33,
+    output wand id_34,
+    input tri1 id_35
+    , id_44,
+    input wire id_36,
+    output uwire id_37,
+    output supply0 id_38,
+    input tri0 id_39
+);
+  wire id_45;
+  module_0(
+      id_25,
+      id_24,
+      id_35,
+      id_20,
+      id_6,
+      id_25,
+      id_6,
+      id_30,
+      id_13,
+      id_1,
+      id_29,
+      id_39,
+      id_21,
+      id_28,
+      id_0,
+      id_23,
+      id_10,
+      id_9,
+      id_27,
+      id_5,
+      id_4,
+      id_15
+  );
+endmodule

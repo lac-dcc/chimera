@@ -1,21 +1,46 @@
-// Seed: 2430779558
+// Seed: 937174971
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2
-    , id_11, id_12,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    input id_9,
-    input logic id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  type_20(
-      1, 1, 1
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_4 = 1 - 1;
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output wire id_1,
+    output tri1 id_2,
+    input  wire id_3,
+    input  tri1 id_4,
+    input  tri  id_5
+);
+  wire id_7;
+  wire id_8;
+  wire id_9;
+  always_latch @(id_4) begin
+    id_1 = 1'b0;
+  end
+  wire id_10 = id_9;
+  module_0(
+      id_10, id_10, id_8, id_9, id_9, id_8, id_7, id_10
   );
-  logic id_13 = id_1;
-  logic id_14;
+  genvar id_11;
+  id_12(
+      .id_0(1), .id_1(id_3), .id_2(1'b0), .id_3(1'b0)
+  );
+  assign id_2 = id_3;
+  wire id_13;
 endmodule

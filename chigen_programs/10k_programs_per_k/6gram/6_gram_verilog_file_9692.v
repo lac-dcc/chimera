@@ -1,18 +1,36 @@
-// Seed: 2507861807
+// Seed: 58651287
 module module_0 (
-    output id_0,
-    input id_1,
-    output logic id_2
-    , id_11,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    output id_10
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_10 = !id_5;
-  logic id_12;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+endmodule
+module module_1 #(
+    parameter id_8 = 32'd22,
+    parameter id_9 = 32'd83
+) (
+    id_1
+);
+  input wire id_1;
+  string id_2;
+  wire   id_3;
+  module_0(
+      id_3, id_3, id_3
+  );
+  wire id_4;
+  assign id_2 = "";
+  wire id_5;
+  wire id_6;
+  wire id_7;
+  generate
+    if (id_2) begin
+      defparam id_8.id_9 = 1; id_10(
+          .id_0(id_8), .id_1(1), .id_2(id_9(id_5))
+      );
+    end else wire id_11;
+  endgenerate
 endmodule

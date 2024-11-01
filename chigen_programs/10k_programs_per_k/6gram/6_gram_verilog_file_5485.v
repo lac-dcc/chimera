@@ -1,35 +1,24 @@
-// Seed: 772906002
-`timescale 1ps / 1ps
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    output id_13
-    , id_20,
-    input id_14,
-    output logic id_15
-    , id_21,
-    input id_16,
-    input id_17,
-    input logic id_18,
-    output id_19
+// Seed: 83965798
+module module_0;
+  always @(id_1 or posedge id_1 - id_1) id_1 <= #1 id_1 + 1 >= 1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input tri1 id_1,
+    output wire id_2,
+    input supply0 id_3,
+    input tri1 id_4,
+    input wand id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    input tri0 id_8,
+    output wor id_9,
+    output supply0 id_10,
+    input wire id_11,
+    input wor id_12,
+    input supply0 id_13,
+    output supply1 id_14
 );
-  assign id_13[1] = id_4 ? id_8 : 1;
-  logic id_22;
-  assign id_5 = id_9;
-  defparam id_23.id_24 = 1;
-  logic id_25;
-  logic id_26 = id_21;
-  logic id_27;
-  assign id_1 = 1;
+  assign id_10 = 1;
+  module_0();
 endmodule

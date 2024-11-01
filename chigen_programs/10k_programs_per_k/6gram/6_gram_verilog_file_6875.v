@@ -1,56 +1,47 @@
-// Seed: 1554859765
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output logic id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    output id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    output logic id_17,
-    output logic id_18,
-    output id_19,
-    input id_20,
-    input id_21,
-    input id_22,
-    output id_23,
-    input logic id_24,
-    input id_25,
-    output id_26,
-    output logic id_27,
-    input logic id_28,
-    output id_29,
-    output logic id_30,
-    input logic id_31,
-    input id_32,
-    input id_33,
-    input logic id_34,
-    output id_35,
-    output id_36,
-    input logic id_37,
-    input logic id_38,
-    input id_39
+// Seed: 3869660268
+module module_0;
+  wire id_2;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input supply0 id_1,
+    output wire id_2,
+    output tri id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input tri0 id_6,
+    output wor id_7
 );
-  type_58 id_40 (
+  wire id_9;
+  wire id_10;
+  module_0();
+endmodule
+module module_2 (
+    output wire id_0,
+    input wand id_1,
+    input tri1 id_2,
+    output uwire id_3,
+    input supply0 id_4,
+    input wand id_5
+    , id_8,
+    inout tri0 id_6
+);
+  wire id_9;
+  id_10(
       .id_0(1),
-      .id_1(id_30),
-      .id_2(1'b0),
+      .id_1(id_6),
+      .id_2(id_1),
       .id_3(1),
       .id_4(1),
-      .id_5(1'd0),
-      .id_6(id_0)
-  );
-  logic id_41;
-  logic id_42;
-  assign id_11[(1)] = 1;
+      .id_5(id_6),
+      .id_6(id_2),
+      .id_7(1'b0),
+      .id_8(id_2),
+      .id_9(id_4),
+      .id_10(id_0)
+  ); module_0();
+  wire id_11;
+  always #1 begin
+    $display(1, -id_1 * id_6);
+  end
 endmodule

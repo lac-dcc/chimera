@@ -1,4 +1,4 @@
-// Seed: 3874909927
+// Seed: 2782808682
 module module_0 (
     id_1,
     id_2,
@@ -7,17 +7,32 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8
+    id_8,
+    id_9
 );
-  input id_8;
-  output id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  type_8(
-      1, 1 ^ 1
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_2 = 1 == 1'h0;
+  integer id_10;
+endmodule
+module module_1 (
+    output wand id_0,
+    output tri1 id_1,
+    input  tri1 id_2,
+    output tri0 id_3,
+    output tri0 id_4,
+    input  wand id_5,
+    input  wand id_6
+);
+  wire id_8;
+  module_0(
+      id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8
   );
 endmodule

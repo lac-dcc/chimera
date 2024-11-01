@@ -1,33 +1,29 @@
-// Seed: 890004578
-`timescale 1ps / 1ps
+// Seed: 1263328373
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    output wand id_0,
+    output tri id_1,
+    output supply1 id_2
 );
-  output id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  input id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  type_13 id_12 (
-      {!id_11{id_3}},
-      1'h0
+  string id_5 = 1'b0 ? id_4 : "";
+  module_2(
+      id_2, id_2
   );
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input wire id_1
+);
+  assign id_0 = id_1;
+  module_0(
+      id_0, id_0, id_0
+  );
+endmodule
+module module_2 (
+    output wire id_0,
+    output tri0 id_1
+);
+  id_3(
+      .id_0(id_4), .id_1(), .id_2(1'b0), .id_3(id_0), .id_4(id_4), .id_5(1), .id_6(id_0), .id_7(1)
+  );
+  genvar id_5;
 endmodule

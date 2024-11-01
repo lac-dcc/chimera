@@ -1,40 +1,47 @@
-// Seed: 2955840518
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`timescale 1ps / 1ps
+// Seed: 2370411961
 module module_0 (
-    input id_0
-    , id_7,
-    output reg id_1,
-    input id_2,
-    output id_3,
-    input reg id_4,
-    input logic id_5,
-    input id_6
+    output supply0 id_0,
+    output supply1 id_1,
+    input tri id_2,
+    input wor id_3
 );
-  assign id_3 = 1;
-  reg id_8 = 1'b0;
-  always @(negedge id_7) begin
-    #1 begin
-      id_8 = id_4;
-      id_8 <= #id_2 1;
-      id_7 = id_0;
-    end
-    id_1 <= 1;
-  end
-  always @(posedge id_0 or posedge 1'b0) id_8 = 1;
-  logic id_9;
-  task id_10;
-    begin
-      #1;
-      id_8 <= id_8;
-    end
-  endtask : id_11
-  logic id_12;
-  assign id_11 = 1;
-  assign id_10 = "" ? 1'd0 : id_10;
-  logic id_13;
-  assign id_10 = 1 == 1;
-  logic id_14;
+  id_5(
+      .id_0(),
+      .id_1(1 && 1),
+      .id_2(id_1),
+      .id_3(1),
+      .id_4(id_2),
+      .id_5(1),
+      .id_6(1),
+      .id_7(id_0),
+      .id_8(id_1)
+  );
+endmodule
+module module_1 (
+    output tri1 id_0,
+    input wor id_1,
+    output supply0 id_2,
+    input tri1 id_3,
+    input wand id_4,
+    input tri0 id_5,
+    input wand id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input supply0 id_9,
+    input wor id_10,
+    input wire id_11
+    , id_19,
+    input tri1 id_12,
+    input tri id_13,
+    output supply1 id_14,
+    output wire id_15,
+    input uwire id_16,
+    output wire id_17
+);
+  wire id_20;
+  wire id_21;
+  assign id_2 = 1;
+  module_0(
+      id_0, id_15, id_7, id_8
+  );
 endmodule

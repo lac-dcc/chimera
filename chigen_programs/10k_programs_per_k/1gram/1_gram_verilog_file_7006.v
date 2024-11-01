@@ -1,65 +1,49 @@
-// Seed: 2909833926
-module module_0 ();
-  type_11(
-      1'h0
-  );
-  logic id_1;
-  type_13 id_4 (
-      .id_0 (""),
-      .id_1 (),
-      .id_2 (id_1),
-      .id_3 (id_0),
-      .id_4 (1),
-      .id_5 (1'b0),
-      .id_6 (id_5),
-      .id_7 (1),
-      .id_8 (1 & id_3),
-      .id_9 (id_5),
-      .id_10(1),
-      .id_11("" == 1),
-      .id_12(1)
-  );
-  always begin
-    id_3 <= 1;
-  end
-  assign id_0['b0] = 1;
-  logic id_6;
-  type_14
-      id_7 (
-          1,
-          1
-      ),
-      id_8;
-  logic id_9;
-  type_16 id_10 (
-      .id_0(1),
-      .id_1(id_7),
-      .id_2(id_7),
-      .id_3(id_6),
-      .id_4(1)
+// Seed: 2176052873
+module module_0;
+  wire id_2;
+  module_2(
+      id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2
   );
 endmodule
 module module_1 (
+    id_1
+);
+  inout wire id_1;
+  always id_1 = id_1;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  output id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  always #1 @(posedge 1) @(id_3) id_1 <= id_1;
-  logic id_4;
-  always id_4 = 1;
-  assign id_4 = 1;
-  assign id_4 = 1;
-  logic id_5 = id_2;
-  reg id_6 = 1'b0, id_7, id_8;
-  reg id_9;
-  always id_6 <= id_9;
-  assign id_4 = id_2;
-  always id_6 <= 1;
-  assign id_4 = 1;
-  logic id_10;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_9, id_10;
+endmodule
+module module_3 (
+    input  wire  id_0,
+    output uwire id_1,
+    output wand  id_2,
+    output tri0  id_3,
+    output tri   id_4
+);
+  wire  id_6;
+  uwire id_7 = 1;
+  module_2(
+      id_7, id_6, id_7, id_6, id_6, id_6, id_6, id_6
+  );
+  always disable id_8;
+  wire id_9, id_10;
 endmodule

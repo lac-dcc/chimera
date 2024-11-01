@@ -1,18 +1,42 @@
-// Seed: 2718527274
-`define pp_10 0
-`define pp_11 0
-module module_0 (
-    output id_0,
-    output wand id_1,
-    output logic id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    output id_8,
-    output logic id_9
-);
-  assign id_1[1] = 1;
+// Seed: 3451451665
+module module_0 ();
+  wire id_1;
+  assign id_1 = id_1;
 endmodule
-`default_nettype wire
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  id_4(
+      1'b0, 1
+  ); module_0();
+  assign id_4 = id_1;
+  wire id_5;
+endmodule
+module module_2 (
+    output tri0 id_0,
+    input  wor  id_1,
+    input  tri1 id_2
+);
+  assign id_0 = id_1;
+  module_0();
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  module_0();
+  initial if (id_4) id_2 <= id_4;
+endmodule

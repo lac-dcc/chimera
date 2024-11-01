@@ -1,7 +1,10 @@
-// Seed: 2155950893
-`timescale 1 ps / 1ps
+// Seed: 1980895816
+module module_0 ();
+  assign id_1 = "";
+endmodule
 module module_0 (
     id_1,
+    module_1,
     id_2,
     id_3,
     id_4,
@@ -24,42 +27,76 @@ module module_0 (
     id_21,
     id_22,
     id_23,
-    id_24
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30,
+    id_31,
+    id_32,
+    id_33,
+    id_34,
+    id_35,
+    id_36,
+    id_37,
+    id_38,
+    id_39,
+    id_40,
+    id_41,
+    id_42,
+    .id_47(id_43),
+    id_44,
+    id_45
 );
-  input id_24;
-  input id_23;
-  input id_22;
-  inout id_21;
-  input id_20;
-  inout id_19;
-  input id_18;
-  input id_17;
-  inout id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  input id_12;
-  inout id_11;
-  inout id_10;
-  output id_9;
-  output id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  logic id_24;
-  type_27 id_25 (
-      .id_0(1 - 1),
-      .id_1(id_6((id_7) + 1'b0, 1'h0)),
-      .id_2(id_3)
-  );
-  type_28 id_26 (
-      .id_0(id_18),
-      .id_1(1),
-      .id_2(id_6),
-      .id_3(id_23 >= 1)
-  );
+  input wire id_46;
+  output wire id_45;
+  output wire id_44;
+  input wire id_43;
+  input wire id_42;
+  inout wire id_41;
+  inout wire id_40;
+  inout wire id_39;
+  inout wire id_38;
+  inout wire id_37;
+  input wire id_36;
+  input wire id_35;
+  input wire id_34;
+  input wire id_33;
+  input wire id_32;
+  input wire id_31;
+  input wire id_30;
+  input wire id_29;
+  inout wire id_28;
+  inout wire id_27;
+  output wire id_26;
+  inout wire id_25;
+  input wire id_24;
+  inout wire id_23;
+  input wire id_22;
+  output wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_44 = "";
+  module_0();
+  assign id_37[1] = 1;
 endmodule

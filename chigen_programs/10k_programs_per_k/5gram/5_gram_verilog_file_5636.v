@@ -1,4 +1,4 @@
-// Seed: 1629796373
+// Seed: 1776511405
 module module_0 (
     id_1,
     id_2,
@@ -7,36 +7,72 @@ module module_0 (
     id_5,
     id_6,
     id_7,
+    module_0,
     id_8,
-    id_9
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17
 );
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  string id_9;
-  logic  id_10;
-  assign id_1 = "";
-  reg   id_11 = id_3;
-  logic id_12;
-  logic id_13;
-  logic id_14;
-  assign id_1#(.id_10(id_10)) = id_9;
-  reg   id_15;
-  logic id_16;
-  always @(*) begin
-    if (1) begin
-      id_16 = !1;
-      id_11 = id_3;
-      if (id_14) id_5 <= id_7;
-      else id_6 <= id_15;
-    end else begin
-      id_11 <= id_11;
-    end
+  output wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_19;
+  initial begin
+    $display((id_11 == 1));
   end
+endmodule
+module module_1 (
+    output uwire id_0,
+    input uwire id_1,
+    input uwire id_2,
+    input wand id_3,
+    input tri id_4,
+    input wand id_5,
+    output tri1 id_6,
+    input wire id_7,
+    output supply0 id_8,
+    input wire id_9
+);
+  wire id_11;
+  module_0(
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11
+  );
 endmodule

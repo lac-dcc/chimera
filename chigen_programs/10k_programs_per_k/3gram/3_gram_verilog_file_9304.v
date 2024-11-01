@@ -1,24 +1,46 @@
-// Seed: 402974188
-`define pp_1 0
-`celldefine
-`define pp_2 0
-`define pp_3 0
-`timescale 1ps / 1 ps `timescale 1ps / 1ps `timescale 1 ps / 1ps
-`define pp_4 0
-`resetall
+// Seed: 292762276
 module module_0 (
-    input id_0
-    , id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  logic   id_2;
-  integer id_3;
-  type_7(
-      1, id_0, 1, 1 - 1, 1
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_4 = 1;
+  wire id_6;
+  wor  id_7 = 1'h0;
+  reg id_8, id_9;
+  module_0(
+      id_5, id_2, id_2, id_1, id_6, id_6, id_7, id_2, id_7
   );
-  logic id_4;
-  logic id_5;
-  type_10(
-      1'h0 - id_4, (1), id_3
-  );
-  always @(posedge (id_4));
+  initial begin
+    id_3 <= id_8;
+  end
+  wire id_10;
 endmodule

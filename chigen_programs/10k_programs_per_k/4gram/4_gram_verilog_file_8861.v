@@ -1,12 +1,31 @@
-// Seed: 3922161392
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output logic id_2,
-    input supply0 id_3,
-    output id_4,
-    input id_5
+// Seed: 1578951238
+module module_0;
+  always @(*) id_1 = id_1;
+  reg id_2;
+  always_latch @(1) begin
+    if (id_2) id_2 <= id_1 | 1;
+    else id_1 = id_1;
+  end
+  wire id_3;
+endmodule
+module module_1;
+  wire id_2, id_3, id_4;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_4 = id_1;
-  logic id_6 = id_3[1];
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  initial begin
+    wait ("");
+  end
+  module_0();
+endmodule
+module module_3;
+  assign id_1 = 1;
+  module_0();
 endmodule

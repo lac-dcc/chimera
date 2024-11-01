@@ -1,2 +1,87 @@
-// Seed: 3378860189
-`define pp_0 0
+// Seed: 1590870508
+module module_0 (
+    input wor id_0,
+    input wand id_1,
+    output supply1 id_2,
+    input uwire id_3,
+    output supply0 id_4,
+    output tri id_5,
+    output supply1 id_6,
+    output tri id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    output wor id_10,
+    input wire id_11,
+    input uwire id_12,
+    output supply0 id_13,
+    output wire id_14,
+    input wand id_15,
+    input supply0 id_16,
+    output tri0 id_17,
+    input supply1 id_18,
+    input uwire id_19,
+    input wand id_20
+    , id_35,
+    input tri0 id_21,
+    input tri0 id_22,
+    input supply0 id_23,
+    input wor id_24,
+    input tri0 id_25,
+    input tri id_26,
+    input supply1 id_27,
+    output tri0 id_28,
+    output wor id_29,
+    input tri1 id_30,
+    output supply0 id_31,
+    input tri0 id_32,
+    output wand id_33
+);
+  initial id_10 = id_9;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input wand id_1
+    , id_7,
+    input wand id_2,
+    input wire id_3,
+    output logic id_4,
+    output wand id_5
+);
+  final id_4 <= 1;
+  module_0(
+      id_3,
+      id_1,
+      id_5,
+      id_2,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_2,
+      id_2,
+      id_5,
+      id_2,
+      id_2,
+      id_5,
+      id_5,
+      id_1,
+      id_1,
+      id_5,
+      id_2,
+      id_3,
+      id_1,
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_0,
+      id_0,
+      id_5,
+      id_5,
+      id_2,
+      id_5,
+      id_0,
+      id_5
+  );
+endmodule

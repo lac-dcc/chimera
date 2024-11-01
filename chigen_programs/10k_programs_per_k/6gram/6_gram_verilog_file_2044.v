@@ -1,22 +1,39 @@
-// Seed: 2901300678
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
+// Seed: 1727114912
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    output logic id_3,
-    output logic id_4
+    input  wor   id_0,
+    input  tri0  id_1,
+    input  uwire id_2,
+    output tri0  id_3
 );
-  logic id_5 = 1;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  assign id_5 = 1;
-  always @(posedge id_6 or 1) begin
-    id_4 = 1'h0;
+  wire id_5;
+  module_2(
+      id_5, id_5, id_5
+  );
+  wire id_6;
+endmodule
+module module_1 (
+    input  supply0 id_0,
+    output supply0 id_1
+);
+  supply1 id_3;
+  module_0(
+      id_0, id_0, id_0, id_1
+  ); id_5(
+      id_0, {id_4, id_3} === id_0, 1
+  );
+  assign id_1 = 1;
+  wire id_6;
+  supply0 id_7 = 1;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always @(posedge 1 or posedge 1) begin
+    assert (id_3);
   end
-  logic id_9;
-  logic id_10;
 endmodule

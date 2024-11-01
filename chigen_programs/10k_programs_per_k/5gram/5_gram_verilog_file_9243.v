@@ -1,49 +1,41 @@
-// Seed: 1634900513
+// Seed: 2905176700
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_2
 );
-  input id_22;
-  output id_21;
-  input id_20;
-  inout id_19;
-  output id_18;
-  input id_17;
-  inout id_16;
-  input id_15;
-  input id_14;
-  output id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  initial id_1 = id_16;
+  output wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 #(
+    parameter id_16 = 32'd24,
+    parameter id_17 = 32'd95
+) (
+    output tri0 id_0,
+    output tri0 id_1,
+    input supply1 id_2,
+    input wire id_3,
+    input wor id_4,
+    input wor id_5,
+    output supply1 id_6,
+    input wand id_7,
+    input wor id_8,
+    input wor id_9,
+    input uwire id_10
+);
+  if (1 < 1)
+    if (id_7) begin
+      wire id_12;
+    end else begin
+      wire id_13;
+    end
+  wire id_14;
+  wire id_15;
+  defparam id_16.id_17 = id_16; module_0(
+      id_15, id_14
+  ); id_18(
+      .id_0(1), .id_1(id_17)
+  );
+  wire id_19;
+  wire id_20;
+  wire id_21 = 1'h0, id_22;
 endmodule

@@ -1,42 +1,33 @@
-// Seed: 1048947454
-module module_0 (
-    input logic id_0,
-    output logic id_1,
-    output id_2
-    , id_30,
-    input id_3,
-    output id_4,
-    input id_5,
-    output logic id_6,
-    output id_7,
-    input id_8,
-    output id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    output logic id_13,
-    input id_14,
-    input id_15,
-    input logic id_16,
-    input logic id_17,
-    output logic id_18,
-    input id_19,
-    output id_20,
-    input id_21,
-    input id_22,
-    input id_23,
-    input id_24,
-    input id_25,
-    output id_26,
-    input id_27,
-    output id_28,
-    output logic id_29
+// Seed: 3736629466
+module module_0;
+  assign id_1 = 1'h0;
+  wire id_2;
+  wire id_3, id_4;
+  wire id_5, id_6;
+  wire id_7;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic id_31 = id_3;
-  assign id_4 = id_16 ? 1 : id_15;
-  logic id_32;
-  assign id_6 = id_14;
-  type_43(
-      id_25, id_31, id_23
-  );
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_5[1] = 1'b0 + 1;
+  module_0();
+  always @(posedge id_1 <= "" or posedge 1) begin
+    $display(1, 1);
+    id_3 <= 1;
+  end
 endmodule

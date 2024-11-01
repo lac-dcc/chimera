@@ -1,25 +1,29 @@
-// Seed: 1212945011
-module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    input id_4#(
-        .id_15(1'b0),
-        .id_16(1 - 1)
-    ),
-    output logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    output id_13,
-    input id_14
-);
-  logic id_17;
-  logic id_18;
+// Seed: 2581451433
+module module_0;
+  assign id_1 = id_1;
 endmodule
-`define pp_15 0
+module module_1 ();
+  assign id_1 = 1;
+  assign id_1 = id_1;
+  genvar id_2;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = id_4;
+  assign id_3 = 1'd0;
+  assign id_3 = id_4;
+  initial begin
+    id_4 = id_4;
+  end
+  always
+    if (1) id_2 <= 1;
+    else id_1 = 1 & id_4 << id_4;
+  module_0();
+endmodule

@@ -1,23 +1,42 @@
-// Seed: 481171469
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`timescale 1 ps / 1ps
-`define pp_9 0
-`timescale 1ps / 1 ps
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`timescale 1ps / 1ps
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5
-);
-  type_8(
-      id_4, id_2, 1 == 1'h0 > id_2
+// Seed: 2290468332
+module module_0 ();
+  wire id_2;
+  module_2(); id_4(
+      1'b0, 1
   );
+endmodule
+module module_1 (
+    input wor id_0,
+    input wor id_1
+);
+  uwire id_3 = id_1;
+  module_0();
+  assign id_3 = 1;
+endmodule
+module module_2;
+  assign id_1 = id_1;
+  assign id_1 = id_1;
+  id_2 :
+  assert property (@(posedge id_2) id_2)
+  else $display(id_2, id_2);
+endmodule
+module module_3 (
+    input uwire id_0,
+    output tri0 id_1,
+    output supply1 id_2,
+    input wire id_3,
+    input wire id_4,
+    input supply1 id_5,
+    input wire id_6,
+    output tri1 id_7,
+    input wor id_8,
+    input wor id_9,
+    input tri0 id_10,
+    input tri1 id_11,
+    input tri id_12,
+    input wor id_13
+);
+  module_2();
+  tri1 id_15;
+  assign id_1 = id_15 - 1'b0;
 endmodule

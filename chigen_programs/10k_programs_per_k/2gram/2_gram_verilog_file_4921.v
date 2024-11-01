@@ -1,26 +1,28 @@
-// Seed: 1144318795
-module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output logic id_4
-    , id_18,
-    output id_5
-    , id_19,
-    input logic id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    output logic id_12,
-    input id_13,
-    output id_14,
-    input id_15,
-    output id_16,
-    input logic id_17
-);
-  logic id_20;
-  logic id_21;
+// Seed: 3331726361
+module module_0;
+  assign id_1 = 1'd0;
+  always id_1 <= id_1;
+  id_3(
+      .id_0(1), .id_1(1), .id_2(1), .id_3({1, id_1}), .id_4(id_1), .id_5(1), .id_6(id_2)
+  );
+endmodule
+module module_1 ();
+  always_comb begin : id_1
+    wait (id_1 - 1);
+    id_1 = {1'd0{1}};
+    id_1 <= 1;
+    if (1'b0)
+      if (1 + 1) begin
+        integer id_3;
+      end
+    if (id_1)
+      @(posedge 1 or negedge id_1++
+      )
+      begin
+        id_1 <= id_1;
+      end
+    $display(1, id_1, id_1);
+    id_1 <= id_1;
+  end
+  module_0();
 endmodule

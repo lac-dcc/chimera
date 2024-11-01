@@ -1,37 +1,40 @@
-// Seed: 3572464908
-`timescale 1ps / 1ps
+// Seed: 1067381812
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    output logic id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    input id_16,
-    output id_17
+    id_1,
+    id_2
 );
-  logic id_18;
-  logic id_19;
-  logic id_20;
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
 endmodule
-`timescale 1ps / 1ps
 module module_1 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    output id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  always @(negedge id_5) begin
-    id_17 = 1;
-  end
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  initial $display(1, 1, id_6 / id_3, id_12 == id_12, id_4, (1) - id_7);
+  module_0(
+      id_11, id_4
+  );
 endmodule

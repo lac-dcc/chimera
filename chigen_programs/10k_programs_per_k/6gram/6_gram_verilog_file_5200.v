@@ -1,5 +1,8 @@
-// Seed: 3511155778
-module module_0 (
+// Seed: 1584816855
+module module_0 ();
+  assign id_1 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -10,13 +13,20 @@ module module_0 (
     id_8,
     id_9
 );
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
+  input wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(posedge id_9 | 1) begin
+    id_2 <= id_9;
+  end
+  always @(1 >= id_3 or negedge ~id_1) begin
+    id_4 <= id_6;
+  end
+  module_0();
 endmodule

@@ -1,34 +1,42 @@
-// Seed: 1985641874
+// Seed: 2554308677
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    output logic id_14,
-    input id_15,
-    output id_16,
-    input id_17,
-    output logic id_18
+    output uwire id_0,
+    output wand  id_1
 );
-  logic id_19;
-  logic id_20, id_21, id_22, id_23;
-  type_34(
-      {1, 1 !== id_19, (1), 1}, 1, 1
+  assign (strong1, strong0) id_0 = id_3;
+endmodule
+module module_1 (
+    inout supply1 id_0,
+    input wor id_1,
+    output supply1 id_2,
+    input tri id_3,
+    input supply1 id_4,
+    output uwire id_5,
+    input wire id_6,
+    input wand id_7,
+    input wor id_8,
+    output uwire id_9,
+    input wor id_10,
+    output tri1 id_11,
+    input supply1 id_12,
+    output tri0 id_13,
+    input tri id_14,
+    output tri1 id_15,
+    output wor id_16,
+    input wand id_17,
+    output tri id_18,
+    input tri0 id_19,
+    output supply0 id_20,
+    output tri id_21,
+    input uwire id_22,
+    output tri0 id_23,
+    output uwire id_24,
+    output tri1 id_25,
+    input wand id_26,
+    output wire id_27
+);
+  assign id_0 = 1;
+  module_0(
+      id_0, id_25
   );
-  logic id_24;
-  logic id_25;
-  logic id_26;
-  always @(posedge id_24 or posedge id_1[1 : 1'b0]) begin
-    id_26 = id_20;
-  end
 endmodule

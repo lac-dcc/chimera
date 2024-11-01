@@ -1,2 +1,43 @@
-// Seed: 4100682898
-`define pp_0 0
+// Seed: 3764250619
+module module_0 (
+    input tri0 id_0,
+    input uwire id_1,
+    output wire id_2,
+    input supply1 id_3,
+    output wor id_4,
+    output wor id_5,
+    input tri0 id_6
+);
+endmodule
+module module_1 (
+    output wor  id_0,
+    input  tri1 id_1,
+    input  tri  id_2,
+    input  wand id_3
+);
+  assign id_0 = id_2;
+  assign id_0 = id_2;
+  assign id_0 = 1;
+  module_0(
+      id_2, id_2, id_0, id_2, id_0, id_0, id_2
+  );
+endmodule
+module module_2 (
+    input wire id_0,
+    input tri1 id_1
+);
+endmodule
+module module_3 (
+    output logic id_0,
+    input  logic id_1,
+    input  tri1  id_2,
+    input  tri   id_3
+);
+  always begin
+    id_0 <= id_1;
+    id_0 <= 1;
+  end
+  module_2(
+      id_2, id_2
+  );
+endmodule

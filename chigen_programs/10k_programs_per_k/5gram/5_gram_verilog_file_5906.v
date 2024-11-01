@@ -1,28 +1,31 @@
-// Seed: 1863332426
-module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    input id_3
-    , id_21,
-    output logic id_4,
-    output id_5,
-    inout id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    output logic id_16
-    , id_22,
-    input id_17,
-    input logic id_18,
-    input logic id_19,
-    input id_20
+// Seed: 245429893
+module module_0 ();
+  assign id_1 = "";
+  module_4();
+endmodule
+module module_1 (
+    output wand id_0,
+    input wor id_1,
+    input wor id_2,
+    output supply1 id_3,
+    output wor id_4
 );
-  assign id_7 = 1'h0;
+  wire id_6;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  final $display();
+  module_0();
+endmodule
+module module_3;
+  wire id_1;
+  module_0();
+endmodule
+module module_4;
+  assign id_1 = id_1 < id_1 | id_1 / (id_1);
 endmodule

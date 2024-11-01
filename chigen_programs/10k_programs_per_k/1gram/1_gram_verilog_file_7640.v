@@ -1,25 +1,44 @@
-// Seed: 2584354969
+// Seed: 3204922125
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    inout logic id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    output id_12,
-    input id_13,
-    output logic id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    input id_18
+    id_1
 );
-  always if (id_13) id_0 = 1;
+  inout wire id_1;
 endmodule
-`define pp_19 0
+module module_1 (
+    input wand id_0,
+    input tri  id_1,
+    input wand id_2
+);
+  assign id_4 = id_4;
+  module_0(
+      id_4
+  );
+endmodule
+module module_2 (
+    input tri id_0,
+    output tri0 id_1,
+    input supply1 id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    output wand id_5,
+    output tri1 id_6,
+    input wor id_7,
+    output tri0 id_8,
+    output logic id_9,
+    output wand id_10,
+    output wire id_11
+    , id_18,
+    input supply1 id_12,
+    input wand id_13,
+    input uwire id_14,
+    input tri1 id_15,
+    output tri1 id_16
+);
+  initial id_9 <= id_7 == 1;
+  module_0(
+      id_18
+  );
+  always id_10 = 1'd0 * id_15;
+  always_comb id_9 <= 1;
+  wire id_19;
+endmodule

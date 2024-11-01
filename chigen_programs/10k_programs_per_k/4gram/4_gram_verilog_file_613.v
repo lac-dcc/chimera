@@ -1,19 +1,39 @@
-// Seed: 2046875438
-`timescale 1 ps / 1ps
+// Seed: 3497348815
 module module_0 (
     id_1,
-    id_2,
-    id_3
+    id_2
 );
-  inout id_3;
-  input id_2;
-  inout id_1;
-  defparam id_3.id_4 = id_3 !== id_3;
-  logic id_5;
-  logic id_6;
-  type_9(
-      id_2[1'd0], id_3, 1, 1
-  ); type_10(
-      id_4, 1
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_10 = 1;
+  module_0(
+      id_9, id_7
   );
+  wire id_12 = 1'h0;
 endmodule

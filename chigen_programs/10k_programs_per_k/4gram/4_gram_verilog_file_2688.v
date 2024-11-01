@@ -1,26 +1,24 @@
-// Seed: 830087096
-`timescale 1ps / 1ps
+// Seed: 1678635323
+module module_0;
+  id_1(
+      .id_0(1), .id_1(1), .id_2(id_2), .id_3(id_2), .id_4(1'b0)
+  );
+  wire id_4, id_5;
+  always @(posedge 1 or posedge 1) deassign id_4;
+endmodule
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    input tri0 id_0,
+    input supply1 id_1,
+    output tri module_1,
+    input tri1 id_3,
+    input tri0 id_4,
+    input uwire id_5
 );
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  output id_1;
-  logic id_8;
-  always @(1'b0 or id_2) begin
-    id_5[1] <= 1;
-  end
-  logic id_9 = 1'b0;
+  assign id_2 = 1;
+  always @("");
+  wire id_7, id_8;
+  assign id_7 = id_7;
+  wire id_9;
+  wire id_10;
+  module_0();
 endmodule

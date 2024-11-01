@@ -1,39 +1,42 @@
-// Seed: 3894013877
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`default_nettype id_6
-`define pp_13 0
-`timescale 1 ps / 1 ps
+// Seed: 2023400424
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    output wand  id_0,
+    input  wand  id_1,
+    input  uwire id_2,
+    output tri   id_3,
+    input  tri0  id_4,
+    output wire  id_5,
+    input  wor   id_6,
+    output wor   id_7
 );
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  always @(posedge id_6)
-    if (1'h0) id_6 <= id_10 && id_7;
-    else begin
-      id_10 <= id_2#(
-          .id_8(id_3),
-          .id_6((1))
-      );
-    end
-  assign id_3 = id_8;
+endmodule
+module module_1 (
+    output uwire id_0,
+    output tri   id_1,
+    input  tri1  id_2,
+    input  wand  id_3
+);
+  wire id_5;
+  module_0(
+      id_0, id_3, id_2, id_0, id_3, id_1, id_2, id_0
+  );
+endmodule
+module module_2 (
+    output wor   id_0,
+    input  uwire id_1,
+    output tri0  id_2,
+    input  wor   id_3,
+    output wand  id_4,
+    output wand  id_5
+);
+  reg   id_7;
+  uwire id_8;
+  wor   id_9;
+  initial begin
+    assert (id_8 + 1);
+    id_7 <= (1 == id_9);
+  end
+  module_0(
+      id_0, id_1, id_1, id_0, id_3, id_5, id_3, id_0
+  );
 endmodule

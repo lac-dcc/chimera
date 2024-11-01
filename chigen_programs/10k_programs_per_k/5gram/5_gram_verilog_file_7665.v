@@ -1,5 +1,4 @@
-// Seed: 2500507244
-`timescale 1ps / 1 ps
+// Seed: 634497937
 module module_0 (
     id_1,
     id_2,
@@ -7,20 +6,41 @@ module module_0 (
     id_4,
     id_5,
     id_6,
-    id_7
+    id_7,
+    id_8
 );
-  inout id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  always @(1 / id_6 or posedge id_1 or(id_6 ? id_1 : 1)) id_7 <= id_3;
-  always @(id_1)
-    if (1) begin
-      id_7 <= id_1;
-    end else begin
-      id_1 <= 1;
-    end
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  initial begin
+    $display;
+    assume #1  (1'h0) $display(1);
+  end
+  wire id_9;
+  wire id_10;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_7, id_8, id_9, id_10;
+  module_0(
+      id_2, id_6, id_5, id_9, id_5, id_6, id_7, id_10
+  );
+  wire id_11;
 endmodule

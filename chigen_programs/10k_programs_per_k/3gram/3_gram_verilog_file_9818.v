@@ -1,43 +1,37 @@
-// Seed: 904405500
-`timescale 1ps / 1ps
-module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    input id_3
-    , id_17,
-    inout id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input id_8
-    , id_18,
-    output id_9
-    , id_19,
-    input id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    input id_14,
-    output id_15,
-    input id_16
+// Seed: 1946036307
+module module_0;
+  assign id_1[1] = 1'b0;
+  assign id_1 = id_1[1'h0];
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri  id_1
+    , id_3
 );
-  logic id_20 = id_8;
-  assign id_15#(
-      .id_19(id_1),
-      .id_3 (1'b0),
-      .id_16(1),
-      .id_12(1),
-      .id_16((1'b0)),
-      .id_16(id_17[1'b0 : ~1]),
-      .id_2 (id_20),
-      .id_3 (id_3),
-      .id_13(id_16)
-  ) = id_12;
-  logic id_21 = 1;
-  logic id_22;
-  type_30(
-      'b0, 1
-  );
-  logic id_23, id_24;
+  wire id_4;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  if (1) begin : id_8
+    always @(posedge id_3 - 1 or negedge id_2) begin
+      $display(1'b0, 1);
+    end
+  end
+  nor (id_1, id_2, id_3, id_5, id_6, id_7);
+  module_0();
 endmodule

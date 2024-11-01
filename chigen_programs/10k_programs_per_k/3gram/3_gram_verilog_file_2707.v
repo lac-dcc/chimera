@@ -1,5 +1,4 @@
-// Seed: 3527514091
-`timescale 1ps / 1 ps
+// Seed: 835733313
 module module_0 (
     id_1,
     id_2,
@@ -28,56 +27,85 @@ module module_0 (
     id_25,
     id_26,
     id_27,
-    id_28
+    id_28,
+    id_29,
+    id_30
 );
-  inout id_28;
-  input id_27;
-  output id_26;
-  inout id_25;
-  input id_24;
-  input id_23;
-  input id_22;
-  output id_21;
-  inout id_20;
-  input id_19;
-  output id_18;
-  output id_17;
-  inout id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  inout id_8;
-  input id_7;
-  output id_6;
-  input id_5;
-  inout id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  assign id_18 = 1;
-  assign id_14 = id_15;
-  assign id_13 = id_16;
-  initial begin
-    id_8 = 1 == 1;
-  end
-  logic id_28;
-  assign id_8  = id_10;
-  assign id_13 = 1'b0;
-  reg id_29, id_30;
-  always @(id_19)
-    if (id_12)
-      if (1) id_20 <= (id_5) == id_23;
-      else begin
-        id_18 <= 1'b0;
-        if (id_25) id_2 <= 1;
-        SystemTFIdentifier(1);
-        id_29 <= id_15;
-      end
-  assign id_21 = id_23;
-  logic id_31;
-  logic id_32;
+  input wire id_30;
+  output wire id_29;
+  input wire id_28;
+  output wire id_27;
+  inout wire id_26;
+  inout wire id_25;
+  output wire id_24;
+  input wire id_23;
+  inout wire id_22;
+  inout wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_31;
+endmodule
+module module_1 (
+    output wand id_0,
+    input tri0 id_1,
+    output wand id_2,
+    output tri1 id_3,
+    input wor id_4,
+    input supply0 id_5,
+    input supply0 id_6,
+    output supply0 id_7,
+    input tri1 id_8
+);
+  wire id_10;
+  module_0(
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10
+  );
+  wire id_11;
 endmodule

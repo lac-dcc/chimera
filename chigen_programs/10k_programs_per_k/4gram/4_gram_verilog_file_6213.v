@@ -1,40 +1,27 @@
-// Seed: 1915613781
-`define pp_25 0
+// Seed: 1012028390
+module module_0;
+  assign id_1[1] = 1;
+endmodule
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input id_3
-    , id_25,
-    input logic id_4,
-    output id_5,
-    output logic id_6,
-    input id_7,
-    input tri1 id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    output logic id_13,
-    input logic id_14,
-    output id_15
-    , id_26,
-    output sample,
-    input logic id_17,
-    output logic id_18,
-    output id_19,
-    input logic id_20,
-    output id_21,
-    output id_22,
-    output logic id_23,
-    output id_24
+    output supply0 id_0,
+    input wand id_1,
+    output wand id_2,
+    output tri1 id_3,
+    input wire id_4,
+    input wor id_5,
+    input wire module_1,
+    output tri0 id_7
 );
-  logic   id_27;
-  integer id_28;
-  assign id_11 = 1;
-  type_42 id_29 (
-      .id_0(1),
-      .id_1(id_8[1])
-  );
-  assign id_16 = 1;
+  wire id_9;
+  module_0();
+  assign id_0 = 1;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    input  wand id_1
+);
+  id_3 :
+  assert property (@(posedge 1'b0) 1)
+  else $display(id_3, id_3);
+  module_0();
 endmodule

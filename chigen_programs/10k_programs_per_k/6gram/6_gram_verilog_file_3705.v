@@ -1,33 +1,43 @@
-// Seed: 2475970811
+// Seed: 4012217678
 module module_0 (
-    output reg id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    output logic id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    output id_9
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19, id_20;
-  logic id_21;
-  type_32 id_22 (
-      .id_0(1'b0 - 1),
-      .id_1(1'b0),
-      .id_2(id_3 * 1),
-      .id_3(1 + id_18),
-      .id_4(1),
-      .id_5((id_9))
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wand  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  =  1  ?  id_11  :  1  ;
+  logic [7:0] id_19;
+  wire id_20;
+  assign id_11 = 1'b0;
+  wire id_21, id_22;
+  tri0 id_23 = 1'h0 ^ 1;
+  wire id_24;
+  wire id_25;
+  assign id_17 = id_12;
+  string id_26;
+  pulldown (1, 1, 1'b0);
+  wire id_27;
+  id_28(
+      1, id_19[1'b0], 1
   );
-  logic id_23;
-  logic id_24;
-  logic id_25;
-  always #0 begin
-    if ({id_16 - id_18 & 1'b0{""}}) begin
-      id_0 <= 1;
-    end else id_24 = id_15;
-  end
-  logic id_26;
+  assign id_26 = "";
+  generate
+    for (genvar id_29 = id_3; 1; id_18 = id_29) begin : id_30
+      assign id_12 = 1;
+    end
+  endgenerate
+endmodule
+module module_1 (
+    input wand  id_0,
+    input uwire id_1
+);
+  integer id_3;
+  wor id_4 = 1'b0, id_5;
+  module_0(
+      id_4, id_4, id_5, id_4
+  );
 endmodule

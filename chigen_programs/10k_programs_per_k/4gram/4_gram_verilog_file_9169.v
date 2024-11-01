@@ -1,25 +1,47 @@
-// Seed: 3558164386
-`define pp_17 0
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    output id_5,
-    output logic id_6,
-    input logic id_7,
-    output id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input logic id_12
-    , id_17,
-    output logic id_13,
-    input id_14,
-    input id_15,
-    output id_16
+// Seed: 4266808412
+module module_0 ();
+  reg id_1;
+  reg id_2;
+  assign id_1 = 1;
+  always @(id_2 or posedge ~id_1) begin
+    id_1 <= id_2;
+    $display(1, 1, 1, 1 == 1, 1);
+  end
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    output wand id_2,
+    input wire id_3,
+    output wor id_4,
+    input supply0 id_5,
+    input supply1 id_6,
+    input wand id_7,
+    input wor id_8,
+    input tri id_9,
+    output wor id_10,
+    input uwire id_11,
+    input uwire id_12,
+    input uwire id_13,
+    output supply0 id_14,
+    output tri id_15,
+    output logic id_16,
+    input tri id_17,
+    input supply1 id_18,
+    input supply0 id_19,
+    output supply1 id_20,
+    output tri id_21,
+    output wor id_22,
+    output tri1 id_23,
+    input tri id_24,
+    output wand id_25,
+    input supply1 id_26,
+    input wand id_27,
+    output wire id_28
 );
-  assign id_6 = 1;
-  logic id_18;
+  always @(posedge 1) begin
+    if (1 & id_3) disable id_30;
+    else id_16 <= 1;
+  end
+  module_0();
 endmodule

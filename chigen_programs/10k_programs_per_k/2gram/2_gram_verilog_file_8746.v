@@ -1,30 +1,38 @@
-// Seed: 638188132
+// Seed: 1972458259
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_1
 );
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_6  = 1;
-  assign id_10 = id_8;
+  output wire id_1;
+  wire id_2;
+  wire id_3;
+  assign id_2 = id_2;
+endmodule
+module module_1;
+  wire id_1;
+  wire id_2;
+  wire id_3;
+  module_0(
+      id_3
+  );
+endmodule
+module module_2 (
+    input uwire id_0,
+    output supply1 id_1,
+    input supply1 id_2,
+    output tri id_3,
+    input tri1 id_4,
+    output supply1 id_5,
+    input supply1 id_6,
+    output supply1 id_7,
+    input supply1 id_8,
+    output wor id_9,
+    input supply1 id_10,
+    input tri0 id_11,
+    input tri1 id_12
+);
+  assign id_9 = 1'b0;
+  wire id_14;
+  module_0(
+      id_14
+  );
 endmodule

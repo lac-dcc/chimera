@@ -1,38 +1,43 @@
-// Seed: 1136831508
-`define pp_18 0
-`define pp_19 0
-`timescale 1ps / 1 ps
-`define pp_20 0
-`define pp_21 0
-`define pp_22 0
-`define pp_23 0
-`timescale 1 ps / 1 ps `timescale 1ps / 1 ps
+// Seed: 3050341314
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4
-    , id_18,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10,
-    inout id_11
-    , id_19,
-    output id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    input logic id_16,
-    output logic id_17
+    id_1,
+    id_2,
+    id_3
 );
-  type_28(
-      1, 1'h0, 1, 1
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  module_0(
+      id_5, id_6, id_7
   );
-  always @(posedge 1'b0 or posedge id_5 + id_3) id_15 <= id_0;
-  assign id_1 = id_18;
-  logic id_20;
+  wire id_8;
+  for (id_9 = 1; 1 % 1; id_9 = id_5) begin
+    wire id_10;
+    wire id_11;
+  end
+  wire id_12;
+  wire id_13;
+  id_14(
+      1'b0, 1
+  ); id_15(
+      .id_0(1'h0), .id_1(id_4[1]), .id_2(id_7)
+  );
 endmodule

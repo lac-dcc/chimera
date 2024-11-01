@@ -1,28 +1,26 @@
-// Seed: 3215821047
+// Seed: 3551035440
 module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    output logic id_6,
-    output id_7,
-    input logic id_8
-    , id_14,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input logic id_12,
-    input logic id_13
+    output wand  id_0,
+    input  uwire id_1,
+    input  wire  id_2,
+    output wor   id_3,
+    output uwire id_4,
+    output tri   id_5
 );
-  logic id_15;
-  logic id_16;
-  assign id_6 = &id_10;
-  type_27(
-      id_5, id_14, 1
-  ); type_28(
-      id_14, 1 == id_1
-  );
-  logic id_17;
+  wand id_7 = 1'h0;
+endmodule
+module module_1 #(
+    parameter id_5 = 32'd35,
+    parameter id_6 = 32'd77
+) (
+    input tri  id_0,
+    input wand id_1
+);
+  assign id_3 = id_3;
+  id_4 :
+  assert property (@(negedge 1) id_3)
+  else $display(id_3, id_1);
+  module_0(
+      id_3, id_3, id_4, id_3, id_3, id_4
+  ); defparam id_5.id_6 = 1'b0;
 endmodule

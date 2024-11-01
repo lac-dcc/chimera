@@ -1,49 +1,32 @@
-// Seed: 2436691866
-`define pp_16 0
-parameter id_4 = 1;
-`define pp_17 0
-`timescale 1ps / 1 ps `timescale 1ps / 1ps `timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16
-);
-  output id_16;
-  output id_15;
-  input id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  logic id_16 = (id_2 || 1 || 1 && 1);
-  always @* begin
-    id_15 <= id_1[1];
-  end
-endmodule
-module module_1;
-  type_16(
-      1'h0, id_3, id_3
+// Seed: 3140147820
+module module_0;
+  wire id_1 = id_1;
+  wire id_2 = id_1, id_3;
+  id_4(
+      .id_0(id_1.id_2), .id_1(id_1), .id_2(1), .id_3(1)
   );
+  uwire id_5 = 1;
+endmodule
+module module_1 (
+    input wire id_0,
+    input wire id_1,
+    input wor id_2,
+    output wire id_3,
+    input supply1 id_4,
+    output tri0 id_5
+);
+  assign id_3 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input wor id_1,
+    input uwire id_2,
+    output logic id_3
+);
+  assign id_3 = 1;
+  always @(*) begin
+    id_3 <= 1 | 1'b0 == id_1;
+  end
+  module_0();
 endmodule

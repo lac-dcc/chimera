@@ -1,25 +1,55 @@
-// Seed: 3110657152
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`timescale 1ps / 1 ps `timescale 1 ps / 1ps
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`timescale 1 ps / 1 ps
-module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    output logic id_5,
-    input id_6
+// Seed: 1767668109
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  type_10(
-      1, id_1[""] + id_3
-  );
-  assign id_3 = 1;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  module_0();
+  wire id_4;
+endmodule
+module module_2 (
+    input tri id_0,
+    input wand id_1,
+    output tri1 id_2,
+    output wand id_3,
+    input supply1 id_4,
+    input tri1 id_5,
+    input tri1 id_6,
+    output supply0 id_7,
+    output uwire id_8,
+    output wand id_9,
+    input supply0 id_10,
+    output uwire id_11,
+    input wor id_12
+    , id_28,
+    input uwire id_13,
+    output uwire id_14,
+    input supply0 id_15,
+    input uwire id_16,
+    output wire id_17,
+    input wire id_18,
+    input tri0 id_19,
+    output tri id_20,
+    input tri id_21,
+    output uwire id_22,
+    input wor id_23,
+    input tri id_24,
+    output tri1 id_25
+    , id_29,
+    output supply1 id_26
+);
+  always_ff @(posedge 1)
+    if (1) begin
+      if (id_15 && id_10) id_7 = 1;
+      else begin
+        id_22 = 1 | id_1;
+        id_22 = id_19;
+      end
+    end else id_20 = id_10;
+  module_0();
 endmodule

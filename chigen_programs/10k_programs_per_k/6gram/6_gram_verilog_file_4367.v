@@ -1,42 +1,25 @@
-// Seed: 2369365617
+// Seed: 1890152919
+module module_0;
+  tri0 id_2;
+  wire id_3;
+  assign id_1 = (1) ? 1 : 1;
+  assign id_1 = id_2;
+endmodule
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    input logic id_10,
-    output logic id_11,
-    input logic id_12,
-    output logic id_13,
-    output reg id_14,
-    input logic id_15,
-    input id_16,
-    output logic id_17,
-    input logic id_18,
-    input id_19,
-    output logic id_20,
-    output id_21,
-    output logic id_22
+    output tri id_0,
+    input supply0 id_1,
+    output wand id_2,
+    input wire module_1,
+    output supply0 id_4,
+    input wor id_5,
+    input supply0 id_6,
+    input tri1 id_7,
+    input wire id_8,
+    output logic id_9
 );
-  logic id_23;
-  logic id_24 = id_16;
-  logic id_25;
-  always @(*) begin
-    id_14 <= id_3;
+  always begin : id_11
+    id_9 <= 1'b0;
   end
-  assign id_21 = 1;
-  logic id_26;
-  event id_27 (
-      .id_0(id_26),
-      .id_1(id_16),
-      .id_2(id_11),
-      .id_3(1),
-      .id_4(id_19)
-  );
+  always @(id_1 or posedge id_3) id_4 = 1;
+  module_0();
 endmodule

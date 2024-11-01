@@ -1,20 +1,27 @@
-// Seed: 1352013812
-`define pp_8 0
-`default_nettype id_3 `default_nettype wire
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    output logic id_5,
-    output id_6,
-    input logic id_7
+// Seed: 3712341558
+module module_0;
+endmodule
+module module_1 (
+    output wand id_0,
+    input tri id_1,
+    input uwire id_2,
+    input wire id_3,
+    input uwire id_4,
+    output uwire id_5,
+    output wand id_6,
+    input supply1 id_7,
+    input uwire id_8,
+    input tri1 id_9,
+    output wor id_10,
+    output tri0 id_11,
+    output uwire id_12,
+    output uwire id_13,
+    input wire id_14,
+    output wand id_15,
+    input supply1 id_16
+    , id_18
 );
-  logic id_8;
-  logic id_9;
-  assign id_4 = 1;
-  logic id_10;
-  logic id_11;
-  assign id_2 = 1;
+  initial id_11 = 1 != id_18;
+  wire id_19;
+  module_0();
 endmodule

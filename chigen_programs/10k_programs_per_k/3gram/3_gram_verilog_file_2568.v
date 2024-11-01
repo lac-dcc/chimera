@@ -1,6 +1,7 @@
-// Seed: 1720201036
-`timescale 1 ps / 1ps
-module module_0 (
+// Seed: 2232417671
+module module_0;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,32 +16,25 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_15
 );
-  input id_20;
-  inout id_19;
-  output id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  always @* id_18 = (id_16) * id_14;
+  output wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_16, id_17;
+  assign id_3 = 1;
+  module_0();
+  wire id_18, id_19;
 endmodule

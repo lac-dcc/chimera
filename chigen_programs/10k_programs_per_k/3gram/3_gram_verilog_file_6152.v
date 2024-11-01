@@ -1,47 +1,53 @@
-// Seed: 4120351955
-`define pp_19 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19
+// Seed: 821840214
+module module_0;
+  always_comb @(posedge {id_1,
+    id_1
+  } or id_1)
+  begin
+    id_1 = id_1;
+  end
+endmodule
+module module_1 (
+    input wire id_0,
+    input tri1 id_1,
+    output wand id_2,
+    output supply0 id_3,
+    output tri0 id_4,
+    output supply1 id_5,
+    input uwire id_6,
+    input tri1 id_7
 );
-  inout id_19;
-  output id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  input id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  type_20(
-      1, 1, 1, id_2, 1'b0 == id_16, 1
-  );
-  logic id_19;
+  wire id_9;
+  module_0();
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input supply1 id_1,
+    input tri1 id_2,
+    input uwire id_3,
+    inout supply1 id_4,
+    input tri1 id_5,
+    output tri1 id_6
+    , id_22,
+    input tri id_7,
+    output wor id_8,
+    output tri id_9,
+    output tri1 id_10
+    , id_23,
+    input supply0 id_11,
+    input wand id_12,
+    input uwire id_13,
+    input supply0 id_14,
+    input wire id_15,
+    input tri0 id_16,
+    input tri id_17
+    , id_24,
+    output supply0 id_18
+    , id_25,
+    output tri0 id_19
+    , id_26,
+    output supply1 id_20
+);
+  module_0();
+  tri1 id_27 = id_17;
 endmodule

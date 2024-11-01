@@ -1,27 +1,49 @@
-// Seed: 3111865748
-`timescale 1ps / 1ps
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    input logic id_8
+// Seed: 3940015470
+module module_0 #(
+    parameter id_5 = 32'd36,
+    parameter id_6 = 32'd11
+) (
+    id_1,
+    id_2
 );
-  logic id_9;
-  always @(1 or negedge 1) id_3 = id_1 & sample == 1;
-  assign id_6 = 1'b0 <= "";
-  assign id_6 = {1{1}};
-  assign id_9 = id_0;
-  logic id_10;
-  logic id_11;
-  assign id_2 = id_1;
-  type_20(
-      id_5, 1, 1'b0, id_3.id_10
-  ); type_21(
-      id_3, 1, id_8
+  output wire id_2;
+  output wire id_1;
+  wire id_3, id_4;
+  defparam id_5.id_6 = id_6;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
+);
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_15;
+  wire id_16, id_17;
+  module_0(
+      id_6, id_12
   );
 endmodule

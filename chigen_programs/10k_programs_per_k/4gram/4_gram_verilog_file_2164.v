@@ -1,61 +1,49 @@
-// Seed: 1500325574
-`default_nettype id_6
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+// Seed: 2181887227
+module module_0;
+  always @(1 or 1'b0) begin
+    id_1 <= id_1;
+    id_1 <= 1;
+  end
+endmodule
+module module_1 (
+    output uwire id_0,
+    input tri1 id_1,
+    output wire id_2,
+    input wor id_3
+    , id_18,
+    input tri id_4,
+    input tri0 id_5,
+    input uwire id_6,
+    input wor id_7,
+    input supply1 id_8,
+    input wor id_9,
+    input wor id_10,
+    input supply1 id_11,
+    input tri0 id_12
+    , id_19,
+    input tri id_13,
+    input supply1 id_14,
+    output supply1 id_15,
+    input wor id_16
 );
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_0 id_13 (
-      .id_0(1),
-      .id_1(id_7),
-      .id_2(id_2),
-      .id_3(id_2),
-      .id_4(1),
-      .id_5(id_3),
-      .id_6(1),
-      .id_7(1),
-      .id_8(1 & 1),
-      .id_9((id_5))
-  );
-  type_17 id_14 (
-      .id_0 (id_7 !== id_1),
-      .id_1 (id_4),
-      .id_2 ('d0),
-      .id_3 (1),
-      .id_4 (id_1),
-      .id_5 (id_13),
-      .id_6 (1),
-      .id_7 (1),
-      .id_8 (id_6 != 1),
-      .id_9 (id_9),
-      .id_10(id_11)
-  );
-  type_18(
-      1, 1, 1
-  );
-  logic id_15;
-  logic id_16;
+  assign id_19[1'b0] = 1;
+  xor (
+      id_0,
+      id_1,
+      id_10,
+      id_11,
+      id_12,
+      id_13,
+      id_14,
+      id_16,
+      id_18,
+      id_19,
+      id_3,
+      id_4,
+      id_5,
+      id_6,
+      id_7,
+      id_8,
+      id_9);
+  module_0();
 endmodule

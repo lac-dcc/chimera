@@ -1,36 +1,23 @@
-// Seed: 124654740
-`timescale 1ps / 1 ps
-module module_0 (
-    output id_0,
-    inout logic id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    output id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    input logic id_16,
-    input id_17,
-    input id_18,
-    output logic id_19,
-    input id_20,
-    input id_21,
-    output id_22,
-    output logic id_23,
-    input logic id_24,
-    output logic id_25,
-    input id_26,
-    input id_27
-);
-  logic id_28;
-  logic id_29;
-  assign id_22 = id_16 ? 1 : (1'b0);
+// Seed: 3873588918
+module module_0;
+  id_1(
+      .id_0((1 < 1)),
+      .id_1(1'b0),
+      .id_2(id_2),
+      .id_3(id_3[1]),
+      .id_4(1),
+      .id_5(id_4),
+      .id_6(1'h0),
+      .id_7(0),
+      .id_8(id_5),
+      .id_9(1'b0 == 1'b0),
+      .id_10(1),
+      .id_11(id_6),
+      .id_12(1),
+      .id_13(id_6[(1'b0)]),
+      .id_14(id_2)
+  );
+endmodule
+module module_1 ();
+  module_0();
 endmodule

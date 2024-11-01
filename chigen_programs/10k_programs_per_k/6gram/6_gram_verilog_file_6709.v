@@ -1,17 +1,36 @@
-// Seed: 3164086198
+// Seed: 2521634439
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_6 = id_8[1];
-  logic id_9 = id_9;
-  logic id_10;
-  assign id_0 = id_1;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wand id_1,
+    output wire id_2,
+    output uwire id_3
+    , id_11,
+    input wand id_4,
+    output tri id_5,
+    input uwire id_6,
+    input supply1 id_7,
+    input supply1 id_8,
+    output tri id_9
+);
+  uwire id_12 = id_8;
+  module_0(
+      id_11, id_11, id_11
+  );
+  always
+  fork : id_13
+    id_14(1 < id_13);
+    id_15;
+    $display;
+  join : id_16
+  initial #1 id_16 <= id_4 | 1'b0;
 endmodule

@@ -1,6 +1,10 @@
-// Seed: 2808164158
-`resetall
-program module_0 (
+// Seed: 2224116484
+module module_0;
+  assign id_1 = id_1;
+  always @(id_1 or posedge id_1 | id_1) id_1 <= 1'b0;
+  assign id_1 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,28 +19,27 @@ program module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    id_15
 );
-  inout id_18;
-  output id_17;
-  output id_16;
-  inout id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  defparam id_18.id_19 = 1;
-endprogram
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0();
+  integer id_16 (
+      .id_0(1),
+      .id_1(1 ? 1'h0 : id_9),
+      .id_2(1)
+  );
+endmodule

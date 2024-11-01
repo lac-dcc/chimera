@@ -1,36 +1,33 @@
-// Seed: 3778313921
-`define pp_25 0
+// Seed: 386229047
 module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    output id_3,
-    input id_4,
-    output logic id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8,
-    output logic id_9,
-    input id_10,
-    input id_11,
-    output logic id_12,
-    output id_13,
-    input id_14,
-    output id_15,
-    output id_16,
-    input id_17
-    , id_25,
-    input id_18,
-    input id_19,
-    output id_20,
-    input id_21
-    , id_26,
-    input id_22,
-    input id_23,
-    input id_24
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  always #1;
-  logic id_27;
-  assign id_13 = id_17;
-  logic id_28;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1;
+  tri0 id_8 = 1;
+  wire id_9;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    output supply0 id_1,
+    input wand id_2
+);
+  assign id_1 = 1;
+  assign id_1 = id_2;
+  wire id_4;
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  );
 endmodule

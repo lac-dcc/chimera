@@ -1,8 +1,34 @@
-// Seed: 2906473104
-`define pp_0 0
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`timescale 1ps / 1ps `resetall `timescale 1 ps / 1 ps
-`define pp_5 0
+// Seed: 3527608551
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  initial
+    #(1) begin
+      id_4 <= 1;
+    end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  supply0 id_5 = {1, id_3};
+  buf (id_3, id_1);
+  assign id_4 = !id_5;
+  always @(1) begin
+    id_2 <= 1 == 1;
+  end
+  module_0(
+      id_1, id_3, id_5
+  );
+endmodule

@@ -1,15 +1,24 @@
-// Seed: 3734877792
-module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    input id_8
-);
-  assign id_6[1] = (id_3) & id_5;
-  logic id_9;
+// Seed: 1310128101
+macromodule module_0;
+  assign id_1 = id_1;
+  id_2(
+      .id_0(id_3), .id_1(1), .id_2(), .id_3(1'h0), .id_4(1), .id_5(1), .id_6(id_3), .id_7(1)
+  );
+  always_ff @(*) begin
+    id_3 = id_1;
+  end
+  wire id_5;
+endmodule
+module module_1;
+  initial begin
+    id_1 = id_1;
+  end
+  assign id_2 = id_2;
+  wire id_3;
+  assign id_3 = id_2;
+  always @(posedge 1) begin
+    id_3 = id_2;
+  end
+  module_0();
+  wire id_4;
 endmodule

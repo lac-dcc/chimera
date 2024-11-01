@@ -1,24 +1,24 @@
-// Seed: 610543166
-`timescale 1 ps / 1ps
-module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8
-    , id_12,
-    input logic id_9,
-    input logic id_10,
-    output id_11
-);
-  type_22(
-      id_5, 1, id_3
+// Seed: 3052090571
+module module_0;
+  assign id_1 = id_1;
+  id_2(
+      .id_0(id_1), .id_1(1)
   );
-  assign id_0 = id_2.id_2;
-  logic id_13;
-  assign id_11 = id_10;
+endmodule
+module module_1 (
+    output wire id_0,
+    output wor id_1,
+    input wand id_2,
+    output logic id_3,
+    input tri0 id_4,
+    output wand id_5,
+    input tri0 id_6,
+    input tri0 id_7
+    , id_11,
+    output supply1 id_8,
+    output tri1 id_9
+);
+  string id_12, id_13, id_14, id_15;
+  always @(negedge id_13 or "") id_3 = #1'b0 - id_7;
+  module_0();
 endmodule

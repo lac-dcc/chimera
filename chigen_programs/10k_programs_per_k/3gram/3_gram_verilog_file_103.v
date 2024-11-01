@@ -1,36 +1,35 @@
-// Seed: 3740876876
-`define pp_0 0
-package `pp_0;
-  localparam `pp_0 = `pp_0;
-  localparam [`pp_0[1] : (  `pp_0[(  `pp_0  )  &&  1  &&  (  ~  1 'b0 )])] `pp_0 = `pp_0[`pp_0];
-  parameter `pp_0 = `pp_0;
-  localparam `pp_0 = `pp_0[1 : 1];
-  `pp_0 `pp_0;
-  localparam `pp_0 = 1;
-  localparam `pp_0 = `pp_0[`pp_0 : `pp_0[1 : `pp_0]];
-  localparam `pp_0 = `pp_0;
-  parameter `pp_0 = 1 + `pp_0;
-  localparam `pp_0 = 1;
-  `pp_0 `pp_0;
-  localparam `pp_0 = !1;
-  localparam `pp_0 = `pp_0;
-  localparam `pp_0 = 1;
-  localparam `pp_0 = 1;
-  localparam `pp_0 = `pp_0;
-  typedef reg `pp_0;
-  typedef integer [id_1 : id_1] `pp_0;
-  parameter `pp_0 = `pp_0;
-  localparam `pp_0 = id_1;
-  localparam `pp_0 = 1'd0;
-  localparam [1 'd0 : id_1[1 : id_1] **  1] `pp_0 = id_1;
-  localparam `pp_0 = 1;
-  localparam ["" : 1  >  id_1] `pp_0 = 1'h0;
-  function reg [id_2 : id_2] `pp_0;
-    input signed `pp_0;
-    reg id_1;
-    begin
-      id_1 <= id_2;
-    end
-  endfunction
-  localparam id_2 = 1;
-endpackage
+// Seed: 2428952238
+module module_0 (
+    input supply1 id_0,
+    output supply0 id_1,
+    input wire id_2,
+    output tri id_3,
+    output supply1 id_4,
+    output tri0 id_5,
+    output wor id_6,
+    output tri1 id_7,
+    input tri id_8,
+    output uwire id_9,
+    input wand id_10,
+    output wire id_11,
+    input wor id_12
+);
+endmodule
+module module_1 (
+    output wire id_0
+    , id_11,
+    input wor id_1,
+    input supply0 id_2,
+    output wand id_3,
+    input wand id_4,
+    output tri0 id_5,
+    output wand id_6,
+    input tri1 id_7,
+    output wand id_8,
+    input tri1 id_9
+);
+  final $display;
+  module_0(
+      id_2, id_3, id_1, id_8, id_8, id_6, id_8, id_8, id_9, id_6, id_1, id_8, id_9
+  );
+endmodule

@@ -1,18 +1,37 @@
-// Seed: 200517263
+// Seed: 3396975614
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    output id_3
-    , id_11,
-    input logic id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_12;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  integer id_4;
+  wire id_5;
 endmodule
-`timescale 1 ps / 1ps `timescale 1ps / 1ps `default_nettype id_4
+module module_1 (
+    output wor id_0,
+    input tri id_1,
+    output wire id_2,
+    input tri1 id_3,
+    input supply0 id_4
+);
+  wire id_6;
+  module_0(
+      id_6, id_6, id_6
+  );
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input uwire id_1,
+    input tri1 id_2,
+    input tri0 id_3,
+    input supply1 id_4
+);
+  wor id_6 = id_6 - 1;
+  module_0(
+      id_6, id_6, id_6
+  );
+  assign id_6 = id_6;
+endmodule

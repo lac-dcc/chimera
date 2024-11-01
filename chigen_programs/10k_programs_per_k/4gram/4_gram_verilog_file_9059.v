@@ -1,31 +1,38 @@
-// Seed: 1446409836
-`timescale 1ps / 1ps
+// Seed: 3413541361
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    output logic id_16,
-    input id_17,
-    input id_18,
-    input logic id_19,
-    input logic id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  type_0 id_21 (
-      .id_0(id_0),
-      .id_1(1),
-      .id_2(1)
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  id_7(
+      id_4, id_4, (id_6)
   );
+  wire id_8;
+endmodule
+module module_1 (
+    output logic id_0,
+    output wor   id_1
+    , id_3
+);
+  id_4(
+      .id_0(1), .id_1(""), .id_2(1), .id_3(id_3), .id_4(1)
+  ); module_0(
+      id_3, id_3, id_3, id_3, id_3, id_3
+  );
+  always @(id_4) id_0 <= 1'b0;
+  id_5(
+      .id_0(id_1 & id_3), .id_1(1)
+  );
+  generate
+    wire id_6;
+  endgenerate
 endmodule

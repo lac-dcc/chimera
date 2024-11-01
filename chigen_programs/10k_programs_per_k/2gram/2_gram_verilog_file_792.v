@@ -1,38 +1,35 @@
-// Seed: 421076918
-`define pp_16 0
+// Seed: 4215027341
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11#(.id_12(id_13 - id_14[1 : 1])),
-    id_15,
-    id_16,
-    id_16,
-    id_17,
-    id_18
+    input wand id_0,
+    output supply1 id_1,
+    input wire id_2
 );
-  output id_16;
-  output id_15;
-  inout id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  assign id_13 = id_3;
+  assign id_1 = id_0;
+  genvar id_4;
+  wire id_5;
+  always #1;
+endmodule
+module module_1 (
+    input  wand  id_0,
+    input  wand  id_1,
+    input  uwire id_2,
+    input  logic id_3,
+    output logic id_4
+    , id_6
+);
+  assign id_4 = id_6;
+  tri1 id_7 = id_1;
+  final
+    if (id_2) id_6 <= id_3;
+    else id_4 <= (1);
+  module_0(
+      id_0, id_7, id_7
+  );
+  always
+    if (1'b0) begin
+      $display;
+    end
+  id_8(
+      .id_0(id_0), .id_1(1), .id_2(id_4), .id_3(1), .id_4(1)
+  );
 endmodule

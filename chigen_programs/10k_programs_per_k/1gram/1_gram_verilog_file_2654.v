@@ -1,62 +1,49 @@
-// Seed: 2834045850
-`define pp_37 0
+// Seed: 4113198443
 module module_0 (
-    input id_0
-    , id_1
+    output wor id_0,
+    output supply0 id_1,
+    output supply1 id_2,
+    input uwire id_3,
+    input wor id_4,
+    input tri1 id_5,
+    input wand id_6,
+    input supply0 id_7,
+    input wor id_8
 );
-  always if (id_0[1]);
 endmodule
 module module_1 (
-    input id_0,
-    output logic id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    input id_10
-    , id_37 = 1,
-    output logic id_11,
-    input id_12,
-    input logic id_13,
-    output id_14,
-    input logic id_15,
-    output id_16,
-    input uwire id_17,
-    output reg id_18,
-    output logic id_19,
-    output id_20,
-    output logic id_21,
-    input id_22,
-    input id_23,
-    output logic id_24,
-    output id_25,
-    output id_26,
-    output logic id_27,
-    input id_28,
-    input logic id_29,
-    inout id_30,
-    input logic id_31,
-    output id_32,
-    input logic id_33,
-    input id_34,
-    input id_35,
-    input id_36
+    input tri id_0,
+    input wor id_1,
+    output tri id_2,
+    output tri1 id_3,
+    input supply0 id_4,
+    output supply0 id_5,
+    output logic id_6,
+    output wire void id_7,
+    input tri id_8,
+    output tri1 id_9,
+    input tri1 id_10,
+    output wand id_11,
+    output tri id_12,
+    output wand id_13,
+    output uwire id_14,
+    input wor id_15,
+    output supply0 id_16,
+    input tri0 id_17,
+    input wire id_18,
+    input uwire id_19,
+    input uwire id_20,
+    input uwire id_21
 );
-  initial begin
-    begin
-      #1;
-      if (1) id_18 <= 1;
-      else begin
-        @(posedge id_17[""%1]) id_19 = id_34;
-        #1 begin
-          id_20 <= 1 & id_23;
-        end
-      end
-      id_16 <= "";
-    end
-  end
+  realtime id_23;
+  module_0(
+      id_5, id_11, id_13, id_10, id_4, id_0, id_0, id_19, id_19
+  );
+  always id_6 <= 1;
+  assign {id_8} = 1;
+  realtime id_24 = (id_23);
+  wire id_25, id_26;
+  always id_2 = id_21;
+  wire id_27;
+  wire id_28;
 endmodule

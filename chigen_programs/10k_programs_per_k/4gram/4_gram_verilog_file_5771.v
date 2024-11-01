@@ -1,23 +1,26 @@
-// Seed: 2860337899
-module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    output logic id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    output id_13,
-    output id_14,
-    output id_15
-);
-  logic id_16;
-  logic id_17 = id_10 ? 1 : id_16;
+// Seed: 1192433571
+module module_0;
+  integer id_1;
 endmodule
-`resetall
+module module_1;
+  always @(posedge id_1 or negedge 'b0)
+    if (1 <= 1'b0) id_1 <= #1 1;
+    else force id_1 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input wor id_0,
+    input wor id_1,
+    input uwire id_2,
+    output wor id_3
+    , id_10,
+    input tri1 id_4,
+    output supply1 id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    input supply1 id_8
+);
+  final $display('d0);
+  tri id_11, id_12 = 1 ? 1 : id_2 ? 1 : 1'b0;
+  module_0();
+endmodule

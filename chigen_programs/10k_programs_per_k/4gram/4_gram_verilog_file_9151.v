@@ -1,26 +1,39 @@
-// Seed: 654118858
-`define pp_4 0
-`define pp_5 0
-`timescale 1ps / 1 ps
-`define pp_6 0
-`define pp_7 0
-`timescale 1ps / 1ps
-`define pp_8 0
-`define pp_9 0
-`timescale 1ps / 1ps
+// Seed: 3736719701
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input logic id_3
+    id_1,
+    id_2
 );
-  logic id_4;
-  logic id_5;
-  always @(posedge 1) begin
-    SystemTFIdentifier(1, 1 & 1, "", id_4 & id_5);
-    id_2 <= 1;
+  output wire id_2;
+  input wire id_1;
+  id_3(
+      id_1, id_4
+  );
+endmodule
+module module_1 (
+    output uwire id_0,
+    input  uwire id_1,
+    input  tri   id_2
+);
+  tri0 id_4 = 1;
+  module_0(
+      id_4, id_4
+  );
+  tri id_5 = 1;
+  generate
+    if (id_1 - 1) begin : id_6
+      wire id_7;
+    end
+  endgenerate
+endmodule
+module module_2 ();
+  always @(posedge (id_1 ^ ~id_1) or posedge 0) begin
+    id_1 <= 1;
   end
-  assign id_4 = 1'b0 && id_5 + id_3;
-  logic id_6, id_7;
-  logic id_8;
+  assign id_1 = id_1;
+  wire id_2;
+  reg  id_3 = id_1;
+  module_0(
+      id_2, id_2
+  );
+  wire id_4;
 endmodule

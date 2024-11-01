@@ -1,50 +1,37 @@
-// Seed: 1223276635
+// Seed: 827763756
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8
-    , id_23,
-    input id_9
-    , id_24,
-    output id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    output reg id_14,
-    output reg id_15,
-    output id_16,
-    input logic id_17,
-    input logic id_18,
-    input logic id_19,
-    input logic id_20,
-    output logic id_21,
-    input logic id_22
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  generate
-    always @(posedge 1 or posedge id_5) begin
-      if ((id_23) & 1) begin
-        SystemTFIdentifier(1);
-      end
-    end
-  endgenerate
-  always @(posedge 1 or posedge 1'd0) begin
-    id_15 <= id_0[1'b0!=1];
-    id_10 <= 1;
-    if ((1)) begin
-      id_14 <= 1;
-      if (1) begin
-        id_4 = id_0;
-      end
-      #(1'b0) SystemTFIdentifier(id_1);
-      #1;
-      if (1) id_24 <= 1'h0;
-      else SystemTFIdentifier;
-    end
-  end
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_13;
+endmodule
+module module_1 ();
+  assign id_1 = 1;
+  wire id_2;
+  assign id_1 = id_2++ ? 1'b0 : id_1;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_1, id_2, id_2, id_2, id_2, id_1, id_1
+  );
 endmodule

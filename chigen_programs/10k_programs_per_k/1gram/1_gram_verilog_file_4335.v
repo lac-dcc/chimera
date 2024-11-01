@@ -1,2 +1,61 @@
-// Seed: 2104728249
-`timescale 1 ps / 1 ps
+// Seed: 2716934120
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri id_1
+);
+  wire id_3, id_4;
+  module_0(
+      id_3
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8#(
+        .id_9 (1),
+        .id_10(1),
+        .id_11(1),
+        .id_12(1'd0)
+    ),
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19
+);
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always id_12 <= 1;
+  module_0(
+      id_1
+  );
+  wand id_20 = id_17 || id_5 >> id_20 + 1 - id_3;
+  wire id_21;
+endmodule

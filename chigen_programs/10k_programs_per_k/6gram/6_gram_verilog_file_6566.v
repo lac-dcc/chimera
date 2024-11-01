@@ -1,41 +1,40 @@
-// Seed: 3252621145
-`define pp_16 0
-localparam `pp_16 = 1;
-`define pp_17 0
-`timescale 1ps / 1 ps
+// Seed: 4022311830
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input reg id_11,
-    input id_12,
-    input id_13,
-    output id_14
-    , id_16,
-    output id_15
+    input supply1 id_0,
+    input uwire id_1,
+    input tri1 id_2,
+    input tri1 id_3,
+    output tri1 id_4
 );
-  generate
-    assign id_0 = 1 == id_11;
-    if (1) begin : id_17
-      always @(1) begin
-        #1;
-        if (1) if (id_5) id_2[1] <= id_11;
-      end
-      assign id_6 = id_1 ? 1 : 1'h0;
-    end else begin
-      assign id_9 = id_4;
-      for (id_18 = id_3; 1; id_18 = {1'b0, 1}) begin
-        defparam id_19.id_20 = 1'b0 & 1;
-      end
-      assign id_9 = id_5.id_4;
-    end
-  endgenerate
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input supply1 id_1,
+    input supply1 id_2,
+    input wand id_3,
+    output tri0 id_4,
+    output tri1 id_5,
+    output logic id_6,
+    input wire id_7,
+    output wand id_8,
+    output wire id_9
+);
+  always @(id_1) begin
+    id_6 <= 1;
+  end
+  module_0(
+      id_2, id_2, id_1, id_1, id_5
+  );
+endmodule
+module module_2 (
+    input  wire  id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    output tri0  id_3,
+    output wand  id_4
+);
+  initial id_4 = 1 ? id_2 : 1;
+  module_0(
+      id_0, id_2, id_2, id_0, id_3
+  );
 endmodule

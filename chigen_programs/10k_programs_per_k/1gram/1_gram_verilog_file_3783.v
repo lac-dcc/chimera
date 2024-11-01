@@ -1,21 +1,36 @@
-// Seed: 659904897
-`timescale 1ps / 1 ps
+// Seed: 3535494660
 module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input id_7
+    input tri1 id_0,
+    input wand id_1,
+    output tri0 id_2,
+    output tri1 id_3,
+    output wor id_4
+    , id_12,
+    output supply0 id_5,
+    output supply0 id_6,
+    input wand id_7,
+    input wand id_8,
+    output wire id_9,
+    output wor id_10
 );
-  logic id_8 = {id_2 % 1 && {1{id_2}}, id_8, id_7};
-  type_16(
-      1, 1
-  );
-  logic id_9;
-  logic id_10, id_11 = 1, id_12, id_13;
+  wire id_13, id_14, id_15, id_16, id_17;
+  wire id_18;
+  reg id_19, id_20, id_21;
+  always id_2 = id_8;
+  always_ff id_21 <= 1;
 endmodule
-parameter [1 'h0 -  1 : id_5[id_1]] id_0 = id_7[1 : 1];
-`default_nettype id_0
+module module_1 (
+    output wor id_0,
+    inout tri0 id_1,
+    input wor id_2,
+    output uwire id_3,
+    input tri1 id_4,
+    input wor id_5,
+    output supply0 id_6
+    , id_8
+);
+  wire id_9;
+  module_0(
+      id_4, id_1, id_1, id_0, id_3, id_3, id_6, id_1, id_2, id_0, id_1
+  );
+endmodule

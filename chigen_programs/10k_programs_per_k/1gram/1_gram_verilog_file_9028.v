@@ -1,39 +1,39 @@
-// Seed: 1269274744
+// Seed: 3785079251
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    sample,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16
+    id_2
 );
-  input id_17;
-  input id_16;
-  inout id_15;
-  output id_14;
-  output id_13;
-  input id_12;
-  output id_11;
-  input id_10;
-  output id_9;
-  inout id_8;
-  inout id_7;
-  output id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  assign id_11 = id_17 == 1 >> {id_12};
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
+  assign id_3 = id_2;
+  always assume (1) @(posedge id_3) $display;
+  assign id_3 = 1;
+  assign id_1 = 1'b0;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    output uwire id_3,
+    input wire id_4,
+    output tri0 id_5,
+    output supply0 id_6,
+    output tri1 id_7,
+    output tri1 id_8,
+    output supply0 id_9,
+    output tri0 id_10,
+    input uwire id_11,
+    input wor id_12,
+    input wor id_13,
+    output tri1 id_14,
+    input tri1 id_15
+);
+  assign id_7 = ~1;
+  or (id_5, id_17, id_2, id_1, id_4, id_13, id_12, id_15);
+  wire id_17;
+  assign id_7 = 1;
+  module_0(
+      id_17, id_17
+  );
 endmodule

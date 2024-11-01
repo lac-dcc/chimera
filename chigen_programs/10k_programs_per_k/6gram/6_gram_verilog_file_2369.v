@@ -1,24 +1,39 @@
-// Seed: 1118522819
+// Seed: 1783076754
 module module_0;
-  always @(posedge "") if (1) if (id_0) if (1) id_0 <= 1;
 endmodule
 module module_1 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5
 );
-  output id_3;
-  inout id_2;
-  inout id_1;
-  assign id_2[1] = 1;
-  logic id_3;
-  logic id_4;
-  type_11(
-      1, id_1, id_1 - id_5
-  );
-  generate
-    if (1) begin : id_6
-      logic id_7, id_8;
-    end
-  endgenerate
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  always @* force id_3 = 1;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_9;
+  module_0();
 endmodule

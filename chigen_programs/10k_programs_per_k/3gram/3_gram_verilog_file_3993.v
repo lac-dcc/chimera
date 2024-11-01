@@ -1,18 +1,31 @@
-// Seed: 1121343697
-`timescale 1ps / 1 ps
-module module_0 (
+// Seed: 3978818850
+module module_0;
+  always @(1 or posedge (id_1)) begin
+    disable id_2;
+  end
+  tri0 id_3 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
+  wire id_3;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5
 );
-  inout id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  assign id_4[1'h0] = id_4;
-  tri0  id_4;
-  logic id_5;
-  logic id_6;
-  assign id_6 = id_4[1'b0];
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_3 = $display(1, id_5[1], 1);
+  module_0();
 endmodule

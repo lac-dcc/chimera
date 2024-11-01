@@ -1,6 +1,29 @@
-// Seed: 431725864
-`timescale 1ps / 1 ps `timescale 1 ps / 1ps
+// Seed: 1042477813
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+  wire id_7;
+  module_2(
+      id_7, id_6, id_7, id_3, id_6, id_3, id_2, id_2
+  );
+endmodule
+module module_1;
+  assign id_1 = 1 ? id_1 ^ 1 : $display;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -8,39 +31,23 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_8
 );
-  inout id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  type_0 id_11 (
-      .id_0 (id_8),
-      .id_1 (""),
-      .id_2 (1'h0),
-      .id_3 (id_9),
-      .id_4 (SystemTFIdentifier),
-      .id_5 (1'b0),
-      .id_6 (1),
-      .id_7 ({1{1}} && id_4),
-      .id_8 (1),
-      .id_9 (id_3),
-      .id_10(id_3),
-      .id_11(),
-      .id_12(1),
-      .id_13(1'h0),
-      .id_14(1)
-  );
-  logic id_12;
-  logic id_13;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_9;
+  always @(posedge 1) $display;
+  generate
+    always @(1'b0 or id_8++
+    )
+    begin
+      id_2 = 1;
+    end
+  endgenerate
 endmodule

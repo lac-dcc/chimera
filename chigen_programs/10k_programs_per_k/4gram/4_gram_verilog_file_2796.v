@@ -1,38 +1,67 @@
-// Seed: 4006313098
+// Seed: 1370322740
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    input id_9,
-    input id_10
+    input wor id_0,
+    output supply1 id_1,
+    output tri1 id_2,
+    input tri1 id_3,
+    input tri id_4,
+    input wor id_5,
+    input uwire id_6,
+    output tri1 id_7,
+    input tri1 id_8,
+    input uwire id_9,
+    input tri0 id_10,
+    output tri id_11,
+    input tri id_12,
+    output supply0 id_13,
+    input wor id_14,
+    input tri0 id_15,
+    input supply1 id_16,
+    output supply0 id_17,
+    output uwire id_18,
+    input tri id_19
+    , id_23,
+    input tri id_20,
+    input wor id_21
 );
-  logic id_11;
-  assign id_2 = id_11 + id_9 + id_5 - 1'd0;
-  defparam id_12.id_13 = 1;
-  function id_14;
-    input id_15;
-    reg id_16;
-    begin
-      id_11 = id_5;
-    end
-  endfunction
-  reg id_17;
-  assign id_4[1] = {SystemTFIdentifier(1'b0 > 1'h0) {id_5}};
-  logic id_18 = id_7;
-  logic id_19;
-  always @(negedge 1 or posedge 1 + id_15) begin
-    id_17 <= {1'b0, 1'd0} ^ 1'b0;
-    SystemTFIdentifier(id_17);
-    id_16 <= 1 + id_7 - id_17;
-  end
-  logic id_20;
-  reg   id_21 = id_17;
-  logic id_22;
-  assign id_18 = id_19 ? id_19 : 1 & 1 & 1'h0;
+  tri0 id_24;
+  wire id_25;
+  assign id_1 = id_24;
+endmodule
+module module_1 (
+    input tri id_0,
+    output supply0 id_1,
+    input uwire id_2,
+    output tri id_3,
+    input supply1 id_4,
+    output wire id_5,
+    input wire id_6,
+    input tri1 id_7,
+    output uwire id_8
+);
+  uwire id_10 = 1'b0;
+  module_0(
+      id_6,
+      id_5,
+      id_1,
+      id_6,
+      id_4,
+      id_0,
+      id_6,
+      id_1,
+      id_7,
+      id_2,
+      id_7,
+      id_3,
+      id_2,
+      id_1,
+      id_4,
+      id_2,
+      id_7,
+      id_5,
+      id_3,
+      id_6,
+      id_6,
+      id_0
+  );
 endmodule

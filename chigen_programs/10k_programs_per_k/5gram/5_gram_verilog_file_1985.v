@@ -1,32 +1,57 @@
-// Seed: 3949915053
-`timescale 1ps / 1 ps
+// Seed: 2120374481
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    output supply1 id_0,
+    output tri id_1,
+    output supply1 id_2
 );
-  inout id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  inout id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  logic id_11;
-  always @(1 or posedge 1) begin
-    id_5 <= 1 < id_6;
-    id_7 = "";
-  end
+  assign id_0 = id_4.sum;
+endmodule
+module module_0 (
+    input tri id_0,
+    input wand id_1,
+    input supply1 id_2,
+    input wor id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    input supply1 id_7,
+    input tri1 id_8,
+    input wand id_9,
+    output wire id_10
+);
+  wire module_1;
+  module_0(
+      id_10, id_10, id_10
+  );
+endmodule
+module module_2 (
+    input wire id_0,
+    input tri1 id_1,
+    output uwire id_2,
+    output supply1 id_3,
+    input tri id_4,
+    input uwire id_5,
+    output wire id_6,
+    input tri1 id_7,
+    output tri id_8,
+    output uwire id_9,
+    output tri0 id_10,
+    input wand id_11,
+    output supply0 id_12,
+    input tri0 id_13,
+    output tri id_14,
+    output tri id_15,
+    output wire id_16,
+    input tri id_17,
+    output wire id_18,
+    input tri1 id_19,
+    output wor id_20
+);
+  wire id_22;
+  genvar id_23;
+  module_0(
+      id_20, id_10, id_20
+  );
+  wire id_24;
+  wire id_25;
 endmodule

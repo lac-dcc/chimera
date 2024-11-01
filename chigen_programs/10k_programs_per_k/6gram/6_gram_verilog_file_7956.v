@@ -1,23 +1,21 @@
-// Seed: 462299200
-`define pp_11 0
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output id_9,
-    input id_10
+// Seed: 2481565966
+module module_0 ();
+  always @(id_1 or 1) {1 | (1 == 1), 1, 1} <= 1'b0;
+  assign id_1 = id_1 | id_1;
+  reg  id_2;
+  wire id_3;
+  initial begin
+    id_2 <= id_1 - 1;
+    id_2 = id_2 < id_1;
+    $display(1 & 1, id_2);
+  end
+endmodule
+module module_1 (
+    output wand  id_0,
+    input  uwire id_1,
+    output tri0  id_2,
+    input  wand  id_3
 );
-  logic id_11 = ({1, id_0, 1});
-  logic id_12;
-  type_17 id_13 (
-      id_11,
-      1,
-      id_12 > 1
-  );
+  assign id_0 = 1;
+  module_0();
 endmodule

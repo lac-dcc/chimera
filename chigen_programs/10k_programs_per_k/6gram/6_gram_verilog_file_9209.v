@@ -1,41 +1,31 @@
-// Seed: 1919011405
-`endcelldefine
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    output logic id_9,
-    input logic id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    inout id_14,
-    output logic id_15,
-    input id_16,
-    output id_17,
-    output logic id_18
+// Seed: 341659869
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  reg id_19;
-  type_35(
-      id_15, id_7
-  );
-  assign id_19 = 1;
-  generate
-    if (1 == 1) begin
-      defparam id_20.id_21 = 1'b0;
-      always @(posedge id_8) begin
-        id_19 <= {id_4 ^ 1'b0{1}} === 1;
-      end
-    end else
-      case (id_12)
-        id_10: logic id_22;
-        1'b0:  assign id_17 = id_11;
-      endcase
-  endgenerate
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
+  bufif0 (id_1, id_2, id_3);
+  module_0();
+endmodule
+module module_2 (
+    input wor id_0,
+    input tri id_1,
+    output supply1 id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    output tri id_6,
+    output supply0 id_7,
+    output uwire id_8,
+    input tri0 id_9,
+    input wand id_10,
+    input tri0 id_11,
+    output wire id_12
+);
+  assign id_6 = id_1;
+  module_0();
 endmodule

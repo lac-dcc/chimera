@@ -1,44 +1,63 @@
-// Seed: 1130709223
+// Seed: 2327046186
 module module_0 (
-    input logic id_0,
-    output logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    output logic id_13,
-    input logic id_14,
-    input logic id_15,
-    output id_16,
-    input id_17,
-    input logic id_18
-    , id_34,
-    output logic id_19,
-    input logic id_20,
-    input id_21,
-    output id_22,
-    output id_23,
-    input logic id_24,
-    output id_25,
-    output id_26,
-    output id_27,
-    output logic id_28,
-    output logic id_29,
-    input logic id_30,
-    input logic id_31,
-    input logic id_32
-    , id_35,
-    input logic id_33
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  logic id_36, id_37;
-  initial id_26 <= 1'b0;
-  logic id_38, id_39, id_40, id_41;
+  input wire id_15;
+  output wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_10 = 1;
 endmodule
-`define pp_34 0
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_7 = 1;
+  xor (id_9, id_2, id_5, id_6, id_4, id_7, id_1, id_10);
+  module_0(
+      id_7, id_7, id_5, id_9, id_4, id_8, id_7, id_10, id_7, id_9, id_8, id_3, id_3, id_3, id_2
+  );
+endmodule

@@ -1,10 +1,31 @@
-// Seed: 2904474225
-module module_0;
-  initial
-  fork
-    if (id_0) begin
-      id_0 <= id_0;
-    end else id_0 = 1;
-  join
-  logic id_1;
+// Seed: 3731531953
+module module_0 (
+    input uwire id_0,
+    input wor   id_1
+);
+endmodule
+module module_1 (
+    input tri id_0,
+    output wand id_1,
+    input uwire id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    inout supply1 id_5,
+    input supply0 void id_6,
+    input tri1 id_7,
+    input supply0 id_8,
+    input tri0 id_9,
+    output tri0 id_10,
+    input wire id_11,
+    output tri1 id_12,
+    input uwire id_13,
+    input uwire id_14,
+    input wire id_15,
+    input wor id_16,
+    output tri0 id_17
+);
+  assign id_10 = 1;
+  module_0(
+      id_4, id_16
+  );
 endmodule

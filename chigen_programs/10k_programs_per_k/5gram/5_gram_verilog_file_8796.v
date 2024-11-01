@@ -1,33 +1,47 @@
-// Seed: 3044426122
-`timescale 1ps / 1ps
+// Seed: 2644202275
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    output logic id_16,
-    output logic id_17,
-    output id_18,
-    input logic id_19,
-    input logic id_20,
-    input id_21,
-    output id_22,
-    input id_23,
-    output logic id_24
+    output wand id_0,
+    output tri id_1,
+    output tri1 module_0,
+    input supply1 id_3
 );
-  assign id_8 = id_10;
-  logic id_25 = 1;
-  logic id_26;
+  wire id_5;
+  wire id_6 = id_5;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    output wor id_2,
+    input wor id_3,
+    output uwire id_4,
+    input uwire id_5,
+    input tri id_6,
+    input supply0 id_7,
+    input uwire id_8,
+    input tri id_9,
+    input tri id_10,
+    output supply1 id_11,
+    input wire id_12,
+    input wire id_13,
+    input tri1 id_14,
+    input supply1 id_15,
+    output tri1 id_16,
+    output wand id_17,
+    input wire id_18,
+    input wor id_19,
+    input supply0 id_20
+    , id_25,
+    input supply1 id_21,
+    output wand id_22,
+    input supply1 id_23
+);
+  initial begin
+    $display('h0, "");
+  end
+  wire id_26;
+  wire id_27;
+  assign id_4 = id_15;
+  module_0(
+      id_17, id_11, id_17, id_14
+  );
 endmodule

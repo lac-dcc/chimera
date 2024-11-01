@@ -1,5 +1,8 @@
-// Seed: 2435328245
-module module_0 (
+// Seed: 2545100183
+module module_0 ();
+  module_2();
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -7,14 +10,21 @@ module module_0 (
     id_5,
     id_6
 );
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_5 = id_2;
-  always @(1 or posedge id_2) begin
-    id_2 <= 1;
-  end
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  assign id_5 = (id_3[1 : 1]);
+  module_0();
+  wire id_7, id_8;
+endmodule
+module module_2 #(
+    parameter id_3 = 32'd91,
+    parameter id_4 = 32'd88
+);
+  wire id_2;
+  defparam id_3.id_4 = 1;
 endmodule

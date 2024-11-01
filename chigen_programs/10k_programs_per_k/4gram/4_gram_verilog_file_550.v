@@ -1,35 +1,43 @@
-// Seed: 3068286416
-`default_nettype wire
+// Seed: 44543407
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output logic id_14,
-    input id_15
-    , id_26,
-    input logic id_16
-    , id_27,
-    output id_17,
-    input id_18,
-    input id_19,
-    input id_20,
-    input id_21,
-    input id_22,
-    output id_23,
-    input id_24,
-    input id_25
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  assign id_4  = id_11;
-  assign id_17 = 1;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_7 = 1;
+  wire id_9;
+endmodule
+module module_1;
+  wire id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  wor id_3;
+  always_comb @(negedge 1) begin
+    id_1 = 1;
+    $display(1, id_3);
+  end
+  module_0(
+      id_3, id_3, id_3, id_1, id_3, id_2, id_3, id_3
+  );
 endmodule

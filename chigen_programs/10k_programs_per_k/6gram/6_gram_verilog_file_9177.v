@@ -1,17 +1,46 @@
-// Seed: 1627292748
-`default_nettype id_3
+// Seed: 3144299548
 module module_0 (
-    input  id_0,
-    input  id_1,
-    input  id_2,
-    input  id_3,
-    output id_4,
-    output id_5
+    input  wand id_0,
+    input  wor  id_1,
+    output wor  id_2
 );
-  reg id_6;
-  initial begin
-    SystemTFIdentifier((1));
-    id_6 <= 1;
-    id_5 = id_3;
-  end
+  assign id_2 = 1;
+  module_2(
+      id_0, id_1, id_2, id_0, id_1, id_1, id_1, id_0, id_1, id_2, id_1, id_0, id_2, id_2
+  );
+endmodule
+module module_1 (
+    input  tri  id_0,
+    input  wire id_1,
+    output tri  id_2,
+    input  tri0 id_3,
+    input  wand id_4,
+    input  tri0 id_5,
+    output tri1 id_6
+);
+  wire id_8;
+  wire id_9;
+  id_10(
+      id_3, id_2, 1'h0
+  ); module_0(
+      id_1, id_5, id_6
+  );
+endmodule
+module module_2 (
+    input wand id_0,
+    input supply1 id_1,
+    output uwire id_2,
+    input wand id_3,
+    input wand id_4,
+    input uwire id_5,
+    input wire id_6,
+    input wor id_7,
+    input uwire id_8,
+    output uwire id_9,
+    input tri0 id_10,
+    input wand id_11,
+    output wire id_12,
+    output tri id_13
+);
+  wire id_15;
 endmodule

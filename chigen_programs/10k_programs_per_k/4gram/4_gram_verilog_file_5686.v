@@ -1,36 +1,70 @@
-// Seed: 1849410635
-`timescale 1ps / 1ps
+// Seed: 1180100614
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    output tri0 id_0,
+    output uwire id_1,
+    input tri0 id_2,
+    output tri id_3,
+    output wor id_4,
+    output tri1 id_5,
+    output supply0 id_6,
+    output wand id_7,
+    input tri0 id_8,
+    output wor id_9,
+    input wand id_10,
+    output tri0 id_11,
+    input wire id_12,
+    output wor id_13
+    , id_27,
+    output wor id_14,
+    input supply0 id_15,
+    input wire id_16,
+    output wor id_17,
+    input tri0 id_18,
+    input tri0 id_19,
+    output wand id_20,
+    output tri1 id_21,
+    input wand id_22,
+    input tri0 id_23,
+    input wand id_24,
+    input tri id_25
 );
-  input id_9;
-  inout id_8;
-  inout id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_11 id_9 (
-      .id_0 (1'b0),
-      .id_1 (1),
-      .id_2 (id_10),
-      .id_3 (1),
-      .id_4 (1'd0),
-      .id_5 (id_1),
-      .id_6 (1),
-      .id_7 (id_7),
-      .id_8 (1'b0),
-      .id_9 (id_3),
-      .id_10()
+  id_28();
+endmodule
+module module_1 (
+    output wor   id_0,
+    input  uwire id_1
+    , id_6,
+    input  tri0  id_2,
+    input  tri   id_3,
+    output wor   id_4
+);
+  always @(id_6) id_4 = 1;
+  module_0(
+      id_4,
+      id_0,
+      id_2,
+      id_4,
+      id_0,
+      id_0,
+      id_4,
+      id_4,
+      id_2,
+      id_0,
+      id_3,
+      id_0,
+      id_1,
+      id_0,
+      id_4,
+      id_2,
+      id_1,
+      id_4,
+      id_2,
+      id_3,
+      id_4,
+      id_4,
+      id_3,
+      id_1,
+      id_1,
+      id_3
   );
 endmodule

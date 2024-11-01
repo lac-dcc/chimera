@@ -1,21 +1,30 @@
-// Seed: 2335413785
-module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    output logic id_9
+// Seed: 2733851653
+module module_0;
+endmodule
+module module_1;
+  always @(id_1 != id_1 or posedge id_1 & 1'b0) begin
+    #1 id_1 <= 1 * 1 + 1;
+  end
+  module_0();
+endmodule
+module module_2 (
+    input  uwire id_0,
+    input  logic id_1,
+    output logic id_2,
+    input  wand  id_3,
+    input  tri0  id_4,
+    output logic id_5
 );
-  logic id_10;
-  assign id_9 = id_10;
-  always @(posedge (id_10) or negedge 1) begin
-    if ((id_6)) begin
-      if (1) id_9 = (1 && id_6);
+  assign id_5 = 1'b0;
+  initial begin
+    id_2 <= id_1;
+    if (1'b0) id_5 <= #1'h0;
+    else begin
+      if (1) id_2 <= 1;
+      else begin
+        id_5 <= !id_4;
+      end
     end
   end
+  module_0();
 endmodule

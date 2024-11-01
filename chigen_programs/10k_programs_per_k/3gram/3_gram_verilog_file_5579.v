@@ -1,51 +1,36 @@
-// Seed: 4199095407
-`resetall
+// Seed: 687901242
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input  tri   id_0,
+    input  uwire id_1,
+    output tri0  id_2
 );
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  assign id_5 = 1;
 endmodule
-`define pp_6 0
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input tri0 id_0,
+    output tri id_1,
+    output supply0 id_2,
+    input tri id_3,
+    output uwire id_4,
+    output tri0 id_5,
+    input uwire id_6,
+    output tri1 id_7,
+    output wand id_8,
+    input wire id_9,
+    output uwire id_10,
+    input supply1 id_11,
+    input tri id_12
+    , id_18,
+    input supply1 id_13,
+    input supply1 id_14,
+    input wor id_15,
+    input wor id_16
 );
-  output id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  tri0  id_6;
-  logic id_7;
-  uwire id_8;
-  assign id_6 = id_2;
-  logic id_9;
-  logic id_10 = 1;
-  assign id_10 = 1;
-  logic id_11;
-  assign id_2[1] = id_8[1] - id_9;
-  logic id_12;
-  type_24(
-      1 == id_6[1], 1'd0, id_6[1'b0 : 1'b0], 1 ^ id_4
+  wire id_19;
+  assign id_10 = 1 == id_16 * (1);
+  module_0(
+      id_0, id_13, id_1
   );
-  wor   id_13;
-  logic id_14;
-  logic id_15;
-  logic id_16 = id_16;
-  logic id_17;
-  assign id_13[1'b0] = 1;
+  wand id_20 = 1;
+  xor (id_1, id_16, id_19, id_0, id_18, id_15, id_11, id_9, id_3, id_13, id_14);
+  wire id_21 = id_13;
 endmodule

@@ -1,25 +1,33 @@
-// Seed: 3121424431
-`define pp_2 0
+// Seed: 3584847788
 module module_0 (
     id_1,
     id_2
 );
-  inout id_2;
-  output id_1;
-  assign id_2 = id_2;
-  for (id_2 = id_2; 1; id_1 = id_2) begin
-    initial begin
-      id_2 <= 1;
-      id_2 = id_2;
-      SystemTFIdentifier;
-      assign id_2 = 1;
-    end
-  end
-  logic id_3;
-  if (1) begin
-    logic id_4;
-  end else begin
-    logic id_5;
-  end
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  tri1 id_3;
+  tri  id_5;
+  assign id_2 = id_4;
+  uwire id_6 = 1;
+  assign id_6 = 1;
+  wor id_8;
+  always if (id_7) id_8 = 1 - id_5;
+  assign id_3 = "" > id_7;
+  wire id_9;
+  wire id_10;
 endmodule
-`define pp_3 0
+module module_1 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
+  wire id_4;
+  assign id_1 = (1);
+  module_0(
+      id_3, id_3
+  );
+  wire id_5;
+endmodule

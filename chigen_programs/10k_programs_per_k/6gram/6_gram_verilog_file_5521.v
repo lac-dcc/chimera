@@ -1,17 +1,28 @@
-// Seed: 1152191154
+// Seed: 1538028424
 module module_0 (
-    input logic id_0,
-    output id_1
+    input supply0 id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input wor id_3
 );
-  always @(posedge id_0) begin
-    id_1 <= 1'h0;
-  end
+  wire id_5;
+  wire id_6 = 1'b0;
+  assign id_6 = id_3;
 endmodule
-`timescale 1ps / 1ps
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`resetall `timescale 1ps / 1ps `default_nettype module_0
-`define pp_7 0
+module module_1 (
+    input uwire id_0,
+    output supply0 id_1,
+    output tri0 id_2,
+    output supply0 id_3
+);
+  wire id_5;
+  module_0(
+      id_0, id_0, id_0, id_0
+  );
+  assign id_1 = id_0;
+  id_6(
+      .id_0(), .id_1(1'b0), .id_2(~id_3), .id_3(id_1), .id_4(""), .id_5(id_5)
+  ); id_7(
+      .id_0(1), .id_1(id_0), .id_2(id_5), .id_3(1 - id_1), .id_4(), .id_5(1)
+  );
+endmodule

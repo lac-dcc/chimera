@@ -1,18 +1,28 @@
-// Seed: 491829792
-`timescale 1ps / 1 ps
-module module_0;
-  logic id_0;
-  logic id_1;
-  logic id_2;
-  assign id_2 = 1'b0;
+// Seed: 139717367
+module module_0 (
+    input tri1 id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output tri id_3
+);
+  wire id_5;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri1 id_1,
+    output wor id_2,
+    input wire id_3,
+    output tri id_4,
+    input wand id_5
+);
+  wire id_7;
   assign id_2 = 1;
-  import id_3::*;
-  generate
-    if ('h0 | 1) logic id_4;
-    else begin
-      assign id_1 = 1;
-      assign id_0 = 1;
-      assign id_2 = 1'b0;
-    end
-  endgenerate
+  for (id_8 = 1; 1; id_8 = 1'h0) begin
+    id_9(
+        .id_0(), .id_1(id_5), .id_2(id_1), .id_3(1'b0 == 1), .id_4(1'd0 ** id_3)
+    );
+  end
+  module_0(
+      id_5, id_5, id_5, id_1
+  );
 endmodule

@@ -1,39 +1,38 @@
-// Seed: 3428899817
-`resetall
+// Seed: 2220810532
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    output logic id_6,
-    output logic id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output id_12,
-    output logic id_13,
-    input id_14,
-    input logic id_15,
-    output id_16,
-    input id_17,
-    input logic id_18,
-    output id_19,
-    input logic id_20,
-    output logic id_21,
-    input logic id_22,
-    output id_23
-    , id_26,
-    output id_24,
-    output id_25
+    output uwire id_0,
+    input  wire  id_1,
+    output wor   id_2,
+    input  wor   id_3,
+    input  tri   id_4
 );
-  logic id_27 = id_0;
-  logic id_28 = id_26;
-  assign id_4 = id_11 & id_28 & id_9 !== id_2;
-  logic id_29;
-  assign id_3 = 1;
-  always id_8 = 1;
-  logic id_30 = id_27;
+  assign id_2 = 1;
+  module_2(
+      id_3, id_3, id_4, id_3, id_3, id_2, id_0, id_4
+  );
+  assign id_2 = 1'h0;
+  id_6(
+      ~id_3, 1
+  );
+endmodule
+module module_1 (
+    input  tri id_0,
+    output wor id_1
+);
+  wire id_3;
+  module_0(
+      id_1, id_0, id_1, id_0, id_0
+  );
+endmodule
+module module_2 (
+    input wire id_0,
+    input tri0 id_1,
+    input supply0 id_2,
+    input tri id_3,
+    input wire id_4,
+    output tri id_5,
+    output tri0 id_6,
+    input tri id_7
+);
+  wire id_9;
 endmodule

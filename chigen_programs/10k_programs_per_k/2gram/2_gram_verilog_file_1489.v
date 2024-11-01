@@ -1,10 +1,33 @@
-// Seed: 1198282339
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output id_2,
-    input id_3
-);
-  logic id_4, id_5, id_6, id_7 = id_6, id_8, id_9, id_10;
+// Seed: 4145486549
+module module_0 ();
+  assign id_1 = 1 == id_1;
+  module_2(
+      id_1
+  );
 endmodule
-`default_nettype wire
+module module_1 (
+    id_1
+);
+  input wire id_1;
+  assign id_2 = id_1;
+  assign id_2 = id_1;
+  integer id_3;
+  module_0();
+endmodule
+module module_2 (
+    id_1
+);
+  inout wire id_1;
+  module_3();
+endmodule
+module module_3 #(
+    parameter id_2 = 32'd86,
+    parameter id_3 = 32'd41
+);
+  wire id_1;
+  defparam id_2.id_3 = 1;
+  if (1) begin
+    assign id_1 = (id_1);
+  end
+  wire id_4, id_5;
+endmodule

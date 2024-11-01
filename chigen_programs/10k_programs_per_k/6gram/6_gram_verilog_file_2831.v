@@ -1,20 +1,31 @@
-// Seed: 220245641
-`timescale 1ps / 1 ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 1072769462
+module module_0;
+  always @*
+    repeat (1'b0) begin
+      wait (1);
+    end
+endmodule
+module module_1 (
+    output uwire id_0,
+    input  tri1  id_1,
+    input  tri0  id_2,
+    input  tri1  id_3,
+    input  tri   id_4
+    , id_7,
+    output logic id_5
 );
-  input id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  type_6(
-      id_5, id_4, id_4, id_2
-  );
+  assign id_0 = id_3;
+  module_0();
+  initial begin
+    id_5 <= #id_4 1'h0;
+  end
+endmodule
+module module_2 (
+    output supply0 id_0,
+    input wor id_1,
+    input tri0 id_2
+);
+  wire id_4;
+  assign id_0 = 1;
+  module_0();
 endmodule

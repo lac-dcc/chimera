@@ -1,22 +1,34 @@
-// Seed: 1253410401
+// Seed: 1468357795
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    id_2
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_1 = 1;
-  generate
-    assign id_4[1] = id_3;
-  endgenerate
+  input wire id_2;
+  output wire id_1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output tri0 id_1,
+    output supply1 id_2,
+    output supply1 id_3,
+    input supply0 id_4,
+    output supply0 id_5,
+    input wor id_6,
+    input wire id_7,
+    input tri0 id_8,
+    output tri id_9,
+    output supply0 id_10,
+    input wor id_11,
+    input wor id_12,
+    input supply1 id_13,
+    input tri1 id_14
+);
+  uwire id_16 = id_11 ? ({1} != id_11) : 1 == id_14;
+  id_17 :
+  assert property (@(negedge id_8) 1 === 1)
+  else $display((~id_6));
+  wire id_18;
+  module_0(
+      id_16, id_16
+  );
 endmodule

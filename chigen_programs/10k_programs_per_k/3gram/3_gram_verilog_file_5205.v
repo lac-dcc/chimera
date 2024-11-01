@@ -1,31 +1,35 @@
-// Seed: 2159572630
-`define pp_10 0
-module module_0 (
-    input id_0,
-    input supply0 id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5
-    , id_10,
-    output id_6,
-    input id_7,
-    output id_8,
-    input id_9
+// Seed: 2018326862
+module module_0 ();
+  uwire id_1 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  wor   id_11 = id_1;
-  logic id_12 = id_9;
-  logic id_13, id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  assign id_17 = id_1[sample];
-  integer id_19 (
-      1'h0,
-      1
-  );
-  assign id_16 = id_2;
-  real id_20;
-  `define pp_11 0
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  module_0();
+  assign id_11 = "";
+  wire id_13 = id_12, id_14;
+  and (id_1, id_12, id_2, id_3, id_4, id_5, id_6, id_7, id_9);
 endmodule

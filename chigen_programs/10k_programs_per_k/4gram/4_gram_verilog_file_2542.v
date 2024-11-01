@@ -1,15 +1,32 @@
-// Seed: 2808189764
-module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output id_9
+// Seed: 3015735145
+module module_0 #(
+    parameter id_1 = 32'd16,
+    parameter id_2 = 32'd82
+) ();
+  defparam id_1.id_2 = 1 == 1'b0;
+  wire id_3;
+  wire id_4;
+endmodule
+module module_1 (
+    input  logic id_0,
+    output logic id_1,
+    input  logic id_2
 );
-  logic id_10;
+  assign id_1 = id_2;
+  always @(posedge id_2) begin
+    id_1 <= id_0;
+  end
+  module_0();
+  integer id_4 = 1;
+  final $display(1);
+endmodule
+module module_0 (
+    input  tri1 id_0
+    , id_5,
+    output wor  id_1,
+    input  wor  id_2,
+    output tri1 module_2
+);
+  wand id_6 = id_0;
+  module_0();
 endmodule

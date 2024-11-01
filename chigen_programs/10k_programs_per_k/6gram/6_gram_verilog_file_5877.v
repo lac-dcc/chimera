@@ -1,17 +1,32 @@
-// Seed: 2819427247
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6
+// Seed: 1300694983
+module module_0;
+  assign id_1[1+1] = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  assign id_6 = 1;
-  assign id_6 = id_4;
-  assign id_0 = 1;
-  type_9(
-      1'b0 >> id_5, 1, id_5
-  );
+  input wire id_2;
+  inout wire id_1;
+  initial forever id_1 <= id_2;
+  module_0();
+endmodule
+module module_2 (
+    input  tri1 id_0,
+    input  tri1 id_1,
+    input  wire id_2,
+    output wor  id_3
+);
+  always @* begin
+    $display;
+  end
+  module_0();
+  assign id_3 = id_0 ? id_0 : 1;
+  always @(1) begin
+    disable id_5;
+  end
+  assign id_3 = id_1;
+  wire id_6;
+  assign id_6 = id_6;
+  wire id_7;
 endmodule

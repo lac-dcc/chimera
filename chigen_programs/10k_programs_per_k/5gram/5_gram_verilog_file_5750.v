@@ -1,31 +1,31 @@
-// Seed: 1587250396
-module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    output id_8,
-    output logic id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    output id_13,
-    output id_14,
-    input logic id_15
+// Seed: 4048073422
+module module_0 ();
+  genvar id_1;
+endmodule
+module module_1 (
+    output wor id_0,
+    output wand id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    input uwire id_4,
+    input supply0 id_5,
+    output tri id_6,
+    input supply1 id_7
 );
-  always @(posedge 1) if (1) id_14 <= {id_12 - 1{1}};
-  logic id_16;
-  type_23(
-      1, 1
-  );
-  always @(posedge 1 - id_15) begin
-    SystemTFIdentifier;
-    if (1'b0) begin
-      id_14 <= 1;
-    end
-  end
+  assign id_1 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input tri1 id_1,
+    output wire id_2,
+    input supply0 id_3,
+    output tri1 id_4,
+    input tri0 id_5,
+    input tri id_6,
+    output tri0 id_7
+);
+  wire id_9;
+  wire id_10;
+  module_0();
 endmodule

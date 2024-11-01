@@ -1,53 +1,30 @@
-// Seed: 3600349533
-module module_0 (
-    output logic id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    inout id_4,
-    input id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    output logic id_12
-);
-  logic
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32,
-      id_33,
-      id_34,
-      id_35,
-      id_36,
-      id_37,
-      id_38,
-      id_39,
-      id_40,
-      id_41,
-      id_42,
-      id_43,
-      id_44,
-      id_45 = 1'b0 ? id_20 : ~id_36;
-  type_53 id_46 (.id_0(~id_3));
+// Seed: 734926062
+module module_0;
+  reg id_1;
+  reg id_2;
+  reg id_3;
+  assign id_2 = id_1;
+  supply0 id_4;
+  tri0 id_5 = (1);
+  always @(posedge 1) begin
+    id_4 = 1;
+    id_2 <= 1;
+    id_3 = id_1;
+  end
 endmodule
-`default_nettype wire
+module module_1 (
+    input tri0 id_0,
+    output supply0 id_1,
+    output logic id_2,
+    input tri id_3,
+    output supply0 id_4,
+    output tri0 id_5,
+    input wor id_6,
+    input wor id_7,
+    input supply1 id_8
+);
+  assign id_2 = 1;
+  always id_2 = #1  ~(1);
+  and (id_1, id_3, id_6, id_7, id_8);
+  module_0();
+endmodule

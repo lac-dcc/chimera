@@ -1,17 +1,24 @@
-// Seed: 2703433795
-module module_0 (
-    inout logic id_0,
-    input logic id_1,
-    input id_2,
-    output id_3,
-    input id_4
-    , id_9,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8
-);
-  assign id_0 = id_6;
+// Seed: 2489557199
+module module_0 ();
 endmodule
-`define pp_9 0
-`define pp_10 0
+module module_1 (
+    input supply0 id_0,
+    output supply1 id_1,
+    input tri id_2,
+    input supply1 id_3
+    , id_16, id_17,
+    output wand id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    output wor id_7,
+    output wor id_8,
+    input tri1 id_9,
+    input tri id_10,
+    output wand id_11,
+    input supply1 id_12,
+    output wand id_13,
+    input wire id_14
+);
+  module_0();
+  assign id_1 = |id_14;
+endmodule

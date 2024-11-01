@@ -1,27 +1,27 @@
-// Seed: 343743872
-`define pp_8 0
-module module_0 (
-    input logic id_0
-    , id_8,
-    input logic id_1,
-    output logic id_2,
-    output id_3,
-    output logic id_4,
-    input logic id_5,
-    input id_6,
-    inout id_7
+// Seed: 3093939322
+module module_0;
+  assign id_1 = 1;
+  assign id_1 = id_1;
+  wire id_2;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input wor id_1,
+    input uwire id_2,
+    input wire id_3,
+    output tri id_4,
+    input wand id_5,
+    input tri0 id_6,
+    output wand id_7,
+    input tri0 id_8,
+    input tri id_9,
+    output wor id_10,
+    input supply1 id_11,
+    output uwire id_12,
+    input tri1 id_13,
+    output wire id_14,
+    input supply1 id_15
 );
-  assign id_8 = id_7;
-  type_17(
-      1, id_6, id_0
-  );
-  assign id_3[1] = 1;
-  logic id_9;
-  always @(posedge id_8);
-  type_19(
-      id_8, id_0
-  );
-  logic id_10, id_11;
-  assign id_2  = 1'b0;
-  assign id_11 = id_7;
+  module_0();
+  always_comb #1 fork join
 endmodule

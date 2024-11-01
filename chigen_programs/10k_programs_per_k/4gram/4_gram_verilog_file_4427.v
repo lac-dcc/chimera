@@ -1,8 +1,4 @@
-// Seed: 4090211067
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
+// Seed: 1118939386
 module module_0 (
     id_1,
     id_2,
@@ -12,22 +8,32 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_9
 );
-  input id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign id_1 = 1;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_10;
+endmodule
+module module_1 (
+    output wand id_0,
+    input wire id_1,
+    input wire id_2,
+    input wor id_3,
+    input supply0 id_4,
+    output tri1 id_5,
+    input tri1 id_6
+);
+  assign id_0 = id_4;
+  supply0 id_8;
+  always @(*) id_8 = 1;
+  module_0(
+      id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8
+  );
 endmodule

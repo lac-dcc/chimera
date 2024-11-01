@@ -1,22 +1,22 @@
-// Seed: 83808243
+// Seed: 3611658212
 module module_0 (
-    output logic id_0,
-    output id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    output id_13
+    output uwire id_0
 );
-  assign id_11[1] = id_3 == 1;
-  type_18(
-      1'b0, 1, id_1[1 : 1'b0]
+  assign id_0 = id_2;
+endmodule
+module module_0 (
+    output wand id_0,
+    input  tri  id_1
+    , id_3
+);
+  id_5(
+      .id_0(id_0), .id_1(1), .id_2((id_6 || id_3)), .id_3(id_1), .id_4(1'h0 == !id_0)
   );
+  assign id_6 = id_4++ >= ~id_1;
+  wire module_1;
+  module_0(
+      id_0
+  ); id_7 :
+  assert property (@(posedge 1 - {id_7, 1}) id_1 < id_7++)
+  else $display(1 | 1'd0 == 1);
 endmodule

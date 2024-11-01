@@ -1,29 +1,143 @@
-// Seed: 3496572198
+// Seed: 230469600
 module module_0 (
-    output string id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input logic id_4
+    input wand id_0,
+    input wire id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    output uwire id_4,
+    output tri id_5,
+    output supply1 id_6,
+    output tri0 id_7,
+    output supply0 id_8,
+    input uwire id_9
+    , id_61,
+    input wire id_10,
+    input wor id_11,
+    output uwire id_12,
+    input supply1 id_13,
+    input wand id_14,
+    input wor id_15,
+    output supply0 id_16,
+    output uwire id_17,
+    input tri1 id_18,
+    output wand id_19,
+    input uwire id_20,
+    input wand id_21,
+    input uwire id_22,
+    output tri id_23,
+    input tri1 id_24
+    , id_62,
+    input wand id_25,
+    input supply1 id_26,
+    output tri0 id_27,
+    output tri1 id_28,
+    input wor id_29,
+    input wor id_30,
+    input wire id_31,
+    input tri0 id_32,
+    input tri id_33,
+    input wand id_34
+    , id_63,
+    input wand id_35,
+    output uwire id_36,
+    input tri0 id_37,
+    input supply1 id_38,
+    input wand id_39,
+    output supply0 id_40,
+    input tri id_41,
+    input supply1 id_42,
+    input tri id_43,
+    output supply1 id_44,
+    input uwire id_45,
+    output wand id_46,
+    input tri0 id_47,
+    output tri0 id_48,
+    input supply0 id_49,
+    output wor id_50,
+    input tri0 id_51,
+    input tri id_52,
+    input supply1 id_53,
+    input tri0 id_54,
+    output wor id_55,
+    output tri1 id_56,
+    input supply0 id_57,
+    input tri0 id_58
+    , id_64,
+    output wand id_59
 );
-  type_0 id_5 (
-      .id_0(1),
-      .id_1({1'b0{1}}),
-      .id_2(id_1 - 1),
-      .id_3(id_0#(.id_4(1), .id_5(id_4), .id_6(id_3), .id_7(1'b0 == 1 - 1), .id_8(1))),
-      .id_9(id_6)
-  );
-  assign id_6 = id_5;
-  logic id_7;
-  assign id_0 = "";
-  assign id_5 = id_2[1'b0];
-  assign id_5 = id_5;
-  logic id_8;
-  logic id_9, id_10, id_11, id_12;
-  logic id_13, id_14 = id_10;
-  logic id_15;
-  logic id_16, id_17 = id_8, id_18;
-  logic id_19;
+  wire id_65;
 endmodule
-`define pp_5 0
-`timescale 1 ps / 1ps
+module module_1 (
+    input  uwire id_0,
+    input  wire  id_1,
+    output wand  id_2,
+    input  uwire id_3,
+    input  tri0  id_4,
+    input  wor   id_5,
+    input  tri1  id_6
+);
+  id_8(
+      id_5, 1'b0
+  ); module_0(
+      id_1,
+      id_5,
+      id_5,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_0,
+      id_5,
+      id_2,
+      id_3,
+      id_3,
+      id_5,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_4,
+      id_3,
+      id_1,
+      id_2,
+      id_0,
+      id_1,
+      id_4,
+      id_2,
+      id_2,
+      id_4,
+      id_5,
+      id_6,
+      id_3,
+      id_4,
+      id_1,
+      id_0,
+      id_2,
+      id_4,
+      id_3,
+      id_4,
+      id_2,
+      id_1,
+      id_6,
+      id_4,
+      id_2,
+      id_3,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_3,
+      id_0,
+      id_6,
+      id_5,
+      id_2,
+      id_2,
+      id_0,
+      id_3,
+      id_2
+  );
+endmodule

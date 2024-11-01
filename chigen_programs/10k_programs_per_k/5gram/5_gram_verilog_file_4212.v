@@ -1,5 +1,11 @@
-// Seed: 232642534
-module module_0 (
+// Seed: 1166356569
+module module_0 #(
+    parameter id_1 = 32'd6,
+    parameter id_2 = 32'd95
+);
+  defparam id_1.id_2 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -8,26 +14,31 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11
+    id_9
 );
-  output id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  type_12 id_11 (
-      .id_0(id_5),
-      .id_1(0),
-      .id_2(1),
-      .id_3(1 >>> id_4)
-  );
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_10;
+  module_0();
 endmodule
-`endcelldefine
+module module_2 (
+    input wand id_0,
+    input tri1 id_1,
+    output wire id_2,
+    output uwire id_3,
+    input supply0 id_4,
+    input tri0 id_5,
+    input supply0 id_6
+);
+  module_0();
+  tri1 id_8 = (1), id_9;
+  assign id_9 = id_1;
+  wire id_10;
+endmodule

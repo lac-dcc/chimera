@@ -1,22 +1,32 @@
-// Seed: 1228034054
-`define pp_7 0
+// Seed: 2708693865
 module module_0 (
-    input reg id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    output id_6
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_6 = id_3;
-  initial begin
-    id_2 = 1;
-    #1 begin
-      id_2 <= id_0;
-    end
-    id_6 <= #1 1;
-    id_6 <= id_3 && 1'b0;
-    id_4 = id_5;
-  end
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_4[1] = "";
+  assign id_4 = id_4;
+  wire id_5;
+  assign id_2[1] = 1'b0;
+  module_0(
+      id_1, id_3, id_5
+  );
+  wire id_6;
+  wire id_7;
+  wire id_8;
 endmodule

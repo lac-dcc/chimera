@@ -1,24 +1,30 @@
-// Seed: 1732364469
-module module_0 (
-    id_1,
-    id_2
+// Seed: 905047547
+module module_0;
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri0 id_1,
+    output tri id_2,
+    output wor id_3,
+    input tri id_4
+    , id_13,
+    input wand id_5,
+    input supply1 id_6,
+    input uwire id_7,
+    input tri0 id_8,
+    input tri1 id_9,
+    input supply0 id_10,
+    input tri0 id_11
 );
-  inout id_2;
-  output id_1;
-  assign id_2 = id_2;
-  assign id_2 = 1;
-  always @(posedge id_2 or posedge id_2);
-  assign id_1 = id_2;
-  assign id_2 = 1;
-  logic id_2, id_3, id_4, id_5 = 1;
-  logic id_6 = 1;
-  type_1 id_7 (
-      (1),
-      &id_4,
-      id_5
-  );
-  reg id_8;
-  always @(posedge 1 & 1 & id_2 & id_4) begin
-    #1 id_8 <= id_4 == id_8;
-  end
+  assign id_3 = id_0;
+  genvar id_14;
+  module_0();
+  assign id_3 = id_14;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    input  wand id_1
+);
+  assign id_0 = id_1;
+  module_0();
 endmodule

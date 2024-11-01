@@ -1,26 +1,37 @@
-// Seed: 1215493273
+// Seed: 2197448512
 module module_0 (
-    output id_0,
-    input logic id_1,
-    inout id_2,
-    input logic id_3,
-    input logic id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    output logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input logic id_15
-    , id_18,
-    input logic id_16,
-    output id_17
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  type_27(
-      id_0 / id_15, 1, id_7
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+endmodule
+module module_1;
+  supply1 id_2;
+  always @(*) begin
+    if (id_1) begin
+      id_2 = 1;
+    end else id_1 <= id_2 < 1;
+  end
+  id_3(
+      .id_0(id_1),
+      .id_1(id_1),
+      .id_2(1),
+      .id_3(id_1),
+      .id_4(id_2),
+      .id_5(id_2),
+      .id_6(id_4),
+      .id_7(1),
+      .id_8(1)
+  ); module_0(
+      id_2, id_2, id_2, id_2, id_2, id_2
   );
 endmodule

@@ -1,47 +1,76 @@
-// Seed: 844390845
-`default_nettype wire
+// Seed: 2481302467
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    output id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    input id_14
-    , id_31,
-    input id_15,
-    input id_16,
-    input logic id_17,
-    input logic id_18,
-    input id_19,
-    input id_20,
-    output id_21,
-    input logic id_22,
-    output logic id_23,
-    output logic id_24,
-    output id_25,
-    input logic id_26,
-    input logic id_27,
-    input id_28,
-    output id_29,
-    output logic id_30
-    , id_32
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  type_46(
-      1, id_8, id_0, id_4, 1, {1{1}}, id_9 + 1, 1, 1'h0
-  );
-  integer id_33 = 1;
-  assign id_29 = id_0;
-  always begin
-    #1 id_25 = id_20;
-  end
+  inout wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_5 = 1'b0;
+  wire id_17;
+  assign id_16 = 1;
+  wire id_18;
 endmodule
-`define pp_31 0
+program module_1 (
+    input tri id_0,
+    input wand id_1,
+    output tri1 id_2,
+    input wand id_3,
+    input wand id_4,
+    input tri0 id_5,
+    input tri id_6,
+    input wire id_7,
+    input supply1 id_8,
+    input uwire id_9,
+    input supply0 id_10,
+    output tri0 id_11,
+    output wor id_12
+);
+  wire id_14;
+  genvar id_15;
+  module_0(
+      id_14,
+      id_15,
+      id_15,
+      id_14,
+      id_14,
+      id_14,
+      id_15,
+      id_15,
+      id_14,
+      id_15,
+      id_14,
+      id_15,
+      id_15,
+      id_15,
+      id_15,
+      id_15
+  );
+endprogram

@@ -1,6 +1,14 @@
-// Seed: 4026854115
-`timescale 1ps / 1ps
+// Seed: 2531343523
 module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -27,45 +35,37 @@ module module_0 (
     id_24,
     id_25,
     id_26,
-    id_27,
-    id_28,
-    id_29
+    id_27
 );
-  inout id_29;
-  input id_28;
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  supply0 id_29 = id_20;
-  integer id_30;
-  type_37 id_31 (.id_0(1));
-  logic id_32 = 1;
-  logic id_33;
-  logic id_34;
-  assign id_29[1] = 1;
-  logic id_35 = 1;
+  output wire id_27;
+  output wire id_26;
+  output wire id_25;
+  output wire id_24;
+  output wire id_23;
+  input wire id_22;
+  inout wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  output wire id_18;
+  output wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_28;
+  module_0(
+      id_3, id_21, id_3
+  );
 endmodule

@@ -1,45 +1,84 @@
-// Seed: 1467857829
+// Seed: 3284511677
 module module_0 (
-    output logic id_0,
-    output id_1
-    , id_30,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    output logic id_10,
-    output id_11,
-    output id_12,
-    input logic id_13,
-    input id_14,
-    output logic id_15,
-    input id_16,
-    output logic id_17,
-    input id_18,
-    input logic id_19,
-    input logic id_20,
-    output reg id_21,
-    input id_22,
-    input logic id_23,
-    input logic id_24,
-    input logic id_25,
-    input logic id_26,
-    output id_27,
-    output logic id_28,
-    input id_29
+    id_1,
+    id_2
 );
-  supply1 id_31 = id_8;
-  logic   id_32;
-  initial begin
-    if (id_25) begin
-      id_17 = id_9;
-    end
-    id_12 = 1;
-    id_1  <= id_8[1'b0];
-    id_21 <= 1;
-  end
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23
+);
+  inout wire id_23;
+  input wire id_22;
+  output wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_18 = id_3[1] ? 1 : 1;
+  assign id_23[1-1'b0] = id_22[1'h0 : 1==1];
+  and (
+      id_12,
+      id_23,
+      id_1,
+      id_22,
+      id_16,
+      id_3,
+      id_14,
+      id_2,
+      id_8,
+      id_19,
+      id_15,
+      id_17,
+      id_7,
+      id_9,
+      id_5,
+      id_10
+  );
+  `define pp_24 0
+  assign id_18   = `pp_24 < 1'b0;
+  assign id_4[1] = 1;
+  module_0(
+      id_1, id_12
+  );
 endmodule

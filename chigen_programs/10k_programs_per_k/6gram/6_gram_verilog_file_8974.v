@@ -1,19 +1,28 @@
-// Seed: 3681702121
-module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output logic id_12,
-    output logic id_13
+// Seed: 250097257
+module module_0 ();
+  assign id_1 = "" & id_1;
+  generate
+    for (id_2 = 1 * ~(1 == 1); id_2; id_1 = id_2) begin : id_3
+      wire id_4;
+      always @(*) begin
+        id_3 <= id_1;
+      end
+    end
+  endgenerate
+  id_6(
+      .id_0(id_2), .id_1(id_1), .id_2(id_5 == id_2)
+  );
+endmodule
+module module_1 (
+    input tri id_0,
+    output tri0 id_1,
+    input supply0 id_2,
+    input supply0 id_3
+    , id_6,
+    input tri0 id_4
 );
-  assign id_5 = id_11;
+  wire id_7;
+  wire id_8;
+  module_0();
+  wor  id_9 = 1, id_10 = 1;
 endmodule

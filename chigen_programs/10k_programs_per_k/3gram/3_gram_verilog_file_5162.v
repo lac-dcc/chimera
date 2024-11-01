@@ -1,4 +1,34 @@
-// Seed: 76022201
-`define pp_0 0
-`define pp_1 0
-localparam [1 : 1] `pp_0 = 1;
+// Seed: 1387894054
+module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = id_3;
+  module_0(
+      id_3, id_3
+  );
+  assign id_3 = 1;
+endmodule
+module module_2;
+  assign id_1 = id_1;
+  if (id_1) begin
+    logic [7:0] id_2, id_3, id_4, id_5, id_6, id_7 = id_7[1'b0], id_8;
+  end
+  module_0(
+      id_1, id_1
+  );
+endmodule

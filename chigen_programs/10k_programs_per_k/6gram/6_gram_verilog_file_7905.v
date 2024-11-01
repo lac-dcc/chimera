@@ -1,11 +1,27 @@
-// Seed: 3593073885
-module module_0;
-  assign id_0 = 1'h0 ? ~id_0 : id_0;
-  always @(posedge 1 or posedge 1) begin
-    id_0 = id_0;
-    id_0 <= 1;
-    id_0 <= 1'd0 != 1;
-    id_0 <= 1;
-    SystemTFIdentifier;
-  end
+// Seed: 2403607570
+module module_0 ();
+  wire id_1;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input supply1 id_1,
+    input tri1 id_2,
+    input wor id_3,
+    output tri id_4,
+    input tri1 id_5,
+    output uwire id_6
+);
+  supply1 id_8 = id_1;
+  module_0(); id_9(
+      .id_0(id_1), .id_1(id_1), .id_2(1), .id_3(1), .id_4(1)
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  logic [7:0] id_3 = id_3[1'b0 : 1];
+  module_0();
 endmodule

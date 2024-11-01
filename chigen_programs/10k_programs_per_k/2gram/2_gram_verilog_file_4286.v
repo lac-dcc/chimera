@@ -1,28 +1,40 @@
-// Seed: 1455694955
+// Seed: 29861952
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    output supply1 id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    output supply0 id_6,
+    input tri0 id_7,
+    input wand id_8,
+    input uwire id_9,
+    output supply0 id_10
 );
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  output id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  logic id_11;
+  initial
+    forever begin
+      assert (id_5);
+    end
 endmodule
-`define pp_11 0
+program module_1 (
+    output tri id_0,
+    input tri1 id_1,
+    input logic id_2
+    , id_8,
+    input wand id_3,
+    output logic id_4,
+    output logic id_5,
+    input supply1 id_6
+);
+  always_latch begin
+    #1 begin
+      id_5 <= 1;
+    end
+    id_4 <= id_2;
+    id_5 = 1;
+  end
+  module_0(
+      id_0, id_6, id_6, id_1, id_6, id_6, id_0, id_6, id_3, id_3, id_0
+  );
+endprogram

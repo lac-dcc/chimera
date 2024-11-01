@@ -1,22 +1,32 @@
-// Seed: 489172369
-`resetall
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    output id_8,
-    output id_9
-    , id_14,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    output id_13
+// Seed: 2566971529
+program module_0 (
+    output wire  id_0,
+    input  wor   id_1,
+    input  wor   id_2,
+    output tri   id_3,
+    input  wand  id_4,
+    input  wand  id_5,
+    output uwire id_6,
+    input  tri0  id_7,
+    input  tri0  id_8
 );
-  logic id_15;
-  assign id_4 = 1;
+  wire id_10;
+  wire id_11;
+  wire id_12;
+endprogram
+module module_1 (
+    output supply0 id_0,
+    output wor id_1,
+    input tri0 id_2,
+    output tri0 id_3,
+    input wand id_4,
+    input uwire id_5,
+    input supply1 id_6,
+    output tri id_7,
+    output tri0 id_8
+);
+  wire id_10;
+  module_0(
+      id_1, id_5, id_4, id_8, id_4, id_5, id_1, id_4, id_5
+  );
 endmodule

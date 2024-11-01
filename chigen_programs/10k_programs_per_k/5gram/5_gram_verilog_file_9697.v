@@ -1,13 +1,31 @@
-// Seed: 2710323815
-`define pp_3 0
-`timescale 1ps / 1ps `timescale 1ps / 1 ps
+// Seed: 2738442691
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5;
+  wand id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14;
+  assign (weak1, strong0) id_13 = 1;
+  wire id_15;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3
 );
-  output id_3;
-  input id_2;
-  output id_1;
-  assign id_3 = id_2;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_3 = 1;
+  wire id_4;
+  module_0(
+      id_3, id_1, id_4, id_3
+  );
+  wire id_5;
 endmodule

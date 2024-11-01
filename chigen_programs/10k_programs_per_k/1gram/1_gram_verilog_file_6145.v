@@ -1,41 +1,34 @@
-// Seed: 2021290214
-module module_0;
-  type_1(
-      id_0
-  );
-endmodule
-`define pp_6 0
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 2153208156
+module module_0 (
+    id_1
 );
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_6;
-  logic id_7;
-  type_10(
-      1 == 1'b0, 1'b0
-  );
-  logic id_8;
-  type_12(
-      .id_0(1),
-      .id_1(1),
-      .id_2(id_7),
-      .id_3(id_1),
-      .id_4(1),
-      .id_5(1),
-      .id_6(""),
-      .id_7(id_4),
-      .id_8(1),
-      .id_9(id_7 | 1)
-  );
+  input wire id_1;
+  wire id_2;
+  wire id_3;
+  integer id_4, id_5;
+  wire id_6;
 endmodule
-`timescale 1ps / 1ps
+module module_1 (
+    input  logic id_0,
+    output tri   id_1,
+    input  wand  id_2
+);
+  always_latch id_1 = id_2;
+  task id_4(id_5);
+    id_1 = 1'h0;
+  endtask
+  assign id_4 = id_0;
+  assign id_4 = 1'b0;
+  reg id_6, id_7;
+  tri1 id_8;
+  reg  id_9;
+  always id_5 <= id_6;
+  always_comb id_9 <= 1;
+  supply0 id_10 = id_5 + id_0, id_11;
+  module_0(
+      id_11
+  );
+  wire id_12;
+  wire id_13;
+  pmos #1  (id_8, id_1, 1, id_8);
+endmodule

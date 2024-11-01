@@ -1,5 +1,4 @@
-// Seed: 542633883
-`define pp_22 0
+// Seed: 1525483893
 module module_0 (
     id_1,
     id_2,
@@ -9,47 +8,32 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_9
 );
-  input id_22;
-  inout id_21;
-  output id_20;
-  input id_19;
-  inout id_18;
-  input id_17;
-  input id_16;
-  output id_15;
-  output id_14;
-  inout id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  always @(posedge id_21) begin
-    id_13 = 1 == 1'b0;
-    id_13 <= id_3;
-  end
-  logic id_22, id_23;
-  assign id_23 = 1'b0;
+  output wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_10;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input tri0 id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    output tri id_4
+);
+  wire id_6;
+  wire  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ;
+  wire id_28;
+  wire id_29;
+  module_0(
+      id_8, id_8, id_26, id_20, id_14, id_23, id_29, id_17, id_22
+  );
+  wire id_30;
 endmodule

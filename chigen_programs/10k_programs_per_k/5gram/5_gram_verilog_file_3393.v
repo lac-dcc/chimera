@@ -1,42 +1,39 @@
-// Seed: 3145936900
-`define pp_17 0
-`default_nettype wire
+// Seed: 2970892745
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_6
 );
-  input id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  input id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  inout id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  assign id_16 = 1;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  tri0 id_7;
+  always @(posedge id_7 or posedge 1) id_5 = 1'b0;
+  assign id_3 = id_5 != id_4 ? id_1 : 1;
+  assign id_6 = module_0 == 1;
+  genvar id_8;
+  wire id_9;
 endmodule
-`default_nettype module_0
+module module_1 (
+    output wand id_0,
+    input wire id_1,
+    input wand id_2,
+    output wand id_3,
+    output tri id_4,
+    input tri1 id_5,
+    input wor id_6,
+    output tri id_7,
+    input supply1 id_8,
+    input tri id_9
+);
+  wire id_11;
+  module_0(
+      id_11, id_11, id_11, id_11, id_11, id_11
+  );
+endmodule

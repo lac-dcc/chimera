@@ -1,25 +1,44 @@
-// Seed: 3776319751
+// Seed: 3270860841
 module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    output id_5,
-    input logic id_6
+    input  tri0  id_0,
+    output uwire id_1
 );
-  assign id_5[1] = id_6;
-  logic id_7;
-  logic id_8;
-  function id_9;
-    reg id_10;
-    begin
-      id_10 <= 1;
-    end
-  endfunction
-  type_18(
-      1'b0, 1'b0, ""
+  tri0 id_3;
+  always @(posedge id_3) begin
+    id_1 = 1;
+    id_1 = 1;
+    $display;
+  end
+  assign id_1 = id_0;
+  assign id_1 = 1 ? 1 : id_3;
+  assign id_1 = id_0;
+endmodule
+module module_1 (
+    input wand id_0,
+    output supply1 id_1,
+    output uwire id_2,
+    input wor id_3,
+    input supply0 id_4,
+    input uwire id_5,
+    input supply0 id_6,
+    output tri id_7,
+    output wor id_8,
+    input wire id_9,
+    output uwire id_10,
+    output supply0 id_11,
+    input wire id_12,
+    output wand id_13,
+    output supply0 id_14,
+    input tri0 id_15,
+    input uwire id_16,
+    input tri id_17,
+    output supply1 id_18,
+    output tri id_19
+);
+  supply1  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ,  id_49  ,  id_50  =  1 'h0 >=  1  ;
+  assign id_42 = id_46;
+  wire id_51;
+  module_0(
+      id_17, id_8
   );
-  always @(*) id_0 <= 1;
-  logic id_11;
 endmodule

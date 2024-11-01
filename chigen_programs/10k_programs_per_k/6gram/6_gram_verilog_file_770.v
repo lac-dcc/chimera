@@ -1,5 +1,4 @@
-// Seed: 2557407353
-`timescale 1 ps / 1ps
+// Seed: 1965561860
 module module_0 (
     id_1,
     id_2,
@@ -10,56 +9,40 @@ module module_0 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25
+    id_10
 );
-  output id_25;
-  inout id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  input id_19;
-  input id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  output id_14;
-  output id_13;
-  input id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  logic id_25;
-  logic id_26;
-  logic id_27;
-  always @(negedge id_2) begin
-    #1;
-    if (id_3 != 1) begin
-      id_1 = id_5;
-    end else if (id_2) {1} <= id_1[1'b0];
-    else id_3 <= id_12;
+  input wire id_10;
+  output wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_11;
+  wire id_12;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input logic id_1,
+    output wire id_2,
+    input supply1 id_3,
+    output tri id_4,
+    output tri id_5,
+    output supply1 id_6,
+    input tri0 id_7,
+    output logic id_8,
+    output uwire id_9,
+    output wand id_10
+);
+  wire id_12;
+  initial begin
+    id_8 <= 1 == id_1;
+    id_8 <= id_1;
   end
+  module_0(
+      id_12, id_12, id_12, id_12, id_12, id_12, id_12, id_12, id_12, id_12
+  );
 endmodule

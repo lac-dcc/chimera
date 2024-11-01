@@ -1,25 +1,27 @@
-// Seed: 549018149
-module module_0 (
-    id_1,
-    id_2
-);
-  inout id_2;
-  input id_1;
-  assign id_2 = 1 == id_2;
-  reg id_2;
-  assign id_2 = 1;
-  always @(posedge id_2);
-  assign id_2 = id_2;
-  always @(1) begin
-    id_2 <= id_2;
-    if (1) begin
-      #1;
-      if (1) id_2 <= 1'b0;
-      id_2 <= id_1;
-    end
+// Seed: 338213220
+module module_0;
+  wire id_1;
+  id_2 :
+  assert property (@(negedge 1) (id_1))
+  else begin
+    if (id_2) id_2 = id_2;
   end
-  type_6(
-      (""), (id_3 - 1)
-  );
-  logic id_4 = id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  xor (id_2, id_3, id_4, id_6);
+  module_0();
+  always @(1 or posedge id_6) if (id_1[1 : ""]) id_4 <= 1;
 endmodule

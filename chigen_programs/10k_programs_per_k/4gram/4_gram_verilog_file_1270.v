@@ -1,2 +1,95 @@
-// Seed: 3490723769
-`default_nettype id_0
+// Seed: 1927525455
+module module_0 (
+    output supply0 id_0,
+    output supply0 id_1,
+    input supply0 id_2,
+    output uwire id_3,
+    input wire id_4,
+    input uwire id_5,
+    input uwire id_6,
+    input wor id_7,
+    output tri0 id_8,
+    input wor id_9,
+    output tri id_10,
+    input supply1 id_11,
+    input tri0 id_12,
+    input uwire id_13,
+    input wor id_14,
+    output wor id_15,
+    input supply1 id_16,
+    input tri1 id_17,
+    output tri0 id_18,
+    output supply0 id_19,
+    input supply0 id_20,
+    input wand id_21,
+    output supply1 id_22,
+    output supply1 id_23,
+    input wor id_24,
+    input tri id_25,
+    input supply0 id_26,
+    input wand id_27,
+    input uwire id_28,
+    output tri0 id_29,
+    output supply1 id_30
+    , id_40,
+    input wand id_31,
+    output wor id_32,
+    input supply0 id_33,
+    input tri id_34,
+    input wire id_35,
+    input wand id_36,
+    input tri0 id_37,
+    input supply1 id_38
+);
+  wire id_41;
+endmodule
+module module_1 (
+    output wire id_0,
+    output wand id_1,
+    input supply1 id_2
+);
+  id_4 :
+  assert property (@(posedge id_2) id_4)
+  else $display;
+  module_0(
+      id_4,
+      id_0,
+      id_4,
+      id_4,
+      id_2,
+      id_4,
+      id_2,
+      id_4,
+      id_4,
+      id_2,
+      id_1,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_0,
+      id_4,
+      id_2,
+      id_1,
+      id_0,
+      id_4,
+      id_4,
+      id_0,
+      id_0,
+      id_2,
+      id_2,
+      id_4,
+      id_2,
+      id_4,
+      id_1,
+      id_0,
+      id_4,
+      id_4,
+      id_2,
+      id_4,
+      id_2,
+      id_4,
+      id_2,
+      id_4
+  );
+endmodule

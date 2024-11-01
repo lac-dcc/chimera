@@ -1,25 +1,19 @@
-// Seed: 685283999
-module module_0 (
-    output id_0,
-    input id_1
-    , id_9,
-    input id_2
-    , id_10,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8
+// Seed: 1898909802
+module module_0;
+  id_1(
+      .id_0(id_2), .id_1(""), .id_2(1), .id_3(id_3 * id_4), .id_4(1), .id_5(1), .id_6(1 ^ 1)
+  );
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output tri  id_1,
+    input  wor  id_2,
+    output tri  id_3,
+    input  wire id_4,
+    output tri  id_5,
+    input  wire id_6
 );
-  always @(negedge id_9) begin
-    id_4 = 1;
-    id_0 <= ~id_3;
-  end
-  always @(negedge 1'b0) begin
-    if (1 - 1) begin
-      id_10 <= id_3 || 1;
-    end else id_0 <= 1;
-    id_10 <= 1;
-  end
+  wire id_8;
+  xor (id_1, id_2, id_4, id_6, id_8);
+  module_0();
 endmodule

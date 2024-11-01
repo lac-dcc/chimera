@@ -1,27 +1,25 @@
-// Seed: 3704112598
-module module_0 (
-    input reg id_0,
-    input id_1,
-    input id_2
-    , id_3
-);
-  reg id_4 = 1;
-  assign id_3 = 1;
+// Seed: 2194096975
+module module_0 ();
   initial begin
-    id_3 = id_3;
-    id_4 <= 1 && 1;
-    id_3 <= #1 1;
-    SystemTFIdentifier(1, 1);
-    id_3 = id_0;
-    id_3 <= #1 1;
-    id_4 = 1;
-    id_3 = 1'b0;
-    SystemTFIdentifier(id_1);
-    #1;
-    for (id_4 = id_4 - 1; 1; id_4 = id_0 << 1'b0) begin
-      id_4 = 1;
-    end
-    id_3 <= id_1;
-    id_3 <= id_2;
+    id_1 = 1;
   end
+  always @(1 or id_2) begin
+    $display;
+  end
+  reg id_3;
+  reg id_4 = id_3;
+  assign id_4 = id_2 ^ 1;
+  always @(posedge id_2 or posedge 1'b0 < 1) begin
+    if (1 && (id_3)) id_2 <= id_4;
+  end
+endmodule
+module module_1 (
+    output wor  id_0,
+    input  wor  id_1
+    , id_5,
+    input  tri1 id_2,
+    input  wand id_3
+);
+  tri1 id_6 = 1;
+  module_0();
 endmodule

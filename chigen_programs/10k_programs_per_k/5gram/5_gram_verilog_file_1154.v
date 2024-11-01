@@ -1,41 +1,50 @@
-// Seed: 2071297046
-`timescale 1 ps / 1ps
+// Seed: 2588526677
 module module_0 (
-    inout id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output id_4
-    , id_18,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input logic id_12,
-    input logic id_13,
-    input id_14,
-    input logic id_15,
-    input id_16,
-    input id_17
+    id_1,
+    id_2
 );
-  generate
-    logic id_19;
-    assign id_19 = 1;
-  endgenerate
-  type_32(
-      id_6, id_18
+  input wire id_2;
+  input wire id_1;
+  wire id_3;
+  wire id_4;
+endmodule
+module module_1;
+  wire id_1;
+  module_0(
+      id_1, id_1
   );
-  logic id_20 = 1;
-  assign id_3 = 1;
-  logic id_21;
-  assign id_19 = "" ? 1 - id_8[1] : id_12;
-  logic id_22 = 1;
-  assign id_9 = 1;
-  task id_23;
-    output id_24;
-    SystemTFIdentifier(1, id_0, 1);
-  endtask
+endmodule
+module module_2 (
+    output uwire id_0,
+    output wor   id_1,
+    output wire  id_2,
+    input  wire  id_3,
+    input  tri1  id_4
+);
+  wire id_6;
+  module_0(
+      id_6, id_6
+  );
+endmodule
+module module_3 (
+    input wor id_0
+    , id_14,
+    input uwire id_1,
+    input tri0 id_2,
+    input wor id_3,
+    input supply1 id_4,
+    input tri1 id_5,
+    output wire id_6,
+    input wor id_7,
+    input supply1 id_8,
+    input tri id_9,
+    input wor id_10,
+    input supply0 id_11,
+    input supply0 id_12
+);
+  supply0 id_15 = id_10;
+  module_0(
+      id_14, id_14
+  );
+  wire id_16, id_17, id_18, id_19, id_20, id_21;
 endmodule

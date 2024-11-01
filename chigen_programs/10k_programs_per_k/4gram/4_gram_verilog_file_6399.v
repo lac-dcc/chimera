@@ -1,18 +1,64 @@
-// Seed: 2512521854
+// Seed: 1229208786
 module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8,
-    input id_9,
-    input id_10,
-    input id_11
-    , id_12
+    id_1,
+    id_2
 );
-  assign id_4 = 1;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1 = 1'b0;
+  wire id_3;
+  wire id_4;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    module_1,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
+);
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always @(negedge 1 or posedge 1'h0) begin
+    id_8 <= id_2;
+  end
+  module_0(
+      id_7, id_11
+  ); id_16(
+      .id_0(),
+      .id_1(1),
+      .id_2(id_11),
+      .id_3(1),
+      .id_4(id_15),
+      .id_5(1),
+      .id_6(),
+      .id_7(1),
+      .id_8(1'b0)
+  );
+  wire id_17 = id_6;
+  id_18(
+      id_1 - id_11, id_14, 1
+  );
 endmodule

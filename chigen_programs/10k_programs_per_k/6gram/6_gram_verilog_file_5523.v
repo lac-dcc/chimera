@@ -1,20 +1,27 @@
-// Seed: 2226027465
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  output id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  assign id_2 = id_2;
-  logic id_6 = 1;
-  assign id_5 = id_3;
+// Seed: 3515230101
+module module_0 ();
+  wand id_2;
+  always @(1 or 1)
+    if (1) id_2 = 1;
+    else assign id_2 = id_1;
 endmodule
-`default_nettype wire
+module module_1 (
+    output uwire id_0,
+    output wire id_1,
+    input wand id_2,
+    input tri0 id_3,
+    output tri0 id_4,
+    input supply1 id_5,
+    output wor id_6,
+    output wire id_7,
+    output supply1 id_8
+);
+  wire id_10;
+  assign id_6 = id_3;
+  wire id_11;
+  timeprecision 1ps; module_0();
+endmodule
+module module_2;
+  assign id_1 = id_1[""];
+  module_0();
+endmodule

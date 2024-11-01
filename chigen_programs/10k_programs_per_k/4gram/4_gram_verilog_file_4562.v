@@ -1,23 +1,31 @@
-// Seed: 2855715029
-`define pp_7 0
-`timescale 1ps / 1 ps
+// Seed: 3597001556
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    input logic id_4
-    , id_7,
-    output supply1 id_5,
-    output id_6
+    output wand  id_0,
+    output uwire id_1,
+    input  uwire id_2,
+    input  tri   id_3,
+    input  tri1  id_4
 );
-  logic id_8;
-  logic id_9;
-  logic id_10;
-  logic id_11 = id_9;
-  assign id_5[1] = 1;
-  logic id_12 = id_7;
-  type_22(
-      1, id_8
+  function real id_6;
+    integer id_7, id_8;
+    reg id_9;
+    begin
+      id_0 = id_7;
+      `define pp_10 0
+      if (1 == id_4 * id_8) begin
+        id_9 <= 1;
+      end
+    end
+  endfunction
+endmodule
+module module_1 (
+    input  tri1 id_0,
+    input  wor  id_1,
+    output tri0 id_2
+);
+  assign id_2 = 1'b0;
+  assign id_2 = id_0;
+  module_0(
+      id_2, id_2, id_1, id_0, id_1
   );
 endmodule

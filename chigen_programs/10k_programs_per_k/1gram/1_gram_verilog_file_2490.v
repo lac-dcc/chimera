@@ -1,2 +1,24 @@
-// Seed: 1962315832
-`define pp_0 0
+// Seed: 373753465
+module module_0;
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  assign id_1 = 1;
+  tri1 id_2;
+  assign id_2 = 'd0;
+  assign id_1 = 1'b0 - id_1 - 1 * 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = id_3 | id_3;
+  module_0();
+  wire id_4;
+  id_5(
+      1 ? 1 & "" - 1 : id_3, {1{id_1}}, id_2
+  );
+endmodule

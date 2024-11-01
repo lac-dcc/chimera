@@ -1,32 +1,58 @@
-// Seed: 1933433050
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`define pp_20 0
-`define pp_21 0
-`default_nettype id_1 `default_nettype `pp_5 `timescale 1 ps / 1ps
+// Seed: 3591056831
 module module_0 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  output id_2;
-  input id_1;
-  genvar id_2;
-  logic id_3;
-  assign id_2 = 1;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  id_11(
+      .id_0(1'b0),
+      .id_1(1),
+      .id_2(id_3),
+      .id_3(1),
+      .id_4(!id_2),
+      .id_5(1),
+      .id_6(1),
+      .id_7(1),
+      .id_8(1 - 1),
+      .id_9(id_5)
+  ); id_12(
+      .id_0(1 == id_1), .id_1(id_1)
+  );
+  wire id_13;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_6;
+  wire id_7;
+  module_0(
+      id_4, id_6, id_7, id_3, id_6, id_4, id_2, id_6, id_3, id_6
+  );
+  always @(*) id_1 <= 1;
 endmodule

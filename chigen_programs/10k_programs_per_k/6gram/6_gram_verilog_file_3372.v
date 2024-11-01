@@ -1,39 +1,35 @@
-// Seed: 2700898997
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+// Seed: 2499674642
+module module_0 ();
+  wire id_2;
+  wire id_3;
+  reg  id_4;
+  wire id_5;
+  initial forever id_1 = #1 id_4;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output supply1 id_1,
+    input supply0 id_2,
+    output supply1 id_3,
+    output wire id_4,
+    input wire id_5,
+    output wor id_6,
+    input wand id_7,
+    output supply0 id_8,
+    output wand id_9
 );
-  inout id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  output id_9;
-  inout id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_13;
-  type_16(
-      id_8 & id_7 & 1, 1, 1
+  module_0();
+  tri id_11 = id_5;
+  id_12(
+      .id_0(1),
+      .id_1(1),
+      .id_2(1 > id_5),
+      .id_3(id_5),
+      .id_4(id_3),
+      .id_5(1 ? 1 : id_4),
+      .id_6(id_4),
+      .id_7(1 == id_4 - id_3),
+      .id_8(id_1),
+      .id_9(1)
   );
-  assign id_7 = 1;
-  logic id_14;
-  always @((id_8 && 'd0)) begin
-    if (id_6) id_5 <= id_12;
-  end
 endmodule

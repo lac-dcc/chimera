@@ -1,4 +1,4 @@
-// Seed: 2700633271
+// Seed: 4099287355
 module module_0 (
     id_1,
     id_2,
@@ -25,48 +25,83 @@ module module_0 (
     id_23,
     id_24,
     id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31
+    id_26
 );
-  output id_31;
-  inout id_30;
-  inout id_29;
-  input id_28;
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  supply1 id_31;
-  assign id_2 = id_31[1];
-  logic id_32, id_33, id_34;
-  always @(1'b0) begin
-    id_13 = 1;
-  end
+  output wire id_26;
+  inout wire id_25;
+  input wire id_24;
+  input wire id_23;
+  input wire id_22;
+  output wire id_21;
+  inout wire id_20;
+  input wire id_19;
+  output wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  timeprecision 1ps;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  id_6(
+      .id_0(1),
+      .id_1(id_5),
+      .id_2(id_5),
+      .id_3(id_4),
+      .id_4(),
+      .id_5(id_2),
+      .id_6(id_2 != id_1[1 : 1]),
+      .id_7(id_2)
+  ); module_0(
+      id_4,
+      id_5,
+      id_4,
+      id_4,
+      id_2,
+      id_4,
+      id_5,
+      id_5,
+      id_3,
+      id_2,
+      id_5,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_5,
+      id_5,
+      id_5,
+      id_2,
+      id_4,
+      id_4,
+      id_5,
+      id_4,
+      id_2,
+      id_4,
+      id_5
+  );
 endmodule

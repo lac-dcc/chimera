@@ -1,17 +1,33 @@
-// Seed: 1709658913
-module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input integer id_3,
-    output logic id_4,
-    output logic id_5,
-    output logic id_6,
-    output logic id_7
-);
-  logic id_8 = 1'h0;
-  assign id_7 = 1'b0;
+// Seed: 893492518
+module module_0 ();
+  assign id_1 = id_1 ^ id_1 * 1;
+  integer id_2;
+  reg id_3;
+  always id_2 <= id_1;
+  assign id_3 = !1'b0;
+  assign id_2 = id_3;
 endmodule
-`timescale 1ps / 1 ps
-parameter module_0 = 1;
-`define pp_8 0
+module module_1 (
+    input supply0 id_0
+);
+  assign id_2 = (1) & id_2;
+  assign id_2 = id_2 - id_0;
+  module_0();
+  assign id_2 = id_0 == id_0;
+endmodule
+module module_2 (
+    output wor id_0
+);
+  wire id_2;
+  module_0();
+endmodule
+module module_3 (
+    id_1
+);
+  inout wire id_1;
+  wire id_2;
+  wor id_3, id_4;
+  always $display(id_3);
+  module_0(); id_5 :
+  assert property (@((1) or negedge id_3) 1);
+endmodule

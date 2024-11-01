@@ -1,15 +1,115 @@
-// Seed: 4250859720
-`timescale 1ps / 1ps
-module module_0 ();
-  wire  id_0;
-  logic id_3 = id_3;
-  always @(posedge id_3) begin
-    #((1 - 1));
-  end
-  reg   id_4;
-  logic id_5;
-  always @* #1 id_4 <= 1 & 1;
-  logic id_6 = id_2;
-  assign id_0[1'b0] = id_2;
-  logic id_7;
+// Seed: 246481286
+module module_0 (
+    input supply0 id_0,
+    output supply0 id_1,
+    output supply1 id_2
+    , id_5,
+    input wand id_3
+);
+  wire id_6;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_1 (
+    output tri id_0,
+    input uwire id_1,
+    output tri0 id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input uwire id_5,
+    input uwire id_6,
+    output wire id_7,
+    input supply1 id_8,
+    output tri1 id_9,
+    input uwire id_10,
+    input tri1 id_11,
+    output supply0 id_12,
+    output wire id_13,
+    input wor id_14,
+    output tri0 id_15,
+    output wand id_16,
+    input supply0 id_17,
+    output wand id_18,
+    input wire id_19,
+    input tri id_20,
+    input uwire id_21,
+    output uwire id_22,
+    input tri1 id_23,
+    input wor id_24,
+    output tri0 id_25,
+    input uwire id_26,
+    input uwire id_27,
+    output wire id_28,
+    output wand id_29,
+    input supply1 id_30,
+    input supply1 id_31,
+    output supply1 id_32,
+    output wand id_33,
+    input tri0 id_34,
+    input tri1 id_35,
+    input wire id_36,
+    output tri1 id_37,
+    input tri0 id_38,
+    input supply0 id_39,
+    inout tri1 id_40,
+    input uwire id_41,
+    output wire id_42,
+    output wire id_43,
+    input supply0 id_44,
+    output supply1 id_45,
+    output tri0 id_46,
+    input wor id_47
+    , id_62,
+    input supply0 id_48,
+    output tri id_49,
+    input tri id_50,
+    output tri0 id_51,
+    input uwire id_52,
+    output tri1 id_53,
+    input tri1 id_54,
+    output supply1 id_55,
+    output wor id_56,
+    output uwire id_57,
+    output tri1 id_58,
+    output tri id_59,
+    output wor id_60
+);
+  assign id_13 = id_50;
+  nand (
+      id_28,
+      id_21,
+      id_48,
+      id_17,
+      id_52,
+      id_11,
+      id_24,
+      id_5,
+      id_19,
+      id_39,
+      id_54,
+      id_6,
+      id_38,
+      id_23,
+      id_1,
+      id_26,
+      id_20,
+      id_3,
+      id_8,
+      id_10,
+      id_14,
+      id_47,
+      id_50,
+      id_36,
+      id_4,
+      id_34,
+      id_41,
+      id_27,
+      id_44,
+      id_35,
+      id_62,
+      id_40
+  );
+  module_0(
+      id_4, id_42, id_58, id_30
+  );
 endmodule

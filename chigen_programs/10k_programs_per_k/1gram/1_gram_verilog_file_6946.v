@@ -1,26 +1,28 @@
-// Seed: 3335969274
-`define pp_2 0
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 1309540044
+module module_0 ();
+  assign id_1 = id_1;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  inout id_2;
-  output id_1;
-  genvar id_2;
-  reg   id_3;
-  logic id_4 = 1'b0;
-  always
-    if (id_3)
-      if (1) id_2 <= 1;
-      else SystemTFIdentifier();
-    else id_3 = id_2 == 1;
-  logic id_5;
-  assign id_3 = id_2;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  type_14(
-      .id_0(id_3)
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_7;
+  assign id_4 = id_6[""];
+  assign id_3 = id_6;
+  module_0(); id_8(
+      id_6, id_3, id_8
   );
+  initial id_5[1] = 1;
+  wire id_9;
 endmodule

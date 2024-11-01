@@ -1,28 +1,42 @@
-// Seed: 1151626353
-`define pp_15 0
+// Seed: 617015943
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14
+    id_1,
+    id_2,
+    id_3
 );
-  type_27(
-      id_5, 1
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_3 = 'b0;
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_4;
+  module_0(
+      id_3, id_3, id_4
   );
-  assign id_4 = id_11#(.id_6(1));
-  uwire id_15;
-  logic id_16;
-  assign id_15[1] = id_16;
-  always @(id_8) id_0 = id_11;
+endmodule
+module module_2 (
+    input  tri1  id_0,
+    output logic id_1,
+    input  tri   id_2,
+    input  wor   id_3,
+    input  tri1  id_4
+);
+  assign id_1 = id_0 ? 1 : 1;
+  notif1 (id_1, id_6, id_4);
+  always @(posedge 1) begin
+    id_1 <= 1;
+  end
+  supply1 id_6 = 1 - id_2;
+  module_0(
+      id_6, id_6, id_6
+  );
 endmodule

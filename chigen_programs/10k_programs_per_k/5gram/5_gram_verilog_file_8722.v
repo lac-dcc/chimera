@@ -1,31 +1,41 @@
-// Seed: 425629661
-localparam id_16 = id_11 & 1;
+// Seed: 2601799296
 module module_0 (
-    input logic id_0
-    , id_21,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    output logic id_8,
-    input logic id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input id_15,
-    input id_16,
-    input logic id_17,
-    output logic id_18,
-    input logic id_19,
-    output id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  assign id_2 = 1 <= (id_19);
-  always @(*) id_20 = 1;
-  timeunit 1ps;
-  logic id_22;
+  input wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_9 = id_3;
+endmodule
+module module_1 (
+    output wor   id_0,
+    input  wor   id_1,
+    output tri   id_2,
+    input  uwire id_3,
+    input  tri0  id_4
+);
+  assign id_0 = (id_3);
+  final $display();
+  wor id_6;
+  assign id_2 = id_6 ? 1 : id_6;
+  wire id_7;
+  module_0(
+      id_7, id_7, id_7, id_7, id_7, id_7, id_7, id_7, id_7, id_7
+  );
 endmodule

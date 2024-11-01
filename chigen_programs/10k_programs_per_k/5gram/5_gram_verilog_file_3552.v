@@ -1,50 +1,26 @@
-// Seed: 1180718062
-`timescale 1ps / 1 ps
+// Seed: 3991750811
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    input uwire id_0,
+    input tri0 id_1,
+    output supply1 id_2
 );
-  input id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  initial begin
-    id_5 = id_8;
-    if ('b0) id_5 <= 1'b0;
-    else begin
-      id_2 <= 1 & 1;
-    end
+  supply1 id_4;
+  always_latch @(negedge id_0 or posedge 1) id_4 = id_1 == 1;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  wand  id_1,
+    output wand  id_2,
+    output logic id_3,
+    input  tri   id_4
+);
+  module_0(
+      id_0, id_0, id_2
+  );
+  always @(posedge id_4 or posedge 1) begin
+    assume #1  (id_4) $display(1'h0);
+    else;
   end
-  assign id_9 = (1);
-  type_0 id_13 (
-      1,
-      id_11
-  );
-  logic id_14;
-  int id_15 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1)
-  );
+  always @(posedge id_0) id_3 <= 1'b0;
+  assign id_2 = 1 - {1, 1 | 1 - !id_1, 1'b0};
 endmodule

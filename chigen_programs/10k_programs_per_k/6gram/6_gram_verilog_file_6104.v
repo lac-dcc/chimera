@@ -1,5 +1,24 @@
-// Seed: 2410651866
+// Seed: 1335108734
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_7;
+  wire id_8;
+  genvar id_9;
+  tri0 id_10 = id_3 == id_9;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -12,20 +31,28 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13
+    id_13,
+    id_14
 );
-  output id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  inout id_9;
-  inout id_8;
-  inout id_7;
-  output id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  output id_2;
-  output id_1;
-  assign id_4 = 1'h0;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign #id_15 id_13[1] = 1;
+  module_0(
+      id_8, id_12, id_4, id_4, id_4, id_4
+  );
+  initial
+  fork : id_16
+  join_none : id_17
 endmodule

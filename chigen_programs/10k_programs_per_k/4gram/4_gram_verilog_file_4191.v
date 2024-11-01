@@ -1,21 +1,44 @@
-// Seed: 2122514020
-`define pp_6 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 329072308
+module module_0;
+  wand id_1;
+  module_2(
+      id_1, id_1
+  );
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input  tri1 id_1
 );
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  assign id_2[1] = id_6;
-  logic id_6 = 1;
-  logic id_7;
-  assign id_7 = id_7;
+  wire id_3 = id_3;
+  wire id_4;
+  module_0();
+  wire id_5;
+  genvar id_6;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  task id_3;
+    input id_4;
+    begin
+      $display(1);
+    end
+  endtask
+  wire id_5;
+  wire id_6;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_3 (
+    input  wand id_0,
+    output wire id_1
+);
+  wire id_3;
+  module_2(
+      id_3, id_3
+  );
 endmodule

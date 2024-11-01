@@ -1,20 +1,20 @@
-// Seed: 425284143
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input id_9
-    , id_14,
-    input id_10,
-    output logic id_11,
-    input logic id_12,
-    output logic id_13
-);
-  assign id_5 = 1'h0;
+// Seed: 3376292036
+module module_0;
+  always #1 begin
+    if (id_1) $display(1, id_1, 1'b0, id_1, id_1, 1'b0, id_1, (1));
+    else begin
+      id_1 <= 1;
+    end
+  end
+  module_2();
+endmodule
+module module_1;
+  logic [7:0] id_1 = id_1;
+  assign id_1 = id_1;
+  assign id_1[1] = 1;
+  wor id_2 = 1;
+  module_0();
+endmodule
+module module_2 ();
+  assign id_1#(.id_1(1 == id_1)) = 1 ==? id_1;
 endmodule

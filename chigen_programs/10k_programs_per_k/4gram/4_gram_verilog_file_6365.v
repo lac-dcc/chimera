@@ -1,32 +1,101 @@
-// Seed: 855750114
+// Seed: 547854381
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output logic id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26
 );
-  assign id_4 = id_1;
-  reg id_5;
-  logic id_6, id_7;
-  type_13 id_8 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1'h0),
-      .id_3(id_3 & 1),
-      .id_4({1{1'h0}})
+  output wire id_26;
+  input wire id_25;
+  input wire id_24;
+  inout wire id_23;
+  inout wire id_22;
+  output wire id_21;
+  input wire id_20;
+  input wire id_19;
+  output wire id_18;
+  output wire id_17;
+  output wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  input wire id_12;
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_27;
+  wire id_28;
+endmodule
+module module_1;
+  logic [7:0] id_2 = id_2[1 : 1];
+  wire id_3;
+  module_0(
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
   );
-  logic id_9 = 1;
-  always @(posedge "")
-    if (1 - 1) begin
-      id_0 = 1;
-      id_6 = id_9;
-      SystemTFIdentifier;
-      id_0 = 1;
-      id_5 <= 1;
-      if (id_1 - 1) id_0 = 1;
+  wire id_4;
+  wire id_5;
+  for (id_6 = id_1; 1; id_2 = id_2) begin
+    if (~id_6) begin
+      id_7(
+          .id_0(1), .id_1(1), .id_2(1'b0)
+      );
     end
-  always @(posedge 1'd0) begin
-    for (id_7 = id_5; id_6; id_7 = id_1) #1 id_6 = id_1;
   end
+  wire id_8;
+  wire id_9;
 endmodule

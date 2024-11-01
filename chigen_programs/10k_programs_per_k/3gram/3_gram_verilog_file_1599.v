@@ -1,24 +1,31 @@
-// Seed: 1274007942
-`default_nettype id_14 `timescale 1 ps / 1ps `default_nettype wire
+// Seed: 2093596409
 module module_0 (
-    input logic id_0
-    , id_17,
-    output id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    output logic id_16
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  logic id_18;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_7;
+  id_8(
+      .id_0(1), .id_1(id_3), .id_2(id_7), .id_3(id_7)
+  );
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output tri0  id_1
+);
+  logic [7:0] id_3, id_4, id_5, id_6, id_7;
+  assign id_7[1'b0] = id_7;
+  wire id_8;
+  module_0(
+      id_8, id_8, id_8, id_8, id_8, id_8
+  );
 endmodule

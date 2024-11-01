@@ -1,50 +1,36 @@
-// Seed: 829336628
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+// Seed: 648801513
+module module_0 ();
+endmodule
+module module_1 (
+    output logic id_0,
+    input tri1 id_1,
+    input wor id_2,
+    input logic id_3,
+    input logic id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    input supply0 id_7,
+    output logic id_8,
+    input wand id_9,
+    input wand id_10,
+    output wor id_11,
+    input tri0 id_12,
+    output logic id_13,
+    output uwire id_14,
+    output logic id_15
 );
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
   initial begin
-    id_4 <= {SystemTFIdentifier(!1)};
-    id_19 = id_8;
+    wait (id_7) begin
+      if (1) id_0 = id_3;
+      else begin
+        id_0  <= 1;
+        id_15 <= 1'b0;
+      end
+    end
+    id_13 <= 1;
+    id_13 <= id_4;
+    id_0 = 1;
+    id_8 <= id_3;
   end
+  module_0();
 endmodule

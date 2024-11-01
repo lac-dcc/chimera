@@ -1,39 +1,41 @@
-// Seed: 491512455
-`default_nettype id_12
+// Seed: 4222577330
+module module_0 ();
+  final $display;
+  assign id_1 = id_1;
+endmodule
 module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    output logic id_4,
-    output logic id_5,
-    output logic id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    output logic id_10,
-    output logic id_11,
-    output id_12,
-    input id_13,
-    input id_14,
-    input logic id_15,
-    input logic id_16
-    , id_31,
-    output logic id_17,
-    input id_18,
-    input logic id_19,
-    input logic id_20,
-    input id_21,
-    input id_22,
-    input logic id_23
-    , id_32,
-    input id_24,
-    output logic id_25,
-    output logic id_26,
-    input id_27,
-    output id_28,
-    input id_29,
-    output logic id_30
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    module_1
 );
-  logic id_33;
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_16 = id_3;
+  assign id_12[1'b0] = id_1 ? 1 : id_10;
+  module_0();
 endmodule

@@ -1,34 +1,34 @@
-// Seed: 3011769167
-module module_0;
-  always @(1 or posedge 1) begin
-    id_0 <= #1 1;
-  end
+// Seed: 3406034371
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_4;
 endmodule
 module module_1 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    output id_6,
-    output id_7
-    , id_11,
-    output logic id_8,
-    input logic id_9,
-    output logic id_10
+    input tri id_0,
+    output tri1 id_1,
+    output supply1 id_2
 );
-  type_20 id_12 (
-      .id_0(),
-      .id_1(id_9),
-      .id_2(id_10),
-      .id_3(1),
-      .id_4(id_11),
-      .id_5(id_7)
+  wire id_4;
+  wire id_5;
+  module_0(
+      id_4, id_4, id_5
   );
-  type_21 id_13 (
-      id_8,
-      1,
-      1 * (1)
+  wire id_6;
+  assign id_1 = 1;
+  wand id_7;
+  always @(id_7 or posedge 1) $display;
+endmodule
+module module_2;
+  assign id_1 = 1;
+  assign id_1 = 1;
+  module_0(
+      id_1, id_1, id_1
   );
+  assign id_1 = 'b0;
 endmodule

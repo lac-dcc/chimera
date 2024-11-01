@@ -1,34 +1,55 @@
-// Seed: 787108716
-`define pp_13 0
+// Seed: 3428789404
 module module_0 (
-    input reg id_0,
-    output id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    input logic id_9,
-    input logic id_10,
-    input logic id_11,
-    output logic id_12
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  assign id_8[1] = id_4;
-  logic id_13;
-  always @(id_4[1] or negedge id_9) begin
-    if (id_9) begin
-      id_6 <= 1;
-      id_2 <= id_0;
-    end
-  end
-  type_26(
-      id_12, id_7, 1
+  output wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wor  id_17 = 1;
+  wire id_18;
+  module_0(
+      .id_0(1'h0), .id_1(id_11)
   );
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
-  initial id_17 = id_14;
+  wire id_19;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  initial id_2 <= 1 == 1;
+  module_0(
+      id_3, id_3, id_1, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_1, id_3, id_3, id_3, id_3
+  );
 endmodule

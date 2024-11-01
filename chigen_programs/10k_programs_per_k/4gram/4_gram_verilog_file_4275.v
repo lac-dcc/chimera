@@ -1,24 +1,28 @@
-// Seed: 3013468875
-`timescale 1 ps / 1 ps
-module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    input id_7,
-    output logic id_8,
-    output id_9,
-    output id_10,
-    output id_11
-    , id_17,
-    output id_12,
-    output id_13,
-    output id_14,
-    output id_15,
-    input logic id_16
+// Seed: 2038935330
+module module_0 ();
+  always_ff @* begin
+    id_1 <= 1;
+  end
+  assign #1 id_2 = id_2;
+  wire id_3;
+  assign id_2 = 1 + id_2;
+  wire id_4;
+  wire id_5;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    output supply0 id_1,
+    input wire id_2,
+    inout supply1 id_3,
+    input tri1 id_4,
+    input wor id_5,
+    output supply1 id_6,
+    input supply0 id_7,
+    output wand id_8,
+    output tri0 id_9,
+    input tri1 id_10,
+    inout tri0 id_11
 );
-  assign id_5 = id_6;
+  wire id_13, id_14, id_15, id_16, id_17, id_18, id_19;
+  module_0();
 endmodule

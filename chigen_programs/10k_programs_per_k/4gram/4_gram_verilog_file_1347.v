@@ -1,14 +1,78 @@
-// Seed: 2993706642
-`define pp_4 0
+// Seed: 2973034230
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output wire id_0,
+    output wand id_1,
+    input tri id_2,
+    input supply1 id_3,
+    output wand id_4,
+    input tri id_5,
+    input tri1 id_6,
+    input wor id_7,
+    input wand id_8
 );
-  output id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  assign id_3 = id_1;
+  wire id_10;
+endmodule
+module module_0 (
+    output tri1 id_0
+    , id_29,
+    input supply1 id_1,
+    input supply1 id_2,
+    input wire id_3,
+    input wand id_4,
+    output tri0 id_5,
+    input tri1 id_6,
+    input tri0 id_7,
+    output wor id_8,
+    input supply0 id_9,
+    output supply0 id_10,
+    input tri1 id_11,
+    input supply0 id_12,
+    output tri0 id_13,
+    input supply1 id_14,
+    output tri0 id_15,
+    input tri id_16,
+    output tri1 id_17,
+    input tri0 id_18,
+    output uwire id_19,
+    output tri1 id_20,
+    output tri0 id_21,
+    input wire id_22,
+    input wire id_23,
+    input wand id_24,
+    input tri0 id_25,
+    output supply0 id_26,
+    input tri1 module_1
+);
+  id_30(
+      .id_0(1),
+      .id_1(id_2),
+      .id_2(1'b0),
+      .id_3(!id_11),
+      .id_4(1),
+      .id_5(id_21),
+      .id_6(id_18),
+      .id_7(id_15),
+      .id_8(1'd0),
+      .id_9(id_27),
+      .id_10(id_29[1]),
+      .id_11(1),
+      .id_12(id_23 ^ 1),
+      .id_13(),
+      .id_14(id_27),
+      .id_15(id_29),
+      .id_16(id_3),
+      .id_17(""),
+      .id_18(id_25),
+      .id_19(1),
+      .id_20(1'h0)
+  );
+  wire id_31;
+  module_0(
+      id_8, id_15, id_2, id_22, id_21, id_7, id_16, id_4, id_11
+  );
+  wor  id_32 = 1;
+  wire id_33;
+  wire id_34;
+  assign id_10 = 1;
+  wire id_35;
 endmodule

@@ -1,14 +1,28 @@
-// Seed: 1053590720
+// Seed: 3852759968
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    output uwire id_5,
-    output logic id_6,
-    input id_7,
-    output id_8
+    module_0,
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_5[1'h0] = id_2 != id_2;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_5;
+  always @(id_2 or posedge 1) force id_4 = id_2 != id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_4;
+  always @(posedge 1 or posedge id_1) $display(id_1, 1, 1, 1, !id_4);
+  module_0(
+      id_4, id_1, id_4, id_3
+  );
 endmodule

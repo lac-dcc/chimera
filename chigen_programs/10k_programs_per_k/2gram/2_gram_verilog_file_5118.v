@@ -1,20 +1,37 @@
-// Seed: 3492814761
-`define pp_3 0
-module module_0 (
-    input  id_0,
-    output id_1,
-    output id_2
+// Seed: 2274880426
+macromodule module_0 (
+    output wor id_0
+    , id_2
 );
-  logic id_3;
-  assign id_2 = 'b0;
-  logic id_4;
-  assign id_2 = 1;
-  wand  id_5;
-  logic id_6;
-  logic id_7;
-  type_13(
-      1
-  );
-  assign id_5[1] = id_7;
+  wire id_3;
+  wire id_4;
 endmodule
-`define pp_4 0
+module module_1 (
+    input tri id_0,
+    output wand id_1,
+    input supply1 id_2,
+    input tri1 id_3,
+    output wor id_4,
+    output tri id_5,
+    input supply1 id_6,
+    input supply0 id_7
+);
+  wire id_9, id_10, id_11, id_12 = id_12;
+  assign id_4 = 1;
+  module_0(
+      id_4
+  );
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input uwire id_1,
+    output supply1 id_2,
+    input wor id_3,
+    output logic id_4
+);
+  always_ff id_4 <= id_1 & id_0;
+  assign id_2 = id_0;
+  module_0(
+      id_2
+  );
+endmodule

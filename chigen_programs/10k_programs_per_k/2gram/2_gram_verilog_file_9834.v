@@ -1,18 +1,30 @@
-// Seed: 2683283685
-`timescale 1ps / 1ps
-`define pp_1 0
+// Seed: 7496298
 module module_0 (
-    input logic id_0
+    input wand id_0,
+    input wor id_1,
+    input supply1 id_2,
+    input tri0 id_3,
+    input uwire id_4
 );
-  always id_1 = 1;
-  logic id_3;
-  always @(id_1 or posedge 1) @(posedge 1 or posedge id_0 - 1);
-  logic id_4;
-  assign id_2 = 1;
-  logic id_5;
-  assign id_2 = id_2;
   always begin
-    id_2 = id_4;
+    id_6 <= 1;
+    id_6 <= 1;
+    id_6 <= id_6;
   end
-  logic id_6;
+endmodule
+module module_1 (
+    output tri1  id_0,
+    input  logic id_1,
+    input  tri0  id_2,
+    input  wire  id_3
+);
+  wire id_5 = id_5;
+  reg  id_6;
+  always @(*) begin
+    if (id_2) id_6 <= id_1(1);
+    else id_0 = 1;
+  end
+  module_0(
+      id_2, id_2, id_2, id_3, id_2
+  );
 endmodule

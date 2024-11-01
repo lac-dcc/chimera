@@ -1,14 +1,32 @@
-// Seed: 1707353583
+// Seed: 1658376488
 module module_0;
-  logic id_0, id_1;
-  logic id_2, id_3;
-  always id_1 = 1;
-  defparam id_4 = 1; type_10(
-      1 & 1'b0
-  );
-  assign id_4#(.id_0(1)) = 1;
-  logic id_5;
-  logic id_6 = id_0;
-  logic id_7;
+  assign id_1 = id_1;
+  wire id_2;
 endmodule
-`timescale 1ps / 1 ps
+module module_1 (
+    input logic id_0,
+    input wire id_1,
+    input wor id_2,
+    output wor id_3,
+    output tri id_4,
+    input supply0 id_5,
+    output tri0 id_6,
+    output supply1 id_7,
+    input wand id_8,
+    output supply1 id_9,
+    input tri0 id_10,
+    output logic id_11,
+    input tri0 id_12,
+    input wire id_13
+);
+  generate
+    begin
+      begin
+        wire id_15;
+      end
+      reg id_16;
+      always id_11.id_16 <= id_0;
+    end
+  endgenerate
+  module_0();
+endmodule

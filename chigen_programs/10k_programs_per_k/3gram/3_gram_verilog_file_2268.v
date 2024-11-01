@@ -1,42 +1,44 @@
-// Seed: 244840622
-module module_0 (
-    input logic id_0,
-    output reg id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    input reg id_6
+// Seed: 3960403684
+module module_0;
+  assign id_1 = "" & 1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output wire id_1,
+    input tri0 id_2,
+    output wor id_3,
+    output tri1 id_4,
+    input wire id_5,
+    input supply0 id_6,
+    input wand id_7,
+    output tri1 id_8,
+    output wor id_9,
+    input tri0 id_10,
+    output uwire id_11,
+    input supply1 id_12,
+    input tri id_13,
+    output tri0 id_14,
+    input wire id_15,
+    output tri id_16,
+    input wor id_17,
+    output wand id_18,
+    output supply1 id_19,
+    input tri0 id_20,
+    output uwire id_21,
+    output wand id_22,
+    output wand id_23,
+    input tri id_24,
+    input tri0 id_25,
+    output wire id_26,
+    inout wor id_27,
+    output wor id_28,
+    inout tri1 id_29,
+    input tri0 id_30,
+    output supply1 id_31,
+    input wand id_32,
+    input tri1 id_33
 );
-  tri1  id_7 = id_7;
-  reg   id_8 = id_4;
-  logic id_9;
-  assign id_7 = id_7;
-  `define pp_7 0
-  function id_11(input id_12);
-    id_1 <= 1;
-  endfunction
-  type_30(
-      (1'b0), 1
-  );
-  logic id_13;
-  logic id_14;
-  always @(negedge 1 or posedge id_12) begin
-    #1;
-  end
-  always @(*) begin
-    id_8 <= id_6;
-  end
-  logic id_15;
-  assign id_7[1 : ""] = id_5;
-  logic id_16 = 1;
-  logic id_17 = 1;
-  logic id_18;
-  logic id_19;
-  logic id_20;
-  assign id_18 = id_15 && id_6 && {1, id_4};
-  logic id_21;
-  assign id_15 = 1;
-  assign id_20 = 1;
-  logic id_22;
+  assign id_3  = id_33;
+  module_0();
+  assign id_27 = 1'b0;
 endmodule

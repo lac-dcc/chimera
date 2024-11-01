@@ -1,26 +1,39 @@
-// Seed: 1431987276
-`define pp_17 (  pp_18  ,  pp_19  ,  pp_20  ,  pp_21  ,  pp_22  )  0
+// Seed: 3134945677
 module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    output logic id_13,
-    output id_14,
-    input id_15,
-    input id_16
+    input tri0 id_0,
+    output wire id_1,
+    output wor id_2,
+    input tri0 id_3,
+    input supply1 id_4,
+    output wor id_5,
+    input supply1 id_6,
+    input wand id_7,
+    output wire id_8,
+    input wire id_9,
+    input wire id_10,
+    input tri0 id_11
 );
-  realtime id_17;
-  assign id_5 = 1;
-  assign id_1 = 1;
-  logic id_18;
+  always @(*) begin
+    fork
+      #1;
+    join
+  end
+  assign id_2 = 1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input uwire id_1,
+    input wand id_2,
+    output wor id_3,
+    output tri1 id_4,
+    input wand id_5,
+    output tri0 id_6,
+    input supply1 id_7,
+    input tri1 id_8,
+    input wire id_9
+);
+  assign id_3 = 1 + 1 == id_0;
+  module_0(
+      id_2, id_6, id_6, id_9, id_5, id_6, id_7, id_1, id_6, id_1, id_1, id_0
+  );
 endmodule

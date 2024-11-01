@@ -1,36 +1,30 @@
-// Seed: 2734359059
-module module_0 (
-    input logic id_0
-    , id_4,
-    output id_1,
-    input id_2,
-    input logic id_3
-);
-  logic id_5, id_6;
-  logic id_7 = id_6;
-  defparam id_8 = id_3;
-  always id_7 = id_4 * 1;
-  logic id_9;
-  always id_5 = id_8;
+// Seed: 3575090716
+module module_0;
+  integer id_1, id_2;
+  assign id_1 = 1;
+  assign id_1 = 1'b0 - 1;
+  wire id_3;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    output supply1 id_0,
+    output wand id_1,
+    input logic id_2,
+    input supply1 id_3,
+    input logic id_4,
+    input supply0 id_5
+    , id_7
 );
-  output id_3;
-  inout id_2;
-  output id_1;
-  initial id_2.id_2 <= 1;
-  assign id_2 = 1 ** 1'h0;
-  type_10(
-      1'b0
-  );
-  string id_4 = ("");
-  logic  id_5;
-  logic  id_6;
-  logic  id_7 = 1;
-  assign id_6 = {id_0[1]};
-  assign id_5 = 1;
-  logic id_8, id_9;
-endmodule
+  assign id_0 = 1;
+  always_ff
+    if (1)
+      if (1'b0)
+        if (id_2) id_7 = id_7.id_4;
+        else #1;
+      else if (id_7)
+        assert (id_2) begin
+          id_7 <= 1;
+          id_7 <= id_2;
+        end
+  if (1'b0 - id_3) module_0();
+  assign id_0 = ~1;
+endmodule : id_8

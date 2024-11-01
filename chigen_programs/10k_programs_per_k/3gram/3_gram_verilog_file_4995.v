@@ -1,52 +1,76 @@
-// Seed: 2489621027
-`define pp_31 0
+// Seed: 1564004990
 module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    output id_6,
-    input id_7
-    , id_31, id_32,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    output id_13,
-    input logic id_14,
-    output logic id_15,
-    input logic id_16,
-    output id_17,
-    input logic id_18,
-    input logic id_19,
-    output id_20,
-    input id_21#(
-        .id_33(id_8),
-        .id_34(1)
-    ),
-    input id_22,
-    output id_23,
-    output id_24,
-    input id_25,
-    output tri id_26,
-    input id_27,
-    input tri1 id_28,
-    output id_29,
-    output id_30
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  logic id_35;
-  type_47 id_36 (
-      .id_0(),
-      .id_1(id_25[1] ^ id_28[1]),
-      .id_2(id_20),
-      .id_3(id_3),
-      .id_4(id_17),
-      .id_5(1'd0)
+  inout wire id_16;
+  inout wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  id_17(
+      .id_0(1'b0), .id_1(id_13 * 1'b0 ? id_4 : id_10), .id_2(1), .id_3(id_14)
   );
-  assign id_24 = 1;
-  logic id_37 = ~id_2 && 1 & 1 && 1'b0;
-  assign id_26[1] = "";
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input tri id_1,
+    input wor id_2,
+    input supply1 id_3,
+    output wand id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    input wor id_7,
+    output supply0 id_8,
+    input tri1 id_9,
+    input tri id_10,
+    output wand id_11,
+    input supply1 id_12,
+    inout wand id_13,
+    input wire id_14
+);
+  wire id_16;
+  module_0(
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16
+  );
 endmodule

@@ -1,12 +1,34 @@
-// Seed: 361125615
-`timescale 1ps / 1 ps
-module module_0 (
-    input logic id_0,
-    output logic id_1,
-    output id_2,
-    input logic id_3
+// Seed: 1836923296
+module module_0;
+  assign id_1 = id_1;
+  generate
+    integer id_2, id_3;
+  endgenerate
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wor id_1,
+    output uwire id_2,
+    input tri id_3,
+    input tri id_4,
+    input supply0 id_5,
+    input uwire id_6,
+    output wand id_7,
+    output wor id_8,
+    input uwire id_9
 );
-  assign id_2 = 1;
-  logic id_4 = 1'h0;
-  assign #id_5 id_4 = (1) ? 1'd0 : 1'h0;
+  wire id_11;
+  module_0();
+endmodule
+module module_2 (
+    output tri0  id_0,
+    input  uwire id_1,
+    input  wire  id_2,
+    input  tri1  id_3,
+    input  tri0  id_4
+);
+  always_latch @(posedge id_2) id_0 = id_4;
+  wire id_6;
+  nand (id_0, id_1, id_2, id_3, id_4, id_6);
+  module_0();
 endmodule

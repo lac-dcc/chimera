@@ -1,25 +1,45 @@
-// Seed: 99140078
-module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    input logic id_16,
-    output logic id_17
+// Seed: 4012871654
+module module_0 #(
+    parameter id_1 = 32'd71,
+    parameter id_2 = 32'd81
 );
-  defparam id_18.id_19 = id_13;
-  logic id_20;
-  logic id_21;
+  defparam id_1.id_2 = 1'b0;
+  reg  id_3;
+  wire id_4;
+  module_2(
+      id_4
+  );
+  initial begin
+    id_3 <= 1;
+  end
+endmodule
+module module_1 (
+    output wor id_0,
+    input supply1 id_1,
+    output tri id_2
+);
+  tri id_4;
+  initial begin
+    id_0 = id_4;
+    if (id_4) disable id_5;
+  end
+  module_0();
+endmodule
+module module_2 (
+    id_1
+);
+  inout wire id_1;
+  id_2(
+      .id_0(id_3),
+      .id_1(),
+      .id_2(id_3),
+      .id_3(id_3),
+      .id_4(1),
+      .id_5(id_3),
+      .id_6(id_1),
+      .id_7(1),
+      .id_8(),
+      .id_9(1)
+  );
+  assign id_3 = 1 ? 1'h0 : 1;
 endmodule

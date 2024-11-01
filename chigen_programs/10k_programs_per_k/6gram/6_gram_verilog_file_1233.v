@@ -1,30 +1,49 @@
-// Seed: 3423762248
-module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    output reg id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    output logic id_13,
-    input logic id_14,
-    input id_15,
-    input id_16,
-    output id_17,
-    input id_18,
-    inout id_19,
-    input logic id_20,
-    input id_21,
-    output id_22
+// Seed: 307467708
+module module_0 ();
+  wire id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  always @(*) begin
-    if (id_14) id_4 <= 1 ^ 1;
-  end
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  id_10(
+      1'b0, (id_6), 1
+  ); module_0();
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input supply1 id_1,
+    input uwire id_2,
+    input wire id_3,
+    output logic id_4,
+    output logic id_5,
+    input tri1 id_6,
+    input wor id_7,
+    output wor id_8
+);
+  always @(*)
+    if (!id_0) id_4 <= 1'b0;
+    else begin
+      id_5 <= 1;
+    end
+  assign id_4 = 1'b0;
+  bufif1 (id_4, id_6, id_7);
+  module_0();
+  assign id_8 = 1;
 endmodule

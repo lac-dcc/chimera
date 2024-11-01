@@ -1,6 +1,15 @@
-// Seed: 2640131534
-`timescale 1ps / 1ps
+// Seed: 254749354
 module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+endmodule
+module module_1 #(
+    parameter id_11 = 32'd39,
+    parameter id_12 = 32'd49
+) (
     id_1,
     id_2,
     id_3,
@@ -9,46 +18,25 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24
+    id_9
 );
-  inout id_24;
-  input id_23;
-  output id_22;
-  input id_21;
-  inout id_20;
-  output id_19;
-  input id_18;
-  inout id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  output id_13;
-  inout id_12;
-  input id_11;
-  input id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_24;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_2[1&&1+1] = id_6;
+  wire id_10;
+  module_0(
+      id_7, id_7
+  );
+  always @(negedge id_6[1'h0]) begin
+    id_9 = id_8;
+  end
+  assign id_3 = "" + 1;
+  defparam id_11.id_12 = id_5;
 endmodule

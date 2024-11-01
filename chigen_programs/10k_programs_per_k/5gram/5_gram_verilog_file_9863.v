@@ -1,25 +1,37 @@
-// Seed: 1524614905
-`define pp_12 0
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    output logic id_7
-    , id_12,
-    input id_8,
-    output id_9,
-    input id_10,
-    output logic id_11
+// Seed: 3466386271
+module module_0;
+  always @(negedge 1'b0) $display(1);
+  wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  logic id_13 = id_13;
-  always @(id_12 or posedge id_5) begin
-    id_9 = id_10;
-  end
-  logic id_14;
-  assign id_11 = id_12;
-  logic id_15;
+  input wire id_13;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_14(
+      .id_0(id_12), .id_1(1), .id_2(id_3)
+  ); module_0();
 endmodule

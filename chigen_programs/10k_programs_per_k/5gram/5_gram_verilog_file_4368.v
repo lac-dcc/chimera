@@ -1,30 +1,41 @@
-// Seed: 396872045
-`default_nettype id_0 `default_nettype id_0
-`define pp_3 0
-`timescale 1ps / 1ps
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
+// Seed: 1363254362
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2
+    output tri0  id_0,
+    output wand  module_0,
+    input  uwire id_2
 );
-  always @(*) begin
-    SystemTFIdentifier(1);
-  end
+  wire id_4;
+  wire id_5;
+  module_2(
+      id_4, id_4, id_5, id_4, id_4, id_5, id_4
+  );
 endmodule
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`timescale 1ps / 1ps
-`define pp_19 0
+module module_1 (
+    output tri1 id_0,
+    input  tri  id_1
+);
+  wire id_3;
+  module_0(
+      id_0, id_0, id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  id_8(
+      .id_0(id_1), .id_1(1), .id_2(""), .id_3(id_9), .id_4(id_7)
+  );
+endmodule

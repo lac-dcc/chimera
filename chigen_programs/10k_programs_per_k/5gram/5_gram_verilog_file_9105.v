@@ -1,17 +1,30 @@
-// Seed: 337356988
-`define pp_5 0
-`default_nettype id_3 `timescale 1ps / 1ps
-module module_0 (
+// Seed: 2559998742
+module module_0;
+  reg id_1;
+  always @(posedge 1 or posedge id_1) begin
+    id_1 <= 1 - id_1;
+  end
+  id_2 :
+  assert property (@(posedge 1) 1)
+  else $display(1, id_2 == id_1, 1 == id_1, 1, 1, id_1, id_2);
+  wire id_3;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6
 );
-  output id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  assign id_5 = id_2 ? id_1 : 1'b0;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_7;
+  wand id_8;
+  module_0();
+  assign id_4[1'b0==1] = 1 == id_8;
 endmodule

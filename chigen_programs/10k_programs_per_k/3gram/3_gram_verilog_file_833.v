@@ -1,35 +1,26 @@
-// Seed: 2704608060
-`define pp_15 0
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output logic id_5,
-    input logic id_6,
-    output logic id_7,
-    input id_8,
-    output id_9
-    , id_15, id_16,
-    input logic id_10,
-    input id_11,
-    output id_12,
-    input logic id_13,
-    input id_14
+// Seed: 73410692
+module module_0;
+  wire id_1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input wand id_3,
+    input wire id_4,
+    output supply0 id_5
 );
-  integer id_17;
-  type_29(
-      1, id_8 != 1
-  );
-  generate
-    reg id_18, id_19, id_20, id_21, id_22;
-  endgenerate
-  assign id_17 = id_0;
-  always @(posedge 1'b0 + id_11 - id_11('d0
-  ))
-  begin
-    id_20 <= id_22;
-    id_17 <= 1'b0;
-  end
+  wire id_7;
+  module_0();
+  reg  id_8;
+  always @(posedge 1) id_8 <= (id_8);
+  id_9 :
+  assert property (@(posedge 1) 1)
+  else id_9 = id_2;
+  assign id_5 = 1'b0;
+  supply1 id_10 = 1'b0;
+  assign id_8 = 1'h0;
+  wire id_11;
 endmodule

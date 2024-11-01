@@ -1,19 +1,34 @@
-// Seed: 1462637975
-`timescale 1 ps / 1ps
-module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12
+// Seed: 471897299
+module module_0;
+  wire id_1;
+  assign id_1 = 1'b0;
+  always @(posedge 1) $display;
+endmodule
+module module_1 (
+    output wor id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    input supply1 id_3,
+    output wire id_4
 );
-  assign id_1[1] = 1;
+  id_6(
+      .id_0(1'b0 & 1), .id_1(1 * 1), .id_2()
+  ); module_0();
+endmodule
+module module_2 #(
+    parameter id_10 = 32'd94,
+    parameter id_11 = 32'd73
+) (
+    input wor id_0,
+    input supply0 id_1
+    , id_7,
+    input uwire id_2,
+    output uwire id_3,
+    input tri id_4,
+    input wand id_5
+);
+  time id_8;
+  assign id_7 = id_5;
+  wor id_9;
+  defparam id_10.id_11 = id_9; module_0();
 endmodule

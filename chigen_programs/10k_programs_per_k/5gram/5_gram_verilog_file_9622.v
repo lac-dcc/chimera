@@ -1,21 +1,37 @@
-// Seed: 2039519626
+// Seed: 1100055171
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    output id_3
-    , id_8,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_9;
-  logic id_10 (
-      id_2,
-      1
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  always_ff @(1'b0) begin
+    disable id_4;
+  end
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input wand id_1,
+    output wand id_2,
+    output supply1 id_3,
+    output tri id_4,
+    output tri id_5
+);
+  id_7(
+      .id_0(id_4 ~^ id_3++), .id_1()
   );
-  always @(posedge 1) if (id_0) id_5 <= 1;
-  assign id_4[1] = id_8 ? id_1 : "";
-  logic id_11;
+  initial begin
+    #1;
+  end
+  assign id_4 = id_0;
+  wire id_8;
+  wire id_9;
+  assign id_4 = 1;
+  wand id_10 = 1;
+  nand (id_4, id_1, id_8, id_10, id_7, id_0, id_9);
+  module_0(
+      id_10, id_10, id_8
+  );
 endmodule

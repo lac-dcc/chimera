@@ -1,38 +1,26 @@
-// Seed: 1121291977
-`define pp_7 0
-`default_nettype wire
-`define pp_8 0
-`define pp_9 0
-`timescale 1ps / 1 ps `default_nettype id_5
-`define pp_10 0
-`define pp_11 0
-`resetall
-`define pp_12 0
-`define pp_13 0
-`timescale 1ps / 1ps
-`define pp_14 0
-module module_0 (
-    input logic id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    output id_6
+// Seed: 3702547514
+module module_0;
+  module_2();
+endmodule
+module module_1 (
+    output wire id_0,
+    output wor id_1,
+    output tri0 id_2,
+    input tri0 id_3,
+    input wand id_4,
+    output tri0 id_5,
+    output uwire id_6,
+    output tri id_7,
+    input wand id_8,
+    output supply1 id_9,
+    output tri1 id_10,
+    input uwire id_11,
+    input tri id_12,
+    input tri0 id_13
 );
-  always @(1) begin : id_7
-    SystemTFIdentifier(1, id_7, 1);
-  end
-  assign id_3 = 1;
-  assign id_1 = id_2;
-  logic id_8 (
-      1,
-      1,
-      id_2 * id_2
-  );
-  type_16 id_9 = id_8;
-  logic   id_10;
-  logic   id_11 = 1;
-  assign id_11 = 1'b0 + ~1;
-  logic id_12;
+  wire id_15;
+  module_0();
+  always_latch @(posedge id_15);
+endmodule
+module module_2;
 endmodule

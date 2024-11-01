@@ -1,16 +1,27 @@
-// Seed: 3892368115
+// Seed: 1787332367
+module module_0;
+  always @(posedge 1) release id_1;
+endmodule
 module module_0 (
-    input logic id_0
-    , id_4,
-    input id_1,
-    output id_2,
-    output id_3
+    input  wire id_0,
+    output tri1 id_1,
+    output tri0 module_1,
+    output tri1 id_3
 );
-  always @* begin
-    if (id_4) begin
-      id_3 = 1;
-      id_4 <= 1'b0;
-    end
-    SystemTFIdentifier(id_1);
+  wire id_5;
+  module_0();
+  wire id_6;
+  assign id_3 = id_0;
+endmodule
+module module_2 (
+    input wire id_0,
+    input wor id_1,
+    output supply0 id_2
+);
+  always @(posedge id_1 or posedge 1) $display;
+  wire id_4;
+  always @(posedge 1) begin
+    id_4 = id_4;
   end
+  module_0();
 endmodule

@@ -1,45 +1,46 @@
-// Seed: 997196619
+// Seed: 3637976367
 module module_0 (
-    input id_0,
-    input id_1,
-    input supply0 id_2,
-    input logic id_3,
-    output id_4
-    , id_17,
-    input id_5,
-    input logic id_6,
-    input reg id_7,
-    output id_8,
-    output supply0 id_9,
-    output id_10,
-    output logic id_11,
-    output id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    output uwire id_16
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  tri id_18;
-  assign id_11 = 1;
-  supply1 id_19;
-  always @(posedge 1 | id_5) begin
-    id_8 <= "";
-    id_16[1] <= id_17;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = id_12 == 1;
+  wire id_13;
+  assign id_6 = id_5 ? 1 : {id_1{id_3 * id_3}};
+endmodule
+module module_1 (
+    output logic id_0,
+    input  tri   id_1
+);
+  tri1 id_3 = id_3;
+  always @(id_3 or posedge 1) begin
+    id_0 <= 1;
+    disable id_4;
+    id_4 = id_4;
   end
-  type_33(
-      id_8, id_7
+  wire id_5;
+  module_0(
+      id_3, id_3, id_5, id_3, id_3, id_5, id_3, id_5, id_3, id_3, id_5, id_5
   );
-  logic id_20;
-  genvar id_21;
-  assign id_9[1] = 1;
-  type_35(
-      id_14, 1
-  );
-  assign id_18[1'b0 : 1] = 1;
-  logic id_22;
-  assign id_18 = id_19;
-  type_37(
-      id_5, id_2[1]
-  );
-  logic id_23 = 1;
 endmodule

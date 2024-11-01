@@ -1,29 +1,51 @@
-// Seed: 1084014765
+// Seed: 1201976232
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output logic id_8,
-    output id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12,
-    input logic id_13,
-    output id_14,
-    input id_15,
-    output logic id_16,
-    output logic id_17,
-    input id_18,
-    output logic id_19
+    input wor  id_0,
+    input tri1 id_1
 );
-  assign id_9[1'b0] = id_10;
-  logic id_20;
-  assign id_20 = !id_7 ? 1'b0 : id_15;
-  assign id_6[1'b0] = id_0 & id_1;
-  defparam id_21.id_22 = id_0, id_23.id_24 = 1'b0 == 1, id_25.id_26 = 1'b0, id_27.id_28 = id_26;
+  wire id_3;
+endmodule
+module module_1 (
+    input tri  id_0,
+    input wand id_1,
+    input tri  id_2,
+    input tri0 id_3
+);
+  integer id_5;
+  module_0(
+      id_3, id_3
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_6 = id_6;
+  wire id_7;
+  assign id_1 = 1;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  tri0 id_4;
+  initial $display(id_4);
+  assign id_3 = 1;
+  module_2(
+      id_3, id_3, id_4, id_4, id_4
+  );
+  assign id_2 = "";
+  always @(posedge 1) $display(1, id_4, 1);
 endmodule

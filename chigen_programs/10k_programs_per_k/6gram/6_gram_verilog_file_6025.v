@@ -1,45 +1,40 @@
-// Seed: 2866808950
+// Seed: 2027946522
 module module_0 (
-    output id_0,
-    input logic id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    output logic id_10,
-    output id_11,
-    input logic id_12,
-    input id_13,
-    output logic id_14,
-    output id_15,
-    output id_16,
-    input logic id_17,
-    output id_18,
-    input id_19,
-    input id_20,
-    output id_21,
-    output id_22
-    , id_23
+    input supply1 id_0,
+    output wor id_1
 );
-  assign id_16 = id_17;
-  assign id_0  = "" | id_7;
+  reg id_3;
+  always @(posedge id_3)
+    if ((id_3 || 1'b0)) id_3 <= 1;
+    else begin
+      id_3 = 1;
+    end
 endmodule
 module module_1 (
-    input id_0,
-    output logic id_1
-    , id_23,
-    input logic id_2,
-    output logic id_3,
-    input id_4,
-    output logic id_5,
-    output id_6
+    output tri0 id_0,
+    input supply1 id_1,
+    output wand id_2,
+    input tri1 id_3,
+    output tri id_4,
+    output uwire id_5,
+    inout wand id_6,
+    output uwire id_7,
+    input tri1 id_8,
+    input wor id_9,
+    input wor id_10,
+    input wire id_11
+    , id_19,
+    input tri0 id_12,
+    input tri id_13,
+    input wand id_14,
+    input wand id_15,
+    input uwire id_16,
+    input wand id_17
 );
-  logic id_24;
-  always @(posedge 1) begin
-    SystemTFIdentifier();
-  end
+  assign id_2 = 1 & 1'b0;
+  wire id_20;
+  always @(posedge 1) #1;
+  module_0(
+      id_15, id_7
+  );
 endmodule

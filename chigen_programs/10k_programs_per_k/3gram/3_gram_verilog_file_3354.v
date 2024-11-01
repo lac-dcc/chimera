@@ -1,31 +1,39 @@
-// Seed: 3825771731
-`define pp_6 0
+// Seed: 4057349979
 module module_0 (
-    inout id_0,
-    output id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    input logic id_5
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign id_0 = 1'b0;
-  logic id_6;
-  assign id_1 = (1'b0 - 1);
-  logic id_7;
-  assign id_1 = 1;
-  assign id_1 = id_0;
-  task id_8;
-    input id_9;
-    input id_10;
-    logic id_11;
-    input id_12;
-    input id_13;
-    input id_14;
-    begin
-      id_8 <= 1'b0;
-      #1 id_8 <= 1;
-    end
-  endtask
-  logic id_15;
-  logic id_16 = 1;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_8;
+  wire id_9;
+endmodule
+module module_1 (
+    output wand id_0,
+    input wire id_1,
+    output wor id_2,
+    output uwire id_3,
+    output uwire id_4,
+    input wor id_5,
+    output wor id_6,
+    input uwire id_7,
+    output tri id_8,
+    input supply0 id_9,
+    input supply1 id_10
+);
+  wire id_12;
+  module_0(
+      id_12, id_12, id_12, id_12, id_12, id_12, id_12
+  );
+  wire id_13;
 endmodule

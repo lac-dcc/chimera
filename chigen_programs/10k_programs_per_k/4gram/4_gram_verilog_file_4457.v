@@ -1,27 +1,25 @@
-// Seed: 228342998
+// Seed: 1025219305
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8
+    input  wand  id_0,
+    output wire  id_1,
+    input  uwire id_2,
+    output tri   id_3,
+    input  uwire id_4,
+    input  uwire id_5,
+    output tri1  id_6
 );
-  reg id_9;
-  assign id_1 = 1;
-  generate
-    reg id_10;
-    genvar id_11;
-  endgenerate
-  assign id_9  = 1;
-  assign id_10 = id_11;
-  generate
-    logic id_12;
-    initial begin
-      id_9 <= (id_11);
-    end
-  endgenerate
+  id_8 :
+  assert property (@(posedge id_5) id_4)
+  else $display(1);
+  wire  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input wor id_1,
+    output tri id_2
+);
+  wire id_4, id_5, id_6;
+  module_0(
+      id_1, id_0, id_1, id_0, id_1, id_1, id_2
+  );
 endmodule

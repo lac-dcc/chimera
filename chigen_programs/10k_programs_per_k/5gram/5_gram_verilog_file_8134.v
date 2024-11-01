@@ -1,33 +1,48 @@
-// Seed: 3873622935
-`timescale 1 ps / 1ps
+// Seed: 1858977794
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12,
-    input reg id_13,
-    input id_14,
-    input id_15,
-    output reg id_16
+    input wor id_0,
+    input supply1 id_1
 );
-  assign id_7[1] = id_2 / !id_15;
-  always_latch @(posedge id_0[1]) begin
-    if (1) begin : id_17
-      id_16 <= id_14 * {1'd0, |(id_9), 1};
-    end else begin
-      id_1 <= 1;
-    end
-  end
-  initial begin
-    id_16 = id_13;
-  end
+endmodule
+module module_1 (
+    output wand id_0,
+    input  tri  id_1,
+    output tri0 id_2
+);
+  assign id_0 = id_1;
+  module_0(
+      id_1, id_1
+  );
+endmodule
+module module_2 (
+    output tri1 id_0,
+    output supply1 id_1,
+    input uwire id_2,
+    input supply0 id_3,
+    input tri0 id_4
+);
+  not (id_0, id_4);
+  module_0(
+      id_3, id_3
+  );
+  assign id_1 = id_4;
+endmodule
+module module_3 (
+    output wand id_0,
+    input uwire id_1,
+    output wand id_2,
+    output tri id_3,
+    input wor id_4,
+    output wand id_5,
+    input tri id_6,
+    output supply1 id_7
+    , id_10,
+    input tri id_8
+);
+  assign id_3 = 0;
+  wire id_11;
+  module_0(
+      id_8, id_6
+  );
+  assign id_10 = (1) == id_8 - id_1 - 1;
 endmodule

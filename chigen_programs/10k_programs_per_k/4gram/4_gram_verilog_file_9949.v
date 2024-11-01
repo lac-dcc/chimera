@@ -1,24 +1,44 @@
-// Seed: 3953117796
-`default_nettype id_8
-module module_0 (
-    input logic id_0
-    , id_15,
-    input id_1
-    , id_16,
-    input id_2,
-    input logic id_3
-    , id_17,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    input logic id_14
+// Seed: 2812852701
+module module_0;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output uwire id_1 id_3
 );
-  logic id_18;
+  wire id_4;
+  wire id_5;
+  module_0();
+endmodule
+module module_2;
+  module_0();
+endmodule
+module module_3 (
+    input  wire  id_0,
+    output uwire id_1
+);
+  assign id_1 = 1;
+  assign id_1 = id_0;
+  module_0();
+  assign id_1 = 1 ? id_0 : 1, id_1 = id_1++;
+  generate
+    assign id_1 = 1;
+    genvar id_3;
+  endgenerate
+endmodule
+module module_4 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  id_5(
+      .id_0(id_1 ^ 1), .id_1(1), .id_2(1), .id_3(1), .id_4(1), .id_5(1)
+  );
+  bufif1 (id_3, id_4, id_5);
+  module_0();
 endmodule

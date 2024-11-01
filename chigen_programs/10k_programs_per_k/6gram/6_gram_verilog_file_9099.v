@@ -1,30 +1,37 @@
-// Seed: 4169821084
+// Seed: 1740560440
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4
+    id_3
 );
-  output id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  always @(id_1 or id_1 or negedge id_1 & id_1) begin
-    id_2 = 1;
-  end
-  reg id_4 = id_1;
-  assign id_2 = 1'h0;
-  logic id_5 = 1;
-  reg   id_6 = 1'b0 == 1'h0;
-  always @(posedge 1 or 1) begin
-    SystemTFIdentifier;
-  end
-  always @(1 or negedge id_3 == 1) begin
-    if (1) begin
-      if (id_4)
-        if (id_3) begin
-          id_4 <= 1 & 1 & 1;
-        end else id_6 <= id_2;
-    end else id_6 <= 1;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_4 = id_4;
+  wire id_5;
+  module_2();
+  wire id_6;
+  wire id_7;
+endmodule
+module module_1;
+  tri0 id_1;
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  wire id_2;
+  module_0(
+      id_2, id_1, id_1
+  );
+endmodule
+module module_2;
+  initial begin
+    wait (~id_1 & 1);
+    if (id_1) begin
+      begin
+        id_1 <= id_1;
+        id_1 = 1;
+        id_1 = id_1;
+        id_1 <= 1;
+      end
+    end
   end
 endmodule

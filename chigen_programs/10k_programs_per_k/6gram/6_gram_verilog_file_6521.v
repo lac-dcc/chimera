@@ -1,14 +1,28 @@
-// Seed: 3647313711
-`default_nettype id_0 `default_nettype id_3 `timescale 1 ps / 1ps
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    input id_3
+// Seed: 3993767506
+module module_0 ();
+  tri0 id_1;
+  supply1 id_2 = 1;
+  wire id_3;
+  assign id_1 = id_2;
+  id_4(
+      .id_0(1), .id_1(1), .id_2(1), .id_3(1'b0)
+  );
+endmodule
+module module_1 (
+    output uwire id_0,
+    input uwire id_1,
+    input supply0 id_2,
+    input wand id_3,
+    input supply0 id_4,
+    input wire id_5,
+    input wor id_6,
+    output tri0 id_7,
+    output supply1 id_8,
+    input tri id_9,
+    input tri id_10,
+    output supply0 id_11,
+    input wand id_12
 );
-  assign id_0 = id_2;
-  logic id_4;
-  always @(posedge 1) begin
-    SystemTFIdentifier(id_1, 1);
-  end
+  supply1 id_14 = 1;
+  module_0();
 endmodule

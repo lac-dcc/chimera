@@ -1,42 +1,40 @@
-// Seed: 1628939386
-`timescale 1 ps / 1ps
+// Seed: 3127129480
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    output logic id_5,
-    input logic id_6,
-    output logic id_7,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    output id_13,
-    input id_14,
-    output id_15,
-    output id_16,
-    output id_17,
-    input id_18,
-    output logic id_19,
-    output id_20,
-    input id_21,
-    input id_22,
-    output id_23,
-    input id_24,
-    input id_25,
-    output id_26,
-    input id_27,
-    input id_28,
-    output id_29,
-    output id_30,
-    input logic id_31,
-    input logic id_32,
-    output id_33,
-    output id_34,
-    output id_35,
-    input logic id_36
+    output supply0 id_0,
+    output tri1 id_1,
+    input wand id_2,
+    input wire id_3,
+    output tri0 id_4,
+    output tri1 id_5,
+    output tri0 id_6
 );
+endmodule
+module module_1 (
+    output tri id_0,
+    output wor id_1,
+    input supply0 id_2,
+    input supply1 id_3,
+    input supply1 id_4,
+    output wand id_5,
+    input supply1 id_6
+    , id_11,
+    output tri1 id_7,
+    input tri id_8,
+    input wand id_9
+);
+  wire id_12;
+  final begin
+    if (id_9) assume (1);
+    if (id_8)
+      if (id_11) begin
+        id_11 <= 1;
+      end else begin
+        assume #1  (id_11) $display;
+      end
+  end
+  wire id_13;
+  module_0(
+      id_0, id_5, id_8, id_3, id_1, id_7, id_7
+  );
+  wire id_14;
 endmodule

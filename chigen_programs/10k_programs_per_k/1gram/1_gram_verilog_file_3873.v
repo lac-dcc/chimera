@@ -1,32 +1,34 @@
-// Seed: 3336445032
-`define pp_10 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+// Seed: 3498926091
+module module_0 ();
+  assign id_1 = id_1;
+  tri1 id_2, id_3 = 1 - 1;
+  wire id_4;
+  wire id_5;
+  assign id_1 = 1'd0;
+  assign id_1 = 1;
+endmodule
+module module_1 #(
+    parameter id_2 = 32'd23
 );
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  assign id_10 = 1;
-  logic id_10;
-  type_14(
-      id_6, id_7
-  );
-  logic id_11;
-endmodule : id_12
-`timescale 1ps / 1ps
+  assign id_1 = 1;
+  assign id_1 = id_1;
+  module_0();
+  assign id_1 = id_1;
+  defparam id_2 = 1;
+endmodule
+module module_2 (
+    input  tri0 id_0,
+    input  wire id_1
+    , id_6,
+    output tri  id_2,
+    output wand id_3,
+    input  tri0 id_4
+);
+  always $display;
+  module_0();
+  assign id_6 = id_0;
+  uwire id_7 = 1'b0 * 1, id_8;
+  wire  id_9;
+  wire id_10, id_11;
+  initial $display(1'b0);
+endmodule

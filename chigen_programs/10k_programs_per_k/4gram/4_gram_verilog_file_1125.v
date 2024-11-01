@@ -1,44 +1,42 @@
-// Seed: 822926554
+// Seed: 3750327060
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output logic id_5,
-    output logic id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_7;
-  logic id_8;
-  type_25(
-      id_5 - id_7, 1
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+endmodule
+module module_1 ();
+  id_1 :
+  assert property (@(posedge 1 == 1) 1)
+  else $display(id_1);
+  module_0(
+      id_1, id_1, id_1, id_1
   );
-  logic id_9;
-  logic id_10 = id_7 & 1;
-  logic id_11;
-  logic id_12;
-  assign id_7 = 1'h0;
-  assign id_3 = id_1;
-  wire id_13;
-  type_31(
-      id_6 == ~id_3, 1
-  );
-  logic id_14;
-  assign id_6 = 1;
-  logic id_15;
-  assign id_13[1] = 1;
-  wire  id_16;
-  logic id_17;
-  logic id_18;
-  assign id_13 = (id_16);
-  type_36 id_19 (
-      .id_0((1)),
-      .id_1(1),
-      .id_2(id_12),
-      .id_3(id_2),
-      .id_4(1'b0),
-      .id_5(id_10),
-      .id_6('b0),
-      .id_7(1)
+endmodule
+module module_2 (
+    input tri id_0,
+    input tri id_1,
+    input tri0 id_2,
+    input uwire id_3,
+    input wor id_4,
+    input tri id_5,
+    output wand id_6,
+    output tri0 id_7,
+    input tri0 id_8,
+    output uwire id_9,
+    output wor id_10
+    , id_16,
+    input tri1 id_11,
+    output supply0 id_12,
+    input uwire id_13,
+    input supply0 id_14
+);
+  module_0(
+      id_16, id_16, id_16, id_16
   );
 endmodule

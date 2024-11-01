@@ -1,35 +1,52 @@
-// Seed: 3307312607
+// Seed: 4049329709
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    output logic id_10,
-    input logic id_11,
-    input logic id_12,
-    output logic id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    output id_18,
-    input id_19,
-    output id_20,
-    input id_21,
-    input id_22
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_23, id_24;
-  logic id_25 = 1;
-  assign id_23 = (id_15) == id_3;
-  logic id_26;
-  logic id_27;
-  logic id_28;
-  logic id_29;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  if (id_4) assign id_3 = 1;
+  else begin : id_6
+    assign id_2[1] = id_3;
+    wire id_7;
+  end
 endmodule
-`include ""
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_12;
+  module_0(
+      id_11, id_4, id_2, id_10, id_6
+  );
+  assign id_4[(1)-:1] = 1;
+  initial begin
+    $display(1);
+  end
+endmodule

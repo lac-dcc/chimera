@@ -1,2 +1,73 @@
-// Seed: 318480560
-`timescale 1ps / 1ps
+// Seed: 1841445645
+module module_0 ();
+endmodule
+macromodule module_1 (
+    input tri0 id_0,
+    input supply1 id_1
+    , id_63,
+    input wire id_2,
+    output tri0 id_3,
+    output supply0 id_4,
+    input uwire id_5,
+    input wire id_6,
+    input tri id_7,
+    input uwire id_8,
+    output tri1 id_9,
+    output supply1 id_10,
+    output supply0 id_11,
+    input tri0 id_12,
+    output wand id_13,
+    input tri0 id_14,
+    input tri0 id_15,
+    input wire id_16,
+    input uwire id_17,
+    output tri id_18,
+    output uwire id_19,
+    output uwire id_20,
+    output supply1 id_21,
+    input wire id_22,
+    input wand id_23,
+    output tri id_24,
+    input supply1 id_25,
+    input wire id_26,
+    output tri0 id_27,
+    output supply1 id_28,
+    output wor id_29,
+    output wire id_30,
+    output wor id_31,
+    output wire id_32,
+    input wire id_33,
+    input tri0 id_34,
+    input wire id_35
+    , id_64,
+    input supply0 id_36,
+    output wand id_37,
+    output tri1 id_38,
+    output tri1 id_39,
+    output tri0 id_40,
+    input wor id_41,
+    input tri0 id_42,
+    output tri1 id_43,
+    output tri0 id_44,
+    input supply0 id_45,
+    input wor id_46,
+    input wand id_47,
+    output tri1 id_48,
+    input wor id_49,
+    input wire id_50,
+    input uwire id_51,
+    input tri0 id_52,
+    input supply1 id_53,
+    input wand id_54,
+    input uwire id_55,
+    input supply0 id_56,
+    output uwire id_57,
+    input tri0 id_58,
+    output tri1 id_59,
+    input tri1 id_60,
+    output wor id_61
+);
+  wire id_65;
+  module_0();
+  wire id_66;
+endmodule

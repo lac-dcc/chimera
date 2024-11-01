@@ -1,18 +1,30 @@
-// Seed: 683637407
+// Seed: 2288833029
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    id_1
 );
-  output id_3;
-  output id_2;
-  output id_1;
-  type_0 id_3 (.id_0(1));
-  always begin
-    id_1[1'b0] <= 1;
-  end
-  generate
-    type_5 id_4 (.id_0(1));
-  endgenerate
+  output wire id_1;
+  id_2(
+      .id_0(1'b0), .id_1(id_1)
+  );
 endmodule
-`timescale 1ps / 1 ps
+module module_1 (
+    output tri0 id_0,
+    input supply0 id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input tri1 id_4,
+    input supply0 id_5
+);
+  assign id_0 = id_2 + 'b0;
+  wire id_7;
+  module_0(
+      id_7
+  );
+endmodule
+module module_2;
+  uwire id_2;
+  always_ff $display(1, id_2, 1'b0, id_1 - 1);
+  module_0(
+      id_2
+  );
+endmodule

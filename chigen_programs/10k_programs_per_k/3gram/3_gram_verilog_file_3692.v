@@ -1,24 +1,43 @@
-// Seed: 3169651903
-`define pp_14 0
+// Seed: 307101280
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    output id_3
-    , id_14,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input wor id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    input id_13
+    output supply0 id_0,
+    input supply1 id_1,
+    input supply0 id_2,
+    output supply0 id_3,
+    output wand id_4,
+    output uwire id_5,
+    output supply0 id_6
 );
-  reg id_15;
-  always @(posedge id_8[1]) begin
-    id_15 <= id_6[1];
-  end
+  final $display(id_2, 1, id_1);
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output wor  id_1
+);
+  wire id_3;
+  always #1;
+  assign id_1 = id_0;
+  wire id_4;
+  module_0(
+      id_1, id_0, id_0, id_1, id_1, id_1, id_1
+  );
+  wire id_5;
+endmodule
+module module_2 #(
+    parameter id_8 = 32'd60,
+    parameter id_9 = 32'd33
+) (
+    input tri id_0,
+    input tri1 id_1,
+    output supply0 id_2,
+    input uwire id_3,
+    input supply0 id_4,
+    output supply0 id_5,
+    output tri1 id_6
+);
+  assign id_5 = 1;
+  assign id_6 = 1;
+  module_0(
+      id_6, id_1, id_4, id_2, id_5, id_2, id_5
+  ); defparam id_8.id_9 = 1'b0;
 endmodule

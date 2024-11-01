@@ -1,60 +1,31 @@
-// Seed: 3868952558
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26
+// Seed: 1883174861
+module module_0;
+  wor id_2;
+  wor id_3;
+  assign id_2 = 1 ? 1 : 1 ? id_3 : id_3;
+  assign id_1 = "";
+  supply1 id_4;
+  always @(posedge id_4 or posedge id_2) id_2 = 1;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    output uwire id_3,
+    output tri1 id_4,
+    input wire id_5,
+    output tri id_6,
+    input tri1 id_7,
+    input tri0 id_8,
+    input supply1 id_9,
+    input tri0 id_10,
+    input tri0 id_11,
+    output wand id_12
 );
-  output id_26;
-  output id_25;
-  inout id_24;
-  output id_23;
-  output id_22;
-  input id_21;
-  input id_20;
-  output id_19;
-  input id_18;
-  inout id_17;
-  input id_16;
-  inout id_15;
-  inout id_14;
-  input id_13;
-  input id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign id_8 = id_11 && 1'h0;
-  assign id_8 = id_21;
-  assign id_4 = 1;
-  logic id_26;
+  wire id_14;
+  module_0();
+  initial begin
+    $display(1'h0);
+    disable id_15;
+  end
 endmodule

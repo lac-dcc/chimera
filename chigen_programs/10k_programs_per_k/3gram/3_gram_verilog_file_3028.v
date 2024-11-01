@@ -1,20 +1,25 @@
-// Seed: 2462505019
-`define pp_12 0
-module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    output logic id_9,
-    input id_10,
-    input id_11
+// Seed: 909101623
+module module_0 ();
+  always @(1);
+  always @(*) disable id_1;
+  assign id_1 = id_1;
+  tri1 id_2;
+  always @(id_2 or 1) id_2 = (1) > id_1;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output tri1 id_1,
+    input uwire id_2
+    , id_9,
+    input wand id_3,
+    output tri1 id_4,
+    input tri1 id_5,
+    input wor id_6,
+    output tri1 id_7
 );
-  logic id_12 = 1'h0;
-  logic id_13;
-  logic id_14;
+  if (1) wire id_10;
+  module_0();
+  always_comb begin
+    id_9 <= 1'd0;
+  end
 endmodule

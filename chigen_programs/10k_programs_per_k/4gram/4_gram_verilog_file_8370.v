@@ -1,29 +1,47 @@
-// Seed: 2646124632
-`define pp_22 0
-`timescale 1 ps / 1ps
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    output logic id_6,
-    input logic id_7,
-    output id_8,
-    input logic id_9,
-    output logic id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    input logic id_14,
-    output logic id_15,
-    input logic id_16
-    , id_22,
-    input id_17,
-    input logic id_18,
-    output id_19,
-    input logic id_20,
-    inout logic id_21
+// Seed: 199028430
+module module_0;
+  wire id_2;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    output logic id_1
 );
+  always_latch @(1'h0) begin
+    id_1 <= !id_0;
+  end
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  supply1 id_3;
+  initial begin
+    if (id_3)
+      if (id_3) begin
+        force id_3.id_3 = id_1[1];
+      end
+  end
+  always @(1) begin
+    wait (id_2);
+  end
+  wor id_4;
+  tri id_5 = id_3 + id_5 * (id_4) + 1;
+  string id_6, id_7, id_8;
+  uwire id_9 = 1'b0;
+  id_10(
+      .id_0(id_9), .id_1((id_3))
+  );
+  assign id_7 = "";
+  reg id_11 = 1;
+  id_12 :
+  assert property (@(posedge 1) id_2)
+  else $display(1'b0, id_3, 1,, 1);
+  always @(posedge id_1) begin
+    if (1 < 1) id_12 <= id_11;
+  end
+  wire id_13;
+  module_0();
 endmodule

@@ -1,40 +1,39 @@
-// Seed: 1800119946
+// Seed: 4017287132
 module module_0 (
-    id_1,
-    id_2
+    input  uwire id_0,
+    output tri0  id_1,
+    output wor   id_2,
+    input  tri   id_3,
+    output tri0  id_4,
+    input  wand  id_5,
+    output wire  id_6
 );
-  inout id_2;
-  inout id_1;
-  generate
-    for (id_2 = 1; 1; id_1 = id_1) begin : id_3
-      if (id_2)
-        always @(posedge 1'b0 && 1'h0 && 1 && 1)
-          if (1) begin
-            if (id_2) begin
-              if (1) id_2 <= id_1;
-            end else begin
-              id_1 <= id_2;
-              SystemTFIdentifier(id_2);
-            end
-          end else begin
-            id_2 <= 1;
-            @(posedge 1);
-            if (1'b0) begin
-              SystemTFIdentifier;
-            end
-          end
-    end
-  endgenerate
+  wire id_8;
 endmodule
 module module_1 (
-    output logic id_0,
-    input logic id_1,
-    input id_2
+    input wand id_0,
+    input supply1 id_1
+    , id_15,
+    input supply1 id_2,
+    output supply0 id_3,
+    input wor id_4,
+    output logic id_5,
+    output wire id_6,
+    input supply0 id_7,
+    input supply1 id_8,
+    input tri id_9,
+    output wor id_10,
+    input tri1 id_11,
+    output logic id_12,
+    input tri id_13
 );
-  logic id_3;
-  type_8 id_4 (
-      .id_0(id_1),
-      .id_1(id_1),
-      .id_2(id_3)
+  initial begin
+    id_12 <= 1;
+    id_5  <= id_2 * 1 - id_7;
+    id_3 = 1'd0;
+    id_12 <= 1;
+  end
+  module_0(
+      id_8, id_6, id_3, id_4, id_10, id_4, id_6
   );
 endmodule

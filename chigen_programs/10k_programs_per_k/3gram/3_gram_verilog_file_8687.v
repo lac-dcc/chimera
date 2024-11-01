@@ -1,6 +1,21 @@
-// Seed: 1321861955
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 25944999
+module module_0 ();
+  always @(posedge 1 or posedge 1);
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_5;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -14,27 +29,57 @@ module module_0 (
     id_11,
     id_12,
     id_13,
-    id_14
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28
 );
-  inout id_14;
-  output id_13;
-  input id_12;
-  inout id_11;
-  input id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  input id_1;
-  logic id_14;
-  type_17(
-      id_10, id_2
-  ); type_18(
-      (id_3), id_13, 1, id_10
+  input wire id_28;
+  output wire id_27;
+  input wire id_26;
+  input wire id_25;
+  input wire id_24;
+  inout wire id_23;
+  inout wire id_22;
+  output wire id_21;
+  input wire id_20;
+  input wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_29;
+  module_0(); id_30(
+      .id_0(id_25), .id_1()
+  ); id_31(
+      .id_0(1), .id_1(1)
   );
-  logic id_15;
+  wire id_32;
+  wire  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ,  id_49  ,  id_50  ,  id_51  ,  id_52  ,  id_53  ,  id_54  ,  id_55  ,  id_56  ,  id_57  ,  id_58  ,  id_59  ,  id_60  ,  id_61  ,  id_62  ,  id_63  ,  id_64  ,  id_65  ;
+  wire id_66;
 endmodule

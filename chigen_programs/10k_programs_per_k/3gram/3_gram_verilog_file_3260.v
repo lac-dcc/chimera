@@ -1,37 +1,39 @@
-// Seed: 881082299
-`define pp_3 0
+// Seed: 3879468702
 module module_0 (
     id_1,
     id_2,
     id_3
 );
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_3;
-  logic id_4 = 1 & 1 & 1;
-  generate
-    if (id_3) logic id_5;
-    else begin : id_6
-      if (id_2) begin : id_7
-        integer id_8;
-      end
-      type_1 id_9 (
-          .id_0(1),
-          .id_1(id_3(id_6)),
-          .id_2(id_1),
-          .id_3(1),
-          .id_4(1)
-      );
-    end
-  endgenerate
-  initial begin
-    SystemTFIdentifier((id_3));
-  end
-  logic id_10;
-  type_15 id_11 (
-      .id_0(1),
-      .id_1(id_4),
-      .id_2(id_4)
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  supply1 id_4;
+  assign id_4 = 1;
+  wire id_5;
+  assign id_4 = 1;
+  module_2();
+  wire id_6;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_6;
+  assign id_6 = id_4;
+  module_0(
+      id_3, id_6, id_4
   );
 endmodule
+module module_2 ();
+  id_2(
+      .id_0(id_3), .id_1(1)
+  );
+endmodule : id_4

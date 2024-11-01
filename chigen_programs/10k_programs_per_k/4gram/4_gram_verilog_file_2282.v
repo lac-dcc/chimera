@@ -1,35 +1,35 @@
-// Seed: 4000954060
+// Seed: 2071103655
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    input sample,
-    input logic id_9,
-    output logic id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    output logic id_14,
-    input id_15,
-    input logic id_16,
-    input id_17
-    , id_30,
-    output logic id_18,
-    input logic id_19,
-    input id_20,
-    input id_21,
-    input id_22,
-    output id_23,
-    input logic id_24,
-    input logic id_25,
-    output logic id_26,
-    input id_27,
-    output id_28,
-    input logic id_29
+    output tri1 id_0,
+    output tri0 id_1,
+    output wire id_2,
+    output wire id_3
+    , id_6,
+    output wand id_4
 );
+  wire id_7 = id_6;
+  wire id_8;
+  wire id_9;
+endmodule
+module module_1 (
+    input wor id_0,
+    inout tri1 id_1,
+    output wand id_2,
+    output logic id_3,
+    input uwire id_4,
+    output supply1 id_5,
+    output tri id_6,
+    output wor id_7,
+    output uwire id_8,
+    input logic id_9,
+    output tri1 id_10,
+    input supply1 id_11
+);
+  module_0(
+      id_10, id_10, id_8, id_5, id_6
+  );
+  always_comb @(negedge id_1) begin
+    id_3 <= id_9;
+  end
+  wire id_13;
 endmodule

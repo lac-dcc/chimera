@@ -1,3 +1,60 @@
-// Seed: 4129530826
-`define pp_0 0
-`define pp_1 0
+// Seed: 389870383
+module module_0 ();
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input supply0 id_1,
+    input wand id_2,
+    output wire id_3,
+    input tri0 id_4,
+    input wire id_5,
+    input tri0 id_6,
+    input tri1 id_7,
+    input wor id_8,
+    output wand id_9,
+    input supply1 id_10,
+    output tri0 id_11,
+    input uwire id_12,
+    output wand id_13,
+    input wand id_14,
+    input tri id_15,
+    output tri0 void id_16,
+    input wire id_17,
+    input wire id_18,
+    input wor id_19,
+    output tri0 id_20,
+    output uwire id_21,
+    input supply1 id_22,
+    input tri id_23,
+    output tri0 id_24,
+    input tri id_25,
+    output wor id_26,
+    output tri0 id_27,
+    output tri0 id_28,
+    input tri0 id_29,
+    output wand id_30,
+    output tri1 id_31,
+    output tri0 id_32,
+    output wor id_33,
+    input uwire id_34,
+    output wand id_35,
+    output tri1 id_36,
+    input wire id_37,
+    input supply0 id_38,
+    input tri0 id_39,
+    output supply1 id_40,
+    input wor id_41,
+    input wor id_42,
+    input tri1 id_43,
+    input tri0 id_44,
+    input supply1 id_45,
+    output wand id_46,
+    input tri1 id_47,
+    input tri id_48,
+    input uwire id_49,
+    input wand id_50,
+    output uwire id_51
+);
+  wire id_53;
+  module_0();
+endmodule

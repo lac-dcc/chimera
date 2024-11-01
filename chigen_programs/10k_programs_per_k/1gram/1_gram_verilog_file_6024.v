@@ -1,3 +1,40 @@
-// Seed: 2614307917
-`define pp_0 0
-`timescale 1ps / 1ps
+// Seed: 2758616285
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  reg  id_3;
+  wire id_4;
+  wire id_5;
+  final id_3 <= (id_2 | 1'b0) - 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_3 = id_5;
+  nand (id_4, id_5, id_8, id_6, id_9, id_7, id_3);
+  always id_1 <= ~1;
+  tri1 id_7, id_8, id_9;
+  initial begin
+    begin
+      id_9 = 1 == id_3[1];
+      @(negedge id_9 !== 1) id_2 <= 1;
+    end
+    $display(id_7 - id_4, id_7, id_6[1]);
+  end
+  always id_4 <= 1;
+  module_0(
+      id_8
+  );
+endmodule

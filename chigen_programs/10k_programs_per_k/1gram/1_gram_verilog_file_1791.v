@@ -1,27 +1,28 @@
-// Seed: 46842817
+// Seed: 4208838547
 module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    output id_3,
-    input id_4
-    , id_18,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10,
-    output reg id_11,
-    input id_12,
-    output logic id_13,
-    output id_14,
-    input logic id_15,
-    output logic id_16,
-    output logic id_17
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  always @(posedge id_18) id_11 <= 1;
-  assign id_18 = id_7;
-  integer id_19;
-  logic   id_20;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  tri1 id_5 = 1;
+endmodule
+macromodule module_1 (
+    input tri  id_0,
+    input tri0 id_1
+    , id_3
+);
+  assign id_3 = 1 ? 1 : id_3;
+  module_0(
+      id_3, id_3, id_3, id_3
+  );
+  assign id_3 = 1'b0;
+  initial
+    @((1)) begin
+      $display(1, ~1, 1'd0, 1);
+    end
 endmodule

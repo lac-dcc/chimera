@@ -1,49 +1,47 @@
-// Seed: 4036485443
-module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    output logic id_5,
-    output id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    output id_14
+// Seed: 485868689
+module module_0 #(
+    parameter id_3 = 32'd7,
+    parameter id_4 = 32'd84
+) (
+    id_1,
+    id_2
 );
-  assign id_6 = id_11;
-  reg
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32,
-      id_33,
-      id_34;
-  reg   id_35;
-  logic id_36;
-  always @(1 or id_24 == id_20) begin
-    SystemTFIdentifier(id_35, {id_29, id_34});
-    {1} <= id_33;
-  end
-  logic id_37;
-  logic id_38;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  defparam id_3.id_4 = id_3;
+  assign id_2 = 1;
+  wire id_5;
+endmodule
+module module_1;
+  assign id_1 = 1;
+  module_0(
+      id_1, id_1
+  );
+endmodule
+module module_2 (
+    input wand id_0,
+    output wand id_1,
+    input wire id_2,
+    output wand id_3,
+    input tri0 id_4,
+    input supply1 id_5,
+    output wor id_6,
+    input tri0 id_7,
+    output uwire id_8,
+    input tri id_9
+    , id_19,
+    output uwire id_10,
+    output uwire id_11,
+    output wire id_12,
+    output uwire id_13,
+    input uwire id_14,
+    input uwire id_15,
+    input supply0 id_16,
+    output wand id_17
+);
+  wire id_20;
+  module_0(
+      id_20, id_20
+  );
 endmodule

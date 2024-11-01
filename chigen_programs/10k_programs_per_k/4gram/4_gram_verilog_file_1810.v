@@ -1,6 +1,20 @@
-// Seed: 309371272
-`resetall
+// Seed: 1608478868
 module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  generate
+    always begin
+      $display(1, id_3, 1);
+    end
+  endgenerate
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -16,25 +30,25 @@ module module_0 (
     id_13,
     id_14
 );
-  output id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  output id_8;
-  inout id_7;
-  input id_6;
-  output id_5;
-  input id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  reg id_14;
-  assign id_5 = 1 === id_4;
-  logic id_15;
-  always @(posedge id_6) begin
-    id_8 = 1;
-    id_1 <= id_14;
-  end
+  inout wire id_14;
+  input wire id_13;
+  input wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_10 = id_6++ ? 1'b0 : 1;
+  nand (id_4, id_12, id_15, id_13, id_9, id_7, id_3, id_10, id_5, id_11, id_8, id_14, id_2, id_6);
+  id_15(
+      .id_0(id_10), .id_1(), .id_2(id_5)
+  ); module_0(
+      id_8, id_6, id_9
+  );
 endmodule

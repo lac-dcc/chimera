@@ -1,37 +1,46 @@
-// Seed: 203255197
-localparam id_7 = 1;
-`define pp_11 0
-`timescale 1ps / 1ps
+// Seed: 2860597787
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output logic id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    output id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  logic id_11;
-  uwire id_12;
-  logic id_13, id_14;
-  assign id_12[1] = id_11;
-  logic id_15;
-  always @(id_14) begin
-    if (id_14 && 1'b0) begin
-      id_3 = 1;
-    end else begin
-      id_5 <= 1;
-    end
+  inout wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_8 = id_9;
+  wor id_11;
+  assign id_11 = 1;
+endmodule
+module module_1 (
+    output logic id_0,
+    output supply1 id_1,
+    input wand id_2,
+    input wor id_3,
+    input logic id_4,
+    output wor id_5
+);
+  reg id_7;
+  initial begin
+    id_0 <= id_2 < id_2;
+    id_7 <= id_4;
+    #1;
   end
-  type_23 id_16 (
-      .id_0(),
-      .id_1,
-      .id_2(id_1),
-      .id_3(id_15),
-      .id_4(1)
+  wire id_8;
+  module_0(
+      id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8, id_8
   );
 endmodule

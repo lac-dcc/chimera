@@ -1,5 +1,4 @@
-// Seed: 3610534936
-`timescale 1 ps / 1ps
+// Seed: 2422185032
 module module_0 (
     id_1,
     id_2,
@@ -21,33 +20,66 @@ module module_0 (
     id_18,
     id_19,
     id_20,
-    id_21
+    id_21,
+    id_22
 );
-  input id_21;
-  inout id_20;
-  input id_19;
-  input id_18;
-  output id_17;
-  output id_16;
-  inout id_15;
-  input id_14;
-  input id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  logic id_21;
-  assign id_20 = 1;
-  assign id_21 = id_21;
-  type_22(
-      id_9, 1
+  input wire id_22;
+  inout wire id_21;
+  input wire id_20;
+  output wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  id_23 :
+  assert property (@(posedge 1 - id_6) id_16 - id_16)
+  else $display(id_8, 1, id_3, 1);
+endmodule
+module module_1 (
+    output wire  id_0,
+    input  uwire id_1,
+    input  tri1  id_2
+);
+  supply1 id_4;
+  wire id_5;
+  assign id_0 = id_4;
+  assign id_5 = $display;
+  module_0(
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5
   );
 endmodule

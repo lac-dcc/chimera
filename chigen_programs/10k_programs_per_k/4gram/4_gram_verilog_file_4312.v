@@ -1,24 +1,55 @@
-// Seed: 976565007
+// Seed: 3396421006
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input reg id_3,
-    input id_4,
-    input reg id_5
+    input  wor  id_0
+    , id_4,
+    output wire id_1,
+    input  wire id_2
 );
-  always @(1)
-    if (1 & 1) begin
-      id_6 <= id_4;
-    end else begin
-      SystemTFIdentifier(id_2, 1, SystemTFIdentifier(id_1, 1'd0, id_0, id_1), 1, 1, id_5, 1,
-                         id_3 == {(id_5), 1});
-    end
-  logic id_7;
-  reg   id_8;
-  always @(posedge 1'h0) begin
-    id_8 <= id_2 ? id_3 : 1;
+  wire id_5;
+  wire id_6;
+  module_2(
+      id_4, id_6, id_4, id_4
+  );
+  wire id_7;
+endmodule
+module module_1 (
+    input wor id_0
+    , id_6,
+    inout wor id_1,
+    input supply1 id_2,
+    input tri1 id_3,
+    input uwire id_4
+);
+  id_7(
+      .id_0(1)
+  );
+  assign id_7 = id_7;
+  not (id_1, id_2);
+  module_0(
+      id_3, id_1, id_4
+  );
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    module_2,
+    id_3
+);
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = id_4;
+  assign id_2 = id_4;
+  supply1 id_5;
+  wand id_6;
+  assign id_6 = id_5;
+  wire id_7;
+  always @(posedge {1, 1, $display(1
+  )} && 1'b0)
+  begin
+    assert (id_6 & 1);
   end
-  reg id_9 = id_3;
-  assign id_9 = id_2;
+  wire id_8;
+  tri  id_9 = 1;
 endmodule

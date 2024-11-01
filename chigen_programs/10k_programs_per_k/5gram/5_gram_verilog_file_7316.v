@@ -1,21 +1,35 @@
-// Seed: 229466143
-module module_0 (
-    input  id_0,
-    output id_1,
-    input  id_2,
-    output id_3,
-    input  id_4
+// Seed: 2550486083
+module module_0;
+  assign id_1 = id_1 ? 1 < id_1 : id_1;
+  module_3(
+      id_1, id_1
+  );
+  wand id_3 = id_1;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri   id_1
 );
-  always @(*) SystemTFIdentifier;
-  logic id_5;
-  logic id_6;
-  initial begin
-    id_3 <= 1 | 1;
+  always @(negedge id_0 or posedge id_3++
+  )
+  begin
+    $display;
   end
-  logic id_7;
-  logic id_8 = 1'h0, id_9;
-  logic id_10;
-  logic id_11;
-  logic id_12 = id_8;
-  assign id_6 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input  wand id_0,
+    output wire id_1
+);
+  wire id_3;
+  wire id_4;
+  module_0();
+endmodule
+module module_3 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  assign id_2 = id_1;
 endmodule

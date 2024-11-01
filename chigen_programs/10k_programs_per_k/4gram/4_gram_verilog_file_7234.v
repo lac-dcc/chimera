@@ -1,42 +1,73 @@
-// Seed: 702872787
+// Seed: 2946137696
 module module_0 (
-    output id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    input logic id_4
+    input wand id_0,
+    output wor id_1,
+    input tri0 id_2,
+    input tri0 id_3
+    , id_6,
+    input supply1 id_4
 );
-  type_9 id_5 (
-      .id_0(1),
-      .id_1(1'b0),
-      .id_2(),
-      .id_3(id_1 * 1 - 1)
-  );
-  assign id_0 = 1;
-  genvar id_6;
 endmodule
 module module_1 (
-    id_1,
-    id_2
+    output supply0 id_0,
+    output supply1 id_1,
+    output supply0 id_2,
+    output supply0 id_3,
+    input wor id_4,
+    input wand id_5
 );
-  output id_2;
-  output id_1;
-  logic id_5;
-  tri0  id_6;
-  assign id_0 = id_5;
-  logic id_7;
-  assign id_5 = 1'b0 - id_5;
-  integer id_8;
-  reg id_9;
-  logic id_10 = 1;
-  logic id_11;
-  initial SystemTFIdentifier(1, 1);
-  function id_12;
-    logic id_13;
-    begin
-      id_9 <= id_6[1 : 1];
-    end
-  endfunction
-  logic id_14;
-  assign id_1 = id_9;
+  module_0(
+      id_4, id_0, id_5, id_5, id_5
+  ); id_7(
+      .id_0(1'd0), .id_1(id_2), .id_2(1)
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_12;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    module_3,
+    id_7
+);
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_9;
+  module_2(
+      id_9, id_1, id_6, id_2, id_7, id_7, id_2, id_7, id_4, id_4, id_4
+  );
 endmodule

@@ -1,22 +1,27 @@
-// Seed: 2566041287
-module module_0;
-  logic id_0;
-  logic id_1, id_2;
-  logic id_3;
+// Seed: 3043424632
+module module_0 (
+    output wor id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    output tri1 id_3,
+    input wor id_4,
+    input tri0 id_5,
+    output uwire id_6,
+    output wor id_7,
+    input wand id_8,
+    input supply1 id_9
+);
+  `define pp_11 0
+  id_12(
+      1, 1 ? 1 : 1, ~id_1, 1
+  );
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    input  wire  id_0,
+    output uwire id_1,
+    input  wor   id_2
 );
-  inout id_3;
-  output id_2;
-  input id_1;
-  reg id_3, id_4;
-  assign id_3 = id_1;
-  reg id_5, id_6;
-  logic id_7 = id_7;
-  always id_3 <= id_6;
-  logic id_8;
+  module_0(
+      id_1, id_2, id_0, id_1, id_2, id_0, id_1, id_1, id_2, id_2
+  );
 endmodule
-`timescale 1ps / 1 ps

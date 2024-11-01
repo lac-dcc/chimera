@@ -1,36 +1,45 @@
-// Seed: 3492845479
-`timescale 1 ps / 1ps
-`define pp_3 0
+// Seed: 4042103903
 module module_0 (
-    output logic id_0,
-    output logic id_1,
-    output id_2
+    output wand id_0,
+    input supply1 id_1
 );
-  type_8 id_4 (
-      .id_0 (1),
-      .id_1 (id_3),
-      .id_2 (1),
-      .id_3 (1),
-      .id_4 (1),
-      .id_5 (1),
-      .id_6 (),
-      .id_7 (1),
-      .id_8 (1),
-      .id_9 (id_3[(1)]),
-      .id_10(),
-      .id_11(1),
-      .id_12(1)
-  );
-  wor id_5;
-  always @(posedge 1'b0) id_3 = id_5;
+  wire id_3;
+  wire id_4;
 endmodule
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
 module module_1 (
-    input logic id_0
-    , id_3
+    input  logic id_0,
+    output logic id_1,
+    output logic id_2,
+    input  logic id_3,
+    output logic id_4,
+    output tri   id_5,
+    input  logic id_6,
+    input  logic id_7,
+    output logic id_8,
+    input  uwire id_9
 );
+  assign id_4 = id_0;
+  final begin
+    #1 begin
+      $display(id_3, id_7, 1);
+      if (id_9) begin
+        id_4 <= id_3;
+        if (id_3) begin
+          id_8 <= id_9 && id_0;
+          id_1 <= id_9 - id_7;
+          id_4 <= id_3;
+        end else begin
+          id_4 = (~id_6);
+        end
+      end else begin
+        if (1) id_4 <= id_6;
+        else id_4 = 1;
+      end
+    end
+    id_2 <= 0 + 1;
+  end
+  assign id_2 = id_0;
+  module_0(
+      id_5, id_9
+  );
 endmodule

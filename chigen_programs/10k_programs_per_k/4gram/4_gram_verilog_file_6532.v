@@ -1,14 +1,31 @@
-// Seed: 1277494625
-`timescale 1ps / 1ps
+// Seed: 1512910876
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output logic id_2
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_4;
-  type_8 id_5 (
-      .id_0(id_0),
-      .id_1(1)
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_4 :
+  assert property (@(posedge id_4) id_4 ? id_4 : id_1)
+  else $display(1'b0 == id_4, 1'b0);
+  assign id_2 = 1;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    inout wor id_1,
+    output wor id_2,
+    output tri0 id_3,
+    input wor id_4,
+    output tri id_5,
+    input supply1 id_6
+);
+  generate
+    wire id_8;
+    assign id_5 = 1;
+  endgenerate
+  module_0(
+      id_8, id_8, id_8
   );
-  always @(posedge 1 or posedge 1) id_3 = 1'b0;
 endmodule

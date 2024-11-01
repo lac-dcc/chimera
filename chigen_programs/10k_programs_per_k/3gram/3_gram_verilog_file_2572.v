@@ -1,29 +1,30 @@
-// Seed: 3146065855
-module module_0 (
-    output id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    input logic id_14,
-    output logic id_15,
-    output id_16,
-    output logic id_17
+// Seed: 3673664610
+module module_0 ();
+  final $display(1, id_1);
+  assign id_1 = 1;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri1 id_1,
+    input supply0 id_2,
+    output tri1 id_3,
+    output wor id_4,
+    input supply1 id_5,
+    output supply0 id_6,
+    input tri0 id_7,
+    output supply1 id_8,
+    input wire id_9,
+    input tri0 id_10,
+    output tri1 id_11,
+    input tri0 id_12,
+    input wor id_13,
+    output supply0 id_14,
+    input wire id_15,
+    input wor id_16,
+    output supply0 id_17
 );
-  type_27(
-      id_1, id_1, id_17
-  );
-  logic id_18;
-  assign #id_19 id_4 = 1;
-  assign id_16 = 1;
-  assign id_1 = id_12;
+  assign id_17 = id_15;
+  xor (id_11, id_12, id_13, id_15, id_16, id_2, id_5, id_7, id_9);
+  module_0();
 endmodule

@@ -1,25 +1,31 @@
-// Seed: 2811017631
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5
-    , id_8,
-    input logic id_6,
-    input logic id_7
-);
-  always id_1 = id_5;
-  assign id_1 = id_8 && id_0;
-  logic id_9, id_10, id_11 = 1;
-  assign id_9 = id_6;
-  always id_1 <= 1;
-  assign id_9 = 1;
-  string id_12;
-  logic  id_13;
-  always SystemTFIdentifier(id_12, "");
-  logic id_14, id_15, id_16, id_17, id_18;
+// Seed: 2556144337
+module module_0 ();
+  wire id_1;
 endmodule
-`define pp_8 0
-`define pp_9 0
+module module_1 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  input wire id_1;
+  wire id_3;
+  module_0();
+endmodule
+module module_2 (
+    inout supply0 id_0,
+    output uwire id_1,
+    input tri id_2,
+    output wand id_3,
+    output supply0 id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    input supply0 id_7,
+    input tri id_8,
+    input wor id_9,
+    input uwire id_10,
+    input wor id_11
+);
+  assign id_5 = id_8;
+  module_0();
+  assign id_5 = 1;
+endmodule

@@ -1,33 +1,34 @@
-// Seed: 3352548220
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output logic id_2,
-    output id_3,
-    output logic id_4,
-    input id_5
-    , id_24,
-    output id_6,
-    input logic id_7,
-    output logic id_8,
-    input id_9
-    , id_25,
-    output id_10,
-    output id_11,
-    input id_12,
-    output id_13,
-    output logic id_14,
-    input id_15,
-    input id_16,
-    output id_17,
-    input id_18,
-    input logic id_19,
-    input logic id_20,
-    input id_21,
-    input id_22,
-    input id_23
+// Seed: 2847400830
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_26;
-  logic id_27;
-  assign id_6 = id_18;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always @(posedge id_2) begin
+    id_1 = 1;
+    id_1 = id_2;
+  end
+  module_0();
+  assign id_2 = 1;
+  genvar id_5;
+  assign id_5[1] = 1 ? {1'h0, id_3, id_2, id_2} : 1;
+  wire id_6, id_7;
+endmodule
+module module_2 (
+    input tri id_0,
+    input tri id_1,
+    output tri1 id_2,
+    output wor id_3,
+    input tri id_4,
+    input supply1 id_5
+);
+  wire id_7;
+  module_0();
 endmodule

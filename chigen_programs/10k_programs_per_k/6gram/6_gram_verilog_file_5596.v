@@ -1,12 +1,31 @@
-// Seed: 2918350035
-module module_0 (
-    input  logic id_0,
-    output logic id_1
+// Seed: 2210843138
+module module_0;
+  always @(posedge 1 == 1 or negedge 1) if (1) id_1 <= 1;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    output wire id_1,
+    output tri0 id_2,
+    output supply0 id_3,
+    output tri1 id_4,
+    output tri0 id_5
 );
-  logic id_2;
-  wand  id_3 = id_3;
-  tri   id_4 = id_3;
-  assign id_1 = 1;
-  assign id_1 = 1 ? (1) : id_0 ? 1'b0 : id_3[1];
-  logic id_5;
+  wire id_7;
+  wire id_8;
+  module_0();
+  tri1 id_9 = 1;
+  wire id_10;
+  tri0 id_11 = 1'd0;
+  wire id_12;
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input wor id_1,
+    output wand id_2,
+    input tri id_3,
+    input wire id_4
+);
+  always disable id_6;
+  wire id_7;
+  module_0();
 endmodule

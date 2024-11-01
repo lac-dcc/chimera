@@ -1,26 +1,36 @@
-// Seed: 1212761544
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-module module_0 (
+// Seed: 3712485353
+module module_0 ();
+  reg id_1;
+  reg id_3;
+  always @* begin
+    id_1 = 1;
+  end
+  id_4(
+      .id_0(id_1), .id_1(id_2), .id_2(id_3)
+  );
+  always
+  fork
+    @(posedge 1) begin
+      id_3 <= id_1;
+    end
+  join
+  assign id_2 = id_4;
+endmodule
+module module_1 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    id_2
 );
-  input id_7;
-  output id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  logic id_7;
-  assign id_4 = 1;
+  output wire id_2;
+  inout wire id_1;
+  wire id_3;
+  assign id_1 = id_1#(
+      .id_1(1),
+      .id_3(1),
+      .id_1(1),
+      .id_3(1),
+      .id_1(id_3 - 1 & 1),
+      .id_1(!1)
+  );
+  wire id_4;
+  module_0();
 endmodule

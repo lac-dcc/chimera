@@ -1,31 +1,38 @@
-// Seed: 3358237616
-module module_0 (
-    output id_0,
-    input logic id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    output id_17,
-    input id_18,
-    output logic id_19,
-    input logic id_20,
-    input id_21,
-    output logic id_22,
-    input id_23
-);
-  logic id_24;
+// Seed: 428270189
+module module_0;
+  always_ff id_1 <= 1;
 endmodule
-`define pp_24 0
-`default_nettype id_1
+module module_1 (
+    inout uwire id_0,
+    input tri   id_1,
+    input uwire id_2,
+    input wire  id_3
+);
+  integer id_5;
+  supply1 id_6 = id_3;
+  logic [7:0] id_7;
+  string id_8 = "";
+  assign id_5 = 1;
+  final begin
+    forever id_7[1'h0 : 1] <= 1;
+  end
+  wire id_9;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  always $display(id_2 / 1);
+  module_0();
+  assign id_1 = {id_1};
+  logic [7:0] id_3;
+  always @(1) begin
+    @(posedge 1 or id_1 or posedge 1);
+  end
+  wire id_4, id_5;
+  always id_3 = id_3[1][1];
+  assign id_3[1] = id_3;
+endmodule

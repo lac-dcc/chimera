@@ -1,6 +1,10 @@
-// Seed: 318788477
-`define pp_15 0
-module module_0 (
+// Seed: 2148656918
+module module_0;
+  tri0 id_1;
+  assign id_1 = 1;
+  assign id_1 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,24 +19,53 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29
 );
-  output id_15;
-  output id_14;
-  inout id_13;
-  output id_12;
-  input id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  input id_1;
-  initial begin
-    id_6[1'b0] <= id_8;
+  output wire id_29;
+  inout wire id_28;
+  input wire id_27;
+  input wire id_26;
+  inout wire id_25;
+  output wire id_24;
+  input wire id_23;
+  input wire id_22;
+  input wire id_21;
+  input wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  output wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always @(posedge 1) begin
+    #1 id_17 <= id_18;
   end
+  module_0();
 endmodule

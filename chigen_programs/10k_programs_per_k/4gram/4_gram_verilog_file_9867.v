@@ -1,50 +1,34 @@
-// Seed: 2341171151
+// Seed: 3222508931
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    output logic id_7,
-    input logic id_8,
-    input logic id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12,
-    output id_13
+    id_1,
+    id_2
 );
-  assign id_7 = id_2;
-  logic id_14;
-  logic
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32,
-      id_33,
-      id_34,
-      id_35,
-      id_36,
-      id_37,
-      id_38,
-      id_39,
-      id_40,
-      id_41,
-      id_42,
-      id_43;
+  output wire id_2;
+  input wire id_1;
+  id_3 :
+  assert property (@(negedge id_3) id_3)
+  else $display;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input tri id_1,
+    output wire id_2,
+    input uwire id_3,
+    output tri1 id_4,
+    output supply1 id_5,
+    output tri0 id_6,
+    input wor id_7,
+    output tri id_8,
+    input tri0 id_9,
+    output tri1 id_10,
+    output wire id_11,
+    input wand id_12,
+    output tri id_13
+    , id_16,
+    output tri id_14
+);
+  wire id_17;
+  module_0(
+      id_17, id_17
+  );
 endmodule

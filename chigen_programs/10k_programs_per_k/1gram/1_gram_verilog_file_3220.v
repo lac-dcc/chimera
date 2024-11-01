@@ -1,29 +1,39 @@
-// Seed: 361585751
+// Seed: 209398577
 module module_0 (
-    input  id_0,
-    output id_1,
-    input  id_2,
-    input  id_3
+    output wand id_0,
+    input supply1 id_1,
+    output wand id_2,
+    input tri id_3,
+    input tri1 id_4,
+    input wor id_5
 );
-  logic id_4;
-  logic id_5;
-  logic id_6;
+  wire id_7;
+  assign id_0 = id_3;
+  wire id_8;
+  integer id_9 (1);
+  wire id_10;
+  rtran #id_11 (1);
 endmodule
 module module_1 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input logic id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input id_12
+    input supply0 id_0
+    , id_13,
+    input supply1 id_1,
+    input uwire id_2,
+    input supply0 id_3
+    , id_14,
+    input supply1 id_4,
+    input logic id_5,
+    input tri0 id_6,
+    output logic id_7,
+    output supply0 id_8,
+    input wand id_9,
+    input wire id_10,
+    output wire id_11
 );
-  supply1 id_13, id_14;
-  always id_13[1+:1] <= 1'h0;
+  initial if (1) id_7 <= id_5;
+  assign id_14 = id_5 > 1;
+  module_0(
+      id_8, id_10, id_11, id_9, id_9, id_9
+  );
+  assign id_13 = id_3 < id_13;
 endmodule

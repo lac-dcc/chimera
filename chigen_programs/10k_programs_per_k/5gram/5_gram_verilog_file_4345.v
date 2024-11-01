@@ -1,35 +1,28 @@
-// Seed: 3585541358
+// Seed: 1717491772
+module module_0 ();
+  assign id_1 = id_1 < 1'h0;
+  tri0 id_2 = 1;
+endmodule
 module module_0 (
-    output logic id_0,
-    output id_1,
-    input id_2,
-    input wor id_3,
-    input id_4,
-    output id_5
+    input wire id_0,
+    input wand module_1,
+    input tri id_2,
+    input supply1 id_3,
+    output wand id_4,
+    input tri id_5,
+    output tri1 id_6,
+    output wor id_7,
+    input wand id_8
 );
-  always @(posedge id_3) begin
-    if (1) begin
-      id_1 <= id_2;
-    end else begin
-      SystemTFIdentifier(id_3[1 : 1]);
-    end
-  end
-  logic id_6;
-  reg   id_7;
-  reg   id_8;
-  tri   id_9;
-  genvar id_10;
-  assign id_9 = id_3;
-  reg id_11 = id_10;
-  always @(posedge 1) #1;
-  logic id_12;
-  assign id_12 = id_12;
-  type_22(
-      !id_8, 1
-  );
-  assign id_7 = id_8;
-  always #1 begin
-    if (1'b0) if (1) id_10 <= id_8;
-  end
-  integer id_13;
+  wire id_10;
+  nor (id_4, id_5, id_8);
+  module_0();
+endmodule
+module module_2 (
+    output wor id_0,
+    output supply0 id_1
+);
+  wire id_3, id_4;
+  module_0();
+  wire id_5;
 endmodule

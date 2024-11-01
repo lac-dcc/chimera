@@ -1,5 +1,4 @@
-// Seed: 2450888916
-`define pp_23 0
+// Seed: 920710761
 module module_0 (
     id_1,
     id_2,
@@ -23,32 +22,82 @@ module module_0 (
     id_20,
     id_21,
     id_22,
-    id_23
+    id_23,
+    id_24
 );
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  output id_19;
-  output id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  input id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  type_23(
-      id_16, id_17
+  input wire id_24;
+  input wire id_23;
+  inout wire id_22;
+  inout wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_25;
+endmodule
+module module_1 (
+    output tri id_0,
+    output supply0 id_1,
+    input tri id_2,
+    input wand id_3,
+    input wand id_4,
+    output supply1 id_5,
+    input supply0 id_6,
+    output wor id_7,
+    input tri id_8
+    , id_13,
+    input wor id_9,
+    input uwire id_10,
+    input uwire id_11
+);
+  wand id_14;
+  wire id_15;
+  assign id_15 = id_13;
+  wire id_16;
+  tri0 id_17 = 1;
+  for (id_18 = 1; id_14; id_7 = 1 - id_11) begin
+    wire id_19;
+  end
+  module_0(
+      id_16,
+      id_17,
+      id_18,
+      id_15,
+      id_14,
+      id_14,
+      id_18,
+      id_14,
+      id_17,
+      id_18,
+      id_13,
+      id_16,
+      id_16,
+      id_13,
+      id_17,
+      id_13,
+      id_16,
+      id_18,
+      id_14,
+      id_13,
+      id_18,
+      id_16,
+      id_17,
+      id_13
   );
 endmodule

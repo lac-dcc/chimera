@@ -1,4 +1,4 @@
-// Seed: 2316738934
+// Seed: 835918495
 module module_0 (
     id_1,
     id_2,
@@ -16,25 +16,81 @@ module module_0 (
     id_14,
     id_15,
     id_16,
-    id_17
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27
 );
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_17;
-  logic id_18 = 1;
+  input wire id_27;
+  output wire id_26;
+  output wire id_25;
+  inout wire id_24;
+  input wire id_23;
+  input wire id_22;
+  inout wire id_21;
+  output wire id_20;
+  input wire id_19;
+  input wire id_18;
+  input wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_28;
+  wire id_29;
+endmodule
+module module_1 (
+    input  wire  id_0,
+    input  wire  id_1,
+    output uwire id_2
+);
+  import id_4::*;
+  module_0(
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4
+  );
 endmodule

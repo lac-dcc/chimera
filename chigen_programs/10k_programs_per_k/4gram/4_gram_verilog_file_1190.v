@@ -1,22 +1,37 @@
-// Seed: 3067114712
+// Seed: 528755067
 module module_0 (
-    output logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output logic id_7,
-    input logic id_8,
-    input id_9,
-    output id_10
+    id_1,
+    id_2
 );
-  type_15(
-      1, id_4 && -id_0
+  inout wire id_2;
+  output wire id_1;
+  wire id_3;
+  wire id_4;
+endmodule
+module module_1 (
+    input  wand  id_0,
+    input  wor   id_1,
+    output wire  id_2,
+    output tri   id_3,
+    input  uwire id_4,
+    input  wor   id_5,
+    output logic id_6,
+    input  wand  id_7,
+    output tri0  id_8,
+    output logic id_9,
+    input  wand  id_10,
+    input  wand  id_11,
+    input  tri   id_12,
+    output wand  id_13,
+    output wand  id_14
+);
+  always
+  fork : id_16
+    id_9 <= 1'b0 * id_12;
+    if (1) id_6 <= 1;
+  join : id_17
+  module_0(
+      id_17, id_17
   );
-  logic id_11;
-  type_17(
-      id_10, 1
-  );
+  assign id_3 = id_4;
 endmodule

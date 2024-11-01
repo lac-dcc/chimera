@@ -1,20 +1,30 @@
-// Seed: 991901420
+// Seed: 3184886395
 module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output id_2
+    id_1,
+    id_2,
+    id_3
 );
-  specify
-    specparam id_3 = 1;
-  endspecify
-  type_0 id_4 (
-      .id_0((1'h0)),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_2),
-      .id_4(id_1),
-      .id_5(1)
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  assign id_3 = id_2;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  wand  id_1,
+    output uwire id_2
+);
+  logic [7:0] id_4;
+  assign id_4[1 : 1] = 1;
+  wire id_5;
+  wire id_6 = 1'b0;
+  wire id_7;
+  reg  id_8;
+  always @(posedge 1 + 1) begin
+    id_8 <= 1;
+  end
+  module_0(
+      id_7, id_6, id_6
   );
-  logic id_5;
-  logic id_6 = 1;
 endmodule

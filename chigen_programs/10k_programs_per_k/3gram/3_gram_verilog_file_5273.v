@@ -1,19 +1,32 @@
-// Seed: 773705840
-`default_nettype id_2
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    input logic id_5,
-    output id_6,
-    input id_7
+// Seed: 299035695
+module module_0 #(
+    parameter id_6 = 32'd55,
+    parameter id_7 = 32'd47
 );
-  genvar id_8;
-  assign id_4 = id_0[1];
-  logic id_9;
-  assign id_3 = 1'b0;
-  assign id_1 = 1;
-  assign id_8[(1)] = !1;
+  if (1)
+    initial begin
+      id_1 <= 1 == id_1 ? ('d0) : 1;
+      id_1 <= id_1;
+    end
+  else begin : id_2
+    if (~1) begin : id_3
+      wire id_4, id_5;
+    end else begin
+      defparam id_6.id_7 = id_7;
+    end
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_4;
+  module_0();
+  assign id_3 = 1;
+  assign id_4 = id_4;
+  wire id_5;
 endmodule

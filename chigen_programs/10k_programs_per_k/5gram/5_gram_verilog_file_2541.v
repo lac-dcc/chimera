@@ -1,46 +1,37 @@
-// Seed: 163581082
+// Seed: 16847684
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    input wor id_0,
+    input tri1 id_1,
+    input supply0 id_2,
+    input tri1 id_3,
+    output wor id_4
 );
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_13 = 1;
-  logic id_14;
-  type_23(
-      1'h0, id_3
+  logic [7:0] id_6 = id_6;
+  assign id_6[1'b0] = id_2;
+  tri1 id_7;
+  assign id_7 = 1'h0;
+  supply1 id_8 = 1;
+  assign id_8 = $display(1'b0);
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output wor id_1,
+    input supply1 id_2,
+    input tri id_3,
+    input tri0 id_4,
+    output wor id_5,
+    input supply0 id_6,
+    input tri0 id_7,
+    output tri1 id_8,
+    input supply0 id_9,
+    input tri0 id_10,
+    input wand id_11,
+    input wire id_12,
+    input wire id_13,
+    output tri0 id_14
+);
+  assign id_14 = (1);
+  module_0(
+      id_0, id_11, id_4, id_4, id_1
   );
-  assign id_11 = 1 ? id_7 & id_14 : id_7;
-  logic id_15 = 1, id_16;
-  assign id_14 = 1'b0;
-  logic id_17;
-  assign id_15 = 1;
-  type_26(
-      id_9 * 1, 1
-  );
-  logic id_18 = 1, id_19;
-  assign id_10 = id_8;
-  logic id_20;
 endmodule

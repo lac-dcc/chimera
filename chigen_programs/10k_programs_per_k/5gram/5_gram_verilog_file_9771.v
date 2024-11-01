@@ -1,5 +1,24 @@
-// Seed: 3727015371
+// Seed: 3623479398
 module module_0 (
+    input supply1 id_0,
+    input tri0 id_1,
+    output tri0 id_2,
+    output supply0 id_3
+);
+  assign id_3 = id_0;
+  uwire   id_5 = 1;
+  supply1 id_6 = id_5;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input tri id_1
+);
+  assign id_0 = 1 - id_1;
+  module_0(
+      id_1, id_1, id_0, id_0
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -12,37 +31,40 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    id_13
 );
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_13[1] = 1;
-  logic id_18;
-  assign id_4 = 1'b0;
-  logic id_19;
-  type_23(
-      1'd0, 1
+  output wire id_13;
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_14;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_5;
+  module_2(
+      id_4, id_5, id_5, id_5, id_4, id_2, id_5, id_5, id_5, id_5, id_3, id_2, id_4
   );
-  logic id_20 = 1;
+  always_comb @(posedge id_5) begin
+    id_1 <= 1'b0;
+    disable id_6;
+  end
+  assign id_5 = 1;
 endmodule

@@ -1,31 +1,36 @@
-// Seed: 3251388503
-`define pp_5 0
-`define pp_6 0
+// Seed: 1294137008
 module module_0 (
-    input id_0,
-    input id_1#(.id_5(1'h0)),
-    output logic id_2,
-    input logic id_3,
-    output id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_6;
-  reg   id_7;
-  assign id_7 = id_7 & 1;
-  initial begin
-    id_5 = 1;
-    id_7 <= (id_7);
-  end
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
   assign id_2 = 1;
-  logic id_8 = id_1;
-  uwire id_9 = id_9[1'b0 : 1];
-  logic id_10;
-  type_18 id_11 (
-      .id_0(1'd0),
-      .id_1(1 ? 1 : 1),
-      .id_2((1))
-  );
-  assign id_2 = id_9[1];
-  type_19(
-      1, id_1
+  wire id_5;
+  always id_4 = #1 1;
+endmodule
+module module_1 (
+    output logic id_0,
+    input supply0 id_1,
+    output wor id_2,
+    input tri1 id_3,
+    input uwire id_4
+    , id_6
+);
+  assign id_0 = 1;
+  task id_7;
+    begin
+      id_0 <= !(id_1);
+      id_6 <= 1;
+    end
+  endtask
+  id_8(
+      .id_0(~id_3), .id_1(id_2), .id_2(1'b0), .id_3(id_3), .id_4(1), .id_5(1), .id_6((id_3))
+  ); module_0(
+      id_7, id_7, id_7, id_6
   );
 endmodule

@@ -1,43 +1,39 @@
-// Seed: 2470188676
+// Seed: 722324348
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output id_2,
-    output id_3,
-    input id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    output logic id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    input logic id_15,
-    input id_16,
-    input id_17,
-    input id_18
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  logic id_19;
-  assign id_9 = 1;
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_7 = id_3;
 endmodule
-primitive module_0(output id_19, input id_20);
-  table
-    1 1 0 : 1;
-    0 1 x : 1;
-    0 ? : 0;
-    0 0 x : 0;
-    1 0 1 : 1;
-    1 1 ? 0 x 0 : 1;
-    1 0 ? ? 1 : 1;
-    ? ? 1 x 0 : 0;
-    ? 0 0 ? x 0 : 0;
-    ? ? 1 0 x : 1;
-    0 ? 1 1 0 : x;
-    0 x 1 : 1;
-    ? 1 ? : 0;
-    ? 1 1 : 1;
-  endtable
-endprimitive : id_21
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  logic [7:0] id_4;
+  assign id_4[1] = id_3;
+  module_0(
+      id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_3, id_3
+  );
+endmodule

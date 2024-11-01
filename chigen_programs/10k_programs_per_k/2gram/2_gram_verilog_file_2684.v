@@ -1,29 +1,31 @@
-// Seed: 1659995470
-`timescale 1ps / 1ps
+// Seed: 2108739949
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    input logic id_13,
-    input logic id_14,
-    output logic id_15,
-    input id_16
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_8 = 1'b0 * 1;
-  logic id_17;
-  assign id_1  = id_0;
-  assign id_12 = 1;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  tri0 id_4 = 1;
+  assign id_2 = 1;
+  assign id_2 = 1;
 endmodule
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
+module module_1 (
+    output supply1 id_0,
+    input supply0 id_1,
+    output tri0 id_2,
+    input tri0 id_3,
+    input tri1 id_4,
+    input tri0 id_5,
+    input tri id_6,
+    input tri id_7,
+    input supply1 id_8,
+    input tri0 id_9
+);
+  string id_11 = "";
+  wire   id_12;
+  module_0(
+      id_12, id_12, id_12
+  );
+endmodule

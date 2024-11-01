@@ -1,36 +1,32 @@
-// Seed: 3353628241
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`default_nettype id_1
-`define pp_7 0
-`define pp_8 0
-`default_nettype id_3
-`define pp_9 0
-`define pp_10 (  pp_11  )  0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`timescale 1ps / 1ps
+// Seed: 2466603450
+module module_0 ();
+endmodule
+module module_1 #(
+    parameter id_5 = 32'd2,
+    parameter id_6 = 32'd22
+) (
+    output tri1 id_0,
+    input tri id_1,
+    input supply1 id_2,
+    output tri1 id_3
+);
+  defparam id_5.id_6 = id_5; module_0();
+  wire id_7;
+endmodule
 module module_0 (
     id_1,
+    module_2,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5
 );
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  always @(posedge 1) begin
-    assign id_2 = 1 & 1 - 1;
-    if (1) id_3 <= 1;
-  end
-  assign id_3 = 1;
-  reg   id_3;
-  logic id_4;
-  logic id_5, id_6, id_7, id_8;
-  assign id_6 = 1'h0 ? id_7 : !id_5;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_4 = 1'b0;
+  module_0();
 endmodule

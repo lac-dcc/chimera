@@ -1,49 +1,45 @@
-// Seed: 3120431923
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    input logic id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    input logic id_18,
-    output logic id_19,
-    input logic id_20,
-    output id_21,
-    input logic id_22,
-    input logic id_23,
-    output id_24,
-    output logic id_25,
-    output id_26,
-    inout id_27,
-    input logic id_28,
-    input logic id_29,
-    input id_30,
-    input logic id_31,
-    input id_32,
-    output id_33,
-    input id_34,
-    input id_35,
-    input id_36,
-    output id_37,
-    input id_38,
-    output id_39,
-    input logic id_40,
-    output logic id_41,
-    output id_42,
-    input logic id_43
+// Seed: 226310324
+module module_0;
+  wire id_1;
+  module_3(
+      id_1, id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri id_1
 );
-  logic id_44;
+  assign id_1 = 1'h0;
+  module_0();
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input wand id_1,
+    output supply1 id_2,
+    input supply0 id_3,
+    output wire id_4,
+    input tri0 id_5,
+    input tri1 id_6
+);
+  generate
+    assign id_4 = 1 < id_1;
+  endgenerate
+  xnor (id_2, id_3, id_5, id_6);
+  module_0();
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  id_6(
+      1 - ""
+  );
 endmodule

@@ -1,16 +1,37 @@
-// Seed: 3169772720
-module module_0 (
-    output logic id_0,
-    output id_1,
-    input id_2
-    , id_7,
-    input id_3,
-    input id_4,
-    output logic id_5,
-    input id_6
+// Seed: 867293136
+module module_0;
+  always_latch begin
+    if (&id_1)
+      if (1)
+        if (id_1) begin
+          id_1 <= id_1 == 1'b0;
+        end else begin
+          id_1 <= id_1;
+          id_1 = 1;
+        end
+      else id_1 <= 1'b0;
+  end
+  assign id_2 = id_2;
+  wire id_3;
+  assign id_2 = id_2;
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  defparam id_8.id_9 = 1;
-  assign id_9 = 1'b0;
-  logic id_10;
-  always @(posedge id_2);
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  always id_5 = #1 1;
+  assign id_1 = id_4;
+  assign id_5 = id_5;
+  module_0();
+  wire id_6;
 endmodule

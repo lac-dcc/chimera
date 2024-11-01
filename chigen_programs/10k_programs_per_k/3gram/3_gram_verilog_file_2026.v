@@ -1,23 +1,21 @@
-// Seed: 137985584
-`define pp_7 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 928148532
+module module_0;
+  static id_1();
+endmodule
+module module_1 (
+    output supply1 id_0,
+    inout wor id_1,
+    output supply1 id_2,
+    output supply0 id_3,
+    input tri id_4,
+    input wand id_5,
+    input tri1 id_6,
+    input tri id_7,
+    output wand id_8,
+    output supply1 id_9
 );
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  logic id_7;
-  type_9(
-      1, 1, id_2 == id_3
-  );
+  id_11(
+      .id_0(1'd0), .id_1(1), .id_2(1), .id_3(1), .id_4(id_5), .id_5(1)
+  ); module_0();
+  wire id_12;
 endmodule

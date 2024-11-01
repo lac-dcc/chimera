@@ -1,26 +1,48 @@
-// Seed: 480501559
-`define pp_3 0
+// Seed: 3393651440
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2
+    output supply0 id_0,
+    output supply1 id_1,
+    output supply0 id_2,
+    output supply0 id_3,
+    input uwire id_4,
+    input tri id_5,
+    input wor id_6
 );
-  always @(id_2) begin
-    #1 SystemTFIdentifier(id_1, 1 - id_2);
-  end
-  integer id_3 (
-      .id_0 (id_0),
-      .id_1 (id_0),
-      .id_2 (""),
-      .id_3 (1),
-      .id_4 (1),
-      .id_5 (1),
-      .id_6 (1),
-      .id_7 (id_0 - 1'b0),
-      .id_8 (id_2),
-      .id_9 (1),
-      .id_10(),
-      .id_11(id_1)
+  assign id_3 = 1;
+  wire id_8;
+  wire id_9;
+  module_2(
+      id_8, id_9, id_8
   );
-  logic id_4;
+  wire id_10;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    input  wor   id_1,
+    output tri0  id_2,
+    output tri1  id_3
+);
+  wor id_5 = 1;
+  module_0(
+      id_3, id_3, id_2, id_3, id_0, id_1, id_0
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  generate
+    if (id_2) begin
+      wire id_4, id_5;
+    end else begin
+      wire id_6;
+      initial begin
+        $display(1);
+      end
+    end
+  endgenerate
 endmodule

@@ -1,24 +1,38 @@
-// Seed: 390174848
-module module_0;
-  always begin
-    if (id_0) id_0 = id_0;
-    else id_0 = id_0;
-  end
-  assign id_1 = 1;
-  logic id_2, id_3, id_4, id_5;
-  type_0.type_1
-      id_6 (
-          1'h0 + id_2,
-          1'h0,
-          1,
-          1 && id_3,
-          1,
-          id_5
-      ),
-      id_7;
-  assign id_4 = id_2;
-  logic id_8;
-  logic id_9 = id_4;
+// Seed: 1310783597
+module module_0 (
+    output wand  id_0,
+    input  wand  id_1,
+    input  uwire id_2
+);
+  assign id_0 = id_2;
+  wire id_4;
+  tri0 id_5;
+  id_6(
+      .id_0(1), .id_1(id_5), .id_2(id_4), .id_3(id_4), .id_4(1'h0)
+  );
+  wire id_7, id_8;
+  wire id_9;
+  assign id_5 = 'h0;
+  tri id_10 = 1;
+  assign id_9 = id_8;
 endmodule
-`define pp_0 0
-`timescale 1 ps / 1 ps
+module module_1 (
+    input supply1 id_0,
+    output tri1 id_1,
+    output tri1 id_2,
+    inout supply1 id_3,
+    output tri1 id_4
+);
+  assign id_3 = 1;
+  assign id_1 = 1;
+  wor   id_6;
+  uwire id_7 = 1, id_8;
+  module_0(
+      id_2, id_6, id_6
+  );
+  tri1 id_9;
+  tri id_10, id_11, id_12;
+  assign id_10 = id_6;
+  assign id_10 = id_9;
+  assign id_4  = id_10.id_8;
+endmodule

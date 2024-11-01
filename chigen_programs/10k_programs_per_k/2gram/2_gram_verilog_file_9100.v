@@ -1,28 +1,31 @@
-// Seed: 2670616403
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    output logic id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    output id_13,
-    input id_14,
-    output id_15,
-    input id_16
-);
-  logic id_17;
-  logic id_18;
-  initial begin : id_19
-    id_5 = id_17 ? id_9 : id_10 ? id_12 : id_6;
-    id_1 = 1 === id_19;
+// Seed: 3691000033
+module module_0 ();
+  assign id_1 = id_1;
+  reg id_2;
+  assign id_2 = (1);
+  always begin
+    id_2 <= id_2;
+    $display(id_1, id_2, 1);
+    if (1)
+      if (1)
+        fork
+          id_1 <= id_2;
+        join
   end
-  assign id_17 = 1;
+  wire id_3;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input wor id_1,
+    output tri1 id_2,
+    input tri0 id_3,
+    input supply0 id_4,
+    input wor id_5,
+    input uwire id_6
+);
+  assign id_2 = 1'b0;
+  wire id_8;
+  supply0 id_9 = id_4;
+  module_0();
+  wire id_10;
 endmodule

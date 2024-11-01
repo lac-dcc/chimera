@@ -1,18 +1,27 @@
-// Seed: 2582621113
-`timescale 1 ps / 1 ps
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    output logic id_8,
-    output id_9
-);
-  type_13(
-      1'd0, id_2
+// Seed: 3000694867
+module module_0;
+  id_2(
+      (1)
   );
+endmodule
+module module_1 ();
+  id_1 :
+  assert property (@(posedge id_1) id_1)
+  else $display(-id_1);
+  id_2(
+      .id_0(), .id_1(1), .id_2(1'h0)
+  );
+  for (id_3 = 1'b0 && 1; 1'b0; id_2 = id_2) begin
+    assign id_1 = 1;
+  end
+  assign id_1 = 1;
+  wire id_4;
+  module_0();
+  reg  id_5;
+  reg  id_6;
+  always @(1 or posedge 1) begin
+    $display;
+    id_1 <= {id_6{1}};
+    id_5 <= (1'h0);
+  end
 endmodule

@@ -1,37 +1,37 @@
-// Seed: 19787584
-`define pp_11 0
-`timescale 1ps / 1ps
+// Seed: 3135397486
 module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  supply1 id_4;
+  assign id_4 = 1'b0;
+  assign id_4 = (id_4) ? 1'h0 : 1 ? id_2 : 1'b0;
+endmodule
+module module_1 #(
+    parameter id_7 = 32'd57,
+    parameter id_8 = 32'd29
+) (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_6
 );
-  output id_11;
-  input id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  type_12 id_11 (
-      .id_0(1),
-      .id_1(id_9),
-      .id_2(1),
-      .id_3(id_5)
-  );
-  type_13(
-      1, id_4, 1
-  );
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(posedge 1 or posedge id_1) begin
+    if (id_1 == 1'b0) id_2 <= 1;
+  end
+  module_0(
+      id_4, id_1, id_1
+  ); defparam id_7.id_8 = 1;
 endmodule

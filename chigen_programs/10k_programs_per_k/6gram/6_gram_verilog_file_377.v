@@ -1,44 +1,37 @@
-// Seed: 3575803237
+// Seed: 1539947992
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input id_3,
-    output logic id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    output logic id_11
-    , id_38,
-    output id_12,
-    input logic id_13,
-    output logic id_14,
-    input id_15,
-    output id_16,
-    input id_17,
-    input logic id_18,
-    input id_19,
-    input id_20,
-    output id_21,
-    input id_22,
-    output logic id_23,
-    output id_24,
-    output id_25,
-    input id_26,
-    input logic id_27,
-    output id_28,
-    input id_29,
-    inout logic id_30,
-    input logic id_31,
-    input logic id_32,
-    output id_33,
-    input id_34,
-    input logic id_35,
-    input id_36,
-    output logic id_37
+    input supply1 id_0,
+    input wor id_1,
+    output tri id_2,
+    input tri0 id_3,
+    output tri id_4,
+    input tri id_5,
+    input supply0 id_6,
+    input uwire id_7,
+    input supply1 id_8
+    , id_10
 );
-  assign id_21 = 1'b0;
+  always force id_2 = id_1 > id_8;
+endmodule
+module module_1 (
+    input tri id_0,
+    input uwire id_1,
+    input wor id_2,
+    input wand id_3,
+    output supply0 id_4,
+    output wor id_5,
+    input wand id_6,
+    input supply0 id_7,
+    input supply0 id_8,
+    output supply1 id_9,
+    output supply0 id_10
+);
+  always @(posedge id_1) begin
+    id_4 = id_7;
+  end
+  module_0(
+      id_2, id_7, id_5, id_7, id_9, id_1, id_8, id_8, id_3
+  );
+  wire id_12;
+  initial id_9 = 1;
 endmodule

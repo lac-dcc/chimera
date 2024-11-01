@@ -1,36 +1,24 @@
-// Seed: 131974813
-`define pp_26 0
-`timescale 1ps / 1ps `timescale 1 ps / 1ps
-`define pp_27 0
-`define pp_28 0
-`timescale 1ps / 1 ps
+// Seed: 4159110902
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    input id_16,
-    output id_17,
-    output logic id_18,
-    output id_19,
-    input id_20,
-    output id_21,
-    input id_22,
-    input logic id_23,
-    input id_24,
-    input logic id_25
+    input supply0 id_0,
+    output tri id_1
+    , id_6,
+    input wor id_2,
+    input supply1 id_3,
+    input supply1 id_4
 );
-  logic id_26;
+  id_7(
+      .id_0(1), .id_1(id_6), .id_2(), .id_3(id_1), .id_4(), .id_5('h0), .id_6(1), .id_7(id_4)
+  );
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output wand id_1,
+    output wor id_2
+);
+  wire id_4;
+  wire id_5;
+  module_0(
+      id_0, id_2, id_0, id_0, id_0
+  );
 endmodule

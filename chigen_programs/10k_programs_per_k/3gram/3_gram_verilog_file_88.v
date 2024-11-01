@@ -1,32 +1,33 @@
-// Seed: 121642667
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    output id_8,
-    input logic id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    input id_13,
-    output logic id_14,
-    input logic id_15,
-    input id_16,
-    output id_17,
-    input logic id_18,
-    output id_19,
-    input id_20,
-    input id_21,
-    input logic id_22
+// Seed: 4009899065
+module module_0;
+  wire id_2;
+  wire id_4;
+  generate
+    wire id_5;
+  endgenerate
+  supply0 id_7;
+  wire id_8;
+  logic [7:0] id_9;
+  initial begin
+    id_7 = 1;
+  end
+  wire id_10 = id_4;
+  wire id_11;
+  wire id_12;
+  wire id_13;
+  wire id_14;
+  id_15(
+      .id_0(id_9[1]), .id_1(1)
+  );
+  wire id_16;
+  wire id_17;
+  assign id_16 = id_10;
+  wire id_18;
+endmodule
+module module_1 (
+    input wor  id_0,
+    input tri1 id_1
 );
-  logic id_23;
-  logic id_24 = 1;
-  defparam id_25.id_26 = id_2;
-  logic id_27 = id_21;
-  assign id_23 = 1;
+  wire id_3;
+  module_0();
 endmodule

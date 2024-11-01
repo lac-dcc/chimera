@@ -1,5 +1,43 @@
-// Seed: 4277644059
-module module_0 (
+// Seed: 2385807225
+module module_0;
+  wire id_1, id_2;
+  module_2(
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1
+  );
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  logic [7:0] id_3;
+  module_0();
+  assign id_3[1] = id_1;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -12,39 +50,41 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23
 );
-  input id_13;
-  input id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  inout id_7;
-  input id_6;
-  output id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  input id_1;
-  logic id_13;
-  assign id_9 = id_13;
-  logic id_14;
-  assign id_10 = id_1;
-  assign id_3  = 1;
-  assign id_11 = 1;
-  logic id_15;
-  assign id_10 = 1 - 1;
-  type_22
-      id_16 (
-          .id_0(id_8),
-          .id_1(),
-          .id_2(""),
-          .id_3(1),
-          .id_4(1 ? id_7 : id_13),
-          .id_5(),
-          .id_6()
-      ),
-      id_17,
-      id_18;
+  input wire id_23;
+  input wire id_22;
+  inout wire id_21;
+  input wire id_20;
+  inout wire id_19;
+  output wire id_18;
+  output wire id_17;
+  input wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_11 = id_4;
+  assign id_21 = id_12 - id_23;
 endmodule

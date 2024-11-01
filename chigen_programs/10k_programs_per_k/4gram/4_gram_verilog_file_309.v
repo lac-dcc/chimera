@@ -1,41 +1,60 @@
-// Seed: 1713323558
+// Seed: 4009355634
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    input tri id_0,
+    input tri id_1,
+    output supply0 id_2,
+    output wire id_3,
+    input wire id_4,
+    output tri1 id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    input uwire id_8,
+    input uwire id_9,
+    input uwire id_10,
+    output wor id_11,
+    output wor id_12,
+    output uwire id_13
 );
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  reg id_13;
-  integer id_14 (
-      .id_0(1),
-      .id_1(id_3),
-      .id_2(id_8 < 1),
-      .id_3(id_13)
+  supply1 id_15 = 1;
+  uwire   id_16 = id_6;
+endmodule
+module module_1 (
+    input wor id_0,
+    output tri id_1,
+    input wire id_2,
+    output tri0 id_3,
+    input tri0 id_4,
+    output wand id_5,
+    output tri1 id_6,
+    output wand id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    input wand id_10,
+    input tri0 id_11,
+    output tri0 id_12,
+    output tri0 id_13,
+    input wor id_14,
+    output wand id_15,
+    output tri0 id_16,
+    output wire id_17,
+    output tri1 id_18,
+    output tri0 id_19,
+    output wand id_20
+    , id_32,
+    output tri id_21,
+    output wire id_22,
+    output uwire id_23,
+    output wor id_24,
+    input uwire id_25,
+    input tri0 id_26,
+    input tri id_27,
+    input wor id_28,
+    output supply1 id_29,
+    input uwire id_30
+);
+  wire id_33;
+  wire id_34;
+  module_0(
+      id_4, id_8, id_1, id_21, id_14, id_3, id_27, id_14, id_14, id_14, id_8, id_23, id_20, id_24
   );
-  initial begin
-    id_13 <= #id_7 1;
-  end
-  timeunit 1ps;
 endmodule

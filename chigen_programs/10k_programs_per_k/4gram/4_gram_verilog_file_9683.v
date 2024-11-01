@@ -1,27 +1,35 @@
-// Seed: 2171251164
-`default_nettype wire
+// Seed: 2619134064
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    inout reg id_12
+    input tri0 id_0,
+    input tri0 id_1,
+    input tri0 id_2
 );
-  logic id_13 = id_1;
-  always @(*) begin
-    id_13 = 1;
-    id_12 <= 1;
-  end
-  type_20(
-      (1), 1'h0, 1'h0, 1
+  tri id_4 = id_1;
+  assign id_4 = id_1;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output wor   id_1,
+    input  tri0  id_2
+);
+  id_4(
+      1 - 1
   );
-  logic id_14;
+  tri  id_5;
+  wire id_6;
+  assign id_5 = 1;
+  wire id_7;
+  tri  id_8;
+  wire id_9;
+  wire id_10;
+  tri0 id_11 = id_8;
+  wire id_12;
+  wire id_13;
+  wire id_14;
+  wire id_15;
+  wire id_16;
+  module_0(
+      id_0, id_2, id_0
+  );
+  assign #id_17 id_11 = 1;
 endmodule

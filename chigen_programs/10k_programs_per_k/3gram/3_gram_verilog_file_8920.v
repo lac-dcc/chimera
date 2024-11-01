@@ -1,13 +1,39 @@
-// Seed: 256596043
+// Seed: 3694277191
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    output logic id_5,
-    input logic id_6,
-    output id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_8;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  initial begin
+    if (id_4) begin
+      $display(id_2, id_4);
+      id_1 -= 1;
+    end
+    id_3 = 1;
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  assign id_3[1] = id_4;
+  assign id_1 = id_2;
+  wire id_5;
+  module_0(
+      id_1, id_4, id_5, id_5, id_4
+  );
 endmodule

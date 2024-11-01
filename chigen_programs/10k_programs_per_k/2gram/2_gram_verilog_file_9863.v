@@ -1,28 +1,35 @@
-// Seed: 3014492964
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    output logic id_4,
-    input logic id_5
+// Seed: 1288879249
+module module_0 #(
+    parameter id_4 = 32'd37,
+    parameter id_5 = 32'd98
 );
-  type_15 id_6;
-  type_16(
-      1
-  );
-  logic id_7 = id_1;
-  logic id_8;
-  logic id_9;
-  logic id_10;
-  type_0 id_11 (
-      .id_0(1'b0 - 1),
-      .id_1(id_6),
-      .id_2(1),
-      .id_3(1)
-  );
-  logic id_12;
-  assign id_11 = id_6;
+  assign id_1 = id_1;
+  wire id_2;
+  wire id_3;
+  assign id_1 = id_1;
+  defparam id_4.id_5 = 1;
 endmodule
-`timescale 1ps / 1ps
-`define pp_6 0
+module module_1 ();
+  initial id_1 <= (id_1);
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always begin
+    id_1 = #1 id_2;
+  end
+  id_6(
+      .id_0(1)
+  ); module_0();
+  assign id_3 = id_2 == 1;
+endmodule

@@ -1,30 +1,54 @@
-// Seed: 1008472216
+// Seed: 3488758872
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    output id_4,
-    inout id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    output id_9
+    id_1,
+    id_2
 );
-  logic id_10;
-  type_0 id_11 (
-      1 - id_2,
-      1,
-      1
-  );
-  logic id_12;
-  logic id_13 = 1;
-  type_1 id_14 (.id_0(id_13));
-  logic id_15;
-  logic id_16;
-  always @(posedge 1'b0 or posedge 1) begin
-    SystemTFIdentifier(id_15, id_15);
-    if (1'b0) id_12 = 1;
+  output wire id_2;
+  input wire id_1;
+  generate
+    logic [7:0] id_3;
+    if (id_3) begin
+      assign id_3[""] = 1'b0;
+      wire id_4;
+    end
+  endgenerate
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  reg id_5;
+  reg id_6 = 1;
+  always @(negedge 1 or negedge id_6)
+    if (id_2)
+      if (1) id_5 <= 1;
+      else begin
+        if (id_2 ~^ id_6) begin
+          $display;
+        end else begin
+          if (1)
+            if (id_6 && id_5) begin
+              id_5 = 1 >= 1;
+            end else id_6 <= $display;
+        end
+      end
+  always_comb @(*) id_4 = id_5;
+  wire id_7;
+  always @(posedge "") begin
+    if (1 - 1) begin
+      id_1 <= id_3;
+    end else begin
+      deassign id_4;
+    end
   end
-  logic id_17 = 1;
+  module_0(
+      id_7, id_7
+  );
+  wire id_8;
 endmodule

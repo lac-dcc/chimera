@@ -1,18 +1,31 @@
-// Seed: 3609714174
+// Seed: 1675442400
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input wand id_0,
+    input wire id_1
 );
-  input id_4;
-  input id_3;
-  inout id_2;
-  output id_1;
-  assign {id_4, 1} = 1;
-  type_4(
-      1, id_3, 1
-  ); type_5(
-      1 == id_4 & id_1, id_1
+  wire id_3;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input supply0 id_1,
+    output tri1 id_2,
+    output uwire id_3,
+    output tri1 id_4,
+    input supply0 id_5,
+    output tri id_6,
+    output wand id_7,
+    output tri id_8,
+    input wand id_9,
+    output tri1 id_10,
+    input wor id_11,
+    input wor id_12,
+    input supply1 id_13,
+    output tri id_14,
+    input tri1 id_15
+);
+  supply1 id_17 = 1 == id_13;
+  module_0(
+      id_0, id_11
   );
+  assign id_17 = 1;
 endmodule

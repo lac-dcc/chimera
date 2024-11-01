@@ -1,20 +1,36 @@
-// Seed: 1020632096
-`timescale 1 ps / 1 ps
+// Seed: 991837253
 module module_0 (
-    inout logic id_0,
-    input id_1,
-    output reg id_2,
-    input id_3,
-    output id_4,
-    input id_5
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_6;
-  always @(posedge id_3 - 1 ^ id_3) begin
-    id_0 = 1;
-    id_2 <= 1;
-  end
-  initial id_4[1 : 1] = "" == id_0;
-  type_10(
-      id_3, id_0
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input tri0 id_1,
+    input wand id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    input tri0 id_5,
+    input tri1 id_6
+    , id_11,
+    input tri0 id_7,
+    input wand id_8,
+    input tri0 id_9
+);
+  wire id_12;
+  assign id_11 = 1'd0;
+  wire id_13;
+  module_0(
+      id_12, id_12, id_13, id_13, id_12
   );
+  wire id_14;
 endmodule

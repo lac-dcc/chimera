@@ -1,23 +1,35 @@
-// Seed: 3348725357
-`define pp_7 0
-module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    output id_3,
-    output logic id_4,
-    output id_5
-    , id_7,
-    output logic id_6
+// Seed: 2989348476
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  always @((~id_7) or posedge 1 + id_7) begin
-    if (id_7)
-      if (1'b0 * id_7) begin
-        id_0 = ~1'b0;
-      end else id_6 = 1;
-  end
-  assign id_1 = 1'b0;
-  logic id_8;
-  logic id_9;
-  assign id_8 = 1;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign #id_4 id_1 = id_2;
+  module_0();
+endmodule
+module module_2 (
+    input  tri0 id_0,
+    output tri0 id_1,
+    output tri0 id_2
+);
+  generate
+    for (id_4 = (1); 1; id_2 = 1'b0) begin
+      wand id_5 = 1;
+    end
+  endgenerate
+  module_0();
+endmodule
+module module_3 (
+    input wire id_0,
+    input wor id_1,
+    input uwire id_2,
+    input supply0 id_3
+);
+  always @(1 or posedge 1) id_5 <= 1 == id_5;
+  module_0();
 endmodule

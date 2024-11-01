@@ -1,25 +1,25 @@
-// Seed: 343169204
-`default_nettype id_2
-module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    input id_5
-);
-  logic id_6;
+// Seed: 1328006640
+module module_0;
+  reg id_1;
+  always @(1 or 1 or 1 or 1 or 1 or 1'd0 or 1 or id_1 or id_1 or posedge id_1 + 1) id_1 <= 1;
 endmodule
-`define pp_6 0
 module module_1 (
-    output logic id_0,
-    output logic id_1,
-    output id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_2 = id_3[1];
-  string id_6 = "";
-  type_10 id_7 (
-      .id_0(!id_4),
-      .id_1(id_6)
-  );
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_4 = id_2;
+  module_0();
+endmodule
+module module_2;
+  tri0 id_1;
+  wire id_3;
+  id_4(
+      1'h0, $display(1), id_1
+  ); module_0();
 endmodule

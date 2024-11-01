@@ -1,18 +1,29 @@
-// Seed: 3309840791
+// Seed: 4152335061
 module module_0 (
-    output id_0,
-    output logic id_1,
-    input int id_2
-    , id_7,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6
+    input wand id_0,
+    output tri id_1,
+    input wor id_2,
+    output wand id_3,
+    input supply1 id_4,
+    output uwire id_5,
+    input tri0 id_6
 );
-  assign #1 id_1 = id_4;
-  type_12(
-      1, id_6
+  tri id_8 = 1;
+  always @(id_2 or posedge 1);
+  id_9(
+      .id_0(id_1), .id_1(1), .id_2(~1), .id_3(id_0)
   );
-  logic id_8;
-  logic id_9;
+  always @(*) $display(1);
+  wire id_10;
+endmodule
+macromodule module_1 (
+    input wor id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    output supply1 id_3
+);
+  wire id_5;
+  module_0(
+      id_0, id_3, id_2, id_3, id_0, id_3, id_0
+  );
 endmodule

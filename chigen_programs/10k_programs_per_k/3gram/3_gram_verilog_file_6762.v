@@ -1,4 +1,4 @@
-// Seed: 1804769770
+// Seed: 2583233189
 module module_0 (
     id_1,
     id_2,
@@ -19,27 +19,62 @@ module module_0 (
     id_17,
     id_18
 );
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_18(
-      id_16, id_4
-  );
+  output wire id_18;
+  input wire id_17;
+  input wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  input wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_19;
 endmodule
-`define pp_18 0
-`timescale 1 ps / 1 ps `timescale 1 ps / 1 ps
+module module_1 #(
+    parameter id_12 = 32'd83,
+    parameter id_13 = 32'd90
+) (
+    input  tri0 id_0,
+    output tri0 id_1,
+    input  tri1 id_2,
+    input  tri0 id_3,
+    input  wand id_4,
+    input  tri0 id_5,
+    output wor  id_6,
+    input  tri  id_7,
+    output tri0 id_8,
+    output tri  id_9
+);
+  assign id_1 = 1;
+  supply1 id_11;
+  always_latch @(id_11 or negedge 1'h0) $display(1);
+  module_0(
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11
+  ); defparam id_12.id_13 = 1'b0 - id_0 & id_4;
+endmodule

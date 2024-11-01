@@ -1,19 +1,20 @@
-// Seed: 1340136464
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  input id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  logic id_5;
+// Seed: 165993832
+module module_0;
+  id_2(
+      .id_0(1), .id_1(id_1), .id_2(id_1), .id_3(1), .id_4(1), .id_5(1'b0), .id_6(1)
+  );
   initial begin
-    if (id_5) id_1 = 1'h0;
+    id_1 = #id_3 1;
   end
-  assign id_1 = id_4;
+endmodule
+module module_1 (
+    input wor id_0,
+    input wire id_1,
+    input wor id_2,
+    input supply0 id_3
+);
+  reg  id_5 = 1;
+  wire id_6;
+  module_0();
+  always @(posedge 1) while (1) id_5 = #1 1'b0;
 endmodule

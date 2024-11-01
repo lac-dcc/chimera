@@ -1,24 +1,33 @@
-// Seed: 1356480709
-`define pp_5 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 2679205922
+module module_0;
+  logic [7:0] id_1;
+  assign id_1 = id_1[1'h0];
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output logic id_1
+    , id_18,
+    input supply1 id_2,
+    output tri0 id_3,
+    input tri0 id_4,
+    input wand id_5,
+    input wand id_6,
+    output tri1 id_7,
+    input tri0 id_8,
+    input uwire id_9,
+    input tri1 id_10,
+    input wire id_11,
+    input tri id_12
+    , id_19,
+    input tri1 id_13,
+    output tri0 id_14,
+    output tri id_15,
+    input tri0 id_16
 );
-  output id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  logic id_8 = id_3;
-  logic id_9 = id_7;
-  logic id_10;
-  generate
-    defparam  id_11  .  id_12  =  id_4  ,  id_13  .  id_14  =  1  ,  id_15  .  id_16  =  id_14  ,  id_17  .  id_18  =  1  ,  id_19  .  id_20  =  1 'b0 ,  id_21  .  id_22  =  id_2  ,  id_23  .  id_24  =  1  ,  id_25  .  id_26  =  1  ,  id_27  .  id_28  =  sample  [  (  1  )  ]  ,  id_29  .  id_30  =  id_14  ,  id_31  .  id_32  =  1  ,  id_33  .  id_34  =  1  ,  id_35  .  id_36  =  1  ,  id_37  .  id_38  =  id_11  ,  id_39  .  id_40  =  1  ,  id_41  .  id_42  =  1  ,  id_43  .  id_44  =  1  ,  id_45  .  id_46  =  1  ,  id_47  .  id_48  =  1  -  id_28  ;
-  endgenerate
+  always @(posedge ~(~1) == id_5 < "" & (id_19))
+    for (id_19 = id_16 * id_2 - {1'b0{id_10}}; id_5; id_14 = id_9 == 1)
+      id_1 = #1{1, 1, 1, 1, id_5 - id_11, 1, 1'h0 - 1};
+  wire id_20;
+  wire id_21;
+  module_0();
 endmodule

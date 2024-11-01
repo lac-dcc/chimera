@@ -1,28 +1,56 @@
-// Seed: 4110057763
+// Seed: 2769333163
 module module_0 (
-    input logic id_0,
-    output wire id_1
-    , id_5, id_6,
-    output id_2,
-    input logic id_3,
-    input id_4
+    id_1,
+    id_2
 );
-  assign id_1[1] = 1;
-  always @(1) begin
-    if (1 & 1)
-      if (1) id_2 <= 1'b0;
-      else id_6 <= 1;
-    else begin
-      id_2 <= {~id_5{1 & ""}};
-    end
-  end
-  logic id_7;
-  always @(1 or 1'b0) begin
-    #1;
-    id_5 = 1;
-  end
-  logic id_8;
-  type_13(
-      id_0, 1'b0, 1
+  output wire id_2;
+  input wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3[1] = id_2;
+  xnor (id_1, id_5, id_2, id_4);
+  module_0(
+      id_4, id_1
   );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  tri1 id_4;
+  final $display(1);
+  module_0(
+      id_3, id_4
+  );
+  logic [7:0] id_5;
+  always_ff @(1) id_5 += 1;
+  initial begin
+    case (id_4)
+      id_2, 1: id_1 = id_5;
+      id_4:
+      #(id_4) begin
+        id_1 = (id_5[1]);
+      end
+      default: id_4 = 1;
+    endcase
+  end
+  wire id_6;
+  assign id_4 = 1;
 endmodule

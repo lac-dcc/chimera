@@ -1,6 +1,22 @@
-// Seed: 3204916360
-`define pp_27 (  pp_28  )  0
+// Seed: 2222379672
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  timeprecision 1ps;
+  wire id_6;
+endmodule
+module module_1 #(
+    parameter id_31 = 32'd42
+) (
     id_1,
     id_2,
     id_3,
@@ -25,37 +41,42 @@ module module_0 (
     id_22,
     id_23,
     id_24,
-    id_25,
-    id_26,
-    id_27
+    id_25
 );
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_27;
-  logic id_28;
+  input wire id_25;
+  input wire id_24;
+  input wire id_23;
+  output wire id_22;
+  inout wire id_21;
+  input wire id_20;
+  output wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_26;
+  assign id_2 = 1;
+  wire id_27;
+  wire id_28;
+  if (id_3 + 1) assign id_5 = 1;
+  else id_29(id_18);
+  wire id_30;
+  assign id_9['d0][1] = id_13;
+  defparam id_31 = 1; module_0(
+      id_2, id_27, id_5, id_12, id_14
+  );
 endmodule

@@ -1,4 +1,4 @@
-// Seed: 1948094514
+// Seed: 3053529809
 module module_0 (
     id_1,
     id_2,
@@ -9,87 +9,40 @@ module module_0 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12#(
-        .id_13(1),
-        .id_14(id_15[1'b0]),
-        .id_16(1'h0),
-        .id_17(id_18.id_19 - 1),
-        .id_20(1),
-        .id_21(id_22)
-    ),
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_36,
-    id_37,
-    id_38,
-    id_39,
-    id_40,
-    id_41,
-    id_42,
-    id_43,
-    id_44,
-    id_45
+    id_10
 );
-  output id_36;
-  inout id_35;
-  input id_34;
-  output id_33;
-  input id_32;
-  inout id_31;
-  input id_30;
-  input id_29;
-  input id_28;
-  inout id_27;
-  inout id_26;
-  inout id_25;
-  inout id_24;
-  inout id_23;
-  inout id_22;
-  output id_21;
-  input id_20;
-  inout id_19;
-  output id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  input id_13;
-  inout id_12;
-  input id_11;
-  inout id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  output id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  assign id_36#(
-      .id_40(id_20 == (1)),
-      .id_42(id_24),
-      .id_2 (!1'b0),
-      .id_27(1'b0),
-      .id_28(id_2),
-      .id_39(1),
-      .id_34(id_11),
-      .id_28(id_41),
-      .id_32(1),
-      .id_4 ("")
-  ) = 1'b0;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_3 = id_9 - 1'd0;
+  wire id_11;
+  id_12(
+      id_6, id_10 * 1, 1, id_9, id_5, 1
+  );
+endmodule
+macromodule module_1 (
+    input uwire id_0,
+    output wire id_1,
+    input wand id_2
+    , id_9,
+    input supply1 id_3,
+    input supply1 id_4,
+    input supply1 id_5,
+    output wand id_6,
+    input uwire id_7
+);
+  tri0 id_10;
+  module_0(
+      id_10, id_10, id_10, id_9, id_9, id_9, id_10, id_10, id_10, id_9
+  );
+  assign id_1  = 1;
+  assign id_10 = 1;
+  assign id_6  = 1;
 endmodule

@@ -1,41 +1,43 @@
-// Seed: 3457928822
-`timescale 1 ps / 1 ps
+// Seed: 3273639206
 module module_0 (
-    input id_0,
-    output id_1,
-    output logic id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    input logic id_16,
-    input id_17,
-    input logic id_18,
-    input id_19,
-    input logic id_20,
-    input logic id_21,
-    output id_22,
-    input id_23
-    , id_33,
-    input id_24,
-    input id_25,
-    input logic id_26,
-    input id_27,
-    output logic id_28,
-    input logic id_29,
-    input id_30,
-    output id_31,
-    output id_32
+    id_1,
+    id_2
 );
-  assign id_32[1] = id_12;
-  assign id_1 = 1 - id_25;
+  output wire id_2;
+  output wire id_1;
+  wire id_3 = id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3 = 1;
+  wire id_6;
+  wire id_7;
+  assign id_1[1'b0] = "" <= id_2;
+  module_0(
+      id_4, id_6
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  id_4(
+      .id_0(1), .id_1(id_1 == 1), .id_2(1'b0 ^ id_2), .id_3(id_1 == id_1), .id_4(1 == id_3)
+  ); module_0(
+      id_3, id_3
+  );
 endmodule

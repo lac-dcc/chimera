@@ -1,38 +1,43 @@
-// Seed: 830465828
-`timescale 1ps / 1ps
+// Seed: 3698601023
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    input supply1 id_0,
+    output wand id_1,
+    input tri id_2,
+    output wand id_3
 );
-  input id_12;
-  output id_11;
-  output id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_12;
-  logic id_13, id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  logic id_19 = 1;
-  logic id_20;
-  defparam id_21.id_22 = 1'b0;
+  always @(posedge id_2) begin
+    assert (id_0 + id_2);
+  end
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output tri0 id_1,
+    output tri id_2,
+    output supply1 id_3,
+    output supply0 id_4,
+    output supply0 id_5,
+    output wand id_6
+);
+  logic [7:0] id_8;
+  wire id_9;
+  assign id_8[1===1] = 1 == 1;
+  id_10(
+      .id_0(id_3),
+      .id_1(id_8),
+      .id_2(id_2),
+      .id_3(1),
+      .id_4(1'd0),
+      .id_5(id_1),
+      .id_6(id_1),
+      .id_7(id_6),
+      .id_8(id_6),
+      .id_9(id_0),
+      .id_10(id_3),
+      .id_11(),
+      .id_12(id_2 - 1)
+  ); id_11(
+      .id_0(id_2), .id_1(id_6), .id_2(1)
+  ); module_0(
+      id_0, id_6, id_0, id_6
+  );
 endmodule

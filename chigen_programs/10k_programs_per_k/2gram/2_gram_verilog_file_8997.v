@@ -1,24 +1,49 @@
-// Seed: 1876988597
-`timescale 1ps / 1 ps
+// Seed: 3233444826
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    output logic id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    output logic id_14,
-    output id_15,
-    input id_16
+    input tri0 id_0,
+    input tri1 id_1,
+    input supply0 id_2,
+    output tri0 id_3,
+    input wand id_4,
+    input wor id_5,
+    input tri id_6,
+    output wand id_7,
+    output tri id_8,
+    output tri0 id_9,
+    input tri1 id_10
 );
-  assign id_3 = ~|id_13;
 endmodule
-`timescale 1ps / 1ps
+macromodule module_1 (
+    output wand  id_0,
+    output logic id_1,
+    input  wire  id_2,
+    output tri1  id_3,
+    input  tri0  id_4,
+    input  wire  id_5,
+    input  uwire id_6
+);
+  assign id_3 = 1;
+  wire id_8;
+  id_9(
+      .id_0(1 | id_1),
+      .id_1(),
+      .id_2((1)),
+      .id_3(id_4),
+      .id_4(id_0),
+      .id_5(1'b0),
+      .id_6(id_6),
+      .id_7(),
+      .id_8(id_8)
+  );
+  wire id_10;
+  id_11 :
+  assert property (@(1 or 1'b0) 1 - 1)
+  else id_1 <= 1;
+  wire id_12;
+  tri  id_13 = 1'b0;
+  wire id_14;
+  module_0(
+      id_2, id_4, id_5, id_3, id_4, id_5, id_5, id_3, id_3, id_3, id_4
+  );
+  tri id_15 = 1 > 1'b0, id_16;
+endmodule

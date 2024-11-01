@@ -1,37 +1,27 @@
-// Seed: 2575701205
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output logic id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    input logic id_16,
-    input logic id_17,
-    input logic id_18,
-    input logic id_19,
-    input logic id_20,
-    output id_21,
-    input logic id_22,
-    output logic id_23,
-    output id_24,
-    input id_25,
-    output id_26,
-    inout id_27,
-    input logic id_28,
-    input id_29,
-    output id_30
+// Seed: 3317831157
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1;
+  integer id_1;
+  always @(1'b0 or posedge 1) if (1) id_1 <= id_1;
+  module_0();
+  always force id_1 = id_1;
+endmodule
+module module_2 (
+    input wire id_0,
+    input supply1 id_1
+    , id_9,
+    input tri1 id_2,
+    input supply0 id_3,
+    input tri id_4,
+    input wand id_5,
+    input wire id_6,
+    output wand id_7
 );
-  assign id_10 = 1;
-  logic id_31;
+  genvar id_10;
+  always @(posedge 1'b0) begin
+    id_10 = id_1;
+  end
+  module_0();
 endmodule

@@ -1,18 +1,29 @@
-// Seed: 2119378771
-`timescale 1ps / 1ps
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11
+// Seed: 418648132
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    input wire id_0
 );
-  logic id_12;
+  id_2(
+      .id_0(1), .id_1(id_0)
+  ); id_3(
+      .id_0(0),
+      .id_1(id_0),
+      .id_2(id_4),
+      .id_3(id_2),
+      .id_4(id_4 == id_0),
+      .id_5(id_2),
+      .id_6(id_2),
+      .id_7(id_2),
+      .id_8(1'b0),
+      .id_9(1),
+      .id_10(),
+      .id_11(1'b0),
+      .id_12(id_4),
+      .id_13(""),
+      .id_14(id_2),
+      .id_15(id_4),
+      .id_16()
+  ); module_0();
 endmodule

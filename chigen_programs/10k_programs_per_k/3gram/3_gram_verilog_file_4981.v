@@ -1,17 +1,49 @@
-// Seed: 2179772118
-`timescale 1ps / 1ps
+// Seed: 3341909474
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  final $display(id_1, 1);
+  assign id_3 = id_1;
+  id_5 :
+  assert property (@(posedge 1) 1'b0)
+  else begin
+    if (1'h0 == 1) id_3 = 1;
+    id_5 <= (1) - 1'b0 * id_1;
+  end
+  wire id_6;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  output id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_10;
+  module_0(
+      id_2, id_6, id_5, id_10
+  );
+  assign id_5 = id_9 - id_8;
 endmodule

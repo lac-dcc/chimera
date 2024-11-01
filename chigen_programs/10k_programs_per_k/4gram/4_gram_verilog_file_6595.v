@@ -1,64 +1,31 @@
-// Seed: 19231220
+// Seed: 4124557380
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28
+    input  wor   id_0,
+    input  wire  id_1,
+    input  wand  id_2,
+    output uwire id_3
 );
-  input id_28;
-  inout id_27;
-  input id_26;
-  input id_25;
-  inout id_24;
-  output id_23;
-  output id_22;
-  output id_21;
-  input id_20;
-  inout id_19;
-  inout id_18;
-  output id_17;
-  output id_16;
-  inout id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_28, id_29;
-  always @(id_14 or negedge id_12) begin
-    id_14 <= 1;
-  end
+  assign id_3 = 1'b0 ? id_0 && 1 - 1 : id_0;
+  wire id_5, id_6, id_7, id_8;
+endmodule
+module module_1 (
+    input wor id_0,
+    output uwire id_1,
+    input supply1 id_2,
+    input wor id_3,
+    input uwire id_4,
+    input tri0 id_5,
+    output wor id_6,
+    output wand id_7,
+    input wor id_8,
+    input wor id_9,
+    output wire id_10,
+    input tri id_11,
+    output wor id_12,
+    output wor id_13
+);
+  assign id_12 = 1'b0;
+  module_0(
+      id_8, id_4, id_5, id_7
+  );
 endmodule

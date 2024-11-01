@@ -1,3 +1,121 @@
-// Seed: 2682481522
-`define pp_0 0
-`define pp_1 0
+// Seed: 2217940599
+module module_0 (
+    input tri id_0,
+    output uwire id_1,
+    input wor id_2,
+    input wor id_3,
+    input tri id_4,
+    output tri id_5,
+    input supply0 id_6,
+    input supply1 id_7
+    , id_49,
+    input tri id_8,
+    input tri1 id_9,
+    input tri id_10,
+    output wire id_11,
+    input tri1 id_12,
+    input uwire id_13,
+    input uwire id_14,
+    output tri0 id_15,
+    output uwire id_16,
+    output wand id_17,
+    input supply0 id_18,
+    output supply0 id_19,
+    input supply1 id_20
+    , id_50 = id_50,
+    output supply0 id_21,
+    input tri0 id_22
+    , id_51,
+    input tri id_23,
+    input supply0 id_24,
+    input tri0 id_25,
+    input wor id_26,
+    input wor id_27,
+    output supply0 id_28,
+    output wand id_29,
+    output wand id_30,
+    input tri0 id_31,
+    output tri0 id_32,
+    output wand id_33,
+    input tri1 id_34,
+    input tri1 id_35,
+    input uwire id_36,
+    input wor id_37,
+    input tri1 id_38,
+    input tri0 id_39,
+    output tri0 id_40,
+    input supply1 id_41,
+    input tri0 id_42,
+    input tri0 id_43,
+    input wand id_44,
+    input wand id_45,
+    output tri0 id_46,
+    output wire id_47
+);
+  assign id_47 = 1;
+  supply0 id_52 = id_20, id_53 = 1 & (1);
+  for (id_54 = 1'b0; 1; id_54 = 1) wire id_55;
+  assign id_53 = 1;
+  wire id_56;
+  wire id_57;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input supply1 id_1,
+    output supply0 id_2,
+    input wire id_3,
+    input wire id_4
+);
+  wor  id_6, id_8 = 1 - id_0;
+  wire id_9;
+  module_0(
+      id_1,
+      id_2,
+      id_4,
+      id_0,
+      id_3,
+      id_2,
+      id_1,
+      id_3,
+      id_3,
+      id_3,
+      id_0,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_4,
+      id_2,
+      id_1,
+      id_4,
+      id_0,
+      id_1,
+      id_4,
+      id_4,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_1,
+      id_0,
+      id_3,
+      id_4,
+      id_3,
+      id_4,
+      id_2,
+      id_1,
+      id_3,
+      id_4,
+      id_1,
+      id_3,
+      id_2,
+      id_2
+  );
+endmodule

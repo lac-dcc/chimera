@@ -1,30 +1,44 @@
-// Seed: 3249045104
-`default_nettype id_2
+// Seed: 357479537
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    output logic id_6,
-    input id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_8;
-  always @(posedge id_7);
-  logic id_9;
-  logic id_10;
-  initial id_10 = -1;
-  assign id_3 = 1'h0;
-  type_19(
-      1'b0, 1'b0, 1'h0, id_3
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = 1;
+  tri0 id_6;
+  assign id_6 = id_4 == 1;
+  wire id_7;
+endmodule
+module module_1 (
+    input wire id_0,
+    output tri id_1,
+    input tri1 id_2,
+    output supply1 id_3,
+    output supply0 id_4,
+    output supply0 id_5,
+    input supply0 id_6,
+    input tri1 id_7,
+    output supply1 id_8,
+    output tri1 id_9,
+    input supply1 id_10,
+    input uwire id_11,
+    output wire id_12,
+    input uwire id_13,
+    input uwire id_14,
+    input wor id_15
+);
+  assign id_3 = id_2;
+  wire id_17;
+  wire id_18 = 1;
+  wire id_19;
+  module_0(
+      id_19, id_19, id_17, id_18, id_18
   );
-  assign id_9 = id_7;
-  generate
-    if (id_7) begin : id_11
-      logic id_12;
-    end else if ((1'b0)) begin
-      assign id_3 = 1;
-    end else assign id_8 = 1'b0;
-  endgenerate
 endmodule

@@ -1,38 +1,65 @@
-// Seed: 954347132
-`timescale 1 ps / 1ps
+// Seed: 3870523270
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    input logic id_7,
-    output logic id_8,
-    output id_9,
-    output logic id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    input reg id_14,
-    input id_15
-    , id_27,
-    input id_16,
-    output id_17
-    , id_28,
-    output logic id_18,
-    inout logic id_19,
-    inout id_20,
-    input id_21,
-    input id_22,
-    input logic id_23,
-    input id_24,
-    input logic id_25,
-    inout id_26
+    input wand id_0,
+    output supply1 id_1,
+    input supply0 id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    output wor id_5,
+    output wire id_6,
+    output wand id_7,
+    output supply1 id_8,
+    input tri id_9,
+    input wor id_10,
+    output tri1 id_11,
+    input tri id_12,
+    input wand id_13,
+    input supply1 id_14,
+    output wand id_15
 );
-  always @(posedge id_20) begin
-    SystemTFIdentifier(id_12, id_19);
-    id_26 <= id_14;
-  end
+  wire id_17;
+  assign id_15 = id_3;
+  assign id_11 = 1 - 1;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input tri1 id_1,
+    input tri id_2,
+    output tri1 id_3,
+    input wire id_4
+    , id_19,
+    input wire id_5,
+    input supply1 id_6,
+    input tri id_7,
+    input wand id_8,
+    output supply0 id_9,
+    input wand id_10,
+    output wor id_11,
+    input wire id_12,
+    input wire id_13,
+    output tri0 id_14,
+    output supply1 id_15,
+    inout supply0 id_16,
+    output supply1 id_17
+);
+  wire id_20;
+  assign id_15 = 1;
+  module_0(
+      id_5,
+      id_11,
+      id_6,
+      id_4,
+      id_6,
+      id_17,
+      id_3,
+      id_9,
+      id_15,
+      id_16,
+      id_6,
+      id_0,
+      id_10,
+      id_12,
+      id_16,
+      id_0
+  );
 endmodule

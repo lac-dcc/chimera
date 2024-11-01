@@ -1,15 +1,41 @@
-// Seed: 348927495
-`default_nettype id_1
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input id_8
+// Seed: 2177042534
+module module_0 ();
+  wire id_2;
+  wire id_3;
+  always_ff @(posedge id_1) begin
+    disable id_4;
+  end
+endmodule
+module module_1 (
+    output supply0 id_0,
+    input supply0 id_1,
+    input wor id_2,
+    input supply0 id_3
+    , id_26,
+    input wor id_4,
+    input wand id_5,
+    output wor id_6,
+    output supply1 id_7,
+    input wor id_8,
+    output uwire id_9,
+    input wor id_10,
+    output tri1 id_11,
+    input wand id_12,
+    input supply0 id_13,
+    input wor id_14,
+    input wire id_15,
+    output wand id_16,
+    input wand id_17,
+    output supply0 id_18,
+    input wor id_19,
+    output uwire id_20,
+    input wand id_21,
+    input tri id_22,
+    input wand id_23,
+    input tri1 id_24
 );
-  logic id_9;
+  wire id_27;
+  tri1 id_28 = id_2;
+  module_0();
+  wire id_29;
 endmodule

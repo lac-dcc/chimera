@@ -1,7 +1,40 @@
-// Seed: 3282904250
-`define pp_0 0
-`celldefine
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`default_nettype `pp_0 `timescale 1 ps / 1ps `timescale 1ps / 1ps
+// Seed: 2243496042
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_11;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always_ff @(posedge id_4) id_4 = 1;
+  module_0(
+      id_4, id_4, id_4, id_3, id_4, id_4, id_3, id_4, id_3, id_4
+  );
+endmodule

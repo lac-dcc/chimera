@@ -1,25 +1,33 @@
-// Seed: 1309303063
-`celldefine
+// Seed: 1253856615
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    input logic id_4,
-    output id_5
-    , id_16,
-    input logic id_6,
-    output logic id_7,
-    inout logic id_8
-    , id_17,
-    input id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    input logic id_13,
-    input id_14,
-    input logic id_15
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  assign id_11 = (id_16 & 1);
-  logic id_18 = 1;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_1 = 1 ? id_1 : id_3;
+  wire id_7;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    module_1
+);
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  uwire id_5 = id_5 == 1 && "";
+  module_0(
+      id_5, id_3, id_5, id_3, id_3, id_5
+  );
 endmodule

@@ -1,51 +1,80 @@
-// Seed: 4181296926
+// Seed: 2184882910
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+    input wire id_0,
+    input supply0 id_1,
+    input wor id_2,
+    input supply0 id_3,
+    input tri1 id_4,
+    input wire id_5,
+    output supply1 id_6,
+    input wand id_7,
+    input tri id_8,
+    input supply0 id_9,
+    input uwire id_10,
+    input tri0 id_11,
+    output wire id_12,
+    output tri0 id_13,
+    input uwire id_14,
+    input tri id_15,
+    input tri0 id_16,
+    output wire id_17,
+    output wand id_18,
+    output tri1 id_19,
+    input wire id_20
+    , id_32,
+    output supply0 id_21,
+    input wand id_22,
+    output uwire id_23,
+    input wand id_24,
+    input tri0 id_25,
+    output tri id_26,
+    output tri0 id_27
+    , id_33,
+    input wor id_28,
+    output uwire id_29,
+    output tri id_30
 );
-  input id_15;
-  inout id_14;
-  inout id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  output id_3;
-  inout id_2;
-  inout id_1;
-  type_20(
-      1, id_3, 1 & 1'b0
+  wire id_34;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    input  wand  id_1,
+    input  tri1  id_2,
+    output tri1  id_3
+);
+  wire id_5;
+  module_0(
+      id_0,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_1,
+      id_3,
+      id_0,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_3,
+      id_3,
+      id_0,
+      id_0,
+      id_1,
+      id_3,
+      id_3,
+      id_3,
+      id_1,
+      id_3,
+      id_2,
+      id_3,
+      id_1,
+      id_2,
+      id_3,
+      id_3,
+      id_0,
+      id_3,
+      id_3
   );
-  assign id_3 = "" ? 1 : id_11 ? 1 : id_2 & 1;
-  logic id_15 (
-      id_11,
-      1,
-      1
-  );
-  function integer id_16(input id_17, input integer id_18);
-    begin
-      SystemTFIdentifier;
-    end
-  endfunction
-  assign id_7 = 1;
-  assign id_6 = id_9;
-  type_22 id_19 = id_15;
+  wire id_6 = id_6;
 endmodule

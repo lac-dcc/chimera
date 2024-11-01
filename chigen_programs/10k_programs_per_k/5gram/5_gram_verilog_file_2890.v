@@ -1,32 +1,48 @@
-// Seed: 3531582880
+// Seed: 2700271032
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    output tri1 id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    output id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  type_22 id_14 (
-      .id_0(id_9),
-      .id_1(1),
-      .id_2(id_7),
-      .id_3(id_12)
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_9;
+endmodule
+module module_0 (
+    output uwire id_0,
+    input supply0 module_1,
+    output wor id_2,
+    input uwire id_3,
+    output uwire id_4,
+    input tri0 id_5,
+    input wand id_6,
+    input wor id_7,
+    input tri0 id_8,
+    input tri1 id_9,
+    output wor id_10,
+    input tri1 id_11,
+    input supply0 id_12
+);
+  assign id_2 = id_6;
+  assign id_2 = 1;
+  id_14 :
+  assert property (@(posedge id_1) 1'h0)
+  else $display;
+  wire id_15;
+  wire id_16;
+  supply0 id_17 = id_3, id_18;
+  module_0(
+      id_15, id_16, id_15, id_15, id_15, id_16, id_15, id_16
   );
-  type_23 id_15 (
-      .id_0(1 == 1'b0),
-      .id_1(1'b0),
-      .id_2(id_9)
-  );
-  logic  id_16;
-  type_0 id_17 = id_15;
-  assign id_5[""] = id_16;
 endmodule

@@ -1,25 +1,33 @@
-// Seed: 1591699651
+// Seed: 1282400257
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    id_3
 );
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  input id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  always @(posedge id_8 or posedge 1) begin
-    id_5[1] <= 1;
-  end
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wand id_4 = 1;
+  assign id_1 = 1 + id_3[1'b0];
+  id_5 :
+  assert property (@(posedge id_4) 1)
+  else $display;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  logic [7:0] id_5;
+  assign id_5[1] = id_5[1];
+  module_0(
+      id_3, id_3, id_5
+  );
+  assign id_5 = id_2;
 endmodule

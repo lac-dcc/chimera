@@ -1,39 +1,49 @@
-// Seed: 587448806
-`define pp_13 0
-`timescale 1ps / 1 ps
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    inout id_4,
-    input logic id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    input logic id_12
-    , id_13
+// Seed: 3293145826
+module module_0 ();
+  integer id_1;
+  initial begin
+    $display(1, id_2);
+    id_1 = id_2;
+    id_1 <= id_1;
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  type_24(
-      1'd0, id_4, id_7
-  );
-  logic id_14 = (1);
-  logic id_15;
-  type_0 id_16 (
-      .id_0(id_12),
-      .id_1(id_1)
-  );
-  assign id_6 = 1;
-  logic id_17;
-  assign id_0 = id_2;
-  type_28 id_18 (
-      id_14 && 1 && 1,
-      id_10
-  );
+  inout wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_8 = (id_3);
+  wire id_9;
+  module_0();
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input tri1 id_1,
+    output supply0 id_2,
+    input tri id_3,
+    output tri0 id_4,
+    output wand id_5,
+    input wor id_6,
+    output tri id_7,
+    output tri0 id_8,
+    output logic id_9,
+    input tri1 id_10
+);
+  always
+  fork : id_12
+    `define pp_13 0
+    id_9 <= 1;
+  join
+  module_0();
 endmodule

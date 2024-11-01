@@ -1,43 +1,50 @@
-// Seed: 4042742980
+// Seed: 880896177
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    input id_8
+    output supply0 id_0,
+    input wor id_1,
+    input wor id_2,
+    output supply0 id_3,
+    input tri1 id_4,
+    input supply1 id_5,
+    input tri0 id_6,
+    input supply0 id_7,
+    output wor id_8,
+    output wor id_9
 );
-  logic id_9;
-  logic id_10;
-  assign id_10 = 1;
-  logic
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27 = 1;
-  function integer id_28;
-    input id_29;
-    logic id_30;
-    begin
-      SystemTFIdentifier((id_27 << (1 + 1'b0)), id_21, 1);
-      id_11 = id_24;
-    end
-  endfunction
-  logic id_31;
+  wire id_11 = id_4 - id_6;
+  wire id_12;
+  wire id_13;
+  assign id_3 = 1 == 1'b0;
+endmodule
+module module_1 (
+    input wand id_0,
+    input uwire id_1,
+    output tri1 id_2
+    , id_18,
+    input tri id_3,
+    output wor id_4
+    , id_19,
+    input logic id_5,
+    input tri1 id_6,
+    input supply0 id_7,
+    input wire id_8,
+    output logic id_9,
+    output tri0 id_10,
+    input tri id_11,
+    input wand id_12,
+    output tri0 id_13,
+    input supply0 id_14,
+    input uwire id_15,
+    output logic id_16
+);
+  supply1 id_20 = id_8;
+  module_0(
+      id_20, id_1, id_20, id_4, id_6, id_6, id_6, id_11, id_20, id_4
+  );
+  always #1 begin
+    $display;
+    id_9 <= 1;
+    if (1) id_16 <= id_5;
+  end
+  wire id_21;
 endmodule

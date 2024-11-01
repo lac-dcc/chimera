@@ -1,36 +1,40 @@
-// Seed: 2033675973
-`timescale 1ps / 1ps
+// Seed: 3619691489
 module module_0 (
+    input wand id_0,
+    input supply0 id_1,
+    input tri0 id_2,
+    input wire id_3
+    , id_5
+);
+  always @(posedge 1 & id_0 or posedge {1, id_2, 1, id_0}) force id_5 = id_5;
+endmodule
+module module_1 (
+    input  tri1 id_0,
+    output tri0 id_1,
+    output wand id_2
+);
+  id_4(
+      1, 1, 1
+  );
+  wire id_5;
+  module_0(
+      id_0, id_0, id_0, id_0
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_3
 );
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_5 = id_2;
-  type_11(
-      id_4, 1, 1, id_2
-  );
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
   assign id_3 = 1;
-  logic id_6;
-  integer id_7 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(id_5),
-      .id_3(1),
-      .id_4(!id_3),
-      .id_5(id_1),
-      .id_6(id_3)
+endmodule
+module module_3;
+  wire id_2;
+  module_2(
+      id_2, id_2, id_2
   );
-  rpmos (1, {id_2, 1});
-  logic id_8;
-  logic id_9;
-  logic id_10;
+  assign id_1 = id_1;
 endmodule

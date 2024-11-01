@@ -1,24 +1,26 @@
-// Seed: 2935749992
-`timescale 1ps / 1 ps
-module module_0 (
-    output id_0,
-    output logic id_1,
-    output id_2,
-    output logic id_3,
-    input logic id_4,
-    input logic id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    output logic id_10,
-    output id_11,
-    input id_12,
-    output logic id_13
+// Seed: 238455191
+module module_0 ();
+  wire id_1;
+  always_ff @* begin
+    $display(1 < 1);
+  end
+  byte id_4;
+  wire id_5;
+  tri0 id_6;
+  assign id_3 = id_4[1 : 1>1] ==? id_6;
+endmodule
+module module_1 (
+    input tri id_0,
+    input wire id_1,
+    output tri id_2,
+    input tri1 id_3,
+    input supply1 id_4,
+    input supply0 id_5,
+    input wand id_6,
+    input tri id_7
 );
-  logic id_14;
-  logic id_15;
-  assign id_13 = 1;
-  logic id_16;
-  logic id_17, id_18;
+  assign id_2 = 1;
+  assign id_2 = id_6 == 1;
+  module_0();
+  assign id_2 = 1;
 endmodule

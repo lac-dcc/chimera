@@ -1,50 +1,55 @@
-// Seed: 2492929852
-`define pp_18 0
+// Seed: 63085967
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    input wire id_0,
+    input uwire id_1,
+    input wire id_2,
+    output supply1 id_3
 );
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_18 (
-      id_8[1],
-      1'b0
+  wire id_5;
+  wire id_6;
+  always repeat (1) #1;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input wire id_1,
+    inout wire id_2,
+    input supply1 id_3,
+    output tri1 id_4,
+    output wand id_5
+);
+  wire id_7;
+  module_0(
+      id_3, id_1, id_3, id_2
   );
-  assign id_13 = 1;
-  assign id_10 = !id_2[1];
-  assign id_18 = id_18;
-  logic id_19 = 1;
-  logic id_20;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  initial begin
+    id_1 = id_1 < id_1;
+  end
+endmodule
+module module_3 (
+    input uwire id_0,
+    input wor id_1,
+    input supply0 id_2,
+    input logic id_3,
+    output logic id_4
+);
+  always @(id_0) begin
+    if (id_2 == 1'h0 < 1) disable id_6;
+  end
+  wire id_7;
+  id_8(
+      1'd0, (1 && id_2 == id_1), id_0
+  );
+  always #1 begin
+    id_4 <= id_3;
+  end
+  module_2(
+      id_7, id_7
+  );
 endmodule

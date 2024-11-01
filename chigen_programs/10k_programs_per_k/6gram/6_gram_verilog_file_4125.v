@@ -1,33 +1,27 @@
-// Seed: 3739437424
+// Seed: 393314372
 module module_0 (
-    output logic id_0,
-    output logic id_1,
-    input id_2,
-    output id_3
+    output supply0 id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    output tri id_5,
+    input supply0 id_6,
+    output tri0 id_7
 );
-  logic id_4;
-  logic id_5;
-  initial begin
-    id_3 <= 1;
-    if (1) begin
-      id_0 = 1;
-    end else begin
-      @(posedge 1) id_3 = id_2;
-    end
+  always @(posedge module_0 - id_1, posedge id_3) begin
+    {id_6 & 1, 1} = id_6;
   end
 endmodule
 module module_1 (
-    input logic id_0,
-    input id_1,
-    output logic id_2
+    input tri0  id_0,
+    input uwire id_1,
+    input tri1  id_2,
+    input wor   id_3
 );
-  assign id_2 = id_0;
-  always @(*) begin
-    if (1) begin
-      id_2 = 1;
-    end else id_2 = 1;
-  end
-  always #0 begin
-    SystemTFIdentifier(1);
-  end
+  tri0 id_5 = id_0;
+  assign id_5 = id_1;
+  module_0(
+      id_5, id_3, id_5, id_3, id_3, id_5, id_0, id_5
+  );
 endmodule

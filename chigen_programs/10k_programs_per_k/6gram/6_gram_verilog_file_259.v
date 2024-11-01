@@ -1,28 +1,35 @@
-// Seed: 1389814090
-module module_0;
-  reg id_0;
-  always @(posedge id_0 or 1) begin
-    if (1'b0) begin
-      forever begin
-        if (1) begin
-          if (id_0) begin
-            id_0 <= 1'b0;
-          end
-          if (id_0) id_0 <= 1'd0;
-        end else begin
-          id_0 <= 1;
-        end
-      end
-    end else begin
-      id_0 <= id_0;
-    end
-  end
-  assign id_0 = 1;
-  initial begin
-    if (1 && 1) begin
-      if (1) begin
-        id_0 = id_0;
-      end
-    end
-  end
+// Seed: 3173102112
+module module_0 (
+    output tri  id_0,
+    input  wor  id_1,
+    output tri0 id_2,
+    output wand id_3,
+    output tri1 id_4,
+    input  wor  id_5
+);
+  logic [7:0] id_7;
+  assign #id_8 id_7[1] = 1;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output uwire id_1,
+    output wire id_2,
+    input uwire id_3,
+    input supply0 id_4,
+    input supply0 id_5,
+    input supply0 id_6,
+    input wor id_7,
+    output wand id_8,
+    input wor id_9,
+    input supply1 id_10,
+    input wand id_11,
+    input wire id_12,
+    input tri0 id_13,
+    output supply0 id_14
+);
+  wire id_16;
+  module_0(
+      id_14, id_10, id_14, id_1, id_1, id_3
+  );
+  wire id_17;
 endmodule

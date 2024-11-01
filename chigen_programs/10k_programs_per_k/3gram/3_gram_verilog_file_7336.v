@@ -1,32 +1,77 @@
-// Seed: 4159002903
-`celldefine
+// Seed: 1581352324
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_2
 );
-  input id_11;
-  output id_10;
-  output id_9;
-  inout id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  logic id_14;
-  logic id_15 = id_12;
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1;
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  module_0(
+      id_1, id_1
+  );
+  assign id_1 = (id_1);
+endmodule
+module module_2 (
+    input wire id_0,
+    input wand id_1,
+    input wand id_2,
+    input tri0 id_3,
+    input tri0 id_4,
+    output uwire id_5,
+    input wire id_6,
+    output wand id_7,
+    input supply1 id_8,
+    input tri id_9,
+    input wand id_10,
+    output wand id_11,
+    input tri0 id_12,
+    input wire id_13,
+    input wor id_14,
+    input wand id_15,
+    output tri id_16,
+    output uwire id_17,
+    input wor id_18,
+    input supply1 id_19,
+    output wor id_20
+);
+  wire id_22;
+endmodule
+module module_3 (
+    input  tri1  id_0,
+    input  wire  id_1,
+    input  uwire id_2,
+    output logic id_3,
+    output tri1  id_4
+);
+  always_latch #1
+    if (id_0) begin
+      id_3 <= 1;
+    end
+  nand (id_4, id_1, id_0, id_2);
+  module_2(
+      id_0,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_4,
+      id_0,
+      id_4,
+      id_1,
+      id_2,
+      id_2,
+      id_4,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_4,
+      id_4,
+      id_0,
+      id_0,
+      id_4
+  );
 endmodule

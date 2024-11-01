@@ -1,42 +1,30 @@
-// Seed: 3403157498
+// Seed: 4028849278
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    input logic id_10,
-    output logic id_11,
-    input id_12,
-    output id_13,
-    input id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    input id_18,
-    input logic id_19,
-    output id_20,
-    input logic id_21,
-    input id_22,
-    output id_23,
-    input logic id_24,
-    input logic id_25,
-    output id_26,
-    output logic id_27,
-    input logic id_28,
-    input id_29,
-    input id_30,
-    input id_31,
-    output id_32
+    output wire id_0,
+    output supply1 id_1,
+    output wor id_2,
+    input wor id_3,
+    output supply0 id_4
 );
-  logic id_33;
-  initial id_20 = 1'h0;
-  assign id_4  = id_17;
-  assign id_26 = 1'b0;
-  always @(posedge id_25) if (1) id_23 = 1;
+  supply0 id_6 = id_3;
+  wire id_7, id_8;
+endmodule
+module module_1 (
+    output wand id_0,
+    input  wor  id_1
+);
+  initial if (id_1 | ~id_1 > 1) id_0 = 1;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  id_6(
+      .id_0((1 / 1)), .id_1(id_7 + ""), .id_2(1'b0 == 1), .id_3(1'b0), .id_4(1 - id_4), .id_5(id_5)
+  );
+  supply0 id_8 = 1;
+  wand id_9 = 1'd0;
+  wire id_10;
+  module_0(
+      id_0, id_0, id_0, id_1, id_0
+  );
+  wire id_11;
 endmodule

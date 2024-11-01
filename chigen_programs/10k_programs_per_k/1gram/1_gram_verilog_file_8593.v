@@ -1,20 +1,40 @@
-// Seed: 3877446064
-`default_nettype id_0
-module module_0 (
-    output logic id_0,
-    output id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    input id_5,
-    input logic id_6,
-    output id_7
+// Seed: 2650260196
+module module_0;
+  reg id_2;
+  reg id_3;
+  reg id_4;
+  always begin
+    begin
+      @(posedge ~id_3)
+      if (id_4) id_2 <= id_3.id_4;
+      else id_4 <= id_3;
+      id_3 = id_1;
+      id_3 <= id_3;
+    end
+    begin
+      id_3 <= id_2;
+      $display(1);
+    end
+    id_5[1];
+  end
+endmodule
+module module_1 (
+    input wand  id_0,
+    input tri   id_1,
+    input logic id_2
 );
-  logic id_8;
-  logic id_9, id_10, id_11, id_12;
-  assign id_9 = 1'b0;
-  logic id_13;
-  logic id_14;
-  logic id_15;
-  assign id_13 = 1;
+  initial begin
+    if (1'h0) begin
+      begin
+        begin
+          id_4 <= #1 id_2;
+          id_4 <= !id_0;
+          if (1) @(posedge id_2 ? "" : 1) id_4 = 1'd0;
+        end
+      end
+    end
+    id_5 <= 1;
+  end
+  module_0();
+  wire id_6, id_7;
 endmodule

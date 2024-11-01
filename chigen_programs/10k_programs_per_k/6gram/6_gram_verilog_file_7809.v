@@ -1,14 +1,30 @@
-// Seed: 2831805903
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output id_7
+// Seed: 1347020207
+module module_0 ();
+  assign id_1 = id_1;
+  initial begin
+    id_1 <= id_1;
+  end
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input tri1 id_1,
+    input wire id_2,
+    input supply1 id_3,
+    input wor id_4,
+    input tri id_5,
+    output tri0 id_6,
+    input uwire id_7,
+    output supply1 id_8,
+    input wor id_9,
+    input wor id_10,
+    input supply1 id_11,
+    output tri0 id_12
 );
-  assign id_6[1] = id_4;
-  defparam id_8.id_9 = 1'b0;
+  always @(posedge 1 or posedge 1) begin
+    $display;
+  end
+  wire id_14;
+  wire id_15;
+  module_0();
 endmodule

@@ -1,69 +1,42 @@
-// Seed: 1957938548
-`timescale 1 ps / 1 ps `timescale 1ps / 1 ps
+// Seed: 3487315692
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    output logic id_5,
-    output id_6,
-    input logic id_7,
-    input logic id_8,
-    output id_9,
-    input id_10
+    output tri0 id_0,
+    input  wire id_1,
+    output tri  id_2
 );
-  logic id_11;
-  logic id_12 = 1;
-  logic id_13;
-  logic id_14, id_15, id_16, id_17, id_18, id_19, id_20, id_21, id_22, id_23;
-  logic id_24;
+  wire id_4;
+  uwire id_5;
+  supply1 id_6;
+  id_7(
+      .id_0(id_0), .id_1({id_5, 1, 1}), .id_2(id_2)
+  );
+  always id_5 = id_6;
 endmodule
-`timescale 1ps / 1ps `endcelldefine
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    output wand id_0,
+    input tri1 id_1,
+    output tri1 id_2,
+    input tri0 id_3,
+    input tri0 id_4,
+    output wand id_5,
+    input wand id_6,
+    input supply0 id_7,
+    input wor id_8,
+    output wand id_9,
+    output supply0 id_10,
+    output wor id_11,
+    input wor id_12,
+    input wire id_13,
+    input tri1 id_14,
+    input tri1 id_15,
+    input tri id_16,
+    input tri0 id_17,
+    input wor id_18,
+    input wor id_19,
+    input tri0 id_20
 );
-  inout id_22;
-  input id_21;
-  input id_20;
-  output id_19;
-  inout id_18;
-  input id_17;
-  output id_16;
-  output id_15;
-  inout id_14;
-  inout id_13;
-  input id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
+  assign id_10 = 1;
+  module_0(
+      id_0, id_15, id_0
+  );
 endmodule

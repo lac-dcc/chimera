@@ -1,5 +1,18 @@
-// Seed: 1342425277
+// Seed: 441366473
 module module_0 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = (1) ? id_3 : id_3;
+  wire id_4;
+  wire id_5;
+  always @(posedge 1) begin
+    id_4 = id_5;
+  end
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -11,43 +24,24 @@ module module_0 (
     id_9,
     id_10,
     id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_12
 );
-  input id_22;
-  input id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  inout id_17;
-  input id_16;
-  inout id_15;
-  input id_14;
-  inout id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  output id_1;
-  assign id_18[1'b0] = id_9;
-  initial begin
-    id_6 <= 1;
-    id_2 <= "";
-  end
+  output wire id_12;
+  input wire id_11;
+  output wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_13;
+  module_0(
+      id_12, id_5
+  ); specify
+    specparam id_14 = 1'b0 == 1;
+  endspecify
 endmodule

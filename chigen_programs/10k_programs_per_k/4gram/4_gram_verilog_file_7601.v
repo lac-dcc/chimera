@@ -1,31 +1,43 @@
-// Seed: 3521504133
-package id_0;
-  parameter [1 : 1 'b0] id_0 = 1;
-  localparam [1 : id_0] id_0 = id_0;
-  localparam [1 : 1] id_0 = 1;
-  typedef reg [id_1 : 1] id_1;
-  task id_0(input [1 : {  id_0  {  1  ==  1 'h0 }  }] id_1, [1 : 1 'b0 ^  1] id_0[id_0 : id_0]);
-    begin
-      if (1'b0) id_1 <= (1);
-    end
-    reg id_1;
-    id_1[1 : 1'b0] = id_1;
-  endtask
-  localparam int id_1 = 1;
-  parameter [id_0 : id_1[1 : id_0[1  -  id_0 : 1]]] id_1 = id_1;
-  localparam [{  1  ,  1  } : id_1] id_0 = id_0;
-  parameter [id_0 : id_0] id_1 = 1;
-  localparam [id_1 : 1 'b0] id_1 = id_0;
-  localparam [1 'h0 : id_0] id_0 = id_1;
-  localparam [id_0 : id_1] id_0 = 1'b0;
-  parameter id_0 = 1;
-  localparam [1 'h0 *  1 : 1] id_0 = 1;
-  localparam id_0 = 1 ? (1'd0 / 1'd0) : 1;
-  localparam [1 : 1] id_1 = id_0;
-  localparam [id_1[1 : 1] : 1] id_1 = id_0;
-  localparam id_1 = {1'b0 == "", id_0};
-  localparam [1 : 1] id_1 = {1, 1};
-  function id_0(input [1 'b0 : id_1[id_1]] id_0, input [1 'b0 : id_1[id_1]] id_1,
-                input [1 'b0 : 1] id_0);
-  endfunction
-endpackage
+// Seed: 3848266302
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_6 = 1'b0;
+  module_2(
+      id_6, id_6, id_6
+  );
+endmodule
+module module_1;
+  integer id_1;
+  wire id_2;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_1, id_2, id_2
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_4;
+  assign id_1 = id_3;
+  wire id_5;
+endmodule

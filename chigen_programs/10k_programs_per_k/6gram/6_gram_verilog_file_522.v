@@ -1,28 +1,44 @@
-// Seed: 2000955405
-`define pp_11 0
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5
-    , id_11,
-    input logic id_6,
-    input logic id_7,
-    output id_8,
-    output id_9,
-    input logic id_10
+// Seed: 2401579215
+module module_0;
+  assign id_1 = id_1;
+  wire  id_3;
+  wire  id_4;
+  wand  id_5;
+  uwire id_6;
+  assign id_6 = 1'b0;
+  assign id_5 = 1;
+endmodule
+module module_1 (
+    output tri  id_0,
+    input  wand id_1,
+    input  wire id_2
 );
-  assign id_8#(
-      .id_3(1),
-      .id_1(id_10)
-  ) = 1;
-  assign id_8 = 1;
-  type_20 id_12 (
-      .id_0(1),
-      .id_1(id_7),
-      .id_2(),
-      .id_3(1 == {id_0, "", SystemTFIdentifier(id_5) == id_2})
-  );
+  wire id_4;
+  module_0();
+endmodule
+module module_2 (
+    input  tri0 id_0,
+    output wor  id_1
+);
+  assign id_1 = 1;
+  module_0();
+  always @(id_0 or posedge 1) begin
+    disable id_3;
+  end
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
+  module_0();
+  wire id_7;
 endmodule

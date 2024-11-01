@@ -1,41 +1,55 @@
-// Seed: 854521455
-`timescale 1 ps / 1 ps
-`define pp_33 0
+// Seed: 1170095492
 module module_0 (
-    input logic id_0,
-    output logic id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input logic id_13,
-    output id_14,
-    input id_15,
-    output id_16,
-    input id_17,
-    input id_18,
-    output logic id_19,
-    output logic id_20,
-    input id_21,
-    output id_22,
-    input logic id_23,
-    output logic id_24,
-    output logic id_25,
-    output logic id_26,
-    input id_27,
-    input id_28,
-    input logic id_29,
-    input id_30,
-    output id_31,
-    output logic id_32
+    input  uwire id_0,
+    input  uwire id_1,
+    input  wor   id_2,
+    output wor   id_3,
+    input  uwire id_4,
+    input  uwire id_5,
+    input  uwire id_6,
+    input  tri   id_7,
+    output wand  id_8
 );
-  logic id_33 = id_12;
-  assign id_19 = 1;
+  assign id_8 = id_7;
+  assign id_3 = 1;
+  id_10 :
+  assert property (@(posedge id_4) 1'd0 && 1 == id_1 && 1)
+  else $display(1, 1'b0);
+endmodule
+module module_1 (
+    output wand id_0,
+    input uwire id_1,
+    output tri id_2,
+    input tri1 id_3,
+    input tri0 id_4,
+    output supply1 id_5,
+    output tri id_6,
+    output uwire id_7,
+    output wand id_8,
+    input tri1 id_9,
+    output wand id_10,
+    input supply1 id_11,
+    input tri0 id_12,
+    input tri1 id_13,
+    output wor id_14,
+    input wor id_15,
+    output wire id_16,
+    inout tri0 id_17,
+    output uwire id_18,
+    input tri0 id_19,
+    input supply0 id_20,
+    input wand id_21,
+    input wire id_22
+    , id_30,
+    output supply0 id_23,
+    output uwire id_24,
+    output wire id_25,
+    output wor id_26,
+    input uwire id_27,
+    output supply1 id_28
+);
+  wire id_31, id_32;
+  module_0(
+      id_4, id_4, id_27, id_6, id_9, id_9, id_20, id_19, id_7
+  );
 endmodule

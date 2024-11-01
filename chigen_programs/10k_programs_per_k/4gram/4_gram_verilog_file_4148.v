@@ -1,36 +1,36 @@
-// Seed: 826876209
+// Seed: 3585657173
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    input logic id_10,
-    output logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    output logic id_15,
-    input logic id_16,
-    output logic id_17
+    output supply1 id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output wand id_3,
+    input tri0 id_4,
+    input tri1 id_5,
+    input wire id_6,
+    output tri1 id_7,
+    input supply1 id_8,
+    input wire id_9,
+    input uwire id_10
 );
-  string id_18 = "";
-  type_0 id_19 (
-      .id_0(),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1),
-      .id_5(""),
-      .id_6(1),
-      .id_7(1 != id_12)
+  wire id_12;
+endmodule
+module module_1 (
+    output wire id_0,
+    output supply1 id_1,
+    output wand id_2,
+    input wand id_3,
+    input supply0 id_4,
+    output supply1 id_5,
+    input supply0 id_6,
+    output supply1 id_7,
+    output wire id_8,
+    output uwire id_9,
+    output wor id_10
+);
+  wire id_12, id_13;
+  xor (id_10, id_13, id_14, id_12, id_6, id_3, id_4);
+  wire id_14;
+  module_0(
+      id_8, id_4, id_6, id_9, id_3, id_6, id_6, id_5, id_4, id_3, id_6
   );
-  logic id_20;
-  logic id_21 = 1;
-  logic id_22;
 endmodule

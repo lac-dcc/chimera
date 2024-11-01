@@ -1,6 +1,36 @@
-// Seed: 690498585
-`timescale 1 ps / 1ps
+// Seed: 1111078299
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_12;
+  wire id_13 = (id_9);
+  wire id_14;
+  id_15(
+      .id_0(""), .id_1(id_14), .id_2(id_3[1]), .id_3(id_4), .id_4(1'h0), .id_5(), .id_6(1)
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -19,46 +49,60 @@ module module_0 (
     id_16,
     id_17,
     id_18,
-    id_19
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30,
+    id_31
 );
-  output id_19;
-  output id_18;
-  output id_17;
-  inout id_16;
-  input id_15;
-  output id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  inout id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  type_25 id_19 (
-      .id_0(id_17),
-      .id_1(1),
-      .id_2(id_14),
-      .id_3(id_17),
-      .id_4(1),
-      .id_5(1'd0),
-      .id_6(id_3)
+  output wire id_31;
+  input wire id_30;
+  input wire id_29;
+  input wire id_28;
+  input wire id_27;
+  inout wire id_26;
+  inout wire id_25;
+  output wire id_24;
+  output wire id_23;
+  output wire id_22;
+  output wire id_21;
+  input wire id_20;
+  input wire id_19;
+  output wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  input wire id_12;
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  logic [7:0] id_32;
+  supply1 id_33 = {1{1}};
+  wire id_34;
+  module_0(
+      id_33, id_3, id_32, id_22, id_23, id_33, id_30, id_25, id_25, id_7, id_31
   );
-  logic id_20;
-  type_27(
-      1, id_8
-  );
-  assign id_1 = id_20;
-  logic id_21 = id_5;
-  type_29(
-      1'b0, 1
-  );
-  logic id_22;
-  logic id_23;
-  logic id_24;
+  final begin
+    if (1) begin
+      id_32[1] <= 1;
+    end else id_18 = 1;
+  end
 endmodule

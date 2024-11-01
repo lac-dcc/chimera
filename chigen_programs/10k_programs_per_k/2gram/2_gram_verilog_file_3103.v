@@ -1,13 +1,40 @@
-// Seed: 3323183784
-module module_0;
-  always id_0 <= {(~id_0 - 1) - id_0{1 & id_0}} - 1;
-  type_3(
-      1
+// Seed: 2634845465
+module module_0 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  input wire id_1;
+  assign id_3 = id_1;
+  module_2(
+      id_3, id_3
   );
-  logic id_1;
-  type_4(
-      (id_0), 1'b0
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  supply0 id_6 = 1;
+  module_0(
+      id_3, id_1
   );
-  assign id_0 = 1;
-  type_5 id_2 ();
+  wire id_7;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
+  always begin
+    id_2 = 1;
+  end
 endmodule

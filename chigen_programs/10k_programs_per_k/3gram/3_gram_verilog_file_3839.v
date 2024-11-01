@@ -1,35 +1,42 @@
-// Seed: 2448034078
-`define pp_11 0
-module module_0 (
+// Seed: 1401186119
+module module_0;
+  wire id_2;
+endmodule
+module module_1 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_3 = |id_3;
-endmodule
-`default_nettype id_7
-module module_1 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input logic id_5
-    , id_11,
-    output id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    output logic id_10
-);
-  logic id_12, id_13;
-  logic id_14 = 1;
-  type_21(
-      id_4[1'd0], 1
-  ); type_22(
-      id_10, 1'b0, 1 === 1
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_5[1] = id_4[1];
+  module_0();
+  assign id_8 = id_10;
+  assign id_6 = 1'b0;
+  id_11(
+      .id_0(id_3),
+      .id_1(1'b0),
+      .id_2(id_1[1 : 1]),
+      .id_3(1'b0),
+      .id_4(1'b0),
+      .id_5(id_8),
+      .id_6(id_4),
+      .id_7(1),
+      .id_8(id_6)
   );
 endmodule

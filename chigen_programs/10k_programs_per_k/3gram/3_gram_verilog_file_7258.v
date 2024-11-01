@@ -1,6 +1,14 @@
-// Seed: 3347253851
-`timescale 1ps / 1ps
+// Seed: 2171393807
 module module_0 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  wire id_3;
+  assign id_2[1] = id_3;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -18,38 +26,43 @@ module module_0 (
     id_15,
     id_16,
     id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_18
 );
-  inout id_22;
-  input id_21;
-  input id_20;
-  inout id_19;
-  output id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  assign id_22 = 1;
-  logic id_22;
-  logic id_23;
-  assign id_9  = (1);
-  assign id_4  = 1;
-  assign id_18 = id_3;
+  inout wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_3 = id_13;
+  wire id_19;
+  assign id_11 = id_19;
+  module_0(
+      id_19, id_15
+  );
+  always @(posedge 1)
+  fork : id_20
+    fork
+      id_19 = id_10[1'b0 : 1];
+    join
+  join
+  assign id_9[1] = 1'b0 - 1;
+  initial begin
+    if (1) id_12 <= 1;
+    else id_15[1] = id_13;
+    id_12 = id_11++ / id_2 + 1;
+    id_5 <= 1;
+  end
 endmodule

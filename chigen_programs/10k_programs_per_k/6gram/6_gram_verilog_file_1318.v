@@ -1,5 +1,7 @@
-// Seed: 64789085
-module module_0 (
+// Seed: 4206504165
+module module_0;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -12,28 +14,27 @@ module module_0 (
     id_10,
     id_11
 );
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_4 = 1'b0 > id_10;
-  type_14 id_11 (
-      id_8,
-      1'd0,
-      id_10
+  input wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_12;
+  integer id_13;
+  module_0(); id_14(
+      .id_0(1 == id_10), .id_1(id_3), .id_2(1'b0 - id_1), .id_3(id_2)
   );
-  logic id_12, id_13;
-  always @(posedge id_13) begin
-    if (id_8) id_1 <= 1;
-    else begin
-      id_5 <= 1;
-    end
+  always @(posedge id_9) begin
+    if (id_7)
+      #1 begin
+        wait (1);
+        id_2 <= id_8;
+      end
   end
 endmodule

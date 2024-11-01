@@ -1,5 +1,25 @@
-// Seed: 2049556746
+// Seed: 498151590
 module module_0 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_4 = !id_3;
+  module_0(
+      id_4, id_3
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -7,27 +27,18 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9
+    id_8
 );
-  output id_9;
-  inout id_8;
-  input id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  reg id_9;
-  assign id_9 = (id_3);
-  always @* begin
-    if (1) id_5[1] <= id_9;
-    else id_6[1] <= #1 1;
-  end
-  logic id_10;
-  logic id_11;
-  initial begin
-    id_9 <= #id_5 1 + id_7;
-  end
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1 = 1 + 1 + 1 && 1'b0 / id_7;
+  module_0(
+      id_2, id_6
+  );
 endmodule

@@ -1,22 +1,37 @@
-// Seed: 1369637584
-`timescale 1 ps / 1ps `default_nettype id_1 `timescale 1ps / 1ps
+// Seed: 1856505890
 module module_0 (
-    input id_0,
-    input id_1
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_2 = 1;
-  logic id_3;
-  type_0 id_4 (
-      .id_0(id_1),
-      .id_1(1 << id_0)
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  wire id_5;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wand id_7;
+  module_0(
+      id_1, id_2, id_7
   );
-  logic id_5;
-  logic id_6;
-  type_1 #(
-      .type_2(1)
-  ) id_7 (
-      1,
-      id_3,
-      1
-  );
+  rtran (1, id_6 - id_6, id_1);
+  tri1 id_8;
+  assign id_2 = 1'd0;
+  assign id_4 = 1;
+  assign id_2 = id_7 ? 1'd0 : 1'h0 == id_7;
+  always @(id_8 or negedge 1) if ((id_3)) id_5 <= 1;
 endmodule

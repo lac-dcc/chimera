@@ -1,22 +1,37 @@
-// Seed: 1327741264
-`define pp_13 0
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output id_12
+// Seed: 4222259190
+module module_0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  specify
-    (id_13 => id_14) = 1;
-    specparam id_15 = id_5;
-  endspecify
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(1'b0 or posedge "") begin
+    $display;
+  end
+  module_0();
+endmodule
+module module_2 (
+    output wire id_0
+);
+  wire id_3;
+  module_0();
+  wire id_4;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_4[1] = 1;
+  module_0();
+  assign id_3[1] = ~id_2;
 endmodule

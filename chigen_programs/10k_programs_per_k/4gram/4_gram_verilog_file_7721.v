@@ -1,22 +1,33 @@
-// Seed: 3335054555
+// Seed: 3235709525
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    input logic id_14,
-    input logic id_15,
-    input id_16
+    output supply1 id_0,
+    output uwire id_1,
+    input tri id_2,
+    output tri0 id_3,
+    output tri id_4,
+    input wor id_5,
+    output tri0 id_6,
+    input tri0 id_7,
+    input tri0 id_8,
+    input wor id_9,
+    output tri1 id_10
 );
-  logic id_17;
+  specify
+    (negedge id_12 => (id_13 +: id_7)) = (id_8, 1);
+    (id_14 => id_15) = (1'd0 : 1  : id_15, 1'b0);
+    (id_16 *> id_17) = (1'b0 : 0 : id_8, 1);
+  endspecify
+endmodule
+module module_1 (
+    output tri   id_0,
+    output uwire id_1,
+    output tri1  id_2
+    , id_6,
+    input  tri0  id_3,
+    output tri   id_4
+);
+  wire id_7;
+  module_0(
+      id_0, id_1, id_3, id_2, id_2, id_3, id_1, id_3, id_3, id_3, id_0
+  );
 endmodule

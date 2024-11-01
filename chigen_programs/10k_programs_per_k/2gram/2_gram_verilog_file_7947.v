@@ -1,19 +1,37 @@
-// Seed: 3189629254
+// Seed: 1902723813
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    output logic id_3,
-    input id_4,
-    output id_5
+    id_1,
+    id_2
 );
-  logic id_6 (
-      id_2,
-      1
-  );
-  assign id_1[1] = 1;
-  logic id_7;
-  logic id_8;
-  logic id_9;
+  inout wire id_2;
+  inout wire id_1;
+  always
+  fork : id_3
+    for (id_2 = id_3; id_1(1); id_1 = id_1) begin
+      $display(1, 1, 1 + 1);
+    end
+  join
 endmodule
-`define pp_6 0
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
+  wire id_3;
+  wire id_4;
+  id_5(
+      .id_0(id_2), .id_1(1'b0), .id_2(!1'b0)
+  );
+  wire id_6;
+  assign id_2 = 'b0;
+  wire id_7;
+  wire id_8;
+  wire id_9;
+  wire id_10;
+  wire id_11;
+  wire id_12;
+  module_0(
+      id_11, id_4
+  );
+endmodule

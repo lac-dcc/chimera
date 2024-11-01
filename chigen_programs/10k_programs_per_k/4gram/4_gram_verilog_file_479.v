@@ -1,30 +1,36 @@
-// Seed: 88187142
+// Seed: 2323917945
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    output id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9
-    , id_24,
-    input logic id_10,
-    output id_11
-    , id_25,
-    output logic id_12,
-    output id_13,
-    input logic id_14,
-    output id_15,
-    output id_16,
-    input logic id_17,
-    input id_18,
-    input id_19,
-    input logic id_20,
-    input logic id_21,
-    output id_22,
-    input id_23
+    id_1
 );
+  inout wire id_1;
+  initial begin
+    id_1 = 1;
+    disable id_2;
+  end
+  wire id_3;
+endmodule
+module module_1 (
+    input wire id_0,
+    output supply1 id_1,
+    input tri1 id_2,
+    input supply0 id_3,
+    output supply1 id_4,
+    input wand id_5,
+    output wor id_6,
+    output tri1 id_7,
+    input supply1 id_8,
+    output tri id_9,
+    input tri0 id_10,
+    input supply0 id_11,
+    input supply1 id_12,
+    inout supply0 id_13,
+    input supply1 id_14,
+    input tri1 id_15
+);
+  wire id_17;
+  module_0(
+      id_17
+  );
+  wire id_18;
+  tri0 id_19 = id_10;
 endmodule

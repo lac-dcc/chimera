@@ -1,27 +1,30 @@
-// Seed: 1501646976
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`default_nettype wire
-`define pp_7 0
-`define pp_8 0
-`timescale 1ps / 1ps
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`timescale 1ps / 1 ps
+// Seed: 3891462673
 module module_0 (
     id_1,
-    id_2,
-    id_3
+    id_2
 );
-  inout id_3;
-  input id_2;
-  inout id_1;
+  output wire id_2;
+  input wire id_1;
+  wire id_3;
+  wire id_4;
+endmodule
+module module_1;
+  wire id_1;
+  module_0(
+      id_1, id_1
+  );
+endmodule
+module module_2 (
+    input wire id_0
+    , id_2
+);
+  wire id_3;
+  id_4(
+      .id_0(1'b0), .id_1(id_0), .id_2(1), .id_3(id_0), .id_4(1), .id_5(1), .id_6(id_3)
+  );
+  wire id_5;
+  module_0(
+      id_5, id_3
+  );
+  wire id_6;
 endmodule

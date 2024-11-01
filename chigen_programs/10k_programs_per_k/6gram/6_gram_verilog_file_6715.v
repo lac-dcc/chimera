@@ -1,68 +1,74 @@
-// Seed: 57629057
-`timescale 1ps / 1ps
+// Seed: 2698750176
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    input  tri1 id_0,
+    output wire id_1,
+    input  wand id_2
+    , id_4
 );
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_0 id_18 (
-      .id_0 (),
-      .id_1 (1),
-      .id_2 (1),
-      .id_3 (id_8),
-      .id_4 (id_5),
-      .id_5 (1),
-      .id_6 (id_14),
-      .id_7 ((id_6)),
-      .id_8 (id_3),
-      .id_9 (1'b0),
-      .id_10(1),
-      .id_11(id_7),
-      .id_12(),
-      .id_13(id_3),
-      .id_14(1'b0),
-      .id_15(id_9),
-      .id_16(id_7),
-      .id_17(id_8 == id_11),
-      .id_18((id_9)),
-      .id_19(1'b0)
+  wire id_5 = id_5;
+  assign id_4[1] = id_0;
+  wire id_6;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input wire id_1,
+    input wor id_2,
+    input wand id_3,
+    input tri0 id_4,
+    output supply1 id_5,
+    input tri1 id_6,
+    input supply0 id_7,
+    output tri id_8,
+    output logic id_9,
+    output logic id_10,
+    output tri1 id_11,
+    input uwire id_12,
+    input wire id_13,
+    input wand id_14,
+    output tri0 id_15,
+    input tri id_16,
+    output tri0 id_17,
+    output tri1 id_18,
+    input wor id_19,
+    input tri0 id_20,
+    input logic id_21,
+    output wire id_22,
+    input wand id_23,
+    output tri0 id_24,
+    output supply0 id_25,
+    output logic id_26
+);
+  module_0(
+      id_20, id_11, id_14
   );
+  reg id_28;
+  supply1 id_29 = 1'b0;
   initial begin
-    id_14 <= 1;
-    id_14 = id_8;
-    #id_19;
+    id_10 <= 1 >= 1;
+    if (id_13)
+      if ((id_23) && id_28 == 1)
+        if (1'b0) id_9 <= 1;
+        else if (1) id_28 <= ~(1'b0 * 1 < 1);
+        else id_26 <= id_7 & id_19;
+      else assert (1 || 1);
   end
+  always id_26 <= #1 id_21;
+  nor (
+      id_25,
+      id_14,
+      id_6,
+      id_1,
+      id_4,
+      id_12,
+      id_13,
+      id_3,
+      id_23,
+      id_20,
+      id_0,
+      id_7,
+      id_21,
+      id_19,
+      id_16,
+      id_2
+  );
 endmodule

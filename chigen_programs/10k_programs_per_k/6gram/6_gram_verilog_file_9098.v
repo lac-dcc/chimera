@@ -1,58 +1,51 @@
-// Seed: 3273248337
-`default_nettype id_2 `default_nettype id_21
-module module_0 (
+// Seed: 886075002
+module module_0;
+  initial begin
+    if (1) id_1 = 1;
+    else $display(1 < id_1, id_1);
+  end
+  module_2();
+endmodule
+module module_1 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    id_2
 );
-  output id_21;
-  inout id_20;
-  input id_19;
-  inout id_18;
-  inout id_17;
-  inout id_16;
-  output id_15;
-  inout id_14;
-  inout id_13;
-  input id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_21;
-  always @(posedge 1'b0 or id_18) begin
-    if (id_20) begin
-      id_16 <= id_12[""];
-      id_14 <= id_13;
-      SystemTFIdentifier;
-    end else begin
-      #1;
-      SystemTFIdentifier;
+  input wire id_2;
+  input wire id_1;
+  assign id_3 = id_2 != id_3;
+  module_0();
+endmodule
+module module_2 ();
+  tri0 id_2;
+  reg  id_3 = 1;
+  always @(posedge 1) begin
+    if (id_2) disable id_4;
+    else begin
+      id_1 <= 1;
+      id_3 <= 1;
     end
   end
+endmodule
+module module_3 (
+    input supply1 id_0,
+    input wand id_1,
+    output wand id_2,
+    input supply0 id_3,
+    input wand id_4,
+    input wor id_5,
+    input supply0 id_6,
+    output uwire id_7,
+    input tri id_8,
+    output wand id_9
+);
+  wire id_11;
+  id_12(
+      .id_0(id_5), .id_1(1), .id_2(1), .id_3(1), .id_4(id_5), .id_5(1), .id_6(id_0), .id_7(1)
+  ); module_2();
+  wire id_13;
+  id_14(
+      1'h0, 1 !== id_3, 1
+  ); id_15(
+      .id_0(("")), .id_1(1 == 1), .id_2(id_16), .id_3(1), .id_4((id_8)), .id_5(1)
+  );
 endmodule

@@ -1,24 +1,33 @@
-// Seed: 3148283986
-`timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  input id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  defparam id_4.id_5 = id_4;
-  assign id_5 = id_5[1 : 1];
-  type_10(
-      1, id_1[1] + id_2, 1, 1, ""
+// Seed: 389243089
+module module_0;
+  wire id_1;
+  assign id_1 = 1 ? 1 : id_1;
+  always disable id_2;
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  id_4(
+      .id_0(1), .id_1(), .id_2(), .id_3(id_2)
   );
-  generate
-    for (id_6 = 1; id_6; id_3 = 1) begin : id_7
-      logic id_8;
-    end
-  endgenerate
-  integer id_9 = 1;
+  assign id_1 = 1;
+  initial begin
+    id_2 = 1;
+  end
+  module_0();
+endmodule
+module module_2 (
+    input  wand  id_0,
+    output logic id_1,
+    input  wire  id_2,
+    input  tri   id_3,
+    input  uwire id_4,
+    input  uwire id_5,
+    input  wire  id_6,
+    inout  uwire id_7
+);
+  initial id_1 = #0 1;
+  module_0();
+  assign id_7 = (1 || 1 && id_0);
+  integer id_9;
+  and (id_1, id_2, id_3, id_4, id_5, id_6, id_7);
 endmodule

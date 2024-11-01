@@ -1,18 +1,27 @@
-// Seed: 1307764840
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+// Seed: 203300986
+module module_0;
+  always_comb @(posedge id_1[1] or posedge 1) begin
+    $display(1);
+  end
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input uwire id_1,
+    input tri1 id_2,
+    input supply0 id_3,
+    output tri0 id_4
 );
-  output id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  reg id_4;
-  assign id_3 = 1;
-  assign id_2 = 1'b0;
-  always @(posedge id_4) id_4 <= 1;
-  logic id_5;
-  logic id_7 = 1;
+  uwire id_6 = 1 - 1;
+  buf (id_4, id_6);
+  module_0();
+  assign id_4 = id_2 << 1 * id_1;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri id_1,
+    output wor id_2,
+    output tri id_3
+);
+  wire id_5;
+  module_0();
 endmodule

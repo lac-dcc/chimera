@@ -1,21 +1,27 @@
-// Seed: 209103670
-module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output id_8
+// Seed: 1000268264
+module module_0;
+  initial id_1 = 1;
+endmodule
+module module_1 (
+    output logic id_0,
+    input logic id_1,
+    input uwire id_2,
+    output logic id_3,
+    output tri1 id_4,
+    input supply0 id_5,
+    output tri id_6,
+    output tri1 id_7,
+    output tri0 id_8,
+    output supply0 id_9
 );
-  logic id_9;
-  reg   id_10;
-  logic id_11;
-  reg   id_12;
-  always @(*) begin
-    if (id_5 == id_4) id_12 <= 1;
-    else id_10 <= id_10;
-  end
+  always
+    repeat (1)
+      if (1) begin
+        id_0 <= id_1;
+      end else begin
+        $display(id_1 - 1);
+        id_3 <= 1;
+        $display((1), id_2 | id_2);
+      end
+  module_0();
 endmodule

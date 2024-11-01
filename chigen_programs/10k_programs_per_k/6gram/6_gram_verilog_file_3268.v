@@ -1,22 +1,32 @@
-// Seed: 4195722586
-`define pp_3 0
-`define pp_4 0
-`timescale 1 ps / 1ps `timescale 1ps / 1ps
+// Seed: 266988521
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wor  id_0,
+    input tri0 id_1
 );
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_4 id_3 (
-      .id_0(id_2),
+  id_3(
+      .id_0(id_1 == ~1),
       .id_1(1),
-      .id_2(id_1)
+      .id_2(1'd0),
+      .id_3(id_0),
+      .id_4(1),
+      .id_5(id_1),
+      .id_6(1),
+      .id_7(1 - 1'b0),
+      .id_8(id_1),
+      .id_9(1 * 1),
+      .id_10(1),
+      .id_11()
   );
-  initial begin
-    id_1 <= #id_2 1;
-    SystemTFIdentifier;
-  end
+endmodule
+module module_1 (
+    output uwire id_0,
+    input  wire  id_1,
+    input  tri0  id_2,
+    output uwire id_3
+);
+  wire id_5;
+  module_0(
+      id_2, id_2
+  );
+  always @(id_2 or 1) #1;
 endmodule

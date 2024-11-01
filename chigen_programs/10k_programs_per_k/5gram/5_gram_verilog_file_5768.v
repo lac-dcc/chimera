@@ -1,20 +1,29 @@
-// Seed: 875145824
-module module_0 (
-    output logic id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    output logic id_10,
-    input logic id_11,
-    input id_12,
-    output logic id_13,
-    input id_14,
-    output id_15
+// Seed: 1891603825
+module module_0 ();
+  final $display(1);
+  wire id_1;
+  wire id_2, id_3;
+  wire id_4, id_5;
+  wire id_6;
+endmodule
+module module_1 #(
+    parameter id_8 = 32'd96,
+    parameter id_9 = 32'd4
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  defparam id_8.id_9 = 1; module_0();
 endmodule

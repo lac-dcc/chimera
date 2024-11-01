@@ -1,51 +1,30 @@
-// Seed: 4048682762
-`timescale 1ps / 1ps `timescale 1 ps / 1ps
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    input logic id_8,
-    output id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    input id_14,
-    input logic id_15,
-    output id_16,
-    input logic id_17,
-    output id_18
-    , id_35,
-    input logic id_19,
-    input id_20,
-    input id_21,
-    output logic id_22,
-    input logic id_23,
-    output id_24,
-    output id_25,
-    output reg id_26,
-    input id_27,
-    input id_28,
-    output id_29,
-    output logic id_30,
-    input logic id_31
-    , id_36,
-    input id_32,
-    output id_33,
-    output id_34
+// Seed: 1259720413
+module module_0;
+  wire id_1;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    input wor id_0,
+    output tri id_1,
+    input supply1 id_2,
+    output tri1 id_3,
+    output tri id_4,
+    input wand id_5,
+    input supply1 id_6,
+    input wand id_7,
+    output supply0 id_8,
+    input supply1 id_9,
+    output wand id_10,
+    input supply1 id_11,
+    output supply0 id_12,
+    output wor id_13,
+    input wire id_14,
+    input wand id_15,
+    input tri id_16,
+    input uwire id_17,
+    input wire id_18
 );
-  assign id_18[1'd0] = 1;
-  logic id_37 = 1;
-  always @(*) id_26 <= 1;
-  always @(posedge id_17) id_34 <= id_32;
-  logic id_38;
-  always @(id_7 or 1 ^ id_4 ^ id_14 ^ 1 ^ (id_5) ^ 1 ^ id_27 > 1);
-  type_54(
-      1'b0, 1, 1, 1
-  );
+  wand id_20 = 1;
+  module_0();
+  wire id_21;
 endmodule

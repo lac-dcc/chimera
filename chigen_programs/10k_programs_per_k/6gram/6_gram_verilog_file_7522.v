@@ -1,20 +1,34 @@
-// Seed: 3602785233
+// Seed: 964377520
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    input logic id_8
-    , id_13,
-    output id_9,
-    input id_10,
-    output id_11,
-    inout id_12
+    input supply0 id_0,
+    input tri1 id_1,
+    output wand id_2,
+    input wire id_3,
+    input tri0 id_4,
+    output tri1 id_5
 );
-  logic id_14;
-  assign id_4 = 1 & id_10;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_0 (
+    output logic id_0,
+    output uwire module_1
+    , id_11,
+    input wire id_2,
+    output wor id_3,
+    input supply1 id_4,
+    output wor id_5,
+    output tri1 id_6,
+    input supply0 id_7,
+    output tri0 id_8,
+    output tri0 id_9
+);
+  reg id_12;
+  module_0(
+      id_2, id_7, id_5, id_7, id_7, id_6
+  );
+  always @(posedge 1 or id_11)
+    if (1) begin
+      id_0 <= 1;
+    end else if (1 == 1 * 1 - "" - 1) id_12 <= id_2 ^ 1 + id_11;
 endmodule

@@ -1,25 +1,31 @@
-// Seed: 1637957234
-`define pp_17 0
-`timescale 1 ps / 1ps
+// Seed: 1336997700
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    output id_9,
-    output id_10,
-    output logic id_11,
-    output logic id_12,
-    input logic id_13,
-    output logic id_14,
-    output logic id_15,
-    input id_16
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_4 = id_0;
-  type_0 id_17 (1);
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  tri1 id_4, id_5;
+  assign id_5 = 1 + 1;
+endmodule
+module module_1 (
+    input logic id_0,
+    input logic id_1,
+    output uwire id_2,
+    input wor id_3,
+    output supply0 id_4,
+    output logic id_5,
+    input wor id_6,
+    output wand id_7,
+    input wand id_8
+);
+  assign id_5 = id_1;
+  wire id_10;
+  wire id_11;
+  module_0(
+      id_11, id_11, id_11
+  );
+  always id_5 <= id_0;
 endmodule

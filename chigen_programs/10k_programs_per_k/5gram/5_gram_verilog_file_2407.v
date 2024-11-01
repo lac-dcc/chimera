@@ -1,22 +1,39 @@
-// Seed: 241919824
+// Seed: 1876666451
 module module_0 (
-    input id_0
-    , id_4,
-    output logic id_1,
-    output id_2,
-    input id_3
+    module_0,
+    id_1,
+    id_2
 );
-  generate
-    begin
-      for (id_5 = id_4; id_5; id_1 = 1) begin : id_6
-        always @* id_6 = id_0;
-        logic   id_7;
-        integer id_8;
-        defparam id_9.id_10 = 1;
-        initial id_2 = 1;
-        assign id_6 = id_0;
-      end
-    end
-  endgenerate
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wor id_4;
+  assign id_2 = 1;
+  assign id_4 = 1;
 endmodule
-`default_nettype id_4
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = id_3[1 : 1];
+  module_0(
+      id_4, id_4, id_4
+  ); id_7(
+      .id_0(1'b0 ** id_6 < 1'b0),
+      .id_1(id_6 >= id_1[1]),
+      .id_2(id_5 ** 1),
+      .id_3(id_3[1]),
+      .id_4(id_3[1])
+  );
+  assign id_1 = id_3;
+endmodule

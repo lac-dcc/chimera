@@ -1,26 +1,5 @@
-// Seed: 3865321642
+// Seed: 1175101039
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
-);
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  always @(posedge id_6) begin
-    #1;
-    SystemTFIdentifier(1, 1);
-  end
-endmodule
-module module_1 (
     id_1,
     id_2,
     id_3,
@@ -34,29 +13,35 @@ module module_1 (
     id_11,
     id_12,
     id_13,
-    id_14
+    id_14,
+    id_15
 );
-  inout id_14;
-  inout id_13;
-  output id_12;
-  output id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  inout id_7;
-  input id_6;
-  output id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  assign id_5 = id_2;
-  assign {id_13[1] == id_4, id_14} = 1;
-  assign id_4 = 1'b0;
-  always @(posedge 1 or negedge 1 == 1) begin
-    if (1) begin
-      id_1 <= 1;
-    end
-    id_8 <= {1, 1'b0 != 1, 1};
-  end
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_6 = 1;
+endmodule
+module module_1 (
+    output wor   id_0,
+    output wor   id_1,
+    output uwire id_2
+);
+  wire id_4;
+  wire id_6;
+  module_0(
+      id_4, id_4, id_6, id_4, id_4, id_4, id_4, id_6, id_4, id_6, id_6, id_6, id_4, id_4, id_4
+  );
+  uwire id_7 = 1;
 endmodule

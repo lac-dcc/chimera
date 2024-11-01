@@ -1,5 +1,4 @@
-// Seed: 1990346104
-`timescale 1ps / 1ps
+// Seed: 743129689
 module module_0 (
     id_1,
     id_2,
@@ -7,31 +6,37 @@ module module_0 (
     id_4,
     id_5
 );
-  inout id_5;
-  input id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  logic id_5;
-  logic id_6;
-  logic id_7 = id_5 > id_4;
-  always @(posedge id_5) begin
-    #1 id_3 = id_4;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+  always @(*) force id_2[1 : 1] = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  initial begin
+    disable id_8;
+    begin
+      id_5 <= id_8;
+    end
   end
-  logic id_8;
-  logic id_9;
-  logic id_10 = 1;
-  assign id_8 = 1;
-  generate
-    if (id_5)
-      if (id_4) begin : id_11
-        assign id_9 = 1'b0 - 1 ? 1 : id_8;
-      end else if ((1))
-        always @(posedge id_10 > 1) begin
-          id_2 <= 1'b0;
-        end
-      else begin
-        logic id_12;
-      end
-  endgenerate
+  module_0(
+      id_4, id_1, id_6, id_1, id_4
+  );
 endmodule

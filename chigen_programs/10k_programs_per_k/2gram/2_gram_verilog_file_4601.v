@@ -1,12 +1,8 @@
-// Seed: 1907116730
-module module_0 ();
-  logic id_0;
-  always SystemTFIdentifier(1, id_0 || 1);
-  logic id_1;
-  logic id_2 = id_1;
-  type_7 id_3 (.id_0(1));
-  logic id_4;
-  logic id_5;
+// Seed: 3136245769
+module module_0;
+  assign id_1 = 1;
+  wor id_2;
+  assign id_2 = id_1;
 endmodule
 module module_1 (
     id_1,
@@ -25,39 +21,24 @@ module module_1 (
     id_14,
     id_15,
     id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    id_17
 );
-  output id_22;
-  output id_21;
-  input id_20;
-  inout id_19;
-  inout id_18;
-  inout id_17;
-  output id_16;
-  output id_15;
-  output id_14;
-  input id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  output id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  assign id_16 = 1;
-  type_22(
-      1'h0
-  );
+  inout wire id_17;
+  output wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0();
 endmodule
-`define pp_22 0
-`timescale 1 ps / 1ps

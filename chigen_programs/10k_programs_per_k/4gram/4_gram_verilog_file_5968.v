@@ -1,30 +1,111 @@
-// Seed: 843972915
-`timescale 1ps / 1 ps
+// Seed: 3268318101
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    input wire id_0,
+    output supply0 id_1,
+    output uwire id_2,
+    output tri id_3,
+    output wand id_4,
+    input tri0 id_5,
+    output uwire id_6,
+    output tri0 id_7,
+    output tri0 id_8,
+    input wand id_9,
+    output supply0 id_10,
+    input tri1 id_11,
+    output tri id_12,
+    output wor id_13,
+    output tri1 id_14,
+    input supply1 id_15,
+    input tri1 id_16,
+    input uwire id_17,
+    input wor id_18,
+    input tri0 id_19,
+    input uwire id_20,
+    input tri1 id_21,
+    output supply0 id_22,
+    input wire id_23,
+    input wand id_24,
+    input supply0 id_25,
+    input supply1 id_26,
+    input uwire id_27,
+    output wand id_28,
+    input wor id_29,
+    output tri0 id_30,
+    input wand id_31,
+    output wire id_32,
+    output uwire id_33,
+    output uwire id_34,
+    input supply0 id_35,
+    input wire id_36,
+    input tri0 id_37,
+    input wand id_38,
+    output wand id_39,
+    input tri0 id_40,
+    input supply1 id_41,
+    input tri1 id_42,
+    input tri1 id_43
 );
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  initial begin
-    id_2 = id_6;
-    if (id_3) begin
-      id_3 = id_3 - 1;
-    end
-  end
-  logic id_9;
+  tri id_45 = id_11;
+endmodule
+module module_1 (
+    input wor id_0,
+    input tri1 id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    output tri0 id_4,
+    input supply1 id_5,
+    output tri0 id_6,
+    input logic id_7,
+    output logic id_8,
+    input supply1 id_9,
+    input wand id_10
+);
+  assign id_4 = id_9;
+  module_0(
+      id_2,
+      id_3,
+      id_4,
+      id_3,
+      id_4,
+      id_1,
+      id_6,
+      id_6,
+      id_3,
+      id_10,
+      id_3,
+      id_9,
+      id_6,
+      id_3,
+      id_4,
+      id_9,
+      id_10,
+      id_10,
+      id_0,
+      id_1,
+      id_10,
+      id_9,
+      id_4,
+      id_9,
+      id_5,
+      id_1,
+      id_5,
+      id_9,
+      id_3,
+      id_10,
+      id_3,
+      id_0,
+      id_6,
+      id_6,
+      id_3,
+      id_2,
+      id_9,
+      id_10,
+      id_10,
+      id_6,
+      id_10,
+      id_1,
+      id_9,
+      id_1
+  );
+  always @(posedge id_1 or posedge 1) id_8 = #(id_7) 1;
 endmodule

@@ -1,39 +1,48 @@
-// Seed: 1644155184
-`define pp_11 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+// Seed: 940657308
+module module_1 (
+    input supply0 module_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input supply1 id_3,
+    output tri0 id_4,
+    input tri id_5,
+    input tri1 id_6,
+    input tri0 id_7,
+    input wor id_8,
+    input tri1 id_9,
+    output supply1 id_10,
+    input wand id_11
 );
-  inout id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  output id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  logic id_11 = 1;
-  logic id_12;
-  type_16 id_13 (
-      .id_0(),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_1),
-      .id_4(1),
-      .id_5(id_11),
-      .id_6(1'd0),
-      .id_7(id_1)
+  assign id_10 = 1;
+  assign id_10 = id_1 < -id_6;
+  tri1 id_13 = {id_11{id_7}};
+endmodule
+module module_0 (
+    input tri1 id_0
+    , id_13,
+    output logic id_1,
+    input uwire module_1,
+    output wand id_3,
+    input tri1 id_4,
+    output logic id_5,
+    input wor id_6,
+    input tri0 id_7,
+    input supply1 id_8,
+    input tri id_9,
+    output tri id_10,
+    input supply1 id_11
+);
+  assign id_3 = id_4;
+  module_0(
+      id_8, id_4, id_8, id_8, id_3, id_11, id_4, id_7, id_11, id_0, id_10, id_6
   );
+  final $display($display, ("" + 1 || 1), 1);
+  always id_13 <= #1~&id_13;
+  assign id_3 = 1 & id_7 | id_13 * id_9 - 1;
+  assign id_1 = id_13;
+  generate
+    always @(*) begin
+      id_5 <= 1 < 1;
+    end
+  endgenerate
 endmodule

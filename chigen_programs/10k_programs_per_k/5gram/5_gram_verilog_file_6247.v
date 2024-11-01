@@ -1,31 +1,31 @@
-// Seed: 1754940389
-`timescale 1 ps / 1ps
+// Seed: 3637841688
 module module_0 (
-    output id_0,
-    input logic id_1
-    , id_17, id_18,
-    output logic id_2,
-    input id_3,
-    inout logic id_4,
-    output logic id_5,
-    input supply1 id_6,
-    output logic id_7,
-    input logic id_8,
-    output id_9,
-    output logic id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    output logic id_14,
-    output logic id_15,
-    output id_16
+    input tri1 id_0,
+    input tri  id_1
 );
-  logic id_19;
-  logic id_20;
-  assign id_16[1] = 1;
-  logic id_21;
-  type_37(
-      id_16, id_6
+  for (id_3 = id_1; 1; id_3 = 1) begin : id_4
+    integer id_5 = id_3++;
+  end
+  wire id_6;
+  assign id_3 = 1;
+  wire id_7;
+endmodule
+module module_1 (
+    output logic   id_0,
+    input  logic   id_1,
+    input  supply1 id_2
+);
+  always @(*) begin
+    id_0 = id_1;
+    id_0 <= 1;
+  end
+  tri id_4 = id_2;
+  initial begin
+    force id_0 = 1'b0;
+  end
+  module_0(
+      id_2, id_2
   );
-  logic id_22;
+  wire id_5;
+  wire id_6;
 endmodule

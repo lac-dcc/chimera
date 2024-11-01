@@ -1,5 +1,14 @@
-// Seed: 4098259390
+// Seed: 3975365784
 module module_0 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  wor id_3;
+  assign id_3 = 1'h0;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -8,20 +17,26 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9
+    id_9,
+    id_10
 );
-  inout id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  input id_5;
-  input id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  logic id_9;
-  specify
-    if (id_5) (id_10 => id_11) = 1;
-    specparam id_12 = id_4;
-  endspecify
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  initial begin
+    if ((id_9 == 1)) begin : id_11
+      id_6[1] <= 1;
+      id_3 <= id_7;
+    end
+  end
+  module_0(
+      id_2, id_2
+  );
 endmodule

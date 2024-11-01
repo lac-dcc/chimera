@@ -1,26 +1,25 @@
-// Seed: 1988878271
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+// Seed: 2274507672
+module module_0;
+  initial begin
+    id_1 = 1 | 1;
+  end
+  wor id_2 = 1;
+  always @(posedge id_2 or(id_2)) id_2 = id_2;
+endmodule
+module module_1 (
+    input  wire id_0,
+    output wire id_1
 );
-  output id_9;
-  input id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  logic id_9 = id_6;
-  type_11(
-      1, id_6 == id_1, 1, 1, 1
-  );
+  module_0();
+  wire id_3;
+  if (1 * id_0 / (1)) wire id_4;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  assign id_1[(1'd0) : 1] = id_1;
+  module_0();
 endmodule

@@ -1,21 +1,28 @@
-// Seed: 2826058795
-`timescale 1 ps / 1ps
+// Seed: 1910545205
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input id_6
-    , id_7
+    input tri0 id_0,
+    output supply1 id_1,
+    input wor id_2,
+    output wor id_3,
+    output tri id_4
 );
-  logic id_8;
-  always @(posedge id_3[1])
-    if (1)
-      if (1) begin
-        SystemTFIdentifier(1);
-      end else begin
-        id_8 = 1'h0 * id_5;
-      end
+  assign id_4 = 0;
+endmodule
+module module_1 (
+    output supply0 id_0,
+    output tri0 id_1,
+    input supply0 id_2,
+    output tri1 id_3,
+    input wire id_4,
+    input tri1 id_5,
+    input wire id_6,
+    output wand id_7,
+    output uwire id_8
+    , id_11,
+    input wire id_9
+);
+  tri1 id_12 = 1;
+  module_0(
+      id_5, id_0, id_9, id_8, id_1
+  );
 endmodule

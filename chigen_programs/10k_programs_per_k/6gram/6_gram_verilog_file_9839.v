@@ -1,5 +1,4 @@
-// Seed: 2834981954
-`timescale 1ps / 1ps
+// Seed: 3101198112
 module module_0 (
     id_1,
     id_2,
@@ -11,34 +10,52 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13
+    id_11
 );
-  input id_13;
-  input id_12;
-  inout id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  type_19 id_13 (
-      .id_0(id_3),
-      .id_1(1 ^ id_2),
-      .id_2(1 + id_5),
-      .id_3(id_9),
-      .id_4(id_5)
+  inout wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = id_1;
+  assign id_6 = (1);
+  initial begin
+    $display(1'b0);
+    id_9 = 1;
+    $display;
+  end
+endmodule
+module module_1 (
+    input wire id_0,
+    output supply0 id_1,
+    input wire id_2,
+    input uwire id_3,
+    input supply0 id_4,
+    input wand id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    output tri0 id_8,
+    input wor id_9,
+    input supply0 id_10,
+    output tri id_11,
+    output tri id_12,
+    output tri0 id_13
+    , id_17,
+    input uwire id_14,
+    output tri1 id_15
+);
+  always @(posedge 1 == {id_0, id_14}) id_13 = 1;
+  module_0(
+      id_17, id_17, id_17, id_17, id_17, id_17, id_17, id_17, id_17, id_17, id_17
   );
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  assign id_3[(1)] = 1;
+  wire id_18;
+  always @(id_4) begin
+    wait (1);
+  end
 endmodule

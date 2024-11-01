@@ -1,18 +1,31 @@
-// Seed: 2536772003
-`timescale 1ps / 1ps
-localparam id_2 = id_8;
-`timescale 1 ps / 1ps
-module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    output id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9
+// Seed: 718391458
+module module_0 ();
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_10;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  always @(*) id_1 <= 1;
+  module_0();
+  wire id_4;
+endmodule
+module module_1;
+  assign id_1 = 1;
+  always @(posedge id_1);
+  supply0 id_2 = 1;
+  assign id_1 = 1;
+  assign id_1 = 1;
+  assign id_1 = id_2 ? 1 : 1;
+  tri1 id_3;
+  tri1 module_2 = 1;
+  always #0 begin : id_4
+    id_2 = 1'b0;
+  end
+  module_0();
+  assign id_3 = 1;
+  wire id_5;
 endmodule

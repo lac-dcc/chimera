@@ -1,21 +1,45 @@
-// Seed: 3264015299
+// Seed: 2018010302
 module module_0 (
-    input logic id_0,
-    input tri0 id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    output id_6
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_6[1'h0] = id_3;
-  reg   id_7;
-  logic id_8;
-  initial begin
-    if (1)
-      if (id_1[1'd0 : 1'h0]) id_4[1 : 1'd0] <= 1;
-      else begin
-        id_4[1] <= id_7;
-      end
-  end
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_4 = id_1;
+  assign id_4 = 1'b0 * id_3 + ~id_2;
+endmodule
+module module_1 ();
+  assign id_1 = id_1;
+  module_0(
+      id_1, id_1, id_1
+  );
+endmodule
+module module_2 ();
+  wire id_1;
+  wire id_2;
+  supply0 id_3 = 1'h0, id_4;
+  module_0(
+      id_3, id_3, id_4
+  );
+  wire id_5;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  tri0 id_5;
+  wire id_6;
+  module_0(
+      id_4, id_1, id_1
+  );
+  assign id_3 = id_5 - 1;
+  assign id_6 = id_2;
 endmodule

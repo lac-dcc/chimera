@@ -1,22 +1,29 @@
-// Seed: 3292752896
-`timescale 1 ps / 1ps
+// Seed: 277967013
+module module_0;
+  tri id_2;
+  assign id_1 = id_2 ? id_1 == id_1 : id_1;
+  wire id_3;
+endmodule
 module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    output logic id_8
-    , id_12,
-    input id_9,
-    output id_10,
-    input id_11
+    output tri   id_0
+    , id_5,
+    output tri0  module_1,
+    output wand  id_2,
+    input  uwire id_3
 );
-  assign id_3[1'b0] = id_11 > 1;
-  assign id_4 = id_12;
-  logic id_13;
-  logic id_14 = 1'h0;
+  wire id_6;
+  logic [7:0] id_7;
+  supply1 id_8;
+  tri1 id_9 = 1;
+  id_10(
+      .id_0(1), .id_1(1), .id_2(1)
+  );
+  tri id_11;
+  assign id_11 = 1;
+  logic [7:0] id_12;
+  assign id_8 = 1;
+  always @(posedge id_7[1]) begin
+    $display((id_12[1]), 1);
+  end
+  module_0();
 endmodule

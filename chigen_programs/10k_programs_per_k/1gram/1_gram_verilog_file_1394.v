@@ -1,28 +1,32 @@
-// Seed: 1482568134
-module module_0 (
-    output logic id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    input id_10
-);
-  assign id_6 = 1;
-  type_15(
-      .id_0(1),
-      .id_1(id_6),
-      .id_2(1),
-      .id_3(id_3),
-      .id_4(1),
-      .id_5(1 == 1'b0),
-      .id_6(1),
-      .id_7(id_1),
-      .id_8(id_7)
-  );
+// Seed: 802943648
+macromodule module_0;
+  assign id_1 = 1;
+  always_comb $display(1, id_1, id_1, 1, 1'b0);
+  uwire id_2, id_3;
+  assign id_2 = 1;
+  assign id_3 = 1;
+  wire id_4, id_5 = !id_1, id_6, id_7;
+  wire id_8;
+  wire id_9, id_10;
+  uwire id_11 = id_1;
+  function id_12;
+    input id_13, id_14;
+  endfunction
+  wire id_15, id_16;
+  assign id_12 = 1'b0;
+  wire id_17 = id_7;
+  wire id_18;
+  tri id_19, id_20 = 1, id_21, id_22;
+  wire id_23;
 endmodule
-`define pp_11 0
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1[1 : 1];
+  module_0();
+endmodule

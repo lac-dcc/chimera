@@ -1,45 +1,74 @@
-// Seed: 1130068071
-`timescale 1ps / 1 ps
-package id_0;
-  localparam id_0 = 1;
-  localparam id_0 = id_0;
-  localparam id_0 = id_0;
-  localparam id_0 = 1;
-  localparam id_0 = id_0;
-  parameter id_0 = 1;
-  localparam id_0 = id_0[1-id_0 : 1'b0];
-  task id_0;
-    input reg [1 : 1] id_0;
-  endtask
-  localparam id_0 = (1);
-  localparam id_0 = 1;
-  parameter id_0 = 1'h0;
-  task id_0;
-    type_0 id_0;
-  endtask
-  reg [1 : id_0] id_0;
-  localparam id_0 = 1;
-  parameter id_0 = id_0[1];
-  parameter id_0 = id_0[1];
-  parameter id_0 = id_0;
-  task id_0([1 : 1 'h0] id_0 = id_0, input [1 : 1] id_0, output id_0);
-    @(posedge id_0 or posedge id_0) begin
-      SystemTFIdentifier(id_0, 1, 1);
-      id_0[id_0] <= id_0;
-    end
-  endtask
-  localparam id_0 = (id_0);
-  import "" function [{  id_0  {  1  }  } : 1] id_0(input id_0);
-  localparam id_0 = (id_0);
-  localparam id_0 = id_0;
-  localparam id_0 = 1;
-  localparam id_0 = id_0;
-  localparam id_0 = 1;
-  localparam id_0 = 'b0;
-  parameter id_0 = (id_0);
-  typedef reg [id_0 : id_0] id_0;
-  localparam id_0 = id_0#(.id_0(id_0)) [id_0];
-  localparam id_0 = 1;
-endpackage
-`timescale 1ps / 1ps
-`define pp_1 0
+// Seed: 3830164124
+module module_0 (
+    input uwire id_0,
+    input tri id_1,
+    input tri id_2,
+    input wor id_3
+    , id_29,
+    input tri id_4,
+    output uwire id_5,
+    input tri0 id_6,
+    output wor id_7,
+    input wand id_8,
+    input wire id_9,
+    output wire id_10,
+    output tri1 id_11
+    , id_30,
+    output tri0 id_12,
+    output wire id_13,
+    output wor id_14,
+    input tri id_15,
+    input tri0 id_16,
+    output tri1 id_17,
+    output supply1 id_18,
+    output uwire id_19,
+    input wor id_20,
+    input wor id_21,
+    output wand id_22,
+    output supply1 id_23,
+    input wor id_24,
+    output supply1 id_25,
+    output tri0 id_26,
+    input wor id_27
+);
+  wire id_31;
+  tri0 id_32 = 1;
+  wire id_33;
+endmodule
+module module_1 (
+    input  wor  id_0,
+    output wand id_1,
+    input  tri0 id_2
+);
+  wire id_4;
+  module_0(
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_0
+  );
+endmodule

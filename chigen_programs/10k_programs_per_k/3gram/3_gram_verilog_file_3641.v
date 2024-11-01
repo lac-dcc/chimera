@@ -1,34 +1,38 @@
-// Seed: 4074649529
-`timescale 1ps / 1ps
-`define pp_15 0
-import "" function void id_1(
-  input [1 : id_7] id_3,
-  input [id_7 : {  id_6  ,  id_6  }] id_9,
-  input [1 : 1  ?  id_5  ^  1 'd0 &&  id_7  &&  1 : 1] id_8[1 : id_6]
-);
-`timescale 1ps / 1ps
-`define pp_16 0
-`timescale 1 ps / 1 ps
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1 ps / 1ps
+// Seed: 3994805317
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input wor id_6,
-    input logic id_7,
-    output id_8,
-    output logic id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    input id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  assign id_8[1] = id_6[1];
+  output wire id_9;
+  input wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output wire id_1;
+  logic [7:0] id_3;
+  assign id_3[""] = id_2;
+  assign id_2 = id_2;
+  wire id_4;
+  module_0(
+      id_4, id_1, id_4, id_4, id_4, id_4, id_2, id_2, id_4
+  );
+  wire id_5 = id_2;
+  assign id_5 = id_2;
 endmodule

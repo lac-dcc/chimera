@@ -1,4 +1,4 @@
-// Seed: 2768477020
+// Seed: 3721956966
 module module_0 (
     id_1,
     id_2,
@@ -18,32 +18,68 @@ module module_0 (
     id_16,
     id_17,
     id_18,
-    id_19
+    id_19,
+    id_20,
+    id_21,
+    id_22
 );
-  inout id_19;
-  input id_18;
-  input id_17;
-  output id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  wand  id_19;
-  logic id_20;
-  assign id_12[1] = 1;
-  type_21(
-      id_5, 1, 1'b0
+  inout wire id_22;
+  inout wire id_21;
+  inout wire id_20;
+  output wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_23;
+  assign id_10 = id_20;
+endmodule
+module module_1 (
+    input  wand  id_0,
+    input  wand  id_1,
+    input  tri1  id_2,
+    output uwire id_3,
+    input  wire  id_4,
+    input  wand  id_5,
+    output tri0  id_6
+);
+  wire id_8;
+  module_0(
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_8
   );
-  assign id_19[""] = id_1;
 endmodule

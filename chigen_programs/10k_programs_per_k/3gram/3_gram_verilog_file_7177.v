@@ -1,17 +1,44 @@
-// Seed: 1194180283
+// Seed: 538316853
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5
+    id_1,
+    id_2
 );
-  logic id_6;
-  always @(posedge 1) begin
-    id_0 <= 1 + SystemTFIdentifier;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = id_2;
+  always
+    forever begin
+      if (1) begin
+        id_2 = id_2 !== id_2;
+      end else begin
+        #1;
+      end
+      release id_2;
+      id_1 = 1;
+    end
+  logic [7:0] id_3;
+  wire id_4 = id_3[1];
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  inout wire id_1;
+  real id_3;
+  reg  id_4;
+  always @(posedge id_4 or posedge 1) begin
+    id_4.id_1 = new;
   end
-  logic id_7;
-  logic id_8, id_9, id_10, id_11, id_12;
-  logic id_13;
+  wire id_5;
+  genvar id_6;
+  id_7(
+      .id_0(), .id_1(1), .id_2(1), .id_3(1)
+  );
+  wire id_8;
+  tri  id_9 = 1'd0;
+  wire id_10;
+  module_0(
+      id_10, id_6
+  );
 endmodule

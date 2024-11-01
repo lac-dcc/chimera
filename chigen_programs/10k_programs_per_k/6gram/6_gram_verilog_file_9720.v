@@ -1,13 +1,30 @@
-// Seed: 2881429591
-`timescale 1ps / 1ps
-module module_0 (
-    input  id_0,
-    output id_1
+// Seed: 394148579
+module module_0;
+  reg id_1;
+  reg id_2 = 1;
+  always @(1'd0 or id_2)
+    #1 begin
+      id_2 <= 1 == id_1;
+      id_1 <= 1;
+      id_1 <= id_1;
+      wait (1'b0);
+      disable id_3;
+      id_3 <= 1 | 1;
+      #1 id_3 = 1;
+      if (1) begin
+        id_3 <= id_1;
+      end else begin
+        id_3 = #1 1;
+      end
+    end
+endmodule
+module module_1 (
+    output logic id_0,
+    input  wire  id_1,
+    input  wire  id_2
 );
-  always @(posedge id_0) begin
-    id_1 <= 1 & id_0 - 1;
+  always @(id_2) begin
+    id_0 = #id_4 id_4;
   end
-  reg id_2;
-  assign id_2 = id_2;
-  assign id_1 = id_2;
+  module_0();
 endmodule

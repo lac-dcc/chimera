@@ -1,52 +1,97 @@
-// Seed: 1227927277
+// Seed: 1303258505
 module module_0 (
-    input id_0,
-    input logic id_1
-    , id_41,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    output logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    input id_18,
-    output id_19,
-    input id_20,
-    input id_21,
-    input logic id_22,
-    output id_23,
-    input logic id_24,
-    output id_25,
-    input id_26,
-    input id_27,
-    input logic id_28,
-    output logic id_29,
-    output id_30,
-    output logic id_31,
-    input id_32,
-    input logic id_33,
-    input logic id_34,
-    output logic id_35,
-    input logic id_36,
-    input id_37,
-    input id_38,
-    input id_39,
-    input logic id_40
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24
 );
-  always @(posedge 1 - "" or 1) begin
-    id_31 = id_27;
-  end
-  assign id_31 = id_10 ? 1 : id_0;
-  assign id_35 = id_2 ? ~id_0 : 1;
-  logic id_42;
+  input wire id_24;
+  inout wire id_23;
+  input wire id_22;
+  input wire id_21;
+  inout wire id_20;
+  input wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire  id_25;
+  wire  id_26;
+  uwire id_27 = id_14 ? 1'b0 - 1 : 1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output uwire id_1,
+    input wor id_2,
+    input supply1 id_3,
+    output tri id_4,
+    output tri0 id_5,
+    output tri id_6
+);
+  id_8(
+      .id_0()
+  );
+  wire id_9;
+  module_0(
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9,
+      id_9
+  );
+  wire id_10;
+  wire id_11;
 endmodule

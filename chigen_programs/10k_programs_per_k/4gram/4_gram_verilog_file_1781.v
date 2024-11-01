@@ -1,22 +1,20 @@
-// Seed: 3049721847
-module module_0 (
-    input id_0,
-    input reg id_1,
-    output reg id_2
-);
-  always @*
-    @(negedge 1 or id_1) begin
-      id_2 <= id_1;
-    end
-  assign id_2 = id_1;
-  logic id_3;
-  logic id_4;
-  logic id_5;
-  logic id_6;
-  assign id_4 = id_4;
-  defparam id_7.id_8 = 1'b0;
+// Seed: 445168616
+module module_0;
+  wire id_2 = id_1;
+  module_2();
 endmodule
-module module_1 (
+module module_1;
+  assign id_1 = 1;
+  always @(negedge id_1) begin
+    disable id_2;
+  end
+  wire id_3 = ((1));
+  module_0();
+  wire id_4;
+endmodule
+module module_2 ();
+endmodule
+module module_3 (
     id_1,
     id_2,
     id_3,
@@ -26,30 +24,20 @@ module module_1 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    id_10
 );
-  output id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  always @(*) id_11 = 1;
-  always @(1'd0 or posedge id_0) begin
-    SystemTFIdentifier("" - 1'b0, id_9, 1 - 1 - "", 1, id_1);
+  inout wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  for (id_11 = id_11; id_10; id_2 = 1) begin : id_12
+    assign id_11 = 1;
   end
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17;
+  module_2();
 endmodule

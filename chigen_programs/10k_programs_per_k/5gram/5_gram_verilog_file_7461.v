@@ -1,33 +1,49 @@
-// Seed: 3844834843
-`timescale 1ps / 1ps
+// Seed: 2737608520
 module module_0 (
-    output id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    output id_8
-    , id_15,
-    output id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input logic id_14
+    output wor id_0,
+    output supply0 id_1
 );
-  generate
-    always @(posedge id_1 or id_14) begin
-      #1 begin
-        SystemTFIdentifier(id_12);
-        id_8 <= 1 ? id_11 : 1;
-      end
-      #1;
-      id_15 = 1;
-      SystemTFIdentifier(id_14, 1, id_1 * 1'b0, id_13, 1'b0, 1, id_15);
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    input wand id_0,
+    output wand id_1,
+    output tri0 id_2,
+    input supply0 id_3,
+    input wor id_4
+);
+  wire id_6, id_7;
+  module_0(
+      id_1, id_1
+  );
+endmodule
+module module_2 (
+    input  logic id_0,
+    input  wire  id_1,
+    output uwire id_2,
+    input  uwire id_3,
+    output logic id_4,
+    input  tri1  id_5,
+    input  wire  id_6,
+    input  wor   id_7,
+    input  logic id_8,
+    input  tri0  id_9,
+    input  wire  id_10,
+    output uwire id_11,
+    output logic id_12
+);
+  assign id_12 = id_7 ? &id_1 : id_0 ? id_0 : 1;
+  wire id_14;
+  assign id_12 = 1;
+  assign id_12 = id_8;
+  always @(1 or posedge id_7) begin
+    if (1) begin
+      if (1) id_12 <= 1;
+      else id_4 <= 1 / 1;
     end
-  endgenerate
-  logic id_16;
+  end
+  wire id_15;
+  module_0(
+      id_2, id_11
+  );
 endmodule

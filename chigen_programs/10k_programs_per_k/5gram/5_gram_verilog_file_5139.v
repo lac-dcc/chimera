@@ -1,30 +1,33 @@
-// Seed: 3738771201
-`define pp_22 0
-`define pp_23 0
-`default_nettype id_5
+// Seed: 237992811
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output id_4,
-    inout id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    input supply0 id_13,
-    output id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    input id_18,
-    input id_19,
-    input logic id_20,
-    input id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_14 = id_13[-(1)];
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(posedge 1 * id_2 - 1 & id_2 - 1) begin
+    if (id_1) assert (1 + 1 ^ id_3 + id_2 + id_2);
+  end
+endmodule
+module module_1 (
+    input uwire id_0
+    , id_11,
+    input supply0 id_1,
+    output supply0 id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input tri id_5,
+    input tri id_6,
+    output supply1 id_7,
+    input wand id_8,
+    output uwire id_9
+);
+  wire id_12;
+  module_0(
+      id_11, id_11, id_11, id_12
+  );
 endmodule

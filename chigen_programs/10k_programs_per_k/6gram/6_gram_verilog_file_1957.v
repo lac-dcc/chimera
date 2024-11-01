@@ -1,35 +1,38 @@
-// Seed: 3089811198
-`define pp_5 0
-`timescale 1ps / 1ps `timescale 1ps / 1 ps
-`define pp_6 0
+// Seed: 1348969224
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    output logic id_3,
-    output id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  reg id_5;
-  generate
-    always @(id_0 or posedge 1'h0 != 1'b0) begin
-      if (id_5) begin
-        SystemTFIdentifier;
-        id_4 <= 1;
-      end
-    end
-    if (1) begin
-      type_0 id_6 (
-          id_2#(.id_1(1)),
-          id_2 == id_1,
-          1 | id_3
-      );
-      type_1 id_7 (
-          .id_0(id_2),
-          .id_1(1)
-      );
-    end
-  endgenerate
-  assign id_4 = id_5;
-  defparam id_8.id_9 = id_8;
-  logic id_10 = 1;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3 = 1'b0 - 1;
+  assign id_1 = 1 < id_4;
+  wire id_5;
+  wire id_6;
+endmodule
+module module_1 (
+    input wand id_0,
+    input wire id_1,
+    input tri1 id_2
+    , id_14,
+    input tri id_3,
+    input wand id_4,
+    input uwire id_5,
+    input tri id_6,
+    input uwire id_7,
+    input supply0 id_8,
+    input supply0 id_9,
+    output supply1 id_10,
+    output wor id_11,
+    output tri0 id_12
+);
+  id_15(
+      .id_0(id_1), .id_1(1 / id_7 + (1)), .id_2(1)
+  ); module_0(
+      id_14, id_14, id_14, id_14
+  );
 endmodule

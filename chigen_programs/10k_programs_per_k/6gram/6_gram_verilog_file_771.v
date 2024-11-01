@@ -1,24 +1,31 @@
-// Seed: 501327786
-`define pp_14 0
+// Seed: 429942919
 module module_0 (
-    input logic id_0,
-    output id_1,
-    output logic id_2,
-    input id_3,
-    output logic id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    input id_8
-    , id_14,
-    input id_9,
-    output id_10,
-    output id_11,
-    input id_12,
-    output id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_15;
-  assign id_5 = 1;
-  logic id_16, id_17, id_18;
-  assign id_4 = id_17;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  tri1 id_5;
+  generate
+    if (id_2) wire id_6;
+    else assign id_4 = 1 ? 1 : id_5 ? 1 <= ~id_5 : 1;
+  endgenerate
+endmodule
+module module_1 (
+    input wire id_0,
+    output wire id_1,
+    input tri0 id_2,
+    input wand id_3,
+    input supply0 id_4,
+    input wand id_5,
+    output tri id_6
+);
+  wor id_8 = 1;
+  module_0(
+      id_8, id_8, id_8, id_8
+  );
 endmodule

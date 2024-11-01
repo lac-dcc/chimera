@@ -1,10 +1,25 @@
-// Seed: 3449527355
-`resetall
+// Seed: 3565585157
 module module_0 ();
   initial begin
-    for (id_0 = 1; 1; id_0 = id_0) begin
-      id_0 <= 1;
-    end
+    if (1) id_1 = ((1) + 1);
   end
-  logic id_2;
+  assign id_2[1!=1] = "";
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_7, id_8, id_9, id_10, id_11;
+  final $display(1, 1);
+  module_0();
 endmodule

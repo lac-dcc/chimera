@@ -1,13 +1,39 @@
-// Seed: 4205896276
-module module_0 (
-    output id_0,
-    input  id_1,
-    input  id_2,
-    input  id_3,
-    input  id_4,
-    output id_5,
-    input  id_6,
-    output id_7
+// Seed: 3397323761
+module module_0 ();
+  initial $display(1'h0);
+  module_3();
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  logic id_8;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = id_2 !=? 1;
+  module_0();
+endmodule
+module module_2;
+  wire id_1;
+  module_0();
+endmodule
+module module_3;
+  assign id_1 = id_1;
+  wire id_2;
+endmodule
+module module_4;
+  wand id_2 = 1;
+  module_3();
+endmodule
+module module_5 (
+    output wire id_0,
+    output wor  id_1
+);
+  assign id_0 = 1 == 1'b0;
+  string id_3, id_4;
+  assign id_4 = id_4;
+  module_3();
+  assign id_1 = 1;
+  generate
+    assign id_3 = "";
+  endgenerate
 endmodule

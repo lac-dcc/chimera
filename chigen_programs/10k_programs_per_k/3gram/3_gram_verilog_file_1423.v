@@ -1,3 +1,24 @@
-// Seed: 3408500477
-`define pp_0 0
-`define pp_1 0
+// Seed: 1350008557
+module module_0 (
+    output wand id_0,
+    input supply1 id_1,
+    input supply0 id_2,
+    output supply1 id_3,
+    input supply0 id_4
+);
+  generate
+    assign id_0 = 1;
+  endgenerate
+endmodule
+module module_1 (
+    output tri1 id_0,
+    input  tri0 id_1
+);
+  assign id_0 = id_1;
+  assign id_0 = {id_1{1}};
+  module_0(
+      id_0, id_1, id_1, id_0, id_1
+  ); id_3(
+      .id_0(id_0), .id_1(id_1), .id_2(1 ? 1 : 1), .id_3(id_1), .id_4(~1)
+  );
+endmodule

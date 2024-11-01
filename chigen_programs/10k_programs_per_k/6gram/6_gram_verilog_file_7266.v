@@ -1,60 +1,47 @@
-// Seed: 1583319420
-`timescale 1ps / 1 ps
-module module_0 (
+// Seed: 1694266309
+module module_0 ();
+endmodule
+module module_1 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    id_3
 );
-  inout id_21;
-  input id_20;
-  inout id_19;
-  inout id_18;
-  inout id_17;
-  output id_16;
-  inout id_15;
-  output id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  assign id_2 = 1;
-  logic id_21 = id_17;
-  type_28 id_22 (
-      .id_0(id_15),
-      .id_1(id_5 - (1'h0 || id_20))
-  );
-  type_29(
-      1, (1), (1)
-  );
-  logic id_23, id_24;
-  logic id_25;
-  logic id_26;
-  assign id_12 = 1;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_3 = 1 == ~id_2;
+  module_0();
+  nmos (1, 1, $display (id_2 < id_1));
+  always @(1 or posedge id_2) id_3 = #1 id_2;
+endmodule
+module module_2 (
+    input wor id_0,
+    input supply0 id_1,
+    output wand id_2,
+    output wor id_3,
+    output supply0 id_4,
+    input wor id_5,
+    input uwire id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input supply1 id_9,
+    input supply0 id_10,
+    input wor id_11,
+    input wor id_12,
+    input uwire id_13,
+    output wor id_14,
+    output tri1 id_15,
+    output wand id_16,
+    input supply0 id_17,
+    output tri id_18,
+    output wand id_19,
+    input tri1 id_20,
+    input tri1 id_21,
+    output tri id_22
+);
+  always @* if (id_11) forever id_22 = id_12 == id_9 < 1;
+  wire id_24;
+  wire id_25;
+  wire id_26;
+  module_0();
 endmodule

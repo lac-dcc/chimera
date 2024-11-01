@@ -1,50 +1,31 @@
-// Seed: 452446482
-`define pp_21 0
-`timescale 1ps / 1ps `timescale 1ps / 1ps
+// Seed: 67130695
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    input tri id_0,
+    input supply0 id_1,
+    input tri1 id_2,
+    input wand id_3,
+    output uwire id_4,
+    output tri id_5,
+    input wor id_6
 );
-  output id_21;
-  inout id_20;
-  input id_19;
-  input id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  logic id_21;
-  logic id_22 = 1'h0;
+  assign id_5 = 1;
+  wire id_8;
+  wire id_9;
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply0 id_1,
+    input wand id_2,
+    output tri id_3,
+    output wor id_4,
+    input tri1 id_5,
+    output tri1 id_6
+);
+  wor id_8;
+  assign id_8 = id_5;
+  module_0(
+      id_2, id_5, id_5, id_0, id_6, id_4, id_5
+  );
+  always #1 id_8 = id_2 & id_5 / id_8;
+  wire id_9;
 endmodule

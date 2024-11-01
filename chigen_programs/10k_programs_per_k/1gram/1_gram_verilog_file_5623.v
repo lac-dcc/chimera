@@ -1,5 +1,18 @@
-// Seed: 2818420004
+// Seed: 4033850314
 module module_0 (
+    id_1
+);
+  input wire id_1;
+  assign id_2 = {1'b0, 1'b0 + 1} < 1;
+  wire id_3 = id_3;
+  always if (id_1 - 1) id_2 = 'b0;
+  logic [7:0][1] id_4 (
+      1,
+      id_2,
+      1
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -14,25 +27,28 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16
+    id_15
 );
-  input id_16;
-  inout id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  integer id_16;
-  assign id_13 = 1;
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_14 = 1;
+  uwire id_16 = 1, id_17;
+  module_0(
+      id_6
+  );
+  tri   id_18 = 1;
+  uwire id_19 = id_17;
 endmodule

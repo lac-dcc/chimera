@@ -1,37 +1,42 @@
-// Seed: 3161481977
-`define pp_19 0
+// Seed: 694023008
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    output logic id_7,
-    output logic id_8,
-    inout logic id_9,
-    output id_10,
-    input tri id_11,
-    output id_12,
-    output id_13,
-    input logic id_14,
-    output tri0 id_15,
-    input logic id_16,
-    output logic id_17,
-    input id_18
+    id_1,
+    id_2
 );
-  assign id_15[1] = id_14;
-  logic id_19, id_20, id_21, id_22;
-  logic id_23;
-  assign id_10 = id_16;
-  type_40(
-      id_4 - 1, 1'b0
+  output wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_7;
+  module_0(
+      id_4, id_2
   );
-  logic id_24;
-  logic id_25;
-  assign id_19 = id_11[1];
-  logic id_26;
-  logic id_27;
-  genvar id_28;
+endmodule
+module module_2 (
+    input  tri  id_0,
+    input  tri0 id_1,
+    output wor  id_2,
+    output tri1 id_3,
+    output tri1 id_4,
+    output wire id_5
+);
+  wire id_7;
+  module_0(
+      id_7, id_7
+  );
+  int id_8 = 1'd0;
 endmodule

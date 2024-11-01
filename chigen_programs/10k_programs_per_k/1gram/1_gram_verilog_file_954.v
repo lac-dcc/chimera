@@ -1,30 +1,37 @@
-// Seed: 3013061848
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output logic id_4
-    , id_24,
-    input id_5,
-    input id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    output logic id_15,
-    inout logic id_16,
-    output id_17,
-    output logic id_18,
-    input id_19,
-    output logic id_20,
-    output logic id_21,
-    input id_22,
-    output id_23#(1, id_5 + id_22)
-);
+// Seed: 2199845880
+module module_0 ();
+  id_1(
+      1, ($display), ~id_1, id_1
+  ); module_2(
+      id_1, id_1
+  );
 endmodule
-`default_nettype id_2
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_3 = 1'h0 - id_1;
+  wire id_4;
+  module_0();
+  wire id_5;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
+  tri1 id_3 = (1);
+  initial $display(1);
+  assign id_2 = 1;
+  uwire id_4;
+  always begin
+    id_2 = 1;
+  end
+  assign id_4 = 1;
+  wire id_5;
+endmodule

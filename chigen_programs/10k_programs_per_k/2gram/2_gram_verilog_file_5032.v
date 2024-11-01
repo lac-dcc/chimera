@@ -1,30 +1,49 @@
-// Seed: 2943562572
-`timescale 1ps / 1ps
+// Seed: 3005925749
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    id_4
 );
-  input id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  type_10 id_9 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_8 && id_7)
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always
+  fork
+  join_any
+  assign id_2 = id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_4 = id_3[1 : 1'd0]++;
+  module_0(
+      id_4, id_4, id_4, id_4
   );
 endmodule
-`default_nettype id_3
+module module_2 (
+    output logic id_0,
+    output wor id_1,
+    input supply0 id_2,
+    input wire id_3
+);
+  always_comb begin
+    if (id_3) begin
+      id_0 <= (1);
+      id_1 = 1'h0;
+    end
+  end
+  wire id_5;
+  module_0(
+      id_5, id_5, id_5, id_5
+  );
+  wire id_6;
+endmodule

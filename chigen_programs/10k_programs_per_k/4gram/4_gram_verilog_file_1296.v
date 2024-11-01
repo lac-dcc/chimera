@@ -1,17 +1,45 @@
-// Seed: 1912404953
+// Seed: 2461144542
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    output id_6,
-    input logic id_7,
-    output logic id_8,
-    input id_9,
-    input logic id_10
+    output tri   id_0,
+    input  tri   id_1,
+    input  wand  id_2,
+    output wire  id_3,
+    input  uwire id_4,
+    input  wor   id_5,
+    output wor   id_6,
+    output tri   id_7
 );
-  assign id_6[""] = (1 ? 1 : id_3);
-  defparam id_11.id_12 = 1'b0; timeprecision 1ps;
+endmodule
+module module_1 (
+    input  wand id_0,
+    output tri0 id_1,
+    input  wand id_2,
+    output tri0 id_3
+);
+  wor id_5 = 1, id_6;
+  module_0(
+      id_3, id_0, id_2, id_1, id_0, id_2, id_3, id_3
+  );
+  generate
+    assign id_3 = id_2;
+  endgenerate
+endmodule
+module module_2;
+  assign id_1 = id_1;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(*) begin
+    fork
+      id_1 = id_1;
+      id_1 <= id_3[1'h0];
+    join_any
+  end
+  module_2();
 endmodule

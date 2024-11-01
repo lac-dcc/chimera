@@ -1,4 +1,4 @@
-// Seed: 908611655
+// Seed: 342100881
 module module_0 (
     id_1,
     id_2,
@@ -23,32 +23,97 @@ module module_0 (
     id_21,
     id_22,
     id_23,
-    id_24
+    id_24,
+    id_25,
+    id_26,
+    id_27
 );
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_5 = 1;
-  logic id_24;
+  output wire id_27;
+  output wire id_26;
+  output wire id_25;
+  output wire id_24;
+  input wire id_23;
+  input wire id_22;
+  output wire id_21;
+  output wire id_20;
+  output wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  output wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_28;
+endmodule
+module module_0 (
+    output tri1 id_0
+    , id_25,
+    output tri1 id_1,
+    output tri0 id_2,
+    input tri0 module_1,
+    output wand id_4,
+    input supply1 id_5,
+    input tri id_6,
+    output wire id_7,
+    output tri id_8,
+    output tri id_9,
+    input wire id_10,
+    input wire id_11,
+    input wand id_12,
+    input wand id_13,
+    output wand id_14,
+    input supply0 id_15,
+    input supply1 id_16,
+    input wand id_17,
+    input wor id_18,
+    input wire id_19,
+    output supply0 id_20,
+    output tri1 id_21,
+    input wire id_22,
+    input supply0 id_23
+);
+  wire id_26;
+  supply0 id_27;
+  module_0(
+      id_25,
+      id_26,
+      id_26,
+      id_25,
+      id_26,
+      id_25,
+      id_25,
+      id_25,
+      id_26,
+      id_25,
+      id_25,
+      id_25,
+      id_26,
+      id_25,
+      id_26,
+      id_26,
+      id_25,
+      id_26,
+      id_26,
+      id_26,
+      id_25,
+      id_25,
+      id_25,
+      id_26,
+      id_26,
+      id_25,
+      id_25
+  );
+  assign id_27 = id_19;
 endmodule

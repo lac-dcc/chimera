@@ -1,19 +1,27 @@
-// Seed: 4185350380
-`default_nettype id_3
-`define pp_6 0
+// Seed: 863869987
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    input logic id_5#(
-        .id_6(1),
-        .id_7(1),
-        .id_8(id_4)
-    )
+    input uwire id_0,
+    output supply0 id_1,
+    output wire id_2,
+    output wand id_3
 );
-  if (id_3) assign id_7 = id_5;
-  logic id_9, id_10, id_11, id_12, id_13, id_14;
-  logic id_15, id_16;
+  always_comb begin
+    $display(id_0);
+  end
+  wire id_5, id_6, id_7, id_8;
+endmodule
+module module_1 (
+    output wire  id_0,
+    output uwire id_1,
+    input  uwire id_2
+);
+  assign id_0 = id_2;
+  wor id_4;
+  logic [7:0] id_5;
+  assign id_0 = (id_5[1'd0!==1]);
+  module_0(
+      id_2, id_0, id_0, id_0
+  );
+  always_ff $display(1 * 1);
+  for (id_6 = 1; 1; id_0 = 1) assign id_1 = 1 - id_4;
 endmodule

@@ -1,5 +1,29 @@
-// Seed: 2949448431
-module module_0 (
+// Seed: 602604590
+module module_0 ();
+  tri id_1;
+  assign id_1 = 1;
+  wire id_2;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    output uwire id_1,
+    output tri   id_2
+);
+  logic [7:0] id_4;
+  module_0();
+  wire id_5;
+  assign id_4[1] = id_0;
+endmodule
+module module_2 (
+    output tri  id_0,
+    output wand id_1,
+    input  wor  id_2,
+    output wor  id_3
+);
+  assign id_3 = 1'b0;
+  module_0();
+endmodule
+module module_3 (
     id_1,
     id_2,
     id_3,
@@ -10,32 +34,30 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  input id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  inout id_6;
-  inout id_5;
-  input id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign id_5 = 1;
-endmodule
-module module_1 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output logic id_7
-);
-  type_15(
-      1 / 1, 1 << 1, id_9
-  );
+  input wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  output wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always @(posedge (1) or id_4) begin
+    id_1 <= id_13;
+    id_6 = id_2 != id_4;
+  end
+  module_0();
 endmodule

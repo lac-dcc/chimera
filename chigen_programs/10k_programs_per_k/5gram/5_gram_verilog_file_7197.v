@@ -1,37 +1,37 @@
-// Seed: 4184869763
+// Seed: 2324496122
 module module_0 (
-    output id_0,
-    output id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output logic id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    input logic id_16,
-    output logic id_17,
-    output id_18,
-    output logic id_19,
-    output id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  type_29 id_21 (
-      .id_0(id_12),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_8),
-      .id_4(1),
-      .id_5(1),
-      .id_6(1'b0),
-      .id_7(id_20),
-      .id_8(1),
-      .id_9(1)
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always @(*) $display(id_6 == 1, id_8);
+  wire id_13;
+  wire id_14;
+endmodule
+module module_1;
+  assign id_1 = id_1 ~^ !id_1 - 1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
   );
 endmodule

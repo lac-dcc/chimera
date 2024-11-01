@@ -1,26 +1,31 @@
-// Seed: 2689063720
+// Seed: 2726640071
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    input logic id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    input logic id_14,
-    input logic id_15,
-    input logic id_16,
-    output logic id_17,
-    input logic id_18
+    input wand  id_0,
+    input tri0  id_1,
+    input tri0  id_2,
+    input uwire id_3,
+    input tri   id_4
+    , id_7,
+    input wor   id_5
 );
-  timeprecision 1ps; type_33(
-      id_16, 1 | 1
+  wire id_8;
+  wire id_9;
+  wire id_10;
+  wand id_11 = 1;
+  wire id_12;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input wire id_1,
+    input wor id_2,
+    input tri id_3,
+    input supply1 id_4,
+    output wire id_5,
+    output uwire id_6
+);
+  wire id_8;
+  wire id_9;
+  module_0(
+      id_3, id_1, id_1, id_0, id_3, id_3
   );
 endmodule

@@ -1,30 +1,64 @@
-// Seed: 3168195352
-`timescale 1ps / 1ps
+// Seed: 1129082369
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input logic id_6,
-    output id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  assign id_5 = id_0;
-  reg id_8;
-  always @(posedge 1) begin
-    id_8 <= id_2;
-    wait (1);
-    id_7 <= 1;
-    for (id_5 = id_6; id_3 != id_6; id_5 = "" - id_2 | id_0) begin
-      id_5 <= 1;
-      id_5 <= 1'd0;
-    end
-    id_7 <= 1;
-    SystemTFIdentifier(id_8, {1 << id_4, 1'b0});
-    if (1) id_8 <= 1;
-  end
-  logic id_9 = 1 & 1;
-  assign id_5 = 1;
-  assign id_5 = 1 - id_4;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_5 = id_2;
+  wire id_9;
+  specify
+    specparam id_10 = 1;
+  endspecify
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
+);
+  output wire id_16;
+  input wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_17;
+  module_0(
+      id_6, id_12, id_6, id_17, id_10, id_5, id_8, id_13
+  );
 endmodule

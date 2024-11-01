@@ -1,8 +1,33 @@
-// Seed: 2310793983
-`define pp_0 0
-`define pp_1 0
-parameter `pp_0 = 1'b0;
-`define pp_2 0
-`timescale 1ps / 1 ps
-`define pp_3 0
-`timescale 1 ps / 1ps
+// Seed: 3915289764
+module module_0;
+  assign id_1 = id_1 + id_1;
+  module_2();
+endmodule
+module module_1 ();
+  module_0();
+  assign id_1 = 1;
+endmodule
+module module_2;
+  id_2(
+      .id_0(1)
+  );
+endmodule
+module module_3 (
+    output wor  id_0
+    , id_4,
+    input  wire id_1,
+    output tri0 id_2
+);
+  wire id_5;
+  module_2();
+endmodule
+module module_4 (
+    input wor id_0
+    , id_4,
+    input supply1 id_1,
+    input wire id_2
+);
+  wire id_5;
+  module_2();
+  assign id_4 = 1;
+endmodule

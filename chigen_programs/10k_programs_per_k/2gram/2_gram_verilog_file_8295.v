@@ -1,17 +1,26 @@
-// Seed: 2466287241
-`resetall
-`define pp_7 0
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output id_2
-    , id_7,
-    input logic id_3,
-    input logic id_4,
-    input logic id_5,
-    output logic id_6
+// Seed: 1791135750
+module module_0;
+  wor   id_2 = 1'd0;
+  wire  id_4;
+  wire  id_5;
+  uwire id_6;
+  assign id_6 = id_2;
+  always @(1 == 1) id_2 = id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_8 = 1;
-  logic id_9;
-  assign id_6 = 1;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_4 :
+  assert property (@(posedge 1'b0 >= id_2) 1)
+  else @(posedge id_4 ? id_1 : 1) id_2 <= 1'h0;
+  wire id_5;
+  tri0 id_6 = 1 + 1'd0;
+  wire id_7;
+  module_0();
+  wire id_8;
 endmodule

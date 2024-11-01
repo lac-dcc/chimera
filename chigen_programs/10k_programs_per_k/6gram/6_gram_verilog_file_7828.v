@@ -1,31 +1,29 @@
-// Seed: 1686098307
+// Seed: 1246935919
 module module_0;
-  always @(posedge 1) begin
-    if ((id_0 - id_0)) begin
-      id_0 <= (id_0) + 1;
-      if (1) id_0 <= id_0;
+  wand id_1;
+  wire id_2;
+  generate
+    for (id_3 = 1; 1; id_1 = id_3) begin : id_4
+      assign id_4 = 1;
     end
-  end
-  wand id_2;
-  type_9 id_3 (
-      .id_0(1),
-      .id_1(!id_1),
-      .id_2(id_4),
-      .id_3(id_2[1]),
-      .id_4(1),
-      .id_5(id_2),
-      .id_6()
-  );
-  logic id_5 = 1;
-  logic id_6;
-  assign id_5 = id_1;
-  always @(posedge id_6) begin
-    #1;
-    id_6 = 1;
-  end
-  assign id_6 = "" || 1;
-  always @(posedge id_1 or 1) begin
-    SystemTFIdentifier;
-  end
-  logic id_7;
+  endgenerate
+endmodule
+module module_1 (
+    output wand id_0,
+    output tri  id_1,
+    input  tri1 id_2,
+    output wor  id_3
+);
+  id_5(
+      .id_0(id_0),
+      .id_1(((1))),
+      .id_2(1'd0),
+      .id_3({1 === id_1, 1}),
+      .id_4(1 & 1 ? 1 : 1),
+      .id_5(1'h0),
+      .id_6(1'b0),
+      .id_7(id_2),
+      .id_8(1'b0),
+      .id_9(1 < 1)
+  ); module_0();
 endmodule

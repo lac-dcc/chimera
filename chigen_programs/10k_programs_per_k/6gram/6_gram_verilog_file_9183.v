@@ -1,29 +1,30 @@
-// Seed: 4158360345
+// Seed: 1240678764
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    output reg id_5
+    output tri id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    input supply0 id_3,
+    output tri0 id_4
 );
-  initial begin
-    @(posedge 1) id_5 = id_2;
-    case (1)
-      1'h0:  id_5 = id_3[1];
-      1 - 1: id_5 = id_1;
-      id_2:  id_5 = 1;
-      default: begin
-        id_5 = 1;
-        id_5 <= 1;
-        id_5 <= 1;
-      end
-    endcase
-  end
-  logic id_6 = 1;
-  initial
-    #1 begin
-      SystemTFIdentifier;
-    end
+  wire id_6;
+  wire id_7;
+  tri  id_8 = 1;
+  wire id_9;
+  wire id_10;
+  wire id_11;
 endmodule
-`define pp_6 0
+module module_1 (
+    input  supply0 id_0,
+    output uwire   id_1,
+    input  supply0 id_2
+    , id_5, id_6,
+    output logic   id_3
+);
+  supply1 id_7;
+  module_0(
+      id_7, id_2, id_7, id_2, id_7
+  );
+  initial id_3 <= 1;
+  assign id_7 = id_0;
+  wire id_8;
+endmodule

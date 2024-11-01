@@ -1,25 +1,34 @@
-// Seed: 3333924004
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    output id_2,
-    input logic id_3,
-    output id_4,
-    output logic id_5,
-    output id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    output id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    input logic id_17
+// Seed: 1780687218
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    output logic id_0,
+    output wor id_1,
+    input supply0 id_2,
+    input wor id_3,
+    output wand id_4,
+    input uwire id_5,
+    output wand id_6,
+    input tri id_7,
+    output wand id_8,
+    input tri1 id_9,
+    input tri1 id_10,
+    input tri id_11,
+    input wire id_12,
+    output wor id_13
 );
-  logic id_18;
-  logic id_19;
-  logic id_20;
+  always #id_15
+    if (id_15) begin
+      id_0 <= ^id_9;
+    end
+  id_16 :
+  assert property (@(negedge 1) 1)
+  else begin
+    if (id_9) id_6 = 1;
+  end
+  final $display(1 ^ 1'b0, id_11);
+  wire id_17;
+  module_0();
+  always @(posedge 1 or posedge 1 + (1'b0)) id_16 = 1'b0;
 endmodule

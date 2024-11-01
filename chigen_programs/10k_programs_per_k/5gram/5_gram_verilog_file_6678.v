@@ -1,41 +1,33 @@
-// Seed: 2034229557
+// Seed: 2602300975
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    output id_13,
-    input logic id_14,
-    output id_15,
-    output logic id_16,
-    inout id_17,
-    input id_18,
-    input logic id_19,
-    output id_20,
-    output logic id_21,
-    input id_22,
-    input id_23
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_24;
-  logic id_25;
-  assign id_24 = 1'b0;
-  logic id_26;
-  logic id_27;
-  type_40(
-      1, id_5
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wand id_4;
+  assign id_4 = 1'b0;
+  tri1 id_5 = id_5;
+  assign id_5 = id_4;
+  always_comb @(negedge 1'b0 or posedge id_2) id_2 = 1;
+  assign id_4 = 1'b0;
+  wire id_6;
+  if (id_2) wire id_7;
+  wire id_8 = id_1;
+  assign id_4 = 1;
+  wire id_9;
+endmodule
+module module_1 (
+    output supply0 id_0,
+    input wire id_1,
+    input wor id_2,
+    output tri1 id_3,
+    input wire id_4
+);
+  wire id_6;
+  module_0(
+      id_6, id_6, id_6
   );
-  logic id_28 = id_23;
-  type_42(
-      id_23, id_10, 1, id_24
-  );
-  logic id_29, id_30;
 endmodule

@@ -1,35 +1,26 @@
-// Seed: 3682611904
-`define pp_0 0
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1 ps / 1ps
-`define pp_20 0
-`define pp_21 0
-`define pp_22 0
-`define pp_23 0
-`define pp_24 0
-`define pp_25 0
-`define pp_26 0
-`define pp_27 0
-`define pp_28 0
-`define pp_29 0
-localparam `pp_11 = 1;
-`resetall `timescale 1 ps / 1 ps
-`define pp_30 0
+// Seed: 1297682786
+module module_0;
+  tri0 id_2 = 1'b0;
+  wire id_3;
+  wire id_4;
+  wire id_5 = id_4(1);
+endmodule
+module module_1 #(
+    parameter id_12 = 32'd19,
+    parameter id_13 = 32'd84
+) (
+    input  tri   id_0,
+    input  tri0  id_1,
+    output uwire id_2,
+    output uwire id_3,
+    output tri   id_4,
+    input  wire  id_5,
+    output tri1  id_6,
+    output tri0  id_7
+);
+  tri0 id_9;
+  supply1 id_10 = id_5;
+  assign id_4 = id_9;
+  supply0 id_11 = 1'h0;
+  module_0(); defparam id_12.id_13 = 1'b0;
+endmodule

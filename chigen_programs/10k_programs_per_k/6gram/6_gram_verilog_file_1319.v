@@ -1,32 +1,40 @@
-// Seed: 2486165810
+// Seed: 550339701
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    output logic id_6,
-    input logic id_7,
-    input logic id_8
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  type_19 id_9 (
-      .id_0(1),
-      .id_1(id_7),
-      .id_2(1),
-      .id_3(1'b0),
-      .id_4((1'd0))
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  tri1 id_8;
+  assign id_8 = id_4;
+  assign id_4 = 1 ? 1 & id_5 : 1;
+  assign id_7 = id_4 ^ id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_5;
+  module_0(
+      id_1, id_3, id_5, id_5, id_1, id_3, id_1
   );
-  logic id_10;
-  assign id_5 = id_9;
-  reg   id_11 = id_3;
-  logic id_12;
-  type_23(
-      1'b0, id_2, id_10
-  );
-  integer id_13;
-  always #1 begin
-    id_11 <= 1;
-    id_11 <= id_3;
-  end
+  assign id_2[1'b0] = (id_1);
+  assign id_3 = id_4;
+  notif1 (id_1, id_4, id_5);
 endmodule

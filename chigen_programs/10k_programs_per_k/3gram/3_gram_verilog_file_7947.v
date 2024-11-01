@@ -1,33 +1,30 @@
-// Seed: 2694582847
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    output logic id_4,
-    input logic id_5,
-    input logic id_6
-);
-  logic id_7;
+// Seed: 646020291
+module module_0 ();
+  wand id_1;
+  wire id_2;
+  wire id_3;
+  id_4(
+      .id_0(id_2(id_1, 1'b0, id_2, 1'b0, 1)), .id_1(1), .id_2(1), .id_3(1'h0 & 1), .id_4(id_1)
+  );
+  wire id_5 = id_3;
+  wire id_6, id_7, id_8;
 endmodule
 module module_1 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  assign id_1[1] = 1;
-  logic id_7, id_8, id_9, id_10, id_11, id_12;
-  generate
-    assign id_3 = id_5;
-  endgenerate
-  logic id_13;
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  logic id_17, id_18;
-  logic id_19;
-  logic id_20 = id_5;
+  inout wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_8;
+  module_0();
 endmodule

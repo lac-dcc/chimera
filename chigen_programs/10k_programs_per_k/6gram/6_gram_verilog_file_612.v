@@ -1,26 +1,38 @@
-// Seed: 2389874556
-`default_nettype id_3 `timescale 1 ps / 1ps
+// Seed: 214995882
 module module_0 (
-    output logic id_0,
-    input logic id_1,
-    output logic id_2,
-    output logic id_3
-    , id_11,
-    input wire id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    output logic id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  type_0 id_12 (
-      .id_0(1),
-      .id_1(),
-      .id_2(id_1)
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  id_5(
+      .id_0(1), .id_1(1)
   );
-  assign id_0 = id_4[1] - id_1;
-  initial
-  fork
-  join
+  wire id_6;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  assign id_5[1'b0] = id_7;
+  module_0(
+      id_4, id_4, id_4, id_3
+  );
 endmodule

@@ -1,20 +1,23 @@
-// Seed: 2389448806
+// Seed: 542226670
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input logic id_13
+    input uwire id_0,
+    input wor id_1,
+    input supply0 id_2,
+    input supply0 id_3
 );
-  logic id_14 = id_3.id_5;
+  assign id_5 = 1;
+  initial $display(1, id_2, 1, id_3, id_2.id_0, 1, 1, 1, 1 && id_2);
+  wire id_6;
+  tri  id_7 = 1;
 endmodule
-`define pp_14 0
+macromodule module_1 (
+    input wire id_0,
+    input wand id_1,
+    input supply1 id_2,
+    output wand id_3
+);
+  assign id_3 = (1) - (1);
+  module_0(
+      id_2, id_2, id_0, id_2
+  );
+endmodule

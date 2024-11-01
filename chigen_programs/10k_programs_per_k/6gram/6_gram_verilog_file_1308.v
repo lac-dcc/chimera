@@ -1,32 +1,52 @@
-// Seed: 69020923
-module module_0 (
-    input reg id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    inout id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    output reg id_11,
-    input id_12,
-    input id_13,
-    output logic id_14,
-    input logic id_15,
-    input id_16,
-    input id_17,
-    output id_18,
-    output logic id_19
+// Seed: 2813693152
+module module_0;
+  assign id_1[1] = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  always @(posedge id_15) begin
-    id_11 <= id_0;
+  output wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1;
+  assign id_1 = 1 ? 1'b0 : id_1;
+  module_0();
+endmodule
+module module_2 ();
+  wire id_1;
+  module_0();
+endmodule
+module module_3 (
+    output supply1 id_0,
+    input tri id_1,
+    input supply1 id_2,
+    input uwire id_3,
+    input wand id_4
+);
+  tri0 id_6 = 1;
+  module_0();
+endmodule
+module module_4 (
+    input supply1 id_0,
+    input tri id_1,
+    input uwire id_2,
+    output supply1 id_3,
+    output wand id_4,
+    input uwire id_5,
+    input uwire id_6,
+    output wire id_7,
+    output tri0 id_8,
+    output wire id_9,
+    input tri1 id_10,
+    input uwire id_11,
+    output tri1 id_12,
+    input supply0 id_13,
+    input wire id_14,
+    input wor id_15
+    , id_17
+);
+  always @(posedge id_17) begin
+    assign id_3 = 1'd0;
   end
-  always @(1) begin
-    id_11 = id_9;
-    id_5  = 1;
-    SystemTFIdentifier(id_10, 'b0 + id_6);
-  end
+  module_0();
 endmodule

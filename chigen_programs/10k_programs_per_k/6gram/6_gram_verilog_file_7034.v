@@ -1,101 +1,42 @@
-// Seed: 2324706360
+// Seed: 256378855
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_37,
-    id_38,
-    id_39,
-    id_40,
-    id_41,
-    id_42,
-    id_43,
-    id_44,
-    id_45,
-    id_46,
-    id_47
+    input uwire id_0,
+    output uwire id_1,
+    output tri0 id_2,
+    input wand id_3,
+    input uwire id_4,
+    input wand id_5,
+    output wand id_6,
+    input uwire id_7,
+    output supply1 id_8,
+    output wand id_9
 );
-  input id_47;
-  input id_46;
-  output id_45;
-  output id_44;
-  input id_43;
-  input id_42;
-  input id_41;
-  output id_40;
-  inout id_39;
-  output id_38;
-  input id_37;
-  input id_36;
-  inout id_35;
-  output id_34;
-  output id_33;
-  output id_32;
-  input id_31;
-  input id_30;
-  inout id_29;
-  input id_28;
-  inout id_27;
-  output id_26;
-  inout id_25;
-  inout id_24;
-  output id_23;
-  input id_22;
-  output id_21;
-  output id_20;
-  output id_19;
-  output id_18;
-  output id_17;
-  inout id_16;
-  input id_15;
-  output id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  inout id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  always @(1) begin
-    id_17 <= id_28[1];
+  wire id_11;
+  wire id_12;
+endmodule
+module module_1 #(
+    parameter id_15 = 32'd7,
+    parameter id_16 = 32'd41
+) (
+    input  wor   id_0,
+    output uwire id_1,
+    output logic id_2
+);
+  reg id_4;
+  reg id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14 = id_5;
+  defparam id_15.id_16 = 1;
+  assign id_12 = id_6 | id_6 ? id_10 : 1;
+  module_0(
+      id_0, id_1, id_1, id_0, id_0, id_0, id_1, id_0, id_1, id_1
+  );
+  wire id_17;
+  reg  id_18 = id_11;
+  assign id_18 = 1;
+  wire id_19;
+  initial begin
+    assume (1);
+    id_6  <= 1'b0;
+    id_2  <= 1;
+    id_10 <= id_4;
   end
 endmodule

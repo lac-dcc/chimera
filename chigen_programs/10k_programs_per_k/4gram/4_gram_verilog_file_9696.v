@@ -1,94 +1,69 @@
-// Seed: 1261619116
-`timescale 1ps / 1ps
+// Seed: 2891981906
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_37,
-    id_38,
-    id_39,
-    id_40,
-    id_41,
-    id_42,
-    id_43,
-    id_44
+    output wor   id_0,
+    output wand  id_1,
+    input  wand  id_2,
+    input  tri0  id_3,
+    output uwire id_4
 );
-  inout id_44;
-  output id_43;
-  input id_42;
-  inout id_41;
-  input id_40;
-  input id_39;
-  output id_38;
-  output id_37;
-  inout id_36;
-  input id_35;
-  input id_34;
-  inout id_33;
-  output id_32;
-  input id_31;
-  input id_30;
-  input id_29;
-  input id_28;
-  inout id_27;
-  inout id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  output id_22;
-  input id_21;
-  input id_20;
-  output id_19;
-  output id_18;
-  inout id_17;
-  output id_16;
-  output id_15;
-  input id_14;
-  input id_13;
-  output id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  logic id_44;
+endmodule
+module module_0 (
+    output supply1 id_0,
+    output wor id_1,
+    input supply1 id_2,
+    input wor id_3,
+    output uwire id_4,
+    output supply1 id_5,
+    input tri1 id_6,
+    input wor id_7,
+    output wor id_8,
+    input tri0 id_9,
+    output wor id_10,
+    output tri0 id_11,
+    input wire id_12,
+    input wire id_13,
+    input wire id_14,
+    output wire id_15,
+    output tri0 id_16,
+    output supply0 id_17,
+    input wand id_18,
+    input tri0 id_19,
+    output uwire id_20,
+    input tri id_21,
+    input wor id_22,
+    output wor id_23,
+    output uwire id_24
+    , id_53,
+    output wire id_25,
+    input tri id_26,
+    output tri id_27,
+    input wand id_28,
+    input wire module_1,
+    input tri1 id_30,
+    output tri0 id_31,
+    output wire id_32,
+    input tri id_33,
+    output tri0 id_34,
+    input tri id_35,
+    input uwire id_36,
+    inout tri1 id_37,
+    input supply1 id_38,
+    input tri0 id_39,
+    input wor id_40,
+    output tri1 id_41,
+    input wand id_42,
+    output uwire id_43,
+    output tri0 id_44,
+    input wor id_45,
+    input supply1 id_46,
+    input wire id_47,
+    input wor id_48,
+    input supply0 id_49,
+    output supply0 id_50,
+    output supply1 id_51
+);
+  final $display(id_26);
+  module_0(
+      id_44, id_51, id_13, id_30, id_51
+  );
 endmodule

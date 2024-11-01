@@ -1,18 +1,48 @@
-// Seed: 3044169656
-`timescale 1 ps / 1ps
-module module_0 (
-    input id_0,
-    input logic id_1,
-    output id_2,
-    output logic id_3,
-    output logic id_4
+// Seed: 2798290004
+module module_0;
+  initial id_1 = id_1 & 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  logic id_5;
-  logic id_6;
-  logic id_7 = id_7;
-  logic id_8 = id_7;
-  initial begin
-    id_5 = 1;
-    SystemTFIdentifier(id_8);
-  end
+  output wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always
+  fork : id_17
+    $display(1);
+    id_18;
+    $display;
+  join
+  assign id_12 = id_15;
+  assign id_17 = 1;
+  module_0();
 endmodule

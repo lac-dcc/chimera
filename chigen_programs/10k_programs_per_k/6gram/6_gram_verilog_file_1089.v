@@ -1,30 +1,32 @@
-// Seed: 3711054099
-`define pp_23 0
-module module_0 (
-    output logic id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    input logic id_4,
-    output logic id_5,
-    output id_6,
-    output id_7,
-    output logic id_8,
-    output id_9,
-    output logic id_10,
-    input logic id_11,
-    input id_12,
-    output logic id_13,
-    input id_14,
-    output id_15,
-    input id_16,
-    output id_17,
-    output logic id_18,
-    input id_19,
-    input id_20,
-    input id_21
-    , id_23,
-    output id_22
+// Seed: 1133111726
+module module_0;
+  specify
+    (id_1 => id_2) = 1;
+  endspecify
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  assign id_3 = 1;
+  output wire id_2;
+  inout wire id_1;
+  wire id_3;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(posedge 1) begin
+    if (1)
+      for (id_2 = id_3; 1; id_1 = 1) begin
+        id_1 <= id_1;
+      end
+    else id_1 <= 1'b0;
+  end
+  module_0();
 endmodule

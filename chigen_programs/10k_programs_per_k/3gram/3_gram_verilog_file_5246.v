@@ -1,20 +1,32 @@
-// Seed: 4008548492
-`default_nettype id_4
+// Seed: 2584617097
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2
-    , id_9,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    output id_6,
-    output logic id_7,
-    output logic id_8
+    id_1,
+    id_2,
+    id_3
 );
-  defparam id_10.id_11 = 1'b0;
-  logic id_12;
-  assign id_11 = id_11;
-  logic id_13;
-  logic id_14;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    output tri id_0,
+    input wor id_1,
+    input tri1 id_2,
+    input supply1 id_3
+    , id_14,
+    input supply0 id_4,
+    input supply1 id_5,
+    input wand id_6,
+    input supply1 id_7,
+    input tri id_8,
+    input wand id_9,
+    output supply1 id_10,
+    input wand id_11,
+    input wire id_12
+);
+  wire id_15;
+  assign id_0 = !1;
+  module_0(
+      id_14, id_15, id_15
+  );
 endmodule

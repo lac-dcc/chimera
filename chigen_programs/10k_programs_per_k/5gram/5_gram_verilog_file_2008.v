@@ -1,5 +1,15 @@
-// Seed: 2317515401
+// Seed: 696922170
 module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_4;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -12,22 +22,61 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    .id_13(id_13)
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30
 );
-  output id_13;
-  inout id_12;
-  input id_11;
-  input id_10;
-  inout id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  logic  id_14 = 1;
-  sample id_15 = id_11;
-  logic  id_16;
+  output wire id_30;
+  inout wire id_29;
+  input wire id_28;
+  inout wire id_27;
+  inout wire id_26;
+  inout wire id_25;
+  inout wire id_24;
+  input wire id_23;
+  output wire id_22;
+  inout wire id_21;
+  input wire id_20;
+  output wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  initial begin
+    id_19 <= (1) - 1;
+    id_8  <= 1'h0;
+    id_26 <= id_18;
+  end
+  module_0(
+      id_6, id_24, id_20
+  );
 endmodule

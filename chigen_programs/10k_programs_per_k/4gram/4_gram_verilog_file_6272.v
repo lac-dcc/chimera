@@ -1,13 +1,26 @@
-// Seed: 1485100318
-`define pp_0 0
-`define pp_1 0
-`timescale 1ps / 1 ps
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
+// Seed: 2880892297
 module module_0;
-  assign id_0 = 1;
+  wire id_1;
+endmodule
+module module_1 (
+    input wand id_0,
+    inout tri0 id_1
+);
+  wire id_3;
+  module_0();
+endmodule
+module module_2;
+  always_comb @(posedge id_1)
+    #1 begin
+      assert (id_1);
+    end
+  id_2(
+      .id_0(1 * id_1 - 1 == 1 - 1),
+      .id_1((1)),
+      .id_2(1 == 1),
+      .id_3(1),
+      .id_4(id_3),
+      .id_5(1 - 1'b0)
+  ); module_0();
+  wire id_4;
 endmodule

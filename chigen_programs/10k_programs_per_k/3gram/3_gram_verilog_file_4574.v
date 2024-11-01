@@ -1,26 +1,35 @@
-// Seed: 1323208540
-`timescale 1 ps / 1 ps `timescale 1 ps / 1ps
-`define pp_9 0
-`define pp_10 0
-`timescale 1 ps / 1ps
+// Seed: 684289466
 module module_0 (
-    output logic id_0
-    , id_9,
-    input id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input id_8
+    output wire id_0,
+    output wand id_1,
+    output tri  id_2
 );
-  type_14(
-      id_1, 1 !== 1
-  );
 endmodule
-`timescale 1ps / 1ps
-module module_1;
-  logic id_9;
-  logic id_10 = 1;
+module module_1 (
+    output tri0 id_0,
+    inout uwire id_1,
+    output supply1 id_2
+);
+  module_0(
+      id_2, id_1, id_1
+  );
+  string id_4 = "";
+endmodule
+module module_2 (
+    output supply0 id_0,
+    input tri1 id_1,
+    input uwire id_2,
+    output uwire id_3,
+    output supply1 id_4,
+    input tri id_5,
+    input supply1 id_6,
+    output wand id_7,
+    output wor id_8,
+    input wire id_9
+);
+  assign id_7 = id_1;
+  module_0(
+      id_7, id_0, id_8
+  );
+  assign id_4 = 1;
 endmodule

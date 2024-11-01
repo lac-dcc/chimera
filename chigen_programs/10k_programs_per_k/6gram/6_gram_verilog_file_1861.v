@@ -1,42 +1,43 @@
-// Seed: 3028330335
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    output id_8,
-    output logic id_9,
-    output id_10,
-    input id_11
-    , id_28,
-    input id_12,
-    input id_13
-    , id_29,
-    input id_14,
-    input id_15,
-    input id_16,
-    input logic id_17,
-    output id_18,
-    output reg id_19,
-    input id_20,
-    output logic id_21,
-    input id_22,
-    input logic id_23,
-    input id_24,
-    output id_25,
-    output logic id_26,
-    output id_27
+// Seed: 775053436
+module module_0 ();
+  assign id_1 = ~id_1;
+  wire id_2;
+  assign id_1   = (1'b0 && 1);
+  assign {1, 1} = 1;
+endmodule
+module module_1 (
+    input uwire id_0,
+    output tri id_1,
+    input wor id_2,
+    input tri0 id_3,
+    output wand id_4,
+    input wire id_5,
+    input wor id_6,
+    output tri0 id_7,
+    output wand id_8,
+    input supply1 id_9,
+    input tri id_10,
+    input supply1 id_11,
+    input supply0 id_12,
+    input wor id_13,
+    input wire id_14,
+    input supply0 id_15,
+    input wor id_16,
+    output tri0 id_17,
+    input tri0 id_18,
+    input supply1 id_19,
+    output tri1 id_20,
+    input uwire id_21,
+    input tri id_22
+    , id_31,
+    input tri0 id_23,
+    input tri id_24,
+    input wire id_25,
+    output tri0 id_26,
+    output tri1 id_27,
+    input wire id_28,
+    output wand id_29
 );
-  always @(1'b0 or negedge id_11) id_19 <= 1'b0;
-  type_39(
-      id_11, 1, id_13
-  );
-  always @(posedge id_28 == id_2)
-    if (1) begin
-      SystemTFIdentifier;
-    end
+  assign id_29 = ~id_28;
+  module_0();
 endmodule

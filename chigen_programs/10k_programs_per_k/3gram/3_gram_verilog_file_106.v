@@ -1,32 +1,118 @@
-// Seed: 436834152
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 3958493192
+module module_0 ();
+  always_comb @(1 | 1 or negedge id_1) begin
+    id_1 <= id_1;
+  end
+endmodule
+module module_1 (
+    input wire id_0,
+    input wand id_1,
+    input tri0 id_2,
+    input wand id_3,
+    input tri1 id_4,
+    input supply1 id_5,
+    output uwire id_6,
+    input wire id_7,
+    output wand id_8,
+    input wor id_9,
+    input uwire id_10,
+    input wire id_11,
+    input wire id_12,
+    input tri0 id_13,
+    input tri id_14,
+    input uwire id_15,
+    input tri0 id_16,
+    input wire id_17,
+    input uwire id_18,
+    output wire id_19,
+    output wor id_20,
+    input tri1 id_21,
+    input supply0 id_22,
+    input uwire id_23,
+    input uwire id_24,
+    input supply1 id_25,
+    output tri id_26,
+    input supply1 id_27,
+    output wand id_28,
+    input wire id_29,
+    input supply1 id_30,
+    output supply1 id_31
+    , id_66,
+    input tri1 id_32,
+    input supply1 id_33,
+    input wor id_34,
+    input tri1 id_35,
+    input tri1 id_36,
+    output wand id_37,
+    input tri id_38,
+    input wand id_39,
+    output wand id_40,
+    input tri0 id_41,
+    input uwire id_42,
+    input supply0 id_43,
+    input wor id_44,
+    input supply0 id_45,
+    output wire id_46,
+    input wand id_47,
+    output tri id_48,
+    output supply0 id_49,
+    input tri1 id_50,
+    output wire id_51,
+    input supply1 id_52,
+    output wand id_53,
+    output tri1 id_54,
+    input wire id_55,
+    input supply0 id_56,
+    input wand id_57,
+    input uwire id_58
+    , id_67,
+    input wand id_59,
+    output tri0 id_60,
+    output tri id_61,
+    output tri0 id_62,
+    input wor id_63,
+    output uwire id_64
 );
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  integer id_7;
-  assign id_7 = id_5 - 1'h0;
-  type_11(
-      1, 1
-  );
-  logic id_8;
-  type_1 id_9 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_6)
-  );
-  logic id_10;
-  assign id_3[1] = 1'b0 && 1;
+  wire id_68;
+  or (
+      id_19,
+      id_2,
+      id_21,
+      id_22,
+      id_23,
+      id_24,
+      id_25,
+      id_27,
+      id_29,
+      id_3,
+      id_30,
+      id_32,
+      id_33,
+      id_34,
+      id_35,
+      id_36,
+      id_38,
+      id_39,
+      id_4,
+      id_41,
+      id_42,
+      id_43,
+      id_44,
+      id_45,
+      id_47,
+      id_5,
+      id_50,
+      id_52,
+      id_55,
+      id_56,
+      id_57,
+      id_58,
+      id_59,
+      id_63,
+      id_66,
+      id_67,
+      id_68,
+      id_7,
+      id_9);
+  module_0();
 endmodule

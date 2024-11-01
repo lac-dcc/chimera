@@ -1,57 +1,53 @@
-// Seed: 1927029470
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+// Seed: 747029659
+module module_0 ();
+  assign id_1 = id_1;
+  real id_3 = id_2[1];
+endmodule
+module module_1 (
+    output logic id_0,
+    input  tri   id_1,
+    input  wor   id_2,
+    input  uwire id_3,
+    input  wor   id_4,
+    input  uwire id_5,
+    output uwire id_6
 );
-  output id_22;
-  inout id_21;
-  inout id_20;
-  input id_19;
-  output id_18;
-  input id_17;
-  output id_16;
-  output id_15;
-  input id_14;
-  input id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  output id_9;
-  inout id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  type_25(
-      1, 1, id_1
-  );
-  logic id_22;
-  assign id_7 = (1) == id_20 | 1;
-  logic id_23;
-  assign id_3[1] = 1;
-  logic id_24 = id_1;
-  assign id_4 = 1;
+  assign id_0 = 1;
+  initial begin
+    id_0 <= 1'b0;
+  end
+  module_0();
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input supply1 id_1,
+    inout wor id_2,
+    input supply1 id_3,
+    input uwire id_4,
+    input wor id_5,
+    input tri1 id_6,
+    input wand id_7,
+    input tri id_8,
+    input wor id_9,
+    input supply1 id_10,
+    output wire id_11,
+    output tri1 id_12,
+    output uwire id_13,
+    input supply1 id_14,
+    input wor id_15,
+    output tri id_16,
+    input tri0 id_17,
+    input wor id_18,
+    output uwire id_19,
+    input tri1 id_20,
+    input supply1 id_21,
+    output wand id_22,
+    input wor id_23,
+    output supply0 id_24,
+    input wand id_25,
+    output wor id_26,
+    output tri id_27
+);
+  wire id_29;
+  module_0();
 endmodule

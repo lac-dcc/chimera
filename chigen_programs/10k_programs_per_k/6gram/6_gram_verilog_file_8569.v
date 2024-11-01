@@ -1,6 +1,14 @@
-// Seed: 537147123
-`timescale 1ps / 1ps
+// Seed: 2824081535
 module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = id_1;
+  assign id_1 = 1'b0;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -16,29 +24,81 @@ module module_0 (
     id_13,
     id_14,
     id_15,
-    id_16
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30
 );
-  input id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  type_17 id_16 (
-      .id_0(id_1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1'b0)
+  inout wire id_30;
+  input wire id_29;
+  input wire id_28;
+  inout wire id_27;
+  inout wire id_26;
+  inout wire id_25;
+  output wire id_24;
+  output wire id_23;
+  input wire id_22;
+  output wire id_21;
+  output wire id_20;
+  output wire id_19;
+  input wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_21 = id_22 * id_8 + 1 ? 1'h0 : id_28;
+  module_0(
+      id_6, id_16
   );
+  wire id_31;
+  wire id_32;
+  xor (
+      id_16,
+      id_6,
+      id_22,
+      id_18,
+      id_10,
+      id_4,
+      id_17,
+      id_7,
+      id_27,
+      id_26,
+      id_9,
+      id_11,
+      id_1,
+      id_8,
+      id_29,
+      id_13,
+      id_30,
+      id_12,
+      id_5,
+      id_25,
+      id_2,
+      id_15
+  );
+  assign id_14 = id_22 ? id_10 : id_12;
 endmodule

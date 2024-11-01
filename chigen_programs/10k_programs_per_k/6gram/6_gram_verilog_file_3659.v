@@ -1,73 +1,51 @@
-// Seed: 1186251714
-`default_nettype id_5
+// Seed: 3158480889
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_4
 );
-  input id_20;
-  output id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  output id_15;
-  inout id_14;
-  input id_13;
-  output id_12;
-  output id_11;
-  inout id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  assign id_10[(1)] = 1;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  initial assume (1);
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    input supply1 id_0,
+    output wand id_1,
+    output uwire id_2,
+    input tri0 id_3,
+    input uwire id_4,
+    output wire id_5
 );
-  output id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  inout id_1;
-  type_23(
-      (id_1.id_9), id_9, 1
+  always disable id_7;
+  module_0(
+      id_7, id_7, id_7, id_7
   );
-  logic id_20;
-  logic id_21;
-  logic id_22;
+  wire id_8;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    output logic id_1,
+    input tri id_2,
+    input tri id_3,
+    input wand id_4
+    , id_8,
+    input tri id_5,
+    output tri0 id_6
+);
+  tri1 id_9;
+  task id_10;
+    forever $display(id_9, id_0);
+  endtask
+  tri0 id_11;
+  module_0(
+      id_11, id_11, id_11, id_11
+  );
+  logic id_12;
+  assign id_1  = id_12;
+  assign id_11 = 1'd0 && 1;
+  wire id_13;
+  always id_12 = #1 1;
 endmodule

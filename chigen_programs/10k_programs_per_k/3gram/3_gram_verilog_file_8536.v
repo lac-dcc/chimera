@@ -1,20 +1,24 @@
-// Seed: 2320070718
-`default_nettype id_2
-module module_0 (
-    inout  id_0,
-    output id_1,
-    input  id_2
-);
-  logic id_3;
-  assign id_3 = id_0;
-  always @(id_2 or 1) id_0 = 1 ^ 1;
-  type_6(
-      1, 1
-  );
-  logic id_4;
-  type_8(
-      1, 1, id_3
-  );
+// Seed: 1328229383
+module module_0;
   assign id_1 = 1;
-  assign id_0 = id_3;
+  wire id_2;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input supply1 id_1,
+    input wand id_2
+    , id_12,
+    input supply1 id_3,
+    input supply0 id_4,
+    input supply0 id_5,
+    output tri id_6,
+    input wor id_7,
+    output tri1 id_8,
+    input tri id_9,
+    input wand id_10
+);
+  id_13(
+      !id_8, id_9 - 1
+  ); module_0();
+  assign id_8 = $display("", id_12);
 endmodule

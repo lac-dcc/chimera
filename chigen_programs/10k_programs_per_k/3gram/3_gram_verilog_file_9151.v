@@ -1,30 +1,33 @@
-// Seed: 1869588254
-`define pp_23 0
+// Seed: 2816538889
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    output logic id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8,
-    output id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    output logic id_13,
-    input logic id_14,
-    input id_15,
-    input id_16,
-    input id_17,
-    inout id_18,
-    output logic id_19,
-    output logic id_20,
-    input id_21,
-    output logic id_22
+    output wand id_0,
+    input supply0 id_1,
+    output tri1 id_2,
+    output wand id_3,
+    output supply1 id_4,
+    input tri0 id_5
 );
-  type_0 id_23 (.id_0(id_20));
-  logic id_24;
+  wire id_7;
+  module_2(
+      id_3, id_2, id_4
+  );
+endmodule
+module module_1 (
+    input wor   id_0,
+    input uwire id_1
+);
+  task id_3(id_4);
+    id_5(id_1, id_3);
+  endtask
+  module_0(
+      id_4, id_4, id_5, id_4, id_4, id_1
+  );
+endmodule
+module module_2 (
+    output tri0 id_0,
+    output supply0 id_1,
+    output uwire id_2
+);
+  wire id_4;
+  assign id_4 = id_4;
 endmodule

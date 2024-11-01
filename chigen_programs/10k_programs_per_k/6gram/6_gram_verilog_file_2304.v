@@ -1,15 +1,30 @@
-// Seed: 26205381
-`timescale 1ps / 1 ps `default_nettype id_1 `timescale 1ps / 1 ps
-module module_0 (
+// Seed: 4177617356
+module module_0 ();
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6
 );
-  output id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  logic id_4;
-  logic id_5;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0();
+  wire id_7;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input supply0 id_1
+);
+  always @(~id_0 or negedge id_1) begin
+    $display(id_0, id_0, 1'd0, 1, !id_1);
+    if (1) id_3 <= id_1 + 1 + 1 - 1;
+  end
+  module_0();
 endmodule

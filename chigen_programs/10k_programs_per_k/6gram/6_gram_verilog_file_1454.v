@@ -1,36 +1,30 @@
-// Seed: 180277608
+// Seed: 3754388733
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    inout wand id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    output logic id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    output id_12,
-    input id_13,
-    output id_14
+    input wire id_0,
+    input supply0 id_1,
+    input uwire id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    output uwire id_5,
+    input tri id_6,
+    output supply1 id_7,
+    input wand id_8,
+    output wire id_9,
+    input wor id_10,
+    input uwire id_11,
+    output supply1 id_12
 );
-  logic id_15;
-  logic id_16;
-  type_31 id_17 (
-      .id_0(1),
-      .id_1(id_4[1] & id_3),
-      .id_2(1'b0)
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri1 id_1,
+    input supply1 id_2,
+    input supply1 id_3,
+    input tri1 id_4
+);
+  tri1 id_6;
+  module_0(
+      id_2, id_0, id_2, id_1, id_0, id_6, id_4, id_6, id_2, id_6, id_6, id_1, id_6
   );
-  logic id_18;
-  logic id_19;
-  assign id_9 = 1;
-  defparam id_20.id_21 = id_18;
-  logic id_22;
-  reg   id_23;
-  logic id_24 = id_6;
-  always @(*) begin
-    id_23 <= 1;
-  end
+  assign id_6 = id_3;
 endmodule

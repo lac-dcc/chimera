@@ -1,21 +1,29 @@
-// Seed: 2257779079
+// Seed: 3270967245
 module module_0 (
-    input id_0
-    , id_15,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    output logic id_14
+    input tri1 id_0,
+    input wire id_1
+    , id_4,
+    input wand id_2
 );
-  logic id_16, id_17, id_18, id_19, id_20, id_21, id_22, id_23, id_24, id_25, id_26, id_27, id_28;
+  wire id_5;
+endmodule
+module module_1 (
+    input wand id_0,
+    input uwire id_1,
+    output supply0 id_2,
+    output supply0 id_3,
+    input wire id_4,
+    output tri0 id_5,
+    input tri id_6,
+    input wand id_7,
+    output tri1 id_8,
+    input tri id_9
+);
+  id_11 :
+  assert property (@(posedge (((id_6)))) (1'b0))
+  else $display;
+  wire id_12;
+  module_0(
+      id_11, id_4, id_9
+  );
 endmodule

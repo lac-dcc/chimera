@@ -1,21 +1,40 @@
-// Seed: 3366903864
-module module_0 (
+// Seed: 2866523796
+module module_0 #(
+    parameter id_4 = 32'd36,
+    parameter id_5 = 32'd60
+) (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    id_3
 );
-  output id_8;
-  output id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_8;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  defparam id_4.id_5 = 1; module_2(
+      id_3, id_3, id_3, id_1
+  );
+endmodule
+module module_1 (
+    input wire id_0
+);
+  uwire id_2;
+  module_0(
+      id_2, id_2, id_2
+  );
+  wire id_3;
+  always @(negedge id_2) begin
+    assert (1) $display;
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    module_2,
+    id_3
+);
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_5 = id_2;
 endmodule

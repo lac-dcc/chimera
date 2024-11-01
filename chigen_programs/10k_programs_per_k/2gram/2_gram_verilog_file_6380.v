@@ -1,34 +1,54 @@
-// Seed: 1229091795
+// Seed: 4141180792
 module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    output logic id_4,
-    input id_5,
-    input logic id_6,
-    inout id_7,
-    input id_8,
-    output logic id_9,
-    output logic id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    input logic id_15,
-    input logic id_16,
-    input logic id_17,
-    output id_18,
-    output id_19
+    input uwire id_0,
+    input tri0  id_1
 );
-  logic id_20;
-  assign id_20 = 1'b0;
-  assign id_20 = 1;
-  assign id_9  = 1'b0;
-  type_36(
-      ""
+  always id_3 <= 1;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input wor id_1
+    , id_12,
+    output tri id_2,
+    input wand id_3,
+    output wire id_4,
+    input supply1 id_5,
+    input supply1 id_6,
+    input supply0 id_7,
+    output wire id_8,
+    input wire id_9,
+    output wire id_10
+);
+  module_0(
+      id_5, id_0
   );
-  logic id_21;
-  logic id_22;
-  assign id_4 = 1;
+  supply1 id_13 = 1;
+  wire id_14;
+endmodule
+module module_2 (
+    input wire id_0,
+    output uwire id_1,
+    output wire id_2,
+    input supply1 id_3,
+    output tri id_4,
+    input tri1 id_5,
+    output wire id_6,
+    output logic id_7,
+    output tri0 id_8,
+    input tri0 id_9,
+    input supply1 id_10,
+    input wand id_11,
+    output wor id_12,
+    input wire id_13,
+    input wor id_14,
+    output wor id_15,
+    output supply0 id_16
+);
+  initial id_7 <= 1;
+  xnor (id_16, id_11, id_9, id_10, id_14, id_0, id_13, id_18, id_5, id_3);
+  id_18(
+      .id_0(id_15), .id_1((id_2) - 1), .id_2(id_10), .id_3(id_9), .id_4(id_8), .id_5(1), .id_6(id_8)
+  ); module_0(
+      id_14, id_11
+  );
 endmodule

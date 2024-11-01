@@ -1,67 +1,67 @@
-// Seed: 1219553373
-`define pp_61 0
+// Seed: 1861795303
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input logic id_7#(.id_61(1)),
-    output id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    input logic id_13,
-    output logic id_14,
-    input logic id_15,
-    output id_16,
-    output id_17,
-    output id_18,
-    input id_19,
-    output logic id_20,
-    input id_21,
-    input id_22,
-    input id_23,
-    input logic id_24,
-    input logic id_25,
-    input logic id_26
-    , id_62,
-    output id_27,
-    input id_28,
-    input logic id_29,
-    input id_30,
-    input id_31,
-    input id_32,
-    output logic id_33,
-    output id_34,
-    input logic id_35,
-    input id_36,
-    input id_37,
-    input id_38,
-    input id_39,
-    output logic id_40,
-    output logic id_41,
-    input logic id_42,
-    input logic id_43,
-    output id_44,
-    output id_45,
-    output id_46,
-    output id_47,
-    output logic id_48,
-    input id_49,
-    output id_50,
-    input id_51,
-    input logic id_52,
-    output id_53,
-    input logic id_54,
-    input logic id_55,
-    output logic id_56,
-    input id_57,
-    input logic id_58,
-    output id_59,
-    output logic id_60
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  integer id_7;
+  module_2(
+      id_4, id_6, id_7, id_3, id_6, id_3, id_2, id_2, id_3, id_6, id_4, id_3, id_7, id_7, id_2, id_7
+  );
+endmodule
+module module_1 (
+    input wor id_0,
+    input wor id_1,
+    input supply1 id_2,
+    input supply1 id_3
+);
+  wire id_5;
+  module_0(
+      id_5, id_5, id_5, id_5, id_5, id_5
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
+);
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_17;
 endmodule

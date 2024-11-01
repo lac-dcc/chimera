@@ -1,28 +1,36 @@
-// Seed: 3726144076
+// Seed: 2234860817
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input id_3
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_4 = id_1;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  always
+    if (1'b0) id_2 = id_3 - 1'b0;
+    else if (id_1)
+      if (1) id_3 = id_3;
+      else;
+  wire id_4;
 endmodule
-`timescale 1ps / 1 ps
 module module_1 (
     id_1,
-    id_2
+    id_2,
+    .id_7(id_3),
+    id_4,
+    id_5,
+    id_6
 );
-  output id_2;
-  output id_1;
-  timeunit 1ps; type_6(
-      .id_0(1), .id_1(id_3), .id_2(id_2)
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_8;
+  assign id_2 = "";
+  module_0(
+      id_3, id_8, id_8
   );
-  logic id_4;
-  logic id_5;
-  always begin
-    id_1 = "";
-  end
-  assign id_2 = id_0;
-  assign id_2[(1'b0)] = id_3;
 endmodule
-`default_nettype id_4

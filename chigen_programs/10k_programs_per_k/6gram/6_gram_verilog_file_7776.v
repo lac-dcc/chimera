@@ -1,28 +1,41 @@
-// Seed: 1589554394
+// Seed: 1696074982
 module module_0 (
-    input reg id_0,
-    output reg id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    input logic id_8,
-    input reg id_9,
-    output reg id_10
+    output supply0 id_0,
+    output supply1 id_1
 );
-  always @(1'h0 == 1) begin
-    id_1 <= id_7;
-    id_6 = 1;
-    #1 id_6 = id_9;
-    logic id_11;
-    id_1 <= id_7;
-    id_6 <= 1 - id_0;
-    #1;
-    #1 SystemTFIdentifier;
-    id_1  <= id_4;
-    id_10 <= id_0;
-    id_6  <= 1;
+  always @(*) begin
+    $display(id_3);
+    if (1) begin
+      $display(~id_3, id_3);
+      if (1 && "" == 1) id_1 = 1;
+      else begin
+        id_0 = id_3;
+      end
+    end
   end
+endmodule
+module module_1 (
+    output wor id_0,
+    input wor id_1,
+    input uwire id_2,
+    input supply1 id_3,
+    input tri1 id_4,
+    output logic id_5,
+    input wor id_6,
+    output wand id_7,
+    input supply1 id_8,
+    input wor id_9,
+    input supply1 id_10,
+    input tri0 id_11,
+    output wor id_12
+);
+  wire  id_14;
+  logic id_15;
+  always @(posedge id_11 or 1) begin
+    id_15 <= "";
+    id_5 = id_15;
+  end
+  module_0(
+      id_0, id_0
+  );
 endmodule

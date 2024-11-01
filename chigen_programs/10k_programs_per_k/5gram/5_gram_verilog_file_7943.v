@@ -1,42 +1,32 @@
-// Seed: 3038271715
+// Seed: 4170728924
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    output logic id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    output logic id_13,
-    input id_14
-    , id_22,
-    input logic id_15,
-    input id_16,
-    output id_17,
-    output logic id_18,
-    output logic id_19,
-    input logic id_20,
-    input logic id_21
+    input wire id_0,
+    output wor id_1,
+    input supply0 id_2,
+    output wand id_3,
+    output tri id_4,
+    input uwire id_5,
+    input uwire id_6
 );
-  type_42(
-      id_21, id_0, 1 - 1
+  wire id_8;
+  wire id_9;
+  wire id_10;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input tri id_1,
+    input wor id_2,
+    input tri id_3,
+    output supply1 id_4,
+    input supply0 id_5,
+    input supply1 id_6,
+    input wand id_7
+);
+  always @(id_1) id_4 = 1;
+  wire id_9;
+  assign id_4 = id_2;
+  assign id_4 = 1;
+  module_0(
+      id_3, id_4, id_1, id_4, id_4, id_3, id_6
   );
-  assign id_17 = (1);
-  logic id_23;
-  logic id_24, id_25;
-  logic   id_26;
-  logic   id_27;
-  integer id_28;
-  assign id_27 = id_28;
-  assign id_22 = id_24;
-  logic id_29;
-  logic id_30;
-  assign id_30 = 1 ? 1 : 1 - (1) ? !id_25 : id_16;
-  assign id_29 = id_14;
 endmodule

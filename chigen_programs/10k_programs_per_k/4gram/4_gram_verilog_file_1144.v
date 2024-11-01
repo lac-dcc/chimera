@@ -1,7 +1,8 @@
-// Seed: 998393683
-`define pp_10 0
-parameter id_2 = id_3[1-id_5];
-module module_0 (
+// Seed: 1366067523
+module module_0 ();
+  assign id_1 = id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -11,38 +12,65 @@ module module_0 (
     id_7,
     id_8,
     id_9,
-    id_10
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20
 );
-  input id_10;
-  output id_9;
-  input id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_10 = 1;
-  type_16 id_12 (
-      .id_0 (),
-      .id_1 (id_6),
-      .id_2 (1),
-      .id_3 (0),
-      .id_4 (1),
-      .id_5 (1),
-      .id_6 (1),
-      .id_7 (1),
-      .id_8 (),
-      .id_9 (1),
-      .id_10({1'b0, (id_5), 1, id_10}),
-      .id_11(id_3 == 1),
+  output wire id_20;
+  input wire id_19;
+  output wire id_18;
+  output wire id_17;
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  initial begin
+    if (1) begin
+      if (1'b0) begin
+        id_3 <= id_13;
+        if (1'b0) id_3 <= 1;
+        else begin
+          if (1) $display(!id_19);
+        end
+      end
+    end
+  end
+  id_21(
+      .id_0(id_18),
+      .id_1(1),
+      .id_2(1),
+      .id_3(id_18),
+      .id_4(1),
+      .id_5(id_3 - id_15),
+      .id_6(id_13),
+      .id_7(1),
+      .id_8(("")),
+      .id_9(1),
+      .id_10(1),
+      .id_11(id_4),
       .id_12(1),
-      .id_13((1)),
-      .id_14(1),
-      .id_15(1)
-  );
-  logic id_13;
-  assign id_4 = id_5;
-  logic id_14;
+      .id_13(1),
+      .id_14()
+  ); module_0();
+  wire id_22;
 endmodule

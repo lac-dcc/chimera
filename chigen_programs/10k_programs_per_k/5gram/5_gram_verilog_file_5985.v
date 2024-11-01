@@ -1,15 +1,37 @@
-// Seed: 3361717937
-`define pp_1 0
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
-`define pp_5 0
-`timescale 1ps / 1 ps
+// Seed: 1946597257
 module module_0 (
-    id_1
+    id_1,
+    id_2,
+    id_3
 );
-  inout id_1;
-  logic id_1 = 1;
-  always @(1 or id_1 - 'b0) id_1 = 1;
-  logic id_2;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always_ff while (id_2 == 1 || 1 || 1 == 1) #0;
+  logic [7:0] id_4;
+  id_5 :
+  assert property (@(posedge 1) id_5)
+  else $display(id_4[1] && id_1);
+  wire id_6;
+  assign id_5 = "" ? id_1 : 1;
+  wire id_7;
+  always @(1'h0) begin
+    if (1'h0) begin
+      assume (id_2.id_7);
+    end
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  genvar id_3;
+  always @(*) {1'b0 ^ 1, 1'b0} -= 1 == id_1;
+  module_0(
+      id_3, id_2, id_2
+  );
+  wire id_4;
+  assign id_2 = id_1;
 endmodule

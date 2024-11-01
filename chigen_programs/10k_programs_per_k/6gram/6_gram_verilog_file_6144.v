@@ -1,20 +1,31 @@
-// Seed: 3161140128
+// Seed: 1942606851
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    id_2
 );
-  input id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  reg id_5;
-  always @(posedge id_4 + 1 or posedge id_2) begin
-    if (1) begin
-      id_3 <= id_5;
-    end
+  inout wire id_2;
+  input wire id_1;
+  wire id_3;
+  wire id_4 = id_4;
+  wire id_5 = id_3;
+endmodule
+module module_1 (
+    input wor id_0,
+    output uwire id_1,
+    input wire id_2,
+    output uwire id_3
+    , id_8,
+    input supply0 id_4,
+    input wire id_5,
+    input wand id_6
+);
+  always @(negedge 1) begin
+    disable id_9;
   end
+  assign id_1 = 1;
+  wire id_10;
+  wire id_11;
+  module_0(
+      id_10, id_10
+  );
 endmodule

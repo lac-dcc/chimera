@@ -1,16 +1,41 @@
-// Seed: 4281721299
-`timescale 1ps / 1 ps
-module module_0 (
+// Seed: 3119617800
+module module_0;
+  wire id_2;
+  module_2(
+      id_2, id_2, id_2, id_2
+  );
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1
+);
+  wire id_3;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5
+    id_4
 );
-  input id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  logic id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5 = id_2;
+  module_3(
+      id_1, id_1
+  );
+  wire id_6;
+endmodule
+module module_3 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  always_latch @(posedge id_3 or id_3) begin
+    force id_2 = 1;
+  end
+  wire id_4 = id_4;
 endmodule

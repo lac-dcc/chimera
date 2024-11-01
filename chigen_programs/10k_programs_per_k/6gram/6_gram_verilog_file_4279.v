@@ -1,26 +1,35 @@
-// Seed: 2174259636
+// Seed: 638167630
 module module_0 (
-    output id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    output id_9
+    output logic id_0,
+    output tri1 id_1,
+    output supply1 id_2
 );
-  uwire id_10;
-  assign id_9 = id_4 & 1;
-  uwire id_11;
-  logic id_12;
-  type_21(
-      1, id_6, 1
+  logic id_5 = id_4;
+  always @(posedge 1 or 1'b0) begin
+    case (id_5)
+      1: begin
+        id_0 <= id_4;
+      end
+      id_5 ~^ id_5: id_0 = 1 ? 1 : (1);
+      id_4: id_0 <= id_4 | id_4 | id_5;
+      1: id_0 = id_5;
+    endcase
+  end
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri id_1,
+    output supply1 id_2,
+    output wand id_3,
+    output wire id_4,
+    output logic id_5
+);
+  initial begin
+    id_5 <= 1;
+    #1 id_4 = 1;
+  end
+  xnor (id_2, id_0, id_1);
+  module_0(
+      id_5, id_4, id_2
   );
-  assign id_12 = 1;
-  assign #id_13 id_11[1] = id_13;
-  assign id_10[1] = 1'b0;
-  logic id_14;
-  logic id_15;
 endmodule

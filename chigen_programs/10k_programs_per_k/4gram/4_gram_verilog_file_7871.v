@@ -1,17 +1,39 @@
-// Seed: 3943873573
-`define pp_4 0
+// Seed: 4169410461
 module module_0 (
-    input supply0 id_0,
-    input reg id_1,
-    input logic id_2,
-    output id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  type_8(
-      1, id_1, id_3, 1
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_8;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_7;
+  final $display;
+  module_0(
+      id_4, id_6, id_7, id_6, id_6, id_4, id_6
   );
-  assign id_3 = 1'h0;
-  always @(posedge id_0[1] or id_0) begin
-    id_3 <= 1;
-  end
-  logic id_4;
 endmodule

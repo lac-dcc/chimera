@@ -1,34 +1,98 @@
-// Seed: 3718573848
-module module_0 ();
-  type_1(
-      id_0, 1, id_0
+// Seed: 1484636976
+module module_0 (
+    input tri0 id_0,
+    output supply1 id_1,
+    input supply1 id_2,
+    input wand id_3,
+    input wire id_4,
+    input supply1 id_5,
+    input tri1 id_6,
+    input wire id_7,
+    input tri1 id_8,
+    input tri0 id_9,
+    output supply0 id_10,
+    output tri1 id_11,
+    output tri0 id_12,
+    input tri id_13,
+    input tri0 id_14,
+    output wand id_15,
+    input uwire id_16#(.id_38("")),
+    output uwire id_17,
+    output tri0 id_18,
+    input wor id_19,
+    input tri1 id_20,
+    input uwire id_21,
+    input uwire id_22,
+    input tri id_23,
+    output wand id_24,
+    input wire id_25,
+    input uwire id_26,
+    input uwire id_27,
+    input wand id_28,
+    input supply1 id_29,
+    input supply1 id_30,
+    input tri id_31,
+    input uwire id_32,
+    output tri0 id_33,
+    output wire id_34,
+    output tri1 id_35,
+    input uwire id_36
+);
+  wire id_39;
+  id_40(
+      .id_0(id_2), .id_1(1'd0), .id_2(~1)
   );
 endmodule
 module module_1 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    output id_11,
-    output logic id_12,
-    input logic id_13,
-    input logic id_14,
-    output logic id_15,
-    output id_16,
-    output logic id_17
+    input tri1 id_0,
+    input uwire id_1,
+    output supply1 id_2,
+    input wand id_3,
+    output tri1 id_4,
+    input uwire id_5,
+    output tri0 id_6,
+    input tri1 id_7,
+    input supply1 id_8,
+    input wand id_9
 );
-  logic id_18 = id_2;
-  assign id_10 = id_4;
-  logic id_19;
-  assign id_16 = 1'b0;
-  always @(posedge id_14 or posedge 1) begin
-    id_11 = id_19#(.id_14(id_13));
-  end
+  wire id_11;
+  module_0(
+      id_0,
+      id_2,
+      id_1,
+      id_9,
+      id_7,
+      id_1,
+      id_8,
+      id_8,
+      id_3,
+      id_8,
+      id_2,
+      id_2,
+      id_6,
+      id_3,
+      id_8,
+      id_4,
+      id_3,
+      id_2,
+      id_4,
+      id_3,
+      id_0,
+      id_9,
+      id_9,
+      id_3,
+      id_6,
+      id_1,
+      id_5,
+      id_9,
+      id_3,
+      id_0,
+      id_3,
+      id_0,
+      id_3,
+      id_2,
+      id_6,
+      id_2,
+      id_3
+  );
 endmodule

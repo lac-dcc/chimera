@@ -1,16 +1,21 @@
-// Seed: 1322064776
-`define pp_9 0
-module module_0 (
-    input logic id_0,
-    input id_1
-    , id_9,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    output logic id_6,
-    output logic id_7,
-    input id_8
+// Seed: 1096433765
+module module_0 ();
+  int  id_1;
+  tri0 id_2 = id_1 ? 1 : id_2 - 1 ? 1 : 1'b0;
+  wire id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri0 id_1,
+    input tri id_2,
+    input tri0 id_3,
+    output wand id_4,
+    input wire id_5,
+    input supply1 id_6,
+    output tri0 id_7
 );
-  logic id_10;
+  assign #id_9 id_1 = 1;
+  module_0(); id_10(
+      .id_0(""), .id_1(1), .id_2(1)
+  );
 endmodule

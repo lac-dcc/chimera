@@ -1,32 +1,30 @@
-// Seed: 1608357195
+// Seed: 4125026359
 module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input logic id_4,
-    output logic id_5,
-    input logic id_6,
-    input logic id_7,
-    input id_8,
-    output id_9,
-    output id_10,
-    input logic id_11,
-    input logic id_12
+    id_1,
+    id_2,
+    id_3
 );
-  type_29(
-      id_3 / id_1, id_4, 1
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  id_4(
+      1, id_2 !== 1'b0, 1'b0, 1'b0
   );
-  logic id_13;
-  logic id_14, id_15;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  assign id_9 = 1;
-  logic id_19, id_20;
-  task id_21;
-    begin
-      id_0 <= id_2;
-    end
-  endtask
+endmodule
+module module_1 (
+    input uwire id_0,
+    output tri0 id_1,
+    inout wor id_2,
+    input wor id_3,
+    input wor id_4,
+    input uwire id_5,
+    input wire id_6,
+    input tri id_7,
+    input tri id_8,
+    input tri1 void id_9
+);
+  integer id_11;
+  module_0(
+      id_11, id_11, id_11
+  );
 endmodule

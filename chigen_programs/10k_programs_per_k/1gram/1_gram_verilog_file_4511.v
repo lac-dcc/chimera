@@ -1,33 +1,24 @@
-// Seed: 540442983
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
-);
-  output id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  logic id_14;
-  logic id_15;
-  logic id_16, id_17;
-  assign id_11 = (id_9);
+// Seed: 1875357325
+module module_0;
+  supply0 id_1 = id_1 !== id_1;
+  id_2(
+      .id_0(1'b0), .id_1(id_3), .id_2("")
+  );
+  generate
+    wire id_4, id_5;
+    begin
+      wire id_6;
+      wire id_7;
+    end
+    wire id_8;
+  endgenerate
+  initial $display(id_8, 1, 1);
+  id_10(
+      .id_0(id_1), .id_1(id_9), .id_2(id_1), .id_3(1'd0)
+  );
+endmodule
+module module_1;
+  always id_1 <= (id_1);
+  module_0();
+  wire id_2;
 endmodule

@@ -1,18 +1,32 @@
-// Seed: 3115268822
-`timescale 1ps / 1 ps `timescale 1ps / 1 ps
-`define pp_9 0
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    input id_8
+// Seed: 274111286
+module module_0;
+  module_2();
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  initial begin
-    SystemTFIdentifier;
-  end
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  wire id_3;
+  module_0();
+  wand id_4 = 1;
+  wire id_5;
+endmodule
+module module_2;
+  always @(posedge id_1) id_1 <= (1);
+endmodule
+module module_3 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  wire id_3;
+  assign id_2 = 1;
+  wire id_4;
+  id_5(
+      .id_0(1), .id_1(1)
+  ); module_2();
 endmodule

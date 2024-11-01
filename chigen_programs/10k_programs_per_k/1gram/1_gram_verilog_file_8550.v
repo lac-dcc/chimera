@@ -1,30 +1,99 @@
-// Seed: 631339839
-`define pp_10 0
-`define pp_11 0
+// Seed: 2343645899
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    output reg id_7,
-    output id_8,
-    input id_9
+    input tri id_0
 );
-  logic id_10;
-  always id_7 <= 1;
-  logic id_11;
-  always id_7 = 1;
-  logic id_12;
-  string id_13, id_14, id_15, id_16, id_17;
-  logic id_18;
-  type_36 id_19 (id_11);
-  logic id_20, id_21, id_22;
-  string id_23 = id_16, id_24, id_25, id_26;
-  logic id_27 = 1 - 1;
-  assign id_15 = "";
-  assign id_27 = 1;
-  assign id_11 = id_4;
+  assign id_2 = 1;
+endmodule
+module module_1 (
+    output wire id_0,
+    input  tri0 id_1,
+    input  tri0 id_2,
+    input  wire id_3
+);
+  wire id_5;
+  assign id_0 = 1;
+  module_0(
+      id_3
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20
+);
+  output wire id_20;
+  output wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  input wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_20 = 1'b0;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  assign id_2 = id_2;
+  module_2(
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_3,
+      id_4,
+      id_1,
+      id_4,
+      id_4,
+      id_1,
+      id_1,
+      id_4,
+      id_3,
+      id_3,
+      id_4
+  );
+  always id_2 <= 1;
+  reg  id_5;
+  wire id_6;
+  if (1'b0) assign id_5 = id_2;
 endmodule

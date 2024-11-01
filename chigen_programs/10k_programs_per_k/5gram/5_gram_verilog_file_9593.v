@@ -1,20 +1,32 @@
-// Seed: 4062242904
-`default_nettype id_4
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 1635364263
+module module_0;
+  wand id_1;
+  assign id_1 = 1;
+  wire id_2, id_3;
+  wire id_4 = id_2;
+endmodule
+module module_1 (
+    input  tri1 id_0,
+    output tri1 id_1,
+    output tri0 id_2
 );
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_6;
-  assign id_3 = 1;
-  logic id_7;
+  wire id_4;
+  module_0();
+endmodule
+module module_2 (
+    output wire id_0,
+    output tri0 id_1
+);
+  wire id_3;
+  module_0();
+endmodule
+module module_3 (
+    output tri1 id_0,
+    input supply0 id_1
+);
+  wire id_3;
+  assign id_0 = 1;
+  wire id_4;
+  wire id_5, id_6;
+  module_0();
 endmodule

@@ -1,68 +1,68 @@
-// Seed: 1138201697
+// Seed: 608094572
 module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input logic id_7
+    input uwire id_0,
+    output wor id_1,
+    input supply0 id_2,
+    output supply0 id_3,
+    output wand id_4,
+    input supply1 id_5,
+    output supply1 id_6,
+    output uwire id_7,
+    input wire id_8,
+    input uwire id_9,
+    input tri0 id_10,
+    input tri0 id_11,
+    input supply0 id_12,
+    output supply0 id_13,
+    input supply0 id_14,
+    output wor id_15,
+    input tri id_16,
+    output wor id_17,
+    output tri id_18
+    , id_25,
+    output supply0 id_19
+    , id_26,
+    output wand id_20,
+    input uwire id_21,
+    input tri0 id_22,
+    input supply1 id_23
 );
-  logic id_8;
+  assign id_25 = "";
+  id_27(
+      .id_0(id_7), .id_1($display), .id_2(id_18)
+  );
+  wand id_28 = id_23;
+  wire id_29;
 endmodule
 module module_1 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    input logic id_12,
-    input id_13,
-    input logic id_14
+    output tri0 id_0,
+    input  wor  id_1,
+    output tri  id_2
 );
-  logic   id_15;
-  integer id_16;
-  always @(posedge 1'b0) begin
-    if (1) begin
-      id_10 <= 1;
-      if (1) id_11 <= id_2;
-      else begin
-        id_10 = SystemTFIdentifier;
-      end
-    end
-    id_11 = 1'b0;
-    if (SystemTFIdentifier(id_12)) id_16 <= {1, 1};
-    else begin
-      if (id_8) id_16 <= id_6;
-      else if (1)
-        if (id_16 == id_16) id_16 = 1;
-        else begin
-          id_5 <= (1);
-        end
-      else id_5 <= id_8;
-    end
-  end
-  assign id_11 = 1;
-  logic id_17;
-  type_32(
-      1, id_8, 1, 1, 1'h0, 1
+  module_0(
+      id_1,
+      id_2,
+      id_1,
+      id_0,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1
   );
-  logic id_18, id_19, id_20;
-  logic id_21;
-  logic id_22;
-  assign id_15 = id_20;
-  assign id_20 = id_14 ? id_19 : 1;
-  assign id_10 = 'd0 && 1'b0;
-  logic id_23 = 1;
-  assign id_20 = id_23;
-  logic id_24;
-  logic id_25;
 endmodule

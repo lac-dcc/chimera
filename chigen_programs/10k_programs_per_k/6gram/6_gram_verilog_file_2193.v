@@ -1,29 +1,34 @@
-// Seed: 3107910294
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    output id_12,
-    output id_13,
-    input logic id_14
-    , id_15
+// Seed: 3676188803
+module module_0;
+  uwire id_1 = 1;
+  wire  id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  always @(1 or posedge 1 - 1'b0)
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always @(posedge {1'b0,
+    id_1 / 1
+  } or posedge id_2)
+  begin
     if (1) begin
-      if (1'b0) begin
-        for (id_13 = 1; 1; id_15 = 1'b0) @(1);
-        repeat (1) id_13 = 1;
-      end else begin
-        id_15 = id_0;
-      end
+      id_7 <= id_2 && id_1;
     end
+  end
+  assign id_3 = id_1 - 1;
+  wire id_8;
+  wire id_9;
+  module_0();
 endmodule

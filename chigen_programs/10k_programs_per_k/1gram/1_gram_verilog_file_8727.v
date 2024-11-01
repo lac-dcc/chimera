@@ -1,9 +1,103 @@
-// Seed: 2612449495
-module module_0;
-  logic id_0, id_2;
-  always id_1 = 1;
-  logic id_3, id_4;
-  assign id_3 = id_0;
-  logic id_5;
+// Seed: 2271820522
+module module_0 (
+    input wor id_0,
+    output tri1 id_1,
+    input supply0 id_2,
+    input tri id_3,
+    output tri id_4,
+    output tri0 id_5,
+    output uwire id_6,
+    input wor id_7,
+    output tri0 id_8,
+    input uwire id_9,
+    input supply0 id_10,
+    output tri1 id_11,
+    input supply0 id_12,
+    output tri id_13,
+    input tri1 id_14,
+    input tri id_15,
+    output uwire id_16,
+    input supply0 id_17,
+    input uwire id_18,
+    input tri id_19,
+    output wand id_20,
+    input tri0 id_21,
+    output tri id_22,
+    input wor id_23,
+    output supply1 id_24,
+    input supply0 id_25,
+    output wor id_26,
+    output tri0 id_27,
+    input wand id_28,
+    input wire id_29,
+    input supply0 id_30,
+    output tri0 id_31,
+    input wire id_32,
+    output supply1 id_33,
+    output tri1 id_34,
+    input tri id_35,
+    input wand id_36,
+    input wor id_37,
+    output tri1 id_38,
+    input supply1 id_39,
+    input uwire id_40,
+    output supply0 id_41,
+    input supply1 id_42,
+    output supply1 id_43
+);
 endmodule
-`define pp_0 (  pp_1  )  0
+module module_1 (
+    input uwire id_0,
+    inout supply1 id_1,
+    input wor id_2,
+    input wand id_3
+);
+  wor id_5;
+  module_0(
+      id_3,
+      id_1,
+      id_2,
+      id_3,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_3,
+      id_1,
+      id_3,
+      id_0,
+      id_1,
+      id_3,
+      id_0,
+      id_0,
+      id_1,
+      id_3,
+      id_1,
+      id_3,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_0,
+      id_2,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_2,
+      id_0,
+      id_1,
+      id_2,
+      id_0,
+      id_1,
+      id_3,
+      id_1
+  );
+  assign id_5 = id_3 + id_3.sum;
+endmodule

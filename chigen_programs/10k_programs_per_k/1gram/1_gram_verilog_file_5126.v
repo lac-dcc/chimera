@@ -1,5 +1,4 @@
-// Seed: 3212770906
-`define pp_12 0
+// Seed: 2058260750
 module module_0 (
     id_1,
     id_2,
@@ -14,19 +13,30 @@ module module_0 (
     id_11,
     id_12
 );
-  input id_12;
-  inout id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  defparam id_12 = id_12 & "";
-  logic id_13, id_14;
-  logic id_15;
+  input wire id_12;
+  output wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_8 = id_10 ^ 1'h0;
+  wire id_13, id_14;
+endmodule
+module module_1 (
+    input tri id_0,
+    input wor id_1,
+    input supply1 id_2,
+    output uwire id_3
+);
+  wire id_5, id_6;
+  assign id_5 = id_6;
+  module_0(
+      id_5, id_6, id_6, id_6, id_6, id_6, id_5, id_5, id_6, id_6, id_6, id_6
+  );
 endmodule

@@ -1,27 +1,21 @@
-// Seed: 1140188845
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+// Seed: 2000104580
+module module_0;
+  id_1(
+      .id_0(), .id_1({{id_2, id_2}, 1'b0}), .id_2(id_2), .id_3(1'b0 !=? id_2), .id_4(1'b0)
+  );
+  wire id_3;
+  always id_2 <= 1;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output wor id_3
 );
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  task id_9;
-    input id_10;
-  endtask
-  logic id_11;
-  assign id_3 = id_6 & id_3;
+  always disable id_5;
+  for (id_6 = 1; 1; id_5 = "") begin
+    assign id_6 = 1;
+  end
+  module_0();
+  wire id_7;
 endmodule

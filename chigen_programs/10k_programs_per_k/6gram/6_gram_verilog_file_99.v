@@ -1,28 +1,35 @@
-// Seed: 746332184
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 3670910231
+module module_0;
+  integer id_2;
+  always @(id_1)
+    #1 begin
+      assert (1);
+    end
+endmodule
+module module_1 #(
+    parameter id_6 = 32'd7,
+    parameter id_7 = 32'd45
+) (
+    input supply1 id_0,
+    input tri0 id_1,
+    input tri1 id_2,
+    output supply0 id_3
 );
-  output id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  input id_1;
-  `define pp_6 0
-  assign id_2 = id_1 || 1;
+  ;
+  wor id_5 = id_5;
+  module_0();
+  assign id_5 = 0;
+  defparam id_6.id_7 = id_7;
+  wire id_8;
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input uwire id_3,
+    output supply1 id_4,
+    output supply0 id_5
+);
   assign id_4 = 1;
-  reg id_7;
-  always @(posedge `pp_6 or negedge 1) begin
-    if (1) begin
-      id_3 <= #id_7{id_3, 1 & id_7 & `pp_6} ? 1'h0 : `pp_6;
-      SystemTFIdentifier(id_7);
-      id_6 <= 1'h0;
-      id_3 <= 1'b0;
-    end else id_7 <= 1;
-  end
+  module_0();
 endmodule

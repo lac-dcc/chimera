@@ -1,10 +1,11 @@
-// Seed: 3292905620
+// Seed: 2234137962
 module module_0 (
+    module_0,
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
+    .id_19(id_5),
     id_6,
     id_7,
     id_8,
@@ -16,71 +17,64 @@ module module_0 (
     id_14,
     id_15,
     id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33
+    id_17
 );
-  output id_33;
-  output id_32;
-  output id_31;
-  output id_30;
-  inout id_29;
-  input id_28;
-  output id_27;
-  input id_26;
-  inout id_25;
-  input id_24;
-  input id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  inout id_18;
-  inout id_17;
-  inout id_16;
-  output id_15;
-  input id_14;
-  inout id_13;
-  output id_12;
-  input id_11;
-  input id_10;
-  input id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_33;
-  logic id_34;
-  logic id_35;
-  assign id_34 = 1 ? 1 - id_5 : id_26;
-  logic id_36;
-  logic id_37;
-  assign id_36 = id_17;
-  logic id_38 = 1;
-  logic id_39, id_40, id_41, id_42;
-  type_49(
-      1, 1 - 1, id_24
+  inout wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_20;
+  assign id_11 = id_10;
+  wire id_21;
+  assign id_4 = 1 - 1;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    input  wor   id_1,
+    input  tri0  id_2
+    , id_8,
+    input  wor   id_3,
+    input  uwire id_4,
+    output uwire id_5,
+    output tri1  id_6
+);
+  wor id_9 = 1 && 1 == 1'h0 + id_3;
+  or (id_5, id_3, id_10, id_8, id_0, id_4, id_1, id_9);
+  supply0 id_10 = 1'b0;
+  module_0(
+      id_10,
+      id_10,
+      id_8,
+      id_9,
+      id_9,
+      id_8,
+      id_10,
+      id_10,
+      id_10,
+      id_9,
+      id_8,
+      id_9,
+      id_10,
+      id_9,
+      id_9,
+      id_10,
+      id_8,
+      id_10
+  ); id_11(
+      .id_0(1), .id_1(id_1)
   );
-  assign id_19 = id_2 !== 1;
-  always @(negedge id_25)
-    if (1) id_12 <= 1;
-    else id_33 = 1;
 endmodule

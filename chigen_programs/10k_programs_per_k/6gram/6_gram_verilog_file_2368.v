@@ -1,52 +1,39 @@
-// Seed: 4192764053
-`timescale 1ps / 1ps `timescale 1ps / 1ps `timescale 1ps / 1ps
+// Seed: 2122261075
 module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    input logic id_16,
-    output id_17,
-    output id_18,
-    input logic id_19,
-    input logic id_20,
-    output id_21,
-    input id_22,
-    input id_23
-    , id_37,
-    output id_24,
-    input id_25,
-    output id_26,
-    input id_27,
-    input logic id_28,
-    input id_29,
-    input logic id_30,
-    input id_31,
-    input logic id_32,
-    output id_33,
-    input logic id_34,
-    output id_35,
-    output logic id_36
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_38;
-  assign id_2 = 1;
-  logic id_39;
-  type_2 id_40 (
-      .id_0(1 == ""),
-      .id_1(id_20),
-      .id_2(id_14),
-      .id_3(1 + 1)
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  tri1 id_5;
+  tri0 id_6 = (1);
+  assign id_5 = "" - id_1;
+  always @(posedge 1 or 1) id_3 = 1'd0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_5 = id_6;
+  assign id_6 = id_5 ? 1 : id_5;
+  initial
+  fork
+  join : id_7
+  module_0(
+      id_5, id_6, id_7, id_5
   );
 endmodule

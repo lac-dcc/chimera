@@ -1,21 +1,40 @@
-// Seed: 49508235
-`define pp_9 0
+// Seed: 4238709802
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    output logic id_3,
-    output logic id_4,
-    input id_5,
-    input id_6,
-    output logic id_7,
-    output id_8
-    , id_9
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  always @(posedge 1)
-    if (id_0 - id_6) @(posedge id_6 or posedge (id_0));
-    else begin
-      id_1 <= 1 * id_2 - 1;
-      id_1 <= 1;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_7;
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  if (id_2)
+    always begin
+      id_3[1] <= 1;
     end
+  buf (id_2, id_3);
+  module_0(
+      id_2, id_2, id_2, id_1, id_2, id_2
+  );
 endmodule

@@ -1,54 +1,42 @@
-// Seed: 2221130004
-`timescale 1ps / 1ps
+// Seed: 935727299
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    output uwire id_0,
+    output wor id_1,
+    output wor id_2,
+    input wand id_3,
+    input supply1 id_4
 );
-  input id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  always @(negedge id_14) begin
-    if (1) id_3 <= id_5;
-    else begin
-      #1;
-      if (1)
-        if (!id_18) begin
-          #1 begin
-            id_12 = new;
-          end
-          SystemTFIdentifier(1, 1, id_5 !== 1);
-        end else id_2 <= 1;
-    end
-  end
+  assign id_2 = 1;
+  function id_6;
+    input id_7;
+    id_2 = id_4 + 1;
+  endfunction
+endmodule
+module module_0 (
+    input tri0 id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    input tri0 id_3,
+    input wire id_4,
+    input tri0 sample,
+    input wire id_6,
+    inout wor id_7,
+    output tri1 module_1,
+    input tri id_9,
+    output tri0 id_10,
+    input tri id_11,
+    output wor id_12,
+    output tri0 id_13,
+    output tri0 id_14,
+    output tri0 id_15,
+    output wand id_16,
+    output tri1 id_17,
+    output wor id_18,
+    output wire id_19,
+    input tri1 id_20
+);
+  int id_22;
+  module_0(
+      id_15, id_14, id_15, id_0, id_4
+  );
 endmodule

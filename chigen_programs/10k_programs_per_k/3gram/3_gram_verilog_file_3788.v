@@ -1,23 +1,31 @@
-// Seed: 743436912
-`timescale 1ps / 1ps
-`define pp_5 (  pp_6  ,  pp_7  )  0
-`resetall
+// Seed: 3525242349
 module module_0 (
-    input id_0,
-    output id_1,
-    output reg id_2,
-    input logic id_3,
-    output logic id_4
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_5, id_6, id_7, id_8;
-  integer id_9;
-  logic   id_10;
-  always @(1 or posedge 1'h0) begin
-    id_2 <= "";
-  end
-  assign id_5 = 1;
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  logic id_14;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  uwire id_4 = 1 & id_2;
+  tri0  id_5;
+  assign id_5 = id_4;
+  wire id_6;
+endmodule
+module module_1 (
+    input  tri  id_0,
+    output wire id_1,
+    input  tri  id_2,
+    input  tri  id_3,
+    input  wor  id_4,
+    output tri1 id_5,
+    output tri0 id_6,
+    output tri  id_7,
+    input  tri0 id_8
+);
+  wire id_10;
+  module_0(
+      id_10, id_10, id_10
+  );
+  wire id_11;
 endmodule

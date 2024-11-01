@@ -1,26 +1,27 @@
-// Seed: 1296716084
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input id_4
-);
-  reg id_5;
-  assign {1 == 1'b0, 1} = id_0;
-  logic id_6;
-  assign id_6 = 1 - 1 > 1;
-  assign id_5 = (id_4 - id_2);
-  always id_5 <= id_2;
-  logic id_7;
-  assign id_5 = ~1;
-  type_13(
-      (1)
+// Seed: 3659534381
+module module_0 ();
+  id_2(
+      .id_0(id_3), .id_1(1), .id_2(id_1[1'b0]), .id_3(id_1), .id_4(1)
   );
-  assign id_7 = 1;
-  type_14(
-      id_1
-  );
+  assign id_2 = id_3;
+  wire id_4;
 endmodule
-`define pp_5 0
-`define pp_6 0
+module module_1 (
+    input wire id_0,
+    input supply1 id_1,
+    output wor id_2,
+    output wor id_3,
+    output supply1 id_4
+);
+  tri0 id_6;
+  always begin
+    #1 begin
+      wait (1'h0);
+    end
+    id_6 = id_1;
+  end
+  wor id_7 = id_0;
+  module_0();
+  assign id_2 = 1'b0;
+  assign id_7 = id_7 + id_7;
+endmodule

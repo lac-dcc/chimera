@@ -1,5 +1,16 @@
-// Seed: 715109012
-module module_0 (
+// Seed: 2851952032
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    input  tri0 id_1
+);
+  wire id_3;
+  wire id_4;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -11,64 +22,21 @@ module module_0 (
     id_9,
     id_10,
     id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31
+    id_12
 );
-  input id_31;
-  input id_30;
-  input id_29;
-  output id_28;
-  input id_27;
-  inout id_26;
-  input id_25;
-  inout id_24;
-  output id_23;
-  input id_22;
-  input id_21;
-  output id_20;
-  output id_19;
-  inout id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  logic id_31;
-  logic id_32;
-  logic id_33;
-  type_36 id_34 (
-      .id_0(id_20),
-      .id_1((1)),
-      .id_2(id_24)
-  );
+  input wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wor id_13;
+  module_0();
+  always @(negedge 1) id_9 <= id_13++;
 endmodule

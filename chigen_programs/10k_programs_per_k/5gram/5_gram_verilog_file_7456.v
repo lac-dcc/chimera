@@ -1,43 +1,12 @@
-// Seed: 1144869847
-`define pp_18 0
+// Seed: 3254978511
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_2
 );
-  output id_12;
-  input id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  input id_1;
-  always @(*) begin
-    id_6 <= id_1;
-    id_12(id_8 + id_10);
-    id_12 = 1;
-    id_12 <= 1 !== id_7;
-  end
-  logic id_13;
-  always @(posedge 1 - id_7 or posedge id_13) begin
-    @(negedge 1);
-  end
+  input wire id_2;
+  input wire id_1;
+  wire id_3;
 endmodule
-`timescale 1ps / 1ps
 module module_1 (
     id_1,
     id_2,
@@ -45,44 +14,58 @@ module module_1 (
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+    id_7
 );
-  output id_18;
-  inout id_17;
-  input id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  output id_7;
-  inout id_6;
-  input id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  output id_1;
-  assign id_14 = id_15;
-  always @(posedge id_5 or posedge 1 && 1 && 1) begin
-    if (id_13) begin
-      id_4[1'b0] <= 1;
-    end else begin
-      SystemTFIdentifier;
-      id_7 <= (1);
-    end
-  end
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_8;
+  wire id_10;
+  assign id_9 = 1'b0 ? 1 : id_5;
+  module_0(
+      id_2, id_6
+  );
+endmodule
+module module_2 #(
+    parameter id_10 = 32'd50,
+    parameter id_9  = 32'd84
+) (
+    output uwire id_0,
+    output wand id_1,
+    input supply0 id_2,
+    input wand id_3
+    , id_8,
+    input supply1 id_4,
+    input wire id_5,
+    input supply0 id_6
+);
+  defparam id_9.id_10 = id_3 < id_6;
+endmodule
+module module_3 (
+    input tri0 id_0,
+    output tri0 id_1,
+    input wand id_2,
+    input tri1 id_3,
+    input wand id_4,
+    input tri0 id_5,
+    input wand id_6,
+    input supply0 id_7,
+    output tri1 id_8,
+    input wor id_9,
+    output tri id_10,
+    input wire id_11,
+    output uwire id_12,
+    output wand id_13,
+    output tri0 id_14,
+    output tri0 id_15
+);
+  id_17(
+      .id_0(id_2 == 1), .id_1(id_8), .id_2(), .id_3(id_12), .id_4(1), .id_5(id_2)
+  ); module_2(
+      id_13, id_8, id_3, id_5, id_4, id_5, id_0
+  );
 endmodule

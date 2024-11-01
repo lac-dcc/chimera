@@ -1,34 +1,50 @@
-// Seed: 2636512666
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    output reg id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    output id_10
+// Seed: 819390816
+module module_0 #(
+    parameter id_4 = 32'd76,
+    parameter id_5 = 32'd68
+) (
+    id_1,
+    id_2
 );
-  reg id_11;
-  always @(id_1 or posedge 1) id_11 <= #1 1;
-  always @(negedge 1) begin
-    id_5 = ~id_11;
-    SystemTFIdentifier(1, 1);
-    id_5 = id_11;
-    @(negedge 1) id_11 = 1'b0;
-    id_10 <= id_8;
-    id_3  <= 1;
-    id_11 <= 1;
-    id_11 = id_11;
-    id_10 <= 1;
-    SystemTFIdentifier(1, 1);
-    if (1'b0) begin
-      if (1 && 1'b0) id_10 <= 1;
-      id_10 = 1;
-    end
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+  defparam id_4.id_5 = id_5;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output wire id_1;
+  reg id_3;
+  module_0(
+      id_2, id_2
+  );
+  always @(*) begin
+    id_3 <= 1;
+    id_1 <= 1;
   end
-  logic id_12;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    output wire id_1
+);
+  wire id_3 = id_3 ^ id_3;
+  module_0(
+      id_3, id_3
+  ); id_4(
+      .id_0(1),
+      .id_1(id_1),
+      .id_2(-(1)),
+      .id_3(1),
+      .id_4(1 < id_1),
+      .id_5(id_3),
+      .id_6(1'b0),
+      .id_7(1'b0),
+      .id_8(1),
+      .id_9(1'h0),
+      .id_10(1),
+      .id_11(1)
+  );
 endmodule

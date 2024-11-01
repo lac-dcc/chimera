@@ -1,38 +1,22 @@
-// Seed: 1362036518
-module module_0 (
-    input id_0,
-    output logic id_1,
-    inout id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input id_6
-    , id_13,
-    input id_7,
-    output id_8,
-    output id_9,
-    input logic id_10,
-    input logic id_11,
-    input id_12
+// Seed: 256004934
+module module_0 #(
+    parameter id_1 = 32'd96,
+    parameter id_2 = 32'd75
+) ();
+  defparam id_1.id_2 = id_2;
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply0 id_1,
+    input tri id_2,
+    output logic id_3,
+    output tri0 id_4,
+    input supply1 id_5,
+    input logic id_6,
+    input supply0 id_7,
+    input logic id_8
 );
-  assign id_3[1] = 1'h0;
-  logic id_14 = 1;
-  always @(1 or(id_4)) begin
-    id_2 = 1;
-  end
-  logic id_15;
-  logic id_16 = 1'b0;
-  type_26(
-      1'b0, id_8
-  );
-  type_0 id_17 (
-      .id_0({1, id_10}),
-      .id_1(id_15),
-      .id_2(1),
-      .id_3(1)
-  );
-  logic id_18;
-  always @(posedge 1) begin
-    id_17 = id_13;
-  end
+  module_0();
+  always id_3 = #(1'b0 == 1'b0 : 1'b0 : id_8) id_6;
+  always @(id_6) if (id_8) id_3 <= 1 == 1;
 endmodule

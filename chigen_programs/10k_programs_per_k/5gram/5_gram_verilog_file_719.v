@@ -1,5 +1,10 @@
-// Seed: 4103649446
-module module_0 (
+// Seed: 2617266807
+module module_0;
+  tri  id_1;
+  tri0 id_2;
+  assign id_2 = id_2 == 1'b0 ? id_1 : 1 - 1 ? id_2 * (~id_2) : 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -7,11 +12,38 @@ module module_0 (
     id_5,
     id_6
 );
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_6 = 1;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_2 = 1'd0;
+  module_0();
+  assign id_2 = id_3++;
+  nand (id_1, id_3, id_4);
+endmodule
+module module_2 (
+    output supply1 id_0,
+    output supply1 id_1
+    , id_10,
+    input wor id_2,
+    input supply1 id_3,
+    output uwire id_4,
+    input tri0 id_5,
+    inout tri id_6,
+    input wor id_7,
+    input tri id_8
+);
+  uwire id_11;
+  assign id_11 = id_6 - id_3;
+  assign id_6 = 1;
+  assign {id_3 ==? 1} = id_11 ? id_6 : 1 - 1;
+  task id_12;
+    id_10 = 1;
+  endtask
+  wire id_13;
+  module_0();
+  wire id_14;
+  wire id_15;
 endmodule

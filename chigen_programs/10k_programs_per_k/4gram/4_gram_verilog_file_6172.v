@@ -1,28 +1,28 @@
-// Seed: 373653342
-`default_nettype wire
+// Seed: 1438879212
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    output tri  id_0,
+    input  tri  id_1,
+    input  wand id_2
 );
-  inout id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  string id_11 = "";
+  wire id_4;
+endmodule
+module module_1 (
+    input wire id_0,
+    input tri0 id_1,
+    output supply0 id_2,
+    input wire id_3,
+    input wire id_4,
+    output wire id_5,
+    input tri0 id_6,
+    output wor id_7,
+    output tri1 id_8,
+    input wand id_9,
+    input uwire id_10,
+    input tri0 id_11,
+    output wor id_12
+);
+  supply1 id_14 = 1;
+  module_0(
+      id_8, id_10, id_6
+  );
 endmodule

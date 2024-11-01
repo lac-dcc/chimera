@@ -1,27 +1,41 @@
-// Seed: 2737860722
-`timescale 1ps / 1ps
-`define pp_10 0
-`timescale 1 ps / 1ps `timescale 1 ps / 1 ps
-module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input logic id_9
-);
-  assign id_4 = 1;
-  logic id_10;
-  logic id_11;
-  assign id_3 = id_10;
-  logic id_12;
-  assign id_12 = id_12;
-  logic id_13;
+// Seed: 1121678103
+module module_0;
+  wire id_2;
 endmodule
-`define pp_11 0
-`celldefine
-`define pp_12 0
+module module_1 (
+    input tri0 id_0,
+    input wor id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input wor id_4,
+    input wor id_5,
+    output supply1 id_6,
+    input wire id_7
+);
+  assign id_6 = id_0;
+  generate
+    supply1 id_9;
+  endgenerate
+  module_0();
+  assign id_9 = id_0;
+endmodule
+module module_2 (
+    output wire id_0,
+    output uwire id_1,
+    output uwire id_2,
+    input tri1 id_3,
+    input wand id_4,
+    output supply1 id_5,
+    output uwire id_6,
+    input wand id_7,
+    input wor id_8
+);
+  always @(posedge id_3 or posedge id_4) begin
+    begin
+      id_1 = 1;
+    end
+  end
+  module_0();
+  assign id_0 = id_4;
+  assign id_2 = 1'b0;
+endmodule

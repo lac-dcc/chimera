@@ -1,38 +1,57 @@
-// Seed: 3040446076
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`timescale 1 ps / 1 ps `timescale 1 ps / 1ps `timescale 1ps / 1ps
+// Seed: 1736003570
 module module_0 (
-    output id_0,
-    input logic id_1,
-    output id_2,
-    output id_3,
-    input logic id_4
-    , id_6,
-    input logic id_5
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  tri1 id_7;
-  initial id_7[1 : 1] = 1;
-  logic id_8;
-  assign id_0 = id_1;
-  assign id_0 = 1;
-  integer id_9;
-  initial begin
-    #1;
-  end
-  type_18(
-      1, id_3[1]
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_5 = 1 ? id_2 : 1 - 1 === 1'b0;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_2, id_1
   );
-  supply1 id_10;
-  logic   id_11 = 1;
-  logic   id_12 = 1 ? 1 : id_5 & id_10[1];
-  assign id_12 = id_4;
+endmodule
+module module_2 (
+    output wor id_0,
+    input supply0 id_1,
+    output wire id_2,
+    output supply0 id_3,
+    output supply0 id_4,
+    output tri1 id_5,
+    input tri id_6,
+    output supply1 id_7,
+    input wire id_8,
+    output uwire id_9,
+    output wire id_10
+);
+  logic [7:0] id_12;
+  wire id_13;
+  tri0 id_14;
+  tri0 id_15;
+  initial id_14 = 1;
+  always @(negedge id_14) begin
+    wait (1);
+  end
+  wire id_16;
+  id_17(
+      .id_0(((1))), .id_1(id_4), .id_2(1'h0), .id_3(1), .id_4(id_14 < id_12[""])
+  ); module_0(
+      id_14, id_15, id_14, id_13, id_16, id_15
+  );
+  assign id_15 = 1'b0 >> 1;
 endmodule

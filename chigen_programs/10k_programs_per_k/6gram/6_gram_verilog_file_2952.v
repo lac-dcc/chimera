@@ -1,37 +1,30 @@
-// Seed: 1303618497
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`timescale 1ps / 1 ps
-`define pp_19 0
-`define pp_20 0
-`define pp_21 0
-`define pp_22 0
-`define pp_23 0
-`default_nettype id_2 `resetall `endcelldefine
+// Seed: 2707240263
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    id_2
 );
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
+  inout wire id_2;
+  output wire id_1;
+  tri1 id_3;
+  assign id_3 = id_3 ? id_2 == 1 : id_3 ? 1'b0 : 1 ? 1'b0 : 1 ? 1'b0 : id_3;
+  wire id_4;
   assign id_1 = 1;
-  logic id_5;
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply0 id_1,
+    input wire id_2,
+    input tri0 id_3,
+    input tri1 id_4,
+    input tri0 id_5,
+    input wire id_6,
+    input supply0 id_7,
+    input wor id_8,
+    input supply0 id_9,
+    input supply1 id_10
+);
+  assign id_12 = 1;
+  module_0(
+      id_12, id_12
+  );
 endmodule

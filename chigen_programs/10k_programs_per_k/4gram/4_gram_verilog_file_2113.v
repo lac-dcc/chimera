@@ -1,4 +1,7 @@
-// Seed: 899075236
+// Seed: 2082385624
+module module_0;
+  wire id_1 = id_1;
+endmodule
 module module_0 (
     id_1,
     id_2,
@@ -10,43 +13,22 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_11
 );
-  input id_17;
-  input id_16;
-  output id_15;
-  output id_14;
-  inout id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  assign id_6 = 1'd0;
-  type_23(
-      id_1 == id_5, id_1
-  );
-  reg id_17 = id_16, id_18;
-  logic id_19;
-  initial id_7[1 : 1'b0] = (1);
-  always @(posedge id_17 or posedge 1) begin
-    id_18 = 1;
-    id_13 <= id_16;
-  end
-  assign id_10[1'b0] = 1;
-  defparam id_20.id_21 = 1;
-  logic id_22;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_12;
+  generate
+    assign module_1 = 1;
+  endgenerate
+  module_0();
 endmodule

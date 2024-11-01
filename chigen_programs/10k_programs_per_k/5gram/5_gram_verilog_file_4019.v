@@ -1,11 +1,20 @@
-// Seed: 3873520304
-`define pp_17 0
-localparam id_6 = 1 | ('d0 - 1) | id_6[1'b0 : 1];
-`define pp_18 0
-`define pp_19 0
-`define pp_20 0
-`timescale 1 ps / 1 ps
+// Seed: 3978014442
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  always @(posedge (1) == 1)
+    if (1'h0)
+      assume (1);
+      else assume (id_1);
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -14,44 +23,21 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_9
 );
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_17 = id_15;
-  logic id_18;
-  logic id_19 = 1;
-  assign id_5 = 1'b0;
-  type_30(
-      id_14, 1, 1
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = id_8;
+  module_0(
+      id_4, id_2, id_2, id_4
   );
-  logic id_20;
-  logic id_21, id_22, id_23 = id_22, id_24;
-  logic id_25;
-  logic id_26;
-  logic id_27;
-  assign id_13[1'h0] = 1;
+  assign id_1[1] = id_7 - 1;
+  assign id_4 = id_2;
 endmodule

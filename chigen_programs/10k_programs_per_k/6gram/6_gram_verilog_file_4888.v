@@ -1,5 +1,16 @@
-// Seed: 2439635242
-module module_0 (
+// Seed: 734189846
+module module_0;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input supply1 id_3
+);
+  always @(posedge id_0) id_5 = id_0;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -13,69 +24,32 @@ module module_0 (
     id_11,
     id_12,
     id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_37
+    id_14
 );
-  input id_37;
-  input id_36;
-  inout id_35;
-  output id_34;
-  input id_33;
-  input id_32;
-  input id_31;
-  input id_30;
-  inout id_29;
-  inout id_28;
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  input id_23;
-  input id_22;
-  output id_21;
-  output id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  input id_13;
-  inout id_12;
-  input id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  logic id_37;
-  logic id_38;
-  initial id_35 = id_32;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_12 = id_5 + id_7;
+  always @(1'b0 or id_7)
+    if (1 || id_12 < 1) begin
+      id_6 <= id_4;
+      id_9 = new;
+      cover (1);
+      id_14 <= id_10[1];
+      id_2  <= 1'b0;
+      $display(id_11);
+      $display;
+    end else id_12 <= (id_6);
+  module_0();
 endmodule

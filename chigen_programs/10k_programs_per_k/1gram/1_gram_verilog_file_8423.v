@@ -1,29 +1,73 @@
-// Seed: 2564827404
-`define pp_10 0
-`define pp_11 0
+// Seed: 4028413290
 module module_0 (
-    output reg id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input reg id_8,
-    output id_9
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20
 );
-  reg id_10;
-  always begin
-    begin
-      id_10 <= id_4 ? id_8 : id_10;
-    end
-    SystemTFIdentifier(1);
-  end
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  always id_0 = 1;
-  assign id_0 = id_10;
+  input wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_21;
 endmodule
-`default_nettype wire
+module module_1 (
+    output uwire id_0
+);
+  wire id_2, id_3;
+  module_0(
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_2
+  );
+  assign id_3 = id_2;
+endmodule

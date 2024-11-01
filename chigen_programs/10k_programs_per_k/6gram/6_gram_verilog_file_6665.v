@@ -1,30 +1,43 @@
-// Seed: 3401839755
+// Seed: 399554827
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    id_4
 );
-  inout id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  logic id_10;
-  always @(id_10 or posedge 1) begin
-    if (id_10) begin
-      if (id_8) id_1 <= 1;
-    end
-  end
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5;
+  assign id_3 = id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_5;
+  buf (id_4, id_5);
+  module_0(
+      id_4, id_5, id_5, id_4
+  );
+endmodule
+module module_2 (
+    input tri0 id_0,
+    output supply1 id_1,
+    output wor id_2
+);
+  id_4(
+      .id_0(1), .id_1(id_1)
+  );
+  wire id_5;
+  module_0(
+      id_5, id_5, id_5, id_5
+  );
 endmodule

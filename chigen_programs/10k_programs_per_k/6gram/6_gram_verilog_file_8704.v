@@ -1,21 +1,35 @@
-// Seed: 4167723951
-`define pp_4 0
-`timescale 1ps / 1 ps
-`define pp_5 0
-module module_0 (
-    input id_0,
-    input logic id_1
+// Seed: 2237261782
+module module_0;
+  always @(posedge 'h0) if (1'b0) $display(1);
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output logic id_1
     , id_4,
-    output id_2,
-    output id_3
+    input  wor   id_2
 );
-  always @(posedge 1) begin
-    if (1'b0 && id_4 && 1) begin
-      id_3 = 1;
-    end else if (id_1) begin
-      id_2 <= (1);
-      SystemTFIdentifier(1);
-    end else id_3 = 1;
-  end
-  assign id_3 = id_1;
+  always @(1) id_1 = #1 1'b0;
+  module_0();
+  wire id_5;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_6 = id_3;
+  module_0();
 endmodule

@@ -1,24 +1,31 @@
-// Seed: 4111367299
-`timescale 1 ps / 1ps
+// Seed: 3409009351
 module module_0 (
-    output logic id_0,
-    output logic id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    output logic id_13,
-    input id_14
+    id_1,
+    id_2,
+    id_3
 );
-  type_23 id_15 (
-      id_6,
-      id_4
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  id_4 :
+  assert property (@(posedge id_2[1]) 1)
+  else $display(id_3 & 1, 1'b0);
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_4[1] = 1'b0 - 1;
+  module_0(
+      id_1, id_4, id_3
   );
+  wire id_6;
 endmodule

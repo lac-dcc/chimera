@@ -1,27 +1,37 @@
-// Seed: 1113212080
-`define pp_19 0
-`default_nettype id_3
-`define pp_20 0
+// Seed: 3106286206
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    output logic id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    output logic id_15,
-    input id_16,
-    output logic id_17,
-    input id_18
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  initial id_1 = id_8;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_4;
+  wire id_5;
+  module_0(
+      id_4, id_4, id_5, id_4, id_4, id_4, id_1, id_5, id_4
+  );
+  assign id_3 = id_5;
 endmodule

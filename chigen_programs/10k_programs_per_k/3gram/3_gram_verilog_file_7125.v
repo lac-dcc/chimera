@@ -1,14 +1,36 @@
-// Seed: 2438736537
-`timescale 1ps / 1 ps
+// Seed: 2278320539
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    output tri id_5
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  assign id_5 = id_3;
-  assign id_0 = id_3;
-  assign id_0[1] = id_4;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  tri  id_7 = 1'b0 & id_6;
+  wire id_8;
+  module_2(
+      id_8, id_6
+  );
+endmodule
+module module_1 ();
+  always @(1 or id_1) assert (id_1);
+  uwire id_2 = 1'b0;
+  module_0(
+      id_2, id_2, id_2, id_2, id_2, id_2
+  );
+  wire id_3;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
 endmodule

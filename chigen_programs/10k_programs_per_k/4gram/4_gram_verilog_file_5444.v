@@ -1,48 +1,31 @@
-// Seed: 3189824166
+// Seed: 464584708
 module module_0 (
-    id_1
+    input  tri   id_0,
+    input  wor   id_1,
+    output wor   id_2,
+    input  uwire id_3
 );
-  input id_1;
-  reg id_1 = 1 + id_1;
-  assign id_1 = 1 > id_1 & 1;
-  always @(id_1, 1'b0 & id_1) id_1 <= "";
+  assign id_2 = 1 >> id_3;
 endmodule
-primitive id_1(id_2, id_3, id_4);
-  output id_5;
-  input id_6, id_7, id_8;
-  table
-    * ? 1 0 : 0;
-    ? 0 ? 0 : 0;
-    ? 1 1 1 1 : x;
-    x 1 : 1;
-    ? ? : x;
-    ? 1 0 0 : 0;
-    ? 1 0 : 0;
-    0 ? 0 1 : 1;
-    1 : 0;
-    0 1 ? 1 ? ? ? 0 0 : 0;
-    1 0 1 : 0;
-    1 1 x : 0;
-    1 0 0 : 0;
-    ? 1 1 1 ? x ? : 1;
-    1 0 ? : 1;
-    ? 1 0 : 0;
-    0 ? ? : x;
-    0 ? 1 ? x 0 ? 0 : 0;
-    ? 0 0 : 1;
-    0 : 1;
-    ? ? 0 : 1;
-    ? ? 0 1 : 1;
-    ? x x : 0;
-    ? 1 1 : x;
-    1 x x : 0;
-    0 1 : 0;
-    0 ? 0 : 1;
-    1 1 ? : 0;
-    0 0 1 : 0;
-    ? 1 ? 0 0 ? ? 0 0 : 0;
-    0 0 1 : 1;
-    1 0 1 : x;
-    0 0 : 0;
-  endtable
-endprimitive
+module module_0 (
+    input  tri1  id_0,
+    output tri0  id_1,
+    output wire  module_1,
+    input  tri   id_3,
+    input  tri0  id_4,
+    output tri   id_5,
+    output uwire id_6,
+    input  wire  id_7,
+    input  wand  id_8,
+    output tri   id_9
+    , id_12,
+    output tri   id_10
+);
+  id_13(
+      "", 1
+  ); module_0(
+      id_8, id_4, id_9, id_8
+  );
+  wire id_14, id_15;
+  wire id_16;
+endmodule

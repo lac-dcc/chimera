@@ -1,71 +1,36 @@
-// Seed: 928501273
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33
+// Seed: 3368922018
+module module_0;
+  wire id_2;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output wor id_1,
+    output wire id_2,
+    output wand id_3,
+    input supply1 id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    input supply1 id_7,
+    input wand id_8,
+    input tri id_9,
+    input uwire id_10,
+    output uwire id_11,
+    input wor id_12,
+    output wor id_13,
+    input uwire id_14,
+    input uwire id_15,
+    output uwire id_16,
+    output supply0 id_17,
+    output tri id_18,
+    input wor id_19,
+    output tri1 id_20,
+    input tri id_21,
+    output wand id_22,
+    input supply1 id_23,
+    output wand id_24,
+    output wire id_25
 );
-  inout id_33;
-  inout id_32;
-  inout id_31;
-  output id_30;
-  inout id_29;
-  input id_28;
-  inout id_27;
-  inout id_26;
-  output id_25;
-  input id_24;
-  inout id_23;
-  inout id_22;
-  input id_21;
-  output id_20;
-  output id_19;
-  inout id_18;
-  input id_17;
-  output id_16;
-  input id_15;
-  output id_14;
-  output id_13;
-  inout id_12;
-  input id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  assign id_22 = id_26;
+  assign id_11 = id_23;
+  always @(posedge 1) disable id_27;
+  module_0();
 endmodule

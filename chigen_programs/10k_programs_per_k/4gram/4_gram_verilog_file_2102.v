@@ -1,26 +1,39 @@
-// Seed: 4165462281
+// Seed: 1943573056
 module module_0 (
-    input id_0,
-    input string id_1,
-    input id_2,
-    output id_3
-    , id_14,
-    output logic id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    output id_9,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    input id_13
+    id_1,
+    id_2
 );
-  logic id_15;
-  type_22(
-      1, 1, 1
+  inout wire id_2;
+  input wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
+);
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  module_0(
+      id_5, id_3
   );
-  always @(posedge id_1 or negedge {id_7{""}}) begin
-    id_3 = id_14;
-  end
+  wire id_13;
 endmodule

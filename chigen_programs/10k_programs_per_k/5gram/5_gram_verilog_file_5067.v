@@ -1,22 +1,26 @@
-// Seed: 1516357333
-`timescale 1ps / 1ps
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    input id_4,
-    output logic id_5,
-    input id_6,
-    output id_7,
-    output id_8
+// Seed: 1687056929
+module module_0 ();
+  assign id_1 = 1;
+  tri1 id_2;
+  wire id_3;
+  wire id_4;
+  id_5(
+      .id_0(1),
+      .id_1(1'd0),
+      .id_2(1 ==? 1'b0),
+      .id_3(~id_2),
+      .id_4(id_2),
+      .id_5(),
+      .id_6({1}),
+      .id_7(1)
+  );
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input uwire   id_1
 );
-  assign id_1 = id_3;
-  logic id_9;
-  initial id_5 = 1;
-  reg id_10;
-  assign id_10 = id_10;
-  always @(negedge id_3) begin
-    if (id_9) id_8 <= id_10;
-  end
+  assign id_3#(
+      .id_1(""),
+      .id_3(1)) = 1'h0;
+  module_0();
 endmodule

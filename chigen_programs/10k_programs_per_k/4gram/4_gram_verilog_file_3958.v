@@ -1,16 +1,29 @@
-// Seed: 3926744197
-`timescale 1ps / 1ps
+// Seed: 3019264136
 module module_0 (
-    input logic id_0,
-    output logic id_1,
-    input id_2,
-    input logic id_3,
-    output logic id_4,
-    input id_5,
-    output id_6,
-    output id_7,
-    output id_8,
-    input logic id_9,
-    input id_10
+    input  uwire id_0,
+    output wand  id_1,
+    input  tri1  id_2
 );
+  always @(*) id_1 = 1;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    output supply1 id_3,
+    inout tri0 id_4,
+    input tri id_5,
+    input tri1 id_6,
+    output tri0 id_7,
+    output wor id_8,
+    input tri1 id_9,
+    input supply1 id_10,
+    output wand id_11,
+    input tri1 id_12
+);
+  wire id_14;
+  module_0(
+      id_6, id_4, id_6
+  );
+  always @(posedge 1 < (1'b0)) if (1) assert (id_9);
 endmodule

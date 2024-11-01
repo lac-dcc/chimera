@@ -1,27 +1,34 @@
-// Seed: 465194323
+// Seed: 215347922
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input logic id_7,
-    output logic id_8
-    , id_21,
-    input id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    output id_15,
-    output logic id_16,
-    output id_17,
-    output logic id_18,
-    input logic id_19,
-    output logic id_20
+    id_1,
+    id_2
 );
-  defparam id_22.id_23 = id_22;
+  output wire id_2;
+  input wire id_1;
+  wire id_3 = id_3;
+  assign id_2 = 1;
+endmodule
+module module_1 (
+    output tri1 id_0
+    , id_3, id_4, id_5,
+    output wire id_1
+);
+  assign id_1 = 1 & id_4;
+  module_0(
+      id_4, id_4
+  );
+  wire id_6;
+  assign id_5 = 1;
+endmodule
+module module_2;
+  assign id_1 = id_1 & id_1 & 1;
+  always #0 #1;
+  assign id_1 = 1;
+  module_0(
+      id_1, id_1
+  );
+  wire id_3;
+  wire id_4;
+  assign id_1 = 1;
+  assign id_2 = 1;
 endmodule

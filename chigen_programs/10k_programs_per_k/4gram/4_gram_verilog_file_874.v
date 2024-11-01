@@ -1,54 +1,66 @@
-// Seed: 2012097855
+// Seed: 1297322026
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output logic id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    output logic id_9,
-    input id_10,
-    input id_11,
-    output logic id_12,
-    output id_13,
-    input logic id_14,
-    input id_15,
-    input logic id_16,
-    input logic id_17,
-    input logic id_18,
-    output logic id_19,
-    input id_20,
-    input logic id_21,
-    output id_22,
-    output id_23,
-    input logic id_24,
-    input logic id_25,
-    input id_26,
-    input logic id_27,
-    output id_28,
-    input logic id_29,
-    input logic id_30,
-    output id_31,
-    input id_32,
-    output id_33
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  logic id_34;
-  type_57(
-      1, id_17, id_6
+  inout wire id_13;
+  input wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_14, id_15;
+  wire  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ;
+  id_31(
+      .id_0(1), .id_1(1), .id_2(id_28), .id_3(id_12), .id_4(id_21), .id_5(id_28)
   );
-  logic id_35;
-  initial begin
-    id_31 <= 1;
-  end
-  assign id_35 = 1;
-  logic id_36;
-  logic id_37 = 1;
-  logic id_38;
-  type_62(
-      1, id_33, id_4, 1
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_11;
+  module_0(
+      id_2, id_7, id_7, id_9, id_7, id_2, id_11, id_9, id_11, id_11, id_11, id_8, id_9
+  ); id_12(
+      .id_0()
   );
-  assign id_28 = 1;
+  assign id_1 = ("");
+  xor (id_6, id_9, id_1, id_7, id_2, id_11, id_8);
 endmodule

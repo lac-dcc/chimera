@@ -1,30 +1,43 @@
-// Seed: 2712889283
-`timescale 1ps / 1 ps
+// Seed: 2479163943
 module module_0 (
-    output id_0,
-    output wand id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    output logic id_8,
-    input id_9,
-    input id_10,
-    output logic id_11,
-    output id_12,
-    input logic id_13,
-    input logic id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  always @(posedge id_9 or negedge id_9) begin
-    if (id_6[1'b0 : 1] * id_9 - id_9) if (id_3) id_5 <= 1;
-  end
-  logic id_15, id_16;
-  logic id_17;
-  type_28(
-      1, id_15
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_9;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_5 = id_6;
+  wire id_8;
+  module_0(
+      id_8, id_6, id_6, id_2, id_4, id_5, id_6, id_6
   );
-  assign id_1[1] = 1;
-  logic id_18;
 endmodule

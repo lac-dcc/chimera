@@ -1,12 +1,31 @@
-// Seed: 3311225026
-module module_0 (
+// Seed: 1267393789
+module module_0 ();
+  id_1(
+      .id_0(1),
+      .id_1(""),
+      .id_2(id_2#(
+          .id_3(1 - 1),
+          .id_4(id_3),
+          .id_5(id_4),
+          .id_6(id_2 && id_2)))
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  output id_4;
-  output id_3;
-  input id_2;
-  input id_1;
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = id_6;
+  module_0();
 endmodule

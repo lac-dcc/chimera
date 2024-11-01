@@ -1,19 +1,56 @@
-// Seed: 415318938
+// Seed: 1584739736
 module module_0 (
-    output reg id_0,
-    input logic id_1,
-    input reg id_2,
-    input supply1 id_3
+    id_1,
+    id_2
 );
-  type_9(
-      id_2, SystemTFIdentifier - 1 == id_1, 1
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    output tri   id_0
+    , id_13,
+    input  wire  id_1,
+    output uwire id_2,
+    input  wand  id_3,
+    output tri0  id_4,
+    input  wand  id_5,
+    output tri1  id_6,
+    input  wand  id_7,
+    output wor   id_8,
+    input  uwire id_9,
+    input  tri0  id_10,
+    input  tri   id_11
+);
+  wire id_14;
+  module_0(
+      id_13, id_13
   );
-  assign id_0 = id_3[1];
-  assign id_0 = 1;
-  always @(negedge id_2)
-    if (1) id_0 <= 1;
-    else begin
-      id_0 <= {id_2{1}};
-    end
-  logic id_4;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_10;
+  wire id_11;
+  wire id_12;
+  module_0(
+      id_11, id_11
+  );
 endmodule

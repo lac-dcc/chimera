@@ -1,2 +1,30 @@
-// Seed: 3309996027
-`timescale 1ps / 1ps `timescale 1ps / 1ps
+// Seed: 3618022807
+module module_0 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = 1;
+  assign id_2 = 'b0;
+  module_2();
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  module_0(
+      id_4, id_4
+  );
+  wire id_6;
+  assign id_1[1'b0] = 1 >= 1;
+endmodule
+module module_2;
+  reg id_1;
+  always @(*) if (1'b0) id_1 <= id_1;
+endmodule

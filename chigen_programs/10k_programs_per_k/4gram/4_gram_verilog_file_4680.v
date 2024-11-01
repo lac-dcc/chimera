@@ -1,49 +1,56 @@
-// Seed: 3376682801
+// Seed: 2197996128
 module module_0 (
-    input logic id_0,
-    output id_1,
-    output id_2,
-    output logic id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    output id_12,
-    input id_13,
-    output logic id_14
-    , id_38,
-    input id_15,
-    input id_16,
-    output logic id_17,
-    output logic id_18,
-    output id_19,
-    input logic id_20,
-    output logic id_21,
-    input id_22,
-    input id_23,
-    output logic id_24,
-    input logic id_25,
-    input id_26,
-    output id_27,
-    input id_28,
-    output id_29,
-    input id_30,
-    output logic id_31,
-    input logic id_32,
-    output logic id_33,
-    input logic id_34,
-    output logic id_35,
-    output id_36,
-    input logic id_37
+    input wand id_0,
+    output supply1 id_1,
+    input supply0 id_2,
+    input supply1 id_3,
+    output supply0 id_4,
+    input supply1 id_5,
+    input tri id_6,
+    output wor id_7,
+    input wor id_8,
+    input wire id_9,
+    output wand id_10,
+    input tri id_11,
+    input uwire id_12,
+    input uwire id_13,
+    input wor id_14,
+    input wor id_15,
+    input uwire id_16,
+    input uwire id_17
 );
-  function id_39;
-    logic id_40;
-    input id_41;
-    input integer id_42;
-    id_27 = id_4;
-  endfunction
+  specify
+    specparam id_19 = 1;
+  endspecify
+endmodule
+module module_1 (
+    output wire id_0,
+    input  wor  id_1,
+    output wand id_2,
+    output tri0 id_3,
+    output wand id_4
+);
+  wand id_6;
+  assign id_3 = id_6;
+  module_0(
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_6,
+      id_4,
+      id_1,
+      id_6,
+      id_6,
+      id_1,
+      id_1,
+      id_1,
+      id_6,
+      id_6,
+      id_6,
+      id_6
+  );
+  assign id_0 = (1);
 endmodule

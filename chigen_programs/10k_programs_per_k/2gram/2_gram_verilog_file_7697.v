@@ -1,98 +1,41 @@
-// Seed: 3924071136
-package id_0;
-  localparam [id_0 : id_0] id_0 = id_0;
-  import "" function [1 : 1 'b0] id_0(
-    input reg id_0,
-    [id_0 : id_0  -  id_0] id_0
+// Seed: 2771762723
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_9;
+  assign id_5 = id_5;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    input wor id_2,
+    output uwire id_3,
+    inout tri0 id_4,
+    output tri0 id_5,
+    input supply0 id_6,
+    input supply0 id_7,
+    output wire id_8,
+    input supply0 id_9,
+    output supply0 id_10,
+    input wand id_11
+);
+  genvar id_13;
+  module_0(
+      id_13, id_13, id_13, id_13, id_13, id_13, id_13, id_13
   );
-  localparam id_0 = id_0;
-  localparam id_0 = {1'h0{1'b0}};
-  parameter id_0 = 1;
-  localparam id_0 = id_0;
-  parameter id_0 = id_0 % "";
-  function id_0;
-    output [1 'd0 : 1] id_0;
-    begin
-      id_0 <= 1;
-    end
-  endfunction
-  parameter id_0 = id_0 ? 1 : id_0;
-  localparam signed id_0 = id_0;
-  localparam id_0 = 1 || 1;
-  localparam id_0 = 1'h0;
-  localparam id_0 = id_0;
-  localparam id_0 = 1;
-  localparam id_0 = 1;
-  parameter id_0 = id_0;
-  parameter id_0 = (1);
-  localparam id_0 = 1'b0;
-  function [id_0 : id_0] id_0(input [1 : 1] id_0, input [id_0 : id_0  ==  1] id_0);
-    id_0 <= #1 id_0;
-    SystemTFIdentifier(1'b0);
-    id_0 <= id_0;
-    id_0 = id_0;
-    id_0 = id_0;
-    id_0 <= 1'b0;
-    id_0 = id_0;
-    SystemTFIdentifier(id_0[1'b0], 1);
-    if (1) begin
-      id_0 <= id_0;
-    end else if ('b0) begin : id_0
-      id_0 = ~1;
-      id_0 = id_0;
-      id_0 <= 1;
-      if (1) begin
-        id_0 <= 1;
-      end
-      id_0 <= 1 * 1;
-      #(1 & id_0) @(1 !== id_0) if (id_0 - id_0) for (id_0 = ""; 1'd0; id_0 = 1) id_0 <= 1;
-      id_0 = id_0;
-      id_0 = id_0;
-      id_0 <= 1;
-      SystemTFIdentifier();
-    end
-    id_0[id_0>~id_0] = 1'b0 == {id_0, id_0};
-    id_0 = id_0;
-    @(id_0 or posedge 1 - 1'b0);
-  endfunction
-  task id_0;
-    begin
-      id_0 <= 1;
-      id_0 <= 1;
-      id_0 <= id_0;
-    end
-    reg id_0;
-  endtask
-  localparam id_0 = 0;
-  parameter id_0 = id_0;
-  localparam id_0 = id_0 - 1'b0;
-  localparam id_0 = id_0;
-  localparam id_0 = 1 * 1 & id_0[1'b0];
-  localparam id_0 = id_0 ? id_0 : id_0[1];
-  localparam id_0 = 1;
-  localparam id_0 = 1;
-  localparam id_0 = (1'b0);
-  import "" function [id_0[1] : 1 'd0] id_0();
-  localparam id_0 = id_0;
-  function reg [id_1 : 1] id_0;
-    input [id_1 : 1] id_1;
-    id_1 = id_1;
-  endfunction
-  ;
-  localparam id_0 = id_0;
-  parameter id_1 = 1;
-  localparam id_1 = id_0;
-  function [id_1 : id_0] id_1;
-    input [1 : 1 'b0] id_0;
-    @*
-      @(posedge 1)
-        if (1 ? id_0 : id_1[(1) : 1'b0])
-          #(1) begin
-            id_0 <= id_0;
-          end
-        else if (id_1)
-          if (id_1) begin
-            id_0 <= "";
-          end
-  endfunction
-endpackage : id_1
+endmodule

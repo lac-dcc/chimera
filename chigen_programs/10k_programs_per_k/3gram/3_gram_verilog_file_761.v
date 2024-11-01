@@ -1,36 +1,49 @@
-// Seed: 3529589461
-module module_0 (
+// Seed: 4097649404
+module module_0;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    output logic id_1
+);
+  wire id_3;
+  initial begin
+    id_1 <= 1;
+  end
+  wire id_4;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  output id_7;
-  output id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  type_12(
-      1, ~1 - 1
-  );
-  assign id_6 = 1;
-  logic id_7;
-  defparam id_8.id_9 = id_8;
-  always #1 id_3 = id_4;
-  always @(posedge id_4 != 1 or posedge 1) id_4 <= 1;
-  type_14(
-      id_4, id_3
-  );
-  assign id_9 = (id_2);
-  type_15 id_10 (
-      .id_0(),
-      .id_1(id_4)
-  );
-  assign id_5[1] = id_1;
-  logic id_11;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_4[1] = 1;
+  module_0();
 endmodule

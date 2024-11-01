@@ -1,29 +1,33 @@
-// Seed: 169932001
-`define pp_5 0
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input logic id_4
-);
-  assign id_2 = id_3;
-  logic id_5;
-  assign id_1 = 1;
-  type_15(
-      id_4, 1, id_6
-  );
-  logic id_7;
-  reg   id_8;
-  logic id_9;
-  logic id_10;
-  always begin
-    id_10 = id_6;
-    if (1'b0)
-      if (1) id_8 <= 1;
-      else id_5 = id_10;
-  end
-  logic id_11;
-  assign id_9 = 1;
+// Seed: 1477495613
+module module_0;
+  tri id_2;
+  assign id_1 = id_2;
+  always id_1 = 1;
+  assign id_2 = id_1;
+  wire id_3;
 endmodule
-`default_nettype wire
+module module_1 (
+    input tri1 id_0,
+    output wand id_1,
+    input wor id_2,
+    input uwire id_3,
+    input supply1 id_4,
+    input tri id_5,
+    inout wor id_6,
+    output logic id_7,
+    input uwire id_8,
+    input tri1 id_9,
+    input supply1 id_10,
+    input wand id_11,
+    output wor id_12,
+    input supply0 id_13,
+    input wand id_14,
+    input wor id_15,
+    output tri id_16
+);
+  always begin
+    id_7 <= 1'b0;
+    id_6 = 1 ? 1'b0 : 1;
+  end
+  module_0();
+endmodule

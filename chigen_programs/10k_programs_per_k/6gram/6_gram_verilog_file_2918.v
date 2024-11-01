@@ -1,29 +1,34 @@
-// Seed: 3517124562
-`define pp_18 0
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output logic id_7,
-    input id_8,
-    output logic id_9,
-    input logic id_10
-    , id_18,
-    input logic id_11,
-    input logic id_12,
-    output logic id_13,
-    output id_14,
-    input id_15,
-    output logic id_16,
-    output logic id_17
-);
-  logic id_19;
-  logic id_20;
-  type_1 id_21 (.id_0(id_9));
-  logic id_22 = {1{1}};
+// Seed: 1505309862
+module module_0;
+  wire id_2;
+  always begin
+    id_1 = 1;
+  end
 endmodule
-`endcelldefine
+module module_1 (
+    input  wire id_0
+    , id_5,
+    output wor  id_1,
+    input  wand id_2,
+    input  tri0 id_3
+);
+  wire id_6;
+  module_0();
+endmodule
+module module_2 (
+    output wand id_0,
+    input wand id_1,
+    input uwire id_2,
+    input uwire id_3,
+    output wire id_4,
+    input supply0 id_5,
+    output wire id_6,
+    input uwire id_7,
+    output tri0 id_8,
+    input wor id_9,
+    output tri id_10
+);
+  supply0 id_12 = id_2;
+  wire id_13 = id_12 + id_9;
+  module_0();
+endmodule

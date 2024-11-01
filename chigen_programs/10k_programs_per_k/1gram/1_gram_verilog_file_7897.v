@@ -1,29 +1,35 @@
-// Seed: 1356046867
-module module_0 (
-    input logic id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    output id_11,
-    input id_12,
-    input logic id_13,
-    output logic id_14,
-    input logic id_15
-    , id_16 = 1
-);
-  logic id_17, id_18;
-  assign id_11 = 1;
-  logic id_19, id_20, id_21;
-  logic id_22;
+// Seed: 1228693887
+module module_0;
 endmodule
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
+module module_1 ();
+  assign id_1 = id_1;
+  wire id_2;
+  tri1 id_3, id_4;
+  wand id_6 = id_3;
+  always $display;
+  assign id_6 = 1;
+  reg id_7 = id_7;
+  module_0();
+  always id_1 = #((id_1)) id_7;
+  assign id_3 = 1;
+  reg id_8, id_9 = id_1;
+  wire id_10;
+  wire id_11;
+  integer id_12, id_13;
+  wire id_14, id_15, id_16;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_5;
+  nor (id_1, id_3, id_4, id_5);
+  module_0();
+  wire id_6, id_7, id_8, id_9;
+endmodule

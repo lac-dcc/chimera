@@ -1,66 +1,42 @@
-// Seed: 2402862177
-`define pp_22 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+// Seed: 2770840119
+module module_0 ();
+  assign id_1[1] = 1 & 1 - id_1['d0 : 1'b0];
+  wire id_2;
+endmodule
+module module_1;
+  supply1 id_1;
+  wire id_3, id_4;
+  uwire id_5 = 1'b0;
+  assign id_1 = 1 * 1'b0;
+  module_0();
+endmodule
+module module_2 (
+    input wire id_0,
+    input supply1 id_1
 );
-  output id_22;
-  output id_21;
-  input id_20;
-  input id_19;
-  output id_18;
-  input id_17;
-  output id_16;
-  output id_15;
-  output id_14;
-  input id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  inout id_1;
-  logic id_22;
-  logic id_23;
-  assign id_4 = 1;
-  assign id_3 = id_9;
-  assign id_5 = id_1;
-  assign id_6 = (1);
-  logic id_24;
-  type_34(
-      id_20, 1
-  ); type_35(
-      1'd0, 1, id_15
-  );
-  logic id_25;
-  logic id_26;
-  logic id_27, id_28, id_29;
-  logic id_30;
-  logic id_31;
+  final $display(1);
+  module_0();
+endmodule
+module module_3 (
+    input tri0 id_0,
+    output tri1 id_1,
+    input wire id_2,
+    input supply1 id_3,
+    output uwire id_4,
+    input wand id_5,
+    output tri0 id_6,
+    output supply1 id_7,
+    output wire id_8,
+    input supply0 id_9,
+    output tri id_10,
+    input tri0 id_11,
+    input wand id_12,
+    input wire id_13,
+    input wire id_14,
+    input tri0 id_15,
+    output wire id_16
+);
+  wire id_18;
+  xor (id_1, id_11, id_12, id_13, id_14, id_15, id_18, id_2, id_3, id_5, id_9);
+  module_0();
 endmodule

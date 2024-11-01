@@ -1,41 +1,42 @@
-// Seed: 1339865658
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`default_nettype id_7 `timescale 1ps / 1ps `timescale 1ps / 1 ps
+// Seed: 4189840055
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    input uwire id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    output tri id_3,
+    output tri id_4,
+    input supply0 id_5,
+    input wor id_6,
+    output tri0 id_7,
+    input tri0 id_8,
+    input supply1 id_9,
+    input wor id_10,
+    output uwire id_11,
+    output tri1 id_12,
+    input tri id_13
 );
-  output id_7;
-  input id_6;
-  input id_5;
-  output id_4;
-  output id_3;
-  inout id_2;
-  output id_1;
-  type_10(
-      id_4, id_3[1 : 1], id_6
+endmodule
+module module_1 (
+    output wand id_0,
+    output tri id_1,
+    input tri0 id_2,
+    input tri0 id_3,
+    output tri id_4,
+    input wor id_5,
+    output wand id_6,
+    output supply1 id_7,
+    input tri id_8,
+    input tri1 id_9,
+    input wor id_10,
+    output tri id_11,
+    input tri0 id_12,
+    output tri id_13,
+    output wire module_1,
+    output tri id_15,
+    output wire id_16
+);
+  wire id_18;
+  module_0(
+      id_3, id_5, id_3, id_0, id_1, id_5, id_8, id_1, id_2, id_9, id_9, id_15, id_4, id_12
   );
-  reg id_7 = id_5 ? id_6 : 1'b0 == id_5;
-  always @(posedge id_5 & 1'd0 & 1'b0 & id_7) begin
-    id_4 <= 1;
-  end
-  logic id_8;
-  logic id_9;
 endmodule

@@ -1,24 +1,24 @@
-// Seed: 2706213429
+// Seed: 1862928271
+module module_0 ();
+  wire id_2;
+endmodule
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input logic id_12,
-    input logic id_13,
-    output id_14,
-    output id_15,
-    input id_16
+    input supply1 id_0,
+    output tri id_1,
+    output tri0 id_2,
+    output uwire id_3,
+    input wor id_4,
+    output wor id_5,
+    input supply1 id_6,
+    output tri1 id_7,
+    output wor module_1,
+    inout supply0 id_9,
+    input supply0 id_10,
+    output supply0 id_11
 );
-  logic id_17;
-  always @(posedge 1) #1 id_14 <= 1;
-  logic id_18;
+  id_13 :
+  assert property (@(posedge (id_10) !=? 1) id_4)
+  else $display(1);
+  nand (id_1, id_10, id_13, id_4, id_6, id_9);
+  module_0();
 endmodule

@@ -1,28 +1,31 @@
-// Seed: 2639762708
-`timescale 1ps / 1ps
+// Seed: 3640935232
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    input logic id_3,
-    input logic id_4,
-    output id_5,
-    output id_6,
-    input logic id_7,
-    output id_8,
-    input id_9
-    , id_21,
-    output id_10,
-    input logic id_11,
-    output id_12,
-    input id_13,
-    input logic id_14,
-    output id_15,
-    input id_16,
-    input logic id_17,
-    input id_18,
-    input id_19,
-    input id_20
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_10 = 1;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_1 = 1;
+  assign id_2 = 1'd0;
+  assign id_1 = 1;
+  id_4 :
+  assert property (@(negedge 1) 1 & 1)
+  else $display({{1, 1} {('b0)}}, 1, 1, 1 && id_1);
+endmodule
+module module_1 (
+    input  wand  id_0,
+    input  uwire id_1,
+    output wire  id_2,
+    input  wire  id_3,
+    input  wor   id_4,
+    output uwire id_5
+    , id_8,
+    output wire  id_6
+);
+  wire id_9;
+  module_0(
+      id_8, id_9, id_8
+  );
 endmodule

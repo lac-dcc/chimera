@@ -1,5 +1,4 @@
-// Seed: 2436346244
-`timescale 1ps / 1ps
+// Seed: 35141692
 module module_0 (
     id_1,
     id_2,
@@ -7,22 +6,39 @@ module module_0 (
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8
+    id_7
 );
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  logic id_8;
-  generate
-    for (id_9 = 1'b0; id_3; id_3 = 1 & id_7) begin : id_10
-      type_0 id_11 (.id_0());
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always
+    if ((id_2 - id_3)) begin
+      id_2 = id_6;
+      id_2 = 1;
+    end else begin
+      id_3 = id_7 ^ 1;
     end
-  endgenerate
-  logic id_12 = 0;
+endmodule
+module module_1 (
+    input wor id_0,
+    input wand id_1,
+    input tri0 id_2,
+    input tri0 id_3,
+    input wire id_4,
+    input supply0 id_5
+    , id_10,
+    input tri id_6,
+    input tri1 id_7,
+    output supply1 id_8
+);
+  wire id_11;
+  module_0(
+      id_11, id_11, id_11, id_11, id_11, id_11, id_10
+  );
+  wire id_12;
+  tri1 id_13 = 1, id_14;
 endmodule

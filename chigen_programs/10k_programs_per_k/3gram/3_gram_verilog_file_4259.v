@@ -1,33 +1,55 @@
-// Seed: 218269003
-`define pp_4 0
-module module_0 ();
-  always @(~^1 or posedge {id_0, id_0 == 1, 1, id_0, 1'b0}) SystemTFIdentifier(id_0 !== id_0);
-  type_8(
-      id_1, 1, 1'b0
-  );
-  logic id_2;
-  logic id_3;
-  logic id_4;
-  logic id_5;
-  reg   id_6;
-  logic id_7;
-  always @(id_3) id_6 <= 1 !== id_6;
-endmodule
-`define pp_5 0
-module module_1 (
-    output id_0
-    , id_4,
-    input  id_1,
-    output id_2,
-    output id_3
+// Seed: 3026671542
+module module_0 (
+    output tri id_0,
+    output tri1 id_1,
+    input wor id_2,
+    output supply1 id_3,
+    input wand id_4,
+    input wire id_5,
+    input wand id_6,
+    input tri id_7,
+    input wand id_8,
+    output tri id_9,
+    output supply1 id_10,
+    output supply0 id_11,
+    input supply1 id_12,
+    input wand id_13,
+    input supply1 id_14,
+    input supply0 id_15,
+    input wor id_16,
+    input wire id_17
 );
-  reg id_5;
-  assign id_3 = 1;
-  logic id_6;
-  initial begin
-    id_5 <= id_5;
-  end
-  type_9(
-      1, 1, 1
+  wire id_19;
+  wire id_20;
+endmodule
+module module_1 (
+    output supply0 id_0
+    , id_3,
+    input wand id_1
+);
+  wire id_4;
+  assign id_3 = id_4;
+  uwire id_5 = 1;
+  module_0(
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
   );
+  final $display(id_4);
+  wire id_6;
 endmodule

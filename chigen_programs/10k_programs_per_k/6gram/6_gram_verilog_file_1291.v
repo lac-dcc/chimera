@@ -1,41 +1,40 @@
-// Seed: 2780420431
-module module_0 (
-    input reg id_0,
-    output reg id_1,
-    input reg id_2,
-    input reg id_3,
-    input logic id_4,
-    output id_5
+// Seed: 725552008
+module module_0 #(
+    parameter id_1 = 32'd32,
+    parameter id_2 = 32'd22
+) ();
+  defparam id_1.id_2 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  reg id_6;
-  reg id_7;
-  assign id_5 = id_4;
-  type_19(
-      id_0, id_3, (1)
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  tri0 id_9 = 1;
+  wor  id_10;
+  tri0 id_11;
+  module_0();
+  assign id_10 = 1;
+  wire id_12;
+  wire id_13;
+  wire id_14;
+  assign id_4 = 1;
+  wire id_15;
+  id_16(
+      .id_0(~id_11), .id_1(id_14), .id_2(1), .id_3(id_10), .id_4(1)
   );
-  assign id_1 = id_6;
-  reg   id_8;
-  reg   id_9;
-  logic id_10;
-  type_23 id_11 (
-      .id_0(1),
-      .id_1(id_2),
-      .id_2(""),
-      .id_3(1'b0 !== 1'd0),
-      .id_4(id_2)
-  );
-  initial begin
-    wait (1);
-    id_9 <= id_9;
-    #1 id_7 = id_0;
-    SystemTFIdentifier(1);
-    id_8 <= 1;
-    id_9 <= 1'b0;
-    SystemTFIdentifier(!id_6, !id_7);
-    id_1 = id_0;
-    id_1 = id_0;
-    id_7 <= 1;
-    id_8 <= id_2;
-    id_1 <= 1;
-  end
+  assign id_1[1] = id_7 == 1'b0;
 endmodule

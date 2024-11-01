@@ -1,29 +1,35 @@
-// Seed: 26969159
-`timescale 1ps / 1 ps
+// Seed: 1000930167
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    input supply1 id_0,
+    output tri id_1
 );
-  output id_8;
-  output id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_8;
-  logic id_9;
-  generate
-    case (id_4)
-      id_5: assign id_9 = 1'h0;
-      "":   assign id_1 = 1;
-    endcase
-  endgenerate
+endmodule
+module module_1 (
+    input wire id_0,
+    output tri id_1
+    , id_15,
+    input tri id_2,
+    input wire id_3,
+    output supply0 id_4,
+    input uwire id_5,
+    output supply1 id_6,
+    input uwire id_7,
+    output tri0 id_8,
+    input tri0 id_9
+    , id_16,
+    output logic id_10,
+    input tri id_11,
+    output tri0 id_12,
+    input wor id_13
+);
+  initial begin
+    for (id_4 = id_0 ==? 1'b0; !id_3; id_1 = id_2 + 1 & id_16) begin
+      disable id_17;
+    end
+    id_10 = #1 1;
+  end
+  module_0(
+      id_9, id_12
+  );
+  always @(posedge id_11) id_15 = id_15;
 endmodule

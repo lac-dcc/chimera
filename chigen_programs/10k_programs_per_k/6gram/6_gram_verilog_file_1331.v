@@ -1,29 +1,30 @@
-// Seed: 3194119930
-`timescale 1 ps / 1ps
+// Seed: 4127995931
 module module_0 (
-    input logic id_0
-    , id_16,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    output logic id_14
-    , id_17,
-    output logic id_15
+    input tri0 id_0,
+    input tri0 id_1,
+    output wand id_2,
+    output wand id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    input wor id_6,
+    output wand id_7,
+    output wand id_8,
+    output supply0 id_9,
+    output wor id_10,
+    output wor id_11
 );
-  assign id_16 = id_8;
-  assign id_11 = 'b0;
-  logic id_18;
-  assign id_18 = 1;
-  assign id_14 = 1;
-  initial SystemTFIdentifier(1'h0);
+  assign id_8 = id_6;
+endmodule
+module module_1 (
+    input wor id_0,
+    input wor id_1,
+    output supply0 id_2,
+    input wor id_3,
+    input wor id_4
+);
+  assign id_2 = 1;
+  module_0(
+      id_3, id_3, id_2, id_2, id_3, id_1, id_0, id_2, id_2, id_2, id_2, id_2
+  );
+  assign id_2 = 1 == 1'h0;
 endmodule

@@ -1,33 +1,51 @@
-// Seed: 2468656307
+// Seed: 126856034
 module module_0 (
-    input reg id_0,
-    input id_1,
-    input id_2,
-    output reg id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  initial begin
-    id_3 = 1;
-    if ((1'b0))
-      if (id_2 - id_1)
-        if (1'b0) id_3 <= 1;
-        else id_3 <= id_2;
-      else deassign id_3;
-    if (1'b0 && 1) begin
-      #1 SystemTFIdentifier(id_1, 1, id_2);
-      SystemTFIdentifier(1'b0, 1'd0 + 1, id_0);
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+endmodule
+module module_1;
+  assign id_1 = 1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  generate
+    for (id_6 = 1; 1; id_2 = id_3) begin : id_7
+      wire id_8 = id_4;
     end
-    id_3 <= 1 - 1;
-    id_3 = 1;
-    #1;
-    id_3 <= 1'b0;
-    #1 id_3 = (1);
-    id_3 <= 1 - id_1;
-    id_3 = 1;
-    id_3 <= 1'b0;
-    SystemTFIdentifier(1, id_2);
-    id_3 <= id_1 == 1;
-    id_3 = id_0;
+  endgenerate
+  module_0(
+      id_4, id_6, id_3, id_4, id_6
+  );
+  wire  id_9;
+  uwire id_10;
+  or (id_1, id_3, id_6, id_5, id_4);
+  always @(*) begin
+    if (id_10) begin
+      id_1 <= 1;
+      id_2 = id_9;
+    end
   end
-  logic id_4;
-  logic id_5;
 endmodule

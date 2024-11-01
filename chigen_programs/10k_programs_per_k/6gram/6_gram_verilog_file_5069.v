@@ -1,56 +1,40 @@
-// Seed: 911030056
-`timescale 1ps / 1 ps
-package id_0;
-  localparam [id_0 : 1 'b0 ==  1] id_0 = id_0;
-  localparam [1 : id_0] id_0 = 1;
-  localparam id_0 = id_0;
-  localparam [1 : 1] id_0 = 1;
-  localparam id_0 = id_0 ? id_0 : id_0 ? id_0#(.id_0((id_0))) : 1 ? 1 : 1 ? 1 : id_0;
-  localparam [id_0 : id_0] id_0 = (1) & id_0;
-  localparam [~  id_0 : 1  /  id_0] id_0 = 1'd0;
-  parameter [id_0 : id_0] id_0 = ~id_0;
-  localparam [1 : (  1  &&  id_0  )] id_0 = 1;
-  function real id_0([id_0 : id_0] id_0, input [id_0 : id_0] id_0);
-    id_0 = 1;
-  endfunction
-  localparam [1 'b0 : 1] id_0 = 1;
-  localparam [1 : 1] id_0 = id_0;
-  parameter [id_0[1] : id_0[id_0 : 1 'b0]] id_0 = ~id_0[1];
-  parameter [id_0 : id_0] id_0 = id_0;
-  localparam [1 : id_0] id_0 = 1'h0;
-  parameter [1 'd0 : id_0] id_0 = id_0;
-  parameter [id_0 : 1  <  1] id_0 = 1;
-  localparam [id_0[id_0  ==  id_0] : id_0] id_0 = id_0;
-  localparam [id_0[id_0] -  1 : id_0] id_0 = id_0[1'd0-1&1 : id_0];
-  localparam [(  1 'b0 ) : 1] id_0 = 1;
-  localparam id_0 = 1'h0 * 1 - id_0;
-  localparam [id_0  (
-(  1  )  ,  id_0  -  1  ,  1 'd0 ,  1 'h0 ,  id_0  !==  1  -  1  ,  id_0[1]
-  ) : id_0] id_0 = id_0[id_0 : id_0] == id_0[1 : id_0];
-  function integer id_0(int id_0);
-    begin
-      id_0 = 1;
-      #1 id_0[(id_0)>>1 : id_0] = 1 == 1'd0;
-      id_0 = id_0;
-      id_0 <= 1;
-      id_0 <= id_0[id_0 : 1];
-      SystemTFIdentifier(1);
-      id_0[1'h0==id_0] <= id_0;
-      id_0 <= 1;
-      id_0[1] <= id_0[id_0[id_0]];
-    end
-  endfunction
-  localparam [1 : id_0] id_0 = 1;
-  localparam [1 : id_0] id_0 = id_0[id_0];
-  localparam [1 : id_0] id_0 = 1;
-  localparam [1 : id_0[1]] id_0 = 1;
-  event id_0;
-  function id_0 id_0;
-    input [1 : id_0] id_0;
-    integer [~  id_1[id_1] : id_2] id_2;
-    begin
-      id_0 <= 1 ? id_1 - 1 : id_0;
-    end
-  endfunction
-  typedef logic [id_0 : 1] id_0;
-endpackage
+// Seed: 3348431355
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  tri0 id_4 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  reg id_8;
+  initial begin
+    id_6 += 1 + id_4;
+    id_8 <= 1 == 1;
+    id_2 <= 1;
+  end
+  module_0(
+      id_6, id_6, id_6
+  );
+  always #0 begin
+    $display(1'b0 - 1, 1, 1);
+  end
+endmodule

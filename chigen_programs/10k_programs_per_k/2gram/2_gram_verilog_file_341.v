@@ -1,5 +1,4 @@
-// Seed: 693980907
-`timescale 1ps / 1 ps `timescale 1ps / 1ps
+// Seed: 1070768581
 module module_0 (
     id_1,
     id_2,
@@ -23,31 +22,66 @@ module module_0 (
     id_20,
     id_21
 );
-  inout id_21;
-  output id_20;
-  input id_19;
-  output id_18;
-  inout id_17;
-  inout id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  always @(posedge 1) begin
-    SystemTFIdentifier(id_6);
-    id_14 <= 1;
-  end
+  input wire id_21;
+  inout wire id_20;
+  output wire id_19;
+  inout wire id_18;
+  input wire id_17;
+  input wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  output wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_22;
+  wire id_23;
+  wire id_24;
 endmodule
-`define pp_21 0
-`resetall
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  input wire id_1;
+  id_3(
+      .id_0(id_4),
+      .id_1(id_2),
+      .id_2(id_1[1]),
+      .id_3(id_2 - 1),
+      .id_4(1),
+      .id_5(id_4[1]),
+      .id_6(1'b0)
+  ); module_0(
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2
+  );
+endmodule

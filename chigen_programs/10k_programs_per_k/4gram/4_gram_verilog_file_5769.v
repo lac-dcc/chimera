@@ -1,20 +1,30 @@
-// Seed: 4271306
+// Seed: 2351313510
 module module_0 (
-    output reg id_0,
-    input id_1
+    input tri1  id_0,
+    input tri1  id_1,
+    input uwire id_2
 );
-  assign id_0 = 1;
-  always @(negedge id_1 or id_1 - 1) begin
-    id_0 <= 1;
-  end
-  reg id_2;
-  assign id_2 = 1'b0;
-  logic id_3;
-  initial
-    #(1) begin
-      id_0 <= id_2;
-    end
-  logic id_4;
-  logic id_5;
-  logic id_6;
+  specify
+    (id_4 *> id_5) = 1;
+    (id_6 => id_7) = 1;
+  endspecify
+endmodule
+module module_1 (
+    input tri0 id_0
+    , id_10,
+    input supply1 id_1,
+    input supply0 id_2,
+    input tri id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    output supply1 id_6,
+    input uwire id_7,
+    output tri1 id_8
+);
+  supply0 id_11;
+  assign id_11 = 1;
+  xnor (id_6, id_0, id_11, id_4, id_10, id_3, id_7, id_5, id_2);
+  module_0(
+      id_0, id_2, id_1
+  );
 endmodule

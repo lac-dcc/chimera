@@ -1,17 +1,37 @@
-// Seed: 3142669235
-`timescale 1ps / 1ps
+// Seed: 2706279218
 module module_0 (
-    input logic id_0,
-    input logic id_1
+    id_1,
+    id_2
 );
-  logic id_2 = 1;
-  logic id_3 = 1;
-  logic id_4 (
-      1,
-      id_0,
-      (1'b0),
-      1
+  inout wire id_2;
+  output wire id_1;
+endmodule
+module module_1;
+  reg id_1;
+  always @* begin
+    if (1'b0) $display;
+    else begin
+      #id_2 begin
+        id_2 = 1 / 1;
+        $display(id_2, 1 == id_1, id_2 == id_1++, id_2);
+      end
+      id_1 = {1'b0{1}};
+      if (1) id_2 <= 1;
+      fork
+        for (id_2 = 1; 1; id_1 = id_2) begin
+          if (1'b0) begin
+            $display(1, 1);
+          end
+        end
+      join_any
+    end
+  end
+  assign id_1 = id_1;
+  wire id_3;
+  module_0(
+      id_3, id_3
   );
-  logic id_5;
-  logic id_6 = 1;
+  wire id_4;
+  wire id_5;
+  wor  id_6 = 1;
 endmodule

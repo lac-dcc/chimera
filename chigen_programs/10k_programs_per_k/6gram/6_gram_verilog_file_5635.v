@@ -1,52 +1,26 @@
-// Seed: 2088057754
-module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    output logic id_3,
-    input logic id_4,
-    output logic id_5,
-    output logic id_6,
-    output logic id_7,
-    output logic id_8,
-    input id_9,
-    output logic id_10,
-    input logic id_11,
-    input id_12,
-    output id_13,
-    input id_14,
-    input logic id_15,
-    input logic id_16,
-    input id_17,
-    input id_18,
-    input logic id_19,
-    output logic id_20
-);
-  logic id_21;
+// Seed: 3648639963
+module module_0 #(
+    parameter id_3 = 32'd44,
+    parameter id_4 = 32'd19
+) ();
+  assign id_1 = 1;
+  supply0 id_2 = 1 == id_2;
+  always @(posedge id_2) begin
+    force id_1.id_1 = id_1 == 1;
+  end
+  defparam id_3.id_4 = 1;
 endmodule
 module module_1 (
-    input logic id_0,
-    input id_1,
-    input reg id_2,
-    output id_3,
-    output id_4
+    input wor  id_0,
+    input wire id_1,
+    input wand id_2,
+    input tri0 id_3,
+    inout wand id_4
 );
-  logic id_21;
-  reg   id_22;
-  initial begin
-    id_4  = id_12;
-    id_22 = !id_2;
-    if (1) begin
-      if (id_2) begin
-        id_10 <= 1;
-        id_10 <= id_12;
-        id_6 = 1'b0;
-        id_5 <= id_15 ? 1 : 1;
-        id_21 = !0;
-        id_8  = id_0;
-      end else id_4 <= id_16;
-      id_4 = id_22;
-      id_13 <= id_2;
-    end else id_4 <= 1 + id_21;
-  end
+  wire id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19;
+  id_20(
+      .id_0(id_19), .id_1(), .id_2(id_2), .id_3(id_18)
+  ); module_0();
+  always @(posedge (1)) $display;
+  nand (id_4, id_6, id_7, id_8, id_9);
 endmodule

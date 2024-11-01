@@ -1,28 +1,36 @@
-// Seed: 808509964
+// Seed: 1285144596
 module module_0 (
-    input id_0,
-    input reg id_1,
-    output id_2
-    , id_8,
-    input id_3,
-    input id_4,
-    output reg id_5,
-    output wand id_6,
-    input id_7
+    input wand id_0,
+    input tri0 id_1,
+    input wire id_2
 );
-  logic id_9;
-  type_16(
-      "", id_2 && id_7
+  assign id_4 = id_4;
+  assign id_4 = id_1;
+endmodule
+module module_1 (
+    input wire id_0,
+    input uwire id_1,
+    input wor id_2,
+    input wire id_3,
+    input tri0 id_4,
+    input tri id_5,
+    input uwire id_6,
+    input tri0 id_7,
+    output tri0 id_8,
+    output wand id_9,
+    input wire id_10,
+    output uwire id_11,
+    output wand id_12,
+    output wand id_13,
+    input tri1 id_14,
+    input supply1 id_15,
+    output uwire id_16,
+    input wire id_17,
+    output wire id_18,
+    input tri0 id_19
+);
+  final $display({1, (id_3)});
+  module_0(
+      id_2, id_1, id_2
   );
-  assign id_6[1 : SystemTFIdentifier&1] = 1;
-  type_17(
-      (id_5), 1
-  );
-  always @(1 or 1 or posedge id_1);
-  assign id_9 = id_8[1];
-  logic id_10;
-  logic id_11;
-  assign id_5 = ~id_11;
-  always @(posedge id_4) id_5 <= id_1;
-  assign id_9 = 1;
 endmodule

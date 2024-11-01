@@ -1,26 +1,25 @@
-// Seed: 1144797944
-module module_0 (
-    input id_0,
-    input id_1,
-    output reg id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    output logic id_9,
-    input id_10
-);
-  reg id_11, id_12;
-  always @(posedge id_5 or posedge 1) begin
-    id_11 <= 1'b0 + 1;
-    if ("") begin
-      id_2 <= (1);
-    end else begin
-      if (1) begin
-        id_2 <= 1'b0;
-      end else id_7 <= id_6 ? id_12 : 1;
-    end
+// Seed: 3610637971
+module module_0;
+  id_1 :
+  assert property (@(posedge id_1) 1'h0)
+  else $display(id_1, id_1);
+  always @(*) begin
+    id_1 <= 1;
   end
+  assign id_1 = 1'h0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_5 = id_5;
+  module_0();
+  assign id_3[1] = 1'b0;
+  assign id_1 = id_1 < id_2;
 endmodule

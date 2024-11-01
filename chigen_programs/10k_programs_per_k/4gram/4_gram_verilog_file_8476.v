@@ -1,31 +1,34 @@
-// Seed: 1761520975
-`resetall
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
-);
-  input id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  inout id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  logic id_8, id_9, id_10;
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  always @(posedge id_13)
-    if (1) begin
-      id_5 = 1;
-    end
-  logic id_14 = 1'b0;
+// Seed: 861724048
+module module_0 ();
+  wire id_1;
 endmodule
-`define pp_8 0
+module module_1 (
+    input  wor   id_0,
+    output logic id_1,
+    input  logic id_2,
+    input  tri   id_3,
+    output uwire id_4,
+    input  wand  id_5
+);
+  assign id_4 = id_5 & id_2;
+  wire id_7;
+  always @(*) begin
+    id_1 <= id_2;
+  end
+  module_0();
+endmodule
+module module_0 (
+    input supply1 id_0,
+    input wor id_1,
+    input tri0 sample,
+    input supply0 id_3,
+    input supply0 id_4,
+    input uwire id_5,
+    output tri id_6,
+    output tri1 module_2,
+    input supply1 id_8,
+    input supply1 id_9
+);
+  wire id_11;
+  module_0();
+endmodule

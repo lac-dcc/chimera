@@ -1,20 +1,81 @@
-// Seed: 690380481
+// Seed: 1577987583
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input id_5
-    , id_12,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    input id_10,
-    input id_11
+    input tri1 id_0,
+    input tri id_1,
+    input wand id_2,
+    input wor id_3
+    , id_14,
+    output tri id_4,
+    input supply1 id_5,
+    output supply0 id_6,
+    output supply1 id_7,
+    output supply1 id_8,
+    output wand id_9,
+    input wire id_10,
+    input wand id_11,
+    input tri id_12
 );
-  type_16(
-      id_1, 1, !id_2
+endmodule
+module module_0 (
+    input tri id_0,
+    output tri1 id_1,
+    input tri1 id_2,
+    input tri id_3,
+    input tri id_4,
+    output uwire id_5,
+    output tri1 id_6,
+    input wor id_7,
+    output wor id_8,
+    inout wire id_9,
+    inout wor id_10,
+    input wor id_11,
+    input supply0 id_12,
+    input wand id_13,
+    output wor id_14,
+    output tri1 id_15,
+    output tri1 id_16,
+    output wand id_17,
+    output tri0 id_18,
+    input tri id_19,
+    input tri1 module_1,
+    output uwire id_21,
+    input wor id_22,
+    output supply1 id_23,
+    input tri1 id_24,
+    input tri1 id_25
+    , id_56,
+    input uwire id_26,
+    input tri0 id_27,
+    input tri id_28,
+    output tri id_29,
+    input supply0 id_30,
+    input wor id_31,
+    output tri0 id_32,
+    input supply1 id_33,
+    input supply0 id_34,
+    output wire id_35,
+    output wire id_36,
+    output uwire id_37,
+    output supply0 id_38,
+    output wand id_39,
+    output tri0 id_40,
+    input tri0 id_41,
+    input tri0 id_42,
+    output wand id_43,
+    input wand id_44,
+    input supply0 id_45
+    , id_57,
+    output wor id_46,
+    input wor id_47,
+    output tri0 id_48,
+    output supply0 id_49,
+    output tri id_50,
+    output tri0 id_51,
+    output supply0 id_52,
+    output supply1 id_53,
+    output supply0 id_54
+);
+  module_0(
+      id_44, id_22, id_27, id_0, id_1, id_25, id_10, id_29, id_48, id_37, id_25, id_24, id_30
   );
 endmodule

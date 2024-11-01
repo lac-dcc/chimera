@@ -1,32 +1,45 @@
-// Seed: 2345024000
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    output logic id_8,
-    input logic id_9
-    , id_17,
-    output id_10,
-    input id_11,
-    output id_12
-    , id_18,
-    input id_13,
-    input id_14,
-    input id_15
-    , id_19,
-    output id_16
-);
-  assign id_8 = id_7;
-  type_29(
-      1, id_10, id_16
+// Seed: 1133353089
+program module_0;
+  id_2(
+      .id_0(id_1), .id_1(), .id_2(id_1 == id_3 * 1)
   );
-  logic id_20;
-  logic id_21;
-  logic id_22;
-  logic id_23;
+endprogram
+module module_1 (
+    input wire id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input wor id_3,
+    input supply0 id_4,
+    input supply0 id_5,
+    input supply0 id_6,
+    output wand id_7,
+    input tri id_8,
+    input tri0 id_9,
+    output wand id_10,
+    output wor id_11,
+    output supply0 id_12,
+    output supply1 id_13,
+    inout supply0 id_14,
+    input supply0 id_15,
+    input supply0 id_16,
+    input uwire id_17,
+    input wand id_18,
+    input tri0 id_19,
+    input uwire id_20,
+    output wire id_21,
+    output wor id_22,
+    input supply1 id_23,
+    output logic id_24,
+    input wand id_25,
+    input wire id_26,
+    output tri0 id_27
+);
+  supply0 id_29 = 1'b0;
+  always @(negedge id_18) begin
+    id_24 <= id_2 - 1;
+    id_22 = id_19;
+    id_13 = 1'd0;
+    if (1 - id_14 && id_20) #1;
+  end
+  module_0();
 endmodule

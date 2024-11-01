@@ -1,31 +1,34 @@
-// Seed: 737235921
-`define pp_5 0
-`timescale 1ps / 1 ps
+// Seed: 2362595911
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    input id_3,
-    input id_4
+    output supply1 id_0,
+    input uwire id_1,
+    output wor id_2,
+    input tri1 id_3,
+    output uwire id_4
 );
-  logic id_5;
-  assign id_5 = id_1;
-  logic id_6;
+  wire id_6;
+  assign id_0 = 1'b0;
 endmodule
-module module_1 (
-    input id_0
-    , id_5,
-    inout id_1,
-    output id_2,
-    input logic id_3
-    , id_6
+module module_0 (
+    output uwire id_0
+    , id_15,
+    output wor module_1,
+    output wor id_2,
+    input uwire id_3,
+    output uwire id_4,
+    input supply0 id_5,
+    input tri id_6,
+    output tri id_7,
+    input uwire id_8,
+    input uwire id_9,
+    output tri id_10,
+    output wand id_11
+    , id_16,
+    output wire id_12,
+    input wor id_13
 );
-  logic id_7;
-  type_13 id_8 (
-      .id_0(id_6),
-      .id_1(1),
-      .id_2(id_5),
-      .id_3(id_6)
+  assign id_12 = id_4++;
+  module_0(
+      id_0, id_6, id_4, id_6, id_4
   );
-  defparam id_9.id_10 = id_0;
 endmodule

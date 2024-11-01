@@ -1,25 +1,44 @@
-// Seed: 4056049021
+// Seed: 1563734140
 module module_0 (
-    input logic id_0,
-    output id_1,
-    output id_2,
-    inout id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  logic id_15;
-  logic id_16;
-  type_22(
-      1 - id_5, 1, "" ==? ""
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always @(*) begin
+    $display(1);
+    id_5 = 1'b0;
+    id_3 += id_8 - 1;
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign module_1 = 1 ? id_2 : id_2;
+  wire id_4;
+  wire id_5 = id_2;
+  module_0(
+      id_4, id_4, id_5, id_4, id_4, id_4, id_4, id_5, id_4
   );
-  assign id_1 = id_4[1 : 1];
+  assign id_4 = id_5;
+  buf (id_1, id_5);
 endmodule

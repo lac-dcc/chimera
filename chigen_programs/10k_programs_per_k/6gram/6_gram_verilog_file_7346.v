@@ -1,39 +1,80 @@
-// Seed: 2598578924
+// Seed: 1087729073
+module module_0 ();
+  wire id_2, id_3;
+  reg id_4;
+  always @(posedge "") id_4 = #1 id_4;
+  assign id_2 = (1) / id_3;
+endmodule
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    output supply1 id_0,
+    output tri1 id_1,
+    input uwire id_2,
+    input wor id_3,
+    input tri id_4,
+    input tri1 id_5,
+    input supply0 id_6,
+    output wand id_7,
+    output supply1 id_8,
+    output tri1 id_9,
+    input tri1 id_10,
+    output tri id_11
+    , id_67,
+    input supply0 id_12,
+    input tri0 id_13,
+    output supply1 id_14,
+    input tri1 id_15,
+    input supply0 id_16,
+    output wor id_17,
+    input uwire id_18,
+    input supply0 id_19,
+    output wire id_20,
+    input tri0 id_21,
+    output tri id_22,
+    output wand id_23,
+    input tri1 module_1,
+    input tri0 id_25,
+    output uwire id_26,
+    input tri0 id_27,
+    input wor id_28,
+    input tri0 id_29,
+    input uwire id_30,
+    input tri1 id_31,
+    output supply0 id_32,
+    input wire id_33,
+    input wand id_34,
+    input supply0 id_35,
+    input supply1 id_36
+    , id_68,
+    input uwire id_37,
+    input wand id_38,
+    input wor id_39,
+    output wor id_40,
+    input supply0 id_41,
+    input wor id_42,
+    input wor id_43,
+    input wire id_44,
+    output tri0 id_45,
+    input wand id_46,
+    output wor id_47,
+    input tri0 id_48,
+    output tri0 id_49,
+    input tri0 id_50,
+    output wand id_51,
+    input uwire id_52,
+    input wire id_53,
+    output tri id_54,
+    input wor id_55,
+    input tri1 id_56,
+    input supply0 id_57,
+    input tri0 id_58,
+    input tri0 id_59,
+    input wand id_60,
+    input tri1 id_61,
+    output wand id_62,
+    output tri0 id_63,
+    output wand id_64,
+    output tri id_65
 );
-  input id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  input id_1;
-  logic id_12;
-  type_15(
-      id_7, 1, id_2
-  );
-  assign id_3  = 1 == 1;
-  assign id_12 = (1 ? id_12 : 1) == 1;
-  type_16(
-      1, 1'h0, 1
-  );
-  assign id_5 = id_12;
-  logic id_13 = ~id_8;
+  assign id_40 = 1;
+  module_0();
 endmodule

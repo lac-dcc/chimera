@@ -1,43 +1,36 @@
-// Seed: 987443150
+// Seed: 2582181832
 module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    output logic id_7,
-    output logic id_8,
-    output id_9,
-    output logic id_10,
-    output logic id_11,
-    output logic id_12,
-    output id_13,
-    input logic id_14,
-    input id_15,
-    output id_16,
-    input logic id_17,
-    input logic id_18,
-    input id_19,
-    output logic id_20,
-    output id_21,
-    output id_22,
-    input logic id_23,
-    output logic id_24,
-    input id_25,
-    input id_26,
-    output id_27,
-    output logic id_28,
-    input logic id_29
-    , id_34,
-    input id_30,
-    input id_31,
-    output id_32,
-    input id_33
+    input uwire id_0,
+    input wor   id_1,
+    input tri1  id_2
 );
-  assign id_8 = 1;
-  logic id_35;
-  logic id_36;
-  logic id_37;
+  generate
+    genvar id_4;
+  endgenerate
+endmodule
+module module_0 (
+    input supply1 module_1,
+    input wand id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    input wor id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    input tri id_7
+);
+  assign id_5 = 1;
+  initial begin
+    $display(1, id_6);
+  end
+  id_9(
+      .id_0(1), .id_1(1), .id_2(id_4), .id_3(1'b0), .id_4(1), .id_5(id_6)
+  ); module_0(
+      id_2, id_6, id_6
+  );
+  wire id_10;
+  wire id_11;
+  wire id_12;
+  initial begin
+    assume (1 == 1'b0);
+  end
 endmodule

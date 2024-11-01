@@ -1,31 +1,41 @@
-// Seed: 3381182131
+// Seed: 2471189261
 module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    output logic id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    output id_16
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  assign id_6#(
-      .id_14(1),
-      .id_8 (id_15)
-  ) = id_15;
-  assign id_16 = (id_0);
-  type_23(
-      .id_0(1), .id_1(id_14), .id_2(1'b0), .id_3(id_9), .id_4(1), .id_5('h0), .id_6(id_5), .id_7(1)
-  );
-  logic id_17;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
 endmodule
-`resetall
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0(
+      id_2, id_2, id_2, id_1, id_2, id_2, id_3, id_2, id_2, id_3, id_2, id_1
+  );
+  assign id_2 = 1 - id_2;
+endmodule

@@ -1,22 +1,36 @@
-// Seed: 1429094498
+// Seed: 3162094441
 module module_0 (
-    input id_0,
-    output reg id_1,
-    output id_2,
-    inout reg id_3
+    input supply1 id_0,
+    input wand id_1,
+    input tri id_2,
+    input wand id_3
+    , id_6,
+    output wire id_4
 );
-  reg id_4 = id_3;
-  assign id_3 = id_4 && id_3 && id_3;
-  type_11(
-      1, id_3, 1, id_1
+  wire id_7;
+endmodule
+module module_1 (
+    input  supply1 id_0,
+    output supply0 id_1
+);
+  assign id_1 = id_0;
+  module_0(
+      id_0, id_0, id_0, id_0, id_1
   );
-  logic id_5;
-  generate
-    genvar id_6;
-    for (id_7 = id_3; 1; id_3 = id_7) begin
-      always @(1) begin
-        id_1 <= {{id_3{~id_5}} {id_0}} - 1 | 1;
-      end
-    end
-  endgenerate
+endmodule
+module module_2 (
+    input tri id_0,
+    input supply0 id_1,
+    output uwire id_2
+);
+  assign id_2 = 1 > id_0;
+  initial if (id_0) #1;
+  module_0(
+      id_0, id_1, id_1, id_0, id_2
+  );
+  uwire id_4 = 1'b0, id_5;
+  assign id_4 = 1'b0;
+  uwire id_6;
+  assign id_6 = id_4;
+  assign id_5 = 1;
 endmodule

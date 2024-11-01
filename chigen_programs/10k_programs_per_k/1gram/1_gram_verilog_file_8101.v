@@ -1,35 +1,25 @@
-// Seed: 2170222322
+// Seed: 3039168449
 module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    input id_3#(.id_23(1)),
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    output logic id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    input logic id_14,
-    input logic id_15,
-    input id_16,
-    input id_17,
-    output logic id_18,
-    output id_19,
-    output logic id_20,
-    output id_21,
-    input id_22
+    input  tri1 id_0,
+    input  wor  id_1,
+    input  tri  id_2,
+    output wand id_3
+    , id_5
 );
-  logic id_24;
-  logic id_25;
-  assign id_24 = id_15 - "";
-  initial SystemTFIdentifier(1'h0, SystemTFIdentifier(id_23, 1'b0), {1{1}}, 1);
-  logic id_26;
-  always id_21 = 1;
+  always #1;
+  supply1 id_6, id_7, id_8 = 1;
 endmodule
-`define pp_23 0
-`define pp_24 0
+module module_1 (
+    input tri0 id_0
+    , id_7,
+    output supply1 id_1,
+    input logic id_2,
+    input supply0 id_3,
+    output supply1 id_4,
+    input wor id_5
+);
+  for (id_8 = id_7; 1'd0; id_4 = 1'b0 > id_3) always id_7 <= id_2;
+  module_0(
+      id_5, id_5, id_5, id_1
+  );
+endmodule

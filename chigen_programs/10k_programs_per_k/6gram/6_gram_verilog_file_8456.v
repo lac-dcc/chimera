@@ -1,24 +1,37 @@
-// Seed: 2642973966
+// Seed: 3398477450
 module module_0 (
-    output logic id_0,
-    input logic id_1
-    , id_13,
-    output id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    output id_11,
-    input logic id_12
+    output tri1 id_0,
+    input wand id_1,
+    input supply0 id_2,
+    output wire id_3,
+    input tri0 id_4,
+    output tri1 id_5
 );
-  logic id_14;
-  string id_15, id_16, id_17;
-  logic id_18 = id_18;
-  always @(1 or posedge 1) begin
-    SystemTFIdentifier(id_17, "");
+  always @* begin
+    $display;
+    #1 id_0 = id_4;
   end
+endmodule
+module module_0 (
+    input tri1 id_0
+    , id_14,
+    input uwire id_1,
+    input wire id_2,
+    input wand id_3,
+    output supply1 id_4,
+    input uwire id_5,
+    input supply1 id_6
+    , id_15,
+    input wire id_7,
+    input uwire id_8,
+    output wand id_9
+    , id_16,
+    input wor id_10,
+    input uwire id_11,
+    output tri module_1
+);
+  assign id_16 = id_14[1];
+  module_0(
+      id_4, id_11, id_11, id_4, id_2, id_4
+  );
 endmodule

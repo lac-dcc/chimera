@@ -1,25 +1,29 @@
-// Seed: 2166339211
+// Seed: 549098725
+module module_0;
+  always @(posedge id_1 or posedge id_1) begin
+    id_1 <= 1;
+  end
+endmodule
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    output supply0 module_1,
+    input supply1 id_1,
+    output tri0 id_2,
+    output wire id_3,
+    output wire id_4,
+    input uwire id_5,
+    input supply0 id_6,
+    input wand id_7,
+    output wor id_8
 );
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_10;
+  assign id_4 = (1);
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  wire id_3;
+  module_0();
 endmodule

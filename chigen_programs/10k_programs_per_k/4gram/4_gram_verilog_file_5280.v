@@ -1,30 +1,37 @@
-// Seed: 3388929319
+// Seed: 700906636
 module module_0 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    output logic id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output logic id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11
-    , id_25,
-    output id_12,
-    output id_13,
-    output id_14,
-    input logic id_15,
-    output id_16,
-    input id_17,
-    output id_18,
-    input id_19,
-    output id_20,
-    input id_21,
-    input id_22,
-    input id_23,
-    output id_24
+    output tri id_0,
+    output supply1 id_1,
+    input wor id_2,
+    output tri1 id_3
 );
+endmodule
+module module_1 (
+    input  tri  id_0,
+    input  tri  id_1,
+    input  wire id_2,
+    input  tri0 id_3,
+    output tri1 id_4,
+    input  tri1 id_5
+);
+  module_0(
+      id_4, id_4, id_2, id_4
+  );
+endmodule
+module module_2;
+  assign id_1 = 1;
+endmodule
+module module_3 (
+    output uwire id_0,
+    output logic id_1
+);
+  reg  id_3;
+  module_2();
+  tri  id_4;
+  wire id_5;
+  wire id_6;
+  always_ff @(posedge id_4 or posedge 1'b0 * id_4 - id_4) begin
+    if (1) id_1 <= id_3;
+    id_0 = {id_4 == 1, 1'b0};
+  end
 endmodule

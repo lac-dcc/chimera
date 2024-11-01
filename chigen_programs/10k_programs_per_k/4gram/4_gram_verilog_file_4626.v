@@ -1,37 +1,31 @@
-// Seed: 912112880
+// Seed: 2922623972
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    input uwire id_0,
+    input uwire id_1,
+    input wor id_2,
+    output wire id_3,
+    input uwire id_4,
+    input tri0 id_5
+    , id_12,
+    output tri0 id_6,
+    output supply0 id_7,
+    input supply0 id_8,
+    input supply0 id_9,
+    output wand id_10
 );
-  input id_13;
-  input id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  type_13(
-      id_4, id_3
-  );
-  assign id_11 = 1;
-  initial begin
-    if (id_8) SystemTFIdentifier(1 - id_12);
+  wire id_13;
+endmodule
+module module_1 (
+    input  wor   id_0,
+    output logic id_1,
+    output wire  id_2
+);
+  wire id_4;
+  wire id_5;
+  always @* begin
+    id_1 <= 1;
   end
+  module_0(
+      id_0, id_0, id_0, id_2, id_0, id_0, id_2, id_2, id_0, id_0, id_2
+  );
 endmodule

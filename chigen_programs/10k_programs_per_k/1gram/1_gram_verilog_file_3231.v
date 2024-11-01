@@ -1,52 +1,19 @@
-// Seed: 3465635207
+// Seed: 1976351083
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6
 );
-  output id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  reg id_5, id_6, id_7;
-  assign id_3 = "" - "";
-  logic id_8;
-  assign id_2 = id_7 && id_8;
-  type_19(
-      .id_0(1),
-      .id_1(1'd0),
-      .id_2(id_1 ? 1'b0 : 1),
-      .id_3({1'd0, id_6, id_2}),
-      .id_4(id_5),
-      .id_5(""),
-      .id_6(id_5),
-      .id_7(id_2),
-      .id_8(id_5),
-      .id_9(1)
-  );
-  assign id_6 = 1;
-  assign id_8 = 1;
-  logic id_9, id_10;
-  always id_5 <= id_3;
-  type_21(
-      .id_0(id_8),
-      .id_1(id_6),
-      .id_2({1}),
-      .id_3(id_3),
-      .id_4(id_6),
-      .id_5(id_5),
-      .id_6(1),
-      .id_7(id_4)
-  );
-  logic id_11;
-  logic id_12 = id_10;
-  logic id_13;
-  assign id_10 = id_9;
-  logic id_14, id_15;
-  logic id_16;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_7;
 endmodule
 module module_1 (
     id_1,
@@ -55,16 +22,53 @@ module module_1 (
     id_4,
     id_5,
     id_6,
-    sample
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25
 );
-  inout id_7;
-  input id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_7;
-  assign id_2 = id_2;
-  `define pp_7 0
+  output wire id_25;
+  input wire id_24;
+  input wire id_23;
+  output wire id_22;
+  output wire id_21;
+  inout wire id_20;
+  input wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  output wire id_16;
+  output wire id_15;
+  output wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_22 = id_13[1'h0 : 1'b0] | id_1;
+  module_0(
+      id_1, id_9, id_3, id_8, id_11, id_18
+  );
 endmodule

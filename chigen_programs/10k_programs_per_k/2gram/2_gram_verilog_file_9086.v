@@ -1,5 +1,5 @@
-// Seed: 1341628790
-module module_0 (
+// Seed: 675905580
+macromodule module_0 (
     id_1,
     id_2,
     id_3,
@@ -14,34 +14,39 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_15
 );
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_20;
+  input wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  id_16(
+      .id_0(id_10), .id_1(id_6 < 1'b0), .id_2(id_4), .id_3(1), .id_4(1), .id_5('b0)
+  );
 endmodule
-`define pp_20 0
-`default_nettype id_14
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5;
+  module_0(
+      id_4, id_4, id_5, id_5, id_5, id_2, id_1, id_5, id_2, id_5, id_3, id_2, id_5, id_1, id_2
+  );
+endmodule

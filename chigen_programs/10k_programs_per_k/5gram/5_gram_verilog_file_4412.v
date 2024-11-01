@@ -1,19 +1,31 @@
-// Seed: 3155470766
-`define pp_4 0
+// Seed: 1895107002
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6
 );
-  input id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  logic id_4;
-  logic id_5 = 1;
-  logic id_6;
-  type_11(
-      1'd0, id_4
-  ); defparam id_7.id_8 = 1'b0;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = 1;
+  id_7 :
+  assert property (@(posedge 1) ($display(1)))
+  else $display(id_7);
+endmodule
+module module_1 ();
+  wire id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1
+  );
+  logic [7:0] id_2;
+  wire id_3;
+  assign id_2[1] = 1;
+  wire id_4;
+  wire id_5;
 endmodule

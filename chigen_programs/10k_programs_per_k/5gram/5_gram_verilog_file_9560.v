@@ -1,46 +1,41 @@
-// Seed: 2431982755
-`timescale 1ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+// Seed: 2940824538
+module module_0 ();
+  always @(negedge id_1) begin
+    id_1 <= id_1;
+  end
+  wire id_2;
+endmodule
+module module_1 (
+    input wor id_0,
+    output uwire id_1,
+    input uwire id_2,
+    input tri id_3,
+    input wand id_4,
+    output wire id_5,
+    input wor id_6,
+    output uwire id_7,
+    output wor id_8,
+    output uwire id_9,
+    output uwire id_10,
+    output supply0 id_11,
+    output tri id_12,
+    output tri id_13,
+    input supply1 id_14,
+    input wire id_15,
+    input wire id_16,
+    input supply0 id_17,
+    input supply1 id_18,
+    output wand id_19,
+    input supply1 id_20,
+    output supply0 id_21,
+    output supply1 id_22,
+    output tri id_23,
+    input wor id_24
 );
-  output id_9;
-  output id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_9;
-  logic id_10 = id_1[1];
-  logic
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30;
+  assign id_11 = 1 - id_17;
+  module_0();
+  tri1 id_26;
+  assign id_22 = !(id_3) == id_6;
+  string id_27 = "";
+  assign id_26 = 1;
 endmodule

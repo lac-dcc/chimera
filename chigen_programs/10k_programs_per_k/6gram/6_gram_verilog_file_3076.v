@@ -1,28 +1,47 @@
-// Seed: 3894167485
-`timescale 1ps / 1ps
+// Seed: 2766228039
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    input  wire  id_0,
+    output uwire id_1,
+    input  tri   id_2,
+    output tri0  id_3
 );
-  input id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  logic id_10;
-  assign id_5 = 1'h0;
-  assign id_8[1] = sample;
+  wire id_5;
+  assign id_3 = 1;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input wire id_1,
+    output tri0 id_2,
+    input uwire id_3,
+    input wand id_4,
+    input wor id_5,
+    input tri1 id_6,
+    output supply0 id_7,
+    input wor id_8,
+    input wire id_9,
+    input uwire id_10,
+    input uwire id_11,
+    output tri1 id_12,
+    input wire id_13,
+    input tri0 id_14,
+    input tri0 id_15,
+    input supply0 id_16,
+    output uwire id_17,
+    input supply0 id_18,
+    input wire id_19,
+    output wire id_20,
+    output tri id_21
+);
+  assign id_7 = id_1;
+  module_0(
+      id_9, id_2, id_1, id_17
+  );
+  initial begin
+    if (1) id_17 = id_10;
+    else begin
+      if (1) begin
+        disable id_23;
+      end
+    end
+  end
 endmodule

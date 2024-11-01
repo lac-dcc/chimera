@@ -1,46 +1,73 @@
-// Seed: 3364881120
-`define pp_21 0
-`timescale 1ps / 1ps
-`define pp_22 0
-`define pp_23 0
-`define pp_24 0
-`timescale 1ps / 1ps
-`define pp_25 0
-`define pp_26 0
-`define pp_27 0
-`timescale 1ps / 1 ps `timescale 1ps / 1ps
-`define pp_28 0
-`define pp_29 0
-`define pp_30 0
-`define pp_31 0
-`timescale 1 ps / 1ps
+// Seed: 881140439
 module module_0 (
-    output logic id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    input logic id_6
-    , id_21,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    output logic id_16,
-    output tri0 id_17,
-    input id_18,
-    output logic id_19,
-    input logic id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17
 );
-  assign id_17[1] = 1 ? 1 : 1;
-  logic id_22 = 1;
-  type_32(
-      id_3 - 1, 1, 1'h0
+  output wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_3 = 1;
+  wor id_18, id_19;
+  wire id_20;
+  assign id_19 = 1;
+endmodule
+module module_1 (
+    output wire  id_0,
+    input  tri0  id_1,
+    output uwire id_2,
+    output tri0  id_3
+);
+  assign id_0 = 1;
+  tri1 id_5, id_6;
+  module_0(
+      id_5,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_5,
+      id_5,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_5,
+      id_5,
+      id_6
   );
+  tri0 id_7;
+  assign id_0 = id_1 ? 1 : ~id_6;
+  assign id_7 = (id_1) == 1;
 endmodule

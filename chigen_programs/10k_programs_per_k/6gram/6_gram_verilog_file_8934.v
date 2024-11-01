@@ -1,18 +1,24 @@
-// Seed: 2647949372
-`define pp_8 0
-`timescale 1ps / 1ps
-module module_0 (
-    output id_0,
-    input id_1,
-    input reg id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7
+// Seed: 2931422488
+module module_0 ();
+  reg id_1;
+  always #(1) if (1 && id_1 && id_1) id_1 <= 1 === id_1;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input tri0 id_1,
+    output uwire id_2,
+    input tri0 id_3,
+    output supply1 id_4,
+    input wor id_5,
+    input supply1 id_6,
+    input supply1 id_7,
+    input tri1 id_8,
+    output tri0 id_9,
+    input wor id_10,
+    input tri1 id_11,
+    input tri1 id_12
 );
-  logic id_8;
-  always #1 begin
-    id_0 <= id_2;
-  end
+  wire id_14;
+  assign id_14 = id_14;
+  module_0();
 endmodule

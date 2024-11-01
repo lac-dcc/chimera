@@ -1,21 +1,34 @@
-// Seed: 1821363189
-`define pp_8 0
-`define pp_9 0
-`timescale 1ps / 1ps `timescale 1 ps / 1 ps
+// Seed: 2242819364
 module module_0 (
-    input id_0,
-    input string id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    input logic id_6,
-    output id_7
+    input  wire id_0,
+    output wand id_1,
+    input  wand id_2,
+    output wire id_3,
+    output tri  id_4,
+    input  tri  id_5,
+    input  tri0 id_6
 );
-  type_12(
-      id_1, ""
+  wire id_8;
+  module_2(
+      id_8, id_8
   );
-  assign id_7 = id_2;
-  logic  id_8;
-  string id_9 = "";
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output wand id_1,
+    input tri0 id_2,
+    input tri id_3
+);
+  wire id_5 = id_0;
+  module_0(
+      id_3, id_5, id_5, id_5, id_5, id_3, id_0
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
 endmodule

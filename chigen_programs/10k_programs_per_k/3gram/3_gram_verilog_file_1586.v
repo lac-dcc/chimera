@@ -1,26 +1,32 @@
-// Seed: 3720484144
-module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    output id_11,
-    output id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    output id_16,
-    input id_17
+// Seed: 2961912242
+module module_0 ();
+  wire id_2 = id_2;
+endmodule
+module module_2 (
+    input  uwire id_0,
+    input  logic id_1,
+    input  uwire id_2,
+    input  wire  id_3,
+    output logic id_4,
+    input  uwire module_1
 );
-  always @(*)
-    if ((id_2)) begin
-      #1 id_1 = id_3;
-    end else id_6 <= 1;
+  initial begin
+    id_4 <= id_1;
+  end
+  module_0(); id_7(
+      .id_0(id_1), .id_1(1'b0)
+  );
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input supply0 id_1,
+    input tri id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    input wor id_5,
+    output wor id_6,
+    output logic id_7
+);
+  always @(posedge 1 or posedge $display(1) * 1) id_7 <= 1;
+  module_0();
 endmodule

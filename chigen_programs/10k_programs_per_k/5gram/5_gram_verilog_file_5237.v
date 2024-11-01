@@ -1,22 +1,34 @@
-// Seed: 1828090013
-module module_0 ();
-  type_9(
-      1, 1'b0 + id_0 <= 1, 1, 1, 1, 1
+// Seed: 3744001592
+module module_0 (
+    output wor  id_0,
+    input  tri1 id_1
+);
+  assign id_0 = id_1;
+  module_2(
+      id_1, id_1
   );
-  logic   id_2 = id_2;
-  logic   id_3;
-  integer id_4 = id_0;
-  logic   id_5;
-  logic   id_6 = ~id_1;
-  type_13 id_7 (
-      .id_0(1'h0),
-      .id_1(1'b0),
-      .id_2(id_0),
-      .id_3(1),
-      .id_4(1'b0)
+endmodule
+module module_1 (
+    input uwire id_0,
+    input supply1 id_1,
+    input wor id_2,
+    output tri id_3,
+    output wor id_4,
+    input tri0 id_5,
+    output supply1 id_6
+);
+  wire id_8;
+  wire id_9;
+  tri1 id_10 = 1;
+  module_0(
+      id_6, id_5
   );
-  always @(posedge 1) begin
-    id_6 = id_5;
-  end
-  logic id_8;
+  wire id_11;
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input tri1 id_1
+);
+  wire id_3;
+  wire id_4;
 endmodule

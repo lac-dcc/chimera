@@ -1,7 +1,8 @@
-// Seed: 858121122
-`define pp_13 0
-`define pp_14 0
-module module_0 (
+// Seed: 1864964811
+program module_0;
+  wire id_5;
+endprogram : id_6
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -10,42 +11,26 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    id_9
 );
-  input id_13;
-  inout id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  always @(posedge 1) begin
-    #1 id_4 = id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  tri1 id_10;
+  module_0();
+  always @(id_3 or 1 or id_8 == 1) begin
+    if (id_6) begin
+      if (~id_8) begin
+        if (id_10) begin
+          id_1 = 1;
+        end else id_8 <= {1, id_6, !id_9} * 1 - 1;
+      end
+    end
   end
-endmodule
-`default_nettype wire
-module module_1 ();
-  type_17 id_13 (
-      .id_0(id_14),
-      .id_1(id_8)
-  );
-  initial begin
-    id_3 <= 1'b0;
-    id_2 <= "";
-    id_13 = id_8[1];
-    id_11 = 1 ? 1 : (id_5);
-    id_14 = id_9;
-  end
-  logic id_15;
-  logic id_16;
 endmodule

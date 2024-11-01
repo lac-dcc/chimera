@@ -1,32 +1,40 @@
-// Seed: 39143595
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1ps / 1ps
+// Seed: 655975074
 module module_0 (
-    input logic id_0,
-    output id_1,
-    output reg id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    input logic id_8,
-    output id_9,
-    output logic id_10,
-    input id_11,
-    input id_12,
-    output id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(1 or id_8) begin
-    id_2 <= 1;
-  end
-  always @(id_4) begin
-    id_1 <= 1'd0 & id_12;
-  end
-  logic id_14;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_6;
+  module_2(
+      id_2, id_1, id_3, id_2, id_1, id_3
+  );
+endmodule
+module module_1;
+  wire id_2 = id_1;
+  module_0(
+      id_2, id_2, id_2, id_2, id_2
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_7;
 endmodule

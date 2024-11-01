@@ -1,11 +1,49 @@
-// Seed: 1810837968
+// Seed: 3249537492
 module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_2 = id_3;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_11 = 1;
+  wor id_12 = 1'h0;
+  id_13(
+      ~1, 1
+  );
+  wire id_14;
+endmodule
+module module_1 #(
+    parameter id_6 = 32'd23,
+    parameter id_7 = 32'd67
+);
+  initial cover (1);
+  always @(posedge id_1) begin
+    `define pp_2 0
+    `pp_2 <= 1;
+  end
+  wire id_3;
+  wire id_4;
+  module_0(
+      id_4, id_3, id_3, id_4, id_4, id_3, id_4, id_4, id_4, id_4, id_3
+  );
+  wire id_5;
+  defparam id_6.id_7 = "";
 endmodule

@@ -1,36 +1,37 @@
-// Seed: 760130816
-parameter id_5 = id_2 + 1;
+// Seed: 3167224400
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_5
 );
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  always @(posedge 1'b0) begin
-    SystemTFIdentifier("", 1);
-  end
-  logic id_12;
-  assign id_7 = id_3;
-  logic id_13;
-  logic id_14;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_6 = id_2 || id_1;
+  supply1 id_7 = id_6;
+endmodule
+module module_1 (
+    output logic id_0,
+    output supply1 id_1,
+    input logic id_2,
+    output wand id_3,
+    output supply0 id_4,
+    input tri id_5,
+    input tri1 id_6,
+    input uwire id_7
+);
+  uwire id_9;
+  assign id_1 = id_6;
+  always @(1 or posedge id_9) id_0 <= id_2;
+  assign id_1 = id_9;
+  tri0 id_10;
+  module_0(
+      id_10, id_10, id_10, id_10, id_10
+  );
+  assign id_10 = 1;
+  assign id_0  = 1;
 endmodule

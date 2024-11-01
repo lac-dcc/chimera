@@ -1,21 +1,34 @@
-// Seed: 4079853964
-`define pp_13 0
+// Seed: 3654953727
 module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    output logic id_11,
-    input id_12
+    input  tri0 id_0
+    , id_3,
+    output tri0 id_1
 );
-  logic id_13;
-  logic id_14;
-  assign id_4 = id_8[1] || 1;
+  assign id_1 = id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input uwire id_1,
+    input wand id_2,
+    output uwire id_3
+);
+  initial id_3 = id_1;
+  module_0(
+      id_2, id_3
+  );
+endmodule
+module module_2 (
+    input  wor   id_0,
+    output logic id_1,
+    output uwire id_2
+);
+  wor id_4;
+  generate
+    for (id_5 = 1; 1; id_4 = 1) begin
+      always @(posedge 1) id_1 <= 1;
+    end
+  endgenerate
+  module_0(
+      id_0, id_2
+  );
 endmodule

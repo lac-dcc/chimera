@@ -1,36 +1,38 @@
-// Seed: 88157766
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`define pp_15 0
-`define pp_16 0
-module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    output id_11
+// Seed: 2487794360
+macromodule module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_12;
-  always @(1 or posedge 1'b0) id_4 <= id_1;
-  tri   id_13;
-  logic id_14;
-  logic id_15;
-  logic id_16;
-  uwire id_17;
-  assign id_17[1'b0] = 1;
-  logic id_18 = id_6;
-  logic id_19;
-  type_0 id_20 (
-      .id_0(""),
-      .id_1(1'b0)
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  id_5(
+      .id_0(1), .id_1()
   );
-  assign id_13[1] = 1;
+  wire id_6;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  module_0(
+      id_1, id_1, id_1, id_1
+  );
+  wire id_2;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri0 id_1,
+    input tri id_2,
+    input wor id_3,
+    input tri id_4,
+    input supply1 id_5
+);
+  assign id_7 = 1;
+  module_0(
+      id_7, id_7, id_7, id_7
+  );
 endmodule

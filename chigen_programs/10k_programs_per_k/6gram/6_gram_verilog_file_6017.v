@@ -1,21 +1,35 @@
-// Seed: 345446140
-`define pp_12 0
-`default_nettype id_8 `default_nettype id_8 `timescale 1ps / 1ps
-module module_0 (
-    input supply1 id_0,
-    output id_1,
-    output logic id_2,
-    output id_3,
-    output id_4,
-    input logic id_5,
-    output id_6,
-    output id_7,
-    inout id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11
+// Seed: 3472755995
+module module_0 ();
+  wire id_1;
+  wire id_2;
+  wire id_3;
+  wire id_4;
+  id_5(
+      .id_0(), .id_1(id_1)
+  );
+endmodule
+module module_1 (
+    input  wand id_0,
+    output tri  id_1
 );
-  logic id_12;
-  assign id_2 = 1 == id_0[1];
-  logic id_13;
+  wire id_3;
+  module_0();
+endmodule
+module module_2 (
+    input uwire id_0,
+    output supply0 id_1,
+    output tri1 id_2
+);
+  always @(1 or posedge 1) begin
+    $display(id_0);
+    for (id_2 = 1'b0; 1'h0; id_2 = id_0) begin
+      fork
+        id_1 = id_0.id_0;
+        id_4();
+      join
+      id_4 <= 1;
+    end
+    #1;
+  end
+  module_0();
 endmodule

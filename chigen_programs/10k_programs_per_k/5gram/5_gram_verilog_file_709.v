@@ -1,21 +1,26 @@
-// Seed: 2148615643
-`default_nettype id_2
+// Seed: 360117877
 module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    inout id_9,
-    output logic id_10,
-    input logic id_11
+    output supply1 id_0,
+    output tri1 id_1
 );
-  type_16(
-      1, 1 - 1'h0
+  wire id_3, id_4;
+  wire id_5;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    output wand id_1,
+    output tri0 id_2,
+    output wand id_3,
+    output tri id_4,
+    output wire id_5,
+    output tri0 id_6
+    , id_8
+);
+  tri id_9, id_10 = 1, id_11;
+  wire id_12;
+  module_0(
+      id_4, id_3
+  ); id_13(
+      .id_0(id_12), .id_1(id_1), .id_2(1)
   );
-  logic id_12;
 endmodule

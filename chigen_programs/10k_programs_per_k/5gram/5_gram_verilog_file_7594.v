@@ -1,22 +1,36 @@
-// Seed: 2214375734
-`define pp_8 0
-`timescale 1ps / 1ps
-`define pp_9 0
-module module_0 (
-    output id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7
+// Seed: 1388522853
+module module_0;
+  wire id_1;
+  module_2(
+      id_1, id_1, id_1, id_1
+  );
+endmodule
+module module_1 (
+    input tri id_0,
+    inout wor id_1,
+    output tri1 id_2,
+    input tri1 id_3,
+    input uwire id_4,
+    output wor id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    input uwire id_8,
+    output tri id_9
 );
-  always @(posedge 1) begin
-    id_0 <= 1;
-  end
-  assign id_6 = id_2;
-  generate
-    assign id_1 = id_7;
-  endgenerate
+  tri  id_11 = 1;
+  wire id_12;
+  module_0();
+  wire id_13;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_5;
 endmodule

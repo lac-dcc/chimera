@@ -1,13 +1,18 @@
-// Seed: 4184561116
-`define pp_10 0
-`define pp_11 0
-`define pp_12 (  pp_13  ,  pp_14  ,  pp_15  )  0
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`timescale 1ps / 1ps
+// Seed: 4005608869
 module module_0 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
+  supply1 id_4;
+  tri0 id_5 = id_4, id_6;
+  assign id_1 = id_5++ ? 1'h0 : 1;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -19,20 +24,18 @@ module module_0 (
     id_9,
     id_10
 );
-  output id_10;
-  output id_9;
-  inout id_8;
-  output id_7;
-  inout id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  input id_1;
-  initial begin
-    id_5 <= 1;
-    id_2 <= 1;
-    SystemTFIdentifier;
-    id_2 = 1 - id_4;
-  end
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_9 = 1'b0 ? 1 : id_9;
+  module_0(
+      id_2, id_1
+  );
 endmodule

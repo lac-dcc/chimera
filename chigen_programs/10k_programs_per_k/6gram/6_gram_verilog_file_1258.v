@@ -1,41 +1,37 @@
-// Seed: 2783662275
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    output logic id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    output logic id_11,
-    output id_12,
-    input logic id_13,
-    output id_14,
-    input id_15,
-    input id_16,
-    input logic id_17,
-    input id_18,
-    input logic id_19,
-    output logic id_20
+// Seed: 3026064095
+module module_0;
+  tri id_1;
+  tri id_2;
+  assign id_1 = id_1 ? id_1 == 1 : id_2;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  wire id_6;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  logic id_21;
-  logic id_22;
-  assign id_22 = id_8 ? 1 : id_22;
-  logic id_23;
-  logic id_24;
-  logic id_25;
-  tri1  id_26;
-  logic id_27;
-  assign id_24 = 1 - id_19;
-  assign id_12 = id_26[1] ? id_21 : id_23;
-  assign #(id_16) id_23 = 1;
-  logic id_28, id_29;
-  logic id_30;
-  logic id_31;
-  logic id_32;
-  assign id_22 = 1;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = id_5;
+  module_0(); id_6(
+      .id_0(id_3),
+      .id_1(),
+      .id_2(id_4),
+      .id_3(1),
+      .id_4(id_4),
+      .id_5(id_5),
+      .id_6(1 | 1 == id_1),
+      .id_7(1'b0),
+      .id_8(1),
+      .id_9(1'h0),
+      .id_10((id_5 && 1))
+  );
+  wand id_7;
+  assign id_2 = id_7 - 1;
 endmodule

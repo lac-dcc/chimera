@@ -1,25 +1,31 @@
-// Seed: 142634969
-module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    output id_8,
-    input logic id_9
+// Seed: 1590371856
+module module_0;
+  wire id_2;
+  wire id_3;
+  wire id_4, id_5;
+endmodule
+module module_1 ();
+  assign id_1 = id_1;
+  wire id_2, id_3, id_4, id_5, id_6, id_7, id_8;
+  wire id_9;
+  wire id_10;
+  module_0();
+  wire id_11;
+endmodule
+module module_2 #(
+    parameter id_6 = 32'd52,
+    parameter id_7 = 32'd71
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  type_16 id_10 (
-      .id_0(id_6),
-      .id_1(id_9),
-      .id_2(""),
-      .id_3(1),
-      .id_4(id_2),
-      .id_5(1)
-  );
-  id_11 :
-  assert property (@(posedge 1) 1)
-  else SystemTFIdentifier(1, 1);
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  defparam id_6.id_7 = id_5; module_0();
 endmodule

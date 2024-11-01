@@ -1,41 +1,32 @@
-// Seed: 3476982392
-`define pp_16 0
-module module_0 (
-    input id_0,
-    output id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    output tri1 id_9,
-    input logic id_10,
-    output logic id_11,
-    input logic id_12,
-    output id_13,
-    input id_14,
-    input id_15
-);
-  type_26(
-      id_2, id_10
+// Seed: 3975299750
+module module_0;
+  logic [7:0] id_2;
+  id_3(
+      .id_0(1), .id_1(), .id_2(1), .id_3(1), .id_4(id_2[1'b0])
   );
-  reg id_16;
-  assign id_6 = id_3;
-  assign id_6 = id_3;
-  assign id_9[1] = 1'b0 - 1;
-  logic id_17;
-  assign id_1 = {id_7, id_17};
-  logic id_18;
-  always @(negedge 1)
-    if (id_16) id_18 = 1;
-    else id_16 <= id_5;
-  assign id_4 = id_5;
-  always @(negedge 1) begin
-    id_1 = 1'b0 == 1;
-    id_16 <= (1);
-    id_16 <= #1 1 + 1;
-    SystemTFIdentifier;
-  end
+endmodule
+module module_1;
+  wire id_1;
+  module_0(); id_2(
+      .id_0(1), .id_1(1'd0), .id_2(id_1), .id_3(id_3)
+  );
+  tri1 id_4 = 1;
+endmodule
+module module_2 (
+    output tri   id_0
+    , id_8,
+    output wand  id_1,
+    input  uwire id_2,
+    output uwire id_3,
+    input  tri1  id_4,
+    input  wor   id_5,
+    output tri0  id_6
+    , id_9
+);
+  wire id_10;
+  assign id_8 = id_9;
+  module_0();
+  wire id_11 = 1'b0;
+  assign id_3 = 1;
+  wire id_12 = id_10;
 endmodule

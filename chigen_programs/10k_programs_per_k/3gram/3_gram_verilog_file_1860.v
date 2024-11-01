@@ -1,31 +1,35 @@
-// Seed: 3192007672
+// Seed: 2457201279
 module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_0 id_3 (
-      .id_0(id_1),
-      .id_1(id_2),
-      .id_2(~1),
-      .id_3(id_1),
-      .id_4(id_1),
-      .id_5(id_2),
-      .id_6(1),
-      .id_7(id_2),
-      .id_8('b0)
-  );
-  logic id_4;
-  always @(posedge id_3) begin
-    id_2 <= id_2;
-    SystemTFIdentifier(id_4 - "");
-    if (1) begin
-      SystemTFIdentifier(id_2);
-    end
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_8 = id_6;
+endmodule
+module module_1;
+  always @(posedge "" or 1) id_1 = 1'b0 ^ 1 === id_1;
+  assign id_1 = 1;
+  final begin
+    id_1 <= 1 == 1;
   end
-  logic id_5;
-  assign id_2 = (1'h0);
+  wire id_2;
+  module_0(
+      id_2, id_2, id_2, id_2, id_2, id_2, id_2
+  );
+  supply0 id_3;
+  id_4(
+      .id_0(id_2), .id_1(id_3), .id_2(1), .id_3(1), .id_4(id_2), .id_5(id_2), .id_6(1), .id_7(1)
+  );
+  always @(1 or id_2 & id_1 - id_3);
 endmodule

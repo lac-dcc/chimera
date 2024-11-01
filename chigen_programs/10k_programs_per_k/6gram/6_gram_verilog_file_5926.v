@@ -1,25 +1,39 @@
-// Seed: 950474569
+// Seed: 1800979979
 module module_0 (
-    output logic id_0,
-    output reg id_1,
-    input id_2,
-    inout id_3,
-    input id_4,
-    output logic id_5,
-    output id_6
+    id_1,
+    id_2,
+    id_3
 );
-  type_15(
-      1, 1'h0, {id_4(1'b0 << 1), 1, 1, id_0, id_4, 1}
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_4, id_5;
+  initial assume (id_3 / id_1);
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri id_1,
+    output wor id_2,
+    output wor id_3,
+    output tri1 id_4,
+    input wand id_5,
+    input uwire id_6,
+    output tri1 id_7,
+    input uwire id_8,
+    input tri0 id_9,
+    output supply1 id_10,
+    output wor id_11,
+    input wor id_12,
+    input supply1 id_13,
+    output wire id_14,
+    output tri1 id_15,
+    input uwire id_16,
+    input supply1 id_17,
+    input supply1 id_18,
+    output wand id_19
+);
+  wire id_21 = !id_9;
+  module_0(
+      id_21, id_21, id_21
   );
-  reg id_7;
-  generate
-    for (id_8 = 1; id_3 - 1; id_0 = id_3.id_7 < 1) begin : id_9
-      always @(posedge id_7) begin
-        id_8 <= 1;
-        id_1 <= 1'b0;
-      end
-    end
-  endgenerate
-  reg   id_10 = id_7;
-  logic id_11 = !id_2[1] === id_7;
 endmodule

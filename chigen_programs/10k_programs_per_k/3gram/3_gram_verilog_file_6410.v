@@ -1,24 +1,35 @@
-// Seed: 3142586169
-`timescale 1 ps / 1 ps `timescale 1 ps / 1 ps `timescale 1ps / 1 ps
-`define pp_2 0
+// Seed: 1482215634
 module module_0 (
-    input id_0,
-    input id_1
+    input  uwire id_0,
+    input  tri   id_1,
+    output wand  id_2
 );
-  reg id_2;
-  always @(posedge 1) begin
-    if (id_1) id_2 <= 1;
-    if (id_0) begin
-      id_2 <= 1;
-    end
-    id_2 <= #id_0 1;
-    if (1'h0)
-      if (1) begin
-        if (id_1) begin
-          id_2 <= id_1;
-        end
-      end else id_2 = 1;
-    id_2 = (id_0);
-    if (1) id_2 <= 1'b0;
-  end
+  assign id_2 = id_1;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    output wand id_4,
+    output wire id_5,
+    input supply0 id_6,
+    input uwire id_7,
+    input tri0 id_8,
+    input tri0 id_9,
+    input tri1 id_10,
+    output wand id_11
+    , id_19,
+    output uwire id_12,
+    input wand id_13,
+    output uwire id_14,
+    input tri id_15,
+    input tri1 id_16,
+    input wand id_17
+);
+  wire id_20;
+  and (id_11, id_13, id_0, id_19, id_16, id_17, id_9, id_2, id_1, id_10, id_7, id_8);
+  module_0(
+      id_15, id_1, id_11
+  );
 endmodule

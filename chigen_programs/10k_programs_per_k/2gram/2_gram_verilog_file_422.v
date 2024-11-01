@@ -1,2 +1,92 @@
-// Seed: 4169092348
-`timescale 1ps / 1 ps `default_nettype id_0
+// Seed: 3150221505
+module module_0 (
+    output tri1 id_0,
+    output wire id_1,
+    input wire id_2,
+    output tri id_3,
+    input supply1 id_4,
+    input tri id_5,
+    output uwire id_6,
+    output wire id_7,
+    output tri0 id_8,
+    input tri id_9,
+    input tri1 id_10,
+    output tri0 id_11,
+    output supply1 id_12,
+    output wire id_13,
+    input wire id_14,
+    output wire id_15,
+    output wor id_16,
+    output supply1 id_17,
+    output tri id_18,
+    input uwire id_19,
+    output wor id_20,
+    output uwire id_21,
+    input wor id_22,
+    input supply0 id_23
+);
+  wire id_25;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wand id_1,
+    input wire id_2,
+    input wire id_3,
+    input tri1 id_4,
+    input wor id_5,
+    input wor id_6
+    , id_32,
+    output wand id_7,
+    output wire id_8
+    , id_33,
+    output uwire id_9,
+    output tri1 id_10,
+    input wire id_11,
+    output supply1 id_12,
+    output tri1 id_13,
+    input tri id_14,
+    output supply1 id_15,
+    output wor id_16,
+    input wor id_17,
+    input wire id_18,
+    input supply1 id_19,
+    output wor id_20,
+    input tri0 id_21
+    , id_34,
+    output tri1 id_22,
+    input tri id_23,
+    output supply1 id_24,
+    input tri0 id_25,
+    input supply0 id_26,
+    output tri id_27,
+    output wor id_28,
+    input wire id_29,
+    input wor id_30
+);
+  module_0(
+      id_22,
+      id_12,
+      id_26,
+      id_12,
+      id_14,
+      id_3,
+      id_16,
+      id_24,
+      id_24,
+      id_17,
+      id_11,
+      id_12,
+      id_20,
+      id_24,
+      id_29,
+      id_7,
+      id_28,
+      id_7,
+      id_12,
+      id_25,
+      id_7,
+      id_15,
+      id_25,
+      id_25
+  );
+endmodule

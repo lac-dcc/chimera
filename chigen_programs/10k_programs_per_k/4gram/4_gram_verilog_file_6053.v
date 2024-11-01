@@ -1,29 +1,59 @@
-// Seed: 524075965
+// Seed: 698491226
 module module_0 (
-    input id_0,
-    output id_1,
-    output logic id_2,
-    input logic id_3,
-    input id_4
-    , id_20,
-    output logic id_5,
-    output logic id_6,
-    inout logic id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input logic id_12,
-    output logic id_13,
-    output wor id_14,
-    input id_15,
-    input id_16,
-    output id_17,
-    output logic id_18,
-    output logic id_19
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  type_33(
-      id_17, 1, id_10 - id_17
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_4 = 1;
+endmodule
+module module_1 #(
+    parameter id_16 = 32'd26,
+    parameter id_17 = 32'd22
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
+);
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  defparam id_16.id_17 = 1; module_0(
+      id_6, id_12, id_3, id_5, id_10
+  ); id_18 :
+  assert property (@(posedge id_7) 1)
+  else $display;
+  id_19(
+      .id_0(1), .id_1(1'b0), .id_2((id_1 * 1)), .id_3(id_13), .id_4(1'b0), .id_5(id_2), .id_6(1)
   );
-  assign id_14[""+1] = 1 & 1;
 endmodule

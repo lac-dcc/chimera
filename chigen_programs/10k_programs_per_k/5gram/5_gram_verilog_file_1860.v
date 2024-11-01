@@ -1,29 +1,28 @@
-// Seed: 3573464828
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-`celldefine
-`define pp_12 0
-`define pp_13 0
-`define pp_14 0
-`timescale 1ps / 1 ps `timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 527165564
+module module_0;
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    input wire id_0,
+    output wand id_1,
+    input supply0 id_2,
+    output supply1 id_3,
+    input wand id_4,
+    input uwire id_5,
+    input wor id_6,
+    input uwire id_7,
+    input supply1 id_8,
+    output supply0 id_9,
+    output supply1 id_10,
+    input uwire id_11,
+    input supply0 id_12,
+    output tri0 id_13,
+    output supply1 id_14
 );
-  input id_7;
-  input id_6;
-  output id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  output id_1;
-  logic id_7;
+  wire id_16;
+  wire id_17;
+  wire id_18;
+  module_0();
+  wire id_19;
+  assign id_18 = 1;
 endmodule

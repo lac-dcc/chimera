@@ -1,31 +1,47 @@
-// Seed: 3823744276
-module module_0 (
-    output id_0,
-    output logic id_1,
-    output logic id_2,
-    input logic id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    output id_11,
-    input id_12,
-    output logic id_13,
-    input logic id_14,
-    input id_15,
-    input id_16,
-    output logic id_17,
-    output id_18,
-    output logic id_19,
-    output id_20
+// Seed: 2016917737
+module module_0;
+  `define pp_1 0
+endmodule
+module module_1;
+  assign id_1 = 1;
+  wire id_2;
+  tri1 id_3;
+  assign id_3 = id_1;
+  module_0();
+  if (1) begin
+    logic [7:0] id_4;
+    assign id_3 = 1 ^ (id_1) ^ id_1;
+    assign id_4 = id_4[1];
+    wire id_5;
+  end
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  logic id_21;
-  logic id_22;
-  type_34(
-      1
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0(); id_11(
+      .id_0(1'b0), .id_1(id_10), .id_2((1) * 1)
+  ); id_12(
+      .id_0({{1{id_8}} {1}}), .id_1(id_3)
   );
-  logic id_23;
+  wire id_13;
+  assign id_1[1'd0] = id_2;
 endmodule

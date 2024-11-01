@@ -1,5 +1,4 @@
-// Seed: 620658213
-`endcelldefine
+// Seed: 211865428
 module module_0 (
     id_1,
     id_2,
@@ -7,13 +6,29 @@ module module_0 (
     id_4,
     id_5
 );
-  output id_5;
-  inout id_4;
-  inout id_3;
-  output id_2;
-  input id_1;
-  always @(posedge 1'h0) begin
-    id_2 = id_1;
-  end
-  assign id_3 = id_3;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input tri0 id_1,
+    input uwire id_2,
+    input wand id_3
+    , id_13,
+    output wand id_4,
+    input supply0 id_5,
+    output tri1 id_6,
+    output wire id_7,
+    input wand id_8,
+    input wand id_9,
+    output tri id_10,
+    output tri0 id_11
+);
+  module_0(
+      id_13, id_13, id_13, id_13, id_13
+  );
+  wire id_14 = 1;
 endmodule

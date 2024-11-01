@@ -1,27 +1,31 @@
-// Seed: 209226463
-`timescale 1ps / 1ps
-`define pp_12 0
-`timescale 1ps / 1ps `timescale 1ps / 1ps `timescale 1 ps / 1ps `default_nettype id_9
+// Seed: 185771482
 module module_0 (
-    output id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    output logic id_4,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    input logic id_11
+    output uwire id_0,
+    output tri0  id_1,
+    input  wor   id_2,
+    input  tri   id_3,
+    input  wor   id_4,
+    input  wor   id_5
+    , id_9,
+    output uwire id_6,
+    output tri1  id_7
 );
-  assign id_10 = id_11 == id_9;
+  wire id_10;
+  assign id_0 = id_9;
+  supply1 id_11;
+  if (id_2) assign id_6 = id_11;
 endmodule
 module module_1 (
-    id_1,
-    id_2
+    input tri1 id_0,
+    input supply1 id_1,
+    output tri0 id_2,
+    output uwire id_3,
+    input tri id_4
 );
-  output id_2;
-  output id_1;
+  reg id_6;
+  module_0(
+      id_2, id_2, id_0, id_1, id_0, id_1, id_3, id_3
+  );
+  always @(posedge id_4) id_6 <= #id_1 id_1 < 1;
+  wire id_7;
 endmodule

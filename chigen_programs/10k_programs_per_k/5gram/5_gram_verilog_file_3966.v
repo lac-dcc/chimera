@@ -1,4 +1,4 @@
-// Seed: 43311660
+// Seed: 52334188
 module module_0 (
     id_1,
     id_2,
@@ -7,32 +7,32 @@ module module_0 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    id_8
 );
-  inout id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  assign id_5 = id_12 || 1 ? id_7 : 1;
-  logic id_12;
-  assign id_4[1] = 1;
-  always @(posedge 1) begin
-    id_12 = 1;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_9;
+  assign id_5[1] = id_3;
+  wire id_10;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2[1'h0] = 1;
+  initial begin
+    #1;
   end
-  supply1 id_13;
-  assign id_2 = 1;
-  defparam id_14.id_15 = id_13[1];
-  logic id_16 = id_3 - id_6;
+  module_0(
+      id_1, id_1, id_1, id_1, id_2, id_1, id_1, id_1
+  );
+  wire id_3;
 endmodule

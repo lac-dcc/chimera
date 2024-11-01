@@ -1,18 +1,33 @@
-// Seed: 4156470532
-module module_0 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input id_3,
-    output logic id_4
+// Seed: 3325709545
+module module_0;
+  wire id_1;
+  wor  id_2 = 1;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input supply0 id_1,
+    output supply1 id_2,
+    input supply0 id_3,
+    output wand id_4,
+    input tri0 id_5,
+    input wand id_6
 );
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  type_17(
-      1, 1, id_2 - id_6 - 1, 1'b0
-  );
-  logic id_9;
-  assign id_5 = 1;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  id_6 :
+  assert property (@(posedge id_5) 1)
+  else $display(1'b0 & id_6);
+  module_0();
 endmodule

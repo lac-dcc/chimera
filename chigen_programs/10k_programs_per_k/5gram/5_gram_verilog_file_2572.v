@@ -1,31 +1,28 @@
-// Seed: 2798833462
-`define pp_16 0
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    output logic id_7,
-    input reg id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output reg id_14,
-    input logic id_15
+// Seed: 1085021253
+module module_0;
+  assign id_1 = id_1;
+  wand id_2 = 1 / 1 + id_2 ? 1 : id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign id_14 = id_8;
-  assign id_14 = id_13;
-  always @(posedge 1 or posedge 1) begin
-    if (1) begin
-      id_14 <= id_12;
-    end
-  end
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_2 = 1;
+  assign id_3 = 1'b0;
+  logic [7:0] id_8;
+  id_9(
+      .id_0(id_6 < 1), .id_1({1, id_8[1'b0 : (1)]}), .id_2(1'b0), .id_3(id_6 - id_4)
+  ); module_0();
 endmodule

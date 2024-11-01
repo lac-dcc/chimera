@@ -1,21 +1,40 @@
-// Seed: 512046127
-module module_0;
-  assign id_0 = id_0;
-  always id_1 = id_1;
-  always
-    if (id_0 - 1'b0) @(posedge id_1, posedge id_0) @(id_0) id_1 <= id_1;
-    else id_1 <= 1;
-endmodule
-`default_nettype wire
-`define pp_3 0
-`define pp_4 0
-module module_1 (
-    input logic id_0,
-    input id_1,
-    input logic id_2
+// Seed: 302572880
+macromodule module_0 (
+    input wor id_0,
+    input supply0 id_1,
+    input wor id_2,
+    inout wor id_3,
+    output wire id_4,
+    input tri0 id_5,
+    input wand id_6
 );
-  logic id_3;
-  assign id_3 = 1'b0;
-  logic id_4, id_5;
-  logic id_6 = 1;
+  assign id_3 = 1;
+endmodule
+module module_1 (
+    output tri id_0,
+    input wand id_1,
+    input wand id_2,
+    input wor id_3,
+    input wor id_4,
+    output tri1 id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    input wire id_8,
+    input uwire id_9,
+    input tri0 id_10,
+    input supply1 id_11,
+    input wand id_12,
+    input wand id_13,
+    output supply0 id_14,
+    output tri1 id_15,
+    input wire id_16,
+    input wor id_17,
+    output tri0 id_18,
+    inout wand id_19
+);
+  wire id_21 = id_21;
+  wire id_22, id_23;
+  module_0(
+      id_19, id_11, id_19, id_19, id_5, id_2, id_13
+  );
 endmodule

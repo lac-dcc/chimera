@@ -1,23 +1,57 @@
-// Seed: 923242850
-`timescale 1 ps / 1ps
+// Seed: 3588628315
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  input id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  output id_1;
-  always @(1 or id_2) begin
-    id_6(1, 1);
-    if (id_5) begin
-      id_5 <= 1;
-    end
+  output wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  tri0 id_12 = 1'b0 == id_1;
+  wire id_13 = id_5 == 1'd0;
+endmodule
+module module_1 #(
+    parameter id_8 = 32'd50,
+    parameter id_9 = 32'd68
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  always begin
+    id_3 <= id_1;
+    wait (id_5);
+    id_2 = 1'b0;
+    id_6(1);
+    cover (id_6);
+    id_3 <= id_5;
   end
+  module_0(
+      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_2, id_4, id_2, id_2
+  );
+  wire id_7;
+  defparam id_8.id_9 = 1'h0;
 endmodule

@@ -1,5 +1,23 @@
-// Seed: 3760504454
-module module_0 (
+// Seed: 3760127909
+module module_0;
+  if (1) wire id_1;
+  assign id_1 = id_1 - 1'b0;
+  assign id_1 = id_1;
+  wire id_2;
+endmodule
+module module_1;
+  initial begin
+    id_1 = 1'b0;
+    id_1 <= id_1;
+    id_1 <= 1 ^ id_1;
+  end
+  wire id_3, id_4;
+  id_5(
+      id_4, id_4
+  ); module_0();
+  wire id_6, id_7, id_8, id_9;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -22,46 +40,31 @@ module module_0 (
     id_20,
     id_21,
     id_22,
-    id_23,
-    id_24,
-    id_25
+    id_23
 );
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_27(
-      .id_0(1), .id_1(1 ? 1 !== 1 - id_10 : id_19), .id_2(id_23), .id_3(1), .id_4(id_22), .id_5(1)
-  );
-  always
-    if (id_8) begin
-      id_5 = {1'h0{id_19}};
-    end else begin
-      id_21 = 1;
-    end
-  assign id_2 = id_10;
-  logic id_25;
-  logic id_26;
-  always SystemTFIdentifier(id_8, id_14, 1'b0, 1);
+  input wire id_23;
+  output wire id_22;
+  output wire id_21;
+  inout wire id_20;
+  output wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  output wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_24;
+  module_0();
 endmodule

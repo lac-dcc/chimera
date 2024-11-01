@@ -1,5 +1,11 @@
-// Seed: 164734224
-module module_0 (
+// Seed: 1120743992
+module module_0 ();
+  supply0 id_2;
+  for (id_3 = id_3; 1 & id_1; id_1 = 1'b0) assign id_2 = {id_1};
+  assign id_3 = 1'b0;
+  wire id_4;
+endmodule
+macromodule module_1 (
     id_1,
     id_2,
     id_3,
@@ -8,28 +14,13 @@ module module_0 (
     id_6,
     id_7
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_4 = id_3;
-  assign id_3 = id_7;
-  type_12(
-      1'b0, id_7, 1, 1, id_5
-  );
-  reg id_7;
-  reg id_8;
-  initial
-    if (1)
-      #1 begin
-        id_5 <= id_8;
-      end
-  logic id_9, id_10;
-  type_16 id_11 (
-      1,
-      ~1
-  );
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_8;
+  module_0();
 endmodule

@@ -1,22 +1,28 @@
-// Seed: 46055854
-module module_0 (
-    input id_0
-    , id_15,
-    output logic id_1,
-    output logic id_2,
-    input id_3,
-    output logic id_4,
-    output logic id_5,
-    output id_6,
-    input id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11,
-    output logic id_12,
-    input id_13,
-    input logic id_14
+// Seed: 3811327049
+module module_0;
+  wire id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  always @(posedge id_13['d0 : 1] && id_0, posedge SystemTFIdentifier) id_6[1 : 1] = 1'b0;
-  logic id_16;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = "" | id_2;
+  always @(posedge 1'b0 or 1'b0) begin
+    id_2 = 1'b0;
+  end
+  module_0();
+endmodule
+module module_2 #(
+    parameter id_3 = 32'd1,
+    parameter id_4 = 32'd13
+) (
+    output tri1 id_0,
+    input supply0 id_1
+);
+  assign id_0 = id_1;
+  module_0(); defparam id_3.id_4 = 1;
 endmodule

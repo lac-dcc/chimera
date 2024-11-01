@@ -1,19 +1,30 @@
-// Seed: 3040150024
+// Seed: 683943986
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    output reg id_5,
-    input id_6
+    input tri  id_0,
+    input tri1 id_1
 );
-  logic id_7;
-  always begin
-    id_5 <= id_4 | id_0;
-  end
-  defparam id_8 = 1;
-  assign id_5 = id_3;
+  wire id_3;
+  wire id_4, id_5;
 endmodule
-`define pp_7 0
-`default_nettype wire
+module module_1 (
+    input supply0 id_0,
+    input logic id_1,
+    output wor id_2,
+    input logic id_3,
+    input logic id_4,
+    input wand id_5,
+    input uwire id_6
+    , id_8
+);
+  logic id_9 = id_4;
+  module_0(
+      id_0, id_5
+  );
+  assign id_2 = 1;
+  logic id_10 = id_4;
+  assign id_9  = id_8 & id_8;
+  assign id_10 = 1'b0;
+  always id_10 <= id_3;
+  always id_9 <= id_3;
+  assign id_9 = id_1;
+endmodule

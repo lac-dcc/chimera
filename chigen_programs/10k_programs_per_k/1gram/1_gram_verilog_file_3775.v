@@ -1,30 +1,30 @@
-// Seed: 1581572820
+// Seed: 3410198074
 module module_0 (
-    output id_0,
-    input  id_1,
-    output id_2
+    input  uwire id_0,
+    input  tri1  id_1,
+    input  wire  id_2,
+    output tri1  id_3
 );
-  assign id_0 = 1;
-  reg id_3;
-  reg id_4, id_5;
-  reg id_6;
-  logic id_7, id_8;
-  assign id_5 = 1;
-  type_15(
-      1, 1'b0 - id_4 + 1'b0 ? 1 : 1, 1
-  ); type_16(
-      1
-  );
-  reg id_9, id_10;
-  assign id_2 = 1;
-  always begin
-    id_9 <= id_6;
-    @(posedge 1)
-    if (1) begin
-      id_3 <= 1 - 1;
-    end
-  end
-  logic id_11 = id_1[1];
-  always if (id_4) id_2 <= id_5;
 endmodule
-`define pp_3 0
+module module_1 (
+    output logic id_0,
+    input uwire id_1,
+    input wor id_2,
+    output tri id_3,
+    output tri id_4,
+    output supply0 id_5,
+    input uwire id_6,
+    output wor id_7,
+    output uwire id_8
+);
+  initial
+    if (id_1) $display(1, id_1 - id_2);
+    else id_0 <= 1 ^ 1;
+  assign id_3 = 1;
+  module_0(
+      id_1, id_1, id_1, id_8
+  );
+  always id_4 = 1;
+  integer id_10;
+  rtran (id_3, id_7);
+endmodule

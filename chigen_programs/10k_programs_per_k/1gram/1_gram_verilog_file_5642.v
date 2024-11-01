@@ -1,41 +1,39 @@
-// Seed: 1178236950
-parameter signed id_4 = id_7;
+// Seed: 3837597338
 module module_0 (
-    output id_0,
-    input logic id_1
-    , id_19,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    input logic id_6
-    , id_20,
-    input logic id_7,
-    output id_8
-    , id_21,
-    output id_9,
-    output id_10,
-    input id_11
-    , id_22 = id_11,
-    input logic id_12,
-    input logic id_13,
-    input id_14,
-    output logic id_15,
-    output id_16,
-    input id_17,
-    input logic id_18
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  logic id_23;
-  logic id_24;
-  logic id_25, id_26;
-  logic id_27;
-  id_28(
-      (1)
-  );
-  assign id_25 = id_21;
-  type_42 id_29 (
-      .id_0(1),
-      .id_1(1 | id_5),
-      .id_2(1)
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_10 = id_7;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  module_0(
+      id_4, id_4, id_3, id_4, id_4, id_4, id_1, id_3, id_4
   );
 endmodule

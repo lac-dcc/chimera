@@ -1,23 +1,34 @@
-// Seed: 3532819578
-`resetall
+// Seed: 2126540234
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    output supply0 id_0,
+    input tri id_1
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  generate
-    assign id_1 = id_3;
-    assign id_2 = id_6;
-  endgenerate
+endmodule
+module module_1 (
+    output wor id_0,
+    output tri id_1,
+    output uwire id_2,
+    output uwire id_3
+    , id_21,
+    input tri id_4,
+    output supply1 id_5,
+    input tri id_6,
+    input uwire id_7,
+    inout tri id_8,
+    output supply0 id_9,
+    input uwire id_10,
+    input wand id_11,
+    input supply0 id_12,
+    output supply0 id_13,
+    output supply1 id_14,
+    input supply0 id_15,
+    output tri0 id_16,
+    input wor id_17,
+    input tri1 id_18,
+    input tri id_19
+);
+  string id_22 = "";
+  module_0(
+      id_2, id_10
+  );
 endmodule

@@ -1,8 +1,26 @@
-// Seed: 1507197808
-typedef reg id_0;
+// Seed: 1458105388
 module module_0 ();
-  always @(posedge id_0) begin
-    id_0 <= id_0;
+  assign id_1 = (id_1 - id_1) ? |id_1 : id_1++;
+  uwire id_2 = 1;
+  module_0 id_3;
+  initial begin
+    disable id_4;
   end
-  logic id_1 = 1'b0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wor id_4;
+  module_0();
+  assign id_4#(
+      .id_4(1),
+      .id_1(1),
+      .id_1(1'h0),
+      .id_1(1)
+  ) = 1;
 endmodule

@@ -1,22 +1,38 @@
-// Seed: 1335058997
+// Seed: 684202509
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign id_14 = id_14;
-  logic id_15, id_16, id_17, id_18 = id_12;
-  assign id_17 = 1'h0;
-  pmos ({id_17{id_9}}, 1'b0, 1);
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_7 = id_3 + id_3;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_5;
+  module_0(
+      id_4, id_3, id_5, id_5, id_4, id_2, id_4
+  );
+  wire id_6;
+  assign id_2 = 1;
+  wire id_7;
+  assign id_6 = id_1;
 endmodule

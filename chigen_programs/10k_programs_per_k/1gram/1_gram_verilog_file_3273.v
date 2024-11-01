@@ -1,29 +1,96 @@
-// Seed: 4017827174
+// Seed: 3967186589
 module module_0 (
-    output logic id_0,
-    output id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output logic id_5,
-    output id_6,
-    output logic id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    input id_15
-    , id_17,
-    output id_16
+    output supply1 id_0,
+    output wor id_1,
+    input wire id_2,
+    output tri0 id_3
+    , id_39,
+    input uwire id_4,
+    output wire id_5,
+    input wand id_6,
+    output wand id_7,
+    output wand id_8,
+    input tri id_9,
+    input wand id_10,
+    input wand id_11,
+    input tri0 id_12,
+    output wire id_13,
+    input wor id_14,
+    input wand id_15,
+    output tri id_16,
+    output supply1 id_17,
+    output wor id_18,
+    input wire id_19,
+    output supply1 id_20,
+    input supply1 id_21,
+    output wand id_22,
+    input wor id_23,
+    output tri id_24,
+    input tri0 id_25,
+    input tri id_26,
+    output wand id_27,
+    input tri id_28,
+    output tri0 id_29,
+    input tri1 id_30,
+    output wor id_31,
+    input tri id_32,
+    input tri0 id_33,
+    input tri id_34,
+    input wire id_35,
+    input tri id_36,
+    input tri0 id_37
 );
-  assign id_6 = 1;
-  assign id_7 = 1;
-  type_27(
-      .id_0(!id_15)
+  assign id_5  = id_21;
+  assign id_16 = 1;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    input wand id_1,
+    input wand id_2,
+    inout supply0 id_3,
+    input wand id_4,
+    output wand id_5,
+    output wand id_6
+);
+  assign id_3 = 1;
+  module_0(
+      id_3,
+      id_5,
+      id_4,
+      id_3,
+      id_3,
+      id_3,
+      id_1,
+      id_5,
+      id_5,
+      id_4,
+      id_3,
+      id_2,
+      id_4,
+      id_6,
+      id_1,
+      id_1,
+      id_6,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_6,
+      id_4,
+      id_5,
+      id_3,
+      id_0,
+      id_5,
+      id_4,
+      id_3,
+      id_2,
+      id_3,
+      id_0,
+      id_2,
+      id_1,
+      id_3,
+      id_1,
+      id_1
   );
-  always id_1 <= 1;
-  logic id_18;
 endmodule

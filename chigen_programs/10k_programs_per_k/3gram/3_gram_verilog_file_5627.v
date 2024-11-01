@@ -1,52 +1,40 @@
-// Seed: 1777339505
-`define pp_24 0
-`define pp_25 0
-`define pp_26 0
-`define pp_27 0
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input logic id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    inout supply1 id_9,
-    input id_10,
-    output id_11,
-    output id_12
-    , id_24,
-    input id_13,
-    input logic id_14,
-    input id_15,
-    output id_16,
-    output logic id_17,
-    input logic id_18,
-    input id_19,
-    input id_20
-    , id_25,
-    output id_21,
-    output id_22,
-    input id_23
-);
-  logic id_26;
-  logic id_27;
-  logic id_28;
-  logic id_29;
-  assign id_9[1] = id_7;
-  always @(1) id_12 <= id_19;
+// Seed: 1151312230
+module module_0 ();
+  id_1(
+      .id_0(id_2), .id_1(id_3)
+  );
+  assign id_1 = id_2;
+  assign id_2 = $display;
+  assign id_3 = id_3;
 endmodule
 module module_1 (
-    output id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    output id_6,
-    input id_7
+    input wand id_0,
+    input wire id_1,
+    input tri1 id_2
 );
-  logic id_24;
+  logic [7:0] id_4;
+  assign id_4 = id_4[1'b0];
+  module_0();
+endmodule
+module module_2 (
+    output tri   id_0,
+    input  wand  id_1,
+    input  wor   id_2,
+    input  uwire id_3,
+    output wor   id_4,
+    input  wand  id_5,
+    input  uwire id_6,
+    input  wire  id_7,
+    input  wire  id_8,
+    output tri0  id_9,
+    input  wand  id_10,
+    output wand  id_11,
+    input  tri   id_12
+);
+  assign id_11 = id_12;
+  wire id_14;
+  wire id_15;
+  wire id_16;
+  module_0();
+  assign id_11 = 1;
 endmodule

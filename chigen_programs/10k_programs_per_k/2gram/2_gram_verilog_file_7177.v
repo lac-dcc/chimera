@@ -1,19 +1,36 @@
-// Seed: 3753405546
+// Seed: 3695627231
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  output id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign id_3 = "";
-  logic id_4;
-  logic id_5;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always begin
+    casez (1 == 1)
+      1'b0: id_9 = id_9;
+      1'b0: begin
+        if (1'b0)
+          @(posedge 1 - 1 or posedge 1) begin
+            id_6 = id_6;
+          end
+      end
+    endcase
+  end
 endmodule
-`define pp_13 0
 module module_1 (
     id_1,
     id_2,
@@ -27,46 +44,45 @@ module module_1 (
     id_10,
     id_11,
     id_12,
-    id_13
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23
 );
-  output id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  type_15 id_13 (
-      .id_0(id_1),
-      .id_1("")
+  inout wire id_23;
+  inout wire id_22;
+  output wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  genvar id_24;
+  wire id_25;
+  always_latch id_17 <= id_22;
+  module_0(
+      id_19, id_10, id_19, id_8, id_23, id_19, id_20, id_23, id_4
   );
-  logic id_14;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
-);
-  input id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  inout id_2;
-  inout id_1;
-  assign id_5 = 1;
 endmodule

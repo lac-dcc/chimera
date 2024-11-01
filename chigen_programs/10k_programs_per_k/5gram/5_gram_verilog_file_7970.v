@@ -1,5 +1,4 @@
-// Seed: 2276631294
-`default_nettype id_8
+// Seed: 1026358565
 module module_0 (
     id_1,
     id_2,
@@ -15,58 +14,67 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33
+    id_15
 );
-  inout id_33;
-  input id_32;
-  inout id_31;
-  inout id_30;
-  inout id_29;
-  inout id_28;
-  input id_27;
-  output id_26;
-  inout id_25;
-  input id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  input id_20;
-  inout id_19;
-  inout id_18;
-  input id_17;
-  inout id_16;
-  input id_15;
-  input id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  output id_1;
-  logic id_33;
+  inout wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  always @(posedge 1) id_3 = id_12;
+  wire id_16;
+  wire id_17;
+  wor  id_18 = 1;
+  assign id_15 = 1;
+endmodule
+module module_0 #(
+    parameter id_17 = 32'd40,
+    parameter id_18 = 32'd4
+) (
+    output tri1 id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    output uwire id_3,
+    input wor id_4,
+    input supply1 id_5,
+    output tri id_6,
+    input wire id_7,
+    output tri0 id_8,
+    output wire id_9,
+    input wor module_1
+    , id_14,
+    output wire id_11,
+    input tri1 id_12
+);
+  assign id_8 = 1 - id_4;
+  module_0(
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14
+  );
+  wire id_15;
+  supply0 id_16;
+  defparam id_17.id_18 = id_16 >= id_16 * 1;
 endmodule

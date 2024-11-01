@@ -1,5 +1,30 @@
-// Seed: 72796619
+// Seed: 261165554
+module module_0;
+  tri id_1;
+  module_2(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
+  assign id_1 = 1'b0;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_6;
+  module_0();
+  wire id_7;
+  assign id_7 = id_1;
+endmodule
 module module_0 (
+    module_2,
     id_1,
     id_2,
     id_3,
@@ -13,62 +38,22 @@ module module_0 (
     id_11,
     id_12,
     id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    .id_32(id_27),
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32
+    id_14
 );
-  output id_32;
-  input id_31;
-  inout id_30;
-  input id_29;
-  input id_28;
-  input id_27;
-  inout id_26;
-  inout id_25;
-  inout id_24;
-  inout id_23;
-  inout id_22;
-  inout id_21;
-  output id_20;
-  input id_19;
-  inout id_18;
-  output id_17;
-  input id_16;
-  input id_15;
-  input id_14;
-  output id_13;
-  input id_12;
-  inout id_11;
-  input id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  output id_2;
-  input id_1;
-  assign id_13 = 1;
-  logic id_33;
-  assign id_21 = SystemTFIdentifier(id_23) || 1;
-  generate
-    assign id_13 = 1 == id_25.id_26;
-  endgenerate
+  inout wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  tri1 id_16 = id_6 * 1;
 endmodule

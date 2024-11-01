@@ -1,18 +1,33 @@
-// Seed: 403163881
-module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    output logic id_3,
-    output logic id_4,
-    output logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    output logic id_10
-);
-  assign id_5 = id_2;
-  logic id_11;
+// Seed: 2003888824
+module module_0 ();
+  id_1(
+      1
+  );
+  supply0 id_2;
+  wand id_3;
+  assign id_2 = 1;
+  assign id_3 = 1;
+  supply1 id_4, id_5, id_6;
+  id_7(
+      1'b0
+  );
+  wire id_8;
+  wire id_9;
+  id_10(
+      id_4 - 1'b0, 1
+  );
 endmodule
-`timescale 1ps / 1 ps
+module module_1;
+  assign id_1 = 1;
+  assign id_1 = id_1;
+  wire id_2;
+  always_latch id_1 <= id_1;
+  module_0();
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input uwire   id_1
+);
+  assign id_3 = 1;
+  module_0();
+endmodule

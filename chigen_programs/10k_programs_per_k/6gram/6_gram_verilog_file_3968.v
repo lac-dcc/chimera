@@ -1,23 +1,34 @@
-// Seed: 2286028819
-`timescale 1ps / 1ps
-module module_0 (
-    input id_0,
-    output id_1,
-    input id_2,
-    input logic id_3
-    , id_7,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6
+// Seed: 2907814449
+module module_0 ();
+  initial
+    if (id_1)
+      if (1)
+        if ((1'h0) ** 1) id_1 <= id_1;
+        else id_1 <= 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  logic id_8;
-  logic id_9;
-  generate
-    if (1) begin
-      logic id_10;
-      logic id_11;
-    end else begin : id_12
-      defparam id_13.id_14 = id_13;
-    end
-  endgenerate
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always @* begin
+    id_3 <= id_1;
+    deassign id_3;
+  end
+  module_0();
 endmodule

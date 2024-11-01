@@ -1,38 +1,49 @@
-// Seed: 1147607088
+// Seed: 2675023478
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    output id_5,
-    output id_6,
-    input id_7,
-    output logic id_8,
-    output id_9,
-    output id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    output logic id_14,
-    input id_15,
-    output logic id_16,
-    output logic id_17,
-    output id_18,
-    input id_19,
-    output logic id_20,
-    input id_21,
-    output id_22,
-    output logic id_23,
-    input id_24,
-    input id_25,
-    input id_26,
-    output id_27
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  type_37(
-      1, id_4 + 1
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_8;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wor id_8;
+  initial begin
+    case (1 * 1)
+      id_5: id_8 = 1;
+      1: id_2 = 1'h0;
+      1 - 1: id_4[1 : 1'b0] = id_6;
+      default: id_7 = id_1;
+    endcase
+  end
+  assign id_6 = id_1;
+  module_0(
+      id_3, id_6, id_6, id_2, id_1, id_5, id_6
   );
-  always @(*) id_20 = "" + id_3;
-  logic id_28 = id_24;
-  logic id_29;
 endmodule

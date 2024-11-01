@@ -1,3 +1,81 @@
-// Seed: 3415039001
-`define pp_0 0
-`timescale 1ps / 1ps `timescale 1 ps / 1 ps
+// Seed: 3772583299
+module module_0 (
+    input tri0 id_0,
+    output supply1 id_1,
+    output supply0 id_2,
+    output tri1 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    input tri id_6,
+    input uwire id_7,
+    output tri0 id_8,
+    output supply1 id_9,
+    input tri0 id_10,
+    input wire id_11,
+    input wire id_12,
+    output wor id_13,
+    input wand id_14,
+    input supply0 id_15,
+    input wand id_16,
+    input tri id_17
+);
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    output uwire id_2,
+    input uwire id_3,
+    output uwire id_4,
+    input wor id_5,
+    output tri id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input tri id_9,
+    output tri id_10,
+    input supply1 id_11,
+    output wire id_12,
+    input wire id_13,
+    input tri1 id_14,
+    input wor id_15,
+    input supply1 id_16,
+    input tri1 id_17,
+    input wire id_18,
+    input wor id_19,
+    output supply0 id_20,
+    input supply1 id_21,
+    output wand id_22,
+    output supply1 id_23,
+    input supply0 id_24,
+    input supply1 id_25,
+    input tri id_26,
+    output wor id_27,
+    output tri1 id_28,
+    input tri id_29,
+    output wand id_30
+    , id_35,
+    input supply1 id_31,
+    input wand id_32#(.id_36(1)),
+    input wire id_33
+);
+  assign id_36 = id_3;
+  module_0(
+      id_8,
+      id_36,
+      id_36,
+      id_12,
+      id_19,
+      id_19,
+      id_36,
+      id_33,
+      id_30,
+      id_20,
+      id_16,
+      id_0,
+      id_3,
+      id_27,
+      id_21,
+      id_31,
+      id_29,
+      id_33
+  );
+endmodule

@@ -1,26 +1,33 @@
-// Seed: 1390966326
-localparam id_14 = 1'b0;
+// Seed: 3772529264
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output id_11,
-    input logic id_12,
-    input id_13,
-    input id_14
-    , id_16,
-    output id_15
+    input supply0 id_0,
+    input tri id_1,
+    input tri id_2,
+    input tri id_3,
+    input uwire id_4,
+    output tri1 id_5,
+    output uwire id_6,
+    input tri1 id_7,
+    output tri0 id_8,
+    output supply1 id_9,
+    output wor id_10
 );
-  assign id_11[1] = id_16;
-  logic id_17;
-  logic id_18, id_19;
-  assign id_19 = id_18;
+  wire id_12;
+  tri  id_13;
+  assign id_13 = 1;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  wand  id_1,
+    input  uwire id_2,
+    output uwire module_1,
+    input  wire  id_4,
+    input  tri0  id_5,
+    inout  wand  id_6,
+    output tri0  id_7
+);
+  wire id_9;
+  module_0(
+      id_2, id_6, id_6, id_0, id_4, id_7, id_6, id_6, id_7, id_6, id_7
+  );
 endmodule

@@ -1,20 +1,54 @@
-// Seed: 2306544222
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    output logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output logic id_8
+// Seed: 1681286878
+module module_0 ();
+  wire id_1, id_2;
+  initial
+  fork : id_3
+  join : id_4
+endmodule
+module module_1 (
+    output uwire id_0,
+    input supply1 id_1,
+    input tri1 id_2,
+    input supply1 id_3,
+    input tri1 id_4,
+    output wor id_5,
+    input tri id_6,
+    input tri1 id_7,
+    output tri1 id_8,
+    input tri1 id_9,
+    input tri id_10,
+    output supply0 id_11,
+    output tri0 id_12
 );
-  logic id_9;
-  generate
-    for (id_10 = id_3; id_3 === id_0; id_1 = 1 - id_10) begin : id_11
-      assign id_1 = 1;
-    end
-  endgenerate
-  logic id_12;
+  module_0();
+  wire id_14;
+endmodule
+module module_2 #(
+    parameter id_12 = 32'd90,
+    parameter id_13 = 32'd59
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
+);
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  defparam id_12.id_13 = id_6; module_0();
 endmodule

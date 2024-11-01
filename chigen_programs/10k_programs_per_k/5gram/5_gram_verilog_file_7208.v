@@ -1,17 +1,28 @@
-// Seed: 4165335825
+// Seed: 1078039089
 module module_0 (
-    input id_0,
-    output id_1,
-    reg id_2
+    output tri1 id_0,
+    output wor  id_1
 );
-  always @(id_0 or posedge id_2 == 1'b0) begin
-    if (id_0) begin
-      #1;
-      id_1 <= id_0;
-      id_1 <= 1;
-      id_2 = {1, id_2};
-    end else id_1 <= 1;
-  end
-  assign id_1 = id_2;
-  logic id_3 = 1;
+  if (1 & 1) wire id_3 = id_3, id_4;
+  wire id_5;
+endmodule
+module module_1 (
+    inout wire id_0,
+    input tri0 id_1,
+    input wand id_2,
+    input supply0 id_3,
+    output tri0 id_4,
+    input tri1 id_5,
+    input wand id_6,
+    output wor id_7
+);
+  integer id_9 (
+      .id_0(1),
+      .id_1(id_2),
+      .id_2(1'b0)
+  );
+  module_0(
+      id_0, id_0
+  );
+  wire id_10;
 endmodule

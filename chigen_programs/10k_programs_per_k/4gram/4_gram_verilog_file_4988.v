@@ -1,30 +1,42 @@
-// Seed: 578345151
+// Seed: 2571395311
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2
-    , id_18,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    output id_9
-    , id_19,
-    input logic id_10,
-    input logic id_11,
-    output id_12,
-    output logic id_13,
-    input id_14,
-    output logic id_15,
-    input logic id_16,
-    input logic id_17
+    id_1,
+    id_2,
+    id_3
 );
-  class id_20;
-    function new();
-      id_0 = id_17;
-    endfunction : new
-  endclass : id_21
-  assign id_18 = id_19;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+endmodule
+module module_0 (
+    id_1,
+    module_1
+);
+  inout wire id_2;
+  inout wire id_1;
+  function id_3(input id_4);
+    id_3 = #1 1;
+    if (1) id_4 <= !id_2 && 1;
+  endfunction
+  module_0(
+      id_1, id_1, id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_6 = id_6;
+  wire id_7;
+  module_0(
+      id_1, id_6, id_7
+  );
 endmodule

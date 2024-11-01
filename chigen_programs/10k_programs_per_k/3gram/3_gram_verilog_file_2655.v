@@ -1,23 +1,49 @@
-// Seed: 2389768728
-`resetall
+// Seed: 4106415693
 module module_0 (
-    output id_0,
-    output id_1,
-    output logic id_2,
-    input id_3,
-    input logic id_4,
-    output logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8
+    input tri id_0,
+    input wand id_1,
+    output uwire id_2,
+    output supply0 id_3,
+    output tri1 id_4,
+    output uwire id_5,
+    output tri1 id_6
 );
-  type_15(
-      (id_8), 1'b0
+  wire id_8;
+endmodule
+module module_1 (
+    output wor id_0,
+    output wire id_1,
+    input supply0 id_2
+    , id_5,
+    output supply0 id_3
+);
+  wire id_6;
+  module_0(
+      id_2, id_2, id_0, id_1, id_0, id_3, id_3
   );
-  logic id_9;
-  type_17(
-      id_6, 1, id_3, id_4
+endmodule
+module module_2 (
+    output wand id_0,
+    output supply0 id_1,
+    output tri id_2
+);
+  assign id_2 = id_4;
+  wor  id_5 = (id_4);
+  wire id_6 = id_6;
+  for (id_7 = 1; 1; id_2 = id_5) begin
+    always #1 begin
+      id_4 = 1;
+    end
+    assign id_2 = id_7;
+    if (id_7 + 1) wire id_8;
+    assign id_7 = id_5;
+    assign id_0 = 1;
+  end
+  assign id_7 = id_7 && id_5;
+  module_0(
+      id_5, id_7, id_2, id_1, id_0, id_5, id_5
   );
-  logic id_10;
-  assign id_10 = 1 - 1;
+  uwire id_9;
+  assign id_0 = id_9;
+  wire id_10;
 endmodule

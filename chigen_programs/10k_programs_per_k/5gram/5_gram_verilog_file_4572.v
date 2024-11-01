@@ -1,44 +1,33 @@
-// Seed: 3122345382
-`define pp_24 0
-`default_nettype id_18
+// Seed: 2394765917
 module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    output logic id_12,
-    output logic id_13,
-    output logic id_14,
-    input logic id_15,
-    output logic id_16,
-    output id_17,
-    input id_18,
-    input logic id_19,
-    output logic id_20,
-    output logic id_21,
-    input id_22,
-    input id_23
+    id_1,
+    id_2,
+    id_3
 );
-  logic id_24 = id_10;
-  logic id_25;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4, id_5;
+  assign id_4 = 1'b0;
 endmodule
-module module_1;
-  logic id_24;
-  tri1  id_25;
-  assign id_17 = 1 ? id_25[1] : 1 ? 1 : id_10 ? id_23[1] : 1 ? id_15 : id_11 ? 1 : 1;
-  logic id_26;
-  generate
-    for (id_27 = 1; id_5; id_25 = id_23[1]) begin : id_28
-      logic id_29 = 1;
-    end
-  endgenerate
-  assign id_20[1] = 1;
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_1[""] = 1;
+  wire id_7;
+  module_0(
+      id_5, id_6, id_7
+  );
+  wire id_8;
 endmodule

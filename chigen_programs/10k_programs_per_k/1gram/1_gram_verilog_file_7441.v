@@ -1,105 +1,67 @@
-// Seed: 3913825401
+// Seed: 724827419
 module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    output id_8,
-    output id_9,
-    output id_10,
-    output logic id_11,
-    output id_12,
-    input logic id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    output id_17,
-    input logic id_18,
-    output logic id_19,
-    input logic id_20,
-    output id_21,
-    input logic id_22,
-    input logic id_23,
-    input id_24
-);
-  logic id_25;
-  logic id_26;
-  logic id_27, id_28;
-  logic id_29;
-  logic id_30, id_31;
-endmodule
-module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7#(
-        .id_8 (1),
-        .id_9 (id_10),
-        .id_11(id_12),
-        .id_13(1'b0),
-        .id_14(id_15 & id_16),
-        .id_17(id_18)
-    ),
-    id_19,
-    id_20,
-    id_21,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  output id_21;
-  output id_20;
-  output id_19;
-  inout id_18;
-  input id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  always id_30 <= 1 + 1'h0;
-  logic id_36;
-  logic id_37;
-  logic id_38;
-  logic id_39;
-  type_44(
-      .id_0(id_15),
-      .id_1(1),
-      .id_2(id_29),
-      .id_3(1),
-      .id_4(id_26[1]),
-      .id_5(1),
-      .id_6(id_33 << 1'b0),
-      .id_7(id_28),
-      .id_8(id_13),
-      .id_9(id_16),
-      .id_10(1)
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always_ff id_1 <= id_6;
+  wire id_17;
+  wor id_18, id_19, id_20;
+  id_21(
+      .id_0(0),
+      .id_1(id_9),
+      .id_2(1 == id_4),
+      .id_3(),
+      .id_4(id_6 && 1 ? id_18 : 1'b0),
+      .id_5(id_8 + id_18 ^ 1 && 1'h0 + id_1)
   );
 endmodule
-`default_nettype module_0
+module module_1;
+  always
+  fork
+    id_1 <= id_1;
+    fork
+      @('h0 or 1) disable id_2;
+    join
+    $display(id_2 * 1'b0);
+  join_any
+  reg id_3 = id_1;
+  initial @("") id_1 <= 1;
+  supply1 id_4;
+  wire id_5;
+  wire id_6, id_7;
+  assign id_2 = id_2;
+  assign id_4 = 1'b0;
+  module_0(
+      id_1, id_6, id_7, id_4, id_6, id_1, id_2, id_2, id_6, id_6, id_4, id_5, id_7, id_7, id_2, id_7
+  );
+endmodule

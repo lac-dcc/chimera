@@ -1,21 +1,32 @@
-// Seed: 4089814998
-`define pp_9 0
-`define pp_10 0
-`define pp_11 0
-localparam id_5 = 1;
-`default_nettype id_7 `timescale 1 ps / 1 ps
+// Seed: 69272474
 module module_0 (
-    input id_0,
-    output id_1,
-    input id_2
-    , id_9,
-    input id_3,
-    input id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    output id_8
+    output supply0 id_0,
+    input  supply1 id_1,
+    input  uwire   id_2
 );
-  logic id_10, id_11, id_12, id_13;
-  assign id_1 = 1;
+  wire id_4;
+endmodule
+module module_1 (
+    input logic id_0,
+    output supply0 id_1,
+    output wor id_2,
+    output logic id_3,
+    output wor id_4,
+    input wire id_5,
+    output tri1 id_6,
+    input wand id_7,
+    output wor id_8
+);
+  tri1 id_10;
+  tri1 id_11 = 1;
+  assign id_10 = 1;
+  wire id_12;
+  wand id_13;
+  module_0(
+      id_6, id_5, id_7
+  );
+  always @(posedge (id_7)) @(posedge $display);
+  always @(posedge 1 > id_13) begin
+    id_3 <= id_0;
+  end
 endmodule

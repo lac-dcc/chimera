@@ -1,12 +1,8 @@
-// Seed: 2174908508
-`define pp_19 0
-`define pp_20 0
-`define pp_21 0
-function void id_8(output id_2);
-endfunction
-`define pp_22 0
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 1933582935
+module module_0 ();
+  assign id_1 = 'h0;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -23,39 +19,32 @@ module module_0 (
     id_14,
     id_15,
     id_16,
-    id_17,
-    id_18,
-    id_19
+    id_17
 );
-  output id_19;
-  output id_18;
-  input id_17;
-  output id_16;
-  inout id_15;
-  input id_14;
-  output id_13;
-  input id_12;
-  inout id_11;
-  output id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  input id_1;
-  assign id_18 = id_3;
-  always @(posedge 1 or posedge 1)
-    if (id_3) begin
-      for (id_15 = id_9; !1'b0; id_10 = id_8 - id_15) id_18 <= id_14;
-      if (1) begin
-        if (1) begin
-          id_8 <= 1;
-        end
-      end
-    end
-  logic id_19;
-  assign id_19 = id_2;
+  input wire id_17;
+  output wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  module_0();
+  tri0 id_18;
+  id_19(
+      .id_0((id_2 == 1) ==? id_5.id_3), .id_1(id_17)
+  );
+  initial begin
+    id_18 = 1;
+    id_5  = #id_20 id_9;
+  end
 endmodule

@@ -1,52 +1,54 @@
-// Seed: 3452752510
-`define pp_18 0
-localparam id_6 = id_9;
-`define pp_19 0
-`timescale 1ps / 1 ps
-`define pp_20 0
-`define pp_21 0
-`define pp_22 0
-`define pp_23 0
-`timescale 1 ps / 1ps
-`define pp_24 0
+// Seed: 3102969965
 module module_0 (
-    output id_0,
-    output logic id_1,
-    input logic id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    output id_7,
-    input logic id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input logic id_12,
-    input id_13,
-    input id_14,
-    output id_15
-    , id_18,
-    output logic id_16,
-    output id_17
+    input wand id_0,
+    input supply0 id_1,
+    input uwire id_2,
+    input tri0 id_3,
+    output wor id_4,
+    input wire id_5,
+    input supply0 id_6,
+    input tri1 id_7,
+    input wire id_8,
+    output wire id_9,
+    input supply0 id_10,
+    input supply1 id_11,
+    input tri0 id_12
 );
-  logic id_19;
-  type_31 id_20 (
-      .id_0(1'b0),
-      .id_1(id_9)
-  );
-  logic id_21;
-  assign id_19 = 1;
-  assign id_17 = 1;
-  type_33(
-      id_19, 1'b0
-  );
+  always @(id_7 or posedge id_11) begin
+    id_9 = id_12;
+  end
 endmodule
-`timescale 1ps / 1ps
 module module_1 (
-    input id_0
+    output wire id_0,
+    input supply0 id_1,
+    input tri0 id_2,
+    output wor id_3,
+    output supply0 id_4,
+    input supply0 id_5,
+    output wor id_6,
+    output supply1 id_7,
+    input wire id_8,
+    input tri id_9,
+    output wire id_10,
+    output tri id_11,
+    output tri0 id_12,
+    output tri id_13,
+    input wor id_14,
+    input tri1 id_15,
+    input tri0 id_16,
+    input tri id_17,
+    input supply1 id_18,
+    output wire id_19,
+    input tri0 id_20,
+    output tri0 id_21,
+    input tri0 id_22,
+    input tri id_23
 );
-  type_18(
-      id_2, 1, id_3, 1'b0
+  wire id_25;
+  generate
+    assign id_0 = 1;
+  endgenerate
+  module_0(
+      id_20, id_9, id_18, id_8, id_10, id_18, id_2, id_17, id_16, id_19, id_18, id_5, id_17
   );
 endmodule

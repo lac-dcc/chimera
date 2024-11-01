@@ -1,14 +1,16 @@
-// Seed: 2219982054
+// Seed: 2155288563
 module module_0 (
-    output id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  type_1(
-      1, 1, id_0
-  );
-  assign id_0 = 1'b0;
-  assign id_0 = 1;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always @(id_2 or negedge id_4) id_1 <= id_4;
 endmodule
-`timescale 1ps / 1 ps
 module module_1 (
     id_1,
     id_2,
@@ -25,28 +27,31 @@ module module_1 (
     id_13,
     id_14,
     id_15,
-    id_16
+    id_16,
+    id_17,
+    id_18
 );
-  inout id_16;
-  output id_15;
-  input id_14;
-  inout id_13;
-  input id_12;
-  input id_11;
-  output id_10;
-  output id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  logic id_17;
-  assign id_16 = 1;
-  type_20(
-      1'b0, 1 * id_9, id_9
+  input wire id_18;
+  input wire id_17;
+  output wire id_16;
+  input wire id_15;
+  output wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_11 = 1'h0;
+  module_0(
+      id_6, id_6, id_18, id_6
   );
-  logic id_18;
+  always id_6 <= #1 id_18 * 1 - 1;
 endmodule

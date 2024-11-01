@@ -1,27 +1,19 @@
-// Seed: 3518676835
-module module_0 (
-    output logic id_0,
-    output logic id_1,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    input logic id_8
-);
-  logic id_9;
-  logic id_10;
-  type_21(
-      {id_9, id_2}, id_4[1'b0] & 1 * 1'b0
-  );
-  assign id_9 = 1'b0;
-  logic id_11;
-  logic id_12, id_13;
-  logic id_14;
-  type_25(
-      id_1, 1
-  );
-  logic id_15;
+// Seed: 1805647548
+module module_0;
+  always @(1 or negedge 1) id_1 = id_1;
 endmodule
-`resetall
+module module_1 ();
+  wire id_1 = 1;
+  module_0();
+endmodule
+module module_2 (
+    output uwire id_0,
+    input wor id_1,
+    input wor id_2,
+    input supply1 id_3,
+    output tri1 id_4
+);
+  wire  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ;
+  wand id_24 = id_2;
+  module_0();
+endmodule

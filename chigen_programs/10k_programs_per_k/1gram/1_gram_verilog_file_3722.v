@@ -1,12 +1,42 @@
-// Seed: 1572760794
-`define pp_3 0
+// Seed: 3705495487
 module module_0 (
-    input  id_0,
-    output id_1,
-    output id_2
+    id_1
 );
-  assign id_2 = id_0;
-  defparam id_3 = id_0, id_4 = 1, id_5 = 1;
+  inout wire id_1;
+  wire id_2;
+  wire id_3;
+  always_latch if (id_1) id_1 = id_1;
 endmodule
-`define pp_4 0
-`define pp_5 0
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
+);
+  input wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_14 = id_3;
+  module_0(
+      id_8
+  );
+endmodule

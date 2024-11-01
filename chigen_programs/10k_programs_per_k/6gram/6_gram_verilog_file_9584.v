@@ -1,21 +1,34 @@
-// Seed: 2653385028
-module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    inout id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    output logic id_11
+// Seed: 4082279024
+module module_0 #(
+    parameter id_10 = 32'd11,
+    parameter id_7  = 32'd5,
+    parameter id_8  = 32'd34,
+    parameter id_9  = 32'd91
+) (
+    input tri1 id_0,
+    input tri id_1,
+    input supply0 id_2,
+    output wire id_3,
+    output tri0 id_4,
+    output wor id_5
 );
-  logic id_12;
-  assign id_8  = 1'b0;
-  assign id_8  = 1;
-  assign id_12 = 1;
-  always @* id_11 = id_2;
+  defparam id_7#(
+      .id_8(1),
+      .id_9(id_7)
+  ).id_10 = 1;
+endmodule
+module module_1 (
+    input tri id_0,
+    input supply0 id_1,
+    input tri id_2,
+    input tri1 id_3,
+    output supply0 id_4,
+    input tri0 id_5
+);
+  assign id_4 = 1;
+  module_0(
+      id_2, id_0, id_2, id_4, id_4, id_4
+  );
+  wire id_7;
+  wire id_8;
 endmodule

@@ -1,20 +1,28 @@
-// Seed: 2385900586
-`define pp_4 0
+// Seed: 4009716935
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output wand  id_0,
+    input  uwire id_1,
+    input  tri1  id_2
 );
-  output id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  type_8(
-      id_2, 1
-  );
-  logic id_4;
-  logic id_5, id_6;
-  logic id_7;
+  tri0 id_4 = id_1;
+  assign id_0 = 1;
 endmodule
-`default_nettype id_3 `endcelldefine
+module module_1 (
+    output wire id_0,
+    input supply1 id_1,
+    input tri1 id_2,
+    output uwire id_3,
+    output supply1 id_4,
+    input wor id_5,
+    output tri id_6
+    , id_11,
+    output tri0 id_7,
+    input wor id_8,
+    input wor id_9
+);
+  module_0(
+      id_0, id_2, id_1
+  );
+  assign id_3 = {1'b0{1}};
+  wire id_12;
+endmodule

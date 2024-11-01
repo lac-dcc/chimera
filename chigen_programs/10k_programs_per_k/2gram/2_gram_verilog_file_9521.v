@@ -1,29 +1,40 @@
-// Seed: 1929390473
-primitive id_2(id_1, id_2);
-  input id_2;
-  reg id_3;
-  table
-    ? ? x : 0;
-    ? : 0;
-    x ? : 1;
-    ? 1 : 1;
-    ? 0 1 1 : 0;
-  endtable
-endprimitive
+// Seed: 1890692627
 module module_0 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4
 );
-  inout id_2;
-  input id_1;
-  logic id_2;
-  assign id_2 = 1;
-  logic id_3;
-  always begin
-    id_2 = +id_3;
-  end
-  assign id_3 = id_3;
-  assign id_2 = 1;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_3 = 1'h0;
 endmodule
-`define pp_4 0
-`endcelldefine `timescale 1ps / 1ps
+module module_1 (
+    input supply1 id_0,
+    input wire id_1
+);
+  assign id_3 = 1;
+  module_0(
+      id_3, id_3, id_3, id_3
+  );
+endmodule
+module module_2 (
+    output tri id_0,
+    input wor id_1,
+    output supply0 id_2,
+    input uwire id_3,
+    input uwire id_4,
+    input wand id_5,
+    output tri0 id_6,
+    input wor id_7,
+    output wor id_8,
+    output tri id_9,
+    input tri id_10
+);
+  wire id_12;
+  module_0(
+      id_12, id_12, id_12, id_12
+  );
+endmodule

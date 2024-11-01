@@ -1,42 +1,94 @@
-// Seed: 3822251509
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input logic id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    output id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    input logic id_12,
-    input logic id_13,
-    input id_14,
-    output logic id_15,
-    output id_16,
-    input id_17,
-    output id_18,
-    input id_19,
-    input id_20,
-    input logic id_21,
-    output id_22,
-    input id_23,
-    output logic id_24,
-    output id_25,
-    input logic id_26,
-    input id_27,
-    input id_28,
-    input id_29,
-    output logic id_30,
-    input logic id_31,
-    input id_32,
-    input logic id_33,
-    input logic id_34,
-    input id_35
+// Seed: 1294371196
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1;
+  tri1 id_1;
+  rnmos #(1 ** id_1, 1) ((1), 1);
+  wire id_2;
+  tri1 id_3;
+  assign id_3 = id_1 - 1;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30,
+    id_31,
+    id_32,
+    id_33,
+    id_34
 );
-  logic id_36;
-  logic id_37;
+  input wire id_34;
+  input wire id_33;
+  output wire id_32;
+  inout wire id_31;
+  inout wire id_30;
+  inout wire id_29;
+  output wire id_28;
+  inout wire id_27;
+  input wire id_26;
+  output wire id_25;
+  output wire id_24;
+  inout wire id_23;
+  input wire id_22;
+  output wire id_21;
+  inout wire id_20;
+  input wire id_19;
+  output wire id_18;
+  input wire id_17;
+  input wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  supply0 id_35;
+  always_latch @(*) begin
+    if (1'b0) begin
+      if (1 - id_19) id_4 = 1'b0;
+      else begin
+        $display(id_35, id_16, 1, id_5 - 1);
+      end
+    end
+  end
+  module_0();
+  assign id_18 = 1'b0;
 endmodule

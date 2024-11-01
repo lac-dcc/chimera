@@ -1,5 +1,4 @@
-// Seed: 2189981109
-`define pp_28 0
+// Seed: 1963847763
 module module_0 (
     id_1,
     id_2,
@@ -14,63 +13,33 @@ module module_0 (
     id_11,
     id_12,
     id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27
+    id_14
 );
-  output id_27;
-  output id_26;
-  output id_25;
-  output id_24;
-  output id_23;
-  input id_22;
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  integer id_27 = id_10, id_28;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  if (1) assign id_12 = 1;
+  assign id_2 = 1 - 1, id_12 = 1;
+  wire id_15;
 endmodule
-module module_1 (
-    output id_0,
-    input logic id_1
-);
-  logic id_28;
-  assign id_4 = id_10;
-  type_33
-      id_29 (
-          id_17,
-          1'b0,
-          1'b0,
-          1
-      ),
-      id_30;
-  assign id_12 = id_22;
+module module_1;
+  assign id_1 = id_1;
+  always
+  `define pp_2 0
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  );
+  always_latch #1 `pp_2 <= 1;
+  wire id_3;
 endmodule

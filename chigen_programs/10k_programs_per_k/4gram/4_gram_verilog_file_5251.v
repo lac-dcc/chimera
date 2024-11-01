@@ -1,10 +1,58 @@
-// Seed: 2088707995
-`timescale 1ps / 1ps
+// Seed: 3731297853
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input logic id_2,
-    output logic id_3
+    id_1,
+    id_2
 );
-  logic id_4;
+  output wire id_2;
+  output wire id_1;
+  initial begin
+    id_2 <= id_3 ? 1 : 1;
+    id_2 <= 1;
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
+);
+  inout wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_15;
+  assign id_2 = id_10;
+  always @(*) id_1 = id_4;
+  module_0(
+      id_8, id_9
+  );
+  wire id_16;
+  always
+    while (1) begin
+      $display(id_5 - 1, 1'd0, 1'b0);
+      if (id_7) begin
+        id_9 <= 1 - id_4;
+        force id_16 = id_11;
+      end
+    end
 endmodule

@@ -1,46 +1,70 @@
-// Seed: 782726488
+// Seed: 2915118297
 module module_0 (
-    output id_0,
-    output logic id_1,
-    input id_2,
-    input id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    output id_13,
-    input logic id_14,
-    input logic id_15,
-    output logic id_16,
-    output logic id_17,
-    output id_18
-    , id_35,
-    input id_19,
-    input id_20,
-    input id_21,
-    output id_22,
-    output logic id_23,
-    input id_24,
-    output id_25
-    , id_36,
-    input id_26,
-    input logic id_27,
-    input id_28#(
-        .id_37(1),
-        .id_38(1)
-    ),
-    input id_29,
-    output logic id_30,
-    input real id_31
-    , id_39,
-    input logic id_32,
-    input id_33,
-    output logic id_34
+    output uwire id_0,
+    output wand id_1,
+    input tri1 id_2,
+    output tri id_3,
+    output wand id_4,
+    input supply1 id_5,
+    output wand id_6,
+    output wire id_7,
+    input uwire id_8,
+    input tri1 id_9,
+    output supply0 id_10,
+    output uwire id_11,
+    output wand id_12,
+    output tri1 id_13,
+    input tri1 id_14,
+    input wor id_15,
+    output wor id_16,
+    output uwire id_17,
+    output supply1 id_18,
+    output uwire id_19,
+    input tri1 id_20
 );
-  logic id_40, id_41;
+  wire id_22;
+  wire id_23;
+  wire id_24;
+  assign id_19 = ~1;
+  wire id_25;
+endmodule
+module module_1 (
+    input logic id_0,
+    input wor id_1
+    , id_4,
+    output supply1 id_2
+);
+  logic id_5;
+  logic [7:0] id_6;
+  module_0(
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1
+  );
+  assign id_5 = id_0;
+  logic [7:0] id_7;
+  for (id_8 = {id_5{id_7[1]}}; 1; id_5 = 1 - 1) begin
+    if (1) begin
+      always @(id_1 ^ 1'b0 ^ 1) id_8 <= id_8;
+    end
+  end
+  assign id_6[1] = 1'b0;
 endmodule

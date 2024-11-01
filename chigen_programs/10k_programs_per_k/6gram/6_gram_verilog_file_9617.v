@@ -1,39 +1,28 @@
-// Seed: 371804766
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
-);
-  input id_12;
-  input id_11;
-  input id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  assign id_7 = id_11 + id_1;
-  uwire id_12;
-  logic id_13;
-  logic id_14;
-  always @(posedge id_13 < id_3) begin
-    SystemTFIdentifier(1'b0, 1);
-    id_12[1] <= (1'd0);
+// Seed: 600164319
+module module_0;
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  always @(posedge id_1) if (id_1) $display(0 * 1, 1);
+  always @* begin
+    disable id_2;
   end
-  generate
-    assign id_14 = 1;
-  endgenerate
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input tri id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    input tri0 id_4,
+    input wire id_5,
+    output supply1 id_6,
+    output supply1 id_7,
+    input wor id_8,
+    input wor id_9,
+    input supply1 id_10
+);
+  wire id_12 = id_12;
+  always @(posedge id_4) begin
+    id_7 = id_8;
+  end
+  module_0();
 endmodule

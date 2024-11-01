@@ -1,36 +1,26 @@
-// Seed: 1869880486
-`timescale 1 ps / 1 ps
+// Seed: 1007110154
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input reg id_2,
-    input id_3,
-    input logic id_4,
-    output id_5,
-    output supply1 id_6,
-    input id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    inout id_15,
-    input id_16,
-    output id_17,
-    input reg id_18,
-    input logic id_19,
-    output id_20
+    input wire id_0,
+    output wand id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input tri id_5,
+    output tri1 id_6,
+    output wor id_7,
+    output wand id_8
 );
-  always @(id_14[1'b0 : 1+1'b0]) begin
-    if (1) begin
-      if (1 && 1) id_6[1] <= (id_18);
-      else begin
-        SystemTFIdentifier;
-      end
-    end else if (id_8) begin
-      id_20 <= id_2;
-    end
-  end
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply1 id_1,
+    output wor id_2
+);
+  assign id_2 = id_0;
+  wire id_4 = id_0;
+  module_0(
+      id_4, id_2, id_4, id_4, id_4, id_4, id_2, id_4, id_2
+  ); id_5(
+      .id_0(1), .id_1(id_6), .id_2(1'h0 == id_4)
+  );
 endmodule

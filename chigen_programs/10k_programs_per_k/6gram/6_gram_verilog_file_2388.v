@@ -1,19 +1,43 @@
-// Seed: 518360251
-module module_0 (
-    input id_0,
-    input string id_1,
-    output id_2,
-    input logic id_3,
-    input logic id_4,
-    input id_5,
-    input logic id_6,
-    input logic id_7,
-    output string id_8
+// Seed: 152033651
+module module_0;
+  always id_1 = #(id_1  : id_1  : 1'd0) id_1(id_1) ~^ "";
+endmodule
+module module_1 (
+    id_1,
+    id_2
 );
-  assign id_8 = id_1;
-  always @(posedge 1) begin
-    if (1) begin
-      id_8 = "";
-    end
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = 0;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  reg id_9 = 1;
+  module_0();
+  always @(negedge id_2) begin
+    if (1'b0) #1 id_8 <= 1;
   end
+  assign id_8 = id_9;
+  logic [7:0] id_10;
+  wire id_11;
+  id_12(
+      .id_0(id_10[1==1]), .id_1("")
+  );
 endmodule

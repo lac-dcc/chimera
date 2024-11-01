@@ -1,5 +1,8 @@
-// Seed: 3607510951
-module module_0 (
+// Seed: 3388024151
+module module_0;
+  genvar id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -13,19 +16,18 @@ module module_0 (
     id_11,
     id_12
 );
-  input id_12;
-  inout id_11;
-  inout id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  output id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  assign id_7 = id_10;
-  logic id_12;
-  logic id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_13;
+  module_0();
 endmodule

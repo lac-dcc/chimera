@@ -1,4 +1,4 @@
-// Seed: 255067024
+// Seed: 4153198418
 module module_0 (
     id_1,
     id_2,
@@ -14,26 +14,57 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17
+    id_15
 );
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_14 = 1 & 1;
+  output wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_16;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input wand id_1,
+    output supply0 id_2,
+    input supply1 id_3,
+    input supply1 id_4,
+    input wor id_5,
+    input tri0 id_6,
+    output wor id_7,
+    input supply1 id_8,
+    output tri1 id_9,
+    input tri id_10,
+    input tri id_11
+);
+  initial id_2 -= id_1;
+  wire id_13;
+  module_0(
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13
+  );
+  wire id_14;
 endmodule

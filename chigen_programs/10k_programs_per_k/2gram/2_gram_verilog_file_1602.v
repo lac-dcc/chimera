@@ -1,28 +1,108 @@
-// Seed: 2795349282
+// Seed: 2181934656
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input supply0 id_0,
+    output wand id_1,
+    input wor id_2,
+    output supply1 id_3,
+    input tri1 id_4,
+    output uwire id_5,
+    output wand id_6,
+    input tri1 id_7,
+    output wand id_8,
+    output tri id_9,
+    input uwire id_10,
+    output supply0 id_11,
+    input supply0 id_12,
+    input supply1 id_13,
+    input supply0 id_14,
+    input tri1 id_15,
+    output supply1 id_16,
+    input tri1 id_17,
+    output wor id_18,
+    output wor id_19,
+    output uwire id_20,
+    input supply1 id_21,
+    output tri id_22,
+    input wor id_23,
+    output tri0 id_24,
+    input supply1 id_25,
+    input wor id_26,
+    input wor id_27,
+    input supply1 id_28,
+    input wire id_29,
+    output tri1 id_30,
+    output uwire id_31,
+    input supply1 id_32,
+    input wor id_33,
+    output tri id_34,
+    input tri0 id_35,
+    output uwire id_36,
+    input wor id_37,
+    input uwire id_38,
+    input wire id_39,
+    input tri id_40,
+    output uwire id_41,
+    input supply1 id_42,
+    input tri0 id_43,
+    input supply0 id_44,
+    input wire id_45,
+    input tri1 id_46
 );
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_5;
-  logic id_6;
-  assign id_2 = id_6;
-  function id_7;
-    output id_8;
-    output logic id_9;
-    begin
-      id_8 = {id_7{id_2}};
-      id_9 = id_5;
-    end
-  endfunction
-  always begin
-    SystemTFIdentifier;
-  end
+endmodule
+module module_1 (
+    input tri1 id_0
+);
+  assign id_2 = id_0;
+  initial $display(id_2);
+  id_3(
+      .id_0(id_0 == !1'd0), .id_1(id_0), .id_2(id_0), .id_3(1'b0), .id_4(id_2)
+  ); module_0(
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_0,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_0,
+      id_0,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_0,
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_0,
+      id_2
+  );
 endmodule

@@ -1,5 +1,19 @@
-// Seed: 830684757
-module module_0 (
+// Seed: 3366425561
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output wor id_1,
+    output supply1 id_2,
+    input wand id_3,
+    output uwire id_4,
+    input uwire id_5,
+    input wor id_6
+);
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -15,24 +29,33 @@ module module_0 (
     id_13,
     id_14,
     id_15,
-    id_16
+    id_16,
+    id_17,
+    id_18,
+    id_19
 );
-  input id_16;
-  inout id_15;
-  inout id_14;
-  input id_13;
-  input id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign id_2 = 1 | 1;
-  logic id_16;
+  output wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  output wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  always @(posedge id_6 or posedge 1) begin : id_20
+    repeat (1) deassign id_18;
+    #1 id_10 <= "";
+  end
+  module_0();
 endmodule

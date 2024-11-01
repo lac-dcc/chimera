@@ -1,28 +1,37 @@
-// Seed: 430959634
+// Seed: 580697491
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    id_3
 );
-  output id_10;
-  inout id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  output id_1;
-  assign #id_10 id_3 = 1;
-  logic id_11;
-  assign id_3 = 1;
-  logic id_12;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_4 = id_4;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    input  wor   id_1,
+    output tri   id_2
+);
+  reg id_4, id_5, id_6;
+  reg id_7;
+  assign id_6 = id_6;
+  wire id_8;
+  assign id_8 = 1;
+  initial begin
+    if (id_4)
+      fork
+        id_5 <= 1;
+        if (id_5) begin
+          id_7 <= 1;
+        end
+      join
+  end
+  wire id_9;
+  module_0(
+      id_8, id_9, id_8
+  ); id_10(
+      .id_0((1) & id_9), .id_1((id_2))
+  );
 endmodule

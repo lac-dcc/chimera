@@ -1,30 +1,36 @@
-// Seed: 1224374920
-`define pp_6 0
-`timescale 1ps / 1ps
-`define pp_7 0
-`timescale 1ps / 1 ps
+// Seed: 3802374427
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6
+    id_4
 );
-  input id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  inout id_1;
-  defparam id_6.id_7 = id_1 ** id_6; type_9(
-      1, id_4
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_2 = id_3;
+  genvar id_5;
+endmodule
+module module_1;
+  assign id_1 = 1;
+  wand id_2 = 1'h0;
+  assign id_1 = 1'h0;
+  assign id_2 = id_2;
+  module_0(
+      id_2, id_1, id_1, id_2
   );
-  always @(posedge id_6 >> 1) begin
-    SystemTFIdentifier;
+endmodule
+module module_2;
+  always @(posedge 1'b0) begin
+    $display(1, id_1, id_1, 1, 1'd0, id_1);
+    id_1 = 1 && id_1;
   end
-  logic id_8;
-  initial begin
-    id_1 = 1;
-  end
+endmodule
+module module_3 (
+    output uwire id_0,
+    input  tri0  id_1
+);
+  always @(*) #0 id_0 = 'b0;
+  module_2();
 endmodule

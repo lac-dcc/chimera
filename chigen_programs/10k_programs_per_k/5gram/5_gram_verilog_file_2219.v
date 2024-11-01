@@ -1,36 +1,37 @@
-// Seed: 2767099648
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 1384894137
+module module_0 #(
+    parameter id_5 = 32'd74,
+    parameter id_6 = 32'd80
+) (
+    output wire id_0,
+    input  tri  id_1,
+    input  wire id_2
 );
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  logic id_7;
-  logic id_8;
-  logic id_9;
-  assign id_8 = 1 ? 1 : 1;
-  logic id_10;
-  type_17(
-      id_9, id_2, id_5[1], 1, id_1, id_3
+  wand id_4;
+  assign id_0 = id_1;
+  if (id_1)
+    if (1) begin
+      defparam id_5.id_6 = id_4 != 1;
+    end else begin
+      wire id_7;
+    end
+  else wire id_8;
+  id_9(
+      .id_0(id_4), .id_1(1'b0)
   );
-  assign id_9 = id_8;
-  assign id_2 = 1;
-  uwire id_11;
-  assign id_5[1] = id_7;
-  logic id_12;
-  assign id_8 = 1;
-  assign id_6 = id_12;
-  logic id_13;
-  assign id_11[1&&1] = 1;
-  assign id_10 = id_3;
+  wire id_10;
+endmodule
+module module_1 (
+    output wor id_0,
+    inout  wor id_1
+);
+  wire id_3;
+  tri0 id_4;
+  wire id_5;
+  id_6 :
+  assert property (@(posedge 1'b0) id_4)
+  else $display(id_6);
+  module_0(
+      id_1, id_1, id_1
+  );
 endmodule

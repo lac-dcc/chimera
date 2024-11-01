@@ -1,5 +1,20 @@
-// Seed: 2821847761
+// Seed: 945917167
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_6;
+  assign id_3 = id_6;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -13,21 +28,70 @@ module module_0 (
     id_11,
     id_12,
     id_13,
-    id_14
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27
 );
-  inout id_14;
-  output id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  input id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  always @(1) if (id_3 > 1) {1 < id_3} <= 1;
+  output wire id_27;
+  inout wire id_26;
+  inout wire id_25;
+  output wire id_24;
+  output wire id_23;
+  inout wire id_22;
+  inout wire id_21;
+  inout wire id_20;
+  output wire id_19;
+  inout wire id_18;
+  input wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  integer id_28 (
+      .id_0 (1 == id_17[1'h0]),
+      .id_1 (id_3),
+      .id_2 (1),
+      .id_3 (id_20 * 1'b0 + id_12[1]),
+      .id_4 (id_5),
+      .id_5 (id_12),
+      .id_6 (1),
+      .id_7 (id_17),
+      .id_8 (1),
+      .id_9 (1),
+      .id_10(1),
+      .id_11(1),
+      .id_12(id_23 == 1),
+      .id_13(id_24),
+      .id_14(id_7 == id_25),
+      .id_15(id_5 == 1),
+      .id_16(1),
+      .id_17(id_19)
+  );
+  assign id_18 = id_10;
+  module_0(
+      id_8, id_26, id_26, id_10, id_9
+  );
 endmodule

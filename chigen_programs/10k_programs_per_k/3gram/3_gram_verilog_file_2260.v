@@ -1,23 +1,41 @@
-// Seed: 77566002
-module module_0 (
-    output reg id_0,
-    input id_1,
-    input reg id_2,
-    input id_3,
-    output supply0 id_4,
-    output reg id_5,
-    input id_6
-    , id_9,
-    output id_7,
-    input id_8
+// Seed: 3474947354
+module module_0 ();
+  wire id_1;
+  wire id_2 = id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  always begin
-    wait (id_6);
-    id_4[1-1] <= id_2;
-    id_5 <= 1;
-    id_0 <= 1;
-    id_4[""] <= #1 1;
-  end
-  logic id_10, id_11;
-  assign id_4 = id_1;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  output wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  task id_15(id_16, input reg id_17);
+    id_17 <= 1;
+  endtask
+  nor (id_1, id_10, id_12, id_13, id_14, id_15, id_16, id_17, id_3, id_7, id_8, id_9);
+  module_0();
 endmodule

@@ -1,33 +1,47 @@
-// Seed: 2131127946
-`timescale 1 ps / 1ps
+// Seed: 1117187557
 module module_0 (
-    input id_0,
-    input id_1
-    , id_16,
-    input id_2,
-    output tri1 id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input id_7,
-    input id_8,
-    output id_9,
-    input id_10,
-    output logic id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    input id_15
+    id_1,
+    id_2
 );
-  assign id_9 = 1;
-  logic id_17;
-  initial begin
-    id_6 <= "";
-    if (1'b0) id_3[1] <= id_16;
-    if (id_10) begin
-      for (id_17 = id_8; ~id_1; id_13 = 1'h0) begin
-        id_11 = 'h0;
-      end
-    end
-  end
+  input wire id_2;
+  input wire id_1;
+  wire id_3;
+endmodule
+module module_1 #(
+    parameter id_27 = 32'd77,
+    parameter id_28 = 32'd40
+) (
+    input tri0 id_0,
+    output tri id_1,
+    output wand id_2,
+    input tri id_3,
+    input wor id_4,
+    output uwire id_5,
+    output tri0 id_6,
+    input wor id_7,
+    output supply1 id_8,
+    input supply0 id_9,
+    output wor id_10,
+    input tri0 id_11,
+    input wand id_12,
+    output wire id_13,
+    input supply0 id_14,
+    input tri0 id_15,
+    input wire id_16,
+    output tri id_17,
+    input tri id_18,
+    input tri0 id_19,
+    input uwire id_20,
+    input wor id_21,
+    input tri1 id_22
+);
+  assign id_10 = id_9;
+  wire id_24;
+  wire id_25;
+  logic [7:0] id_26;
+  defparam id_27.id_28 = ""; module_0(
+      id_25, id_25
+  );
+  assign id_26[1] = id_16;
+  wire id_29;
 endmodule

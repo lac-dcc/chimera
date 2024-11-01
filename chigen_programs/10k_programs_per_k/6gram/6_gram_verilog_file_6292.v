@@ -1,5 +1,11 @@
-// Seed: 1157235395
-module module_0 (
+// Seed: 3422228069
+module module_0;
+  logic [7:0] id_1;
+  generate
+    assign id_1[1] = 1;
+  endgenerate
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -11,42 +17,29 @@ module module_0 (
     id_9,
     id_10,
     id_11,
-    id_12
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  input id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  output id_8;
-  input id_7;
-  inout id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  function id_12(logic id_13);
-    begin
-      id_13 = id_12 & "";
-    end
-  endfunction
-  type_17(
-      1, id_3, 1
-  );
-  logic id_14;
-  type_19 id_15 (
-      .id_0 (id_6),
-      .id_1 (),
-      .id_2 (id_12 & 1),
-      .id_3 (1'd0),
-      .id_4 (1),
-      .id_5 (1),
-      .id_6 (id_12),
-      .id_7 ({1{id_1}}),
-      .id_8 (1),
-      .id_9 (1),
-      .id_10((1)),
-      .id_11(1),
-      .id_12(id_9)
-  );
+  inout wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  output wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_16;
+  wire id_17;
+  wire id_18;
+  wire id_19;
+  module_0();
 endmodule

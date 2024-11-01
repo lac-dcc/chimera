@@ -1,22 +1,24 @@
-// Seed: 4094604420
-`timescale 1ps / 1 ps
+// Seed: 1555000694
 module module_0 (
-    input  id_0,
-    output id_1,
-    input  id_2,
-    input  id_3,
-    input  id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  reg id_5;
-  type_9 id_6 (
-      .id_0(id_3),
-      .id_1(1)
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_6;
+  wire id_7;
+  wire id_8;
+endmodule
+module module_1 ();
+  assign  id_1  =  id_1  ?  1 'b0 ==  1  :  1  ?  id_1  :  id_1  ?  id_1  &&  1  !=  1 'h0 +  id_1  :  id_1  ?  id_1  :  id_1  ?  id_1  >=  id_1  :  1  ?  1  :  id_1  ;
+  always @(posedge id_1) id_1 = id_1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1
   );
-  logic id_7;
-  type_11(
-      1'b0, id_5, id_1
-  );
-  always @(*) begin
-    if (id_7 + 1) id_5 <= 1;
-  end
 endmodule

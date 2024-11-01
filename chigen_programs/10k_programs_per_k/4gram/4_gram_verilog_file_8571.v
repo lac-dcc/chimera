@@ -1,35 +1,81 @@
-// Seed: 80540864
+// Seed: 1756794082
 module module_0 (
-    input id_0,
-    output id_1,
-    output logic id_2,
-    input id_3,
-    output id_4
-    , id_15,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    input id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input logic id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  logic id_16, id_17;
-  logic id_18;
-  assign id_16 = 1;
-  assign id_2  = id_14;
-  assign id_16 = 1;
-  assign id_2  = 1;
-  logic id_19;
-  logic id_20;
-  logic id_21;
-  assign id_1[1==1] = id_13;
-  logic id_22;
-  logic id_23;
-  type_33(
-      id_19, 1
+  output wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_13;
+  always @(*) begin
+    return id_8;
+  end
+  wire id_14;
+  wire id_15;
+  assign id_6 = 1;
+  wire id_16 = 1'd0;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18
+);
+  inout wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_18 = !module_1[(1)];
+  module_0(
+      id_16, id_2, id_18, id_2, id_2, id_14, id_18, id_11, id_6, id_18, id_5, id_16
   );
+  wire id_19;
+  assign id_5 = id_14;
 endmodule

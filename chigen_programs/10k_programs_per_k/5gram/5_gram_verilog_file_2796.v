@@ -1,34 +1,49 @@
-// Seed: 1388552548
-`timescale 1 ps / 1 ps
+// Seed: 572527680
 module module_0 (
-    input id_0,
-    input id_1,
-    output reg id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    input logic id_7,
-    output id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    input logic id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_15;
-  always @(1) begin
-    id_2 <= id_13;
-  end
-  logic id_16;
-  logic id_17, id_18;
-  assign id_15 = id_14 - id_11;
-  logic id_19;
-  logic id_20;
-  logic id_21 = {1{id_15}};
-  logic id_22, id_23, id_24, id_25;
-  logic id_26;
-  logic id_27;
-  logic id_28;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_3 = id_5++ - id_1;
+endmodule
+module module_1;
+  wire id_2;
+  always @(id_1) $display(id_1);
+  module_0(
+      id_2, id_2, id_2, id_2, id_2
+  );
+endmodule
+module module_2 (
+    input  wire id_0,
+    input  wand id_1,
+    output tri  id_2
+);
+endmodule
+module module_3 #(
+    parameter id_13 = 32'd52,
+    parameter id_14 = 32'd65
+) (
+    output supply0 id_0,
+    input uwire id_1,
+    input tri0 id_2
+    , id_11, id_12,
+    input supply1 id_3,
+    input tri0 id_4,
+    input wor id_5,
+    output supply1 id_6,
+    output supply0 id_7,
+    input supply1 id_8,
+    input supply0 id_9
+);
+  assign id_11 = id_12;
+  module_2(
+      id_5, id_4, id_6
+  ); defparam id_13.id_14 = 0;
 endmodule

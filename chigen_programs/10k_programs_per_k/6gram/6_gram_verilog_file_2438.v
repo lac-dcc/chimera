@@ -1,53 +1,34 @@
-// Seed: 3342531707
-`timescale 1ps / 1 ps
+// Seed: 2002260681
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    output logic id_6,
-    input logic id_7,
-    inout id_8,
-    input id_9,
-    output id_10,
-    input id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    input logic id_15,
-    output id_16,
-    input id_17,
-    input logic id_18,
-    input logic id_19,
-    input logic id_20,
-    output id_21,
-    output logic id_22
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32,
-      id_33,
-      id_34,
-      id_35,
-      id_36,
-      id_37,
-      id_38,
-      id_39,
-      id_40,
-      id_41,
-      id_42,
-      id_43,
-      id_44,
-      id_45;
-  logic id_46;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always @(id_3 or posedge 1'b0) begin
+    if (id_4) disable id_9;
+  end
+endmodule
+module module_0;
+  wire id_1;
+  tri  sample = 1;
+  wire id_2;
+  wor  module_1;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_1, id_2, id_2
+  );
+  real id_3;
+  tri  id_4 = 1;
 endmodule

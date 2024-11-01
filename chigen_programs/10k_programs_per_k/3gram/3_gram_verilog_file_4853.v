@@ -1,6 +1,15 @@
-// Seed: 3690579909
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 241880058
+module module_0 #(
+    parameter id_2 = 32'd59,
+    parameter id_3 = 32'd81
+) ();
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  defparam id_2.id_3 = 1;
+  supply0 id_4 = id_2;
+  uwire   id_5 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -23,32 +32,47 @@ module module_0 (
     id_20,
     id_21
 );
-  input id_21;
-  inout id_20;
-  output id_19;
-  input id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  output id_6;
-  output id_5;
-  inout id_4;
-  output id_3;
-  output id_2;
-  input id_1;
-  logic id_21;
-  type_24 id_22 (
+  input wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  output wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  or (
+      id_1,
+      id_10,
+      id_11,
+      id_13,
+      id_16,
+      id_17,
+      id_18,
+      id_19,
+      id_2,
+      id_20,
+      id_21,
+      id_22,
+      id_3,
       id_4,
-      id_16 && 1,
-      1,
-      id_1
+      id_6,
+      id_7,
+      id_9
   );
+  wire id_22;
+  module_0();
+  wire id_23;
 endmodule

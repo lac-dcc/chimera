@@ -1,26 +1,37 @@
-// Seed: 4234591356
-`define pp_4 0
+// Seed: 2094912512
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output uwire id_0,
+    output wand id_1,
+    input wand id_2,
+    input tri0 id_3,
+    output uwire id_4,
+    input tri1 id_5,
+    output tri id_6,
+    output uwire id_7,
+    input tri id_8,
+    output supply1 id_9,
+    input supply0 id_10,
+    input wor id_11,
+    input wor id_12,
+    input wand id_13
 );
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  logic id_4;
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  logic id_8;
-  always @(1 or posedge id_6) begin
-    SystemTFIdentifier(id_5, id_2);
-  end
-  logic id_9;
-  logic id_10 = id_8 ? id_3.id_1 : id_4;
-  assign id_7 = 1;
-  logic id_11 = id_6;
-  logic id_12;
+  wire id_15 = id_12, id_16, id_17, id_18, id_19;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd73,
+    parameter id_5 = 32'd47
+) (
+    input  tri id_0,
+    output wor id_1,
+    output wor id_2
+);
+  generate
+    defparam id_4.id_5 = "";
+    begin : id_6
+      wire id_7;
+    end
+  endgenerate
+  module_0(
+      id_2, id_2, id_0, id_0, id_2, id_0, id_2, id_1, id_0, id_2, id_0, id_0, id_0, id_0
+  );
 endmodule

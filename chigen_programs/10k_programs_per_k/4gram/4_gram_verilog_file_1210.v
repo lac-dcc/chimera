@@ -1,23 +1,28 @@
-// Seed: 1985031056
-`define pp_8 0
+// Seed: 4178436123
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    input supply1 id_0,
+    output wand id_1
 );
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_8;
-  assign #(1) id_1 = id_2;
+  supply1 id_3 = id_3, id_4;
+  always @(posedge "") begin
+    id_1 = id_0 ? id_4 : id_3;
+  end
+  always @(id_0);
+endmodule
+module module_0 (
+    input tri id_0,
+    input wand id_1,
+    input supply1 id_2,
+    input tri1 id_3,
+    input wor module_1,
+    input tri id_5,
+    input supply1 id_6,
+    output supply0 id_7,
+    input wand id_8,
+    input wire id_9
+);
+  assign id_7 = id_8;
+  module_0(
+      id_3, id_7
+  );
 endmodule

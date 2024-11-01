@@ -1,21 +1,26 @@
-// Seed: 3017247969
-module module_0 (
-    output id_0,
-    output id_1
+// Seed: 1172555736
+module module_0 ();
+  assign id_1 = id_1;
+  wire id_2;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input wor id_1,
+    output tri1 id_2,
+    output tri id_3,
+    output wor id_4,
+    output wor id_5,
+    input uwire id_6,
+    output wire id_7,
+    input uwire id_8,
+    output supply1 id_9,
+    output uwire id_10,
+    output wor id_11,
+    input wor id_12,
+    input wand id_13,
+    input supply1 id_14,
+    output wor id_15
 );
-  logic id_3 = id_3;
-  type_10 id_4 (
-      id_2,
-      1
-  );
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  assign id_7 = SystemTFIdentifier;
-  logic id_8;
-  assign id_5 = 1'b0;
-  assign id_8 = (1);
-  type_15(
-      1, 1, 1, 1'b0, 1, 1
-  );
+  wire id_17;
+  module_0();
 endmodule

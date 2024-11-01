@@ -1,19 +1,54 @@
-// Seed: 3530630637
-module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    input logic id_6,
-    output id_7,
-    input id_8,
-    input id_9,
-    input id_10
+// Seed: 3968182420
+module module_1 (
+    input tri0 id_0,
+    input tri1 id_1,
+    input tri0 id_2,
+    input supply1 sample,
+    output supply0 id_4,
+    input supply1 id_5,
+    output tri0 id_6,
+    output wire module_0,
+    input tri0 id_8,
+    input tri id_9,
+    input tri id_10,
+    input uwire id_11,
+    input uwire id_12,
+    output wire id_13,
+    output supply1 id_14,
+    output supply1 id_15,
+    output supply0 id_16,
+    output supply0 id_17,
+    output wire id_18,
+    input wor id_19
 );
-  logic id_11;
-  logic id_12;
-  logic id_13;
+  assign id_16 = 1;
+  wand id_21 = id_5 && 1;
 endmodule
-`default_nettype wire
+module module_1 (
+    output tri1 id_0,
+    input  wire id_1
+);
+  wire id_3;
+  module_0(
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1
+  );
+endmodule

@@ -1,51 +1,35 @@
-// Seed: 1505125896
+// Seed: 2892750210
 module module_0 (
-    input logic id_0
-    , id_18,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    output logic id_6,
-    input logic id_7,
-    input id_8,
-    input logic id_9,
-    output id_10,
-    output logic id_11
-    , id_19,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    input id_15,
-    input id_16,
-    output id_17
+    id_1,
+    id_2
 );
-  logic id_20;
+  input wire id_2;
+  input wire id_1;
+  wire id_3;
 endmodule
 module module_1 (
-    input id_0,
-    input id_1
+    input wand id_0,
+    input wand id_1,
+    output tri id_2,
+    output uwire id_3
     , id_18,
-    output logic id_2,
-    output id_3,
-    output id_4,
-    output logic id_5,
-    output id_6,
-    output logic id_7,
-    output logic id_8,
-    inout logic id_9,
-    input id_10,
-    input logic id_11,
-    output logic id_12
+    input tri0 id_4
     , id_19,
-    output id_13,
-    input id_14,
-    output id_15,
-    input id_16
+    input supply1 id_5,
+    output wand id_6,
+    output wand id_7,
+    output tri0 id_8,
+    input wire id_9,
+    output wor id_10,
+    input wor id_11,
+    input tri1 id_12,
+    input tri0 id_13
+    , id_20,
+    input supply1 id_14,
+    input wand id_15,
+    input tri1 id_16
 );
-  type_30(
-      1'b0, id_9
-  ); defparam id_20.id_21 = id_20;
-  logic id_22;
+  module_0(
+      id_20, id_20
+  );
 endmodule

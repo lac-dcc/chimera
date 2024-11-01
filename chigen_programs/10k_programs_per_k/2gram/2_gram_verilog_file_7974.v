@@ -1,43 +1,38 @@
-// Seed: 3171961504
-`define pp_17 0
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+// Seed: 25756313
+module module_0;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output uwire id_1,
+    input supply1 id_2,
+    output tri1 id_3,
+    inout tri1 id_4,
+    input supply0 id_5,
+    output supply1 id_6,
+    output tri0 id_7,
+    output supply0 id_8,
+    input wire id_9,
+    input tri1 id_10,
+    output wand id_11
 );
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_14 = id_8;
-  type_17(
-      1, id_15, id_12, id_5, id_13
-  );
+  integer id_13 (
+      1'h0,
+      id_9,
+      !1'd0);
+  module_0();
+  assign id_7 = id_10;
+  genvar id_14;
+endmodule
+module module_2 (
+    output uwire id_0,
+    output supply1 id_1,
+    output supply1 id_2,
+    input uwire id_3,
+    output tri0 id_4,
+    output supply1 id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    output supply0 id_8
+);
+  module_0();
 endmodule

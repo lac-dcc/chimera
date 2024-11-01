@@ -1,36 +1,44 @@
-// Seed: 265293492
-`define pp_26 0
-module module_0 (
-    input id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    input logic id_4,
-    input logic id_5,
-    output id_6,
-    output logic id_7,
-    input id_8,
-    inout id_9,
-    input logic id_10,
-    input id_11,
-    output id_12,
-    output id_13,
-    output logic id_14,
-    input logic id_15,
-    output logic id_16,
-    output id_17,
-    input id_18
-    , id_26,
-    output logic id_19,
-    input logic id_20,
-    input logic id_21,
-    input id_22,
-    input id_23,
-    input logic id_24,
-    output reg id_25
-);
-  always @(posedge 1 or posedge id_21) begin
-    id_25 <= id_0 == 1 & 1;
-    id_2 = id_24 + 1;
+// Seed: 2621862840
+module module_0 ();
+  always @((id_1) or posedge id_1 & id_1) begin
+    if (id_1) begin
+      if (id_1) begin
+        disable id_2;
+      end
+    end
   end
+  assign id_1 = id_1;
+endmodule
+module module_1 (
+    output tri id_0,
+    output uwire id_1,
+    input wor id_2,
+    output supply1 id_3,
+    input wor id_4,
+    input wor id_5,
+    input tri1 id_6,
+    output uwire id_7,
+    input wor id_8,
+    output tri0 id_9,
+    input wor id_10,
+    input uwire id_11,
+    input wire id_12,
+    input tri id_13,
+    input tri id_14,
+    input wand id_15,
+    output wand id_16,
+    input supply1 id_17,
+    input wor id_18,
+    input supply1 id_19,
+    output tri0 id_20
+);
+  wor  id_22 = 1'b0;
+  wire id_23;
+  assign id_16 = id_15;
+  id_24(
+      .id_0(id_3)
+  );
+  wire id_25;
+  module_0();
+  tri0 id_26 = 1;
 endmodule

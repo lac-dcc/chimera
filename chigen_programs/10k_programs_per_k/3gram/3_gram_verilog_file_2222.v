@@ -1,5 +1,4 @@
-// Seed: 3912737785
-`define pp_11 0
+// Seed: 1291005620
 module module_0 (
     id_1,
     id_2,
@@ -11,21 +10,47 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  inout id_11;
-  inout id_10;
-  output id_9;
-  output id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_7 = id_4;
-  logic id_11 = 1'b0;
-  logic id_12;
-  assign id_11 = id_6;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_8 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
+  always_latch @(negedge 1 or posedge id_1) begin
+    id_1 <= #1 1 == id_1;
+  end
+  buf (id_1, id_3);
+  always @(1 | 1 or posedge id_1) begin
+    id_1 = 1;
+    id_1 <= id_1;
+  end
+  wire id_3;
+  module_0(
+      id_3, id_2, id_3, id_2, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_2, id_3, id_3, id_3
+  );
 endmodule

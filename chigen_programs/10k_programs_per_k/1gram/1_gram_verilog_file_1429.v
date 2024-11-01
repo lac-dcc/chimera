@@ -1,21 +1,37 @@
-// Seed: 3370503382
-module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output logic id_3,
-    output id_4,
-    output id_5,
-    output logic id_6,
-    input reg id_7,
-    output reg id_8,
-    input id_9,
-    input logic id_10,
-    input logic id_11
-);
-  assign (supply1, highz0) id_8 = id_7;
-  assign id_6 = 1;
-  logic id_12, id_13, id_14;
-  always id_8 <= 1'b0 && id_0;
+// Seed: 2093553847
+module module_0;
+  assign id_1 = 1;
 endmodule
-`default_nettype id_12
+module module_1 (
+    id_1
+);
+  inout wire id_1;
+  always @(1 or posedge 1 <-> 1) begin
+    $display(1);
+    id_1 <= (id_1);
+  end
+  module_0();
+endmodule
+module module_2 (
+    id_1
+);
+  input wire id_1;
+  wire id_2;
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = id_3;
+  wire id_4;
+  wire id_5;
+  module_2(
+      id_4
+  );
+  wire id_6;
+  assign id_4 = id_4;
+endmodule

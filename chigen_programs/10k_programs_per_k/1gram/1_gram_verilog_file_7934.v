@@ -1,36 +1,23 @@
-// Seed: 1818939169
-`define pp_2 0
-parameter `pp_2 = 1;
+// Seed: 3266175530
 module module_0 (
-    input  id_0,
-    output id_1
+    output wire id_0,
+    input wor id_1,
+    input supply0 id_2
 );
-  logic id_2, id_3;
-  assign id_1 = 1;
+  assign id_0 = id_1;
 endmodule
 module module_1 (
-    input logic id_0,
-    input id_1
+    input  wire  id_0,
+    output tri   id_1,
+    input  wand  id_2,
+    input  tri0  id_3,
+    input  wand  id_4,
+    input  tri1  id_5,
+    output uwire id_6
 );
-  always begin
-    id_2 <= id_2;
-    id_2 = 1;
-  end
-  assign id_3 = 1;
-  logic id_4;
-  assign id_3 = id_0;
-  logic id_5, id_6, id_7;
-  assign id_6 = (1);
-  always
-    if (id_5) begin
-      begin
-        #1 @(id_1 or negedge id_1);
-      end
-    end else if (id_7) id_3 = 1;
-  logic id_8;
-  logic id_9, id_10 = 1;
-  assign id_7 = id_10;
-  logic id_11 = id_9;
-  logic id_12;
-  assign id_5 = 1;
+  id_8(
+      .id_0(1), .id_1(1), .id_2(1), .id_3(id_6), .id_4(1), .id_5(id_4 + 1'd0)
+  ); module_0(
+      id_1, id_5, id_5
+  );
 endmodule

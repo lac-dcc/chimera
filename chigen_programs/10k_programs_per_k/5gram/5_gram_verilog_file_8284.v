@@ -1,49 +1,32 @@
-// Seed: 1378349204
+// Seed: 45951853
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    output logic id_6,
-    output wire id_7,
-    input logic id_8,
-    input id_9,
-    input logic id_10,
-    output logic id_11,
-    output logic id_12,
-    input id_13,
-    output id_14,
-    input id_15,
-    input id_16,
-    output id_17,
-    output logic id_18,
-    output id_19,
-    input id_20,
-    output logic id_21,
-    input id_22,
-    input logic id_23,
-    output logic id_24,
-    input id_25,
-    output id_26,
-    input id_27,
-    input id_28,
-    input id_29
+    input wire id_0,
+    output wire module_0,
+    input wor id_2,
+    output supply1 id_3,
+    output supply0 id_4,
+    input supply1 id_5,
+    output tri0 id_6,
+    input tri0 id_7,
+    input tri0 id_8,
+    input wand id_9
+    , id_13,
+    output supply0 id_10,
+    input wand id_11
 );
-  wire  id_30;
-  logic id_31;
-  type_49 id_32 (
-      .id_0(),
-      .id_1(""),
-      .id_2(1'h0),
-      .id_3(~id_9)
+  wire id_14 = id_13;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  uwire id_1,
+    input  wor   id_2
+    , id_5,
+    output tri   id_3
+    , id_6
+);
+  assign id_3 = id_2;
+  xor (id_3, id_2, id_6, id_5);
+  module_0(
+      id_2, id_3, id_2, id_3, id_3, id_2, id_3, id_0, id_2, id_1, id_3, id_1
   );
-  assign #1 id_7 = id_30[1 : 1];
-  logic id_33;
-  type_51(
-      id_26, id_7[1]
-  );
-  assign id_30 = id_29;
-  logic id_34;
 endmodule

@@ -1,2 +1,36 @@
-// Seed: 3423800849
-`default_nettype id_0
+// Seed: 151817058
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  uwire id_9;
+  id_10 :
+  assert property (@(posedge id_9) 1 > 1)
+  else $display(1'b0, 1'b0, 1, 1'b0, 1, 1);
+  assign id_6 = 1;
+  always @(id_3 & (id_3) & id_3, negedge (1));
+  assign id_7 = 1;
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri  id_1
+);
+  wire id_3;
+  module_0(
+      id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3
+  );
+endmodule

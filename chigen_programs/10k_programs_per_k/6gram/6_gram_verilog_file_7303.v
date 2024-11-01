@@ -1,38 +1,45 @@
-// Seed: 2335664393
+// Seed: 2522129151
 module module_0 (
-    input id_0,
-    input id_1,
-    input logic id_2,
-    input logic id_3,
-    output reg id_4,
-    output reg id_5,
-    input id_6,
-    input id_7,
-    input reg id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output logic id_12
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  logic id_13 = 1 ^ "";
-  initial begin
-    id_5 = id_8;
-    #(1);
-    id_4 <= 1'h0;
-    if (id_2) begin
-      if (id_3) begin
-        id_4 <= 1;
-      end else id_5 = id_0;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  tri0 id_5 = id_5;
+  logic [7:0] id_6;
+  logic [7:0] id_7 = id_6;
+  module_0(
+      id_5, id_2, id_5, id_1, id_5, id_5, id_5
+  );
+  tri0 id_8 = 1;
+  assign id_5 = id_5;
+  logic [7:0] id_9;
+  always @(posedge id_8 == (id_5)) begin
+    foreach (id_10[1]) begin
+      id_7 = (id_9);
+      id_3 <= 1;
     end
-    if (1)
-      if (1) begin
-        if (1) id_13 = id_13;
-        else begin
-          SystemTFIdentifier(id_10);
-        end
-      end else id_5 <= 1'b0 * id_9;
-  end
-  always @(1 or posedge id_1) begin
-    id_13 = 1;
+    id_10 = id_9;
   end
 endmodule

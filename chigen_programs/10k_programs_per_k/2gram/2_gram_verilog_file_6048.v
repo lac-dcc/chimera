@@ -1,27 +1,40 @@
-// Seed: 4176997942
-`define pp_14 0
-`define pp_15 0
-`timescale 1ps / 1ps
+// Seed: 1683411928
 module module_0 (
-    input id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input id_8,
-    output logic id_9,
-    output id_10,
-    input id_11,
-    input id_12,
-    input logic id_13
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  assign id_9 = 1;
-  logic id_14 = id_2;
-  type_25 id_15 (.id_0(""));
-  logic id_16;
-  logic id_17;
-  logic id_18;
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_9;
+  wire id_10;
+  assign id_7 = 1;
+  wire id_11;
+  always assume (1'd0);
+  wire id_12;
+  wire id_13;
+  wire id_14;
+  wire id_15;
+endmodule
+module module_1;
+  always @(id_1.sum or posedge 1);
+  id_2(
+      .id_0(1)
+  );
+  always disable id_3;
+  assign id_1 = id_3;
+  module_0(
+      id_3, id_3, id_1, id_1, id_3, id_1, id_3, id_3
+  );
 endmodule

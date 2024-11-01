@@ -1,27 +1,32 @@
-// Seed: 3753064028
-`timescale 1ps / 1ps `timescale 1ps / 1ps
-`undef pp_4
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-module module_0 ();
-  assign id_0 = !id_0;
-  logic id_1;
-  assign #1 id_0 = 1'b0;
-  logic id_2, id_3, id_4;
-  logic id_5 = id_2;
-  assign id_4 = id_3;
-  logic id_6 = 1'd0;
-  always @(1 or id_1);
-  assign id_1 = 1;
+// Seed: 3779620139
+module module_0 (
+    output tri1 id_0,
+    output tri1 id_1
+);
+  wire id_3;
 endmodule
 module module_1 (
-    input id_0,
-    input id_1,
-    output logic id_2,
-    input id_3
+    output wor id_0
+    , id_2
 );
-  logic id_4;
+  wire id_3;
+  assign id_0 = id_2;
+  supply0 id_4 = 1;
+  module_0(
+      id_2, id_0
+  );
+  always_ff @(*) $display;
+  always @(posedge 1 or posedge 1) begin
+    id_0 = 1'b0 == 1'h0;
+  end
+  timeunit 1ps;
+endmodule
+module module_2;
+  assign id_1[1] = id_1[1];
+endmodule
+module module_3;
+  tri1 id_2;
+  module_2();
+  wire id_3 = id_3;
+  always @(*) id_2 = 1;
 endmodule

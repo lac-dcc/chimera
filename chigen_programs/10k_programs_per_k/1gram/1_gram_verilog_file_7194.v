@@ -1,43 +1,25 @@
-// Seed: 2618241894
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+// Seed: 562836104
+module module_0;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri1 id_1,
+    input wire id_2,
+    output wand id_3,
+    input supply0 id_4,
+    input tri0 id_5,
+    output tri id_6,
+    output tri1 id_7,
+    output supply1 id_8,
+    input tri id_9,
+    output supply0 id_10,
+    input tri0 id_11,
+    output tri1 id_12,
+    output supply1 id_13,
+    input wire id_14
 );
-  input id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  input id_1;
-  assign id_12 = 1;
-  logic id_15 = 1 & 1;
-  assign id_13 = id_1;
-  logic id_16;
-  task id_17;
-  endtask
-  type_20(
-      id_18, 1
-  );
+  always $display;
+  module_0();
+  wire id_16;
+  assign id_10 = 1;
 endmodule

@@ -1,5 +1,26 @@
-// Seed: 2548034655
+// Seed: 1239850079
 module module_0 (
+    input tri1 id_0,
+    input wor  id_1
+);
+  assign id_3 = 1;
+  module_2(
+      id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3
+  );
+  assign id_3 = 1 == "";
+endmodule
+module module_1 (
+    output wand id_0,
+    output wire id_1,
+    input  wand id_2,
+    output tri  id_3
+);
+  wire id_5;
+  module_0(
+      id_2, id_2
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -14,30 +35,22 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16
+    id_15
 );
-  input id_16;
-  input id_15;
-  output id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  always @(posedge 1)
-    if (id_15) id_2 = "";
-    else begin
-      id_10 <= {1'd0, id_5};
-    end
-  logic id_16;
-  logic id_17;
+  output wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  final $display('b0);
 endmodule

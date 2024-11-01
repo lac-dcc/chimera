@@ -1,6 +1,10 @@
-// Seed: 940849146
-`define pp_13 0
+// Seed: 1822287743
 module module_0 (
+    id_1
+);
+  input wire id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -13,37 +17,42 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19
 );
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_13, id_14, id_15;
-  function id_16;
-    input logic id_17, id_18;
-    logic id_19;
-    case (id_2)
-      1: id_3 = id_7;
-      1: id_3 = id_9;
-      id_6:
-      case (1 - 1'b0)
-        1: assign id_1 = 1;
-      endcase
-    endcase
-  endfunction
-  type_23 id_20 (
-      .id_0(1),
-      .id_1((1))
+  input wire id_19;
+  input wire id_18;
+  input wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_5 = id_18;
+  module_0(
+      id_4
   );
+  assign id_12 = id_14;
+  assign id_5  = 1;
+  supply1 id_20, id_21;
+  wire id_22;
+  wire id_23;
+  assign id_6  = 1;
+  assign id_21 = 1;
 endmodule
-`define pp_14 0

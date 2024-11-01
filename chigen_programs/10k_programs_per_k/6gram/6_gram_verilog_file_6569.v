@@ -1,40 +1,38 @@
-// Seed: 2484868540
-`default_nettype id_23 `timescale 1ps / 1 ps
+// Seed: 691463917
 module module_0 (
-    output id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    output id_4,
-    input id_5,
-    input logic id_6,
-    input id_7,
-    output logic id_8,
-    input logic id_9,
-    output logic id_10,
-    output id_11,
-    input id_12
-    , id_26,
-    output id_13,
-    input id_14,
-    input id_15,
-    output logic id_16,
-    input id_17,
-    input logic id_18,
-    output logic id_19,
-    output id_20,
-    input logic id_21,
-    output id_22,
-    input id_23,
-    input logic id_24,
-    output id_25
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  logic   id_27 = id_18;
-  logic   id_28 = 1;
-  logic   id_29;
-  logic   id_30;
-  logic   id_31 = id_5 !== 1'h0;
-  integer id_32;
-  assign id_10 = 1;
-  logic id_33;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_8;
+  wire id_9, id_10;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input tri0 id_1,
+    input uwire id_2,
+    input supply1 id_3,
+    input uwire id_4,
+    input uwire id_5,
+    input uwire id_6,
+    input wire id_7,
+    input tri1 id_8,
+    input wor id_9,
+    output wor id_10
+);
+  wire id_12;
+  module_0(
+      id_12, id_12, id_12, id_12, id_12, id_12, id_12
+  );
 endmodule

@@ -1,47 +1,35 @@
-// Seed: 1256196765
+// Seed: 3690726671
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    output uwire id_0,
+    output wire  id_1,
+    output wand  id_2
 );
-  inout id_12;
-  input id_11;
-  output id_10;
-  output id_9;
-  output id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_12;
-  logic id_13;
-  logic id_14;
-  type_19 id_15 (
-      .id_0(1),
-      .id_1(id_4),
-      .id_2(1),
-      .id_3(1),
-      .id_4(id_14),
-      .id_5(1),
-      .id_6(1 == 1'b0),
-      .id_7(1)
+  assign id_2 = id_4;
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output uwire id_1,
+    input  tri0  id_2,
+    inout  logic id_3,
+    input  wor   id_4
+);
+  reg id_6;
+  module_0(
+      id_1, id_1, id_1
   );
-  type_20(
-      id_5, 1, 1
-  );
-  always @(negedge {id_14{1}}) begin
-    id_13 = 1;
+  always @(negedge id_3) begin
+    id_3 <= 1;
+    id_3 = 1 % 1;
+    id_6 <= 1;
   end
+endmodule
+module module_2 ();
+  supply1 id_1 = (1 | 1);
+endmodule
+module module_3;
+  reg id_1;
+  always @(posedge id_1) begin
+    id_1 <= 1;
+  end
+  module_2();
 endmodule

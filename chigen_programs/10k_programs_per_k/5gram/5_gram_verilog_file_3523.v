@@ -1,23 +1,33 @@
-// Seed: 1635609933
-`timescale 1ps / 1ps
+// Seed: 2060033668
 module module_0 (
-    output id_0,
-    output reg id_1,
-    output id_2,
-    input id_3,
-    input logic id_4,
-    input id_5,
-    inout id_6,
-    output logic id_7,
-    input logic id_8,
-    output id_9,
-    input id_10
-    , id_12,
-    input id_11
+    input tri0 module_0,
+    input supply0 id_1,
+    input wand id_2,
+    output supply0 id_3,
+    output supply1 id_4,
+    output tri0 id_5,
+    output wand id_6,
+    input wire id_7,
+    input tri0 id_8,
+    output tri1 id_9,
+    input wire id_10
 );
-  always @(posedge id_8) begin
-    id_1 <= 1;
-    id_7 = 1;
-  end
-  initial SystemTFIdentifier();
+  always
+    if (id_2) begin
+      $display;
+    end
+endmodule
+module module_1 (
+    input wor id_0,
+    output wire id_1,
+    output logic id_2,
+    input tri0 id_3,
+    input supply1 id_4
+);
+  tri1 id_6 = id_3;
+  module_0(
+      id_3, id_0, id_0, id_1, id_1, id_1, id_6, id_4, id_3, id_6, id_6
+  );
+  assign id_2 = 1;
+  always @((id_3(1'h0)) or posedge 1) id_2 <= 1;
 endmodule

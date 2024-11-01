@@ -1,33 +1,40 @@
-// Seed: 2373670506
-`define pp_23 0
-`timescale 1 ps / 1 ps
+// Seed: 1781595927
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    output logic id_5,
-    input id_6,
-    output id_7,
-    output id_8,
-    input id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    output id_15,
-    input logic id_16,
-    input logic id_17,
-    input logic id_18
-    , id_23,
-    output logic id_19,
-    input logic id_20,
-    output id_21,
-    output logic id_22
+    input  tri1 id_0,
+    output tri0 id_1
 );
-  initial begin
-    id_21 <= id_1;
+  id_3 :
+  assert property (@(posedge id_0) 1 ? 1 : 1)
+  else $display(1 & 1 & id_3, id_0, id_3, 1'b0);
+endmodule
+module module_0 (
+    input tri1 id_0,
+    input supply1 id_1,
+    output wor id_2,
+    output uwire id_3,
+    input wor id_4,
+    input wor id_5,
+    input logic module_1,
+    input tri1 id_7,
+    output wor id_8,
+    input supply0 id_9,
+    output tri id_10,
+    input logic id_11,
+    output logic id_12,
+    output logic id_13,
+    input tri0 id_14,
+    input tri0 id_15,
+    input tri0 id_16,
+    input tri1 id_17
+);
+  always @(posedge id_7 or id_14) begin
+    if (id_4) begin
+      id_12 <= id_11;
+      id_13 <= (id_6);
+    end
   end
+  module_0(
+      id_5, id_8
+  );
+  supply1 id_19 = 1;
 endmodule

@@ -1,19 +1,31 @@
-// Seed: 2917827238
-`timescale 1 ps / 1 ps `timescale 1ps / 1 ps
+// Seed: 4000641611
 module module_0 (
-    output id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    output id_4,
-    input logic id_5,
-    output id_6
+    input supply1 id_0,
+    input wor id_1,
+    input wor id_2,
+    input tri0 id_3,
+    output wor id_4
 );
-  type_13(
-      id_3, id_3, 1
+endmodule
+module module_1 (
+    output logic id_0,
+    output tri1 id_1,
+    input supply1 id_2,
+    output wand id_3,
+    input tri1 id_4
+);
+  always @(posedge 1 or(id_2)) begin
+    id_0 = 1;
+    id_0 <= 1;
+    case (1)
+      ~id_4: id_0 <= 1'd0;
+      id_4: id_0 = 1;
+      1: id_3 = id_4;
+    endcase
+  end
+  module_0(
+      id_4, id_2, id_4, id_4, id_3
   );
-  logic id_7;
-  assign id_4 = id_5;
-  logic id_8;
-  logic id_9;
+  wire id_6;
+  assign id_3 = 1;
 endmodule

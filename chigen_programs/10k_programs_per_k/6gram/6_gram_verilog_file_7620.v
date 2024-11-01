@@ -1,26 +1,28 @@
-// Seed: 1954768121
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+// Seed: 1929066712
+module module_0;
+endmodule
+module module_1 (
+    output tri  id_0,
+    input  wand id_1,
+    output wire id_2
 );
-  input id_4;
-  output id_3;
-  inout id_2;
-  input id_1;
-  type_6(
-      id_4, 1, 1, 1
-  );
-  logic id_4;
-  type_8(
-      1, 1, 1
-  );
-  type_0 id_5 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(1),
-      .id_3(id_4)
-  );
-  assign id_4 = {1 + id_4 - 1{id_4}};
+  always @(posedge 1) begin
+    disable id_4;
+  end
+  module_0();
+endmodule
+module module_2 (
+    input  tri id_0,
+    output wor id_1
+);
+  assign id_1 = 1 < 1'h0 ? 1 : id_0;
+  module_0();
+endmodule
+module module_3 #(
+    parameter id_2 = 32'd94,
+    parameter id_3 = 32'd81
+) ();
+  assign id_1 = 1;
+  module_0(); defparam id_2.id_3 = id_3;
+  always force id_3 = 1;
 endmodule

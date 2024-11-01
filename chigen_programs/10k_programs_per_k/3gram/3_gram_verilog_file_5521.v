@@ -1,25 +1,31 @@
-// Seed: 1718896639
+// Seed: 3892226944
 module module_0 (
-    inout id_0,
-    input logic id_1,
-    input logic id_2,
-    output logic id_3,
-    input logic id_4,
-    output id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    output logic id_9,
-    input logic id_10,
-    output id_11,
-    input logic id_12
-    , id_16,
-    output logic id_13,
-    output id_14,
-    input logic id_15
+    input wire id_0,
+    input supply0 id_1,
+    input wor id_2
 );
-  always @(*) begin
-    SystemTFIdentifier;
+  final $display;
+  always @(negedge 1) begin
+    id_4 = 1;
   end
+  assign id_5 = ((id_1));
 endmodule
-`default_nettype wire
+module module_1 (
+    input wand id_0,
+    output tri0 id_1,
+    input wire id_2,
+    output wand id_3,
+    output tri0 id_4,
+    output tri0 id_5,
+    output supply1 id_6,
+    input tri0 id_7,
+    output supply0 id_8,
+    output uwire id_9,
+    input uwire id_10,
+    output wire id_11
+);
+  assign id_6 = id_0;
+  module_0(
+      id_10, id_10, id_2
+  );
+endmodule

@@ -1,20 +1,38 @@
-// Seed: 2791270369
-`timescale 1ps / 1ps
+// Seed: 2604720958
 module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    input logic id_3,
-    input id_4,
-    output id_5,
-    input logic id_6
+    output tri1 id_0,
+    input wand id_1,
+    input uwire id_2,
+    input wand id_3,
+    input wor id_4,
+    input tri1 id_5,
+    output supply1 id_6,
+    input supply0 id_7,
+    input tri1 id_8,
+    input wire id_9,
+    output tri1 id_10
 );
-  type_17(
-      1, 1'b0, 1'b0, 1, id_5, {id_6, id_1} == 1 || id_5, 1
-  ); defparam id_7.id_8 = id_4;
-  logic id_9;
-  assign id_7 = (1'b0) == 1;
-  logic id_10, id_11;
-  logic id_12;
-  logic id_13;
+  assign #id_12 id_0 = id_5;
+  wire id_13;
+endmodule
+module module_1 (
+    output logic id_0,
+    input wor id_1,
+    input wire id_2,
+    input supply1 id_3,
+    input wor id_4,
+    input tri0 id_5,
+    input logic id_6,
+    input uwire id_7,
+    output supply0 id_8,
+    input supply0 id_9,
+    input supply1 id_10
+);
+  initial begin
+    assert (1);
+    id_0 <= {!id_1, id_6};
+  end
+  module_0(
+      id_8, id_7, id_1, id_9, id_7, id_1, id_8, id_9, id_3, id_10, id_8
+  );
 endmodule

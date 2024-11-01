@@ -1,24 +1,36 @@
-// Seed: 3199185870
-`default_nettype id_1
+// Seed: 78125795
 module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    output id_4,
-    input id_5,
-    input logic id_6,
-    output id_7,
-    output id_8
+    input supply0 id_0,
+    input supply1 id_1
 );
-  assign id_8 = id_6 * (id_1) - 1;
-  logic id_9;
-  logic id_10;
-  always @(1'b0) begin
-    if (1) begin
-      SystemTFIdentifier(id_0);
-    end
+  wire id_3;
+  wire id_4;
+  wor  id_5 = 1'b0 || 1;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    output tri0 id_1,
+    input wand id_2,
+    output tri1 id_3,
+    input tri1 id_4,
+    output wor id_5,
+    input wand id_6,
+    output wand id_7,
+    output wand id_8,
+    input supply0 id_9
+);
+  initial begin
+    assert (id_9);
   end
-  logic id_11;
-  defparam id_12.id_13 = id_10;
+  module_0(
+      id_2, id_6
+  );
+  assign id_7 = id_6;
+  wor id_11;
+  wor id_12 = id_11 == id_12;
+  wire id_13;
+  logic [7:0] id_14;
+  assign id_3 = id_0;
+  wire id_15;
+  assign id_14[1] = !id_11;
 endmodule

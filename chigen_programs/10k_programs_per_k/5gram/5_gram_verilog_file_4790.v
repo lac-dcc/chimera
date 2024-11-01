@@ -1,21 +1,30 @@
-// Seed: 4235719638
-`timescale 1 ps / 1 ps
-module module_0 (
+// Seed: 592104087
+module module_0;
+  reg id_1;
+  wire id_2 = $display(1, id_1, id_1 == id_1);
+  supply1 id_3;
+  wire id_4;
+  always @(posedge 1'b0) begin
+    id_1 <= id_3 == 1;
+    id_1 <= id_1;
+  end
+  wire id_5;
+  wire id_6;
+  tri1 id_7 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5
 );
-  output id_4;
-  inout id_3;
-  output id_2;
-  output id_1;
-  initial begin
-    if (1) begin
-      id_3 <= id_3;
-    end else begin
-      id_3 = 1 - 1;
-    end
-  end
-  logic id_4 = 1;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_6;
+  assign id_5 = 1'h0;
+  module_0();
 endmodule

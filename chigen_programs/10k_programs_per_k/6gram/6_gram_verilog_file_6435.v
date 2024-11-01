@@ -1,5 +1,8 @@
-// Seed: 1899501514
-module module_0 (
+// Seed: 3120393363
+module module_0;
+  always @(negedge 1) id_1 = id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,70 +18,25 @@ module module_0 (
     id_13,
     id_14,
     id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32
+    id_16
 );
-  output id_32;
-  output id_31;
-  input id_30;
-  input id_29;
-  output id_28;
-  input id_27;
-  inout id_26;
-  input id_25;
-  inout id_24;
-  inout id_23;
-  input id_22;
-  input id_21;
-  inout id_20;
-  output id_19;
-  inout id_18;
-  output id_17;
-  input id_16;
-  inout id_15;
-  inout id_14;
-  inout id_13;
-  output id_12;
-  output id_11;
-  output id_10;
-  output id_9;
-  inout id_8;
-  input id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  output id_3;
-  inout id_2;
-  inout id_1;
-  reg id_32 = id_16;
-  assign id_32 = id_24;
-  assign id_23[1] = id_13 || 1 == (1 && 1 ? (id_20 - 1) : id_13) || id_1 && 1;
-  logic id_33 = id_5;
-  assign id_20 = 1'h0 == id_7;
-  logic id_34;
-  logic id_35;
-  initial begin
-    id_11 = id_16 * 1;
-    id_8 <= 1;
-  end
-  logic id_36;
-  logic id_37;
-  always @(posedge 1) begin
-    id_11 <= id_24;
-  end
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  module_0();
+  tri1 id_17, id_18, id_19;
+  assign id_1[1] = id_19 ? {1, 1} ^ id_9 : id_9;
 endmodule

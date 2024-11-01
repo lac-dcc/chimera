@@ -1,25 +1,22 @@
-// Seed: 925090723
-module module_0 (
-    input id_0,
-    output id_1,
-    input logic id_2,
-    input id_3,
-    output logic id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    output id_10
+// Seed: 454137827
+module module_0;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input supply1 id_1
 );
-  logic id_11;
-  logic id_12;
-  logic id_13;
-  byte  id_14;
-  assign id_12 = 1'h0 & 1;
-  assign id_1  = 1;
-  type_23(
-      id_10, 1
-  );
-  assign id_12 = 1;
+  assign #(1'b0) id_3 = id_0 + id_0;
+  generate
+    for (id_4 = 1; id_3; id_3 = id_3) begin
+      id_5(
+          .id_0(1), .id_1(id_4), .id_2(!id_3), .id_3(""), .id_4(id_3)
+      );
+      initial begin
+        id_3 <= 1;
+        id_4 <= 1;
+      end
+    end
+  endgenerate
+  module_0();
+  wire id_6;
 endmodule

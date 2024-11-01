@@ -1,35 +1,41 @@
-// Seed: 3642117177
-module module_0 ();
-  always @(negedge 1 or id_0) begin
-    if (id_0) SystemTFIdentifier(id_0, 1, id_0, 1, 1 - id_0);
-  end
-endmodule
-`timescale 1ps / 1 ps
-module module_1 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output reg id_9,
-    input id_10,
-    output logic id_11,
-    input reg id_12
+// Seed: 1909086616
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  reg id_13;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
   initial begin
-    if (id_4) begin
-      id_7 <= 1 - 1 - 1'b0;
-    end else begin
-      id_13 <= #1 1;
-    end
+    id_1 = id_1;
+    id_1 = #1 id_1;
   end
-  always @(*) begin
-    if (id_13) SystemTFIdentifier(id_2);
-    if (1'b0) id_9 <= id_12;
-  end
+  wire id_4;
+  assign id_3 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_7;
+  always @(1'h0 or posedge id_3) force id_2 = id_2;
+  wor  id_8 = 1;
+  wire id_9;
+  wire id_10;
+  module_0(
+      id_2, id_6, id_5
+  );
+  supply0 id_11 = 1;
+  supply1 id_12 = id_3;
 endmodule

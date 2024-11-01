@@ -1,41 +1,41 @@
-// Seed: 3069658107
-`default_nettype id_2
+// Seed: 1950638940
 module module_0 (
-    input id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3
-    , id_30,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7
-    , id_31,
-    input id_8,
-    input logic id_9,
-    input logic id_10,
-    output id_11,
-    output id_12,
-    output logic id_13,
-    input logic id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    input id_18,
-    output logic id_19,
-    output id_20,
-    output id_21,
-    input logic id_22,
-    input id_23,
-    output id_24,
-    input logic id_25,
-    input id_26,
-    input id_27,
-    input logic id_28,
-    output id_29
-    , id_32
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic id_33 = id_22;
-  logic id_34;
-  logic id_35 = id_25;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  generate
+    assign id_6 = id_3;
+  endgenerate
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_6(
+      .id_0(id_2), .id_1(id_2), .id_2(1), .id_3(id_2), .id_4(1 - id_1), .id_5(id_1)
+  ); module_0(
+      id_3, id_1, id_1, id_2, id_1, id_4, id_5, id_1
+  );
 endmodule

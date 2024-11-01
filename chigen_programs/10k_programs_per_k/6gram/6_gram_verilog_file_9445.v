@@ -1,5 +1,34 @@
-// Seed: 355985687
-`timescale 1ps / 1 ps
-module module_0 ();
-  logic id_1 = id_0;
+// Seed: 2800046595
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_3 = 1;
+  wand id_4;
+  always @(posedge id_4 or posedge 1) id_4 = id_4;
+endmodule
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    module_1,
+    id_4,
+    id_5,
+    id_6
+);
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_7 = 1;
+  module_0(
+      id_4, id_2, id_7
+  );
 endmodule

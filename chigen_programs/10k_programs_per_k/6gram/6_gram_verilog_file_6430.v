@@ -1,23 +1,30 @@
-// Seed: 651341807
-localparam id_6 = id_4;
-`timescale 1 ps / 1ps `timescale 1 ps / 1ps
-module module_0 (
+// Seed: 1507287600
+program module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_2
 );
-  output id_6;
-  inout id_5;
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  logic id_6 = 1'b0;
-  always @(negedge id_5 - id_1) begin
-    if (1) id_4 <= id_1 | 1;
-  end
-  logic id_7 = (1);
+  output wire id_2;
+  output wire id_1;
+  wire id_3;
+  always @(posedge 1 or posedge 1'b0 ^ 1) forever id_3 = 1;
+endprogram
+module module_1 #(
+    parameter id_12 = 32'd55,
+    parameter id_13 = 32'd41
+) (
+    input wand id_0,
+    input wand id_1,
+    input wand id_2,
+    input wand id_3,
+    output tri id_4
+    , id_11,
+    input tri0 id_5,
+    output wire id_6,
+    input wire id_7,
+    output wor id_8,
+    output supply1 id_9
+);
+  defparam id_12.id_13 = 1'b0; module_0(
+      id_11, id_11
+  );
 endmodule

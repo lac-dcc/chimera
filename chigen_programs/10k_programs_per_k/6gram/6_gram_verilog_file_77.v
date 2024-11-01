@@ -1,12 +1,32 @@
-// Seed: 2256795265
-`timescale 1ps / 1 ps
+// Seed: 3909396826
 module module_0 (
-    output id_0,
-    input id_1,
-    input wand id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(posedge id_2[1] or id_2) begin
-    id_0 <= 1'b0;
-    SystemTFIdentifier;
-  end
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = id_2;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wor id_1,
+    output tri id_2,
+    input wand id_3,
+    input tri0 id_4,
+    input wor id_5,
+    input supply1 id_6,
+    input tri0 id_7,
+    output uwire id_8,
+    input wor id_9
+);
+  wire id_11;
+  module_0(
+      id_11, id_11, id_11, id_11, id_11
+  );
 endmodule

@@ -1,27 +1,41 @@
-// Seed: 1085679518
-`timescale 1ps / 1 ps
+// Seed: 1626349206
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  type_9(
-      1, (1), id_1
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  initial begin
+    $display(id_1);
+  end
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  wire id_2;
+  module_0(
+      id_2, id_1, id_1, id_2, id_2, id_1, id_2, id_2, id_2, id_2, id_1, id_1, id_1
   );
-  type_0 id_3 (
-      .id_0(id_0),
-      .id_1(id_2),
-      .id_2(~""),
-      .id_3(1)
-  );
-  assign id_2 = id_0;
-  type_10(
-      id_1, 1
-  );
-  assign id_3 = id_3;
-  logic   id_4;
-  logic   id_5;
-  logic   id_6;
-  type_14 id_7;
-  assign id_7 = id_3;
+  assign id_2 = id_1;
 endmodule

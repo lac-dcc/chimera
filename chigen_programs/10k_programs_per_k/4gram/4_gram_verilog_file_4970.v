@@ -1,27 +1,28 @@
-// Seed: 4116621904
-`default_nettype id_7
+// Seed: 1963392363
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    input wand id_0,
+    output tri0 id_1,
+    input supply1 id_2,
+    input tri1 id_3,
+    input wire id_4,
+    output tri1 id_5,
+    output tri0 id_6,
+    output supply0 id_7,
+    output supply1 id_8,
+    input supply1 id_9
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_1 = id_3;
-  logic id_7;
   always @(posedge 1 or posedge 1) begin
-    id_3 <= 'b0;
+    $display(id_9);
   end
-  generate
-    assign id_2 = id_3;
-  endgenerate
+endmodule
+module module_1 (
+    input  uwire id_0,
+    output wor   id_1
+);
+  id_3 :
+  assert property (@(posedge id_0) 1 - 1)
+  else $display(id_0, id_3);
+  module_0(
+      id_3, id_1, id_0, id_0, id_3, id_1, id_3, id_3, id_3, id_3
+  );
 endmodule

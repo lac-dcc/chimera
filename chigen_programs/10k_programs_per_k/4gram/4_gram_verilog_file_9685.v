@@ -1,48 +1,30 @@
-// Seed: 34068339
-`timescale 1 ps / 1ps
-module module_0 (
+// Seed: 4232511908
+module module_0;
+  always @(negedge id_1)
+    if (id_1) begin
+      id_1 = new(1, 1, 1);
+    end else id_1 <= id_1;
+  integer id_3 = 1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    id_6
 );
-  inout id_9;
-  output id_8;
-  output id_7;
-  input id_6;
-  output id_5;
-  inout id_4;
-  input id_3;
-  output id_2;
-  input id_1;
-  logic
-      id_9 = 1,
-      id_10,
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  always
+    if (id_3) id_1 <= 1;
+    else begin
+      $display("" + id_4, id_6, id_4);
+      id_2 <= 1;
+    end
+  module_0();
 endmodule

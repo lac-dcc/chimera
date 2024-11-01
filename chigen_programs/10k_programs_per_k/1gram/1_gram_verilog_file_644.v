@@ -1,40 +1,32 @@
-// Seed: 2510482539
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
-);
-  inout id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  real  id_9;
-  logic id_10;
-  if (1) real id_11, id_12 = id_9;
-  byte id_13;
-  type_1 id_14 (
-      1,
-      1
-  );
-  logic id_15 (
-      .id_0(1'b0),
-      .id_1(1)
-  );
-  always SystemTFIdentifier;
-  logic id_16 = 1;
-  logic id_17;
-  logic id_18;
-  logic id_19;
+// Seed: 3731557236
+module module_0;
+  assign id_1 = 1;
+  assign id_1 = 1;
+  assign id_1 = id_1;
+  supply1 id_2;
+  assign id_1 = id_2;
 endmodule
-`default_nettype id_4
+module module_1 (
+    input uwire id_0,
+    output supply1 id_1,
+    output wor id_2,
+    input wor id_3,
+    output supply1 id_4,
+    output tri id_5
+);
+  id_7 :
+  assert property (@(*) id_7);
+  wire id_8;
+  and (id_1, id_3, id_7, id_8);
+  module_0();
+  wire id_9, id_10, id_11;
+endmodule
+module module_2 (
+    output wor id_0,
+    input tri1 id_1,
+    input wor id_2,
+    input supply1 id_3
+);
+  wor id_5 = id_3, id_6;
+  module_0();
+endmodule

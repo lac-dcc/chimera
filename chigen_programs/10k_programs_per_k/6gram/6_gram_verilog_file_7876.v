@@ -1,31 +1,50 @@
-// Seed: 2181709905
-`timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+// Seed: 4182563840
+module module_0 ();
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  wire id_2;
+  assign id_1 = 1;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output tri  id_1,
+    output tri  id_2,
+    output wire id_3
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_7;
-  logic id_8;
-  genvar id_9;
-  logic id_10;
-  logic id_11;
-  type_18(
-      1'b0 / 1, 1, id_3
-  );
-  logic id_12, id_13;
-  type_20(
-      1 - 1, 1'h0, SystemTFIdentifier(id_7)
-  );
+  wire id_5;
+  module_0();
+  assign id_1 = 1'b0;
+endmodule
+module module_2 (
+    input tri id_0,
+    input supply1 id_1,
+    output logic id_2,
+    output wor id_3,
+    input wand id_4,
+    input tri id_5,
+    input wand id_6,
+    output wor id_7,
+    output tri id_8,
+    output tri0 id_9,
+    output tri id_10,
+    input wire id_11,
+    input tri0 id_12,
+    output supply1 id_13,
+    output wand id_14,
+    input uwire id_15,
+    input logic id_16,
+    output wand id_17,
+    input uwire id_18,
+    output tri id_19,
+    input uwire id_20,
+    output supply1 id_21,
+    input tri id_22
+);
+  always @(id_11, negedge id_4)
+    if (id_16) id_2 <= id_16;
+    else begin
+      #1 id_19 = 1'b0;
+    end
+  module_0();
 endmodule

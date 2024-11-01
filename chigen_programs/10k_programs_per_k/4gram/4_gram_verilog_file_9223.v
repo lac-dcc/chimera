@@ -1,5 +1,4 @@
-// Seed: 2145574924
-`default_nettype wire
+// Seed: 2456671826
 module module_0 (
     id_1,
     id_2,
@@ -20,27 +19,49 @@ module module_0 (
     id_17,
     id_18
 );
-  inout id_18;
-  input id_17;
-  input id_16;
-  inout id_15;
-  input id_14;
-  output id_13;
-  input id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  input id_5;
-  input id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  logic id_18;
-  logic id_19;
-  type_22(
-      1, id_18
+  output wire id_18;
+  output wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_19;
+endmodule
+module module_1 (
+    input uwire id_0
+);
+  assign id_2 = 1;
+  assign id_2 = id_2;
+  module_0(
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2
   );
 endmodule

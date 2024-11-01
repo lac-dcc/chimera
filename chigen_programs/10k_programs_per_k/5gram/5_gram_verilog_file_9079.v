@@ -1,23 +1,31 @@
-// Seed: 4111055415
-module module_0 (
-    input id_0,
-    input id_1,
-    input id_2
-    , id_14,
-    output id_3,
-    input id_4,
-    inout id_5,
-    output logic id_6,
-    input id_7,
-    input logic id_8,
-    input id_9
-    , id_15,
-    input logic id_10,
-    output id_11,
-    output id_12,
-    input id_13
+// Seed: 3711217493
+module module_0 ();
+  wire id_1;
+  tri0 id_2;
+  wor  id_3 = 1 == id_2;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  type_19(
-      id_7, id_10 && id_4
-  );
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  assign id_8 = id_1;
+  module_0();
+  wire id_9;
+  always #1 begin
+    id_9 = ~id_1;
+  end
 endmodule

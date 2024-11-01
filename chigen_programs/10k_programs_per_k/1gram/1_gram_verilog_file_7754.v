@@ -1,17 +1,95 @@
-// Seed: 596235970
-`define pp_10 0
-`define pp_11 0
+// Seed: 667934792
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output logic id_2,
-    output id_3,
-    input logic id_4,
-    output id_5,
-    output id_6,
-    output logic id_7,
-    output id_8,
-    output id_9
+    input tri0 id_0,
+    input wand id_1,
+    input wire id_2,
+    input tri1 id_3,
+    output wor id_4,
+    input wand id_5,
+    output tri1 id_6,
+    output wand id_7,
+    input supply1 id_8,
+    output tri0 id_9,
+    input wor id_10,
+    output tri1 id_11,
+    output tri0 id_12,
+    output tri1 id_13,
+    input supply1 id_14,
+    output tri0 id_15,
+    input wand id_16,
+    output wor id_17,
+    input supply0 id_18,
+    output uwire id_19
 );
-  assign id_8 = (1);
+  wire id_21;
+  wire id_22;
+  wire id_23;
+endmodule
+module module_1 (
+    output wor id_0,
+    output uwire id_1,
+    input wor id_2,
+    input tri id_3,
+    input tri id_4,
+    output supply0 id_5,
+    output uwire id_6,
+    output wand id_7,
+    output uwire id_8,
+    input uwire id_9,
+    output tri id_10,
+    input supply1 id_11,
+    input tri id_12,
+    output tri1 id_13,
+    output tri id_14,
+    input wire id_15,
+    output tri1 id_16,
+    input uwire id_17,
+    input supply0 id_18,
+    output supply0 id_19,
+    input supply1 id_20,
+    output supply0 id_21,
+    output tri0 id_22,
+    input tri id_23,
+    input supply0 id_24,
+    input tri0 id_25,
+    output logic id_26,
+    output wor id_27,
+    input wor id_28,
+    input supply0 id_29,
+    input wand id_30,
+    input wand id_31,
+    input tri0 id_32,
+    input tri0 id_33,
+    input wand id_34,
+    input tri1 id_35,
+    output tri1 id_36,
+    output wor id_37,
+    input wand id_38,
+    output supply0 id_39,
+    input tri0 id_40
+);
+  always_comb id_26 <= 1;
+  module_0(
+      id_40,
+      id_9,
+      id_17,
+      id_40,
+      id_27,
+      id_32,
+      id_36,
+      id_10,
+      id_25,
+      id_7,
+      id_11,
+      id_22,
+      id_37,
+      id_6,
+      id_17,
+      id_21,
+      id_25,
+      id_13,
+      id_20,
+      id_13
+  );
+  tri1 id_42 = id_9, id_43, id_44;
 endmodule

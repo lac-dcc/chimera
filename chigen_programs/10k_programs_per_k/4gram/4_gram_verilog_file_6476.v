@@ -1,42 +1,58 @@
-// Seed: 1167478854
-module module_0 (
-    input id_0,
-    output logic id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    output reg id_5,
-    output id_6
+// Seed: 3682846100
+module module_0;
+  assign id_1 = id_1 ? id_1 : 1'b0;
+  id_2(
+      .id_0(1),
+      .id_1(),
+      .id_2(0),
+      .id_3(id_1),
+      .id_4(id_1),
+      .id_5(1),
+      .id_6(id_1),
+      .id_7((id_1 ? 1 : id_1)),
+      .id_8(1),
+      .id_9(1),
+      .id_10(1'd0),
+      .id_11(id_1),
+      .id_12(1),
+      .id_13(1),
+      .id_14(1 ^ id_1),
+      .id_15(1),
+      .id_16(1),
+      .id_17(id_1),
+      .id_18(),
+      .id_19(1),
+      .id_20(1),
+      .id_21(1),
+      .id_22(id_1),
+      .id_23(1'b0)
+  );
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic id_7;
-  assign id_6[1] = 1;
-  logic id_8;
-  always @(posedge 1) id_5 <= id_0;
-  logic id_9 = id_7;
-  logic id_10 = id_8;
-  type_21 id_11 (
-      .id_0(id_9),
-      .id_1(1),
-      .id_2(1),
-      .id_3(1),
-      .id_4(1),
-      .id_5(id_0)
-  );
-  type_22 id_12 (
-      .id_0 (),
-      .id_1 (id_9),
-      .id_2 (1),
-      .id_3 (id_8),
-      .id_4 (id_6),
-      .id_5 (1),
-      .id_6 (1),
-      .id_7 (1'h0),
-      .id_8 (id_5),
-      .id_9 (1),
-      .id_10(id_9)
-  );
-  logic id_13;
-  logic id_14;
-  defparam id_15.id_16 = 1;
-  assign id_8 = 1;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  always @(posedge 1 or posedge id_3 !== 1 - id_6)
+    if (1'b0)
+      #1 begin
+        id_4 <= id_5;
+      end
+    else id_6 <= id_7 & 1;
+  xnor (id_1, id_2, id_3, id_5, id_6, id_7, id_8);
+  assign id_1 = id_8;
+  module_0();
 endmodule

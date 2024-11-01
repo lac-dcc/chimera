@@ -1,4 +1,97 @@
-// Seed: 75613029
-`define pp_0 0
-`define pp_1 0
-`undef pp_2
+// Seed: 3259823105
+module module_0;
+endmodule
+module module_1 (
+    id_1
+);
+  inout wire id_1;
+  tri1 id_2 = 1;
+  module_0();
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input supply1 id_1,
+    input tri id_2,
+    output wand id_3,
+    input uwire id_4,
+    output uwire id_5,
+    input wire id_6,
+    input wand id_7
+);
+  wire id_9;
+  assign id_5 = 1;
+  module_0();
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21
+);
+  output wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_7 = 1'b0;
+  wand id_22;
+  wire id_23;
+  assign id_19 = 1'b0;
+  logic [7:0] id_24;
+  final id_9 <= id_14;
+  assign id_22 = 1;
+  module_0();
+  wire id_25;
+  wire id_26;
+  always
+  fork : id_27
+    id_8 <= id_14;
+  join_none
+  wire id_28;
+  assign id_6 = 1'b0;
+  id_29(
+      .id_0(1)
+  ); id_30(
+      .id_0(id_1), .id_1(1'b0), .id_2(id_24)
+  );
+  final $display(id_8, id_4, 1'b0, id_8);
+  tri0 id_31;
+  assign id_24[1] = id_31;
+  wire id_32;
+  assign id_31 = 1;
+  wire id_33;
+  assign id_19 = id_33;
+endmodule

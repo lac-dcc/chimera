@@ -1,34 +1,61 @@
-// Seed: 3364179467
+// Seed: 2256370207
 module module_0 (
-    input  id_0,
-    input  id_1,
-    input  id_2,
-    input  id_3,
-    output id_4
-    , id_7,
-    input  id_5,
-    output id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    module_0
 );
-  logic id_8;
-  assign id_6 = 1;
-  logic id_9;
-  logic id_10;
-  always @(id_2 or {id_3{id_8}}) SystemTFIdentifier(id_10, 1'h0);
-  always @(posedge id_2 or negedge 1) id_9 = 1 + 1'b0;
-  logic id_11;
-  logic id_12 = id_2, id_13;
-  type_23(
-      id_4, id_5 == 1, 1
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  tri0 id_6;
+  assign id_3 = 1 - id_3;
+  wire id_7;
+  assign id_5 = 1;
+  assign id_6 = (1) ? 1'h0 : 1'd0;
+endmodule
+module module_1 ();
+  wire id_2;
+  module_0(
+      id_2, id_2, id_2, id_2, id_2
   );
-  assign id_10 = id_7[1] ? 1 : 1'h0;
-  logic id_14;
-  type_25 id_15 (
-      .id_0(SystemTFIdentifier),
-      .id_1((id_8)),
-      .id_2(id_11)
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri1 id_1,
+    output wor id_2,
+    output wire id_3,
+    output wire id_4,
+    output uwire id_5,
+    output tri id_6,
+    output wor id_7,
+    input wor id_8,
+    input uwire id_9,
+    input tri0 id_10
+);
+  id_12(
+      .id_0(1), .id_1(1)
   );
-  assign id_4 = id_13;
-  logic id_16;
-  logic id_17;
-  assign id_8 = 1'h0;
+endmodule
+module module_3 (
+    output tri0 id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    input supply1 id_3,
+    input tri id_4,
+    input supply0 id_5,
+    output tri0 id_6
+);
+  reg id_8, id_9;
+  generate
+    always @(*) begin
+      id_9 <= 1;
+    end
+  endgenerate
+  module_2(
+      id_3, id_1, id_0, id_0, id_6, id_6, id_6, id_6, id_3, id_2, id_4
+  );
 endmodule

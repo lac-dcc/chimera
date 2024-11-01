@@ -1,46 +1,39 @@
-// Seed: 1593299940
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+// Seed: 1339832367
+module module_0;
+  initial begin
+    id_1 <= 1;
+  end
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri0 id_1,
+    input wand id_2,
+    input supply0 id_3
 );
-  input id_21;
-  output id_20;
-  output id_19;
-  output id_18;
-  input id_17;
-  input id_16;
-  inout id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  input id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
+  assign id_5 = id_0;
+  wire id_6;
+  module_0();
+endmodule
+module module_2 (
+    input supply1 id_0,
+    inout supply0 id_1,
+    input tri1 id_2
+);
+  wire id_4;
+  wire id_5, id_6;
+  and (id_1, id_2, id_4, id_5, id_6, id_7);
+  wire id_7;
+  module_0();
+endmodule
+module module_3 (
+    input tri0 id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    output tri1 id_4,
+    output tri id_5
+);
+  assign id_4 = 1;
+  assign id_4 = 1;
+  module_0();
 endmodule

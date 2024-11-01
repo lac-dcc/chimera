@@ -1,37 +1,67 @@
-// Seed: 3867566732
-module module_0 #(
-    parameter id_22 = 32'd62
-) (
-    output logic id_0,
-    output logic id_1,
-    output id_2,
-    input id_3,
-    input wand id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    output id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12
-    , id_21, _id_22,
-    input logic id_13,
-    input logic id_14,
-    output logic id_15,
-    input id_16,
-    input id_17,
-    input id_18,
-    input id_19,
-    output id_20
+// Seed: 252189627
+module module_4 (
+    output uwire id_0,
+    input wire id_1,
+    input wor id_2,
+    output uwire id_3,
+    output tri1 id_4,
+    input wire id_5,
+    output tri0 id_6,
+    input tri0 id_7,
+    input tri0 module_0,
+    output wire id_9,
+    input uwire id_10,
+    output supply0 id_11,
+    output wand id_12,
+    input wor id_13
+    , id_16,
+    input tri1 id_14
 );
-  assign id_15 = id_4[1];
-  logic id_23;
-  specify
-    (posedge id_24 => (id_25 +: 1)) = (1, id_24);
-    if ((id_21[1 : SystemTFIdentifier(
-        id_22
-    )])) (posedge id_26 => (id_27 +: id_10)) = ((1) + 1'h0, id_14  : 1  : id_7);
-    $setup(id_28, negedge id_29, id_23);
-  endspecify
+  assign id_4 = 1;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input tri0 id_1
+    , id_23,
+    output tri1 id_2,
+    input tri0 id_3,
+    output supply0 id_4,
+    output wor id_5,
+    output supply0 id_6,
+    output supply0 id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    input tri id_10,
+    output wor id_11,
+    input supply1 id_12,
+    input supply1 id_13,
+    input wor id_14
+    , id_24,
+    input wor id_15,
+    input wor id_16
+    , id_25,
+    input wire id_17,
+    input wor id_18,
+    input supply0 id_19,
+    input supply0 id_20,
+    output wire id_21
+);
+  wire id_26;
+  module_0(
+      id_2,
+      id_10,
+      id_8,
+      id_5,
+      id_5,
+      id_18,
+      id_2,
+      id_8,
+      id_17,
+      id_21,
+      id_18,
+      id_5,
+      id_21,
+      id_16,
+      id_10
+  );
 endmodule

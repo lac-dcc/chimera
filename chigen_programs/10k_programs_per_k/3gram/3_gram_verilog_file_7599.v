@@ -1,20 +1,44 @@
-// Seed: 1828942500
-`default_nettype id_1
-`define pp_2 0
-`define pp_3 0
-`define pp_4 0
+// Seed: 2449780359
 module module_0 (
-    input logic id_0,
-    output id_1
+    id_1
 );
-  assign id_1 = id_0;
-  logic id_2;
-  type_6(
-      1, id_0, 1, id_1.id_0
-  );
-  always @(posedge id_2) begin
-    id_2 = id_0 + 1'b0;
-    SystemTFIdentifier(1, 1'b0);
+  output wire id_1;
+  wand id_2;
+  reg  id_3;
+  assign id_3 = 1'h0;
+  always @(id_3)
+    @(id_2 - 1) begin
+      id_3 <= 1;
+      $display(1, 1, 1, 1);
+    end
+  reg  id_4;
+  wire id_5;
+  always id_4 <= id_4 | 1;
+  assign id_1 = 1;
+  assign id_4 = (id_3);
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  final begin
+    #(1) disable id_9;
   end
-  logic id_3;
+  module_0(
+      id_3
+  );
 endmodule

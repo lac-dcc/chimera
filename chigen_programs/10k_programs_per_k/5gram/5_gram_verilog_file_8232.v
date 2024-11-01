@@ -1,5 +1,12 @@
-// Seed: 2180119296
-module module_0 (
+// Seed: 1133449033
+module module_0 ();
+  always @(posedge 1 or posedge 1) id_1 = 1 < id_1;
+  `define pp_2 0
+  wire id_3;
+  assign `pp_2 = 1;
+  supply1 module_0 = id_1;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -10,31 +17,23 @@ module module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16
+    id_11
 );
-  output id_16;
-  output id_15;
-  output id_14;
-  output id_13;
-  output id_12;
-  input id_11;
-  inout id_10;
-  inout id_9;
-  inout id_8;
-  output id_7;
-  output id_6;
-  output id_5;
-  input id_4;
-  inout id_3;
-  output id_2;
-  inout id_1;
-  logic id_16;
-  type_18(
-      1, id_10, id_14
-  );
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_12;
+  assign id_10 = id_9;
+  assign id_4  = !id_6;
+  wire id_13;
+  timeunit 1ps; module_0();
+  wire id_14;
 endmodule

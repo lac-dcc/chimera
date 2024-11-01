@@ -1,55 +1,32 @@
-// Seed: 4268017537
-module module_0 (
-    input id_0,
-    output id_1,
-    output logic id_2,
-    input logic id_3,
-    output id_4,
-    output id_5,
-    input id_6,
-    input wor id_7,
-    output id_8,
-    output id_9,
-    output id_10,
-    output id_11,
-    input id_12,
-    output id_13,
-    input id_14,
-    output id_15,
-    output id_16,
-    output id_17,
-    output logic id_18
+// Seed: 1009487460
+module module_0;
+  wire id_1;
+  assign id_1 = 1 ? 1 : 1'b0;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    output supply1 id_1,
+    output supply0 id_2,
+    output wire id_3,
+    input uwire id_4,
+    input uwire id_5,
+    output logic id_6,
+    input supply0 id_7,
+    input wor id_8,
+    input wire id_9,
+    input supply1 id_10,
+    output wor id_11,
+    input tri0 id_12,
+    output uwire id_13,
+    input logic id_14,
+    output wand id_15,
+    input tri1 id_16,
+    input tri id_17
 );
-  logic id_19;
-  logic id_20, id_21;
-  logic id_22;
-  assign id_15 = 1 == 1;
-  always @(posedge id_7[1'h0] < !(id_22) or posedge id_12) SystemTFIdentifier;
-  assign id_13 = 1;
-  assign id_19 = id_21 == ("");
-  logic
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30,
-      id_31,
-      id_32,
-      id_33,
-      id_34,
-      id_35,
-      id_36,
-      id_37,
-      id_38,
-      id_39,
-      id_40,
-      id_41,
-      id_42,
-      id_43,
-      id_44,
-      id_45;
-  assign id_28 = id_6;
+  tri id_19 = 1 + id_9;
+  assign id_13 = id_4;
+  always id_6 <= #1 id_14;
+  module_0();
 endmodule

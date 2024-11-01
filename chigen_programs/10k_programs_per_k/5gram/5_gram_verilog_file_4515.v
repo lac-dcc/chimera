@@ -1,18 +1,48 @@
-// Seed: 3220996667
-`define pp_4 0
-`define pp_5 0
-`timescale 1ps / 1 ps `timescale 1 ps / 1 ps
+// Seed: 3506341465
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output tri0 id_0,
+    input  wand id_1,
+    output tri1 id_2,
+    input  wire id_3,
+    output wand id_4,
+    input  wire id_5,
+    output tri0 id_6,
+    output tri0 id_7,
+    output tri0 module_0,
+    input  wand id_9
 );
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_4;
-  assign id_4 = id_2 ? 1 : id_4;
-  always @(posedge id_4 or posedge 1) id_1 = 1 | id_3;
+  always @(posedge id_3) id_7 = 1;
+  module_2(
+      id_0, id_1, id_1, id_0, id_5, id_3
+  );
+endmodule
+module module_0 (
+    output tri0  id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    output wire  module_1
+);
+  wire id_5;
+  module_0(
+      id_0, id_2, id_0, id_2, id_0, id_1, id_0, id_0, id_0, id_2
+  );
+endmodule
+module module_2 (
+    output wand id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    output uwire id_3,
+    input tri id_4,
+    input wor id_5
+);
+  id_7(
+      .id_0(id_4), .id_1(id_5 == 1)
+  );
+  reg id_8 = 1;
+  reg id_9 = (id_8);
+  generate
+    always @(posedge id_9 or 1) begin
+      id_9 <= ~id_8;
+    end
+  endgenerate
 endmodule

@@ -1,46 +1,39 @@
-// Seed: 2064159830
-module module_0 (
+// Seed: 1710878130
+macromodule module_0;
+  assign id_1 = id_1;
+  genvar id_2;
+  always id_2 <= id_1;
+  wire id_3, id_4;
+endmodule
+module module_1 (
+    input tri0  id_0,
+    input uwire id_1,
+    input tri   id_2,
+    input wand  id_3
+);
+  module_0();
+  wire id_5;
+  wire id_6, id_7;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6,
+    id_7
 );
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_5;
-endmodule
-module module_1;
-  type_6(
-      id_3, 1
-  );
-  logic id_5;
-  assign id_1 = id_3 / 1 * id_2;
-endmodule
-module module_2 ();
-  logic id_5, id_6;
-  assign id_5 = (1'd0);
-  initial id_6 = 1;
-  assign id_2 = id_2;
-  tri id_7;
-  type_13(
-      .id_0(1'b0), .id_1(0)
-  );
-  type_14 id_8 (
-      .id_0(id_4),
-      .id_1()
-  );
-  assign id_7 = id_3;
-  assign id_5 = id_5;
-  type_15(
-      .id_0(1), .id_1(id_3)
-  ); type_16(
-      .id_0(id_5)
-  );
-  assign id_5 = id_6;
-  assign id_1 = id_7[1'b0 : 1];
-  logic id_9 = 1, id_10;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_8, id_9, id_10;
+  assign id_1 = 1'b0;
+  module_0();
+  assign id_4 = 1'b0;
+  wire id_11;
 endmodule

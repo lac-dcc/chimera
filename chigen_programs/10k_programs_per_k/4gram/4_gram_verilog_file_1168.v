@@ -1,5 +1,5 @@
-// Seed: 4068742117
-module module_0 (
+// Seed: 3963429863
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,29 +15,59 @@ module module_0 (
     id_13,
     id_14,
     id_15,
-    id_16
+    id_16,
+    id_17,
+    module_0,
+    id_18,
+    id_19
 );
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  output id_9;
-  input id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  inout id_3;
-  input id_2;
-  input id_1;
-  type_17(
-      1 + 1 - 1, 1
-  );
-  logic id_16;
-  type_18(
-      1 - id_1, 1, 1
+  output wire id_20;
+  inout wire id_19;
+  output wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_21, id_22;
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  id_2 :
+  assert property (@(posedge 1) id_2)
+  else $display(1);
+  module_0(
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_2
   );
 endmodule

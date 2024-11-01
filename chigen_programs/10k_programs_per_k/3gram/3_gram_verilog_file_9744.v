@@ -1,58 +1,61 @@
-// Seed: 3649693051
-`celldefine
+// Seed: 2196468324
 module module_0 (
-    output logic id_0,
-    input id_1,
-    output reg id_2
-    , id_26,
-    output id_3,
-    input id_4,
-    output id_5,
-    input id_6,
-    input reg id_7,
-    input logic id_8,
-    input logic id_9,
-    input id_10,
-    input logic id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    output reg id_15,
-    input id_16,
-    input id_17,
-    output id_18,
-    output logic id_19,
-    output id_20,
-    input id_21,
-    output id_22,
-    input id_23,
-    input id_24,
-    input id_25
+    input wand id_0,
+    input uwire id_1
+    , id_18,
+    input supply0 id_2
+    , id_19,
+    input supply0 id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    output supply0 id_6,
+    input tri0 id_7,
+    input tri id_8,
+    output tri id_9,
+    output wor id_10,
+    output uwire id_11,
+    output wor id_12,
+    input uwire id_13,
+    input uwire id_14,
+    output tri id_15,
+    output supply1 id_16
 );
-  always @(posedge id_14 or posedge 1)
-    if (id_9) begin
-      if (id_11) begin
-        SystemTFIdentifier(id_14);
-        for (id_15 = id_21; 1; id_20 = (id_14 ? id_14 : 1)) begin
-          id_15 <= id_23;
-        end
-        id_22 <= 1;
-        #1;
-        if (1) id_22 <= id_16;
-        else begin
-          id_2 <= id_23;
-        end
-      end else begin
-        id_20 <= 1'b0;
-        if (1) begin
-          id_3 <= id_26;
-        end else begin
-          id_19 = id_6;
-        end
-      end
-    end else id_3 <= id_7;
-  type_36(
-      id_18, id_20
+  final $display;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output wor id_1,
+    output wand id_2,
+    input wire id_3,
+    input uwire id_4
+    , id_12,
+    output uwire id_5,
+    input supply0 id_6,
+    input wand id_7,
+    input logic id_8,
+    output uwire id_9,
+    output supply1 id_10
+);
+  always @(1 or posedge (1))
+    if (1) id_9 = 1;
+    else force id_2 = id_8;
+  module_0(
+      id_4,
+      id_4,
+      id_4,
+      id_6,
+      id_6,
+      id_7,
+      id_5,
+      id_7,
+      id_6,
+      id_0,
+      id_0,
+      id_1,
+      id_5,
+      id_7,
+      id_3,
+      id_0,
+      id_5
   );
-  logic id_27;
 endmodule

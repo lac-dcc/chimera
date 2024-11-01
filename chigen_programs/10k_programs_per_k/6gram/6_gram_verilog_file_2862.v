@@ -1,13 +1,35 @@
-// Seed: 2419234684
-`define pp_0 0
-task `pp_0;
-  reg `pp_0;
-  reg [id_1 : id_1] `pp_0;
-  event [1 'b0 : id_2] id_1;
-  reg [1 : `pp_0] id_1;
-  begin
-    if ("" == `pp_0) begin
-      id_1 = id_2;
+// Seed: 1471775616
+module module_0 ();
+  reg id_1;
+  initial begin
+    if (1) begin
+      `define pp_2 0
+      `pp_2 <= id_1;
+      $display("", 1'b0);
+      force id_1 = (0);
     end
   end
-endtask
+  supply0 id_3;
+  assign id_3 = 1'b0;
+endmodule
+module module_0 (
+    output supply1 id_0,
+    input uwire id_1,
+    output logic id_2,
+    input wand id_3,
+    input tri module_1,
+    output wor id_5
+);
+  initial begin
+    if (id_1) begin
+      if (1) assert (id_4 - id_3);
+      disable id_7;
+    end
+    begin
+      if (1) begin
+        if (!id_4) id_2 <= 1'b0;
+      end else disable id_8;
+    end
+  end
+  module_0();
+endmodule

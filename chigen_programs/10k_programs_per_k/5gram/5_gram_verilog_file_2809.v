@@ -1,28 +1,40 @@
-// Seed: 130612226
-`define pp_17 0
-`define pp_18 0
-`define pp_19 0
-`define pp_20 0
-`define pp_21 0
-`define pp_22 0
-`timescale 1ps / 1 ps
-module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    input id_9,
-    output id_10,
-    input logic id_11,
-    input id_12,
-    input logic id_13,
-    input logic id_14,
-    input id_15,
-    input id_16
+// Seed: 3927320409
+module module_0 #(
+    parameter id_10 = 32'd85,
+    parameter id_11 = 32'd29
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_9;
+  defparam id_10.id_11 = 1'h0;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input uwire id_1,
+    input supply0 id_2,
+    input tri id_3,
+    output supply1 id_4,
+    output tri id_5
+);
+  wire id_7;
+  final $display(1);
+  assign id_5 = id_2;
+  module_0(
+      id_7, id_7, id_7, id_7, id_7, id_7, id_7, id_7
+  );
 endmodule

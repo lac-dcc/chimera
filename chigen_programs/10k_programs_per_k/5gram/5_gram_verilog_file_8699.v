@@ -1,26 +1,30 @@
-// Seed: 2459660491
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+// Seed: 694720279
+module module_0 #(
+    parameter id_1 = 32'd83,
+    parameter id_2 = 32'd86
 );
-  inout id_4;
-  inout id_3;
-  input id_2;
-  inout id_1;
-  assign id_3 = id_4;
-  always @(posedge 1) begin
-    #1;
-    if (1'h0) begin
-      if ("") id_1 <= 1;
-      else id_1 <= id_4;
-    end
-    id_4 <= id_3;
-    id_4 <= id_1 ? 1 : id_3;
-    if (id_2) id_3 = id_2;
-  end
-  generate
-    always @(1) {id_2, id_3, id_3, 1} = 1;
-  endgenerate
+  defparam id_1.id_2 = 1;
+endmodule
+module module_1 (
+    input  tri0 id_0,
+    output wor  id_1,
+    input  tri  id_2,
+    output tri  id_3,
+    input  tri1 id_4,
+    input  tri1 id_5,
+    output wire id_6
+);
+  wire id_8;
+  module_0();
+endmodule
+module module_2 (
+    output uwire id_0,
+    output tri   id_1,
+    output wor   id_2,
+    output wire  id_3
+);
+  reg  id_6;
+  wire id_7;
+  always @(id_6, 1) id_6 <= 1;
+  module_0();
 endmodule

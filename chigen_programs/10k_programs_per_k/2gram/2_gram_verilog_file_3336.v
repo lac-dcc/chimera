@@ -1,36 +1,52 @@
-// Seed: 1119231987
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    output id_4,
-    output id_5,
-    input logic id_6,
-    output id_7,
-    output id_8,
-    output id_9,
-    output id_10,
-    input id_11,
-    output logic id_12,
-    input logic id_13,
-    output id_14,
-    input logic id_15,
-    input id_16,
-    input logic id_17,
-    output logic id_18,
-    input logic id_19,
-    input id_20,
-    input logic id_21,
-    output logic id_22,
-    input id_23,
-    output id_24
+// Seed: 826862238
+module module_0;
+  id_1 :
+  assert property (@(1) 1)
+  else;
+  assign id_1 = id_1;
+  assign id_1 = ~id_1;
+  wire id_2;
+  wire id_3;
+  id_4 :
+  assert property (@(posedge 1 or posedge 1) 1'b0)
+  else;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17
 );
-  logic id_25;
-  genvar id_26;
-  logic id_27;
-  assign id_5[1'b0] = 1;
-  type_45 id_28 (.id_0(id_24));
-  logic id_29;
-  logic id_30;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_18;
+  module_0();
 endmodule

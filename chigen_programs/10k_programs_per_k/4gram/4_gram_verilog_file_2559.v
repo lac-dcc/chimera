@@ -1,25 +1,32 @@
-// Seed: 4168917828
-`define pp_14 0
-`timescale 1ps / 1ps
+// Seed: 3526438435
 module module_0 (
-    output id_0,
-    input id_1,
-    input id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input logic id_9,
-    output wand id_10,
-    input id_11
-    , id_14,
-    output logic id_12,
-    output logic id_13
+    input wor id_0,
+    input wire id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input supply0 id_4
 );
-  assign id_10[1] = (1) ? id_9 : 1 ? id_11 : id_3;
-  type_20(
-      id_1, id_13, SystemTFIdentifier, id_12, id_5 ^ 1'b0, 1
+  wire id_6;
+  wire id_7;
+  assign id_7 = !1;
+endmodule
+module module_0 (
+    input tri1 module_1,
+    input supply1 id_1,
+    output uwire id_2,
+    output tri0 id_3,
+    output uwire id_4,
+    input tri id_5,
+    input wor id_6,
+    input wor id_7,
+    input wor id_8,
+    input wor id_9,
+    input wor id_10,
+    input wand id_11,
+    input supply1 id_12
+);
+  wire id_14;
+  module_0(
+      id_12, id_5, id_8, id_5, id_12
   );
 endmodule

@@ -1,55 +1,34 @@
-// Seed: 3386602480
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23
+// Seed: 2112063793
+module module_0;
+  always_comb @(*) id_1 <= 1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 (
+    input wand id_0
+    , id_18,
+    output tri id_1,
+    input wire id_2,
+    output wor id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    output wand id_6,
+    input supply1 id_7,
+    output uwire id_8,
+    input uwire id_9,
+    output wor id_10,
+    input wor id_11,
+    input uwire id_12,
+    input uwire id_13,
+    input uwire id_14,
+    output supply0 id_15
+    , id_19, id_20,
+    output supply0 id_16
 );
-  inout id_23;
-  inout id_22;
-  output id_21;
-  inout id_20;
-  input id_19;
-  inout id_18;
-  inout id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  input id_12;
-  output id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  output id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  input id_2;
-  output id_1;
-  type_25(
-      1'd0, 1
-  );
-  always @(posedge id_20 && id_13);
-  defparam id_23.id_24 = id_3;
+  wire id_21;
+  supply1 id_22 = 1 - 1;
+  tri id_23 = id_22;
+  module_0();
+  assign id_22 = id_7;
+  assign id_20 = id_9;
 endmodule

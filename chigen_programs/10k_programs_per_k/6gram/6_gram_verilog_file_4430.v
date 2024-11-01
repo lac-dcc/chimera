@@ -1,32 +1,35 @@
-// Seed: 3027917313
-`timescale 1 ps / 1ps
-module module_0 #(
-    parameter id_15 = 32'd16
-) (
-    input logic id_0,
-    input logic id_1,
-    input id_2,
-    output logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input id_9,
-    input id_10,
-    input id_11,
-    output id_12,
-    output id_13
-    , id_14
+// Seed: 661372739
+module module_0 (
+    output tri0 id_0,
+    output tri1 id_1,
+    output wor  id_2,
+    input  wire id_3,
+    input  tri0 id_4,
+    input  wire id_5,
+    output wor  id_6,
+    output wire id_7
 );
-  assign id_12[1 : 1] = 1 - id_1;
-  logic _id_15;
-  logic id_16;
-  logic id_17;
-  logic id_18;
-  logic id_19;
-  logic id_20 = 1;
-  type_31(
-      1'h0, id_13[1 : SystemTFIdentifier(id_15)], 1 + 1
+  assign id_7 = id_4 < id_3;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    output uwire id_1,
+    input wire id_2,
+    input tri0 id_3,
+    input uwire id_4,
+    input tri id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    input supply0 id_8,
+    output logic id_9
+);
+  assign id_1 = 1'd0 ? 1 : 1;
+  assign id_1 = 1;
+  assign id_9 = id_5 > id_6;
+  always @* begin
+    id_9 <= 1'h0;
+  end
+  module_0(
+      id_1, id_1, id_1, id_7, id_5, id_6, id_1, id_1
   );
 endmodule

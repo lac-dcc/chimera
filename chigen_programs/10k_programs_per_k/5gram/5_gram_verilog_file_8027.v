@@ -1,37 +1,27 @@
-// Seed: 90187072
-`timescale 1ps / 1ps `resetall `timescale 1ps / 1 ps
+// Seed: 926355997
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    input wor id_0,
+    input supply0 id_1
 );
-  output id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  input id_9;
-  output id_8;
-  inout id_7;
-  input id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  type_16 id_13 ();
-  type_17(
-      id_6[1], id_5, 1
+endmodule
+module module_1 (
+    output supply0 id_0,
+    input wire id_1,
+    input wor id_2,
+    input logic id_3
+    , id_6,
+    input tri0 id_4
+);
+  reg id_7;
+  always_latch @(posedge id_2) id_7 <= #1 id_3;
+  assign id_0 = id_6;
+  wor id_8 = id_4;
+  supply0 id_9 = 1;
+  supply1 id_10, id_11;
+  wire id_12;
+  module_0(
+      id_10, id_10
   );
-  string id_14 = "";
-  logic  id_15;
+  assign id_11 = id_6;
+  tri id_13 = id_8;
 endmodule

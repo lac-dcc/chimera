@@ -1,28 +1,33 @@
-// Seed: 1033421431
+// Seed: 3216902858
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7
+    id_6
 );
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  type_8 id_7 (
-      .id_0(1),
-      .id_1(id_4),
-      .id_2(1),
-      .id_3(id_1),
-      .id_4(id_5),
-      .id_5(1),
-      .id_6(),
-      .id_7(id_2)
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  reg id_7;
+  function id_8;
+    id_9(.id_0(id_4 - id_6), .id_1(id_3), .id_2(1), .id_3(1), .id_4(), .id_5(1'h0), .id_6(id_8[1]),
+         .id_7(id_4));
+    begin
+      id_7 <= !1'b0;
+    end
+  endfunction
+endmodule
+module module_1 (
+    input tri1 id_0
+);
+  wire id_2;
+  wire id_3;
+  module_0(
+      id_3, id_2, id_2, id_2, id_3, id_2
   );
 endmodule

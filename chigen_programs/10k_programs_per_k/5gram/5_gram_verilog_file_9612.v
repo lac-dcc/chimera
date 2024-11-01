@@ -1,12 +1,38 @@
-// Seed: 494076952
-`timescale 1ps / 1ps
-module module_0 (
+// Seed: 2526179180
+module module_0;
+  tri id_1;
+  assign id_1 = 1;
+  wire id_2;
+endmodule
+module module_1 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  inout id_3;
-  input id_2;
-  input id_1;
-  assign id_3 = 1;
+  input wire id_8;
+  output wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  final begin
+    $display(id_2);
+  end
+  module_0();
+  initial begin
+    if (id_8) id_4 <= id_6;
+    else begin
+      if (id_8) id_3 <= 1;
+      else begin
+        id_5 <= id_2;
+      end
+    end
+  end
 endmodule

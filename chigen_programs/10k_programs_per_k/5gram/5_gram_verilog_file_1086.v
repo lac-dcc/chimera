@@ -1,25 +1,29 @@
-// Seed: 3779053996
+// Seed: 63134220
 module module_0 (
-    input logic id_0,
-    output id_1,
-    input id_2,
-    input reg id_3,
-    output id_4,
-    input id_5,
-    output id_6,
-    input id_7,
-    output logic id_8,
-    input id_9,
-    output reg id_10,
-    output logic id_11,
-    input logic id_12
+    input supply1 id_0,
+    input tri id_1
 );
-  always @(negedge (!id_9)) begin
-    id_11 = 1;
-    id_4  = 1'b0;
-    id_10 <= (id_3);
-  end
-  logic id_13;
-  logic id_14;
-  defparam id_15.id_16 = id_15;
+  assign id_3 = 1'b0;
+  assign id_3 = id_1 & id_0;
+  tri0 id_4;
+  assign id_3 = id_4;
+endmodule
+module module_1 (
+    output supply1 id_0,
+    input tri id_1,
+    input uwire id_2,
+    input supply1 id_3,
+    output tri id_4,
+    input supply0 id_5,
+    output uwire id_6,
+    input supply0 id_7,
+    input wand id_8,
+    input tri0 id_9
+);
+  id_11 :
+  assert property (@(posedge 1 == id_1) id_3)
+  else $display;
+  module_0(
+      id_2, id_7
+  );
 endmodule

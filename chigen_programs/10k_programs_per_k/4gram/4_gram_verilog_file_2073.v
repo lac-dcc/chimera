@@ -1,18 +1,41 @@
-// Seed: 4116820741
-`define pp_4 0
-`define pp_5 0
-`define pp_6 0
-`define pp_7 0
-`default_nettype wire
+// Seed: 41723292
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4
+    id_3
 );
-  inout id_4;
-  inout id_3;
-  inout id_2;
-  inout id_1;
-  logic id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_4;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    output tri1 id_1,
+    input  wand id_2
+);
+  assign id_1 = id_2;
+  initial
+  fork : id_4
+    $display;
+  join
+  buf (id_0, id_2);
+  module_0(
+      id_4, id_4, id_4
+  );
+endmodule
+module module_2 (
+    output tri id_0,
+    input wire id_1,
+    input uwire id_2,
+    input tri0 id_3,
+    output supply0 id_4,
+    input tri id_5,
+    input uwire id_6
+);
+  wire id_8;
+  wire id_9, id_10;
+  module_0(
+      id_10, id_10, id_8
+  );
 endmodule

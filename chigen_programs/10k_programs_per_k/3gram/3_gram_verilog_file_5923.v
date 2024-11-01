@@ -1,31 +1,60 @@
-// Seed: 1629973008
-`timescale 1ps / 1 ps
+// Seed: 2490662503
 module module_0 (
-    output id_0,
-    output logic id_1,
-    output id_2,
-    output logic id_3,
-    output logic id_4,
-    output logic id_5,
-    output logic id_6,
-    output logic id_7#(
-        .id_16(id_16),
-        .id_17(id_9),
-        .id_18(id_8)
-    ),
-    input logic id_8,
-    input logic id_9,
-    input logic id_10,
-    input id_11,
-    input logic id_12,
-    input id_13,
-    output logic id_14,
-    output id_15
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  logic id_19 = 1 < id_17;
-  assign id_1 = 1;
-  logic id_20;
-  logic id_21;
-  logic id_22, id_23, id_24, id_25, id_26, id_27, id_28, id_29, id_30;
-  logic id_31, id_32;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  supply0 id_8 = id_8;
+  supply1 id_9;
+  assign id_6 = id_8 ? {1} : 1 + id_9;
+  logic [7:0] id_10;
+  assign id_7 = id_10[1];
+endmodule
+module module_1 (
+    output wor id_0,
+    input uwire id_1,
+    output wor id_2,
+    output supply0 id_3,
+    input tri0 id_4,
+    input supply0 id_5,
+    input wor id_6,
+    output tri1 id_7
+    , id_30,
+    input uwire id_8,
+    input wire id_9,
+    output uwire id_10,
+    input tri id_11,
+    output supply1 id_12,
+    input tri id_13,
+    input tri0 id_14,
+    output tri id_15,
+    output tri1 id_16,
+    input wire id_17,
+    output supply0 id_18,
+    output tri1 id_19,
+    input tri1 id_20,
+    input wor id_21,
+    input supply1 id_22,
+    input wor id_23,
+    output wire id_24
+    , id_31,
+    output uwire id_25,
+    output supply0 id_26,
+    input tri0 id_27,
+    output tri0 id_28
+);
+  module_0(
+      id_31, id_31, id_31, id_31, id_31, id_31, id_31
+  );
 endmodule

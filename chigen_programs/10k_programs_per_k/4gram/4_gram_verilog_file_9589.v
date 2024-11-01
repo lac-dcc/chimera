@@ -1,6 +1,18 @@
-// Seed: 2862764578
-`define pp_31 0
-module module_0 (
+// Seed: 3248988699
+module module_0;
+  wire id_1 = id_1;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    input supply1 id_1,
+    input wire id_2,
+    input wire id_3
+    , id_5
+);
+  assign id_0 = 1 ? 1'd0 : 1;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -31,50 +43,46 @@ module module_0 (
     id_28,
     id_29,
     id_30,
-    id_31
+    id_31,
+    id_32,
+    id_33,
+    id_34
 );
-  output id_31;
-  input id_30;
-  output id_29;
-  inout id_28;
-  inout id_27;
-  output id_26;
-  input id_25;
-  inout id_24;
-  inout id_23;
-  output id_22;
-  inout id_21;
-  input id_20;
-  output id_19;
-  inout id_18;
-  input id_17;
-  input id_16;
-  input id_15;
-  output id_14;
-  inout id_13;
-  input id_12;
-  output id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  inout id_7;
-  inout id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  output id_2;
-  inout id_1;
-  always @(posedge 1 or 1)
-    if (id_21) begin
-      if (id_6) {id_23, 1} <= 1;
-    end
-  always @(posedge 1) id_5 <= #1 1;
-  assign #(1) id_31 = 1 ? 1 : id_4;
-  defparam id_31.id_32 = id_13;
-  logic id_33;
-  assign id_31 = id_5;
-  logic id_34;
-  assign id_34 = 1;
-  logic id_35;
-  assign id_29 = 1;
+  output wire id_34;
+  output wire id_33;
+  output wire id_32;
+  output wire id_31;
+  input wire id_30;
+  output wire id_29;
+  inout wire id_28;
+  inout wire id_27;
+  inout wire id_26;
+  input wire id_25;
+  inout wire id_24;
+  output wire id_23;
+  inout wire id_22;
+  output wire id_21;
+  output wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  inout wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  wire id_35;
+  wire id_36;
+  module_0();
 endmodule

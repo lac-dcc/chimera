@@ -1,3 +1,47 @@
-// Seed: 4110703076
-`timescale 1ps / 1 ps
-`define pp_0 0
+// Seed: 1130938438
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_5;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output tri0 id_1
+);
+  wire id_3;
+  module_0(
+      id_3, id_3, id_3, id_3
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  input wire id_1;
+  generate
+    wire id_3;
+  endgenerate
+  module_0(
+      id_3, id_2, id_3, id_3
+  );
+endmodule
+module module_3;
+  id_1(
+      .id_0(1), .id_1(id_2), .id_2(1), .id_3((!id_2 ? 1 : id_2)), .id_4(id_2)
+  );
+endmodule
+module module_4 (
+    input  supply1 id_0,
+    output supply0 id_1
+);
+  assign id_1 = 1;
+  module_3();
+endmodule

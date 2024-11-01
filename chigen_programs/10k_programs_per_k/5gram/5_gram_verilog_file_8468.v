@@ -1,17 +1,45 @@
-// Seed: 504961542
+// Seed: 2951233822
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input logic id_5,
-    input logic id_6,
-    input id_7,
-    input logic id_8,
-    output id_9
+    id_1,
+    id_2
 );
-  type_13(
-      id_0, 1'd0 != id_9, id_6 & id_3, id_7, 1'b0 ^ id_5, 1'h0 && id_6
+  inout wire id_2;
+  output wire id_1;
+  supply0 id_3 = id_3 <= id_2;
+  wire id_4;
+  supply1 id_5;
+  assign id_5 = id_2 + 1;
+endmodule
+module module_1 (
+    input  tri   id_0,
+    input  tri0  id_1,
+    output uwire id_2
+);
+  integer id_4;
+  module_0(
+      id_4, id_4
   );
+endmodule
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  wire module_2;
+  always @(posedge id_2) begin
+    id_1#(.id_2(1 == 1)) <= id_2;
+  end
+  always @(posedge !id_2 or posedge id_2 && id_2) begin
+    begin
+      assign id_2 = id_2;
+      id_2 <= id_2;
+      $display(id_2);
+    end
+  end
+  wire id_3;
+  id_4(
+      .id_0(1), .id_1(1 == (1)), .sum(1), .id_2(id_1), .id_3(id_3), .id_4(id_2), .id_5(id_1)
+  ); module_0(
+      id_3, id_3
+  );
+  wire id_5;
 endmodule

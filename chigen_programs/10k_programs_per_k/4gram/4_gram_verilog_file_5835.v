@@ -1,6 +1,10 @@
-// Seed: 3733750079
-`default_nettype wire
-module module_0 (
+// Seed: 123115237
+module module_0;
+  always_comb @(posedge 1'h0) begin
+    id_1 <= 1;
+  end
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -13,18 +17,17 @@ module module_0 (
     id_10,
     id_11
 );
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  logic id_11;
-  logic id_12;
-  logic id_13;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_12;
+  module_0();
 endmodule

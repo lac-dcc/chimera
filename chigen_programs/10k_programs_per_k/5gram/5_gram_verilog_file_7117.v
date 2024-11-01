@@ -1,35 +1,39 @@
-// Seed: 1581332490
-`timescale 1 ps / 1ps
+// Seed: 1025563356
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output logic id_2,
-    input id_3,
-    input id_4,
-    output id_5,
-    output id_6,
-    input id_7,
-    output id_8,
-    output id_9,
-    output id_10,
-    output logic id_11,
-    output id_12,
-    input id_13,
-    output id_14,
-    output id_15,
-    input logic id_16
-    , id_25,
-    output logic id_17,
-    input id_18,
-    input logic id_19,
-    output logic id_20,
-    input logic id_21,
-    output id_22,
-    output id_23,
-    input id_24
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  type_34(
-      1, 1
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_9, id_10;
+endmodule
+module module_1 (
+    input  logic id_0,
+    input  tri0  id_1,
+    input  uwire id_2,
+    input  uwire id_3,
+    input  wire  id_4,
+    output wand  id_5
+);
+  supply1 id_7;
+  wire id_8;
+  module_0(
+      id_8, id_7, id_7, id_8, id_7, id_7, id_8, id_7
   );
-  assign id_14 = id_25;
+  assign id_7 = 1 * id_3 - (1);
+  reg id_9;
+  assign id_5 = 1;
+  always_ff @(id_7) id_9 <= id_0;
 endmodule

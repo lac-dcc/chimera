@@ -1,3 +1,103 @@
-// Seed: 1537078435
-`define pp_0 0
-`resetall
+// Seed: 3380134181
+module module_0 (
+    input wire id_0,
+    output uwire id_1,
+    input tri0 id_2,
+    input wire id_3,
+    output wire id_4,
+    input supply1 id_5,
+    input tri1 id_6,
+    input tri1 id_7,
+    output supply1 id_8,
+    output wor id_9,
+    input wor id_10,
+    output tri0 id_11,
+    input tri1 id_12,
+    output tri id_13
+    , id_43,
+    input wor id_14,
+    input tri1 id_15,
+    input tri0 id_16,
+    output wor id_17,
+    output wor id_18,
+    output uwire id_19,
+    output tri1 id_20,
+    input supply1 id_21,
+    output wor id_22,
+    output wor id_23,
+    input supply0 id_24,
+    output tri id_25,
+    output tri0 id_26,
+    output tri0 id_27,
+    input tri0 id_28,
+    output wire id_29,
+    output supply1 id_30,
+    input supply1 id_31,
+    input supply0 id_32,
+    input supply0 id_33,
+    input wor id_34,
+    input wor id_35,
+    output wire id_36,
+    input tri1 id_37,
+    output supply0 id_38,
+    output tri0 id_39,
+    output uwire id_40,
+    input tri1 id_41
+);
+  wand id_44 = 1 < id_31;
+  assign id_43 = id_5;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    input tri0 id_1,
+    input tri id_2,
+    output supply1 id_3
+);
+  wire id_5;
+  wire id_6;
+  module_0(
+      id_2,
+      id_3,
+      id_2,
+      id_1,
+      id_3,
+      id_2,
+      id_1,
+      id_0,
+      id_3,
+      id_3,
+      id_1,
+      id_3,
+      id_1,
+      id_3,
+      id_0,
+      id_0,
+      id_0,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_0,
+      id_3,
+      id_3,
+      id_1,
+      id_3,
+      id_3,
+      id_3,
+      id_0,
+      id_3,
+      id_3,
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_0,
+      id_3,
+      id_0,
+      id_3,
+      id_3,
+      id_3,
+      id_0
+  );
+  wire id_7;
+endmodule

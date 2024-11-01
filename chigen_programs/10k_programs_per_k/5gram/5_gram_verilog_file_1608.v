@@ -1,34 +1,36 @@
-// Seed: 2238948918
-module module_0 (
-    output id_0,
-    input id_1,
-    input logic id_2,
-    output logic id_3,
-    input logic id_4,
-    output logic id_5,
-    input logic id_6,
-    output id_7,
-    output id_8,
-    output logic id_9,
-    output id_10,
-    output logic id_11
-);
-  logic id_12 = 1 == 1'b0 ? 1 : 1 == id_1 | SystemTFIdentifier;
-  logic id_13;
-  logic id_14;
-  assign id_5 = 1;
-  assign id_0 = 1;
+// Seed: 1859445872
+module module_0;
+  tri id_2 = 1;
 endmodule
 module module_1 (
-    input logic id_0,
-    input logic id_1,
-    input logic id_2,
-    output logic id_3
-    , id_12,
-    input id_4,
-    input id_5,
-    input id_6,
-    output logic id_7
+    input  wand id_0,
+    output wire id_1,
+    input  wor  id_2
 );
-  logic id_13;
+  id_4(
+      1, 1, 1 !== id_1, 1
+  ); module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(1, id_2) begin
+    id_1 <= 1;
+  end
+  module_0();
+endmodule
+module module_3 (
+    input  tri0 id_0,
+    output tri1 id_1
+);
+  logic [7:0] id_3;
+  generate
+    assign id_3[1] = id_0;
+  endgenerate
+  module_0();
 endmodule

@@ -1,23 +1,110 @@
-// Seed: 246078476
-`define pp_10 0
-`include ""
+// Seed: 959452164
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input id_3,
-    output id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    input id_8,
-    output id_9
+    output uwire id_0,
+    input supply0 id_1,
+    output uwire id_2,
+    input uwire id_3,
+    output tri0 id_4,
+    input wand id_5,
+    output wor id_6,
+    output supply1 id_7,
+    input wor id_8,
+    input tri0 id_9,
+    input tri1 id_10,
+    input wor id_11,
+    input tri1 id_12,
+    input supply0 id_13,
+    input supply0 id_14,
+    input wor id_15,
+    input tri1 id_16,
+    input wor id_17,
+    input tri0 id_18,
+    output tri0 id_19,
+    output tri0 id_20,
+    output uwire id_21,
+    input supply1 id_22,
+    input tri1 id_23,
+    input supply0 id_24,
+    input supply0 id_25,
+    input supply0 id_26,
+    input supply1 id_27,
+    input tri id_28
+    , id_46,
+    input wire id_29,
+    output wire id_30,
+    output tri1 id_31,
+    output supply1 id_32,
+    output tri1 id_33,
+    output supply1 id_34,
+    input uwire id_35,
+    output wire id_36,
+    input wor id_37,
+    input uwire id_38,
+    output uwire id_39,
+    input supply1 id_40,
+    output wor id_41,
+    output tri1 id_42,
+    output tri1 id_43,
+    input tri id_44
 );
-  logic id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19, id_20;
-  type_25(
-      id_11, id_3, 1
+  task id_47(input id_48);
+    begin
+      id_41 = 1 < 1;
+    end
+  endtask
+endmodule
+module module_1 (
+    input uwire id_0,
+    input wire  id_1,
+    input tri   id_2
+    , id_4
+);
+  assign id_4 = id_2;
+  module_0(
+      id_4,
+      id_2,
+      id_4,
+      id_2,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_2,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_4,
+      id_0,
+      id_0,
+      id_4,
+      id_2,
+      id_2,
+      id_4,
+      id_4,
+      id_4,
+      id_0,
+      id_0,
+      id_2,
+      id_2,
+      id_4,
+      id_1,
+      id_0,
+      id_2,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_1,
+      id_4,
+      id_0,
+      id_4,
+      id_4,
+      id_0,
+      id_4,
+      id_4,
+      id_4,
+      id_2
   );
-  logic id_21;
-  assign id_7 = 1;
-  logic id_22;
 endmodule

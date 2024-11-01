@@ -1,82 +1,56 @@
-// Seed: 2257971199
-module module_0 (
-    input logic id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    input logic id_4,
-    input id_5,
-    output logic id_6,
-    input id_7,
-    output id_8,
-    input logic id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    input id_13,
-    input id_14,
-    input id_15,
-    output logic id_16,
-    output logic id_17,
-    output logic id_18,
-    input id_19,
-    input id_20,
-    output logic id_21,
-    input id_22,
-    output logic id_23,
-    output id_24,
-    input logic id_25,
-    input logic id_26,
-    input logic id_27,
-    input logic id_28,
-    input logic id_29,
-    input logic id_30,
-    input logic id_31,
-    output logic id_32,
-    input logic id_33,
-    input logic id_34,
-    input id_35,
-    output id_36,
-    output id_37,
-    output id_38,
-    input logic id_39,
-    input logic id_40,
-    input id_41,
-    output logic id_42,
-    input logic id_43,
-    input id_44,
-    input id_45,
-    input logic id_46,
-    input id_47,
-    input id_48,
-    input id_49,
-    input id_50,
-    input logic id_51,
-    output logic id_52,
-    output logic id_53,
-    input logic id_54,
-    output logic id_55,
-    input id_56,
-    output logic id_57,
-    input id_58,
-    output id_59,
-    output id_60,
-    input logic id_61
-    , id_73,
-    input logic id_62,
-    input logic id_63,
-    input id_64,
-    input logic id_65,
-    input id_66,
-    input id_67,
-    output id_68,
-    input logic id_69,
-    output logic id_70,
-    output id_71,
-    input logic id_72
+// Seed: 625090604
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23
 );
-  logic id_74;
-  logic id_75, id_76, id_77;
-  defparam id_78.id_79 = "";
-  assign id_74 = id_49;
+  inout wire id_23;
+  inout wire id_22;
+  inout wire id_21;
+  inout wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  output wire id_14;
+  input wire id_13;
+  input wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  module_0();
+  wire id_24;
+  wire id_25;
 endmodule

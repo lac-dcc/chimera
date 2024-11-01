@@ -1,46 +1,36 @@
-// Seed: 2766529251
+// Seed: 2147663342
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19
+    output uwire id_0,
+    input  wire  id_1
 );
-  input id_19;
-  input id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  input id_14;
-  input id_13;
-  output id_12;
-  inout id_11;
-  output id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  input id_3;
-  input id_2;
-  inout id_1;
-  logic id_19 = id_7;
-  generate
-    logic id_20 = id_13;
-  endgenerate
+  wire id_3;
+  wire id_4;
+  assign id_0 = 1;
+  wand id_5 = 1 + id_1;
+  wire id_6;
+  wire id_7;
+  assign id_0 = (id_1);
+endmodule
+module module_1 (
+    output wire id_0,
+    input wire id_1,
+    input logic id_2,
+    output tri0 id_3,
+    output supply1 id_4,
+    input supply0 id_5,
+    input supply1 id_6,
+    output wor id_7,
+    input wand id_8
+);
+  supply0 id_10;
+  function void id_11;
+    begin
+      id_11 = #1 id_2;
+      if (1'd0 & 1) id_3 = id_10;
+      else id_4 = 1'b0;
+    end
+  endfunction
+  module_0(
+      id_0, id_6
+  );
 endmodule

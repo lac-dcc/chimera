@@ -1,6 +1,16 @@
-// Seed: 1227031814
-`define pp_34 0
+// Seed: 3981007893
 module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output wire id_1;
+  always
+  fork : id_3
+    id_3[1] = id_2;
+  join_any
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -15,66 +25,24 @@ module module_0 (
     id_12,
     id_13,
     id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34
+    id_15
 );
-  inout id_34;
-  inout id_33;
-  output id_32;
-  inout id_31;
-  input id_30;
-  output id_29;
-  inout id_28;
-  input id_27;
-  input id_26;
-  input id_25;
-  output id_24;
-  inout id_23;
-  input id_22;
-  output id_21;
-  output id_20;
-  inout id_19;
-  input id_18;
-  inout id_17;
-  inout id_16;
-  inout id_15;
-  inout id_14;
-  input id_13;
-  output id_12;
-  inout id_11;
-  input id_10;
-  output id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  inout id_4;
-  input id_3;
-  inout id_2;
-  input id_1;
-  always begin
-    if (1) id_5 <= 1;
-  end
-  logic id_34;
+  input wire id_15;
+  output wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  module_0(
+      id_8, id_2
+  );
 endmodule
-`define pp_35 0
-`define pp_36 0
-`define pp_37 0

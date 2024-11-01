@@ -1,34 +1,50 @@
-// Seed: 2530434319
-module module_0 (
-    input id_0,
-    inout id_1,
-    input id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    output id_7,
-    input id_8
-    , id_25,
-    output id_9,
-    input logic id_10,
-    input id_11,
-    input id_12,
-    output id_13,
-    input id_14,
-    input id_15,
-    output id_16,
-    input logic id_17,
-    input id_18,
-    output id_19,
-    input logic id_20,
-    input id_21,
-    output id_22,
-    input id_23,
-    input id_24
+// Seed: 1290954969
+module module_0;
+  wire id_1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  logic id_26;
-  type_32(
-      id_19 - id_8, id_21 << 1'b0, 1'b0, 1, id_22
-  );
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
+  module_0();
+endmodule
+module module_2 (
+    input supply0 id_0,
+    output logic id_1,
+    inout wor id_2,
+    output wand id_3,
+    input supply1 id_4,
+    input uwire id_5,
+    input wand id_6,
+    output uwire id_7,
+    output tri0 id_8,
+    input wand id_9,
+    output supply0 id_10,
+    input wire id_11,
+    output wand id_12,
+    output tri1 id_13,
+    output uwire id_14,
+    input tri0 id_15,
+    input logic id_16
+);
+  initial begin
+    if (id_15) id_1 <= id_16;
+    else if (id_11) disable id_18;
+  end
+  assign id_1 = ~1;
+  module_0();
+  assign id_8 = 1;
+  id_19 :
+  assert property (@(posedge 1) 1)
+  else $display(1'b0, id_5, id_6);
+  tri0 id_20 = id_15;
 endmodule

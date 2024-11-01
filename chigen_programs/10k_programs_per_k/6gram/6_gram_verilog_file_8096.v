@@ -1,46 +1,39 @@
-// Seed: 3470454891
+// Seed: 222713300
 module module_0 (
-    id_1,
-    id_2
+    input  tri0  id_0
+    , id_6,
+    input  tri   id_1,
+    input  uwire id_2,
+    output uwire id_3,
+    output wire  id_4
 );
-  inout id_2;
-  output id_1;
-  logic id_2;
-  assign id_2 = 1;
-  task id_3;
-    logic id_4;
-    input logic id_5;
-    logic id_6;
-    begin
-      id_4 = id_2;
-    end
-  endtask
-  assign id_4 = id_2;
-  logic id_7;
-  logic id_8;
-  type_15(
-      1, 1, 1
-  );
-  always @(posedge 1) begin
-    for (id_4 = 1; 1'b0; id_5 = 1) begin
-      id_3 = 1;
-    end
-  end
+  supply1 id_7 = id_0 && id_1;
+  supply1 id_8;
+  tri id_9 = id_7;
+  assign id_4 = 1'd0 - id_8;
 endmodule
-module module_1 (
-    input id_0,
-    output reg id_1
-    , id_7,
-    input id_2,
-    output id_3,
-    input logic id_4,
-    input logic id_5,
-    input id_6
+module module_0 (
+    input tri id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    output wand id_3,
+    output supply1 id_4,
+    input supply1 module_1,
+    input supply0 id_6,
+    input wor id_7,
+    input tri1 id_8,
+    output tri id_9,
+    output wand id_10
 );
-  logic id_8 = id_5;
-  logic id_9, id_10;
-  always @* begin
-    id_1 <= 1;
-  end
-  logic id_11;
+  wire id_12;
+  wire id_13;
+  module_0(
+      id_8, id_0, id_8, id_4, id_9
+  );
+  integer id_14 (
+      .id_0(id_6),
+      .id_1(1 != id_2),
+      .id_2(1),
+      .id_3(id_13)
+  );
 endmodule

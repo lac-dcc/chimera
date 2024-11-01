@@ -1,28 +1,40 @@
-// Seed: 1704724318
-module module_0 (
-    input id_0,
-    output logic id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    output logic id_5,
-    output id_6,
-    input id_7,
-    input logic id_8,
-    output id_9,
-    output id_10,
-    input id_11,
-    input id_12,
-    input id_13,
-    input logic id_14,
-    output id_15,
-    input id_16
+// Seed: 3096699862
+module module_0;
+  always_ff @(1 or 1) begin
+    if ((1)) begin
+      id_1 <= id_1;
+    end
+  end
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  logic id_17;
-  logic id_18;
-  logic id_19 = id_19;
-  logic id_20;
-  assign id_19 = id_0 == 1;
-  logic id_21;
-  logic id_22;
+  output wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  module_0();
 endmodule

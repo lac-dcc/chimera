@@ -1,17 +1,30 @@
-// Seed: 4233340017
-module module_0 (
-    output logic id_0,
-    input logic id_1,
-    input logic id_2,
-    input logic id_3
-    , id_8,
-    input id_4,
-    output logic id_5,
-    input id_6
-    , id_9,
-    input logic id_7
+// Seed: 3333247751
+module module_0 ();
+  always_comb @(posedge 1) id_1 = id_1;
+  wire id_2;
+  wire id_3;
+  assign id_2 = id_1;
+  wire id_4;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  type_16(
-      1, 1, 1'd0 | 1 | ~id_6, 1
-  );
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  module_0();
+endmodule
+module module_2 (
+    output wire id_0,
+    output wire id_1,
+    output supply1 id_2
+);
+  supply1 id_5 = 1;
+  assign id_0 = id_5;
+  module_0();
+  wire id_6;
+  wire id_7;
 endmodule

@@ -1,45 +1,19 @@
-// Seed: 714502471
-`define pp_27 0
-`default_nettype id_13 `timescale 1ps / 1 ps
-module module_0 (
-    inout id_0,
-    input logic id_1,
-    input logic id_2,
-    output id_3,
-    output logic id_4,
-    input logic id_5,
-    output id_6,
-    input logic id_7,
-    input id_8,
-    output logic id_9,
-    input id_10,
-    input logic id_11,
-    input logic id_12,
-    output id_13,
-    input logic id_14,
-    input logic id_15,
-    output logic id_16,
-    input logic id_17,
-    input id_18,
-    input id_19,
-    output logic id_20,
-    input id_21,
-    input logic id_22,
-    output id_23,
-    output id_24,
-    input logic id_25,
-    input id_26
+// Seed: 1036939961
+module module_0 ();
+  wire  id_1  ,  id_2  ,  id_3  ,  id_4  ,  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ;
+  wire id_17;
+endmodule
+module module_1 (
+    output supply0 id_0,
+    input tri1 id_1,
+    input tri id_2,
+    output wand id_3,
+    output uwire id_4,
+    inout supply0 id_5,
+    output wire id_6,
+    input tri0 id_7,
+    input wor id_8
 );
-  logic id_27;
-  type_52(
-      1, 1
-  ); defparam id_28.id_29 = id_7;
-  logic id_30;
-  assign id_28 = id_25;
-  generate
-    for (id_31 = 1; (id_14); id_30 = 1'b0) begin : id_32
-      logic id_33;
-    end
-  endgenerate
-  logic id_34, id_35;
+  tri1 id_10 = id_7;
+  module_0();
 endmodule

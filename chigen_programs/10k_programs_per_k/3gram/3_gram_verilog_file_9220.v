@@ -1,33 +1,50 @@
-// Seed: 91811029
+// Seed: 4201247859
 module module_0 (
-    input logic id_0,
-    input id_1,
-    output id_2,
-    output id_3,
-    output logic id_4,
-    output logic id_5,
-    input logic id_6
-    , id_14,
-    input id_7,
-    output logic id_8,
-    input logic id_9,
-    output logic id_10,
-    input id_11,
-    input logic id_12,
-    input id_13
+    id_1,
+    id_2
 );
-  assign id_10 = 1;
-  logic id_15;
-  type_30(
-      !1, id_2, id_14
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output supply1 id_1,
+    input tri0 id_2,
+    output tri0 id_3,
+    output wand id_4,
+    input wand id_5,
+    input tri0 id_6,
+    output wire id_7,
+    input tri0 id_8,
+    input tri1 id_9,
+    input tri0 id_10
+    , id_30,
+    output uwire id_11,
+    input tri1 id_12,
+    input wire id_13,
+    input tri id_14,
+    input tri1 id_15,
+    output tri id_16,
+    input supply0 id_17,
+    output uwire id_18,
+    input uwire id_19,
+    input wire id_20,
+    output wand id_21,
+    output tri0 id_22
+    , id_31,
+    output wor id_23,
+    input wand id_24,
+    output uwire id_25,
+    input supply1 id_26,
+    output supply0 id_27,
+    input wand id_28
+);
+  genvar id_32;
+  wire id_33 = id_8;
+  wire id_34;
+  assign id_0 = id_10 * 1;
+  module_0(
+      id_32, id_30
   );
-  assign id_5 = id_9;
-  logic id_16;
-  logic id_17;
-  wand  id_18 = id_7;
-  logic id_19 = 1;
-  always deassign id_4;
-  logic id_20;
-  always @(posedge id_9 + 1 or posedge id_1) SystemTFIdentifier(id_7[1], id_0);
-  assign id_18 = id_18;
 endmodule

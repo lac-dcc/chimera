@@ -1,42 +1,24 @@
-// Seed: 2145971669
-`timescale 1 ps / 1 ps
-module module_0 (
-    input logic id_0,
-    input id_1,
-    input id_2,
-    input logic id_3,
-    input logic id_4,
-    output logic id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    input id_9,
-    input id_10,
-    output logic id_11,
-    input id_12,
-    input id_13,
-    output id_14,
-    input logic id_15,
-    input id_16,
-    output id_17,
-    input logic id_18,
-    output id_19,
-    output id_20,
-    input logic id_21,
-    output logic id_22,
-    input id_23,
-    output logic id_24,
-    output id_25,
-    input logic id_26,
-    input id_27,
-    input logic id_28,
-    output logic id_29,
-    output logic id_30,
-    input logic id_31,
-    input id_32
-    , id_36 = id_18 == id_1,
-    output id_33,
-    output logic id_34,
-    output id_35
+// Seed: 1661440334
+module module_0 ();
+  initial id_1 = id_1;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri0 id_1,
+    input tri id_2,
+    input wor id_3,
+    output wor id_4,
+    output uwire id_5,
+    output wire id_6,
+    output tri id_7,
+    input wor id_8,
+    output tri1 id_9,
+    input supply1 id_10,
+    input uwire id_11,
+    input wor id_12,
+    output wor id_13,
+    input wand id_14
 );
+  assign id_7 = 1'd0;
+  module_0();
 endmodule

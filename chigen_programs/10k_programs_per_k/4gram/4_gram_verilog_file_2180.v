@@ -1,26 +1,33 @@
-// Seed: 3679771470
-`define pp_6 0
-`define pp_7 0
-`define pp_8 0
-`define pp_9 0
-`define pp_10 0
-`timescale 1 ps / 1ps `default_nettype wire
-`define pp_11 0
-`timescale 1ps / 1ps `timescale 1ps / 1ps
+// Seed: 2385253532
 module module_0 (
-    output id_0,
-    input  id_1,
-    output id_2,
-    input  id_3,
-    input  id_4,
-    input  id_5
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  reg id_6 = id_3 / 1;
-  logic id_7, id_8, id_9, id_10, id_11, id_12;
-  assign id_2[1] = 1;
-  always @(*) begin
-    id_6 = ~id_8;
-  end
-  assign id_0 = id_6;
-  always @(*) id_6 <= 1;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  id_6(
+      .id_0(1), .id_1(1), .id_2(id_2), .id_3(1), .id_4(id_7), .id_5(id_3), .id_6(1)
+  );
+endmodule
+module module_1 (
+    input  tri   id_0
+    , id_6,
+    input  wor   id_1,
+    output tri0  id_2,
+    input  wor   id_3
+    , id_7,
+    input  uwire id_4
+);
+  id_8 :
+  assert property (@(posedge id_8) (id_1))
+  else $display({1, 1}, id_1, 1);
+  module_0(
+      id_7, id_6, id_6, id_6, id_7
+  );
 endmodule

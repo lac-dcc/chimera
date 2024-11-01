@@ -1,28 +1,32 @@
-// Seed: 381501112
-`define pp_7 0
-module module_0 (
-    input id_0,
-    output id_1,
-    output id_2,
-    output logic id_3,
-    input id_4,
-    input id_5,
-    output id_6
+// Seed: 1195388514
+module module_0 ();
+  wire id_1;
+endmodule
+module module_1 (
+    input  logic   id_0,
+    input  supply1 id_1,
+    output logic   id_2
 );
-  type_24(
-      id_6, id_3, id_6
-  );
-  logic id_7;
-  logic id_8 = 1'b0;
-  supply1 id_9, id_10;
-  always @(posedge id_7 && id_4) begin
-    #(id_10[1'h0]) begin
-      id_1 = id_9;
-    end
+  always @(1 or id_1) begin
+    id_2 <= id_0;
   end
-  logic id_11;
-  defparam id_12.id_13 = 1;
-  logic id_14;
-  logic id_15, id_16, id_17, id_18, id_19, id_20, id_21, id_22;
-  always @(negedge id_7 or posedge 1);
+  module_0();
+endmodule
+module module_2 (
+    output tri id_0,
+    output tri0 id_1
+    , id_13,
+    input supply1 id_2,
+    output tri1 id_3,
+    input tri0 id_4,
+    output uwire id_5,
+    output tri1 id_6,
+    output tri0 id_7,
+    input tri0 id_8,
+    input supply0 id_9,
+    input supply1 id_10,
+    input wor id_11
+);
+  wire id_14 = ~id_13;
+  module_0();
 endmodule

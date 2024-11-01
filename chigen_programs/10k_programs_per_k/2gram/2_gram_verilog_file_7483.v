@@ -1,14 +1,57 @@
-// Seed: 3874307089
+// Seed: 3115454730
 module module_0 (
-    output logic id_0,
-    output id_1,
-    output reg id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  always begin
-    if (id_3 - 1) id_2 <= 1;
-    else begin
-      id_1 <= id_3;
-    end
-  end
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_8;
+  assign id_2 = 1;
 endmodule
-`default_nettype id_3 `timescale 1ps / 1 ps
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wand id_11;
+  module_0(
+      id_2, id_6, id_7, id_1, id_7, id_6, id_11
+  );
+  generate
+    id_12(
+        1 * 1, 1, 1, 1
+    );
+  endgenerate
+  id_13(
+      1, id_8, id_11, id_4, 1
+  );
+  always id_4 = 1;
+  wire id_14;
+endmodule

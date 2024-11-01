@@ -1,30 +1,30 @@
-// Seed: 130978036
+// Seed: 897077950
 module module_0 (
-    input id_0,
-    input logic id_1,
-    output id_2,
-    input id_3,
-    input id_4,
-    input id_5,
-    input id_6,
-    input id_7,
-    input logic id_8,
-    output id_9
+    input supply0 id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    input supply0 id_3,
+    input wand id_4,
+    input wand id_5,
+    input wor id_6,
+    input wire id_7,
+    input supply1 id_8,
+    output tri0 id_9
 );
-  assign id_9[1] = (id_4);
-  logic id_10;
-  reg   id_11;
-  logic id_12;
-  always @(*) begin
-    id_11 <= id_5[1];
-  end
-  module module_1;
-    timeprecision 1ps;
-  endmodule
-  type_1 id_13 (
-      .id_0(id_3),
-      .id_1(1),
-      .id_2(id_2),
-      .id_3(1)
+  wire id_11;
+  wire id_12;
+  supply0 id_13;
+  always @(negedge "" - id_13) #1;
+endmodule
+module module_1 (
+    output logic id_0,
+    input  uwire id_1,
+    output wor   id_2
+);
+  supply0 id_4;
+  assign id_4 = 1'b0;
+  always @(posedge 1 > 1 or posedge 1 == 1'd0) id_0 <= #id_1 1;
+  module_0(
+      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_2
   );
 endmodule

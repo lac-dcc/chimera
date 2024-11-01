@@ -1,13 +1,23 @@
-// Seed: 2881905553
-module module_0 (
-    output logic id_0,
-    input id_1,
-    input id_2,
-    output id_3,
-    input id_4,
-    output id_5,
-    input logic id_6,
-    output id_7
+// Seed: 778771258
+module module_0;
+  assign id_1 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  always @* id_5 = 1'h0;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  rtran #(id_3 == 1'b0, id_4 == 1 + 1) (1'b0, id_1, 1, 1'b0);
+  tri0 id_7 = 1 == id_2;
+  assign id_6 = 1 ? id_3 : id_5;
+  module_0();
 endmodule

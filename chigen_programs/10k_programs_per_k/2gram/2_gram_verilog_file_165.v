@@ -1,43 +1,39 @@
-// Seed: 937692377
-`define pp_13 0
-`define pp_14 0
+// Seed: 897015046
 module module_0 (
-    output id_0
-    , id_1
+    output wire id_0
 );
-  assign id_1 = "";
+  wire id_2, id_3, id_4, id_5;
+  module_2();
+  always #1;
 endmodule
-`timescale 1 ps / 1 ps
-`define pp_15 0
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12
+    input wire id_0,
+    output supply0 id_1,
+    output tri0 id_2
 );
-  input id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  input id_8;
-  input id_7;
-  input id_6;
-  inout id_5;
-  output id_4;
-  output id_3;
-  input id_2;
-  output id_1;
-  logic id_13 = id_8 * id_8 & id_11;
-  always
-    if (id_2) begin
-      id_9 <= -id_12[1] - !1;
-    end else id_9 <= id_9;
+  if (1 < id_0) begin
+    assign id_2 = id_0 == 'b0;
+  end else tri1 id_4 = id_0;
+  module_0(
+      id_2
+  );
+endmodule
+program module_2 ();
+  wire id_2;
+endprogram
+module module_3 (
+    output wand  id_0,
+    output wor   id_1,
+    input  wire  id_2,
+    input  tri   id_3,
+    output uwire id_4,
+    input  wor   id_5,
+    input  wand  id_6
+);
+  wire id_8;
+  assign id_1 = id_2;
+  tri0 id_9 = id_5;
+  wire id_10;
+  wire id_11;
+  module_2();
 endmodule

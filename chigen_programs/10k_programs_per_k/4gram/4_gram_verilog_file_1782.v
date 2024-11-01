@@ -1,15 +1,30 @@
-// Seed: 3446888835
-module module_0;
-  always @(posedge id_0 or posedge id_0) begin
-    id_0 = 1;
-    id_0 <= 1;
-  end
-  always @(1 or posedge id_0);
-  reg id_1;
-  type_4(
-      1, SystemTFIdentifier(1, 1, id_0 + 1, id_0, id_2)
+// Seed: 483533852
+module module_0 (
+    input tri1 id_0,
+    input supply0 id_1
+);
+  module_2();
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input wor id_1,
+    output wand id_2,
+    output tri0 id_3,
+    output wire id_4,
+    input wor id_5,
+    output wor id_6,
+    input supply0 id_7,
+    input tri0 id_8,
+    output tri0 id_9,
+    input wand id_10
+);
+  assign id_3 = 1'd0;
+  module_0(
+      id_0, id_7
   );
-  always @(id_2) begin
-    id_1 <= 1'h0;
-  end
+  uwire id_12;
+  assign id_12 = 1;
+endmodule
+module module_2 ();
+  wire id_1;
 endmodule

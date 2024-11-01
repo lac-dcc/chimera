@@ -1,41 +1,24 @@
-// Seed: 1130905005
-`timescale 1 ps / 1ps
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  always @(posedge 1) SystemTFIdentifier(1);
-  reg   id_4;
-  logic id_5;
-  logic id_6;
-  logic id_7;
-  assign id_5 = 1 & 1;
-  type_16 id_8 (
-      .id_0(id_7),
-      .id_1(1),
-      .id_2(id_1 != 1),
-      .id_3(1),
-      .id_4(1 < 1'b0),
+// Seed: 2113684817
+module module_0;
+  id_1(
+      .id_0(""),
+      .id_1(1'b0),
+      .id_2(id_2),
+      .id_3(1'b0),
+      .id_4(1),
       .id_5(1),
-      .id_6((1)),
-      .id_7(1'b0),
-      .id_8(1)
+      .id_6(id_2),
+      .id_7(id_3),
+      .id_8(id_3),
+      .id_9(1),
+      .id_10(1),
+      .id_11(id_3),
+      .id_12(id_2),
+      .id_13(1 + id_2 && id_4),
+      .id_14({1, id_4 - id_3})
   );
-  logic id_9;
-  initial begin
-    id_4 <= 1;
-    if (id_7) id_3 = id_6;
-  end
-  uwire id_10;
-  assign id_10[1 : 1'b0] = id_10;
-  logic id_11;
-  type_20(
-      id_4, 1
-  );
+endmodule
+macromodule module_1 ();
+  assign id_1 = id_1;
+  module_0();
 endmodule

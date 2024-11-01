@@ -1,45 +1,38 @@
-// Seed: 99052437
-module module_0 (
+// Seed: 1930954979
+module module_0 ();
+  assign id_1 = 1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_1 #(
+    parameter id_6 = 32'd42,
+    parameter id_7 = 32'd36
+) (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_5
 );
-  output id_20;
-  input id_19;
-  inout id_18;
-  output id_17;
-  inout id_16;
-  inout id_15;
-  input id_14;
-  input id_13;
-  inout id_12;
-  inout id_11;
-  inout id_10;
-  input id_9;
-  inout id_8;
-  inout id_7;
-  inout id_6;
-  input id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  input id_1;
-  always @(negedge id_16 or 1) id_6 = "" + id_16 - 1 - id_15 - id_12;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  defparam id_6.id_7 = 1; module_0();
+endmodule
+module module_2;
+  wire id_2;
+  module_0();
+endmodule
+module module_3 (
+    input tri0  id_0,
+    input tri1  id_1,
+    input uwire id_2,
+    input tri1  id_3
+);
+  assign id_5 = 1;
+  wire id_6;
+  module_0();
+  wand id_7 = 1;
 endmodule

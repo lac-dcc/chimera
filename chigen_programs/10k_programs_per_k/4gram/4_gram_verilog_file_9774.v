@@ -1,5 +1,19 @@
-// Seed: 2590464101
-module module_0 (
+// Seed: 3620241878
+module module_0 ();
+endmodule
+module module_1 (
+    output logic id_0,
+    input  logic id_1
+);
+  assign id_0 = id_1;
+  always_latch @(id_1 or negedge 1)
+    if (id_1) id_0 = id_1;
+    else begin
+      id_0 <= "";
+    end
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -17,42 +31,47 @@ module module_0 (
     id_15,
     id_16,
     id_17,
-    .id_23(id_18),
+    id_18,
     id_19,
     id_20,
     id_21,
     id_22,
-    id_23
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28
 );
-  output id_23;
-  input id_22;
-  input id_21;
-  inout id_20;
-  inout id_19;
-  inout id_18;
-  inout id_17;
-  inout id_16;
-  input id_15;
-  inout id_14;
-  inout id_13;
-  output id_12;
-  output id_11;
-  input id_10;
-  input id_9;
-  input id_8;
-  inout id_7;
-  input id_6;
-  inout id_5;
-  input id_4;
-  input id_3;
-  inout id_2;
-  output id_1;
-  logic id_24;
-  type_26(
-      id_23[1'b0 : (1'h0)], 1
-  );
-  assign id_11 = 1;
-  type_27(
-      1, id_16
-  );
+  output wire id_28;
+  output wire id_27;
+  output wire id_26;
+  inout wire id_25;
+  input wire id_24;
+  input wire id_23;
+  output wire id_22;
+  output wire id_21;
+  output wire id_20;
+  input wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  input wire id_15;
+  output wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  genvar id_29;
+  always @(posedge 1) id_2 = id_17;
+  module_0();
 endmodule

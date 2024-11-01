@@ -1,26 +1,30 @@
-// Seed: 3031512976
-`define pp_10 0
+// Seed: 2596518846
 module module_0 (
-    output id_0,
-    input id_1,
-    output id_2,
-    input logic id_3,
-    input id_4,
-    input logic id_5,
-    input id_6,
-    input id_7,
-    output id_8,
-    input id_9
+    output tri1 id_0,
+    output tri  id_1,
+    output tri0 id_2,
+    input  tri1 id_3,
+    input  wire id_4,
+    output wor  id_5,
+    input  wor  id_6
 );
-  logic id_10;
-  assign id_10 = 1;
-  tranif1 (id_5, 1, id_7, id_6);
-  assign id_10 = 1 !== id_5;
-  always id_2 <= 1'd0 !== 1;
-  type_15(
-      (1'h0)
+endmodule
+module module_1 (
+    output wand id_0,
+    output tri0 id_1,
+    output tri id_2,
+    input wor id_3,
+    input supply1 id_4
+);
+  always @(posedge id_3) $display(id_4);
+  supply0 id_6 = id_3;
+  module_0(
+      id_2, id_0, id_2, id_3, id_6, id_2, id_4
   );
-  assign id_10 = 1;
-  assign id_10 = 1;
-  type_16 id_11 (1'b0 * 1);
+  tri id_7;
+  assign id_7 = 1;
+  assign id_2 = 1;
+  id_8(
+      1, id_0
+  );
 endmodule

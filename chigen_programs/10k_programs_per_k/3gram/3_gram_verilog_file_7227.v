@@ -1,21 +1,45 @@
-// Seed: 1151843723
-`define pp_0 0
-`define pp_1 0
+// Seed: 3506872984
 module module_0 ();
-  always @(posedge 1 or posedge 1) begin
-    @(negedge (1) or negedge 1);
-  end
-  reg id_0;
-  reg id_1, id_2, id_3, id_4, id_5, id_6;
-  type_10(
-      id_0, id_5
+  id_2(
+      .id_0(1), .id_1(id_1)
   );
-  initial begin
-    id_2 = id_4;
-  end
-  assign id_0 = id_0 == 1 - 1;
-  logic id_7;
-  initial begin
-    id_6 <= 1;
-  end
+  wire id_3;
+  module_2(
+      id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3
+  );
+  wire id_4;
+endmodule
+module module_1 (
+    input tri0 id_0,
+    input supply0 id_1,
+    output tri0 id_2,
+    input uwire id_3,
+    input wand id_4,
+    output tri1 id_5
+);
+  assign id_5 = 1;
+  module_0();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
 endmodule

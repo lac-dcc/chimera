@@ -1,7 +1,16 @@
-// Seed: 2223857990
-`default_nettype wire `timescale 1ps / 1ps
-`define pp_17 0
-module module_0 (
+// Seed: 2281147747
+module module_0;
+  wire id_2;
+  module_2(
+      id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2, id_2
+  );
+endmodule
+module module_1;
+  assign id_1 = id_1;
+  assign id_1[1 : 1] = id_1;
+  module_0();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -14,27 +23,20 @@ module module_0 (
     id_10,
     id_11,
     id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+    id_13
 );
-  output id_17;
-  output id_16;
-  inout id_15;
-  input id_14;
-  inout id_13;
-  inout id_12;
-  inout id_11;
-  output id_10;
-  inout id_9;
-  inout id_8;
-  input id_7;
-  output id_6;
-  output id_5;
-  output id_4;
-  output id_3;
-  output id_2;
-  input id_1;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_14;
 endmodule

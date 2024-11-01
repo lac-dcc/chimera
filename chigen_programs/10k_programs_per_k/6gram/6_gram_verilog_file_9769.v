@@ -1,30 +1,80 @@
-// Seed: 2637943743
-parameter id_5 = id_2;
-`timescale 1ps / 1ps `timescale 1ps / 1ps
+// Seed: 4082688924
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input wor id_0,
+    input supply0 id_1,
+    input wire id_2,
+    input tri0 id_3,
+    input wor id_4,
+    input uwire id_5,
+    output tri1 id_6,
+    input wire id_7,
+    output tri id_8,
+    input supply1 id_9,
+    input tri1 id_10,
+    input uwire id_11,
+    input uwire id_12,
+    input wand id_13,
+    input wire id_14,
+    input tri0 id_15,
+    output tri id_16,
+    input tri0 id_17,
+    input supply0 id_18,
+    input supply0 id_19,
+    output supply1 id_20,
+    output wor id_21,
+    input wor id_22,
+    output supply0 id_23,
+    input tri0 id_24,
+    input tri id_25,
+    input uwire id_26,
+    output wire id_27,
+    output tri0 id_28,
+    input wire id_29,
+    input wor id_30,
+    output tri id_31
 );
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  assign id_5 = 1;
-  logic id_6;
-  logic id_7 = id_6;
-  logic id_8;
-  logic id_9;
-  logic id_10;
-  logic id_11;
-  logic id_12;
-  type_20(
-      1, id_10, id_9
+  assign id_16 = id_18;
+endmodule
+module module_1 (
+    input tri id_0,
+    input wand id_1,
+    input supply1 id_2,
+    output wand id_3
+);
+  id_5(
+      {id_2 - 1'b0, 1, 1 & 1, id_0}, 1'b0, id_1
+  ); module_0(
+      id_0,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_1,
+      id_3,
+      id_0,
+      id_3,
+      id_2,
+      id_2,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_3,
+      id_2,
+      id_0,
+      id_0,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_1,
+      id_2,
+      id_0,
+      id_3,
+      id_3,
+      id_2,
+      id_1,
+      id_3
   );
-  assign id_1 = 1'b0 ? 1 | id_6 : id_9;
 endmodule

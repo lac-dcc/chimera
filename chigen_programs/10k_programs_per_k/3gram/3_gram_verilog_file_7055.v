@@ -1,5 +1,4 @@
-// Seed: 877723079
-localparam id_8 = id_8;
+// Seed: 3137825865
 module module_0 (
     id_1,
     id_2,
@@ -23,32 +22,87 @@ module module_0 (
     id_20,
     id_21
 );
-  inout id_21;
-  inout id_20;
-  inout id_19;
-  output id_18;
-  output id_17;
-  output id_16;
-  input id_15;
-  inout id_14;
-  output id_13;
-  inout id_12;
-  output id_11;
-  inout id_10;
-  input id_9;
-  input id_8;
-  input id_7;
-  inout id_6;
-  output id_5;
-  output id_4;
-  inout id_3;
-  inout id_2;
-  output id_1;
-  always @(posedge id_20 or posedge 1'b0) begin
-    if (id_8) id_6 <= 1;
-    else begin
-      id_16 <= id_7;
-    end
+  output wire id_21;
+  output wire id_20;
+  input wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_22;
+  id_23(
+      .id_0(id_20),
+      .id_1(1 & ~id_10),
+      .id_2(id_10),
+      .id_3(),
+      .id_4(($display)),
+      .id_5(id_3),
+      .id_6(1)
+  );
+  assign id_22 = id_13;
+  wire id_24;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  if (~"") begin : id_9
+    wire id_10;
+    wire id_11;
+  end else begin : id_12
+    initial if (1'b0) id_7 <= id_1[1];
   end
-  genvar id_21;
+  wire id_13;
+  module_0(
+      id_13,
+      id_13,
+      id_13,
+      id_8,
+      id_3,
+      id_13,
+      id_3,
+      id_13,
+      id_3,
+      id_2,
+      id_13,
+      id_13,
+      id_2,
+      id_13,
+      id_13,
+      id_13,
+      id_2,
+      id_4,
+      id_13,
+      id_5,
+      id_2
+  );
+  assign id_2 = id_2;
 endmodule
