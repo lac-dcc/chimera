@@ -1,0 +1,3 @@
+[submodule "verible"]
+	path = verible
+	url = https://github.com/joaovam/verible.git
