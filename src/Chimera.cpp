@@ -526,7 +526,7 @@ static void dumpSyntaxTree(Node *head) {
 
 static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   // clang-format off
-  cxxopts::Options options("Chimera", "Generates SystemVerilog based on a json file of probabilities.");
+  cxxopts::Options options("Chimera", "Generates SystemVerilog Programs based on a json file of probabilities.");
   options.positional_help("<file> <n-value>");
 
   options.add_options()
