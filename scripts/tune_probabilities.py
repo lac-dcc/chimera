@@ -36,7 +36,7 @@ import os
 import sys
 
 
-def convert_float_array_to_int(normalized_counts: npt.NDArray) -> npt.NDArray:
+def convert_float_array_to_int(normalized_counts: npt.NDArray) -> list:
     min_exponent = abs(np.floor(np.log10(normalized_counts)).min())
     # The base exponent is used to guarantee that counts won't be too small
     base_exponent = 3
