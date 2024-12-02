@@ -2,7 +2,11 @@
   <img alt="jotai drawing" src="./assets/images/Banner.png" width="100%" height="auto"/></br>
 </p>
 
+
 ## Goals
+This repository contains **ChiGen** and **ChiBench**, two tools designed to test and debug electronic design automation (EDA) tools. Below, you'll find descriptions of each tool and how they can be utilized.
+
+### Chibench
 
 **ChiBench** consists of a large collection of Verilog programs mined from open-source github repositories.
 The goal of this benchmark suite is to test and debug electronic design automation (EDA) tools, such as the [Jasper Formal Verification Platform](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification.html) or [Intel Quartus](https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html).
@@ -21,7 +25,47 @@ Below we list examples of issues reported in this way:
 |   [1174](https://github.com/steveicarus/iverilog/issues/1174) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Crashes when assigning to parameters in a procedural block. | 
 |   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
 
-This repository also contains **ChiGen**, a generator of Verilog programs. You can find the tutorial [here](#chigen-tutorial). 
+### Chigen
+
+**ChiGen** is a  tool designed for synthesizing realistic Verilog designs to test and debug Electronic Design Automation (EDA) tools. Originally developed to validate the [Jasper Formal Verification Platform](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification.html), ChiGen has proven to be highly effective in identifying bugs across a wide range of tools, including Verible, Verilator, and Yosys. A tutorial to get started with ChiGen can be found below. 
+
+
+
+
+## ChiGen Tutorial 
+### Installing
+#### 1. Clone Chimera: 
+  ```
+  git clone  https://github.com/lac-dcc/chimera.git
+  ``` 
+
+#### 2. Build Verible
+The verible binary is in the `verible_bin` folder. However, if the binary does not work on the computer, try building it from [source](https://github.com/chipsalliance/verible)
+
+<!-- - Install [Bazel](https://github.com/bazelbuild/bazel)  -->
+
+
+<!-- `sudo apt install apt-transport-https curl gnupg -y | gpg --dearmor >bazel-archive-keyring.gpg` -->
+
+#### 3. Build Chigen
+```
+./scripts/setup.sh
+```
+
+### 4. Train probabilistic grammar
+```
+./scripts/run_parser_count_productions.sh ./database verible-verilog-syntax grammar.json
+```
+
+### 5. Run
+```
+./build/Chimera grammar.json 1 > program.v
+```
+
+### 6. Format (optional)
+```
+verible-verilog-format --inplace program.v
+```
 
 If you ever use ChiBench or ChiGen to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
@@ -76,40 +120,7 @@ On May 24th, 2024, the following licenses were used among the repositories mined
 
 </div>
 
-## ChiGen Tutorial 
-### Installing
-#### 1. Clone Chimera: 
-  ```
-  git clone  https://github.com/lac-dcc/chimera.git
-  ``` 
 
-#### 2. Build Verible
-The verible binary is in the `verible_bin` folder. However, if the binary does not work on the computer, try building it from [source](https://github.com/chipsalliance/verible)
-
-<!-- - Install [Bazel](https://github.com/bazelbuild/bazel)  -->
-
-
-<!-- `sudo apt install apt-transport-https curl gnupg -y | gpg --dearmor >bazel-archive-keyring.gpg` -->
-
-#### 3. Build Chigen
-```
-./scripts/setup.sh
-```
-
-### 4. Train probabilistic grammar
-```
-./scripts/run_parser_count_productions.sh ./database verible-verilog-syntax grammar.json
-```
-
-### 5. Run
-```
-./build/Chimera grammar.json 1 > program.v
-```
-
-### 6. Format (optional)
-```
-verible-verilog-format --inplace program.v
-```
 
 ## Acknowledgment
 
