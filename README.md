@@ -40,7 +40,7 @@ Below we list examples of issues reported in this way:
   ``` 
 
 #### 2. Build Verible
-The verible binary is in the `verible_bin` folder. However, if the binary does not work on the computer, try building it from [source](https://github.com/chipsalliance/verible)
+The verible binary is in the `verible_bin` folder. However, if the binary does not work on the computer, try building it from [source](https://github.com/joaovam/verible/tree/73f291dc73d38e8f876ce9cc35aad62ff932f138)
 
 <!-- - Install [Bazel](https://github.com/bazelbuild/bazel)  -->
 
