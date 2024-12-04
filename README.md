@@ -11,19 +11,6 @@ This repository contains **ChiGen** and **ChiBench**, two tools designed to test
 **ChiBench** consists of a large collection of Verilog programs mined from open-source github repositories.
 The goal of this benchmark suite is to test and debug electronic design automation (EDA) tools, such as the [Jasper Formal Verification Platform](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification.html) or [Intel Quartus](https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html).
 To test your EDA tool, simply pass all the programs in the ChiBench collection to it, and see if it crashes.
-Below we list examples of issues reported in this way:
-
-| Issue | Tool | Description |
-|:-----:|:----| :-------------|
-|   [2159](https://github.com/chipsalliance/verible/issues/2159)  |   [Verible's Obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) |     Crashes when reading a program that only contains the pragma directive.        |
-|   [2181](https://github.com/chipsalliance/verible/issues/2181)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Crashes instead of reporting syntax errors related to instantiation type.          |
-|   [2189](https://github.com/chipsalliance/verible/issues/2189)  |  [Verible's code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) |     Crashes with syntactically valid input.        |
-|   [2233](https://github.com/chipsalliance/verible/issues/2233)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Incorrectly accepts Verilog code with mismatched program and endmodule keywords.          |
-|   [5276](https://github.com/verilator/verilator/issues/5276)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes with signal 9 on a very large program.        |
-|   [5311](https://github.com/verilator/verilator/issues/5311)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when using time assignments.        |
-|   [5312](https://github.com/verilator/verilator/issues/5312)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when calling a function created in "generate" block.        |
-|   [1174](https://github.com/steveicarus/iverilog/issues/1174) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Crashes when assigning to parameters in a procedural block. | 
-|   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
 
 ### Chigen
 
@@ -69,6 +56,21 @@ verible-verilog-format --inplace program.v
 
 If you ever use ChiBench or ChiGen to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
+
+## Use cases
+We have found various bugs in open-source platforms with programs from ChiBench and ChiGen. Below we list examples of issues reported:
+
+| Issue | Tool | Description |
+|:-----:|:----| :-------------|
+|   [2159](https://github.com/chipsalliance/verible/issues/2159)  |   [Verible's Obfuscator](https://github.com/chipsalliance/verible/tree/master/verilog/tools/obfuscator) |     Crashes when reading a program that only contains the pragma directive.        |
+|   [2181](https://github.com/chipsalliance/verible/issues/2181)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Crashes instead of reporting syntax errors related to instantiation type.          |
+|   [2189](https://github.com/chipsalliance/verible/issues/2189)  |  [Verible's code formater](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) |     Crashes with syntactically valid input.        |
+|   [2233](https://github.com/chipsalliance/verible/issues/2233)  |  [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/parser/verilog.y) |   Incorrectly accepts Verilog code with mismatched program and endmodule keywords.          |
+|   [5276](https://github.com/verilator/verilator/issues/5276)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes with signal 9 on a very large program.        |
+|   [5311](https://github.com/verilator/verilator/issues/5311)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when using time assignments.        |
+|   [5312](https://github.com/verilator/verilator/issues/5312)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when calling a function created in "generate" block.        |
+|   [1174](https://github.com/steveicarus/iverilog/issues/1174) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Crashes when assigning to parameters in a procedural block. | 
+|   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
 
 ## Technical Report
 
