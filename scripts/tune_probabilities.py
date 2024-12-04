@@ -28,6 +28,7 @@ Arguments:
         show help message and exit
 """
 
+# 2572
 import argparse
 import json
 import numpy as np
@@ -54,18 +55,33 @@ def sigmoid(counts: npt.NDArray, temperature: float) -> npt.NDArray:
     return 1 / (1 + np.exp(-counts))
 
 
-def update_counts(probabilities: dict, threshold: int, temperature: float) -> list:
+def update_counts(
+    probabilities: dict, threshold: int, temperature: float, large_diff: int
+) -> list:
     updated_rules = []
     for rule, productions in probabilities.items():
+        if len(productions.values()) < 2:
+            continue
+
         counts = np.array(list(productions.values()))
+        more_than_one_production = " " in list(productions.keys())[counts.argmin()]
+
+        if more_than_one_production:
+            continue
+        print(list(productions.keys())[counts.argmin()])
+
         max_count = counts.max()
         min_count = counts.min()
 
-        if np.log2(max_count / min_count) > threshold:
-            updated_rules.append(rule)
-            normalized_counts = convert_float_array_to_int(sigmoid(counts, temperature))
-            for key, count in zip(productions.keys(), normalized_counts):
-                productions[key] = count
+        diff = np.log10(max_count / min_count)
+        if diff < threshold:
+            continue
+
+        updated_rules.append(rule)
+        normalized_counts = convert_float_array_to_int(sigmoid(counts, temperature))
+
+        for key, count in zip(productions.keys(), normalized_counts):
+            productions[key] = count
 
     return updated_rules
 
@@ -108,6 +124,12 @@ def parse_args() -> argparse.Namespace:
         help="(%(type)s) Temperature for the normalization function (default: %(default)s).",
         default=1,
     )
+    parser.add_argument(
+        "--large_diff",
+        type=int,
+        help="(%(type)s) Sets the large proportial difference, in log scale (default: %(default)s).",
+        default=8,
+    )
     args = parser.parse_args()
 
     if not os.path.isfile(args.probabilities_path):
@@ -121,7 +143,9 @@ def main() -> None:
     args = parse_args()
 
     probabilities = read_json(args.probabilities_path)
-    updated_rules = update_counts(probabilities, args.threshold, args.temp)
+    updated_rules = update_counts(
+        probabilities, args.threshold, args.temp, args.large_diff
+    )
     save_json(probabilities, args.output_file)
 
     print("Updated production rules:")
