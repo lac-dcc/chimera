@@ -537,6 +537,7 @@ public:
   void insertChild(std::unique_ptr<Node>,
                    std::vector<std::unique_ptr<Node>>::const_iterator);
 
+  //Deletes the children of the node
   void clearChildren();
 
   void setChildren(std::vector<std::unique_ptr<Node>> &&children);
