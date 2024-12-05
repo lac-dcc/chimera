@@ -55,6 +55,7 @@ public:
   int varID = 0;
   int moduleID = 0;
   int typeID = 0;
+  int labelID = 0;
 
   IdentifierRenamingVisitor(
       int modID, std::unordered_map<std::string, Node *> &declMap,
@@ -106,5 +107,6 @@ public:
   virtual void visit(Tk_octbase *node) override;
 
   virtual void visit(Udp_port_decls *node) override;
+  virtual void visit(Label_opt *node) override;
 };
 #endif
