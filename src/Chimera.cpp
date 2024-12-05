@@ -328,7 +328,7 @@ static void replaceTypes(Node *head, int &id) {
 
   else if (head->getElement() == " signed " ||
            head->getElement() == " unsigned ") {
-
+            
     head->setElement("");
 
   } else if (head->getElement() == " string ") {
@@ -698,7 +698,18 @@ static void findModuleName(Node *head, Node *&name) {
   }
 }
 
-void generateModules(
+static void removeEmptyGateTypes(Node* head){
+  if(head->type == NodeType::GATETYPE && head->getChildren()[0]->getElement().empty()){
+    auto parent = head->getParent();
+    parent->clearChildren();
+    parent->insertChildToEnd(std::make_unique<Terminal>(""));
+  }else{
+    for (size_t i = 0; i < head->getChildren().size(); i++) {
+      removeEmptyGateTypes(head->getChildren()[i].get());
+    }
+  }
+}
+static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
     std::unique_ptr<Node> &head, std::mt19937 &gen,
@@ -731,6 +742,7 @@ void generateModules(
     directionMap.clear();
     portList.clear();
     auto ansi = isAnsi(m);
+    
     if (!ansi) {
       declareNonAnsiPorts(m, declMap, dirMap, directionMap, portList);
     } else {
@@ -743,15 +755,16 @@ void generateModules(
     removeBodyParameters(m);
     removeAssignmentsInPorts(m);
     int lastID = renameVars(m, modID++, declMap, directionMap);
-
+    
     replaceTypes(m, lastID);
-
     addConstantIDsToParameterList(m, declMap, dirMap);
+    
     std::unordered_map<std::string, CanonicalTypes> idToType;
 
     isCorrect = inferTypes(m, idToType);
-
+    
     if (isCorrect) {
+      removeEmptyGateTypes(m);
       auto mod = std::make_shared<Module>();
       mod->moduleHead = m->getParent()->extractChild(m);
       mod->directionMap = std::move(directionMap);
@@ -817,24 +830,64 @@ findCompatibleId(std::vector<std::string> &idsCallerModule,
   return "";
 }
 
-static void callModule(ProgramPoint &caller, std::string callee,
-                       std::vector<std::string> &chosenIds) {
-  Node *parent = caller.programPoint->getParent();
+static std::string getDefaultValue(CanonicalTypes t){
+  switch(t){
+    case CanonicalTypes::SCALAR:
+    case CanonicalTypes::CONST_SCALAR:
+    case CanonicalTypes::BIT:
+    case CanonicalTypes::LOGIC:
+    case CanonicalTypes::REG:
+    case CanonicalTypes::WIRE:
+    case CanonicalTypes::INTEGER:
+      return "0";
+    
+    case CanonicalTypes::FLOAT_SCALAR:
+      return "0.0";
+    case CanonicalTypes::STRING:
+      return "\"\"";
+    default:
+    std::cerr << "Type " << static_cast<typeId>(t) <<" has no default value" << std::endl;
+    return NULL;
+  }
+}
+
+static size_t getPosFromPP(ProgramPoint& pp){
+  Node *parent = pp.programPoint->getParent();
   size_t pos = 0;
-  std::string call = callee + "(";
+
+  while (pos < parent->getChildren().size() &&
+    parent->getChildren()[pos].get() != pp.programPoint)
+    pos++;
+
+  return pos;
+}
+
+//creates assignment for an hierarchical reference and place it just after the program point indicated
+static void hierarchicalReference(ProgramPoint& where, const std::string& id, const std::string& value, std::string callName){
+
+  auto pos =  getPosFromPP(where) + 1;//the new child must be after the caller program point
+  auto parent = where.programPoint->getParent();
+  const auto reference = "assign " + callName + "." + id + " = " + value;
+  parent->insertChild(std::make_unique<Terminal>(reference), std::next(parent->getChildren().begin(), pos));
+  
+}
+
+static void callModule(ProgramPoint &caller, const std::string& callee,
+                       std::vector<std::string> &chosenIds, std::string callName) {
+
+  std::string call = callee + " " +  callName + " (";
 
   for (size_t i = 0; i < chosenIds.size(); i++) {
     call += chosenIds[i] + ((i < chosenIds.size() - 1) ? "," : "");
   }
   call += ");";
-
-  while (pos < parent->getChildren().size() &&
-         parent->getChildren()[pos].get() != caller.programPoint)
-    pos++;
+  auto parent = caller.programPoint->getParent();
+  auto pos =  getPosFromPP(caller) + 1;//the new child must be after the caller program point
 
   parent->insertChild(std::make_unique<Terminal>(call),
-                      std::next(parent->getChildren().begin(), pos + 1));
+                      std::next(parent->getChildren().begin(), pos));
 }
+
 static bool endsWith(const std::string &str, const std::string &pattern) {
   // Check if the string is shorter than the pattern
   if (str.length() < pattern.length()) {
@@ -915,7 +968,7 @@ static void callPrimitiveModule(Module *m,
     break;
   }
   name = primitiveNames[rand() % primitiveNames.size()];
-  callModule(pp, name, chosenIds);
+  callModule(pp, name, chosenIds, "primCall");
 }
 
 int main(int argc, char **argv) {
@@ -969,6 +1022,8 @@ int main(int argc, char **argv) {
     std::cerr << "Seed: " << seed << std::endl;
   }
 
+  int callCounter = 1;//id to use when calling a method
+
   do {
     do {
       generateModules(n, map, head, gen,
@@ -1018,7 +1073,29 @@ int main(int argc, char **argv) {
 
               usedModules.push_back(m2);
             }
-            callModule(pp, m2->moduleName->getElement(), chosenIds);
+            std::string callName = "modCall_" + std::to_string(callCounter);
+            callModule(pp, m2->moduleName->getElement(), chosenIds, callName);
+
+            // if(rand() % 2 == 0){//reference will be on caller
+            //   auto m2It = m2->idToType.begin();
+            //   std::advance(m2It, rand() % m2->idToType.size());
+            //   auto id = m2It->first;
+            //   auto val = getDefaultType(m2It->second);
+            //   if(val)
+            //     hierarchicalReference(pp->getParent(), id, val);
+            // }else{
+            //   auto m1It = m1->idToType.begin();
+            //   std::advance(m1It, rand() % m1->idToType.size());
+
+            //   auto id = m1It->first;
+            //   auto val = getDefaultType(m1It->second);
+
+            //   auto pp2 = m2->programPoints[rand() %
+            //                m2->programPoints.size()];
+                           
+            //   if(val)
+            //     hierarchicalReference(pp2->getParent(), id, val, callName);
+            // }
 
             if (rand() / (double)RAND_MAX < PRIMITIVE_MODULE_PROBABILITY) {
               auto primitiveProgramPoint =
