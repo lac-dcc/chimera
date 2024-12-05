@@ -87,6 +87,10 @@ std::string getType(CanonicalTypes t) {
 
   std::vector<std::string> realEquivalents = {" real ", " shortreal ",
                                               " realtime "};
+
+  // bit is equivalent to reg (both are used in procedural assignments)
+  std::vector<std::string> regEquivalents = {" reg ", " bit "};
+
   std::string idType = "";
   switch (t) {
 
@@ -121,7 +125,7 @@ std::string getType(CanonicalTypes t) {
 
     break;
   case CanonicalTypes::REG:
-    idType = " reg ";
+    idType = regEquivalents[rand() % regEquivalents.size()];
     break;
   case CanonicalTypes::INTEGER:
     idType = integerEquivalents[rand() % integerEquivalents.size()];
@@ -2737,7 +2741,8 @@ constraintSet TypeInferenceVisitor::visit(Source_text *node, typeId) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId) {
