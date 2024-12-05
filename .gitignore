@@ -10,3 +10,6 @@ build/
 generated_programs/
 size_test/
 sample_database/
+time_test/
+transFuzz/tmp
+verismith_acc
