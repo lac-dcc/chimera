@@ -13,6 +13,24 @@ void LivenessVisitor::defaultVisitor(Node *node) {
   }
 };
 
+//should be called by label_opt node
+//returns the label string referent to that label node
+static std::string getLabel(Node* head){
+  if(head->type != NodeType::LABEL_OPT)
+    return NULL;
+
+  return head->getChildren()[1]->getChildren()[0]->getChildren()[0]->getElement(); //label_opt -> symbol_or_label -> GenericIdentifier -> value
+}
+
+static std::string getScope(std::vector<std::string>& labelContext){
+  std::string scope = "";
+
+  for(auto const& s: labelContext){
+    scope += s + ".";
+  }
+  return scope;
+}
+
 void LivenessVisitor::visit(Terminal *node) {
   if (isStartingToken(node->getElement())) {
 
@@ -36,6 +54,8 @@ void LivenessVisitor::visit(Module_item *node) {
   pp.programPoint = node;
   pp.liveness = std::set<std::string>(identifiersInScope.begin(),
                                       identifiersInScope.end());
+
+  pp.scope = getScope(labelContext);
 
   programPoints.push_back(std::move(pp));
 };
@@ -216,7 +236,9 @@ void LivenessVisitor::visit(Lpvalue *node) {
 };
 
 void LivenessVisitor::visit(Label_opt *node) {
-  defaultVisitor(node);
+  if(node->getChildren().size() > 1){
+    labelContext.push_back(getLabel(node));
+  }
 };
 
 void LivenessVisitor::visit(Escapedidentifier *node) {
@@ -1631,8 +1653,8 @@ void LivenessVisitor::visit(Tk_decdigits *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(End *node) {
-  defaultVisitor(node);
+void LivenessVisitor::visit(End*) {
+  labelContext.pop_back();
 };
 
 void LivenessVisitor::visit(Net_declaration *node) {
