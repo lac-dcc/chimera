@@ -13,19 +13,23 @@ void LivenessVisitor::defaultVisitor(Node *node) {
   }
 };
 
-//should be called by label_opt node
-//returns the label string referent to that label node
-static std::string getLabel(Node* head){
-  if(head->type != NodeType::LABEL_OPT)
+// should be called by label_opt node
+// returns the label string referent to that label node
+static std::string getLabel(Node *head) {
+  if (head->type != NodeType::LABEL_OPT)
     return NULL;
 
-  return head->getChildren()[1]->getChildren()[0]->getChildren()[0]->getElement(); //label_opt -> symbol_or_label -> GenericIdentifier -> value
+  return head->getChildren()[1]
+      ->getChildren()[0]
+      ->getChildren()[0]
+      ->getElement(); // label_opt -> symbol_or_label -> GenericIdentifier ->
+                      // value
 }
 
-static std::string getScope(std::vector<std::string>& labelContext){
+static std::string getScope(std::vector<std::string> &labelContext) {
   std::string scope = "";
 
-  for(auto const& s: labelContext){
+  for (auto const &s : labelContext) {
     scope += s + ".";
   }
   return scope;
@@ -62,9 +66,10 @@ void LivenessVisitor::visit(Module_item *node) {
 
 void LivenessVisitor::visit(Genericidentifier *node) {
   if (node->getChildren()[0]->type != NodeType::KEYWORDIDENTIFIER &&
-      node->getChildren()[0]->getElement().find("id") != std::string::npos && 
+      node->getChildren()[0]->getElement().find("id") != std::string::npos &&
       node->getChildren()[0]->getElement().size() > 2 &&
-      node->getChildren()[0]->getElement()[1] != '_') {//"_" means excluded identifier
+      node->getChildren()[0]->getElement()[1] !=
+          '_') { //"_" means excluded identifier
     identifiersInScope.push_back(node->getChildren()[0]->getElement());
   }
 }
@@ -236,7 +241,7 @@ void LivenessVisitor::visit(Lpvalue *node) {
 };
 
 void LivenessVisitor::visit(Label_opt *node) {
-  if(node->getChildren().size() > 1){
+  if (node->getChildren().size() > 1) {
     labelContext.push_back(getLabel(node));
   }
 };
@@ -1653,7 +1658,7 @@ void LivenessVisitor::visit(Tk_decdigits *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(End*) {
+void LivenessVisitor::visit(End *) {
   labelContext.pop_back();
 };
 
