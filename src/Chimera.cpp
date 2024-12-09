@@ -847,8 +847,8 @@ static std::string getDefaultValue(CanonicalTypes t){
       return "\"\"";
     default:
     std::cerr << "Type " << static_cast<typeId>(t) <<" has no default value" << std::endl;
-    return NULL;
   }
+  return "";
 }
 
 static size_t getPosFromPP(ProgramPoint& pp){
@@ -863,11 +863,9 @@ static size_t getPosFromPP(ProgramPoint& pp){
 }
 
 //creates assignment for an hierarchical reference and place it just after the program point indicated
-static void hierarchicalReference(ProgramPoint& where, const std::string& id, const std::string& value, std::string callName){
-
-  auto pos =  getPosFromPP(where) + 1;//the new child must be after the caller program point
-  auto parent = where.programPoint->getParent();
-  const auto reference = "assign " + callName + "." + id + " = " + value;
+static void hierarchicalReference(Node *parent, size_t pos, const std::string& id, const std::string& value, std::string& scope, const std::string& callName){
+  
+  const auto reference = "assign " + callName + "." + scope + id + " = " + value + ";";
   parent->insertChild(std::make_unique<Terminal>(reference), std::next(parent->getChildren().begin(), pos));
   
 }
@@ -1076,26 +1074,33 @@ int main(int argc, char **argv) {
             std::string callName = "modCall_" + std::to_string(callCounter);
             callModule(pp, m2->moduleName->getElement(), chosenIds, callName);
 
-            // if(rand() % 2 == 0){//reference will be on caller
-            //   auto m2It = m2->idToType.begin();
-            //   std::advance(m2It, rand() % m2->idToType.size());
-            //   auto id = m2It->first;
-            //   auto val = getDefaultType(m2It->second);
-            //   if(val)
-            //     hierarchicalReference(pp->getParent(), id, val);
-            // }else{
-            //   auto m1It = m1->idToType.begin();
-            //   std::advance(m1It, rand() % m1->idToType.size());
+            if (!m->isSelected) {
+              m->moduleName->setElement("module_" +
+                                        std::to_string(usedModules.size()));
+            }
 
-            //   auto id = m1It->first;
-            //   auto val = getDefaultType(m1It->second);
 
-            //   auto pp2 = m2->programPoints[rand() %
-            //                m2->programPoints.size()];
+            if(rand() % 2 == 0){//reference will be on caller
+               auto m2It = m2->idToType.begin();
+               std::advance(m2It, rand() % m2->idToType.size());
+               auto id = m2It->first;
+               auto val = getDefaultValue(m2It->second);
+               if(!val.empty())
+                 hierarchicalReference(pp.programPoint->getParent(), getPosFromPP(pp) + 2, id, val, pp.scope, callName);
+             }else{
+               auto mIt = m->idToType.begin();
+               std::advance(mIt, rand() % m->idToType.size());
+
+               auto id = mIt->first;
+               auto val = getDefaultValue(mIt->second);
+
+               auto pp2 = m2->programPoints[rand() %
+                            m2->programPoints.size()];
                            
-            //   if(val)
-            //     hierarchicalReference(pp2->getParent(), id, val, callName);
-            // }
+               if(!val.empty()){
+                 hierarchicalReference(pp2.programPoint->getParent(), getPosFromPP(pp2) + 1, id, val, pp2.scope, m->moduleName->getElement());
+               }
+             }
 
             if (rand() / (double)RAND_MAX < PRIMITIVE_MODULE_PROBABILITY) {
               auto primitiveProgramPoint =
@@ -1105,8 +1110,6 @@ int main(int argc, char **argv) {
 
             if (!m->isSelected) {
               m->isSelected = true;
-              m->moduleName->setElement("module_" +
-                                        std::to_string(usedModules.size()));
 
               if (m_it != createdModules.end()) {
                 // Move m to usedModules
