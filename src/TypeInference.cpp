@@ -2737,7 +2737,8 @@ constraintSet TypeInferenceVisitor::visit(Source_text *node, typeId) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId) {
