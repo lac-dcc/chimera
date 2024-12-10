@@ -54,7 +54,8 @@ void IdentifierRenamingVisitor::finishScope() {
   }
 }
 
-Var IdentifierRenamingVisitor::createNewID(std::string t) {
+Var IdentifierRenamingVisitor::createNewID(std::string t,
+                                           bool isEscaped = false) {
   Var v;
   for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
 
@@ -74,7 +75,11 @@ Var IdentifierRenamingVisitor::createNewID(std::string t) {
   } else if (t == "PP") {
     v.name = " `pp_" + std::to_string(varID++) + " ";
   } else {
-    v.name = " id_" + std::to_string(varID++) + " ";
+    if (isEscaped) {
+      v.name = " \\id_" + std::to_string(varID++) + " ";
+    } else {
+      v.name = " id_" + std::to_string(varID++) + " ";
+    }
   }
   if (debug)
     std::cerr << "Var name: " << v.name << std::endl;
@@ -176,7 +181,8 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 }
 
 std::string IdentifierRenamingVisitor::placeID(
-    std::string type) { // SymbolIdentifier, EscapedIdentifier
+    std::string type,
+    bool isEscaped = false) { // SymbolIdentifier, EscapedIdentifier
   if (debug)
     std::cerr << "Placing id" << std::endl;
 
@@ -199,7 +205,8 @@ std::string IdentifierRenamingVisitor::placeID(
 
   if (!contexts.empty() && contexts.top() == ContextType::DECL) {
     std::string t;
-    auto id = createNewID(type);
+
+    auto id = createNewID(type, isEscaped);
 
     return id.name;
   }
@@ -303,7 +310,7 @@ void IdentifierRenamingVisitor::visit(Macroidentifier *node) {
 
 void IdentifierRenamingVisitor::visit(Escapedidentifier *node) {
   if (node->getElement() == " EscapedIdentifier ") {
-    auto id = placeID("");
+    auto id = placeID("", true);
 
     if (!contexts.empty() && contexts.top() == ContextType::DECL) {
       (*this->declMap)[id] = node;

@@ -23,7 +23,7 @@ void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_realtime *node) {
-  node->setElement("0");
+  node->setElement("#1");
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -86,7 +86,8 @@ void ReplaceConstantsVisitor::visit(Tk_decdigits *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_xzdigits *node) {
-  node->setElement("0");
+  std::vector<std::string> digits = {"x", "z"};
+  node->setElement(digits[rand() % digits.size()]);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());

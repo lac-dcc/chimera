@@ -43,11 +43,11 @@ private:
   bool isFinishingToken(std::string t);
   void startNewScope();
   void finishScope();
-  Var createNewID(std::string t);
+  Var createNewID(std::string t, bool isEscaped = false);
   void createIDContext(ContextType t, bool force = false);
   void finishIDContext(bool force = false);
   std::string findID(std::string type);
-  std::string placeID(std::string type);
+  std::string placeID(std::string type, bool isEscaped = false);
   std::unordered_map<std::string, Node *> *declMap;
   std::unordered_map<std::string, std::unique_ptr<Var>> *typeMap;
 
