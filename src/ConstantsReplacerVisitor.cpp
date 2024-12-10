@@ -39,7 +39,7 @@ void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_unbasednumber *node) {
-  node->setElement("0");
+  node->setElement("'0");
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
