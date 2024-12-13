@@ -37,6 +37,8 @@ public:
 
   virtual void visit(Tk_stringliteral *node) override;
 
+  virtual void visit(Tk_evalstringliteral *node) override;
+
   virtual void visit(Tk_octbase *node) override;
 
   virtual void visit(Tk_octdigits *node) override;

@@ -54,8 +54,7 @@ void IdentifierRenamingVisitor::finishScope() {
   }
 }
 
-Var IdentifierRenamingVisitor::createNewID(std::string t,
-                                           bool isEscaped = false) {
+Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
   Var v;
   for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
 
@@ -182,7 +181,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
 std::string IdentifierRenamingVisitor::placeID(
     std::string type,
-    bool isEscaped = false) { // SymbolIdentifier, EscapedIdentifier
+    bool isEscaped) { // SymbolIdentifier, EscapedIdentifier
   if (debug)
     std::cerr << "Placing id" << std::endl;
 
