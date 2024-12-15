@@ -102,6 +102,14 @@ void ReplaceConstantsVisitor::visit(Tk_hexbase *node) {
   }
 }
 
+void ReplaceConstantsVisitor::visit(Tk_ls_eq *node) {
+  node->setElement("<<=");
+
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+}
+
 void ReplaceConstantsVisitor::visit(Tk_hexdigits *node) {
   node->setElement("0");
 

@@ -25,6 +25,8 @@ public:
 
   virtual void visit(Macronumericwidth *node) override;
 
+  virtual void visit(Tk_ls_eq *node) override;
+
   virtual void visit(Tk_decbase *node) override;
 
   virtual void visit(Tk_decdigits *node) override;
