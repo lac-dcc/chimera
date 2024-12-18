@@ -42,9 +42,10 @@ void LivenessVisitor::visit(Module_item *node) {
 
 void LivenessVisitor::visit(Genericidentifier *node) {
   if (node->getChildren()[0]->type != NodeType::KEYWORDIDENTIFIER &&
-      node->getChildren()[0]->getElement().find("id") != std::string::npos && 
+      node->getChildren()[0]->getElement().find("id") != std::string::npos &&
       node->getChildren()[0]->getElement().size() > 2 &&
-      node->getChildren()[0]->getElement()[1] != '_') {//"_" means excluded identifier
+      node->getChildren()[0]->getElement()[1] !=
+          '_') { //"_" means excluded identifier
     identifiersInScope.push_back(node->getChildren()[0]->getElement());
   }
 }
@@ -597,7 +598,7 @@ void LivenessVisitor::visit(Tk_unbasednumber *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Decl_dimensions_opt *){};
+void LivenessVisitor::visit(Decl_dimensions_opt *) {};
 
 void LivenessVisitor::visit(Class_items_opt *node) {
   defaultVisitor(node);
@@ -1098,7 +1099,7 @@ void LivenessVisitor::visit(Data_declaration_base *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Any_port_list_opt *){};
+void LivenessVisitor::visit(Any_port_list_opt *) {};
 
 void LivenessVisitor::visit(Macronumericwidth *node) {
   defaultVisitor(node);
@@ -1509,7 +1510,7 @@ void LivenessVisitor::visit(Data_declaration *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Expression *){};
+void LivenessVisitor::visit(Expression *) {};
 
 void LivenessVisitor::visit(Cont_assign *node) {
   defaultVisitor(node);

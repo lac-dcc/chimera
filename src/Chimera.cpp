@@ -380,26 +380,28 @@ static void renamePositionalPorts(Node *head) {
 }
 
 // find ids used in a place where their value should be constant
-static void findConstantIDs(Node *head, std::set<std::pair<std::string, bool>> &idsFound,
+static void findConstantIDs(Node *head,
+                            std::set<std::pair<std::string, bool>> &idsFound,
                             bool isIndex = false, bool isParam = false) {
-  if (head->type == NodeType::DECL_VARIABLE_DIMENSION||
+  if (head->type == NodeType::DECL_VARIABLE_DIMENSION ||
       head->type == NodeType::SELECT_VARIABLE_DIMENSION)
     isIndex = true;
 
-  else if ((isIndex || isParam) && head->getElement().find("id") != std::string::npos &&
+  else if ((isIndex || isParam) &&
+           head->getElement().find("id") != std::string::npos &&
            head->getChildren().size() == 0) {
     bool shouldRename = true;
 
-    if(isParam)
+    if (isParam)
       shouldRename = false;
 
     idsFound.insert({head->getElement(), shouldRename});
   }
 
-  for (const auto &c : head->getChildren()){
-   
-    if(head->type == NodeType::DEFPARAM_ASSIGN && 
-    c->type == NodeType::REFERENCE)
+  for (const auto &c : head->getChildren()) {
+
+    if (head->type == NodeType::DEFPARAM_ASSIGN &&
+        c->type == NodeType::REFERENCE)
       findConstantIDs(c.get(), idsFound, isIndex, true);
     else
       findConstantIDs(c.get(), idsFound, isIndex, isParam);
@@ -414,9 +416,10 @@ static void createParameterList(Node *parameterList) {
   parameterList->setChildren(std::move(children));
 }
 
-static void addParametersToList(Node *parameterList,
-                                const std::set<std::pair<std::string, bool>> &constantIds) {
-  for (auto& [id, _] : constantIds) {
+static void
+addParametersToList(Node *parameterList,
+                    const std::set<std::pair<std::string, bool>> &constantIds) {
+  for (auto &[id, _] : constantIds) {
     auto node = std::make_unique<Terminal>("parameter");
     parameterList->insertChildToEnd(std::move(node));
     auto node2 = std::make_unique<Symbolidentifier>(id);
@@ -434,12 +437,12 @@ static void addParametersToList(Node *parameterList,
       ->setElement(")");
 }
 
-static void
-renameConstantIDsDeclarations(std::unordered_map<std::string, Node *> &declMap,
-                              std::unordered_map<std::string, Node *> &dirMap,
-                              std::set<std::pair<std::string, bool>> &constantIDs) {
+static void renameConstantIDsDeclarations(
+    std::unordered_map<std::string, Node *> &declMap,
+    std::unordered_map<std::string, Node *> &dirMap,
+    std::set<std::pair<std::string, bool>> &constantIDs) {
   for (auto &[id, shouldRename] : constantIDs) {
-    
+
     if (shouldRename && declMap.find(id) != declMap.end()) {
       std::string newId = id;
       if (newId[0] == ' ') {

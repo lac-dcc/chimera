@@ -44,6 +44,10 @@ void CodeGenVisitor::visit(Tk_stringliteral *node) {
   std::cout << node->getElement();
 }
 
+void CodeGenVisitor::visit(Tk_evalstringliteral *node) {
+  std::cout << node->getElement();
+}
+
 void CodeGenVisitor::visit(Tk_realtime *node) {
   std::cout << node->getElement();
 }

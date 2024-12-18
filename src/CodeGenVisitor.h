@@ -34,6 +34,8 @@ public:
 
   virtual void visit(Tk_stringliteral *node) override;
 
+  virtual void visit(Tk_evalstringliteral *node) override;
+
   virtual void visit(Tk_realtime *node) override;
 
   virtual void visit(Tk_timeliteral *node) override;

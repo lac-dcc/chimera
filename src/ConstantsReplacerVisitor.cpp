@@ -23,7 +23,7 @@ void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_realtime *node) {
-  node->setElement("0");
+  node->setElement("$realtime");
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -39,7 +39,7 @@ void ReplaceConstantsVisitor::visit(Tk_timeliteral *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_unbasednumber *node) {
-  node->setElement("0");
+  node->setElement("'0");
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -86,7 +86,8 @@ void ReplaceConstantsVisitor::visit(Tk_decdigits *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_xzdigits *node) {
-  node->setElement("0");
+  std::vector<std::string> digits = {"'x", "'Z", "'?"};
+  node->setElement(digits[rand() % digits.size()]);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -95,6 +96,14 @@ void ReplaceConstantsVisitor::visit(Tk_xzdigits *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_hexbase *node) {
   node->setElement("'h");
+
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+}
+
+void ReplaceConstantsVisitor::visit(Tk_ls_eq *node) {
+  node->setElement("<<=");
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -111,6 +120,13 @@ void ReplaceConstantsVisitor::visit(Tk_hexdigits *node) {
 
 void ReplaceConstantsVisitor::visit(Tk_stringliteral *node) {
   node->setElement("\"\"");
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+}
+
+void ReplaceConstantsVisitor::visit(Tk_evalstringliteral *node) {
+  node->setElement("`\"`hello`\"");
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
