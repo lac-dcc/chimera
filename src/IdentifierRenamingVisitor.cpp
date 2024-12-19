@@ -450,3 +450,19 @@ void IdentifierRenamingVisitor::visit(Udp_port_decls *node) {
   }
   finishIDContext();
 }
+
+// forces begin nodes to have a label
+void IdentifierRenamingVisitor::visit(Label_opt *node) {
+  if (node->getParent()->type == NodeType::BEGIN) {
+    node->clearChildren();
+    node->insertChildToEnd(std::make_unique<Terminal>(":"));
+    auto label = std::make_unique<Symbol_or_label>("Symbol_or_label");
+    auto genId = std::make_unique<Genericidentifier>("Genericidentifier");
+    genId->insertChildToEnd(
+        std::make_unique<Symbolidentifier>("LABEL_" + std::to_string(labelID)));
+
+    label->insertChildToEnd(std::move(genId));
+
+    node->insertChildToEnd(std::move(label));
+  }
+}

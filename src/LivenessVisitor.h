@@ -13,6 +13,7 @@ class ProgramPoint {
 public:
   Node *programPoint;
   std::set<std::string> liveness;
+  std::string scope = "";
 };
 
 class Module {
@@ -36,6 +37,7 @@ public:
   std::stack<size_t> scopeLimit;
   std::vector<ProgramPoint> &programPoints;
   std::stack<IdentifierRenamingVisitor::ContextType> context;
+  std::vector<std::string> labelContext;
 
   LivenessVisitor(std::vector<ProgramPoint> &PP) : programPoints(PP) {
     programPoints.clear();
