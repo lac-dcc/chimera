@@ -1,18 +1,5 @@
-// Seed: 792472726
-module module_0;
-  always @(posedge id_1) begin
-    disable id_2;
-    #1;
-  end
-endmodule
-module module_1;
-  assign id_1 = 1;
-  always @(1, posedge 1)
-    if (id_1) id_1 <= id_1;
-    else id_1 <= id_1 == 1;
-  module_0();
-endmodule
-module module_2 (
+// Seed: 2212494211
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -22,25 +9,73 @@ module module_2 (
     id_7,
     id_8,
     id_9,
-    id_10
+    id_10,
+    id_11,
+    id_12,
+    module_0,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18
 );
+  inout wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
+  output wire id_11;
   inout wire id_10;
   input wire id_9;
-  input wire id_8;
-  output wire id_7;
-  inout wire id_6;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
   output wire id_5;
-  input wire id_4;
+  inout wire id_4;
   input wire id_3;
-  inout wire id_2;
+  output wire id_2;
   inout wire id_1;
-  id_11(
-      .id_0(id_1 * (id_2 || 1)),
-      .id_1(1),
-      .id_2(1'b0),
-      .id_3(1),
-      .id_4(1),
-      .id_5(|id_8[1'b0]),
-      .id_6(1)
-  ); module_0();
+  wire id_20;
+  assign module_1.id_8 = 0;
+  assign id_2 = 1'h0;
+  assign id_15 = 1'b0;
+endmodule
+module module_1 #(
+    parameter id_10 = 32'd5,
+    parameter id_3  = 32'd34,
+    parameter id_4  = 32'd91,
+    parameter id_5  = 32'd75,
+    parameter id_6  = 32'd55,
+    parameter id_7  = 32'd14,
+    parameter id_8  = 32'd89,
+    parameter id_9  = 32'd68
+);
+  wire id_2;
+  assign id_1 = 1;
+  module_0 modCall_1 (
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1
+  );
+  defparam id_3.id_4 = (id_3), id_5.id_6 = id_4, id_7.id_8 = 1 != 1, id_9.id_10 = id_9;
 endmodule

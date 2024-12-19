@@ -1,46 +1,50 @@
-// Seed: 3990882609
+// Seed: 706821682
 module module_0 (
-    input supply0 id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    input tri0 id_3,
-    input tri id_4,
-    output tri0 id_5,
-    output wand id_6,
-    input wor id_7,
-    input wire id_8,
-    output tri1 id_9,
-    output tri0 id_10,
-    input wand id_11,
-    input supply1 id_12
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_14;
-  tri1 id_15 = 1, id_16;
-  wire id_17;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  supply1 id_4;
+  assign id_3 = {1'b0, 1, id_2, id_4 - id_4, 1, id_2};
+  generate
+    assign id_2 = id_2;
+  endgenerate
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input wor id_1,
-    input supply1 id_2,
-    input wire id_3,
-    input wand id_4,
-    input tri0 id_5,
-    output wand id_6,
-    output tri0 id_7,
-    output tri1 id_8,
-    output uwire id_9,
-    input tri id_10
-    , id_16,
-    input tri0 id_11,
-    input tri id_12,
-    output wire id_13,
-    output tri0 id_14
+module module_0 (
+    id_1,
+    id_2
 );
-  wire id_17;
-  tri1 id_18;
-  assign id_18 = {id_4 - id_12{1}};
-  assign id_6  = id_5;
-  module_0(
-      id_4, id_2, id_4, id_2, id_2, id_13, id_6, id_10, id_11, id_13, id_14, id_4, id_1
+  input wire id_2;
+  input wire id_1;
+  always @(posedge 1'b0) begin : LABEL_0
+    id_3 <= 1;
+  end
+  reg id_4 = id_2;
+  reg id_5;
+  initial begin : LABEL_0
+    assign id_4 = 1 - 1;
+  end
+  for (id_6 = id_1; 1; id_6 = 0) begin : LABEL_0
+    wire id_7;
+  end
+  assign id_4 = module_1[""];
+  always #1 begin : LABEL_0
+    if (1) id_6 = "" + 1'd0;
+  end
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7
   );
+  assign modCall_1.type_5 = 0;
+  always @* begin : LABEL_0
+    id_6 = id_5;
+    if ("") #1 $display(1'd0);
+    else if (id_2 - 1) id_5 <= id_4;
+  end
+  reg id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16;
+  always @(posedge id_16) id_9 <= id_8;
 endmodule

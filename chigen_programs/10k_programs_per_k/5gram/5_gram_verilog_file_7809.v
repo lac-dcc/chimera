@@ -1,44 +1,46 @@
-// Seed: 28027464
+// Seed: 2244052181
 module module_0 (
-    input wire id_0,
-    input wire id_1,
-    input tri0 id_2,
-    input supply1 id_3,
-    input supply0 id_4,
-    output supply1 id_5,
-    input tri0 module_0,
-    output wor id_7,
-    output wand id_8,
-    input supply0 id_9,
-    output wand id_10
+    input tri id_0,
+    input tri1 id_1,
+    input wand id_2,
+    output supply1 id_3,
+    input wand id_4
 );
-  always @(posedge id_0, posedge 1 ==? 1'b0) begin
-    id_7 = 1 | 1;
-  end
-  wire id_12;
-  wire id_13;
-  tri  id_14 = 1;
-  tri1 id_15 = id_3;
-  wire id_16;
+  task id_6;
+    begin : LABEL_0
+      #1;
+      id_3 = id_0;
+      id_3 = 1;
+    end
+  endtask
 endmodule
-module module_1 (
-    input  wor   id_0,
-    input  uwire id_1,
-    input  tri   id_2,
-    input  wand  id_3,
-    input  uwire id_4,
-    input  wire  id_5,
-    input  uwire id_6,
-    output tri1  id_7,
-    input  wand  id_8,
-    input  wor   id_9,
-    output wire  id_10,
-    input  tri0  id_11,
-    input  wand  id_12
+module module_0 (
+    input uwire id_0,
+    input tri1 id_1,
+    input tri0 sample,
+    output tri1 id_3,
+    input supply0 id_4
+    , id_13,
+    output tri id_5,
+    input wand module_1,
+    output uwire id_7,
+    output supply0 id_8,
+    input tri id_9,
+    input wand id_10,
+    output tri1 id_11
+    , id_14
 );
-  wire id_14;
-  assign id_7 = 1;
-  module_0(
-      id_8, id_4, id_6, id_9, id_5, id_10, id_6, id_10, id_10, id_2, id_10
+  module_0 modCall_1 (
+      id_10,
+      id_10,
+      id_9,
+      id_8,
+      id_1
   );
+  assign modCall_1.type_2 = 0;
+  id_15 :
+  assert property (@(posedge id_0.id_6) 1'b0 == id_15)
+  else $display;
+  wire id_16;
+  wire id_17;
 endmodule

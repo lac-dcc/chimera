@@ -1,41 +1,52 @@
-// Seed: 4093529320
-module module_0 ();
-  assign id_1 = id_1;
-endmodule
-module module_1 #(
-    parameter id_10 = 32'd42,
-    parameter id_11 = 32'd54,
-    parameter id_12 = 32'd44,
-    parameter id_13 = 32'd24,
-    parameter id_14 = 32'd39,
-    parameter id_15 = 32'd59,
-    parameter id_16 = 32'd63,
-    parameter id_17 = 32'd18,
-    parameter id_18 = 32'd53,
-    parameter id_19 = 32'd12,
-    parameter id_20 = 32'd69,
-    parameter id_21 = 32'd5,
-    parameter id_22 = 32'd4,
-    parameter id_23 = 32'd33,
-    parameter id_24 = 32'd99,
-    parameter id_25 = 32'd34,
-    parameter id_4  = 32'd19,
-    parameter id_5  = 32'd15,
-    parameter id_6  = 32'd35,
-    parameter id_7  = 32'd87,
-    parameter id_8  = 32'd53,
-    parameter id_9  = 32'd69
-) (
-    id_1,
-    id_2,
-    id_3
+// Seed: 1638244249
+module module_0 (
+    input uwire id_0
 );
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  defparam id_4.id_5 = 1, id_6.id_7 = id_3, id_8.id_9 = 1, id_10.id_11 = 1, id_12.id_13 = id_8,
-      id_14.id_15 = 1, id_16.id_17 = (id_1), id_18.id_19 = "", id_20.id_21 = 1, id_22.id_23 = id_21,
-      id_24.id_25 = 1;
-  and (id_2, id_20, id_21, id_22, id_23, id_24, id_25, id_3, id_4, id_5, id_6, id_7, id_8, id_9);
-  module_0();
+  tri id_2 = 1;
+  assign module_1.id_4 = 0;
+endmodule
+module module_1 (
+    output tri0 id_0,
+    output tri1 id_1,
+    input  tri0 id_2
+);
+  supply1 id_4 = (1'b0);
+  module_0 modCall_1 (id_2);
+  assign id_0 = 1'b0;
+endmodule
+module module_2 (
+    output logic id_0,
+    input tri1 id_1,
+    output wire id_2,
+    output wire id_3,
+    output supply1 id_4,
+    input tri id_5,
+    input tri id_6,
+    input supply1 id_7
+    , id_21,
+    input tri1 id_8,
+    input tri id_9,
+    input wand id_10,
+    output supply0 id_11,
+    output wand id_12,
+    output logic id_13,
+    input wor id_14,
+    input wire id_15,
+    input wire id_16,
+    input supply0 id_17,
+    input uwire id_18,
+    input uwire id_19
+);
+  always @(1 or negedge id_15) begin : LABEL_0
+    #1 begin : LABEL_0
+      id_13 <= id_21;
+      id_4 = {id_5 === 1 + {id_10{id_10}}, 1, id_8};
+      $display(id_21);
+      id_0 <= id_1 - id_10;
+    end
+  end
+  always_ff disable id_22;
+  wire id_23, id_24;
+  module_0 modCall_1 (id_7);
+  assign modCall_1.type_4 = 0;
 endmodule

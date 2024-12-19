@@ -1,31 +1,29 @@
-// Seed: 2964590524
-module module_0 ();
-  wand id_2 = id_2 ==? 1;
-  wire id_3;
+// Seed: 87058419
+module module_0;
+  assign module_1.type_30 = 0;
 endmodule
 module module_1 (
-    input wire  id_0,
-    inout uwire id_1,
-    input uwire id_2
+    input uwire id_0,
+    input wand id_1,
+    output logic id_2,
+    input supply0 id_3
+    , id_20,
+    output tri1 id_4,
+    input tri1 id_5,
+    input wand id_6,
+    output tri1 id_7,
+    input tri1 id_8,
+    input wor id_9,
+    input wor id_10,
+    input uwire id_11,
+    input tri0 id_12,
+    input supply0 id_13,
+    input tri1 id_14,
+    input supply1 id_15,
+    output uwire id_16,
+    output uwire id_17,
+    output supply1 id_18
 );
-  wire id_4;
-  module_0();
-endmodule
-module module_2 (
-    input  tri0  id_0,
-    input  tri1  id_1,
-    input  uwire id_2,
-    input  tri1  id_3,
-    input  wire  id_4,
-    output tri   id_5,
-    output tri1  id_6
-);
-  tri id_8;
-  genvar id_9;
-  always_comb begin
-    if (id_0) id_6 = 1;
-    else id_9 = 1'b0 & id_0 == id_8 * id_9;
-  end
-  module_0();
-  always id_5 = id_0;
+  module_0 modCall_1 ();
+  always id_2 <= #1 1'b0;
 endmodule

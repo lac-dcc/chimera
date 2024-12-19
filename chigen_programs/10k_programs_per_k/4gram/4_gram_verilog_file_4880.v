@@ -1,31 +1,22 @@
-// Seed: 3077152413
-module module_0 (
-    input uwire   id_0,
-    input supply1 id_1
-);
-  wire id_3;
-  wire id_4;
-  wire id_5;
+// Seed: 1406559552
+module module_0 ();
+  for (id_1 = 1; 0 + id_1; id_1 = id_1) begin : LABEL_0
+    wire id_2, id_3;
+  end
+  assign module_1.type_7 = 0;
 endmodule
 module module_1 (
-    output supply0 id_0,
-    output uwire id_1,
-    input wire id_2,
-    input wand id_3,
-    output supply0 id_4,
-    output tri0 id_5,
-    output uwire id_6,
-    input wire id_7,
-    input wor id_8,
-    input uwire id_9,
-    output supply1 id_10,
-    output wand id_11
+    output tri id_0,
+    input logic id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    output logic id_4,
+    output supply1 id_5
 );
-  id_13(
-      1, 1 - id_1
-  );
-  or (id_5, id_7, id_9, id_13, id_3, id_2, id_8);
-  module_0(
-      id_8, id_7
-  );
+  always while (1 || id_2 || 1) #1 id_4 <= id_2 << id_2;
+  module_0 modCall_1 ();
+  always_latch @(posedge id_2) begin : LABEL_0
+    id_4 = id_1;
+    id_3 = 1;
+  end
 endmodule

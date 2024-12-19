@@ -1,49 +1,48 @@
-// Seed: 318798445
-module module_0 ();
-  wire id_1;
-  always disable id_2;
+// Seed: 3573419725
+module module_0 (
+    input wire id_0,
+    input tri1 id_1
+);
+  wor id_3;
+  reg id_4;
+  genvar id_5;
+  wire id_6;
+  always @(posedge 1) begin : LABEL_0
+    wait (id_5);
+  end
+  assign id_3 = id_1;
+  initial begin : LABEL_0
+    id_4 <= id_4;
+  end
+  always @(id_0 or posedge id_0) begin : LABEL_0
+    `define pp_7 0
+  end
+  wire id_8;
+  integer id_9 = id_6;
 endmodule
 module module_1 (
-    output logic id_0,
-    input  uwire id_1
+    input  tri0  id_0,
+    input  tri1  id_1,
+    input  logic id_2,
+    input  tri   id_3,
+    output tri   id_4,
+    input  uwire id_5,
+    input  uwire id_6
 );
-  always @(1) id_0 <= #id_1 1;
-  module_0();
-endmodule
-module module_2 (
-    input supply1 id_0,
-    output supply0 id_1
-    , id_30,
-    input supply1 id_2,
-    input tri0 id_3,
-    input wire id_4,
-    output wire id_5,
-    output wor id_6,
-    output wand id_7,
-    input tri0 id_8,
-    output tri0 id_9,
-    output tri1 id_10
-    , id_31,
-    input tri0 id_11,
-    output tri id_12,
-    input tri id_13,
-    input uwire id_14,
-    input uwire id_15,
-    output wire id_16,
-    input supply1 id_17,
-    input supply0 id_18,
-    output wand id_19,
-    output tri id_20,
-    output tri1 id_21,
-    input supply1 id_22,
-    output tri1 id_23,
-    input wire id_24,
-    input wire id_25,
-    input supply1 id_26,
-    output tri id_27,
-    input tri id_28
-);
-  wire id_32;
-  wire id_33;
-  module_0();
+  always @(negedge 1) begin : LABEL_0
+    id_4 = ~id_3;
+    if (1) begin : LABEL_0
+      if (id_6)
+        if (1'h0) disable id_8;
+        else id_8 <= id_2;
+      id_8 <= "";
+    end else begin : LABEL_0
+      if (id_2) $display(id_6);
+    end
+  end
+  module_0 modCall_1 (
+      id_1,
+      id_5
+  );
+  assign modCall_1.id_5 = 0;
 endmodule

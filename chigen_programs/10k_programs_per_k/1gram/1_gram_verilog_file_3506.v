@@ -1,64 +1,44 @@
-// Seed: 154277749
+// Seed: 3495017239
 module module_0 (
-    output supply1 id_0,
-    output tri1 id_1,
-    output tri id_2,
-    input wand id_3,
-    input wor id_4,
-    input tri1 id_5,
-    input supply1 id_6,
-    input wire id_7,
-    input tri0 id_8
+    output wand id_0,
+    input  tri0 id_1
 );
-  id_10(
-      .id_0(1 == id_5), .id_1(id_2)
+  id_3(
+      1'd0, id_1, 1 + 1, id_4
   );
-  wire id_11;
+  uwire id_5, id_6;
+  wire id_7, id_8;
+  tri id_9 = id_5;
+  wire id_10;
+  integer id_11 = "";
+  wire id_12;
+  integer id_13;
+  assign id_5 = 1;
 endmodule
 module module_1 (
-    output supply0 id_0,
-    output tri0 id_1,
-    input supply1 id_2,
-    input wand id_3,
-    input tri0 id_4,
-    input tri1 id_5,
-    output wire id_6,
-    output supply1 id_7,
-    input tri0 id_8,
-    input wand id_9,
-    input wire id_10,
-    output tri id_11,
-    input supply0 id_12,
-    input wor id_13,
-    input wand id_14,
-    output supply1 id_15,
-    output tri0 id_16,
-    input supply0 id_17,
-    input supply1 id_18,
-    output wor id_19,
-    output tri id_20,
-    output uwire id_21,
-    input wand id_22,
-    input tri id_23,
-    output supply0 id_24,
-    input tri1 id_25,
-    input uwire id_26,
-    input tri1 id_27,
-    output tri0 id_28,
-    output supply0 id_29,
-    output tri id_30,
-    output wand id_31
-    , id_37,
-    output tri1 id_32,
-    input wor id_33,
-    input wor id_34,
-    input supply1 id_35
-    , id_38
+    input wand id_0,
+    output supply1 id_1,
+    output supply1 id_2,
+    input supply0 id_3
+    , id_12,
+    input wor id_4,
+    output wire id_5,
+    output wand id_6,
+    input supply0 id_7,
+    output supply1 void id_8,
+    input tri id_9,
+    inout wor id_10
 );
-  assign id_1 = id_25;
-  assign id_7 = id_4;
-  module_0(
-      id_6, id_28, id_15, id_8, id_10, id_26, id_23, id_9, id_12
+  tri1 id_13;
+  assign id_2 = 1'd0;
+  wire id_14;
+  module_0 modCall_1 (
+      id_8,
+      id_10
   );
-  wire id_39;
+  assign modCall_1.type_14 = 0;
+  always id_5 = 1;
+  always id_8 = id_13;
+  wire id_15;
+  wire id_16;
 endmodule

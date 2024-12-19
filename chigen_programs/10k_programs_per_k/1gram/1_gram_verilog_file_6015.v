@@ -1,49 +1,52 @@
-// Seed: 661992163
-module module_0 ();
+// Seed: 869355684
+module module_0;
+  assign id_1 = 1;
+  wire id_2;
+  wire id_3;
+  assign id_2 = id_3;
+  assign module_2.type_5 = 0;
+  wire id_4;
 endmodule
 module module_1 (
-    id_1,
-    id_2
+    input wire id_0,
+    inout tri0 id_1,
+    output supply1 id_2,
+    input wire id_3,
+    input wor id_4
 );
-  input wire id_2;
-  input wire id_1;
-  id_3(
-      1
-  ); module_0();
+  wire id_6;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule
 module module_2 (
-    output uwire id_0
+    output supply0 id_0,
+    output supply1 id_1,
+    input  uwire   id_2
 );
+  wire id_4;
+  module_0 modCall_1 ();
 endmodule
 module module_3 (
-    input wand id_0,
-    input tri id_1,
-    output wire id_2,
-    input uwire id_3,
-    input tri1 id_4,
-    output tri id_5,
-    output supply0 void id_6,
-    input uwire id_7,
-    input tri0 id_8,
-    input tri0 id_9,
-    input wor id_10,
-    input tri0 id_11,
-    input wand id_12,
-    output supply0 id_13,
-    input wor id_14,
-    input tri1 id_15
+    input wire id_0,
+    input supply1 id_1,
+    output wire id_2
+    , id_10,
+    input wand id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    input wand id_6#(
+        .id_11(""),
+        .id_12(1'b0),
+        .id_13(1'h0 / 1'b0),
+        .id_14(id_3 == 1)
+    ),
+    output uwire id_7,
+    output wor id_8
 );
-  uwire id_17;
-  module_2(
-      id_6
-  );
-  wire id_18;
-  wire id_19;
-  tri0 id_20, id_21;
-  assign id_21 = 1;
-  assign id_19 = 1;
-  assign id_6  = id_17;
-  assign id_19 = id_10;
-  always id_13 = id_11;
-  always @* if (1) id_5 = id_0;
-endmodule
+  assign id_7  = 1;
+  assign id_11 = id_4;
+  wire id_15;
+  assign id_10 = id_10;
+  wire id_16, id_17, id_18;
+  module_0 modCall_1 ();
+endmodule : SymbolIdentifier

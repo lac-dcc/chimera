@@ -1,30 +1,26 @@
-// Seed: 2332389743
-module module_0;
-  always id_1 = (id_1 - "");
-endmodule
-module module_1 (
-    input logic id_0
-);
+// Seed: 1970583368
+module module_0 #(
+    parameter id_5 = 32'd84,
+    parameter id_6 = 32'd92,
+    parameter id_7 = 32'd72,
+    parameter id_8 = 32'd72,
+    parameter id_9 = 32'd50
+) ();
+  wire id_1;
+  wire id_2 = id_2;
+  wire id_3;
+  supply0 id_4;
+  defparam id_5 = 1, id_6 = 1, id_7 = id_7, id_8 = id_4, id_9 = 1'b0;
   assign id_2 = 1;
-  reg id_3, id_4, id_5, id_6, id_7;
-  module_0();
-  assign id_4 = 1;
-  assign id_7 = ~id_6;
-  always_ff id_5 <= id_0;
+  reg id_10;
+  always id_10 <= "";
+  `define pp_11 0
 endmodule
-module module_2 (
-    output supply1 id_0,
-    input logic id_1,
-    output supply0 id_2,
-    input logic id_3,
-    output supply0 id_4,
-    input wor id_5
-);
-  logic id_7, id_8, id_9;
-  module_0();
-  always begin
-    return id_5 + 1'b0;
-  end
-  id_10 :
-  assert property (@(id_1) id_9) id_10 <= id_3;
+module module_1;
+  generate
+    wire id_2;
+    wire id_3;
+  endgenerate
+  module_0 modCall_1 ();
+  assign modCall_1.id_4 = 0;
 endmodule

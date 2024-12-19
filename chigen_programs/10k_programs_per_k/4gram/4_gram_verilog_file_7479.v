@@ -1,33 +1,53 @@
-// Seed: 2556504885
+// Seed: 2230878426
 module module_0 (
-    input tri0 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    input supply0 id_3,
-    output tri0 id_4,
-    input wor id_5,
-    output wor id_6,
-    input supply0 id_7,
-    input tri id_8,
-    input supply0 id_9,
-    output supply0 id_10,
-    input wand id_11,
-    input uwire id_12,
-    input supply0 id_13
+    id_1,
+    id_2,
+    id_3
 );
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  tri id_4;
+  assign id_4 = 1'h0;
+  module_2 modCall_1 (
+      id_4,
+      id_3,
+      id_4,
+      id_4
+  );
+  assign modCall_1.id_4 = 0;
 endmodule
 module module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    output supply1 id_2,
-    input tri1 id_3
-    , id_5
+    output wor id_0,
+    input uwire id_1,
+    input supply1 id_2
 );
-  always_comb @(1) begin
-    assume (id_0);
-  end
-  buf (id_2, id_5);
-  module_0(
-      id_3, id_3, id_3, id_3, id_2, id_3, id_2, id_0, id_3, id_0, id_2, id_0, id_3, id_0
+  wire id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4
   );
+  assign modCall_1.id_4 = 0;
+  always_comb @(1) begin : LABEL_0
+    if (1 < 1) begin : LABEL_0
+      wait (1);
+    end else disable id_5;
+  end
+endmodule
+module module_0 (
+    module_2,
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_1 = 1;
+  always @(1 or posedge 1) begin : LABEL_0
+    if (id_2) id_4 = 1;
+    else id_4 = id_2;
+  end
 endmodule

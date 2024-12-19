@@ -1,25 +1,27 @@
-// Seed: 133008496
-module module_0 ();
+// Seed: 697165293
+module module_0;
   wire id_1;
 endmodule
 module module_1 (
-    input tri id_0
+    output supply0 id_0,
+    output tri1 id_1
+    , id_13,
+    output supply1 id_2,
+    input supply0 id_3,
+    input supply0 id_4,
+    output uwire id_5,
+    input tri id_6,
+    input supply1 id_7,
+    output tri1 id_8,
+    input uwire id_9,
+    output supply1 id_10,
+    output tri0 id_11
 );
-  initial id_2 = 1;
-  module_0();
-endmodule
-module module_2;
-  tri id_1 = id_1;
-  wor id_2, id_3, id_4;
-  module_0();
-  assign id_1 = (1 - 1);
-  assign id_1 = id_4;
-  logic [7:0] id_5;
-  always @(*)
-    if (1) begin
-      $display;
-      disable id_6;
-    end
-  assign id_5[1'o0] = 1;
-  always @(1 or posedge $display(1)) id_1 = id_3;
+  assign id_1 = 1 == id_6#(
+      .id_4(id_13),
+      .id_4(1)
+  ) - id_3;
+  supply0 id_14;
+  assign id_1 = id_14;
+  module_0 modCall_1 ();
 endmodule

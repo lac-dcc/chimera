@@ -1,30 +1,91 @@
-// Seed: 3671069547
+// Seed: 1604885252
 module module_0 (
-    output supply1 id_0,
-    output wand id_1,
-    input wire id_2,
-    input wand id_3,
-    output tri id_4,
-    input tri1 id_5
-    , id_7
+    output tri0 id_0,
+    output wor id_1,
+    input tri0 id_2,
+    input tri1 id_3,
+    output supply0 id_4,
+    input wire id_5,
+    output wand id_6,
+    input supply0 id_7,
+    input uwire id_8,
+    output uwire id_9,
+    input tri0 id_10
 );
-  wire id_8;
-  wor  id_9 = id_3;
-  wire id_10;
+  assign module_1.type_9 = 0;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input wire id_1,
-    inout supply0 id_2,
-    input wand id_3,
-    input wand id_4,
-    input tri0 id_5
+    input tri1 id_0,
+    output supply1 id_1,
+    output tri1 id_2,
+    input tri1 id_3,
+    input tri1 id_4,
+    inout tri id_5,
+    input supply0 id_6,
+    input tri0 id_7,
+    output supply1 id_8,
+    input wor id_9,
+    input tri id_10,
+    output tri1 id_11,
+    input supply0 id_12,
+    input wand id_13,
+    output uwire id_14,
+    input supply0 id_15,
+    input wire id_16,
+    input tri0 id_17,
+    input uwire id_18,
+    input supply1 id_19,
+    input tri1 id_20,
+    output supply0 id_21,
+    output wor id_22,
+    input wor id_23,
+    input supply0 id_24,
+    output wor id_25,
+    input wor id_26,
+    input wire id_27,
+    output tri0 id_28,
+    input wand id_29,
+    output wor id_30,
+    output tri0 id_31,
+    input tri0 id_32,
+    output tri0 id_33,
+    output wand id_34
 );
-  wire id_7;
-  wire id_8;
-  module_0(
-      id_2, id_2, id_5, id_0, id_2, id_4
+  wire id_36;
+  or primCall (
+      id_8,
+      id_5,
+      id_3,
+      id_17,
+      id_18,
+      id_27,
+      id_0,
+      id_23,
+      id_24,
+      id_9,
+      id_32,
+      id_6,
+      id_19,
+      id_36,
+      id_29,
+      id_13,
+      id_10,
+      id_20,
+      id_15,
+      id_26,
+      id_12
   );
-  wire id_9, id_10, id_11, id_12;
-  wire id_13;
+  module_0 modCall_1 (
+      id_8,
+      id_5,
+      id_5,
+      id_12,
+      id_30,
+      id_19,
+      id_33,
+      id_16,
+      id_29,
+      id_21,
+      id_16
+  );
 endmodule

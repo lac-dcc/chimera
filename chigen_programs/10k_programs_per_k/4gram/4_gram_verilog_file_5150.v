@@ -1,39 +1,106 @@
-// Seed: 2146801042
+// Seed: 178999928
 module module_0 (
-    input  wire  id_0,
-    output uwire id_1,
-    output tri0  id_2,
-    input  tri1  id_3,
-    input  tri0  id_4
+    output uwire id_0,
+    input uwire id_1,
+    input wand id_2,
+    output tri id_3,
+    output uwire id_4,
+    inout uwire id_5,
+    input tri1 id_6,
+    input wor id_7,
+    input wand id_8,
+    output supply1 id_9,
+    input supply1 id_10,
+    output tri id_11,
+    input uwire id_12,
+    output tri0 id_13,
+    input wire id_14,
+    output tri1 id_15,
+    input uwire id_16,
+    output tri1 id_17,
+    output wire id_18,
+    input tri0 id_19,
+    input uwire id_20,
+    input uwire id_21,
+    input wire id_22,
+    input wand id_23,
+    input supply1 id_24,
+    input supply1 id_25,
+    output supply1 id_26,
+    output wand id_27,
+    input tri0 id_28,
+    input tri1 id_29,
+    output wire id_30,
+    input tri1 id_31,
+    input tri0 id_32,
+    output supply0 id_33,
+    input tri1 id_34,
+    input tri0 id_35,
+    input tri id_36,
+    input tri0 id_37,
+    input wand id_38,
+    output wor id_39,
+    output tri id_40
+    , id_43,
+    output supply0 id_41
 );
-  uwire id_6;
-  id_7(
-      .id_0(id_0), .id_1(id_1)
-  );
-  assign id_6 = id_0;
+  wire id_44;
+  assign module_1.type_11 = 0;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    input tri id_3,
-    output wire id_4,
-    input wire id_5,
-    input supply0 id_6,
-    input tri1 id_7,
-    input supply1 id_8,
-    input uwire id_9,
-    input tri0 id_10,
-    input tri0 id_11,
-    input tri0 id_12,
-    input supply1 id_13,
-    output wor id_14
+    input wire id_0,
+    output supply1 id_1,
+    input wire id_2,
+    input wand id_3,
+    output supply0 id_4,
+    output supply1 id_5,
+    input supply0 id_6
 );
-  assign id_4 = 1;
-  always @(posedge id_5 or posedge 1 & id_3) $display(1, id_0);
-  wire id_16;
-  xor (id_14, id_16, id_10, id_3, id_8, id_6, id_2, id_12);
-  module_0(
-      id_6, id_14, id_14, id_5, id_1
+  wand id_8;
+  assign id_5 = id_3 ? id_0 : id_8;
+  module_0 modCall_1 (
+      id_8,
+      id_0,
+      id_6,
+      id_1,
+      id_4,
+      id_8,
+      id_8,
+      id_6,
+      id_3,
+      id_5,
+      id_0,
+      id_8,
+      id_6,
+      id_8,
+      id_2,
+      id_5,
+      id_0,
+      id_8,
+      id_8,
+      id_6,
+      id_0,
+      id_3,
+      id_8,
+      id_8,
+      id_8,
+      id_8,
+      id_4,
+      id_4,
+      id_0,
+      id_0,
+      id_5,
+      id_6,
+      id_3,
+      id_4,
+      id_6,
+      id_0,
+      id_8,
+      id_2,
+      id_3,
+      id_4,
+      id_5,
+      id_1
   );
+  assign id_5 = id_0;
 endmodule

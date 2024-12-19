@@ -1,27 +1,30 @@
-// Seed: 1467758504
-module module_0 (
-    input uwire id_0
-);
-  tri1 id_2 = ~id_2;
-  module_2();
+// Seed: 2029236404
+module module_0 ();
+  supply1 id_1 = id_1.id_1;
+  assign id_1 = id_1 <= id_1;
+  assign id_1 = id_1;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output logic id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  initial begin
-    id_1 <= 1;
-  end
-  id_3(); module_0(
-      id_0
-  );
-  wire id_4;
-endmodule
-module module_2 ();
-  uwire id_1;
-  assign id_1 = 1;
-  id_2(
-      .id_0(1 != 1), .id_1(id_1), .id_2(id_1), .id_3(id_1 ^ 1 && id_1 && 1), .sum(id_1)
-  );
-  wire id_3;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  generate
+    if (1) begin : LABEL_0
+      wire id_7 = id_5, id_8;
+    end else begin : LABEL_0
+      assign id_6 = id_1;
+    end
+  endgenerate
+  module_0 modCall_1 ();
+  assign modCall_1.type_2 = 0;
 endmodule

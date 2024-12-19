@@ -1,33 +1,27 @@
-// Seed: 552020894
+// Seed: 1998370726
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    output wor  id_0,
+    output wire id_1
 );
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_6;
-  wire id_7;
+  assign id_0 = id_3 | {1'b0, 1'b0, id_3};
+  assign id_1 = 1'b0;
+  wire id_4;
+  for (id_5 = id_5; id_3; id_5 = id_5) begin : LABEL_0
+    wire id_6;
+  end
+  assign module_1.type_9 = 0;
 endmodule
-module module_1 (
-    input  tri1  id_0,
-    input  tri0  id_1,
-    output uwire id_2,
-    output uwire id_3,
-    output wire  id_4,
-    output tri0  id_5,
-    input  uwire id_6,
-    output tri0  id_7,
-    input  tri0  id_8,
-    input  wire  id_9
+module module_0 (
+    output supply0 id_0,
+    output supply0 id_1,
+    input uwire id_2,
+    input supply1 id_3,
+    output supply1 module_1,
+    input wor id_5,
+    output tri0 id_6
 );
-  wire id_11;
-  module_0(
-      id_11, id_11, id_11, id_11, id_11
+  module_0 modCall_1 (
+      id_1,
+      id_0
   );
 endmodule

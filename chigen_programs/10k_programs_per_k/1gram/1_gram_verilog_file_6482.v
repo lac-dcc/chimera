@@ -1,36 +1,44 @@
-// Seed: 2969492931
-module module_0;
-  wire id_1;
-  wire id_2 = id_2;
+// Seed: 3890834474
+module module_0 (
+    input wor id_0
+);
+  wire id_2;
+  assign module_1.type_26 = 0;
+  wire id_3, id_4;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input supply1 id_1,
-    output wand id_2
-    , id_25,
-    output supply1 id_3,
-    input tri id_4,
+    input wand id_0,
+    output supply1 id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    input supply0 id_4,
     output wor id_5,
-    output tri1 id_6,
-    input tri id_7,
-    output supply1 id_8,
-    input supply0 id_9,
-    output wor id_10,
-    output wire id_11
-    , id_26,
-    input wand id_12,
-    output tri id_13,
-    output uwire id_14,
-    input uwire id_15,
-    output wor id_16,
-    input wor id_17,
-    output wand id_18,
-    output supply1 id_19,
-    input wand id_20,
-    output wire id_21,
-    input wand id_22,
-    input tri id_23
+    output wire id_6,
+    input wand id_7,
+    input tri id_8,
+    input uwire id_9
 );
-  wire id_27;
-  module_0();
+  assign id_6 = 1;
+  assign id_5 = 1;
+  wire id_11;
+  assign {1, id_2 == "", id_7, 1 ^ 1} = id_0;
+  string id_12, id_13 = "";
+  string id_14 = id_12;
+  wire id_15, id_16;
+  uwire id_17;
+  generate
+    begin : LABEL_0
+      wire id_18;
+      begin : LABEL_0
+        always_latch $display({1, 1} + id_17, 1);
+      end
+    end
+    wire id_19, id_20, id_21;
+  endgenerate
+  supply1 id_22;
+  module_0 modCall_1 (id_9);
+  id_23(
+      1'b0, ~1, id_22
+  );
+  wire id_24, id_25;
 endmodule

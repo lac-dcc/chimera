@@ -1,38 +1,25 @@
-// Seed: 816880848
-module module_0;
+// Seed: 3606748783
+module module_0 ();
+  tri1 id_1;
+  assign id_1 = 1;
 endmodule
 module module_1 (
-    output wire id_0,
+    input wire id_0,
     input uwire id_1,
-    output supply0 id_2,
-    output tri0 id_3,
-    output wor id_4
-    , id_14,
-    input wire id_5,
-    input uwire id_6,
-    input uwire id_7,
-    input wand id_8,
-    input wor id_9,
-    output tri1 id_10,
-    input supply0 id_11,
-    output supply0 id_12
+    input supply1 id_2,
+    input supply1 id_3
 );
-  wire id_15;
-  module_0();
-endmodule
-module module_2;
-  tri0 id_1;
-  assign id_1 = id_1;
-  supply0 id_2;
-  module_0();
-  initial
-    #1 begin
-      id_1 = id_2;
-      $display(id_1, id_2, 1, id_2 + id_2, id_2 & 1, ~id_2, (1), id_1);
-      fork
-        $display(id_2);
-        id_3;
-        id_4(~id_3, 1, 1'd0, 1 | 1);
-      join : id_5
-    end
+  assign id_5 = id_3 == 1;
+  supply0 id_6 = id_3;
+  wire id_7;
+  logic [7:0] id_8;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  logic [7:0] id_9, id_10;
+  assign id_10[1'h0] = 1'b0;
+  logic [7:0] id_11;
+  assign id_8[1'b0] = id_5;
+  always begin : LABEL_0
+    id_11 = id_9;
+  end
 endmodule

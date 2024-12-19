@@ -1,43 +1,55 @@
-// Seed: 3137238840
+// Seed: 3675597936
 module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  tri0 id_5 = 1;
+  initial id_5 = id_3 == id_3;
+  integer id_6;
+  wire id_7;
+  initial begin : LABEL_0
+    id_6 <= 1;
+    id_1 = #1 id_3;
+  end
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    id_6
 );
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
   inout wire id_6;
-  inout wire id_5;
+  output wire id_5;
   output wire id_4;
   inout wire id_3;
   inout wire id_2;
-  inout wire id_1;
-  assign id_7 = id_1 == id_5;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3
-);
-  input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  integer id_4;
-  wire id_5;
-  wire id_6;
-  module_0(
-      id_4, id_1, id_1, id_4, id_1, id_4, id_5, id_5, id_4
+  output wire id_1;
+  assign id_5[1] = 1;
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_3,
+      id_2
   );
-  wire id_7;
-  logic [7:0] id_8;
-  wire id_9;
-  wire id_10 = id_8[1];
-  assign id_2 = id_8;
+  function integer id_7;
+    input id_8;
+    input id_9;
+    begin : LABEL_0
+      id_8 <= 1;
+      id_3 <= id_8 < id_7;
+      $display(id_8);
+      if (id_6 && "")
+        if (id_3 - 1) id_4 <= 1'b0;
+        else #1;
+      else id_9 = 1;
+    end
+  endfunction
 endmodule

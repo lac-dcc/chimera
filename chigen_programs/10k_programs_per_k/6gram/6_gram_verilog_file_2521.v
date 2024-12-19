@@ -1,25 +1,43 @@
-// Seed: 2421771679
-module module_0 ();
-  wire id_1;
-  assign id_1 = id_2[1 : 1'h0];
+// Seed: 2258149734
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_2 = id_5 < id_2;
+  tri id_6;
+  always @(posedge 1'b0) begin : LABEL_0
+    if (id_6) begin : LABEL_0
+      id_3 = id_4;
+    end else id_3 = 1;
+  end
 endmodule
 module module_1 (
-    input wire id_0,
-    input wor id_1,
-    input tri1 id_2,
+    input tri id_0,
+    input supply1 id_1,
+    output tri id_2,
     output tri id_3,
-    input wand id_4,
-    input wire id_5,
-    input supply1 id_6,
-    input tri1 id_7,
-    input supply1 id_8,
-    input wor id_9,
-    output wire id_10,
-    output supply0 id_11
+    output wire id_4,
+    input wand id_5,
+    output tri0 id_6
 );
-  assign module_1 = 1;
-  module_0();
-  wire id_13;
-  wire id_14;
-  wire id_15;
+  wire id_8;
+  wire id_9;
+  or primCall (id_3, id_9, id_0, id_8, id_1);
+  assign id_6 = {1'b0 == 1'h0, id_0} + 1;
+  module_0 modCall_1 (
+      id_8,
+      id_9,
+      id_8,
+      id_9,
+      id_9
+  );
+  assign modCall_1.id_6 = 0;
 endmodule

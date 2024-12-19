@@ -1,55 +1,44 @@
-// Seed: 475192928
+// Seed: 2272951867
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_3
 );
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
   inout wire id_3;
-  inout wire id_2;
+  output wire id_2;
   output wire id_1;
-  always @(posedge id_3) begin
-    id_1 <= "";
-  end
+  uwire id_4 = 1;
+  specify
+    (id_5 => id_6) = (1  : 1  : {id_5, id_5} == 1'h0, 1);
+    specparam id_7 = id_7 - {1, id_7};
+  endspecify
 endmodule
-module module_1 #(
-    parameter id_12 = 32'd49,
-    parameter id_13 = 32'd89
-) (
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_7
 );
-  output wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  input wire id_7;
+  output wire id_7;
   output wire id_6;
-  output wire id_5;
+  inout wire id_5;
   inout wire id_4;
   input wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign id_9 = id_10 - 1;
-  assign id_9 = 1'b0 * 1 * (1 > 1);
-  defparam id_12.id_13 = id_12; module_0(
-      id_8, id_4, id_4, id_5, id_2, id_4
+  input wire id_2;
+  inout wire id_1;
+  module_0 modCall_1 (
+      id_4,
+      id_6,
+      id_5
   );
-  initial begin
-    id_9 <= id_8;
+  assign modCall_1.id_7 = 0;
+  assign id_4 = 1;
+  always @(posedge id_1 or negedge id_2 == id_2) begin : LABEL_0
+    if (1) begin : LABEL_0
+      id_7 <= 1 + id_2 - id_3 - id_4;
+    end
   end
 endmodule

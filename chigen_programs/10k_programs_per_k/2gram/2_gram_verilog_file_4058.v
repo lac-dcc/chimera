@@ -1,31 +1,32 @@
-// Seed: 4060898644
+// Seed: 2488024836
 module module_0 (
-    input tri id_0
+    input tri1 id_0
 );
+  wire id_2;
 endmodule
 module module_1 (
-    input wor id_0,
-    inout wor id_1,
-    input uwire id_2,
-    input uwire id_3,
-    input supply0 id_4,
-    input uwire id_5,
-    output logic id_6,
-    output uwire id_7,
-    output uwire id_8,
-    output tri id_9,
-    input wand id_10
+    input  wire  id_0,
+    output logic id_1,
+    input  tri1  id_2,
+    input  tri0  id_3
+    , id_10,
+    input  logic id_4,
+    input  wire  id_5,
+    output tri   id_6,
+    input  wand  id_7,
+    input  tri   id_8
 );
-  wire id_12;
-  reg  id_13;
-  always begin
-    if ({1{1}}) begin
-      id_8  = id_3;
-      id_13 = 1;
-      id_6 <= id_13;
+  always begin : LABEL_0
+    id_10 <= (id_3 & 1);
+    id_6 = id_7 !== 1;
+    if (1) begin : LABEL_0
+      if (1) begin : LABEL_0
+        id_10 <= #1 id_4;
+        $display(id_4, id_10);
+      end
+      id_1 <= 1;
     end
   end
-  module_0(
-      id_0
-  );
+  module_0 modCall_1 (id_5);
+  assign modCall_1.type_0 = 0;
 endmodule

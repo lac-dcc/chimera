@@ -1,27 +1,34 @@
-// Seed: 3741841472
-module module_0;
-  uwire id_2 = id_2 + id_2;
-  assign id_2 = 1;
-  wor id_3;
-  supply1 id_4;
-  assign id_3 = id_2;
-  assign id_3 = id_4;
-  function id_5;
-    input id_6;
-    id_2 = id_6;
-  endfunction
-  assign id_2 = 1;
+// Seed: 1921759319
+module module_0 ();
+  always @(negedge id_1) begin : LABEL_0
+    if (id_1 + 1'b0)
+      if (id_1) begin : LABEL_0
+        begin : LABEL_0
+          id_1 = 1 & module_0;
+          id_1 = 1;
+        end
+      end else begin : LABEL_0
+        deassign id_1;
+      end
+    else begin : LABEL_0
+      wait ((1));
+    end
+  end
+  assign module_1.type_4 = 0;
 endmodule
-module module_0 (
-    input wor id_0,
-    output supply0 id_1
+module module_1 (
+    output tri id_0,
+    input wand id_1,
+    input tri1 id_2,
+    output wor id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    input supply1 id_7
 );
-  supply1 id_3 = id_3;
-  module_0();
-  wire id_4;
-  module_1(
-      .id_0(1 * id_3 - 1), .id_1(1), .id_2(1 - 1), .id_3(id_0 < 1), .id_4(1)
-  );
-  wire id_5;
-  assign id_1 = 1;
+  always @(posedge 1 or posedge id_2) begin : LABEL_0
+    id_0 = ~id_5 == id_2 - id_7;
+  end
+  xnor primCall (id_0, id_1, id_2, id_4, id_5, id_6, id_7);
+  module_0 modCall_1 ();
 endmodule

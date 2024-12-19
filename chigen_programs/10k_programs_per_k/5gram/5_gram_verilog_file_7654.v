@@ -1,28 +1,32 @@
-// Seed: 2953309446
-module module_0;
-  supply0 id_1;
-  for (id_2 = ~id_1; 1; id_1 = 1) begin : id_3
-    for (id_4 = 1; 1; id_3 = 1) begin : id_5
-      always @(1) begin
-        if (1)
-          for (id_3 = id_4#(.id_5(1)) == id_3; 1'b0 >= 1; id_4 = id_5) begin
-            id_2 <= 1'h0;
-            id_3 <= 1;
-          end
-        else id_1 = 1;
-      end
-    end
-  end
+// Seed: 2813902377
+module module_0 ();
+  assign id_1 = 1;
 endmodule
-module module_1;
-  always_ff @(id_1) begin
-    id_1 <= id_1;
-  end
-  always @(posedge id_1) begin
-    id_1 = id_1;
-  end
-  assign id_1 = 1'd0;
-  tri0 id_2;
-  assign id_2 = 1'b0 == 1;
-  module_0();
+module module_1 (
+    input supply0 id_0,
+    input wire id_1,
+    input tri0 id_2,
+    output uwire id_3,
+    input uwire id_4,
+    output wire id_5,
+    inout wand id_6,
+    input tri0 id_7
+);
+  assign id_3 = 1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    output supply0 id_0,
+    output supply0 id_1,
+    input supply0 id_2,
+    output tri0 id_3,
+    output wire id_4,
+    inout tri id_5,
+    output wor id_6,
+    input tri1 id_7
+);
+  wire id_9;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule

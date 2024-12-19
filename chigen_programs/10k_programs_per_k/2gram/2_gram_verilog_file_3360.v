@@ -1,52 +1,65 @@
-// Seed: 2507917128
+// Seed: 2429672248
 module module_0 (
-    input supply1 id_0,
-    output wand id_1,
-    input wire id_2,
-    input wand id_3,
-    input tri id_4,
-    output tri1 id_5,
-    input wor id_6
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_5 = 1;
-  wire id_8;
-  wire id_9;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign module_1.id_5 = 0;
 endmodule
 module module_1 (
-    input wor id_0,
-    input tri0 id_1,
-    input supply0 id_2,
+    output supply0 id_0,
+    input wand id_1,
+    output wor id_2,
     input tri1 id_3,
-    input wand id_4
-    , id_22,
-    input wire id_5,
-    input tri0 id_6,
-    input supply1 id_7,
-    output tri id_8,
-    output tri0 id_9,
-    input wor id_10,
-    output supply0 id_11,
-    output tri0 id_12,
-    output tri0 id_13,
-    input wand id_14,
-    input uwire id_15,
-    input wire id_16,
-    output logic id_17,
-    output tri0 id_18,
-    output tri1 id_19,
-    output uwire id_20
+    input uwire id_4,
+    input wor id_5
 );
-  always begin
-    id_13 = id_6 === id_4;
-  end
-  always begin
-    id_17 <= id_16 % 1;
-  end
-  module_0(
-      id_2, id_9, id_2, id_4, id_14, id_19, id_4
-  ); id_23(
-      .id_0(id_11), .id_1(1), .id_2(id_14)
+  assign id_0 = 1;
+  wire id_7;
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7
   );
-  wire id_24;
-  wire id_25;
+  tri0 id_8;
+  assign id_0 = id_4;
+  tri0 id_9 = id_8;
+  assign id_9 = id_1;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    output supply1 id_3,
+    output uwire id_4,
+    output tri0 id_5,
+    input tri0 id_6
+    , id_24,
+    input tri0 id_7,
+    output supply0 id_8,
+    input supply1 id_9,
+    output tri id_10,
+    input wire id_11,
+    input wire id_12,
+    output tri1 id_13,
+    input supply1 id_14,
+    output logic id_15,
+    output tri1 id_16,
+    input logic id_17,
+    input supply1 id_18,
+    input wor id_19,
+    input wand id_20,
+    input tri0 id_21
+    , id_25,
+    input uwire id_22
+);
+  always id_15 <= id_17;
+  module_0 modCall_1 (
+      id_24,
+      id_24,
+      id_25
+  );
 endmodule

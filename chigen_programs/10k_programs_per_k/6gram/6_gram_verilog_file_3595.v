@@ -1,71 +1,44 @@
-// Seed: 3192306409
+// Seed: 1002836590
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wire id_0,
+    input tri1 id_1,
+    input supply0 id_2
 );
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wand id_1,
-    input supply0 id_2,
-    input tri id_3,
-    input uwire id_4,
-    input wor id_5,
-    output tri id_6,
-    input wand id_7,
-    input uwire id_8,
-    output wand id_9,
-    input tri id_10,
-    input tri1 id_11,
-    output supply0 id_12,
-    output wor id_13,
-    output uwire id_14,
-    output tri1 id_15,
-    input uwire id_16,
-    input uwire id_17,
-    input tri0 id_18,
-    input wor id_19,
-    input wire id_20,
-    input tri0 id_21,
-    output supply0 id_22,
-    output uwire id_23,
-    input wire id_24,
-    output uwire id_25,
-    output wor id_26,
-    output supply1 id_27,
-    input tri0 id_28,
-    input wire id_29
-    , id_53,
-    output uwire id_30,
-    output uwire id_31,
-    output wor id_32,
-    output tri id_33,
-    output wand id_34,
-    input tri1 id_35,
-    output tri1 id_36,
-    input uwire id_37,
-    input tri0 id_38,
-    output uwire id_39,
-    output tri1 id_40,
-    output tri1 id_41,
-    input tri1 id_42,
-    output supply0 id_43,
-    input wor id_44,
-    input wire id_45,
-    input supply0 id_46,
-    input wand id_47,
-    input wire id_48,
-    input wire id_49,
-    input wor id_50,
-    input uwire id_51
-    , id_54
+    input  wor id_0,
+    output tri id_1
 );
-  wire id_55;
-  module_0(
-      id_55, id_53, id_55
+  reg id_3;
+  reg id_4;
+  assign id_3 = id_4;
+  wire id_5;
+  module_0 modCall_1 (
+      id_0,
+      id_0,
+      id_0
   );
+  assign modCall_1.type_0 = 0;
+  tri1 id_6 = 1;
+  always @(posedge id_5) id_6 = 1;
+  always @(*) begin : LABEL_0
+    id_4 <= id_4;
+  end
+endmodule
+module module_2 ();
+  assign id_1[1] = 1;
+  assign id_1 = id_1;
+  always @(posedge 1) $display;
+endmodule
+module module_3 (
+    input  logic id_0,
+    output logic id_1
+);
+  always @(posedge id_0 or id_0 >= id_0(
+      1'b0
+  ))
+    if (id_0) id_1 <= id_0;
+    else id_1 <= 1;
+  module_2 modCall_1 ();
+  assign id_1 = 1;
 endmodule

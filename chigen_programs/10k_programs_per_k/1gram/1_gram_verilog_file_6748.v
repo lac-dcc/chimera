@@ -1,36 +1,30 @@
-// Seed: 2656859150
-macromodule module_0;
-  tri id_2, id_3;
-  assign id_2 = 1;
+// Seed: 2625717618
+module module_0 #(
+    parameter id_3 = 32'd12,
+    parameter id_4 = 32'd86,
+    parameter id_5 = 32'd0
+) (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  output wire id_1;
+  defparam id_3 = 1, id_4 = id_3, id_5 = id_3;
+  assign module_1.id_8 = 0;
 endmodule
 module module_1 (
-    output logic id_0,
-    input supply1 id_1,
-    output supply0 id_2,
-    output supply1 id_3,
-    input tri0 id_4
+    output wor id_0,
+    input supply0 id_1,
+    input wor id_2
 );
-  always id_0 <= id_4 + "" - id_4;
-  module_0();
-  wire id_6;
-endmodule
-module module_2 #(
-    parameter id_8 = 32'd70
-) (
-    input wire id_0,
-    input wand id_1,
-    input tri0 id_2,
-    input supply0 id_3,
-    input tri1 id_4,
-    input wor id_5
-);
-  reg id_7;
-  assign id_7 = 1;
-  module_0(); defparam id_8 = 1;
-  assign id_8 = id_8;
-  always_latch
-    if (id_5) id_9;
-    else if (1)
-      if (id_7) id_7 <= 1;
-      else id_9 <= id_7;
+  tri0 id_4;
+  assign id_0 = 1;
+  module_0 modCall_1 (
+      id_4,
+      id_4
+  );
+  assign id_4 = id_4;
+  wire id_5, id_6, id_7;
+  supply0 id_8;
+  assign id_8 = id_2 ? id_7 : 1;
 endmodule

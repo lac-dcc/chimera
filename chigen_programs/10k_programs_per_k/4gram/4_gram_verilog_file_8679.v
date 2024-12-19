@@ -1,69 +1,67 @@
-// Seed: 3193119224
+// Seed: 2976522080
 module module_0 (
-    input tri id_0,
-    input supply1 id_1,
-    output wire id_2,
-    output tri1 id_3,
-    input wire id_4,
-    input wor id_5,
-    output supply0 id_6,
-    output supply0 id_7,
-    input uwire id_8,
-    input wire id_9,
-    input tri0 id_10,
-    input tri0 id_11,
-    output supply1 id_12,
-    output wand id_13,
-    output wor id_14,
-    input wire id_15,
-    output wor id_16,
-    input tri id_17,
-    output supply0 id_18,
-    output wor id_19,
-    output tri1 id_20,
-    input tri1 id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  assign id_14 = 1;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
 endmodule
 module module_1 (
-    input  wor  id_0,
-    input  tri1 id_1,
-    output wand id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  supply0 id_4 = id_1;
-  generate
-    if (1) begin : id_5
-      wor id_6;
-      for (id_7 = id_6; id_5 + 1; id_6 = id_4 & id_0) begin : id_8
-        wire id_9;
-      end
-      assign id_5 = 1;
-      wire id_10;
-      assign id_6 = id_4;
-    end else assign id_2 = id_4;
-  endgenerate
-  module_0(
-      id_4,
-      id_0,
-      id_4,
-      id_2,
-      id_4,
-      id_4,
-      id_2,
-      id_4,
-      id_4,
-      id_0,
-      id_1,
-      id_1,
-      id_4,
-      id_4,
-      id_4,
-      id_0,
-      id_4,
-      id_0,
-      id_2,
-      id_4,
-      id_4,
-      id_4
+  inout wire id_15;
+  input wire id_14;
+  output wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_8 = 1;
+  module_0 modCall_1 (
+      id_8,
+      id_6,
+      id_15,
+      id_6,
+      id_9
   );
+  wire id_16;
+  wire id_17 = id_14;
+  assign id_17 = 1;
+  wire id_18 = id_7;
+  initial
+    assert (id_2 != 1)
+    else;
+  reg id_19;
+  initial begin : LABEL_0
+    id_19 <= 1;
+  end
 endmodule

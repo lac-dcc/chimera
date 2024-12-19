@@ -1,27 +1,29 @@
-// Seed: 2682387996
+// Seed: 1239911860
 module module_0 (
-    output supply1 id_0,
-    input wand id_1
+    output supply1 id_0
 );
-  for (id_3 = (1); 1; id_3 = 1'h0) begin
-    for (id_4 = 1; 1; id_3 = id_1) begin : id_5
-      wire id_6;
-    end
-  end
+  initial cover (id_2);
+  assign module_1.type_20 = 0;
+  assign id_2 = "";
 endmodule
-module module_1 (
-    output logic id_0,
-    input  wire  id_1
-    , id_6,
-    input  tri   id_2,
-    output wire  id_3,
-    input  tri0  id_4
+module module_0 (
+    input logic id_0,
+    input supply0 id_1,
+    input wor id_2,
+    output tri id_3,
+    input supply1 id_4
+    , id_15,
+    output tri0 id_5,
+    input uwire id_6,
+    input supply0 id_7,
+    input supply0 module_1,
+    input tri0 id_9,
+    output tri0 id_10,
+    input uwire id_11,
+    output wire id_12,
+    input uwire id_13
 );
-  assign id_6 = 1;
-  always @(posedge 1 or 1) begin
-    id_0 <= 1;
-  end
-  module_0(
-      id_3, id_4
-  );
+  module_0 modCall_1 (id_5);
+  wire id_16;
+  always_latch force id_10 = id_0;
 endmodule

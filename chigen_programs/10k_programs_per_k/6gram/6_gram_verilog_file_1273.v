@@ -1,33 +1,32 @@
-// Seed: 2917707120
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  tri id_5;
-  assign id_1 = 1 ? id_5 : 1;
-  assign id_5 = 1;
-  wire id_6;
-  assign id_5 = 1 - id_4;
+// Seed: 1814499711
+module module_0;
+  always @(1 or id_1 or id_1(id_1)) release id_1;
+  module_2 modCall_1 ();
+  reg id_2, id_3;
+  reg id_4;
+  always
+    if (id_2) assign id_2 = id_1;
+    else begin : LABEL_0
+      id_4 <= id_2;
+    end
 endmodule
-module module_1 (
-    input uwire id_0,
-    output wire id_1,
-    input wor id_2,
-    output wand id_3,
-    input uwire id_4,
-    input supply0 id_5,
-    output supply0 id_6
+module module_1;
+  always @(1) id_1 = #1 1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_3 = 0;
+endmodule
+module module_2;
+  supply1 id_1;
+  assign module_0.id_2 = 0;
+  assign id_1 = 1;
+endmodule
+module module_3 (
+    id_1
 );
-  assign id_3 = id_5;
-  tri0 id_8 = id_8 && 1;
-  integer id_9;
-  module_0(
-      id_8, id_9, id_8, id_9
-  );
+  input wire id_1;
+  initial begin : LABEL_0
+    assert (id_1);
+    $display(1 === 1'b0);
+  end
+  module_2 modCall_1 ();
 endmodule

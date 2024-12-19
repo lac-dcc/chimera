@@ -1,37 +1,29 @@
-// Seed: 1684956059
-module module_0 (
-    input tri id_0,
-    output tri1 id_1,
-    input tri id_2,
-    input supply1 id_3,
-    input tri id_4,
-    input uwire id_5
-);
-  uwire id_7 = 1 - 1;
-  integer id_8;
-  wire id_9;
+// Seed: 1851394918
+module module_0 ();
+  assign id_1 = id_1 - 1 && 1'd0;
+  assign id_1 = 1;
+  wor  id_2;
+  wire id_3;
+  initial @(id_2) id_2 = id_1;
+  always assume (id_1);
 endmodule
 module module_1 (
-    input  logic id_0,
-    input  wire  id_1,
-    output tri0  id_2,
-    input  logic id_3,
-    input  logic id_4,
-    output wire  id_5,
-    inout  logic id_6
+    input tri0 id_0,
+    output tri id_1,
+    input tri id_2,
+    input wor id_3,
+    output tri0 id_4,
+    input tri0 id_5,
+    input tri0 id_6,
+    output wand id_7,
+    input supply1 id_8,
+    input uwire id_9
 );
-  logic id_8 = id_3;
-  assign id_8 = id_4;
-  module_0(
-      id_1, id_5, id_1, id_1, id_1, id_1
-  );
-  always begin
-    id_6 <= id_0;
-    for (id_2 = (!id_1); 1; id_5++)
-    @(*) begin
-      id_8 <= 1;
-    end
+  assign id_1 = id_9;
+  always begin : LABEL_0
+    id_7 = 1'd0;
   end
-  assign id_8 = id_4;
-  assign id_8 = id_8 != id_3;
+  module_0 modCall_1 ();
+  wire id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19, id_20;
+  xor primCall (id_1, id_2, id_3, id_5, id_6, id_8, id_9);
 endmodule

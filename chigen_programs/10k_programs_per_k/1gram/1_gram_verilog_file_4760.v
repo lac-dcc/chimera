@@ -1,40 +1,44 @@
-// Seed: 2812390703
-module module_0;
-  assign id_1 = id_1;
+// Seed: 337027562
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_2 = 1;
 endmodule
 module module_1 (
-    id_1
+    output tri0 id_0,
+    output supply1 id_1,
+    output uwire id_2,
+    input wire id_3,
+    input tri1 id_4,
+    input wand id_5,
+    input uwire id_6,
+    output wor id_7,
+    input supply0 id_8,
+    input tri1 id_9,
+    input supply1 id_10,
+    input tri1 id_11,
+    input supply0 id_12
+    , id_19, id_20,
+    output supply1 id_13,
+    output supply0 id_14,
+    input supply0 id_15,
+    input uwire id_16,
+    input tri id_17
+    , id_21
 );
-  input wire id_1;
-  tri1 id_2;
-  always id_2 = 1;
-  uwire id_3;
-  assign id_3 = id_2;
-  tri0 id_4 = 1;
-  module_0();
-  assign id_4 = 1;
-endmodule
-module module_2 (
-    input tri0 id_0,
-    input uwire id_1,
-    input tri id_2,
-    input uwire id_3,
-    input wor id_4,
-    output tri id_5,
-    output wand id_6,
-    input tri0 id_7,
-    input wand id_8,
-    input supply0 id_9,
-    output wand id_10,
-    input tri id_11,
-    input tri1 id_12
-);
-  assign id_5 = id_1;
-  always_ff @(posedge id_4) begin
-    id_10 = 1;
-  end : id_14
-  wire id_15;
-  module_0();
-  if (1) supply0 id_16;
-  else always id_16 += id_16 - id_1;
+  module_0 modCall_1 (
+      id_21,
+      id_19,
+      id_19,
+      id_19
+  );
+  assign modCall_1.id_2 = 0;
+  wire id_22;
 endmodule

@@ -1,23 +1,34 @@
-// Seed: 1783905783
-module module_0;
-  tri1 id_1 = (id_1 * 1);
+// Seed: 1559726625
+module module_0 (
+    input supply1 id_0,
+    input tri0 id_1,
+    input tri id_2,
+    output tri0 id_3
+);
+  wire id_5;
+  assign module_1.id_11 = 0;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input wand id_1
+    input wor id_0,
+    input wand id_1,
+    input wire id_2,
+    output wor id_3,
+    input tri id_4,
+    input supply0 id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    input tri0 id_8,
+    input tri0 id_9
 );
-  wire  id_3;
-  uwire id_4;
-  wire  id_5;
-  tri1  id_6 = 1;
-  assign id_4 = id_6;
-  wire id_7;
-  wor  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ;
-  genvar id_25;
-  wire id_26;
-  module_0(); id_27(
-      .id_0(id_19), .id_1(id_20)
+  wire   id_11 = 1;
+  string id_12;
+  wire   id_13;
+  wire   id_14;
+  module_0 modCall_1 (
+      id_8,
+      id_4,
+      id_6,
+      id_7
   );
-  wire id_28;
-  always_ff @(posedge id_0) id_15 = 1'd0;
+  assign id_12 = "";
 endmodule

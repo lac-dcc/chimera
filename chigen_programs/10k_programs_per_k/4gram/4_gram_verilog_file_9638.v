@@ -1,43 +1,30 @@
-// Seed: 1946944592
+// Seed: 2286785799
 module module_0;
-  wire id_1;
+  always @(posedge 1 or posedge id_1) begin : LABEL_0
+    id_1 = 1;
+  end
+  wire id_3;
+  wire id_4;
 endmodule
 module module_1 (
-    input wire id_0,
-    input wand id_1
-    , id_31,
-    input supply0 id_2,
-    input wire id_3,
-    output supply1 id_4,
-    output wand id_5,
-    input uwire id_6,
-    output wor id_7,
-    output supply1 id_8,
-    input supply0 id_9,
-    output supply1 id_10,
-    input uwire id_11,
-    input supply0 id_12,
-    output tri0 id_13,
-    input supply1 id_14,
-    input tri0 id_15,
-    input wor id_16,
-    input wor id_17,
-    input uwire id_18,
-    input wire id_19,
-    input wand id_20,
-    inout tri0 id_21,
-    input supply1 id_22,
-    input supply1 id_23,
-    output supply1 id_24,
-    output tri id_25,
-    input tri id_26,
-    output uwire id_27
-    , id_32,
-    input wire id_28,
-    input wor id_29
+    output supply1 id_0,
+    input wor id_1,
+    output tri1 id_2,
+    output tri id_3,
+    input wand id_4,
+    input supply1 id_5,
+    input wand id_6,
+    input supply0 id_7,
+    input supply1 id_8,
+    input wand id_9,
+    input supply1 id_10,
+    input supply0 id_11,
+    input wor id_12
 );
-  generate
-    wire id_33 = id_20;
-  endgenerate
-  module_0();
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  wire id_14;
+  wire id_15;
+  wire id_16;
+  tri  id_17 = 1;
 endmodule

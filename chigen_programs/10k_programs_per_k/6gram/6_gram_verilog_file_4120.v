@@ -1,31 +1,37 @@
-// Seed: 446347890
+// Seed: 236926584
 module module_0 (
-    output supply0 id_0,
-    output supply0 id_1
-    , id_6,
-    input wand id_2,
-    output uwire id_3,
-    input supply0 id_4
+    id_1,
+    id_2
 );
-  always #1 begin
-    disable id_7;
-  end
-  wire id_8;
-  always #0 id_8 = id_8;
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = id_2;
 endmodule
 module module_1 (
-    input wire id_0,
-    output uwire id_1,
-    input wand id_2,
-    input supply1 id_3,
-    output logic id_4,
-    inout wand id_5,
-    input logic id_6,
-    output tri1 id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  always @(1 or posedge id_5) #1;
-  always @(posedge 1) id_4 <= id_6;
-  module_0(
-      id_7, id_5, id_5, id_1, id_3
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  generate
+    for (id_9 = 1'b0; 1; id_2 = id_2) begin : LABEL_0
+      wire id_10 = id_4;
+    end
+  endgenerate
+  module_0 modCall_1 (
+      id_2,
+      id_6
   );
 endmodule

@@ -1,15 +1,12 @@
-// Seed: 2595563359
+// Seed: 1703813547
 module module_0 (
     id_1,
-    id_2
+    id_2,
+    id_3
 );
-  input wire id_2;
-  inout wire id_1;
-  supply0 id_3;
-  generate
-    assign id_3 = 1;
-  endgenerate
-  wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
 endmodule
 module module_1 (
     id_1,
@@ -27,34 +24,29 @@ module module_1 (
     id_13,
     id_14,
     id_15,
-    id_16,
-    id_17,
-    id_18
+    id_16
 );
-  inout wire id_18;
-  inout wire id_17;
-  inout wire id_16;
+  input wire id_16;
   input wire id_15;
   output wire id_14;
-  inout wire id_13;
-  input wire id_12;
-  output wire id_11;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
   input wire id_10;
   inout wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
+  output wire id_8;
+  input wire id_7;
+  input wire id_6;
   input wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  logic [7:0] id_19, id_20, id_21 = id_9, id_22, id_23, id_24, id_25;
-  wire id_26;
-  tri1 id_27, id_28 = 1'b0;
-  module_0(
-      id_13, id_26
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0 modCall_1 (
+      id_9,
+      id_9,
+      id_15
   );
-  wire id_29;
-  assign id_23[1] = 1 + ~id_4;
+  assign id_9 = id_16 >= 1'b0;
+  assign (strong1, weak0) id_8 = id_4;
 endmodule

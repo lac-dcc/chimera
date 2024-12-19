@@ -1,40 +1,30 @@
-// Seed: 419848865
-module module_0;
-  assign id_1 = id_1;
-  module_2(
-      id_1, id_1, id_1, id_1, id_1, id_1
-  );
+// Seed: 2422884243
+module module_0 ();
+  reg id_2;
+  task automatic id_3;
+    begin : LABEL_0
+      id_2 <= #1 1'b0;
+    end
+  endtask
+  wand id_4;
+  initial begin : LABEL_0
+    id_3 = !id_4;
+  end
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    output tri1 id_0,
+    output wor  id_1
 );
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign id_2[1] = id_1;
-  module_0();
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  input wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  id_7(
-      .id_0(id_4 == 1), .id_1(1), .id_2(1)
-  );
+  module_0 modCall_1 ();
+  assign modCall_1.type_5 = 0;
+  reg id_3, id_4;
+  always @(posedge id_4) begin : LABEL_0
+    id_0 = 1 - 1;
+  end
+  always @({id_4,
+    1
+  } or posedge id_4)
+  begin : LABEL_0
+    id_3 <= id_4;
+  end
 endmodule

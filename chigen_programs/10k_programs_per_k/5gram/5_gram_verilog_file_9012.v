@@ -1,33 +1,36 @@
-// Seed: 1723541652
-module module_0 (
-    input wand id_0,
-    output tri1 id_1,
-    input tri1 id_2,
-    output wand id_3,
-    output uwire id_4,
-    input wor id_5,
-    input supply0 id_6,
-    input wor id_7,
-    input tri id_8,
-    input tri id_9,
-    input wire id_10,
-    output wor id_11,
-    input tri id_12,
-    output supply0 id_13,
-    input tri id_14,
-    output tri1 id_15
-);
-  wire id_17;
+// Seed: 944173677
+module module_0;
+  reg id_2;
+  assign module_1.id_6 = 0;
+  reg id_3;
+  always @(id_1, 1 + id_3) begin : LABEL_0
+    if (1) deassign id_1;
+    else begin : LABEL_0
+      id_2 <= id_3;
+      id_2 <= id_2;
+    end
+  end
 endmodule
 module module_1 (
-    input wor  id_0,
-    input wand id_1
+    id_1,
+    id_2,
+    id_3
 );
-  always @(1 or posedge 1) begin
-    id_3 <= 1;
-  end
-  assign id_4 = {1'b0, id_0};
-  module_0(
-      id_4, id_4, id_1, id_4, id_4, id_1, id_4, id_4, id_4, id_4, id_1, id_4, id_0, id_4, id_1, id_4
-  );
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  `define pp_4 0
+  always_ff @(1 == id_3 or 1) id_2 <= 1;
+  module_0 modCall_1 ();
+  wire id_5;
+  wire id_7;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    output tri id_1,
+    input wire id_2
+);
+  assign id_1 = 1 == id_0;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule

@@ -1,51 +1,52 @@
-// Seed: 2431189722
+// Seed: 2876505969
 module module_0 (
-    output tri1 id_0
+    input wor id_0
 );
-  module_2();
+  always $display(1, 1, id_0, id_0, 1, id_0 / 1 + id_0);
+  assign id_2 = id_0 & 1;
+  assign #(1'b0) id_2 = 1;
+  assign id_2 = id_2;
+  assign module_1.id_7 = 0;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    output wor id_1,
-    input tri id_2,
-    input supply0 id_3
-);
-  always if (1'b0) if (1);
-  not (id_1, id_0);
-  module_0(
-      id_1
-  );
-  wire id_5;
-endmodule
-module module_2;
-  wire id_2;
-  wire id_3;
-  wire id_4;
-  assign id_2 = id_3;
-endmodule
-module module_3 (
-    output tri id_0,
-    output wand id_1,
-    output supply1 id_2,
-    output tri0 id_3,
-    output tri id_4,
-    output tri0 id_5,
-    input tri1 id_6,
-    input supply0 id_7,
-    output wand id_8,
-    output uwire id_9,
+    output uwire id_0,
+    input tri0 id_1,
+    input wor id_2,
+    input supply1 id_3,
+    output wire id_4,
+    output wor id_5,
+    input tri0 id_6,
+    input wand id_7,
+    input wire id_8,
+    input supply0 id_9,
     input tri1 id_10,
-    output supply1 id_11,
-    input wand id_12,
-    input tri1 id_13,
-    output uwire id_14,
-    output tri0 id_15,
-    input tri1 id_16,
-    output wor id_17,
-    input wor id_18,
-    input tri0 id_19,
-    output tri1 id_20
+    input wire id_11,
+    input wire id_12,
+    input wire id_13,
+    input tri0 id_14,
+    output wor id_15,
+    input supply0 id_16
+    , id_27,
+    output supply0 id_17,
+    input supply1 id_18,
+    output supply1 id_19,
+    output wire id_20,
+    output uwire id_21,
+    output uwire id_22,
+    input tri id_23,
+    output tri id_24,
+    output tri0 id_25
 );
-  module_2();
-  wire id_22;
+  if (1) begin : LABEL_0
+    tri1 id_28, id_29 = 1 * 1, id_30 = 1, id_31 = 1;
+    initial
+    fork
+      begin : LABEL_0
+        @(*) id_5 = 1;
+      end
+    join : SymbolIdentifier
+    assign id_4 = 1 || id_23;
+  end else assign id_22 = 1;
+  assign id_17 = id_2;
+  module_0 modCall_1 (id_6);
 endmodule

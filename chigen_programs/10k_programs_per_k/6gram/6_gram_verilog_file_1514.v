@@ -1,39 +1,31 @@
-// Seed: 549905022
+// Seed: 3304517941
 module module_0 (
-    input wire id_0,
-    input supply1 id_1,
-    output tri1 id_2,
-    output tri1 id_3
+    output tri1 id_0,
+    output wand id_1
 );
-  assign id_3 = id_0;
+  tri id_3 = 1 & id_3 & 1;
+  assign module_1.id_3 = 0;
+  assign id_3 = id_3 ? 1 : ~id_3 ? id_3 : 1'b0;
+  wire id_4;
+  supply1 id_5;
+  always @(~id_5 or id_3) begin : LABEL_0
+    id_1 = 1;
+  end
+  tri id_6;
+  assign id_0 = id_3;
+  assign id_6 = 1 == 1;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input wand id_1,
-    input uwire id_2,
-    input tri0 id_3,
-    input wand id_4,
-    input uwire id_5,
-    input uwire id_6,
-    output wor id_7,
-    input wor id_8,
-    input wand id_9,
-    input wand id_10,
-    input wire id_11,
-    output tri id_12,
-    input uwire id_13,
-    input uwire id_14,
-    output wire id_15,
-    input uwire id_16,
-    input uwire id_17,
-    output supply1 id_18,
-    input tri id_19,
-    input wor id_20,
-    input supply0 id_21
+    input  wire  id_0,
+    output tri   id_1,
+    input  wand  id_2,
+    output uwire id_3
 );
-  wire id_23;
-  wire id_24;
-  module_0(
-      id_2, id_4, id_15, id_18
+  always @(*) begin : LABEL_0$display
+    ;
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_3
   );
 endmodule

@@ -1,36 +1,61 @@
-// Seed: 2289424802
-module module_0;
-  supply1 id_2;
-  assign id_1 = id_2 !=? 1;
-  wor  id_3 = 1'b0 || 1;
-  wire id_4;
-  wor id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17;
-  always @(negedge 1) begin
-    id_7 = id_1;
-  end
-endmodule
-module module_1 (
-    input logic id_0,
-    output logic id_1,
-    output wor id_2,
-    output wire id_3,
-    input logic id_4,
-    output wand id_5,
-    input supply0 id_6,
-    input logic id_7
+// Seed: 2220667080
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  logic id_9 = id_0;
-  always_comb @(1'b0 == id_4 or 1) begin
-    for (id_9 = id_6; id_9; id_1 = 1 == id_4 ? 1 : id_7) begin
-      if ("") begin
-        id_1 <= id_4;
-      end
-    end
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign module_1.id_1 = 0;
+  wire id_11;
+endmodule
+module module_1;
+  assign id_1 = 1'h0;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
+endmodule
+module module_2;
+  assign id_1 = id_1;
+  reg id_2;
+  always @(posedge 1) begin : LABEL_0
+    if (!id_1 != id_2) id_2 <= #1 1 >= 1;
   end
-  module_0();
-  wire id_10;
-  initial begin
-    wait (id_9);
-    assert (id_7);
-  end
+  wire id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_1,
+      id_1,
+      id_3,
+      id_1,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
 endmodule

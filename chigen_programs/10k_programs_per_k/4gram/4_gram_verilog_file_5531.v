@@ -1,35 +1,64 @@
-// Seed: 2348853774
-module module_0;
-  wire id_1;
+// Seed: 485232913
+module module_0 (
+    id_1,
+    access,
+    module_0,
+    id_2,
+    id_3
+);
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output wire id_1;
+  tri0 id_6 = 1'b0 & id_2;
+  assign module_1.type_4 = 0;
 endmodule
 module module_1 (
-    input  tri   id_0,
-    output wor   id_1,
-    input  uwire id_2,
-    input  wand  id_3,
-    output tri1  id_4,
-    input  tri1  id_5,
-    input  uwire id_6,
-    output tri0  id_7,
-    input  uwire id_8,
-    output wire  id_9
+    input wire id_0,
+    output wand id_1,
+    input supply1 id_2,
+    output uwire id_3,
+    input tri1 id_4,
+    input supply0 id_5
 );
-  assign id_9 = id_3;
-  module_0();
+  wire id_7;
+  and primCall (id_3, id_7, id_2, id_4, id_0);
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
+  );
 endmodule
 module module_2 (
-    inout tri   id_0,
-    input tri0  id_1,
-    input uwire id_2
+    output wire id_0
+    , id_4,
+    input  wor  id_1,
+    input  wire id_2
 );
-  always_latch @(posedge id_0 or posedge id_1) begin
-    if (id_0 * 1 / id_0 - id_1) begin
-      @(posedge 1 or posedge id_2) begin
-        #1;
-        #1 id_0 = 1'b0 & 1;
-        $display(id_1);
-      end
-    end
-  end
-  module_0();
+  task id_5;
+    id_0 = id_4;
+  endtask
+  id_6(
+      .id_0(1 / 1'b0),
+      .id_1(),
+      .id_2(1 - 1),
+      .id_3(id_4),
+      .id_4(id_1),
+      .id_5({id_5, id_1, id_1, 1, id_4, id_4}),
+      .id_6(1)
+  );
+  assign id_5 = 1'b0;
+  wire id_7;
+  wire id_8;
+  module_0 modCall_1 (
+      id_8,
+      id_7,
+      id_7,
+      id_8,
+      id_7
+  );
+  wire id_9;
 endmodule

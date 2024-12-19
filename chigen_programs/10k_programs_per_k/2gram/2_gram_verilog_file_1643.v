@@ -1,32 +1,36 @@
-// Seed: 1827627771
-module module_0;
+// Seed: 3480379314
+module module_0 (
+    id_1
+);
+  input wire id_1;
+  assign id_2 = "";
+  reg id_3;
+  assign id_3 = 1;
+  always #1 id_3 <= id_3;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input logic id_1,
-    output supply0 id_2,
-    input tri id_3,
-    input tri id_4
-    , id_17,
-    output wor id_5,
-    output uwire id_6,
-    input wand id_7
-    , id_18,
-    output supply0 id_8,
-    input supply0 id_9,
-    output supply1 id_10,
-    input supply0 id_11,
-    output tri0 id_12,
-    input tri id_13,
-    output logic id_14,
-    input supply0 id_15
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_19;
-  always @(1, negedge 1 - id_15) begin
-    fork
-      id_14 <= id_1;
-    join
-  end
-  module_0();
-  wire id_20;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
+  assign id_5 = 1;
+  always assert (1);
+  wire id_7;
+  module_0 modCall_1 (id_4);
+  assign modCall_1.type_4 = 0;
+endmodule
+module module_2 (
+    id_1
+);
+  input wire id_1;
+  wire id_2;
+  module_0 modCall_1 (id_2);
 endmodule

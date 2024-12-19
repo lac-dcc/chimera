@@ -1,37 +1,110 @@
-// Seed: 2049915679
-module module_0;
-  reg id_1;
-  assign id_1 = 1;
-  reg id_2;
-  reg id_3;
-  assign id_2 = id_1;
-  always #(id_2)
-    if (id_2) begin
-      if (1'b0) id_3 = 1'd0;
-      else id_3 <= id_2;
-    end
-  assign id_1 = id_2;
-  initial begin
-    id_1 <= 1;
-  end
-  wire id_4;
+// Seed: 3075648655
+module module_0 (
+    input tri0 id_0,
+    output tri id_1,
+    output wand id_2,
+    input tri0 id_3,
+    output tri1 id_4,
+    input supply0 id_5,
+    output tri0 id_6,
+    input tri1 id_7,
+    input wor id_8,
+    input tri id_9,
+    input wand id_10,
+    input supply1 id_11,
+    output uwire id_12
+    , id_39,
+    input tri1 id_13,
+    input supply1 id_14,
+    output wand id_15,
+    output tri1 id_16,
+    output uwire id_17,
+    output wire id_18,
+    output tri1 id_19,
+    input tri0 id_20,
+    input wand id_21,
+    output supply1 id_22,
+    output supply1 id_23,
+    input supply1 id_24,
+    input wand id_25,
+    input wire id_26,
+    output uwire id_27,
+    output uwire id_28,
+    input tri0 id_29
+    , id_40,
+    output wor id_30,
+    output tri1 id_31,
+    input uwire id_32,
+    input uwire id_33,
+    output tri id_34,
+    input wand id_35,
+    output wire id_36,
+    output uwire id_37
+);
+  wire id_41;
+  assign module_1.type_3 = 0;
+  uwire id_42 = 1'b0;
 endmodule
 module module_1 (
-    input  tri0 id_0,
-    output tri  id_1,
-    input  wire id_2,
-    input  tri  id_3,
-    output wor  id_4,
-    input  tri1 id_5,
-    output tri0 id_6,
-    output tri  id_7,
-    input  tri  id_8
+    input wor id_0,
+    input supply1 id_1,
+    input uwire id_2,
+    output wor id_3,
+    output tri1 id_4,
+    input supply1 id_5,
+    input tri0 id_6,
+    inout wor id_7,
+    input supply1 id_8,
+    input tri id_9,
+    output supply1 id_10
+    , id_17,
+    input uwire id_11,
+    input wire id_12,
+    output wand id_13,
+    input tri id_14
+    , id_18,
+    input tri0 id_15
 );
-  wire id_10;
-  wire id_11;
-  tri0 id_12;
-  module_0();
-  assign id_12 = id_5;
-  assign id_10 = id_2;
-  and (id_1, id_10, id_11, id_12, id_2, id_3, id_5, id_8);
+  final $display(1'd0);
+  assign id_13 = 1;
+  module_0 modCall_1 (
+      id_15,
+      id_10,
+      id_4,
+      id_2,
+      id_13,
+      id_12,
+      id_4,
+      id_7,
+      id_11,
+      id_5,
+      id_5,
+      id_15,
+      id_7,
+      id_12,
+      id_0,
+      id_13,
+      id_3,
+      id_10,
+      id_13,
+      id_4,
+      id_6,
+      id_8,
+      id_4,
+      id_4,
+      id_11,
+      id_2,
+      id_15,
+      id_10,
+      id_3,
+      id_12,
+      id_4,
+      id_7,
+      id_8,
+      id_11,
+      id_7,
+      id_5,
+      id_3,
+      id_13
+  );
 endmodule

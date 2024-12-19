@@ -1,41 +1,37 @@
-// Seed: 528690890
+// Seed: 2999863857
 module module_0 (
-    input wor id_0,
-    output tri0 id_1,
-    input tri1 id_2,
-    input supply0 id_3,
-    output wire id_4
+    input  uwire id_0,
+    output wire  id_1,
+    output tri   id_2,
+    input  wor   id_3,
+    output wor   id_4,
+    input  tri   id_5,
+    output uwire id_6
 );
-  assign id_4 = 1;
+  always @(posedge ~id_0) release id_6;
 endmodule
 module module_0 (
-    input supply1 id_0,
-    input logic id_1,
-    input logic id_2,
+    input  tri   id_0,
+    output wand  id_1,
+    input  tri1  id_2,
     output logic id_3,
-    input logic id_4,
-    output tri1 id_5,
-    output tri module_1,
-    input wire id_7
-    , id_10,
-    input tri0 id_8
+    output wor   module_1
 );
-  logic id_11;
-  module_0(
-      id_7, id_5, id_7, id_8, id_5
+  tri id_6;
+  module_0 modCall_1 (
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_1
   );
-  assign id_11 = id_2;
-  always @(posedge 1) begin
-    id_3 <= id_11;
-    foreach (id_12[1]) begin
-      id_11 <= #1 id_4;
-    end
-    id_6 = id_1 - id_4;
-    wait (id_10);
+  assign modCall_1.type_2 = 0;
+  wire id_7;
+  initial begin : LABEL_0
+    assert ((~id_0)) $display(id_6, 1'b0);
+    if (1) assert (id_2);
   end
-  reg id_13;
-  always @(posedge id_8) begin
-    id_13 <= #1 id_1;
-  end
-  always @(*) #1;
+  always @(posedge 1'b0) id_3 <= 1;
 endmodule

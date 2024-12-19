@@ -1,29 +1,33 @@
-// Seed: 630876851
+// Seed: 2096899446
 module module_0;
-  always
-    while (1 == id_1 & 1)
-      #0 begin
-        id_1 = 1;
-      end
+  reg id_2;
+  always @(posedge id_1) id_2 <= 1;
+  assign module_1.id_8 = 0;
+  reg id_3 = id_2;
 endmodule
-module module_1 (
-    output logic id_0
-    , id_7,
-    input  wor   id_1,
-    input  tri0  id_2,
-    input  logic id_3,
-    input  logic id_4,
-    output wand  id_5
+module module_0 (
+    output wor id_0,
+    output wor id_1,
+    input supply1 module_1,
+    input supply1 id_3,
+    input tri0 id_4,
+    input wor id_5,
+    output tri id_6
+    , id_20,
+    input supply1 id_7,
+    input wire id_8,
+    output tri1 id_9,
+    output uwire id_10,
+    input supply1 id_11,
+    input wor id_12,
+    input tri id_13,
+    output tri0 id_14
+    , id_21,
+    output uwire id_15,
+    input wor id_16,
+    output uwire id_17,
+    input uwire id_18
 );
-  assign id_7 = id_2 ? 1 : 1 * 1 + 1 & id_7 ? 1'b0 + 1 : 1 ^ "" !=? 1;
-  reg id_8;
-  module_0();
-  always @(!id_3) begin
-    id_8 <= id_3;
-    id_0 <= id_4;
-    if (1) begin
-      $display(id_1, 1);
-      id_7 = #1 1;
-    end
-  end
+  assign id_0 = id_13;
+  module_0 modCall_1 ();
 endmodule

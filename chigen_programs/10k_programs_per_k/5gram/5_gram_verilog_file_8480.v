@@ -1,60 +1,67 @@
-// Seed: 2291180312
-module module_0;
-  time id_2;
-endmodule
+// Seed: 505008736
 module module_0 (
     output wand id_0,
-    input wire id_1,
-    input wor id_2,
-    output uwire id_3,
-    input wire id_4,
-    input uwire id_5,
-    input wand id_6,
-    input wire id_7,
-    output wand id_8,
-    output supply1 id_9,
-    output supply0 id_10,
-    input supply1 id_11,
-    input supply0 id_12,
-    input supply1 id_13,
-    input uwire id_14,
-    input supply0 id_15,
-    output tri0 id_16,
-    output tri0 module_1,
-    input supply1 id_18,
-    input supply1 id_19,
-    output supply1 id_20,
-    input tri id_21,
-    output tri id_22
+    input uwire id_1,
+    input uwire id_2,
+    input supply1 id_3
+    , id_19,
+    output supply1 id_4,
+    input tri id_5,
+    output uwire id_6,
+    input tri0 id_7,
+    input wire id_8,
+    input wand id_9,
+    output tri id_10,
+    output uwire id_11,
+    output uwire id_12,
+    output tri1 id_13,
+    output wor id_14,
+    output tri0 id_15,
+    output uwire id_16,
+    input uwire id_17
 );
-  wire id_24;
-  assign id_22 = 1;
-  module_0();
-  wire id_25;
-  and (
-      id_0,
-      id_1,
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_18,
-      id_19,
-      id_2,
-      id_21,
-      id_24,
-      id_4,
-      id_5,
+  assign id_0 = id_19;
+  assign module_1.id_3 = 0;
+  wire id_20;
+endmodule
+module module_1 (
+    output tri0 id_0
+    , id_13,
+    output wand id_1,
+    output supply0 id_2,
+    output wor id_3,
+    output wire id_4,
+    output logic id_5,
+    input supply0 id_6,
+    input logic id_7,
+    output uwire id_8,
+    input wire id_9,
+    input wire id_10,
+    output supply0 id_11
+);
+  final begin : LABEL_0
+    id_5 <= id_7;
+  end
+  wire id_14;
+  module_0 modCall_1 (
+      id_8,
+      id_10,
       id_6,
-      id_7
+      id_9,
+      id_8,
+      id_9,
+      id_11,
+      id_9,
+      id_9,
+      id_6,
+      id_0,
+      id_3,
+      id_4,
+      id_3,
+      id_11,
+      id_4,
+      id_11,
+      id_6
   );
-  if (1 ==? 1)
-    always @(negedge 1)
-      if (1) for (id_22 = 1; 1; id_16++) $display;
-      else disable id_26;
-  else uwire id_27 = id_27;
-  generate
-    assign id_3 = id_27;
-  endgenerate
+  wire id_15;
 endmodule

@@ -1,5 +1,9 @@
-// Seed: 635465761
-module module_0 (
+// Seed: 3536965303
+module module_0;
+  wire id_1;
+  wire id_2;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -18,87 +22,35 @@ module module_0 (
     id_16,
     id_17,
     id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24
+    id_19
 );
-  input wire id_24;
-  input wire id_23;
-  input wire id_22;
-  output wire id_21;
-  input wire id_20;
-  inout wire id_19;
-  inout wire id_18;
-  inout wire id_17;
-  inout wire id_16;
-  output wire id_15;
+  output wire id_19;
+  output wire id_18;
+  input wire id_17;
+  input wire id_16;
+  input wire id_15;
   input wire id_14;
   inout wire id_13;
-  inout wire id_12;
+  input wire id_12;
   inout wire id_11;
-  output wire id_10;
+  input wire id_10;
   inout wire id_9;
-  output wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  output wire id_3;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
   output wire id_2;
   output wire id_1;
-  wire id_25;
-endmodule
-module module_0 (
-    input tri1 id_0,
-    output tri1 id_1,
-    input tri1 id_2,
-    output tri0 id_3,
-    output tri0 id_4,
-    output supply0 id_5,
-    input wire id_6,
-    input wor id_7,
-    input supply1 id_8,
-    output supply0 module_1
-);
-  always_comb @(posedge id_6 == 1)
-    if (1) begin
-      if (1) deassign id_4;
-      else begin
-        if (id_8) begin
-          id_3 = id_6;
-        end
-      end
-    end
-  wire id_11;
-  xor (id_3, id_2, id_11, id_7, id_6, id_8);
-  module_0(
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11,
-      id_11
-  );
-  wire id_12;
+  integer id_20;
+  wire id_21 = id_10;
+  wire id_22;
+  wire id_23;
+  wire id_24 = id_23, id_25;
+  uwire id_26 = 1;
+  wire id_27;
+  module_0 modCall_1 ();
+  wire id_28 = 1;
+  assign id_7 = ((1));
 endmodule

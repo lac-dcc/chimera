@@ -1,52 +1,50 @@
-// Seed: 1507181382
-module module_0;
-  initial id_1 <= id_1;
-  id_3(
-      id_2, id_1, id_1, 1, 1
+// Seed: 2078207098
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  id_4(
+      id_2, id_2, 1
   );
-  wor id_4;
-  assign id_4 = 1;
 endmodule
 module module_1 (
-    output wire id_0,
-    output wire id_1,
-    input tri0 id_2,
-    output wire id_3,
-    output wire id_4
-    , id_29,
+    output tri1 id_0,
+    input tri1 id_1,
+    output tri0 id_2,
+    input wor id_3,
+    input supply0 id_4,
     output tri0 id_5,
-    input tri0 id_6,
+    input wand id_6,
     input supply1 id_7,
-    input wor id_8,
-    output supply1 id_9,
-    input wand id_10,
-    output wor id_11,
-    input wor id_12,
-    input wor id_13,
-    input uwire id_14,
-    input supply1 id_15,
+    output tri1 id_8,
+    output wor id_9,
+    input supply1 id_10,
+    output supply0 id_11,
+    input tri0 id_12,
+    output supply1 id_13,
+    output tri0 id_14,
+    output wire id_15,
     input supply0 id_16,
-    input tri1 id_17,
-    output wand id_18,
-    input uwire id_19,
-    output tri0 id_20,
-    output wor id_21,
-    output supply1 id_22,
-    inout wire id_23,
-    output wor id_24,
-    input supply0 id_25
-    , id_30,
-    input supply0 id_26,
-    input supply1 id_27
+    output wire id_17,
+    output wor id_18,
+    input supply0 id_19,
+    input supply1 id_20
 );
-  assign id_3 = id_23;
-  module_0();
-  assign id_29[1] = 1;
-  always
-    if (id_6) @(*) id_0 = 1;
-    else
-      #1 begin
-        id_9 = 1;
-      end
-  assign id_11 = {1, ~1 & 1};
+  tri id_22 = 1'b0;
+  id_23(
+      id_13 == id_7
+  );
+  module_0 modCall_1 (
+      id_22,
+      id_22,
+      id_22
+  );
+  supply1 id_24;
+  assign #1 id_14 = id_20;
+  wire id_25;
+  assign id_24 = id_7;
 endmodule

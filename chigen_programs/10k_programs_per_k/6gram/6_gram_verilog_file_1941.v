@@ -1,93 +1,69 @@
-// Seed: 2269302095
-module module_0 #(
-    parameter id_22 = 32'd80,
-    parameter id_23 = 32'd86
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+// Seed: 2550887679
+module module_0 (
+    input supply1 id_0,
+    input wand id_1,
+    input tri id_2,
+    input wand id_3,
+    output wire id_4
 );
-  output wire id_20;
-  inout wire id_19;
-  inout wire id_18;
-  inout wire id_17;
-  inout wire id_16;
-  input wire id_15;
-  output wire id_14;
-  inout wire id_13;
-  input wire id_12;
-  input wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_18 = id_1;
-  wire id_21;
-  defparam id_22.id_23 = 1;
+  assign id_4 = 1 == id_2;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri0 id_1,
-    input tri0 id_2,
-    input wire id_3,
-    input supply0 id_4,
-    input tri1 id_5,
-    input wand id_6,
-    output supply1 id_7,
-    output wor id_8,
-    output supply0 id_9,
-    input wire id_10,
-    input wor id_11
-    , id_15,
-    input supply0 id_12,
-    output supply1 id_13
+    output uwire id_0,
+    input supply0 id_1,
+    output wor id_2,
+    input supply1 id_3,
+    output wire id_4,
+    output wor id_5,
+    output logic id_6,
+    input tri1 id_7,
+    input tri1 id_8,
+    output logic id_9,
+    input supply0 id_10,
+    input tri0 id_11,
+    output tri0 id_12,
+    input wire id_13,
+    input wand id_14,
+    input wire id_15,
+    output tri0 id_16
 );
-  wire id_16, id_17;
-  assign id_7 = 1;
-  initial assume (1);
-  module_0(
-      id_17,
-      id_17,
-      id_15,
-      id_17,
-      id_16,
-      id_15,
-      id_16,
-      id_15,
-      id_17,
-      id_16,
-      id_17,
-      id_15,
-      id_16,
-      id_16,
-      id_15,
-      id_17,
-      id_16,
-      id_16,
-      id_16,
-      id_17
+  id_18(
+      .id_0(1),
+      .id_1(id_9),
+      .id_2(id_10),
+      .id_3(~id_16 == id_9),
+      .id_4(id_12),
+      .id_5(id_14),
+      .id_6(id_16),
+      .id_7(id_16),
+      .id_8(""),
+      .id_9(id_16 + 1),
+      .id_10({"", 1}),
+      .id_11(1),
+      .id_12(id_12),
+      .id_13(id_10),
+      .id_14(0),
+      .id_15(id_12),
+      .id_16(1),
+      .id_17(id_6),
+      .id_18(id_3),
+      .id_19(id_6),
+      .id_20(id_3),
+      .id_21("" + id_11),
+      .id_22(id_5),
+      .id_23(1),
+      .id_24(1)
   );
+  assign id_12 = id_8;
+  always
+    if ({id_8, 1}) id_9 <= 1'b0;
+    else id_6 <= id_11 == 1;
+  module_0 modCall_1 (
+      id_15,
+      id_11,
+      id_10,
+      id_3,
+      id_2
+  );
+  assign modCall_1.type_2 = 0;
 endmodule

@@ -1,42 +1,36 @@
-// Seed: 1045609318
-module module_0 (
-    id_1,
-    id_2
+// Seed: 2757818000
+macromodule module_0 (
+    output supply1 id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    input tri0 id_3
+    , id_7,
+    input tri0 id_4,
+    input wand id_5
 );
-  output wire id_2;
-  input wire id_1;
-  wire id_3;
+  wand id_8;
+  assign id_8 = id_1;
 endmodule
-module module_1;
-  supply0 id_1;
-  wand id_2;
-  wand id_3, id_4;
-  tri id_5, id_6;
-  module_0(
-      id_3, id_1
-  );
-  assign id_1 = 1'b0;
-  id_7(
-      1, id_4, id_2, 1'b0, id_4, id_5
-  ); id_8(
-      1'b0 == 1
-  );
-endmodule
-module module_2 (
-    output tri   id_0,
-    input  tri1  id_1,
-    input  wand  id_2,
-    input  uwire id_3,
-    input  wand  id_4,
-    input  uwire id_5
+module module_1 (
+    output wand id_0,
+    input logic id_1,
+    input wor id_2,
+    input supply0 void id_3
 );
-endmodule
-module module_3 (
-    input  uwire id_0,
-    output wand  id_1
-);
-  tri id_3 = 1'd0;
-  module_2(
-      id_1, id_0, id_0, id_0, id_0, id_0
+  id_5 :
+  assert property (@(id_5) id_1)
+    if (1) id_5 = id_1;
+    else begin : LABEL_0
+      id_5 <= 1'b0;
+    end
+  assign id_5 = 1;
+  module_0 modCall_1 (
+      id_0,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3
   );
+  assign modCall_1.type_11 = 0;
 endmodule

@@ -1,42 +1,50 @@
-// Seed: 3361995406
+// Seed: 772966315
 module module_0 (
-    input supply1 id_0,
-    output wor id_1
+    input uwire id_0,
+    input wor id_1,
+    input wire id_2,
+    input wor id_3,
+    output uwire id_4,
+    output wor id_5,
+    output tri0 id_6,
+    output wor id_7,
+    output uwire id_8,
+    output tri id_9,
+    input wire id_10,
+    output uwire id_11,
+    output supply0 id_12,
+    output uwire id_13,
+    output wand id_14
 );
+  always @(posedge 1 or posedge id_3);
+  assign module_1.type_11 = 0;
 endmodule
 module module_1 (
-    output wand id_0,
-    input tri id_1,
-    output uwire id_2,
-    input wire id_3,
-    output wor id_4,
-    input supply0 id_5,
-    input supply1 id_6,
-    output wand id_7,
-    input uwire id_8,
-    input wor id_9,
-    output wor id_10,
-    input uwire id_11,
-    input logic id_12,
-    input uwire id_13,
-    input uwire id_14,
-    input supply0 id_15,
-    input tri id_16,
-    input logic id_17,
-    output logic id_18,
-    output supply1 id_19,
-    output supply0 id_20,
-    input supply1 id_21,
-    input tri id_22
+    input wire id_0,
+    input wand id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input tri id_5,
+    output tri1 id_6,
+    input wor id_7,
+    output wand id_8
 );
-  wire id_24;
-  wire id_25;
-  always @(posedge id_5) begin
-    id_18 <= id_17;
-    id_18 <= id_12;
-  end
-  module_0(
-      id_3, id_20
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_1,
+      id_0,
+      id_8,
+      id_8,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_4,
+      id_8,
+      id_8,
+      id_6,
+      id_8
   );
-  assign id_19 = id_1;
 endmodule

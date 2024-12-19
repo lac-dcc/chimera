@@ -1,70 +1,46 @@
-// Seed: 393045315
-module module_0 (
-    output tri   id_0,
-    input  tri   id_1,
-    input  wor   id_2,
-    input  tri1  id_3,
-    input  wor   id_4,
-    input  tri   id_5,
-    input  tri1  id_6,
-    input  uwire id_7,
-    input  uwire id_8,
-    input  tri0  id_9,
-    output tri   id_10,
-    input  tri1  id_11,
-    output tri1  id_12,
-    input  wire  id_13,
-    input  wor   id_14
-);
-  wire id_16;
-  wire id_17;
-  wire id_18;
+// Seed: 737588202
+module module_0;
+  assign id_1 = id_1;
+  always @(posedge 1 or posedge id_1) id_1 = 1;
 endmodule
 module module_1 (
-    output tri1 id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    input tri0 id_3,
-    input wand id_4,
-    input supply1 id_5,
-    input supply1 id_6,
-    input wire id_7,
-    output supply0 id_8,
-    input tri1 id_9,
-    output tri0 id_10,
-    output tri id_11,
-    input tri0 id_12,
-    input wand id_13,
-    input wor id_14
-    , id_22,
-    output tri id_15,
-    output wand id_16,
-    output supply1 id_17,
-    output wand id_18,
-    input wire id_19,
-    output uwire id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  uwire id_23;
-  assign id_23 = 1;
-  nor (id_18, id_12, id_2, id_14, id_22, id_4, id_19, id_3, id_7, id_24, id_13);
-  tri0 id_24 = id_12;
-  module_0(
-      id_0,
-      id_4,
-      id_13,
-      id_13,
-      id_12,
-      id_24,
-      id_14,
-      id_24,
-      id_1,
-      id_9,
-      id_18,
-      id_9,
-      id_8,
-      id_19,
-      id_1
-  );
-  wire id_25;
-  assign id_16 = 1;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always
+    if (id_1) @(posedge 1) id_6 <= 1;
+    else begin : LABEL_0
+      forever id_6 <= 1;
+      begin : LABEL_0
+        id_7 = 1;
+        id_6 <= 1'd0;
+        id_7 <= id_4;
+      end
+    end
+  assign id_6 = 1;
+  reg id_8 = id_2, id_9;
+  always @* id_9 <= 1;
+  assign id_7.id_8 = 1;
+  wire id_10;
+  assign id_8 = id_1;
+  assign id_7 = 1;
+  wire id_11;
+  always #1 id_8 <= {1{id_9 == 1}};
+  final begin : LABEL_0
+    id_8 <= #1 1 & id_1(1'b0 | "") - 1'd0;
+  end
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule

@@ -1,5 +1,17 @@
-// Seed: 3750552292
-module module_0 (
+// Seed: 3027844106
+module module_0 ();
+  id_1(
+      .id_0(),
+      .id_1(1),
+      .id_2(""),
+      .id_3(id_2),
+      .id_4(1'b0 == id_2),
+      .id_5(id_3 || id_3),
+      .id_6(1),
+      .id_7(id_2)
+  );
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -21,74 +33,32 @@ module module_0 (
     id_19,
     id_20,
     id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28
+    id_22
 );
-  inout wire id_28;
-  input wire id_27;
-  input wire id_26;
-  inout wire id_25;
-  input wire id_24;
-  inout wire id_23;
-  output wire id_22;
+  inout wire id_22;
   inout wire id_21;
-  input wire id_20;
-  input wire id_19;
+  inout wire id_20;
+  inout wire id_19;
   input wire id_18;
-  inout wire id_17;
-  output wire id_16;
-  output wire id_15;
-  input wire id_14;
-  output wire id_13;
-  input wire id_12;
+  output wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
   output wire id_11;
   inout wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  input wire id_7;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
   inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
+  input wire id_5;
+  input wire id_4;
   inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-endmodule
-module module_1 ();
-  wire id_2;
-  wire id_3;
-  module_0(
-      id_3,
-      id_2,
-      id_2,
-      id_3,
-      id_3,
-      id_2,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_2,
-      id_2,
-      id_2,
-      id_3,
-      id_2,
-      id_2,
-      id_2,
-      id_3,
-      id_2,
-      id_3,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_3,
-      id_3
-  );
+  inout wire id_2;
+  inout wire id_1;
+  wire id_23, id_24;
+  wire id_25, id_26;
+  module_0 modCall_1 ();
+  wire id_27, id_28, id_29, id_30;
 endmodule

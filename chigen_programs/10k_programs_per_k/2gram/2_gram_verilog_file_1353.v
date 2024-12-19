@@ -1,49 +1,52 @@
-// Seed: 3104597183
-module module_0 ();
-endmodule
-module module_1;
-  module_0();
-endmodule
-module module_2 (
-    output wor id_0,
-    output wire id_1,
-    input wand id_2,
-    output supply1 id_3,
-    input tri0 id_4,
-    input tri0 id_5,
-    output uwire id_6,
-    input wire id_7,
-    input wand id_8,
-    input tri id_9,
-    output wand id_10,
-    input wand id_11,
-    input tri0 id_12,
-    input wire id_13,
-    input wor id_14
-    , id_17,
-    input wand id_15
-    , id_18, id_19
+// Seed: 1934718377
+module module_0 (
+    output tri  id_0,
+    input  wor  id_1,
+    output tri1 id_2
 );
-  tri  id_20 = ~id_12 + id_11;
-  module_0();
-  wire id_21;
-  wire id_22;
-  and (
-      id_0,
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_17,
-      id_18,
-      id_19,
-      id_2,
-      id_20,
+endmodule
+module module_1 (
+    input wand id_0,
+    input tri id_1,
+    input uwire id_2,
+    input wire id_3,
+    output wor id_4,
+    input supply0 id_5,
+    input supply1 id_6,
+    output wand id_7,
+    input uwire id_8,
+    input wor id_9,
+    input wor id_10,
+    output uwire id_11,
+    input uwire id_12,
+    output uwire id_13,
+    input supply0 id_14,
+    input tri id_15,
+    output tri id_16,
+    input supply1 id_17,
+    output supply1 id_18
+    , id_30,
+    output supply0 id_19
+    , id_31,
+    output supply1 id_20,
+    input tri id_21,
+    output wor id_22,
+    input tri1 id_23,
+    input tri id_24,
+    input wand id_25,
+    output supply1 id_26,
+    output wand id_27,
+    output wire id_28
+);
+  wire id_32;
+  module_0 modCall_1 (
       id_4,
-      id_5,
-      id_7,
-      id_8,
-      id_9
+      id_23,
+      id_27
   );
+  assign modCall_1.type_2 = 0;
+  wire id_33;
+  id_34 :
+  assert property (@(1) 1'b0)
+  else;
 endmodule

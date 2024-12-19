@@ -1,33 +1,40 @@
-// Seed: 716540479
+// Seed: 2436278595
 module module_0 (
-    id_1,
-    id_2
+    input  tri1 id_0
+    , id_3,
+    output wire id_1
 );
-  inout wire id_2;
-  input wire id_1;
-  wire id_3;
-  wire id_4;
-  always
-    if (id_2) id_3 = id_1;
-    else begin
-      deassign id_2;
-    end
+  reg  id_4;
+  wire id_5 = 1;
+  wire id_6;
+  always id_4 <= #1 1 ? 1 : 1;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input tri id_1,
-    output logic id_2,
-    input uwire id_3,
-    output wire id_4,
-    input supply1 id_5
+    input  uwire id_0,
+    input  wire  id_1,
+    output tri0  id_2,
+    inout  tri0  id_3,
+    input  wand  id_4,
+    output uwire id_5
 );
-  supply1 id_7 = 1;
-  module_0(
-      id_7, id_7
+  assign id_2 = id_4;
+  xnor primCall (id_5, id_4, id_1, id_3);
+  module_0 modCall_1 (
+      id_3,
+      id_5
   );
-  wire id_8;
-  always @(negedge id_8) begin
-    id_7 = !(module_1);
-    id_2 <= 1 + 1'b0;
-  end
+  assign modCall_1.type_3 = 0;
+endmodule
+module module_2 (
+    input tri id_0,
+    input tri id_1,
+    output supply0 id_2,
+    output wor id_3,
+    output wand id_4
+);
+  module_0 modCall_1 (
+      id_0,
+      id_3
+  );
+  assign modCall_1.type_7 = 0;
 endmodule

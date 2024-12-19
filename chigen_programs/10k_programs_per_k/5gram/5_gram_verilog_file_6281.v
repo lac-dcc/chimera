@@ -1,39 +1,40 @@
-// Seed: 2189742393
-module module_0 (
-    output uwire id_0,
-    input wire id_1,
-    input supply0 id_2,
-    output uwire id_3
-);
-  assign id_0 = 1 == id_2;
-  always @(posedge id_2) $display;
-  always disable id_5;
-  wand id_6;
-  wire id_7;
-  assign id_6 = (1'd0);
-endmodule
-program module_1 (
-    output uwire id_0,
-    input tri id_1,
-    input uwire id_2,
-    input wor id_3,
-    output wor id_4,
-    input uwire id_5,
-    output uwire id_6,
-    input uwire id_7,
-    output wand id_8,
-    input wire id_9,
-    input wor id_10,
-    output supply0 id_11,
-    input supply1 id_12,
-    input wand id_13,
-    output supply1 id_14,
-    output supply0 id_15
-);
-  integer id_17;
-  wire id_18;
-  assign id_4 = 1 == "";
-  module_0(
-      id_4, id_2, id_10, id_4
+// Seed: 1919654639
+module module_0;
+  id_1(
+      .id_0(id_2), .id_1(1 !=? 1), .id_2(id_2), .id_3(id_2), .id_4(id_2[1] - id_3)
   );
-endprogram
+  uwire id_4 = 1;
+  assign module_1.type_10 = 0;
+  wire id_5;
+endmodule
+module module_1 (
+    input wor id_0,
+    output wand id_1,
+    input supply1 id_2,
+    output wand id_3,
+    output wor id_4
+    , id_25,
+    input tri id_5,
+    input uwire id_6,
+    output supply0 id_7,
+    output tri1 id_8,
+    input uwire id_9,
+    output wand id_10,
+    input tri1 id_11
+    , id_26, id_27,
+    input wor id_12,
+    input uwire id_13,
+    output supply1 id_14,
+    input tri id_15,
+    input wor id_16,
+    input supply0 id_17,
+    input supply0 id_18,
+    output supply1 id_19,
+    input supply0 id_20,
+    input tri1 id_21,
+    input supply1 id_22,
+    input tri1 id_23
+);
+  wire id_28;
+  module_0 modCall_1 ();
+endmodule

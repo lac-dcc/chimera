@@ -1,39 +1,44 @@
-// Seed: 2228052271
-module module_0;
-  assign id_1 = id_1;
-endmodule
-module module_1;
-  wire id_1;
-  wire id_2;
-  module_0();
-  genvar id_3;
-endmodule
-module module_2 (
-    input supply0 id_0,
-    output wire id_1,
-    output wand id_2,
-    output uwire id_3,
-    input wand id_4,
-    input tri0 id_5,
-    output tri id_6,
-    output tri1 id_7,
-    input wand id_8,
-    output logic id_9,
-    output supply1 id_10,
-    input logic id_11
-    , id_16,
-    input wire id_12,
-    input tri1 id_13,
-    output supply0 id_14
+// Seed: 379653749
+module module_0 (
+    input  supply0 id_0,
+    output supply0 id_1
+    , id_4,
+    input  supply1 id_2
 );
-  if ("" !=? 1)
-    initial begin
-      id_9 <= id_11;
-    end
-  wire id_17;
-  module_0();
-  wire id_18;
-  wire id_19;
-  genvar id_20;
-  always @(posedge 1 or posedge id_13 - 1);
+  wire id_5;
+  always_ff @(*) begin : LABEL_0
+    `define pp_6 0
+  end
+  assign id_4 = 1'b0;
+  wire id_7;
+  wire id_8;
+  wire id_9;
+  wand id_10 = 1;
+  assign module_1.type_23 = 0;
+endmodule
+module module_1 (
+    output tri1 id_0,
+    input tri1 id_1,
+    output wand id_2,
+    input wor id_3,
+    output wand id_4,
+    input supply0 id_5
+    , id_15,
+    output wor id_6,
+    output wor id_7,
+    output tri0 id_8,
+    input tri0 id_9,
+    input wand id_10,
+    input wand id_11,
+    input supply0 id_12,
+    output wor id_13
+);
+  wire id_16;
+  module_0 modCall_1 (
+      id_9,
+      id_2,
+      id_10
+  );
+  wire id_17 = id_16;
+  wor  id_18 = id_12;
 endmodule

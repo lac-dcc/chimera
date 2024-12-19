@@ -1,33 +1,43 @@
-// Seed: 1206297487
-module module_0;
-  assign id_1 = id_1[1];
-endmodule
-module module_1 (
-    input  logic id_0,
-    input  wire  id_1,
-    output logic id_2,
-    input  logic id_3,
-    input  tri1  id_4,
-    input  logic id_5
+// Seed: 3977620401
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_2 = id_0;
-  reg  id_7;
-  module_0();
-  wire id_8 = id_1;
-  reg  id_9;
-  logic id_10 = 1, id_11;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_4 = 1;
+  module_2 modCall_1 ();
+  wire id_5, id_6, id_7;
+  wire id_8;
+  assign module_1.id_4 = 0;
+endmodule
+macromodule module_1 ();
+  assign id_1 = "";
+  wire id_2;
+  supply1 id_3, id_4 = 1, id_5;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_5,
+      id_4
+  );
+  wire id_6, id_7;
+  assign id_3 = id_4;
+  wire id_8;
+endmodule
+module module_2;
+  reg id_1;
   always
-    if (1) begin
-      id_9 <= id_3;
-      reg id_12 = id_12;
-      begin
-        if (1) id_10 <= 1'b0;
-        else id_7.id_12 <= 1;
-        id_2 <= 1;
-        $display;
-        id_11 <= 1;
+    if (id_1) id_1 = 1;
+    else begin : LABEL_0
+      id_1 <= 1;
+      @(posedge 1'b0, posedge 1, negedge 1) id_1 = ((1)) == (1);
+      begin : LABEL_0
+        @(1'b0) id_1 = id_1;
       end
     end
-  always id_10 = id_5;
-  wire id_13, id_14;
 endmodule

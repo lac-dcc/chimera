@@ -1,43 +1,37 @@
-// Seed: 2017426945
+// Seed: 4064859262
 module module_0 (
-    input uwire id_0,
-    output tri id_1,
-    input wor id_2,
-    input supply0 id_3,
-    input supply0 id_4,
-    output supply1 id_5
+    id_1,
+    id_2
 );
-  wire id_7;
+  input wire id_2;
+  input wire id_1;
+  assign id_3 = 1 > 1'b0;
+  assign module_1.id_14 = 0;
+  wire id_4;
 endmodule
 module module_1 (
-    input  logic   id_0,
-    output supply0 id_1,
-    input  uwire   id_2,
-    output logic   id_3,
-    input  uwire   id_4
+    output wor id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input uwire id_3,
+    output wire id_4,
+    input uwire id_5,
+    input supply1 id_6,
+    output tri1 id_7,
+    input uwire id_8,
+    output tri1 id_9,
+    input tri0 id_10,
+    input tri id_11,
+    input tri1 id_12,
+    input wand id_13,
+    output wand id_14,
+    input uwire id_15,
+    output wire id_16,
+    input wand id_17
 );
-  logic id_6;
-  if (id_2) begin : id_7
-    wire id_8;
-  end
-  module_0(
-      id_2, id_1, id_2, id_4, id_2, id_1
+  wire id_19;
+  module_0 modCall_1 (
+      id_19,
+      id_19
   );
-  assign id_1 = id_4;
-  always @(posedge id_4 or 1) begin
-    #(id_2) @(1 ? 1 : id_4 & id_0 or 1) id_6 <= 1'b0;
-  end
-  id_9 :
-  assert property (@(posedge 1) 1)
-  else id_1 = 1;
-  if (1'b0) begin : id_10
-    tri0 id_11 = 1;
-    assign id_6 = id_0;
-    always #1 id_9 = id_11;
-  end else if (id_6) begin
-    wire id_12 = 1;
-  end
-  tri1 id_13 = 1;
-  always @((1) or posedge id_2) forever id_3 <= 1'b0;
-  timeunit 1ps;
 endmodule

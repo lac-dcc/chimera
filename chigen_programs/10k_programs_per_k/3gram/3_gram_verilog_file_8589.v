@@ -1,26 +1,35 @@
-// Seed: 2957486523
-module module_0 ();
-  assign id_1 = 1;
-endmodule
-module module_1 #(
-    parameter id_4 = 32'd60,
-    parameter id_5 = 32'd36,
-    parameter id_6 = 32'd55,
-    parameter id_7 = 32'd70
+// Seed: 2157451339
+module module_0 #(
+    parameter id_6 = 32'd45,
+    parameter id_7 = 32'd56
 ) (
-    input logic id_0
+    output supply0 id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    output tri1 id_3
 );
-  if (1 & (id_0) & id_0 - id_0) begin
-    logic id_2;
-    assign id_2 = id_0;
-    always @(posedge id_2) begin
-      if ((1)) begin
-        id_2 <= id_0;
-      end
-      id_2 = id_0;
-    end
-  end else begin : id_3
-    defparam id_4.id_5 = id_4; defparam id_6.id_7 = 1;
+  always @(posedge 1 or posedge 1);
+  always_comb @(posedge 1'h0);
+  assign module_1.type_8 = 0;
+  supply0 id_5;
+  defparam id_6.id_7 = id_5;
+  always @(1'd0) begin : LABEL_0$display
+    ;
   end
-  module_0();
+endmodule
+module module_1 (
+    output tri id_0,
+    input tri1 id_1,
+    output supply0 id_2,
+    output wor id_3,
+    input tri1 id_4
+);
+  wire id_6;
+  wire id_7;
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_4,
+      id_2
+  );
 endmodule

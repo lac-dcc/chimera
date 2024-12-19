@@ -1,112 +1,45 @@
-// Seed: 2979639608
+// Seed: 2786525306
 module module_0 (
-    input tri id_0,
-    input wire id_1,
-    output tri id_2,
-    input wire id_3,
-    output wand id_4,
-    input wand id_5,
-    input wand id_6,
-    input supply0 id_7,
-    input tri0 id_8,
-    input tri1 id_9,
-    output tri1 module_0,
-    input tri0 id_11,
-    input wand id_12,
-    input supply1 id_13,
-    output tri id_14,
-    input wire id_15,
-    output wor id_16,
-    output wire id_17,
-    input supply1 id_18,
-    output wand id_19,
-    input wand id_20,
-    output tri id_21,
-    output tri id_22,
-    input supply0 id_23,
-    input wor id_24,
-    output tri id_25,
-    output wor id_26,
-    input uwire id_27,
-    output uwire id_28,
-    input wand id_29,
-    input tri0 id_30,
-    output wor id_31,
-    output supply1 id_32,
-    output tri0 id_33,
-    input wand id_34,
-    input uwire id_35,
-    input wand id_36,
-    output wand id_37,
-    output wire id_38,
-    input tri id_39,
-    input uwire id_40,
-    input supply0 id_41,
-    output tri1 id_42
-    , id_45,
-    input wire id_43
+    id_1,
+    id_2
 );
-  assign id_26 = (id_34 && 1'b0);
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input wor id_1,
-    input tri0 id_2,
-    input uwire id_3,
-    input wire id_4,
-    input tri1 id_5,
-    input wire id_6,
-    input wor id_7,
-    input tri0 id_8,
-    output logic id_9,
-    output tri1 id_10
+    input  tri0 id_0,
+    output tri  id_1,
+    output tri1 id_2,
+    output tri0 id_3
 );
-  assign id_10 = id_7 ? (id_1 ? 1 : 1) : 1;
-  module_0(
-      id_2,
-      id_7,
-      id_0,
-      id_7,
-      id_0,
-      id_1,
-      id_8,
-      id_8,
-      id_3,
-      id_6,
-      id_10,
-      id_8,
-      id_6,
-      id_3,
-      id_10,
-      id_4,
-      id_10,
-      id_10,
-      id_4,
-      id_10,
-      id_3,
-      id_0,
-      id_10,
-      id_3,
-      id_6,
-      id_10,
-      id_0,
-      id_2,
-      id_0,
-      id_2,
-      id_3,
-      id_0,
-      id_10,
-      id_10,
-      id_3,
-      id_2,
-      id_6,
-      id_10,
-      id_10,
-      id_6,
-      id_2,
-      id_1,
-      id_10,
-      id_7
+  tri0 id_5 = 1 == 1;
+  module_0 modCall_1 (
+      id_5,
+      id_5
   );
-  always @(posedge id_6) id_9 <= 1'd0;
+  wire id_6;
+  bufif1 primCall (id_3, id_0, id_5);
+  assign id_2 = 1 + 1;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  initial begin : LABEL_0
+    #1;
+    disable id_6;
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_1
+  );
 endmodule

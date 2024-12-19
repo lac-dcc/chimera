@@ -1,54 +1,62 @@
-// Seed: 3414255666
-module module_0 (
-    input wand id_0,
-    input supply0 id_1,
-    output uwire id_2,
-    input supply1 id_3,
-    input wand id_4,
-    input wor id_5,
-    input tri0 id_6,
-    output wire id_7,
-    output supply0 id_8,
-    output tri1 id_9,
-    output uwire id_10
-);
-  assign id_2  = id_6;
-  assign id_10 = ~1;
-  final begin : id_12
-    id_7 = 'b0;
-    for (id_8 = 'b0; id_1 - ~id_3; id_8 = 1 <= 1) begin
-      repeat (id_3) begin
-        $display(id_3, 'b0, id_6);
-      end
-    end
-  end
-  wire id_13;
-  wire id_14;
+// Seed: 3683610933
+module module_0;
+  wire id_1;
 endmodule
 module module_1 (
-    input uwire id_0,
+    input tri id_0,
     input supply0 id_1,
-    output tri id_2,
-    input uwire id_3,
-    output uwire id_4,
-    output wor id_5,
-    output wor id_6,
-    input uwire id_7
-    , id_19,
-    input tri id_8,
-    output supply1 id_9,
-    input wire id_10,
-    output wire id_11,
-    input tri1 id_12
-    , id_20,
-    input supply1 id_13,
-    output tri1 id_14,
-    output tri id_15,
-    input wand id_16,
-    output supply0 id_17
+    output tri0 id_2
 );
-  module_0(
-      id_0, id_1, id_6, id_13, id_1, id_10, id_13, id_9, id_15, id_9, id_6
-  );
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_23 = 32'd72,
+    parameter id_24 = 32'd72,
+    parameter id_25 = 32'd50,
+    parameter id_26 = 32'd25,
+    parameter id_27 = 32'd85,
+    parameter id_28 = 32'd22
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
+);
+  output wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_16, id_17;
+  wire id_18 = id_14;
+  assign id_8 = id_12 == 1 - 1;
+  module_0 modCall_1 ();
+  integer id_19;
+  wire id_20;
+  assign id_5 = 1;
   wire id_21;
+  assign id_15 = id_3;
+  wand id_22 = 1;
+  defparam id_23.id_24 = 1, id_25.id_26 = 1'h0, id_27.id_28 = 1;
 endmodule

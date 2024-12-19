@@ -1,37 +1,27 @@
-// Seed: 1293014243
-module module_0;
-  wire id_2;
-  wire id_3;
+// Seed: 2813462469
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  id_2 :
+  assert property (@(posedge id_2) id_2)
+  else;
+  always begin : LABEL_0
+    id_2 = id_2;
+  end
+  assign id_2 = 1;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input supply1 id_1,
-    input tri0 id_2,
-    input supply1 id_3,
-    output tri0 id_4,
-    output logic id_5,
-    output tri id_6,
-    input tri1 id_7,
-    input wor id_8,
-    output tri1 id_9
+    input supply1 id_0
 );
-  wire id_11;
-  reg  id_12;
-  initial begin
-    id_5 <= id_12;
-  end
-  wire id_13;
-  assign id_6 = 1;
-  module_0();
-endmodule
-module module_2 (
-    input supply1 id_0,
-    input tri id_1
-    , id_4,
-    output tri id_2
-);
+  id_2(
+      .id_0(1'b0), .id_1(1), .id_2(id_0), .id_3(), .id_4(1ps)
+  );
+  tri id_3;
+  assign id_3 = 1;
+  assign id_3 = 1;
+  module_0 modCall_1 (id_3);
+  assign modCall_1.id_2 = 0;
+  wire id_4;
   wire id_5;
-  id_6(
-      .id_0()
-  ); module_0();
 endmodule

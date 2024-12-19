@@ -1,45 +1,35 @@
-// Seed: 1320767628
+// Seed: 1599574146
 module module_0 (
-    id_1
+    input tri id_0
 );
-  input wire id_1;
-  generate
-    reg id_2, id_3;
-  endgenerate
-  reg  id_4;
-  reg  id_5 = id_3;
-  reg  id_6 = id_2 == id_1;
-  wand id_7;
-  wire id_8;
-  final begin
-    id_6 <= (id_4) + 1;
-  end
-  assign id_7 = 1;
-  always begin
-    id_2 <= id_6;
-  end
-  tri1 id_9;
-  wire id_10;
-  assign id_6 = id_4;
-  wor  id_11;
-  wire id_12;
-  wire id_13;
-  wire id_14 = ~id_11;
-  id_15 :
-  assert property (@(posedge id_6 != 1) 1'b0)
-  else;
-  wire id_16;
-  assign id_5  = 1 - "";
-  assign id_12 = id_14;
-  wire id_17 = 1 == id_5;
-  assign id_15 = id_9;
-  wire   id_18;
-  string id_19 = "";
-  wire   id_20;
+  assign module_1.type_13 = 0;
 endmodule
-module module_1;
-  wand id_1 = 1'h0;
-  module_0(
-      id_1
-  );
+module module_1 (
+    input tri id_0,
+    output wire id_1,
+    output tri1 id_2,
+    input supply1 id_3,
+    output supply0 id_4,
+    output supply1 id_5,
+    input supply1 id_6,
+    output wand id_7,
+    output tri id_8,
+    input tri0 id_9,
+    input uwire id_10,
+    output wor id_11,
+    output tri1 id_12,
+    output tri id_13,
+    input uwire id_14,
+    input supply0 id_15,
+    output supply1 id_16
+);
+  always begin : LABEL_0
+    if (1) #1;
+    else id_4 = id_0;
+  end
+  module_0 modCall_1 (id_6);
+  wire id_18;
+  wand id_19 = 1'b0;
+  tri  id_20 = 1;
+  assign id_13 = 1;
 endmodule

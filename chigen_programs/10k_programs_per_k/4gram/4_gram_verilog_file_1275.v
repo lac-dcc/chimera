@@ -1,52 +1,37 @@
-// Seed: 2065557582
-module module_0 ();
-  generate
-    begin : id_1
-      genvar id_2;
-    end
-  endgenerate
+// Seed: 2995375061
+module module_0;
 endmodule
 module module_1 (
-    input wor id_0,
-    output wor id_1,
-    input tri id_2,
-    input wire id_3,
-    input supply1 id_4,
-    input logic id_5,
-    input wor id_6,
-    output wor id_7,
-    output wor id_8,
-    input uwire id_9,
-    output wor id_10,
-    input tri1 id_11,
-    output tri1 id_12
+    output tri1  id_0,
+    output logic id_1,
+    output wand  id_2,
+    input  logic id_3,
+    input  logic id_4,
+    input  tri   id_5,
+    input  tri   id_6,
+    input  wire  id_7,
+    output logic id_8,
+    output wand  id_9,
+    input  wand  id_10
 );
-  wand id_14;
-  assign id_7 = 1;
-  assign id_7 = id_11;
-  assign id_7 = id_14;
-  id_15(
-      .id_0(id_14),
-      .id_1(id_9),
-      .id_2(1),
-      .id_3(id_8),
-      .id_4(1),
-      .id_5(1),
-      .id_6(id_10),
-      .id_7(1),
-      .id_8(1),
-      .id_9(id_9),
-      .id_10(1'b0),
-      .id_11(id_10),
-      .id_12(id_10),
-      .id_13(1'b0)
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  tri1 id_12;
+  always_comb @(posedge 1)
+    case (!id_5)
+      1: begin : LABEL_0
+        id_1 <= id_4;
+      end
+      1: id_8 = 1;
+      id_5: id_1 = id_3;
+      1: begin : LABEL_0
+        id_8 <= (1);
+        id_9 = id_10;
+      end
+      default: id_12 = id_5 & 1;
+    endcase
+  id_13(
+      .id_0(id_4), .id_1(1), .id_2(id_7), .id_3()
   );
-  reg id_16;
-  assign id_10 = 1;
-  module_0();
-  always @(negedge 1'b0) begin
-    id_16 <= id_5;
-  end
-  wire id_17;
-  wire id_18;
+  wire id_14;
 endmodule

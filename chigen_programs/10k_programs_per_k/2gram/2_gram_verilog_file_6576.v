@@ -1,10 +1,5 @@
-// Seed: 3189199919
-module module_0 ();
-  supply1 id_1 = id_1;
-  wire id_2;
-  always @(1 or posedge id_1) deassign id_1;
-endmodule
-module module_1 (
+// Seed: 1088592638
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -14,27 +9,54 @@ module module_1 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12
+    id_10
 );
-  inout wire id_12;
-  input wire id_11;
   inout wire id_10;
   inout wire id_9;
   inout wire id_8;
-  output wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
   inout wire id_1;
-  wire id_13;
-  wire id_14;
-  module_0();
-  if (id_10[1'd0 : 1]) wire id_15;
-  else begin
-    tri1 id_16 = 1;
-  end
+  wire id_11;
+  assign module_1.id_13 = 0;
+endmodule
+module module_1 (
+    output supply0 id_0,
+    input wor id_1,
+    input tri0 id_2,
+    output supply0 id_3,
+    output supply1 id_4,
+    output tri id_5,
+    input supply1 id_6,
+    output wor id_7,
+    output wor id_8,
+    input tri1 id_9,
+    input tri0 id_10,
+    output wire id_11,
+    input supply0 id_12,
+    output tri1 id_13,
+    output wand id_14,
+    output supply1 id_15,
+    input tri1 id_16,
+    input wor id_17,
+    input wire id_18
+);
+  wire id_20;
+  xor primCall (id_15, id_17, id_12, id_20, id_10, id_2, id_6, id_1, id_18);
+  module_0 modCall_1 (
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20,
+      id_20
+  );
 endmodule

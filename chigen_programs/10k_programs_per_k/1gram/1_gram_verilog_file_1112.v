@@ -1,40 +1,39 @@
-// Seed: 1624015834
-module module_0 ();
-  assign id_1 = ~1 - 1;
-  time id_2;
+// Seed: 1882382157
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  wire id_2;
 endmodule
 module module_1 (
-    output tri1  id_0,
-    input  logic id_1,
-    output logic id_2,
-    input  logic id_3
+    output tri0  id_0,
+    input  wand  id_1,
+    input  wire  id_2,
+    input  tri1  id_3,
+    input  tri1  id_4,
+    inout  tri0  id_5,
+    input  wand  id_6,
+    input  uwire id_7,
+    input  wand  id_8
 );
-  always id_2 <= id_1;
-  module_0();
-  always @((1)) id_2 = 1;
-  assign id_2 = id_3;
-  generate
-    assign id_2 = id_1;
-  endgenerate
+  wire id_10;
+  module_0 modCall_1 (id_10);
 endmodule
 module module_2 (
-    input wire id_0,
-    input supply0 id_1,
-    input wor id_2,
-    output tri0 id_3,
-    input tri1 id_4,
-    output tri0 id_5,
-    input wor id_6
+    input  tri0 id_0,
+    output tri1 id_1,
+    output wire id_2
+    , id_7#(
+        .id_8(1'b0)
+    ),
+    input  wor  id_3,
+    output tri  id_4,
+    input  wand id_5
 );
-  if (id_0) wire id_8;
-  else supply0 id_9, id_10;
-  module_0();
-  supply1 id_11, id_12 = 1;
-  wire id_13;
-  id_14(
-      id_8
-  );
-  tri id_15 = 1, id_16;
-  assign id_16 = id_9;
-  assign id_5  = 1;
+  or primCall (id_4, id_8, id_5, id_9, id_7);
+  reg id_9;
+  module_0 modCall_1 (id_7);
+  generate
+    final id_8 <= id_9;
+  endgenerate
 endmodule

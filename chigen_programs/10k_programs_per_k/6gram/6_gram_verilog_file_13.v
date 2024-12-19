@@ -1,33 +1,38 @@
-// Seed: 1951433831
-module module_0 (
+// Seed: 4106957362
+module module_0 ();
+  tri1 id_1;
+  assign module_1.type_1 = 0;
+  assign id_1 = 1;
+  assign module_2.type_7 = 0;
+endmodule
+module module_1 (
+    output uwire id_0,
+    input  tri   id_1
+    , id_10,
+    output wand  id_2,
+    output uwire id_3,
+    input  wor   id_4,
+    output wor   id_5,
+    output uwire id_6,
+    output uwire id_7,
+    output wire  id_8
+);
+  assign id_8 = id_10;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5
+    id_4
 );
-  input wire id_5;
   output wire id_4;
   input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  uwire id_6;
-  assign id_4 = id_1;
-  wire id_7;
-  tri0 id_8;
-  always @(1) begin
-    repeat (1'b0 == id_1 > 1) for (id_8 = 1; ~id_5; id_4 = 1) id_6 = 1'b0;
-  end
-endmodule
-module module_1 (
-    id_1,
-    id_2
-);
   input wire id_2;
   inout wire id_1;
-  wire id_3;
-  module_0(
-      id_3, id_3, id_2, id_1, id_3
+  tri1 id_5 = 1;
+  module_0 modCall_1 ();
+  id_6(
+      .id_0(1'b0), .id_1(id_3[1])
   );
-  wire id_4;
 endmodule

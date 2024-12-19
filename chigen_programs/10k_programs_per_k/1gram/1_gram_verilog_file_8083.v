@@ -1,45 +1,36 @@
-// Seed: 1028611095
-module module_0 (
-    output uwire id_0,
-    input  tri   id_1,
-    output tri0  id_2,
-    input  uwire id_3
-);
+// Seed: 2907301133
+module module_0;
+  assign module_3.id_2   = 0;
+  assign module_2.type_1 = 0;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    output logic id_1,
-    input wor id_2,
-    input tri0 id_3,
-    input tri1 id_4,
-    input tri id_5,
-    input wire id_6,
-    input wand id_7,
-    input wor id_8,
-    input logic id_9,
-    output logic id_10,
-    input wor id_11,
-    input tri1 id_12,
-    input wire id_13,
-    output uwire id_14,
-    input wand id_15
+    input tri  id_0,
+    input wire id_1
 );
-  assign id_14 = 1;
-  assign id_1  = id_9;
-  reg id_17;
-  always begin
-    @(posedge 1)
-    if ("") id_1 <= 1;
-    else id_10 <= 1 - 1 == "";
-    begin
-      $display;
-      id_17 <= {id_9{~1}};
-      if (id_9 && id_15);
-      else id_17 = 1;
-    end
-  end
-  wire id_18;
-  module_0(
-      id_14, id_2, id_0, id_2
-  );
+  wire id_8;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    output tri0 id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    input wor id_3,
+    output tri0 id_4,
+    input uwire id_5,
+    input tri1 id_6,
+    input supply0 id_7
+);
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    output supply1 id_0,
+    input wor id_1,
+    input wor id_2,
+    input tri1 id_3,
+    output tri1 id_4
+    , id_7,
+    output tri id_5
+);
+  assign id_4 = 1;
+  module_0 modCall_1 ();
 endmodule

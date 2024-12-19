@@ -1,37 +1,37 @@
-// Seed: 785710387
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7#(
-        .id_8 (1 == id_5),
-        .id_9 (""),
-        .id_10(1)
-    )
-);
-  output wire id_7;
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  assign id_7 = 1;
+// Seed: 2577655591
+module module_0;
+  reg id_1;
+  always @(*) begin : LABEL_0
+    #1
+    if (1) begin : LABEL_0
+      id_1 = 1;
+    end else begin : LABEL_0
+      id_1 = 1;
+      wait (1'b0);
+      id_1 <= 1;
+    end
+  end
+  tri1 id_2;
+  assign id_2 = 1;
+  wor   id_3;
+  wire  id_4;
+  uwire id_5 = id_2;
 endmodule
 module module_1 (
-    input  uwire id_0,
-    output wire  id_1,
-    input  wire  id_2,
-    output tri0  id_3
+    id_1,
+    id_2,
+    id_3
 );
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wand id_4;
+  module_0 modCall_1 ();
+  assign modCall_1.type_7 = 0;
   id_5(
-      .id_0(1'h0), .id_1(id_0), .id_2(id_3), .id_3(id_0)
+      .id_0(id_3[1])
   );
-  wire id_6;
-  module_0(
-      id_6, id_6, id_6, id_6, id_6, id_6, id_6
-  );
+  assign id_3[1'b0] = 1;
+  assign id_2 = 1;
+  assign id_2 = id_4 & ~1 & (1'b0);
 endmodule

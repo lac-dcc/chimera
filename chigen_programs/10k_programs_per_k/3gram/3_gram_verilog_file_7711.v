@@ -1,35 +1,36 @@
-// Seed: 1138943232
-module module_0 ();
-  wor id_1;
-  tri id_2;
-  always @(posedge id_1) begin
-    if (1) id_1 = 1 + "";
-    else id_1 = id_2 - 1;
+// Seed: 266944978
+module module_0 (
+    input wire id_0
+);
+  always @(posedge 1'b0 or negedge id_0 != id_0) begin : LABEL_0
+    if (id_0 != id_0) id_2 = id_2;
   end
 endmodule
-module module_1 (
-    input wand id_0,
-    output wire id_1,
-    output uwire id_2,
-    output tri0 id_3,
-    input wor id_4,
-    input wand id_5,
-    output uwire id_6,
-    output supply1 id_7,
-    inout uwire id_8,
-    output supply0 id_9,
-    output wire id_10,
-    input tri0 id_11,
-    input wand id_12,
-    output wand id_13,
-    output tri0 id_14,
-    input tri0 id_15,
-    input supply1 id_16,
-    input tri0 id_17,
-    output supply0 id_18
-    , id_21,
-    output wand id_19
+macromodule module_1 (
+    input wire id_0,
+    output tri id_1,
+    output wire id_2,
+    input tri0 id_3,
+    input supply0 id_4,
+    input wire id_5,
+    input wor id_6,
+    input wor id_7,
+    output tri id_8,
+    output tri0 id_9,
+    input tri id_10,
+    input wor id_11,
+    input tri1 id_12,
+    input tri0 id_13,
+    output tri id_14,
+    output wand id_15,
+    input tri id_16
+    , id_18
 );
-  assign id_21 = 1;
-  module_0();
+  id_19 :
+  assert property (@(posedge id_18) id_16)
+  else if (1 + 1) id_19 = 1;
+  module_0 modCall_1 (id_4);
+  assign modCall_1.type_0 = 0;
+  assign id_8 = id_5;
+  always_ff @(*);
 endmodule

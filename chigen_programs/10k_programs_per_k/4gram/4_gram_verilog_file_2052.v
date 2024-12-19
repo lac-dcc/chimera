@@ -1,64 +1,43 @@
-// Seed: 539760484
-module module_0 (
-    input supply0 id_0,
-    output tri1 id_1,
-    output supply1 id_2,
-    input supply0 id_3,
-    output supply0 id_4,
-    output uwire id_5,
-    input tri id_6,
-    output wor id_7,
-    input supply1 id_8,
-    output tri1 id_9,
-    input uwire id_10,
-    input supply1 id_11,
-    output tri0 id_12,
-    output supply0 id_13,
-    output wire id_14,
-    input tri1 id_15
-);
-  wire id_17;
+// Seed: 408604950
+module module_0 ();
+  wire id_1;
 endmodule
-module module_0 (
-    output tri0 id_0,
-    input wor id_1,
-    output logic id_2,
-    output logic id_3,
-    output tri id_4,
-    input supply1 id_5,
-    input wor id_6,
-    input wor id_7,
-    output supply1 module_1,
-    output wire id_9
-    , id_13,
-    output tri1 id_10,
-    output uwire id_11
+module module_0 #(
+    parameter id_32 = 32'd73,
+    parameter id_33 = 32'd37
+) (
+    output tri id_0,
+    input wire id_1,
+    output tri1 flow,
+    input tri1 id_3
+    , id_29,
+    input tri0 id_4,
+    input tri0 id_5,
+    input wand id_6,
+    input wire id_7,
+    input wand id_8,
+    output wand id_9,
+    input wand id_10,
+    input supply0 id_11,
+    input supply1 id_12,
+    input wand id_13,
+    input tri id_14
+    , id_30,
+    output wand id_15,
+    output tri id_16,
+    input supply1 id_17,
+    output tri id_18,
+    input wire module_1,
+    output wor id_20,
+    output wire id_21,
+    output supply0 id_22,
+    input tri1 id_23,
+    input wire id_24,
+    output supply0 id_25,
+    output supply0 id_26
+    , id_31,
+    output wire id_27
 );
-  logic [7:0] id_14;
-  logic id_15;
-  assign id_2 = id_15 ? id_15 : 1'h0 ? 1 : 1'b0;
-  wire id_16;
-  assign id_8 = id_1 == 1'b0;
-  always @(1 or posedge 1)
-    if (id_14[1]) id_3 <= 1;
-    else id_2 <= 1;
-  module_0(
-      id_6,
-      id_10,
-      id_10,
-      id_5,
-      id_9,
-      id_4,
-      id_5,
-      id_4,
-      id_5,
-      id_11,
-      id_5,
-      id_6,
-      id_9,
-      id_10,
-      id_9,
-      id_1
-  );
-  supply1 id_17 = 1;
+  defparam id_32.id_33 = 1;
+  module_0 modCall_1 ();
 endmodule

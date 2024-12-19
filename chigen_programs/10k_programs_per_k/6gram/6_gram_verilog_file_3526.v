@@ -1,33 +1,30 @@
-// Seed: 3811893888
-module module_0 (
-    input uwire id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    input supply0 id_3,
-    output wire id_4
-);
-  wand id_6;
-  wire id_7;
-  assign id_6 = 1;
-  logic [7:0] id_8;
-  generate
-    assign id_8[1] = id_0;
-    if (1) begin : id_9
-      logic [7:0] id_10 = id_8;
-    end
-  endgenerate
-  wire id_11;
-  always @(*) begin
-    id_6 = 1;
+// Seed: 1496171248
+module module_0;
+  assign id_1 = 1'b0;
+  assign module_2.type_0 = 0;
+  always @(id_1 or posedge 1) begin : LABEL_0
+    id_1 <= 1;
   end
+  assign id_1 = id_1 & 1;
 endmodule
 module module_1 (
-    input  wor   id_0,
-    output uwire id_1,
-    output wor   id_2
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_4;
-  module_0(
-      id_0, id_0, id_0, id_0, id_2
-  );
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  tri id_4 = 1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    input  tri0 id_0,
+    output tri  id_1,
+    input  tri0 id_2,
+    output wor  id_3
+);
+  always repeat (id_2[1^1'b0==1]) #1;
+  module_0 modCall_1 ();
 endmodule

@@ -1,47 +1,61 @@
-// Seed: 857356526
+// Seed: 2162965989
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    output supply1 id_0
 );
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  wire id_4;
+  uwire id_2 = 1;
+  assign module_1.id_8 = 0;
+  wire id_3 = id_3;
+  module_2 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2
+  );
 endmodule
 module module_1 (
-    input supply1 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    output logic id_3,
-    output tri id_4,
-    input wor id_5,
-    output wand id_6,
-    input supply1 id_7,
-    input supply0 id_8,
-    input wor id_9,
-    inout wire id_10,
-    input wand id_11,
-    input tri id_12,
-    inout uwire id_13,
-    input uwire id_14,
-    input wor id_15
+    input wand id_0,
+    input wor id_1
+    , id_5,
+    input uwire id_2,
+    output supply1 id_3
 );
-  wor id_17;
-  reg id_18;
-  initial $display(id_14, id_17,, id_0, id_2, 1);
-  wire id_19;
-  always @(1 == 1) begin
-    id_18 <= 1;
-  end
-  initial begin
-    #1;
-    id_3 <= |(1);
-  end
-  module_0(
-      id_19, id_19, id_19
+  tri1 id_6 = 1;
+  module_0 modCall_1 (id_3);
+  id_7(
+      .id_0(1), .id_1(id_5), .id_2(1), .id_3(id_8), .id_4(id_8 - 1'd0), .id_5(id_8)
   );
-  tri1 id_20 = 1;
-  tri  id_21 = 1;
-  wire id_22;
+endmodule
+module module_0 (
+    module_2,
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
+);
+  inout wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3 = 1'b0;
+  wire id_12;
 endmodule

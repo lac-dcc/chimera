@@ -1,32 +1,23 @@
-// Seed: 1288232781
-module module_0 ();
-  reg id_1 = 1 - id_1;
-  reg id_2;
+// Seed: 2940819433
+module module_0;
   assign id_1 = 1;
-  reg id_3, id_4;
-  always id_4 <= id_1;
-  assign id_1 = id_2;
+  assign module_1.id_6 = 0;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    input supply1 id_1,
-    input supply0 id_2,
-    input wire id_3,
-    input wand id_4,
-    output tri id_5,
-    input supply1 id_6
+    input wor id_0,
+    input tri id_1,
+    input supply1 id_2,
+    input tri id_3,
+    output logic id_4,
+    input logic id_5,
+    input logic id_6
 );
-  `define pp_8 0
-  module_0();
-  wire id_9, id_10;
-endmodule
-module module_2 (
-    output wand id_0,
-    input  wor  id_1,
-    input  tri0 id_2
-);
-  uwire id_4;
-  id_5(
-      .id_0(1'b0), .id_1(1), .id_2(""), .id_3(1 * id_4), .id_4(id_2)
-  ); module_0();
+  for (id_8 = 1'b0; 1'h0; id_4 = id_5) assign id_4 = id_6 << 1;
+  reg   id_9;
+  logic id_10;
+  always id_9 <= id_10;
+  assign id_10 = 1;
+  module_0 modCall_1 ();
+  assign id_10 = id_5;
+  assign id_10 = id_6;
 endmodule

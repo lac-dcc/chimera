@@ -1,38 +1,35 @@
-// Seed: 1533362463
+// Seed: 91327732
 module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4
 );
+  output wire id_4;
   output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_4;
+  inout wire id_2;
+  output wire id_1;
+  wire id_5, id_6;
+  wire id_7;
+  module_2 modCall_1 ();
+  always #1 assert (1);
 endmodule
-module module_1 (
-    input supply1 id_0,
-    output tri0 id_1,
-    input logic id_2,
-    input wor id_3,
-    input tri1 id_4,
-    input tri id_5,
-    output wire id_6,
-    input supply0 id_7,
-    input tri id_8,
-    output wor id_9,
-    input tri0 id_10
-);
-  reg id_12, id_13;
-  id_14(
-      .id_0(1'b0), .id_1(id_9), .id_2(id_8), .id_3(1), .id_4(id_12), .id_5(1'h0)
+module module_1;
+  genvar id_1;
+  wire id_4;
+  assign id_2 = id_1;
+  wire id_5;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_5,
+      id_4
   );
-  uwire id_15;
-  module_0(
-      id_15, id_15, id_15
-  );
-  always @(posedge (id_15 & ~id_2) or posedge 1) begin
-    id_12 <= id_2;
-  end
-  assign id_13 = 1;
-  tri id_16 = 1;
+  wire id_6;
+endmodule
+module module_2;
+  uwire id_1;
+  final $display(id_1, 1);
+  wire id_2;
+  always @(posedge id_2) id_1 = {1{1 == 1}};
 endmodule

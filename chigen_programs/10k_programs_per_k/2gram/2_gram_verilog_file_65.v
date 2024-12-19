@@ -1,36 +1,104 @@
-// Seed: 430593653
+// Seed: 2982051458
 module module_0 (
-    output tri0 id_0
+    output supply0 id_0,
+    output tri1 id_1,
+    input wand id_2,
+    output wor id_3,
+    input supply0 id_4,
+    input tri id_5,
+    input tri1 id_6,
+    output supply1 id_7,
+    output uwire id_8,
+    output wor id_9,
+    output tri1 id_10,
+    output wire id_11,
+    input supply0 id_12
+    , id_44,
+    input wire id_13,
+    output wire id_14,
+    input tri id_15,
+    output tri id_16,
+    output uwire id_17,
+    input supply1 id_18,
+    output uwire id_19,
+    output tri id_20,
+    input tri id_21,
+    output supply1 id_22,
+    input tri id_23,
+    output wire id_24,
+    output wand id_25,
+    input tri0 id_26,
+    input uwire id_27,
+    output uwire id_28,
+    input supply1 id_29,
+    output wand id_30,
+    output uwire id_31,
+    input wand id_32,
+    input wand id_33,
+    output uwire id_34,
+    input wire id_35,
+    input wor id_36,
+    input wire id_37,
+    input tri1 id_38,
+    output supply0 id_39,
+    input tri1 id_40,
+    input tri id_41,
+    input tri id_42
 );
-  assign id_0 = id_2;
-  wire id_3;
-  wire id_4;
-  wire id_5;
+  always id_19 = 1;
+  assign module_1.type_9 = 0;
 endmodule
 module module_1 (
-    input  wire  id_0,
-    output tri   id_1,
-    input  wand  id_2,
-    input  wire  id_3,
-    input  tri   id_4,
-    input  tri1  id_5,
-    input  uwire id_6,
-    output logic id_7,
-    output wor   id_8,
-    input  wor   id_9,
-    input  tri   id_10
+    output wor  id_0,
+    input  tri1 id_1
 );
-  assign id_7 = 1;
-  assign id_1 = 1;
-  initial id_7 <= 1;
-  if (id_10) assign id_1 = $display({id_5, 1});
-  else begin
-    uwire id_12 = id_10 - id_5;
-  end
-  module_0(
-      id_8
+  assign id_0 = id_1;
+  wire id_3;
+  wire id_4;
+  supply0 id_5 = 1;
+  module_0 modCall_1 (
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_1
   );
-  tri0 id_13;
-  assign id_13 = id_6 * 1'h0;
-  wire id_14;
 endmodule

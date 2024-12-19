@@ -1,38 +1,32 @@
-// Seed: 2290434132
-module module_0 (
-    input wire id_0
-);
-  always id_2 = id_2;
-  wire id_3;
+// Seed: 2830772444
+module module_0;
+  assign module_1.id_2 = 0;
+  wire id_1;
+  always disable id_2;
 endmodule
-module module_1 (
-    output uwire id_0,
-    output wand id_1,
-    input supply1 id_2,
-    input wand id_3,
-    input wand id_4,
-    input supply0 id_5,
-    input tri0 id_6,
-    output wand id_7,
-    output tri id_8
-    , id_11,
-    input tri0 id_9
+module module_1 #(
+    parameter id_4 = 32'd66,
+    parameter id_5 = 32'd70
+) (
+    id_1,
+    id_2
 );
-  wire id_12;
+  output wire id_2;
+  inout wire id_1;
   assign id_1 = 1;
-  logic [7:0] id_13;
-  genvar id_14;
-  always_ff @(posedge 1 or posedge id_6) begin
-    @(posedge 1'b0) begin
-      $display;
-    end
+  assign id_1 = 1;
+  integer id_3;
+  if (id_1) begin : LABEL_0
+    defparam id_4.id_5 = 1;
   end
-  module_0(
-      id_3
-  );
-  assign id_13[1 : 1] = 1 * 1;
-  wire id_15;
-  wire id_16;
-  wire id_17;
-  wire id_18;
+  reg id_6 = id_1;
+  always @(posedge id_1 or negedge id_6) begin : LABEL_0
+    if (1) begin : LABEL_0
+      id_2 = 1;
+    end else id_1 <= 1'b0 - id_3;
+  end
+  wire id_7;
+  wire id_8;
+  module_0 modCall_1 ();
+  genvar id_9;
 endmodule

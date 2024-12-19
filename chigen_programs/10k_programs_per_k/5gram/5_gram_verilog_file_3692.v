@@ -1,5 +1,26 @@
-// Seed: 1470153925
+// Seed: 384517596
 module module_0 (
+    input  wire id_0,
+    output tri0 id_1
+);
+  assign id_1 = 1 ? {id_0 - id_0, 1} : "" ? 1 : id_0;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output wor id_1
+);
+  assign id_1 = 1;
+  wire id_3;
+  module_0 modCall_1 (
+      id_0,
+      id_1
+  );
+  assign modCall_1.type_3 = 0;
+  id_5(
+      id_1, id_0, 1
+  );
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
@@ -8,45 +29,60 @@ module module_0 (
     id_6,
     id_7,
     id_8,
-    id_9
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  output wire id_9;
-  output wire id_8;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  output wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  input wire id_8;
   output wire id_7;
-  output wire id_6;
+  inout wire id_6;
   output wire id_5;
   input wire id_4;
-  input wire id_3;
-  input wire id_2;
+  output wire id_3;
+  output wire id_2;
   input wire id_1;
-  wire id_10;
+  assign id_11 = 1'd0;
+  wire id_16;
 endmodule
-module module_1 (
-    output wand  id_0,
-    input  uwire id_1,
-    input  logic id_2,
-    output wand  id_3,
-    inout  uwire id_4,
-    output tri   id_5,
-    output logic id_6,
-    input  logic id_7,
-    output tri1  id_8,
-    output tri0  id_9
-);
-  reg id_11;
-  nand (id_4, id_12, id_11, id_13, id_1, id_7, id_2, id_14);
-  supply1 id_12;
-  wire id_13;
-  always_ff @("" == id_12 or posedge id_1) begin
-    if ('b0) forever id_5 = 1;
-    else begin
-      wait (1);
-      id_11 <= id_2;
-      id_6  <= id_7;
-    end
+module module_3;
+  always begin : LABEL_0
+    id_1 = 1;
+    id_1 = id_1;
   end
-  wire id_14;
-  module_0(
-      id_13, id_13, id_13, id_13, id_14, id_12, id_14, id_14, id_12
+  module_2 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
   );
+  reg id_3 = 1'b0;
+  always
+  fork
+    id_3 <= 1;
+    logic [7:0] id_4;
+  join
+  assign id_4[1'h0] = 1;
+  wire id_5;
 endmodule

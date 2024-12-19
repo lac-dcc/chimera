@@ -1,66 +1,56 @@
-// Seed: 2878407003
-module module_0;
-  wire id_1;
-  wire id_2;
-  wire id_3 = id_3;
+// Seed: 2693781426
+module module_0 (
+    output wand id_0,
+    output wire id_1,
+    input  tri0 id_2,
+    input  wand id_3,
+    input  tri1 id_4,
+    input  wand id_5,
+    output tri1 id_6,
+    input  wor  id_7#(1'b0, ""),
+    input  wor  id_8
+);
 endmodule
 module module_1 (
-    output tri1 id_0,
-    input tri0 id_1,
-    output tri id_2,
-    output tri0 id_3,
-    output tri id_4,
-    input supply1 id_5,
-    output tri0 id_6,
-    output wire id_7,
-    input tri0 id_8,
-    output wor id_9,
-    output wire id_10,
-    input wor id_11,
-    inout wire id_12,
-    input tri1 id_13,
-    output uwire id_14,
-    input supply0 id_15,
-    input wand id_16,
-    input wor id_17,
-    output tri0 id_18,
-    output tri0 id_19,
-    input tri0 id_20,
-    input wand id_21,
-    input tri1 id_22,
-    input tri0 id_23,
-    output wor id_24,
-    output uwire id_25,
-    input wand id_26,
-    output tri1 id_27,
-    output logic id_28,
-    input wire id_29,
-    input supply0 id_30,
-    input tri0 id_31,
-    input supply1 id_32,
-    input uwire id_33,
-    input tri1 id_34,
-    output logic id_35,
-    input supply1 id_36,
-    input tri1 id_37,
-    input supply0 id_38,
-    input supply1 id_39,
-    input wand id_40,
-    input supply1 id_41,
-    input tri0 id_42,
-    output uwire id_43,
-    input wand id_44,
-    output wand id_45,
-    input tri id_46
+    output wor id_0,
+    output logic id_1,
+    output supply1 id_2,
+    input wor id_3,
+    input supply1 id_4,
+    input wire id_5,
+    output tri1 id_6,
+    output uwire id_7,
+    input supply1 id_8,
+    input wor id_9,
+    input tri id_10,
+    input tri0 id_11,
+    input uwire id_12
 );
-  wire id_48;
-  assign id_6 = (1);
-  module_0();
-  wire id_49;
-  reg  id_50;
-  wire id_51;
-  always_comb @(posedge id_11, posedge 1) id_35 = #id_52 id_50;
-  always @(posedge 1)
-    if (1) $display;
-    else id_28 <= (1'b0 - id_40);
+  logic id_14;
+  always @(posedge 1) id_1 <= 1;
+  wire id_15;
+  wire id_16;
+  module_0 modCall_1 (
+      id_6,
+      id_2,
+      id_10,
+      id_5,
+      id_5,
+      id_3,
+      id_2,
+      id_4,
+      id_12
+  );
+  assign modCall_1.id_7 = 0;
+  assign id_14 = id_14 - 1;
+  int id_17 (
+      .id_0(1),
+      .id_1(1),
+      .id_2(""),
+      .id_3(id_4),
+      .id_4(id_0),
+      .id_5(id_7),
+      .id_6(id_15)
+  );
+  wire id_18;
 endmodule

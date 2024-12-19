@@ -1,53 +1,52 @@
-// Seed: 752667896
+// Seed: 2270298278
 module module_0 (
-    id_1,
-    id_2
+    output wire id_0,
+    input  wand module_0
 );
-  output wire id_2;
-  inout wire id_1;
   wire id_3;
   wire id_4;
+  wire id_5 = id_5, id_6;
+  initial begin : LABEL_0
+    disable id_7;
+  end
 endmodule
 module module_1 (
-    output wire id_0,
-    output tri  id_1
+    input logic id_0,
+    output tri1 id_1,
+    output tri id_2,
+    input logic id_3,
+    output wand id_4,
+    input supply1 id_5
 );
-  always @(posedge 1'b0) id_0 = 1'h0;
-  wire id_3;
-  nmos (id_1, 1 - 1, 1);
-  module_0(
-      id_3, id_3
+  always @(id_3, posedge 1) {1, id_3, id_0} <= id_3;
+  module_0 modCall_1 (
+      id_2,
+      id_5
   );
-  wire id_4;
-  wor  id_5;
-  initial assume (1'b0 == id_5);
 endmodule
-module module_2 (
-    input wor id_0,
-    output supply1 id_1,
-    input tri0 id_2,
-    output tri1 id_3,
-    input tri1 id_4
-);
-  assign id_1 = 1;
-  always @(id_4 or negedge id_2 - "") force id_3 = 1'b0 == 1'b0;
+module module_2;
+  always @(1 or id_1) begin : LABEL_0
+    id_1 <= 1;
+  end
 endmodule
 module module_3 (
-    output supply1 id_0,
-    input tri id_1,
-    output uwire id_2,
-    output tri id_3,
-    input wire id_4,
-    input wire id_5,
-    input tri1 id_6,
-    input uwire id_7,
-    output wire id_8,
-    output tri1 id_9,
-    output tri1 id_10,
-    output wor id_11
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  assign id_0 = 1 ** 1;
-  module_2(
-      id_5, id_10, id_4, id_8, id_6
-  );
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  initial begin : LABEL_0
+    #1 id_2 = id_6;
+    id_2 <= 1;
+    assert (1);
+  end
+  module_2 modCall_1 ();
 endmodule

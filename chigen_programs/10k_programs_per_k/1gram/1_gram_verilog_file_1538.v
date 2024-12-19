@@ -1,65 +1,62 @@
-// Seed: 3225363667
+// Seed: 1907625049
 module module_0 (
-    input tri id_0
+    input wand id_0,
+    output tri id_1,
+    input tri1 id_2,
+    input tri0 id_3
+    , id_10,
+    input supply1 id_4,
+    output supply0 id_5,
+    input tri id_6,
+    output uwire id_7,
+    input uwire id_8
 );
+  wire id_11, id_12;
+  wire id_13;
+  assign module_1.type_8 = 0;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input wire id_1,
+    input supply0 id_0,
+    output wire id_1,
     input uwire id_2,
-    input wor id_3,
-    input tri0 id_4,
-    output wor id_5,
-    input uwire id_6,
-    inout tri1 id_7,
-    output uwire id_8,
-    input tri0 id_9,
-    output tri1 id_10,
+    input wand id_3,
+    output wire id_4,
+    input wor id_5,
+    output supply1 id_6,
+    input logic id_7,
+    input tri id_8,
+    input tri id_9,
+    input supply1 id_10,
     input tri0 id_11,
-    output uwire id_12,
-    input wire id_13,
-    input tri0 id_14,
+    input logic id_12,
+    input wor id_13,
+    output logic id_14,
     input uwire id_15,
-    input tri0 id_16
-    , id_26,
-    input wor id_17,
-    input supply0 id_18,
-    output wand id_19,
-    input tri0 id_20,
-    input wor id_21,
-    input tri0 id_22,
-    input uwire id_23,
-    output tri id_24
+    input wire id_16,
+    output tri1 id_17,
+    input tri1 id_18,
+    output tri1 id_19,
+    input tri id_20
 );
-  assign id_10 = id_23;
-  assign id_7  = 1;
-  assign id_26 = id_0;
-  module_0(
-      id_2
-  );
-  wire id_27;
-  wire id_28, id_29, id_30;
-  wire id_31, id_32;
-  and (
-      id_5,
-      id_22,
-      id_14,
-      id_0,
-      id_17,
-      id_4,
-      id_21,
-      id_6,
-      id_13,
+  assign id_19 = 1;
+  logic id_22 = 1, id_23, id_24;
+  final begin : LABEL_0
+    if (id_18 || 1'b0 * 1) #1 id_14 <= id_7;
+  end
+  assign id_4 = id_3;
+  tri0 id_25 = id_10;
+  assign id_14 = id_12;
+  module_0 modCall_1 (
+      id_20,
       id_1,
       id_3,
-      id_16,
-      id_26,
-      id_11,
-      id_18,
-      id_9,
-      id_15,
-      id_7,
-      id_23,
-      id_20
+      id_8,
+      id_10,
+      id_17,
+      id_2,
+      id_17,
+      id_16
   );
+  for (id_26 = 1 - 1; id_24; id_14 = 1) assign id_19 = id_25;
+  assign id_14 = id_23;
 endmodule

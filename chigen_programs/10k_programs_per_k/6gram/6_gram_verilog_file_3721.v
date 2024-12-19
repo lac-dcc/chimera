@@ -1,37 +1,40 @@
-// Seed: 3478062790
-module module_0 (
-    output logic id_0,
-    input  tri1  id_1,
-    input  logic id_2,
-    input  uwire id_3,
-    input  wire  id_4
-);
-  always #1 begin
-    id_0 = 1'h0;
-    id_0 <= id_2;
-  end
+// Seed: 1263114021
+module module_0 ();
+  assign module_1.id_4 = "";
+  wire id_2;
+  assign module_2.id_7 = 0;
+  initial assume (1);
 endmodule
 module module_1 (
-    output tri id_0,
-    input logic id_1,
-    input supply1 id_2,
-    input wor id_3,
-    input tri id_4,
-    input tri0 id_5,
-    output logic id_6
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_6 = id_1;
-  reg id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19 = id_12;
-  module_0(
-      id_6, id_5, id_1, id_4, id_2
-  );
-  wire id_20;
-  wire id_21;
-  assign id_18 = 1 * 1;
-  wire id_22;
-  initial id_23;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  string id_4;
+  module_0 modCall_1 ();
+  assign id_4 = "";
+  assign id_1 = 1'd0;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  uwire id_6;
+  tri0  id_7;
+  module_0 modCall_1 ();
   initial
-    if (id_13 || id_1) begin
-      id_13 <= 1;
-    end else id_17 <= id_1;
+    forever begin : LABEL_0
+      id_7 = id_6 == id_4;
+    end
 endmodule

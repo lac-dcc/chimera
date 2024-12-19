@@ -1,38 +1,29 @@
-// Seed: 806701881
-module module_0 (
-    input wor id_0,
-    input supply1 id_1,
-    output tri id_2,
-    input tri id_3,
-    output tri0 id_4,
-    input tri id_5
-    , id_11,
-    output wire id_6,
-    output tri0 id_7,
-    output wand id_8,
-    output wor id_9
-);
-  wire id_12;
-  tri  id_13 = 1;
+// Seed: 2893780183
+module module_0;
+  wire id_2;
+  wire id_3;
+  wire id_4;
+  assign module_1.type_8 = 0;
 endmodule
-module module_0 (
-    input  tri   id_0,
-    output uwire id_1,
-    input  wand  id_2,
-    input  wire  id_3,
-    input  logic id_4,
-    input  uwire id_5,
-    input  tri1  id_6,
-    output logic module_1
+module module_1 (
+    output wand id_0,
+    input supply0 id_1,
+    output wand id_2,
+    output wor id_3,
+    output wire id_4,
+    input wire id_5,
+    output tri0 id_6,
+    output tri id_7,
+    output tri1 id_8,
+    input supply1 id_9,
+    output tri1 id_10,
+    output wire id_11,
+    output wire id_12,
+    input supply1 id_13
 );
-  always_latch @(1 or posedge 1) begin
-    if (id_2) assign id_1 = id_4;
-    else begin
-      if (1) id_7 <= 1;
-      id_1 = id_5;
-    end
+  assign id_8 = 1;
+  always @(posedge 1'b0 or posedge (1)) begin : LABEL_0
+    id_3 = {id_1};
   end
-  module_0(
-      id_3, id_5, id_1, id_2, id_1, id_0, id_1, id_1, id_1, id_1
-  );
+  module_0 modCall_1 ();
 endmodule

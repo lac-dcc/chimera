@@ -1,33 +1,38 @@
-// Seed: 3023314116
+// Seed: 1852148731
 module module_0;
-  wire id_1;
-  generate
-    wire id_2;
-    wire id_3;
-  endgenerate
+  assign id_1 = id_1;
+  assign module_2.type_2 = 0;
+  assign id_1 = 1;
+  wire id_2, id_3;
+  assign module_1.type_2 = 0;
 endmodule
 module module_1 (
-    input  tri  id_0,
-    output wand id_1,
-    input  tri0 id_2,
-    output wor  id_3
+    inout  tri   id_0,
+    inout  tri   id_1,
+    output tri0  id_2,
+    input  uwire id_3,
+    input  wor   id_4,
+    output tri   id_5
 );
-  wire id_5;
-  real id_7;
-  wire id_8 = id_6;
-  module_0();
+  wand id_7;
+  module_0 modCall_1 ();
+  assign id_0 = 1 + 1;
+  assign id_0 = id_7;
+  integer id_8 = 1 - 1'b0;
 endmodule
 module module_2 (
-    input supply0 id_0,
-    input wire id_1,
-    input wand id_2,
-    input tri0 id_3
-    , id_8,
-    input wire id_4,
-    output supply1 id_5,
-    input tri1 id_6
+    output wand  id_0,
+    output logic id_1,
+    input  tri1  id_2,
+    input  logic id_3,
+    output tri0  id_4,
+    input  tri1  id_5
 );
-  wire id_9;
-  module_0();
-  wire id_10;
+  always id_1 <= id_3;
+  tri0 id_7 = 1;
+  initial begin : LABEL_0
+    id_4 = id_5;
+  end
+  wand id_8 = 1;
+  module_0 modCall_1 ();
 endmodule

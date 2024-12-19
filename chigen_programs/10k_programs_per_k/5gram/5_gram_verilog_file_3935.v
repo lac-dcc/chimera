@@ -1,38 +1,48 @@
-// Seed: 867128386
+// Seed: 3752603600
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output tri  id_0,
+    input  wire id_1,
+    output tri0 id_2,
+    input  wor  id_3,
+    output wor  id_4
 );
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  tri1 id_5;
-  always @(1 == 1, (id_1), posedge (id_2) or posedge 1) begin
-    if (id_1)
-      for (id_2 = 1; id_2; id_3++) begin
-        forever id_4 += 1;
-      end
-  end
-  wire id_6;
-  always_latch @(id_6) begin
-    id_2 = 1'b0;
-    id_2 = (id_1);
-    id_4 = id_5++;
-  end
-  specify
-    (id_7 => id_8) = (1  : 1  : 1'b0 == 1, 1);
-    specparam id_9 = (id_2);
-  endspecify
-endmodule
-module module_1;
-  assign id_1 = 1;
-  wire id_2;
-  module_0(
-      id_2, id_1, id_1, id_2
+  assign id_4 = 1'b0 ? id_3 : 1 == id_3 < 1'd0;
+  tri1 id_6;
+  tri0 id_7 = id_7 - 1;
+  id_8(
+      .id_0(id_4),
+      .id_1(1),
+      .id_2(id_2 !== id_1),
+      .id_3(),
+      .id_4(id_0),
+      .id_5(1),
+      .id_6(1'b0),
+      .id_7(1),
+      .id_8(id_4 == id_6),
+      .id_9(id_7),
+      .id_10((id_6)),
+      .id_11(id_0),
+      .id_12(1 && id_2),
+      .id_13(1 == ~id_2),
+      .id_14(id_0)
   );
-  wire id_3;
-  wire id_4;
+  assign module_1.id_2 = 0;
+  wire id_9;
+endmodule
+module module_1 (
+    input wand id_0,
+    output supply1 id_1,
+    input uwire id_2,
+    output wor id_3,
+    inout supply0 id_4,
+    input uwire id_5
+);
+  assign id_3 = id_0;
+  module_0 modCall_1 (
+      id_3,
+      id_0,
+      id_3,
+      id_5,
+      id_1
+  );
 endmodule

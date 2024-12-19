@@ -1,44 +1,31 @@
-// Seed: 4185300620
-module module_0;
-  string id_2;
-  always @(posedge "" or id_2) begin
-    if (1) id_2 = id_2;
-    id_1 = 1;
-  end
+// Seed: 1684805764
+module module_0 (
+    input wor id_0,
+    output wand id_1
+    , id_4, id_5,
+    input supply1 id_2
+);
+  id_6(
+      .id_0(id_0), .id_1(1'd0), .id_2(1'b0), .id_3(id_4), .id_4(id_4 > id_0)
+  );
+  module_2 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input wor id_1,
-    input tri0 id_2,
-    input wire id_3,
-    output wor id_4,
-    input supply0 id_5,
-    input supply1 id_6,
-    input tri id_7,
-    input tri1 id_8,
-    output tri0 id_9,
-    input wire id_10,
-    output supply0 id_11,
-    output tri1 id_12,
-    output wand id_13,
-    output supply1 id_14,
-    input tri1 id_15,
-    input wor id_16,
-    input supply1 id_17,
-    input supply1 id_18,
-    inout wor id_19,
-    input tri id_20,
-    input uwire id_21,
-    input tri0 id_22,
-    input wand id_23
-    , id_28,
-    input tri0 id_24,
-    input wand id_25
-    , id_29,
-    output wire id_26
+    input  tri0 id_0,
+    input  wor  id_1,
+    output tri  id_2,
+    output tri  id_3
 );
-  always @(posedge 1 == 1) begin
-    id_11 += id_6;
-  end
-  module_0();
+  assign id_2 = id_0;
+  notif1 primCall (id_3, id_0, id_1);
+  module_0 modCall_1 (
+      id_1,
+      id_2,
+      id_0
+  );
+  assign modCall_1.type_2 = 0;
+endmodule
+module module_2 ();
+  assign id_1 = 1 & 1;
 endmodule

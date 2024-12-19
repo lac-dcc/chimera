@@ -1,133 +1,42 @@
-// Seed: 1515148823
-module module_0 (
-    output tri0 id_0,
-    output uwire id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input uwire id_4,
-    output supply1 id_5,
-    input tri id_6,
-    input wire id_7,
-    output wand id_8
-    , id_50,
-    output uwire id_9,
-    input supply1 id_10,
-    input tri1 id_11,
-    input wor id_12,
-    input wand id_13,
-    input tri id_14,
-    output tri1 id_15,
-    input supply1 id_16,
-    output wire id_17,
-    output wor id_18,
-    output supply1 id_19,
-    input tri0 id_20,
-    input tri id_21,
-    output tri id_22,
-    input supply0 id_23,
-    input uwire id_24,
-    output tri id_25,
-    output tri1 id_26,
-    output uwire id_27,
-    input tri1 id_28,
-    input tri1 id_29,
-    output wor id_30,
-    input wire id_31,
-    input supply1 id_32,
-    output supply1 id_33,
-    input supply1 id_34,
-    input wire id_35,
-    output wire id_36,
-    input wand id_37,
-    input tri id_38,
-    output wire id_39,
-    input tri0 id_40,
-    input supply0 id_41,
-    input wire id_42,
-    output wand id_43,
-    input tri0 id_44,
-    input wor id_45,
-    output supply0 id_46,
-    input supply1 id_47,
-    output wor id_48
-);
-  assign id_18 = 1;
-  wire id_51;
-endmodule
+// Seed: 2322044724
+program module_0;
+  uwire id_1;
+  wor   id_3 = (1);
+  assign id_1 = id_1;
+  wire id_4;
+  assign id_1 = 1'b0;
+  initial begin : LABEL_0
+    id_2 = id_4;
+  end
+endprogram
 module module_1 (
-    input tri0 id_0,
-    input tri id_1,
-    input tri id_2,
-    input uwire id_3,
-    input wor id_4,
-    input tri id_5,
-    output wand id_6,
-    input tri0 id_7,
-    output tri0 id_8,
-    input uwire id_9,
-    output wor id_10,
-    output tri1 id_11,
-    output supply0 id_12,
-    input uwire id_13,
-    input supply0 id_14
+    output wor id_0,
+    input tri id_1
+    , id_15,
+    output supply1 id_2,
+    output wand id_3,
+    input supply0 id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    input logic id_7,
+    input supply0 id_8,
+    input wand id_9,
+    input uwire id_10,
+    input tri0 id_11,
+    input supply1 id_12,
+    output wand id_13
 );
-  initial begin
-    if (1'b0 || 1 && 1 && id_5) begin
-      id_12 = id_9 ^ 1 << 1;
-    end else begin
-      $display;
+  reg id_16;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  initial begin : LABEL_0
+    for (id_15 = ~id_4; 1; id_5 = 1) #1;
+    id_16 = new id_17;
+    if (id_8) id_17 <= id_7;
+    else begin : LABEL_0
+      if (1)
+        assert (1'b0);
+        else disable id_18;
     end
   end
-  nor (id_12, id_3, id_2, id_9, id_4, id_0, id_5, id_7, id_1, id_13, id_14);
-  module_0(
-      id_8,
-      id_11,
-      id_4,
-      id_4,
-      id_9,
-      id_11,
-      id_7,
-      id_4,
-      id_11,
-      id_12,
-      id_9,
-      id_7,
-      id_7,
-      id_14,
-      id_4,
-      id_11,
-      id_4,
-      id_12,
-      id_6,
-      id_10,
-      id_9,
-      id_2,
-      id_10,
-      id_2,
-      id_13,
-      id_6,
-      id_11,
-      id_10,
-      id_4,
-      id_4,
-      id_8,
-      id_1,
-      id_2,
-      id_6,
-      id_2,
-      id_13,
-      id_6,
-      id_0,
-      id_7,
-      id_6,
-      id_4,
-      id_13,
-      id_4,
-      id_11,
-      id_2,
-      id_0,
-      id_12,
-      id_4,
-      id_12
-  );
 endmodule

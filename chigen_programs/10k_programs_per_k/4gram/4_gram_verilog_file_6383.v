@@ -1,38 +1,25 @@
-// Seed: 4153168708
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+// Seed: 2591740993
+module module_0;
+  id_1 :
+  assert property (@(posedge id_1) 1)
+  else $display(1'b0, id_1, id_1);
+  assign id_1 = $display;
+  wire id_3;
+  wire id_5;
+  wor  id_6;
+  wire id_7;
+  assign id_6 = id_2;
+  assign module_1.id_0 = 0;
+  wire id_8;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output tri1 id_1,
+    input tri1 id_2
 );
-  inout wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_9;
-  module_2();
-endmodule
-module module_1 #(
-    parameter id_1 = 32'd83,
-    parameter id_2 = 32'd86
-) ();
-  generate
-    defparam id_1.id_2 = 1;
-    genvar id_3;
-  endgenerate
-  module_0(
-      id_3, id_3, id_3, id_3, id_3, id_3, id_3, id_3
-  );
-endmodule
-module module_2 ();
-  logic [7:0] id_1;
-  assign id_1[1'b0==1] = 1'b0;
+  uwire id_4;
+  module_0 modCall_1 ();
+  always @(posedge 1'b0 or $display(id_0 - 1, id_4, 1, 1'h0, 1, 1, 1, 1)) $display(id_4, id_0);
+  wire id_5;
+  assign id_1 = id_2;
 endmodule

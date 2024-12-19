@@ -1,38 +1,36 @@
-// Seed: 2997427131
-module module_0;
-  uwire id_2 = id_2 + id_2;
-  assign id_2 = id_1;
-endmodule
-module module_1 (
+// Seed: 3078326338
+module module_0 (
     id_1,
     id_2
 );
-  output wire id_2;
-  input wire id_1;
-  module_0();
-  tri id_3 = 1;
-  if (1) final $display(id_1, id_3);
-  else reg id_4 = ~1, id_5, id_6, id_7;
-  tri id_8, id_9, id_10;
-  id_11 :
-  assert property (@(id_7) 1 == id_6)
-  else id_11 <= 1 ^ id_8;
+  inout wire id_2;
+  output wire id_1;
+  wire id_3, id_4;
+  assign module_1.type_22 = 0;
+  assign id_4 = id_4;
 endmodule
-module module_2 (
-    input wand id_0,
-    input uwire id_1,
-    input tri0 id_2,
-    output supply1 id_3,
-    input tri id_4,
-    input supply1 id_5,
-    output tri id_6,
+module module_1 (
+    output tri1 id_0
+    , id_15,
+    input supply0 id_1,
+    input uwire id_2,
+    output wor id_3,
+    inout uwire id_4
+    , id_16,
+    output tri0 id_5,
+    inout tri id_6,
     output supply0 id_7,
-    input tri0 id_8
+    output tri1 id_8,
+    input supply0 id_9,
+    input tri id_10,
+    output tri1 id_11,
+    input tri id_12,
+    input uwire id_13
 );
-  id_10(
-      id_5
+  always id_6 = id_9;
+  module_0 modCall_1 (
+      id_16,
+      id_15
   );
-  wire id_11;
-  wire id_12;
-  module_0();
+  assign id_8 = id_2;
 endmodule

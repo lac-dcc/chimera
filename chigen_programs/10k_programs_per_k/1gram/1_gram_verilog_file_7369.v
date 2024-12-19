@@ -1,29 +1,34 @@
-// Seed: 3851908701
-module module_0 (
-    id_1
-);
-  inout wire id_1;
-  wire id_2;
-  wire id_3;
-  wire id_4;
+// Seed: 2669889435
+module module_0 ();
+  reg id_2;
+  always
+    if (1)
+      if (id_2)
+        @(negedge id_2)
+          @(posedge ~1 or id_2)
+            if (1) id_1 <= id_2;
+            else $display(id_2, 1);
+      else @(1) wait (id_1) id_2 = id_2;
+    else;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output tri   id_1,
-    output wor   id_2,
-    output tri   id_3,
-    output tri   id_4,
-    input  uwire id_5,
-    output tri1  id_6,
-    input  tri1  id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  always #1 $display(1);
-  wire id_9;
-  module_0(
-      id_9
-  );
-  tri1 id_10, id_11, id_12, id_13;
-  assign id_12 = id_11;
-  assign id_4  = id_13;
-  for (id_14 = id_5; 1; id_6 = id_0) always #id_15 id_9 = ~id_5;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_4 = id_3;
+  module_0 modCall_1 ();
 endmodule

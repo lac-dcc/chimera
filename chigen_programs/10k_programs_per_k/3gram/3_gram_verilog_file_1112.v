@@ -1,40 +1,39 @@
-// Seed: 3485253642
-module module_0 (
-    input wire id_0
-    , id_12,
-    output tri1 id_1,
-    output tri1 id_2,
-    output uwire id_3,
-    input wand id_4,
-    input tri1 id_5,
-    output wand id_6,
-    output supply1 id_7,
-    output tri id_8,
-    input wor id_9,
-    output tri1 id_10
-);
-  always @(posedge "")
-    if (id_12) $display(id_4);
-    else begin
-      id_6 = 1;
-    end
+// Seed: 2163651533
+module module_0;
+  wire id_1;
+  assign module_2.type_0 = 0;
+  wire id_3;
+  assign id_3 = id_3;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input supply1 id_1,
-    output supply1 id_2,
-    output wire id_3,
-    input uwire id_4,
-    output wor id_5,
-    output uwire id_6,
-    input wand id_7,
-    output wand id_8,
-    input supply1 id_9
+    input  wor   id_0,
+    input  uwire id_1,
+    output uwire id_2
 );
-  module_0(
-      id_7, id_6, id_5, id_5, id_9, id_9, id_2, id_2, id_2, id_1, id_8
-  );
-  wire id_11;
-  genvar id_12;
-  wire id_13;
+  wire id_4;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input  logic id_0,
+    output tri   id_1,
+    output uwire id_2,
+    output tri0  id_3,
+    input  wor   id_4,
+    input  tri0  id_5,
+    input  wand  id_6,
+    output logic id_7,
+    input  tri0  id_8,
+    output wand  id_9,
+    output wire  id_10,
+    output uwire id_11,
+    output tri1  id_12
+);
+  always_latch @(posedge id_10++
+  )
+  begin : LABEL_0
+    id_7 <= id_0;
+  end
+  module_0 modCall_1 ();
+  wire id_14;
+  assign id_7 = id_6 == 1;
 endmodule

@@ -1,26 +1,27 @@
-// Seed: 1353391373
+// Seed: 3803206493
 module module_0 (
-    input tri0 id_0,
-    input supply1 id_1,
-    input wor id_2
+    id_1
 );
-  id_4(
-      .id_0(1'b0), .id_1(id_1), .id_2(1), .id_3(1), .id_4(1), .id_5(id_0), .id_6(1'b0)
-  );
-endmodule
-module module_0 (
-    input  tri0  module_1,
-    input  tri1  id_1,
-    output wire  id_2
-    , id_5,
-    input  logic id_3
-);
-  final begin
-    begin
-      if (1'b0) id_5 <= id_3;
-    end
+  input wire id_1;
+  assign module_1.id_2 = 0;
+  assign id_2 = 1;
+  always @(id_1 or posedge 1) begin : LABEL_0
+    disable id_3;
+    id_3 = id_2 + id_1;
   end
-  module_0(
-      id_1, id_1, id_1
-  );
+endmodule
+module module_1 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output wire id_1;
+  wire id_3;
+  module_0 modCall_1 (id_3);
+  assign {1, 1 == 1, 1, 1} = id_2;
+  wire id_4;
+  always @(posedge 1 or posedge 1'b0 == 1) begin : LABEL_0
+    #1;
+  end
+  buf primCall (id_1, id_2);
 endmodule

@@ -1,43 +1,29 @@
-// Seed: 3674022009
+// Seed: 2895669640
 module module_0;
-  wire id_1;
-  timeprecision 1ps;
+  module_2 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  supply1 id_2;
+  assign id_2 = 1;
 endmodule
 module module_1 (
-    input uwire id_0
-    , id_27,
-    output uwire id_1,
-    input tri0 id_2,
-    output wor id_3,
-    output tri1 sample,
-    output uwire id_5,
-    output uwire id_6,
-    input wire module_1,
-    input wand id_8,
-    input supply1 id_9,
-    output supply1 id_10,
-    output supply1 id_11,
-    input wand id_12,
-    input tri0 id_13,
-    output tri1 id_14
-    , id_28,
-    input wire id_15,
-    input tri1 id_16,
-    output tri id_17,
-    input wand id_18,
-    output wire id_19,
-    input uwire id_20,
-    output uwire id_21,
-    input wand id_22,
-    output supply1 id_23,
-    input supply1 id_24,
-    output tri id_25
+    input supply1 id_0,
+    input tri1 id_1,
+    inout uwire id_2,
+    output supply0 id_3,
+    input supply1 id_4,
+    input tri1 id_5,
+    input supply0 id_6,
+    input supply0 id_7
+    , id_13 = 1'b0,
+    input supply1 id_8,
+    output tri0 id_9,
+    input supply0 id_10,
+    output wire id_11
 );
-  wire id_29;
-  module_0();
-  wire id_30;
-  wire id_31;
-  id_32 :
-  assert property (@(posedge id_7) 1 ? 1 : 'd0)
-  else $display(1);
+  tri1 id_14 = id_8;
+  module_0 modCall_1 ();
+  assign modCall_1.type_1 = 0;
+endmodule
+module module_2 ();
+  assign id_1 = 1'b0;
 endmodule

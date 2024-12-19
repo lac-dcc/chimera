@@ -1,40 +1,31 @@
-// Seed: 2400493634
+// Seed: 427328228
 module module_0 (
-    output supply1 id_0,
-    output supply0 id_1
+    input wand id_0,
+    input wor  id_1,
+    input wire id_2,
+    input wire id_3,
+    input wire id_4,
+    input wand id_5,
+    input tri0 id_6
 );
-  reg id_3, id_4;
-  reg id_5;
-  assign id_4 = id_5 == id_3;
-  for (id_6 = 1; id_6; id_4 = id_4) begin : id_7
-    initial begin
-      id_3 <= id_5;
-    end
-    assign id_0 = 1'b0;
-    always begin
-      if (1'b0)
-        if (id_5)
-          if (1 + 1'b0) begin
-            id_6 = 1 ? 1'b0 - id_7++ : id_4;
-          end else begin
-            if (1'b0) begin
-              id_6 = #1  (1);
-            end else begin
-              id_4 <= id_4;
-            end
-          end
-        else if (1) $display(~id_3);
-    end
-    wire id_8;
-  end
+  genvar id_8;
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input wire id_1,
-    output tri1 id_2
+module module_0 (
+    input wand  id_0,
+    inout uwire id_1
 );
-  assign id_2 = 1;
-  module_0(
-      id_2, id_2
+  uwire id_3 = 1 != continuous / 1 && 1 && 1'h0;
+  wand id_5, id_6, id_7;
+  module_0 modCall_1 (
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_1
   );
+  for (id_8 = 1'b0 == 1; id_6; id_1 = 1) begin : LABEL_0
+    tri module_1 = (id_6 - id_5);
+  end
 endmodule

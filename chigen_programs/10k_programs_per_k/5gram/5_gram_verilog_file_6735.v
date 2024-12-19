@@ -1,36 +1,26 @@
-// Seed: 1795779154
-module module_0 #(
-    parameter id_2 = 32'd19,
-    parameter id_3 = 32'd36
-) ();
-  tri1 id_1 = 1'h0;
-  defparam id_2.id_3 = id_3;
+// Seed: 3361446764
+module module_0;
+  always @(posedge id_1 == 1) begin : LABEL_0
+    id_1 = id_1 ? id_1 : 1;
+    id_1 = id_1;
+    if (id_1 & 1) begin : LABEL_0
+      id_1 = new;
+      id_1 += 1 ==? {id_1, 1, 1};
+    end else if (id_1) begin : LABEL_0
+      id_1 <= 1;
+    end
+    id_1 = 1'b0;
+  end
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input uwire id_0,
+    input supply0 id_1,
+    output tri0 id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    input supply1 id_5
 );
-  output wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_4 = id_1 - 'b0;
-  module_0();
-  reg id_5;
-  reg id_6, id_7;
-  always @(posedge 1 or posedge 1'b0) begin
-    id_4 <= 1'h0;
-  end
-  wire id_8;
-  always @(id_5 or id_2) begin
-    assign id_2 = id_7;
-  end
-  id_9(
-      1'h0, id_4, id_1, id_5
-  );
-  wire id_10;
-  wire id_11;
-  assign id_1 = 1;
+  wire id_7;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule

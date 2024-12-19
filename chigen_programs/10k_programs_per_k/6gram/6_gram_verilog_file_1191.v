@@ -1,30 +1,49 @@
-// Seed: 3262240856
-module module_0 ();
-  assign id_1 = id_1;
+// Seed: 1283196356
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign module_2.id_2 = 0;
+  wire id_4;
+  wire id_5;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    inout supply1 id_1,
-    input tri id_2,
-    output wor id_3,
-    input tri1 id_4,
-    input supply0 id_5
+    id_1,
+    id_2
 );
-  assign id_1 = id_0;
-  module_0();
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = id_1;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1
+  );
 endmodule
-module module_0 (
-    input tri id_0,
-    input tri id_1,
-    input wor id_2
+module module_2 (
+    input wor id_0,
+    output supply0 id_1,
+    input wire id_2,
+    input tri1 id_3,
+    output tri id_4
+    , id_7,
+    output supply1 id_5
 );
-  wire module_2;
-  always @(posedge id_0) if (id_1 || id_1) id_4 <= id_4;
-  always @(negedge id_1) id_4 = #1 id_4;
-  module_0();
-  tri0 id_5, id_6;
-  assign id_5 = 1'h0 == 1;
-  specify
-    (id_7 => id_8) = 1;
-  endspecify
+  reg id_8;
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7
+  );
+  assign id_8 = 1;
+  supply0 id_9;
+  assign id_4 = 1 & 1'b0;
+  supply0 id_10;
+  always @(posedge 1'h0 * id_9 or negedge id_10) begin : LABEL_0
+    id_8 <= 1'b0;
+  end
 endmodule

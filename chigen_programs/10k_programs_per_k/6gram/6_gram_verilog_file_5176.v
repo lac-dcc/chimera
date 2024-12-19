@@ -1,104 +1,35 @@
-// Seed: 169978650
-module module_0 (
-    input tri1 id_0,
-    output wand id_1,
-    input uwire id_2,
-    output tri1 id_3,
-    input wor id_4,
-    output wor id_5,
-    output tri id_6,
-    input wire id_7,
-    output tri1 id_8,
-    input wor id_9,
-    input tri0 id_10,
-    output supply1 id_11,
-    input tri id_12,
-    output tri id_13,
-    output supply1 id_14,
-    input supply0 id_15,
-    output wire id_16,
-    output uwire id_17,
-    input wor id_18,
-    input wor id_19,
-    input supply1 id_20,
-    input wor id_21,
-    output uwire id_22,
-    input wor id_23,
-    input uwire id_24,
-    input tri0 id_25,
-    output wor id_26,
-    input wand id_27,
-    input wand id_28,
-    input supply0 id_29,
-    input tri1 id_30,
-    input wor id_31
-    , id_41, id_42,
-    input supply0 id_32,
-    input supply1 id_33,
-    input wire id_34,
-    input supply1 id_35,
-    input supply0 id_36,
-    input tri1 id_37,
-    input uwire id_38,
-    input wire id_39
-);
-  wand id_43;
-  assign id_43 = id_9 == 1;
-endmodule
-module module_0 (
-    input wor id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    output supply1 id_3,
-    input wire module_1,
-    input wand id_5,
-    output wor id_6
-    , id_11,
-    input wor id_7,
-    output tri id_8,
-    output supply1 id_9
-);
-  wire id_13;
-  module_0(
-      id_0,
-      id_6,
-      id_1,
-      id_9,
-      id_7,
-      id_6,
-      id_8,
-      id_0,
-      id_9,
-      id_0,
-      id_2,
-      id_8,
-      id_0,
-      id_3,
-      id_3,
-      id_2,
-      id_9,
-      id_8,
-      id_0,
-      id_2,
-      id_0,
-      id_1,
-      id_9,
-      id_2,
-      id_7,
-      id_1,
-      id_9,
-      id_0,
-      id_2,
-      id_0,
-      id_2,
-      id_0,
-      id_2,
-      id_5,
-      id_2,
-      id_2,
-      id_2,
-      id_1,
-      id_0,
-      id_2
+// Seed: 2691109579
+module module_0;
+  assign id_1 = id_1;
+  assign module_1.id_4 = 0;
+  id_3(
+      .id_0(1 + 1), .id_1(id_1 == id_1), .id_2(id_2), .id_3(id_2), .id_4(1)
   );
+endmodule
+module module_1 #(
+    parameter id_10 = 32'd91,
+    parameter id_11 = 32'd47
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  defparam id_10.id_11 = 1;
+  always id_4 <= #id_3 1;
+  module_0 modCall_1 ();
 endmodule

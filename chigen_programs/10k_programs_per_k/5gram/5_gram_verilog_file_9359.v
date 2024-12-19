@@ -1,36 +1,51 @@
-// Seed: 462342964
+// Seed: 2883625598
 module module_0 (
-    input uwire id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_2;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_6;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input supply1 id_1,
-    input uwire id_2,
-    input uwire id_3,
-    input wire id_4,
-    input tri id_5,
-    input tri id_6,
-    input tri0 id_7,
-    output supply0 id_8,
-    input supply0 id_9,
-    input wor id_10,
-    output wire id_11,
-    input supply1 id_12,
-    output wor id_13,
-    output tri0 id_14,
-    input uwire id_15,
-    input wand id_16,
-    output tri1 id_17,
-    output tri1 id_18,
-    input tri0 id_19,
-    output tri0 id_20,
-    input supply1 id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  supply0 id_23 = 1;
-  module_0(
-      id_19
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  always_latch @(id_3 or posedge id_3 + id_2)
+    if (1'b0) $display(id_2 + id_3, ~1'd0 == id_3, id_2 - 1'b0 <= 1'h0, id_3, id_2);
+    else begin : LABEL_0
+      id_4 = #id_5 1;
+    end
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_3
   );
-  assign id_20 = 1;
+  assign id_4 = 1;
+  always_latch disable id_6;
+  initial begin : LABEL_0
+    if (1) assign id_1 = id_6;
+    else begin : LABEL_0
+      id_1 <= 1;
+      id_2 = id_2;
+      assert (id_3);
+    end
+  end
+  wire id_7;
+  assign id_1 = 1'b0;
+  reg id_8 = 1 ? id_6 : 1;
 endmodule

@@ -1,50 +1,44 @@
-// Seed: 1311135771
-module module_0 #(
-    parameter id_6 = 32'd83,
-    parameter id_7 = 32'd77
-) (
-    input uwire id_0,
-    output supply0 id_1,
-    output tri id_2
-);
-  generate
-    for (id_4 = ~id_0; 1; id_2 = id_4 ^ id_0) begin : id_5
-      defparam id_6.id_7 = 1;
-    end
-  endgenerate
-  tri id_8;
-  assign id_1 = id_8;
+// Seed: 3664164823
+module module_0 ();
+  assign id_1 = 1;
+  assign module_2.type_2 = 0;
+  assign module_1.type_6 = 0;
 endmodule
 module module_1 (
-    output tri id_0,
-    output tri1 id_1,
-    input wand id_2,
-    input uwire id_3,
-    output wand id_4,
-    output uwire id_5,
-    input logic id_6,
-    input wand id_7,
-    input supply1 id_8,
-    input tri0 id_9,
-    input tri1 id_10,
-    output wor id_11,
-    input wor id_12,
-    input wire id_13,
-    input tri0 id_14,
-    input tri id_15,
-    input wand id_16,
-    output wand id_17,
-    output tri1 id_18,
-    input tri0 id_19,
-    input supply1 id_20,
-    input tri id_21,
-    output uwire id_22
+    input  tri   id_0,
+    input  wor   id_1,
+    output tri0  id_2
+    , id_13,
+    input  tri   id_3,
+    output uwire id_4,
+    output tri1  id_5,
+    output wor   id_6,
+    input  tri   id_7,
+    input  tri   id_8,
+    output tri1  id_9,
+    output tri1  id_10,
+    output wire  id_11
 );
-  wire id_24;
-  assign id_0 = 1;
-  module_0(
-      id_2, id_18, id_17
-  );
-  wire id_25;
-  always force id_11 = id_6;
+  assign id_10 = 1;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input  tri0  id_0,
+    output uwire id_1,
+    input  wor   id_2
+    , id_9,
+    output logic id_3,
+    input  wor   id_4,
+    input  wand  id_5,
+    input  logic id_6,
+    output uwire id_7
+);
+  always @(posedge {id_9
+  })
+  begin : LABEL_0
+    id_3 <= id_6;
+  end
+  assign id_9 = 1;
+  and primCall (id_1, id_2, id_4, id_5, id_6, id_9);
+  module_0 modCall_1 ();
 endmodule

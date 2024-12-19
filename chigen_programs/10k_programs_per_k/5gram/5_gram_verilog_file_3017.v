@@ -1,58 +1,56 @@
-// Seed: 218429022
-module module_0;
-  supply1 id_2 = id_2;
-  initial
-    if (1 * id_2 - 1'b0) begin
-      id_1 = 1;
-    end
-  wire id_3;
+// Seed: 3491419527
+module module_0 #(
+    parameter id_5 = 32'd86,
+    parameter id_6 = 32'd77
+) (
+    output wand module_0,
+    input tri id_1,
+    input supply1 id_2,
+    output wand id_3
+);
+  assign id_3 = 1;
+  defparam id_5.id_6 = 1'b0 == 1;
+  module_2 modCall_1 (
+      id_3,
+      id_3,
+      id_1,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_2
+  );
+  assign modCall_1.type_12 = 0;
 endmodule
 module module_1 (
-    input wor id_0,
-    output uwire id_1,
-    input wire id_2,
-    input wand id_3,
-    output supply1 id_4,
-    input wire id_5,
-    output wire id_6,
-    input wand id_7
-    , id_42,
-    input wand id_8,
-    output tri0 id_9,
-    input supply1 id_10,
-    input supply1 id_11,
-    output supply1 id_12,
-    output tri id_13,
-    input tri id_14,
-    input uwire id_15,
-    input wire id_16,
-    input wor id_17,
-    output supply0 id_18,
-    input supply1 id_19,
-    output supply0 id_20,
-    input supply1 id_21,
-    input uwire id_22,
-    output supply0 id_23,
-    input tri0 id_24,
-    input supply1 id_25,
-    output tri0 id_26,
-    input wor id_27,
-    input wor id_28,
-    input wire id_29,
-    input tri1 id_30,
-    input wand id_31,
-    input uwire id_32,
-    output tri0 id_33,
-    output wor id_34,
-    input tri1 id_35,
-    output wand id_36,
-    input tri0 id_37,
-    input supply1 id_38
-    , id_43,
-    output supply1 id_39,
-    input uwire id_40
+    output wor id_0,
+    input supply0 id_1,
+    output wor id_2,
+    output uwire id_3
 );
-  wire id_44;
-  wire id_45;
-  module_0();
+  wire id_5;
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_1,
+      id_3
+  );
+  assign modCall_1.id_5 = 0;
+endmodule
+module module_2 (
+    output supply0 id_0,
+    output wor id_1,
+    input wire id_2,
+    output wand id_3,
+    output wand id_4,
+    input tri0 id_5,
+    output wand id_6,
+    output wand id_7,
+    input tri1 id_8
+);
+  always @(posedge id_2 - id_2) begin : LABEL_0
+    id_3 = 1'b0 < 1;
+  end
+  assign id_4 = 1;
 endmodule

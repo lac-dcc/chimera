@@ -1,37 +1,58 @@
-// Seed: 1005888742
+// Seed: 1056758658
 module module_0 (
-    output tri0 id_0,
-    input supply1 id_1,
-    input supply0 id_2,
-    output wire id_3,
-    input tri id_4,
-    input supply0 id_5,
-    input wor id_6,
-    output wand id_7,
-    input wand id_8,
-    input tri0 id_9,
-    input supply0 id_10,
-    input wand id_11
+    output wor  id_0,
+    input  wire id_1,
+    input  tri  id_2,
+    output wire id_3
 );
+  wire id_5;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    output wire id_0,
+    input wire id_0,
     input uwire id_1,
-    input supply1 id_2,
-    output supply1 id_3,
-    output tri id_4
-    , id_13,
-    input supply1 id_5,
-    output tri id_6,
-    input wor id_7,
-    input wire id_8,
-    input tri1 id_9,
-    input supply1 id_10,
-    output wor id_11
+    input tri1 id_2,
+    input uwire id_3,
+    input wand id_4,
+    input wor id_5,
+    input uwire id_6,
+    input tri id_7,
+    output wand id_8,
+    output supply1 id_9,
+    input uwire id_10,
+    output supply1 id_11
+    , id_38,
+    input wire id_12,
+    input supply0 id_13,
+    input supply0 id_14,
+    inout wire id_15,
+    input tri1 id_16,
+    input supply0 id_17,
+    output wand id_18,
+    input wor id_19,
+    output wire id_20,
+    output tri0 id_21,
+    input wand id_22,
+    input wand id_23,
+    input tri id_24,
+    input wand id_25,
+    output wand id_26,
+    output wire id_27,
+    input wor id_28,
+    input supply1 id_29,
+    input tri0 id_30,
+    input tri0 id_31,
+    input uwire id_32,
+    input wire id_33,
+    output wand id_34,
+    output supply1 id_35,
+    input wor id_36
 );
-  id_14(
-      .id_0(1)
-  ); module_0(
-      id_3, id_10, id_5, id_11, id_5, id_9, id_10, id_4, id_9, id_2, id_10, id_2
+  assign id_38 = 1;
+  module_0 modCall_1 (
+      id_34,
+      id_28,
+      id_17,
+      id_8
   );
 endmodule

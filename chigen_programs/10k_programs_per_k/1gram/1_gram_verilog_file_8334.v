@@ -1,32 +1,54 @@
-// Seed: 2101956775
-module module_0 #(
-    parameter id_10 = 32'd10,
-    parameter id_9  = 32'd18
+// Seed: 1274460246
+module module_0 (
+    output wire id_0
 );
-  defparam id_9 = id_8, id_10 = id_2;
+  assign module_1.id_2 = 0;
+  integer id_2 = 1;
+  assign id_0.id_2 = (1);
 endmodule
 module module_1 (
-    input wor id_0,
-    input wand id_1,
-    output tri0 id_2,
-    input tri0 id_3
-    , id_20,
-    input tri0 id_4,
-    output tri0 id_5,
-    input wand id_6,
-    input uwire id_7,
-    input wire id_8,
-    output wor id_9,
-    input wor id_10,
-    input supply0 id_11,
-    input wor id_12,
-    output wor id_13,
-    input supply0 id_14,
-    input tri1 id_15,
-    input supply1 id_16,
-    input tri0 id_17,
-    input wire id_18
+    input wire id_0
 );
-  module_0();
-  wire id_21;
+  assign id_2 = id_0;
+  module_0 modCall_1 (id_2);
+endmodule
+module module_2 (
+    output logic id_0,
+    output uwire id_1,
+    input uwire id_2,
+    output uwire id_3,
+    input wor id_4,
+    input wor id_5
+    , id_29,
+    output uwire id_6,
+    input supply0 id_7,
+    input tri id_8,
+    input tri id_9,
+    input supply1 id_10,
+    input wire id_11,
+    input wire id_12,
+    input tri1 id_13,
+    input supply1 id_14,
+    input tri1 id_15,
+    output tri id_16,
+    output uwire id_17,
+    input tri id_18,
+    input wand id_19,
+    input wire id_20,
+    input wor id_21,
+    input supply0 id_22,
+    input supply1 id_23,
+    output wand id_24,
+    input supply1 id_25,
+    input supply0 id_26,
+    input supply1 id_27
+);
+  tri id_30;
+  if (id_11) initial id_0 <= 1 - id_30;
+  else assign id_29 = id_29;
+  wire id_31;
+  wire id_32;
+  wire id_33 = id_32;
+  module_0 modCall_1 (id_6);
+  assign modCall_1.id_0 = 0;
 endmodule

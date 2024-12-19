@@ -1,41 +1,35 @@
-// Seed: 352610034
+// Seed: 2322593091
 module module_0;
-  assign id_1 = id_1 - !1;
+  genvar id_1;
+  int  id_3;
+  wire id_4;
 endmodule
-module module_0 (
-    input supply0 id_0,
-    input wire id_1,
-    input tri id_2,
-    input tri0 id_3,
-    output supply1 id_4,
-    input supply0 id_5,
-    input tri0 id_6,
-    output wor id_7,
-    input wand id_8,
-    output supply1 id_9,
-    input tri0 id_10,
-    output uwire id_11,
-    input wand id_12,
-    input wand id_13,
-    input supply0 id_14,
-    output tri id_15,
-    output wor id_16,
-    output supply0 id_17,
-    input wand id_18,
-    output tri0 id_19,
-    input tri1 id_20,
-    input wire id_21,
-    input supply1 id_22,
-    input supply1 id_23,
-    output wor id_24,
-    output tri id_25,
-    input uwire id_26,
-    input wand id_27,
-    input tri id_28,
-    output supply0 id_29,
-    output tri1 module_1
+module module_1;
+  wire id_1 = id_1;
+  reg  id_2;
+  wire id_3;
+  always @(*) assign id_1 = id_2;
+  module_0 modCall_1 ();
+  assign id_2 = 1;
+endmodule
+module module_2 #(
+    parameter id_12 = 32'd8,
+    parameter id_13 = 32'd53
+) (
+    output uwire id_0,
+    output tri1 id_1,
+    input supply0 id_2,
+    output tri1 id_3,
+    input wor id_4,
+    output tri id_5
 );
-  id_32(
-      .id_0(id_28), .id_1(1'b0 + $display(id_15)), .id_2(1'd0), .id_3(id_21)
-  ); module_0();
+  wand id_7;
+  assign id_7 = 1'h0;
+  wand id_8;
+  wire id_9;
+  wire id_10 = id_4;
+  logic [7:0] id_11 = id_11[1];
+  defparam id_12.id_13 = id_8;
+  wire id_14, id_15, id_16, id_17, id_18, id_19, id_20;
+  module_0 modCall_1 ();
 endmodule

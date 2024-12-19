@@ -1,35 +1,49 @@
-// Seed: 1805021273
-module module_0;
-  tri  id_1 = 1;
-  wire id_2;
+// Seed: 3992210090
+module module_0 (
+    output uwire id_0
+    , id_3,
+    input  uwire id_1
+);
+  assign id_3[1 : 1'b0] = id_3;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input wor id_1,
-    input tri id_2,
-    input wor id_3,
-    input wor id_4,
-    inout supply1 id_5,
-    input wire id_6,
-    input tri1 id_7,
+    output tri0 id_0,
+    output tri id_1,
+    output tri1 id_2,
+    input tri id_3,
+    output uwire id_4,
+    input wire id_5,
+    output uwire id_6,
+    input wor id_7,
     input supply1 id_8,
-    input supply1 id_9,
-    output uwire id_10,
-    input wor id_11,
-    input tri1 id_12
+    input wire id_9,
+    input wire id_10,
+    input tri id_11,
+    input tri1 id_12,
+    output tri0 id_13,
+    input supply1 id_14,
+    output wire id_15,
+    input wire id_16,
+    output wire id_17,
+    output tri id_18,
+    input uwire id_19,
+    input wor id_20,
+    input supply0 id_21,
+    input logic id_22,
+    output tri0 id_23,
+    output logic id_24,
+    input supply0 id_25,
+    input wor id_26,
+    output tri1 id_27,
+    input supply0 id_28,
+    input tri1 id_29,
+    input tri1 id_30,
+    input wor id_31
 );
-  wire id_14;
-  module_0();
-endmodule
-module module_2 (
-    input wand id_0,
-    input supply1 id_1,
-    input logic id_2,
-    input wire id_3,
-    output logic id_4
-);
-  always_ff begin
-    id_4 <= (id_2);
-  end
-  module_0();
+  always_latch id_24 <= id_22;
+  module_0 modCall_1 (
+      id_4,
+      id_31
+  );
+  assign modCall_1.type_0 = 0;
 endmodule

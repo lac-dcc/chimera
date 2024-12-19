@@ -1,30 +1,27 @@
-// Seed: 3358327945
+// Seed: 1258520133
 module module_0 ();
-  wire id_1;
-  initial begin
-    $display(id_1 + id_1, id_1++, 1'h0, id_1);
-  end
-  assign id_1 = 1'b0 & 1;
-  wire id_2;
-  wire id_3;
-  wire id_4;
-  assign id_3 = id_2;
+  wire id_1 = id_1, id_2;
 endmodule
 module module_1 (
-    output wand id_0,
-    input supply0 id_1,
-    output wor id_2
+    output wire id_0,
+    output supply0 id_1,
+    input tri1 id_2,
+    input wor id_3,
+    input tri0 id_4,
+    output wand id_5,
+    input supply0 id_6,
+    output uwire id_7,
+    input uwire id_8,
+    input tri1 id_9,
+    input wire id_10,
+    output tri0 id_11,
+    input uwire id_12,
+    input tri id_13,
+    input supply1 id_14,
+    input supply1 id_15,
+    input wand id_16
 );
-  assign id_2 = id_0++ > id_1;
-  module_0();
-endmodule
-module module_0 (
-    input  wor   id_0,
-    output tri0  id_1,
-    output wand  module_2,
-    input  tri0  id_3,
-    input  uwire id_4
-);
-  module_0();
-  wire id_6;
+  wire id_18;
+  module_0 modCall_1 ();
+  wire id_19;
 endmodule

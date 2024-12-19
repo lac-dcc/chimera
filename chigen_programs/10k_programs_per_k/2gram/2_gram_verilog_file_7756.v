@@ -1,29 +1,40 @@
-// Seed: 2189281980
+// Seed: 3138598321
 module module_0 (
-    input  wor   id_0,
-    input  uwire id_1,
-    output uwire id_2,
-    input  wor   id_3
+    id_1
 );
-  assign id_2 = id_3;
+  output wire id_1;
+  wire id_2 = id_2, id_3;
+  assign module_1.type_32 = 0;
 endmodule
 module module_1 #(
-    parameter id_7 = 32'd62,
-    parameter id_8 = 32'd27
+    parameter id_13 = 32'd38,
+    parameter id_14 = 32'd66
 ) (
-    input supply0 id_0,
-    input wor id_1,
-    input wire id_2,
-    input wand id_3
+    input  wire  id_0,
+    output tri0  id_1,
+    output wand  id_2,
+    input  wand  id_3,
+    output tri   id_4,
+    input  uwire id_5
+    , id_12,
+    output wor   id_6,
+    input  wand  id_7,
+    input  uwire id_8,
+    output logic id_9,
+    input  wire  id_10
 );
-  string id_5;
-  assign id_5 = "";
-  tri id_6 = id_2;
-  defparam id_7.id_8 = id_7; module_0(
-      id_2, id_6, id_6, id_0
+  assign id_1 = id_5;
+  initial
+    @(posedge id_3) begin : LABEL_0
+      id_9 <= 1;
+    end
+  defparam id_13.id_14 = 1;
+  module_0 modCall_1 (id_12);
+  id_15(
+      .id_0(id_1), .id_1(1)
   );
-  supply1 id_9 = 1;
-  wand id_10;
-  assign id_10 = id_3;
-  supply1 id_11 = id_10;
+  assign id_4 = id_8;
+  wor id_16, id_17, id_18, id_19, id_20, id_21, id_22, id_23, id_24, id_25;
+  wand id_26 = 1;
+  assign id_18 = 1;
 endmodule

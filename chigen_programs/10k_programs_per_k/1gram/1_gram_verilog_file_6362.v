@@ -1,41 +1,27 @@
-// Seed: 1252311478
+// Seed: 402847037
 module module_0;
+  tri0 id_1 = 1;
   assign id_1 = id_1;
+  assign module_1.id_2 = 0;
   assign id_1 = id_1;
-  always id_1 <= #1 id_1;
 endmodule
 module module_1 (
-    output uwire id_0,
-    output uwire id_1,
-    output supply0 id_2,
-    input wand id_3,
-    output tri0 id_4,
-    input wor id_5,
-    input wand id_6,
-    output uwire id_7,
-    output wire id_8,
-    output wire id_9,
-    output tri0 id_10
-    , id_30,
-    input wand id_11,
-    output wand id_12,
-    input tri0 id_13,
-    input tri0 id_14,
-    input supply1 id_15,
-    input tri0 id_16,
-    input tri0 id_17,
-    output supply1 id_18,
-    input supply0 id_19,
-    input wand id_20,
-    output wire id_21,
-    input supply0 id_22,
-    output tri1 id_23,
-    input uwire id_24,
-    output tri0 id_25,
-    output wor id_26,
-    output tri0 id_27,
-    input uwire id_28
+    output wire id_0,
+    input  tri0 id_1,
+    output tri1 id_2,
+    output tri0 id_3
 );
-  wire id_31;
-  module_0();
+  integer id_5;
+  wire id_6;
+  assign id_2 = id_1;
+  uwire id_7, id_8;
+  module_0 modCall_1 ();
+  wire id_9;
+  wire id_10, id_11;
+  wire id_12, id_13, id_14;
+  always_ff id_5 <= #1 1;
+  assign id_2 = 1;
+  or primCall (id_0, id_1, id_5, id_6, id_7, id_8);
+  assign id_6 = id_9;
+  initial $display(id_8, 1, 1);
 endmodule

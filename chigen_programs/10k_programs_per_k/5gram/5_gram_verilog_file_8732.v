@@ -1,51 +1,60 @@
-// Seed: 2955883162
+// Seed: 990582809
 module module_0;
-  wire id_2 = id_2 - 1;
-  wire id_3;
+  assign module_1.id_0 = 0;
+  tri0 id_2 = id_2++;
+  assign id_2 = id_2;
 endmodule
-module module_0 (
-    input wand module_1,
-    input uwire id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input supply0 id_4,
-    output wor id_5,
-    output tri0 id_6,
-    output supply1 id_7,
-    input tri id_8,
-    output supply1 id_9,
-    input tri id_10,
-    output supply0 id_11,
-    input uwire id_12,
-    output supply0 id_13,
-    output wor id_14,
-    output wand id_15,
-    input supply1 id_16,
-    input tri id_17,
-    input supply1 id_18
-    , id_38,
-    output tri0 id_19,
-    input wor id_20,
-    output tri1 id_21,
-    input supply0 id_22,
-    output tri0 id_23,
-    output wand id_24,
-    output wire id_25,
-    output wire id_26,
-    output tri0 id_27,
-    output tri1 id_28,
-    output uwire id_29,
-    input tri0 id_30,
-    input tri1 id_31,
-    output tri id_32,
-    output tri0 id_33,
-    input supply1 id_34,
-    input tri0 id_35,
-    input supply0 id_36
+module module_1 (
+    output wire id_0,
+    output wire id_1
 );
-  assign id_11 = 1;
-  assign id_28 = 1;
-  assign id_26 = 1 == 1;
-  wire id_39;
-  module_0();
+  assign id_1 = id_3;
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    output tri id_0,
+    input supply0 id_1,
+    input wire id_2,
+    output logic id_3,
+    input tri1 sample,
+    output tri id_5,
+    input supply0 id_6,
+    inout tri1 id_7,
+    input supply0 id_8,
+    input supply1 id_9,
+    input supply1 id_10,
+    output supply0 id_11,
+    output uwire id_12,
+    input wand id_13,
+    input supply0 id_14,
+    output tri1 id_15,
+    input supply1 id_16,
+    input supply0 id_17,
+    input uwire id_18,
+    input tri1 id_19,
+    output supply1 id_20,
+    input wire id_21,
+    input tri1 id_22,
+    input tri0 id_23,
+    output tri0 id_24,
+    input uwire module_2,
+    input supply1 id_26,
+    input wor id_27,
+    output logic id_28,
+    input wand id_29,
+    input tri1 id_30,
+    input uwire id_31,
+    input uwire id_32,
+    input wand id_33,
+    input wor id_34,
+    input wire id_35
+);
+  wire id_37;
+  module_0 modCall_1 ();
+  always @('b0 or posedge 1) begin : LABEL_0
+    if (id_26) id_3 <= 1;
+    else begin : LABEL_0
+      id_28 <= id_1 ? 1 & id_13 && 1 : 1;
+    end
+  end
 endmodule

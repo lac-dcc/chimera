@@ -1,38 +1,35 @@
-// Seed: 3214093810
-module module_0 (
-    input tri id_0
-    , id_2
-);
-  initial begin
-    assign id_2 = 1;
-    if (id_2) release id_2;
+// Seed: 134540098
+module module_0;
+  always_ff @(id_1) begin : LABEL_0
+    id_1 = 1;
   end
-  wire id_3;
-  wire id_4;
-  wire id_5, id_6;
-  assign id_3 = id_4;
+  assign module_1.id_11 = 0;
+  always @(posedge 1 or negedge id_1.id_1) begin : LABEL_0
+    id_1 <= 1;
+  end
 endmodule
-module module_1 #(
-    parameter id_14 = 32'd72,
-    parameter id_15 = 32'd41
-) (
+module module_1 (
     output supply1 id_0,
-    input uwire id_1,
-    input wor id_2,
-    input wor id_3
-    , id_7,
-    input tri0 id_4,
-    input tri id_5
+    input tri id_1,
+    output tri0 id_2,
+    input tri0 id_3,
+    output wor id_4,
+    input tri1 id_5,
+    input supply0 id_6,
+    input tri0 id_7,
+    input wor id_8,
+    input supply0 id_9,
+    input tri0 id_10,
+    input tri0 id_11,
+    input wand id_12,
+    output uwire id_13,
+    output supply1 id_14,
+    input tri id_15,
+    output supply1 id_16,
+    input tri id_17
 );
-  module_0(
-      id_3
-  );
-  wor id_8 = id_3;
-  assign id_0 = 1 >> 1;
-  integer id_9, id_10, id_11;
-  for (id_12 = 1; 1; id_12 = id_5 == id_7) begin : id_13
-    defparam id_14.id_15 = 1;
-  end
-  supply0 id_16 = 1;
-  assign id_12 = id_11;
+  assign id_16 = id_6;
+  wire id_19;
+  assign id_2 = id_11;
+  module_0 modCall_1 ();
 endmodule

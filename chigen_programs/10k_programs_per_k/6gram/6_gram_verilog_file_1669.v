@@ -1,7 +1,12 @@
-// Seed: 1399125124
-module module_0 #(
-    parameter id_10 = 32'd37,
-    parameter id_11 = 32'd91
+// Seed: 1874866170
+module module_0;
+  supply0 id_1 = id_1 == id_1;
+  wire id_2;
+  wire id_4;
+endmodule
+module module_1 #(
+    parameter id_15 = 32'd20,
+    parameter id_16 = 32'd36
 ) (
     id_1,
     id_2,
@@ -11,43 +16,31 @@ module module_0 #(
     id_6,
     id_7,
     id_8,
-    id_9
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
-  output wire id_6;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
   output wire id_5;
-  input wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_1 = 1;
-  defparam id_10.id_11 = 1'b0;
-  tri0 id_12;
-  assign id_2 = 1;
-  tri id_13, id_14;
-  assign id_7 = id_13 | 1 ? id_12 : 1;
-  assign id_1 = 1;
-  wire id_15;
-  wire id_16;
-endmodule
-module module_1 (
-    output tri0 id_0,
-    output wand id_1
-);
-  wand id_3;
-  assign id_0 = id_3;
-  assign id_1 = 1,
-      id_3 = 1,
-      id_3 = 1'b0,
-      id_1 = 1,
-      id_0 = 1,
-      id_3 = id_3 == 1 ? 1'b0 == id_3 : id_3 ? !id_3 : 1,
-      id_3 = 1;
-  tri id_4 = 0;
-  assign id_0 = 1;
-  module_0(
-      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
-  );
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  defparam id_15.id_16 = 1'b0;
+  module_0 modCall_1 ();
+  initial begin : LABEL_0
+    assert (id_16);
+    id_5 = #id_17 id_7;
+  end
 endmodule

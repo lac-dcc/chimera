@@ -1,7 +1,23 @@
-// Seed: 2926316924
-macromodule module_0;
+// Seed: 2473807731
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_2 = 1;
+  wire id_4;
+  wire id_5;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_25 = 32'd8,
+    parameter id_26 = 32'd34,
+    parameter id_27 = 32'd98,
+    parameter id_28 = 32'd91,
+    parameter id_29 = 32'd76
+) (
     id_1,
     id_2,
     id_3,
@@ -21,30 +37,40 @@ module module_1 (
     id_17,
     id_18,
     id_19,
-    id_20
+    id_20,
+    id_21,
+    id_22
 );
-  output wire id_20;
+  output wire id_22;
+  output wire id_21;
+  input wire id_20;
   output wire id_19;
-  inout wire id_18;
-  inout wire id_17;
-  inout wire id_16;
+  input wire id_18;
+  output wire id_17;
+  input wire id_16;
   inout wire id_15;
-  input wire id_14;
-  output wire id_13;
+  inout wire id_14;
+  inout wire id_13;
   inout wire id_12;
-  input wire id_11;
+  inout wire id_11;
   input wire id_10;
   inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
   output wire id_2;
-  inout wire id_1;
-  assign id_7 = 1;
-  id_21 :
-  assert property (@(1'h0 & 1) 1'b0) id_6[1][1'b0] <= id_14;
-  module_0();
+  input wire id_1;
+  module_0 modCall_1 (
+      id_9,
+      id_11,
+      id_15
+  );
+  assign id_9 = id_20 == 1;
+  wire id_23;
+  assign id_3 = id_20;
+  wire id_24;
+  defparam id_25 = 1'b0, id_26 = id_14, id_27 = id_8, id_28 = 1 - 1, id_29 = ~id_9;
 endmodule

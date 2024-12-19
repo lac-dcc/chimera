@@ -1,106 +1,62 @@
-// Seed: 3963193176
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32
-);
-  output wire id_32;
-  input wire id_31;
-  input wire id_30;
-  input wire id_29;
-  output wire id_28;
-  input wire id_27;
-  inout wire id_26;
-  input wire id_25;
-  inout wire id_24;
-  output wire id_23;
-  input wire id_22;
-  input wire id_21;
-  output wire id_20;
-  output wire id_19;
-  inout wire id_18;
-  output wire id_17;
-  input wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  inout wire id_13;
-  inout wire id_12;
-  inout wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  assign id_12 = 1 ? id_4 : id_11;
+// Seed: 1495637603
+module module_0 ();
+  wire id_2;
+  assign id_2 = id_2;
+  generate
+    supply0 id_3 = 1;
+  endgenerate
+  assign module_2.type_7 = 0;
 endmodule
-module module_1;
-  wire id_1;
-  module_0(
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
+module module_1 (
+    output wor id_0,
+    output wand id_1
+    , id_7,
+    output wire id_2,
+    input wor id_3,
+    input tri id_4,
+    input supply0 id_5
+);
+  always @(id_4 == 1'd0 or negedge id_5) begin : LABEL_0
+    cover (id_3);
+  end
+  wire id_8;
+  module_0 modCall_1 ();
+  wire id_9, id_10;
+endmodule
+module module_2 (
+    input wire id_0,
+    input wire id_1
+    , id_12,
+    output logic id_2,
+    input wire id_3,
+    output supply1 id_4,
+    input tri1 id_5,
+    input wand id_6,
+    input wire id_7,
+    output uwire id_8,
+    input tri0 id_9,
+    input uwire id_10
+);
+  wire id_13;
+  initial id_2 <= 1;
+  module_0 modCall_1 ();
+  assign id_2 = id_7 & id_0;
+  reg id_14, id_15;
+  xor primCall (id_2, id_3, id_5, id_6, id_7, id_9);
+  id_16(
+      .id_0(id_6),
+      .id_1(1'b0),
+      .id_2(1'd0),
+      .id_3(1),
+      .id_4(1),
+      .id_5(1),
+      .id_6(id_9),
+      .id_7(id_13),
+      .id_8(id_6),
+      .id_9(~id_3)
   );
+  initial begin : LABEL_0
+    id_15 <= 1;
+    if (id_14) id_14 <= 1'h0;
+  end
 endmodule

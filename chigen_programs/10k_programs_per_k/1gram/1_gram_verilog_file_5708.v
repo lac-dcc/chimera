@@ -1,38 +1,73 @@
-// Seed: 3278303672
-module module_0 (
+// Seed: 3781041405
+module module_0;
+  wire id_2;
+  wire id_3 = id_3;
+  module_2 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2
+  );
+  assign module_1.type_13 = 0;
+endmodule
+module module_1 (
+    output tri1  id_0,
+    output tri1  id_1,
+    input  wor   id_2,
+    input  wor   id_3,
+    input  uwire id_4
+);
+  reg id_6;
+  module_0 modCall_1 ();
+  reg id_7 = id_4 & 1'b0, id_8, id_9 = 1;
+  if (1) assign id_7 = 1;
+  else reg id_10, id_11 = id_8;
+  assign id_6 = id_11;
+  always id_10 <= 1;
+  wire id_12;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
-  output wire id_7;
+  input wire id_15;
+  output wire id_14;
+  input wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
   output wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  input wire id_3;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
   output wire id_2;
-  input wire id_1;
-  assign {1, id_1, id_1} = 1;
-endmodule
-module module_1 #(
-    parameter id_5 = 32'd88,
-    parameter id_6 = 32'd64
-) (
-    output tri id_0,
-    output supply1 id_1
-);
-  assign id_0 = 1;
-  assign id_1 = 1;
-  id_3 :
-  assert property (@(posedge 1 or posedge 1) id_3 == 1);
-  assign id_3 = id_3;
-  assign id_1 = 1 & id_3;
-  wire id_4;
-  module_0(
-      id_3, id_3, id_4, id_3, id_3, id_4, id_3
-  ); defparam id_5 = 1'b0, id_6 = 1'b0;
-  wire id_7, id_8;
+  output wire id_1;
+  assign id_2 = 1 & 1;
 endmodule

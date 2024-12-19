@@ -1,50 +1,34 @@
-// Seed: 3370309579
+// Seed: 3891793232
 module module_0 (
-    id_1
+    output tri id_0,
+    output wor id_1
 );
-  inout wire id_1;
-  wire id_2;
-  wire id_3;
-  assign id_1 = 1;
+  generate
+    wire id_3;
+    wire id_4;
+  endgenerate
 endmodule
 module module_1 (
-    id_1,
-    id_2
-);
-  input wire id_2;
-  input wire id_1;
-  wire id_3;
-  module_0(
-      id_3
-  );
-endmodule
-module module_2 (
-    input supply0 id_0,
-    output supply0 id_1,
-    input supply0 id_2,
+    output tri id_0,
+    output tri0 id_1,
+    input tri1 id_2,
     input supply1 id_3,
-    input tri id_4,
-    input wire id_5
+    input uwire id_4,
+    output logic id_5,
+    output tri0 id_6,
+    input wor id_7,
+    output tri id_8,
+    input wire id_9,
+    input tri0 id_10
 );
-  id_7(
-      1
+  always_comb
+    if (1'b0 == 1) $display;
+    else id_5 <= 1;
+  module_0 modCall_1 (
+      id_0,
+      id_6
   );
-  wire id_8;
-  wire id_9;
-  module_0(
-      id_8
-  );
+  assign modCall_1.type_0 = 0;
+  tri1 id_12, id_13, id_14;
+  initial id_12 = 1'b0;
 endmodule
-module module_3 (
-    output uwire id_0,
-    input supply1 id_1,
-    output tri id_2,
-    input wire id_3,
-    input tri id_4
-);
-  wire id_6;
-  wire id_7;
-  module_0(
-      id_7
-  );
-endmodule : id_8

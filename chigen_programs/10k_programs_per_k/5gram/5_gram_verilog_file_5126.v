@@ -1,53 +1,44 @@
-// Seed: 1457626006
-module module_0 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  output wire id_1;
-  assign id_1 = 1;
+// Seed: 1733437517
+module module_0 ();
+  wire id_2;
+  assign module_1.id_21 = 0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input uwire id_0,
+    input tri id_1
+    , id_24,
+    input wand id_2,
+    output wire id_3,
+    input wor id_4,
+    input uwire id_5,
+    input wor id_6,
+    input wor id_7,
+    input uwire id_8,
+    input uwire id_9,
+    input uwire id_10,
+    input supply0 id_11,
+    input tri id_12,
+    input tri id_13,
+    output supply1 id_14,
+    output supply0 id_15,
+    input supply1 id_16,
+    output wand id_17,
+    input supply1 id_18,
+    output supply0 id_19,
+    output supply1 id_20,
+    input tri id_21,
+    input wor id_22
 );
-  inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_7;
-  module_0(
-      id_4, id_6
+  always @(1 or posedge 1'b0 % id_11) $display;
+  module_0 modCall_1 ();
+  id_25(
+      id_6, 1'b0
   );
-  wire id_8;
-endmodule
-module module_2 #(
-    parameter id_4 = 32'd60
-) (
-    id_1,
-    id_2,
-    id_3,
-    _id_4
-);
-  inout wire _id_4;
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  reg id_5 = !id_5;
-  initial begin
-    $display(id_2);
-    assign id_1 = 1'd0;
-    release id_4[id_4];
-    id_5 <= 1 & 1;
-  end
-  bufif0 (id_1, id_5, id_2);
-  module_0(
-      id_1, id_1
+  tri1 id_26 = id_2;
+  id_27(
+      .id_0(1), .id_1(1)
   );
+  wire id_28 = id_28(1'b0 ==? 1);
+  wire id_29;
+  wire id_30;
 endmodule

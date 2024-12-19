@@ -1,34 +1,38 @@
-// Seed: 237269674
-module module_0;
-  assign id_1 = ~id_1 & id_1;
+// Seed: 3765455801
+module module_0 (
+    input  supply0 id_0,
+    output supply1 id_1
+);
 endmodule
 module module_1 (
-    input  logic id_0,
-    output logic id_1,
-    input  tri1  id_2,
-    input  tri   id_3,
-    output wand  id_4
+    input wire id_0,
+    input tri1 id_1,
+    output tri id_2
+    , id_6,
+    input wor id_3,
+    input supply0 id_4
 );
-  always_comb @(id_3)
-    @(1'b0) begin
-      @(posedge 1 or negedge 1) id_4 = 1;
-      id_4 = id_3;
-      $display;
-      $display();
-      id_1 <= 1;
-      deassign id_1;
-      #1 begin
-        if ((1))
-          if (id_2) begin
-            $display(id_2 * id_2 - id_3);
-          end else id_1 <= id_0;
-        else begin
-          id_1 = 1;
-        end
-      end
-      $display(1);
-    end
-  module_0();
-  string id_6 = "";
-  wire   id_7 = ~id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_2
+  );
+  assign modCall_1.type_0 = 0;
+  assign id_6[1] = id_3;
+  wire id_7;
+endmodule
+module module_2 (
+    output wand id_0,
+    output wand id_1,
+    output tri0 id_2,
+    input  wire id_3,
+    output wor  id_4
+);
+  final begin : LABEL_0
+    id_0 = 1;
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_2
+  );
+  assign modCall_1.type_0 = 0;
 endmodule

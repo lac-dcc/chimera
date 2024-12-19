@@ -1,33 +1,35 @@
-// Seed: 3957845451
-module module_0 ();
-  id_1 :
-  assert property (@* 1)
-    if ("") begin
-      id_1 = id_1;
-    end else id_1 <= 1'b0;
+// Seed: 3698555353
+module module_0;
+  assign id_1 = id_1;
+  always id_1 = 1;
+  assign id_1 = id_1;
+  always $display;
 endmodule
 module module_1 (
-    output supply1 id_0
-    , id_3,
-    output wire id_1
+    input supply1 id_0
 );
-  wire id_4, id_5;
-  module_0();
+  assign id_2 = id_2;
+  id_3(
+      1, 1
+  );
+  wire id_4;
+  assign id_2 = 1;
+  id_5(
+      1 ? 1 == 1'b0 : 1
+  );
+  module_0 modCall_1 ();
 endmodule
-macromodule module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+module module_2 (
+    output logic id_0,
+    input  logic id_1,
+    input  wire  id_2
 );
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
+  assign id_0 = id_1;
+  assign id_0 = 1'b0;
+  always id_0 <= id_2 | 1;
+  uwire id_4 = 1'd0, id_5;
   wire id_6, id_7, id_8;
-  assign id_3 = id_4;
-  module_0();
-  wire id_9, id_10;
+  wire id_9;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
 endmodule

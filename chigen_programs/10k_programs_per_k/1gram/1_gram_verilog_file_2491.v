@@ -1,11 +1,5 @@
-// Seed: 1550368208
-module module_0 (
-    id_1
-);
-  inout wire id_1;
-  wire id_2;
-  assign id_2 = id_2;
-  assign id_1 = id_2;
+// Seed: 135826528
+module module_0;
 endmodule
 module module_1 (
     id_1,
@@ -23,16 +17,8 @@ module module_1 (
     id_13,
     id_14,
     id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    id_16
 );
-  inout wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  output wire id_17;
   output wire id_16;
   input wire id_15;
   inout wire id_14;
@@ -49,8 +35,19 @@ module module_1 (
   inout wire id_3;
   inout wire id_2;
   output wire id_1;
-  assign id_5 = id_2;
-  module_0(
-      id_20
+  assign (strong1, highz0) id_4 = ("");
+  assign id_6 = id_3;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  id_17(
+      id_11[1], 1, id_6
   );
+  initial begin : LABEL_0
+    begin : LABEL_0
+      return 1;
+    end
+    @(posedge 1);
+  end
+  wire id_18;
+  initial id_10 = id_2 & id_12;
 endmodule

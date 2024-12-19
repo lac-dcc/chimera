@@ -1,61 +1,38 @@
-// Seed: 1350922019
-module module_0 ();
-  always @(1 ==? 1) begin
-    id_1 <= 1;
-    id_1 <= 1;
-  end
-  initial begin
-    id_2 <= 1;
-  end
-  wire id_3;
-  assign id_3 = 1'd0;
-endmodule
+// Seed: 3483137508
 module module_0 (
-    input wor id_0,
-    output tri0 id_1,
-    input tri1 id_2,
-    input tri0 id_3,
-    output uwire id_4,
-    input wire id_5,
-    output tri1 id_6,
-    output wire id_7,
-    output supply1 id_8,
-    output tri id_9,
-    input wor id_10,
-    input tri1 id_11,
-    output tri0 id_12,
-    input uwire id_13,
-    output tri1 continuous,
-    input wand id_15,
-    input supply1 id_16,
-    input tri1 id_17,
-    input wor id_18,
-    output wire id_19,
-    output supply1 id_20,
-    input tri1 id_21,
-    input tri1 id_22,
-    output wor id_23,
-    output wor id_24,
-    input uwire id_25,
-    input tri1 id_26,
-    inout supply1 id_27,
-    input wor id_28,
-    input wor id_29,
-    input supply0 id_30,
-    output tri id_31,
-    input tri0 id_32,
-    output tri0 id_33,
-    input tri0 id_34,
-    input wire id_35,
-    input supply1 module_1,
-    output supply1 id_37,
-    output supply0 id_38,
-    input supply0 id_39,
-    output wor id_40,
-    input uwire id_41
-    , id_44,
-    input supply1 id_42
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_45, id_46;
-  module_0();
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  integer id_6;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    input  wand  id_1,
+    input  tri   id_2,
+    output tri1  id_3,
+    input  wand  id_4,
+    output wand  id_5,
+    input  tri0  id_6,
+    input  wire  id_7
+    , id_10,
+    input  uwire id_8
+);
+  module_0 modCall_1 (
+      id_10,
+      id_10,
+      id_10,
+      id_10,
+      id_10
+  );
+  logic [7:0] id_11, id_12;
+  always @(posedge id_12) $display(id_4);
+  assign id_5 = 1 ? 1 : id_12[1] == id_8;
 endmodule

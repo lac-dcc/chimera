@@ -1,60 +1,36 @@
-// Seed: 348003225
+// Seed: 2772796802
 module module_0;
-  wire id_1, id_2, id_3, id_4;
+  task automatic id_1(input id_2, input id_3 = 1'b0);
+  endtask
+  wire id_4;
 endmodule
-module module_0 (
-    input wire id_0,
-    input wor id_1,
-    input tri1 id_2
-    , id_51,
-    output supply1 id_3,
-    input supply1 id_4,
-    input wire id_5,
-    output wire id_6,
-    input tri id_7,
-    input tri1 id_8,
-    input uwire sample,
+module module_1 (
+    input wor id_0,
+    output supply0 id_1,
+    input wor id_2,
+    output wor id_3,
+    output wire id_4,
+    input tri0 id_5,
+    output wand id_6,
+    input wor id_7,
+    input wor id_8,
+    input supply0 id_9,
     output tri1 id_10,
-    input tri id_11,
-    input uwire id_12,
+    input supply1 id_11,
+    input tri0 id_12,
     input supply0 id_13,
-    output tri id_14,
-    input tri id_15,
-    output tri0 id_16,
+    input tri id_14,
+    input tri1 id_15,
+    output tri1 id_16,
     output supply1 id_17,
-    output wire id_18,
-    output wand id_19,
+    input tri0 id_18,
+    input tri0 id_19,
     input tri0 id_20,
-    output wor id_21,
-    input supply1 id_22,
-    output supply0 id_23,
-    input supply0 id_24,
-    inout uwire id_25,
-    input tri id_26,
-    output wand id_27,
-    output wire id_28,
-    input uwire id_29,
-    input tri1 id_30,
-    input tri id_31,
-    input wand id_32,
-    input tri0 id_33,
-    input supply1 id_34,
-    input supply0 id_35,
-    input tri id_36,
-    input supply1 id_37,
-    output uwire id_38,
-    output supply0 id_39,
-    output wor id_40,
-    input tri id_41,
-    output supply1 id_42,
-    input uwire id_43,
-    input tri0 id_44,
-    input wand id_45,
-    output tri0 id_46,
-    output wire id_47,
-    output uwire id_48,
-    output tri0 id_49
+    input wand id_21,
+    output uwire id_22
 );
-  wand module_1 = 1;
-  module_0();
+  wire id_24;
+  wire id_25;
+  assign id_22 = id_0;
+  module_0 modCall_1 ();
 endmodule

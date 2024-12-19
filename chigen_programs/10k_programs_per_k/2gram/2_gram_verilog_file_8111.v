@@ -1,57 +1,44 @@
-// Seed: 3270146149
-module module_0 (
-    output wire id_0,
-    output tri0 id_1
-);
-  reg id_3;
-  always id_3 <= 1;
+// Seed: 3882138280
+module module_0;
+  wire id_1;
+  always begin : LABEL_0
+    `define pp_2 0
+  end
 endmodule
 module module_1 (
-    input tri id_0,
-    input supply1 id_1,
-    output supply0 id_2,
-    input uwire id_3,
-    output uwire id_4,
-    input uwire id_5,
-    input tri id_6,
-    input wire id_7,
-    input wire id_8,
-    input tri1 id_9,
-    input supply1 id_10,
-    input tri1 id_11,
-    output tri id_12,
-    input wand id_13,
-    output supply0 id_14,
-    input wand id_15,
-    input wor id_16,
+    input supply1 id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    input uwire id_4,
+    output wand id_5,
+    output wand id_6,
+    output tri id_7,
+    output tri1 id_8,
+    input wire id_9,
+    input wor id_10,
+    input wand id_11,
+    output wire id_12,
+    input tri0 id_13,
+    input wire id_14,
+    input tri0 id_15,
+    input tri1 id_16,
     input wor id_17,
-    input wor id_18,
-    input uwire id_19,
-    input uwire id_20,
-    input tri id_21,
-    output wand id_22,
-    input wire id_23
-    , id_36,
-    output wor id_24,
-    input supply0 id_25,
-    output supply1 id_26,
-    output wand id_27,
-    output supply1 id_28,
-    output supply0 id_29,
-    input supply1 id_30,
-    input tri id_31,
-    input wor id_32,
-    input tri1 id_33,
-    input tri id_34
+    output logic id_18,
+    output tri0 id_19,
+    output wire id_20,
+    input wor id_21,
+    input wor id_22,
+    input tri1 id_23,
+    output tri0 id_24,
+    output supply1 id_25,
+    input wand id_26,
+    input tri1 id_27,
+    input tri id_28
 );
-  if (1) begin
-    wire id_37;
-    assign id_2 = id_18;
-  end
-  wire id_38;
-  module_0(
-      id_14, id_28
-  );
-  assign id_2 = {1{1}};
-  wire id_39;
+  always
+    if (id_17) begin : LABEL_0
+      id_18 = new;
+    end
+  module_0 modCall_1 ();
 endmodule

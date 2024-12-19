@@ -1,33 +1,31 @@
-// Seed: 915953195
-module module_0 (
-    id_1
-);
-  output wire id_1;
+// Seed: 2937115716
+module module_0;
   assign id_1 = 1;
-  supply0 id_2;
-  generate
-    assign id_1 = id_2 + 1 && id_2;
-  endgenerate
 endmodule
 module module_1 (
-    input tri1 id_0,
-    output uwire id_1,
-    input supply1 id_2,
-    output supply1 id_3,
-    output wand id_4,
-    input tri1 id_5,
-    input uwire id_6,
-    output tri0 id_7,
-    output wand id_8,
-    input tri id_9,
-    input wor id_10,
-    input wand id_11,
-    output tri0 id_12,
-    input tri id_13
+    id_1,
+    id_2
 );
-  assign id_8 = id_6;
-  wire id_15;
-  module_0(
-      id_15
-  );
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input uwire id_0,
+    input tri0  id_1,
+    input tri   id_2
+);
+  assign id_4 = 1;
+  wire id_5;
+  module_0 modCall_1 ();
+  for (id_6 = id_1; 1; id_4 = 1) begin : LABEL_0
+    always disable id_7;
+    initial id_7 = ~id_4 && id_6 - "";
+  end
+  always force id_6 = 1 - id_1;
+  wire id_8;
+  wor  id_9;
+  assign id_9 = 1 == 1;
+  wire id_10;
 endmodule

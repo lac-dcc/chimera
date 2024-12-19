@@ -1,44 +1,48 @@
-// Seed: 3472929343
+// Seed: 2749324551
 module module_0 (
-    output wire id_0,
-    output wand id_1,
-    input supply1 id_2,
-    input wand id_3,
-    input tri id_4
+    output wor id_0
 );
 endmodule
-module module_0 (
-    input tri0 id_0,
-    output tri module_1,
+module module_1 (
+    input wor id_0,
+    output tri id_1,
     input tri1 id_2,
-    output supply0 id_3,
-    output wand id_4,
-    input wor id_5,
-    input uwire id_6,
-    input uwire id_7,
-    output tri1 id_8
-    , id_26,
-    input wand id_9,
-    input wand id_10
-    , id_27,
-    inout uwire id_11,
-    output wire id_12,
-    input wand id_13,
-    input tri0 id_14,
-    input wand id_15,
-    inout tri1 id_16,
-    input tri1 id_17,
-    output wire id_18,
-    output uwire id_19,
-    input supply1 id_20,
-    input tri1 id_21,
-    input supply1 id_22,
-    input tri1 id_23,
-    output wire id_24
+    input supply1 id_3,
+    input wor id_4,
+    input wire id_5,
+    output tri1 id_6,
+    input wand id_7,
+    output tri id_8,
+    input supply0 id_9,
+    input tri0 id_10,
+    input tri1 id_11,
+    input uwire id_12,
+    output tri1 id_13,
+    input supply0 id_14,
+    input supply1 id_15,
+    output tri1 id_16,
+    input uwire id_17,
+    input wire id_18,
+    input wire id_19,
+    input wand id_20,
+    input uwire id_21,
+    input wire id_22,
+    output tri1 id_23,
+    output wor id_24,
+    input wor id_25
 );
+  wand id_27;
+  assign id_27 = id_12 & 1;
   wire id_28;
+  module_0 modCall_1 (id_8);
+  generate
+    assign id_27 = id_20;
+  endgenerate
   wire id_29;
-  module_0(
-      id_8, id_3, id_17, id_10, id_6
-  ); timeprecision 1ps;
+  id_30(
+      .id_0(id_12 || id_9), .id_1(~id_21 ** 1'b0)
+  );
+  assign id_28 = id_2;
+  wire id_31;
+  wire id_32;
 endmodule

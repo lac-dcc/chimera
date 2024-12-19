@@ -1,41 +1,34 @@
-// Seed: 4128123510
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
-);
-  input wire id_8;
-  inout wire id_7;
-  input wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = id_1;
+// Seed: 2377113354
+module module_0;
+  wire id_1, id_2, id_3, id_4, id_5, id_6, id_7, id_8, id_9, id_10;
 endmodule
 module module_1 (
-    output wor   id_0,
-    input  tri0  id_1
-    , id_7,
-    output logic id_2,
-    input  logic id_3,
-    input  wire  id_4,
-    output wand  id_5
+    output tri0 id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output wand id_3,
+    input tri0 id_4,
+    input tri0 id_5,
+    output wire id_6,
+    input supply0 id_7,
+    input tri0 id_8,
+    input tri0 id_9,
+    input tri1 id_10,
+    input tri0 id_11,
+    output uwire id_12,
+    input tri1 id_13,
+    output wire id_14,
+    input tri id_15,
+    output tri1 id_16,
+    output tri id_17,
+    output uwire id_18,
+    input uwire id_19,
+    input wire id_20
 );
-  always_comb @(1 or id_3 or posedge 1'b0) begin
-    id_2 <= id_3;
-  end
-  wire id_8;
-  id_9 :
-  assert property (@(posedge 1) 1)
-  else $display;
-  module_0(
-      id_8, id_9, id_8, id_9, id_9, id_9, id_7, id_7
-  );
+  wire id_22;
+  module_0 modCall_1 ();
+  wand id_23;
+  assign id_23 = 1'h0;
+  tri0 id_24 = 1'b0;
+  wire id_25;
 endmodule

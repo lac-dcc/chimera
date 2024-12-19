@@ -1,49 +1,50 @@
-// Seed: 1461526810
-module module_0 (
-    input  uwire   id_0,
-    output supply1 id_1
-);
-  assign id_1 = 1;
-  wire id_3;
+// Seed: 2600283021
+module module_0 ();
+  always if (1) id_1 <= id_1;
 endmodule
-module module_1 (
-    output wire id_0,
-    input tri1 id_1,
-    output supply0 id_2,
-    input tri1 id_3,
+module module_1 #(
+    parameter id_33 = 32'd62,
+    parameter id_34 = 32'd27
+) (
+    input tri1 id_0,
+    output wire id_1,
+    output supply1 id_2,
+    output supply1 id_3,
     input wire id_4,
-    input wand id_5,
-    input tri1 id_6,
-    output wor id_7,
-    output tri0 id_8
+    input tri id_5,
+    input tri id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input wand id_9,
+    output wor id_10,
+    input wire id_11,
+    output wire id_12,
+    input tri id_13,
+    output tri1 id_14,
+    input tri0 id_15,
+    output supply0 id_16,
+    inout uwire id_17,
+    output uwire id_18,
+    output uwire id_19,
+    output wor id_20,
+    input wor id_21,
+    output uwire id_22,
+    input uwire id_23,
+    input tri id_24,
+    output wand id_25,
+    output wire id_26,
+    output wor id_27,
+    output supply0 id_28,
+    output supply1 id_29,
+    output wand id_30,
+    output supply1 id_31
 );
-  assign id_0 = id_6;
-  module_0(
-      id_3, id_8
-  );
-endmodule
-module module_2 (
-    id_1,
-    id_2
-);
-  input wire id_2;
-  output wire id_1;
-  logic [7:0] id_3;
-  generate
-  endgenerate
-  wire id_6;
-  assign id_5[1'b0] = id_2;
-  always @(posedge id_3[1]) id_4 = id_5[1];
-endmodule
-module module_3 (
-    output logic   id_0,
-    output supply1 id_1,
-    input  logic   id_2
-);
-  assign id_0 = id_2;
-  wire id_4;
-  module_2(
-      id_4, id_4
-  );
-  always id_0 = #id_5 1'd0;
+  assign id_26 = 1;
+  assign id_29 = id_5;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  assign id_17 = 1;
+  defparam id_33.id_34 = id_33;
+  assign id_1 = id_4 == id_11;
+  assign id_19 = id_6;
 endmodule

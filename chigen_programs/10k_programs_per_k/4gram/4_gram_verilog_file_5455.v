@@ -1,59 +1,50 @@
-// Seed: 1985058968
-module module_0 (
-    output uwire id_0,
-    output tri0  id_1
-);
+// Seed: 4179932539
+module module_0 ();
 endmodule
-module module_1 (
-    output supply0 id_0,
-    output uwire id_1,
-    input tri id_2,
-    output tri0 id_3,
-    output supply1 id_4,
-    input wand id_5,
-    output uwire id_6,
-    output wire id_7,
-    output wire id_8,
-    inout wor id_9,
-    input uwire id_10,
-    output supply1 id_11,
-    input logic id_12,
-    input wand id_13,
-    input wor id_14,
-    input supply0 id_15,
-    input tri0 id_16,
-    input tri1 id_17,
-    input wand id_18,
-    input uwire id_19,
-    output wand id_20,
-    output uwire id_21,
-    input tri id_22,
-    input tri1 id_23,
-    output wand id_24,
-    input supply1 id_25,
-    input tri0 id_26,
-    input tri1 id_27,
-    input wor id_28,
-    output wor id_29,
-    input wire id_30,
-    output tri0 id_31
+module module_1;
+  module_0 modCall_1 ();
+  integer id_2;
+  wire id_3;
+endmodule
+module module_2 #(
+    parameter id_18 = 32'd98,
+    parameter id_19 = 32'd7
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17
 );
-  wire id_33;
-  reg  id_34;
-  tri  id_35;
-  assign id_35 = id_12 !== id_18;
-  wire id_36;
-  module_0(
-      id_8, id_29
-  );
-  always_ff id_34 <= id_12;
-  wire id_37;
-  supply0 id_38;
-  id_39(
-      .id_0(id_6), .id_1(id_27), .id_2(id_29), .id_3(1)
-  );
-  wire  id_40;
-  wire  id_41;
-  uwire id_42 = 1;
-  assign id_38 = 1'b0;
+  inout wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  defparam id_18.id_19 = (1);
+  module_0 modCall_1 ();
 endmodule

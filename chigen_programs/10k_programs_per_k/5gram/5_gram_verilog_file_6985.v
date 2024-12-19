@@ -1,61 +1,65 @@
-// Seed: 3299442462
+// Seed: 3762004093
 module module_0;
-  tri0 id_2;
-  logic [7:0] id_3;
-  assign id_3[1] = 1;
-  supply1 id_4;
-  generate
-    assign id_2 = 1 == id_2;
-  endgenerate
-  id_5(
-      .id_0(1),
-      .id_1(id_2),
-      .id_2(1'd0),
-      .id_3(id_1),
-      .id_4(id_2),
-      .id_5(1),
-      .id_6(id_2),
-      .id_7(id_4),
-      .id_8(1 == (id_4 == id_2 && id_1 || id_2 == id_1 >= (1))),
-      .id_9(id_1),
-      .id_10()
+  wire id_2;
+  wire id_3;
+  assign module_1.id_34 = 0;
+  id_4(
+      .id_0(1'b0), .id_1()
   );
-  wire id_6;
-  assign id_2 = id_1;
-  assign id_6 = 1;
-  uwire id_7 = 1;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+module module_0 #(
+    parameter id_33 = 32'd41,
+    parameter id_34 = 32'd50
+) (
+    output tri0 id_0,
+    input supply0 id_1,
+    input wand id_2,
+    output wire id_3,
+    input uwire id_4,
+    input tri id_5,
+    output supply1 id_6,
+    input logic id_7,
+    input tri0 id_8,
+    input tri1 id_9,
+    output wand id_10,
+    output uwire id_11,
+    output wand id_12,
+    input uwire id_13,
+    output supply0 id_14,
+    output uwire id_15,
+    input wire id_16,
+    input wor id_17,
+    output uwire id_18,
+    input supply1 id_19,
+    output wand module_1,
+    input wor id_21,
+    input supply0 id_22,
+    input uwire id_23,
+    input supply0 id_24,
+    input tri id_25,
+    output logic id_26
 );
-  input wire id_10;
-  output wire id_9;
-  output wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  output wire id_2;
-  input wire id_1;
-  integer id_11;
-  wire id_12;
-  always disable id_13;
-  wire id_14;
-  wor  id_15 = id_15 == id_7;
-  module_0();
-  final $display(1, 1, 1, id_1 <= 1, 1, 1'h0 < module_1);
-  assign id_12 = id_13;
-  nand (id_2, id_3, id_4, id_5, id_7);
-  assign id_9 = id_14;
-  wire #(1'b0, id_10(1, 1'd0)) id_16;
+  wire id_28;
+  assign id_3 = {id_22, id_22};
+  always @(negedge 1 or posedge 1 - 1) begin : LABEL_0
+    id_26 <= 1'd0;
+  end
+  wire id_29;
+  integer id_30;
+  assign id_0 = (id_13) ? id_5 : id_5 == id_24 - 1;
+  initial begin : LABEL_0
+    if (1) begin : LABEL_0
+      if (id_22 - "" || id_22 ==? 1'b0) assign id_10 = id_30;
+    end
+  end
+  initial
+  fork : SymbolIdentifier
+  join_none : SymbolIdentifier
+  wire id_31;
+  assign id_26 = id_7;
+  wire id_32;
+  module_0 modCall_1 ();
+  defparam id_33.id_34 = id_34;
+  wire id_35;
+  wire id_36;
 endmodule

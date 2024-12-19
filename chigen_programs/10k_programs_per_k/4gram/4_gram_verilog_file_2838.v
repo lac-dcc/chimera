@@ -1,6 +1,12 @@
-// Seed: 2245301807
-module module_0 ();
-  wire id_1;
+// Seed: 2462498057
+module module_0 (
+    module_0,
+    id_1
+);
+  inout wire id_2;
+  input wire id_1;
+  supply1 id_3 = 1;
+  assign id_3 = id_3;
 endmodule
 module module_1 (
     id_1,
@@ -15,23 +21,31 @@ module module_1 (
     id_10,
     id_11,
     id_12,
-    id_13
+    id_13,
+    id_14,
+    id_15
 );
+  inout wire id_15;
+  inout wire id_14;
   inout wire id_13;
-  inout wire id_12;
-  inout wire id_11;
-  input wire id_10;
+  input wire id_12;
+  output wire id_11;
+  inout wire id_10;
   input wire id_9;
-  output wire id_8;
+  input wire id_8;
   inout wire id_7;
   inout wire id_6;
   inout wire id_5;
-  output wire id_4;
+  inout wire id_4;
   output wire id_3;
-  inout wire id_2;
+  output wire id_2;
   input wire id_1;
-  wire id_14;
-  module_0();
-  always_latch @(1 or 1 - 1) id_7 = (1);
-  wire id_15;
+  assign id_3 = id_12;
+  tri0 id_16 = 1;
+  assign id_7 = 1;
+  module_0 modCall_1 (
+      id_6,
+      id_5
+  );
+  genvar id_17;
 endmodule

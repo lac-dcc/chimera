@@ -1,21 +1,39 @@
-// Seed: 812708288
-module module_0 ();
-  assign id_1 = 1;
-  always #1 begin
-    $display(id_1, id_1 - id_1, 1, 1, 1 == id_1,);
-    #id_2 id_1 <= 1;
-    id_2 <= id_2;
-  end
-  wire id_3, id_4;
-endmodule
-macromodule module_1 (
-    input supply0 id_0,
-    input wire id_1,
-    input uwire id_2,
-    input wand id_3
+// Seed: 2568626459
+module module_0 (
+    input tri id_0,
+    input wor id_1
 );
-  always @(negedge id_1) id_5 <= 1 && 1;
-  assign id_5 = "" & id_0;
-  module_0();
-  wire id_6;
+  supply0 id_3;
+  assign id_3 = 1;
+  supply0 id_4;
+  module_2 modCall_1 (
+      id_3,
+      id_3
+  );
+  assign (highz1, pull0) id_4 = (1);
+  assign module_1.type_9 = 0;
+  uwire id_5 = id_0;
+endmodule
+module module_1 (
+    input wor id_0,
+    input supply1 id_1,
+    input tri0 id_2
+);
+  assign id_4 = 1'b0;
+  module_0 modCall_1 (
+      id_2,
+      id_2
+  );
+  reg id_5, id_6;
+  assign id_4 = id_6;
+  always if (id_2) id_4 <= ~id_5;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output wire id_1;
+  wire id_3;
+  wire id_4;
 endmodule

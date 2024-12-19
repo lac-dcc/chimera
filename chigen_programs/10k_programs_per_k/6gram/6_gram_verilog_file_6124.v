@@ -1,39 +1,40 @@
-// Seed: 2615090705
-module module_0 ();
-  uwire id_1, id_2, id_3, id_4, id_5;
-  always @(posedge (id_4) or posedge id_3)
-    #1 begin
-      fork
-        $display;
-      join
-    end
+// Seed: 4028541975
+module module_0 (
+    output supply1 id_0
+    , id_2
+);
+  assign module_2.id_7 = 0;
+  wire id_3 = $display;
+  wire id_4;
 endmodule
 module module_1 (
-    output logic id_0,
-    input  wor   id_1
+    input  tri  id_0,
+    input  tri  id_1,
+    output tri0 id_2,
+    input  tri1 id_3,
+    input  tri0 id_4,
+    output tri0 id_5
 );
-  initial begin
-    if (1) id_0 <= 1 & id_1;
-    id_0 = 1 - id_1;
-  end
-  buf (id_0, id_1);
-  module_0();
+  assign id_2 = id_1;
+  wire id_7, id_8, id_9;
+  module_0 modCall_1 (id_5);
+  assign id_2 = (1);
 endmodule
-module module_2 #(
-    parameter id_12 = 32'd4,
-    parameter id_13 = 32'd18
-) (
-    output wire  id_0,
-    output tri0  id_1,
-    output tri1  id_2,
-    input  wor   id_3,
-    output tri0  id_4,
-    output tri0  id_5,
-    input  uwire id_6,
-    input  wire  id_7,
-    input  wor   id_8,
-    output wire  id_9,
-    output tri1  id_10
+module module_2 (
+    output wand id_0,
+    input supply0 id_1,
+    output wor id_2,
+    input wire id_3,
+    output wand id_4,
+    input wand id_5,
+    output tri0 id_6,
+    output tri1 id_7,
+    input wor id_8
 );
-  defparam id_12.id_13 = id_3 == id_8; module_0();
+  assign id_7 = id_3;
+  assign id_7 = 1 % 1;
+  module_0 modCall_1 (id_0);
+  assign id_4 = 1;
+  logic [7:0] id_10;
+  assign id_10[1] = id_3 + 1'd0;
 endmodule

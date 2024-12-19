@@ -1,32 +1,40 @@
-// Seed: 50831153
+// Seed: 2167597976
 module module_0;
-  reg id_1, id_2;
-  always_comb
-    if (id_1.id_2) id_2 <= (id_2);
-    else id_1 = 1;
+  id_1(
+      id_2, id_2, id_2, !id_2, 1, id_2
+  );
+  wire id_3;
+  assign id_1 = id_1;
+  wire id_4;
 endmodule
-macromodule module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    input tri1 id_2,
-    output uwire id_3,
-    output uwire id_4,
-    input tri id_5,
-    input wand id_6,
-    input uwire id_7,
-    input uwire id_8,
-    input wire id_9,
-    output wand id_10,
-    input supply1 id_11,
-    output supply1 id_12,
-    input supply1 id_13,
-    output wand id_14,
-    output tri0 id_15
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  if (1'b0) wire id_17;
-  else assign id_14 = 1;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_7;
+  wire id_8;
+  wire id_9;
+  assign id_7 = id_7;
+  module_0 modCall_1 ();
+  assign modCall_1.id_2 = 0;
+  logic [7:0] id_10;
+  assign id_3 = 1;
+  wire id_11;
+  always if (id_3) $display;
+  supply1 id_12;
+  wire id_13, id_14;
+  for (id_15 = id_12; 1; id_2 = id_3) wire id_16;
+  wire id_17;
   wire id_18;
-  assign id_15 = 1;
-  wire id_19;
-  module_0();
+  assign id_10[1'b0] = id_16;
 endmodule

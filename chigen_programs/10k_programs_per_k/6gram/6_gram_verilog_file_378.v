@@ -1,27 +1,60 @@
-// Seed: 1728886204
+// Seed: 1248866093
 module module_0;
-  assign id_1 = 'b0;
-  module_2();
+  wire id_1;
+  wire id_2;
 endmodule
 module module_1 (
-    output uwire id_0,
-    input wand id_1,
-    output wire id_2,
-    input supply0 id_3,
-    output wire id_4,
-    output uwire id_5,
-    output logic id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  logic [7:0] id_8;
-  reg id_9;
-  always @(posedge 1 | id_3) while (id_8[1]) id_6 = #1 id_9;
-  module_0();
-  wire id_10;
-endmodule
-module module_2;
-  initial begin
-    id_1 <= 1;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always @(posedge 1 or negedge id_2) begin : LABEL_0
+    begin : LABEL_0
+      cover (1 || 1);
+      id_3 = 1;
+    end
   end
-  wire id_2;
-  assign id_2 = 1;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  input wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_8;
+  module_0 modCall_1 ();
+  initial begin : LABEL_0
+    assign id_4 = id_6;
+    if (1)
+      if (id_6 && 1'h0) id_3 <= id_6;
+      else begin : LABEL_0
+        id_3 = 1'b0;
+        id_4 <= 1;
+      end
+    else begin : LABEL_0
+      id_4 = 1;
+    end
+  end
 endmodule

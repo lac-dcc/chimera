@@ -1,37 +1,30 @@
-// Seed: 3635360355
+// Seed: 3995429215
 module module_0;
-  wor  id_1;
-  wire id_3 = id_1;
-  id_4 :
-  assert property (@(posedge 1) 1)
-  else $display(id_2);
-  always @(1 or posedge 1) begin
-    id_4 = id_3++;
+  final begin : LABEL_0
+    assert (1 || id_1);
   end
+  assign module_1.type_5 = 0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input tri1 id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    output logic id_3,
+    input logic id_4,
+    input tri1 id_5,
+    input supply0 id_6,
+    output logic id_7,
+    input supply1 id_8,
+    output logic id_9,
+    input tri0 id_10,
+    input supply0 id_11,
+    input wire id_12
 );
-  output wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  always @* id_4 <= id_3;
-  module_0();
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
-);
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_3 = id_1;
-  string id_4 = "";
-  module_0();
-  assign id_2 = 1;
+  wire id_14;
+  module_0 modCall_1 ();
+  always @(id_12) begin : LABEL_0
+    id_7 <= id_4;
+    id_3 <= 1;
+    id_9 <= #1 1 <= 1;
+  end
 endmodule

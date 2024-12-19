@@ -1,37 +1,29 @@
-// Seed: 3642891698
-module module_0 (
-    input tri1 id_0,
-    input tri id_1,
-    output wand id_2,
-    input tri id_3,
-    input supply1 id_4,
-    input supply0 id_5,
-    output supply1 id_6,
-    output wand id_7,
-    input wor id_8,
-    input supply1 id_9,
-    input wand id_10
-    , id_12
-);
-  wire id_13, id_14;
-  assign id_13 = id_10;
+// Seed: 3682281354
+module module_0;
+  uwire id_1;
+  assign id_1 = id_2;
+  assign id_2 = 1'b0;
+  uwire id_4;
+  logic [7:0][1  -  1 'h0 !==  1 'b0] id_5 = id_3;
+  initial id_1 = 1;
+  assign id_3 = id_5;
+  class id_6;
+    task id_7(id_8);
+      wait (1'h0)
+        if (id_2) begin : LABEL_0
+          id_4 = 1;
+        end else id_6 <= "";
+      begin : LABEL_0
+        if (id_4) id_8 <= 1;
+      end
+    endtask
+    reg id_9;
+  endclass
 endmodule
-module module_1 (
-    input tri1 id_0,
-    output wire id_1,
-    input logic id_2,
-    input supply1 id_3
-);
-  logic id_5, id_6, id_7;
-  tri1 id_8, id_9 = id_0;
-  assign id_7 = ~1;
-  assign id_7 = id_2;
-  wire id_10;
-  assign id_1 = id_9;
-  always id_5 <= 1 == id_5;
-  module_0(
-      id_8, id_0, id_1, id_9, id_9, id_0, id_1, id_1, id_8, id_9, id_8
-  );
-  wire id_11;
-  wire id_12;
+module module_1;
+  assign {id_1, 1, 1 | 1} = id_1;
+  assign id_1 = id_1;
+  assign id_1 = id_1;
+  module_0 modCall_1 ();
+  assign modCall_1.type_11 = 0;
 endmodule

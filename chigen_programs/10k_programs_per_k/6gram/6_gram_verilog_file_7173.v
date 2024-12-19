@@ -1,66 +1,94 @@
-// Seed: 2690163314
+// Seed: 1970058917
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input uwire id_0,
+    input uwire id_1,
+    input uwire id_2,
+    output wor id_3,
+    output wor id_4,
+    output uwire id_5,
+    input uwire id_6,
+    output tri id_7,
+    input supply0 id_8,
+    input tri id_9,
+    output tri id_10,
+    input supply1 id_11,
+    input wire id_12,
+    input wire id_13,
+    input tri1 id_14,
+    output supply1 id_15,
+    input tri1 id_16,
+    input tri id_17,
+    output wand id_18,
+    output wire id_19,
+    input wor id_20,
+    output supply0 id_21,
+    output supply1 id_22,
+    output wand id_23,
+    input supply1 id_24,
+    input supply0 id_25,
+    output supply1 id_26,
+    output tri id_27,
+    input wor id_28,
+    input tri1 id_29,
+    input tri id_30,
+    input wand id_31,
+    input supply1 id_32,
+    input wand id_33
 );
-  input wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  reg id_6;
-  wor id_7 = 1'b0;
-  always @(posedge id_3 or posedge 1) begin
-    fork
-      begin
-        if (1'b0 == id_7) begin
-          #1 id_1 = id_2;
-        end
-      end
-      begin
-        id_6 <= 1 - id_5;
-      end
-    join
-  end
+  assign module_1.type_6 = 0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    input uwire id_0,
+    input wor id_1,
+    output tri id_2,
+    input tri id_3,
+    input supply0 id_4,
+    output uwire id_5,
+    input wand id_6,
+    input wor id_7,
+    input uwire id_8,
+    input uwire id_9,
+    input tri id_10,
+    input supply1 id_11,
+    output tri id_12
 );
-  inout wire id_14;
-  input wire id_13;
-  input wire id_12;
-  inout wire id_11;
-  output wire id_10;
-  input wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  id_15(
-      .id_0(~id_10), .id_1(id_8[1!=1] < "" + id_12), .id_2(1), .id_3(id_7)
+  id_14(
+      id_2, id_10, 1
   );
-  xor (id_4, id_11, id_13, id_8, id_14, id_12, id_7, id_1, id_6, id_15);
-  module_0(
-      id_1, id_12, id_12, id_4, id_9
+  module_0 modCall_1 (
+      id_8,
+      id_10,
+      id_6,
+      id_12,
+      id_5,
+      id_2,
+      id_6,
+      id_5,
+      id_4,
+      id_3,
+      id_12,
+      id_3,
+      id_4,
+      id_3,
+      id_11,
+      id_12,
+      id_6,
+      id_3,
+      id_12,
+      id_2,
+      id_0,
+      id_12,
+      id_12,
+      id_2,
+      id_4,
+      id_11,
+      id_12,
+      id_12,
+      id_1,
+      id_1,
+      id_4,
+      id_9,
+      id_8,
+      id_11
   );
 endmodule

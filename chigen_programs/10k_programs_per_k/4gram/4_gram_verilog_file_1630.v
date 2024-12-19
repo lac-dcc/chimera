@@ -1,41 +1,38 @@
-// Seed: 3867680870
-module module_0 (
+// Seed: 1290370067
+module module_0 ();
+  reg id_1;
+  always @(posedge 1) begin : LABEL_0
+    id_1 <= id_1;
+  end
+  tri0 id_2;
+  always @((1)) if (id_2) disable id_3;
+  supply1 id_4 = 1;
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    module_0,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    id_4
 );
-  input wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
+  input wire id_4;
   output wire id_3;
-  inout wire id_2;
+  output wire id_2;
   input wire id_1;
-  wire id_16;
-endmodule
-module module_1 ();
-  wire id_1;
-  module_0(
-      id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1, id_1
+  tri id_5 = 1;
+  wire id_6;
+  logic [7:0] id_7;
+  assign id_6 = id_7[""==1 : 1];
+  wire id_8;
+  wire id_9;
+  wire id_10;
+  integer module_1 (
+      .id_0(id_8),
+      .id_1(1)
   );
+  module_0 modCall_1 ();
+  assign modCall_1.id_4 = 0;
+  wire id_11;
+  wire id_12 = id_6;
+  wire id_13;
+  wire id_14, id_15;
 endmodule

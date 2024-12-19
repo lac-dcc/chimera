@@ -1,31 +1,31 @@
-// Seed: 2544298638
-module module_0 ();
-  id_2(
-      .id_0(1), .id_1(id_1), .id_2(1), .id_3(id_1 != {id_1{1}}), .id_4(id_1), .id_5(id_3)
-  );
+// Seed: 2144073133
+module module_0 (
+    id_1
+);
+  output wire id_1;
+  wor id_2;
+  assign id_1 = id_2;
+  supply0 id_3 = id_2;
+  assign module_1.type_26 = 0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input tri1 id_0,
+    input wire id_1,
+    input wire id_2,
+    input tri1 id_3,
+    output tri id_4,
+    input wand id_5,
+    output supply0 id_6,
+    output wand id_7,
+    output supply1 id_8,
+    input supply1 id_9,
+    input tri id_10,
+    input tri id_11,
+    input supply0 id_12,
+    input uwire id_13,
+    input uwire id_14,
+    input uwire id_15
 );
-  inout wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  always #1 begin
-    $display(1, id_5++);
-  end
-  id_7 :
-  assert property (@(1 or posedge 1) 1)
-  else;
-  module_0();
-  wire id_8;
-  wire id_9;
-  always_comb id_5 <= id_4;
+  wire id_17;
+  module_0 modCall_1 (id_17);
 endmodule

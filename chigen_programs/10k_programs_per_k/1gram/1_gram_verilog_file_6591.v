@@ -1,53 +1,25 @@
-// Seed: 1298955018
-module module_0;
-  assign id_1 = id_1;
-  wire id_2;
+// Seed: 924068114
+module module_0 (
+    input tri id_0
+);
+  assign id_2.id_0 = 1;
+  assign id_2 = 1 & {1 * 1, id_0, 1, 1, 1, 1 - 1} - id_2;
+  wire id_3;
 endmodule
 module module_1 (
-    input wor id_0,
+    input uwire id_0,
     input tri0 id_1,
-    output wor id_2,
-    input wire id_3,
-    output wor id_4,
-    output wand id_5,
-    input wand id_6,
-    input tri id_7,
-    input tri id_8,
-    input wor id_9,
-    input supply0 id_10,
-    input supply1 id_11,
-    output tri1 id_12,
-    output tri1 id_13,
-    output tri1 id_14,
-    input tri0 id_15
-    , id_37,
-    input tri0 id_16,
-    input uwire id_17,
-    output tri0 id_18,
-    output tri1 id_19,
-    input wand id_20,
-    input supply0 id_21,
-    output wire id_22,
-    output wire id_23,
-    output tri0 id_24,
-    input wor id_25,
-    output tri1 id_26,
-    output wire id_27,
-    output supply0 id_28
-    , id_38,
-    input wand id_29,
-    output tri1 id_30,
-    input tri id_31,
-    input tri id_32,
-    output wire id_33,
-    input wand id_34,
-    input wand id_35
+    input wand id_2,
+    inout tri1 id_3,
+    input supply0 id_4,
+    input tri0 id_5,
+    input wire id_6,
+    output wor id_7
 );
-  assign id_4.id_20 = 1;
-  module_0();
-  initial begin
-    #1
-    if (1 ? 1 : 1) id_5 = id_38;
-    else;
-  end
+  reg id_9;
+  module_0 modCall_1 (id_3);
+  logic [7:0] id_10;
+  assign id_10[$display][1] = id_2;
+  if (id_4) wire id_11, id_12;
+  else id_13 : assert property (@(posedge id_4) 1) id_9 <= 1;
 endmodule

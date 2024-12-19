@@ -1,49 +1,35 @@
-// Seed: 1962777623
-module module_0 #(
-    parameter id_4 = 32'd68,
-    parameter id_5 = 32'd8
-);
-  id_1(
-      .id_0(id_2), .id_1(), .id_2(1), .id_3(1), .id_4(1), .id_5(id_3)
-  ); defparam id_4.id_5 = id_5;
-endmodule
+// Seed: 1066136847
 module module_0 (
-    id_1,
-    module_1
+    output tri1 id_0,
+    input  tri  id_1
 );
-  inout wire id_2;
-  input wire id_1;
-  wire id_3, id_4;
-  module_0();
+  wire id_3;
+  assign module_1.type_16 = 0;
 endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+module module_1 (
+    input uwire id_0,
+    input wire id_1,
+    inout uwire id_2,
+    output wire id_3,
+    input tri0 id_4,
+    input supply0 id_5,
+    input wand id_6,
+    input wand id_7,
+    input tri0 id_8,
+    output wor id_9,
+    input wand id_10,
+    input uwire id_11
 );
-  output wire id_13;
-  output wire id_12;
-  inout wire id_11;
-  output wire id_10;
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
+  id_13 :
+  assert property (@(posedge 1) id_11)
+  else $display;
   wire id_14;
-  module_0();
+  always @(posedge id_14) begin : LABEL_0
+    id_9 = 1;
+    id_2 = id_4;
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_10
+  );
 endmodule

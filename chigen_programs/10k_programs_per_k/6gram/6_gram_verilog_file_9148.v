@@ -1,34 +1,94 @@
-// Seed: 495013438
+// Seed: 3857988437
 module module_0 (
-    output supply1 id_0,
-    output logic   id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22
 );
-  reg   id_3;
-  uwire id_4;
-  always @(*) begin
-    if (id_3) id_1 <= 1;
-    else begin
-      if (1'h0) id_3 <= 1'b0;
-    end
-  end
-  always @(1 or posedge id_4) begin
-    $display;
-  end
+  inout wire id_22;
+  inout wire id_21;
+  input wire id_20;
+  output wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout wire id_14;
+  input wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_23;
+  wire id_24;
 endmodule
-module module_0 (
-    input tri id_0,
-    output tri1 id_1,
-    input logic id_2,
-    input wand id_3,
-    output logic id_4,
-    input supply1 id_5,
-    output wand module_1
+module module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  initial begin
-    id_4 += 1;
-    id_4 <= id_2;
-  end
-  module_0(
-      id_1, id_4
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  generate
+    genvar id_4;
+    if (1'h0) begin : LABEL_0
+      genvar id_5;
+      assign id_3[1] = id_2;
+    end else begin : LABEL_0
+      wor id_6;
+      genvar id_7;
+      assign id_6 = 1;
+    end
+  endgenerate
+  module_0 modCall_1 (
+      id_4,
+      id_6,
+      id_7,
+      id_4,
+      id_6,
+      id_4,
+      id_2,
+      id_2,
+      id_6,
+      id_6,
+      id_4,
+      id_5,
+      id_7,
+      id_7,
+      id_2,
+      id_7,
+      id_7,
+      id_4,
+      id_4,
+      id_7,
+      id_4,
+      id_4
   );
 endmodule

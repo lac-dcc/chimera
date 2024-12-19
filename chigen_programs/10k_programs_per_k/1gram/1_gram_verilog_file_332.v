@@ -1,28 +1,34 @@
-// Seed: 3027867585
+// Seed: 437644108
 module module_0 ();
-  wire id_1;
   assign id_1 = id_1;
+  reg id_2;
+  assign module_1.type_6 = 0;
+  id_3(
+      1, id_1 ^ 1 || "", !id_1 == 1'h0, id_4
+  );
+  reg id_5, id_6;
+  initial begin : LABEL_0
+    id_5 <= id_1;
+    $display(id_5);
+    id_2 = 1;
+    id_1 <= id_2 ^ id_1;
+    id_2 <= 1;
+    id_6 <= 1;
+  end
+  generate
+    ;
+  endgenerate
+  wire id_7;
+  assign id_1 = id_2;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    input tri0 id_1,
-    input wand id_2
-    , id_9,
-    output supply1 id_3,
-    output tri id_4,
-    input tri0 id_5,
-    input tri0 id_6,
-    input wand id_7
+    output wire id_0,
+    output supply1 id_1,
+    input tri0 id_2
 );
-  assign id_9 = 1;
-  module_0();
-endmodule
-module module_2 (
-    id_1
-);
-  inout wire id_1;
-  if (id_1) begin
-    wire id_2;
-  end else for (id_3 = 1; id_1; id_3 = 1) always return id_1;
-  module_0();
+  reg id_4;
+  module_0 modCall_1 ();
+  generate
+    always wait (id_4) id_4 <= id_4;
+  endgenerate
 endmodule

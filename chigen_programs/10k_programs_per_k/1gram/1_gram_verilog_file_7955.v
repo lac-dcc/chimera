@@ -1,52 +1,30 @@
-// Seed: 1904484039
-module module_0;
-  logic [7:0] id_1, id_3;
-  assign id_3[1'b0&&1'b0] = 1;
-  genvar id_4;
+// Seed: 1009015839
+module module_0 ();
+  wire id_2, id_3;
+  assign module_1.type_24 = 0;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input wand id_1,
-    output tri1 id_2,
-    input tri0 id_3,
-    input supply1 id_4,
-    output tri1 id_5,
-    output wor id_6,
-    input tri0 id_7,
-    input wor id_8,
-    output tri0 id_9,
-    input wire id_10,
-    input supply0 id_11,
-    input tri id_12,
-    output tri1 id_13,
-    input uwire id_14,
-    input wire id_15,
-    input wand id_16,
-    input tri0 id_17,
-    input wire id_18,
-    output wand id_19,
-    output tri0 id_20,
-    input supply0 id_21
+    output supply0 id_0,
+    input wor id_1,
+    output wor id_2,
+    output wor id_3,
+    input wor id_4,
+    output wire id_5,
+    input tri0 id_6,
+    input wand id_7,
+    input supply0 id_8,
+    input tri1 id_9,
+    input supply1 id_10,
+    input tri0 id_11,
+    input supply0 id_12,
+    output tri id_13,
+    input tri1 id_14,
+    output tri1 id_15,
+    input supply1 id_16,
+    input uwire id_17,
+    output wor id_18
 );
-  wire id_23;
-  assign id_2 = ~"" == 1;
-  nand (
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_21,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_3,
-      id_4,
-      id_7,
-      id_8
-  );
-  wire id_24, id_25, id_26;
-  module_0();
+  wire id_20;
+  module_0 modCall_1 ();
+  assign id_3 = 1'b0;
 endmodule

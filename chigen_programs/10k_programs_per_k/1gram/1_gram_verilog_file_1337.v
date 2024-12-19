@@ -1,25 +1,26 @@
-// Seed: 226059638
-module module_0 ();
-  always id_1 <= 1;
+// Seed: 1766781566
+module module_0;
+  always_latch id_1 <= #1 1'd0;
 endmodule
-module module_1 (
-    output uwire id_0,
-    output uwire id_1,
-    input tri id_2,
-    input tri id_3,
-    input supply1 id_4,
-    input wire id_5,
-    output wire id_6,
-    output supply0 id_7,
-    input uwire id_8,
-    output wor id_9,
-    input wor id_10,
-    output uwire id_11,
-    input uwire id_12,
-    input tri id_13
+module module_1;
+  assign id_1 = 1 - id_1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    output uwire   id_0
+    , id_3,
+    input  supply0 id_1
 );
-  wand id_15;
-  assign id_0 = id_13;
-  module_0();
-  assign id_7 = 1'h0 & id_15;
-endmodule
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  if (1) logic [7:0][1 'd0 == "" : 1] id_4 = ~!id_1;
+  wire id_5;
+  wire id_6, id_7, id_8, id_9, id_10;
+  assign id_4 = 1;
+  uwire id_11 = 1'b0;
+  assign id_9 = $display;
+  wire id_12;
+  wire id_13;
+  wire id_14;
+endmodule : SymbolIdentifier

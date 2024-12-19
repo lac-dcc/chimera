@@ -1,45 +1,34 @@
-// Seed: 1797078644
+// Seed: 2557840799
 module module_0 (
-    input wor  id_0,
-    input tri  id_1,
-    input tri  id_2,
-    input tri0 id_3,
-    input tri  id_4,
-    input tri1 id_5
+    id_1
 );
+  inout wire id_1;
+  initial if (1) id_1 -= id_1;
+  module_2 modCall_1 ();
+  assign modCall_1.id_3 = 0;
 endmodule
-module module_1 (
-    input uwire id_0,
-    output supply1 id_1,
-    input wor id_2,
-    output wire id_3,
-    output uwire id_4,
-    input supply0 id_5,
-    input logic id_6,
-    input wand id_7,
-    input wor id_8,
-    input supply0 id_9,
-    output uwire id_10,
-    output supply0 id_11,
-    output tri id_12,
-    output logic id_13,
-    input logic id_14
-);
-  module_0(
-      id_8, id_2, id_9, id_5, id_9, id_2
-  );
-  always
-    repeat (id_8) begin
-      begin
-        id_13 = id_6;
-        id_13 <= 1;
-        id_11 = id_9;
-        id_11 = 1;
-        id_13 <= {1{id_6}};
-        #id_16;
-        if (id_2) id_16 <= id_14;
+module module_1;
+  wire id_1;
+  module_0 modCall_1 (id_1);
+  wire id_2;
+endmodule
+module module_2;
+  class id_1;
+    reg id_2;
+    reg id_3;
+    function new;
+      begin : LABEL_0$display
+        ;
       end
-    end
-  assign id_1  = 1;
-  assign id_12 = id_9;
+      if (1) id_3 <= 1 - 1;
+    endfunction
+    task id_4;
+    endtask
+  endclass
+  string id_5, id_6;
+  assign id_6 = "";
+  integer id_7;
+  assign id_3 = 1;
+  assign id_7 = id_5;
+  wire id_8;
 endmodule

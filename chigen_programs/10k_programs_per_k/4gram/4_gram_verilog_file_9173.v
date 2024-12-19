@@ -1,46 +1,40 @@
-// Seed: 1289137385
-module module_0 (
-    input wand id_0,
-    output supply1 id_1
-);
-  wire id_3;
+// Seed: 4123922969
+module module_0;
+  assign id_1 = 1;
+  module_2 modCall_1 ();
+  wire id_2;
+  final $display(1);
+  id_3 :
+  assert property (@(negedge 1) id_2)
+  else $display(1, 1, 1);
   wire id_4;
 endmodule
-module module_1 (
-    output wand  id_0,
-    input  uwire id_1,
-    input  wand  id_2
-);
-  wire id_4;
-  wire id_5;
-  wire id_6;
-  wire id_7, id_8;
-  module_0(
-      id_2, id_0
-  );
-  wire id_9;
+module module_1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  assign id_1 = 1'b0;
+  wire id_2;
 endmodule
-module module_0 #(
-    parameter id_12 = 32'd35,
-    parameter id_13 = 32'd34
-) (
-    output wire id_0,
-    input tri1 id_1,
-    output supply0 id_2,
-    output tri1 id_3,
-    output tri0 id_4,
-    input tri0 id_5,
-    output tri module_2,
-    output tri1 id_7,
-    input tri0 id_8,
-    input wand id_9
+module module_2 ();
+  wire id_2;
+  assign module_4.type_8 = 0;
+endmodule
+module module_3 (
+    id_1,
+    id_2
 );
-  assign id_7 = 1;
-  module_0(
-      id_8, id_3
-  );
-  assign id_0 = id_9;
-  wire id_11;
-  defparam id_12.id_13 = 1;
-  wire id_14;
+  output wire id_2;
+  inout wire id_1;
+  module_2 modCall_1 ();
+endmodule
+module module_4 (
+    output tri0 id_0,
+    input supply0 id_1,
+    input tri1 id_2,
+    input tri1 id_3,
+    input wire id_4,
+    input tri1 id_5
+);
+  wire id_7;
+  module_2 modCall_1 ();
 endmodule

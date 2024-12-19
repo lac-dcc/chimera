@@ -1,49 +1,57 @@
-// Seed: 3131365628
-module module_0 ();
-  initial id_1[1 : 1] = id_1[1 : 1'h0];
+// Seed: 3439710963
+module module_0 #(
+    parameter id_1 = 32'd86,
+    parameter id_2 = 32'd2
+);
+  defparam id_1.id_2 = id_1;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input supply0 id_1,
-    input tri id_2
-    , id_7,
-    input tri1 id_3,
-    output logic id_4,
-    output supply1 id_5
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_8;
-  initial if (id_3 - 1) id_4 <= 1'b0;
-  module_0();
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  generate
+    for (id_4 = (id_3) < (id_1); 1; id_3 = id_1) begin : LABEL_0
+      always @(posedge id_3) begin : LABEL_0
+        if (1) assert (id_2);
+        id_2 <= 1;
+      end
+    end
+  endgenerate
+  module_0 modCall_1 ();
 endmodule
-module module_2 (
-    input wor id_0,
-    input wire id_1,
-    input tri id_2,
-    input tri id_3,
-    input supply0 id_4,
-    input tri id_5,
-    output tri1 id_6,
-    output supply0 id_7,
-    input tri1 id_8,
-    input tri1 id_9,
-    output wand id_10,
-    output tri id_11,
-    output wand id_12,
-    output uwire id_13,
-    output wor id_14,
-    input supply0 id_15,
-    input wor id_16,
-    input wand id_17,
-    input tri0 id_18,
-    input wire id_19,
-    input uwire id_20,
-    input uwire id_21,
-    input uwire id_22,
-    input supply1 id_23,
-    output tri1 id_24
+module module_0 (
+    input  wire  id_0,
+    input  wand  id_1,
+    input  tri0  id_2,
+    output wor   id_3,
+    input  uwire id_4,
+    output wand  id_5
 );
-  reg  id_26;
-  wire id_27;
-  module_0();
-  always id_26 <= #1 1;
+  id_7(
+      .id_0(id_1),
+      .id_1(1),
+      .id_2(id_2),
+      .id_3(1),
+      .id_4(1 | id_3),
+      .id_5(id_5),
+      .id_6("" & 1'h0),
+      .id_7(id_8[1'b0]),
+      .id_8(1'd0),
+      .id_9(1'b0),
+      .id_10(1'b0 == id_1),
+      .id_11(1)
+  );
+  wire id_9;
+  wire id_10;
+  wire id_11 = 1'b0;
+  supply1 id_12 = id_12;
+  uwire id_13 = 1;
+  module_0 modCall_1 ();
+  supply1 module_2 = 1'h0 + 1 - id_1;
+  always @(posedge 1 or posedge id_4) $display;
 endmodule

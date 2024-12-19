@@ -1,26 +1,38 @@
-// Seed: 3211794882
-module module_0;
-  wand id_2;
-  assign id_1[1] = 1 - id_2;
-endmodule
-module module_1 #(
-    parameter id_13 = 32'd70,
-    parameter id_14 = 32'd68,
-    parameter id_15 = 32'd8
-) (
-    output supply0 id_0,
-    input tri1 id_1,
-    input wor id_2
+// Seed: 1586898371
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  always id_0 = 1'b0 ? id_2 : 1;
-  tri0 id_4, id_5;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  reg id_4;
+  assign id_4 = 1;
+  supply1 id_5;
+  initial id_4 <= ~1'b0 == id_5;
+  always $display(1, id_3, id_3, id_3, id_3, 1);
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
   wire id_6;
-  supply1 id_7 = 1;
-  tri0 id_8, id_9, id_10 = id_8;
-  module_0();
-  wire id_11;
-  wire id_12;
-  defparam id_13 = 1, id_14 = $display(
-      id_10, 1
-  ), id_15 = id_4;
+  tri1 id_7 = 1;
+  module_0 modCall_1 (
+      id_1,
+      id_6,
+      id_7
+  );
+  assign modCall_1.type_7 = 0;
+  wire id_8;
+  nor primCall (id_5, id_1, id_4, id_2);
 endmodule

@@ -1,66 +1,43 @@
-// Seed: 345359249
+// Seed: 4130977617
 module module_0 (
-    input wire id_0,
-    input supply0 id_1,
-    input wor id_2,
-    output tri id_3,
-    input tri1 id_4,
-    output wor id_5,
-    input uwire id_6,
-    output tri0 id_7,
-    input supply1 id_8,
-    input tri1 id_9
-    , id_22,
-    input wor id_10,
-    output wire id_11,
-    input tri id_12,
-    input wand id_13,
-    input wire id_14,
-    input supply1 id_15,
-    input uwire id_16,
-    input tri module_0,
-    input wand id_18,
-    input supply1 id_19,
-    input tri1 id_20
+    id_1,
+    id_2
 );
-  id_23(
-      .id_0(id_10), .id_1(), .id_2(id_14), .id_3(id_12)
-  );
+  input wire id_2;
+  input wire id_1;
 endmodule
 module module_1 #(
-    parameter id_8 = 32'd87,
-    parameter id_9 = 32'd8
+    parameter id_18 = 32'd66,
+    parameter id_19 = 32'd28
 ) (
-    output tri0 id_0,
-    input uwire id_1,
-    input tri1 id_2,
-    input supply1 id_3,
-    input wor id_4,
-    output uwire id_5,
-    input wor id_6
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_5 = id_1;
-  defparam id_8.id_9 = 1; module_0(
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  initial assume (1);
+  reg id_4;
+  reg id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14;
+  generate
+    assign id_4 = id_11;
+  endgenerate
+  reg  id_15;
+  wire id_16;
+  wire id_17;
+  always
+    while (id_3) begin : LABEL_0
+      id_9 <= id_15;
+    end
+  module_0 modCall_1 (
       id_3,
-      id_1,
-      id_1,
-      id_0,
-      id_3,
-      id_5,
-      id_6,
-      id_0,
-      id_3,
-      id_2,
-      id_4,
-      id_0,
-      id_2,
-      id_1,
-      id_3,
-      id_1,
-      id_2,
-      id_4,
-      id_1,
-      id_6,
-      id_2
+      id_17
   );
+  defparam id_18.id_19 = 1;
+  tri0 id_20 = 1, id_21;
+  wire id_22;
+  wire id_23;
+  wire id_24;
+  wire id_25;
 endmodule

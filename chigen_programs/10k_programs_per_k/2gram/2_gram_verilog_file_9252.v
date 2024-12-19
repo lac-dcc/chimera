@@ -1,58 +1,47 @@
-// Seed: 3040944024
+// Seed: 3682007475
 module module_0 (
-    input tri1 id_0,
-    input tri0 id_1,
-    input uwire id_2,
-    output tri0 id_3
-    , id_20,
-    input tri0 id_4,
-    output supply1 id_5,
-    input tri0 id_6,
-    output tri0 id_7,
-    output tri1 id_8,
-    output wire id_9,
-    output tri id_10,
-    input tri1 id_11,
-    input tri id_12,
-    input supply1 id_13,
-    input tri id_14,
-    output uwire id_15,
-    input uwire id_16,
-    input wor id_17,
-    output wand id_18
+    id_1
 );
+  output wire id_1;
+  real id_2;
+  assign module_1.type_0 = 0;
+  real id_4 = id_2;
 endmodule
 module module_1 (
-    output tri id_0,
-    input supply0 id_1
-    , id_7,
-    output uwire id_2,
-    input tri id_3,
-    input supply1 id_4,
-    output wire id_5
+    input tri0 id_0,
+    input wor  id_1
 );
-  wire id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16 = id_13;
-  module_0(
-      id_4,
-      id_4,
-      id_4,
-      id_2,
-      id_1,
-      id_2,
-      id_4,
-      id_5,
-      id_0,
-      id_2,
-      id_2,
-      id_1,
-      id_3,
-      id_4,
-      id_1,
-      id_2,
-      id_4,
-      id_1,
-      id_0
+  uwire id_3;
+  id_4(
+      id_1 - 1
   );
-  assign id_13 = id_11;
-  wire id_17;
+  tri1 id_5;
+  assign id_3 = id_1;
+  always
+    if (id_1) begin : LABEL_0
+      if (1) id_4 <= 1;
+      else assign id_4[1'b0] = 1;
+    end
+  assign id_3 = id_3 - id_5;
+  wire id_6;
+  module_0 modCall_1 (id_5);
+endmodule
+module module_2 (
+    input uwire id_0,
+    input wand id_1,
+    input supply1 id_2,
+    input uwire id_3,
+    input wire id_4
+    , id_9,
+    input wand id_5
+    , id_10,
+    output tri id_6,
+    output supply1 id_7
+);
+  wire id_11;
+  wire id_12;
+  module_0 modCall_1 (id_10);
+  assign modCall_1.id_4 = 0.0;
+  wire id_13;
+  assign id_6 = 1;
 endmodule

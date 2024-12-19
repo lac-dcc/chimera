@@ -1,39 +1,57 @@
-// Seed: 2441157398
-module module_0 (
-    output tri0 id_0,
-    input supply1 id_1
-);
-  assign id_0 = id_1;
-  wire id_3;
-  wire id_4;
-  wire id_5 = id_4;
-  assign id_0 = 1;
-  supply0 id_6;
-  assign id_6 = 1;
+// Seed: 1160538747
+module module_0;
+  id_1 :
+  assert property (@(posedge id_1 or {1, id_1}) id_1)
+  else;
+  module_3 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
+  assign module_2.id_0 = 0;
+  assign module_1.id_1 = 0;
 endmodule
 module module_1 (
-    input wor id_0,
-    output logic id_1,
-    input logic id_2,
-    input wire id_3,
-    output wand id_4,
-    input tri id_5,
-    input supply0 id_6,
-    input supply1 id_7,
-    input wand id_8,
-    output supply1 id_9,
-    output supply0 id_10,
-    output logic id_11
+    id_1,
+    id_2
 );
-  assign id_10 = 1;
-  assign id_4  = id_3;
-  always id_1 <= id_2;
-  always id_1 = id_4++;
-  assign id_9 = 1;
-  final @(negedge (1)) fork id_11 <= 'h0; join_any
-  id_13(
-      1
-  ); module_0(
-      id_9, id_5
-  );
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = 1'b0;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    output wire  id_0,
+    output tri1  id_1,
+    output uwire id_2,
+    input  tri0  id_3#(1'b0)
+);
+  assign id_2 = 1;
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  input wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_9 = 1;
+  assign module_0.id_1 = 0;
 endmodule

@@ -1,28 +1,32 @@
-// Seed: 2040809933
-module module_0 ();
-  initial begin
-    id_1 = #id_2 id_2;
-  end
-  wor id_3 = id_3 < id_4;
-  always @(posedge 1) begin
-    id_4 = 1;
-  end
+// Seed: 1297257792
+module module_0;
+  wire id_2;
 endmodule
-module module_1;
-  wor id_2;
-  assign id_1 = 1;
-  module_0();
-  assign id_1 = id_1;
-  assign id_2 = 1;
-  assign id_2 = 1;
+module module_1 (
+    input wire id_0
+    , id_10,
+    output tri1 id_1,
+    input uwire id_2,
+    input tri id_3,
+    output supply1 id_4,
+    output wor id_5,
+    output tri0 id_6,
+    input tri1 id_7,
+    output tri0 id_8
+);
+  module_0 modCall_1 ();
 endmodule
 module module_2 (
-    output uwire id_0,
-    input supply0 id_1,
-    output tri0 id_2,
-    output supply1 id_3,
-    input tri id_4
+    output wire id_0,
+    input  tri1 id_1,
+    output wire id_2,
+    input  wor  id_3
 );
-  assign id_3 = 1;
-  module_0();
+  always @(posedge 1) begin : LABEL_0
+    id_0 = id_3;
+  end
+  module_0 modCall_1 ();
+  always
+  fork : SymbolIdentifier
+  join
 endmodule

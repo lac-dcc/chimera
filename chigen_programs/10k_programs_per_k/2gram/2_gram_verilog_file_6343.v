@@ -1,30 +1,37 @@
-// Seed: 2001639154
+// Seed: 1761956331
 module module_0 (
-    output supply1 id_0
-    , id_8,
-    output supply0 id_1,
-    output supply0 id_2,
-    input tri1 id_3,
-    input supply1 id_4,
-    output tri1 id_5,
-    output uwire id_6
+    input wor   id_0,
+    input uwire id_1
 );
-  assign id_6 = 1;
-  module_2();
+  wire id_3;
 endmodule
 module module_1 (
-    input  wire id_0,
-    input  wand id_1,
-    inout  tri1 id_2,
-    input  tri1 id_3,
-    input  wire id_4,
-    output tri1 id_5
+    output wire  id_0,
+    output uwire id_1,
+    input  uwire id_2,
+    input  tri0  id_3
 );
-  wire id_7;
-  supply0 id_8 = 1;
-  module_0(
-      id_2, id_5, id_5, id_0, id_3, id_5, id_5
+  logic [7:0] id_5;
+  wire id_6;
+  module_0 modCall_1 (
+      id_2,
+      id_2
   );
+  wire id_7;
+  wire id_8;
+  assign id_1 = 1;
+  id_9 :
+  assert property (@(1) 1)
+  else;
 endmodule
-module module_2;
+module module_2 (
+    input  wor   id_0,
+    output uwire id_1
+);
+  wor id_3 = id_0 == ~id_0;
+  module_0 modCall_1 (
+      id_0,
+      id_0
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

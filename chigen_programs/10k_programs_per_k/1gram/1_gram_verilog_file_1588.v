@@ -1,39 +1,56 @@
-// Seed: 2079901198
-module module_0;
-endmodule
-module module_1;
-  assign id_1 = 1;
-  assign id_1 = 1;
-  module_0();
-  always id_1 <= id_1 - 1;
-endmodule : id_2
-module module_2;
-  assign id_1 = 1;
-  assign id_1 = id_1;
-  reg id_2;
-  final id_1 <= id_2;
-  assign id_2   = id_1 * id_2;
-  assign {id_1} = id_1;
-  assign id_2   = 1;
-  module_0();
-  uwire id_3;
-  assign id_3 = 1;
-endmodule
-module module_3 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 1630784341
+module module_0 (
+    input supply0 id_0,
+    input wand id_1,
+    input wor id_2,
+    output wor id_3,
+    input tri0 id_4,
+    output supply0 id_5,
+    input tri id_6,
+    output wand id_7,
+    input tri0 id_8,
+    input tri0 id_9,
+    input wand id_10,
+    input tri1 id_11,
+    input tri1 id_12,
+    input wor id_13,
+    input wand id_14,
+    input supply0 id_15,
+    input wor id_16,
+    input tri0 id_17,
+    input supply0 id_18
 );
-  output wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  wire id_6;
-  assign id_3 = 1;
-  wire id_7, id_8, id_9, id_10, id_11, id_12;
-  tri id_13 = id_3, id_14;
-  module_0();
+  assign id_5 = 1 & (~1);
+  wire id_20, id_21;
+  assign id_3 = 1 == id_16;
+  assign id_5 = {id_0{1 && (id_8)}};
+endmodule
+module module_1 (
+    output uwire id_0
+);
+  always id_0.id_2 = 1;
+  not primCall (id_0, id_2);
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2
+  );
+  assign modCall_1.id_18 = 0;
+  assign id_0 = 1;
 endmodule

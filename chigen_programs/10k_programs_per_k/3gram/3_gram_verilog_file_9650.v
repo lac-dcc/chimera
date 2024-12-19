@@ -1,48 +1,64 @@
-// Seed: 1436720352
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 3542820118
+module module_0 #(
+    parameter id_22 = 32'd46,
+    parameter id_23 = 32'd51
+) (
+    input uwire id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    input tri id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input uwire id_6,
+    input wor id_7,
+    input wand id_8,
+    output supply1 id_9,
+    input uwire id_10,
+    input wor id_11,
+    input wire id_12,
+    input uwire id_13,
+    output supply0 id_14,
+    input supply0 id_15,
+    input wire id_16,
+    input wand id_17,
+    output tri0 id_18,
+    input tri0 id_19,
+    input supply0 id_20
 );
-  inout wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_6;
+  assign module_1.type_12 = 0;
+  defparam id_22.id_23 = 0;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input tri id_1,
-    output supply0 id_2,
-    output wire id_3,
-    output uwire id_4,
-    output wand id_5,
-    input supply0 id_6,
-    input wand id_7,
-    input tri0 id_8,
-    input uwire id_9,
-    input tri0 id_10,
-    input wor id_11,
-    output tri0 id_12,
-    input uwire id_13,
-    output tri1 id_14
+    output wor   id_0,
+    output wor   id_1,
+    input  uwire id_2,
+    output tri   id_3,
+    input  uwire id_4,
+    input  tri0  id_5,
+    input  wor   id_6
 );
-  assign id_12 = 1;
-  supply0 id_16 = id_6;
-  wire id_17;
-  assign id_4 = id_16;
-  tri1 id_18;
-  tri  id_19;
-  module_0(
-      id_19, id_19, id_17, id_18, id_18
+  tri1 id_8 = id_5;
+  module_0 modCall_1 (
+      id_2,
+      id_5,
+      id_5,
+      id_5,
+      id_6,
+      id_4,
+      id_5,
+      id_6,
+      id_6,
+      id_3,
+      id_4,
+      id_8,
+      id_5,
+      id_8,
+      id_3,
+      id_2,
+      id_5,
+      id_8,
+      id_3,
+      id_6,
+      id_4
   );
-  always @(*)
-    for (id_14 = 1; id_18; id_19 = 1'b0) begin
-      if (id_17) assert (id_13);
-    end
-  wire id_20;
-  wire id_21;
 endmodule

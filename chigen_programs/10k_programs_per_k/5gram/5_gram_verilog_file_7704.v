@@ -1,47 +1,60 @@
-// Seed: 1906345795
+// Seed: 2929178216
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input  tri1 id_0,
+    output tri0 id_1
+    , id_5,
+    output wor  id_2,
+    input  wand id_3
 );
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_2 = id_3;
-  assign id_2 = 1 - id_2 || 1 || 1'h0 || id_2 && id_3 && 1'b0 || id_3;
-  id_4(
-      .id_0(id_2),
-      .id_1(1'b0),
-      .id_2(id_3),
-      .id_3(id_2),
-      .id_4(~(id_3) + 1),
-      .id_5(1'h0),
-      .id_6(1),
-      .id_7(1)
-  );
-  wire id_5;
-  wire id_6;
 endmodule
-module module_1 (
-    output wor id_0,
-    input wand id_1,
-    output wand id_2,
-    output tri0 id_3,
-    input supply1 id_4,
-    input tri id_5,
-    output tri id_6,
-    output wand id_7,
-    output uwire id_8,
-    input uwire id_9,
-    input uwire id_10,
-    input supply0 id_11,
-    output tri id_12,
-    input wor id_13,
-    input tri id_14,
-    output wor id_15
+module module_2 (
+    output wire id_0,
+    output wire id_1,
+    output tri0 id_2
+    , id_37,
+    input wire id_3,
+    output wire id_4,
+    output tri0 sample,
+    output supply0 id_6,
+    output tri1 id_7,
+    output wor id_8,
+    input tri0 id_9,
+    input supply1 id_10,
+    input wor id_11,
+    input supply1 id_12,
+    input wand id_13,
+    input wor id_14
+    , id_38,
+    input wor id_15,
+    input uwire id_16,
+    input wand id_17,
+    input uwire module_1,
+    output tri0 id_19,
+    input wor id_20,
+    input supply1 id_21,
+    output wire id_22,
+    output wor id_23,
+    input supply0 id_24,
+    output supply0 id_25,
+    output supply1 id_26,
+    input supply1 id_27,
+    output wire id_28,
+    output uwire id_29,
+    input uwire id_30,
+    input tri id_31,
+    input tri id_32,
+    input tri0 id_33,
+    input tri1 id_34,
+    output tri0 id_35
 );
-  wire  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ;
-  module_0(
-      id_35, id_36, id_17
+  specify
+    (posedge id_39 => (id_40 +: 1)) = (id_39, id_19++: id_31  : 'b0);
+  endspecify
+  module_0 modCall_1 (
+      id_14,
+      id_29,
+      id_29,
+      id_40
   );
+  assign modCall_1.type_2 = 0;
 endmodule

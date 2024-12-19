@@ -1,46 +1,31 @@
-// Seed: 3090205687
+// Seed: 3681554528
 module module_0;
-  wor  id_1 = id_1;
-  wire id_2;
   assign id_1 = 1;
-  wire id_3;
+  assign id_1 = id_1;
+  supply1 id_2;
+  assign id_1 = 1;
+  reg  id_3;
+  wand id_4 = 1;
+  assign id_2 = id_4 ** id_3;
+  id_5 :
+  assert property (@(posedge id_4) 1)
+  else id_3 <= 1;
+  wire id_6, id_7, id_8, id_9, id_10, id_11;
 endmodule
 module module_1 (
-    input  wand id_0,
-    output wire id_1
+    output supply1 id_0,
+    input wire id_1,
+    input supply1 id_2,
+    output wor id_3,
+    input tri id_4
 );
-  module_0();
-  wire id_3;
-endmodule
-module module_2 (
-    input wor id_0,
-    input wand id_1,
-    input wand id_2,
-    output uwire id_3,
-    output wor id_4,
-    input uwire id_5,
-    input tri0 id_6,
-    output wor id_7,
-    output supply0 id_8,
-    output tri1 id_9,
-    input wor id_10,
-    input supply0 id_11,
-    inout supply1 id_12,
-    input wire id_13,
-    input supply1 id_14,
-    input supply0 id_15,
-    output tri1 id_16,
-    input uwire id_17,
-    input supply1 id_18,
-    input wor id_19,
-    input wor id_20,
-    input wire id_21,
-    output tri id_22,
-    input wor id_23
-);
-  wire id_25;
-  module_0();
-  wor  id_26 = 1, id_27;
-  wire id_28;
-  wire id_29;
+  uwire id_6;
+  generate
+    assign id_6 = 1;
+  endgenerate
+  module_0 modCall_1 ();
+  wire id_7;
+  assign id_0 = id_1;
+  tri1 id_8 = 1;
+  tri0  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ,  id_49  ,  id_50  ,  id_51  ,  id_52  ,  id_53  ,  id_54  ,  id_55  ,  id_56  ,  id_57  ,  id_58  ,  id_59  ,  id_60  ,  id_61  ,  id_62  ,  id_63  ,  id_64  ,  id_65  ,  id_66  ,  id_67  ,  id_68  =  1 'b0 &&  id_43  &&  1  ;
 endmodule

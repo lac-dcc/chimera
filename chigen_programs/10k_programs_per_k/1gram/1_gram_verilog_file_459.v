@@ -1,35 +1,35 @@
-// Seed: 3152548829
+// Seed: 3196589436
 module module_0 (
-    id_1
+    output tri1  id_0,
+    output wor   id_1,
+    input  wor   id_2,
+    output tri1  id_3,
+    output wand  id_4,
+    output uwire id_5
 );
-  output wire id_1;
-  assign id_1 = id_2;
 endmodule
 module module_1 (
-    output tri  id_0,
-    input  wire id_1,
-    output tri  id_2
+    input  wire id_0,
+    output wor  id_1,
+    input  tri1 id_2,
+    output tri1 id_3,
+    output tri  id_4
 );
-  wire id_4;
-  wire id_5 = {1};
-  module_0(
-      id_4
+  always begin : LABEL_0
+    @(negedge 1'b0);
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_1
   );
-endmodule
-module module_2 #(
-    parameter id_5 = 32'd59,
-    parameter id_6 = 32'd62
-);
-  assign id_1 = 1;
-  wire id_2;
-  wire id_3, id_4;
-  defparam id_5 = 1, id_6 = id_6;
-  tri1 id_7, id_8;
-  id_9(
-      .id_0(1), .id_1(id_3), .id_2(id_8 == 1), .id_3(id_2), .id_4(id_4)
-  ); module_0(
-      id_4
-  );
-  wire id_10;
-  assign id_2 = 1;
+  assign modCall_1.type_10 = 0;
+  always_comb id_3 = 1;
+  tri0 id_6;
+  assign id_6 = 1;
+  wire id_7, id_8, id_9;
+  assign id_8 = id_9;
 endmodule

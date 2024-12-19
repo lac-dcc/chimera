@@ -1,30 +1,30 @@
-// Seed: 4220524346
-module module_0 ();
-  always @(posedge id_1 or posedge 1 == 1 < id_1 << 1) begin
-    if (id_1) id_1 <= id_1;
-    else disable id_2;
-  end
-  assign id_1 = 1 | id_1;
+// Seed: 4088027552
+module module_0;
+  wire id_1;
 endmodule
 module module_1 (
+    inout wire id_0,
+    output tri1 id_1,
+    output supply0 id_2,
+    input supply0 id_3,
+    input supply0 id_4,
+    output wire id_5
+);
+  wire id_7;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
     id_1,
     id_2,
-    id_3,
-    id_4
+    id_3
 );
-  input wire id_4;
   output wire id_3;
   output wire id_2;
-  inout wire id_1;
-  always_ff @(negedge id_1 == 1) begin
-    fork
-      $display(1, 1 - 1, id_4 - id_1, id_4, id_4);
-      for (id_3 = id_1; id_4; id_1 = id_4) begin
-        id_3 <= 1;
-      end
-    join : id_5
-  end
-  wire id_6;
-  wire id_7;
-  module_0();
+  output wire id_1;
+  wire id_5;
+  module_0 modCall_1 ();
+  id_6 :
+  assert property (@(posedge 1'd0) 1'h0)
+  else $display(1);
+  assign id_4 = 1;
 endmodule

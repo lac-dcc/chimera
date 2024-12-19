@@ -1,51 +1,47 @@
-// Seed: 1010045684
+// Seed: 3310605869
 module module_0 (
-    output tri0 id_0,
-    output supply0 id_1,
-    output supply0 id_2,
-    input supply0 id_3,
-    input wor id_4,
-    input tri id_5,
-    input tri0 id_6,
-    input uwire id_7,
-    output wire id_8,
-    output uwire id_9,
-    input uwire id_10
+    input tri0 id_0,
+    input wor  id_1
 );
-  assign id_1 = 1;
-  for (id_12 = id_6; 1; id_8 = id_12) begin : id_13
-    id_14(
-        .id_0(1), .id_1(1'b0), .id_2(id_7)
-    );
-  end
+  assign id_3[1] = id_3;
 endmodule
 module module_1 (
-    input tri id_0,
-    output uwire id_1,
-    input wor id_2,
-    input tri id_3,
-    input tri1 id_4,
-    output supply1 id_5,
-    input tri id_6,
-    output logic id_7,
-    input tri0 id_8,
-    output wire id_9,
-    input wire id_10,
-    input tri1 id_11,
-    output logic id_12,
-    input tri1 id_13,
-    output supply1 id_14,
-    input wand id_15,
-    inout supply0 id_16
+    input supply1 id_0,
+    input wire id_1,
+    input uwire id_2,
+    output supply0 id_3,
+    input supply0 id_4,
+    input wor id_5,
+    input wire id_6,
+    output supply1 id_7,
+    input supply1 id_8
 );
-  wire id_18;
-  module_0(
-      id_14, id_16, id_14, id_2, id_2, id_13, id_4, id_10, id_1, id_5, id_2
-  ); id_19(
-      .id_0(id_11 / id_16 & id_15), .id_1(1), .id_2(id_5), .id_3(id_14), .id_4(id_15)
+  wire id_10;
+  module_0 modCall_1 (
+      id_6,
+      id_5
   );
-  always_comb @(posedge id_4) begin
-    id_12 <= 1'o0 & id_10;
-    id_7  <= id_7++;
+  assign modCall_1.id_0 = 0;
+endmodule
+module module_2 (
+    input  logic id_0,
+    output tri   id_1,
+    output tri0  id_2
+    , id_6,
+    input  tri   id_3,
+    input  wor   id_4
+);
+  initial begin : LABEL_0
+    id_6 <= id_0;
   end
+  tri0 id_7 = id_0(1, 1, 1) == "", id_8;
+  reg  id_9;
+  module_0 modCall_1 (
+      id_3,
+      id_3
+  );
+  supply1 id_10;
+  wire id_11;
+  reg id_12 = id_9;
+  assign id_6 = id_9;
 endmodule

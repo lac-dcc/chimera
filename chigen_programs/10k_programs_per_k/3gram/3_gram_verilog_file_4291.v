@@ -1,33 +1,34 @@
-// Seed: 340878950
-module module_0;
-  wire id_2 = id_1;
-  module_2();
-  wire id_3;
-  wire id_4;
+// Seed: 3920393129
+module module_0 (
+    input wire id_0,
+    output wand id_1,
+    input supply1 id_2,
+    input wand id_3
+);
+  always_ff @(negedge id_2) $display;
+  module_2 modCall_1 (
+      id_2,
+      id_2
+  );
+  assign modCall_1.type_0 = 0;
+  assign module_1.type_4  = 0;
 endmodule
 module module_1 (
-    output wand id_0,
-    input tri0 id_1,
-    output tri0 id_2
-    , id_10,
-    output uwire id_3,
-    output supply1 id_4,
-    input tri id_5,
-    input supply1 id_6,
-    input tri id_7,
-    output supply0 id_8
+    output wire id_0,
+    output supply0 id_1,
+    input tri0 id_2
 );
-  assign id_3 = 1;
-  module_0();
-  wire id_11;
+  always @(1 or(id_2)) $display(1, id_2 < id_2);
+  module_0 modCall_1 (
+      id_2,
+      id_1,
+      id_2,
+      id_2
+  );
 endmodule
-module module_2;
-  initial begin
-    id_1 = 1;
-  end
-  supply1 id_2 = id_2, id_3 = "" ** 1, id_4;
-  assign id_4 = 1'h0;
-  wire id_5;
-  logic [7:0] id_6;
-  assign id_6[1-:1] = 1'b0;
+module module_2 (
+    input supply0 id_0,
+    input wand id_1
+);
+  always @(posedge id_0);
 endmodule

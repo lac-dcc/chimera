@@ -1,38 +1,51 @@
-// Seed: 918858519
-module module_0 ();
-  wire id_2;
-  initial id_1 = 1 * 1;
-endmodule
-module module_1 (
-    input wand id_0,
-    input tri  id_1,
-    input tri  id_2
-);
-  assign id_4 = 1;
-  module_0();
-endmodule
-module module_2 (
+// Seed: 1008922875
+module module_0 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  inout wire id_2;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
   output wire id_1;
-  initial begin
-    id_1 <= id_2;
-    if (1) id_1 <= 1;
-    else assert (id_2);
-  end
-  module_0();
+  assign id_2 = id_6 ? id_5 : 1;
 endmodule
-module module_3 (
-    input  wire id_0,
-    input  wand id_1,
-    output tri  id_2
+module module_1 #(
+    parameter id_8 = 32'd25,
+    parameter id_9 = 32'd96
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  always @(posedge 1'b0) begin
-    id_2 = 1;
-  end
-  assign id_2 = id_0;
-  assign id_2 = 1;
-  module_0();
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_6;
+  wire id_7;
+  defparam id_8.id_9 = id_3;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_1,
+      id_1,
+      id_6,
+      id_6,
+      id_7,
+      id_2
+  );
+  assign modCall_1.id_5 = 0;
 endmodule

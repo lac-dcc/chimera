@@ -1,52 +1,62 @@
-// Seed: 4216469910
+// Seed: 2597865432
 module module_0 (
-    id_1
+    id_1,
+    id_2,
+    id_3
 );
-  output wire id_1;
-  id_2(
-      .id_0(id_1), .id_1(id_1), .id_2("")
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
+  assign module_1.id_1 = 0;
+endmodule
+module module_1 ();
+  assign #1 id_1 = 1'b0;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1
   );
 endmodule
-module module_1 (
-    output wire id_0,
-    output tri1 id_1,
-    output tri id_2,
-    input tri id_3,
-    output supply0 id_4,
-    output supply1 id_5,
-    input uwire id_6,
-    output uwire id_7,
-    output supply1 id_8,
-    output tri1 id_9,
-    output tri id_10,
-    output wand id_11,
-    input supply0 id_12,
-    input wand id_13,
-    output wor id_14#(.id_33(1'h0)),
-    output wire id_15,
-    output wire id_16,
-    output wire id_17,
-    output uwire id_18,
-    input wor id_19
-    , id_34,
-    output wor id_20,
-    input uwire id_21,
-    output uwire id_22,
-    input tri id_23,
-    output wand id_24,
-    output wire id_25,
-    input wor id_26,
-    input supply0 id_27,
-    output supply1 id_28,
-    output wand id_29,
-    output supply1 id_30,
-    input supply0 id_31
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  wire id_35;
-  id_36 :
-  assert property (@(posedge id_35) id_33)
-  else id_34[1] <= (1);
-  module_0(
-      id_35
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  rtran #1  (1, 1, id_3);
+  module_0 modCall_1 (
+      id_2,
+      id_7,
+      id_7
   );
+  for (id_12 = 1; 1; id_11 = id_3) begin : LABEL_0
+    always @(posedge id_4) begin : LABEL_0
+      begin : LABEL_0
+        id_9 <= 1;
+      end
+    end
+  end
+  assign id_9 = id_1;
+  wire id_14;
+  always @(negedge id_13 * id_10);
+  final $display;
 endmodule

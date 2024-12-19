@@ -1,56 +1,56 @@
-// Seed: 1225834647
-module module_0 (
-    input wire id_0,
-    output wand id_1,
-    input supply1 id_2
-    , id_5,
-    input wand id_3
-    , id_6
-);
-  integer id_7, id_8;
+// Seed: 965958463
+module module_0 ();
+  assign module_3.type_9 = 0;
+  assign id_1 = {1{id_1}} ? id_1 : id_1;
+  assign module_2.type_3 = 0;
+  wire id_2;
+  wire id_3;
 endmodule
-module module_0 (
-    input uwire id_0,
-    input uwire id_1,
-    input logic id_2,
-    input supply1 id_3,
-    input supply1 id_4,
-    input tri id_5,
-    input wand id_6,
-    input wire id_7,
-    input wand id_8,
-    input tri id_9,
-    input uwire id_10,
-    input uwire id_11,
-    output tri1 id_12,
-    input wor id_13,
-    output tri0 id_14,
-    input uwire id_15,
-    input uwire id_16,
-    input uwire id_17,
-    output tri0 id_18,
-    input wire id_19
-    , id_34,
-    output tri1 id_20,
-    input uwire id_21,
-    output tri1 id_22,
-    output supply0 id_23,
-    output wire id_24,
-    input wor id_25,
-    input tri0 module_1,
-    output wand id_27,
-    input supply0 id_28,
-    input uwire id_29,
-    input wire id_30,
-    output wire id_31,
-    output supply0 id_32
+module module_1 (
+    output wire id_0,
+    input  wire id_1,
+    input  tri  id_2
+    , id_7,
+    input  tri1 id_3,
+    output tri  id_4,
+    input  tri0 id_5
 );
-  wire id_35;
-  initial begin
-    id_34 <= id_2;
-    if (id_10) $display(1, 1 ^ 1 == id_21, "", 1);
-  end
-  module_0(
-      id_4, id_12, id_29, id_21
-  );
+  tri id_8 = id_1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    output supply1 id_0,
+    input  supply1 id_1
+);
+  initial
+  fork
+  join : SymbolIdentifier
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    input tri0 id_0,
+    input wire id_1,
+    output supply1 id_2,
+    output wire id_3,
+    input supply0 id_4,
+    input tri id_5,
+    input tri0 id_6,
+    input wand id_7,
+    input tri1 id_8,
+    input uwire id_9,
+    output wand id_10,
+    input tri0 id_11,
+    output supply1 id_12,
+    input uwire id_13,
+    output tri id_14,
+    input wor id_15,
+    inout tri id_16
+    , id_22,
+    input supply1 id_17,
+    input wire id_18,
+    input wire id_19,
+    output tri0 id_20
+);
+  module_0 modCall_1 ();
 endmodule

@@ -1,46 +1,30 @@
-// Seed: 3037889568
-module module_0 ();
-  assign id_1 = "" >= id_1;
+// Seed: 442782147
+module module_0 (
+    input tri1 id_0,
+    input wand id_1
+);
+  logic [7:0][1] id_3;
+  wire id_4, id_5, id_6;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    output supply1 id_1,
+    output tri0 id_0#(.id_8((1) & id_8)),
+    inout uwire id_1,
     input wor id_2,
-    output wire id_3,
+    input wand id_3,
     input wand id_4,
-    output tri id_5
-    , id_10,
-    input uwire id_6,
-    input wand id_7,
-    output supply1 id_8
+    output supply0 id_5,
+    output wor id_6
 );
-  supply0 id_11, id_12;
-  reg id_13;
-  supply1 id_14, id_15;
-  reg id_16;
-  always begin
-    @(posedge id_4 / id_0 or posedge id_11 or id_0) id_16 <= 1;
-    if (1'd0) id_10 <= 1;
-    if (1) id_13 <= 1'b0;
-    else id_15 = 1;
-  end
-  nand (
+  uwire id_9 = 1, id_10;
+  module_0 modCall_1 (
       id_1,
-      id_10,
-      id_11,
-      id_12,
-      id_13,
-      id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_2,
-      id_4,
-      id_6,
-      id_7
+      id_2
   );
-  wire id_17, id_18, id_19;
-  module_0();
+  wor id_11;
+  supply1 id_12;
+  assign id_1 = id_11;
+  wire id_13;
+  assign id_12 = id_1;
+  wire id_14;
+  assign id_10 = 1;
 endmodule

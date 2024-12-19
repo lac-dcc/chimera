@@ -1,49 +1,59 @@
-// Seed: 2424630553
+// Seed: 3559118824
 module module_0 (
-    output wire id_0,
-    input wire id_1,
-    output supply1 id_2,
-    input wor id_3,
-    input supply1 id_4,
-    input tri id_5,
-    input wand id_6,
-    input wire id_7,
-    output wire id_8,
-    input tri0 id_9,
-    input tri1 id_10,
-    output tri id_11
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  wire id_13;
-  wire id_14;
-  assign id_14 = id_13;
-  wire id_15;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  wire id_5;
 endmodule
 module module_1 (
-    output supply0 id_0,
-    input supply1 id_1,
-    output supply1 id_2,
-    output tri0 id_3,
-    inout wire id_4,
-    input wire id_5,
-    input wor id_6,
-    input wand id_7,
-    input tri0 id_8,
-    input tri0 id_9,
-    input tri1 id_10,
-    output tri0 id_11,
-    input tri id_12,
-    input tri id_13,
-    input uwire id_14,
-    input uwire id_15,
-    input wire id_16,
-    input supply1 id_17,
-    input supply0 id_18,
-    input wand id_19,
-    output tri id_20,
-    output tri1 id_21
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  always @(posedge 1 or posedge 1) $display(1, 1, 1);
-  module_0(
-      id_2, id_10, id_2, id_19, id_9, id_19, id_4, id_12, id_0, id_13, id_9, id_4
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_5 = id_2;
+  module_0 modCall_1 (
+      id_3,
+      id_6,
+      id_3,
+      id_2
   );
+endmodule
+module module_0 (
+    output tri0 id_0,
+    output tri1 module_2,
+    input supply0 id_2,
+    output tri id_3,
+    input logic id_4,
+    input supply1 id_5,
+    input wire id_6,
+    output supply1 id_7
+);
+  wire id_9;
+  module_0 modCall_1 (
+      id_9,
+      id_9,
+      id_9,
+      id_9
+  );
+  assign modCall_1.id_2 = 0;
+  wire id_10;
+  always force id_3 = id_4;
+  specify
+    (id_11 => id_12) = 1;
+  endspecify
 endmodule

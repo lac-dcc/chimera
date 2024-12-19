@@ -1,48 +1,56 @@
-// Seed: 3930898060
-module module_0 (
-    input tri id_0,
-    input supply1 id_1,
-    input tri id_2,
-    input supply1 id_3,
-    output uwire id_4
-);
+// Seed: 2805482019
+module module_0;
+  assign id_1 = id_1;
+  wire id_2;
+  wire id_3;
+  wire id_4;
+  wire id_5;
+  module_2 modCall_1 (
+      id_4,
+      id_4,
+      id_5,
+      id_4,
+      id_4,
+      id_2
+  );
+  assign modCall_1.type_24 = 0;
+  assign id_4 = id_3;
+  wire id_6;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input wand id_1,
-    output tri1 id_2,
-    output tri0 id_3,
-    output wor id_4
+    id_1,
+    id_2
 );
-  id_6 :
-  assert property (@(posedge id_1) 1)
-  else begin
-    $display(1 ? 1'b0 : 1'd0 ? 1'b0 : id_0);
-  end
-  module_0(
-      id_1, id_0, id_0, id_1, id_2
-  );
+  input wire id_2;
+  inout wire id_1;
+  assign id_1 = id_2;
+  module_0 modCall_1 ();
 endmodule
 module module_2 (
-    output wor id_0,
-    input wire id_1,
-    input tri1 id_2,
-    output wor id_3,
-    input tri1 id_4,
-    output tri id_5,
-    output supply1 id_6,
-    input tri1 id_7,
-    input tri id_8,
-    output uwire id_9,
-    input uwire id_10,
-    output uwire id_11,
-    input wand id_12,
-    output wire id_13,
-    input tri id_14
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  wire id_16, id_17, id_18;
-  xnor (id_13, id_8, id_4, id_16, id_18, id_1, id_10, id_7, id_17, id_12, id_14);
-  module_0(
-      id_4, id_2, id_4, id_2, id_13
-  );
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_7;
+  wire id_8;
+  wor id_9, id_10, id_11, id_12;
+  always @(posedge id_5) cover ("" + id_9);
+  tri0 id_13;
+  logic [7:0] id_14;
+  wire id_15;
+  wire id_16, id_17;
+  wire id_18;
+  wand id_19 = id_13 % 1;
+  wire id_20;
+  assign id_5 = id_14[""];
+  wire id_21;
 endmodule

@@ -1,60 +1,43 @@
-// Seed: 3498887096
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  inout wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  wire id_6 = 1;
+// Seed: 2735933167
+module module_0;
+  wire id_1;
+  assign module_2.id_9 = 0;
+  assign id_1 = id_1;
 endmodule
 module module_1 (
-    output tri  id_0,
-    input  wand id_1,
-    output wire id_2
+    id_1,
+    id_2
 );
+  inout wire id_2;
+  inout wire id_1;
+  always #1 id_2 = id_1;
+  wor id_3 = 1;
+  module_0 modCall_1 ();
   wire id_4;
-  wire id_5;
-  module_0(
-      id_4, id_4, id_5, id_4, id_4
-  );
 endmodule
 module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    input supply0 id_0,
+    output tri1 id_1,
+    input uwire id_2,
+    input tri id_3,
+    input wire id_4,
+    input tri0 id_5,
+    input wor id_6,
+    input wand id_7,
+    input wire id_8,
+    input wand id_9,
+    input tri0 id_10,
+    input tri id_11,
+    input uwire id_12,
+    input tri0 id_13,
+    output wor id_14,
+    output tri0 id_15,
+    input wand id_16,
+    input supply0 id_17,
+    output tri0 id_18
 );
-  input wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  always @(posedge 1);
-  module_0(
-      id_4, id_4, id_5, id_9, id_4
-  );
-  wire id_10;
-  assign id_4 = id_3;
-  final begin
-    if (1) begin
-      #1 begin
-        id_6 <= 1;
-      end
-    end
-  end
+  module_0 modCall_1 ();
+  wire id_20;
+  wire id_21;
+  assign id_1 = id_9;
 endmodule

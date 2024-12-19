@@ -1,54 +1,45 @@
-// Seed: 3201828888
-module module_0 #(
-    parameter id_8 = 32'd3,
-    parameter id_9 = 32'd33
-) (
-    output tri1  id_0,
-    input  uwire id_1,
-    input  wor   id_2,
-    output tri1  id_3,
-    input  tri   id_4,
-    input  uwire id_5,
-    output tri   id_6
-);
-  defparam id_8.id_9 = 1'b0;
+// Seed: 3742224621
+module module_0;
+  assign id_1 = id_1;
+  assign module_2.type_5 = 0;
+  assign module_1.id_1 = 0;
 endmodule
-module module_1 (
-    output tri0 id_0,
-    input tri id_1,
-    input tri1 id_2,
-    output supply0 id_3,
-    input wand id_4,
-    output uwire id_5,
-    input tri1 id_6,
-    output tri1 id_7,
-    output tri1 id_8,
-    output wire id_9,
-    output uwire id_10,
-    inout wor id_11,
-    input wire id_12,
-    output wand id_13,
-    input uwire id_14,
-    output wire id_15,
-    input supply0 id_16,
-    output wire id_17,
-    output supply1 id_18
+module module_1 ();
+  assign id_1 = 1;
+  wire id_2;
+  assign id_1 = 1;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input tri1 id_1,
+    output tri id_2,
+    output tri0 id_3,
+    output supply0 id_4,
+    input tri1 id_5,
+    input wand id_6,
+    input uwire id_7,
+    output wire id_8,
+    input uwire id_9,
+    output wor id_10,
+    output wire id_11,
+    input wand id_12
+    , id_25,
+    output uwire id_13,
+    output wire id_14,
+    input supply0 id_15,
+    input supply1 id_16,
+    output tri1 id_17,
+    input wire id_18,
+    input supply1 id_19,
+    output tri id_20,
+    input supply0 id_21,
+    output tri0 id_22,
+    output tri1 id_23
 );
-  tri id_20;
-  always
-    if (1) begin
-      do
-      @(posedge id_14) begin
-        disable id_21;
-      end
-      while (id_20);
-    end
-  module_0(
-      id_15, id_1, id_6, id_13, id_6, id_6, id_13
-  );
-  if (id_2) begin : id_22
-    assign id_11 = 1;
-  end else begin
-    assign id_10 = id_4;
-  end
+  supply1 id_26 = 1;
+  assign id_11 = id_16;
+  assign id_8  = id_7 == (1);
+  always @(*);
+  module_0 modCall_1 ();
 endmodule

@@ -1,33 +1,36 @@
-// Seed: 4200520117
-module module_0;
-  id_1(
-      .id_0(id_2), .id_1(id_2)
-  );
+// Seed: 2314573356
+module module_0 (
+    input tri1 id_0,
+    output supply1 id_1,
+    output wand id_2
+);
+  wire id_4;
+  wire id_5;
+  wire id_6;
+  module_2 modCall_1 ();
+  wire id_7;
+  initial $display(1);
+  assign module_1.type_6 = 0;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    input supply1 id_1,
-    input wire id_2,
-    input supply1 id_3
-    , id_6,
-    output supply1 id_4
+    output tri   id_0,
+    input  tri1  id_1,
+    input  uwire id_2,
+    output wor   id_3,
+    output tri1  id_4
 );
-  logic [7:0] id_7;
-  wire id_8;
-  assign id_7[1] = 1;
-  xor (id_4, id_6, id_7, id_8);
-  module_0();
+  assign id_3 = id_1;
+  module_0 modCall_1 (
+      id_2,
+      id_3,
+      id_4
+  );
 endmodule
-module module_2 (
-    input wand id_0
-    , id_5,
-    input tri1 id_1,
-    input wire id_2,
-    input wor  id_3
-);
-  assign id_5 = 1;
-  always @(posedge 'b0) begin
-    id_5 <= "";
+module module_2;
+  initial begin : LABEL_0
+    id_1 <= 1;
+    id_1 <= (1) == id_1 ? 1 : "";
+    id_1 = id_1;
   end
-  module_0();
+  assign module_0.id_0 = 0;
 endmodule

@@ -1,39 +1,47 @@
-// Seed: 1105896942
-module module_0;
-  wire id_2;
+// Seed: 3157886824
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_5 = id_1;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    input  tri1  id_0,
-    input  wire  id_1,
-    input  wand  id_2,
-    output wire  id_3,
-    output tri   id_4,
-    output tri0  id_5,
-    output tri   id_6,
-    input  uwire id_7,
-    input  tri0  id_8,
-    input  tri   id_9,
-    input  tri   id_10
+    input wor id_0,
+    input supply0 id_1,
+    input uwire id_2,
+    input wand id_3,
+    output supply1 id_4,
+    output uwire id_5
 );
-  always @(posedge id_9) begin
-    disable id_12;
-    wait (id_12);
-  end
-  module_0();
+  wire id_7;
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
+  );
+  wire id_8;
 endmodule
-module module_2 (
-    input tri0 id_0,
-    output tri id_1,
-    input wor id_2,
-    input uwire id_3,
-    input supply1 id_4,
-    input tri id_5,
-    output supply1 id_6,
-    output wand id_7,
-    output tri0 id_8,
-    input wand id_9
-);
-  id_11(
-      .id_0(id_6), .id_1(id_6), .id_2(1), .id_3(id_8), .id_4(1), .id_5(1 < 1)
-  ); module_0();
+module module_2;
+  initial begin : LABEL_0
+    if (1'h0) id_1 = 1;
+  end
+  always id_2 <= #id_2 id_2;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
 endmodule

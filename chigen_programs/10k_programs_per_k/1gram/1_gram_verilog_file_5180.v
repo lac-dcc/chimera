@@ -1,37 +1,29 @@
-// Seed: 3355059523
+// Seed: 3972724028
 module module_0;
-  id_1(
-      .id_0((1))
-  );
-  assign id_1 = id_1;
-  assign id_1 = id_1;
+  wire id_2 = ~&1, id_3;
 endmodule
 module module_1 (
-    id_1,
-    id_2
+    output tri0 id_0,
+    input tri1 id_1,
+    input wor id_2,
+    input tri0 id_3,
+    output wire id_4,
+    input wor id_5
+    , id_18 = id_18,
+    output wire id_6,
+    output tri1 id_7,
+    input tri0 id_8,
+    output uwire id_9,
+    output supply1 id_10,
+    inout tri id_11,
+    output tri0 id_12,
+    input tri id_13,
+    input wor id_14,
+    output tri0 id_15,
+    input tri0 id_16
 );
-  inout wire id_2;
-  output wire id_1;
-  always #1
-    case ((id_2))
-      1: $display(id_2 >> 1);
-      1 == id_2: id_1 <= 1'd0;
-      id_2: begin
-        $display(1 - 1);
-        id_2 <= id_2;
-      end
-      id_2.id_2:
-      @* begin
-        id_1 <= "";
-      end
-    endcase
-  final if (id_2) id_2 <= 1;
-  assign id_1 = 'b0;
-  initial id_1 = id_2;
-  final
-    if ("");
-    else @(posedge id_2 + id_2) id_2 <= 1;
-  always id_1 <= 1;
-  module_0();
-  wire id_3;
+  wire id_19;
+  module_0 modCall_1 ();
+  wire id_20 = !1, id_21;
+  assign id_18 = id_19;
 endmodule

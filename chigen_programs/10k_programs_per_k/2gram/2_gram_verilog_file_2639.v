@@ -1,66 +1,56 @@
-// Seed: 1945300414
-module module_0 ();
-  wire id_1;
+// Seed: 666622830
+module module_0 (
+    output tri0  id_0,
+    input  uwire id_1,
+    input  tri   id_2
+    , id_4
+);
+  wire id_5;
+  module_2 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_2,
+      id_2
+  );
+  wire id_6;
+  assign module_1.id_3 = 0;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input wor id_1,
-    output wor id_2,
-    input supply1 id_3,
-    output wand id_4,
-    output wor id_5,
-    output wor id_6,
-    input tri0 id_7,
-    output wire id_8,
-    input wire id_9,
-    output wire id_10
-    , id_47,
-    input wire id_11,
-    input tri0 id_12,
-    input supply0 id_13,
-    output tri1 id_14,
-    input wand id_15,
-    input uwire id_16,
-    output tri0 id_17,
-    input supply1 id_18,
-    output tri1 id_19,
-    input wor id_20,
-    input tri0 id_21,
-    input uwire id_22,
-    output tri id_23,
-    input wor id_24
-    , id_48, id_49,
-    input wor id_25,
-    output uwire id_26,
-    input wire id_27,
-    input tri id_28,
-    input tri id_29,
-    input wand id_30,
-    input wire id_31,
-    output tri1 id_32,
-    output tri0 id_33,
-    input wire id_34,
-    output tri id_35,
-    output tri0 id_36,
-    input tri id_37,
-    input uwire id_38,
-    output tri0 id_39,
-    output wor id_40,
-    input supply1 id_41,
-    input wire id_42,
-    output wor id_43,
-    output supply0 id_44,
-    output supply0 id_45
+    output wand id_0,
+    input  tri0 id_1,
+    output tri0 id_2,
+    input  tri1 id_3,
+    input  wand id_4,
+    input  tri0 id_5
 );
-  wire id_50;
-  wire id_51;
-  supply1 id_52 = 1, id_53, id_54;
-  supply1 id_55, id_56, id_57 = 1;
-  wire id_58;
-  assign id_35 = 1;
-  wire id_59;
-  module_0();
-  wire id_60;
-  always_comb if (1) id_35 = 1'h0;
-  assign id_59 = 1;
+  assign id_0 = id_3;
+  module_0 modCall_1 (
+      id_2,
+      id_5,
+      id_3
+  );
+endmodule
+module module_2 (
+    input tri0 id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    output tri id_3,
+    output tri id_4,
+    output wire id_5,
+    output wire id_6,
+    input wand id_7,
+    input tri0 id_8,
+    input wand id_9,
+    input supply1 id_10
+);
+  wire id_12;
+  assign id_6 = 1;
+  assign module_0.id_2 = 0;
 endmodule

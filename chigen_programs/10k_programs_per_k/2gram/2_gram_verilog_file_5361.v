@@ -1,49 +1,41 @@
-// Seed: 856637933
-module module_0 (
+// Seed: 1791159412
+module module_0;
+  wire id_1;
+  module_2 modCall_1 (
+      id_1,
+      id_1,
+      id_1
+  );
+  assign modCall_1.id_2 = 0;
+  assign id_1 = id_1;
+  wire id_2;
+  assign module_1.type_9 = 0;
+endmodule
+module module_1 #(
+    parameter id_7 = 32'd62,
+    parameter id_8 = 32'd75
+) (
+    input  uwire id_0,
+    input  wire  id_1,
+    output tri1  id_2,
+    input  tri0  id_3
+);
+  tri0 id_5 = id_3;
+  wire id_6;
+  module_0 modCall_1 ();
+  defparam id_7.id_8 = 1;
+  assign id_6 = $display();
+endmodule
+module module_2 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_3
 );
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
+  input wire id_3;
   inout wire id_2;
-  output wire id_1;
-  wire id_12;
-endmodule
-module module_1 (
-    .id_5(id_1),
-    id_2,
-    id_3,
-    id_4
-);
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
   input wire id_1;
-  supply1 id_6;
-  module_0(
-      id_3, id_6, id_3, id_2, id_3, id_4, id_5, id_5, id_3, id_6, id_6
-  );
-  assign id_6 = 1;
-  assign id_4 = 1 == 1 ? 1 : 1;
-  initial begin
-    id_3 = 1;
-  end
-  assign id_4 = id_3;
-  always id_5 = 1;
+  wire id_4;
+  wire id_5;
+  assign id_2 = id_1;
+  integer id_6;
 endmodule

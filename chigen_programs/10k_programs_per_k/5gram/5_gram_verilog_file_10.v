@@ -1,53 +1,54 @@
-// Seed: 1158359002
-module module_0 (
-    input tri1 id_0,
-    output tri0 id_1,
-    output tri0 id_2,
-    output tri0 id_3,
-    input tri id_4,
-    input tri id_5,
-    input uwire id_6,
-    input uwire id_7,
-    input supply1 id_8
+// Seed: 2123960507
+module module_0 #(
+    parameter id_1 = 32'd30,
+    parameter id_2 = 32'd33
+) ();
+  defparam id_1.id_2 = id_1;
+  assign module_2.type_29 = 0;
+  assign module_1.id_5 = 0;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    input supply0 id_2,
+    input wand id_3,
+    input supply0 id_4,
+    input wire id_5,
+    input wor id_6,
+    input tri0 id_7
 );
-  assign id_2 = 1'd0;
+  assign id_9 = 1 | 1;
+  module_0 modCall_1 ();
 endmodule
 module module_0 (
-    input tri id_0,
-    input wire id_1,
-    input tri0 id_2,
-    output tri1 id_3,
-    output wire id_4,
-    output wand id_5,
-    input uwire id_6,
-    input tri1 id_7,
-    output supply1 id_8,
-    input tri0 id_9,
-    input wor id_10,
-    output tri0 id_11,
-    input wire id_12,
-    output tri id_13,
-    input wand id_14,
-    input tri0 id_15,
-    input tri id_16,
-    input tri id_17,
-    output wire id_18,
-    input uwire id_19,
-    input wor id_20,
-    output wor id_21,
-    input tri id_22,
-    output uwire id_23,
-    output tri0 id_24,
-    input wor id_25,
-    input tri1 module_1,
-    output supply1 id_27,
-    input uwire id_28,
-    input wor id_29
+    input supply0 id_0,
+    output wor id_1,
+    output wire id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input supply1 id_5,
+    inout supply0 id_6,
+    output supply1 id_7,
+    input wand id_8,
+    input tri id_9,
+    input uwire id_10,
+    input uwire id_11,
+    input wor id_12,
+    input wor id_13,
+    input uwire module_2,
+    output uwire id_15,
+    input uwire id_16,
+    input supply0 id_17,
+    input tri id_18,
+    output wor id_19,
+    output tri1 id_20,
+    output tri id_21,
+    input wand id_22,
+    output supply1 id_23,
+    input wand id_24,
+    output wire id_25
 );
-  final $display(1);
-  module_0(
-      id_0, id_5, id_27, id_5, id_14, id_2, id_14, id_17, id_22
-  ); id_31(
-      .id_0(id_9), .id_1(1'b0), .id_2(1), .id_3(id_28), .id_4(1), .id_5(id_12)
-  );
+  final $display(id_4);
+  module_0 modCall_1 ();
+  wire id_27;
 endmodule

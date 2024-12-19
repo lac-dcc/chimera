@@ -1,36 +1,5 @@
-// Seed: 3051440182
-module module_0;
-  wand id_1 = 1, id_2;
-  module_2(
-      id_2, id_1, id_1
-  );
-endmodule
-module module_1 (
-    input  wor   id_0,
-    input  uwire id_1,
-    output tri1  id_2
-);
-  wire id_4;
-  module_0();
-  wire id_5;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_4;
-endmodule
-module module_3;
-  assign id_1 = id_1 ? id_1 : id_1 | 1;
-  module_2(
-      id_1, id_1, id_1
-  );
-endmodule
-module module_4 (
+// Seed: 2979617513
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -42,18 +11,65 @@ module module_4 (
     id_9,
     id_10
 );
-  output wire id_10;
-  output wire id_9;
+  input wire id_10;
+  inout wire id_9;
   inout wire id_8;
   output wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  input wire id_4;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
   input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_5 = 1'h0;
-  module_2(
-      id_6, id_6, id_5
+  input wire id_2;
+  output wire id_1;
+  assign module_1.type_5 = 0;
+endmodule
+module module_0 (
+    input  wand  id_0,
+    output wire  id_1,
+    input  tri   id_2,
+    input  tri   id_3,
+    input  wire  module_1
+    , id_15,
+    input  uwire id_5,
+    input  wor   id_6,
+    input  tri1  id_7,
+    output logic id_8,
+    output logic id_9,
+    input  tri0  id_10,
+    output wire  id_11,
+    output tri   id_12,
+    output tri0  id_13
+);
+  wire id_16;
+  assign id_11 = id_6;
+  tri id_17;
+  task automatic id_18;
+    id_18 = 1;
+  endtask
+  module_0 modCall_1 (
+      id_17,
+      id_17,
+      id_17,
+      id_17,
+      id_16,
+      id_17,
+      id_16,
+      id_17,
+      id_17,
+      id_16
   );
+  wor id_19;
+  initial begin : LABEL_0
+    #1;
+    id_18 <= 1'b0 + 1;
+    id_15 <= 1;
+    if (id_17) begin : LABEL_0
+      if (id_18) begin : LABEL_0
+        id_9 <= 1'b0;
+      end else begin : LABEL_0
+        id_17 = id_19;
+      end
+    end
+    if (id_4) id_8 <= 1;
+  end
 endmodule

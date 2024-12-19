@@ -1,32 +1,31 @@
-// Seed: 778065052
-module module_0 (
-    output uwire id_0,
-    input supply1 id_1,
-    output wor id_2
-);
-  wire id_4;
+// Seed: 2169186047
+module module_0 ();
+  assign id_1 = id_1;
+  assign id_1 = id_1;
+  reg  id_2;
+  reg  id_3;
+  tri0 id_4;
+  reg  id_5 = id_4 - !id_2;
+  always @(posedge 1 or id_5) begin : LABEL_0
+    if (id_5) begin : LABEL_0
+      id_2 <= #1 id_5;
+    end
+  end
+  reg id_6;
+  assign id_6 = id_1 && id_3;
+  always @(posedge id_3, id_3) id_5 = id_3;
+  assign id_6 = id_5;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    output wand id_1,
-    input supply0 id_2,
-    input wor id_3,
-    input wire id_4,
-    output wand id_5,
-    output logic id_6
+    id_1,
+    id_2
 );
-  supply1 id_8;
-  always @(!id_2) begin
-    id_6 <= "";
-  end
-  supply0 id_9;
-  module_0(
-      id_8, id_9, id_1
+  output wire id_2;
+  inout wire id_1;
+  integer id_3 (
+      .id_0(id_1),
+      .id_1(),
+      .id_2(id_4)
   );
-  assign id_5 = {id_8{1'h0}};
-  supply1 id_10 = id_0 == 1;
-  initial begin
-    cover ({id_8, id_9});
-    deassign id_9;
-  end
+  module_0 modCall_1 ();
 endmodule

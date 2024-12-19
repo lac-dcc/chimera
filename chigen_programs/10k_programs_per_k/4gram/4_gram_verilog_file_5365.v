@@ -1,86 +1,58 @@
-// Seed: 213505585
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
-);
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  input wire id_18;
-  output wire id_17;
-  inout wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  output wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_22;
-  assign id_19 = 1'd0;
+// Seed: 1880989439
+module module_0;
+  assign id_1 = id_1;
+  tri1 id_2;
+  assign id_2 = 1;
+  wire id_3;
+  wire module_0;
+  wire id_4;
+  final $display(id_2 == 1);
+  wire id_5;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    input tri id_0,
+    input tri1 id_1,
+    input uwire id_2,
+    input supply0 id_3,
+    input wire id_4,
+    input tri0 id_5,
+    output wor id_6,
+    input wand id_7,
+    input wire id_8,
+    input wand id_9,
+    input tri0 id_10,
+    input tri id_11,
+    input uwire id_12,
+    input tri0 id_13,
+    input wor id_14,
+    input tri0 id_15,
+    output wand id_16,
+    output supply0 id_17
+    , id_41,
+    output tri0 id_18
+    , id_42,
+    input supply1 id_19,
+    input tri1 id_20,
+    output tri0 id_21,
+    inout tri1 id_22,
+    input wor id_23,
+    input tri0 id_24,
+    output wire id_25,
+    output wand id_26,
+    output tri0 id_27,
+    input supply0 id_28,
+    output supply1 id_29,
+    input tri1 id_30,
+    input wor id_31,
+    output wand id_32,
+    output tri1 id_33,
+    output wand id_34,
+    input uwire id_35,
+    input tri1 id_36,
+    input wire id_37,
+    output tri1 id_38,
+    output supply1 id_39
 );
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wor  id_4;
-  wire id_5;
-  assign id_4 = 1 === id_1[1 : 1];
-  tri0 id_6;
-  module_0(
-      id_4,
-      id_6,
-      id_4,
-      id_4,
-      id_6,
-      id_4,
-      id_5,
-      id_5,
-      id_4,
-      id_6,
-      id_6,
-      id_2,
-      id_4,
-      id_4,
-      id_4,
-      id_5,
-      id_6,
-      id_5,
-      id_6,
-      id_4,
-      id_4
-  ); id_7 :
-  assert property (@(posedge 1 & (id_6)) 1)
-  else $display;
+  assign id_39 = 1'b0 * 1;
+  module_0 modCall_1 ();
 endmodule

@@ -1,30 +1,64 @@
-// Seed: 743746855
-module module_0 ();
-  always $display(id_1);
-  wire id_3;
-  assign id_1 = 1;
-endmodule
-module module_1 #(
-    parameter id_10 = 32'd84,
-    parameter id_7  = 32'd92,
-    parameter id_8  = 32'd72,
-    parameter id_9  = 32'd72
-) (
+// Seed: 1322726143
+module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4,
+    id_5
 );
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
   output wire id_1;
-  assign id_1 = id_3;
-  module_0();
-  uwire id_5;
-  wire  id_6;
-  defparam id_7 = id_5, id_8 = 1, id_9 = 1, id_10 = id_5;
-  always_comb id_1 <= 1;
-  wire id_11, id_12;
-  assign id_11 = id_12;
+  wire id_6;
+  wire id_7;
+  assign id_1 = id_3.id_6;
+  wire id_8;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input uwire id_1,
+    input wor id_2,
+    input wor id_3
+    , id_28,
+    output uwire id_4,
+    input uwire id_5,
+    inout uwire id_6,
+    input supply0 id_7,
+    inout tri id_8,
+    output tri id_9,
+    output supply1 id_10,
+    input wire id_11,
+    input wire id_12,
+    input tri1 id_13,
+    output supply1 id_14,
+    output tri1 id_15,
+    output tri id_16,
+    output wand id_17,
+    input wire id_18,
+    input wor id_19,
+    input supply0 id_20,
+    input supply1 id_21,
+    input wand id_22,
+    output supply1 id_23,
+    input supply0 id_24,
+    output supply1 id_25,
+    input tri id_26
+);
+  assign id_4 = id_6;
+  wire id_29;
+  wire id_30, id_31;
+  id_32(
+      id_5
+  );
+  wor id_33, id_34 = id_3, id_35;
+  module_0 modCall_1 (
+      id_29,
+      id_28,
+      id_30,
+      id_29,
+      id_28
+  );
+  always disable id_36;
 endmodule

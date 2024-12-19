@@ -1,37 +1,50 @@
-// Seed: 1720585430
+// Seed: 1086928776
 module module_0 #(
-    parameter id_7 = 32'd15,
-    parameter id_8 = 32'd96
+    parameter id_11 = 32'd84,
+    parameter id_12 = 32'd27,
+    parameter id_13 = 32'd36,
+    parameter id_14 = 32'd5,
+    parameter id_15 = 32'd46,
+    parameter id_16 = 32'd29,
+    parameter id_17 = 32'd13,
+    parameter id_18 = 32'd57,
+    parameter id_19 = 32'd24,
+    parameter id_20 = 32'd95,
+    parameter id_21 = 32'd82,
+    parameter id_22 = 32'd45
 ) (
-    output tri id_0,
-    output wor id_1,
-    input tri id_2,
-    output tri1 id_3,
-    output supply0 id_4
+    input wor id_0,
+    input wand id_1,
+    input wor id_2,
+    input uwire id_3,
+    output supply1 id_4,
+    input wor sample,
+    input supply1 id_6,
+    input tri0 id_7,
+    output wor module_0,
+    output tri0 id_9
 );
-  wire id_6;
-  defparam id_7.id_8 = 1;
+  defparam  id_11  .  id_12  =  1  ,  id_13  .  id_14  =  1  ,  id_15  .  id_16  = "" &  1  ,  id_17  .  id_18  =  id_18  ,  id_19  .  id_20  =  1  ,  id_21  .  id_22  =  1  ==  1  ;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input supply0 id_1,
-    output wire id_2
-    , id_15,
-    input wire id_3,
-    input tri id_4,
-    output wire id_5,
-    input tri id_6,
-    input tri0 id_7,
-    output wor id_8,
-    output wor id_9,
-    input supply0 id_10
-    , id_16,
-    input supply0 id_11,
-    output supply1 id_12,
-    output supply1 id_13
+    input  tri1  id_0,
+    input  wire  id_1,
+    input  uwire id_2,
+    input  wire  id_3,
+    input  wire  id_4,
+    output wand  id_5
 );
-  assign id_16 = id_6;
-  module_0(
-      id_16, id_5, id_15, id_5, id_5
+  module_0 modCall_1 (
+      id_2,
+      id_0,
+      id_2,
+      id_1,
+      id_5,
+      id_3,
+      id_4,
+      id_4,
+      id_5,
+      id_5
   );
+  assign modCall_1.type_2 = 0;
 endmodule

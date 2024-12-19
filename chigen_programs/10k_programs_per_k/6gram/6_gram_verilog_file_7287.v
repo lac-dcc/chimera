@@ -1,74 +1,53 @@
-// Seed: 406500914
-module module_0 (
-    input uwire id_0,
-    input wor id_1,
-    input uwire id_2,
-    output tri id_3,
-    output wand id_4,
-    input wire id_5,
-    input wor id_6,
-    input supply0 id_7,
-    input wor id_8,
-    input uwire id_9,
-    input uwire id_10,
-    input uwire id_11,
-    output supply0 id_12,
-    output tri id_13,
-    output tri id_14,
-    output supply1 id_15,
-    output wire id_16,
-    input wire id_17
-    , id_24,
-    output supply1 id_18,
-    input wand id_19,
-    input supply1 id_20,
-    output supply0 id_21
-    , id_25,
-    output supply1 id_22
-);
-  assign id_25 = 1;
-  assign id_15 = id_24;
+// Seed: 2458681817
+module module_0;
+  wire id_2;
+  assign module_1.type_15 = 0;
+  assign id_1 = 1;
 endmodule
 module module_1 (
-    input wand id_0,
-    output logic id_1,
-    output supply1 id_2,
-    input uwire id_3,
-    input wor id_4,
-    output wire id_5,
-    input uwire id_6,
-    output wor id_7,
-    output supply0 id_8
+    input supply1 id_0,
+    input supply1 id_1,
+    output wire id_2,
+    output wor id_3,
+    output wire id_4,
+    input supply1 id_5,
+    input wor id_6,
+    input tri0 id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    input uwire id_10,
+    input tri id_11,
+    output tri id_12,
+    input tri0 id_13,
+    input tri1 id_14,
+    input tri0 id_15,
+    output tri0 id_16,
+    input supply1 id_17,
+    input supply0 id_18,
+    output uwire id_19,
+    input wand id_20,
+    input tri1 id_21,
+    output supply0 id_22,
+    input tri0 id_23,
+    input wire id_24,
+    output wire id_25,
+    output wire id_26,
+    input wire id_27,
+    input tri0 id_28,
+    input wor id_29,
+    input tri0 id_30,
+    inout supply1 id_31,
+    input wor id_32,
+    output supply1 id_33,
+    input wand id_34,
+    output wor id_35,
+    input wor id_36,
+    input uwire id_37,
+    output supply1 id_38,
+    output tri1 id_39,
+    input wor id_40,
+    output supply0 id_41
 );
-  always @(posedge 1 or posedge 1) begin
-    id_1 <= 1;
-  end
-  module_0(
-      id_3,
-      id_3,
-      id_4,
-      id_8,
-      id_5,
-      id_3,
-      id_6,
-      id_6,
-      id_3,
-      id_0,
-      id_4,
-      id_0,
-      id_5,
-      id_7,
-      id_7,
-      id_5,
-      id_2,
-      id_4,
-      id_8,
-      id_6,
-      id_4,
-      id_2,
-      id_2
-  );
-  always @(posedge 1'h0) begin
-    $display(id_4);
-  end
+  wire id_43;
+  module_0 modCall_1 ();
 endmodule

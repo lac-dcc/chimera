@@ -1,52 +1,44 @@
-// Seed: 3040095480
+// Seed: 1620439758
 module module_0 (
     id_1,
     id_2,
-    id_3
-);
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_4;
-  assign id_3 = id_4;
-  assign id_1 = ~id_2;
-  wire id_5;
-  genvar id_6;
-  supply0 id_7 = 1;
-  wire id_8;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    id_4
 );
-  inout wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
+  output wire id_4;
+  output wire id_3;
   inout wire id_2;
   inout wire id_1;
-  wire id_9;
-  reg  id_10;
-  assign id_1 = 1'b0;
-  or (id_5, id_10, id_8, id_6, id_4, id_2, id_7, id_1, id_9, id_3);
-  assign id_9 = (id_9);
-  assign id_1 = 1;
-  module_0(
-      id_2, id_2, id_5
+  wire id_5;
+  assign module_1.id_93 = 0;
+  wire id_6;
+endmodule
+module module_1;
+  assign id_18 = id_63;
+  reg id_86;
+  assign id_33 = 1;
+  final begin : LABEL_0
+    id_86 = #1 1;
+  end
+  module_0 modCall_1 (
+      id_18,
+      id_33,
+      id_33,
+      id_18
   );
-  wire id_11;
-  reg  id_12 = 1'b0;
-  assign id_5 = ((1));
-  initial @(*) id_10 <= id_6;
-  supply0 id_13 = id_3 & 1;
-  assign id_12 = id_10;
-  wire id_14 = id_9;
+  assign id_20 = 1;
+  assign id_33 = id_24 + 1;
+  assign id_37 = id_33;
+  assign id_56 = (1);
+  wire id_87;
+  wire id_88;
+  assign id_81 = id_2;
+  always @(id_14) id_3 = id_26;
+  wire id_89;
+  assign id_46[1] = id_12;
+  specify
+    (id_90 *> id_91) = 1;
+    (posedge id_92 => (id_93 +: id_26)) = (id_42, 1  : id_11[1] : id_51);
+    $width(negedge id_94, 1);
+  endspecify
 endmodule

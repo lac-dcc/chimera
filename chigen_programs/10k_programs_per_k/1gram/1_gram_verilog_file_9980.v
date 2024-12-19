@@ -1,54 +1,42 @@
-// Seed: 3004394294
+// Seed: 2624092352
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
-);
-  input wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  input wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_12;
-endmodule
-module module_1 (
-    input wand id_0,
-    input supply0 id_1,
-    output supply1 id_2,
-    input wand id_3,
+    output tri1 id_0,
+    output tri1 id_1,
+    output tri id_2,
+    output supply1 id_3,
     input uwire id_4,
-    output supply0 id_5,
-    input uwire id_6,
-    output tri1 id_7,
-    input supply1 id_8,
-    input tri1 id_9,
-    output tri1 id_10,
-    input tri0 id_11,
-    output supply1 id_12,
-    output tri id_13,
-    output supply0 id_14,
-    input tri0 id_15,
-    input wire void id_16,
-    output wor id_17,
-    input tri1 id_18
+    output tri1 id_5,
+    input supply1 id_6,
+    input tri1 id_7
 );
-  wire id_20;
-  module_0(
-      id_20, id_20, id_20, id_20, id_20, id_20, id_20, id_20, id_20, id_20, id_20
+  wire id_9;
+  id_10(
+      id_6
   );
-  wire id_21;
+  wire id_11, id_12, id_13;
+endmodule
+macromodule module_1 (
+    output uwire id_0,
+    input wand id_1,
+    input tri0 id_2,
+    output supply1 id_3,
+    output wand id_4,
+    output wand id_5,
+    input supply0 id_6,
+    input tri1 id_7
+);
+  assign (weak1, pull0) id_0 = id_1;
+  module_0 modCall_1 (
+      id_5,
+      id_5,
+      id_5,
+      id_0,
+      id_6,
+      id_4,
+      id_1,
+      id_6
+  );
+  assign modCall_1.type_14 = 0;
+  always_comb $display((1) == 1, 1, 1, id_7, 1);
+  wire id_9;
 endmodule

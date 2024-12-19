@@ -1,34 +1,38 @@
-// Seed: 927396321
+// Seed: 717818947
 module module_0 (
-    inout supply0 id_0,
-    output tri id_1,
-    output tri id_2,
-    input supply1 id_3,
-    output uwire id_4,
-    input wire id_5
-    , id_8,
-    output uwire id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  uwire id_9;
-  wire  id_10;
-  assign id_4 = 1'b0;
-  generate
-    if (1'h0) begin : id_11
-      wor id_12 = 1 == ~id_8;
-    end else id_13(.id_0(id_6 == id_9 < id_6), .id_1(1), .id_2((1 && 1 == id_4) == id_1));
-  endgenerate
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_6;
+  assign id_2 = id_5;
+  assign id_5 = id_6;
 endmodule
 module module_1 (
-    output wor id_0,
-    input wire id_1,
-    output supply0 id_2,
-    input wor id_3
-    , id_6,
-    output supply0 id_4
+    input supply1 id_0,
+    input wand id_1,
+    input supply0 id_2,
+    input wor id_3,
+    output wire id_4
 );
-  assign id_0 = id_3;
-  module_0(
-      id_6, id_0, id_2, id_1, id_0, id_3, id_4
+  wand id_6 = id_6;
+  tri  id_7;
+  assign id_6 = id_2;
+  logic [7:0] id_8;
+  assign id_8[1] = id_7 ? "" * id_0 * 1 - 1 : id_6;
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
   );
-  assign id_6 = id_1;
+  supply1 id_9 = id_6;
 endmodule

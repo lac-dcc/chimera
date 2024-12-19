@@ -1,24 +1,41 @@
-// Seed: 2946353148
-module module_0;
-  initial begin
-    $display(1'h0);
-    id_1 <= id_1;
-    case (1 < 1'h0)
-      1: id_1 += 1;
-      1 == "": begin
-        id_1 <= id_1 & 1'b0 - 1;
-        $display(1);
-        id_1 <= 1 | (1 - !id_1) == 1;
-      end
-      default: id_1 <= 1'b0;
-    endcase
-  end
-  wire id_2;
-  assign id_3 = 1 == 1;
+// Seed: 2298332566
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_6;
+  assign module_1.id_3 = 0;
 endmodule
-module module_1;
-  module_0();
-  wire id_2;
-  assign id_2 = id_1;
-  wire id_3;
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_6;
+  assign id_6 = id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_3,
+      id_6,
+      id_3
+  );
+  assign id_6 = id_5;
+  assign id_6 = id_4;
+  assign id_3 = 1;
 endmodule

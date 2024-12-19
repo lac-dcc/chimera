@@ -1,5 +1,5 @@
-// Seed: 3301700195
-program module_0 (
+// Seed: 1465922830
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -10,10 +10,8 @@ program module_0 (
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12
+    id_11
 );
-  inout wire id_12;
   input wire id_11;
   inout wire id_10;
   inout wire id_9;
@@ -25,23 +23,26 @@ program module_0 (
   input wire id_3;
   output wire id_2;
   input wire id_1;
-  wire id_13;
-  id_14(
-      .id_0(1), .id_1()
-  );
-endprogram
+  wire id_12;
+endmodule
 module module_1 (
-    input wor id_0
+    input uwire id_0
 );
-  always
-    if (id_0) begin
-      disable id_2;
-    end else begin
-      id_3 = 1;
-    end
-  wire id_4;
-  module_0(
-      id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4, id_4
+  always id_2 = 1 == id_2;
+  tri0 id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2
   );
-  assign id_4 = id_4;
+  assign id_3 = 1;
+  wire id_4 = id_3;
 endmodule

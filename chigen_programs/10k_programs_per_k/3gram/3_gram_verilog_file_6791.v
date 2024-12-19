@@ -1,31 +1,28 @@
-// Seed: 144758011
+// Seed: 1774927342
 module module_0;
   reg id_1;
-  id_2 :
-  assert property (@(1'h0) 1)
-  else id_1 <= {1'b0{{id_1{id_2}}}};
+  reg id_2;
+  assign id_1 = id_1;
+  reg  id_3;
+  wire id_4;
+  always @(posedge id_4) begin : LABEL_0
+    id_3 <= 1 || 1;
+    id_3 = id_2;
+  end
+  wire id_5;
+  assign module_1.id_4 = 0;
+  wor  id_6 = id_2 + 1'h0;
+  wire id_7;
 endmodule
-module module_1 #(
-    parameter id_16 = 32'd26,
-    parameter id_17 = 32'd91
-) (
-    input supply1 id_0,
-    input tri0 id_1,
-    output uwire id_2,
-    output wand id_3,
-    input wor id_4,
-    input tri1 id_5,
-    input wor id_6,
-    output supply0 id_7,
-    input supply0 id_8,
-    input supply1 id_9,
-    input supply1 id_10,
-    output wire id_11,
-    input uwire id_12,
-    input uwire id_13
+module module_1 (
+    output tri1 id_0,
+    input wand id_1,
+    input tri id_2,
+    output wor id_3,
+    output wor id_4,
+    output supply1 id_5
 );
-  wire id_15;
-  defparam id_16.id_17 = id_15; module_0(); id_18(
-      .id_0(), .id_1((1)), .id_2(1), .id_3(id_6)
-  );
+  wire id_7;
+  wire id_8;
+  module_0 modCall_1 ();
 endmodule

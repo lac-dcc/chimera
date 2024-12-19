@@ -1,32 +1,47 @@
-// Seed: 2735566738
-module module_0 #(
-    parameter id_2 = 32'd93,
-    parameter id_3 = 32'd85
-) (
-    input wire id_0
-);
-  defparam id_2.id_3 = 1'b0;
-endmodule
-module module_1 (
-    output logic id_0,
+// Seed: 4048655171
+module module_0 (
+    output supply1 id_0,
     input wor id_1,
-    output tri id_2,
-    input supply1 id_3,
-    output logic id_4,
-    input uwire id_5
+    output wire id_2,
+    input tri0 id_3
 );
-  always begin
-    id_4 <= 1;
-    @(posedge 1 or negedge 1) begin
-      id_2 = id_5;
-    end
-    `define pp_7 0
-    id_0 <= 1 && id_3;
-    `pp_7[1'h0] <= 1'b0;
-    id_4 <= ~1'h0;
-    assert (id_3 && 1);
-  end
-  module_0(
-      id_3
+endmodule
+module module_0 (
+    input uwire id_0,
+    input wand id_1,
+    output tri id_2,
+    output tri1 id_3,
+    input wor id_4,
+    output supply1 id_5,
+    input tri1 id_6,
+    input supply1 module_1,
+    input wand id_8,
+    input tri0 id_9,
+    input uwire id_10,
+    inout wire id_11,
+    output tri0 id_12,
+    input wand id_13,
+    output tri0 id_14,
+    input uwire id_15,
+    output wire id_16,
+    input tri0 id_17,
+    input supply0 id_18,
+    input wire id_19
+);
+  assign id_14 = 1;
+  wand id_21;
+  assign id_21 = 1;
+  always id_5 = (id_18);
+  assign id_11 = 1;
+  module_0 modCall_1 (
+      id_2,
+      id_1,
+      id_2,
+      id_13
   );
+  assign modCall_1.id_3 = 0;
+  always begin : LABEL_0
+    @(negedge id_8, 1 & id_18);
+  end
+  assign id_14 = 1;
 endmodule

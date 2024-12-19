@@ -1,36 +1,36 @@
-// Seed: 3895946278
+// Seed: 644923000
 module module_0 (
-    input supply0 id_0,
-    output wor id_1,
-    output wand id_2,
-    output supply1 id_3,
-    input tri1 id_4
+    input tri0 id_0,
+    input wire id_1
 );
-  id_6 :
-  assert property (@(posedge 1) 1)
-  else $display(1, id_0, id_6);
-  wire id_7;
-  wire id_8, id_9, id_10;
-  wire id_11;
+  always @(~id_0 != 1 or posedge id_1) id_3 = 1;
+  assign module_2.id_6 = 0;
 endmodule
-module module_0 (
-    output tri1 id_0,
-    output supply1 id_1,
-    output tri1 id_2,
-    output supply0 id_3,
-    input supply1 id_4,
-    output supply0 id_5,
-    input supply0 id_6,
-    output uwire id_7,
-    input uwire id_8,
-    input supply1 id_9,
-    input tri0 module_1,
-    output supply0 id_11
+module module_1 (
+    input  wire id_0,
+    output wor  id_1
 );
-  integer id_13;
-  logic [7:0] id_14;
-  module_0(
-      id_8, id_5, id_1, id_5, id_8
+  assign id_1 = id_0 == id_0;
+  module_0 modCall_1 (
+      id_0,
+      id_0
   );
-  assign id_14[1] = 1;
+  assign modCall_1.type_0 = 0;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    output supply0 id_1,
+    output uwire id_2,
+    input tri id_3,
+    input uwire id_4,
+    input tri1 module_2,
+    output wor id_6,
+    output supply1 id_7,
+    input tri id_8
+);
+  always @(id_0 >= 1 or 1 or negedge id_3 or posedge 1) id_7 = id_8;
+  module_0 modCall_1 (
+      id_8,
+      id_0
+  );
 endmodule

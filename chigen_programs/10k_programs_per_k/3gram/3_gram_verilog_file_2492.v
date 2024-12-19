@@ -1,57 +1,40 @@
-// Seed: 3490232386
-module module_0 #(
-    parameter id_19 = 32'd83,
-    parameter id_20 = 32'd50
-) (
+// Seed: 2433528663
+macromodule module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5
+    id_3
 );
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  output wire id_2;
-  output wire id_1;
-  wire id_6;
-  wor  id_7;
-  wire id_8;
-  wire id_9 = id_4;
-  wire id_10;
-  tri1 id_11;
-  wire id_12;
-  wire id_13;
-  wire id_14;
-  wire id_15;
-  wire id_16 = id_12;
-  id_17(
-      .id_0(1)
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  id_4(
+      .id_0(1),
+      .id_1(0),
+      .id_2(1),
+      .id_3(id_5),
+      .id_4(),
+      .id_5(id_1),
+      .id_6(1),
+      .id_7(1),
+      .id_8(~1),
+      .id_9(id_3)
   );
-  assign id_7 = 1;
-  wire id_18;
-  generate
-    defparam id_19.id_20 = id_19;
-  endgenerate
-  wor id_21;
-  assign id_11 = 1;
-  wire id_22;
-  wire id_23;
-  assign id_21 = 1;
-  wire id_24;
 endmodule
 module module_1 (
     output logic id_0,
-    input  logic id_1
+    output wor id_1,
+    input supply0 id_2,
+    input wor id_3,
+    input uwire id_4,
+    input wand id_5
 );
-  wire id_3;
-  module_0(
-      id_3, id_3, id_3, id_3, id_3
+  id_7 :
+  assert property (@(posedge 1) 1'h0)
+  else id_0 <= 1;
+  nand primCall (id_0, id_3, id_2);
+  module_0 modCall_1 (
+      id_7,
+      id_7,
+      id_7
   );
-  reg id_4;
-  final begin
-    if ("") id_0 = #id_5 id_1;
-    else id_5 <= 1;
-    id_4 <= 1;
-  end
 endmodule

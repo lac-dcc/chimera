@@ -1,7 +1,5 @@
-// Seed: 4136568076
-module module_0;
-endmodule
-module module_1 (
+// Seed: 384622229
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -19,22 +17,41 @@ module module_1 (
 );
   output wire id_14;
   output wire id_13;
-  input wire id_12;
-  inout wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
   output wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  inout wire id_3;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
   output wire id_2;
-  output wire id_1;
-  wor id_15 = 1;
-  module_0();
-  always @(posedge 1 or posedge 1) begin
-    id_4 <= 1;
-  end
-  wire id_16;
+  input wire id_1;
+  wire id_15;
+endmodule
+module module_1 (
+    input wire id_0,
+    input wand id_1
+);
+  always_comb @(1 | 1'd0 or {id_1 && id_0, 1'b0} - 1'h0) $display((1), 1'h0 == 1);
+  assign id_3 = 1'b0;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
+  wire id_4;
 endmodule

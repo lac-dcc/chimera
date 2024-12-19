@@ -1,28 +1,27 @@
-// Seed: 2280210134
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always @(1 or negedge id_3 - id_3);
-  wor  id_4;
-  tri1 id_5 = 1 & id_3;
-  assign id_4 = 1'b0;
+// Seed: 3468183676
+module module_0;
+  wire id_2 = id_1;
+  wire id_3;
+  assign id_3 = id_3;
+  always begin : LABEL_0
+    return id_1;
+  end
 endmodule
 module module_1 (
-    input  wand  id_0,
-    input  wire  id_1,
-    output tri   id_2,
-    output uwire id_3
+    input  tri   id_0,
+    output uwire id_1,
+    input  wor   id_2,
+    input  wor   id_3,
+    output uwire id_4,
+    output wire  id_5,
+    input  tri   id_6
 );
-  wire id_5;
-  module_0(
-      id_5, id_5, id_5
-  );
-  initial begin
-    $display(1, 1'b0, 1'b0 == 1'b0, 1, 1, id_1);
-  end
+  assign id_5 = id_0;
+  assign id_5 = id_6;
+  tri0 id_8;
+  wire id_9;
+  wire id_10;
+  module_0 modCall_1 ();
+  wire id_11;
+  assign id_1 = id_8;
 endmodule

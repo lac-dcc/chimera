@@ -1,36 +1,28 @@
-// Seed: 395138116
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_6;
-  wire id_7, id_8, id_9;
-  assign id_7 = id_6;
-  assign id_5 = id_8;
-  wire id_10;
-  wire id_11, id_12;
+// Seed: 2551522780
+module module_0;
+  logic [7:0] id_2;
+  wire id_3 = id_2[1'd0];
+  assign module_1.id_4 = 0;
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input wand id_1,
-    input wand id_2
+module module_1 #(
+    parameter id_3 = 32'd4,
+    parameter id_4 = 32'd29
 );
-  initial begin
-    if (id_1) id_4 <= 1;
-    $display(1 - id_1);
+  if (1) begin : LABEL_0
+    if (id_1) begin : LABEL_0
+      assign id_1 = 1;
+      for (id_2 = 1; id_1; id_2 = id_1) begin : LABEL_0
+        assign id_2 = 1'b0;
+        initial begin : LABEL_0
+          if (id_1) id_1 <= 1;
+        end
+      end
+    end else begin : LABEL_0
+      defparam id_3.id_4 = 1 - 1;
+    end
+  end else begin : LABEL_0
+    wire id_5;
+    wire id_6;
   end
-  wire id_5;
-  wire id_6;
-  module_0(
-      id_5, id_5, id_6, id_5, id_5
-  );
-  wire id_7;
+  module_0 modCall_1 ();
 endmodule

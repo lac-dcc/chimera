@@ -1,40 +1,36 @@
-// Seed: 1277520093
-module module_0;
-  reg  id_2;
-  wand id_3;
-  wire id_4;
-  always @(posedge 1) if (id_3) if (id_2) id_2 <= 1;
-  always @(posedge id_1) begin
-    $display(1);
-  end
-  wire id_5, id_6;
-  always_ff @(1'b0 or posedge 1) id_2 <= 1;
-  wire id_7;
-  wire id_8;
-  wire id_9;
-endmodule
-module module_0 #(
-    parameter id_8 = 32'd93,
-    parameter id_9 = 32'd5
-) (
+// Seed: 1352585043
+module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6
+    id_4
 );
-  inout wire id_6;
-  input wire id_5;
   output wire id_4;
-  output wire id_3;
+  inout wire id_3;
   inout wire id_2;
-  inout wire id_1;
-  wire id_7;
-  assign module_1 = 1'b0;
-  always @(1'b0 or 1) begin
-    id_4 <= 1;
-  end
-  module_0(); defparam id_8.id_9 = 1 + 1;
-  wire id_10;
+  output wire id_1;
+  assign id_2 = id_3;
+  id_5 :
+  assert property (@(posedge id_2) 1)
+  else $display(id_5);
+  always @(1 == id_5 or 1) #1;
+  uwire id_6, id_7, id_8;
+  wire  id_9;
+  wire  id_10;
+  uwire id_11 = 1;
+  wire  id_12;
+  assign module_1.id_1 = 0;
+endmodule
+module module_1 (
+    output wire id_0,
+    input  tri0 id_1
+);
+  assign id_0 = id_1;
+  wire id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
 endmodule

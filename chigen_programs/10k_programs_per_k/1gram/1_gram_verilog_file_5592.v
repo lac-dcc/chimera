@@ -1,27 +1,41 @@
-// Seed: 3725603262
+// Seed: 4270359863
 module module_0;
-  tri1 id_1;
-  assign id_1 = id_2 ? 1 ? id_2 : id_1 : id_1;
-  assign id_1 = 1;
-  wire  id_3;
-  wire  id_4;
-  uwire id_5;
-  assign id_1 = id_5;
-  assign id_5 = 1'b0 | 1;
+  tri0 id_1;
+  always assert (id_1) id_1 = 1;
+  assign id_1 = id_1;
+  uwire id_2, id_3;
+  assign id_3 = id_1;
+  wire id_4;
+  assign id_2 = 1;
+  wire id_5, id_6;
+  wire id_7, id_8;
+  id_9(
+      .id_0(1),
+      .id_1(1),
+      .id_2(),
+      .id_3(1),
+      .id_4(1),
+      .id_5(1),
+      .id_6(id_3),
+      .id_7(),
+      .id_8(id_4),
+      .id_9(1)
+  );
 endmodule
-macromodule module_1 (
-    input  logic id_0
-    , id_6 = 1 * 1,
-    output logic id_1,
-    input  wand  id_2,
-    input  tri0  id_3,
-    input  tri1  id_4
+module module_1 (
+    input supply1 id_0,
+    input wor id_1,
+    output logic id_2
 );
-  reg id_7, id_8;
-  assign id_8 = 1;
-  always_ff
-    if (1) id_1 = id_0;
-    else id_1 <= 1;
-  always do id_7 <= id_7; while (id_2);
-  module_0();
+  always id_2 = 1'b0;
+  module_0 modCall_1 ();
+  always id_2 <= 1 - id_1;
+  id_4(
+      (1), id_1 - "", 1, 1, 1, 1, id_1, 1'b0 + id_0, 1 > 1
+  );
+  wire id_5;
+  wire id_6;
+  id_7(
+      id_2
+  );
 endmodule

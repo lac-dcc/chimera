@@ -1,38 +1,27 @@
-// Seed: 3797873740
-module module_0 (
-    input tri1 id_0,
-    input wor id_1,
-    input tri id_2,
-    input tri id_3,
-    output wand id_4,
-    output supply1 id_5
-);
-  wire id_7;
-  always @(posedge id_2 or posedge id_0) id_7 = id_7;
+// Seed: 4289939193
+module module_0;
+  assign id_1 = id_1 ? id_1 : 1;
+  wire id_3;
+  always @(1'h0 or posedge 1) id_2 = 1;
+  wire id_4;
 endmodule
-module module_1 #(
-    parameter id_10 = 32'd40,
-    parameter id_9  = 32'd49
-) (
-    input tri0 id_0,
-    input tri id_1,
-    input tri0 id_2,
-    input wor id_3,
-    output supply1 id_4,
-    output supply0 id_5,
-    input wor id_6
+module module_1 (
+    output tri1 id_0,
+    output tri0 id_1,
+    input tri id_2,
+    input supply1 id_3
 );
-  case (1)
-    1: begin : id_8
-      defparam id_9.id_10 = 1'b0;
-      assign id_4 = id_1;
-    end
-    default:
-    genvar id_11;
-  endcase
-  wire id_12;
-  assign id_5 = (1);
-  module_0(
-      id_0, id_1, id_1, id_6, id_4, id_4
-  );
+  assign #1 id_1 = 1;
+  wire id_5;
+  assign id_1 = 1;
+  tri1 id_6, id_7;
+  wor   id_8;
+  wire  id_9;
+  uwire id_10 = 1'b0 | id_3;
+  wire  id_11;
+  initial begin : LABEL_0
+    id_7 = id_8 == 1;
+  end
+  wor id_12 = id_3;
+  module_0 modCall_1 ();
 endmodule

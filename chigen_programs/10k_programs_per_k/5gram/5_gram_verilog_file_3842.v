@@ -1,29 +1,45 @@
-// Seed: 402944010
+// Seed: 3026498455
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input tri0 id_0,
+    input tri0 id_1,
+    output wand id_2,
+    output wand id_3,
+    output wand id_4,
+    output supply0 id_5,
+    input wor id_6
 );
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  input wire id_1;
-  tri1 id_5;
-  id_6 :
-  assert property (@(posedge id_4) 1 - id_3)
-  else $display(id_5, 1, (id_4));
+  generate
+    assign id_4 = 1;
+  endgenerate
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    input  logic id_0,
+    input  logic id_1,
+    output logic id_2,
+    input  wor   id_3,
+    output tri1  id_4
 );
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  tri1 id_4 = 1 & id_4 & 1;
-  module_0(
-      id_3, id_1, id_4, id_4
+  wire id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_3
   );
+  assign modCall_1.id_3 = 0;
+  initial begin : LABEL_0
+    if (1'b0)
+      if ((1)) begin : LABEL_0
+        case (1)
+          id_3: id_2 = id_0;
+          default: id_2 = id_0;
+        endcase
+      end
+  end
+  always @* begin : LABEL_0
+    id_2 <= id_1;
+  end
 endmodule

@@ -1,88 +1,56 @@
-// Seed: 2774624299
+// Seed: 2448948522
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4
-);
-  input wire id_4;
-  input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_1 = id_3 ? 1 & id_3 : 1;
-  wire id_5;
-  wire id_6;
-  wire id_7;
-  assign id_7 = id_3;
-endmodule
-module module_1 #(
-    parameter id_28 = 32'd17,
-    parameter id_29 = 32'd30
-) (
-    id_1,
-    id_2,
-    id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26
+    id_5
 );
-  output wire id_26;
-  inout wire id_25;
-  input wire id_24;
-  input wire id_23;
-  input wire id_22;
-  output wire id_21;
-  output wire id_20;
-  output wire id_19;
-  output wire id_18;
-  output wire id_17;
-  output wire id_16;
-  output wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  output wire id_12;
-  output wire id_11;
-  output wire id_10;
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
-  input wire id_6;
   input wire id_5;
-  input wire id_4;
-  input wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign id_26 = 1;
-  reg  id_27;
-  defparam id_28.id_29 = 1;
-  wire id_30;
-  assign id_8 = id_23;
-  wire id_31;
-  module_0(
-      id_31, id_25, id_5, id_4
+  output wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_4 = 1;
+  assign module_1.id_20 = 0;
+endmodule
+module module_1 (
+    input uwire id_0,
+    input tri1 id_1,
+    input supply1 id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    output supply0 id_5,
+    input wire id_6,
+    input tri1 id_7,
+    input tri1 id_8,
+    output supply0 id_9,
+    input supply1 id_10
+    , id_28,
+    input supply0 id_11,
+    output supply0 id_12,
+    output uwire id_13,
+    input tri id_14,
+    output wor id_15,
+    output wand id_16,
+    input supply0 id_17,
+    input wand id_18,
+    output uwire id_19,
+    input wor id_20,
+    output tri0 id_21,
+    input tri1 id_22,
+    input wand id_23,
+    output tri0 id_24,
+    input tri0 id_25,
+    output tri0 id_26
+);
+  assign id_5 = 1;
+  module_0 modCall_1 (
+      id_28,
+      id_28,
+      id_28,
+      id_28,
+      id_28
   );
-  always @(posedge 1 or posedge 1'b0) id_10[1'b0] <= id_27;
-  id_32(
-      .id_0(id_27), .id_1(1), .id_2($display(id_4)), .id_3(id_1), .id_4(id_1)
-  );
+  wire id_29;
 endmodule

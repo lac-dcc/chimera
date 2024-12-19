@@ -1,49 +1,27 @@
-// Seed: 815388906
-module module_0;
-  id_1(
-      1 && 1, 1
-  );
+// Seed: 1852669249
+module module_0 ();
+  reg id_1;
+  reg id_2, id_3;
+  if (1) initial #1 id_1 <= id_3;
+  else begin : LABEL_0
+    wire id_4;
+    wire id_5;
+  end
+  wire id_6, id_7;
+  assign id_1 = 1 !== 1;
+  assign module_1.type_2 = 0;
+  assign id_3 = 1;
 endmodule
-macromodule module_1;
-  module_0();
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = id_3;
-  module_0();
-  wire id_4;
-endmodule
-module module_3 (
-    input tri id_0,
-    input uwire id_1,
-    output wand id_2,
-    output uwire id_3,
+module module_1 (
+    input wire id_0,
+    input wand id_1,
+    input tri id_2,
+    input wand id_3,
     input supply1 id_4,
-    output tri id_5
-    , id_22,
-    input wire id_6,
-    input uwire id_7,
-    input wand id_8,
-    output tri id_9,
-    output wor id_10,
-    input wand id_11,
-    output tri id_12,
-    input supply1 id_13,
-    output wor id_14
-    , id_23,
-    input tri id_15,
-    input tri0 id_16,
-    output tri0 id_17,
-    inout supply1 id_18,
-    inout wire id_19,
-    input wire id_20
+    input wand id_5,
+    input tri id_6,
+    input tri1 id_7
 );
-  assign id_10 = id_11 ? id_23 : (1);
-  module_0();
+  assign id_9 = 1;
+  module_0 modCall_1 ();
 endmodule

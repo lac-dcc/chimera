@@ -1,43 +1,41 @@
-// Seed: 3374966825
+// Seed: 1913495000
 module module_0 (
-    output tri1 id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  wire id_2;
-  reg  id_3;
-  wire id_4;
-  assign id_3 = 1;
-  reg id_5;
-  assign {1, 1, 1} = 1 && 1'd0 && id_5;
-  always #0 begin
-    if (1) id_5 <= id_3;
-  end
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign module_1.type_4 = 0;
 endmodule
 module module_1 (
-    input tri id_0,
+    output tri1 id_0,
     input wand id_1,
-    input supply1 id_2,
-    input wand id_3,
-    output tri0 id_4,
-    output tri id_5,
-    input wor id_6,
-    input tri0 id_7,
-    input uwire id_8,
-    input tri1 id_9,
-    input logic id_10,
-    input supply1 id_11,
-    output wand id_12,
-    output logic id_13
+    input tri id_2,
+    inout wire id_3,
+    input uwire id_4,
+    output supply0 id_5,
+    input tri0 id_6,
+    output supply0 id_7,
+    output wand id_8,
+    output supply0 id_9,
+    output uwire id_10
 );
-  integer id_15;
-  assign (weak1, weak0) id_15 = id_8 ? 1 : 1'b0;
-  wire id_16;
-  initial begin
-    id_15 = id_3;
-    id_13 <= id_10;
-  end
-  module_0(
-      id_15
+  uwire id_12 = 1;
+  nand primCall (id_5, id_12, id_4, id_2, id_6, id_3, id_1);
+  module_0 modCall_1 (
+      id_12,
+      id_12,
+      id_12,
+      id_12,
+      id_12,
+      id_12
   );
-  wire id_17;
-  tri1 id_18 = id_15;
 endmodule

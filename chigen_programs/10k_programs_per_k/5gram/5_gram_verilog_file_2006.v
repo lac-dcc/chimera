@@ -1,41 +1,36 @@
-// Seed: 2610915670
-module module_0 ();
-  assign id_1 = id_1 == id_1;
-  module_3();
+// Seed: 3916570833
+module module_0 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  inout wire id_1;
 endmodule
-module module_1 ();
-  generate
-    assign id_1 = id_1;
-  endgenerate
-  module_0();
+module module_1;
+  always_comb @(posedge id_1 or posedge id_1) begin : LABEL_0
+    id_1 <= 1;
+  end
+  wire id_2;
+  module_0 modCall_1 (
+      id_2,
+      id_2
+  );
 endmodule
 module module_2 (
-    input supply0 id_0,
-    input wand id_1,
-    input supply1 id_2,
-    input wire id_3,
-    input wire id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_6 = 1;
-  wire id_7;
-  wire id_8;
-  module_0();
-endmodule
-module module_3;
-  wire id_2, id_3;
-  tri id_4;
-  assign id_4 = 1'b0;
-endmodule
-module module_4 (
-    output uwire id_0,
-    output supply0 id_1,
-    input uwire id_2,
-    input wire id_3,
-    input tri id_4,
-    input uwire id_5,
-    input wire id_6,
-    output wor id_7
-);
-  always @(posedge 'b0 - 1) $display(id_6);
-  module_3();
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  id_5 :
+  assert property (@(posedge id_2) id_4)
+  else $display(1 == (1'b0 == 1), id_5, 1);
+  module_0 modCall_1 (
+      id_4,
+      id_4
+  );
 endmodule

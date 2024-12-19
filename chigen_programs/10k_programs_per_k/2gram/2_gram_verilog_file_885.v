@@ -1,42 +1,94 @@
-// Seed: 3365242451
+// Seed: 4201839722
 module module_0 (
-    id_1
-);
-  output wire id_1;
-  reg id_2;
-  always id_2 <= 1;
-  module_2();
-endmodule
-module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25
 );
-  input wire id_5;
+  inout wire id_25;
+  output wire id_24;
+  inout wire id_23;
+  output wire id_22;
+  inout wire id_21;
+  output wire id_20;
+  input wire id_19;
+  output wire id_18;
+  inout wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
   input wire id_4;
-  input wire id_3;
-  inout wire id_2;
+  inout wire id_3;
+  input wire id_2;
   output wire id_1;
-  always begin
-    return 1;
-    if (id_3) id_1 <= id_5;
-    else id_1 <= id_5;
-  end
-  wire id_6;
-  module_0(
+  assign id_24 = id_8;
+  assign id_5  = id_7;
+  wire id_26;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  module_0 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_1,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_1,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_2,
       id_2
   );
-endmodule
-module module_2;
-  module_3();
-endmodule
-module module_3;
-  tri0 id_1 = 1 ? id_1 : 1;
-  wor  id_2;
-  assign id_2 = id_2;
-  supply1 id_3 = 1, id_4, id_5;
-  always id_2 = id_3 ? 1 : id_4;
-  wire id_6;
+  assign id_3 = (1'h0);
 endmodule

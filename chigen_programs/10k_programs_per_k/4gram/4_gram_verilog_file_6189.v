@@ -1,8 +1,5 @@
-// Seed: 788345540
-module module_0 #(
-    parameter id_13 = 32'd30,
-    parameter id_14 = 32'd62
-) (
+// Seed: 4204860611
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -13,40 +10,52 @@ module module_0 #(
     id_8,
     id_9,
     id_10,
-    id_11
+    id_11,
+    id_12
 );
-  output wire id_11;
+  inout wire id_12;
+  input wire id_11;
   output wire id_10;
   input wire id_9;
-  inout wire id_8;
+  output wire id_8;
   output wire id_7;
   inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  input wire id_3;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
   input wire id_2;
-  input wire id_1;
-  assign id_5 = 1'b0;
-  always @(*) begin
-    id_6 = id_3;
-  end
-  wire id_12;
-  assign id_12 = id_9;
-  assign id_7  = id_8;
-  generate
-    defparam id_13.id_14 = 1'b0;
-  endgenerate
+  inout wire id_1;
+  wire id_13;
+  wire id_14;
+  assign id_10 = id_11;
 endmodule
-module module_1 (
-    output wand id_0,
-    input  wire id_1,
-    output wand id_2,
-    input  tri  id_3
-);
+module module_1;
+  wand id_1;
+  assign id_1 = 1;
   wire id_5;
-  wire id_6;
-  module_0(
-      id_5, id_6, id_6, id_6, id_6, id_6, id_5, id_5, id_6, id_6, id_6
+  id_6(
+      .id_0(1)
   );
-  wire id_7;
+  module_0 modCall_1 (
+      id_1,
+      id_5,
+      id_5,
+      id_1,
+      id_5,
+      id_5,
+      id_5,
+      id_1,
+      id_5,
+      id_5,
+      id_5,
+      id_1
+  );
+  assign id_4 = 1'h0 ? id_3 : 1;
+  tri   id_7 = 1;
+  wire  id_8;
+  uwire id_9 = id_7;
+  wire  id_10;
+  assign id_2 = id_3;
+  wire id_11;
+  wire id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19, id_20, id_21, id_22, id_23, id_24;
 endmodule

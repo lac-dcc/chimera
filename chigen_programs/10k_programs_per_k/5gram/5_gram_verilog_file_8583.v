@@ -1,47 +1,78 @@
-// Seed: 2369354474
+// Seed: 203664604
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    input tri0 id_0,
+    input supply0 id_1,
+    output uwire id_2,
+    input wor id_3,
+    input wor id_4,
+    input tri1 id_5,
+    output tri1 id_6,
+    output tri1 id_7,
+    output supply1 id_8,
+    input uwire id_9,
+    input uwire id_10,
+    input uwire id_11,
+    input wire id_12,
+    input tri0 id_13,
+    output supply0 id_14,
+    output tri1 id_15,
+    input tri id_16,
+    input wand id_17,
+    input uwire id_18,
+    input supply0 id_19,
+    output tri1 id_20,
+    input tri1 id_21,
+    output wand id_22,
+    input uwire id_23,
+    input supply1 id_24,
+    output uwire id_25,
+    input tri id_26,
+    id_28 id_29
 );
-  input wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_8 = id_7;
+  wand id_30 = id_26 !=? 1;
+  always @(*) id_22 = id_5;
+  assign module_1.type_7 = 0;
+  integer id_31, id_32 = id_18 ^ id_3, id_33;
+  wire id_34;
+  wire id_35;
+  assign id_28 = 1'b0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    input  tri0 id_0,
+    input  tri1 id_1,
+    output wand id_2
 );
-  inout wire id_10;
-  input wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  output wire id_1;
-  wire id_11;
-  module_0(
-      id_3, id_3, id_10, id_2, id_8, id_10, id_11
+  wire id_4;
+  module_0 modCall_1 (
+      id_1,
+      id_0,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_2,
+      id_1,
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_1
   );
-  integer id_12;
+  id_5(
+      1, id_2 == id_2
+  );
 endmodule

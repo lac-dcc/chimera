@@ -1,36 +1,52 @@
-// Seed: 2001872583
+// Seed: 801497282
 module module_0;
-  wor id_1;
-  logic [7:0] id_2;
-  always @(posedge id_2) disable id_3;
-  id_4 :
-  assert property (@(negedge id_3[1]) 1)
-  else id_4 = (1);
-  id_5(
-      .id_0(1'b0),
-      .id_1(id_1 ? id_6 : 1),
-      .id_2(id_4),
-      .id_3(id_6),
-      .id_4(1),
-      .id_5(1'b0 && 1),
-      .id_6(id_4),
-      .id_7(1)
-  );
-  wand id_7;
-  assign id_7 = id_6;
+  wire id_1;
+  module_2 modCall_1 ();
+  assign modCall_1.type_6 = 0;
+  assign module_1.id_0 = 0;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    input supply1 id_1,
-    input supply0 id_2
+    inout supply0 id_0,
+    output tri0 id_1,
+    inout wire id_2,
+    input wire id_3,
+    output wor id_4,
+    input wor id_5
 );
-  module_0();
-  assign id_4 = 1;
-  wire id_5;
-  assign id_5 = id_2;
-  assign id_4 = 1'b0 == 1;
-  wire id_6;
-  id_7(
-      .id_0(1), .id_1(id_5 - id_4), .id_2(1'b0), .id_3(1), .id_4(1)
-  );
+  wire id_7;
+  module_0 modCall_1 ();
+endmodule
+module module_2;
+  tri0 id_1 = 1;
+  assign id_1 = id_1;
+  always disable id_2;
+  reg id_3;
+  always @(posedge 1 or posedge (id_2)) id_3 <= 1;
+endmodule
+module module_3 (
+    output wire  id_0,
+    output wire  id_1,
+    input  uwire id_2
+    , id_14,
+    input  tri0  id_3,
+    output tri   id_4,
+    input  uwire id_5,
+    input  tri0  id_6,
+    output wor   id_7,
+    input  tri0  id_8,
+    input  wand  id_9,
+    output wire  id_10,
+    output uwire id_11,
+    output wand  id_12
+);
+  always @(posedge 1) begin : LABEL_0
+    return 1;
+  end
+  module_2 modCall_1 ();
+  wire id_15, id_16;
+  assign id_12 = id_6;
+  wire id_17;
+  wire id_18;
+  wire id_19;
+  wire id_20, id_21, id_22, id_23, id_24, id_25, id_26;
 endmodule

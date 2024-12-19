@@ -1,34 +1,47 @@
-// Seed: 4174244046
-module module_0;
-  always @(posedge 1 or posedge id_1)
-    if (1) id_1 <= id_1;
-    else if (1'd0 == 1) id_1 <= 1;
-    else begin
-      id_1 <= id_1;
-      $display(id_1, 1);
-      id_1 = id_1;
-    end
-  wire id_2, id_3;
-endmodule
-module module_1 #(
-    parameter id_15 = 32'd7,
-    parameter id_16 = 32'd59
-) (
-    input supply0 id_0,
-    output supply1 id_1,
-    input tri id_2,
-    output tri0 id_3,
-    input tri id_4,
-    input tri1 id_5
-    , id_12,
-    input wand id_6,
-    input tri0 id_7,
-    output wire id_8,
-    input uwire id_9,
-    output tri1 id_10
+// Seed: 2862738304
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_12 = 1 - id_7;
-  wire id_13;
-  wire id_14;
-  module_0(); defparam id_15.id_16 = 1'h0;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  logic [7:0] id_4;
+  wire id_5 = !id_5;
+endmodule
+module module_1 (
+    input tri1 id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    output wire id_3
+);
+  wire id_5, id_6;
+  module_0 modCall_1 (
+      id_5,
+      id_6,
+      id_6
+  );
+endmodule
+module module_2 #(
+    parameter id_7 = 32'd23,
+    parameter id_8 = 32'd94
+) (
+    input  logic id_0,
+    output wor   id_1
+);
+  tri id_3;
+  supply0 id_4 = id_3;
+  logic id_5 = id_5 ? id_5 : id_0;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_3
+  );
+  generate
+    for (id_6 = 1; id_3; id_5 = ~id_5 == id_5) begin : LABEL_0
+      defparam id_7.id_8 = 1;
+    end
+  endgenerate
+  always id_5 <= #1 1'b0 | 1 >= id_5 | 1;
 endmodule

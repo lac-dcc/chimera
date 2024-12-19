@@ -1,33 +1,32 @@
-// Seed: 2009021087
-module module_0 ();
-  always
-    repeat (id_1) begin
-      if (id_1) begin
-        wait (id_1);
-      end
-      if (id_1) begin
-        id_1 <= 1;
-        id_1 <= #1 1 == 1'b0;
-      end else begin
-        id_1 <= 1;
-      end
-    end
+// Seed: 3793325267
+module module_0 #(
+    parameter id_3 = 32'd64,
+    parameter id_4 = 32'd43
+) ();
+  supply1 id_2;
+  assign id_1 = id_2 ? 1 : id_1;
+  assign id_2 = ~id_1 && id_2 && 1;
+  defparam id_3.id_4 = 1;
 endmodule
-module module_0 (
-    input wand module_1,
-    output wand id_1,
-    output logic id_2,
-    output supply0 id_3,
-    output supply1 id_4,
-    input wand id_5,
-    input wand id_6,
-    output tri id_7,
-    input wand id_8,
-    input wire id_9,
-    output wire id_10
+module module_1 (
+    input supply1 id_0,
+    output tri id_1,
+    output wor id_2,
+    output supply0 id_3
+    , id_14,
+    input supply1 id_4,
+    input wand id_5
+    , id_15,
+    input supply1 id_6,
+    input supply0 id_7,
+    input tri1 id_8,
+    input tri id_9,
+    output wand id_10,
+    input supply1 id_11,
+    output wand id_12
 );
-  initial begin
-    id_2 <= 1'h0;
-  end
-  module_0();
+  wire id_16;
+  module_0 modCall_1 ();
+  assign modCall_1.id_4 = 0;
+  assign id_12 = id_6;
 endmodule

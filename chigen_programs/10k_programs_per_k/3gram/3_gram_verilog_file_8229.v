@@ -1,42 +1,29 @@
-// Seed: 2990614232
-module module_0;
-  wire id_2;
-  genvar id_3;
-  module_2();
-endmodule
-module module_1 (
-    output supply0 id_0,
-    input wire id_1
+// Seed: 3265183044
+module module_0 (
+    output tri  id_0,
+    output tri  id_1,
+    input  tri0 id_2
 );
-  wire id_3;
-  module_0();
+  tri1 id_4;
+  assign id_4 = 1;
+  tri0 id_5;
+  tri0 id_6;
+  assign module_1.id_1 = 0;
+  id_7 :
+  assert property (@(posedge id_2) 1 == 1'h0)
+  else id_6 = (1);
+  assign id_5 = 1;
 endmodule
-module module_2;
-  wire id_1;
-  module_3(
-      id_1, id_1, id_1, id_1, id_1, id_1
+program module_1 (
+    input supply0 id_0,
+    output wand id_1
+);
+  id_3(
+      .id_0({id_1 - 1'b0{1'b0}}), .id_1(id_0)
   );
-endmodule
-module module_3 #(
-    parameter id_10 = 32'd89,
-    parameter id_11 = 32'd26
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_7;
-  wire id_8;
-  assign id_4 = id_7;
-  wire id_9 = (id_1);
-  defparam id_10.id_11 = 1;
-endmodule
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_0
+  );
+endprogram

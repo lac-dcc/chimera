@@ -1,30 +1,35 @@
-// Seed: 2424195071
-macromodule module_0;
-  assign id_1 = 1;
-  module_2();
+// Seed: 3603591408
+module module_0 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  inout wire id_1;
+  assign module_1.id_6 = 0;
+  wire id_3;
 endmodule
 module module_1 (
-    input tri id_0,
-    input tri0 id_1,
-    input tri id_2,
-    output tri0 id_3,
-    output tri0 id_4,
-    output tri0 id_5,
-    output wand id_6,
-    input tri1 id_7,
-    output wor id_8,
-    input supply1 id_9,
-    output uwire id_10,
-    output tri0 id_11
+    output tri1 id_0,
+    output supply0 id_1,
+    input tri0 id_2,
+    input uwire id_3,
+    output uwire id_4,
+    input uwire id_5,
+    output wire id_6,
+    input tri0 id_7,
+    output supply1 id_8,
+    input uwire id_9,
+    output wor id_10,
+    output wor id_11,
+    input tri1 id_12,
+    input tri1 id_13,
+    input wand id_14
+    , id_16
 );
-  wire id_13;
-  module_0();
-endmodule
-module module_2;
-  wire id_1;
-  wand id_2;
-  id_3(
-      .id_0(1 == id_2), .id_1((1) - id_2), .id_2(id_2), .id_3(1), .id_4(id_1)
+  wire id_17;
+  wire id_18;
+  module_0 modCall_1 (
+      id_16,
+      id_17
   );
-  wire id_4;
 endmodule

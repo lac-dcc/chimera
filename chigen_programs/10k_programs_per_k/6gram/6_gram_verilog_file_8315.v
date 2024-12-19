@@ -1,22 +1,5 @@
-// Seed: 3316981887
-module module_0 ();
-  initial begin
-    begin
-      id_1 <= 1'b0;
-      begin
-        id_1 <= id_1;
-      end
-    end
-    id_2 <= id_2;
-  end
-endmodule
-module module_1 #(
-    parameter id_1 = 32'd90
-);
-  always @(posedge "") force id_1[id_1] = 1;
-  module_0();
-endmodule
-module module_2 (
+// Seed: 2545063553
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -25,14 +8,40 @@ module module_2 (
     id_6,
     id_7
 );
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
   inout wire id_1;
-  wire id_8;
-  wire id_9;
-  module_0();
+  assign id_7 = 1;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    output tri0  id_1,
+    input  tri0  id_2,
+    output wor   id_3,
+    input  wand  id_4,
+    input  tri0  id_5,
+    output wire  id_6,
+    output wor   id_7,
+    input  wand  id_8,
+    input  uwire id_9,
+    output wire  id_10,
+    input  tri   id_11,
+    output wor   id_12
+);
+  wire id_14;
+  module_0 modCall_1 (
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14,
+      id_14
+  );
+  wire id_15;
+  assign id_6 = id_2;
 endmodule

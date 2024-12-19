@@ -1,25 +1,36 @@
-// Seed: 41238780
-module module_0;
-  assign id_1 = 1;
-  module_2();
-  wire id_2;
-  final $display(1);
-  wire id_3;
+// Seed: 3734752874
+module module_0 (
+    input tri id_0,
+    input supply1 id_1
+);
 endmodule
 module module_1 (
-    input supply1 id_0
+    output tri id_0,
+    input supply1 id_1,
+    input tri id_2,
+    input tri id_3,
+    output tri1 id_4,
+    input wire id_5,
+    input wire id_6,
+    input tri id_7,
+    input tri0 id_8,
+    input uwire id_9,
+    input wire id_10,
+    output uwire id_11,
+    output wor id_12,
+    output uwire id_13
 );
-  assign id_2 = (1'b0);
-  module_0();
+  wire id_15;
+  module_0 modCall_1 (
+      id_8,
+      id_6
+  );
+  assign modCall_1.id_0 = 0;
 endmodule
-module module_2;
-  assign id_1 = (id_1 ? id_1 == id_1 : id_1 == id_1) || "";
-  always_ff @(posedge (id_1) < id_1 or negedge id_1) begin
-    {id_1(1)} <= 1 + (1'd0 - 1) + "";
-    id_1 <= id_1;
-  end
-  id_2 :
-  assert property (@(posedge id_1 == (1 - id_2)) id_1)
-  else $display(1);
-  wire id_3;
+module module_2 ();
+  wire id_2;
+endmodule
+module module_3;
+  assign id_1 = ~id_1;
+  module_2 modCall_1 ();
 endmodule

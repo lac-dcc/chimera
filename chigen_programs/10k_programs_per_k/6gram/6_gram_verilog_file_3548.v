@@ -1,34 +1,50 @@
-// Seed: 2685460913
-module module_0;
-  reg  id_2;
-  wire id_3;
-  always @(negedge 1'b0) begin
-    if (id_2 == id_2) $display(id_3);
-    else id_2 <= 1;
-  end
+// Seed: 4092438983
+module module_0 (
+    input wand id_0,
+    input tri module_0,
+    input tri1 id_2,
+    output supply1 id_3,
+    input wand id_4,
+    output wire id_5
+);
+  wand id_7 = id_2;
+  module_2 modCall_1 (
+      id_3,
+      id_0,
+      id_0,
+      id_7
+  );
 endmodule
 module module_1 (
-    input wire id_0,
-    input uwire id_1,
-    input tri id_2,
-    input wor id_3,
-    output tri1 id_4,
-    output supply0 id_5,
-    output tri0 id_6,
-    input tri0 id_7,
-    output wand id_8,
-    input tri0 id_9,
-    input tri0 id_10,
-    input tri0 id_11,
-    input wor id_12,
-    output wand id_13,
-    output tri0 id_14,
-    input wire id_15,
-    output wor id_16,
-    output wor id_17,
-    output wand id_18
+    input  wor  id_0,
+    output tri0 id_1,
+    input  tri1 id_2
 );
-  assign id_16 = 1;
-  tri1 id_20 = 1;
-  module_0();
+  assign id_1 = id_2;
+  wire id_4;
+  nor primCall (id_1, id_0, id_2);
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_0,
+      id_1,
+      id_2,
+      id_1
+  );
+  assign modCall_1.type_10 = 0;
+endmodule
+module module_2 (
+    output wand id_0,
+    input supply0 id_1,
+    input supply0 id_2,
+    output supply1 id_3
+);
+  id_5(
+      id_1
+  );
+  assign module_0.id_7 = 0;
+  wire id_6;
+  always @(posedge 1) begin : LABEL_0
+    id_3 = 1;
+  end
 endmodule

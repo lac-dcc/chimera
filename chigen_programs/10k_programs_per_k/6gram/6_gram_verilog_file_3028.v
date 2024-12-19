@@ -1,9 +1,12 @@
-// Seed: 107135153
+// Seed: 39056183
 module module_0;
-  initial begin
-    $display;
+  assign id_1 = 1;
+  tri0 id_2;
+  always @(posedge 1 or posedge 1) begin : LABEL_0
+    if (id_2) begin : LABEL_0
+      disable id_3;
+    end else id_1 <= {"", id_1(1, id_2)};
   end
-  assign id_1[1] = id_1;
 endmodule
 module module_1 (
     id_1,
@@ -14,21 +17,23 @@ module module_1 (
     id_6,
     id_7,
     id_8,
-    id_9
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  output wire id_7;
   inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always @(posedge 1 or posedge 1'b0 - "")
-    if (id_3) begin
-      id_3 <= id_3;
-      disable id_10;
-    end
-  module_0();
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_13;
+  module_0 modCall_1 ();
 endmodule

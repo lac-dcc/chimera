@@ -1,63 +1,60 @@
-// Seed: 935007934
+// Seed: 3590034666
 module module_0 (
-    output uwire id_0,
-    input uwire id_1,
-    input tri0 id_2,
-    output supply1 id_3,
-    input wire id_4,
-    input supply1 id_5,
-    input tri id_6,
-    output uwire id_7
-    , id_19,
-    input tri1 id_8,
-    output supply1 id_9,
-    output wand id_10,
-    input supply0 id_11,
-    input tri id_12,
-    output tri id_13,
-    input supply1 id_14,
-    input supply0 id_15,
-    output uwire id_16,
-    input uwire id_17
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  wire id_20;
-  wire module_0;
-  assign id_19 = 1'b0;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  always @(posedge module_0 or posedge id_11 == id_10) begin : LABEL_0
+    disable id_12;
+  end
 endmodule
 module module_1 (
-    output supply0 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    input tri0 id_3,
-    output tri id_4,
-    input supply0 id_5,
-    output supply0 id_6,
-    output wand id_7,
-    output uwire id_8
+    output uwire id_0,
+    input  wire  id_1,
+    output wor   id_2,
+    output logic id_3
+    , id_13,
+    input  wire  module_1,
+    output wand  id_5,
+    output uwire id_6,
+    input  tri1  id_7,
+    input  tri1  id_8,
+    output tri1  id_9,
+    output tri   id_10,
+    input  tri0  id_11
 );
-  module_0(
-      id_0,
-      id_1,
-      id_1,
-      id_8,
-      id_5,
-      id_3,
-      id_5,
-      id_6,
-      id_3,
-      id_0,
-      id_8,
-      id_5,
-      id_5,
-      id_6,
-      id_3,
-      id_1,
-      id_7,
-      id_2
-  ); id_10(
-      .id_0(id_4), .id_1(1)
+  xnor primCall (id_0, id_13, id_11, id_1, id_7, id_8);
+  initial id_3 = #1 1;
+  module_0 modCall_1 (
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13
   );
-  always @(posedge 1) begin
-    id_8 = id_2 + 1'b0;
-  end
 endmodule

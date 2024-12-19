@@ -1,34 +1,45 @@
-// Seed: 3638802134
+// Seed: 1280226009
 module module_0 (
     id_1,
     id_2,
     id_3,
     id_4
 );
-  input wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_3[1] = 1;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  initial begin : LABEL_0
+    assume (1'h0 * 1);
+  end
 endmodule
 module module_1 (
-    output logic id_0,
-    input logic id_1,
-    input logic id_2,
-    input supply1 id_3,
-    output wand id_4,
-    output supply0 id_5
+    output uwire id_0
 );
-  supply0 id_7;
-  logic [7:0] id_8 = id_8[1];
-  always @(id_1 or id_2)
-    #1
-      if (id_1 == 1) begin
-        id_0 <= id_1;
-      end else if (1) begin
-        {{id_7, 1} != 1} += "";
-      end
-  module_0(
-      id_7, id_7, id_8, id_7
+  assign id_0 = 1;
+  tri id_2 = (1) & 1;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_2
   );
+endmodule
+module module_2 (
+    input wire id_0,
+    output uwire id_1,
+    input uwire id_2,
+    input tri0 id_3,
+    input supply1 id_4
+);
+  wire id_6;
+  wor  id_7;
+  module_0 modCall_1 (
+      id_6,
+      id_6,
+      id_6,
+      id_6
+  );
+  assign id_7 = id_4;
+  wire id_8;
 endmodule

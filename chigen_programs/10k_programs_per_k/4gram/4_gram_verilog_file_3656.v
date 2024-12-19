@@ -1,40 +1,34 @@
-// Seed: 2521916439
-module module_0 ();
-  assign id_1#(.id_1(1 * 1)) = 1;
-  assign id_1 = 1;
-  wire id_2;
-  assign id_2 = id_1;
-  wand id_3;
-  assign id_2 = id_3;
-  reg id_4;
-  reg id_5;
-  for (genvar id_6 = 1'd0; 1 - id_5; id_4 = id_3 <-> 1) begin
-    initial begin
-      id_5 <= id_4;
-      id_6 <= #1{1'h0, 1};
-    end
-  end
-  wire id_7, id_8;
+// Seed: 1507949035
+module module_0;
+  wire id_1;
+  assign module_1.type_28 = 0;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri id_1,
-    input supply0 id_2,
-    input uwire id_3,
-    output wire id_4,
-    output logic id_5,
-    input wand id_6,
-    input logic id_7,
-    input wire id_8
+    input tri0 id_0,
+    input wire id_1,
+    output tri id_2,
+    input wire id_3,
+    output wand id_4,
+    input tri1 id_5,
+    input tri id_6,
+    input tri id_7,
+    output tri0 id_8,
+    output tri id_9,
+    output uwire id_10,
+    output tri1 id_11,
+    output supply1 id_12,
+    input tri0 id_13,
+    input wor id_14,
+    inout wire id_15,
+    input wand id_16,
+    input tri0 id_17,
+    inout wire id_18,
+    input uwire id_19,
+    input wor id_20,
+    input wor id_21,
+    output tri id_22
 );
-  initial begin
-    id_5 <= id_7;
-    if (1) begin : id_10
-      force id_4.id_7 = 1;
-    end else begin
-      id_5 <= #1'd0;
-    end
-  end
-  nor (id_4, id_6, id_7, id_8);
-  module_0();
+  wire id_24;
+  assign id_10 = 0;
+  module_0 modCall_1 ();
 endmodule

@@ -1,41 +1,40 @@
-// Seed: 2844711093
+// Seed: 515184110
 module module_0 (
-    id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  inout wire id_1;
-  wire id_2;
-  module_2();
-  assign id_1 = 1;
-  wire id_3;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_1 = id_4;
+  assign id_2 = id_4;
+  wor id_5;
+  final id_3 = 1;
+  always @(posedge id_2 or posedge 1) id_5 = 1;
+  assign id_3 = 1;
+  always id_1 = 1'b0 == 1;
+  wire id_6;
 endmodule
 module module_1 (
-    input tri id_0
+    input wand id_0,
+    input wire id_1
 );
-  assign id_2 = id_2;
-  reg id_3;
-  function id_4(inout id_5);
-    id_3 <= 1;
-  endfunction
+  id_3(
+      id_0
+  );
+  wire id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4,
+      id_4
+  );
+  assign modCall_1.id_1 = 0;
+  always id_3 <= #1 id_3;
+  assign id_3 = (id_0) + id_1;
+  wand id_5 = 1;
   wire id_6;
-  assign id_5 = id_3;
-  assign id_6 = id_2;
-  module_0(
-      id_2
-  );
-  assign id_6 = 1;
-  wire id_7;
-endmodule
-module module_2 ();
-  id_1(
-      .id_0(1)
-  );
-endmodule
-module module_3 (
-    input wor id_0,
-    input tri id_1
-);
-  id_3 :
-  assert property (@(1 or id_0) id_0)
-  else;
-  module_2();
 endmodule

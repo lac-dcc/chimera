@@ -1,61 +1,101 @@
-// Seed: 2421806683
+// Seed: 906702661
 module module_0 (
-    input tri0 id_0,
-    input wand id_1,
-    output wor id_2,
+    input wor id_0,
+    input uwire id_1,
+    output tri id_2,
     input tri1 id_3,
-    input tri0 id_4,
-    output tri1 id_5,
-    output wor id_6,
-    input tri0 id_7,
-    output supply1 id_8,
-    input tri0 id_9,
-    input wire id_10,
-    output supply0 id_11,
-    output tri id_12,
-    output tri1 id_13,
-    input uwire id_14,
-    output wire id_15,
-    output wand id_16
+    input uwire id_4,
+    input supply0 id_5
+    , id_12,
+    output wire id_6,
+    output logic id_7,
+    input tri0 id_8,
+    input tri id_9,
+    input wand id_10
 );
-  wire id_18;
-  wire id_19;
-  wire id_20;
-  wire id_21;
-  wire id_22;
+  always @(posedge 1) begin : LABEL_0
+    if (id_4)
+      if ("") id_7 <= id_12;
+      else id_12 = id_3 + id_5;
+  end
+  assign module_1.id_14 = 0;
 endmodule
 module module_1 (
-    output uwire id_0,
-    output wand id_1,
-    output tri0 id_2,
-    input tri id_3,
-    input supply1 id_4,
-    input tri id_5,
-    output supply0 id_6,
-    output uwire id_7,
+    input supply0 id_0,
+    input wor id_1,
+    output tri id_2,
+    output supply0 id_3,
+    input supply0 id_4,
+    input tri0 id_5,
+    input tri0 id_6,
+    input uwire id_7,
     output supply1 id_8,
-    output tri0 id_9,
-    output supply0 id_10
+    input tri0 id_9,
+    output uwire id_10,
+    output wor id_11,
+    output wor id_12,
+    input supply1 id_13,
+    input tri1 id_14,
+    input wire id_15,
+    input logic id_16
+    , id_35,
+    input wor id_17,
+    output logic id_18,
+    output wire id_19,
+    input uwire id_20,
+    input uwire id_21,
+    input wor id_22,
+    output logic id_23,
+    input supply0 id_24,
+    input supply0 id_25,
+    input wand id_26,
+    input supply1 id_27,
+    input supply1 id_28,
+    output wor id_29,
+    input tri id_30,
+    input supply0 id_31,
+    input wand id_32,
+    output uwire id_33
 );
-  wire id_12;
-  module_0(
+  initial
+    if (id_17) id_23 <= id_16;
+    else id_18 <= 1;
+  xnor primCall (
+      id_19,
+      id_15,
+      id_32,
+      id_21,
+      id_24,
+      id_27,
+      id_20,
+      id_1,
+      id_35,
+      id_25,
+      id_28,
+      id_6,
+      id_14,
+      id_30,
       id_5,
+      id_31,
       id_4,
-      id_8,
-      id_5,
-      id_5,
-      id_7,
-      id_8,
-      id_3,
-      id_1,
-      id_4,
-      id_3,
-      id_1,
-      id_1,
-      id_7,
-      id_3,
+      id_13,
       id_0,
-      id_6
+      id_16,
+      id_22,
+      id_9,
+      id_17
   );
-  wire id_13;
+  module_0 modCall_1 (
+      id_4,
+      id_27,
+      id_2,
+      id_32,
+      id_24,
+      id_24,
+      id_10,
+      id_23,
+      id_32,
+      id_9,
+      id_26
+  );
 endmodule

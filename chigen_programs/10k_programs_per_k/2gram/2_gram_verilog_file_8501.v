@@ -1,32 +1,5 @@
-// Seed: 3714731887
-module module_0 #(
-    parameter id_1 = 32'd4,
-    parameter id_2 = 32'd48
-);
-  defparam id_1.id_2 = 1;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_2 = id_3;
-  module_0();
-endmodule
-module module_2 (
-    output tri1 id_0,
-    input tri1 id_1,
-    input supply1 id_2
-);
-  assign id_0 = 1;
-  module_0();
-endmodule
-module module_3 (
+// Seed: 246116795
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -54,96 +27,82 @@ module module_3 (
     id_25,
     id_26,
     id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_37,
-    id_38,
-    id_39,
-    id_40,
-    id_41,
-    id_42,
-    id_43,
-    id_44,
-    id_45,
-    id_46,
-    id_47,
-    id_48,
-    id_49,
-    id_50,
-    id_51,
-    id_52,
-    id_53,
-    id_54,
-    id_55,
-    id_56,
-    id_57,
-    id_58
+    id_28
 );
-  inout wire id_58;
-  input wire id_57;
-  inout wire id_56;
-  output wire id_55;
-  inout wire id_54;
-  input wire id_53;
-  input wire id_52;
-  inout wire id_51;
-  input wire id_50;
-  input wire id_49;
-  inout wire id_48;
-  input wire id_47;
-  input wire id_46;
-  inout wire id_45;
-  input wire id_44;
-  inout wire id_43;
-  output wire id_42;
-  output wire id_41;
-  input wire id_40;
-  output wire id_39;
-  inout wire id_38;
-  input wire id_37;
-  inout wire id_36;
-  inout wire id_35;
-  output wire id_34;
-  inout wire id_33;
-  output wire id_32;
-  input wire id_31;
-  inout wire id_30;
-  input wire id_29;
-  input wire id_28;
+  inout wire id_28;
   inout wire id_27;
-  input wire id_26;
-  inout wire id_25;
-  inout wire id_24;
-  output wire id_23;
-  output wire id_22;
-  output wire id_21;
+  inout wire id_26;
+  output wire id_25;
+  output wire id_24;
+  inout wire id_23;
+  input wire id_22;
+  input wire id_21;
   output wire id_20;
   inout wire id_19;
-  output wire id_18;
-  input wire id_17;
-  input wire id_16;
-  output wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  output wire id_12;
-  input wire id_11;
+  inout wire id_18;
+  output wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  inout wire id_11;
   inout wire id_10;
-  output wire id_9;
-  input wire id_8;
+  inout wire id_9;
+  output wire id_8;
   output wire id_7;
-  input wire id_6;
-  input wire id_5;
-  input wire id_4;
-  inout wire id_3;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
   input wire id_2;
-  inout wire id_1;
-  wire id_59;
-  module_0();
+  output wire id_1;
+  integer id_29;
+endmodule
+module module_1 (
+    input wire id_0,
+    output tri1 id_1
+    , id_13,
+    input tri id_2,
+    input tri1 id_3,
+    output tri id_4,
+    input supply1 id_5,
+    input tri id_6,
+    input uwire id_7,
+    input uwire id_8,
+    input tri0 id_9,
+    output tri1 id_10,
+    output tri0 id_11
+);
+  assign id_10 = 1;
+  module_0 modCall_1 (
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13,
+      id_13
+  );
 endmodule

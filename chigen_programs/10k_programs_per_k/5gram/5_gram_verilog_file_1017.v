@@ -1,67 +1,59 @@
-// Seed: 3672183703
-module module_0;
-  uwire id_2;
-  tri0  id_3;
-  wand  id_4 = id_2 < 1;
-  for (id_5 = id_3; "" == 1; id_3 = id_3) begin : id_6
-    id_7(
-        1, 1
-    );
-  end
+// Seed: 1298229731
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_5;
+  assign module_1.id_1 = 0;
+  wire id_6;
 endmodule
 module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25
+    id_5
 );
-  output wire id_25;
-  output wire id_24;
-  output wire id_23;
-  input wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  output wire id_17;
-  output wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
+  input wire id_5;
   output wire id_4;
   inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_20[1] = id_15#(~(id_21), 1, id_19, id_7 < 1) >= id_7;
-  module_0();
-  wire id_26;
+  input wire id_2;
+  input wire id_1;
+  reg   id_6;
+  uwire id_7;
+  initial id_6 = #id_8(id_6) > id_3;
+  reg id_9;
+  supply0 id_10;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_10,
+      id_10
+  );
+  always_latch @(id_7)
+    if (1'd0) id_9 <= id_1;
+    else begin : LABEL_0
+      id_9 <= 1;
+      $display;
+      id_9 <= 1'h0;
+      logic [7:0] id_11 = id_11;
+      disable id_12;
+      id_11[1] <= id_1;
+      $display;
+      id_8 <= id_3;
+    end
+  wire id_13;
+  wire id_14;
+  wire id_15;
+  assign id_7 = 1;
+  assign id_9 = 1;
+  wire id_16;
+  wire id_17 = id_5;
+  assign id_10 = (1'd0 ==? 1);
 endmodule

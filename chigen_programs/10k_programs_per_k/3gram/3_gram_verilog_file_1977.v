@@ -1,27 +1,30 @@
-// Seed: 569556954
-module module_0 (
-    output wire  id_0,
-    output uwire id_1,
-    input  tri1  id_2
-);
-  id_4 :
-  assert property (@(posedge id_4) 1'b0)
-  else id_0 = id_4;
+// Seed: 1028085039
+module module_0;
+  always @(posedge id_1) @(posedge 1);
+  assign module_2.type_7 = 0;
 endmodule
 module module_1 (
-    input wand id_0,
-    input tri1 id_1,
-    input supply0 id_2
-    , id_4
+    output logic id_0
 );
-  if (1) tri0 id_5;
-  always @(1'b0 or posedge id_5);
-  assign id_5 = (1);
-  assign id_4 = 1;
-  assign id_4 = 1;
-  assign id_4 = id_2;
-  module_0(
-      id_4, id_4, id_2
-  );
-  wire id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18, id_19;
+  id_2 :
+  assert property (@(posedge 1) id_2)
+  else begin : LABEL_0
+    id_0 <= id_2;
+  end
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    output tri1  id_0,
+    output wire  id_1,
+    input  logic id_2
+);
+  assign id_0 = 1 - 1;
+  logic id_4 = id_2;
+  initial begin : LABEL_0
+    begin : LABEL_0
+      if (id_4) id_4 = #1 id_2;
+    end
+  end
+  module_0 modCall_1 ();
 endmodule

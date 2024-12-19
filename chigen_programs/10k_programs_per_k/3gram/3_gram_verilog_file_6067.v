@@ -1,79 +1,40 @@
-// Seed: 2148298966
+// Seed: 3772409992
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output wor id_0,
+    input tri id_1,
+    output tri1 id_2,
+    output tri1 id_3,
+    output supply1 id_4,
+    output tri1 id_5,
+    input uwire id_6
 );
-  inout wire id_4;
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_2 = id_4;
-  wire id_5 = id_4;
-  wire id_6;
-  assign id_4 = id_5;
-  wire id_7;
   wire id_8;
-  wire id_9;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    output supply1 id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input uwire id_4,
-    input supply1 id_5,
-    input tri1 id_6,
-    output supply0 id_7,
-    output wor id_8,
-    input wand id_9,
-    input tri0 id_10,
-    output uwire id_11,
-    input wor id_12,
-    output uwire id_13,
-    input supply0 id_14,
-    input uwire id_15,
-    output wor id_16,
-    input tri0 id_17,
-    input supply0 id_18,
-    output supply0 id_19,
-    output supply1 id_20,
-    output tri id_21,
-    output wire id_22,
-    output wire id_23,
-    input tri1 id_24,
-    input supply1 id_25,
-    input tri1 id_26,
-    input supply1 id_27,
-    output uwire id_28,
-    inout wire id_29,
-    input uwire id_30,
-    input uwire id_31,
-    input wor id_32,
-    input wand id_33,
-    input supply0 id_34,
-    output tri1 id_35,
-    input tri0 id_36,
-    input tri id_37,
-    input tri1 id_38,
-    input wand id_39
-    , id_47,
-    input tri1 id_40,
-    input wor id_41,
-    input tri1 id_42,
-    input supply0 id_43,
-    output supply0 id_44,
-    input wor id_45
+    input  wand  id_0,
+    input  tri1  id_1,
+    output uwire id_2,
+    input  tri0  id_3,
+    output logic id_4
 );
-  wire id_48;
-  assign id_21 = 1'h0;
-  wire id_49;
-  module_0(
-      id_47, id_48, id_49, id_49
+  tri1 id_6;
+  always disable id_7;
+  module_0 modCall_1 (
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1
   );
-  genvar id_50;
-  assign id_35 = id_30 + 1;
-  tri1 id_51 = id_36;
-  wire id_52;
+  wor id_8 = 1, id_9 = 1, id_10, id_11, id_12, id_13;
+  initial begin : LABEL_0
+    #1;
+    #0 begin : LABEL_0
+      id_4 <= 1;
+    end
+  end
+  wire id_14;
 endmodule

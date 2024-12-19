@@ -1,42 +1,30 @@
-// Seed: 1395978448
+// Seed: 986604416
 module module_0;
-  always @(id_1 or posedge 1) begin
-    $display(id_1);
-  end
-  always_comb @(posedge id_1 or posedge 1) if (1) deassign id_1;
+  wire id_2;
+  module_3 modCall_1 ();
+  assign module_2.id_3 = 0;
 endmodule
 module module_1 (
-    output wand id_0,
-    input uwire id_1,
-    input tri0 id_2,
-    input supply0 id_3,
-    input tri1 id_4,
-    input wor id_5,
-    output tri1 id_6,
-    output wire id_7,
-    output wor id_8,
-    output wand id_9,
-    input tri0 id_10,
-    input supply1 id_11,
-    input supply1 id_12,
-    output supply1 id_13,
-    input uwire id_14,
-    input tri0 id_15,
-    input tri0 id_16,
-    output tri0 id_17,
-    output supply0 id_18,
-    output uwire id_19,
-    input supply0 id_20,
-    output uwire id_21,
-    output uwire module_1,
-    output wor id_23,
-    input uwire id_24,
-    input supply0 id_25,
-    output uwire id_26,
-    input supply0 id_27,
-    input wand id_28
+    input wire id_0,
+    input tri1 id_1,
+    input uwire id_2,
+    input tri0 id_3,
+    output uwire id_4,
+    input tri id_5,
+    output supply1 id_6,
+    output supply1 id_7
 );
-  wire id_30;
-  assign id_22 = 1'b0;
-  module_0();
+  wire id_9;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input wire id_0,
+    input wand id_1
+);
+  reg id_3;
+  always id_3 = #1 1;
+  module_0 modCall_1 ();
+endmodule
+module module_3 ();
+  wire id_1 = id_1;
 endmodule

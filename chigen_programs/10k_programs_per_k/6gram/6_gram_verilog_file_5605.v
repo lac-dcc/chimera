@@ -1,88 +1,44 @@
-// Seed: 1482046071
+// Seed: 3080391239
 module module_0 (
-    input wor id_0,
-    input wor id_1,
-    input uwire id_2,
-    input uwire id_3,
-    output tri id_4,
-    output uwire id_5,
-    input wand id_6,
-    input wire id_7,
-    input uwire id_8,
-    input uwire module_0,
-    input supply0 id_10,
-    input tri id_11,
-    input tri id_12,
-    input supply1 id_13,
-    input wire id_14,
-    input wire id_15,
-    output tri1 id_16,
-    output supply1 id_17,
-    input wor id_18,
-    input supply0 id_19,
-    input supply1 id_20,
-    output wand id_21,
-    output supply1 id_22,
-    output supply0 id_23,
-    input supply1 id_24,
-    output tri id_25,
-    input wor id_26,
-    output tri1 id_27,
-    input tri id_28,
-    input wand id_29,
-    input supply1 id_30,
-    output wand id_31,
-    input wire id_32,
-    output wand id_33
+    output tri1 id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    output supply1 id_3,
+    input tri1 id_4,
+    output supply0 id_5,
+    input supply1 id_6,
+    output supply0 id_7,
+    input tri0 id_8,
+    input supply0 id_9,
+    output wire id_10,
+    input tri1 id_11
 );
-  assign id_4 = 1'h0;
+  always force id_5 = 1 + 1;
+  assign module_1.id_3 = 0;
 endmodule
 module module_1 (
-    input wire id_0,
-    input tri1 id_1,
-    input logic id_2,
-    input tri id_3,
-    input tri1 id_4,
-    output tri id_5,
-    input supply1 id_6
+    output tri0 id_0,
+    input supply0 id_1,
+    input tri1 id_2,
+    output tri1 id_3
 );
-  assign id_5 = 'h0;
-  reg id_8;
-  module_0(
+  module_0 modCall_1 (
+      id_3,
+      id_2,
       id_1,
-      id_0,
-      id_4,
-      id_0,
-      id_5,
-      id_5,
-      id_1,
-      id_6,
       id_3,
+      id_2,
       id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_2,
       id_0,
-      id_0,
-      id_6,
-      id_3,
-      id_3,
-      id_6,
-      id_5,
-      id_5,
-      id_3,
-      id_6,
-      id_4,
-      id_5,
-      id_5,
-      id_5,
-      id_0,
-      id_5,
-      id_4,
-      id_5,
-      id_0,
-      id_4,
-      id_4,
-      id_5,
-      id_3,
-      id_5
+      id_1
   );
-  always while (id_2) id_8 <= id_2;
+  generate
+    for (id_5 = id_2; id_2; id_0 = id_2) begin : LABEL_0
+      assign id_5 = id_5;
+    end
+  endgenerate
 endmodule

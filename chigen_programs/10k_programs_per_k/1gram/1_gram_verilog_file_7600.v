@@ -1,40 +1,35 @@
-// Seed: 1948758136
-module module_0 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  output wire id_1;
-  wand id_3, id_4;
-  assign id_4 = id_3 / id_3;
+// Seed: 1223486017
+module module_0;
+  wire id_1;
+endmodule : SymbolIdentifier
+module module_1;
+  wire id_1;
+  logic [7:0] id_2, id_3, id_4;
+  assign id_4[1] = "" || 1'b0;
+  module_0 modCall_1 ();
 endmodule
-module module_1 (
+module module_2 (
     input wor id_0,
-    output uwire id_1,
-    input uwire id_2,
-    input uwire id_3,
-    input tri id_4,
-    output supply1 id_5,
-    input tri id_6,
-    output tri1 id_7,
-    input wor id_8,
-    input tri id_9,
-    input tri id_10,
+    input supply1 id_1,
+    output supply1 id_2,
+    input supply0 id_3,
+    output wand id_4,
+    output uwire id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    input tri id_8,
+    output wand id_9,
+    input supply0 id_10,
     output supply0 id_11,
-    output uwire id_12,
-    input wand id_13,
-    input supply0 id_14,
-    input supply0 id_15,
-    input supply1 id_16,
-    input supply0 id_17,
-    output tri id_18,
-    output wire id_19,
-    output tri1 id_20
+    input wor id_12,
+    output uwire id_13,
+    output uwire id_14,
+    output wire id_15
+    , id_20,
+    input uwire id_16,
+    input tri0 id_17,
+    input wand id_18
 );
-  uwire id_22 = id_8 - 1;
-  wire  id_23;
-  tri0  id_24 = (id_14) * ~1, id_25;
-  module_0(
-      id_22, id_22
-  );
-endmodule
+  wire id_21;
+  module_0 modCall_1 ();
+endmodule : SymbolIdentifier

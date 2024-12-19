@@ -1,35 +1,44 @@
-// Seed: 2972064458
-module module_0 #(
-    parameter id_2 = 32'd56,
-    parameter id_3 = 32'd97
+// Seed: 1088881704
+module module_0 (
+    output tri1 id_0,
+    output tri0 id_1,
+    input wor module_0,
+    output wor id_3,
+    input wire id_4,
+    input tri0 id_5,
+    input tri id_6,
+    output wand id_7,
+    input supply1 id_8,
+    input wand id_9,
+    input tri1 id_10
 );
-  tri1 id_1;
-  assign id_1 = 1 ==? id_1;
-  defparam id_2.id_3 = 1;
+  assign id_1 = id_2;
+  always @(*) id_7 = 1;
+  integer id_12;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    input  wire id_0,
+    input  wor  id_1,
+    output tri1 id_2
 );
-  inout wire id_9;
-  inout wire id_8;
-  output wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  supply1 id_10 = 1;
-  assign id_9 = 1 ? id_3 == 1 : 1'b0 !=? id_10;
-  module_0();
-  wire id_11;
-  wire id_12;
+  assign id_2 = id_0;
+  generate
+    always @(posedge 1 or posedge 1) begin : LABEL_0
+      id_2 = id_0 == id_0;
+    end
+  endgenerate
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_1
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

@@ -1,37 +1,74 @@
-// Seed: 3546351245
+// Seed: 1868626265
 module module_0 (
-    output supply1 id_0,
-    input tri id_1,
-    input supply0 id_2,
-    output tri id_3,
-    input tri id_4,
-    input wor id_5,
-    input supply0 id_6,
-    input supply0 id_7,
-    output supply0 id_8,
-    input wire id_9,
-    input supply0 id_10
+    output uwire id_0,
+    output tri1  id_1,
+    input  wor   id_2
 );
-  wand id_12;
-  initial begin
-    id_12 = id_1;
-  end
+  wire id_4;
+  assign module_1.id_19 = 0;
 endmodule
-module module_1 #(
-    parameter id_10 = 32'd89,
-    parameter id_11 = 32'd10
-) (
-    input tri id_0,
-    output uwire id_1,
-    input tri0 id_2,
-    output tri id_3,
+module module_1 (
+    output tri id_0,
+    input uwire id_1,
+    output uwire id_2,
+    output wor id_3,
     input supply0 id_4,
-    input wand id_5,
-    input wire id_6,
-    output tri0 id_7,
-    input uwire id_8
+    input supply1 id_5,
+    input wand id_6,
+    input supply1 id_7,
+    output wire id_8,
+    output wor id_9,
+    input wor id_10,
+    input uwire id_11,
+    output uwire id_12,
+    output uwire id_13,
+    input supply0 id_14,
+    output tri id_15,
+    input tri id_16,
+    output supply1 id_17,
+    input wand id_18,
+    output supply0 id_19,
+    input supply1 id_20,
+    input tri id_21,
+    input wor id_22,
+    output tri1 id_23,
+    input tri id_24,
+    input wand id_25,
+    input supply1 id_26,
+    input wand id_27,
+    input wire id_28,
+    output wand id_29
 );
-  defparam id_10.id_11 = 1 == 1; module_0(
-      id_3, id_6, id_6, id_7, id_6, id_5, id_5, id_5, id_3, id_5, id_2
+  wire id_31, id_32, id_33, id_34, id_35, id_36;
+  timeunit 1ps / 1ps;
+  wire id_37;
+  xor primCall (
+      id_3,
+      id_10,
+      id_32,
+      id_22,
+      id_11,
+      id_33,
+      id_26,
+      id_20,
+      id_5,
+      id_28,
+      id_34,
+      id_37,
+      id_16,
+      id_4,
+      id_1,
+      id_14,
+      id_35,
+      id_7,
+      id_36,
+      id_21,
+      id_27,
+      id_25
+  );
+  module_0 modCall_1 (
+      id_8,
+      id_3,
+      id_24
   );
 endmodule

@@ -1,39 +1,40 @@
-// Seed: 1734431954
+// Seed: 1625318401
 module module_0 (
-    input wire id_0,
-    input wand id_1,
-    input tri  id_2
+    input supply1 id_0,
+    input supply0 id_1,
+    input tri1 id_2,
+    output tri0 id_3
 );
-  assign id_4 = 1;
-  wor id_5;
-  assign id_4 = id_5;
+  supply0 id_5;
+  assign module_1.type_0 = 0;
+  assign id_5 = id_5;
+  always @(negedge id_5 or posedge 1)
+    if (id_1) begin : LABEL_0
+      id_5 = 1;
+    end
   wire id_6;
-  supply0 id_7 = id_4;
+  wor  id_7;
+  assign id_7 = id_7;
+  assign id_7 = 1;
+  assign id_3 = (id_0);
   wire id_8;
-  id_9(
-      .id_0(id_4),
-      .id_1(id_5),
-      .id_2(id_4),
-      .id_3(1),
-      .id_4(1),
-      .id_5({1'b0{"" == id_1}}),
-      .id_6(id_4),
-      .id_7(1),
-      .id_8(1)
-  );
 endmodule
 module module_1 (
-    output tri1 id_0,
-    output wor id_1
-    , id_4,
-    input supply0 id_2
+    input wor id_0,
+    input uwire id_1,
+    output uwire id_2,
+    inout uwire id_3,
+    input uwire id_4,
+    input uwire id_5,
+    output supply0 id_6,
+    input tri id_7,
+    output wor id_8
 );
-  tri0 id_5;
-  module_0(
-      id_2, id_2, id_2
+  wire id_10, id_11;
+  module_0 modCall_1 (
+      id_0,
+      id_5,
+      id_1,
+      id_8
   );
-  wire id_6;
-  always @(*) begin
-    id_5 = 1;
-  end
 endmodule

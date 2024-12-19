@@ -1,36 +1,44 @@
-// Seed: 2904737679
+// Seed: 3067148005
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input  wor   id_0,
+    output tri0  id_1
+    , id_7,
+    output wand  id_2,
+    output wire  id_3,
+    input  uwire id_4,
+    input  uwire id_5
 );
-  input wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  input wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_4 = id_5;
-  wand id_7;
-  assign id_7 = 1'b0;
-  wire id_8;
-  wire id_9 = id_9;
-  tri0 id_10 = 1'h0;
+  supply0 id_8;
+  wand id_9;
+  initial begin : LABEL_0
+    id_9 = 1;
+  end
+  id_10 :
+  assert property (@(posedge id_7) id_8)
+  else begin : LABEL_0
+    id_10 = id_4;
+  end
+  wire id_11, id_12;
 endmodule
 module module_1 (
-    input  tri   id_0,
-    output wor   id_1,
-    input  uwire id_2
+    input  tri0  id_0,
+    input  wand  id_1,
+    input  tri   id_2,
+    output uwire id_3,
+    input  tri0  id_4,
+    output wor   id_5,
+    output tri0  id_6,
+    input  uwire id_7,
+    input  tri0  id_8,
+    input  wire  id_9
 );
-  assign id_1 = 1;
-  always @(posedge 1);
-  wire id_4;
-  tri0 id_5 = 1;
-  module_0(
-      id_4, id_4, id_5, id_4, id_4, id_4
+  module_0 modCall_1 (
+      id_2,
+      id_6,
+      id_5,
+      id_5,
+      id_9,
+      id_0
   );
-  wire id_6;
+  assign modCall_1.id_3 = 0;
 endmodule

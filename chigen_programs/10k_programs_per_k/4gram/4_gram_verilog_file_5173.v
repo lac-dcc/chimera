@@ -1,28 +1,36 @@
-// Seed: 3164094330
+// Seed: 1657763158
 module module_0 ();
-  assign id_1 = id_1 | 1;
+  assign id_1 = id_1 - id_1;
+  supply1 id_2 = 1'b0;
+  assign id_1 = 1'b0;
 endmodule
-module module_1;
-  always @(posedge 1 or negedge 1'b0) begin
-    assume (1);
-  end
-  module_0();
-endmodule
-module module_0 (
-    output wire id_0,
-    output tri  id_1
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  id_3 :
-  assert property (@(posedge 1) id_3)
-  else $display(1);
-  assign id_1 = 1 ? 1 == 1'h0 : 1'b0;
-  wire id_4;
-  always force {1 & id_4, 1'b0} = 1;
-  wire module_2;
-  wire id_5;
-  assign id_4 = id_5;
-  module_0();
-  wire id_6;
-  assign id_0 = (id_6);
-  genvar id_7;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_12;
+  module_0 modCall_1 ();
+  assign id_11 = 1;
+  logic [7:0] id_13;
+  assign id_8 = id_13["" : 1];
 endmodule

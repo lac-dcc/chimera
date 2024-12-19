@@ -1,29 +1,62 @@
-// Seed: 9259595
-module module_0 #(
-    parameter id_6 = 32'd69,
-    parameter id_7 = 32'd17,
-    parameter id_8 = 32'd17
+// Seed: 2157838928
+module module_0 (
+    id_1,
+    id_2
 );
-  always begin
-    `define pp_1 0
-  end
-  assign id_2 = id_2;
-  for (id_3 = 1; (1); id_3 -= id_3.id_3) begin
-    wire id_4;
-    wire id_5;
-    initial id_3 = id_5;
-  end
-  defparam id_6 = id_6, id_7 = 1'h0, id_8 = 1 + 1;
+  inout wire id_2;
+  inout wire id_1;
+  module_2 modCall_1 (
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2
+  );
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_8 = 32'd17
+) (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5
 );
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wand id_4 = 1;
-  xor (id_1, id_2, id_3, id_4);
-  module_0();
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  logic [7:0] id_6, id_7 = id_7[1'b0!==1];
+  defparam id_8 = (id_2) !== (id_5);
+  assign id_1 = 1;
+  module_0 modCall_1 (
+      id_1,
+      id_1
+  );
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
 endmodule

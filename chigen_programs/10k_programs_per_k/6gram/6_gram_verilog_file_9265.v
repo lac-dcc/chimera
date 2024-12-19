@@ -1,28 +1,49 @@
-// Seed: 402714540
-program module_0;
-  assign id_1 = 1;
-  reg id_3 = 1'b0, id_4;
-  always @(0 or negedge 1 or posedge 1) begin
-    case (id_3)
-      1: id_1 <= id_4;
-      1: if (1) $display(1'b0, 1);
-    endcase
-    for (id_4 = 1; 1; id_1 = id_2) id_4 = 1'b0;
-    id_1 <= id_3;
-    $display;
-  end
-endprogram
-module module_1 (
-    id_1,
-    id_2,
-    id_3
+// Seed: 1601085628
+module module_0 (
+    input wire id_0,
+    input supply0 id_1,
+    input wand id_2,
+    input supply0 id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    output uwire id_6,
+    output uwire id_7,
+    output wor id_8,
+    input wire id_9,
+    input wire id_10,
+    output wor id_11,
+    input uwire id_12,
+    input uwire id_13,
+    input wand id_14,
+    output tri0 id_15
 );
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  initial begin
-    id_3 <= id_4 + id_4;
-    id_4 = 1;
-  end
-  module_0();
+  wire id_17;
+  assign module_1.type_5 = 0;
+endmodule
+module module_1 (
+    output wire  id_0,
+    output uwire id_1,
+    input  tri0  id_2
+);
+  id_4(
+      .id_0(id_0), .id_1(1), .id_2(id_1), .id_3(1), .id_4(id_2), .id_5()
+  );
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_0
+  );
 endmodule

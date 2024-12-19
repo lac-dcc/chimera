@@ -1,72 +1,50 @@
-// Seed: 348304479
+// Seed: 2084320256
 module module_0 (
-    input tri1 id_0
+    input wand id_0
 );
   wire id_2;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    output wand  id_0,
-    inout  tri0  id_1,
-    input  uwire id_2,
-    input  tri0  id_3,
-    output wand  id_4,
-    output wire  id_5
-);
-  wire id_7;
-  module_0(
-      id_3
-  );
-endmodule
-module module_2 (
-    input tri0 id_0,
-    input wand id_1,
-    input uwire id_2,
+    inout  wand id_0,
+    output tri0 id_1,
+    output wand id_2,
     output tri0 id_3,
-    input tri0 id_4,
-    output wor id_5,
-    input wand id_6,
-    input tri0 id_7,
-    input wire id_8,
-    input tri id_9,
-    output wor id_10,
-    output tri1 id_11,
-    input supply0 id_12,
-    input tri0 id_13,
-    output tri0 id_14,
-    output wand id_15,
-    output tri1 id_16,
-    input wand id_17,
-    input wire id_18,
-    input wor id_19,
-    input wor id_20,
-    output supply0 id_21,
-    input wor id_22,
-    input wor id_23,
-    input supply0 id_24,
-    input tri1 id_25,
-    input supply1 id_26,
-    output tri0 id_27,
-    input supply0 id_28,
-    output tri id_29,
-    input tri1 id_30,
-    output tri1 id_31,
-    input supply1 id_32,
-    input uwire id_33,
-    output tri1 id_34,
-    input supply1 id_35,
-    input tri1 id_36,
-    input wor id_37,
-    input tri id_38,
-    output tri1 id_39,
-    input supply0 id_40,
-    output tri0 id_41,
-    output wand id_42,
-    input tri id_43
+    output wire id_4
 );
-  wire id_45;
-  id_46(
-      id_35, 1'd0 ^ id_30
-  ); module_0(
-      id_4
-  );
+  assign id_2 = id_0;
+  module_0 modCall_1 (id_0);
+  assign id_0 = 1'b0;
+endmodule
+macromodule module_2 (
+    input logic id_0,
+    input logic id_1,
+    input tri id_2,
+    input tri id_3,
+    output logic id_4,
+    input supply1 id_5,
+    input logic id_6,
+    output logic id_7,
+    output tri id_8,
+    input wire id_9,
+    output wand id_10,
+    output logic id_11
+);
+  tri0 id_13;
+  assign id_7 = 1'b0;
+  or primCall (id_4, id_3, id_15, id_2, id_18, id_16, id_5, id_13, id_9, id_17, id_1);
+  reg id_15;
+  reg id_16, id_17, id_18;
+  module_0 modCall_1 (id_3);
+  assign modCall_1.id_0 = 0;
+  always begin : LABEL_0
+    id_7 <= id_6;
+    {id_16, 1, 1} <= 1;
+    $display(id_14, 1, 1);
+    id_11 <= "";
+    if ({1'b0, 1 == 1'b0, 1}) begin : LABEL_0
+      id_15 <= 1;
+    end else id_4 <= (id_18);
+  end
+  assign id_13 = 1;
 endmodule

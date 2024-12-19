@@ -1,29 +1,48 @@
-// Seed: 3691712337
-module module_0;
-  reg id_2;
-  assign id_3 = id_2;
-  reg  id_4;
-  wire id_5;
-  always_latch id_4 <= id_3;
-  assign #1 id_3 = 1'b0;
-  assign id_3 = 1'b0;
-  final id_3 = 1 == id_3;
-  wire id_6;
+// Seed: 2900359323
+module module_0 (
+    input wor id_0
+);
+  assign id_2 = id_0;
+  assign id_2 = 1;
+  id_3(
+      1
+  );
+  assign module_1.type_34 = 0;
+  assign id_3 = id_3;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    output tri0 id_0,
+    input tri1 id_1,
+    input tri0 id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    output tri0 id_6,
+    input wire id_7,
+    output tri0 void id_8,
+    input tri id_9,
+    input tri id_10,
+    input uwire id_11,
+    input uwire id_12,
+    input logic id_13,
+    input wire id_14
+    , id_30,
+    output supply1 id_15,
+    output logic id_16,
+    input supply1 id_17,
+    input wire id_18,
+    output wor id_19,
+    input wand id_20,
+    output supply0 id_21,
+    input wand id_22,
+    input tri id_23,
+    input tri1 id_24,
+    input supply1 id_25
+    , id_31 = id_30,
+    output tri1 id_26,
+    output wire id_27,
+    output wire id_28
 );
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  uwire id_6, id_7 = {1'b0{1}}, id_8;
-  assign id_8 = 1;
-  module_0();
-  wire id_9;
+  initial id_16 <= id_13;
+  module_0 modCall_1 (id_18);
 endmodule

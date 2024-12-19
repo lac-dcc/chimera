@@ -1,40 +1,57 @@
-// Seed: 1029562315
+// Seed: 351551269
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    id_2
 );
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
+  output wire id_2;
+  inout wire id_1;
+  wire id_3 = 1;
+  assign module_3.type_6 = 0;
+  wor id_4 = 1;
+endmodule
+module module_1 (
+    id_1,
+    id_2,
+    id_3
+);
   inout wire id_3;
   inout wire id_2;
   output wire id_1;
-  initial assert (id_3);
+  wire id_4;
+  module_0 modCall_1 (
+      id_3,
+      id_3
+  );
+  always @(id_2) id_1 <= id_2;
 endmodule
-module module_1 (
-    input  wand  id_0,
-    input  wire  id_1,
-    input  logic id_2,
-    input  tri   id_3,
-    output logic id_4,
-    input  uwire id_5,
-    input  logic id_6,
-    output uwire id_7
+macromodule module_2 (
+    input  uwire id_0,
+    output wire  id_1
 );
-  wire id_9;
-  always_latch @(posedge id_7++) id_4 <= id_6;
-  assign id_4 = id_2;
-  module_0(
-      id_9, id_9, id_9, id_9, id_9, id_9, id_9, id_9, id_9
+  wire id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_3
+  );
+  wire id_4;
+endmodule
+module module_3 (
+    input wire id_0,
+    output tri id_1,
+    input supply0 id_2,
+    output wor id_3,
+    output wand id_4
+);
+  reg id_6;
+  always #1
+    #1
+      if (1) begin : LABEL_0
+        id_6 <= 1;
+      end
+  wire id_7;
+  always @(*);
+  module_0 modCall_1 (
+      id_7,
+      id_7
   );
 endmodule

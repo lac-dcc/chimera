@@ -1,58 +1,33 @@
-// Seed: 1907304556
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
-);
-  output wire id_13;
-  input wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  input wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  wire id_14;
+// Seed: 1864257686
+module module_0 ();
+  reg  id_2;
+  wand id_3;
+  always @(posedge id_2 or posedge id_1) id_1 <= id_1;
+  always @(negedge 1) begin : LABEL_0
+    if (id_3) assign id_1 = 1;
+  end
+  integer id_4;
+  reg id_5;
+  assign id_2 = id_4;
+  assign id_2 = id_5 == id_3 ? id_4 : 1'b0 - 1'b0 ? id_5 : id_5;
+  assign module_1.id_3 = 0;
+  assign id_4 = 1;
+  initial begin : LABEL_0
+    id_4 = new;
+    if (id_5) begin : LABEL_0
+      repeat (id_2) if (id_5) id_5 <= 1;
+    end
+    id_4 <= 1'b0;
+  end
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    input  tri1  id_0,
+    output uwire id_1,
+    output wor   id_2,
+    input  wor   id_3
 );
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  uwire id_9 = 1'd0;
-  wire id_10, id_11;
-  always @(posedge 1) begin
-    id_3 = #1 1;
-  end
-  module_0(
-      id_1, id_7, id_10, id_9, id_7, id_10, id_11, id_6, id_1, id_11, id_11, id_8, id_6
-  );
+  wire id_5;
+  module_0 modCall_1 ();
+  wire id_6;
+  wire id_7;
 endmodule

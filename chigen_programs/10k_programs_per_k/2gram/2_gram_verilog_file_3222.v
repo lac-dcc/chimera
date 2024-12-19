@@ -1,41 +1,34 @@
-// Seed: 3276783382
+// Seed: 3117805813
 module module_0 ();
-  assign id_1 = 1;
-  wire id_2;
-  id_3 :
-  assert property (@(1 or posedge 1) 1)
-  else;
 endmodule
-module module_1 (
+module module_1 ();
+  assign id_1 = id_1;
+  wire id_2;
+  module_0 modCall_1 ();
+  assign id_2 = (id_2);
+endmodule
+module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
+  inout wire id_10;
+  output wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
   output wire id_5;
   inout wire id_4;
-  input wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_2 = id_3;
-  module_0();
-  uwire id_6;
-  for (id_7 = id_6; 1; id_1 = id_7) begin
-    wire id_8;
-    wire id_9, id_10;
-    always begin
-      $display(1, id_6, id_3 <-> id_3);
-    end
-  end
-  generate
-    assign id_4 = 1;
-    always_latch begin
-      id_2 = 1;
-    end
-    always #0 begin : id_11
-      id_5 = id_3;
-    end
-    assign id_7 = 1;
-  endgenerate
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_11;
+  module_0 modCall_1 ();
 endmodule

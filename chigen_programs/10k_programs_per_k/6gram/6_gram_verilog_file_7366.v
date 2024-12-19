@@ -1,33 +1,25 @@
-// Seed: 1197862429
+// Seed: 434127691
 module module_0 (
-    output wand id_0,
-    input supply1 id_1,
-    input wire id_2,
-    output wand id_3
+    output wor id_0
 );
-  wire id_5;
-  wire id_6;
-  assign id_3 = 1 == "";
+  always @(id_2) begin : LABEL_0
+    id_2[1'b0] <= 1 ? 1 : 1;
+  end
 endmodule
-module module_1 #(
-    parameter id_3 = 32'd56,
-    parameter id_4 = 32'd1
-) (
-    input  uwire id_0,
-    output tri0  id_1
+module module_1 (
+    input  tri   id_0,
+    input  uwire id_1,
+    input  tri   id_2,
+    input  tri0  id_3,
+    input  wire  id_4,
+    output wire  id_5,
+    output wor   id_6
 );
-  defparam id_3.id_4 = 1; module_0(
-      id_1, id_0, id_0, id_1
+  module_0 modCall_1 (id_6);
+  assign modCall_1.id_0 = 0;
+  id_8(
+      .id_0(1), .id_1($display()), .id_2(1), .id_3(id_0)
   );
-endmodule
-module module_2 (
-    output wire id_0,
-    input supply1 id_1,
-    input uwire id_2,
-    input tri0 id_3
-);
-  assign id_0 = 1;
-  module_0(
-      id_0, id_2, id_3, id_0
-  );
+  xor primCall (id_6, id_1, id_2);
+  timeprecision 1ps;
 endmodule

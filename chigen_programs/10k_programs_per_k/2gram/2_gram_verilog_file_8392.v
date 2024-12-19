@@ -1,31 +1,62 @@
-// Seed: 3256269405
-module module_0;
-  tri id_1;
-  integer id_3 (
-      .id_0(1),
-      .id_1(1 <-> id_1),
-      .id_2(1)
-  );
+// Seed: 1323050278
+module module_0 (
+    output wor id_0,
+    output uwire id_1,
+    input tri id_2,
+    input wand id_3,
+    input wire id_4,
+    input wor id_5
+    , id_23,
+    input supply0 id_6,
+    input wor id_7,
+    output uwire id_8,
+    input uwire id_9,
+    input uwire id_10,
+    input supply0 id_11
+    , id_24,
+    input tri id_12,
+    input tri id_13,
+    input uwire id_14,
+    input supply1 id_15,
+    output wire id_16,
+    output supply1 id_17,
+    input wand id_18,
+    input supply1 id_19,
+    input supply0 id_20,
+    input supply1 id_21
+);
+  assign id_23 = 1'b0;
+  wire id_25;
+  always if (id_24) @(1'b0 or 1'b0) disable id_26;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wire id_1,
-    output tri0 id_2,
-    input wire id_3,
-    input wor id_4,
-    output wire id_5
-    , id_9,
-    input tri1 id_6,
-    input supply0 id_7
+    input  uwire id_0,
+    output wire  id_1
 );
-  module_0();
-endmodule
-module module_2 (
-    input tri1 id_0,
-    inout supply1 id_1,
-    input tri1 id_2
-);
-  assign id_1 = 1;
-  module_0();
-  wire id_4;
+  assign id_1 = id_0;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0
+  );
+  wire id_3;
 endmodule

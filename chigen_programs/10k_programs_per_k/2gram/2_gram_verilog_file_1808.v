@@ -1,33 +1,125 @@
-// Seed: 4046255375
-module module_0;
-  assign id_1 = id_1;
-  wire id_2;
-  wire id_3;
-  wire id_4;
+// Seed: 1310041143
+module module_0 #(
+    parameter id_46 = 32'd28,
+    parameter id_47 = 32'd89
+) (
+    input tri id_0,
+    output wor id_1,
+    output wor id_2,
+    input supply1 id_3,
+    inout uwire id_4,
+    input tri1 id_5,
+    input tri1 id_6,
+    input tri1 id_7,
+    input uwire id_8,
+    input tri id_9,
+    output tri id_10,
+    input wor id_11,
+    input tri0 id_12,
+    input tri id_13
+    , id_44,
+    input tri1 id_14,
+    input tri1 id_15,
+    input tri1 id_16,
+    input uwire id_17,
+    input tri0 id_18,
+    output tri id_19,
+    input tri id_20,
+    output supply0 id_21,
+    output wor id_22,
+    input tri0 id_23,
+    input supply1 id_24,
+    input supply0 id_25,
+    input wire id_26,
+    input wire id_27,
+    input uwire id_28,
+    input supply0 id_29,
+    output wand id_30,
+    input tri0 id_31,
+    input wor id_32,
+    input wire id_33,
+    input supply0 id_34,
+    input tri1 id_35,
+    output uwire id_36,
+    input tri1 id_37,
+    input wire id_38,
+    input wire id_39,
+    input wor id_40,
+    input wor id_41,
+    output supply0 id_42
+);
+  assign {1'b0, 1'b0, id_23, id_32} = id_33;
+  assign module_1.type_8 = 0;
+  wire id_45;
+  defparam id_46.id_47 = 1;
 endmodule
 module module_1 (
-    input logic id_0,
-    input tri1  id_1
+    input tri id_0,
+    inout tri id_1,
+    output supply0 id_2
+    , id_6,
+    input uwire id_3,
+    output wor id_4
 );
-  assign id_3 = 1;
-  assign id_3 = id_0;
-  logic id_4;
-  always @(1'd0) begin
-    if (1) begin
-      id_3 <= 1;
-    end else begin
-      id_3 <= 1'd0;
-    end
-    id_4 = 1;
-    id_4 = id_0;
-  end
-  wire id_5;
-  wire id_6;
-  always_latch begin
-    if (1);
-  end
-  wire id_7;
-  always assert (1);
-  wire id_8;
-  module_0();
+  id_7(
+      .id_0(1),
+      .id_1(id_2),
+      .id_2(),
+      .id_3(id_3),
+      .id_4(1),
+      .id_5(1),
+      .id_6(id_4),
+      .id_7(id_2 && id_6),
+      .id_8(id_0),
+      .id_9(1'b0),
+      .id_10(id_3),
+      .id_11(id_6),
+      .id_12(id_6),
+      .id_13(1)
+  );
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_4,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_3,
+      id_3,
+      id_4,
+      id_1,
+      id_2,
+      id_2,
+      id_0,
+      id_1,
+      id_3,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_3,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_3,
+      id_1,
+      id_2
+  );
 endmodule

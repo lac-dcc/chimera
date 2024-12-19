@@ -1,28 +1,39 @@
-// Seed: 3099490181
-module module_0 #(
-    parameter id_4 = 32'd31,
-    parameter id_5 = 32'd87
+// Seed: 4202389439
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  assign #1 id_1 = id_1;
-  wire id_2, id_3;
-  assign id_3 = id_3;
-  assign id_3 = id_2;
-  defparam id_4 = 1, id_5 = 1;
-  assign id_3 = ~1;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_4;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wor id_1,
-    output tri1 id_2,
-    input uwire id_3,
-    input tri id_4,
-    input wor id_5,
-    input wor id_6,
-    output uwire id_7,
-    output supply1 id_8,
-    input uwire id_9,
-    input wor id_10
+    input wire id_0,
+    input wor  id_1
 );
-  wor id_12, id_13, id_14 = 1, id_15;
-  module_0(); timeunit 1ps;
+  wire id_3;
+  wire id_4;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_4
+  );
+endmodule
+module module_2 (
+    output supply0 id_0
+);
+  always_latch id_0 = 'b0;
+endmodule
+module module_3 (
+    input  uwire id_0,
+    output wire  id_1,
+    output wand  id_2
+    , id_5,
+    output uwire id_3
+);
+  assign id_5 = id_5;
+  module_2 modCall_1 (id_3);
+  assign modCall_1.type_0 = 0;
 endmodule

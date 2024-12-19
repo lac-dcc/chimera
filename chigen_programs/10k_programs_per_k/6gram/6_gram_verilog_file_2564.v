@@ -1,52 +1,51 @@
-// Seed: 677238221
-module module_0;
+// Seed: 2409722434
+module module_0 (
+    output tri0 id_0,
+    input wire id_1,
+    output wire id_2,
+    input supply1 id_3,
+    output supply0 id_4
+    , id_14,
+    input supply1 id_5,
+    output tri0 id_6,
+    output tri0 id_7,
+    input wor id_8,
+    output wand id_9,
+    input supply0 id_10
+    , id_15,
+    input wand id_11
+    , id_16,
+    output tri id_12
+);
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    input  uwire id_0,
-    output uwire id_1,
-    output wire  id_2,
-    input  tri   id_3
-    , id_6,
-    output tri   id_4
+    output wand id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    output wor id_3,
+    input supply1 id_4,
+    output tri0 id_5,
+    output wand id_6
 );
-  wire id_7;
-  tri0 id_8;
-  module_0();
-  assign id_4 = id_8;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
-);
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  inout wire id_1;
   reg id_8;
-  always #0 begin
-    repeat (1) begin
-      if (1'b0) begin
-        id_4 <= 1'b0;
-        $display(id_1, 1);
-        if (1 == 1) begin
-          if (1 && ({id_1, 1}) == id_8) for (id_4 = id_2; 1; id_4 = 1) @(posedge id_1);
-          else disable id_9;
-        end
-      end else begin
-        id_6 <= 1 + 1 - id_6;
-      end
-    end
-    $display(1);
-    id_8 <= id_8 & 1;
+  and primCall (id_5, id_1, id_2, id_4, id_8);
+  always @(negedge 1'b0) begin : LABEL_0
+    id_8 <= 1'b0;
   end
-  assign id_5 = 1;
-  module_0();
+  module_0 modCall_1 (
+      id_6,
+      id_2,
+      id_5,
+      id_1,
+      id_6,
+      id_4,
+      id_5,
+      id_6,
+      id_4,
+      id_3,
+      id_4,
+      id_4,
+      id_5
+  );
 endmodule

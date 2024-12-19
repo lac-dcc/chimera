@@ -1,33 +1,30 @@
-// Seed: 2062970510
-module module_0 (
-    input tri0 id_0,
-    input wor  id_1
-);
-endmodule
-module module_1 (
-    input  tri  id_0,
-    input  wor  id_1,
-    input  tri0 id_2,
-    output tri0 id_3
-);
-  wire id_5;
-  module_0(
-      id_0, id_2
+// Seed: 3706521224
+module module_0;
+  id_2(
+      .id_0(id_1), .id_1(id_1), .id_2(1), .id_3(id_1), .id_4(1), .id_5(1)
   );
+  always_comb @(posedge 1 or posedge id_1 | 1 or 1 or 1, 1 or posedge id_1 or posedge 1'b0)
+    id_1 = 1;
+endmodule
+module module_1;
+  reg id_1;
+  assign id_2 = id_2;
+  always id_2 <= id_1;
+  module_0 modCall_1 ();
 endmodule
 module module_2 (
-    input  wire id_0,
-    output wor  id_1,
-    input  tri0 id_2,
-    output wand id_3
+    output uwire id_0,
+    output supply0 id_1,
+    input tri1 id_2
 );
-  wire id_5;
-  module_0(
-      id_0, id_2
+  assign id_0 = id_2;
+  assign id_1 = 1 == 1'b0;
+  assign id_0 = id_2;
+  wire id_4;
+  logic [7:0] id_5;
+  wire id_6;
+  id_7(
+      id_5[1 : 1'b0], id_2
   );
-  if (id_2) begin : id_6
-    assign id_6 = 1;
-  end else begin : id_7
-    wor id_8 = 1;
-  end
+  module_0 modCall_1 ();
 endmodule

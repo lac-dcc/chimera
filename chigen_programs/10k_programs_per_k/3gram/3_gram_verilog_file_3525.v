@@ -1,4 +1,4 @@
-// Seed: 1290842344
+// Seed: 3067377477
 module module_0 (
     id_1,
     id_2,
@@ -10,26 +10,33 @@ module module_0 (
 );
   input wire id_7;
   inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_3 = id_1;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_8;
 endmodule
 module module_1;
-  wire id_1;
-  wand id_2;
-  module_0(
-      id_2, id_1, id_1, id_2, id_2, id_1, id_2
-  );
-  if (1) begin : id_3
-    if (1) begin
-      assign id_2 = 1;
-    end else begin
-      assign id_2 = 1 + (1'b0);
-    end
+  assign id_1 = {id_1{1}};
+  wire id_3;
+  always @(id_1 or posedge 1) begin : LABEL_0
+    id_2 <= id_1;
   end
-  wire id_4;
-  wire id_5;
+  always_ff @(posedge id_1);
+  initial begin : LABEL_0
+    id_4 = 1;
+    id_1 = 1'b0;
+  end
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
+  wire id_6;
+  wire id_7;
 endmodule

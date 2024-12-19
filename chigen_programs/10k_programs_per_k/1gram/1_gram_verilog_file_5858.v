@@ -1,26 +1,43 @@
-// Seed: 1044753994
-module module_0;
-  reg id_1;
-  always
-    if (1) begin
-      @(posedge 1) id_1 <= 1'b0;
-    end
-  wire id_2, id_3;
-  wire id_4;
-  logic [7:0][1] id_5 = 1'b0, id_6;
+// Seed: 3820092029
+module module_0 (
+    output supply1 id_0,
+    input wand id_1
+);
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri0 id_1,
+    input tri0 id_0,
+    input wand id_1,
     input tri0 id_2,
-    input tri0 id_3,
-    input tri id_4,
-    input tri id_5,
-    input uwire id_6,
-    output uwire id_7,
-    output supply1 id_8
+    input tri1 id_3,
+    input uwire id_4,
+    output wire id_5,
+    input tri0 id_6,
+    input tri1 id_7,
+    output supply0 id_8,
+    input tri1 id_9,
+    input wor id_10,
+    input tri0 id_11,
+    input supply1 id_12,
+    output tri id_13,
+    output tri0 id_14,
+    input wire id_15,
+    input wor id_16,
+    input supply0 id_17,
+    input tri id_18,
+    input tri0 id_19,
+    input supply1 id_20,
+    input tri0 id_21
+    , id_27,
+    output supply0 id_22,
+    input supply1 id_23,
+    input wor id_24
+    , id_28 = 1,
+    input tri1 id_25
 );
-  supply0 id_10;
-  assign id_7 = id_10;
-  module_0();
+  assign id_5 = 1;
+  module_0 modCall_1 (
+      id_8,
+      id_25
+  );
+  assign modCall_1.type_3 = 0;
 endmodule

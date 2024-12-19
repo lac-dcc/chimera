@@ -1,42 +1,59 @@
-// Seed: 3319307456
-module module_0 ();
-  always begin
-    id_1 = #1 1 / 1'd0;
-  end
-  reg id_2;
-  initial
-    if ("") id_2 <= 1;
-    else id_2 = 1;
-  logic [7:0][1  +  1] id_3;
-endmodule
-module module_1;
-  final
-    #id_1 begin
-      id_1 <= id_1;
-    end
-  module_0();
-endmodule
-module module_2 (
-    input supply0 id_0,
-    output tri id_1,
-    output tri1 id_2,
-    output tri0 id_3,
-    input supply1 id_4,
-    input tri1 id_5,
-    input supply0 id_6,
-    output wor id_7,
-    input tri1 id_8,
-    input supply1 id_9,
-    input uwire id_10,
-    input tri1 id_11,
-    output supply1 id_12,
-    output tri1 id_13,
-    output wor id_14,
-    output tri id_15
-    , id_18,
-    input tri1 id_16
+// Seed: 2401464849
+module module_0 (
+    input wor id_0
 );
-  assign id_1 = 1 & 1'b0;
-  wire id_19, id_20;
-  module_0();
+  reg id_2, id_3, id_4;
+  id_5(
+      1 * 1'b0, 1
+  );
+  always begin : LABEL_0
+    id_3 <= id_2;
+  end
+  assign id_4 = 1;
+endmodule
+module module_1 (
+    input  tri0  id_0,
+    output logic id_1,
+    input  logic id_2,
+    input  wor   id_3,
+    output logic id_4,
+    input  logic id_5,
+    output logic id_6,
+    output logic id_7,
+    input  logic id_8
+);
+  assign id_4 = id_5;
+  wire id_10;
+  logic id_11, id_12, id_13, id_14, id_15;
+  always
+  fork
+    id_1 = id_12;
+    id_7  <= 1;
+    id_11 <= id_8;
+    begin : LABEL_0
+      id_14 = 1 + 1 * id_0;
+      begin : LABEL_0
+        id_7 <= id_8;
+      end
+      begin : LABEL_0
+        id_7 <= id_5;
+      end
+      begin : LABEL_0
+        id_6 <= 1;
+      end
+    end
+    begin : LABEL_0
+      id_6 <= id_2;
+      id_15 = (1);
+    end
+    @(negedge id_3 or posedge 1) id_1 <= id_11;
+    id_6 = #(1) 1 - id_11;
+  join
+  module_0 modCall_1 (id_0);
+  generate
+    wire id_16;
+    begin : LABEL_0
+      wire id_17;
+    end
+  endgenerate
 endmodule

@@ -1,28 +1,34 @@
-// Seed: 2965336475
-module module_0;
-  always @(posedge id_1++or posedge id_1);
+// Seed: 1097368837
+module module_0 (
+    input tri1 id_0
+);
+  wire id_2;
 endmodule
 module module_1 (
-    output wor id_0,
-    output wand id_1,
-    input supply0 id_2,
-    input uwire id_3,
-    output supply0 id_4,
-    output tri id_5,
-    input supply0 id_6#(.id_19(1'b0)),
-    output supply1 id_7,
-    input wor id_8,
-    input wand id_9,
-    output supply1 id_10,
-    input tri1 id_11
-    , id_20,
-    output uwire id_12,
-    input wand id_13,
-    output tri1 id_14,
-    output wor id_15,
-    output uwire id_16,
-    input supply1 id_17
+    output wire id_0,
+    input supply0 id_1,
+    output uwire id_2,
+    output uwire id_3,
+    input wire id_4,
+    input wand id_5
 );
-  wire id_21;
-  module_0();
+  id_7(
+      id_1, id_2, id_0
+  );
+  module_0 modCall_1 (id_4);
+endmodule
+module module_2 (
+    output tri0  id_0,
+    input  tri   id_1,
+    input  tri1  id_2,
+    output wor   id_3,
+    input  tri   id_4,
+    input  tri   id_5,
+    output uwire id_6
+);
+  if (id_4) final @(posedge 1 or 'b0);
+  else begin : LABEL_0
+    wire id_8;
+  end
+  module_0 modCall_1 (id_2);
 endmodule

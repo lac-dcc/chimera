@@ -1,35 +1,28 @@
-// Seed: 382695448
+// Seed: 2222110287
 module module_0;
+  wire id_2;
+  wire id_3;
+  wire id_4;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+module module_0 (
+    output wand id_0,
+    input wire id_1,
+    input uwire id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    output supply0 id_5,
+    input tri1 id_6,
+    input tri id_7,
+    output wand id_8
+    , id_13,
+    output supply0 id_9,
+    input uwire id_10,
+    output uwire id_11
 );
-  output wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  always @(posedge 1)
-    if (id_4) id_4 <= #1 id_3;
-    else assign id_5 = 1;
-  module_0();
-endmodule
-module module_2 (
-    output tri1 id_0,
-    input supply1 id_1,
-    output supply1 id_2,
-    input wand id_3
-    , id_5
-);
-  uwire id_6, id_7, id_8, id_9;
-  tri id_10 = {1{1}};
-  initial begin
-    disable id_11;
-    assert (id_9 == id_1) $display(id_5);
-  end
-  module_0();
+  wire id_14;
+  module_0 modCall_1 ();
+  assign id_11 = module_1;
+  id_15(
+      .id_0(1)
+  );
 endmodule

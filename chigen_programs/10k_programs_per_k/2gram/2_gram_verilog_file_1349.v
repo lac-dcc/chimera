@@ -1,31 +1,48 @@
-// Seed: 1488301208
+// Seed: 1311655105
 module module_0 (
-    input tri1 id_0
+    input supply0 id_0,
+    output wor id_1,
+    input tri1 id_2,
+    input tri id_3,
+    output wire id_4,
+    input uwire id_5,
+    input tri0 id_6,
+    output tri0 id_7
 );
-  wor id_2;
-  assign id_2 = id_2;
-  module_2();
-  assign id_2 = 1;
-endmodule
-module module_1 (
-    input wire id_0,
-    output uwire id_1,
-    input uwire id_2,
-    input uwire id_3,
-    input uwire id_4,
-    input supply0 id_5,
-    input wand id_6,
-    input tri id_7,
-    input uwire id_8,
-    output tri id_9,
-    input wire id_10,
-    output wand id_11
-);
-  wire id_13;
-  module_0(
-      id_0
+  assign id_1 = id_2;
+  id_9(
+      .id_0(id_0),
+      .id_1(id_6),
+      .id_2(),
+      .id_3(1'b0),
+      .id_4(id_1 ? id_6 : 1),
+      .id_5(1),
+      .id_6(id_2),
+      .id_7(id_6)
   );
 endmodule
-module module_2 ();
-  wire id_1;
+module module_1 (
+    output wand  id_0,
+    input  tri0  id_1,
+    output uwire id_2,
+    input  tri0  id_3,
+    input  wand  id_4
+);
+  assign id_2 = id_4;
+  wire id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_0,
+      id_3,
+      id_1,
+      id_0,
+      id_3,
+      id_4,
+      id_0
+  );
+  assign modCall_1.type_10 = 0;
+  integer id_7;
+  always begin : LABEL_0
+    if (id_1) assume (1'h0);
+  end
 endmodule

@@ -1,47 +1,37 @@
-// Seed: 3412538555
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
-);
-  input wire id_8;
-  input wire id_7;
-  input wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_9, id_10;
-  assign id_4 = id_4 == id_7;
-  wire id_11;
-  id_12 :
-  assert property (@(posedge 1) 1'b0 / id_12)
-  else $display;
+// Seed: 2488708124
+module module_0 ();
+  tri0 id_1 = 1 >= 1, id_2;
+  assign module_1.id_7 = 0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+module module_1 #(
+    parameter id_15 = 32'd63,
+    parameter id_16 = 32'd26
+) (
+    input  tri   id_0,
+    input  uwire id_1,
+    output logic id_2,
+    input  wor   id_3,
+    input  uwire id_4,
+    output wor   id_5,
+    input  logic id_6,
+    input  wand  id_7,
+    input  logic id_8,
+    output logic id_9,
+    input  wire  id_10,
+    input  wor   id_11,
+    input  logic id_12
 );
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always @(posedge 1 - 1 or id_3) begin
-    begin
-      id_4 = id_2 != id_2;
-      $display(id_3);
-    end
+  assign id_5 = id_7;
+  assign id_2 = id_8;
+  assign id_9 = 1 - 1 & id_8;
+  reg id_14 = id_14;
+  module_0 modCall_1 ();
+  always_latch @(posedge 1) begin : LABEL_0
+    id_14 <= 1;
+    id_2  <= 1;
+    id_2 = id_12;
+    id_9 <= id_6;
+    id_9 <= #1 1;
   end
-  module_0(
-      id_3, id_3, id_4, id_3, id_3, id_2, id_3, id_2
-  );
-  assign id_2 = 1 - 1;
+  defparam id_15.id_16 = 1 > 1;
 endmodule

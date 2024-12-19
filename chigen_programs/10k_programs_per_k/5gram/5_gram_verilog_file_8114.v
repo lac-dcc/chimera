@@ -1,35 +1,37 @@
-// Seed: 4145595528
+// Seed: 81425914
 module module_0 (
-    input supply1 id_0
-    , id_4,
-    output wor id_1,
-    input wire id_2
+    input  wor   id_0,
+    input  tri   id_1,
+    input  tri1  id_2,
+    output tri1  id_3,
+    output tri0  id_4,
+    input  uwire id_5
 );
-  always @(posedge 1'b0 < id_0 or posedge 1) id_1 = id_4;
+  wire id_7;
+  assign module_1.type_0 = 0;
 endmodule
 module module_1 (
-    output tri1  id_0,
-    input  tri1  id_1,
-    input  uwire id_2,
-    output logic id_3
+    output wor   id_0,
+    input  logic id_1,
+    output tri   id_2,
+    output logic id_3,
+    input  tri0  id_4
 );
-  always begin
-    if (id_2) deassign id_3;
-    else id_3 -= 1 & 1;
-  end
-  tri0 id_5;
-  wor  id_6;
-  wor  id_7 = id_5;
-  xor (id_0, id_1, id_2);
-  always @(id_6 or id_7 == id_7) begin
-    if (1 == 1) begin
-      id_3 <= id_7 == 1'h0;
-      disable id_8;
-    end else begin
-      if (1) #1 if (1'b0) id_3 = 1;
+  always @(*) begin : LABEL_0
+    id_3#(
+        .id_4({1, id_1} <= id_4 + 1),
+        .id_1(1 == 1)
+    ) <= 1;
+    begin : LABEL_0
+      id_3 <= id_1;
     end
   end
-  module_0(
-      id_1, id_0, id_1
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4,
+      id_0,
+      id_0,
+      id_4
   );
 endmodule

@@ -1,92 +1,37 @@
-// Seed: 2528737955
+// Seed: 1287631174
 module module_0 (
-    output wire id_0,
-    output supply1 id_1,
-    input supply1 id_2,
-    output tri0 id_3,
-    output tri0 id_4
-    , id_27,
-    output tri0 id_5,
-    input tri id_6,
-    input supply0 id_7,
-    output supply0 id_8,
-    input supply0 id_9
-    , id_28,
-    input wor id_10,
-    input wor id_11,
-    input wire id_12,
-    input supply0 id_13,
-    input tri0 id_14,
-    output wire id_15,
-    input tri id_16,
-    input wire id_17,
-    output wor id_18,
-    input wor id_19,
-    input supply1 id_20,
-    output tri1 id_21,
-    input uwire id_22,
-    input wor id_23,
-    output wor id_24,
-    input tri1 id_25
+    input  tri0 id_0
+    , id_4,
+    input  wor  id_1,
+    output tri1 id_2
 );
+  assign id_2 = 0 & id_0;
+  assign id_4 = id_1;
+  genvar id_5;
+  assign id_5 = id_5;
+  wire id_6 = id_6;
+  assign id_5 = 1;
+  wire id_7;
+  assign id_6 = id_7;
 endmodule
-module module_1 (
-    output wand id_0,
-    input wor id_1,
-    input tri1 id_2,
-    output tri0 id_3,
-    input supply0 id_4,
-    input tri0 id_5,
-    input uwire id_6,
-    output wand id_7,
-    output wand id_8,
-    input wand id_9,
-    output tri id_10,
-    output wor id_11,
-    input tri0 id_12,
-    output tri0 id_13,
-    output wand id_14,
-    output wand id_15,
-    input wire id_16,
-    input wor id_17,
-    input tri1 id_18,
-    input tri1 id_19,
-    input wor id_20,
-    input wire id_21,
-    input tri1 id_22,
-    input supply1 id_23,
-    input tri1 id_24
-    , id_28,
-    input supply0 id_25,
-    input wor id_26
+program module_1 (
+    inout  uwire id_0,
+    output logic id_1,
+    input  wor   id_2,
+    input  wand  id_3
 );
-  wire id_29;
-  module_0(
-      id_8,
-      id_8,
-      id_26,
-      id_8,
-      id_14,
-      id_15,
-      id_23,
-      id_17,
-      id_7,
-      id_20,
-      id_5,
-      id_20,
-      id_5,
-      id_5,
-      id_5,
-      id_10,
-      id_21,
-      id_20,
-      id_10,
-      id_19,
-      id_22,
-      id_14,
-      id_23,
-      id_24,
-      id_15,
-      id_20
+  supply0 id_5, id_6;
+  reg id_7;
+  assign id_7 = 1 == id_7 - id_0;
+  wire id_8;
+  always @(posedge 1 or posedge id_2) begin : LABEL_0
+    id_1 <= id_7;
+  end
+  module_0 modCall_1 (
+      id_2,
+      id_0,
+      id_0
   );
-endmodule
+  always @*;
+  uwire id_9 = 1;
+endprogram

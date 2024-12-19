@@ -1,44 +1,43 @@
-// Seed: 337814837
-module module_0;
-  wand id_1;
-  assign id_1 = 1'd0;
-endmodule
-module module_1 (
-    input supply1 id_0,
-    output uwire id_1,
-    input tri1 id_2
+// Seed: 520036661
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_4;
-  module_0();
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  reg  id_4;
   wire id_5;
-  wire id_6;
+  always id_4 = #1 1;
 endmodule
-module module_1 (
-    input  tri   id_0,
-    input  tri0  id_1,
-    input  tri   id_2,
-    output logic id_3
-);
-  wor module_2 = 1'h0;
-  reg id_5;
-  initial begin
-    fork
-      reg id_6;
-      begin
-        id_6 = id_6;
-      end
-    join_none
-    wait (1'h0);
-    id_3 <= id_6;
-    if (1 && id_5) begin
-      $display;
-    end else begin
-      id_6 <= id_5;
-    end
-  end
-  module_0();
-  wire id_7;
-  id_8(
-      .id_0(1), .id_1(id_3)
+module module_1;
+  wire id_2;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2
   );
+  assign id_1 = id_1;
+endmodule
+module module_2 (
+    input supply0 id_0,
+    output tri0 id_1,
+    output uwire id_2,
+    output wire id_3,
+    input wor id_4,
+    input supply1 id_5,
+    input wor id_6,
+    output tri0 id_7,
+    input wire id_8,
+    input wand id_9
+    , id_11
+);
+  module_0 modCall_1 (
+      id_11,
+      id_11,
+      id_11
+  );
+  assign id_11 = 1 - 1;
+  initial assume (id_6);
 endmodule

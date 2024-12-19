@@ -1,37 +1,62 @@
-// Seed: 1251528710
+// Seed: 271935715
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    output tri1 id_0,
+    input  wor  id_1,
+    output tri  id_2,
+    output tri0 id_3,
+    output tri  id_4,
+    input  wand id_5,
+    input  tri  id_6,
+    output tri0 id_7,
+    input  tri0 id_8,
+    output tri  id_9
 );
-  inout wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  for (id_6 = 1; 1'd0; id_1 = id_2) begin : id_7
-    assign id_3 = 1'd0;
-  end
+  assign id_0 = 1;
+  assign module_1.type_30 = 0;
 endmodule
-module module_1;
-  wire id_2;
-  module_0(
-      id_2, id_2, id_2, id_2, id_2
-  );
-endmodule
-module module_2 (
-    output tri0 id_0,
-    input  wand id_1,
-    input  tri0 id_2
+module module_1 (
+    output wor id_0,
+    input tri0 id_1,
+    input tri0 id_2,
+    output uwire id_3,
+    output tri0 id_4,
+    input wand module_1,
+    input tri id_6,
+    output tri1 id_7,
+    input supply0 id_8,
+    input wire id_9,
+    output wand id_10,
+    input uwire id_11,
+    output supply0 id_12,
+    output supply1 id_13,
+    output uwire id_14,
+    output wand id_15,
+    output wor id_16,
+    output tri0 id_17,
+    input wire id_18,
+    input supply0 id_19,
+    input uwire id_20,
+    output wand id_21
+    , id_27,
+    input supply0 id_22,
+    input tri1 id_23,
+    output tri id_24,
+    input wor id_25
 );
-  id_4 :
-  assert property (@(negedge id_2 ^ id_1) id_4 + 1)
-  else assert (1'h0);
-  or (id_0, id_5, id_2, id_1);
-  wire id_5;
-  module_0(
-      id_4, id_4, id_5, id_4, id_4
+  always @(id_27) assert ((id_18 << id_9));
+  module_0 modCall_1 (
+      id_4,
+      id_2,
+      id_4,
+      id_4,
+      id_4,
+      id_18,
+      id_20,
+      id_16,
+      id_25,
+      id_0
   );
+  wire id_28;
+  assign id_17 = (({1, 1}));
+  tri1 id_29 = 1;
 endmodule

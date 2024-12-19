@@ -1,33 +1,46 @@
-// Seed: 2451270783
-module module_0 ();
-  wire id_1;
-endmodule
-module module_1 (
+// Seed: 1689059915
+module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4
 );
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  supply1 id_4;
-  assign id_4 = 'b0;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  id_5(
+      1 >= 1, id_1, (id_1)
+  );
   wire id_6;
-  reg  id_7 = id_5;
-  module_0();
-  wire id_8;
-  tri1 id_9;
-  always @(posedge id_2++or posedge id_5++) $display(id_3, id_3 - 1, id_5);
-  uwire id_10;
-  always @(id_9 or 1)
-    if (1'h0) $display(id_5 - !id_10, 1);
-    else begin
-      id_2 = 1;
-      if (1) begin
-        id_3 <= 1;
-        if (id_3) begin
-          $display;
-        end
-      end
-    end
+endmodule
+module module_1 (
+    output supply0 id_0,
+    output tri0 id_1,
+    input tri id_2,
+    output supply0 id_3,
+    input supply0 id_4,
+    input wand id_5,
+    inout uwire id_6,
+    input supply0 id_7,
+    input supply1 id_8,
+    output supply0 id_9,
+    output tri0 id_10,
+    output wor id_11,
+    input wor id_12,
+    input supply0 id_13
+    , id_20,
+    output wand id_14,
+    input wand id_15,
+    input tri0 id_16,
+    input tri0 id_17,
+    input tri id_18
+);
+  wire id_21;
+  module_0 modCall_1 (
+      id_21,
+      id_20,
+      id_21,
+      id_20
+  );
 endmodule

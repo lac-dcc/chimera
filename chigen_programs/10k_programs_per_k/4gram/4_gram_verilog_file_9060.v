@@ -1,48 +1,35 @@
-// Seed: 2549838092
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  logic [7:0] id_4;
-  reg id_5;
-  always @(posedge id_4) begin
-    id_5 <= 1;
-  end
-  wor id_6 = id_5 <= 1 - id_4[1];
+// Seed: 2896950842
+module module_0 ();
+  wire id_2;
+  wire id_3;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output wand  id_1,
-    input  uwire id_2,
-    output tri0  id_3
+    input tri0 id_0,
+    output logic id_1,
+    input logic id_2,
+    input wand id_3,
+    output logic id_4,
+    input logic id_5,
+    input supply1 id_6,
+    input tri1 id_7,
+    input logic id_8,
+    input wire id_9,
+    input tri1 id_10,
+    output tri0 id_11,
+    input supply0 id_12,
+    output tri1 id_13,
+    input tri0 id_14
 );
-  wire id_5;
-  module_0(
-      id_5, id_5, id_5
-  );
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_3 = id_1;
-  integer id_5;
-  assign id_2 = id_3[1] - 1'd0;
-  id_6(
-      .id_0(id_1), .id_1(1), .id_2(1)
-  ); module_0(
-      id_4, id_5, id_2
-  ); id_7 :
-  assert property (@(posedge 1) 1)
-  else $display;
+  logic id_16 = id_2;
+  always @(posedge 1 == 1) id_1 <= id_5;
+  wire id_17;
+  wire id_18;
+  always @(1, posedge id_0 or 1) id_4 = 1;
+  always @(id_12) begin : LABEL_0
+    id_16 <= id_8;
+    if (id_5) id_4 <= 1;
+  end
+  wire id_19;
+  wire id_20;
+  module_0 modCall_1 ();
 endmodule

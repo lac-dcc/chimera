@@ -1,132 +1,27 @@
-// Seed: 3619016562
-module module_0 (
-    input wire id_0,
-    output tri id_1,
-    input wor id_2,
-    input tri0 id_3,
-    input tri0 id_4,
-    input tri0 id_5,
-    input wand id_6,
-    input wor id_7,
-    input tri1 id_8,
-    output supply0 id_9,
-    input tri0 id_10,
-    input tri0 id_11,
-    inout wand id_12,
-    input tri1 id_13,
-    output wand id_14,
-    input uwire id_15,
-    input wand id_16,
-    input tri0 id_17,
-    input wand id_18,
-    output tri0 id_19,
-    input wire id_20,
-    output wor id_21,
-    output wor id_22,
-    input supply0 id_23,
-    input wor id_24,
-    input wor id_25,
-    output supply0 id_26,
-    input tri1 id_27,
-    input supply1 id_28,
-    output tri0 id_29,
-    output supply0 id_30,
-    input tri id_31,
-    input tri1 id_32,
-    input tri1 id_33,
-    output supply1 id_34,
-    input uwire id_35,
-    input tri1 id_36,
-    output supply1 id_37,
-    input tri1 id_38,
-    input wor id_39,
-    output tri id_40,
-    input wire id_41,
-    output uwire id_42,
-    input wor id_43,
-    output uwire void id_44,
-    output tri0 id_45,
-    input tri id_46,
-    output wor id_47,
-    output supply1 id_48,
-    input uwire id_49
-);
-  wire id_51;
-  wire id_52;
-  wire id_53;
-  tri1 id_54 = 1, id_55, id_56;
-  always id_14 = id_25;
+// Seed: 2701105290
+module module_0 ();
+  assign id_1 = id_1;
+  assign id_1 = 1;
+  wire id_2;
 endmodule
 module module_1 (
-    output wand id_0,
+    input supply1 id_0,
     output tri0 id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input supply1 id_4,
-    output wand id_5,
-    input tri0 id_6,
-    input tri0 id_7,
-    output wire id_8,
-    input supply0 id_9,
-    input uwire id_10#(
-        .id_13(""),
-        .id_14(1),
-        .id_15(id_13[1]),
-        .id_16(id_16)
-    ),
-    input uwire id_11 id_17
+    output tri0 id_2
 );
-  wire id_18, id_19, id_20;
-  module_0(
-      id_2,
-      id_1,
-      id_6,
-      id_4,
-      id_6,
-      id_6,
-      id_6,
-      id_9,
-      id_9,
-      id_17,
-      id_6,
-      id_11,
-      id_17,
-      id_11,
-      id_17,
-      id_3,
-      id_9,
-      id_6,
-      id_10,
-      id_1,
-      id_6,
-      id_5,
-      id_17,
-      id_17,
-      id_17,
-      id_4,
-      id_0,
-      id_9,
-      id_6,
-      id_5,
-      id_5,
-      id_9,
-      id_17,
-      id_7,
-      id_5,
-      id_3,
-      id_17,
-      id_1,
-      id_11,
-      id_2,
-      id_17,
-      id_4,
-      id_0,
-      id_11,
-      id_5,
-      id_17,
-      id_6,
-      id_5,
-      id_17,
-      id_11
-  );
+  module_0 modCall_1 ();
+  assign id_1 = 1;
+endmodule
+module module_2;
+  always begin : LABEL_0
+    begin : LABEL_0
+      if (1)
+        if (id_1 - id_1 - 1) $display("" && id_1, id_1, 1 == id_1);
+        else id_1 <= 1;
+    end
+    if (1);
+  end
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  wire id_2;
 endmodule

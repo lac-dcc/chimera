@@ -1,50 +1,42 @@
-// Seed: 3796735708
+// Seed: 3594770051
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5
+    id_4
 );
-  output wire id_5;
-  output wire id_4;
+  inout wire id_4;
   output wire id_3;
   input wire id_2;
-  input wire id_1;
-  logic [7:0] id_6;
-  for (id_7 = 1; id_1; id_5 = id_7) begin : id_8
-    wire id_9;
-  end
-  reg id_10;
-  always begin
-    wait (1);
-    {1, ~^1 + id_10} = id_2;
-    id_10 <= id_6[1*~1 : 1'b0];
-    id_10 = 1'h0;
-  end
-  id_11 :
-  assert property (@(posedge 1) id_10)
-  else;
+  output wire id_1;
+  wire id_5;
+  assign module_1.type_1 = 0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+module module_0 (
+    input  wor  id_0,
+    input  tri  id_1,
+    input  tri0 module_1,
+    input  tri0 id_3,
+    output wand id_4,
+    input  tri1 id_5,
+    input  tri0 id_6
 );
-  inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  always begin
-    id_3 <= id_5;
-    id_2 <= id_2;
-  end
-  module_0(
-      id_6, id_1, id_1, id_4, id_1
+  wire id_8;
+  module_0 modCall_1 (
+      id_8,
+      id_8,
+      id_8,
+      id_8
   );
+  assign id_4 = 1;
+  reg id_9;
+  always begin : LABEL_0
+    if (id_3) id_9 <= 1'd0;
+  end
+  wire id_10;
+  wire id_11;
+  assign id_8 = id_11;
+  wire id_12;
+  tri0 id_13 = id_6;
+  wire id_14;
 endmodule

@@ -1,56 +1,37 @@
-// Seed: 1795009701
-module module_0 ();
-  reg id_2;
-  function automatic id_3(input id_4, input reg id_5);
-    fork
-      id_5 <= id_2;
-      id_5 <= 1;
-    join_any
-  endfunction
+// Seed: 3514307148
+module module_0 (
+    output uwire id_0,
+    input wand id_1,
+    input tri0 id_2,
+    input supply1 id_3,
+    output tri id_4,
+    input supply1 id_5
+);
+  wire id_7;
+  assign id_4 = 1;
+  wire id_8;
+  tri0 id_9 = id_2;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input wand id_0,
+    output supply1 id_1,
+    output tri0 id_2,
+    input wor id_3,
+    output wire id_4,
+    output wor id_5,
+    input tri id_6,
+    input supply0 id_7,
+    output tri0 id_8,
+    output wire id_9
 );
-  inout wire id_5;
-  output wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_6;
-  module_0();
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
-);
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  if (1) begin : id_4
-    assign id_4 = id_4;
-  end
-  reg  id_5;
-  wire id_6;
-  reg  id_7;
-  always
-    if (1) #1 $display("");
-    else id_5 <= id_7;
-  module_0();
-  initial begin
-    if (id_7) begin
-      if (1) id_5 <= 1;
-      else begin
-        id_7 = 1;
-      end
-      if (1) id_7 = 1;
-      else begin
-        wait (1);
-      end
-    end
-  end
+  assign id_4 = 1;
+  module_0 modCall_1 (
+      id_2,
+      id_6,
+      id_6,
+      id_7,
+      id_5,
+      id_6
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

@@ -1,49 +1,48 @@
-// Seed: 2119511771
+// Seed: 2107124655
 module module_0 ();
-  logic [7:0] id_1;
-  assign id_1[""] = id_1;
+  reg id_1, id_2;
+  reg id_3;
+  tri1 id_4 = 1;
+  reg id_5;
+  supply1 id_6;
+  wire id_7;
+  reg id_8;
+  assign module_0 = id_7;
+  id_9(
+      1, 1 - "",
+  );
+  task id_10;
+    input id_11;
+    begin : LABEL_0
+      id_8 <= 1;
+      assign id_3 = 1;
+      id_12(1);
+      @(posedge id_11);
+      if (id_11) begin : LABEL_0
+        if (1'b0) begin : LABEL_0
+          id_4 = (id_6 || 1);
+          fork
+            #id_13 id_11 = id_8;
+            repeat (1) id_8 <= 1'h0;
+          join_none
+          id_3 <= 1 ** 1 - 1;
+        end
+      end else begin : LABEL_0$display
+        ;
+      end
+    end
+  endtask
+  wire id_14;
+  reg  id_15 = id_11;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    output wand id_0
 );
-  inout wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_3 = 1'b0;
-  module_0();
+  logic [7:0] id_2, id_3;
   wire id_4;
-  not (id_1, id_3);
-  assign id_2 = id_3;
-  assign id_3 = id_3;
-endmodule
-module module_2 (
-    input tri id_0
-    , id_24,
-    output supply1 id_1,
-    output tri1 id_2,
-    input tri0 id_3,
-    input wand id_4,
-    input wire id_5,
-    input wor id_6,
-    output wire id_7,
-    input tri id_8,
-    input wor id_9,
-    input supply1 id_10,
-    output wand id_11,
-    output wor id_12,
-    input wor id_13,
-    output uwire id_14,
-    output supply1 id_15,
-    input tri id_16,
-    input wand id_17,
-    output tri0 id_18,
-    output supply0 id_19,
-    input tri id_20,
-    output supply1 id_21,
-    output tri0 id_22
-);
-  assign id_18 = 1;
-  module_0();
+  module_0 modCall_1 ();
+  reg id_5;
+  always @(negedge 1 or negedge 1) begin : LABEL_0
+    id_5 <= id_2[1'h0 : 1];
+  end
 endmodule

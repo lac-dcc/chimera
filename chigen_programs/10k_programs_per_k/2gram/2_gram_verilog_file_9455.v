@@ -1,35 +1,40 @@
-// Seed: 3378302695
+// Seed: 3310547781
 module module_0 (
-    output wor   id_0,
-    input  tri   id_1,
-    input  uwire id_2
+    input wand id_0,
+    input supply0 id_1,
+    input wand id_2,
+    input tri1 id_3,
+    input wire id_4,
+    input uwire id_5,
+    input tri id_6,
+    input uwire id_7
 );
+  wire id_9;
+  wire id_10;
+  initial begin : LABEL_0
+    id_9 = id_9;
+    $display(1, 1);
+  end
+  wire id_11;
+  assign id_10 = id_11;
+  wire  id_12;
+  uwire id_13 = 1 - 1 == id_3;
+  always @(posedge 1);
 endmodule
 module module_1 (
-    input logic id_0,
-    output logic id_1,
-    input uwire id_2,
-    output supply1 id_3,
-    input tri1 id_4,
-    input supply0 id_5,
-    output logic id_6,
-    input tri0 id_7,
-    input logic id_8
+    output tri1  id_0,
+    input  uwire id_1
 );
-  assign id_6 = id_0;
-  logic id_10;
-  module_0(
-      id_3, id_5, id_4
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
   );
-  logic id_11 = id_10;
-  wire  id_12;
-  always begin
-    if (1) begin
-      id_6 <= id_8;
-    end else
-      fork : id_13
-        id_1 = id_0;
-      join_any
-  end
-  assign id_6 = id_10;
+  assign modCall_1.type_17 = 0;
+  wire id_3;
 endmodule

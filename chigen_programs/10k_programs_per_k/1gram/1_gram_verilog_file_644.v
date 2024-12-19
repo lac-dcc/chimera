@@ -1,32 +1,41 @@
-// Seed: 3731557236
-module module_0;
-  assign id_1 = 1;
-  assign id_1 = 1;
-  assign id_1 = id_1;
-  supply1 id_2;
-  assign id_1 = id_2;
+// Seed: 449247705
+module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  assign module_1.id_10 = 0;
+  wire id_4;
 endmodule
 module module_1 (
-    input uwire id_0,
-    output supply1 id_1,
-    output wor id_2,
-    input wor id_3,
-    output supply1 id_4,
-    output tri id_5
+    input supply0 id_0,
+    input wor id_1,
+    input wire id_2,
+    input supply1 id_3,
+    input supply1 id_4,
+    output wire id_5,
+    output uwire id_6,
+    input uwire id_7,
+    input supply0 id_8
+    , id_23,
+    input supply1 id_9,
+    output wor id_10,
+    output tri0 id_11,
+    output uwire id_12,
+    output wand id_13,
+    input tri1 id_14,
+    inout supply0 id_15,
+    output tri0 id_16,
+    output wire id_17,
+    input tri id_18,
+    output tri id_19,
+    inout tri0 id_20,
+    input tri1 id_21
 );
-  id_7 :
-  assert property (@(*) id_7);
-  wire id_8;
-  and (id_1, id_3, id_7, id_8);
-  module_0();
-  wire id_9, id_10, id_11;
-endmodule
-module module_2 (
-    output wor id_0,
-    input tri1 id_1,
-    input wor id_2,
-    input supply1 id_3
-);
-  wor id_5 = id_3, id_6;
-  module_0();
+  module_0 modCall_1 (
+      id_23,
+      id_23
+  );
 endmodule

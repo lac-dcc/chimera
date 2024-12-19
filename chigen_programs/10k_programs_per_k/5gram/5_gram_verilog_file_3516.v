@@ -1,35 +1,45 @@
-// Seed: 3354202820
-module module_0;
-  assign id_1[1] = 1;
-  wire id_2;
-  wire id_3, id_4 = id_2;
-  final $display(id_4);
-  wor id_5;
-  always_comb @(*) begin
-    id_5 = 1'b0;
-  end
-  wire id_6;
-endmodule
-module module_1 (
-    input supply0 id_0,
-    input tri0 id_1,
-    input wire id_2,
-    input tri1 id_3
+// Seed: 3110247191
+module module_0 (
+    id_1,
+    id_2
 );
-  assign id_5 = id_0;
-  module_0();
+  output wire id_2;
+  input wire id_1;
+  wire id_3;
 endmodule
-module module_0;
-  module_0();
-  always disable module_2;
+module module_1 ();
+  wand id_1, id_2 = 1'b0;
+  module_0 modCall_1 (
+      id_2,
+      id_1
+  );
 endmodule
-module module_3 (
-    input  wand  id_0,
-    output wand  id_1,
-    output tri   id_2,
-    input  uwire id_3,
-    output tri   id_4
+module module_2 (
+    input tri0 id_0,
+    input wire id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    output wire id_4,
+    output wand id_5
+    , id_19,
+    output tri0 id_6,
+    input wor id_7,
+    output tri1 id_8,
+    input tri id_9,
+    input wand id_10,
+    input wor id_11,
+    input tri1 id_12,
+    input supply1 id_13,
+    input uwire id_14,
+    output wand id_15,
+    input tri0 id_16,
+    output uwire id_17
 );
-  wire id_6;
-  module_0();
+  wire id_20;
+  xnor primCall (id_5, id_10, id_13, id_2, id_12, id_0, id_9);
+  module_0 modCall_1 (
+      id_20,
+      id_20
+  );
+  wire id_21;
 endmodule

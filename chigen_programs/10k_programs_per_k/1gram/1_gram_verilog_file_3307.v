@@ -1,79 +1,50 @@
-// Seed: 886972235
+// Seed: 3840682055
 module module_0 (
-    input  wor  id_0,
-    output wire id_1
+    output uwire id_0,
+    output tri id_1,
+    output tri1 id_2,
+    output wire id_3,
+    input wor id_4,
+    output supply0 id_5,
+    output supply1 id_6,
+    output tri1 id_7
+    , id_13,
+    input wor id_8,
+    input uwire id_9,
+    input tri0 id_10,
+    output tri id_11
 );
-  wire id_3, id_4;
-  supply0 id_5 = id_0;
-  wire id_6;
+  wire id_14, id_15, id_16, id_17;
+  assign id_13.id_9 = 1;
 endmodule
 module module_1 (
-    output wor id_0,
-    output wor id_1,
-    output tri1 id_2,
-    input supply1 id_3,
-    input wor id_4,
-    input tri0 id_5,
-    input uwire id_6,
-    input supply1 id_7,
-    input wand id_8,
-    input supply1 id_9,
-    output wor id_10,
-    output tri0 id_11,
-    output uwire id_12,
-    output wor id_13,
-    input tri0 id_14,
-    output wire id_15,
-    input wire id_16,
-    input tri id_17,
-    inout wor id_18,
-    input wor id_19,
-    input uwire id_20,
-    input wire id_21,
-    input tri id_22,
-    input tri id_23,
-    input wand id_24,
-    input wire id_25,
-    input logic id_26,
-    input tri1 id_27,
-    output tri0 id_28,
-    input wire id_29,
-    input tri id_30,
-    output tri0 id_31,
-    input tri id_32,
-    input uwire void id_33,
-    input tri1 id_34,
-    output supply1 id_35,
-    input tri0 id_36,
-    input wor id_37,
-    input wire id_38,
-    input wire id_39,
-    input wire id_40,
-    output tri0 id_41,
-    output logic id_42,
-    output supply0 id_43,
-    inout tri1 id_44,
-    input wand id_45,
-    output uwire id_46
+    output wor   id_0,
+    output logic id_1,
+    output wire  id_2,
+    input  tri1  id_3
 );
-  tri0 id_48;
-  module_0(
-      id_4, id_11
+  initial id_1 <= 1'b0;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_3,
+      id_0,
+      id_2,
+      id_0,
+      id_3,
+      id_3,
+      id_3,
+      id_0
   );
-  initial begin
-    if (1) if (id_24);
-  end
-  assign id_11 = id_17;
-  always
-    if (1);
-    else id_42 <= id_26;
-  initial begin
-    deassign id_0;
-    @(*) $display(id_16, 1, id_5);
-  end
-  assign id_18 = 1'b0;
-  wire id_49, id_50;
-  wor  id_51 = 1;
-  wire id_52;
-  always id_48 = 1 + 1'b0;
+  assign id_2 = 1;
+  tri id_5, id_6, id_7 = 1'd0, id_8, id_9;
+  initial id_7 = id_9;
+  assign id_2 = 1;
+  id_10(
+      1, {id_6}
+  );
+  assign id_6 = 1;
+  assign id_6 = id_8;
 endmodule

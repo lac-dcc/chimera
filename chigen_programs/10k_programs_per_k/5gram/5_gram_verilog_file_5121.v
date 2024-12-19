@@ -1,25 +1,37 @@
-// Seed: 3540846504
-module module_0;
-  assign id_1 = id_1;
+// Seed: 2482695166
+module module_0 ();
+  id_1 :
+  assert property (@(posedge 1'h0) id_1)
+  else $display;
+  assign id_1 = "" || id_1 ? id_1 == 1'b0 : 1'b0;
+  assign id_1 = 1 ? 1 : id_1;
+  assign module_1.id_1 = 0;
+  id_2(
+      .id_0(1), .id_1(id_1), .id_2(1'd0)
+  );
+  wire id_3;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    output wand id_1,
-    output tri id_2,
-    output wire id_3,
-    output wand id_4,
-    output tri0 id_5,
-    output tri1 id_6,
-    output supply0 id_7,
-    output supply1 id_8,
-    output tri id_9,
-    input wand id_10,
-    input tri1 id_11,
-    input uwire id_12
+module module_1;
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_7 = 32'd82,
+    parameter id_8 = 32'd30
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  for (id_14 = 1'b0; 1; id_14 = 1'h0 < 1'b0) begin
-    wire id_15;
-  end
-  module_0();
-  wire id_16;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  integer id_5;
+  id_6 :
+  assert property (@(posedge 1) id_6)
+  else $display;
+  module_0 modCall_1 ();
+  defparam id_7.id_8 = 1;
+  wire id_9;
 endmodule

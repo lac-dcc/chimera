@@ -1,41 +1,29 @@
-// Seed: 3265227857
+// Seed: 1391521529
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input  logic id_0,
+    output tri1  id_1
 );
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wand id_4;
-  assign id_3 = 1 ? 1 ^ 1 : id_3;
-  string id_5;
-  assign id_3 = id_1;
-  id_6(
-      id_5, id_5, ""
-  );
-  wire id_7;
-  wire id_8;
-  wire id_9;
-  assign id_4 = 1 ? 1 : 1;
+  always @(id_0 or id_0) force id_1 = id_0;
 endmodule
-module module_1 #(
-    parameter id_4 = 32'd73,
-    parameter id_5 = 32'd37
-) (
-    input supply0 id_0,
-    input supply0 id_1,
-    output wire id_2
+module module_1 (
+    output wor id_0,
+    input wor id_1,
+    input tri0 id_2,
+    output tri0 id_3,
+    input supply1 id_4,
+    input uwire id_5,
+    input wand id_6,
+    input tri1 id_7,
+    inout logic id_8,
+    input uwire id_9
+    , id_13, id_14,
+    input tri1 id_10,
+    output wor id_11
 );
-  defparam id_4.id_5 = ~|id_0;
-  wire id_6;
-  always @(posedge 1) begin
-    fork
-      id_7;
-      id_8;
-    join
-  end
-  module_0(
-      id_6, id_6, id_6
+  initial #(id_13) id_8 <= 1'b0;
+  module_0 modCall_1 (
+      id_8,
+      id_0
   );
+  assign modCall_1.id_0 = 0;
 endmodule
