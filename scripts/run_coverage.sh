@@ -1,19 +1,21 @@
 #!/bin/bash
 
-# This script is used to obtain coverage for Verible's tools. It can support
-# both verible-verilog-syntax and verible-verilog-obfuscate. In order to make it
-# work properly, you must compile the target Verible tool with Clang's
-# source-based coverage (https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
+# This script is used to obtain coverage for Verilog-based EDA tools. It can
+# support different Verible tools (obfuscate, syntax and format), Icarus
+# Verilog's parser (ivl) and Verilator. In order to make it # work properly, you
+# must compile the target tool with Clang's source-based coverage
+# (https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
 
-# "Incremental" means that all considered files contribute to coverage. Thus, if
+# This script can obtain both incremental and indidual coverage. "Incremental"
+# means that all considered files contribute to coverage. Thus, if
 # the script is run without the -i argument, the output will tell the coverage
-# that is obtained by running the Verible tool for each individual file.
+# that is obtained by running the target tool for each individual file.
 
 # The script outputs the results in CSV format to the standard output.
 
 display_usage() {
-  >&2 echo "\
-Usage: $0 <_verible_tool_executable> [-h|--help] [-d|--dir DIRECTORY] [-f|--file FILE] [-i|--incremental]
+  echo >&2 "\
+Usage: $0 <tool_executable> [-h|--help] [-d|--dir DIRECTORY] [-f|--file FILE] [-i|--incremental]
 
 Options:
   -d, --dir DIRECTORY  Specifies the directory where files used for coverage will be taken from. Default is "../database"
@@ -35,7 +37,7 @@ while [[ $# -gt 0 ]]; do
     ;;
   -d | --dir)
     if [ $# -lt 2 -o ! -d "$2" ]; then
-      >&2 echo "Invalid value for \"$1\" option"
+      echo >&2 "Invalid value for \"$1\" option"
       exit 1
     fi
     target_dir=$2
@@ -43,7 +45,7 @@ while [[ $# -gt 0 ]]; do
     ;;
   -f | --file)
     if [ $# -lt 2 -o ! -f "$2" ]; then
-      >&2 echo "Invalid value for \"$1\" option"
+      echo >&2 "Invalid value for \"$1\" option"
       exit 1
     fi
     file=$2
@@ -59,30 +61,63 @@ while [[ $# -gt 0 ]]; do
     exit 1
     ;;
   *)
-    if [ ! -z "$verible_exe" ]; then
+    if [ ! -z "$target_exe" ]; then
       display_usage
       exit 1
     fi
-    verible_exe="$1"
+    target_exe="$1"
     shift
     ;;
   esac
 done
 
-if [ -z "$verible_exe" ]; then
+if [ -z "$target_exe" ]; then
   display_usage
   exit 1
 fi
 
-if [ ! -f "$verible_exe" ]; then
-  >&2 echo "$verible_exe does not exist or is not a file"
+UNKNOWN=0
+OBFUSCATE=1
+SYNTAX=2
+FORMAT=3
+VERILATOR=4
+IVERILOG=5
+target_tool=$UNKNOWN
+case "$target_exe" in
+*"obfuscate"*)
+  target_tool=$OBFUSCATE
+  ;;
+*"syntax"*)
+  target_tool=$SYNTAX
+  ;;
+*"format"*)
+  target_tool=$FORMAT
+  ;;
+*"verilator"*)
+  target_tool=$VERILATOR
+  ;;
+*"iverilog"* | *"ivl"*)
+  target_tool=$IVERILOG
+  ;;
+esac
+
+if [ ! -f "$target_exe" -o "$target_tool" -eq $UNKNOWN ]; then
+  echo >&2 "'$target_exe' does not exist or is an invalid target tool"
   exit 1
 fi
 
-is_obfuscate=false
-if [[ $verible_exe == *"obfuscate" ]]; then
-  is_obfuscate=true
-fi
+ignored_filenames=()
+case "$target_tool" in
+$OBFUSCATE | $SYNTAX | FORMAT)
+  ignored_filenames+=(--ignore-filename-regex="external/*")
+  ;;
+$VERILATOR)
+  ignored_filenames+=(--ignore-filename-regex="src/config*")
+  ;;
+$IVERILOG)
+  ignored_filenames+=(--ignore-filename-regex="usr/include/*" --ignore-filename-regex="libs/*")
+  ;;
+esac
 
 printf "file,line_coverage,branch_coverage"
 [ $incremental = true ] && printf ",num_files"
@@ -91,16 +126,22 @@ printf "\n"
 profdata_files=()
 prev_profdata=""
 run_coverage() {
-  >&2 echo "$1"
+  echo >&2 "$1"
 
   profraw_file="$(basename "$1").profraw"
   profdata_file="$(basename "$1").profdata"
 
-  if [ $is_obfuscate = true ]; then
-    LLVM_PROFILE_FILE=$profraw_file "$verible_exe" < "$1" > /dev/null 2>&1
-  else
-    LLVM_PROFILE_FILE=$profraw_file "$verible_exe" "$1" > /dev/null 2>&1
-  fi
+  case "$target_tool" in
+  $OBFUSCATE)
+    LLVM_PROFILE_FILE=$profraw_file "$target_exe" <"$1" >/dev/null 2>&1
+    ;;
+  $VERILATOR)
+    LLVM_PROFILE_FILE=$profraw_file "$target_exe" --binary -j 0 "$1" >/dev/null 2>&1
+    ;;
+  *)
+    LLVM_PROFILE_FILE=$profraw_file "$target_exe" "$1" >/dev/null 2>&1
+    ;;
+  esac
 
   if [ $incremental = true ] && [ -f "$prev_profdata" ]; then
     llvm-profdata merge -sparse "$profraw_file" "$prev_profdata" -o "$profdata_file"
@@ -108,10 +149,10 @@ run_coverage() {
     llvm-profdata merge -sparse "$profraw_file" -o "$profdata_file"
   fi
 
-  summary=$(llvm-cov report --ignore-filename-regex="external/*" \
-                  "$verible_exe" -instr-profile="$profdata_file" | \
-                  tail -1)
-  
+  summary=$(llvm-cov report "${ignored_filenames[@]}" \
+    "$target_exe" -instr-profile="$profdata_file" |
+    tail -1)
+
   line_coverage=$(echo "$summary" | awk '{print $(NF-3)}')
   branch_coverage=$(echo "$summary" | awk '{print $(NF)}')
 
@@ -140,7 +181,7 @@ run_coverage_for_program() {
 
 i=1
 if [ -z "$file" ]; then
-  for input in $target_dir/*.v; do
+  for input in $target_dir/*.*v; do
     run_coverage_for_program "$input" "$i"
     ((i++))
   done
@@ -148,7 +189,7 @@ else
   while IFS="" read -r input || [ -n "$input" ]; do
     run_coverage_for_program "$input" "$i"
     ((i++))
-  done < $file
+  done <$file
 fi
 
 [ $incremental = false ] && wait || exit
