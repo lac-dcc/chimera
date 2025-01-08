@@ -462,6 +462,7 @@ static void renameConstantIDsDeclarations(
   }
 }
 
+
 static void removeBodyParameters(Node *head) {
   if (head->type == NodeType::ANY_PARAM_DECLARATION) {
     head->clearChildren();
@@ -755,27 +756,40 @@ static void generateModules(
       findAnsiDeclarations(directionMap, m, declMap, counter, typeCounter,
                            portList);
     }
+    //Parameters mut be removed since lack of control of if they are constant when renaming
     removeParameters(m);
     removeBodyParameters(m);
+
+    //Eliminate possible assignments when declaring module ports
     removeAssignmentsInPorts(m);
+
+    //Rename SymbolIdentifier placeholders
     int lastID = renameVars(m, modID++, declMap, directionMap);
 
+    //Replace real generated types for placeholders
+    //Prepares for type inference
     replaceTypes(m, lastID);
     addConstantIDsToParameterList(m, declMap, dirMap);
 
-    std::unordered_map<std::string, CanonicalTypes> idToType;
+    std::unordered_map<std::string, CanonicalTypes> idToType;//maps an id to its inferred type
 
     isCorrect = inferTypes(m, idToType);
 
     if (isCorrect) {
+      //Removes not replaced gate types
       removeEmptyGateTypes(m);
+
       auto mod = std::make_shared<Module>();
+
       mod->moduleHead = m->getParent()->extractChild(m);
       mod->directionMap = std::move(directionMap);
       mod->portList = std::move(portList);
       mod->idToType = idToType;
+
+      //Get the name of the module
       findModuleName(m, mod->moduleName);
 
+      //Map live vars to each program point
       LivenessVisitor lv(mod->programPoints);
       lv.applyVisit(mod->moduleHead.get());
 
@@ -786,6 +800,8 @@ static void generateModules(
   declMap.clear();
   dirMap.clear();
   directionMap.clear();
+
+  //Rename what is left of the generated program, e.g. global vars
   renameVars(head.get(), 0, declMap, directionMap);
 }
 
@@ -1061,6 +1077,7 @@ int main(int argc, char **argv) {
           for (auto [x, y] : m2->portList) {
             std::shuffle(availableIds.begin(), availableIds.end(), rng);
 
+            //find possible ids to add call to m2 in m
             auto id = findCompatibleId(availableIds, m->directionMap,
                                        m->idToType, m2->idToType[x], y);
             if (id != "") {
@@ -1091,6 +1108,7 @@ int main(int argc, char **argv) {
                                         std::to_string(usedModules.size()));
             }
 
+            //adds hierarchical reference 
             if (rand() % 2 == 0) { // reference will be on caller
               auto m2It = m2->idToType.begin();
               std::advance(m2It, rand() % m2->idToType.size());
@@ -1116,6 +1134,7 @@ int main(int argc, char **argv) {
               }
             }
 
+            //adds a call to a primitive module 
             if (rand() / (double)RAND_MAX < PRIMITIVE_MODULE_PROBABILITY) {
               auto primitiveProgramPoint =
                   m->programPoints[rand() % m->programPoints.size()];
