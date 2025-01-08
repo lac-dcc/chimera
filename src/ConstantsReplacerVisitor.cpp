@@ -148,6 +148,3 @@ void ReplaceConstantsVisitor::visit(Tk_octdigits *node) {
   }
 }
 
-void ReplaceConstantsVisitor::visit(Systemtfidentifier *node) {
-  node->setElement("$display");
-}
