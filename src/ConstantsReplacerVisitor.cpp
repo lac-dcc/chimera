@@ -148,4 +148,3 @@ void ReplaceConstantsVisitor::visit(Tk_octdigits *node) {
     this->applyVisit(child.get());
   }
 }
-
