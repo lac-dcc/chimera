@@ -997,6 +997,60 @@ static void callPrimitiveModule(Module *m,
   callModule(pp, name, chosenIds, "primCall");
 }
 
+Node* findSystemCall( Node* head){
+  if(head->type == NodeType::SYSTEM_TF_CALL)
+    return head;
+  
+  for(const auto &  c : head->getChildren()){
+    if(auto ret = findSystemCall(c.get()))
+      return ret;
+  }
+
+  return NULL;
+}
+
+struct Function
+{
+  std::string name;
+  std::vector<std::string> ids;
+};
+
+
+void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>modules){
+  std::vector<std::string> primitiveFunctions = {"clog2", "signed", "unsigned"};
+  
+
+  for(auto& m : modules){
+    for(auto& pp : m->programPoints){
+      if(auto pf = findSystemCall(pp.programPoint)){
+        pf->clearChildren();//remove placeholder
+
+        auto primitiveF = primitiveFunctions[rand() % primitiveFunctions.size()];
+
+        std::string selected_id = "";
+
+          
+          
+        for(auto& id :  pp.liveness){
+          if(m->idToType[id] == CanonicalTypes::CONST_SCALAR){
+            selected_id = id;
+            break;
+          }
+        }
+        if(selected_id.empty())
+          selected_id = std::to_string(rand() % 100);
+
+        pf->insertChildToBegin(std::make_unique<Terminal>(" $" + primitiveF + " "));
+        pf->insertChildToEnd(std::make_unique<Terminal>(" ( "));
+        pf->insertChildToEnd(std::make_unique<Terminal>(selected_id));
+        pf->insertChildToEnd(std::make_unique<Terminal>(" ) "));
+        pf->insertChildToEnd(std::make_unique<Terminal>(" ; "));
+      }
+      
+    }
+  }
+}
+
 int main(int argc, char **argv) {
   auto flags = parseArgs(argc, argv);
 
@@ -1049,7 +1103,8 @@ int main(int argc, char **argv) {
   }
 
   int callCounter = 1; // id to use when calling a method
-
+  if (printSeed)
+    std::cout << "// Seed: " << finalSeed << std::endl;
   do {
     do {
       generateModules(n, map, head, gen,
@@ -1110,9 +1165,18 @@ int main(int argc, char **argv) {
 
             //adds hierarchical reference 
             if (rand() % 2 == 0) { // reference will be on caller
-              auto m2It = m2->idToType.begin();
-              std::advance(m2It, rand() % m2->idToType.size());
-              auto id = m2It->first;
+              std::unordered_map<std::string, CanonicalTypes>::iterator m2It;
+              std::size_t counter = 0;
+
+              std::string id = "";
+              do{
+                m2It = m2->idToType.begin();
+                std::advance(m2It, rand() % m2->idToType.size());
+                id = m2It->first;
+                counter++;
+              }while(id.find("id") == std::string::npos && counter <m2It->first.size());
+
+              
               auto val = getDefaultValue(m2It->second);
               if (!val.empty())
                 hierarchicalReference(pp.programPoint->getParent(),
@@ -1124,13 +1188,14 @@ int main(int argc, char **argv) {
 
               auto id = mIt->first;
               auto val = getDefaultValue(mIt->second);
+              if(m2->programPoints.size() > 0){
+                auto pp2 = m2->programPoints[rand() % m2->programPoints.size()];
 
-              auto pp2 = m2->programPoints[rand() % m2->programPoints.size()];
-
-              if (!val.empty()) {
-                hierarchicalReference(pp2.programPoint->getParent(),
-                                      getPosFromPP(pp2) + 1, id, val, pp2.scope,
-                                      m->moduleName->getElement());
+                if (!val.empty()) {
+                  hierarchicalReference(pp2.programPoint->getParent(),
+                                        getPosFromPP(pp2) + 1, id, val, pp2.scope,
+                                        m->moduleName->getElement());
+                }
               }
             }
 
@@ -1158,11 +1223,9 @@ int main(int argc, char **argv) {
         ++it;
       }
     }
-
   } while (measureSize(usedModules) < TARGET_SIZE);
 
-  if (printSeed)
-    std::cout << "// Seed: " << finalSeed << std::endl;
+  addPrimitiveFunctionCalls(usedModules);
 
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
