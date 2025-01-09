@@ -136,7 +136,7 @@ run_coverage() {
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" <"$1" >/dev/null 2>&1
     ;;
   $VERILATOR)
-    LLVM_PROFILE_FILE=$profraw_file "$target_exe" --binary -j 0 "$1" >/dev/null 2>&1
+    LLVM_PROFILE_FILE=$profraw_file "$target_exe" --cc "$1" >/dev/null 2>&1
     ;;
   *)
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" "$1" >/dev/null 2>&1
@@ -190,6 +190,10 @@ else
     run_coverage_for_program "$input" "$i"
     ((i++))
   done <$file
+fi
+
+if [ "$target_tool" -eq $VERILATOR ]; then
+  rm -rf ./obj_dir
 fi
 
 [ $incremental = false ] && wait || exit
