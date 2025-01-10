@@ -107,6 +107,9 @@ public:
   virtual void visit(Tk_octbase *node) override;
 
   virtual void visit(Udp_port_decls *node) override;
+
   virtual void visit(Label_opt *node) override;
+
+  virtual void visit(Any_param_declaration *node) override;
 };
 #endif

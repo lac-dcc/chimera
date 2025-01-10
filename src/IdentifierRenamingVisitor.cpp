@@ -466,3 +466,11 @@ void IdentifierRenamingVisitor::visit(Label_opt *node) {
     node->insertChildToEnd(std::move(label));
   }
 }
+
+void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
