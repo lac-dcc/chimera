@@ -142,7 +142,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
   return head;
 }
 
-static void findNodes(Node *head, std::vector<Node *> &modules,
+static void findModulePorts(Node *head, std::vector<Node *> &modules,
                       std::vector<Node *> &portDeclarations) {
   if (head->getElement() == "module_or_interface_declaration") {
     modules.push_back(head);
@@ -151,7 +151,7 @@ static void findNodes(Node *head, std::vector<Node *> &modules,
   }
 
   for (const auto &c : head->getChildren()) {
-    findNodes(c.get(), modules, portDeclarations);
+    findModulePorts(c.get(), modules, portDeclarations);
   }
 }
 
@@ -416,6 +416,48 @@ static void createParameterList(Node *parameterList) {
   parameterList->setChildren(std::move(children));
 }
 
+static void removeNodes(Node* head, NodeType t){
+  if(head->type == t){
+    head->getParent()->extractChild(head);
+    return;
+  }
+
+  for(int i = 0; i < head->getChildren().size(); i++){
+    removeNodes(head->getChildren()[i].get(), t);
+  }
+}
+
+
+//finds the first occurrence of a node with type t
+Node* findNode( Node* head, NodeType t){
+  if(head->type == t)
+    return head;
+  
+  for(const auto &  c : head->getChildren()){
+    if(auto ret = findNode(c.get(), t))
+      return ret;
+  }
+
+  return nullptr;
+}
+
+//populates the vector nodes with all the occurrence of nodes with type t
+void findNodes(Node*head, std::vector<Node*>& nodes, NodeType t){
+    if(head->type == t)
+    nodes.push_back(head);
+  
+  for(const auto &  c : head->getChildren())
+    findNodes(c.get(),nodes,  t);
+}
+
+Node* getChild(std::vector<std::unique_ptr<Node>>const& children, NodeType t){
+  for(auto & c : children){
+    if(c->type == t)
+      return c.get();
+  }
+  return nullptr;
+}
+
 static void
 addParametersToList(Node *parameterList,
                     const std::set<std::pair<std::string, bool>> &constantIds) {
@@ -592,38 +634,29 @@ static void setDir(Node *head) {
     currentDir = PortDir::INOUT;
 }
 
-static std::string getID(Node *head, int &counter,
-                         std::unordered_map<std::string, Node *> &decl_map) {
+//get id from data_type_or_implicit_basic_followed_by_id_and_dimensions_opt node
+static Node* getID(Node *head) {
 
   if (head->type == NodeType::GENERICIDENTIFIER) {
-
-    auto s = " id_" + std::to_string(counter++) + " ";
-    decl_map[s] = head->getChildren()[0].get();
-
-    if (debug)
-      std::cerr << "Renaming ID to " << s << std::endl;
-
-    head->getChildren()[0]->setElement(std::move(s));
-
-    return head->getChildren()[0]->getElement();
+    return head->getChildren()[0].get();
 
   } else if (head->type == NodeType::CLASS_ID) {
 
-    return getID(head->getChildren()[0]->getChildren()[0].get(), counter,
-                 decl_map); // accesses GenericIdentifier directly
+    return getID(head->getChildren()[0]->getChildren()[0].get()
+              ); // accesses GenericIdentifier directly
 
   } else if (head->type == NodeType::UNQUALIFIED_ID) {
-    return getID(head->getChildren()[0].get(), counter, decl_map);
+    return getID(head->getChildren()[0].get());
 
   } else if (head->type == NodeType::PORT_DECLARATION_ANSI) {
 
     if (head->getChildren()[0]->type == NodeType::PORT_DIRECTION) {
-      return getID(head->getChildren()[2].get(), counter, decl_map);
+      return getID(head->getChildren()[2].get());
     } else if (head->getChildren()[0]->type ==
                NodeType::TYPE_IDENTIFIER_FOLLOWED_BY_ID) {
-      return getID(head->getChildren()[0].get(), counter, decl_map);
+      return getID(head->getChildren()[0].get());
     } else if (head->getChildren()[0]->type == NodeType::DATA_TYPE_PRIMITIVE) {
-      return getID(head->getChildren()[1].get(), counter, decl_map);
+      return getID(head->getChildren()[1].get());
     }
 
   } else if (
@@ -631,13 +664,13 @@ static std::string getID(Node *head, int &counter,
       NodeType::DATA_TYPE_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
 
     if (head->getChildren().size() == 1) {
-      return getID(head->getChildren()[0]->getChildren()[0].get(), counter,
-                   decl_map); // accesses unqualified_id directly
+      return getID(head->getChildren()[0]->getChildren()[0].get()
+                ); // accesses unqualified_id directly
     } else if (head->getChildren()[0]->type ==
                NodeType::SIGNING) { // id is in class_id in third position
-      return getID(head->getChildren()[2].get(), counter, decl_map);
+      return getID(head->getChildren()[2].get());
     } else { // id is in class_id production in the second position
-      return getID(head->getChildren()[1].get(), counter, decl_map);
+      return getID(head->getChildren()[1].get());
     }
   }
   return NULL;
@@ -653,10 +686,19 @@ static void findAnsiDeclarations(
 
       setDir(head->getChildren()[0].get());
 
-      auto id = getID(head, counter, decl_map);
+      auto id = getID(head);
+      auto s = " id_" + std::to_string(counter++) + " ";
+      
+      decl_map[s] = id;
 
-      directionMap[id] = {head, currentDir};
-      portList.push_back({id, currentDir});
+      if (debug)
+        std::cerr << "Renaming ID to " << s << std::endl;
+
+      id->setElement(std::move(s));
+
+
+      directionMap[s] = {head, currentDir};
+      portList.push_back({s, currentDir});
 
       auto netType = head->getChildren()[1].get();
 
@@ -724,7 +766,7 @@ static void generateModules(
 
   std::vector<Node *> moduleHeads, portDeclarations;
 
-  findNodes(head.get(), moduleHeads, portDeclarations);
+  findModulePorts(head.get(), moduleHeads, portDeclarations);
 
   removePortDeclarations(portDeclarations);
   bool isCorrect = true;
@@ -866,8 +908,38 @@ static std::string getDefaultValue(CanonicalTypes t) {
   case CanonicalTypes::STRING:
     return "\"\"";
   default:
-    std::cerr << "Type " << static_cast<typeId>(t) << " has no default value"
-              << std::endl;
+    if(debug)
+      std::cerr << "Type " << static_cast<typeId>(t) << " has no default value"
+                << std::endl;
+  }
+  return "";
+}
+
+std::string getStringfromType(CanonicalTypes t){
+    switch (t) {
+  
+  case CanonicalTypes::BIT:
+    return " bit ";
+  case CanonicalTypes::LOGIC:
+    return " logic ";
+  case CanonicalTypes::REG:
+    return " reg ";
+
+  case CanonicalTypes::SCALAR:
+  case CanonicalTypes::CONST_SCALAR:
+  case CanonicalTypes::WIRE:
+    return " wire ";
+  case CanonicalTypes::INTEGER:
+    return " int ";
+
+  case CanonicalTypes::FLOAT_SCALAR:
+    return " float ";
+  case CanonicalTypes::STRING:
+    return " string ";
+  default:
+    if(debug)
+      std::cerr << "Type " << static_cast<typeId>(t) << " has no defined type as string"
+                << std::endl;
   }
   return "";
 }
@@ -997,32 +1069,13 @@ static void callPrimitiveModule(Module *m,
   callModule(pp, name, chosenIds, "primCall");
 }
 
-Node* findSystemCall( Node* head){
-  if(head->type == NodeType::SYSTEM_TF_CALL)
-    return head;
-  
-  for(const auto &  c : head->getChildren()){
-    if(auto ret = findSystemCall(c.get()))
-      return ret;
-  }
-
-  return NULL;
-}
-
-struct Function
-{
-  std::string name;
-  std::vector<std::string> ids;
-};
-
-
-void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>modules){
+void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>& modules){
   std::vector<std::string> primitiveFunctions = {"clog2", "signed", "unsigned"};
   
 
   for(auto& m : modules){
     for(auto& pp : m->programPoints){
-      if(auto pf = findSystemCall(pp.programPoint)){
+      if(auto pf = findNode(pp.programPoint,  NodeType::SYSTEM_TF_CALL)){
         pf->clearChildren();//remove placeholder
 
         auto primitiveF = primitiveFunctions[rand() % primitiveFunctions.size()];
@@ -1047,6 +1100,36 @@ void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>modules){
         pf->insertChildToEnd(std::make_unique<Terminal>(" ; "));
       }
       
+    }
+  }
+}
+
+void formatCustomFunctions(std::vector<std::shared_ptr<Module>>& modules){
+  for(auto& m : modules){
+    std::vector<Node*> functionNodes;
+    findNodes(m->moduleHead.get(),functionNodes, NodeType::FUNCTION_DECLARATION);
+
+    for(auto& node : functionNodes){
+
+      
+      auto tfPortList = getChild(node->getChildren(), NodeType::TF_PORT_LIST);
+      if(!tfPortList || tfPortList->getChildren()[0]->type != NodeType::TF_PORT_LIST){//means the function has parameters in the signature 
+        
+        //remove all the port declarations in the body
+        removeNodes(node, NodeType::TF_PORT_DECLARATION);
+
+        //get function name
+        auto funcNameNode = getID(node->getChildren()[2]->getChildren()[0].get());
+        std::string funcType = "";
+        if(m->idToType.find(funcNameNode->getElement()) != m->idToType.end())
+            funcType = getStringfromType(m->idToType[funcNameNode->getElement()]);
+        
+        if(funcType.empty())
+          funcType = " void ";
+
+
+
+      }
     }
   }
 }
