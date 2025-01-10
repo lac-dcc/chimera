@@ -139,7 +139,8 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
          (*id)->type == type) &&
-        ((isAssign && (*id)->dir != PortDir::INPUT) ||
+        ((isAssign && (*id)->dir != PortDir::INPUT &&
+          contexts.top() != ContextType::DECL_CONSTANT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
 
       options.push_back((*id)->name);
@@ -202,7 +203,8 @@ std::string IdentifierRenamingVisitor::placeID(
     return createNewID("module").name;
   }
 
-  if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+  if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
+                            contexts.top() == ContextType::DECL_CONSTANT)) {
     std::string t;
 
     auto id = createNewID(type, isEscaped);
@@ -468,7 +470,7 @@ void IdentifierRenamingVisitor::visit(Label_opt *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
-  createIDContext(ContextType::EXPR);
+  createIDContext(ContextType::DECL_CONSTANT);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }

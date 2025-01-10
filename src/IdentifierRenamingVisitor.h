@@ -24,6 +24,7 @@ public:
   enum ContextType {
     EXPR = 0,
     DECL,
+    DECL_CONSTANT,
     MODULE,
     DEFINING_ID,
     DEFINING_TYPE,
