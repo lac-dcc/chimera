@@ -1,6 +1,8 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
 
+std::string last_id_name_created = "";
+
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
     int modID, std::unordered_map<std::string, Node *> &declMap,
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
@@ -89,6 +91,8 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
 
   v.dir = PortDir::NONE;
 
+  last_id_name_created = v.name;
+
   auto r = std::make_shared<Var>(v);
   identifiers.push_back(r);
 
@@ -139,6 +143,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
          (*id)->type == type) &&
+        (*id)->name != last_id_name_created &&
         ((isAssign && (*id)->dir != PortDir::INPUT &&
           contexts.top() != ContextType::DECL_CONSTANT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
