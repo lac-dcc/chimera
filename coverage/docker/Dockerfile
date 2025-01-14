@@ -3,10 +3,10 @@ FROM ubuntu:22.04
 
 ############################################# Date and Time #############################################
 ENV TZ="America/Sao_Paulo"
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ >/etc/timezone &&
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ >/etc/timezone && \
   rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update -y && apt-get install -y locales curl wget tar sudo git apt-utils &&
+RUN apt-get update -y && apt-get install -y locales curl wget tar sudo git apt-utils && \
   localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
@@ -17,7 +17,7 @@ RUN pip3 install matplotlib pandas pyyaml
 
 ############################################### LLVM ####################################################
 RUN wget -qO- https://apt.llvm.org/llvm.sh | bash -s -- 16
-RUN ln -s /bin/clang-16 /bin/clang && ln -s /bin/clang++-16 /bin/clang++ &&
+RUN ln -s /bin/clang-16 /bin/clang && ln -s /bin/clang++-16 /bin/clang++ && \
   ln -s /bin/llvm-cov-16 /bin/llvm-cov && ln -s /bin/llvm-profdata-16 /bin/llvm-profdata
 
 ########################################## Clone Chimera ################################################
@@ -32,15 +32,15 @@ RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gp
 RUN apt-get update -y && apt-get install -y bazel
 
 ############################################## Verible ###################################################
-RUN cd $HOME && git clone https://github.com/joaovam/verible.git && cd verible &&
+RUN cd $HOME && git clone https://github.com/joaovam/verible.git && cd verible && \
   bash $HOME/chimera/coverage/scripts/verible_coverage_build.sh
 
 ########################################## Icarus Verilog ################################################
-RUN cd $HOME && git clone https://github.com/steveicarus/iverilog.git &&
+RUN cd $HOME && git clone https://github.com/steveicarus/iverilog.git && \
   cd iverilog && sh autoconf.sh && bash $HOME/chimera/coverage/scripts/iverilog_coverage_config.sh && make -j $(nproc)
 
 ############################################# Verilator ##################################################
-RUN cd $HOME && git clone https://github.com/verilator/verilator.git &&
+RUN cd $HOME && git clone https://github.com/verilator/verilator.git && \
   cd verilator && autoconf && bash $HOME/chimera/coverage/scripts/verilator_coverage_config.sh && make -j $(nproc)
 
 ############################################ Workdir #####################################################
