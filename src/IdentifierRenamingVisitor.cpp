@@ -1,7 +1,9 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
+#include <set>
 
 std::string last_id_name_created = "";
+std::set<std::string> constant_names;
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
     int modID, std::unordered_map<std::string, Node *> &declMap,
@@ -144,6 +146,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
          (*id)->type == type) &&
         (*id)->name != last_id_name_created &&
+        !constant_names.count((*id)->name) &&
         ((isAssign && (*id)->dir != PortDir::INPUT &&
           contexts.top() != ContextType::DECL_CONSTANT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
@@ -213,6 +216,10 @@ std::string IdentifierRenamingVisitor::placeID(
     std::string t;
 
     auto id = createNewID(type, isEscaped);
+
+    if (contexts.top() == ContextType::DECL_CONSTANT) {
+      constant_names.insert(id.name);
+    }
 
     return id.name;
   }
