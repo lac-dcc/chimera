@@ -145,11 +145,16 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
 
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
          (*id)->type == type) &&
-        (*id)->name != last_id_name_created &&
-        !constant_names.count((*id)->name) &&
-        ((isAssign && (*id)->dir != PortDir::INPUT &&
-          contexts.top() != ContextType::DECL_CONSTANT) ||
+        ((isAssign && (*id)->dir != PortDir::INPUT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
+
+      if (isAssign && constant_names.count((*id)->name)) {
+        continue;
+      }
+
+      if (isAssign && (*id)->name == last_id_name_created) {
+        continue;
+      }
 
       options.push_back((*id)->name);
     }
@@ -251,6 +256,7 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
+  constant_names.clear();
   createIDContext(ContextType::MODULE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
