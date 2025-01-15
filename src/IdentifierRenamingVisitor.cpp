@@ -80,8 +80,6 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
       v.name = " id_" + std::to_string(varID++) + " ";
     }
   }
-  if (debug)
-    std::cerr << "Var name: " << v.name << std::endl;
   v.type = t;
 
   if (debug)
