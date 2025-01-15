@@ -148,7 +148,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
         ((isAssign && (*id)->dir != PortDir::INPUT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
 
-      if (contexts.top() == ContextType::DECL_CONSTANT &&
+      if (!contexts.empty() && contexts.top() == ContextType::DECL_CONSTANT &&
           constant_names.count((*id)->name)) {
         continue;
       }
