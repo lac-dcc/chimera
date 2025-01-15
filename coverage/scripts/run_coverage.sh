@@ -138,7 +138,9 @@ run_coverage() {
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" <"$1" >/dev/null 2>&1
     ;;
   $VERILATOR)
-    LLVM_PROFILE_FILE=$profraw_file "$target_exe" --cc "$1" >/dev/null 2>&1
+    # Verilator's binary is 'verilator_bin', however we need to use 'verilator'
+    # in order to run it
+    LLVM_PROFILE_FILE=$profraw_file ${target_exe::-4} --cc "$1" >/dev/null 2>&1
     ;;
   *)
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" "$1" >/dev/null 2>&1
