@@ -13,3 +13,7 @@ sample_database/
 time_test/
 transFuzz/tmp
 verismith_acc
+coverage/debug/
+coverage/output/
+coverage/*.png
+coverage/*.prof*
