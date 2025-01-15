@@ -64,4 +64,4 @@ tools:
     binary_path: "../../iverilog/ivl"
   - label: "verilator"
     name: "Verilator"
-    binary_path: "../../verilator/bin/verilator"
+    binary_path: "../../verilator/bin/verilator_bin"
