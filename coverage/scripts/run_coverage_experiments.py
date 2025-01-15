@@ -54,7 +54,9 @@ def load_config(config_path: str):
     return datasets, tools
 
 
-def plot_results(tool: Tool, datasets: Iterable[Tuple[str, Dataset]]):
+def plot_results(
+    tool: Tool, datasets: Iterable[Tuple[str, Dataset]], results_path: str
+):
     coverage_types = ["branch", "line"]
     fig, axs = plt.subplots(nrows=1, ncols=2, figsize=(18, 6), layout="constrained")
     for idx, coverage_type in enumerate(coverage_types):
@@ -67,8 +69,8 @@ def plot_results(tool: Tool, datasets: Iterable[Tuple[str, Dataset]]):
         axs[idx].set_ylabel(f"{coverage_type.capitalize()} coverage (%)", fontsize=15)
         axs[idx].grid(zorder=0)
 
-    for results_path, dataset in datasets:
-        df = pd.read_csv(results_path)
+    for output_path, dataset in datasets:
+        df = pd.read_csv(output_path)
         for idx, coverage_type in enumerate(coverage_types):
             axs[idx].plot(
                 df["num_files"],
@@ -82,7 +84,9 @@ def plot_results(tool: Tool, datasets: Iterable[Tuple[str, Dataset]]):
     handles, labels = axs[1].get_legend_handles_labels()
     fig.legend(handles, labels, loc="outside center right", prop={"size": 13})
     timestamp = datetime.datetime.now().replace(microsecond=0).isoformat()
-    plt.savefig(f"{tool.label}_coverage_{timestamp}.png", dpi=800)
+
+    fig_path = path.join(results_path, f"{tool.label}_coverage_{timestamp}.png")
+    plt.savefig(fig_path, dpi=800)
     plt.close(fig)
 
 
@@ -91,6 +95,7 @@ def run_experiments(
     datasets: Iterable[Dataset],
     output_path: str,
     debug_path: str,
+    results_path: str,
     coverage_script: str,
 ):
     for tool in tools:
@@ -119,7 +124,7 @@ def run_experiments(
                         stderr=error_file,
                     )
 
-        plot_results(tool, zip(tool_results, datasets))
+        plot_results(tool, zip(tool_results, datasets), results_path)
 
 
 def prepare_directory(dir_path: str):
@@ -135,25 +140,31 @@ def main():
         "--coverage_script",
         type=str,
         default="./scripts/run_coverage.sh",
-        help="(%(type)s) Coverage script to be used.",
+        help="(%(type)s) Coverage script to be used (default: %(default)s).",
     )
     parser.add_argument(
         "--output_path",
         type=str,
         default="./output",
-        help="(%(type)s) Path where CSV results are saved.",
+        help="(%(type)s) Path where CSV results are saved (default: %(default)s).",
     )
     parser.add_argument(
         "--debug_path",
         type=str,
         default="./debug",
-        help="(%(type)s) Path where debug information is saved.",
+        help="(%(type)s) Path where debug information is saved (default: %(default)s).",
+    )
+    parser.add_argument(
+        "--results_path",
+        type=str,
+        default="./results",
+        help="(%(type)s) Path where charts with results are saved (default: %(default)s).",
     )
     parser.add_argument(
         "--config_path",
         type=str,
         default="./scripts/config/coverage_config.yaml",
-        help="(%(type)s) Path to the YAML config file with information about datasets and EDA tools.",
+        help="(%(type)s) Path to the YAML config file with information about datasets and EDA tools (default: %(default)s).",
     )
     args = parser.parse_args()
 
@@ -161,9 +172,15 @@ def main():
 
     prepare_directory(args.output_path)
     prepare_directory(args.debug_path)
+    makedirs(args.results_path, exist_ok=True)
 
     run_experiments(
-        tools, datasets, args.output_path, args.debug_path, args.coverage_script
+        tools,
+        datasets,
+        args.output_path,
+        args.debug_path,
+        args.results_path,
+        args.coverage_script,
     )
 
 
