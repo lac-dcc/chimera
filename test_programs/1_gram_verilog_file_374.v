@@ -1,0 +1,90 @@
+// Seed: 351274187
+module module_0 (
+    output uwire id_0,
+    output uwire id_1,
+    input wor id_2,
+    input wor id_3,
+    output uwire id_4,
+    output uwire id_5,
+    output tri id_6,
+    output uwire id_7,
+    input supply0 id_8,
+    input tri id_9,
+    input tri id_10,
+    output supply1 id_11,
+    output wire id_12,
+    input wire id_13,
+    input tri1 id_14,
+    input supply1 id_15,
+    input tri1 id_16,
+    input wand id_17,
+    output wire id_18,
+    input wor id_19
+);
+  assign id_1 = -1;
+  assign id_5 = 1;
+  wire id_21;
+endmodule
+module module_1 (
+    input uwire id_0,
+    output uwire id_1,
+    output wor id_2,
+    input supply1 id_3,
+    input tri id_4,
+    output tri1 id_5,
+    input tri id_6,
+    input wire id_7,
+    input tri id_8,
+    output uwire id_9,
+    output wor id_10,
+    input tri id_11,
+    input tri id_12,
+    input supply0 id_13,
+    input uwire id_14,
+    input wand id_15,
+    output supply0 id_16,
+    output supply0 id_17,
+    input tri1 id_18,
+    input uwire id_19,
+    output tri0 id_20,
+    output tri1 id_21,
+    input tri0 id_22,
+    output tri0 id_23,
+    input supply1 id_24,
+    id_36,
+    output tri0 id_25,
+    output tri0 id_26,
+    output wand id_27,
+    input wand id_28,
+    input tri0 id_29,
+    input wire id_30,
+    output supply0 id_31,
+    input uwire id_32,
+    input uwire id_33,
+    output wire id_34
+);
+  assign id_9 = !1;
+  module_0 modCall_1 (
+      id_34,
+      id_5,
+      id_0,
+      id_12,
+      id_20,
+      id_27,
+      id_27,
+      id_16,
+      id_11,
+      id_32,
+      id_7,
+      id_23,
+      id_1,
+      id_12,
+      id_22,
+      id_30,
+      id_29,
+      id_6,
+      id_23,
+      id_15
+  );
+  assign modCall_1.id_5 = 0;
+endmodule
