@@ -22,7 +22,7 @@ RUN ln -s /bin/clang-16 /bin/clang && ln -s /bin/clang++-16 /bin/clang++ && \
   ln -s /bin/llvm-cov-16 /bin/llvm-cov && ln -s /bin/llvm-profdata-16 /bin/llvm-profdata
 
 ########################################## Clone Chimera ################################################
-RUN cd $HOME && git clone https://github.com/lac-dcc/chimera && cd chimera && git checkout coverage
+RUN cd $HOME && git clone https://github.com/lac-dcc/chimera
 
 ############################################## Bazel ####################################################
 RUN apt-get update -y && apt-get install -y apt-transport-https
