@@ -1,3 +1,42 @@
+"""Run coverage experiments
+
+This script runs coverage experiments by using programs in different datasets
+as input for different target tools. The coverage is assumed to be obtained by
+compiling the target tools with Clang's source-based coverage
+(https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
+
+A separate bash script is used to run the target tools and obtain a CSV output,
+which specifies line and branch coverage for programs in each dataset. This
+script can be specified as an argument.
+
+Additionally, this script produces charts with results for line and branch
+coverage for all tested tools.
+
+The datasets and tools that will be used for the experiment can be specified in
+a separate YAML configuration file. This file also allows the user to control
+other aspects, such as the colors that will be used in the charts.
+
+Usage: run_coverage_experiments.py [-h] [--coverage_script COVERAGE_SCRIPT]
+                                   [--output_path OUTPUT_PATH]
+                                   [--debug_path DEBUG_PATH]
+                                   [--results_path RESULTS_PATH]
+                                   [--config_path CONFIG_PATH]
+
+Arguments:
+  --coverage_script COVERAGE_SCRIPT
+                        (str) Coverage script to be used (default: ./scripts/run_coverage.sh).
+  --output_path OUTPUT_PATH
+                        (str) Path where CSV results are saved (default: ./output).
+  --debug_path DEBUG_PATH
+                        (str) Path where debug information is saved (default: ./debug).
+  --results_path RESULTS_PATH
+                        (str) Path where charts with results are saved (default: ./results).
+  --config_path CONFIG_PATH
+                        (str) Path to the YAML config file with information about datasets and EDA tools (default:
+                        ./scripts/config/coverage_config.yaml).
+  -h, --help            Show help message and exit
+"""
+
 import argparse
 import datetime
 import matplotlib.pyplot as plt

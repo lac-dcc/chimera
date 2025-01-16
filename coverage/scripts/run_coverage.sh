@@ -2,7 +2,7 @@
 
 # This script is used to obtain coverage for Verilog-based EDA tools. It can
 # support different Verible tools (obfuscate, syntax and format), Icarus
-# Verilog's parser (ivl) and Verilator. In order to make it # work properly, you
+# Verilog's parser (ivl) and Verilator. In order to make it work properly, you
 # must compile the target tool with Clang's source-based coverage
 # (https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
 
