@@ -2,7 +2,7 @@
 
 # This script is used to obtain coverage for Verilog-based EDA tools. It can
 # support different Verible tools (obfuscate, syntax and format), Icarus
-# Verilog's parser (ivl) and Verilator. In order to make it # work properly, you
+# Verilog's parser (ivl) and Verilator. In order to make it work properly, you
 # must compile the target tool with Clang's source-based coverage
 # (https://clang.llvm.org/docs/SourceBasedCodeCoverage.html#compiling-with-coverage-enabled).
 
@@ -123,20 +123,24 @@ printf "file,line_coverage,branch_coverage"
 [ $incremental = true ] && printf ",num_files"
 printf "\n"
 
-profdata_files=()
+LLVM_PROFDATA="/bin/llvm-profdata"
+LLVM_COV="/bin/llvm-cov"
+
 prev_profdata=""
 run_coverage() {
   echo >&2 "$1"
 
-  profraw_file="$(basename "$1").profraw"
-  profdata_file="$(basename "$1").profdata"
+  profraw_file="${target_tool}_$(basename "$1").profraw"
+  profdata_file="${target_tool}_$(basename "$1").profdata"
 
   case "$target_tool" in
   $OBFUSCATE)
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" <"$1" >/dev/null 2>&1
     ;;
   $VERILATOR)
-    LLVM_PROFILE_FILE=$profraw_file "$target_exe" --cc "$1" >/dev/null 2>&1
+    # Verilator's binary is 'verilator_bin', however we need to use 'verilator'
+    # in order to run it
+    LLVM_PROFILE_FILE=$profraw_file ${target_exe::-4} --cc "$1" >/dev/null 2>&1
     ;;
   *)
     LLVM_PROFILE_FILE=$profraw_file "$target_exe" "$1" >/dev/null 2>&1
@@ -144,12 +148,12 @@ run_coverage() {
   esac
 
   if [ $incremental = true ] && [ -f "$prev_profdata" ]; then
-    llvm-profdata merge -sparse "$profraw_file" "$prev_profdata" -o "$profdata_file"
+    $LLVM_PROFDATA merge -sparse "$profraw_file" "$prev_profdata" -o "$profdata_file"
   else
-    llvm-profdata merge -sparse "$profraw_file" -o "$profdata_file"
+    $LLVM_PROFDATA merge -sparse "$profraw_file" -o "$profdata_file"
   fi
 
-  summary=$(llvm-cov report "${ignored_filenames[@]}" \
+  summary=$($LLVM_COV report "${ignored_filenames[@]}" \
     "$target_exe" -instr-profile="$profdata_file" |
     tail -1)
 
@@ -194,6 +198,10 @@ fi
 
 if [ "$target_tool" -eq $VERILATOR ]; then
   rm -rf ./obj_dir
+fi
+
+if [ $incremental = true ]; then
+  rm "$prev_profdata"
 fi
 
 [ $incremental = false ] && wait || exit
