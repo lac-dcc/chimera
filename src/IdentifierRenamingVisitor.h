@@ -24,6 +24,7 @@ public:
   enum ContextType {
     EXPR = 0,
     DECL,
+    DECL_CONSTANT,
     MODULE,
     DEFINING_ID,
     DEFINING_TYPE,
@@ -107,6 +108,9 @@ public:
   virtual void visit(Tk_octbase *node) override;
 
   virtual void visit(Udp_port_decls *node) override;
+
   virtual void visit(Label_opt *node) override;
+
+  virtual void visit(Any_param_declaration *node) override;
 };
 #endif

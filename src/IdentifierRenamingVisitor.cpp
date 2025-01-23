@@ -1,5 +1,9 @@
 #include "IdentifierRenamingVisitor.h"
 #include <iostream>
+#include <set>
+
+std::string last_id_name_created = "";
+std::set<std::string> constant_names;
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
     int modID, std::unordered_map<std::string, Node *> &declMap,
@@ -87,6 +91,8 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
 
   v.dir = PortDir::NONE;
 
+  last_id_name_created = v.name;
+
   auto r = std::make_shared<Var>(v);
   identifiers.push_back(r);
 
@@ -139,6 +145,14 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
          (*id)->type == type) &&
         ((isAssign && (*id)->dir != PortDir::INPUT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
+
+      if (isAssign && constant_names.count((*id)->name)) {
+        continue;
+      }
+
+      if (isAssign && (*id)->name == last_id_name_created) {
+        continue;
+      }
 
       options.push_back((*id)->name);
     }
@@ -200,10 +214,15 @@ std::string IdentifierRenamingVisitor::placeID(
     return createNewID("module").name;
   }
 
-  if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+  if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
+                            contexts.top() == ContextType::DECL_CONSTANT)) {
     std::string t;
 
     auto id = createNewID(type, isEscaped);
+
+    if (contexts.top() == ContextType::DECL_CONSTANT) {
+      constant_names.insert(id.name);
+    }
 
     return id.name;
   }
@@ -235,6 +254,7 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
+  constant_names.clear();
   createIDContext(ContextType::MODULE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -463,4 +483,12 @@ void IdentifierRenamingVisitor::visit(Label_opt *node) {
 
     node->insertChildToEnd(std::move(label));
   }
+}
+
+void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
+  createIDContext(ContextType::DECL_CONSTANT);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
 }
