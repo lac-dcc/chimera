@@ -94,7 +94,10 @@ def load_config(config_path: str):
 
 
 def plot_results(
-    tool: Tool, datasets: Iterable[Tuple[str, Dataset]], results_path: str
+    tool: Tool,
+    datasets: Iterable[Tuple[str, Dataset]],
+    results_path: str,
+    figure_format: str,
 ):
     coverage_types = ["branch", "line"]
     fig, axs = plt.subplots(nrows=1, ncols=2, figsize=(18, 6), layout="constrained")
@@ -114,7 +117,7 @@ def plot_results(
             axs[idx].plot(
                 df["num_files"],
                 df[f"{coverage_type}_coverage"],
-                label=dataset.label,
+                label=dataset.name,
                 color=dataset.line_color,
                 linestyle=dataset.line_style,
             )
@@ -124,8 +127,10 @@ def plot_results(
     fig.legend(handles, labels, loc="outside center right", prop={"size": 13})
     timestamp = datetime.datetime.now().replace(microsecond=0).isoformat()
 
-    fig_path = path.join(results_path, f"{tool.label}_coverage_{timestamp}.png")
-    plt.savefig(fig_path, dpi=800)
+    fig_path = path.join(
+        results_path, f"{tool.label}_coverage_{timestamp}.{figure_format}"
+    )
+    plt.savefig(fig_path, dpi=800, format=figure_format)
     plt.close(fig)
 
 
@@ -136,6 +141,7 @@ def run_experiments(
     debug_path: str,
     results_path: str,
     coverage_script: str,
+    figure_format: str,
 ):
     for tool in tools:
         tool_results = []
@@ -163,7 +169,7 @@ def run_experiments(
                         stderr=error_file,
                     )
 
-        plot_results(tool, zip(tool_results, datasets), results_path)
+        plot_results(tool, zip(tool_results, datasets), results_path, figure_format)
 
 
 def prepare_directory(dir_path: str):
@@ -205,6 +211,13 @@ def main():
         default="./scripts/config/coverage_config.yaml",
         help="(%(type)s) Path to the YAML config file with information about datasets and EDA tools (default: %(default)s).",
     )
+    parser.add_argument(
+        "--figure_format",
+        type=str,
+        choices=["png", "pdf"],
+        default="png",
+        help="(%(type)s) Output format for the output figures. (default: %(default)s).",
+    )
     args = parser.parse_args()
 
     datasets, tools = load_config(args.config_path)
@@ -220,6 +233,7 @@ def main():
         args.debug_path,
         args.results_path,
         args.coverage_script,
+        args.figure_format,
     )
 
 
