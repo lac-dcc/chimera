@@ -2875,7 +2875,7 @@ constraintSet TypeInferenceVisitor::visit(Specify_item_list *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Tk_ls_eq *node, typeId type) {
+constraintSet TypeInferenceVisitor::visit(Tk_ls_eq *, typeId type) {
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
   return constraintSet({{t, type}});
 }
