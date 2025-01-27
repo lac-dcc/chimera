@@ -28,7 +28,7 @@ def main():
     args = parser.parse_args()
 
     with open(args.results_csv, 'w') as file:
-        print('n_gram,valid_ratio,valid_sum,valid_avg,valid_median,valid_max,valid_min,invalid_avg,invalid_median,invalid_max,invalid_min', file=file)
+        print('n_gram,valid_ratio,valid_sum,valid_avg,valid_median,valid_max,valid_min,invalid_avg,invalid_median,invalid_max,invalid_min, invalid_elaborate_percentage', file=file)
 
     for n in range(1, 7):
         print(f'---------------{n}GRAM---------------', file=sys.stderr)
@@ -40,7 +40,9 @@ def main():
         get_num_tokens(base_dir, args.verible_parser_executable, csv_file)
 
         invalid_dir = os.path.join(base_dir, f'invalid_programs')
+        invalid_elaborate_dir = os.path.join(base_dir, f'invalid_elaborate_programs')
         get_num_tokens(invalid_dir, args.verible_parser_executable, csv_file)
+        
 
         df = pd.read_csv(csv_file)
         df['invalid'] = df.apply(lambda row: row['file'].find('invalid') != -1, axis=1)
@@ -48,8 +50,11 @@ def main():
         valid = df[df['invalid'] == False]['num_tokens']
         invalid = df[df['invalid'] == True]['num_tokens']
 
+        invalid_elaborate_count = len([f for f in os.listdir(invalid_elaborate_dir) if os.path.isfile(os.path.join(invalid_elaborate_dir, f))])
+        invalid_elaborate_percentage = invalid_elaborate_count / (len(df) + invalid_elaborate_count)
+
         with open(args.results_csv, 'a') as file:
-            print(f'{n},{100*(len(valid)/len(df)):.4f},{valid.sum():.2f},{valid.mean():.2f},{valid.median()},{valid.max()},{valid.min()},{invalid.mean():.2f},{invalid.median()},{invalid.max()},{invalid.min()}', file=file)
+            print(f'{n},{100*(len(valid)/len(df)):.4f},{valid.sum():.2f},{valid.mean():.2f},{valid.median()},{valid.max()},{valid.min()},{invalid.mean():.2f},{invalid.median()},{invalid.max()},{invalid.min()},{invalid_elaborate_percentage:.2f}', file=file)
 
 
 if __name__ == '__main__':
