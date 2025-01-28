@@ -11,6 +11,7 @@ if {![info exists database_dir]} {
 }
 
 file mkdir $target_dir
+file mkdir $target_elaborate_dir
 
 set glob_path [file join $database_dir *.v]
 
