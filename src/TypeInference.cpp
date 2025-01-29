@@ -696,8 +696,8 @@ TypeInferenceVisitor::visit(Identifier_optional_unpacked_dimensions *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Function_item_list *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+                                          typeId) {
+  return defaultVisitor(node, freshType());
 }
 
 constraintSet TypeInferenceVisitor::visit(Type_declaration *node, typeId type) {
@@ -1178,8 +1178,8 @@ constraintSet TypeInferenceVisitor::visit(Method_prototype *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Tf_port_item *node, typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Tf_port_item *node, typeId) {
+  return defaultVisitor(node, freshType());
 }
 
 constraintSet
@@ -2105,8 +2105,8 @@ constraintSet TypeInferenceVisitor::visit(Delay3_or_drive_opt *node,
 
 constraintSet
 TypeInferenceVisitor::visit(Tf_item_or_statement_or_null_list_opt *node,
-                            typeId type) {
-  return defaultVisitor(node, type);
+                            typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::LOGIC));
 }
 
 constraintSet TypeInferenceVisitor::visit(Net_decl_assign *node, typeId type) {
@@ -2442,7 +2442,7 @@ TypeInferenceVisitor::visit(Module_or_generate_item_declaration *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Final_construct *node, typeId) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::REG));
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Member_name *, typeId) {
@@ -2611,8 +2611,8 @@ constraintSet TypeInferenceVisitor::visit(Sequence_intersect_expr *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Function_declaration *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+                                          typeId) {
+  return defaultVisitor(node, freshType());
 }
 
 constraintSet TypeInferenceVisitor::visit(Net_type_or_none *node, typeId type) {
@@ -2857,8 +2857,8 @@ TypeInferenceVisitor::visit(Any_port_list_trailing_comma_positional *node,
 
 constraintSet
 TypeInferenceVisitor::visit(Block_item_or_statement_or_null_list_opt *node,
-                            typeId type) {
-  return defaultVisitor(node, type);
+                            typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::LOGIC));
 }
 
 constraintSet TypeInferenceVisitor::visit(Genvar_declaration *node,
