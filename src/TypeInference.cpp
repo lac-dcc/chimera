@@ -695,8 +695,7 @@ TypeInferenceVisitor::visit(Identifier_optional_unpacked_dimensions *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Function_item_list *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Function_item_list *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
@@ -2442,7 +2441,8 @@ TypeInferenceVisitor::visit(Module_or_generate_item_declaration *node,
 }
 
 constraintSet TypeInferenceVisitor::visit(Final_construct *node, typeId) {
-  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
+  return defaultVisitor(node,
+                        static_cast<typeId>(CanonicalTypes::CONST_SCALAR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Member_name *, typeId) {
@@ -2610,8 +2610,7 @@ constraintSet TypeInferenceVisitor::visit(Sequence_intersect_expr *node,
   return applyVisit(node->getChildren().front().get(), type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Function_declaration *node,
-                                          typeId) {
+constraintSet TypeInferenceVisitor::visit(Function_declaration *node, typeId) {
   return defaultVisitor(node, freshType());
 }
 
