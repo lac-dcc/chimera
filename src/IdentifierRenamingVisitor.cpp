@@ -494,15 +494,6 @@ void IdentifierRenamingVisitor::visit(Function_declaration*node){
   finishScope();
 }
 
-void IdentifierRenamingVisitor::visit(Function_declaration*node){
-  startNewScope();
-  
-  for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    this->applyVisit(child.get());
-  }
-  finishScope();
-}
-
 void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
   createIDContext(ContextType::DECL_CONSTANT);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
