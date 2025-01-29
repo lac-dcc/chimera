@@ -110,6 +110,7 @@ public:
   virtual void visit(Udp_port_decls *node) override;
 
   virtual void visit(Label_opt *node) override;
+  virtual void visit(Function_declaration *node) override;
 
   virtual void visit(Any_param_declaration *node) override;
 };
