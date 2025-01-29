@@ -5,6 +5,7 @@
 #include "LivenessVisitor.h"
 #include "TypeInference.h"
 #include "Visitor.h"
+#include "Functions.h"
 #include <algorithm>
 #include <cxxopts.hpp>
 #include <filesystem>
@@ -159,6 +160,17 @@ static void removePortDeclarations(std::vector<Node *> &portDeclarations) {
   for (auto *decl : portDeclarations) {
     decl->getParent()->clearChildren();
   }
+}
+
+static PortDir getPortFromString(std::string port){
+  auto p = PortDir::INPUT;
+  if(port == " output "){
+    p = PortDir::OUTPUT;
+  }else if(port == " inout "){
+    p = PortDir::INOUT;
+  }
+
+  return p;
 }
 
 static void codeGen(Node *head) {
@@ -422,7 +434,7 @@ static void removeNodes(Node* head, NodeType t){
     return;
   }
 
-  for(int i = 0; i < head->getChildren().size(); i++){
+  for(size_t i = 0; i < head->getChildren().size(); i++){
     removeNodes(head->getChildren()[i].get(), t);
   }
 }
@@ -907,13 +919,14 @@ std::string getStringfromType(CanonicalTypes t){
   
   case CanonicalTypes::BIT:
     return " bit ";
+  case CanonicalTypes::SCALAR:
+  case CanonicalTypes::CONST_SCALAR:
   case CanonicalTypes::LOGIC:
     return " logic ";
   case CanonicalTypes::REG:
     return " reg ";
 
-  case CanonicalTypes::SCALAR:
-  case CanonicalTypes::CONST_SCALAR:
+  
   case CanonicalTypes::WIRE:
     return " wire ";
   case CanonicalTypes::INTEGER:
@@ -1056,7 +1069,7 @@ static void callPrimitiveModule(Module *m,
   callModule(pp, name, chosenIds, "primCall");
 }
 
-void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>& modules){
+static void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>& modules){
   std::vector<std::string> primitiveFunctions = {"clog2", "signed", "unsigned"};
   
 
@@ -1091,32 +1104,113 @@ void addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>>& modules){
   }
 }
 
-void formatCustomFunctions(std::vector<std::shared_ptr<Module>>& modules){
+static void getParametersFromFunction(Node* head, std::vector<std::pair<std::string, PortDir>>& parameterList, bool fromSignature = true){
+  std::vector<Node*> ports;
+
+  if(fromSignature){
+    findNodes(head, ports,  NodeType::TF_PORT_ITEM);
+  }else{
+    findNodes(head, ports, NodeType::TF_PORT_DECLARATION);
+  }
+
+  PortDir currDir = PortDir::INPUT;
+  for(auto const & port : ports){
+    
+    if(auto portDir = findNode(port, NodeType::DIR)){
+      currDir = getPortFromString(portDir->getChildren()[0]->getElement());
+    }
+    std::vector<Node*> ids;
+    if(auto idNode = findNode(port, NodeType::TF_VARIABLE_IDENTIFIER_FIRST)){
+      //there's only one id
+      auto id = getID(idNode->getChildren()[0].get());
+      parameterList.push_back({id->getElement(), currDir});  
+      
+    }else{
+      std::vector<Node*> ids;
+      findNodes(port, ids, NodeType::TF_VARIABLE_IDENTIFIER);
+      for(auto const & id: ids){
+
+        parameterList.push_back({getID(id)->getElement(), currDir});  
+      }
+    }
+  }
+}
+
+
+
+
+static void callFunction(Module& mod, Function* func){
+  auto rng = std::default_random_engine{};
+  std::vector<std::string> selectedIds;
+  for(auto const & [id, dir] : func->portList){
+    auto availableIds = std::vector(mod.programPoints[mod.programPoints.size()-1].liveness.begin(), mod.programPoints[mod.programPoints.size()-1].liveness.end());
+    std::shuffle(availableIds.begin(), availableIds.end(), rng);
+
+    auto selectedId = findCompatibleId(availableIds, mod.directionMap, mod.idToType, mod.idToType[id], dir);
+    if(selectedId.empty())
+      return;
+
+    selectedIds.push_back(selectedId);
+  }
+  auto procBlock = std::make_unique<Initial_construct>("initial_construct");
+  procBlock->insertChildToEnd(std::make_unique<Terminal>(" initial "));
+  procBlock->insertChildToEnd(std::make_unique<Terminal>(" begin "));
+
+  auto callNode = std::make_unique<System_tf_call>("system_tf_call");
+  auto nameNode = std::make_unique<Terminal>(func->name);
+  callNode->insertChildToEnd(std::move(nameNode));
+  callNode->insertChildToEnd(std::make_unique<Terminal>(" ( "));
+
+  for(auto const& id : selectedIds){
+    callNode->insertChildToEnd(std::make_unique<Terminal>(id));
+    callNode->insertChildToEnd(std::make_unique<Terminal>(" , "));
+  }
+  if(selectedIds.size() > 0)
+    callNode->getChildren()[callNode->getChildren().size()-1]->setElement(")");
+  else
+    callNode->insertChildToEnd(std::make_unique<Terminal>(" )"));
+  callNode->insertChildToEnd(std::make_unique<Terminal>(";"));
+  procBlock->insertChildToEnd(std::move(callNode));
+  procBlock->insertChildToEnd(std::make_unique<Terminal>(" end "));
+  auto it = mod.moduleHead->getChildren().begin();
+
+  mod.moduleHead->insertChild(std::move(procBlock), std::next(it, 9));
+  
+}
+
+static void formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>>& modules){
   for(auto& m : modules){
     std::vector<Node*> functionNodes;
     findNodes(m->moduleHead.get(),functionNodes, NodeType::FUNCTION_DECLARATION);
 
     for(auto& node : functionNodes){
 
-      
-      auto tfPortList = getChild(node->getChildren(), NodeType::TF_PORT_LIST);
-      if(!tfPortList || tfPortList->getChildren()[0]->type != NodeType::TF_PORT_LIST){//means the function has parameters in the signature 
-        
-        //remove all the port declarations in the body
-        removeNodes(node, NodeType::TF_PORT_DECLARATION);
+      auto func = std::make_unique<Function>();
 
-        //get function name
-        auto funcNameNode = getID(node->getChildren()[2]->getChildren()[0].get());
+      auto tfPortList = getChild(node->getChildren(), NodeType::TF_PORT_LIST);
+      bool parametersInSignature = tfPortList && tfPortList->getChildren()[0]->type != NodeType::TF_PORT_LIST; // if true the function has parameters in the signature 
+      getParametersFromFunction(node, func->portList, parametersInSignature);
+
+
+      //get function name and type
+      auto funcNameNode = getID(node->getChildren()[2]->getChildren()[0].get());
+
         std::string funcType = "";
+
         if(m->idToType.find(funcNameNode->getElement()) != m->idToType.end())
             funcType = getStringfromType(m->idToType[funcNameNode->getElement()]);
         
         if(funcType.empty())
           funcType = " void ";
+      func->funcType = funcType;
+      func->name = funcNameNode->getElement();
 
+      //adding function type
+      auto typeNode = std::make_unique<Terminal>(funcType);
+      auto it = node->getChildren().begin();
+      node->insertChild(std::move(typeNode), std::next(it, 2));
 
-
-      }
+      callFunction(*m, func.get());
     }
   }
 }
@@ -1244,7 +1338,7 @@ int main(int argc, char **argv) {
                 std::advance(m2It, rand() % m2->idToType.size());
                 id = m2It->first;
                 counter++;
-              }while(id.find("id") == std::string::npos && counter <m2It->first.size());
+              }while(id.find("id") == std::string::npos && counter < m2It->first.size());
 
               
               auto val = getDefaultValue(m2It->second);
@@ -1253,17 +1347,26 @@ int main(int argc, char **argv) {
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
             } else {
-              auto mIt = m->idToType.begin();
-              std::advance(mIt, rand() % m->idToType.size());
+              std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
+              std::size_t counter = 0;
+              std::string id_call = "";
 
-              auto id = mIt->first;
+              std::advance(mIt, rand() % m->idToType.size());
+              do{
+                mIt = m2->idToType.begin();
+                std::advance(mIt, rand() % m2->idToType.size());
+                
+                id_call = mIt->first;
+                counter++;
+              }while(id_call.find("id") == std::string::npos && counter < mIt->first.size());
+
               auto val = getDefaultValue(mIt->second);
               if(m2->programPoints.size() > 0){
                 auto pp2 = m2->programPoints[rand() % m2->programPoints.size()];
 
                 if (!val.empty()) {
                   hierarchicalReference(pp2.programPoint->getParent(),
-                                        getPosFromPP(pp2) + 1, id, val, pp2.scope,
+                                        getPosFromPP(pp2) + 1, id_call, val, pp2.scope,
                                         m->moduleName->getElement());
                 }
               }
@@ -1296,6 +1399,7 @@ int main(int argc, char **argv) {
   } while (measureSize(usedModules) < TARGET_SIZE);
 
   addPrimitiveFunctionCalls(usedModules);
+  formatandCallCustomFunctions(usedModules);
 
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
