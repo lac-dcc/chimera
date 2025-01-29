@@ -1,0 +1,55 @@
+// Seed: 2947078537
+module module_0;
+  parameter id_1 = (id_1);
+  assign module_1.id_16 = 0;
+endmodule
+module module_1 (
+    input wire id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    input tri0 id_3,
+    output uwire id_4,
+    input supply1 id_5,
+    output tri id_6,
+    input wor id_7,
+    input wand id_8,
+    output wand id_9,
+    input uwire id_10,
+    output supply1 id_11,
+    output tri1 id_12,
+    input wor id_13,
+    output wand id_14,
+    input tri id_15,
+    id_43,
+    input tri1 id_16,
+    input supply1 id_17,
+    id_44,
+    input supply1 id_18,
+    input tri0 id_19,
+    input tri id_20,
+    input tri id_21,
+    input supply0 id_22,
+    id_45,
+    input uwire id_23,
+    output tri id_24,
+    output tri1 id_25,
+    input uwire id_26,
+    input tri1 id_27 id_46,
+    input tri1 id_28,
+    input wor id_29,
+    input wire id_30,
+    id_47,
+    input supply1 id_31,
+    output supply1 id_32,
+    input supply1 id_33,
+    output wire id_34,
+    input wire id_35,
+    input tri id_36,
+    output wire id_37,
+    output wand id_38,
+    output tri0 id_39,
+    input wire id_40,
+    input tri0 id_41
+);
+  module_0 modCall_1 ();
+endmodule
