@@ -28,16 +28,15 @@ static std::string getScope(std::vector<std::string> &labelContext) {
   return scope;
 }
 
-void LivenessVisitor::startNewScope(){
+void LivenessVisitor::startNewScope() {
   scopeLimit.push(identifiersInScope.size());
 }
 
-void LivenessVisitor::finishScope(){
-  while (!scopeLimit.empty() &&
-           identifiersInScope.size() > scopeLimit.top()) {
+void LivenessVisitor::finishScope() {
+  while (!scopeLimit.empty() && identifiersInScope.size() > scopeLimit.top()) {
 
-      identifiersInScope.pop_back();
-    }
+    identifiersInScope.pop_back();
+  }
 
   if (!scopeLimit.empty())
     scopeLimit.pop();
@@ -620,7 +619,7 @@ void LivenessVisitor::visit(Tk_unbasednumber *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Decl_dimensions_opt *) {};
+void LivenessVisitor::visit(Decl_dimensions_opt *){};
 
 void LivenessVisitor::visit(Class_items_opt *node) {
   defaultVisitor(node);
@@ -1121,7 +1120,7 @@ void LivenessVisitor::visit(Data_declaration_base *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Any_port_list_opt *) {};
+void LivenessVisitor::visit(Any_port_list_opt *){};
 
 void LivenessVisitor::visit(Macronumericwidth *node) {
   defaultVisitor(node);
@@ -1532,7 +1531,7 @@ void LivenessVisitor::visit(Data_declaration *node) {
   defaultVisitor(node);
 };
 
-void LivenessVisitor::visit(Expression *) {};
+void LivenessVisitor::visit(Expression *){};
 
 void LivenessVisitor::visit(Cont_assign *node) {
   defaultVisitor(node);
