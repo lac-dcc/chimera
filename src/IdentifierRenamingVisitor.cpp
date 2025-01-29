@@ -466,3 +466,14 @@ void IdentifierRenamingVisitor::visit(Label_opt *node) {
     node->insertChildToEnd(std::move(label));
   }
 }
+
+void IdentifierRenamingVisitor::visit(Function_declaration*node){
+  startNewScope();
+  
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishScope();
+}
+
+

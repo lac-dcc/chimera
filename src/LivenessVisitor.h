@@ -42,6 +42,8 @@ public:
   LivenessVisitor(std::vector<ProgramPoint> &PP) : programPoints(PP) {
     programPoints.clear();
   }
+  void startNewScope();
+  void finishScope();
 
   void defaultVisitor(Node *node);
 

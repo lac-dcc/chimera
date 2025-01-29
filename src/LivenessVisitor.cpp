@@ -1,11 +1,4 @@
 #include "LivenessVisitor.h"
-static bool isStartingToken(const std::string &t) {
-  return t == " begin " || t == " module ";
-}
-
-static bool isFinishingToken(const std::string &t) {
-  return t == " end " || t == " endmodule ";
-}
 
 void LivenessVisitor::defaultVisitor(Node *node) {
   for (auto &c : node->getChildren()) {
@@ -35,21 +28,23 @@ static std::string getScope(std::vector<std::string> &labelContext) {
   return scope;
 }
 
-void LivenessVisitor::visit(Terminal *node) {
-  if (isStartingToken(node->getElement())) {
+void LivenessVisitor::startNewScope(){
+  scopeLimit.push(identifiersInScope.size());
+}
 
-    scopeLimit.push(identifiersInScope.size());
-
-  } else if (isFinishingToken(node->getElement())) {
-
-    while (!scopeLimit.empty() &&
+void LivenessVisitor::finishScope(){
+  while (!scopeLimit.empty() &&
            identifiersInScope.size() > scopeLimit.top()) {
 
       identifiersInScope.pop_back();
     }
-    if (!scopeLimit.empty())
-      scopeLimit.pop();
-  }
+
+  if (!scopeLimit.empty())
+    scopeLimit.pop();
+}
+
+void LivenessVisitor::visit(Terminal *node) {
+  defaultVisitor(node);
 }
 
 void LivenessVisitor::visit(Module_item *node) {
@@ -581,6 +576,7 @@ void LivenessVisitor::visit(Unqualified_id *node) {
 };
 
 void LivenessVisitor::visit(Begin *node) {
+  startNewScope();
   defaultVisitor(node);
 };
 
@@ -1631,7 +1627,9 @@ void LivenessVisitor::visit(Sequence_intersect_expr *node) {
 };
 
 void LivenessVisitor::visit(Function_declaration *node) {
+  startNewScope();
   defaultVisitor(node);
+  finishScope();
 };
 
 void LivenessVisitor::visit(Net_type_or_none *node) {
@@ -1659,6 +1657,7 @@ void LivenessVisitor::visit(Tk_decdigits *node) {
 };
 
 void LivenessVisitor::visit(End *) {
+  finishScope();
   labelContext.pop_back();
 };
 
