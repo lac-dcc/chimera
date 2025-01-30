@@ -3110,3 +3110,87 @@ constraintSet TypeInferenceVisitor::visit(Class_item_qualifier_list_opt *node,
                                           typeId type) {
   return defaultVisitor(node, type);
 }
+
+constraintSet TypeInferenceVisitor::visit(Assertion_item_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Boolean_abbrev *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Cycle_delay_range *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_operator *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_spec_disable_iff *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Config_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(With_constraint_block_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Random_qualifier *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Bind_target_instance_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Hierarchy_or_call_extension *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_item_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Class_constraint *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Net_alias *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Type_reference *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Method_qualifier_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Interface_type *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Package_export_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}

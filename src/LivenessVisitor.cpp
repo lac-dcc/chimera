@@ -2036,3 +2036,75 @@ void LivenessVisitor::visit(Stream_expression_list *node) {
 void LivenessVisitor::visit(Class_item_qualifier_list_opt *node) {
   defaultVisitor(node);
 };
+
+void LivenessVisitor::visit(Assertion_item_declaration *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Boolean_abbrev *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Cycle_delay_range *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Property_operator *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Property_spec_disable_iff *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Config_declaration *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(With_constraint_block_opt *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Random_qualifier *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Bind_target_instance_list *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Hierarchy_or_call_extension *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Clocking_item_list *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Modport_declaration *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Class_constraint *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Net_alias *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Type_reference *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Method_qualifier_list *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Interface_type *node) {
+  defaultVisitor(node);
+};
+
+void LivenessVisitor::visit(Package_export_declaration *node) {
+  defaultVisitor(node);
+};

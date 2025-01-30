@@ -513,6 +513,24 @@ enum class NodeType {
   COVER_PROPERTY_STATEMENT,
   STREAM_EXPRESSION_LIST,
   CLASS_ITEM_QUALIFIER_LIST_OPT,
+  ASSERTION_ITEM_DECLARATION,
+  BOOLEAN_ABBREV,
+  CYCLE_DELAY_RANGE,
+  PROPERTY_OPERATOR,
+  PROPERTY_SPEC_DISABLE_IFF,
+  CONFIG_DECLARATION,
+  WITH_CONSTRAINT_BLOCK_OPT,
+  RANDOM_QUALIFIER,
+  BIND_TARGET_INSTANCE_LIST,
+  HIERARCHY_OR_CALL_EXTENSION,
+  CLOCKING_ITEM_LIST,
+  MODPORT_DECLARATION,
+  CLASS_CONSTRAINT,
+  NET_ALIAS,
+  TYPE_REFERENCE,
+  METHOD_QUALIFIER_LIST,
+  INTERFACE_TYPE,
+  PACKAGE_EXPORT_DECLARATION
 };
 
 /**
@@ -4145,6 +4163,135 @@ public:
   Class_item_qualifier_list_opt(Class_item_qualifier_list_opt &&) = default;
   Class_item_qualifier_list_opt &
   operator=(Class_item_qualifier_list_opt &&) = default;
+};
+
+class Assertion_item_declaration : public Node {
+public:
+  Assertion_item_declaration(std::string element);
+  Assertion_item_declaration(Assertion_item_declaration &&) = default;
+  Assertion_item_declaration &
+  operator=(Assertion_item_declaration &&) = default;
+};
+
+class Boolean_abbrev : public Node {
+public:
+  Boolean_abbrev(std::string element);
+  Boolean_abbrev(Boolean_abbrev &&) = default;
+  Boolean_abbrev &operator=(Boolean_abbrev &&) = default;
+};
+
+class Cycle_delay_range : public Node {
+public:
+  Cycle_delay_range(std::string element);
+  Cycle_delay_range(Cycle_delay_range &&) = default;
+  Cycle_delay_range &operator=(Cycle_delay_range &&) = default;
+};
+
+class Property_operator : public Node {
+public:
+  Property_operator(std::string element);
+  Property_operator(Property_operator &&) = default;
+  Property_operator &operator=(Property_operator &&) = default;
+};
+
+class Property_spec_disable_iff : public Node {
+public:
+  Property_spec_disable_iff(std::string element);
+  Property_spec_disable_iff(Property_spec_disable_iff &&) = default;
+  Property_spec_disable_iff &operator=(Property_spec_disable_iff &&) = default;
+};
+
+class Config_declaration : public Node {
+public:
+  Config_declaration(std::string element);
+  Config_declaration(Config_declaration &&) = default;
+  Config_declaration &operator=(Config_declaration &&) = default;
+};
+
+class With_constraint_block_opt : public Node {
+public:
+  With_constraint_block_opt(std::string element);
+  With_constraint_block_opt(With_constraint_block_opt &&) = default;
+  With_constraint_block_opt &operator=(With_constraint_block_opt &&) = default;
+};
+
+class Random_qualifier : public Node {
+public:
+  Random_qualifier(std::string element);
+  Random_qualifier(Random_qualifier &&) = default;
+  Random_qualifier &operator=(Random_qualifier &&) = default;
+};
+
+class Bind_target_instance_list : public Node {
+public:
+  Bind_target_instance_list(std::string element);
+  Bind_target_instance_list(Bind_target_instance_list &&) = default;
+  Bind_target_instance_list &operator=(Bind_target_instance_list &&) = default;
+};
+
+class Hierarchy_or_call_extension : public Node {
+public:
+  Hierarchy_or_call_extension(std::string element);
+  Hierarchy_or_call_extension(Hierarchy_or_call_extension &&) = default;
+  Hierarchy_or_call_extension &
+  operator=(Hierarchy_or_call_extension &&) = default;
+};
+
+class Clocking_item_list : public Node {
+public:
+  Clocking_item_list(std::string element);
+  Clocking_item_list(Clocking_item_list &&) = default;
+  Clocking_item_list &operator=(Clocking_item_list &&) = default;
+};
+
+class Modport_declaration : public Node {
+public:
+  Modport_declaration(std::string element);
+  Modport_declaration(Modport_declaration &&) = default;
+  Modport_declaration &operator=(Modport_declaration &&) = default;
+};
+
+class Class_constraint : public Node {
+public:
+  Class_constraint(std::string element);
+  Class_constraint(Class_constraint &&) = default;
+  Class_constraint &operator=(Class_constraint &&) = default;
+};
+
+class Net_alias : public Node {
+public:
+  Net_alias(std::string element);
+  Net_alias(Net_alias &&) = default;
+  Net_alias &operator=(Net_alias &&) = default;
+};
+
+class Type_reference : public Node {
+public:
+  Type_reference(std::string element);
+  Type_reference(Type_reference &&) = default;
+  Type_reference &operator=(Type_reference &&) = default;
+};
+
+class Method_qualifier_list : public Node {
+public:
+  Method_qualifier_list(std::string element);
+  Method_qualifier_list(Method_qualifier_list &&) = default;
+  Method_qualifier_list &operator=(Method_qualifier_list &&) = default;
+};
+
+class Interface_type : public Node {
+public:
+  Interface_type(std::string element);
+  Interface_type(Interface_type &&) = default;
+  Interface_type &operator=(Interface_type &&) = default;
+};
+
+class Package_export_declaration : public Node {
+public:
+  Package_export_declaration(std::string element);
+  Package_export_declaration(Package_export_declaration &&) = default;
+  Package_export_declaration &
+  operator=(Package_export_declaration &&) = default;
 };
 
 using ClassMap =

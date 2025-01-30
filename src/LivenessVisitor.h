@@ -1045,6 +1045,42 @@ public:
   virtual void visit(Stream_expression_list *node) override;
 
   virtual void visit(Class_item_qualifier_list_opt *node) override;
+
+  virtual void visit(Assertion_item_declaration *node) override;
+
+  virtual void visit(Boolean_abbrev *node) override;
+
+  virtual void visit(Cycle_delay_range *node) override;
+
+  virtual void visit(Property_operator *node) override;
+
+  virtual void visit(Property_spec_disable_iff *node) override;
+
+  virtual void visit(Config_declaration *node) override;
+
+  virtual void visit(With_constraint_block_opt *node) override;
+
+  virtual void visit(Random_qualifier *node) override;
+
+  virtual void visit(Bind_target_instance_list *node) override;
+
+  virtual void visit(Hierarchy_or_call_extension *node) override;
+
+  virtual void visit(Clocking_item_list *node) override;
+
+  virtual void visit(Modport_declaration *node) override;
+
+  virtual void visit(Class_constraint *node) override;
+
+  virtual void visit(Net_alias *node) override;
+
+  virtual void visit(Type_reference *node) override;
+
+  virtual void visit(Method_qualifier_list *node) override;
+
+  virtual void visit(Interface_type *node) override;
+
+  virtual void visit(Package_export_declaration *node) override;
 };
 
 #endif

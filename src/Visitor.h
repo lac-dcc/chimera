@@ -1044,6 +1044,42 @@ public:
       return visit(dynamic_cast<Stream_expression_list *>(node));
     case NodeType::CLASS_ITEM_QUALIFIER_LIST_OPT:
       return visit(dynamic_cast<Class_item_qualifier_list_opt *>(node));
+    case NodeType::ASSERTION_ITEM_DECLARATION:
+      return visit(dynamic_cast<Assertion_item_declaration *>(node));
+    case NodeType::BOOLEAN_ABBREV:
+      return visit(dynamic_cast<Boolean_abbrev *>(node));
+    case NodeType::CYCLE_DELAY_RANGE:
+      return visit(dynamic_cast<Cycle_delay_range *>(node));
+    case NodeType::PROPERTY_OPERATOR:
+      return visit(dynamic_cast<Property_operator *>(node));
+    case NodeType::PROPERTY_SPEC_DISABLE_IFF:
+      return visit(dynamic_cast<Property_spec_disable_iff *>(node));
+    case NodeType::CONFIG_DECLARATION:
+      return visit(dynamic_cast<Config_declaration *>(node));
+    case NodeType::WITH_CONSTRAINT_BLOCK_OPT:
+      return visit(dynamic_cast<With_constraint_block_opt *>(node));
+    case NodeType::RANDOM_QUALIFIER:
+      return visit(dynamic_cast<Random_qualifier *>(node));
+    case NodeType::BIND_TARGET_INSTANCE_LIST:
+      return visit(dynamic_cast<Bind_target_instance_list *>(node));
+    case NodeType::HIERARCHY_OR_CALL_EXTENSION:
+      return visit(dynamic_cast<Hierarchy_or_call_extension *>(node));
+    case NodeType::CLOCKING_ITEM_LIST:
+      return visit(dynamic_cast<Clocking_item_list *>(node));
+    case NodeType::MODPORT_DECLARATION:
+      return visit(dynamic_cast<Modport_declaration *>(node));
+    case NodeType::CLASS_CONSTRAINT:
+      return visit(dynamic_cast<Class_constraint *>(node));
+    case NodeType::NET_ALIAS:
+      return visit(dynamic_cast<Net_alias *>(node));
+    case NodeType::TYPE_REFERENCE:
+      return visit(dynamic_cast<Type_reference *>(node));
+    case NodeType::METHOD_QUALIFIER_LIST:
+      return visit(dynamic_cast<Method_qualifier_list *>(node));
+    case NodeType::INTERFACE_TYPE:
+      return visit(dynamic_cast<Interface_type *>(node));
+    case NodeType::PACKAGE_EXPORT_DECLARATION:
+      return visit(dynamic_cast<Package_export_declaration *>(node));
     default:
       return R();
     }
@@ -2105,6 +2141,42 @@ public:
       return visit(dynamic_cast<Stream_expression_list *>(node), arg);
     case NodeType::CLASS_ITEM_QUALIFIER_LIST_OPT:
       return visit(dynamic_cast<Class_item_qualifier_list_opt *>(node), arg);
+    case NodeType::ASSERTION_ITEM_DECLARATION:
+      return visit(dynamic_cast<Assertion_item_declaration *>(node), arg);
+    case NodeType::BOOLEAN_ABBREV:
+      return visit(dynamic_cast<Boolean_abbrev *>(node), arg);
+    case NodeType::CYCLE_DELAY_RANGE:
+      return visit(dynamic_cast<Cycle_delay_range *>(node), arg);
+    case NodeType::PROPERTY_OPERATOR:
+      return visit(dynamic_cast<Property_operator *>(node), arg);
+    case NodeType::PROPERTY_SPEC_DISABLE_IFF:
+      return visit(dynamic_cast<Property_spec_disable_iff *>(node), arg);
+    case NodeType::CONFIG_DECLARATION:
+      return visit(dynamic_cast<Config_declaration *>(node), arg);
+    case NodeType::WITH_CONSTRAINT_BLOCK_OPT:
+      return visit(dynamic_cast<With_constraint_block_opt *>(node), arg);
+    case NodeType::RANDOM_QUALIFIER:
+      return visit(dynamic_cast<Random_qualifier *>(node), arg);
+    case NodeType::BIND_TARGET_INSTANCE_LIST:
+      return visit(dynamic_cast<Bind_target_instance_list *>(node), arg);
+    case NodeType::HIERARCHY_OR_CALL_EXTENSION:
+      return visit(dynamic_cast<Hierarchy_or_call_extension *>(node), arg);
+    case NodeType::CLOCKING_ITEM_LIST:
+      return visit(dynamic_cast<Clocking_item_list *>(node), arg);
+    case NodeType::MODPORT_DECLARATION:
+      return visit(dynamic_cast<Modport_declaration *>(node), arg);
+    case NodeType::CLASS_CONSTRAINT:
+      return visit(dynamic_cast<Class_constraint *>(node), arg);
+    case NodeType::NET_ALIAS:
+      return visit(dynamic_cast<Net_alias *>(node), arg);
+    case NodeType::TYPE_REFERENCE:
+      return visit(dynamic_cast<Type_reference *>(node), arg);
+    case NodeType::METHOD_QUALIFIER_LIST:
+      return visit(dynamic_cast<Method_qualifier_list *>(node), arg);
+    case NodeType::INTERFACE_TYPE:
+      return visit(dynamic_cast<Interface_type *>(node), arg);
+    case NodeType::PACKAGE_EXPORT_DECLARATION:
+      return visit(dynamic_cast<Package_export_declaration *>(node), arg);
     default:
       return R();
     }
@@ -9986,6 +10058,258 @@ public:
       applyVisit(child.get(), arg);
     }
 
+    return R();
+  }
+
+  virtual R visit(Assertion_item_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Assertion_item_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Boolean_abbrev *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Boolean_abbrev *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Cycle_delay_range *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Cycle_delay_range *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Property_operator *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Property_operator *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Property_spec_disable_iff *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Property_spec_disable_iff *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Config_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Config_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(With_constraint_block_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(With_constraint_block_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Random_qualifier *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Random_qualifier *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Bind_target_instance_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Bind_target_instance_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Hierarchy_or_call_extension *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Hierarchy_or_call_extension *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Clocking_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Clocking_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Modport_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Modport_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Class_constraint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Class_constraint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Net_alias *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Net_alias *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Type_reference *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Type_reference *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Method_qualifier_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Method_qualifier_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Interface_type *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Interface_type *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+    return R();
+  }
+
+  virtual R visit(Package_export_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+    return R();
+  }
+
+  virtual R visit(Package_export_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
     return R();
   }
 };

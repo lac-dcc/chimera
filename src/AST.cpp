@@ -2589,6 +2589,96 @@ Class_item_qualifier_list_opt::Class_item_qualifier_list_opt(
   this->setElement(element);
 }
 
+Assertion_item_declaration::Assertion_item_declaration(std::string element) {
+  this->type = NodeType::ASSERTION_ITEM_DECLARATION;
+  this->setElement(element);
+}
+
+Boolean_abbrev::Boolean_abbrev(std::string element) {
+  this->type = NodeType::BOOLEAN_ABBREV;
+  this->setElement(element);
+}
+
+Cycle_delay_range::Cycle_delay_range(std::string element) {
+  this->type = NodeType::CYCLE_DELAY_RANGE;
+  this->setElement(element);
+}
+
+Property_operator::Property_operator(std::string element) {
+  this->type = NodeType::CYCLE_DELAY_RANGE;
+  this->setElement(element);
+}
+
+Property_spec_disable_iff::Property_spec_disable_iff(std::string element) {
+  this->type = NodeType::CYCLE_DELAY_RANGE;
+  this->setElement(element);
+}
+
+Config_declaration::Config_declaration(std::string element) {
+  this->type = NodeType::CONFIG_DECLARATION;
+  this->setElement(element);
+}
+
+With_constraint_block_opt::With_constraint_block_opt(std::string element) {
+  this->type = NodeType::WITH_CONSTRAINT_BLOCK_OPT;
+  this->setElement(element);
+}
+
+Random_qualifier::Random_qualifier(std::string element) {
+  this->type = NodeType::RANDOM_QUALIFIER;
+  this->setElement(element);
+}
+
+Bind_target_instance_list::Bind_target_instance_list(std::string element) {
+  this->type = NodeType::BIND_TARGET_INSTANCE_LIST;
+  this->setElement(element);
+}
+
+Hierarchy_or_call_extension::Hierarchy_or_call_extension(std::string element) {
+  this->type = NodeType::HIERARCHY_OR_CALL_EXTENSION;
+  this->setElement(element);
+}
+
+Clocking_item_list::Clocking_item_list(std::string element) {
+  this->type = NodeType::CLOCKING_ITEM_LIST;
+  this->setElement(element);
+}
+
+Modport_declaration::Modport_declaration(std::string element) {
+  this->type = NodeType::MODPORT_DECLARATION;
+  this->setElement(element);
+}
+
+Class_constraint::Class_constraint(std::string element) {
+  this->type = NodeType::CLASS_CONSTRAINT;
+  this->setElement(element);
+}
+
+Net_alias::Net_alias(std::string element) {
+  this->type = NodeType::NET_ALIAS;
+  this->setElement(element);
+}
+
+Type_reference::Type_reference(std::string element) {
+  this->type = NodeType::TYPE_REFERENCE;
+  this->setElement(element);
+}
+
+Method_qualifier_list::Method_qualifier_list(std::string element) {
+  this->type = NodeType::METHOD_QUALIFIER_LIST;
+  this->setElement(element);
+}
+
+Interface_type::Interface_type(std::string element) {
+  this->type = NodeType::INTERFACE_TYPE;
+  this->setElement(element);
+}
+
+Package_export_declaration::Package_export_declaration(std::string element) {
+  this->type = NodeType::PACKAGE_EXPORT_DECLARATION;
+  this->setElement(element);
+}
+
 ClassMap classMap = {
   {"terminal",
    [](std::string &&f) {
@@ -4550,4 +4640,76 @@ ClassMap classMap = {
    [](std::string &&f) {
       return std::make_unique<Class_item_qualifier_list_opt>(f);
    }},
+   {"assertion_item_declaration",
+   [](std::string &&f) {
+      return std::make_unique<Assertion_item_declaration>(f);
+   }},
+  {"boolean_abbrev",
+    [](std::string &&f) {
+        return std::make_unique<Boolean_abbrev>(f);
+    }},
+  {"cycle_delay_range",
+    [](std::string &&f) {
+        return std::make_unique<Cycle_delay_range>(f);
+    }},
+  {"property_operator",
+    [](std::string &&f) {
+        return std::make_unique<Property_operator>(f);
+    }},
+  {"property_spec_disable_iff",
+    [](std::string &&f) {
+        return std::make_unique<Property_spec_disable_iff>(f);
+    }},
+  {"config_declaration",
+    [](std::string &&f) {
+        return std::make_unique<Config_declaration>(f);
+    }},
+  {"with_constraint_block_opt",
+    [](std::string &&f) {
+        return std::make_unique<With_constraint_block_opt>(f);
+    }},
+  {"random_qualifier",
+    [](std::string &&f) {
+        return std::make_unique<Random_qualifier>(f);
+    }},
+  {"bind_target_instance_list",
+    [](std::string &&f) {
+        return std::make_unique<Bind_target_instance_list>(f);
+    }},
+  {"hierarchy_or_call_extension",
+    [](std::string &&f) {
+        return std::make_unique<Hierarchy_or_call_extension>(f);
+    }},
+  {"clocking_item_list",
+    [](std::string &&f) {
+        return std::make_unique<Clocking_item_list>(f);
+    }},
+  {"modport_declaration",
+    [](std::string &&f) {
+        return std::make_unique<Modport_declaration>(f);
+    }},
+  {"class_constraint",
+    [](std::string &&f) {
+        return std::make_unique<Class_constraint>(f);
+    }},
+  {"net_alias",
+    [](std::string &&f) {
+        return std::make_unique<Net_alias>(f);
+    }},
+  {"type_reference",
+    [](std::string &&f) {
+        return std::make_unique<Type_reference>(f);
+    }},
+  {"method_qualifier_list",
+    [](std::string &&f) {
+        return std::make_unique<Method_qualifier_list>(f);
+    }},
+  {"interface_type",
+    [](std::string &&f) {
+        return std::make_unique<Interface_type>(f);
+    }},
+  {"package_export_declaration",
+    [](std::string &&f) {
+        return std::make_unique<Package_export_declaration>(f);
+    }},
 };

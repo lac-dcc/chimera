@@ -1280,5 +1280,47 @@ public:
 
   virtual constraintSet visit(Class_item_qualifier_list_opt *node,
                               typeId type) override;
+  virtual constraintSet visit(Assertion_item_declaration *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Boolean_abbrev *node, typeId type) override;
+
+  virtual constraintSet visit(Cycle_delay_range *node, typeId type) override;
+
+  virtual constraintSet visit(Property_operator *node, typeId type) override;
+
+  virtual constraintSet visit(Property_spec_disable_iff *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Config_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(With_constraint_block_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Random_qualifier *node, typeId type) override;
+
+  virtual constraintSet visit(Bind_target_instance_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Hierarchy_or_call_extension *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Clocking_item_list *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(Class_constraint *node, typeId type) override;
+
+  virtual constraintSet visit(Net_alias *node, typeId type) override;
+
+  virtual constraintSet visit(Type_reference *node, typeId type) override;
+
+  virtual constraintSet visit(Method_qualifier_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Interface_type *node, typeId type) override;
+
+  virtual constraintSet visit(Package_export_declaration *node,
+                              typeId type) override;
 };
 #endif
