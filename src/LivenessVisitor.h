@@ -1081,6 +1081,179 @@ public:
   virtual void visit(Interface_type *node) override;
 
   virtual void visit(Package_export_declaration *node) override;
+
+  virtual void visit(Interface_opt *node) override;
+
+
+  virtual void visit(Data_type_or_implicit_basic_followed_by_id *node) override;
+
+  virtual void visit(Coverage_spec_or_option_list_opt *node) override;
+
+
+  virtual void visit(Modport_item_list *node) override;
+
+
+  virtual void visit(Expect_property_statement *node) override;
+
+
+  virtual void visit(Lib_cell_identifiers_opt *node) override;
+
+
+  virtual void visit(Sequence_port_list_in_parens_opt *node) override;
+
+
+  virtual void visit(Clocking_direction *node) override;
+
+
+  virtual void visit(Goto_repetition *node) override;
+
+  virtual void visit(Constraint_block_item *node) override;
+
+  virtual void visit(Assertion_variable_declaration *node) override;
+
+
+  virtual void visit(TK_static_opt *node) override;
+
+  virtual void visit(Design_statement *node) override;
+
+
+  virtual void visit(Sequence_declaration *node) override;
+
+
+  virtual void visit(Clocking_item *node) override;
+
+
+  virtual void visit(Property_port_item *node) override;
+
+
+  virtual void visit(List_of_config_rule_statements *node) override;
+
+
+  virtual void visit(Cycle_range *node) override;
+
+
+  virtual void visit(Bind_target_instance *node) override;
+
+
+  virtual void visit(Lib_cell_id *node) override;
+
+
+  virtual void visit(Property_declaration *node) override;
+
+
+  virtual void visit(Property_formal_type_followed_by_id *node) override;
+
+  virtual void visit(Modport_simple_ports_declaration_last *node) override;
+
+
+  virtual void visit(Covergroup_declaration *node) override;
+
+  virtual void visit(Coverage_spec *node) override;
+
+
+  virtual void visit(Consecutive_repetition *node) override;
+
+  virtual void visit(List_of_libraries_opt *node) override;
+
+
+  virtual void visit(Identifier_list_in_parens_opt *node) override;
+
+
+  virtual void visit(List_of_clocking_decl_assign *node) override;
+
+
+  virtual void visit(Coverage_event *node) override;
+
+  virtual void visit(Config_rule_statement *node) override;
+
+
+  virtual void visit(Type_identifier_or_implicit_basic_followed_by_id *node) override;
+
+
+  virtual void visit(Assertion_variable_declaration_list *node) override;
+
+  virtual void visit(Constraint_expression_no_preprocessor *node) override;
+
+
+  virtual void visit(Clocking_decl_assign *node) override;
+
+
+  virtual void visit(With_constraint_block *node) override;
+
+  virtual void visit(Optional_semicolon *node) override;
+
+
+  virtual void visit(Property_port_list_in_parens_opt *node) override;
+
+  virtual void visit(Modport_simple_ports_declaration_begin *node) override;
+
+
+  virtual void visit(Modport_simple_port *node) override;
+
+  virtual void visit(Clocking_skew_opt *node) override;
+
+
+  virtual void visit(Implication_operator *node) override;
+
+
+  virtual void visit(Net_alias_assign_lvalue_list *node) override;
+
+  virtual void visit(Nonconsecutive_repetition *node) override;
+
+
+  virtual void visit(Bins_or_options_list_opt *node) override;
+
+
+  virtual void visit(Sequence_port_list_opt *node) override;
+
+  virtual void visit(Property_port_modifiers_opt *node) override;
+
+
+  virtual void visit(Liblist_clause *node) override;
+
+
+  virtual void visit(Constraint_declaration *node) override;
+
+
+  virtual void visit(Property_actual_arg_opt *node) override;
+
+  virtual void visit(List_of_config_rule_statements_opt *node) override;
+
+
+  virtual void visit(Modport_ports_list *node) override;
+
+  virtual void visit(Cover_point *node) override;
+
+
+  virtual void visit(Modport_item *node) override;
+
+
+  virtual void visit(Constraint_block_item_list_opt *node) override;
+
+
+  virtual void visit(Lib_cell_identifiers *node) override;
+
+  virtual void visit(Property_port_list *node) override;
+
+
+  virtual void visit(List_of_libraries *node) override;
+
+
+  virtual void visit(Constraint_block_item_list *node) override;
+
+  virtual void visit(Coverage_spec_or_option_list *node) override;
+
+  virtual void visit(Constraint_block *node) override;
+
+  virtual void visit(Coverage_event_opt *node) override;
+
+
+  virtual void visit(Cycle_range_or_expr *node) override;
+
+  virtual void visit(Coverage_spec_or_option *node) override;
+  
+  virtual void visit(Method_qualifier *node) override;
+
 };
 
 #endif

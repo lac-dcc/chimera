@@ -1322,5 +1322,244 @@ public:
 
   virtual constraintSet visit(Package_export_declaration *node,
                               typeId type) override;
+
+  virtual constraintSet visit(Interface_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Data_type_or_implicit_basic_followed_by_id *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Coverage_spec_or_option_list_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Modport_item_list *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Expect_property_statement *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Lib_cell_identifiers_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Sequence_port_list_in_parens_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Clocking_direction *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Goto_repetition *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Constraint_block_item *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Assertion_variable_declaration *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(TK_static_opt *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Design_statement *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Sequence_declaration *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Clocking_item *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Property_port_item *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(List_of_config_rule_statements *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Cycle_range *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Bind_target_instance *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Lib_cell_id *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Property_declaration *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Property_formal_type_followed_by_id *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Modport_simple_ports_declaration_last *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Covergroup_declaration *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Coverage_spec *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Consecutive_repetition *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(List_of_libraries_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Identifier_list_in_parens_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(List_of_clocking_decl_assign *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Coverage_event *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Config_rule_statement *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Type_identifier_or_implicit_basic_followed_by_id *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Assertion_variable_declaration_list *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Constraint_expression_no_preprocessor *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Clocking_decl_assign *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(With_constraint_block *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Optional_semicolon *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Property_port_list_in_parens_opt *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Modport_simple_ports_declaration_begin *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Modport_simple_port *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Clocking_skew_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Implication_operator *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Net_alias_assign_lvalue_list *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Nonconsecutive_repetition *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Bins_or_options_list_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Sequence_port_list_opt *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Property_port_modifiers_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Liblist_clause *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Constraint_declaration *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Property_actual_arg_opt *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(List_of_config_rule_statements_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Modport_ports_list *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Cover_point *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Modport_item *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Constraint_block_item_list_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Lib_cell_identifiers *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Property_port_list *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(List_of_libraries *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Constraint_block_item_list *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Coverage_spec_or_option_list *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Constraint_block *node, 
+                                            typeId type) override;
+
+  virtual constraintSet visit(Coverage_event_opt *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Cycle_range_or_expr *node, 
+                                            typeId type) override;
+
+
+  virtual constraintSet visit(Coverage_spec_or_option *node, 
+                                            typeId type) override;
+  virtual constraintSet visit(Method_qualifier *node, 
+                                            typeId type) override;
+
 };
 #endif

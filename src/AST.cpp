@@ -2605,12 +2605,12 @@ Cycle_delay_range::Cycle_delay_range(std::string element) {
 }
 
 Property_operator::Property_operator(std::string element) {
-  this->type = NodeType::CYCLE_DELAY_RANGE;
+  this->type = NodeType::PROPERTY_OPERATOR;
   this->setElement(element);
 }
 
 Property_spec_disable_iff::Property_spec_disable_iff(std::string element) {
-  this->type = NodeType::CYCLE_DELAY_RANGE;
+  this->type = NodeType::PROPERTY_SPEC_DISABLE_IFF;
   this->setElement(element);
 }
 
@@ -2676,6 +2676,349 @@ Interface_type::Interface_type(std::string element) {
 
 Package_export_declaration::Package_export_declaration(std::string element) {
   this->type = NodeType::PACKAGE_EXPORT_DECLARATION;
+  this->setElement(element);
+}
+
+Constraint_block_item_list_opt::Constraint_block_item_list_opt(
+    std::string element) {
+  this->type = NodeType::CONSTRAINT_BLOCK_ITEM_LIST_OPT;
+  this->setElement(element);
+}
+
+Constraint_block_item_list::Constraint_block_item_list(std::string element) {
+  this->type = NodeType::CONSTRAINT_BLOCK_ITEM_LIST;
+  this->setElement(element);
+}
+
+List_of_libraries_opt::List_of_libraries_opt(std::string element) {
+  this->type = NodeType::LIST_OF_LIBRARIES_OPT;
+  this->setElement(element);
+}
+
+Lib_cell_id::Lib_cell_id(std::string element) {
+  this->type = NodeType::LIB_CELL_ID;
+  this->setElement(element);
+}
+
+Expect_property_statement::Expect_property_statement(std::string element) {
+  this->type = NodeType::EXPECT_PROPERTY_STATEMENT;
+  this->setElement(element);
+}
+
+Optional_semicolon::Optional_semicolon(std::string element) {
+  this->type = NodeType::OPTIONAL_SEMICOLON;
+  this->setElement(element);
+}
+
+Identifier_list_in_parens_opt::Identifier_list_in_parens_opt(
+    std::string element) {
+  this->type = NodeType::IDENTIFIER_LIST_IN_PARENS_OPT;
+  this->setElement(element);
+}
+
+Sequence_port_list_in_parens_opt::Sequence_port_list_in_parens_opt(
+    std::string element) {
+  this->type = NodeType::SEQUENCE_PORT_LIST_IN_PARENS_OPT;
+  this->setElement(element);
+}
+
+Data_type_or_implicit_basic_followed_by_id::
+    Data_type_or_implicit_basic_followed_by_id(std::string element) {
+  this->type = NodeType::DATA_TYPE_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID;
+  this->setElement(element);
+}
+
+Modport_simple_ports_declaration_last::Modport_simple_ports_declaration_last(
+    std::string element) {
+  this->type = NodeType::MODPORT_SIMPLE_PORTS_DECLARATION_LAST;
+  this->setElement(element);
+}
+
+Goto_repetition::Goto_repetition(std::string element) {
+  this->type = NodeType::GOTO_REPETITION;
+  this->setElement(element);
+}
+
+Modport_ports_list::Modport_ports_list(std::string element) {
+  this->type = NodeType::MODPORT_PORTS_LIST;
+  this->setElement(element);
+}
+
+Coverage_spec_or_option_list::Coverage_spec_or_option_list(
+    std::string element) {
+  this->type = NodeType::COVERAGE_SPEC_OR_OPTION_LIST;
+  this->setElement(element);
+}
+
+Assertion_variable_declaration::Assertion_variable_declaration(
+    std::string element) {
+  this->type = NodeType::ASSERTION_VARIABLE_DECLARATION;
+  this->setElement(element);
+}
+
+Interface_opt::Interface_opt(std::string element) {
+  this->type = NodeType::INTERFACE_OPT;
+  this->setElement(element);
+}
+
+List_of_libraries::List_of_libraries(std::string element) {
+  this->type = NodeType::LIST_OF_LIBRARIES;
+  this->setElement(element);
+}
+
+Type_identifier_or_implicit_basic_followed_by_id::
+    Type_identifier_or_implicit_basic_followed_by_id(std::string element) {
+  this->type = NodeType::TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID;
+  this->setElement(element);
+}
+
+Bind_target_instance::Bind_target_instance(std::string element) {
+  this->type = NodeType::BIND_TARGET_INSTANCE;
+  this->setElement(element);
+}
+
+Property_actual_arg_opt::Property_actual_arg_opt(std::string element) {
+  this->type = NodeType::PROPERTY_ACTUAL_ARG_OPT;
+  this->setElement(element);
+}
+
+Method_qualifier::Method_qualifier(std::string element) {
+  this->type = NodeType::METHOD_QUALIFIER;
+  this->setElement(element);
+}
+
+Design_statement::Design_statement(std::string element) {
+  this->type = NodeType::DESIGN_STATEMENT;
+  this->setElement(element);
+}
+
+Modport_simple_ports_declaration_begin::Modport_simple_ports_declaration_begin(
+    std::string element) {
+  this->type = NodeType::MODPORT_SIMPLE_PORTS_DECLARATION_BEGIN;
+  this->setElement(element);
+}
+
+Sequence_port_list_opt::Sequence_port_list_opt(std::string element) {
+  this->type = NodeType::SEQUENCE_PORT_LIST_OPT;
+  this->setElement(element);
+}
+
+Clocking_item::Clocking_item(std::string element) {
+  this->type = NodeType::CLOCKING_ITEM;
+  this->setElement(element);
+}
+
+Constraint_declaration::Constraint_declaration(std::string element) {
+  this->type = NodeType::CONSTRAINT_DECLARATION;
+  this->setElement(element);
+}
+
+Clocking_direction::Clocking_direction(std::string element) {
+  this->type = NodeType::CLOCKING_DIRECTION;
+  this->setElement(element);
+}
+
+Modport_item::Modport_item(std::string element) {
+  this->type = NodeType::MODPORT_ITEM;
+  this->setElement(element);
+}
+
+Clocking_decl_assign::Clocking_decl_assign(std::string element) {
+  this->type = NodeType::CLOCKING_DECL_ASSIGN;
+  this->setElement(element);
+}
+
+Consecutive_repetition::Consecutive_repetition(std::string element) {
+  this->type = NodeType::CONSECUTIVE_REPETITION;
+  this->setElement(element);
+}
+
+Bins_or_options_list_opt::Bins_or_options_list_opt(std::string element) {
+  this->type = NodeType::BINS_OR_OPTIONS_LIST_OPT;
+  this->setElement(element);
+}
+
+Cycle_range::Cycle_range(std::string element) {
+  this->type = NodeType::CYCLE_RANGE;
+  this->setElement(element);
+}
+
+Clocking_skew_opt::Clocking_skew_opt(std::string element) {
+  this->type = NodeType::CLOCKING_SKEW_OPT;
+  this->setElement(element);
+}
+
+Nonconsecutive_repetition::Nonconsecutive_repetition(std::string element) {
+  this->type = NodeType::NONCONSECUTIVE_REPETITION;
+  this->setElement(element);
+}
+
+Constraint_expression_no_preprocessor::Constraint_expression_no_preprocessor(
+    std::string element) {
+  this->type = NodeType::CONSTRAINT_EXPRESSION_NO_PREPROCESSOR;
+  this->setElement(element);
+}
+
+List_of_clocking_decl_assign::List_of_clocking_decl_assign(
+    std::string element) {
+  this->type = NodeType::LIST_OF_CLOCKING_DECL_ASSIGN;
+  this->setElement(element);
+}
+
+Property_port_list::Property_port_list(std::string element) {
+  this->type = NodeType::PROPERTY_PORT_LIST;
+  this->setElement(element);
+}
+
+Net_alias_assign_lvalue_list::Net_alias_assign_lvalue_list(
+    std::string element) {
+  this->type = NodeType::NET_ALIAS_ASSIGN_LVALUE_LIST;
+  this->setElement(element);
+}
+
+Assertion_variable_declaration_list::Assertion_variable_declaration_list(
+    std::string element) {
+  this->type = NodeType::ASSERTION_VARIABLE_DECLARATION_LIST;
+  this->setElement(element);
+}
+
+List_of_config_rule_statements::List_of_config_rule_statements(
+    std::string element) {
+  this->type = NodeType::LIST_OF_CONFIG_RULE_STATEMENTS;
+  this->setElement(element);
+}
+
+Constraint_block::Constraint_block(std::string element) {
+  this->type = NodeType::CONSTRAINT_BLOCK;
+  this->setElement(element);
+}
+
+List_of_config_rule_statements_opt::List_of_config_rule_statements_opt(
+    std::string element) {
+  this->type = NodeType::LIST_OF_CONFIG_RULE_STATEMENTS_OPT;
+  this->setElement(element);
+}
+
+Property_port_modifiers_opt::Property_port_modifiers_opt(std::string element) {
+  this->type = NodeType::PROPERTY_PORT_MODIFIERS_OPT;
+  this->setElement(element);
+}
+
+With_constraint_block::With_constraint_block(std::string element) {
+  this->type = NodeType::WITH_CONSTRAINT_BLOCK;
+  this->setElement(element);
+}
+
+Property_declaration::Property_declaration(std::string element) {
+  this->type = NodeType::PROPERTY_DECLARATION;
+  this->setElement(element);
+}
+
+Implication_operator::Implication_operator(std::string element) {
+  this->type = NodeType::IMPLICATION_OPERATOR;
+  this->setElement(element);
+}
+
+Cover_point::Cover_point(std::string element) {
+  this->type = NodeType::COVER_POINT;
+  this->setElement(element);
+}
+
+Coverage_event::Coverage_event(std::string element) {
+  this->type = NodeType::COVERAGE_EVENT;
+  this->setElement(element);
+}
+
+Property_formal_type_followed_by_id::Property_formal_type_followed_by_id(
+    std::string element) {
+  this->type = NodeType::PROPERTY_FORMAL_TYPE_FOLLOWED_BY_ID;
+  this->setElement(element);
+}
+
+Config_rule_statement::Config_rule_statement(std::string element) {
+  this->type = NodeType::CONFIG_RULE_STATEMENT;
+  this->setElement(element);
+}
+
+Modport_item_list::Modport_item_list(std::string element) {
+  this->type = NodeType::MODPORT_ITEM_LIST;
+  this->setElement(element);
+}
+
+TK_static_opt::TK_static_opt(std::string element) {
+  this->type = NodeType::TK_STATIC_OPT;
+  this->setElement(element);
+}
+
+Property_port_item::Property_port_item(std::string element) {
+  this->type = NodeType::PROPERTY_PORT_ITEM;
+  this->setElement(element);
+}
+
+Liblist_clause::Liblist_clause(std::string element) {
+  this->type = NodeType::LIBLIST_CLAUSE;
+  this->setElement(element);
+}
+
+Lib_cell_identifiers_opt::Lib_cell_identifiers_opt(std::string element) {
+  this->type = NodeType::LIB_CELL_IDENTIFIERS_OPT;
+  this->setElement(element);
+}
+
+Covergroup_declaration::Covergroup_declaration(std::string element) {
+  this->type = NodeType::COVERGROUP_DECLARATION;
+  this->setElement(element);
+}
+
+Modport_simple_port::Modport_simple_port(std::string element) {
+  this->type = NodeType::MODPORT_SIMPLE_PORT;
+  this->setElement(element);
+}
+
+Sequence_declaration::Sequence_declaration(std::string element) {
+  this->type = NodeType::SEQUENCE_DECLARATION;
+  this->setElement(element);
+}
+
+Coverage_event_opt::Coverage_event_opt(std::string element) {
+  this->type = NodeType::COVERAGE_EVENT_OPT;
+  this->setElement(element);
+}
+
+Lib_cell_identifiers::Lib_cell_identifiers(std::string element) {
+  this->type = NodeType::LIB_CELL_IDENTIFIERS;
+  this->setElement(element);
+}
+
+Cycle_range_or_expr::Cycle_range_or_expr(std::string element) {
+  this->type = NodeType::CYCLE_RANGE_OR_EXPR;
+  this->setElement(element);
+}
+
+Property_port_list_in_parens_opt::Property_port_list_in_parens_opt(
+    std::string element) {
+  this->type = NodeType::PROPERTY_PORT_LIST_IN_PARENS_OPT;
+  this->setElement(element);
+}
+
+Coverage_spec_or_option_list_opt::Coverage_spec_or_option_list_opt(
+    std::string element) {
+  this->type = NodeType::COVERAGE_SPEC_OR_OPTION_LIST_OPT;
+  this->setElement(element);
+}
+
+Coverage_spec_or_option::Coverage_spec_or_option(std::string element) {
+  this->type = NodeType::COVERAGE_SPEC_OR_OPTION;
+  this->setElement(element);
+}
+
+Coverage_spec::Coverage_spec(std::string element) {
+  this->type = NodeType::COVERAGE_SPEC;
+  this->setElement(element);
+}
+
+Constraint_block_item::Constraint_block_item(std::string element) {
+  this->type = NodeType::CONSTRAINT_BLOCK_ITEM;
   this->setElement(element);
 }
 
@@ -4712,4 +5055,369 @@ ClassMap classMap = {
     [](std::string &&f) {
         return std::make_unique<Package_export_declaration>(f);
     }},
+  {
+    "random_qualifier", 
+    [](std::string &&f) {
+        return std::make_unique<Random_qualifier>(f);
+    }},
+  {"interface_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Interface_opt>(f);
+      }},
+  {"data_type_or_implicit_basic_followed_by_id", 
+      [](std::string &&f) {
+          return std::make_unique<Data_type_or_implicit_basic_followed_by_id>(f);
+      }},
+  {"any_port_list_trailing_comma_positional", 
+      [](std::string &&f) {
+          return std::make_unique<Any_port_list_trailing_comma_positional>(f);
+      }},
+  {"coverage_spec_or_option_list_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_spec_or_option_list_opt>(f);
+      }},
+  {"modport_item_list", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_item_list>(f);
+      }},
+  {"expect_property_statement", 
+      [](std::string &&f) {
+          return std::make_unique<Expect_property_statement>(f);
+      }},
+  {"lib_cell_identifiers_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Lib_cell_identifiers_opt>(f);
+      }},
+  {"sequence_port_list_in_parens_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Sequence_port_list_in_parens_opt>(f);
+      }},
+  {"clocking_direction", 
+      [](std::string &&f) {
+          return std::make_unique<Clocking_direction>(f);
+      }},
+  {"goto_repetition", 
+      [](std::string &&f) {
+          return std::make_unique<Goto_repetition>(f);
+      }},
+  {"assertion_item_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Assertion_item_declaration>(f);
+      }},
+  {"constraint_block_item", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_block_item>(f);
+      }},
+  {"interface_type", 
+      [](std::string &&f) {
+          return std::make_unique<Interface_type>(f);
+      }},
+  {"any_port_list_trailing_comma_named", 
+      [](std::string &&f) {
+          return std::make_unique<Any_port_list_trailing_comma_named>(f);
+      }},
+  {"net_alias", 
+      [](std::string &&f) {
+          return std::make_unique<Net_alias>(f);
+      }},
+  {"bind_target_instance_list", 
+      [](std::string &&f) {
+          return std::make_unique<Bind_target_instance_list>(f);
+      }},
+  {"assertion_variable_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Assertion_variable_declaration>(f);
+      }},
+  {"TK_static_opt", 
+      [](std::string &&f) {
+          return std::make_unique<TK_static_opt>(f);
+      }},
+  {"property_operator", 
+      [](std::string &&f) {
+          return std::make_unique<Property_operator>(f);
+      }},
+  {"design_statement", 
+      [](std::string &&f) {
+          return std::make_unique<Design_statement>(f);
+      }},
+  {"sequence_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Sequence_declaration>(f);
+      }},
+  {"clocking_item", 
+      [](std::string &&f) {
+          return std::make_unique<Clocking_item>(f);
+      }},
+  {"property_port_item", 
+      [](std::string &&f) {
+          return std::make_unique<Property_port_item>(f);
+      }},
+  {"list_of_config_rule_statements", 
+      [](std::string &&f) {
+          return std::make_unique<List_of_config_rule_statements>(f);
+      }},
+  {"cycle_range", 
+      [](std::string &&f) {
+          return std::make_unique<Cycle_range>(f);
+      }},
+  {"bind_target_instance", 
+      [](std::string &&f) {
+          return std::make_unique<Bind_target_instance>(f);
+      }},
+  {"lib_cell_id", 
+      [](std::string &&f) {
+          return std::make_unique<Lib_cell_id>(f);
+      }},
+  {"property_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Property_declaration>(f);
+      }},
+  {"property_formal_type_followed_by_id", 
+      [](std::string &&f) {
+          return std::make_unique<Property_formal_type_followed_by_id>(f);
+      }},
+  {"bind_instantiation", 
+      [](std::string &&f) {
+          return std::make_unique<Bind_instantiation>(f);
+      }},
+  {"modport_simple_ports_declaration_last", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_simple_ports_declaration_last>(f);
+      }},
+  {"covergroup_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Covergroup_declaration>(f);
+      }},
+  {"property_spec_disable_iff", 
+      [](std::string &&f) {
+          return std::make_unique<Property_spec_disable_iff>(f);
+      }},
+  {"cycle_delay_range", 
+      [](std::string &&f) {
+          return std::make_unique<Cycle_delay_range>(f);
+      }},
+  {"coverage_spec", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_spec>(f);
+      }},
+  {"consecutive_repetition", 
+      [](std::string &&f) {
+          return std::make_unique<Consecutive_repetition>(f);
+      }},
+  {"method_qualifier_list", 
+      [](std::string &&f) {
+          return std::make_unique<Method_qualifier_list>(f);
+      }},
+  {"boolean_abbrev", 
+      [](std::string &&f) {
+          return std::make_unique<Boolean_abbrev>(f);
+      }},
+  {"list_of_libraries_opt", 
+      [](std::string &&f) {
+          return std::make_unique<List_of_libraries_opt>(f);
+      }},
+  {"identifier_list_in_parens_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Identifier_list_in_parens_opt>(f);
+      }},
+  {"list_of_clocking_decl_assign", 
+      [](std::string &&f) {
+          return std::make_unique<List_of_clocking_decl_assign>(f);
+      }},
+  {"coverage_event", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_event>(f);
+      }},
+  {"class_constraint", 
+      [](std::string &&f) {
+          return std::make_unique<Class_constraint>(f);
+      }},
+  {"config_rule_statement", 
+      [](std::string &&f) {
+          return std::make_unique<Config_rule_statement>(f);
+      }},
+  {"type_identifier_or_implicit_basic_followed_by_id", 
+      [](std::string &&f) {
+          return std::make_unique<Type_identifier_or_implicit_basic_followed_by_id>(f);
+      }},
+  {"assertion_variable_declaration_list", 
+      [](std::string &&f) {
+          return std::make_unique<Assertion_variable_declaration_list>(f);
+      }},
+  {"bind_directive", 
+      [](std::string &&f) {
+          return std::make_unique<Bind_directive>(f);
+      }},
+  {"clocking_item_list", 
+      [](std::string &&f) {
+          return std::make_unique<Clocking_item_list>(f);
+      }},
+  {"constraint_expression_no_preprocessor", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_expression_no_preprocessor>(f);
+      }},
+  {"clocking_decl_assign", 
+      [](std::string &&f) {
+          return std::make_unique<Clocking_decl_assign>(f);
+      }},
+  {"with_constraint_block", 
+      [](std::string &&f) {
+          return std::make_unique<With_constraint_block>(f);
+      }},
+  {"any_port_list_item_last_named", 
+      [](std::string &&f) {
+          return std::make_unique<Any_port_list_item_last_named>(f);
+      }},
+  {"optional_semicolon", 
+      [](std::string &&f) {
+          return std::make_unique<Optional_semicolon>(f);
+      }},
+  {"property_port_list_in_parens_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Property_port_list_in_parens_opt>(f);
+      }},
+  {"package_export_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Package_export_declaration>(f);
+      }},
+  {"modport_simple_ports_declaration_begin", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_simple_ports_declaration_begin>(f);
+      }},
+  {"modport_simple_port", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_simple_port>(f);
+      }},
+  {"type_reference", 
+      [](std::string &&f) {
+          return std::make_unique<Type_reference>(f);
+      }},
+  {"clocking_skew_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Clocking_skew_opt>(f);
+      }},
+  {"modport_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_declaration>(f);
+      }},
+  {"implication_operator", 
+      [](std::string &&f) {
+          return std::make_unique<Implication_operator>(f);
+      }},
+  {"net_alias_assign_lvalue_list", 
+      [](std::string &&f) {
+          return std::make_unique<Net_alias_assign_lvalue_list>(f);
+      }},
+  {"with_constraint_block_opt", 
+      [](std::string &&f) {
+          return std::make_unique<With_constraint_block_opt>(f);
+      }},
+  {"nonconsecutive_repetition", 
+      [](std::string &&f) {
+          return std::make_unique<Nonconsecutive_repetition>(f);
+      }},
+  {"bins_or_options_list_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Bins_or_options_list_opt>(f);
+      }},
+  {"sequence_port_list_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Sequence_port_list_opt>(f);
+      }},
+  {"any_port_list_positional", 
+      [](std::string &&f) {
+          return std::make_unique<Any_port_list_positional>(f);
+      }},
+  {"property_port_modifiers_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Property_port_modifiers_opt>(f);
+      }},
+  {"liblist_clause", 
+      [](std::string &&f) {
+          return std::make_unique<Liblist_clause>(f);
+      }},
+  {"constraint_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_declaration>(f);
+      }},
+  {"property_actual_arg_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Property_actual_arg_opt>(f);
+      }},
+  {"config_declaration", 
+      [](std::string &&f) {
+          return std::make_unique<Config_declaration>(f);
+      }},
+  {"list_of_config_rule_statements_opt", 
+      [](std::string &&f) {
+          return std::make_unique<List_of_config_rule_statements_opt>(f);
+      }},
+  {"modport_ports_list", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_ports_list>(f);
+      }},
+  {"gate_instance_or_register_variable_list", 
+      [](std::string &&f) {
+          return std::make_unique<Gate_instance_or_register_variable_list>(f);
+      }},
+  {"cover_point", 
+      [](std::string &&f) {
+          return std::make_unique<Cover_point>(f);
+      }},
+  {"modport_item", 
+      [](std::string &&f) {
+          return std::make_unique<Modport_item>(f);
+      }},
+  {"constraint_block_item_list_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_block_item_list_opt>(f);
+      }},
+  {"lib_cell_identifiers", 
+      [](std::string &&f) {
+          return std::make_unique<Lib_cell_identifiers>(f);
+      }},
+  {"method_qualifier", 
+      [](std::string &&f) {
+          return std::make_unique<Method_qualifier>(f);
+      }},
+  {"property_port_list", 
+      [](std::string &&f) {
+          return std::make_unique<Property_port_list>(f);
+      }},
+  {"list_of_libraries", 
+      [](std::string &&f) {
+          return std::make_unique<List_of_libraries>(f);
+      }},
+  {"constraint_block_item_list", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_block_item_list>(f);
+      }},
+  {"any_port_list_named", 
+      [](std::string &&f) {
+          return std::make_unique<Any_port_list_named>(f);
+      }},
+  {"coverage_spec_or_option_list", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_spec_or_option_list>(f);
+      }},
+  {"constraint_block", 
+      [](std::string &&f) {
+          return std::make_unique<Constraint_block>(f);
+      }},
+  {"hierarchy_or_call_extension", 
+      [](std::string &&f) {
+          return std::make_unique<Hierarchy_or_call_extension>(f);
+      }},
+  {"coverage_event_opt", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_event_opt>(f);
+      }},
+  {"cycle_range_or_expr", 
+      [](std::string &&f) {
+          return std::make_unique<Cycle_range_or_expr>(f);
+      }},
+  {"coverage_spec_or_option", 
+      [](std::string &&f) {
+          return std::make_unique<Coverage_spec_or_option>(f);
+      }},
 };

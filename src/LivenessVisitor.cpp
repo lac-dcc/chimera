@@ -2108,3 +2108,199 @@ void LivenessVisitor::visit(Interface_type *node) {
 void LivenessVisitor::visit(Package_export_declaration *node) {
   defaultVisitor(node);
 };
+
+void LivenessVisitor::visit(Interface_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Data_type_or_implicit_basic_followed_by_id *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_spec_or_option_list_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_item_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Expect_property_statement *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Lib_cell_identifiers_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Sequence_port_list_in_parens_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Clocking_direction *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Goto_repetition *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_block_item *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Assertion_variable_declaration *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(TK_static_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Design_statement *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Sequence_declaration *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Clocking_item *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_port_item *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(List_of_config_rule_statements *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Cycle_range *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Bind_target_instance *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Lib_cell_id *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_declaration *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_formal_type_followed_by_id *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_simple_ports_declaration_last *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Covergroup_declaration *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_spec *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Consecutive_repetition *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(List_of_libraries_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Identifier_list_in_parens_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(List_of_clocking_decl_assign *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_event *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Config_rule_statement *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Type_identifier_or_implicit_basic_followed_by_id *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Assertion_variable_declaration_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_expression_no_preprocessor *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Clocking_decl_assign *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(With_constraint_block *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Optional_semicolon *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_port_list_in_parens_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_simple_ports_declaration_begin *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_simple_port *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Clocking_skew_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Implication_operator *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Net_alias_assign_lvalue_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Nonconsecutive_repetition *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Bins_or_options_list_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Sequence_port_list_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_port_modifiers_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Liblist_clause *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_declaration *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_actual_arg_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(List_of_config_rule_statements_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_ports_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Cover_point *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Modport_item *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_block_item_list_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Lib_cell_identifiers *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Property_port_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(List_of_libraries *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_block_item_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_spec_or_option_list *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Constraint_block *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_event_opt *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Cycle_range_or_expr *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Coverage_spec_or_option *node) {
+  defaultVisitor(node);
+};
+void LivenessVisitor::visit(Method_qualifier *node) {
+  defaultVisitor(node);
+};
