@@ -1280,5 +1280,8 @@ public:
 
   virtual constraintSet visit(Class_item_qualifier_list_opt *node,
                               typeId type) override;
+  virtual constraintSet visit(Tk_static_opt *node,
+                              typeId type) override;
+
 };
 #endif

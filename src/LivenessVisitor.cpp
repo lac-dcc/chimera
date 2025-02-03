@@ -2036,3 +2036,7 @@ void LivenessVisitor::visit(Stream_expression_list *node) {
 void LivenessVisitor::visit(Class_item_qualifier_list_opt *node) {
   defaultVisitor(node);
 };
+
+void LivenessVisitor::visit(Tk_static_opt *node){
+  defaultVisitor(node);
+}

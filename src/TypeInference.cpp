@@ -3110,3 +3110,8 @@ constraintSet TypeInferenceVisitor::visit(Class_item_qualifier_list_opt *node,
                                           typeId type) {
   return defaultVisitor(node, type);
 }
+
+constraintSet TypeInferenceVisitor::visit(Tk_static_opt *node,
+                              typeId type){
+  return defaultVisitor(node, type);
+}

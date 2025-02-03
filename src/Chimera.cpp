@@ -81,7 +81,7 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
                                            std::string &&element) {
   auto it = classMap.find(productionName);
   if (it == classMap.end()) {
-    std::cerr << "Unkown production '" << productionName << "'\n";
+    std::cerr << "Unknown production '" << productionName << "'\n";
     std::cerr << "Aborting\n";
     exit(1);
   }

@@ -513,6 +513,7 @@ enum class NodeType {
   COVER_PROPERTY_STATEMENT,
   STREAM_EXPRESSION_LIST,
   CLASS_ITEM_QUALIFIER_LIST_OPT,
+  TK_STATIC_OPT,
 };
 
 /**
@@ -4145,6 +4146,14 @@ public:
   Class_item_qualifier_list_opt(Class_item_qualifier_list_opt &&) = default;
   Class_item_qualifier_list_opt &
   operator=(Class_item_qualifier_list_opt &&) = default;
+};
+
+class Tk_static_opt : public Node {
+public:
+  Tk_static_opt(std::string element);
+  Tk_static_opt(Tk_static_opt &&) = default;
+  Tk_static_opt &
+  operator=(Tk_static_opt &&) = default;
 };
 
 using ClassMap =

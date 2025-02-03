@@ -1044,6 +1044,8 @@ public:
       return visit(dynamic_cast<Stream_expression_list *>(node));
     case NodeType::CLASS_ITEM_QUALIFIER_LIST_OPT:
       return visit(dynamic_cast<Class_item_qualifier_list_opt *>(node));
+    case NodeType::TK_STATIC_OPT:
+      return visit(dynamic_cast<Tk_static_opt *>(node));
     default:
       return R();
     }
@@ -2105,6 +2107,8 @@ public:
       return visit(dynamic_cast<Stream_expression_list *>(node), arg);
     case NodeType::CLASS_ITEM_QUALIFIER_LIST_OPT:
       return visit(dynamic_cast<Class_item_qualifier_list_opt *>(node), arg);
+    case NodeType::TK_STATIC_OPT:
+      return visit(dynamic_cast<Tk_static_opt *>(node), arg);
     default:
       return R();
     }
@@ -9982,6 +9986,22 @@ public:
   }
 
   virtual R visit(Class_item_qualifier_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_static_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_static_opt *node, T arg) {
     for (const std::unique_ptr<Node> &child : node->getChildren()) {
       applyVisit(child.get(), arg);
     }

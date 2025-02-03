@@ -2589,6 +2589,14 @@ Class_item_qualifier_list_opt::Class_item_qualifier_list_opt(
   this->setElement(element);
 }
 
+Tk_static_opt::Tk_static_opt(
+    std::string element) {
+  this->type = NodeType::TK_STATIC_OPT;
+  this->setElement(element);
+}
+
+
+
 ClassMap classMap = {
   {"terminal",
    [](std::string &&f) {
@@ -4550,4 +4558,8 @@ ClassMap classMap = {
    [](std::string &&f) {
       return std::make_unique<Class_item_qualifier_list_opt>(f);
    }},
+  {"tk_static_opt",
+   [](std::string &&f){
+      return std::make_unique<Tk_static_opt>(f);
+   }}
 };

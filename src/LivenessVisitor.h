@@ -1045,6 +1045,7 @@ public:
   virtual void visit(Stream_expression_list *node) override;
 
   virtual void visit(Class_item_qualifier_list_opt *node) override;
+  virtual void visit(Tk_static_opt *node) override;
 };
 
 #endif
