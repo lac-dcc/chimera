@@ -40,15 +40,23 @@ The verible binary is in the `verible_bin` folder. However, if the binary does n
 ```
 
 ### 4. Train probabilistic grammar
-```
-./scripts/run_parser_count_productions.sh ./database verible-verilog-syntax grammar.json
-```
+In this step, there are 2 options: 
+1. Train the grammar from scratch (which may take some hours to complete)
+  ```
+  ./scripts/run_parser_count_productions.sh ./database verible-verilog-syntax grammar.json
+  ```
+2. Use one of the pre-trained grammars available in the `json` folder (recommended).
+
 
 ### 5. Run
+If you opted to train the grammar from scratch, simply run the following command:
 ```
 ./build/Chimera grammar.json 1 > program.v
 ```
-
+If you chose to use a pre-trained grammar, replace `grammar.json` with the grammar file you selected. For example:
+```
+./build/Chimera ./json/1gram_size_test.json 1 > program.v
+```
 ### 6. Format (optional)
 ```
 verible-verilog-format --inplace program.v
