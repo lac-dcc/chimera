@@ -597,6 +597,7 @@ enum class NodeType {
   CYCLE_RANGE_OR_EXPR,
   COVERAGE_SPEC_OR_OPTION
 
+  TK_STATIC_OPT,
 };
 
 /**
@@ -4844,6 +4845,14 @@ public:
   Constraint_block_item(std::string element);
   Constraint_block_item(Constraint_block_item &&) = default;
   Constraint_block_item &operator=(Constraint_block_item &&) = default;
+};
+
+class Tk_static_opt : public Node {
+public:
+  Tk_static_opt(std::string element);
+  Tk_static_opt(Tk_static_opt &&) = default;
+  Tk_static_opt &
+  operator=(Tk_static_opt &&) = default;
 };
 
 using ClassMap =

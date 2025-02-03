@@ -2304,3 +2304,6 @@ void LivenessVisitor::visit(Coverage_spec_or_option *node) {
 void LivenessVisitor::visit(Method_qualifier *node) {
   defaultVisitor(node);
 };
+void LivenessVisitor::visit(Tk_static_opt *node){
+  defaultVisitor(node);
+}

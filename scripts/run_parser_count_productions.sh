@@ -5,7 +5,7 @@
 
 # Check if directory argument is provided
 if [ $# -ne 4 ]; then
-    >&2 echo "Usage: $0 <directory> <_verible_parser_executable> <output_file> <n>"
+    >&2 echo "Usage: $0 <directory> <path_to_verible_parser_executable> <output_file> <n>"
     exit 1
 fi
 

@@ -1254,6 +1254,7 @@ public:
   
   virtual void visit(Method_qualifier *node) override;
 
+  virtual void visit(Tk_static_opt *node) override;
 };
 
 #endif

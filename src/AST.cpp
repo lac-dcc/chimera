@@ -3022,6 +3022,14 @@ Constraint_block_item::Constraint_block_item(std::string element) {
   this->setElement(element);
 }
 
+Tk_static_opt::Tk_static_opt(
+    std::string element) {
+  this->type = NodeType::TK_STATIC_OPT;
+  this->setElement(element);
+}
+
+
+
 ClassMap classMap = {
   {"terminal",
    [](std::string &&f) {
@@ -5420,4 +5428,8 @@ ClassMap classMap = {
       [](std::string &&f) {
           return std::make_unique<Coverage_spec_or_option>(f);
       }},
+  {"tk_static_opt",
+   [](std::string &&f){
+      return std::make_unique<Tk_static_opt>(f);
+   }}
 };

@@ -1275,6 +1275,8 @@ case NodeType::CYCLE_RANGE_OR_EXPR:
 case NodeType::COVERAGE_SPEC_OR_OPTION: 
   return visit(dynamic_cast<Coverage_spec_or_option *>(node));
 
+    case NodeType::TK_STATIC_OPT:
+      return visit(dynamic_cast<Tk_static_opt *>(node));
     default:
       return R();
     }
@@ -2565,6 +2567,8 @@ case NodeType::COVERAGE_SPEC_OR_OPTION:
     case NodeType::COVERAGE_SPEC_OR_OPTION: 
       return visit(dynamic_cast<Coverage_spec_or_option *>(node), arg);
 
+    case NodeType::TK_STATIC_OPT:
+      return visit(dynamic_cast<Tk_static_opt *>(node), arg);
     default:
       return R();
     }
@@ -11611,5 +11615,21 @@ virtual R visit(Coverage_spec_or_option *node, T arg) {
   return R();
 }
 
+
+  virtual R visit(Tk_static_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_static_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
 };
 #endif

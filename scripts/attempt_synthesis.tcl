@@ -2,7 +2,7 @@ if {![info exists target_dir]} {
   set target_dir "../database/invalid_programs"
 }
 
-if {![info exists target_dir]} {
+if {![info exists target_elaborate_dir]} {
   set target_elaborate_dir "../database/invalid_elaborate_programs"
 }
 

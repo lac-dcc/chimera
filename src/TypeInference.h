@@ -1561,5 +1561,8 @@ public:
   virtual constraintSet visit(Method_qualifier *node, 
                                             typeId type) override;
 
+  virtual constraintSet visit(Tk_static_opt *node,
+                              typeId type) override;
+
 };
 #endif

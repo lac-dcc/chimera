@@ -3520,3 +3520,7 @@ constraintSet TypeInferenceVisitor::visit(Coverage_spec_or_option_list *node,
                                           typeId type) {
   return defaultVisitor(node, type);
 }
+constraintSet TypeInferenceVisitor::visit(Tk_static_opt *node,
+                              typeId type){
+  return defaultVisitor(node, type);
+}
