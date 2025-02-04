@@ -596,8 +596,6 @@ enum class NodeType {
   COVERAGE_EVENT_OPT,
   CYCLE_RANGE_OR_EXPR,
   COVERAGE_SPEC_OR_OPTION
-
-  TK_STATIC_OPT,
 };
 
 /**

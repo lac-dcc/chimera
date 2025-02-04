@@ -702,7 +702,7 @@ static void findAnsiDeclarations(
       if (debug)
         std::cerr << "Renaming ID to " << s << std::endl;
 
-      id->setElement(std::move(s));
+      id->setElement(s);
 
       directionMap[s] = {head, currentDir};
       portList.push_back({s, currentDir});
@@ -879,7 +879,7 @@ static bool isCompatible(CanonicalTypes t1, CanonicalTypes t2) {
 }
 
 static std::string
-findCompatibleId(std::vector<std::string> &idsCallerModule,
+findCompatibleId(const std::vector<std::string> &idsCallerModule,
                  std::unordered_map<std::string, std::pair<Node *, PortDir>>
                      &directionMapCaller,
                  std::unordered_map<std::string, CanonicalTypes> &typeMapCaller,
