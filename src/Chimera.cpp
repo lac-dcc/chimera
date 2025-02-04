@@ -1353,14 +1353,15 @@ int main(int argc, char **argv) {
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
             } else {
-              std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
               std::size_t counter = 0;
               std::string id_call = "";
 
-              std::advance(mIt, rand() % m->idToType.size());
+              auto mIt = std::next(m->idToType.begin(),
+                                   std::abs(rand()) % m->idToType.size());
+
               do {
-                mIt = m2->idToType.begin();
-                std::advance(mIt, rand() % m2->idToType.size());
+                auto mIt = std::next(m2->idToType.begin(),
+                                     std::abs(rand()) % m2->idToType.size());
 
                 id_call = mIt->first;
                 counter++;
