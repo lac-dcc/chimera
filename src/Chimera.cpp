@@ -1360,11 +1360,14 @@ int main(int argc, char **argv) {
                                    std::abs(rand()) % m->idToType.size());
 
               do {
-                auto mIt = std::next(m2->idToType.begin(),
-                                     std::abs(rand()) % m2->idToType.size());
-
-                id_call = mIt->first;
-                counter++;
+                if (!m2->idToType.empty()) {
+                  auto mIt = std::next(m2->idToType.begin(),
+                                       std::abs(rand()) % m2->idToType.size());
+                  id_call = mIt->first;
+                  counter++;
+                } else {
+                  break;
+                }
               } while (id_call.find("id") == std::string::npos &&
                        counter < mIt->first.size());
 
