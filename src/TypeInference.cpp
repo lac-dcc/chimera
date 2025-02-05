@@ -2849,12 +2849,6 @@ TypeInferenceVisitor::visit(List_of_ports_or_port_declarations_opt *node,
 }
 
 constraintSet
-TypeInferenceVisitor::visit(Any_port_list_trailing_comma_positional *node,
-                            typeId type) {
-  return defaultVisitor(node, type);
-}
-
-constraintSet
 TypeInferenceVisitor::visit(Block_item_or_statement_or_null_list_opt *node,
                             typeId) {
   return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::LOGIC));
@@ -3108,5 +3102,419 @@ constraintSet TypeInferenceVisitor::visit(Stream_expression_list *node,
 
 constraintSet TypeInferenceVisitor::visit(Class_item_qualifier_list_opt *node,
                                           typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Assertion_item_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Boolean_abbrev *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Cycle_delay_range *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_operator *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_spec_disable_iff *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Config_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(With_constraint_block_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Random_qualifier *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Bind_target_instance_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Hierarchy_or_call_extension *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_item_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Class_constraint *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Net_alias *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Type_reference *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Method_qualifier_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Interface_type *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Package_export_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Interface_opt *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Data_type_or_implicit_basic_followed_by_id *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Any_port_list_trailing_comma_positional *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Coverage_spec_or_option_list_opt *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_item_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Expect_property_statement *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Lib_cell_identifiers_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Sequence_port_list_in_parens_opt *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_direction *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Goto_repetition *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Constraint_block_item *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Assertion_variable_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(TK_static_opt *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Design_statement *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Sequence_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_item *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_port_item *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(List_of_config_rule_statements *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Cycle_range *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Bind_target_instance *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Lib_cell_id *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Property_formal_type_followed_by_id *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Modport_simple_ports_declaration_last *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Covergroup_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Coverage_spec *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Consecutive_repetition *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(List_of_libraries_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Identifier_list_in_parens_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(List_of_clocking_decl_assign *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Coverage_event *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Config_rule_statement *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(
+    Type_identifier_or_implicit_basic_followed_by_id *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Assertion_variable_declaration_list *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Constraint_expression_no_preprocessor *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_decl_assign *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(With_constraint_block *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Optional_semicolon *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Property_port_list_in_parens_opt *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(Modport_simple_ports_declaration_begin *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_simple_port *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Clocking_skew_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Implication_operator *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Net_alias_assign_lvalue_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Nonconsecutive_repetition *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Bins_or_options_list_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Sequence_port_list_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_port_modifiers_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Liblist_clause *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Constraint_declaration *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_actual_arg_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet
+TypeInferenceVisitor::visit(List_of_config_rule_statements_opt *node,
+                            typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_ports_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Cover_point *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Modport_item *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Constraint_block_item_list_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Lib_cell_identifiers *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Method_qualifier *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Property_port_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(List_of_libraries *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Constraint_block_item_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Constraint_block *node, typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Coverage_event_opt *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Cycle_range_or_expr *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Coverage_spec_or_option *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+
+constraintSet TypeInferenceVisitor::visit(Coverage_spec_or_option_list *node,
+                                          typeId type) {
+  return defaultVisitor(node, type);
+}
+constraintSet TypeInferenceVisitor::visit(Tk_static_opt *node, typeId type) {
   return defaultVisitor(node, type);
 }

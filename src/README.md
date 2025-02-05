@@ -1,4 +1,4 @@
-# ChiGen source
+#ChiGen source
 
 This directory contains ChiGen's source code. The main file is `Chimera.cpp`,
 which produces ChiGen's binary. The code in this file is responsible for
@@ -54,8 +54,8 @@ doesn't fit your use case, you should override it.
 ```cpp
 class MyVisitor : public Visitor<void> {
 public:
-  virtual void visit(Node *node) override;
-  virtual void visit(Terminal *node) override;
+  virtual void visit(Node * node) override;
+  virtual void visit(Terminal * node) override;
   // ...
 }
 ```

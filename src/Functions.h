@@ -1,11 +1,11 @@
-#include <string>
-#include <vector>
-#include <utility>
 #include "AST.h"
+#include <string>
+#include <utility>
+#include <vector>
 
-struct Function{
+struct Function {
 
-    std::string name;
-    std::string funcType;
-    std::vector<std::pair<std::string, PortDir>> portList;
+  std::string name;
+  std::string funcType;
+  std::vector<std::pair<std::string, PortDir>> portList;
 };
