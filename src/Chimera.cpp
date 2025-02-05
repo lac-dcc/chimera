@@ -625,12 +625,12 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 PortDir currentDir = PortDir::INPUT;
 
 static void setDir(Node *head) {
-  
-  if(head->getChildren()[0]->type != NodeType::DIR)
+
+  if (head->getChildren()[0]->type != NodeType::DIR)
     return;
 
   auto currPort = head->getChildren()[0]->getChildren()[0]->getElement();
-  
+
   if (currPort == " output ")
     currentDir = PortDir::OUTPUT;
   else if (currPort == " input ")
@@ -1357,7 +1357,7 @@ int main(int argc, char **argv) {
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
             } else {
-                if(m->idToType.size() > 0){
+              if (m->idToType.size() > 0) {
                 std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
                 std::size_t counter = 0;
                 std::string id_call = "";
@@ -1369,16 +1369,17 @@ int main(int argc, char **argv) {
                   id_call = mIt->first;
                   counter++;
                 } while (id_call.find("id") == std::string::npos &&
-                        counter < mIt->first.size());
+                         counter < mIt->first.size());
 
                 auto val = getDefaultValue(mIt->second);
                 if (m2->programPoints.size() > 0) {
-                  auto pp2 = m2->programPoints[rand() % m2->programPoints.size()];
+                  auto pp2 =
+                      m2->programPoints[rand() % m2->programPoints.size()];
 
                   if (!val.empty()) {
-                    hierarchicalReference(pp2.programPoint->getParent(),
-                                          getPosFromPP(pp2) + 1, id_call, val,
-                                          pp2.scope, m->moduleName->getElement());
+                    hierarchicalReference(
+                        pp2.programPoint->getParent(), getPosFromPP(pp2) + 1,
+                        id_call, val, pp2.scope, m->moduleName->getElement());
                   }
                 }
               }

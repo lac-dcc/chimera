@@ -2202,7 +2202,8 @@ void LivenessVisitor::visit(Coverage_event *node) {
 void LivenessVisitor::visit(Config_rule_statement *node) {
   defaultVisitor(node);
 };
-void LivenessVisitor::visit(Type_identifier_or_implicit_basic_followed_by_id *node) {
+void LivenessVisitor::visit(
+    Type_identifier_or_implicit_basic_followed_by_id *node) {
   defaultVisitor(node);
 };
 void LivenessVisitor::visit(Assertion_variable_declaration_list *node) {
@@ -2304,6 +2305,6 @@ void LivenessVisitor::visit(Coverage_spec_or_option *node) {
 void LivenessVisitor::visit(Method_qualifier *node) {
   defaultVisitor(node);
 };
-void LivenessVisitor::visit(Tk_static_opt *node){
+void LivenessVisitor::visit(Tk_static_opt *node) {
   defaultVisitor(node);
 }

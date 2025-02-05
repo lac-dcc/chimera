@@ -4849,8 +4849,7 @@ class Tk_static_opt : public Node {
 public:
   Tk_static_opt(std::string element);
   Tk_static_opt(Tk_static_opt &&) = default;
-  Tk_static_opt &
-  operator=(Tk_static_opt &&) = default;
+  Tk_static_opt &operator=(Tk_static_opt &&) = default;
 };
 
 using ClassMap =
