@@ -513,7 +513,89 @@ enum class NodeType {
   COVER_PROPERTY_STATEMENT,
   STREAM_EXPRESSION_LIST,
   CLASS_ITEM_QUALIFIER_LIST_OPT,
+  ASSERTION_ITEM_DECLARATION,
+  BOOLEAN_ABBREV,
+  CYCLE_DELAY_RANGE,
+  PROPERTY_OPERATOR,
+  PROPERTY_SPEC_DISABLE_IFF,
+  CONFIG_DECLARATION,
+  WITH_CONSTRAINT_BLOCK_OPT,
+  RANDOM_QUALIFIER,
+  BIND_TARGET_INSTANCE_LIST,
+  CLOCKING_ITEM_LIST,
+  MODPORT_DECLARATION,
+  CLASS_CONSTRAINT,
+  NET_ALIAS,
+  TYPE_REFERENCE,
+  METHOD_QUALIFIER_LIST,
+  INTERFACE_TYPE,
+  PACKAGE_EXPORT_DECLARATION,
+  INTERFACE_OPT,
+  DATA_TYPE_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID,
+  COVERAGE_SPEC_OR_OPTION_LIST_OPT,
+  MODPORT_ITEM_LIST,
+  EXPECT_PROPERTY_STATEMENT,
+  LIB_CELL_IDENTIFIERS_OPT,
+  SEQUENCE_PORT_LIST_IN_PARENS_OPT,
+  CLOCKING_DIRECTION,
+  GOTO_REPETITION,
+  CONSTRAINT_BLOCK_ITEM,
+  ASSERTION_VARIABLE_DECLARATION,
   TK_STATIC_OPT,
+  DESIGN_STATEMENT,
+  SEQUENCE_DECLARATION,
+  CLOCKING_ITEM,
+  PROPERTY_PORT_ITEM,
+  LIST_OF_CONFIG_RULE_STATEMENTS,
+  CYCLE_RANGE,
+  BIND_TARGET_INSTANCE,
+  LIB_CELL_ID,
+  PROPERTY_DECLARATION,
+  PROPERTY_FORMAL_TYPE_FOLLOWED_BY_ID,
+  MODPORT_SIMPLE_PORTS_DECLARATION_LAST,
+  COVERGROUP_DECLARATION,
+  COVERAGE_SPEC,
+  CONSECUTIVE_REPETITION,
+  LIST_OF_LIBRARIES_OPT,
+  IDENTIFIER_LIST_IN_PARENS_OPT,
+  LIST_OF_CLOCKING_DECL_ASSIGN,
+  COVERAGE_EVENT,
+  CONFIG_RULE_STATEMENT,
+  TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID,
+  ASSERTION_VARIABLE_DECLARATION_LIST,
+  CONSTRAINT_EXPRESSION_NO_PREPROCESSOR,
+  CLOCKING_DECL_ASSIGN,
+  WITH_CONSTRAINT_BLOCK,
+  OPTIONAL_SEMICOLON,
+  PROPERTY_PORT_LIST_IN_PARENS_OPT,
+  MODPORT_SIMPLE_PORTS_DECLARATION_BEGIN,
+  MODPORT_SIMPLE_PORT,
+  CLOCKING_SKEW_OPT,
+  IMPLICATION_OPERATOR,
+  NET_ALIAS_ASSIGN_LVALUE_LIST,
+  NONCONSECUTIVE_REPETITION,
+  BINS_OR_OPTIONS_LIST_OPT,
+  SEQUENCE_PORT_LIST_OPT,
+  PROPERTY_PORT_MODIFIERS_OPT,
+  LIBLIST_CLAUSE,
+  CONSTRAINT_DECLARATION,
+  PROPERTY_ACTUAL_ARG_OPT,
+  LIST_OF_CONFIG_RULE_STATEMENTS_OPT,
+  MODPORT_PORTS_LIST,
+  COVER_POINT,
+  MODPORT_ITEM,
+  CONSTRAINT_BLOCK_ITEM_LIST_OPT,
+  LIB_CELL_IDENTIFIERS,
+  METHOD_QUALIFIER,
+  PROPERTY_PORT_LIST,
+  LIST_OF_LIBRARIES,
+  CONSTRAINT_BLOCK_ITEM_LIST,
+  COVERAGE_SPEC_OR_OPTION_LIST,
+  CONSTRAINT_BLOCK,
+  HIERARCHY_OR_CALL_EXTENSION,
+  COVERAGE_EVENT_OPT,
+  CYCLE_RANGE_OR_EXPR,
+  COVERAGE_SPEC_OR_OPTION
 };
 
 /**
@@ -4148,12 +4230,626 @@ public:
   operator=(Class_item_qualifier_list_opt &&) = default;
 };
 
+class Assertion_item_declaration : public Node {
+public:
+  Assertion_item_declaration(std::string element);
+  Assertion_item_declaration(Assertion_item_declaration &&) = default;
+  Assertion_item_declaration &
+  operator=(Assertion_item_declaration &&) = default;
+};
+
+class Boolean_abbrev : public Node {
+public:
+  Boolean_abbrev(std::string element);
+  Boolean_abbrev(Boolean_abbrev &&) = default;
+  Boolean_abbrev &operator=(Boolean_abbrev &&) = default;
+};
+
+class Cycle_delay_range : public Node {
+public:
+  Cycle_delay_range(std::string element);
+  Cycle_delay_range(Cycle_delay_range &&) = default;
+  Cycle_delay_range &operator=(Cycle_delay_range &&) = default;
+};
+
+class Property_operator : public Node {
+public:
+  Property_operator(std::string element);
+  Property_operator(Property_operator &&) = default;
+  Property_operator &operator=(Property_operator &&) = default;
+};
+
+class Property_spec_disable_iff : public Node {
+public:
+  Property_spec_disable_iff(std::string element);
+  Property_spec_disable_iff(Property_spec_disable_iff &&) = default;
+  Property_spec_disable_iff &operator=(Property_spec_disable_iff &&) = default;
+};
+
+class Config_declaration : public Node {
+public:
+  Config_declaration(std::string element);
+  Config_declaration(Config_declaration &&) = default;
+  Config_declaration &operator=(Config_declaration &&) = default;
+};
+
+class With_constraint_block_opt : public Node {
+public:
+  With_constraint_block_opt(std::string element);
+  With_constraint_block_opt(With_constraint_block_opt &&) = default;
+  With_constraint_block_opt &operator=(With_constraint_block_opt &&) = default;
+};
+
+class Random_qualifier : public Node {
+public:
+  Random_qualifier(std::string element);
+  Random_qualifier(Random_qualifier &&) = default;
+  Random_qualifier &operator=(Random_qualifier &&) = default;
+};
+
+class Bind_target_instance_list : public Node {
+public:
+  Bind_target_instance_list(std::string element);
+  Bind_target_instance_list(Bind_target_instance_list &&) = default;
+  Bind_target_instance_list &operator=(Bind_target_instance_list &&) = default;
+};
+
+class Hierarchy_or_call_extension : public Node {
+public:
+  Hierarchy_or_call_extension(std::string element);
+  Hierarchy_or_call_extension(Hierarchy_or_call_extension &&) = default;
+  Hierarchy_or_call_extension &
+  operator=(Hierarchy_or_call_extension &&) = default;
+};
+
+class Clocking_item_list : public Node {
+public:
+  Clocking_item_list(std::string element);
+  Clocking_item_list(Clocking_item_list &&) = default;
+  Clocking_item_list &operator=(Clocking_item_list &&) = default;
+};
+
+class Modport_declaration : public Node {
+public:
+  Modport_declaration(std::string element);
+  Modport_declaration(Modport_declaration &&) = default;
+  Modport_declaration &operator=(Modport_declaration &&) = default;
+};
+
+class Class_constraint : public Node {
+public:
+  Class_constraint(std::string element);
+  Class_constraint(Class_constraint &&) = default;
+  Class_constraint &operator=(Class_constraint &&) = default;
+};
+
+class Net_alias : public Node {
+public:
+  Net_alias(std::string element);
+  Net_alias(Net_alias &&) = default;
+  Net_alias &operator=(Net_alias &&) = default;
+};
+
+class Type_reference : public Node {
+public:
+  Type_reference(std::string element);
+  Type_reference(Type_reference &&) = default;
+  Type_reference &operator=(Type_reference &&) = default;
+};
+
+class Method_qualifier_list : public Node {
+public:
+  Method_qualifier_list(std::string element);
+  Method_qualifier_list(Method_qualifier_list &&) = default;
+  Method_qualifier_list &operator=(Method_qualifier_list &&) = default;
+};
+
+class Interface_type : public Node {
+public:
+  Interface_type(std::string element);
+  Interface_type(Interface_type &&) = default;
+  Interface_type &operator=(Interface_type &&) = default;
+};
+
+class Package_export_declaration : public Node {
+public:
+  Package_export_declaration(std::string element);
+  Package_export_declaration(Package_export_declaration &&) = default;
+  Package_export_declaration &
+  operator=(Package_export_declaration &&) = default;
+};
+
+class Constraint_block_item_list_opt : public Node {
+public:
+  Constraint_block_item_list_opt(std::string element);
+  Constraint_block_item_list_opt(Constraint_block_item_list_opt &&) = default;
+  Constraint_block_item_list_opt &
+  operator=(Constraint_block_item_list_opt &&) = default;
+};
+
+class Constraint_block_item_list : public Node {
+public:
+  Constraint_block_item_list(std::string element);
+  Constraint_block_item_list(Constraint_block_item_list &&) = default;
+  Constraint_block_item_list &
+  operator=(Constraint_block_item_list &&) = default;
+};
+
+class List_of_libraries_opt : public Node {
+public:
+  List_of_libraries_opt(std::string element);
+  List_of_libraries_opt(List_of_libraries_opt &&) = default;
+  List_of_libraries_opt &operator=(List_of_libraries_opt &&) = default;
+};
+
+class Lib_cell_id : public Node {
+public:
+  Lib_cell_id(std::string element);
+  Lib_cell_id(Lib_cell_id &&) = default;
+  Lib_cell_id &operator=(Lib_cell_id &&) = default;
+};
+
+class Expect_property_statement : public Node {
+public:
+  Expect_property_statement(std::string element);
+  Expect_property_statement(Expect_property_statement &&) = default;
+  Expect_property_statement &operator=(Expect_property_statement &&) = default;
+};
+
+class Optional_semicolon : public Node {
+public:
+  Optional_semicolon(std::string element);
+  Optional_semicolon(Optional_semicolon &&) = default;
+  Optional_semicolon &operator=(Optional_semicolon &&) = default;
+};
+
+class Identifier_list_in_parens_opt : public Node {
+public:
+  Identifier_list_in_parens_opt(std::string element);
+  Identifier_list_in_parens_opt(Identifier_list_in_parens_opt &&) = default;
+  Identifier_list_in_parens_opt &
+  operator=(Identifier_list_in_parens_opt &&) = default;
+};
+
+class Sequence_port_list_in_parens_opt : public Node {
+public:
+  Sequence_port_list_in_parens_opt(std::string element);
+  Sequence_port_list_in_parens_opt(Sequence_port_list_in_parens_opt &&) =
+      default;
+  Sequence_port_list_in_parens_opt &
+  operator=(Sequence_port_list_in_parens_opt &&) = default;
+};
+
+class Data_type_or_implicit_basic_followed_by_id : public Node {
+public:
+  Data_type_or_implicit_basic_followed_by_id(std::string element);
+  Data_type_or_implicit_basic_followed_by_id(
+      Data_type_or_implicit_basic_followed_by_id &&) = default;
+  Data_type_or_implicit_basic_followed_by_id &
+  operator=(Data_type_or_implicit_basic_followed_by_id &&) = default;
+};
+
+class Modport_simple_ports_declaration_last : public Node {
+public:
+  Modport_simple_ports_declaration_last(std::string element);
+  Modport_simple_ports_declaration_last(
+      Modport_simple_ports_declaration_last &&) = default;
+  Modport_simple_ports_declaration_last &
+  operator=(Modport_simple_ports_declaration_last &&) = default;
+};
+
+class Goto_repetition : public Node {
+public:
+  Goto_repetition(std::string element);
+  Goto_repetition(Goto_repetition &&) = default;
+  Goto_repetition &operator=(Goto_repetition &&) = default;
+};
+
+class Modport_ports_list : public Node {
+public:
+  Modport_ports_list(std::string element);
+  Modport_ports_list(Modport_ports_list &&) = default;
+  Modport_ports_list &operator=(Modport_ports_list &&) = default;
+};
+
+class Coverage_spec_or_option_list : public Node {
+public:
+  Coverage_spec_or_option_list(std::string element);
+  Coverage_spec_or_option_list(Coverage_spec_or_option_list &&) = default;
+  Coverage_spec_or_option_list &
+  operator=(Coverage_spec_or_option_list &&) = default;
+};
+
+class Assertion_variable_declaration : public Node {
+public:
+  Assertion_variable_declaration(std::string element);
+  Assertion_variable_declaration(Assertion_variable_declaration &&) = default;
+  Assertion_variable_declaration &
+  operator=(Assertion_variable_declaration &&) = default;
+};
+
+class Interface_opt : public Node {
+public:
+  Interface_opt(std::string element);
+  Interface_opt(Interface_opt &&) = default;
+  Interface_opt &operator=(Interface_opt &&) = default;
+};
+
+class List_of_libraries : public Node {
+public:
+  List_of_libraries(std::string element);
+  List_of_libraries(List_of_libraries &&) = default;
+  List_of_libraries &operator=(List_of_libraries &&) = default;
+};
+
+class Type_identifier_or_implicit_basic_followed_by_id : public Node {
+public:
+  Type_identifier_or_implicit_basic_followed_by_id(std::string element);
+  Type_identifier_or_implicit_basic_followed_by_id(
+      Type_identifier_or_implicit_basic_followed_by_id &&) = default;
+  Type_identifier_or_implicit_basic_followed_by_id &
+  operator=(Type_identifier_or_implicit_basic_followed_by_id &&) = default;
+};
+
+class Bind_target_instance : public Node {
+public:
+  Bind_target_instance(std::string element);
+  Bind_target_instance(Bind_target_instance &&) = default;
+  Bind_target_instance &operator=(Bind_target_instance &&) = default;
+};
+
+class Property_actual_arg_opt : public Node {
+public:
+  Property_actual_arg_opt(std::string element);
+  Property_actual_arg_opt(Property_actual_arg_opt &&) = default;
+  Property_actual_arg_opt &operator=(Property_actual_arg_opt &&) = default;
+};
+
+class Method_qualifier : public Node {
+public:
+  Method_qualifier(std::string element);
+  Method_qualifier(Method_qualifier &&) = default;
+  Method_qualifier &operator=(Method_qualifier &&) = default;
+};
+
+class Design_statement : public Node {
+public:
+  Design_statement(std::string element);
+  Design_statement(Design_statement &&) = default;
+  Design_statement &operator=(Design_statement &&) = default;
+};
+
+class Modport_simple_ports_declaration_begin : public Node {
+public:
+  Modport_simple_ports_declaration_begin(std::string element);
+  Modport_simple_ports_declaration_begin(
+      Modport_simple_ports_declaration_begin &&) = default;
+  Modport_simple_ports_declaration_begin &
+  operator=(Modport_simple_ports_declaration_begin &&) = default;
+};
+
+class Sequence_port_list_opt : public Node {
+public:
+  Sequence_port_list_opt(std::string element);
+  Sequence_port_list_opt(Sequence_port_list_opt &&) = default;
+  Sequence_port_list_opt &operator=(Sequence_port_list_opt &&) = default;
+};
+
+class Clocking_item : public Node {
+public:
+  Clocking_item(std::string element);
+  Clocking_item(Clocking_item &&) = default;
+  Clocking_item &operator=(Clocking_item &&) = default;
+};
+
+class Constraint_declaration : public Node {
+public:
+  Constraint_declaration(std::string element);
+  Constraint_declaration(Constraint_declaration &&) = default;
+  Constraint_declaration &operator=(Constraint_declaration &&) = default;
+};
+
+class Clocking_direction : public Node {
+public:
+  Clocking_direction(std::string element);
+  Clocking_direction(Clocking_direction &&) = default;
+  Clocking_direction &operator=(Clocking_direction &&) = default;
+};
+
+class Modport_item : public Node {
+public:
+  Modport_item(std::string element);
+  Modport_item(Modport_item &&) = default;
+  Modport_item &operator=(Modport_item &&) = default;
+};
+
+class Clocking_decl_assign : public Node {
+public:
+  Clocking_decl_assign(std::string element);
+  Clocking_decl_assign(Clocking_decl_assign &&) = default;
+  Clocking_decl_assign &operator=(Clocking_decl_assign &&) = default;
+};
+
+class Consecutive_repetition : public Node {
+public:
+  Consecutive_repetition(std::string element);
+  Consecutive_repetition(Consecutive_repetition &&) = default;
+  Consecutive_repetition &operator=(Consecutive_repetition &&) = default;
+};
+
+class Bins_or_options_list_opt : public Node {
+public:
+  Bins_or_options_list_opt(std::string element);
+  Bins_or_options_list_opt(Bins_or_options_list_opt &&) = default;
+  Bins_or_options_list_opt &operator=(Bins_or_options_list_opt &&) = default;
+};
+
+class Cycle_range : public Node {
+public:
+  Cycle_range(std::string element);
+  Cycle_range(Cycle_range &&) = default;
+  Cycle_range &operator=(Cycle_range &&) = default;
+};
+
+class Clocking_skew_opt : public Node {
+public:
+  Clocking_skew_opt(std::string element);
+  Clocking_skew_opt(Clocking_skew_opt &&) = default;
+  Clocking_skew_opt &operator=(Clocking_skew_opt &&) = default;
+};
+
+class Nonconsecutive_repetition : public Node {
+public:
+  Nonconsecutive_repetition(std::string element);
+  Nonconsecutive_repetition(Nonconsecutive_repetition &&) = default;
+  Nonconsecutive_repetition &operator=(Nonconsecutive_repetition &&) = default;
+};
+
+class Constraint_expression_no_preprocessor : public Node {
+public:
+  Constraint_expression_no_preprocessor(std::string element);
+  Constraint_expression_no_preprocessor(
+      Constraint_expression_no_preprocessor &&) = default;
+  Constraint_expression_no_preprocessor &
+  operator=(Constraint_expression_no_preprocessor &&) = default;
+};
+
+class List_of_clocking_decl_assign : public Node {
+public:
+  List_of_clocking_decl_assign(std::string element);
+  List_of_clocking_decl_assign(List_of_clocking_decl_assign &&) = default;
+  List_of_clocking_decl_assign &
+  operator=(List_of_clocking_decl_assign &&) = default;
+};
+
+class Property_port_list : public Node {
+public:
+  Property_port_list(std::string element);
+  Property_port_list(Property_port_list &&) = default;
+  Property_port_list &operator=(Property_port_list &&) = default;
+};
+
+class Net_alias_assign_lvalue_list : public Node {
+public:
+  Net_alias_assign_lvalue_list(std::string element);
+  Net_alias_assign_lvalue_list(Net_alias_assign_lvalue_list &&) = default;
+  Net_alias_assign_lvalue_list &
+  operator=(Net_alias_assign_lvalue_list &&) = default;
+};
+
+class Assertion_variable_declaration_list : public Node {
+public:
+  Assertion_variable_declaration_list(std::string element);
+  Assertion_variable_declaration_list(Assertion_variable_declaration_list &&) =
+      default;
+  Assertion_variable_declaration_list &
+  operator=(Assertion_variable_declaration_list &&) = default;
+};
+
+class List_of_config_rule_statements : public Node {
+public:
+  List_of_config_rule_statements(std::string element);
+  List_of_config_rule_statements(List_of_config_rule_statements &&) = default;
+  List_of_config_rule_statements &
+  operator=(List_of_config_rule_statements &&) = default;
+};
+
+class Constraint_block : public Node {
+public:
+  Constraint_block(std::string element);
+  Constraint_block(Constraint_block &&) = default;
+  Constraint_block &operator=(Constraint_block &&) = default;
+};
+
+class List_of_config_rule_statements_opt : public Node {
+public:
+  List_of_config_rule_statements_opt(std::string element);
+  List_of_config_rule_statements_opt(List_of_config_rule_statements_opt &&) =
+      default;
+  List_of_config_rule_statements_opt &
+  operator=(List_of_config_rule_statements_opt &&) = default;
+};
+
+class Property_port_modifiers_opt : public Node {
+public:
+  Property_port_modifiers_opt(std::string element);
+  Property_port_modifiers_opt(Property_port_modifiers_opt &&) = default;
+  Property_port_modifiers_opt &
+  operator=(Property_port_modifiers_opt &&) = default;
+};
+
+class With_constraint_block : public Node {
+public:
+  With_constraint_block(std::string element);
+  With_constraint_block(With_constraint_block &&) = default;
+  With_constraint_block &operator=(With_constraint_block &&) = default;
+};
+
+class Property_declaration : public Node {
+public:
+  Property_declaration(std::string element);
+  Property_declaration(Property_declaration &&) = default;
+  Property_declaration &operator=(Property_declaration &&) = default;
+};
+
+class Implication_operator : public Node {
+public:
+  Implication_operator(std::string element);
+  Implication_operator(Implication_operator &&) = default;
+  Implication_operator &operator=(Implication_operator &&) = default;
+};
+
+class Cover_point : public Node {
+public:
+  Cover_point(std::string element);
+  Cover_point(Cover_point &&) = default;
+  Cover_point &operator=(Cover_point &&) = default;
+};
+
+class Coverage_event : public Node {
+public:
+  Coverage_event(std::string element);
+  Coverage_event(Coverage_event &&) = default;
+  Coverage_event &operator=(Coverage_event &&) = default;
+};
+
+class Property_formal_type_followed_by_id : public Node {
+public:
+  Property_formal_type_followed_by_id(std::string element);
+  Property_formal_type_followed_by_id(Property_formal_type_followed_by_id &&) =
+      default;
+  Property_formal_type_followed_by_id &
+  operator=(Property_formal_type_followed_by_id &&) = default;
+};
+
+class Config_rule_statement : public Node {
+public:
+  Config_rule_statement(std::string element);
+  Config_rule_statement(Config_rule_statement &&) = default;
+  Config_rule_statement &operator=(Config_rule_statement &&) = default;
+};
+
+class Modport_item_list : public Node {
+public:
+  Modport_item_list(std::string element);
+  Modport_item_list(Modport_item_list &&) = default;
+  Modport_item_list &operator=(Modport_item_list &&) = default;
+};
+
+class TK_static_opt : public Node {
+public:
+  TK_static_opt(std::string element);
+  TK_static_opt(TK_static_opt &&) = default;
+  TK_static_opt &operator=(TK_static_opt &&) = default;
+};
+
+class Property_port_item : public Node {
+public:
+  Property_port_item(std::string element);
+  Property_port_item(Property_port_item &&) = default;
+  Property_port_item &operator=(Property_port_item &&) = default;
+};
+
+class Liblist_clause : public Node {
+public:
+  Liblist_clause(std::string element);
+  Liblist_clause(Liblist_clause &&) = default;
+  Liblist_clause &operator=(Liblist_clause &&) = default;
+};
+
+class Lib_cell_identifiers_opt : public Node {
+public:
+  Lib_cell_identifiers_opt(std::string element);
+  Lib_cell_identifiers_opt(Lib_cell_identifiers_opt &&) = default;
+  Lib_cell_identifiers_opt &operator=(Lib_cell_identifiers_opt &&) = default;
+};
+
+class Covergroup_declaration : public Node {
+public:
+  Covergroup_declaration(std::string element);
+  Covergroup_declaration(Covergroup_declaration &&) = default;
+  Covergroup_declaration &operator=(Covergroup_declaration &&) = default;
+};
+
+class Modport_simple_port : public Node {
+public:
+  Modport_simple_port(std::string element);
+  Modport_simple_port(Modport_simple_port &&) = default;
+  Modport_simple_port &operator=(Modport_simple_port &&) = default;
+};
+
+class Sequence_declaration : public Node {
+public:
+  Sequence_declaration(std::string element);
+  Sequence_declaration(Sequence_declaration &&) = default;
+  Sequence_declaration &operator=(Sequence_declaration &&) = default;
+};
+
+class Coverage_event_opt : public Node {
+public:
+  Coverage_event_opt(std::string element);
+  Coverage_event_opt(Coverage_event_opt &&) = default;
+  Coverage_event_opt &operator=(Coverage_event_opt &&) = default;
+};
+
+class Lib_cell_identifiers : public Node {
+public:
+  Lib_cell_identifiers(std::string element);
+  Lib_cell_identifiers(Lib_cell_identifiers &&) = default;
+  Lib_cell_identifiers &operator=(Lib_cell_identifiers &&) = default;
+};
+
+class Cycle_range_or_expr : public Node {
+public:
+  Cycle_range_or_expr(std::string element);
+  Cycle_range_or_expr(Cycle_range_or_expr &&) = default;
+  Cycle_range_or_expr &operator=(Cycle_range_or_expr &&) = default;
+};
+
+class Property_port_list_in_parens_opt : public Node {
+public:
+  Property_port_list_in_parens_opt(std::string element);
+  Property_port_list_in_parens_opt(Property_port_list_in_parens_opt &&) =
+      default;
+  Property_port_list_in_parens_opt &
+  operator=(Property_port_list_in_parens_opt &&) = default;
+};
+
+class Coverage_spec_or_option_list_opt : public Node {
+public:
+  Coverage_spec_or_option_list_opt(std::string element);
+  Coverage_spec_or_option_list_opt(Coverage_spec_or_option_list_opt &&) =
+      default;
+  Coverage_spec_or_option_list_opt &
+  operator=(Coverage_spec_or_option_list_opt &&) = default;
+};
+
+class Coverage_spec_or_option : public Node {
+public:
+  Coverage_spec_or_option(std::string element);
+  Coverage_spec_or_option(Coverage_spec_or_option &&) = default;
+  Coverage_spec_or_option &operator=(Coverage_spec_or_option &&) = default;
+};
+
+class Coverage_spec : public Node {
+public:
+  Coverage_spec(std::string element);
+  Coverage_spec(Coverage_spec &&) = default;
+  Coverage_spec &operator=(Coverage_spec &&) = default;
+};
+
+class Constraint_block_item : public Node {
+public:
+  Constraint_block_item(std::string element);
+  Constraint_block_item(Constraint_block_item &&) = default;
+  Constraint_block_item &operator=(Constraint_block_item &&) = default;
+};
+
 class Tk_static_opt : public Node {
 public:
   Tk_static_opt(std::string element);
   Tk_static_opt(Tk_static_opt &&) = default;
-  Tk_static_opt &
-  operator=(Tk_static_opt &&) = default;
+  Tk_static_opt &operator=(Tk_static_opt &&) = default;
 };
 
 using ClassMap =

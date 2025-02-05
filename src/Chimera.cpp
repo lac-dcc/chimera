@@ -625,6 +625,10 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 PortDir currentDir = PortDir::INPUT;
 
 static void setDir(Node *head) {
+
+  if (head->getChildren()[0]->type != NodeType::DIR)
+    return;
+
   auto currPort = head->getChildren()[0]->getChildren()[0]->getElement();
 
   if (currPort == " output ")
@@ -698,7 +702,7 @@ static void findAnsiDeclarations(
       if (debug)
         std::cerr << "Renaming ID to " << s << std::endl;
 
-      id->setElement(std::move(s));
+      id->setElement(s);
 
       directionMap[s] = {head, currentDir};
       portList.push_back({s, currentDir});
@@ -875,7 +879,7 @@ static bool isCompatible(CanonicalTypes t1, CanonicalTypes t2) {
 }
 
 static std::string
-findCompatibleId(std::vector<std::string> &idsCallerModule,
+findCompatibleId(const std::vector<std::string> &idsCallerModule,
                  std::unordered_map<std::string, std::pair<Node *, PortDir>>
                      &directionMapCaller,
                  std::unordered_map<std::string, CanonicalTypes> &typeMapCaller,
@@ -1334,7 +1338,8 @@ int main(int argc, char **argv) {
             }
 
             // adds hierarchical reference
-            if (rand() % 2 == 0) { // reference will be on caller
+            if (rand() % 2 == 0 &&
+                !m2->idToType.empty()) { // reference will be on caller
               std::unordered_map<std::string, CanonicalTypes>::iterator m2It;
               std::size_t counter = 0;
 
@@ -1352,29 +1357,32 @@ int main(int argc, char **argv) {
                 hierarchicalReference(pp.programPoint->getParent(),
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
-            } else {
-              std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
+
+            } else if (!m->idToType.empty() && !m2->idToType.empty()) {
               std::size_t counter = 0;
               std::string id_call = "";
 
-              std::advance(mIt, rand() % m->idToType.size());
-              do {
-                mIt = m2->idToType.begin();
-                std::advance(mIt, rand() % m2->idToType.size());
+                do {
+                  mIt = m->idToType.begin();
+                  std::advance(mIt, rand() % m->idToType.size());
 
-                id_call = mIt->first;
-                counter++;
-              } while (id_call.find("id") == std::string::npos &&
-                       counter < mIt->first.size());
 
-              auto val = getDefaultValue(mIt->second);
-              if (m2->programPoints.size() > 0) {
-                auto pp2 = m2->programPoints[rand() % m2->programPoints.size()];
+                  id_call = mIt->first;
+                  counter++;
+                } while (id_call.find("id") == std::string::npos &&
+                         counter < mIt->first.size());
 
-                if (!val.empty()) {
-                  hierarchicalReference(pp2.programPoint->getParent(),
-                                        getPosFromPP(pp2) + 1, id_call, val,
-                                        pp2.scope, m->moduleName->getElement());
+                auto val = getDefaultValue(mIt->second);
+                if (m2->programPoints.size() > 0) {
+                  auto pp2 =
+                      m2->programPoints[rand() % m2->programPoints.size()];
+
+                  if (!val.empty()) {
+                    hierarchicalReference(
+                        pp2.programPoint->getParent(), getPosFromPP(pp2) + 1,
+                        id_call, val, pp2.scope, m->moduleName->getElement());
+                  }
+
                 }
               }
             }
