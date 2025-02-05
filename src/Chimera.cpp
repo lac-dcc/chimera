@@ -1334,7 +1334,8 @@ int main(int argc, char **argv) {
             }
 
             // adds hierarchical reference
-            if (rand() % 2 == 0) { // reference will be on caller
+            if (rand() % 2 == 0 &&
+                !m2->idToType.empty()) { // reference will be on caller
               std::unordered_map<std::string, CanonicalTypes>::iterator m2It;
               std::size_t counter = 0;
 
@@ -1352,7 +1353,7 @@ int main(int argc, char **argv) {
                 hierarchicalReference(pp.programPoint->getParent(),
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
-            } else {
+            } else if (!m->idToType.empty() && !m2->idToType.empty()) {
               std::size_t counter = 0;
               std::string id_call = "";
 
@@ -1360,14 +1361,10 @@ int main(int argc, char **argv) {
                                    std::abs(rand()) % m->idToType.size());
 
               do {
-                if (!m2->idToType.empty()) {
-                  auto mIt = std::next(m2->idToType.begin(),
-                                       std::abs(rand()) % m2->idToType.size());
-                  id_call = mIt->first;
-                  counter++;
-                } else {
-                  break;
-                }
+                auto mIt = std::next(m2->idToType.begin(),
+                                     std::abs(rand()) % m2->idToType.size());
+                id_call = mIt->first;
+                counter++;
               } while (id_call.find("id") == std::string::npos &&
                        counter < mIt->first.size());
 
