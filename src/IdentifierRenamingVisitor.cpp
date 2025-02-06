@@ -133,7 +133,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   auto isAssign = false;
   auto isExpr = !contexts.empty() && contexts.top() == ContextType::EXPR;
 
-  if (!contexts.empty() && contexts.top() == ContextType::ASSIGNMENT) {
+  if (!contexts.empty() && (contexts.top() == ContextType::ASSIGNMENT)) {
     contexts.pop();
     isAssign = true;
   }
@@ -150,12 +150,22 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
         continue;
       }
 
-      if (isAssign && (*id)->name == last_id_name_created) {
+      // constant variables can only be assigned to another constant variables
+      // in its declaration
+      if (!contexts.empty() && contexts.top() == ContextType::CONSTANT_EXPR &&
+          (!constant_names.count((*id)->name) ||
+           (*id)->name == last_id_name_created)) {
         continue;
       }
 
       options.push_back((*id)->name);
     }
+  }
+
+  // there are no constant ids to be used in the assigment of constant variables
+  if (options.empty() && !contexts.empty() &&
+      contexts.top() == ContextType::CONSTANT_EXPR) {
+    return " 1 ";
   }
 
   if (options.empty()) {
@@ -291,7 +301,9 @@ void IdentifierRenamingVisitor::visit(Lpvalue *node) {
 
 void IdentifierRenamingVisitor::visit(Expression *node) {
 
-  createIDContext(ContextType::EXPR);
+  if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
+    createIDContext(ContextType::EXPR);
+  }
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -496,6 +508,14 @@ void IdentifierRenamingVisitor::visit(Function_declaration *node) {
 
 void IdentifierRenamingVisitor::visit(Any_param_declaration *node) {
   createIDContext(ContextType::DECL_CONSTANT);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Parameter_expr *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
