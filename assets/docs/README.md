@@ -112,4 +112,4 @@ Hence, an instantiation of `module_1` is inserted at Line 11 of `module_0`.
 </p>
 
 
-**Code base:** The code that computes liveness analysis and inserts modules can be found in [LivenessVisitor.cpp](https://github.com/lac-dcc/chimera/blob/main/src/LivenessVisitor.cpp).
+**Code base:** The code that computes reaching definitions analysis and inserts modules can be found in [ReachingDefs.cpp](https://github.com/lac-dcc/chimera/blob/main/src/ReachingDefs.cpp).
