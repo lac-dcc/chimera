@@ -1,5 +1,5 @@
-#ifndef CHIMERA_LIVENESS_H
-#define CHIMERA_LIVENESS_H
+#ifndef CHIMERA_REACHING_DEFS_H
+#define CHIMERA_REACHING_DEFS_H
 
 #include "AST.h"
 #include "IdentifierRenamingVisitor.h"
@@ -12,7 +12,7 @@
 class ProgramPoint {
 public:
   Node *programPoint;
-  std::set<std::string> liveness;
+  std::set<std::string> defs;
   std::string scope = "";
 };
 
@@ -28,10 +28,10 @@ public:
 };
 
 /**
- * @class LivenessVisitor
- * @brief Visitor for liveness analysis.
+ * @class ReachingDefsVisitor
+ * @brief Visitor for Reaching Definitions analysis.
  */
-class LivenessVisitor : public Visitor<void> {
+class ReachingDefsVisitor : public Visitor<void> {
 public:
   std::vector<std::string> identifiersInScope;
   std::stack<size_t> scopeLimit;
@@ -39,7 +39,7 @@ public:
   std::stack<IdentifierRenamingVisitor::ContextType> context;
   std::vector<std::string> labelContext;
 
-  LivenessVisitor(std::vector<ProgramPoint> &PP) : programPoints(PP) {
+  ReachingDefsVisitor(std::vector<ProgramPoint> &PP) : programPoints(PP) {
     programPoints.clear();
   }
   void startNewScope();

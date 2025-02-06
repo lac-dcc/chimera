@@ -22,7 +22,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "")
 
-add_executable(Chimera Chimera.cpp AST.cpp CodeGenVisitor.cpp ConstantsReplacerVisitor.cpp IdentifierRenamingVisitor.cpp TypeInference.cpp LivenessVisitor.cpp)
+add_executable(Chimera Chimera.cpp AST.cpp CodeGenVisitor.cpp ConstantsReplacerVisitor.cpp IdentifierRenamingVisitor.cpp TypeInference.cpp ReachingDefs.cpp)
 
 target_link_libraries(Chimera PRIVATE nlohmann_json::nlohmann_json)
 target_link_libraries(Chimera PRIVATE cxxopts::cxxopts)

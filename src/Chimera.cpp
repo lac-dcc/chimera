@@ -3,7 +3,7 @@
 #include "ConstantsReplacerVisitor.h"
 #include "Functions.h"
 #include "IdentifierRenamingVisitor.h"
-#include "LivenessVisitor.h"
+#include "ReachingDefs.h"
 #include "TypeInference.h"
 #include "Visitor.h"
 #include <algorithm>
@@ -836,8 +836,8 @@ static void generateModules(
       findModuleName(m, mod->moduleName);
 
       // Map live vars to each program point
-      LivenessVisitor lv(mod->programPoints);
-      lv.applyVisit(mod->moduleHead.get());
+      ReachingDefsVisitor rd(mod->programPoints);
+      rd.applyVisit(mod->moduleHead.get());
 
       modules.push_back(std::move(mod));
     }
@@ -1087,7 +1087,7 @@ addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>> &modules) {
 
         std::string selected_id = "";
 
-        for (auto &id : pp.liveness) {
+        for (auto &id : pp.defs) {
           if (m->idToType[id] == CanonicalTypes::CONST_SCALAR) {
             selected_id = id;
             break;
@@ -1146,8 +1146,8 @@ static void callFunction(Module &mod, Function *func) {
   std::vector<std::string> selectedIds;
   for (auto const &[id, dir] : func->portList) {
     auto availableIds = std::vector(
-        mod.programPoints[mod.programPoints.size() - 1].liveness.begin(),
-        mod.programPoints[mod.programPoints.size() - 1].liveness.end());
+        mod.programPoints[mod.programPoints.size() - 1].defs.begin(),
+        mod.programPoints[mod.programPoints.size() - 1].defs.end());
     std::shuffle(availableIds.begin(), availableIds.end(), rng);
 
     auto selectedId = findCompatibleId(availableIds, mod.directionMap,
@@ -1297,8 +1297,7 @@ int main(int argc, char **argv) {
       for (auto it = createdModules.begin(); it != createdModules.end();) {
         auto &m2 = *it;
         auto rng = std::default_random_engine{};
-        std::vector<std::string> availableIds(pp.liveness.begin(),
-                                              pp.liveness.end());
+        std::vector<std::string> availableIds(pp.defs.begin(), pp.defs.end());
         if (m2 != m) {
           bool compatible = true;
           std::vector<std::string> chosenIds;
