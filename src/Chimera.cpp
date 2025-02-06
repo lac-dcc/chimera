@@ -289,11 +289,23 @@ static bool matchNonAnsiPorts(
       portList.push_back({id, choice});
 
       auto childType = std::make_unique<Terminal>(type);
+      auto module_item = std::make_unique<Module_item>("module_item");
+      module_item->setParent(head);
 
-      head->insertChildToBegin(std::make_unique<Terminal>("; "));
-      head->insertChildToBegin(std::move(childId));
-      head->insertChildToBegin(std::move(childType));
-      head->insertChildToBegin(std::move(childDir));
+      auto t1 = std::make_unique<Terminal>("; ");
+      t1->setParent(module_item.get());
+      module_item->insertChildToBegin(std::move(t1));
+
+      childId->setParent(module_item.get());
+      module_item->insertChildToBegin(std::move(childId));
+
+      childType->setParent(module_item.get());
+      module_item->insertChildToBegin(std::move(childType));
+
+      childDir->setParent(module_item.get());
+      module_item->insertChildToBegin(std::move(childDir));
+
+      head->insertChildToBegin(std::move(module_item));
     }
     done = true;
   }

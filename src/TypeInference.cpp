@@ -1580,9 +1580,8 @@ constraintSet TypeInferenceVisitor::visit(Bit_logic *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Reference_or_call *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Reference_or_call *node, typeId) {
+  return defaultVisitor(node, freshType());
 }
 
 constraintSet TypeInferenceVisitor::visit(Local_root *node, typeId type) {
