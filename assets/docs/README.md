@@ -1,7 +1,7 @@
 # How ChiGen Works
 
 
-ChiGen is a ``bottom-up'' fuzzer: it generates Verilog specifications by first constructing a skeleton of Verilog syntax and then completing this skeleton by inferring names and types.
+ChiGen is a "bottom-up" fuzzer: it generates Verilog specifications by first constructing a skeleton of Verilog syntax and then completing this skeleton by inferring names and types.
 ChiGen was developed to test the [Jasper Formal Verification Platform](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification.html) from [Cadence Design Systems](https://www.cadence.com/en_US/home.html). In October 2024, ChiGen was announced as an open-source tool.
 
 ChiGen operates in four stages, which Figure 1 illustrates:
@@ -20,8 +20,9 @@ These different modules are invoked at the main function, located in [Chimera.cp
 
 ## Syntax Generation via Probabilistic Grammars
 
-To produce a Verilog specification, ChiGen begins by generating a "skeleton" of the design: a structure that adheres to Verilog's syntactic rules. This skeleton is created using a Probabilistic Context-Free Grammar (PCFG), which assigns probabilities to sequences of production rules.
-These production rules were taken from Verible's grammar, which contains 456 productions meant to parse the IEEE 1800-2017 standard.
+To produce a Verilog specification, ChiGen begins by generating a "skeleton" of the design: a structure that adheres to Verilog's syntactic rules. This skeleton is created using a [Probabilistic Context-Free Grammar](https://en.wikipedia.org/wiki/Probabilistic_context-free_grammar) (PCFG), which assigns probabilities to sequences of production rules.
+These production rules were taken from Verible's grammar, which contains 456 productions meant to parse the [IEEE 1800-2017 standard](https://ieeexplore.ieee.org/document/8299595).
+
 ChiGen enables conditional dependencies between rule applications, allowing the probability of a given rule to depend on previously selected *K* rules (a K-gram), resulting in "sequence-aware" probabilities.
 We limit the probability context *K* - the chain of production rules associated with a probability - to six productions, as each additional context introduces a potentially exponential increase in the table of probabilities.
 To construct the PCFG, ChiGen parses a training set of Verilog designs.
@@ -93,9 +94,10 @@ In Li *et al.*'s original code injection method, a new program $P$ is built by c
   <img alt="Module Injection" src="../images/inject_module.png" width="80%" height="auto"/></br>
 </p>
 
-Following Li *et al.*'s approach, we use the reaching definition data-flow analysis to determine where and how to inject modules into the accumulated program $P$. Reaching definition associates each program point $p \in P$ with the set of variables that reach $p$. A variable $v$ reaches a program point $p$ if the program $P$ contains a path from the definition of $v$ until the point $p$, and $v$ is not redefined along this path.
+Following Li *et al.*'s approach, we use the [reaching definition data-flow analysis](https://en.wikipedia.org/wiki/Reaching_definition) to determine where and how to inject modules into the accumulated program $P$. Reaching definition associates each program point $p \in P$ with the set of variables that reach $p$. A variable $v$ reaches a program point $p$ if the program $P$ contains a path from the definition of $v$ until the point $p$, and $v$ is not redefined along this path.
 We can inject a module $M$ at a program point $p \in P$ if, and only if, for each input (respectively, output) parameter $a$ of $M$, there is an input (respectively, output) variable $v$ of equivalent type reaching $p$. When there are multiple such variables, we pick any of them randomly. Our module injection procedure prevents cycles in the final call graph by removing a module from the list of available modules once it is injected, as shown on Line 06 of Figure 5.
-One last observation about module injection refers to the fact that we can, at any given time, pick a primitive Verilog primitive gate (`or`, `and`, `xor`, etc) instead of a module in `mod_set` to inject.
+
+One last observation about module injection refers to the fact that we can, at any given time, pick a primitive Verilog gate (`or`, `and`, `xor`, etc) instead of a module in `mod_set` to inject.
 The function `pick_compatible_module_primitive_gate` in Line 07 chooses a primitive gate, or a module, based on the probabilities found in the training set used to build the probabilistic grammar.
 Notice that primitive gates are not part of `mod_set`, since they are defined in Verilog language; hence, are never removed from the pool of modules available for injection.
 
