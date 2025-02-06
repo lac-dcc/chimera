@@ -23,6 +23,7 @@ class IdentifierRenamingVisitor : public Visitor<void> {
 public:
   enum ContextType {
     EXPR = 0,
+    CONSTANT_EXPR,
     DECL,
     DECL_CONSTANT,
     MODULE,
@@ -110,8 +111,11 @@ public:
   virtual void visit(Udp_port_decls *node) override;
 
   virtual void visit(Label_opt *node) override;
+
   virtual void visit(Function_declaration *node) override;
 
   virtual void visit(Any_param_declaration *node) override;
+
+  virtual void visit(Parameter_expr *node) override;
 };
 #endif
