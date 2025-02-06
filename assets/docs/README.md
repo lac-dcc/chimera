@@ -53,7 +53,7 @@ This process terminates, as eventually terminals, or the empty string, are produ
 
 
 **Code base:** The implementation of Chimera's abstract syntax tree is located in [AST.cpp](https://github.com/lac-dcc/chimera/blob/main/src/AST.cpp).
-However, the scripts for training the grammar are not implemented in C++; rather, they are mostly written in Python. For an example, take a look into [count_tokens_and_productions.py](https://github.com/lac-dcc/chimera/blob/main/scripts/count_tokens_and_productions.py).
+However, the scripts for training the grammar are not implemented in C++; rather, they are mostly written in Python. For an example, take a look into [count_productions.py](https://github.com/lac-dcc/chimera/blob/main/scripts/count_productions.py).
 
 ## Variable Renaming and Scope Creation
 
