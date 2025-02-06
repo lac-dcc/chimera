@@ -15,7 +15,7 @@ The probabilities associated with production rules can be trained over any numbe
 These different modules are invoked at the main function, located in [Chimera.cpp](https://github.com/lac-dcc/chimera/blob/main/src/Chimera.cpp).
 
 <p align="center">
-  <img alt="Overview of ChiGen" src="./assets/images/ChiGenOvf.png" width="80%" height="auto"/></br>
+  <img alt="Overview of ChiGen" src="../images/ChiGenOvf.png" width="80%" height="auto"/></br>
 </p>
 
 ## Syntax Generation via Probabilistic Grammars
@@ -35,7 +35,7 @@ The example in Figure 2 (b) considers contexts of depth one; that is, it can "re
 As an illustration, the chance of increasing a list of declarations decreases, if we know that this list has already one element, as very long chains of declarations are uncommon.
 
 <p align="center">
-  <img alt="Probabilistic Grammar" src="./assets/images/probabilisticGrammar.png" width="80%" height="auto"/></br>
+  <img alt="Probabilistic Grammar" src="../images/probabilisticGrammar.png" width="80%" height="auto"/></br>
 </p>
 
 **Example 2:**
@@ -48,7 +48,7 @@ The choice of which production is activated depends on the probabilities associa
 This process terminates, as eventually terminals, or the empty string, are produced.
 
 <p align="center">
-  <img alt="The Verilog Skeleton" src="./assets/images/VerilogSkeleton.png" width="80%" height="auto"/></br>
+  <img alt="The Verilog Skeleton" src="../images/VerilogSkeleton.png" width="80%" height="auto"/></br>
 </p>
 
 
@@ -76,7 +76,7 @@ In the subsequent phase of code generation, a "type inference engine" deduces th
 Figure 4 (a) shows the seven pairs of constraints generated for the design in Figure 3. These pairs are produced by visiting the abstract syntax tree that describes the skeleton code. For instance, the pair $(\mathtt{id\_1}, \mathtt{id\_6})$ is produced because of the assignment `always id_6 = id_1` present in the skeleton. This pair indicates that the type of these two identifiers must be the same. The result of unifying all the pairs appears in Figure 4 (b), where the type placeholders have been replaced with actual type names in this updated version of our running example.
 
 <p align="center">
-  <img alt="The Type Inference Engine" src="./assets/images/typeInference.png" width="80%" height="auto"/></br>
+  <img alt="The Type Inference Engine" src="../images/typeInference.png" width="80%" height="auto"/></br>
 </p>
 
 Some Verilog skeletons cannot undergo type inference successfully. Type inference may fail if constraints require the unification of two incompatible primitive types, if insufficient constraints are available to determine the type of a variable and we use `wire` as the default type for those cases. When type inference fails, the skeleton is discarded, and the random seed that produced it is used as input to generate a new seed. The failure rate is influenced by the probabilistic grammar used. Most of the grammars in our [JSON](https://github.com/lac-dcc/chimera/tree/main/json) folder will yield a success rate above 70%.
@@ -90,7 +90,7 @@ Figure 5 illustrates our module injection process.
 In Li *et al.*'s original code injection method, a new program $P$ is built by combining two existing programs, $P_0$ and $P_1$, from a real-world project. In contrast, we perform module injection interactively: as shown in Figure 5, we start with an empty design $P$ and continue adding new modules to it until it reaches a preset token count, $T$.
 
 <p align="center">
-  <img alt="Module Injection" src="./assets/images/inject_module.png" width="80%" height="auto"/></br>
+  <img alt="Module Injection" src="../images/inject_module.png" width="80%" height="auto"/></br>
 </p>
 
 Following Li *et al.*'s approach, we use the reaching definition data-flow analysis to determine where and how to inject modules into the accumulated program $P$. Reaching definition associates each program point $p \in P$ with the set of variables that reach $p$. A variable $v$ reaches a program point $p$ if the program $P$ contains a path from the definition of $v$ until the point $p$, and $v$ is not redefined along this path.
@@ -106,7 +106,7 @@ These variables are compatible with the signature of `module_1`, which is part o
 Hence, an instantiation of `module_1` is inserted at Line 11 of `module_0`.
 
 <p align="center">
-  <img alt="Example of a design after module injection" src="./assets/images/moduleInjectin.png" width="80%" height="auto"/></br>
+  <img alt="Example of a design after module injection" src="../images/moduleInjectin.png" width="80%" height="auto"/></br>
 </p>
 
 
