@@ -1,6 +1,7 @@
 #include "AST.h"
 #include "CodeGenVisitor.h"
 #include "ConstantsReplacerVisitor.h"
+#include "DOTGenVisitor.h"
 #include "Functions.h"
 #include "IdentifierRenamingVisitor.h"
 #include "ReachingDefs.h"
@@ -583,16 +584,23 @@ static void dumpSyntaxTree(Node *head) {
   std::cerr << "\n";
 }
 
+static void writeSyntaxTreeToDOT(Node *head, const std::string &fileName) {
+  DOTGenVisitor visitor;
+  visitor.visit(head);
+  visitor.writeToFile(fileName);
+}
+
 static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   // clang-format off
   cxxopts::Options options("Chimera", "Generates SystemVerilog Programs based on a json file of probabilities.");
-  options.positional_help("<file> <n-value>");
-  
+  options.positional_help("<file> <n-value> [options]");
+
   options.add_options()
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
     ("t,target-size", "Target size for the generated programs", cxxopts::value<int>()->default_value("100"))
     ("p,printtree", "Prints productions chains.")
+    ("visualisetree", "Generates a DOT file with the syntax tree.")
     ("printseed", "Prints the randomization seed.")
     ("printcfg","Generates call graph dot file.")
     ("d,debug", "Prints debug messages.")
@@ -630,6 +638,11 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
 
   if (flags["n-value"].as<int>() < 0) {
     std::cerr << "'n' must be greater than 0." << std::endl;
+    exit(1);
+  }
+
+  if(!flags.count("visualisetree")) {
+    std::cerr << "Visualise tree missing." << std::endl;
     exit(1);
   }
 
@@ -1457,9 +1470,13 @@ int main(int argc, char **argv) {
     }
   }
 
+  std::cout << "Vistree: " << flags.count("visualisetree") << std::endl;
+  
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
       dumpSyntaxTree(m->moduleHead.get());
+    if(flags.count("visualisetree"))
+      writeSyntaxTreeToDOT(m->moduleHead.get(), m->moduleName->getElement() + ".dot");
     codeGen(m->moduleHead.get());
     std::cout << std::endl;
   }
