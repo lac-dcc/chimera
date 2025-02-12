@@ -1335,18 +1335,21 @@ int main(int argc, char **argv) {
 
             if (!m2->isSelected) { // If not in usedModules rename and add it
               m2->isSelected = true;
-              m2->moduleName->setElement("module_" +
+              m2->moduleName->setElement("exa_m2_module_" +
                                          std::to_string(usedModules.size()));
 
+	      std::cout<<"Node n"<<usedModules.size()<<"[name="<<m2->moduleName->getElement()<<"]"<<std::endl;
               usedModules.push_back(m2);
             }
             std::string callName = "modCall_" + std::to_string(callCounter);
             callModule(pp, m2->moduleName->getElement(), chosenIds, callName);
 
             if (!m->isSelected) {
-              m->moduleName->setElement("module_" +
+              m->moduleName->setElement("exa_m_module_" +
                                         std::to_string(usedModules.size()));
+	      std::cout<<"Node n"<<usedModules.size()<<"[name="<<m->moduleName->getElement()<<"]"<<std::endl;
             }
+	      std::cout<<"[LINK1] "<<m->moduleName->getElement()<<" -> "<<m2->moduleName->getElement()<<" name = [ "<<callName<<" ]"<<std::endl;
 
             // adds hierarchical reference
             if (rand() % 2 == 0 &&
@@ -1364,10 +1367,12 @@ int main(int argc, char **argv) {
                        counter < m2It->first.size());
 
               auto val = getDefaultValue(m2It->second);
-              if (!val.empty())
+              if (!val.empty()){
+		    std::cout<<"[LINK2] "<<m->moduleName->getElement()<<" -> "<<m2->moduleName->getElement()<<" name = [ "<<callName<<" ]"<<std::endl;
                 hierarchicalReference(pp.programPoint->getParent(),
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
+	      }
             } else if (!m->idToType.empty() && !m2->idToType.empty()) {
               if (m->idToType.size() > 0) {
                 std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
@@ -1389,6 +1394,7 @@ int main(int argc, char **argv) {
                       m2->programPoints[rand() % m2->programPoints.size()];
 
                   if (!val.empty()) {
+		    std::cout<<"[LINK3] "<<m2->moduleName->getElement()<<" -> "<<m->moduleName->getElement()<<" name = [ "<<" "<<m->moduleName->getElement()<<" ]"<<std::endl;
                     hierarchicalReference(
                         pp2.programPoint->getParent(), getPosFromPP(pp2) + 1,
                         id_call, val, pp2.scope, m->moduleName->getElement());
