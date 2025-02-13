@@ -593,7 +593,7 @@ static void writeSyntaxTreeToDOT(Node *head, const std::string &fileName) {
 static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   // clang-format off
   cxxopts::Options options("Chimera", "Generates SystemVerilog Programs based on a json file of probabilities.");
-  options.positional_help("<file> <n-value> [options]");
+  options.positional_help("[options] <file> <n-value>");
 
   options.add_options()
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
