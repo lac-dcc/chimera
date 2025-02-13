@@ -641,11 +641,6 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     exit(1);
   }
 
-  if(!flags.count("visualisetree")) {
-    std::cerr << "Visualise tree missing." << std::endl;
-    exit(1);
-  }
-
   return flags;
 }
 PortDir currentDir = PortDir::INPUT;
@@ -1470,8 +1465,6 @@ int main(int argc, char **argv) {
     }
   }
 
-  std::cout << "Vistree: " << flags.count("visualisetree") << std::endl;
-  
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
       dumpSyntaxTree(m->moduleHead.get());
