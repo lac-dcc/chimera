@@ -587,13 +587,14 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
   // clang-format off
   cxxopts::Options options("Chimera", "Generates SystemVerilog Programs based on a json file of probabilities.");
   options.positional_help("<file> <n-value>");
-
+  
   options.add_options()
     ("file", "JSON file with n-gram probabilities", cxxopts::value<std::string>())
     ("n-value", "Number of n-grams to be used", cxxopts::value<int>()->default_value("1"))
     ("t,target-size", "Target size for the generated programs", cxxopts::value<int>()->default_value("100"))
     ("p,printtree", "Prints productions chains.")
     ("printseed", "Prints the randomization seed.")
+    ("printcfg","Generates call graph dot file.")
     ("d,debug", "Prints debug messages.")
     //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
@@ -1245,9 +1246,13 @@ int main(int argc, char **argv) {
 
   bool printSeed = flags.count("printseed") != 0;
   bool verbose = flags.count("verbose") != 0;
+  bool pcfg = flags.count("printcfg") != 0;
 
+  std::ostringstream dotcfg;
+  if (pcfg) {
+    dotcfg << "digraph {\n label=\"Generated verilog cfg\" \n";
+  }
   std::ifstream f(flags["file"].as<std::string>());
-
   std::string json_str((std::istreambuf_iterator<char>(f)),
                        std::istreambuf_iterator<char>());
   json data = json::parse(json_str);
@@ -1337,7 +1342,10 @@ int main(int argc, char **argv) {
               m2->isSelected = true;
               m2->moduleName->setElement("module_" +
                                          std::to_string(usedModules.size()));
-
+              if (pcfg)
+                dotcfg << m2->moduleName->getElement()
+                       << "[ label = " << m2->moduleName->getElement() << "]"
+                       << std::endl;
               usedModules.push_back(m2);
             }
             std::string callName = "modCall_" + std::to_string(callCounter);
@@ -1346,7 +1354,14 @@ int main(int argc, char **argv) {
             if (!m->isSelected) {
               m->moduleName->setElement("module_" +
                                         std::to_string(usedModules.size()));
+              if (pcfg)
+                dotcfg << m->moduleName->getElement()
+                       << "[label =" << m->moduleName->getElement() << "]\n";
             }
+            if (pcfg)
+              dotcfg << m->moduleName->getElement() << " -> "
+                     << m2->moduleName->getElement() << "[label =  " << callName
+                     << " ]\n";
 
             // adds hierarchical reference
             if (rand() % 2 == 0 &&
@@ -1364,10 +1379,11 @@ int main(int argc, char **argv) {
                        counter < m2It->first.size());
 
               auto val = getDefaultValue(m2It->second);
-              if (!val.empty())
+              if (!val.empty()) {
                 hierarchicalReference(pp.programPoint->getParent(),
                                       getPosFromPP(pp) + 2, id, val, pp.scope,
                                       callName);
+              }
             } else if (!m->idToType.empty() && !m2->idToType.empty()) {
               if (m->idToType.size() > 0) {
                 std::unordered_map<std::string, CanonicalTypes>::iterator mIt;
@@ -1389,6 +1405,11 @@ int main(int argc, char **argv) {
                       m2->programPoints[rand() % m2->programPoints.size()];
 
                   if (!val.empty()) {
+                    if (pcfg)
+                      dotcfg << m2->moduleName->getElement() << " -> "
+                             << m->moduleName->getElement()
+                             << "[ label = " << " "
+                             << m->moduleName->getElement() << " ]\n";
                     hierarchicalReference(
                         pp2.programPoint->getParent(), getPosFromPP(pp2) + 1,
                         id_call, val, pp2.scope, m->moduleName->getElement());
@@ -1425,6 +1446,16 @@ int main(int argc, char **argv) {
 
   addPrimitiveFunctionCalls(usedModules);
   formatandCallCustomFunctions(usedModules);
+  if (pcfg) {
+    dotcfg << "}\n";
+    std::ofstream dotfile("chimera.cfg.dot", std::ios::trunc);
+    if (!dotfile) {
+      std::cerr << "can't open output file" << std::endl;
+    } else {
+      dotfile << dotcfg.str();
+      dotfile.close();
+    }
+  }
 
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
