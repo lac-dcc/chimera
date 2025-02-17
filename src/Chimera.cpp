@@ -188,6 +188,9 @@ static int renameVars(
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
   IdentifierRenamingVisitor visitor(modID, declMap, directionMap);
   visitor.applyVisit(head);
+  if (visitor.to_define.size() > 0) {
+    return -1;
+  }
   return visitor.varID;
 }
 
@@ -824,6 +827,11 @@ static void generateModules(
     // Rename SymbolIdentifier placeholders
     int lastID = renameVars(m, modID++, declMap, directionMap);
 
+    // Discard programs that use variables not declared
+    if (lastID == -1) {
+      isCorrect = false;
+    }
+
     // Replace real generated types for placeholders
     // Prepares for type inference
     replaceTypes(m, lastID);
@@ -832,7 +840,7 @@ static void generateModules(
     std::unordered_map<std::string, CanonicalTypes>
         idToType; // maps an id to its inferred type
 
-    isCorrect = inferTypes(m, idToType);
+    isCorrect = inferTypes(m, idToType) && isCorrect;
 
     if (isCorrect) {
       // Removes not replaced gate types
