@@ -80,6 +80,7 @@ We have found various bugs in open-source platforms with programs from ChiBench 
 |   [5312](https://github.com/verilator/verilator/issues/5312)  |  [Verilator](https://github.com/verilator/verilator) |     Crashes when calling a function created in "generate" block.        |
 |   [1174](https://github.com/steveicarus/iverilog/issues/1174) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Crashes when assigning to parameters in a procedural block. | 
 |   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
+|   [2359](https://github.com/chipsalliance/verible/issues/2359) | [Verible's parser](https://github.com/chipsalliance/verible/blob/master/verilog/tools/formatter/README.md) | Fails to parse input. |
 
 ## Technical Report
 
