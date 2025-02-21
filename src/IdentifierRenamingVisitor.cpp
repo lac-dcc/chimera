@@ -521,3 +521,11 @@ void IdentifierRenamingVisitor::visit(Parameter_expr *node) {
   }
   finishIDContext();
 }
+
+void IdentifierRenamingVisitor::visit(Parameter_override *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}

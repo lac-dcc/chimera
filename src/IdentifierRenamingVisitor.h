@@ -118,5 +118,7 @@ public:
   virtual void visit(Any_param_declaration *node) override;
 
   virtual void visit(Parameter_expr *node) override;
+
+  virtual void visit(Parameter_override *node) override;
 };
 #endif
