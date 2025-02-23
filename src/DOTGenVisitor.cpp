@@ -11,7 +11,7 @@ DotNode DOTGenVisitor::visit(Node *node) {
     auto nodeName = this->generateNodeName();
     DotNode dotNode;
     dotNode.name = nodeName;
-    dotNode.label = node->getElement();
+    dotNode.label = (node->getElement().length() == 0 ? "_empty" : node->getElement());
     this->terminals.push_back(dotNode);
     return dotNode;
   } else {
