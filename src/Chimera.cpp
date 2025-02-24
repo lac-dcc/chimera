@@ -281,7 +281,7 @@ static bool matchNonAnsiPorts(
         break;
       }
 
-      auto childId = std::make_unique<Terminal>(id);
+      auto childId = std::make_unique<Symbolidentifier>(id);
       dir_map[id] = childId.get();
 
       auto childDir = std::make_unique<Terminal>(dir);
