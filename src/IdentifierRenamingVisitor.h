@@ -33,13 +33,14 @@ public:
     ASSIGNMENT
   };
 
+  std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
+
 private:
   std::string defId = "";
   std::string defType = "";
 
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared
-  std::vector<std::shared_ptr<Var>> to_define;   // vars used but not declared
   std::stack<std::size_t> scopeLimit;
   bool isStartingToken(std::string t);
   bool isFinishingToken(std::string t);
@@ -117,5 +118,7 @@ public:
   virtual void visit(Any_param_declaration *node) override;
 
   virtual void visit(Parameter_expr *node) override;
+
+  virtual void visit(Parameter_override *node) override;
 };
 #endif
