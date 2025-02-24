@@ -1407,9 +1407,8 @@ int main(int argc, char **argv) {
                   if (!val.empty()) {
                     if (pcfg)
                       dotcfg << m2->moduleName->getElement() << " -> "
-                             << m->moduleName->getElement()
-                             << "[ label = " << " "
-                             << m->moduleName->getElement() << " ]\n";
+                             << m->moduleName->getElement() << "[ label = "
+                             << " " << m->moduleName->getElement() << " ]\n";
                     hierarchicalReference(
                         pp2.programPoint->getParent(), getPosFromPP(pp2) + 1,
                         id_call, val, pp2.scope, m->moduleName->getElement());
