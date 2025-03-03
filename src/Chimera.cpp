@@ -90,6 +90,27 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
   return it->second(std::move(element));
 }
 
+bool is_first_netassign = false;
+bool is_first_netvariable = false;
+
+static void isnetdecl(std::vector<std::string> &prods) {
+  if (prods[0] == "net_variable") {
+    if (is_first_netassign == 0) {
+      is_first_netvariable = true;
+    } else {
+      prods.clear();
+      prods.push_back("net_decl_assign");
+    }
+  } else if (prods[0] == "net_decl_assign") {
+    if (is_first_netvariable == 0) {
+      is_first_netassign = true;
+    } else {
+      prods.clear();
+      prods.push_back("net_variable");
+    }
+  }
+}
+
 static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
@@ -108,6 +129,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     std::string context = getNodeContext(curr, n);
     auto prods = chooseProds(map, context, gen);
 
+    isnetdecl(prods);
     std::vector<std::unique_ptr<Node>> children;
     context = getNodeContext(curr, n - 1);
     if (!context.empty())
