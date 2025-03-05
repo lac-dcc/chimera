@@ -2559,15 +2559,15 @@ constraintSet TypeInferenceVisitor::visit(Udp_output_sym *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Assignment_statement_no_expr *node,
-                                          typeId) {
+                                          typeId type) {
   const auto &children = node->getChildren();
   auto t = this->freshType();
 
   if (children.size() == 1) {
-    return applyVisit(children[0].get(), t);
+    return applyVisit(children[0].get(), type);
   } else {
 
-    auto constraintsLpValue = applyVisit(children[0].get(), t);
+    auto constraintsLpValue = applyVisit(children[0].get(), type);
     auto constraintsExpression = applyVisit(children[2].get(), t);
     constraintsLpValue.insert(constraintsExpression.begin(),
                               constraintsExpression.end());
@@ -2776,7 +2776,8 @@ constraintSet TypeInferenceVisitor::visit(Trailing_decl_assignment *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Always_construct *node, typeId type) {
+constraintSet TypeInferenceVisitor::visit(Always_construct *node, typeId) {
+  auto type = static_cast<typeId>(CanonicalTypes::REG);
   return defaultVisitor(node, type);
 }
 
