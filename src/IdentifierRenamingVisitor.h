@@ -30,7 +30,7 @@ public:
     DEFINING_ID,
     DEFINING_TYPE,
     TYPE_DECL,
-    ASSIGNMENT
+    ASSIGNMENT,
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
@@ -120,5 +120,7 @@ public:
   virtual void visit(Parameter_expr *node) override;
 
   virtual void visit(Parameter_override *node) override;
+
+  virtual void visit(Expression_in_parens *node) override;
 };
 #endif
