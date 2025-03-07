@@ -602,7 +602,7 @@
     "\"event\"": 21,
     "\"string\"": 75,
     "enum_data_type": 36,
-    "struct_data_type": 29
+    "struct_data_type": 2900
   },
   "signed_unsigned_opt": {
     "%empty": 74857,
