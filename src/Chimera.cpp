@@ -168,9 +168,9 @@ static std::unique_ptr<Node> buildSyntaxTree(
 
 static void findModulePorts(Node *head, std::vector<Node *> &modules,
                             std::vector<Node *> &portDeclarations) {
-  if (head->getElement() == "module_or_interface_declaration") {
+  if (head->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
     modules.push_back(head);
-  } else if (head->getElement() == "module_port_declaration") {
+  } else if (head->type == NodeType::MODULE_PORT_DECLARATION) {
     portDeclarations.push_back(head);
   }
 
@@ -219,7 +219,7 @@ static int renameVars(
 
 static bool isAnsi(Node *head) {
   bool ansi = false;
-  if (head->getElement() == "list_of_ports_or_port_declarations_ansi")
+  if (head->type == NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_ANSI)
     ansi = true;
 
   for (int i = 0; i < (int)head->getChildren().size() && !ansi; i++) {
@@ -231,7 +231,7 @@ static bool isAnsi(Node *head) {
 static int countNumberPorts(Node *head) {
   int count = 0;
 
-  if (head->getElement() == "port_declaration_non_ansi")
+  if (head->type == NodeType::PORT_DECLARATION_NON_ANSI)
     count += 1;
 
   for (auto const &c : head->getChildren()) {
@@ -243,24 +243,24 @@ static int countNumberPorts(Node *head) {
 static int renameNonAnsiPorts(Node *head, int counter, int n,
                               std::unordered_map<std::string, Node *> &decl_map,
                               bool isdecl = false, bool isDimension = false) {
-  isdecl |= head->getElement() == "port_reference";
-  isDimension |= head->getElement() == "decl_dimensions_opt";
+  isdecl |= head->type == NodeType::PORT_REFERENCE;
+  isDimension |= head->type == NodeType::DECL_DIMENSIONS_OPT;
 
-  if ((head->getElement() == " SymbolIdentifier " ||
-       head->getElement() == " EscapedIdentifier " ||
-       head->getElement() == " KeywordIdentifier ") &&
+  if ((head->type == NodeType::SYMBOLIDENTIFIER ||
+       head->type == NodeType::ESCAPEDIDENTIFIER ||
+       head->type == NodeType::KEYWORDIDENTIFIER) &&
       counter == 0) {
     counter++;
 
   } else if (isdecl && !isDimension &&
-             (head->getElement() == " SymbolIdentifier " ||
-              head->getElement() == " EscapedIdentifier " ||
-              head->getElement() == " KeywordIdentifier ")) {
+             (head->type == NodeType::SYMBOLIDENTIFIER ||
+              head->type == NodeType::ESCAPEDIDENTIFIER ||
+              head->type == NodeType::KEYWORDIDENTIFIER)) {
     auto s = " id_" + std::to_string(counter) + " ";
     decl_map[s] = head;
     if (debug)
       std::cerr << "Renaming ID to " << s << std::endl;
-    head->setElement(std::move(s));
+    head->setElement(s);
 
     counter++;
   }
@@ -281,7 +281,7 @@ static bool matchNonAnsiPorts(
     std::vector<std::pair<std::string, PortDir>> &portList) {
   bool done = false;
 
-  if (head->getElement() == "module_item_list_opt") {
+  if (head->type == NodeType::MODULE_ITEM_LIST_OPT) {
     if (debug)
       std::cerr << "Matching non ansi ports" << std::endl;
 
@@ -360,11 +360,11 @@ static void declareNonAnsiPorts(
 }
 
 static void replaceTypes(Node *head, int &id) {
-  if (head->type == NodeType::DECL_VARIABLE_DIMENSION) {
+  /* if (head->type == NodeType::DECL_VARIABLE_DIMENSION) {
     head->clearChildren();
     head->insertChildToBegin(std::make_unique<Terminal>(""));
-  } else if (head->type ==
-             NodeType::INTEGER_VECTOR_TYPE) { // removes reg, logic ...
+  } else  */
+  if (head->type == NodeType::INTEGER_VECTOR_TYPE) { // removes reg, logic ...
     head->getChildren()[0]->setElement("type_" + std::to_string(id++));
   } else if (head->type == NodeType::UDP_PORT_DECL &&
              head->getChildren()[0]->getElement() == " reg ") {
@@ -393,7 +393,7 @@ static void replaceTypes(Node *head, int &id) {
 
 static Node *findParameterList(Node *moduleHead) {
   for (const auto &c : moduleHead->getChildren()) {
-    if (c->getElement() == "module_parameter_port_list_opt")
+    if (c->type == NodeType::MODULE_PARAMETER_PORT_LIST_OPT)
       return c.get();
   }
 
@@ -1497,8 +1497,9 @@ int main(int argc, char **argv) {
   for (const auto &m : usedModules) {
     if (flags.count("printtree"))
       dumpSyntaxTree(m->moduleHead.get());
-    if(flags.count("visualisetree"))
-      writeSyntaxTreeToDOT(m->moduleHead.get(), m->moduleName->getElement() + ".dot");
+    if (flags.count("visualisetree"))
+      writeSyntaxTreeToDOT(m->moduleHead.get(),
+                           m->moduleName->getElement() + ".dot");
     codeGen(m->moduleHead.get());
     std::cout << std::endl;
   }

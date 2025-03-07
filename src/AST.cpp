@@ -50,7 +50,7 @@ std::string Node::getElement() {
 }
 
 void Node::setElement(std::string element) {
-  this->element = std::move(element);
+  this->element = element;
 }
 
 Terminal::Terminal(std::string element) {

@@ -4,9 +4,9 @@
 #include "Visitor.h"
 
 class DotNode {
-  public:
-    std::string name;
-    std::string label;
+public:
+  std::string name;
+  std::string label;
 };
 
 /**
@@ -21,6 +21,7 @@ private:
 
   int nodeCounter = 0;
   std::string generateNodeName();
+
 public:
   virtual void writeToFile(const std::string &fileName);
   virtual std::string generateDOT();

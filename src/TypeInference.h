@@ -112,7 +112,7 @@ public:
    * @param t The type identifier.
    * @param id The string representation.
    */
-  void addToMap(typeId t, const std::string &id);
+  void addToMap(typeId t, const std::string id);
 
   /**
    * @brief Generates a fresh type identifier.

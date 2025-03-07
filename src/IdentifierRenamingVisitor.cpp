@@ -58,8 +58,25 @@ void IdentifierRenamingVisitor::finishScope() {
   }
 }
 
-Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
-  Var v;
+void IdentifierRenamingVisitor::defineStruct(std::shared_ptr<Var> var) {
+  for (auto &v : structIds) {
+    v->parent = var;
+    identifiers.push_back(v);
+  }
+
+  structIds.clear();
+}
+
+Var IdentifierRenamingVisitor::addId(std::string t, bool isEscaped) {
+
+  if (!contexts.empty() && contexts.top() == ContextType::DECL_STRUCT) {
+    getNextIdAsStructIdentifier = true;
+    auto id = std::make_shared<Var>(createNewID(t, isEscaped));
+
+    structIds.push_back(id);
+    return *id;
+  }
+
   for (auto c = this->to_define.begin(); c != to_define.end(); c++) {
 
     if ((*c).get()->name == t) {
@@ -70,6 +87,19 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
       return *(*c);
     }
   }
+  auto v = std::make_shared<Var>(createNewID(t, isEscaped));
+
+  if (getNextIdAsStructIdentifier) {
+    getNextIdAsStructIdentifier = false;
+    defineStruct(v);
+  }
+
+  identifiers.push_back(v);
+  return *v;
+}
+
+Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
+  Var v;
   if (t == "type") {
     v.name = "type_" + std::to_string(typeID++);
   } else if (t == "module") {
@@ -92,11 +122,9 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
   v.dir = PortDir::NONE;
 
   last_id_name_created = v.name;
+  v.parent = nullptr;
 
-  auto r = std::make_shared<Var>(v);
-  identifiers.push_back(r);
-
-  return *r.get();
+  return v;
 }
 
 void IdentifierRenamingVisitor::createIDContext(ContextType t, bool force) {
@@ -157,8 +185,20 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
            (*id)->name == last_id_name_created)) {
         continue;
       }
-
-      options.push_back((*id)->name);
+      std::stack<std::string> stackName;
+      auto curr = *id;
+      stackName.push(curr->name);
+      while (curr->parent) {
+        stackName.push(curr->parent->name);
+        curr = curr->parent;
+      }
+      std::string name = stackName.top();
+      stackName.pop();
+      while (!stackName.empty()) {
+        name += "." + stackName.top();
+        stackName.pop();
+      }
+      options.push_back(name);
     }
   }
 
@@ -169,7 +209,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   }
 
   if (options.empty()) {
-    auto id = createNewID(type);
+    auto id = addId(type);
     to_define.push_back(std::make_shared<Var>(id));
 
     return id.name;
@@ -190,7 +230,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
     }
 
     if (options[c] == defId || options[c] == defType) {
-      auto ne = createNewID(type);
+      auto ne = addId(type);
       to_define.push_back(std::make_shared<Var>(ne));
       return ne.name;
     }
@@ -208,27 +248,27 @@ std::string IdentifierRenamingVisitor::placeID(
     std::cerr << "Placing id" << std::endl;
 
   if (type == "PP") { // pre-processor TODO: map to enum
-    auto id = createNewID("PP");
+    auto id = addId("PP");
     auto name = id.name;
     name.erase(0, 2);
     return " " + name;
   }
 
   if (!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
-    return createNewID("type").name;
+    return addId("type").name;
 
   if (!contexts.empty() && contexts.top() == ContextType::MODULE) {
 
     contexts.pop();
     createIDContext(ContextType::DECL);
-    return createNewID("module").name;
+    return addId("module").name;
   }
-
   if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
-                            contexts.top() == ContextType::DECL_CONSTANT)) {
+                            contexts.top() == ContextType::DECL_CONSTANT ||
+                            contexts.top() == ContextType::DECL_STRUCT)) {
     std::string t;
 
-    auto id = createNewID(type, isEscaped);
+    auto id = addId(type, isEscaped);
 
     if (contexts.top() == ContextType::DECL_CONSTANT) {
       constant_names.insert(id.name);
@@ -524,6 +564,14 @@ void IdentifierRenamingVisitor::visit(Parameter_expr *node) {
 
 void IdentifierRenamingVisitor::visit(Parameter_override *node) {
   createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Struct_data_type *node) {
+  createIDContext(ContextType::DECL_STRUCT);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
