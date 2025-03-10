@@ -309,7 +309,9 @@ void IdentifierRenamingVisitor::visit(Expression *node) {
     this->applyVisit(child.get());
   }
 
-  finishIDContext();
+  if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
+    finishIDContext();
+  }
 }
 
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
@@ -523,6 +525,14 @@ void IdentifierRenamingVisitor::visit(Parameter_expr *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Parameter_override *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Expression_in_parens *node) {
   createIDContext(ContextType::CONSTANT_EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
