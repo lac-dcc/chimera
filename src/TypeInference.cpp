@@ -2168,7 +2168,6 @@ constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node, typeId type) {
 
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  auto t1 = static_cast<typeId>(CanonicalTypes::GATE);
 
   auto constraintsId = applyVisit(node->getChildren()[0].get(), type);
   auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
@@ -2176,11 +2175,6 @@ constraintSet TypeInferenceVisitor::visit(
     auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), type);
     constraintsId.insert(constraintsAssignment.begin(),
                          constraintsAssignment.end());
-  } else {
-    auto f = freshType();
-    auto portList = applyVisit(node->getChildren()[3].get(), f);
-    constraintsId.insert(portList.begin(), portList.end());
-    constraintsId.insert({{t1, type}});
   }
 
   constraintsId.insert(constraintsDimensions.begin(),

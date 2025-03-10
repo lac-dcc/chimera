@@ -90,8 +90,8 @@ static std::unique_ptr<Node> getNodeOrFail(const std::string &productionName,
   return it->second(std::move(element));
 }
 
-
-static void isnetdecl(std::vector<std::string> &prods,bool *is_first_netassign,bool *is_first_netvariable) {
+static void isnetdecl(std::vector<std::string> &prods, bool *is_first_netassign,
+                      bool *is_first_netvariable) {
   if (prods[0] == "net_variable") {
     if (*is_first_netassign == 0) {
       *is_first_netvariable = true;
@@ -113,9 +113,9 @@ static std::unique_ptr<Node> buildSyntaxTree(
     const std::unordered_map<std::string, std::unordered_map<std::string, int>>
         &map,
     const int n, std::mt19937 &gen) {
-	    
-	bool is_first_netassign = false;
-	bool is_first_netvariable = false;
+
+  bool is_first_netassign = false;
+  bool is_first_netvariable = false;
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
@@ -129,7 +129,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     std::string context = getNodeContext(curr, n);
     auto prods = chooseProds(map, context, gen);
 
-    isnetdecl(prods,&is_first_netassign,&is_first_netvariable);
+    isnetdecl(prods, &is_first_netassign, &is_first_netvariable);
     std::vector<std::unique_ptr<Node>> children;
     context = getNodeContext(curr, n - 1);
     if (!context.empty())
@@ -809,6 +809,23 @@ static void removeEmptyGateTypes(Node *head) {
     }
   }
 }
+
+static void removeIncorrectGates(Node *head) {
+  // Remove gates declarations from the generated module
+  if (head->type ==
+      NodeType::NON_ANONYMOUS_GATE_INSTANCE_OR_REGISTER_VARIABLE) {
+    if (head->getChildren()[2]->getElement() == " ( ") {
+      head->extractChild(head->getChildren()[2].get());
+      head->extractChild(head->getChildren()[2].get());
+      head->getChildren()[2]->setElement(" ; ");
+    }
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectGates(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -817,8 +834,9 @@ static void generateModules(
 
   head = buildSyntaxTree(map, n, gen);
 
-  std::vector<Node *> moduleHeads, portDeclarations;
+  removeIncorrectGates(head.get());
 
+  std::vector<Node *> moduleHeads, portDeclarations;
   findModulePorts(head.get(), moduleHeads, portDeclarations);
 
   removePortDeclarations(portDeclarations);
