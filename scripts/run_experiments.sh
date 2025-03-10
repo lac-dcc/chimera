@@ -1,7 +1,7 @@
 PATH_CHIMERA="../../build/Chimera"
 PATH_SCRIPTS="../../scripts/"
 PATH_JSON="../../json/"
-NAME_JSON="gram_size_test.json"
+NAME_JSON="gram_size_test_modified.json"
 TARGET_SIZE="100"
 
 mkdir generated_programs -p

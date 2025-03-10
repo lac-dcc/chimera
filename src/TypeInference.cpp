@@ -219,7 +219,7 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node *node, typeId type) {
   return d;
 }
 
-void TypeInferenceVisitor::addToMap(typeId t, const std::string &id) {
+void TypeInferenceVisitor::addToMap(typeId t, const std::string id) {
 
   this->typeIdToIdMap[t] = id;
   this->idToTypeIdMap[id] = t;
@@ -2215,7 +2215,10 @@ constraintSet TypeInferenceVisitor::visit(
 }
 
 constraintSet TypeInferenceVisitor::visit(Port_reference *node, typeId type) {
-  return defaultVisitor(node, type);
+  if (node->getChildren()[1]->getChildren()[0]->getChildren().empty())
+    return defaultVisitor(node, type);
+  else // is a vector
+    return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::VECTOR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Dist_opt *node, typeId type) {
@@ -2413,9 +2416,8 @@ constraintSet TypeInferenceVisitor::visit(Udp_port_decls *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Integer_vector_type *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Integer_vector_type *node, typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::LOGIC));
 }
 
 constraintSet TypeInferenceVisitor::visit(Assignment_pattern *node,
@@ -2744,7 +2746,7 @@ constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId) {
-  auto t = static_cast<typeId>(CanonicalTypes::VECTOR);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
   return defaultVisitor(node, t);
 }
 

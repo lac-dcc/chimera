@@ -13,6 +13,7 @@ struct Var {
   std::string name;
   std::string type;
   PortDir dir;
+  std::shared_ptr<struct Var> parent;
 };
 
 /**
@@ -25,6 +26,7 @@ public:
     EXPR = 0,
     CONSTANT_EXPR,
     DECL,
+    DECL_STRUCT,
     DECL_CONSTANT,
     MODULE,
     DEFINING_ID,
@@ -34,6 +36,9 @@ public:
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
+  std::vector<std::shared_ptr<Var>>
+      structIds; // temporary vector to store identifiers declared inside a
+                 // struct
 
 private:
   std::string defId = "";
@@ -42,10 +47,13 @@ private:
   std::stack<ContextType> contexts;
   std::vector<std::shared_ptr<Var>> identifiers; // vars declared
   std::stack<std::size_t> scopeLimit;
+  bool getNextIdAsStructIdentifier = false;
   bool isStartingToken(std::string t);
   bool isFinishingToken(std::string t);
   void startNewScope();
   void finishScope();
+  void defineStruct(std::shared_ptr<Var> var);
+  Var addId(std::string t, bool isEscaped = false);
   Var createNewID(std::string t, bool isEscaped = false);
   void createIDContext(ContextType t, bool force = false);
   void finishIDContext(bool force = false);
@@ -120,5 +128,7 @@ public:
   virtual void visit(Parameter_expr *node) override;
 
   virtual void visit(Parameter_override *node) override;
+
+  virtual void visit(Struct_data_type *node) override;
 };
 #endif
