@@ -488,8 +488,8 @@ void IdentifierRenamingVisitor::visit(Label_opt *node) {
     node->insertChildToEnd(std::make_unique<Terminal>(":"));
     auto label = std::make_unique<Symbol_or_label>("Symbol_or_label");
     auto genId = std::make_unique<Genericidentifier>("Genericidentifier");
-    genId->insertChildToEnd(
-        std::make_unique<Symbolidentifier>("LABEL_" + std::to_string(labelID)));
+    genId->insertChildToEnd(std::make_unique<Symbolidentifier>(
+        "LABEL_" + std::to_string(labelID++)));
 
     label->insertChildToEnd(std::move(genId));
 
