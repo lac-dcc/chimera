@@ -219,7 +219,7 @@ constraintSet TypeInferenceVisitor::defaultVisitor(Node *node, typeId type) {
   return d;
 }
 
-void TypeInferenceVisitor::addToMap(typeId t, const std::string &id) {
+void TypeInferenceVisitor::addToMap(typeId t, const std::string id) {
 
   this->typeIdToIdMap[t] = id;
   this->idToTypeIdMap[id] = t;
@@ -2168,7 +2168,6 @@ constraintSet TypeInferenceVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node, typeId type) {
 
   auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
-  auto t1 = static_cast<typeId>(CanonicalTypes::GATE);
 
   auto constraintsId = applyVisit(node->getChildren()[0].get(), type);
   auto constraintsDimensions = applyVisit(node->getChildren()[1].get(), t);
@@ -2176,11 +2175,6 @@ constraintSet TypeInferenceVisitor::visit(
     auto constraintsAssignment = applyVisit(node->getChildren()[2].get(), type);
     constraintsId.insert(constraintsAssignment.begin(),
                          constraintsAssignment.end());
-  } else {
-    auto f = freshType();
-    auto portList = applyVisit(node->getChildren()[3].get(), f);
-    constraintsId.insert(portList.begin(), portList.end());
-    constraintsId.insert({{t1, type}});
   }
 
   constraintsId.insert(constraintsDimensions.begin(),
@@ -2215,7 +2209,10 @@ constraintSet TypeInferenceVisitor::visit(
 }
 
 constraintSet TypeInferenceVisitor::visit(Port_reference *node, typeId type) {
-  return defaultVisitor(node, type);
+  if (node->getChildren()[1]->getChildren()[0]->getChildren().empty())
+    return defaultVisitor(node, type);
+  else // is a vector
+    return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::VECTOR));
 }
 
 constraintSet TypeInferenceVisitor::visit(Dist_opt *node, typeId type) {
@@ -2413,9 +2410,8 @@ constraintSet TypeInferenceVisitor::visit(Udp_port_decls *node, typeId type) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Integer_vector_type *node,
-                                          typeId type) {
-  return defaultVisitor(node, type);
+constraintSet TypeInferenceVisitor::visit(Integer_vector_type *node, typeId) {
+  return defaultVisitor(node, static_cast<typeId>(CanonicalTypes::LOGIC));
 }
 
 constraintSet TypeInferenceVisitor::visit(Assignment_pattern *node,
@@ -2744,7 +2740,7 @@ constraintSet TypeInferenceVisitor::visit(Defparam_assign *node, typeId) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Decl_dimensions *node, typeId) {
-  auto t = static_cast<typeId>(CanonicalTypes::VECTOR);
+  auto t = static_cast<typeId>(CanonicalTypes::SCALAR);
   return defaultVisitor(node, t);
 }
 

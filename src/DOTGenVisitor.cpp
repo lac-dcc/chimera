@@ -11,7 +11,8 @@ DotNode DOTGenVisitor::visit(Node *node) {
     auto nodeName = this->generateNodeName();
     DotNode dotNode;
     dotNode.name = nodeName;
-    dotNode.label = (node->getElement().empty() ? "_empty" : node->getElement());
+    dotNode.label =
+        (node->getElement().empty() ? "_empty" : node->getElement());
     this->terminals.push_back(dotNode);
     return dotNode;
   } else {
@@ -33,20 +34,24 @@ std::string DOTGenVisitor::generateDOT() {
   dotSrc += "\tnode [shape=circle];\n";
   dotSrc += "\tedge [color=\"#333333\"];\n\n";
 
-  if(!this->nonTerminals.empty()) {
+  if (!this->nonTerminals.empty()) {
     for (size_t i = 0; i < this->nonTerminals.size() - 1; i++) {
-        dotSrc += "\t" + this->nonTerminals[i].name + "[label=\"" + this->nonTerminals[i].label + "\"];\n";
+      dotSrc += "\t" + this->nonTerminals[i].name + "[label=\"" +
+                this->nonTerminals[i].label + "\"];\n";
     }
     auto lastIndex = this->nonTerminals.size() - 1;
-    dotSrc += "\t" + this->nonTerminals[lastIndex].name + "[label=\"" + this->nonTerminals[lastIndex].label + "\"];\n";
+    dotSrc += "\t" + this->nonTerminals[lastIndex].name + "[label=\"" +
+              this->nonTerminals[lastIndex].label + "\"];\n";
   }
 
-  if(!this->terminals.empty()) {
+  if (!this->terminals.empty()) {
     for (size_t i = 0; i < this->terminals.size() - 1; i++) {
-        dotSrc += "\t" + this->terminals[i].name + "[label=\"" + this->terminals[i].label + "\"];\n";
+      dotSrc += "\t" + this->terminals[i].name + "[label=\"" +
+                this->terminals[i].label + "\"];\n";
     }
     auto lastIndex = this->terminals.size() - 1;
-    dotSrc += "\t" + this->terminals[lastIndex].name + "[label=\"" + this->terminals[lastIndex].label + "\"];\n";
+    dotSrc += "\t" + this->terminals[lastIndex].name + "[label=\"" +
+              this->terminals[lastIndex].label + "\"];\n";
   }
 
   for (const std::string &edge : this->edges) {
@@ -58,10 +63,11 @@ std::string DOTGenVisitor::generateDOT() {
 
 void DOTGenVisitor::writeToFile(const std::string &fileName) {
   std::ofstream file(fileName);
-  if(file.is_open()) {
+  if (file.is_open()) {
     file << this->generateDOT();
     file.close();
   } else {
-    std::cerr << "Error: Unable to open file for writing DOT: " << fileName << std::endl;
+    std::cerr << "Error: Unable to open file for writing DOT: " << fileName
+              << std::endl;
   }
 }
