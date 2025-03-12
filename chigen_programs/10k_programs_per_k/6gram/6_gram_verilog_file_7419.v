@@ -1,39 +1,44 @@
-// Seed: 1210123276
-module module_0;
-  always @(id_1 or posedge 1) begin : LABEL_0
-    id_1 <= id_1;
-    if (id_1) begin : LABEL_0
-      id_1 = 1;
+// Seed: 1821190883
+module module_0 (
+    input supply0 id_0,
+    input wire id_1,
+    input wor id_2
+);
+  supply1 id_4;
+  bit id_5;
+  ;
+  assign id_4 = 1'b0 - id_5 - id_5;
+  generate
+    for (id_6 = -1 - id_6; id_0; id_5 = -1) begin : LABEL_0
+      logic id_7 = 1;
     end
-  end
-  assign module_3.id_2 = 0;
+  endgenerate
 endmodule
-module module_1 (
-    output supply1 id_0,
-    input wor id_1,
-    output tri1 id_2
+module module_1 #(
+    parameter id_2 = 32'd44
+) (
+    output supply0 id_0,
+    output wand id_1,
+    input tri _id_2,
+    input wand id_3,
+    output tri1 id_4,
+    output uwire id_5,
+    input supply0 id_6,
+    output uwire id_7
 );
-  wire id_4;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-endmodule
-module module_2 (
-    input  wor   id_0,
-    inout  tri   id_1,
-    input  wand  id_2,
-    output uwire id_3
-);
-  wire id_5;
-  nor primCall (id_1, id_2, id_5);
-  module_0 modCall_1 ();
-endmodule
-module module_3 (
-    output tri id_0,
-    output wire id_1,
-    input uwire id_2,
-    output supply1 id_3,
-    output tri id_4
-);
-  wire id_6;
-  module_0 modCall_1 ();
+  logic id_9;
+  module_0 modCall_1 (
+      id_3,
+      id_6,
+      id_6
+  );
+  assign modCall_1.id_4 = 0;
+  assign id_0 = id_3;
+  logic id_10;
+  assign id_0 = id_9;
+  wire id_11;
+  wire [id_2 : 1] id_12;
+  logic id_13;
+  ;
+  assign id_7 = id_9;
 endmodule

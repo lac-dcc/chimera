@@ -1,27 +1,34 @@
-// Seed: 1798186175
-module module_0;
-  for (id_1 = 1; 1; id_1 = 1) assign id_1 = 1;
-endmodule
-module module_1 ();
-  reg id_1 = 1;
-  reg id_3;
-  tri id_4 = 1'b0;
-  assign id_2 = 1;
-  reg id_5;
-  reg id_6 = {id_3{id_5}};
+// Seed: 3807075203
+module module_0 #(
+    parameter id_5 = 32'd87
+) (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  logic id_4;
+  wire  _id_5 = id_3;
   assign id_2 = id_1;
-  id_7(
-      1, id_1, 1'd0 - 1, id_5
+  logic id_6[-1 : 1] = "";
+  assign id_4[id_5] = 1;
+  assign module_1.id_1 = 0;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd15,
+    parameter id_1 = 32'd70
+) (
+    input  tri1 _id_0[id_0 : -1 'd0 -  id_0],
+    input  tri0 _id_1,
+    output wor  id_2
+);
+  logic [7:0][-1][id_1 : -1] id_4;
+  ;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4
   );
-  wire id_8;
-  wire id_9;
-  wire id_10 = id_8;
-  initial
-    do begin : LABEL_0
-      begin : LABEL_0
-        force id_5 = id_2;
-      end
-    end while (1);
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
 endmodule

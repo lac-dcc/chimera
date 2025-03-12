@@ -1,13 +1,28 @@
-// Seed: 3948783560
-module module_0 ();
-  wire id_1;
+// Seed: 2514738478
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output logic [7:0] id_1;
+  always @(1 or negedge id_4) begin : LABEL_0
+    $clog2(28);
+    ;
+    id_1[1|1!=-1] <= 1;
+  end
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_5 = 32'd77
+) (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
+    _id_5,
     id_6,
     id_7,
     id_8,
@@ -23,28 +38,32 @@ module module_1 (
     id_18,
     id_19
 );
-  inout wire id_19;
-  input wire id_18;
-  output wire id_17;
-  output wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  inout wire id_13;
-  output wire id_12;
-  inout wire id_11;
-  input wire id_10;
+  output wire id_19;
+  inout logic [7:0] id_18;
+  module_0 modCall_1 (
+      id_1,
+      id_19,
+      id_3,
+      id_3
+  );
+  input wire id_17;
+  inout wire id_16;
+  output wire id_15;
+  output wire id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  inout wire id_10;
   output wire id_9;
-  output wire id_8;
-  inout wire id_7;
-  input wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_20;
-  always @(1'b0 or posedge 1 & id_13) begin : LABEL_0
-    id_4 = 1 + 1;
-  end
-  module_0 modCall_1 ();
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire _id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout logic [7:0] id_1;
+  assign id_18[1!=id_5] = id_2;
+  localparam id_20 = "";
+  assign id_1[-1] = id_8;
 endmodule

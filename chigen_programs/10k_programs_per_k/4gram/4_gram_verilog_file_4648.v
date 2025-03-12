@@ -1,83 +1,38 @@
-// Seed: 1115567040
+// Seed: 2576362116
 module module_0 (
-    output tri id_0,
-    input uwire id_1,
-    input supply1 id_2,
-    output supply1 id_3,
-    output wand id_4,
-    output wire id_5,
-    input uwire id_6,
-    output tri1 id_7,
-    input wand id_8,
-    input uwire id_9,
-    input wand id_10,
-    output tri1 id_11
-    , id_25,
-    input tri1 id_12,
-    output supply0 id_13,
-    input uwire id_14,
-    output wand id_15,
-    output tri1 id_16,
-    input tri1 id_17,
-    input supply0 id_18,
-    input supply1 id_19,
-    output wire id_20,
-    output supply1 id_21,
-    input supply0 id_22,
-    input wor id_23
+    output supply0 id_0,
+    input tri1 id_1,
+    input wor id_2,
+    input tri0 id_3,
+    input wand id_4
+    , id_7,
+    input wire id_5
 );
-  always
-  fork : SymbolIdentifier
-  join
+  wire id_8;
+  assign module_1.id_7 = 0;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    output tri1 id_1,
-    output tri0 id_2,
-    output tri id_3,
-    input tri0 id_4,
-    input wand id_5,
-    input tri0 id_6,
-    input tri1 id_7,
-    input logic id_8,
-    output logic id_9,
-    output wire id_10,
-    input tri1 id_11,
-    inout tri0 id_12
+    input wire id_0,
+    input supply0 id_1,
+    output supply0 id_2
 );
-  always @*
-    if (1) begin : LABEL_0
-      id_9 <= id_8;
-    end
+  wire [-1 : -1] id_4;
+  wand [ 1 : -1] id_5;
+  final $unsigned(95);
+  ;
+  assign id_4 = id_1;
+  bit id_6;
   module_0 modCall_1 (
       id_2,
-      id_5,
-      id_6,
-      id_3,
-      id_2,
-      id_12,
-      id_7,
-      id_12,
-      id_6,
-      id_5,
-      id_5,
-      id_10,
-      id_6,
-      id_2,
-      id_5,
-      id_12,
-      id_1,
-      id_7,
-      id_7,
-      id_4,
-      id_12,
+      id_0,
+      id_0,
       id_1,
       id_0,
-      id_0
+      id_1
   );
-  assign modCall_1.type_1 = 0;
-  id_14(
-      .id_0(!id_4), .id_1(""), .id_2(id_2), .id_3(id_7++)
-  );
-  always_comb @(id_8 or posedge 1 + id_12 or 1);
+  for (id_7 = -1; -1; id_6 = -1) begin : LABEL_0
+    wire id_8;
+    assign id_5 = -1;
+  end
+  assign id_6 = ~id_1;
 endmodule

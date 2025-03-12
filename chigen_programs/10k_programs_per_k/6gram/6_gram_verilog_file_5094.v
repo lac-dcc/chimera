@@ -1,53 +1,53 @@
-// Seed: 1097463880
-module module_0;
-  assign module_1.id_2 = 0;
-  wire id_1;
-  assign module_2.type_9 = 0;
-  id_2(
-      id_1, id_1
-  );
+// Seed: 3194440088
+module module_0 (
+    input  uwire id_0,
+    input  wire  id_1,
+    input  tri1  id_2,
+    output tri   id_3,
+    input  tri0  id_4,
+    input  tri0  id_5,
+    input  wor   id_6,
+    output tri   id_7
+);
+  wire  id_9;
+  logic id_10;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input supply0 id_0,
+    input wire id_1,
+    input wand id_2,
+    input uwire id_3,
+    input tri0 id_4,
+    input wor id_5,
+    output tri0 id_6,
+    input uwire id_7,
+    output tri1 id_8,
+    input supply0 id_9,
+    input supply1 id_10,
+    input uwire id_11,
+    input wand id_12,
+    input wor id_13,
+    input tri0 id_14,
+    input wand id_15,
+    input wire id_16,
+    output uwire id_17,
+    input tri0 id_18,
+    input wand id_19,
+    input tri id_20,
+    input tri0 id_21,
+    output wire id_22,
+    output supply0 id_23
 );
-  output wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  xor primCall (id_1, id_2, id_3);
-  assign id_1 = ~id_2;
-  module_0 modCall_1 ();
-  assign id_1 = (id_2 - id_3);
-endmodule
-module module_2 (
-    input  logic id_0,
-    output wor   id_1,
-    input  logic id_2
-);
-  wire id_4;
-  supply1 id_5;
-  module_0 modCall_1 ();
-  reg id_6;
-  initial begin : LABEL_0
-    #id_7;
-    if (id_5) begin : LABEL_0
-      if (id_2) begin : LABEL_0
-        if (1 < id_2) begin : LABEL_0$display
-          ;
-        end
-      end else
-        for (id_4 = 1; 1; id_5 = id_4)
-        if ('h0) begin : LABEL_0
-          id_7 <= #1 id_6;
-          assert (id_0#1);
-        end
-    end
-    case (1)
-      id_2: id_7 = id_0();
-    endcase
-    id_5 = id_2 < 1;
-  end
+  assign id_8 = id_10;
+  module_0 modCall_1 (
+      id_2,
+      id_18,
+      id_13,
+      id_6,
+      id_16,
+      id_16,
+      id_18,
+      id_23
+  );
+  assign modCall_1.id_3 = 0;
 endmodule

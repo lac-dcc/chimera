@@ -1,32 +1,53 @@
-// Seed: 2289221179
+// Seed: 2364547037
 module module_0 (
-    input  wor id_0,
-    output wor id_1
+    id_1,
+    id_2,
+    id_3
 );
-  integer id_3;
-  assign module_1.id_4 = 0;
-  id_4(
-      .id_0(id_0), .id_1(1), .id_2((1)), .id_3(1'b0), .id_4(id_1)
-  );
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_4;
 endmodule
-module module_0 (
-    output tri0 id_0,
-    output supply0 module_1,
-    input supply1 id_2,
-    input tri id_3,
-    output tri1 id_4
-    , id_13,
-    input tri0 id_5,
-    input wor id_6,
-    input tri id_7,
-    input wor id_8,
-    output logic id_9,
-    input wire id_10,
-    output wor id_11
+module module_1 #(
+    parameter id_1  = 32'd20,
+    parameter id_19 = 32'd24,
+    parameter id_21 = 32'd9
+) (
+    output wand id_0,
+    output wire _id_1,
+    input supply0 id_2,
+    input wire id_3,
+    output tri0 id_4,
+    input uwire id_5,
+    input tri1 id_6,
+    input wor id_7,
+    input supply0 id_8,
+    input wand id_9,
+    output supply0 id_10,
+    input supply1 id_11,
+    input supply1 id_12,
+    input wor id_13,
+    input tri0 id_14,
+    input uwire id_15,
+    input wand id_16,
+    input supply0 id_17,
+    input tri id_18,
+    input wire _id_19,
+    output tri1 id_20,
+    input wire _id_21
 );
-  if (1) always @(posedge id_5 or posedge id_2) id_9 <= 1'h0;
+  always @(id_19) {id_2} -= -1;
+  logic id_23;
+  ;
+  assign id_0 = -1 + -1'b0;
   module_0 modCall_1 (
-      id_5,
-      id_4
+      id_23,
+      id_23,
+      id_23
   );
+  wire [-1 : id_21  #  (  1  ,  1  )] id_24;
+  wire id_25;
+  logic [id_19 : -1] id_26;
+  logic [id_21 : id_1] id_27;
 endmodule

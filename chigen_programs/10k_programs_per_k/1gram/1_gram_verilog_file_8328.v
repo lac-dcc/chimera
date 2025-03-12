@@ -1,73 +1,49 @@
-// Seed: 2258776397
+// Seed: 2249885797
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    output tri1  id_0,
+    input  uwire id_1,
+    output wand  id_2
 );
-  output wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign module_2.id_19 = 0;
-  assign module_1.id_1  = 0;
+  logic id_4;
+  ;
 endmodule
-module module_1;
-  assign id_1 = 1;
-  module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
-  );
-endmodule
-module module_2 (
-    output tri1 id_0,
-    input tri1 id_1,
+module module_1 #(
+    parameter id_1  = 32'd4,
+    parameter id_13 = 32'd71,
+    parameter id_5  = 32'd61,
+    parameter id_7  = 32'd33
+) (
+    input wor id_0,
+    input tri1 _id_1
+    , id_17,
     output supply0 id_2,
-    input wor id_3,
-    input supply1 id_4
-    , id_25,
-    output wor id_5,
-    output wire id_6,
-    input uwire id_7
-    , id_26,
-    input tri1 id_8,
-    input wor id_9,
-    input supply0 id_10,
-    output tri0 id_11,
-    input supply0 id_12,
-    input wor id_13,
-    input uwire id_14,
-    input wor id_15,
-    output uwire id_16,
-    input wire id_17,
-    output supply0 id_18,
-    input tri0 id_19,
-    input tri0 id_20,
-    input wire id_21,
-    input wand id_22,
-    output wire id_23
+    input supply0 id_3,
+    input supply0 id_4,
+    input wor _id_5,
+    output uwire id_6,
+    input wor _id_7,
+    output uwire id_8,
+    input wire id_9,
+    output uwire id_10,
+    input tri id_11,
+    output supply1 id_12,
+    input tri0 _id_13[id_5 : id_7],
+    output logic id_14,
+    output tri1 id_15
 );
-  wire id_27;
+  wire  id_18;
+  logic id_19;
+  ;
   module_0 modCall_1 (
-      id_26,
-      id_27,
-      id_26,
-      id_25,
-      id_27,
-      id_27,
-      id_25
+      id_8,
+      id_4,
+      id_2
   );
-  wire id_28;
-  wire id_29, id_30;
+  assign modCall_1.id_1 = 0;
+  wire ["" : id_1] id_20, id_21, id_22, id_23[id_13 : 1];
+  always begin : LABEL_0
+    begin : LABEL_1
+      id_14 = -1;
+    end
+  end
 endmodule

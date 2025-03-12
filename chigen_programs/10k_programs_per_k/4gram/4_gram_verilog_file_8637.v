@@ -1,5 +1,11 @@
-// Seed: 1360943499
-module module_0 (
+// Seed: 3529153741
+module module_0;
+  localparam id_1 = 1;
+endmodule
+module module_1 #(
+    parameter id_16 = 32'd85,
+    parameter id_21 = 32'd6
+) (
     id_1,
     id_2,
     id_3,
@@ -15,71 +21,53 @@ module module_0 (
     id_13,
     id_14,
     id_15,
-    id_16,
+    _id_16,
     id_17,
     id_18,
     id_19,
     id_20,
-    id_21,
-    id_22
+    _id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29,
+    id_30
 );
-  output wire id_22;
-  output wire id_21;
-  inout wire id_20;
-  output wire id_19;
-  inout wire id_18;
+  input wire id_30;
+  output wire id_29;
+  inout wire id_28;
+  input wire id_27;
+  input wire id_26;
+  input wire id_25;
+  inout wire id_24;
+  output wire id_23;
+  input wire id_22;
+  inout wire _id_21;
+  output wire id_20;
+  inout wire id_19;
+  output wire id_18;
   output wire id_17;
-  inout wire id_16;
+  input wire _id_16;
   output wire id_15;
   output wire id_14;
-  input wire id_13;
-  inout wire id_12;
-  input wire id_11;
+  inout wire id_13;
+  output wire id_12;
+  inout wire id_11;
   input wire id_10;
-  inout wire id_9;
-  output wire id_8;
+  input wire id_9;
+  inout wire id_8;
   inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
+  input wire id_6;
+  output wire id_5;
+  module_0 modCall_1 ();
   inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
+  input wire id_3;
+  output wire id_2;
   input wire id_1;
-  wire id_23;
-  tri1 id_24;
-  assign id_24 = 1'b0;
-  wire id_25;
-  wire id_26;
-  always @(id_7 or posedge id_7) id_22 = 1;
-  assign id_18 = 1;
-  wire id_27, id_28, id_29;
-endmodule
-module module_1;
-  assign id_1 = 1;
-  module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
-  );
-  wire id_2;
-  wire id_3;
+  wire [{  id_16  ,  id_21  } : id_16] id_31;
+  localparam id_32 = 1 ? -1 : -1;
 endmodule

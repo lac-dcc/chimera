@@ -1,37 +1,45 @@
-// Seed: 4080147796
+// Seed: 3461966930
 module module_0 (
-    output supply1 id_0,
-    output tri1 id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  reg id_4;
-  assign id_1 = id_3;
-  wire id_5;
-  logic [7:0] id_6;
-  always @(id_3) begin : LABEL_0
-    assign id_1 = id_4;
-  end
-  assign module_1.id_3 = 0;
-  assign id_6[1-1] = 1;
-  wire id_7;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = id_4;
 endmodule
-module module_1 (
-    input  tri0  id_0,
-    input  tri0  id_1,
-    output tri0  id_2,
-    output wor   id_3,
-    input  wand  id_4,
-    input  tri0  id_5,
-    input  wire  id_6,
-    output wand  id_7,
-    output uwire id_8
-);
-  assign id_7 = 1 + 1'h0;
-  wire id_10 = "" * 1;
-  wire id_11;
-  tri  id_12 = 1;
+module module_1;
+  wire id_1;
+  logic [1 : -1] id_2 = 1;
   module_0 modCall_1 (
-      id_7,
-      id_3
+      id_2,
+      id_1,
+      id_1,
+      id_2
   );
-  wire id_13;
+endmodule
+module module_2 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output tri id_1;
+  wire [-1 : 1] id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_2
+  );
+  bit ["" : -1  ==?  1 'b0] id_4;
+  notif1 primCall (id_1, id_2, id_3);
+  for (genvar id_5 = -1; -1; id_4 = -1) begin : LABEL_0
+    wire id_6;
+  end
+  parameter id_7 = -1;
+  assign id_1 = "" << id_7;
+  wire id_8;
 endmodule

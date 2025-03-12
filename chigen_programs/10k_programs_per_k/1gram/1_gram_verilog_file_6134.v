@@ -1,56 +1,52 @@
-// Seed: 716998596
-module module_0 (
-    input tri id_0,
-    input supply1 id_1
-);
-  assign module_2.id_5 = 0;
+// Seed: 1201515397
+module module_0;
+  struct packed {logic id_1;} id_2;
+  ;
+  wire id_3, id_4;
 endmodule
-module module_1 (
-    input wire id_0
+module module_1 #(
+    parameter id_18 = 32'd68
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  reg id_2 = ~id_0;
-  always id_2 <= 1;
-  wire id_3;
-  module_0 modCall_1 (
-      id_0,
-      id_0
-  );
-endmodule
-module module_2 (
-    output wire id_0,
-    output wire id_1,
-    input tri0 id_2,
-    input tri1 id_3,
-    input logic id_4,
-    input uwire id_5,
-    output logic id_6,
-    output logic id_7,
-    input wand id_8,
-    input logic id_9,
-    output logic id_10,
-    output tri0 id_11,
-    output supply0 id_12
-);
-  logic [7:0] id_14;
-  assign id_6 = id_4;
-  always
-    if (id_8) id_12 = 1;
-    else $display(id_8, 1, id_5 - id_4);
-  module_0 modCall_1 (
-      id_8,
-      id_8
-  );
-  reg id_15;
-  assign id_7 = id_14[1 : 1'd0];
-  wire id_16;
-  assign id_7 = id_4;
-  wire id_17, id_18;
-  always id_10 <= id_15;
-  assign id_11 = 1'd0;
-  always_latch begin : LABEL_0
-    id_7 <= id_9;
-    if (id_2) $display(id_3, 1'h0 & 1);
-  end
-  wire id_19;
-  timeunit 1ps;
+  output wire id_16;
+  output reg id_15;
+  output wire id_14;
+  module_0 modCall_1 ();
+  inout wire id_13;
+  output wire id_12;
+  input wire id_11;
+  input wire id_10;
+  output wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output logic [7:0] id_2;
+  inout wire id_1;
+  logic id_17;
+  parameter id_18 = -1;
+  id_19 :
+  assert property (@(1) id_6) id_15 <= 1 != 1 - id_19;
+  defparam id_18 = id_18;
+  assign id_2[-1] = 1;
+  wire id_20;
+  ;
 endmodule

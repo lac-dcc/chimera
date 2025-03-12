@@ -1,41 +1,44 @@
-// Seed: 3702764217
-module module_0;
-  wire id_2;
-  assign id_1 = 1;
-  assign module_1.id_26 = 0;
-  wire id_3 = 1;
-  wire id_4;
+// Seed: 2019350147
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  input wire id_2;
+  input wire id_1;
+  logic id_4;
+  assign id_4 = "" * 1;
+  localparam id_5 = -1;
+  id_6 :
+  assert property (@(id_5) 1)
+  else if (id_5) id_4 <= {1'd0 - id_3, id_2 + 1};
+  genvar id_7;
+  assign id_7[1'b0] = id_6;
 endmodule
 module module_1 (
-    input wor id_0,
-    input wor id_1,
-    input uwire id_2,
-    input uwire id_3,
-    input uwire id_4,
-    input tri id_5,
-    output wand id_6,
-    input wor id_7,
-    output wire id_8,
-    input uwire id_9,
-    input uwire id_10,
-    input supply0 id_11,
-    output tri id_12,
-    input tri id_13,
-    output supply1 id_14,
-    input wire id_15,
-    input wire id_16,
-    input tri1 id_17,
-    input supply0 id_18,
-    input supply1 id_19,
-    output wand id_20,
-    input supply1 id_21,
-    output supply0 id_22,
-    input supply1 id_23,
-    input tri id_24,
-    input wor id_25,
-    output tri1 id_26
+    input tri id_0,
+    input tri1 id_1,
+    output wire id_2,
+    input wand id_3
+    , id_14,
+    input supply1 id_4,
+    input wor id_5,
+    output tri1 id_6,
+    input supply1 id_7,
+    output tri0 id_8,
+    output supply0 id_9
+    , id_15,
+    input wire id_10,
+    input wand id_11,
+    input tri0 id_12
+    , id_16
 );
-  pmos (id_24 - 1, 1, id_20);
-  module_0 modCall_1 ();
-  assign id_6 = id_18;
+  assign id_2 = id_12;
+  module_0 modCall_1 (
+      id_16,
+      id_15,
+      id_15
+  );
+  assign modCall_1.id_4 = 0;
 endmodule

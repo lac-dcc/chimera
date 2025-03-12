@@ -1,33 +1,31 @@
-// Seed: 3306392388
+// Seed: 832116630
 module module_0 (
-    input uwire id_0,
-    input wand id_1,
-    input tri1 id_2,
-    input supply0 id_3
+    input tri1 id_0
+    , id_3,
+    input tri0 id_1
 );
-  wire id_5;
+  genvar id_4;
+  assign module_1.id_1 = 0;
+  localparam id_5 = 1'b0;
 endmodule
 module module_1 (
-    input uwire id_0,
-    output supply1 id_1,
-    input wand id_2,
-    input wire id_3,
-    input supply0 id_4,
-    output supply0 id_5,
-    input wire id_6,
-    input tri1 id_7,
-    output supply1 id_8,
-    input tri1 id_9,
-    input uwire id_10,
-    input wire id_11,
-    output uwire id_12,
-    input wand id_13
+    input supply0 id_0,
+    input tri0 id_1,
+    output tri1 id_2,
+    input supply1 id_3,
+    output logic id_4,
+    input uwire id_5
 );
+  always_latch begin : LABEL_0
+    @(posedge -1)
+    @(posedge id_3)
+    if (1) begin : LABEL_1
+      @(1) id_4 <= (id_1) || -1 % -1'b0;
+    end
+  end
+  always id_4 = id_3;
   module_0 modCall_1 (
       id_3,
-      id_10,
-      id_6,
-      id_9
+      id_0
   );
-  wire id_15;
 endmodule

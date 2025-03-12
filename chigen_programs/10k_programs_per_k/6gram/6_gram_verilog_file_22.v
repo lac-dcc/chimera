@@ -1,44 +1,53 @@
-// Seed: 3576954381
-module module_0;
-  generate
-    if (1 | id_1) begin : LABEL_0
-      assign id_1 = 1'b0;
-    end else begin : LABEL_0
-      always @((1) or negedge 1) id_1 <= 1;
-    end
-  endgenerate
-  wire id_2;
-endmodule
-module module_1 (
-    input  wire  id_0,
-    input  wor   id_1,
-    input  wand  id_2,
-    output tri0  id_3,
-    output wand  id_4,
-    output wand  id_5,
-    input  tri   id_6,
-    output wand  id_7,
-    input  tri   id_8,
+// Seed: 934332549
+module module_0 (
+    input wand id_0,
+    input uwire id_1,
+    output tri id_2,
+    input tri id_3,
+    input wor id_4,
+    input wand id_5,
+    input tri id_6,
+    input supply1 id_7,
+    input wand id_8
+    , id_16,
     output uwire id_9,
-    input  wor   id_10,
-    input  wand  id_11,
-    input  uwire id_12,
-    input  logic id_13,
-    output logic id_14,
-    output wire  id_15,
-    output uwire id_16,
-    input  wand  id_17,
-    input  wire  id_18
+    input supply1 id_10,
+    input tri id_11,
+    output wire id_12,
+    input uwire id_13,
+    output tri0 id_14
 );
-  wor  id_20 = id_10;
-  wire id_21;
-  wire id_22;
-  function id_23;
-    input id_24;
-    begin : LABEL_0
-      id_14 <= id_13;
-    end
-  endfunction
-  module_0 modCall_1 ();
-  assign id_4 = 1;
+  initial
+  fork : SymbolIdentifier
+  join : SymbolIdentifier
+  assign module_1.SymbolIdentifier.SymbolIdentifier.id_3 = 0;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd0
+) (
+    input supply1 _id_0,
+    input wand id_1,
+    input tri0 id_2,
+    output uwire id_3
+);
+  logic [-1 : id_0] id_5;
+  module_0 modCall_1 (
+      id_2,
+      id_1,
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_3
+  );
+  wire id_6;
+  assign id_3 = id_1;
 endmodule

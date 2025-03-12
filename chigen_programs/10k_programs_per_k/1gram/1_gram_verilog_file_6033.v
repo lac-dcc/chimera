@@ -1,42 +1,40 @@
-// Seed: 472432940
-module module_0 ();
-  wire id_2;
-  assign id_1 = 1;
-  wire id_3 = id_2;
-  assign id_1 = 1;
-  assign module_2.type_12 = 0;
+// Seed: 3214313639
+module module_0;
+  wire id_1;
+  ;
+  assign module_2.id_3 = 0;
+  assign module_1.id_4 = 0;
+  assign id_1 = id_1;
+  logic id_2, id_3;
 endmodule
-macromodule module_1 (
-    input wand id_0,
-    output uwire id_1,
-    input wand id_2,
-    input wire void id_3,
-    input tri id_4
+module module_1 #(
+    parameter id_2 = 32'd85
+) (
+    output tri0 id_0,
+    input  wand id_1 [-1 : id_2],
+    input  tri1 _id_2,
+    output tri1 id_3,
+    input  wand id_4
 );
-  uwire id_6;
+  assign id_0 = id_1.id_1;
+  bufif1 primCall (id_0, id_1, id_4);
   module_0 modCall_1 ();
-  logic [7:0] id_7;
-  wire id_8;
-  initial id_7[1] <= 1;
-  wire id_9;
-  id_10(
-      id_6, 1, 1, 1
-  );
+  wire id_6;
 endmodule
-module module_2 (
-    input wand id_0,
+module module_2 #(
+    parameter id_13 = 32'd62
+) (
+    input supply1 id_0
+    , id_9,
     output wand id_1,
-    input supply1 id_2,
-    output tri id_3,
-    output uwire id_4,
-    input tri id_5,
-    output tri id_6,
-    input supply0 id_7
+    input tri id_2,
+    input tri id_3,
+    input tri0 id_4,
+    inout tri id_5,
+    input supply1 id_6,
+    input tri id_7
 );
-  initial if (id_0) if (id_2) id_3 = 1'b0 - id_7;
-  assign #1 id_4 = id_2;
+  wire [-1 : 1] id_10, id_11, id_12, _id_13;
   module_0 modCall_1 ();
-  initial $display(1, id_5, id_7);
-  assign id_3 = id_7 - id_5;
-  wire id_9;
+  wire [id_13 : id_13] id_14;
 endmodule

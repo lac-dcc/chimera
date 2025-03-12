@@ -1,35 +1,38 @@
-// Seed: 156982620
+// Seed: 153788978
 module module_0 (
-    input wor  id_0,
-    input wire id_1
+    id_1,
+    id_2
 );
-  always @(1, posedge 1)
-    if (id_0) begin : LABEL_0
-      id_3 = id_3;
-    end else begin : LABEL_0
-      deassign id_4;
-    end
+  output wand id_2;
+  assign module_1.id_12 = 0;
+  inout wire id_1;
+  assign id_2 = -1;
 endmodule
-module module_1 (
-    output logic id_0,
-    input  uwire id_1,
-    output tri1  id_2,
-    output wire  id_3,
-    output tri0  id_4,
-    input  uwire id_5,
-    output tri   id_6
+module module_1 #(
+    parameter id_8 = 32'd21
+) (
+    input wand id_0,
+    input tri0 id_1,
+    input wand id_2,
+    input wire id_3,
+    input wor id_4,
+    input supply0 id_5,
+    output wand id_6,
+    input tri1 id_7,
+    input wand _id_8,
+    input tri1 id_9,
+    input tri1 id_10,
+    output wor id_11
+    , id_17,
+    input supply0 id_12,
+    output supply0 id_13,
+    output supply0 id_14,
+    input wor id_15
 );
-  assign id_2 = id_5;
   module_0 modCall_1 (
-      id_5,
-      id_5
+      id_17,
+      id_17
   );
-  assign modCall_1.type_5 = 0;
-  assign id_4 = id_5;
-  assign id_6 = id_1;
-  always
-  fork
-    id_0 <= 1;
-    #1;
-  join : SymbolIdentifier
+  wire id_18;
+  wire [1 : id_8  <=  -1] id_19;
 endmodule

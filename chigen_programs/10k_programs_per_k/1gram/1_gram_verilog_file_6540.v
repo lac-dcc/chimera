@@ -1,68 +1,49 @@
-// Seed: 2628884374
+// Seed: 2284568394
 module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always $unsigned(35);
+  ;
+endmodule
+module module_1 #(
+    parameter id_11 = 32'd88,
+    parameter id_12 = 32'd64,
+    parameter id_6  = 32'd28
+) (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7
+    _id_6,
+    id_7,
+    id_8
 );
-  inout wire id_7;
-  inout wire id_6;
+  output tri id_8;
+  input wire id_7;
+  input wire _id_6;
   output wire id_5;
-  inout wire id_4;
+  output wire id_4;
   inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  wire id_8, id_9, id_10;
-  assign module_1.id_5 = 0;
-  wire id_11 = id_8;
-  wire id_12 = id_9;
-  id_13(
-      .id_0(1 - 1'b0), .id_1(id_8)
-  );
-  assign id_3 = id_7;
-  assign id_5 = 1;
-endmodule
-module module_1 (
-    output wand id_0,
-    output uwire id_1,
-    input wor id_2,
-    input tri0 id_3,
-    input wand id_4,
-    output uwire id_5,
-    inout supply1 id_6,
-    input wand id_7,
-    output tri0 id_8,
-    input wand id_9,
-    output wire id_10,
-    input tri id_11,
-    input uwire id_12,
-    input uwire id_13,
-    output wire id_14,
-    output uwire id_15,
-    input uwire id_16,
-    input uwire id_17,
-    input wor id_18,
-    output tri id_19,
-    input wor id_20,
-    input supply0 id_21,
-    input tri id_22
-);
-  assign id_19 = id_9;
-  tri id_24;
+  output wire id_2;
+  input logic [7:0] id_1;
+  or primCall (id_2, id_1, id_6, id_9, id_7, id_3);
+  assign #1 id_8#(.id_6(!1)) = id_1 == 1;
+  wire id_9;
   module_0 modCall_1 (
-      id_24,
-      id_24,
-      id_24,
-      id_24,
-      id_24,
-      id_24,
-      id_24
+      id_9,
+      id_9,
+      id_9
   );
-  assign id_24 = 1;
-  wire id_25;
-  assign id_6 = 1'b0;
-  assign id_1 = 1;
+  logic [7:0] id_10;
+  wire [id_6 : -1] _id_11, _id_12;
+  logic id_13;
+  assign id_10[!1 :-1'b0] = id_1[id_12 : 1?"" : {1}-id_11][1];
+  integer id_14;
+  assign id_13 = id_13;
 endmodule

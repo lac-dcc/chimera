@@ -1,46 +1,33 @@
-// Seed: 3168906576
-module module_0 (
-    id_1
+// Seed: 4004040421
+module module_0 #(
+    parameter id_1 = 32'd90,
+    parameter id_3 = 32'd41
 );
-  output wire id_1;
-  wire id_2;
-  assign module_1.id_8 = 0;
-  function id_3(input id_4, output id_5#(.id_6(id_5)), input id_7);
-    id_6 = 1'b0;
-    $display(1);
-  endfunction
+  logic _id_1;
+  ;
+  assign id_1 = id_1;
+  assign module_1.id_7 = 0;
+  wire [-1 : 1] id_2;
+  wire _id_3;
+  wire id_4, id_5, id_6, id_7, id_8;
+  logic id_9[1  ?  -1 : "" : id_1  -  id_3], id_10;
+  assign id_4 = 1;
+  wire id_11, id_12, id_13, id_14;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    output supply0 id_1,
-    output supply1 id_2,
-    input tri0 id_3,
-    output tri id_4#(1),
-    output supply1 id_5,
-    output tri1 id_6,
-    input tri0 id_7,
-    output wor id_8,
-    input tri1 id_9,
-    output supply1 id_10,
-    input wand id_11,
-    output tri1 id_12,
-    output supply0 id_13,
-    input wire id_14#(
-        .id_16(1),
-        .id_17(id_17),
-        .id_18(1),
-        .id_19(id_14 ^ id_18),
-        .id_20(id_17#(.id_14(1))),
-        .id_21(1),
-        .id_22(1),
-        .id_23(1),
-        .id_24(1),
-        .id_25(1),
-        .id_26(id_23),
-        .id_27(1)
-    )
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  wire id_28;
-  wire id_29;
-  module_0 modCall_1 (id_18);
+  input wire id_4;
+  module_0 modCall_1 ();
+  input wire id_3;
+  inout wor id_2;
+  input wire id_1;
+  assign id_2 = -1;
+  bufif1 primCall (id_2, id_3, id_4);
+  assign id_2 = id_4 ? 1 : -1;
+  assign id_2 = 1 == id_2;
+  parameter id_5 = 1, id_6 = -1 * 1, id_7 = -1;
 endmodule

@@ -1,64 +1,48 @@
-// Seed: 1198672430
-module module_0 #(
-    parameter id_15 = 32'd68,
-    parameter id_16 = 32'd90
-) (
-    output wire id_0,
-    output tri0 id_1,
-    input wor id_2,
-    output wor id_3,
-    input supply0 id_4,
-    input wor id_5,
-    output wor id_6,
-    output supply0 id_7,
-    input wand id_8,
-    input wor id_9,
-    output tri0 id_10,
-    input tri0 id_11,
-    input tri0 id_12,
-    output wand id_13
-);
-  defparam id_15.id_16 = id_15;
-endmodule
-module module_1 (
-    input supply1 id_0,
+// Seed: 4204241553
+module module_0 (
+    input tri1 id_0,
     input supply0 id_1,
-    input tri id_2,
-    output supply1 id_3,
-    input wor id_4,
-    output tri id_5,
-    input uwire id_6,
-    input wor id_7,
-    input wire id_8,
-    input supply0 id_9,
-    input wor id_10,
-    output tri0 id_11,
-    input tri1 id_12,
-    input tri0 id_13,
-    input wire id_14,
-    output supply0 id_15,
-    output tri1 id_16,
-    input tri0 id_17,
-    output wand id_18
+    output tri0 id_2
 );
-  assign id_3 = id_7;
+endmodule
+module module_1 #(
+    parameter id_12 = 32'd9
+) (
+    input tri1 id_0,
+    output tri1 id_1,
+    input wand id_2,
+    output wand id_3,
+    output wire id_4,
+    output wor id_5
+    , id_24,
+    input supply0 id_6
+    , id_25,
+    output wand id_7,
+    input wor id_8,
+    input supply0 id_9,
+    input supply0 id_10,
+    input supply0 id_11,
+    input wor _id_12,
+    input wire id_13,
+    output tri0 id_14,
+    input tri1 id_15,
+    input tri id_16
+    , id_26,
+    input wand id_17,
+    input tri1 id_18,
+    input wor id_19,
+    output uwire id_20,
+    output wor id_21,
+    output wor id_22
+);
   module_0 modCall_1 (
-      id_18,
-      id_18,
-      id_6,
-      id_5,
-      id_1,
-      id_6,
-      id_18,
-      id_11,
-      id_2,
-      id_2,
-      id_18,
-      id_17,
-      id_13,
-      id_16
+      id_0,
+      id_9,
+      id_3
   );
-  assign modCall_1.type_4 = 0;
-  wire id_20;
-  wire id_21;
+  assign modCall_1.id_0 = 0;
+  assign id_22 = id_0;
+  wire id_27;
+  wire [id_12 : 1  ==  1 'b0] id_28;
+  wire id_29;
 endmodule

@@ -1,57 +1,66 @@
-// Seed: 2994188835
+// Seed: 683105100
 module module_0 (
-    input uwire id_0,
-    input wire  id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  assign id_3 = id_1 + !id_1;
-  logic [7:0] id_4;
-  id_5(
-      .id_0(id_6), .id_1(id_6), .id_2(1), .id_3(id_0), .id_4(1)
-  );
-  wire id_7;
-  assign id_4[(1'b0)&1] = 1;
-  wire id_8;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
 endmodule
 module module_1 (
-    output wor id_0,
-    output wire id_1,
-    input supply0 id_2,
-    output supply0 id_3,
-    input supply0 id_4,
-    input supply1 id_5,
-    input supply1 id_6
-    , id_33,
-    input wire id_7,
-    input tri0 id_8,
-    output wire id_9,
-    output tri id_10,
-    input wire id_11,
-    output tri id_12,
-    input wor id_13,
-    output tri0 id_14,
-    input tri id_15,
-    output wor id_16,
-    input tri0 id_17,
-    output tri0 id_18,
-    output tri0 id_19,
-    output tri id_20
-    , id_34,
-    output supply0 id_21,
-    input wor id_22,
-    input wor id_23,
-    output supply1 id_24,
-    output tri1 id_25,
-    input uwire id_26,
-    input wor id_27,
-    output wor id_28,
-    input tri1 id_29,
-    output tri1 id_30,
-    output supply1 id_31
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
-  assign id_12 = 1 ? id_7 : 1;
+  output reg id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout reg id_5;
+  inout wire id_4;
+  inout tri id_3;
   module_0 modCall_1 (
-      id_4,
-      id_13
+      id_6,
+      id_6,
+      id_8,
+      id_6,
+      id_6,
+      id_6,
+      id_3,
+      id_6,
+      id_6
   );
-  assign modCall_1.type_9 = 0;
+  inout logic [7:0] id_2;
+  input wire id_1;
+  assign id_3 = 1;
+  bit id_11;
+  wor [-1 : -1 'b0] id_12;
+  wire id_13;
+  wire id_14;
+  always_comb @(id_2 or posedge id_4 + 1 + id_13 + 1 / id_2[-1] - 1'h0)
+    if ({""{~1}}) for (id_12 = -1 * id_11; ""; id_10 = id_12) id_11 <= -1;
+    else begin : LABEL_0
+      id_5 = (id_14);
+    end
 endmodule

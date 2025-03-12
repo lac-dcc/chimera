@@ -1,32 +1,39 @@
-// Seed: 2947404212
+// Seed: 1382253196
 module module_0 (
-    input supply1 id_0,
-    input tri id_1
+    input tri id_0,
+    input supply1 id_1
 );
-  tri id_3;
-  assign id_3 = 1;
-  assign module_1.type_3 = 0;
+  logic id_3;
+  ;
+  logic id_4;
+  logic id_5;
+  ;
+  assign id_5 = 1;
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input supply1 id_1,
-    input supply1 id_2,
-    output logic id_3,
-    output wand id_4,
-    input logic id_5,
-    output tri0 id_6,
-    output tri1 id_7,
-    output wand id_8,
-    input wire id_9,
-    output uwire id_10,
-    input uwire id_11,
-    input tri0 id_12
+module module_1 #(
+    parameter id_1 = 32'd23,
+    parameter id_9 = 32'd61
+) (
+    input  tri1  id_0,
+    input  tri1  _id_1,
+    output wor   id_2,
+    input  uwire id_3,
+    input  wor   id_4,
+    output tri1  id_5
 );
-  always begin : LABEL_0
-    id_3 <= id_5;
-  end
+  generate
+    localparam id_7 = 1;
+    wire id_8;
+    begin : LABEL_0
+      integer _id_9;
+      assign id_2 = id_3;
+      wire [id_9 : -1 'b0 *  id_1] id_10;
+    end
+  endgenerate
+  assign id_8 = (id_1);
   module_0 modCall_1 (
-      id_11,
-      id_11
+      id_4,
+      id_3
   );
+  wire id_11;
 endmodule

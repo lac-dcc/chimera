@@ -1,52 +1,46 @@
-// Seed: 2270298278
+// Seed: 2520297557
 module module_0 (
-    output wire id_0,
-    input  wand module_0
+    output wand id_0,
+    input wire id_1,
+    output tri1 id_2,
+    input tri id_3,
+    input tri id_4,
+    input uwire id_5,
+    input tri id_6,
+    output supply1 id_7,
+    output wire id_8,
+    output wire id_9,
+    output uwire id_10
 );
-  wire id_3;
-  wire id_4;
-  wire id_5 = id_5, id_6;
-  initial begin : LABEL_0
-    disable id_7;
-  end
+  wire id_12;
+  assign id_7 = $signed(23);
+  ;
+  assign module_1.id_0 = 0;
+  wire id_13;
 endmodule
-module module_1 (
-    input logic id_0,
-    output tri1 id_1,
-    output tri id_2,
-    input logic id_3,
-    output wand id_4,
-    input supply1 id_5
+module module_1 #(
+    parameter id_0 = 32'd38
+) (
+    output wire  _id_0,
+    output tri0  id_1,
+    input  wire  id_2,
+    input  tri0  id_3,
+    output uwire id_4
 );
-  always @(id_3, posedge 1) {1, id_3, id_0} <= id_3;
+  logic [id_0 : -1] id_6 = 1;
+  logic id_7;
   module_0 modCall_1 (
+      id_4,
+      id_3,
+      id_1,
       id_2,
-      id_5
+      id_3,
+      id_3,
+      id_2,
+      id_4,
+      id_4,
+      id_4,
+      id_4
   );
-endmodule
-module module_2;
-  always @(1 or id_1) begin : LABEL_0
-    id_1 <= 1;
-  end
-endmodule
-module module_3 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  inout wire id_6;
-  output wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  initial begin : LABEL_0
-    #1 id_2 = id_6;
-    id_2 <= 1;
-    assert (1);
-  end
-  module_2 modCall_1 ();
+  assign id_7 = id_7;
 endmodule

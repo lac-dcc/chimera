@@ -1,35 +1,37 @@
-// Seed: 3967795709
+// Seed: 4010984001
 module module_0 (
-    id_1,
-    id_2
+    output wor   id_0,
+    input  wire  id_1,
+    output logic id_2
 );
-  output wire id_2;
-  output wire id_1;
-  wire id_3;
-  id_4(
-      id_2, 1, 1
-  );
+  always begin : LABEL_0
+    if (1) begin : LABEL_1
+      fork
+        wait (id_1);
+        #1;
+        id_4();
+      join_none
+      if (-1) begin : LABEL_2
+        id_4 = id_1;
+        assign id_4 = (-1 ? id_1 : 1);
+        id_2 = #id_5 -1;
+      end
+    end
+  end
 endmodule
 module module_1 (
-    input supply0 id_0,
-    output uwire id_1,
-    output tri id_2,
-    output wand id_3,
-    output supply0 id_4
+    output logic id_0,
+    input  wor   id_1,
+    input  tri0  id_2,
+    output tri0  id_3
 );
-  id_6(
-      .id_0(id_4), .id_1(1), .id_2(1 != 1'b0), .id_3(id_4 !=? 1), .id_4(1'b0)
-  );
-  logic [7:0] id_7;
-  wire id_8;
-  assign id_7[1] = 1'b0;
-  id_9(
-      1 & id_4, 1 == "", id_2, 1
-  );
+  always @(-1) begin : LABEL_0
+    if ({1, 1, 1}) id_0 = 1;
+  end
   module_0 modCall_1 (
-      id_8,
-      id_8
+      id_3,
+      id_2,
+      id_0
   );
-  assign modCall_1.id_2 = 0;
-  assign id_4 = 1;
+  assign modCall_1.id_1 = 0;
 endmodule

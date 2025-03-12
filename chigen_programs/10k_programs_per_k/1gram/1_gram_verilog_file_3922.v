@@ -1,37 +1,41 @@
-// Seed: 3923871739
-module module_0;
-  assign id_1 = id_1;
-  assign module_1.type_7 = 0;
-  wire id_2;
-endmodule
-module module_1 (
-    id_1
+// Seed: 2689560441
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  inout wire id_1;
-  reg id_2;
-  initial begin : LABEL_0
-    id_2 <= 1 == id_1;
-    id_1 <= 1;
-    begin : LABEL_0
-    end
-  end
-  module_0 modCall_1 ();
-  reg id_3 = 1, id_4;
-  initial id_2 = id_4 == 1;
-  wire id_5, id_6;
-  assign id_3 = id_4;
-  assign id_3 = id_1;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  byte id_4;
 endmodule
-module module_2 (
-    input uwire id_0,
-    input tri0 id_1,
-    input supply0 id_2,
-    output logic id_3,
-    input tri1 id_4
+module module_1 #(
+    parameter id_2 = 32'd56,
+    parameter id_4 = 32'd97
+) (
+    id_1,
+    _id_2,
+    id_3,
+    _id_4[id_2 : ""],
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  always id_3 <= 1;
-  assign id_3#(.id_2(~1'b0)) = 1;
-  assign (pull1, pull0) id_3 = 1;
-  wire id_6;
-  module_0 modCall_1 ();
+  input wire id_8;
+  input wire id_7;
+  module_0 modCall_1 (
+      id_5,
+      id_5,
+      id_5
+  );
+  input wire id_6;
+  inout wire id_5;
+  input logic [7:0] _id_4;
+  inout wire id_3;
+  input wire _id_2;
+  input wire id_1;
+  wire [1 : id_4] id_9, id_10;
+  logic id_11;
+  assign id_9 = id_7;
 endmodule

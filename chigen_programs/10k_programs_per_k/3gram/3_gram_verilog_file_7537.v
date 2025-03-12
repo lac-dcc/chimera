@@ -1,63 +1,57 @@
-// Seed: 3352527305
+// Seed: 4282403340
 module module_0 (
-    output wand id_0,
-    output wire id_1,
-    output wand id_2
+    id_1,
+    id_2
 );
-  wire id_4 = id_4;
+  input wire id_2;
+  inout wire id_1;
+  wire ["" : 1] id_3 = id_2;
 endmodule
-macromodule module_0 (
-    input  tri0 id_0,
-    output wor  id_1#(.id_5({1{~id_2}})),
-    input  tri1 id_2,
-    input  wand id_3
+module module_1 #(
+    parameter id_4 = 32'd17
+) (
+    output tri id_0,
+    output uwire id_1,
+    output wand id_2,
+    input tri id_3,
+    input wand _id_4,
+    input tri0 id_5,
+    input supply1 id_6,
+    input wor id_7
 );
-  always @(posedge 1);
-  wire id_6;
-  wire module_1;
+  wire [id_4 : 1] id_9;
   module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1
+      id_9,
+      id_9
   );
-  assign modCall_1.type_1 = 0;
 endmodule
-module module_2 (
-    output uwire id_0,
-    output tri id_1,
-    input supply0 id_2,
-    input supply0 id_3,
-    output supply1 id_4,
-    input supply0 id_5
-    , id_18,
-    output tri1 id_6,
-    input wor id_7,
-    input wand id_8,
-    output supply0 id_9,
-    output wor id_10,
-    input wand id_11,
-    input supply1 id_12,
-    input tri1 id_13,
-    output uwire id_14,
-    output wand id_15,
-    input tri1 id_16
+module module_2 #(
+    parameter id_13 = 32'd30
+) (
+    input supply0 id_0,
+    input tri id_1,
+    output uwire id_2,
+    input tri1 id_3,
+    output uwire id_4,
+    input wand id_5,
+    input wor id_6,
+    input tri1 id_7
+    , id_12,
+    output tri1 id_8,
+    output tri0 id_9,
+    input uwire id_10
 );
-  wire id_19;
+  wire _id_13;
+  ;
+  wire id_14;
+  assign id_9 = id_6 * id_7;
   module_0 modCall_1 (
-      id_4,
-      id_10,
-      id_6
+      id_12,
+      id_12
   );
-  assign modCall_1.id_1 = 0;
-  assign id_0 = id_7;
-  wire id_20;
-  function id_21;
-    input integer id_22, id_23, id_24, id_25, id_26, id_27;
-    input logic [7:0] id_28;
-    begin : LABEL_0
-      id_21 = id_26;
-    end
-  endfunction
-  assign id_25[1-:1] = 1 - id_16 * 1;
-  wire id_29;
+  assign id_2 = id_7;
+  logic [7:0] id_15;
+  ;
+  assign id_15[id_13] = $realtime;
+  logic id_16;
 endmodule

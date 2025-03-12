@@ -1,35 +1,30 @@
-// Seed: 3020887812
-module module_0 #(
-    parameter id_6 = 32'd43
-) ();
-  wire id_2;
-  wire id_3;
-  wor  id_4 = id_1 + id_4 + (1);
-  tri1 id_5 = 1'h0;
-  defparam id_6 = 1;
-  assign id_1 = (1);
-endmodule
-module module_1 (
-    output wor id_0,
-    input tri1 id_1,
-    output tri1 id_2,
-    output uwire id_3,
-    output tri1 id_4,
-    output supply1 id_5,
-    output wor id_6,
-    output wor id_7,
-    output wor id_8,
-    input supply1 id_9,
-    input wire id_10,
-    output wire id_11,
-    input tri1 id_12,
-    output wire id_13,
-    input uwire id_14,
-    output tri0 id_15
-    , id_19,
-    input supply1 id_16,
-    input wor id_17
+// Seed: 1677601600
+module module_0 (
+    id_1
 );
-  module_0 modCall_1 ();
-  assign modCall_1.id_5 = 0;
+  inout wire id_1;
+  logic id_2;
+  ;
+  always_latch id_2 = id_1;
+endmodule : SymbolIdentifier
+module module_1 #(
+    parameter id_10 = 32'd76,
+    parameter id_5  = 32'd99
+) ();
+  union packed {logic id_1;} id_2, id_3;
+  parameter id_4 = 1;
+  assign id_3 = id_2.id_1;
+  assign id_2.id_1 = id_4;
+  ;
+  logic _id_5;
+  ;
+  wire ["" : 1] id_6, id_7;
+  logic [id_5 : -1] id_8 = 1;
+  always $signed(39);
+  ;
+  parameter id_9 = id_4;
+  logic _id_10;
+  wire [1 : id_10] id_11;
+  module_0 modCall_1 (id_2);
+  assign modCall_1.id_2 = 0;
 endmodule

@@ -1,54 +1,31 @@
-// Seed: 4027996286
+// Seed: 1614522626
 module module_0 (
-    input supply0 id_0,
-    input supply1 id_1,
-    output supply1 id_2
-    , id_7,
-    input tri0 id_3,
-    input tri0 id_4,
-    output tri1 id_5
+    output supply1 id_0
 );
-  tri0 id_8, id_9, id_10, id_11 = 1;
-  assign id_2 = id_9;
+  wire id_2;
+  ;
+  assign module_1.id_9 = 0;
 endmodule
 module module_1 (
     input wire id_0,
     output wire id_1,
-    input tri0 id_2,
-    input logic id_3,
-    input supply0 id_4,
-    input tri1 id_5,
-    input wand id_6,
-    output wire id_7,
-    output wire id_8,
-    input tri0 id_9,
-    input wor id_10,
-    output logic id_11,
-    input tri0 id_12,
-    input supply1 id_13
-    , id_16,
-    input wor id_14
+    input supply0 id_2,
+    input supply0 id_3,
+    input wand id_4,
+    input tri0 id_5,
+    output wor id_6,
+    input wire id_7,
+    input uwire id_8,
+    output supply1 id_9,
+    input tri0 id_10,
+    input wor id_11
+    , id_14,
+    output supply0 id_12
+    , id_15
 );
-  supply1 id_17;
-  uwire id_18 = id_6;
-  tri0 id_19 = 1 - 1;
-  always if (1) force id_11 = id_3;
-  module_0 modCall_1 (
-      id_4,
-      id_10,
-      id_1,
-      id_5,
-      id_0,
-      id_8
-  );
-  assign modCall_1.id_11 = 0;
-  if (1'b0) assign id_18 = id_17;
-  else
-    initial begin : LABEL_0
-      `define pp_20 0
-      id_11 <= id_16;
-      id_16 <= 1;
-      $display(1'h0, id_19);
-      do `pp_20 = id_3; while (id_13);
-    end
+  wire  id_16;
+  logic id_17;
+  ;
+  module_0 modCall_1 (id_6);
+  logic id_18;
 endmodule

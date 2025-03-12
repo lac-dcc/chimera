@@ -1,48 +1,34 @@
-// Seed: 2276926113
-module module_0;
-  wire id_2;
-  assign module_2.type_0 = 0;
+// Seed: 3287899728
+module module_0 ();
+  wire id_1;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  inout wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_6;
-  module_0 modCall_1 ();
-endmodule
-module module_2 (
-    input supply0 id_0,
-    output tri id_1,
-    input wire id_2,
-    output tri0 id_3,
-    input wor id_4,
-    input wand id_5,
-    input tri0 id_6,
+module module_1 #(
+    parameter id_2 = 32'd64,
+    parameter id_9 = 32'd85
+) (
+    input supply1 id_0,
+    output logic id_1,
+    input wor _id_2,
+    output wand id_3,
+    input tri id_4,
+    output tri0 id_5,
+    output uwire id_6,
     output tri1 id_7,
-    output uwire id_8,
-    input wire id_9,
-    input wand id_10,
-    output tri0 id_11,
-    input tri id_12,
-    output uwire id_13,
-    output tri0 id_14,
-    input wor id_15,
-    output tri0 id_16
+    input supply1 id_8,
+    input wand _id_9,
+    input tri1 id_10,
+    input uwire id_11
+    , id_18,
+    input tri0 id_12,
+    output tri1 id_13,
+    input wand id_14,
+    output wor id_15,
+    input tri id_16
 );
-  id_18 :
-  assert property (@(posedge 1 | id_18) 1)
-  else $display(id_4 / 1 - 1, id_18,, id_0, id_5);
   module_0 modCall_1 ();
-  always @(posedge id_6) begin : LABEL_0
-    id_13 = 1 - id_5;
-  end
-  final $display;
+  genvar id_19, id_20;
+  logic id_21[id_9 : id_2];
+  initial id_1 <= id_18;
+  parameter id_22 = -1;
+  wire id_23;
 endmodule

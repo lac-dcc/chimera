@@ -1,62 +1,47 @@
-// Seed: 3054566949
+// Seed: 3410471425
 module module_0 (
-    output wor id_0,
-    input supply0 id_1,
-    input tri0 id_2,
-    input wire id_3,
-    output tri id_4,
-    input wire id_5,
-    output wire id_6,
-    output wor id_7,
-    input supply0 id_8,
-    input supply0 id_9,
-    output supply1 id_10,
-    input supply1 id_11,
-    output wire id_12,
-    input tri0 id_13
+    input wire id_0,
+    input wand id_1
 );
-  tri0 id_15 = 1'b0, id_16;
-  assign id_6  = 1;
-  assign id_12 = id_16;
-  real id_17;
-  wire id_18;
-  assign id_6 = 1;
+  wire id_3;
+  assign module_1.id_17 = 0;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input supply0 id_1,
-    output tri1 id_2,
-    input supply1 id_3,
-    input tri0 id_4,
-    input wor id_5
+module module_1 #(
+    parameter id_0  = 32'd93,
+    parameter id_14 = 32'd56,
+    parameter id_17 = 32'd11,
+    parameter id_19 = 32'd42,
+    parameter id_22 = 32'd29
+) (
+    output uwire _id_0,
+    input uwire id_1[-1 : id_19],
+    input tri id_2,
+    output wire id_3,
+    output tri id_4,
+    output supply1 id_5,
+    output supply1 id_6,
+    input supply0 id_7,
+    input supply0 id_8,
+    output wor id_9,
+    input wire id_10[id_17 : (  id_22  )],
+    output supply1 id_11,
+    output wor id_12,
+    input tri0 id_13,
+    input uwire _id_14[id_14 : id_0],
+    input tri0 id_15,
+    output tri1 id_16,
+    input tri0 _id_17,
+    output tri0 id_18#(1),
+    input supply1 _id_19,
+    input supply0 id_20,
+    input supply1 id_21,
+    input tri0 _id_22,
+    output wire id_23,
+    output wire id_24
 );
-  wor id_7 = 1, id_8 = id_3;
-  assign id_2 = 1'b0 - id_5;
-  always id_2 = 1'h0 & 1;
-  wire id_9;
-  assign id_8 = !id_1;
-  wor id_10;
-  always id_8 = 1;
-  wire id_11, id_12;
   module_0 modCall_1 (
-      id_8,
-      id_3,
-      id_8,
-      id_4,
-      id_0,
-      id_4,
-      id_2,
-      id_7,
-      id_11,
-      id_8,
-      id_0,
       id_1,
-      id_2,
-      id_7
+      id_10
   );
-  assign modCall_1.type_19 = 0;
-  assign id_2 = 1'b0 && id_1;
-  assign id_10 = 1'b0;
-  assign id_8 = id_12;
-  wor id_13 = 1, id_14 = 1'b0;
+  parameter id_26 = 1;
 endmodule

@@ -1,14 +1,13 @@
-// Seed: 3896145914
-module module_0 ();
-  assign id_1 = 1 + id_1;
-  id_2(
-      .id_0(id_1)
-  );
+// Seed: 3738412444
+module module_0;
+  wire  id_1;
+  wire  id_2;
+  logic id_3 = id_3;
 endmodule
-module module_1 (
+module module_0 (
     id_1,
     id_2,
-    id_3,
+    module_1,
     id_4,
     id_5,
     id_6,
@@ -29,35 +28,36 @@ module module_1 (
     id_21,
     id_22,
     id_23,
-    id_24,
-    id_25,
-    id_26
+    id_24
 );
-  input wire id_26;
-  output wire id_25;
-  input wire id_24;
-  input wire id_23;
-  input wire id_22;
-  inout wire id_21;
-  inout wire id_20;
+  inout wire id_24;
+  output wire id_23;
+  output wire id_22;
+  input wire id_21;
+  input wire id_20;
   output wire id_19;
-  input wire id_18;
-  input wire id_17;
+  output wire id_18;
+  output wire id_17;
   input wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  inout wire id_13;
-  input wire id_12;
+  inout wor id_15;
+  input wire id_14;
+  input wire id_13;
+  inout wire id_12;
   input wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
+  inout wire id_10;
   module_0 modCall_1 ();
+  inout wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout logic [7:0] id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_15 = 1'b0;
+  logic id_25;
+  ;
+  assign id_4[1] = {1 & id_4};
+  wire id_26;
 endmodule

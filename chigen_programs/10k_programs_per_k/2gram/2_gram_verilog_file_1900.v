@@ -1,36 +1,29 @@
-// Seed: 4199914100
-module module_0;
-  wire id_1;
-  assign module_1.type_0 = 0;
+// Seed: 1966341643
+module module_0 #(
+    parameter id_2 = 32'd96,
+    parameter id_3 = 32'd67
+) (
+    input wor id_0
+);
+  supply1 _id_2 = 1'b0, _id_3;
+  wire id_4;
+  wire [id_2 : id_3] id_5;
 endmodule
-module module_1 (
-    input  logic id_0,
+module module_1 #(
+    parameter id_4 = 32'd26
+) (
+    output wor   id_0
+    , id_6,
     output logic id_1,
-    output logic id_2,
-    input  tri0  id_3,
-    input  wand  id_4
+    input  wand  id_2,
+    input  tri   id_3,
+    input  wire  _id_4
 );
-  always_comb id_2 <= id_0;
-  wire id_6;
-  reg  id_7;
-  module_0 modCall_1 ();
-  final begin : LABEL_0
-    id_1 <= id_7;
-    id_7 <= 1'b0;
-    $display;
-  end
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  output wire id_1;
-  module_0 modCall_1 ();
+  assign id_6[1] = id_2 & id_2;
+  always_comb id_1 = #1 id_4;
+  module_0 modCall_1 (id_3);
+  assign modCall_1.id_3 = 0;
+  always id_1 = id_4;
+  logic [id_4 : -1] id_7;
+  wire id_8;
 endmodule

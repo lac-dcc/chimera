@@ -1,33 +1,37 @@
-// Seed: 1792139663
-module module_0 ();
-  assign id_1 = id_1;
-  wire id_2;
+// Seed: 1053669954
+module module_0;
+  parameter id_1 = -1;
+  assign module_1._id_5 = 0;
 endmodule
-module module_1 (
-    input tri id_0,
-    input tri id_1,
+module module_1 #(
+    parameter id_13 = 32'd93,
+    parameter id_14 = 32'd31,
+    parameter id_5  = 32'd10
+) (
+    output logic id_0,
+    input wor id_1,
     input supply1 id_2,
-    output supply0 id_3,
-    output uwire id_4,
-    output uwire id_5,
-    output uwire id_6,
-    output wor id_7
-    , id_19,
-    input wire id_8,
-    output wire id_9,
-    input tri1 id_10,
-    input supply1 id_11,
-    input tri1 id_12,
-    input tri id_13,
-    input wand id_14,
-    output supply0 id_15,
-    output wand id_16,
-    input wor id_17
+    input supply1 id_3,
+    input tri id_4,
+    input uwire _id_5,
+    input wor id_6
 );
-  wire id_20;
+  assign id_0 = id_5 & id_5;
+  wire id_8;
+  ;
+  wire id_9;
+  for (id_10 = id_8; -1'b0; id_0 = id_2) begin : LABEL_0
+    logic [-1 : id_5] id_11;
+    logic id_12;
+  end
   module_0 modCall_1 ();
-  assign id_4 = ~1;
-  wire id_21;
-  wire id_22;
-  wire id_23;
+  wire  _id_13;
+  logic _id_14;
+  genvar id_15;
+  localparam id_16 = -1;
+  wire id_17;
+  always @(posedge 1 - -1);
+  parameter [id_13 : id_14] id_18 = 1;
+  wire id_19;
+  ;
 endmodule

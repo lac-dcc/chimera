@@ -1,28 +1,35 @@
-// Seed: 2287931333
-module module_0;
-  id_1(
-      .id_0(1), .id_1(1), .id_2(id_2)
-  );
+// Seed: 3041952765
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    output wand id_1
+    output tri id_0,
+    output supply1 id_1,
+    input tri id_2,
+    output tri id_3
+    , id_15,
+    output wor id_4,
+    input supply0 id_5,
+    output supply0 id_6,
+    input supply0 id_7,
+    output supply0 id_8,
+    input supply0 id_9,
+    input wire id_10,
+    output supply0 id_11,
+    input wand id_12,
+    output tri id_13
 );
-  wire id_3;
-  module_0 modCall_1 ();
-endmodule
-module module_2 (
-    output supply0 id_0
-    , id_3,
-    output wand id_1
-);
-  tri0 id_4;
-  `define pp_5 0
-  id_6(
-      .id_0(id_1), .id_1(`pp_5), .id_2(1 && 1), .id_3(1), .id_4(1 ^ 1), .id_5()
+  assign id_4 = id_2;
+  parameter id_16 = 1;
+  module_0 modCall_1 (
+      id_16,
+      id_15,
+      id_15
   );
-  module_0 modCall_1 ();
-  always_latch @(posedge 1) begin : LABEL_0
-    @(posedge 1 | id_3 or posedge 1) id_0 = 1;
-  end
 endmodule

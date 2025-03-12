@@ -1,54 +1,53 @@
-// Seed: 2291102042
-module module_0 (
-    output tri1 id_0
-);
-  assign id_0 = 1;
-  wire id_2;
-  assign module_1.id_10 = 0;
-  wire id_3;
-  initial id_3 = id_2;
+// Seed: 395006429
+module module_0;
+  logic id_1;
+  ;
+  logic [1 : 1] id_2;
+  ;
 endmodule
-module module_1 (
-    output tri id_0,
-    input tri0 id_1,
-    output wor id_2,
-    input uwire id_3,
-    input wor id_4,
-    input wor id_5,
-    output supply1 id_6,
-    output tri1 id_7,
-    input wor id_8,
-    output wand id_9,
-    input supply1 id_10,
-    input supply0 id_11,
-    output tri1 id_12,
-    input tri0 id_13,
-    output supply1 id_14,
-    input wire id_15,
-    output supply1 id_16,
-    input supply1 id_17,
-    input tri id_18,
-    output supply1 id_19,
-    input uwire id_20,
-    input wire id_21,
-    input wand id_22,
-    input tri id_23,
-    input tri0 id_24,
-    output logic id_25,
-    input supply0 id_26,
-    output tri id_27,
-    output uwire id_28
+module module_0 #(
+    parameter id_1 = 32'd23,
+    parameter id_2 = 32'd67,
+    parameter id_4 = 32'd35
+) (
+    _id_1,
+    _id_2,
+    id_3,
+    _id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  wire id_30, id_31;
-  module_0 modCall_1 (id_6);
-  wire id_32;
-  wire id_33, id_34;
-  tri0 id_35 = 1'h0;
-  always @(posedge 1 or 1) begin : LABEL_0
-    begin : LABEL_0
-      if (id_10) begin : LABEL_0
-        id_25 <= 1;
-      end
-    end
-  end
+  output wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  output supply1 id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire _id_4;
+  input wire id_3;
+  input wire _id_2;
+  input wire _id_1;
+  logic module_1;
+  assign id_7 = 1'b0;
+  wire id_13;
+  logic [7:0] id_14;
+  struct packed {
+    logic [id_1  ==  id_2 : -1] id_15;
+    logic id_16;
+  } [id_4 : 1] id_17;
+  logic [id_1 : 1] id_18;
+  ;
+  assign id_17.id_16 = id_13;
+  wire id_19, id_20, id_21;
+  wire id_22;
+  assign id_14[1'h0] = 1'd0;
+  module_0 modCall_1 ();
 endmodule

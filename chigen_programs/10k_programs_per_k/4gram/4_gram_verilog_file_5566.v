@@ -1,56 +1,65 @@
-// Seed: 1534767412
-module module_0 (
-    output supply1 id_0,
-    input tri id_1,
-    input tri0 id_2,
-    output uwire id_3,
-    input tri0 id_4
-);
-  assign id_3 = id_1;
+// Seed: 4196210947
+module module_0;
+  tri0 [-1 : -1] id_1;
+  assign id_1 = id_1 + id_1 ? id_1 : id_1 ? -1 : -1'd0 ? id_1 : id_1;
 endmodule
 module module_1 (
-    output tri1 id_0,
-    output supply0 id_1,
-    input wand id_2,
-    input tri id_3,
-    input wor id_4,
-    input tri1 id_5,
-    input supply1 id_6,
-    output tri1 id_7,
-    input uwire id_8,
-    input supply0 id_9,
-    output wire id_10,
-    input tri0 id_11,
-    input tri id_12,
-    input wand id_13,
-    output tri0 id_14,
-    input uwire id_15,
-    input tri0 id_16,
-    input wor id_17,
-    output uwire id_18,
-    input supply1 id_19,
-    output tri1 id_20,
-    input tri1 id_21,
-    input tri id_22,
-    input supply0 id_23,
-    input tri0 id_24,
-    input supply1 id_25,
-    input tri1 id_26,
-    output logic id_27,
-    input supply0 id_28,
-    input wor id_29,
-    output wor id_30,
-    output supply0 id_31,
-    input wor id_32
-    , id_34
+    id_1,
+    id_2,
+    id_3
 );
-  always_comb @(posedge id_34) id_27 <= 1;
-  module_0 modCall_1 (
-      id_14,
-      id_19,
-      id_26,
-      id_14,
-      id_22
-  );
-  assign modCall_1.type_3 = 0;
+  input wire id_3;
+  input wire id_2;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  output wire id_1;
+  reg id_4;
+  always id_4 = #id_5 id_3;
+endmodule
+module module_2 #(
+    parameter id_11 = 32'd47,
+    parameter id_3  = 32'd66,
+    parameter id_4  = 32'd94,
+    parameter id_9  = 32'd39
+) (
+    id_1,
+    id_2,
+    _id_3,
+    _id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
+);
+  output reg id_8;
+  input wire id_7;
+  input wire id_6;
+  input logic [7:0] id_5;
+  input wire _id_4;
+  input wire _id_3;
+  inout logic [7:0] id_2;
+  inout tri1 id_1;
+  assign id_2[id_3] = id_4 & -1'b0;
+  assign id_1 = -1;
+  parameter id_9 = 1'b0;
+  wire  id_10;
+  uwire _id_11 = 1;
+  initial begin : LABEL_0
+    foreach (id_12[id_11, id_11]) begin : LABEL_1
+      id_8 = id_6 & id_5[-1'd0] | id_6;
+      if (id_9) begin : LABEL_2
+        repeat (id_9) begin : LABEL_3
+          $clog2(id_9);
+          ;
+        end
+      end
+    end
+  end
+  wire id_13;
+  assign id_10 = id_9;
+  localparam id_14 = id_9;
+  logic id_15;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  wire [id_9 : id_4] id_16 = id_3;
 endmodule

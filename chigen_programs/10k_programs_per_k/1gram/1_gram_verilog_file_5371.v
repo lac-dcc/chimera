@@ -1,38 +1,44 @@
-// Seed: 1534841577
-module module_0 (
-    output uwire id_0
+// Seed: 4004781548
+module module_0 #(
+    parameter id_11 = 32'd41
+) (
+    output tri1 id_0,
+    input tri1 id_1,
+    output wire id_2,
+    output supply0 id_3,
+    output supply0 id_4,
+    input wor id_5,
+    output wire id_6
 );
+  struct packed {
+    logic id_8;
+    logic id_9;
+    logic id_10;
+  } _id_11;
+  wire [-1 : id_11] id_12, id_13;
+  assign module_1.id_0 = 0;
 endmodule
-module module_1 (
-    output wire id_0,
-    output wor id_1,
-    output wand id_2,
-    input supply1 id_3,
-    input tri0 id_4,
-    output tri0 id_5,
-    input uwire id_6,
-    output wire id_7,
-    input wand id_8,
-    input tri id_9,
-    input wand id_10,
-    output wand id_11,
-    output tri0 id_12,
-    output wire id_13,
-    input wor id_14,
-    input wand id_15,
-    output tri id_16,
-    inout uwire id_17,
-    input wand id_18,
-    output supply1 id_19,
-    input wor id_20,
-    output wire id_21,
-    output supply1 id_22
+module module_1 #(
+    parameter id_2 = 32'd17
+) (
+    input  wand id_0,
+    input  tri0 id_1,
+    input  wor  _id_2,
+    input  tri0 id_3,
+    input  tri0 id_4,
+    input  wor  id_5,
+    output tri1 id_6,
+    input  wire id_7,
+    input  wire id_8 [1 : id_2]
 );
-  id_24(
-      id_7
+  assign id_6 = 1 == 1;
+  module_0 modCall_1 (
+      id_6,
+      id_0,
+      id_6,
+      id_6,
+      id_6,
+      id_5,
+      id_6
   );
-  xnor primCall (
-      id_2, id_14, id_17, id_6, id_3, id_8, id_10, id_4, id_18, id_20, id_15, id_9, id_24
-  );
-  module_0 modCall_1 (id_2);
 endmodule

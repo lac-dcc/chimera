@@ -1,57 +1,33 @@
-// Seed: 4022458761
+// Seed: 43423405
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    output wire  id_0,
+    input  tri1  id_1,
+    input  uwire id_2
 );
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  assign id_1 = 1;
-  wire id_4, id_5 = id_3;
-  assign id_5 = id_3;
-  wire id_6 = 1;
+  genvar id_4;
 endmodule
-module module_1 (
-    input wor id_0,
-    output wand id_1,
-    output logic id_2,
-    output tri0 id_3,
-    output uwire id_4,
-    output tri0 id_5,
-    input wand id_6,
-    input tri0 id_7,
-    input tri0 id_8,
-    input logic id_9,
-    input wire id_10,
-    output wor id_11,
-    output wor id_12,
-    input supply0 id_13,
-    input wire id_14,
-    output tri id_15
+module module_1 #(
+    parameter id_4 = 32'd30,
+    parameter id_7 = 32'd78
+) (
+    input  uwire id_0,
+    output wand  id_1,
+    input  wor   id_2,
+    input  uwire id_3 [-1 : id_4],
+    input  tri1  _id_4,
+    input  tri1  id_5
 );
-  initial id_2 <= id_9;
-  wire id_17;
-  wire id_18;
-  wire id_19;
+  logic _id_7;
+  ;
   module_0 modCall_1 (
-      id_19,
-      id_19,
-      id_17
+      id_1,
+      id_3,
+      id_5
   );
-  integer id_20 (
-      .id_0(1),
-      .id_1(1),
-      .id_2(id_19),
-      .id_3(id_7),
-      .id_4(id_4),
-      .id_5(id_3),
-      .id_6(id_17),
-      .id_7(id_15),
-      .id_8(1),
-      .id_9(id_19)
-  );
-  id_21(
-      id_12
-  );
+  assign modCall_1.id_0 = 0;
+  wire id_8;
+  bit [1 : id_7] id_9;
+  assign id_7 = id_3;
+  id_10 :
+  assert property (@(posedge -1'b0 or posedge -1) -1'b0) id_9 = id_0;
 endmodule

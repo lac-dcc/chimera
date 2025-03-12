@@ -1,36 +1,31 @@
-// Seed: 2738024228
-module module_0 (
-    input wire id_0,
-    output supply1 id_1,
-    input tri1 id_2
-);
-  always_comb @(1 or posedge 1) id_1 = 1;
-  assign module_1.id_2 = 0;
-  tri1 id_4;
-  assign id_4 = 1'b0;
-  wire id_5;
-  assign id_1 = 1;
-  id_6(
-      .id_0(1 <= id_5), .id_1(1), .id_2(1), .id_3(id_5 == id_2)
-  );
-  wire id_7;
-  wire id_8;
+// Seed: 111835871
+module module_0;
+  logic id_1, id_2 = id_2;
+  initial begin : LABEL_0
+    do id_1 <= -1'b0 == (1); while ((id_2));
+    $clog2(73);
+    ;
+    if (1) begin : LABEL_1
+      if (1) begin : LABEL_2
+        id_1 <= 1'b0;
+      end
+    end
+  end
+  assign module_1.id_1 = 0;
 endmodule
 module module_1 (
-    output logic id_0,
-    input supply0 id_1,
-    output wor id_2,
-    input logic id_3
+    inout  logic id_0,
+    input  wire  id_1,
+    output wire  id_2,
+    output wire  id_3,
+    input  tri0  id_4,
+    input  wor   id_5,
+    input  tri0  id_6
 );
-  initial begin : LABEL_0
-    assign id_2 = id_3;
-    id_0 <= id_3 - 1'b0;
-    $display;
-  end
-  buf primCall (id_0, id_1);
-  module_0 modCall_1 (
-      id_1,
-      id_2,
-      id_1
-  );
+  assign id_2 = id_6;
+  wire id_8;
+  module_0 modCall_1 ();
+  generate
+    always @(posedge (id_0)) id_0 <= id_8;
+  endgenerate
 endmodule

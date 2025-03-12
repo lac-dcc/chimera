@@ -1,62 +1,38 @@
-// Seed: 2597865432
+// Seed: 2394318219
 module module_0 (
     id_1,
     id_2,
     id_3
 );
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_4;
-  assign module_1.id_1 = 0;
-endmodule
-module module_1 ();
-  assign #1 id_1 = 1'b0;
-  module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1
-  );
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
-);
-  output wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  input wire id_3;
+  inout wire id_3;
   input wire id_2;
   input wire id_1;
-  rtran #1  (1, 1, id_3);
+  logic id_4 = id_2;
+  assign module_1.id_2 = 0;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd53,
+    parameter id_6 = 32'd66
+) (
+    input wire _id_0,
+    input tri0 id_1,
+    output wor id_2,
+    input supply0 id_3,
+    input uwire id_4,
+    input wire id_5,
+    input wand _id_6
+);
+  parameter id_8 = -1;
+  wor id_9;
   module_0 modCall_1 (
-      id_2,
-      id_7,
-      id_7
+      id_9,
+      id_8,
+      id_9
   );
-  for (id_12 = 1; 1; id_11 = id_3) begin : LABEL_0
-    always @(posedge id_4) begin : LABEL_0
-      begin : LABEL_0
-        id_9 <= 1;
-      end
-    end
-  end
-  assign id_9 = id_1;
-  wire id_14;
-  always @(negedge id_13 * id_10);
-  final $display;
+  wire [(  id_0  ) : 1] id_10;
+  wire id_11;
+  assign id_9 = 1;
+  logic [7:0] id_12;
+  ;
+  assign id_12[!id_6] = -1'd0 + "" - id_11;
 endmodule

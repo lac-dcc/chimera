@@ -1,50 +1,52 @@
-// Seed: 267677412
-module module_0;
-  nmos (1, 1, id_1);
-  initial $display(1);
-  wand id_2 = id_1;
-endmodule
-module module_1 (
-    output supply0 id_0,
-    output wor id_1
-);
-  wand id_3;
-  module_0 modCall_1 ();
-  assign modCall_1.type_3 = 0;
-  assign id_1 = !{id_3, id_3 ? 1 >> id_3 : 1};
-endmodule
-module module_2;
-  module_0 modCall_1 ();
-  assign modCall_1.id_2 = 0;
-  assign id_1 = id_1;
-  wire id_2;
-  wire id_3;
-  assign id_1[1] = 1;
-endmodule
-macromodule module_3 (
+// Seed: 2670714845
+module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_3
 );
-  output wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
+  input wire id_3;
   inout wire id_2;
-  inout wire id_1;
-  id_7(
-      .id_0(id_1),
-      .id_1(id_2),
-      .id_2(0),
-      .id_3(id_1),
-      .id_4(1),
-      .id_5(id_3['b0]),
-      .id_6(id_6),
-      .id_7(1)
+  input wire id_1;
+  assign module_2.id_1 = 0;
+  wire id_4;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd53
+) (
+    input supply1 _id_0,
+    input wire id_1,
+    output supply1 id_2
+);
+  localparam id_4 = 1;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4
   );
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  logic [(  -1  ) : id_0] id_5;
+  always @(posedge 1);
+  logic [1 : 1] id_6;
+  wire [-1 'b0 : -1] id_7;
+endmodule
+module module_2 #(
+    parameter id_6 = 32'd17
+) (
+    output wor  id_0,
+    input  wand id_1,
+    output tri1 id_2,
+    input  wire id_3,
+    input  wire id_4
+    , _id_6, id_7
+);
+  reg [id_6 : -1] id_8;
+  wire id_9[1 : 1];
+  ;
+  and primCall (id_0, id_4, id_8, id_9, id_7, id_10);
+  wire id_10;
+  always @(posedge id_3) id_8 <= -1;
+  module_0 modCall_1 (
+      id_9,
+      id_9,
+      id_9
+  );
 endmodule

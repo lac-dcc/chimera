@@ -1,45 +1,31 @@
-// Seed: 523144864
+// Seed: 2627573274
 module module_0 (
-    input wor id_0,
-    output wor id_1,
-    input uwire id_2,
-    input supply0 id_3
+    output wire id_0,
+    output tri0 id_1
 );
-  wire id_5;
-  assign module_1.id_3 = 0;
+  logic [7:0][1 : (  1  )] id_3;
+  assign id_3[1] = 1'b0;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wire id_1,
-    output wire id_2,
-    input uwire id_3,
-    input tri0 id_4,
-    input tri1 id_5,
-    input tri1 id_6,
-    output tri id_7,
-    output wand id_8,
-    output tri0 id_9,
-    input supply0 id_10,
-    input tri1 id_11,
-    input wor id_12,
-    input tri0 id_13
-    , id_22,
-    input supply1 id_14,
-    input tri id_15,
-    input tri0 id_16,
-    input tri0 id_17,
-    output supply1 id_18
-    , id_23, id_24,
-    input tri0 id_19,
-    input supply0 id_20
+    output logic id_0,
+    input supply1 id_1,
+    input tri1 id_2,
+    output tri1 id_3,
+    input tri1 id_4,
+    input supply0 id_5,
+    input wor id_6
 );
-  supply1 id_25 = id_23;
-  assign id_18 = 1;
+  assign id_3 = id_6;
+  assign id_0 = ~id_4 + -1;
+  assign id_3 = 1;
+  initial begin : LABEL_0
+    $unsigned(53);
+    ;
+    id_0 <= id_2;
+  end
   module_0 modCall_1 (
-      id_20,
-      id_9,
       id_3,
-      id_19
+      id_3
   );
-  assign id_22 = id_4;
+  assign modCall_1.id_0 = 0;
 endmodule

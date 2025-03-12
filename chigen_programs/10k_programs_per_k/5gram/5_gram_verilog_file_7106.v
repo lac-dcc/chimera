@@ -1,44 +1,30 @@
-// Seed: 3384964424
+// Seed: 3345245911
+program module_1;
+  assign id_11 = 1;
+  module_0 modCall_1 ();
+  assign modCall_1.id_11 = 0;
+endprogram
 module module_0 (
     input wand id_0,
-    output logic id_1,
+    output uwire id_1,
     input wire id_2,
-    input wor id_3,
-    input tri0 id_4,
-    input supply1 id_5
+    input tri id_3,
+    input wand id_4,
+    output uwire id_5,
+    input supply0 id_6,
+    output wor id_7,
+    output uwire id_8,
+    input uwire id_9,
+    output tri1 id_10,
+    output wire id_11,
+    input wor id_12,
+    input tri id_13,
+    input wor id_14,
+    input tri1 id_15,
+    output tri id_16,
+    input supply1 id_17
 );
-  assign module_1.type_10 = 0;
-  assign id_1 = id_5 == id_0;
-  always @(1'b0 == 1'b0 or posedge $display == id_0)
-    if (id_5 & 1) id_1 <= 1'b0;
-    else begin : LABEL_0
-      `define pp_7 0
-      id_1 = 1;
-      $display();
-      id_1 = 1'h0;
-    end
-endmodule
-module module_1 #(
-    parameter id_6 = 32'd86,
-    parameter id_7 = 32'd41
-) (
-    output tri id_0,
-    output supply1 id_1,
-    input supply1 id_2,
-    input wor id_3,
-    output logic id_4
-);
-  initial begin : LABEL_0
-    id_4 <= 1;
-  end
-  module_0 modCall_1 (
-      id_3,
-      id_4,
-      id_2,
-      id_3,
-      id_3,
-      id_3
-  );
-  defparam id_6.id_7 = 1'b0;
-  wire id_8;
+  wire [-1 : 1] id_19;
+  assign id_16 = 1;
+  nand primCall (id_1, id_12, id_13, id_14, id_15, id_17, id_19, id_2, id_3, id_4, id_6, id_9);
 endmodule

@@ -1,58 +1,57 @@
-// Seed: 1115619776
+// Seed: 48291985
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
+    id_3
 );
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
   inout wire id_3;
-  inout wire id_2;
+  input wire id_2;
   input wire id_1;
-  wire id_11;
-  assign id_7 = 1;
-  wire id_12;
 endmodule
-module module_0 (
-    output supply0 id_0,
-    output logic id_1,
-    input wor id_2,
-    input logic id_3
+module module_1 (
+    output wire id_0,
+    input  tri0 id_1
+    , id_4,
+    output wire id_2
 );
-  wire id_5;
+  assign id_0 = 1'h0 & id_4;
+  buf primCall (id_0, id_1);
   module_0 modCall_1 (
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5
+      id_4,
+      id_4,
+      id_4
   );
-  assign modCall_1.id_7 = 0;
-  assign id_1 = (1'b0 == {id_3, id_2, id_3, 1});
-  always_comb id_1 = id_3;
-  assign id_5 = 1'b0 + id_3;
-  assign id_0 = 1'b0;
-  wire id_6;
-  always id_1 <= 1;
-  wire module_1;
-  supply1 id_7, id_8, id_9;
-  assign id_7 = id_5;
-  supply0 id_10 = 1 - 1;
-endmodule : SymbolIdentifier
+endmodule
+module module_2 #(
+    parameter id_0  = 32'd97,
+    parameter id_11 = 32'd20,
+    parameter id_3  = 32'd39,
+    parameter id_6  = 32'd94
+) (
+    input wire _id_0
+    , id_19,
+    output tri0 id_1,
+    output tri0 id_2,
+    output supply0 _id_3[id_0 : id_3  .  id_11],
+    output tri1 id_4,
+    input wor id_5,
+    input tri0 _id_6,
+    output tri id_7,
+    output tri id_8,
+    input supply0 id_9,
+    input uwire id_10,
+    output tri _id_11,
+    output uwire id_12,
+    output wor id_13,
+    input tri1 id_14,
+    output tri1 id_15[id_6 : 1],
+    input tri1 id_16,
+    input supply1 id_17
+);
+  assign id_12 = 1;
+  module_0 modCall_1 (
+      id_19,
+      id_19,
+      id_19
+  );
+endmodule

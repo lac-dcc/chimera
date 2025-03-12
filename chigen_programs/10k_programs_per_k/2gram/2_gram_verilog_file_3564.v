@@ -1,33 +1,30 @@
-// Seed: 1340649138
-module module_0 ();
-  assign module_1.id_0 = 0;
-  wire id_3;
+// Seed: 3501393577
+module module_0;
+  wire id_1 = id_1;
 endmodule
-module module_1 (
-    inout tri id_0,
-    output supply0 id_1,
+module module_1;
+  wor id_1[1 : -1];
+  parameter id_2 = id_1++;
+  module_0 modCall_1 ();
+endmodule
+program module_2 #(
+    parameter id_6 = 32'd55
+) (
+    input wor id_0,
+    output logic id_1,
     input uwire id_2,
-    output wand id_3,
-    input supply0 id_4
+    output uwire id_3,
+    input supply0 id_4,
+    output uwire id_5,
+    output supply0 _id_6,
+    output uwire id_7,
+    input supply0 id_8,
+    input uwire id_9
 );
-  id_6(
-      .id_0(""), .id_1('d0), .id_2(id_2), .id_3(id_1 + id_0), .id_4(1), .id_5(1)
-  );
+  and primCall (id_1, id_11, id_2, id_4, id_8, id_9);
+  always_latch #1 id_1 <= id_4;
+  logic id_11;
+  ;
   module_0 modCall_1 ();
-endmodule
-module module_2 (
-    output supply1 id_0,
-    input wand id_1,
-    output tri id_2,
-    input uwire id_3,
-    output tri1 id_4,
-    input supply1 id_5,
-    input wand id_6,
-    input tri1 id_7,
-    input wor id_8,
-    output wand id_9,
-    input tri0 id_10,
-    output tri id_11
-);
-  module_0 modCall_1 ();
-endmodule
+  logic [-1 : id_6] id_12;
+endprogram

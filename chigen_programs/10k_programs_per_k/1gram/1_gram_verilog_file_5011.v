@@ -1,64 +1,39 @@
-// Seed: 1131310322
-module module_0 (
-    input wor id_0,
-    output tri id_1,
-    input supply1 id_2,
-    input wand id_3,
-    input supply1 id_4,
-    input wand id_5,
-    input wire id_6,
-    input wand id_7,
-    input tri id_8,
-    input supply0 id_9,
-    input supply1 id_10,
-    input wand id_11,
-    input supply1 id_12,
-    output supply0 id_13,
-    input wor id_14,
-    input wire id_15,
-    output wand id_16,
-    input tri id_17,
-    input tri1 id_18,
-    input tri id_19
-);
-  wire id_21;
-  assign module_1.id_5 = 0;
+// Seed: 2692102673
+module module_0;
+  id_1 :
+  assert property (@(id_1 or id_1 == 1'b0 + -id_1) id_1)
+    @(posedge id_1) begin : LABEL_0
+      id_1 = -1;
+    end
+  assign module_1.id_4 = 0;
 endmodule
-module module_1 (
-    output tri0 id_0,
-    input  tri0 id_1,
-    output tri1 id_2
+module module_1 #(
+    parameter id_4 = 32'd21
+) (
+    id_1,
+    id_2,
+    id_3[id_4 : !1],
+    _id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  id_4(
-      1, 1, 1
-  );
-  wire id_5 = (id_1);
-  always_ff deassign id_2;
-  wire id_6, id_7, id_8;
-  assign id_5 = 1'b0;
-  module_0 modCall_1 (
-      id_1,
-      id_0,
-      id_5,
-      id_1,
-      id_5,
-      id_5,
-      id_1,
-      id_5,
-      id_5,
-      id_1,
-      id_5,
-      id_5,
-      id_1,
-      id_0,
-      id_1,
-      id_5,
-      id_0,
-      id_1,
-      id_1,
-      id_5
-  );
-  wand id_9;
-  wire id_10;
-  always $display(id_9, {{id_1, 1'b0, id_5} ==? 1 - 1{1'b0}});
+  inout wire id_8;
+  inout wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire _id_4;
+  inout logic [7:0] id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0 modCall_1 ();
+  assign id_3 = id_3;
+  logic [7:0] id_9, id_10;
+  always $signed(12);
+  ;
+  assign id_4 = id_5;
+  wire id_11;
+  supply1 id_12;
+  assign id_12 = 1'b0;
 endmodule

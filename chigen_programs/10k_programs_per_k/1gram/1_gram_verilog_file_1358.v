@@ -1,31 +1,34 @@
-// Seed: 3390733433
-module module_0 ();
-  uwire id_2, id_3;
-  assign id_3 = ~id_1(id_3);
-  assign id_3 = id_1;
-  assign module_1.type_5 = 0;
-endmodule
-macromodule module_1 (
-    input supply1 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    input wor id_3,
-    input tri1 id_4,
-    input tri id_5,
-    input tri id_6,
-    input wand id_7,
-    input supply1 id_8,
-    input supply0 id_9,
-    input wor id_10,
-    input wire id_11,
-    output wand id_12,
-    output tri id_13,
-    input uwire id_14,
-    input uwire id_15
+// Seed: 970227722
+module module_0 #(
+    parameter id_1 = 32'd54
 );
-  if (1) integer id_17;
-  assign id_17 = id_2;
+  logic _id_1 = id_1;
+  wor [id_1 : 1  |  id_1  .  id_1] id_2, id_3;
+  assign id_1 = id_2;
+  assign id_2 = -1;
+  wire id_4, id_5;
+endmodule
+module module_1 (
+    input wire void id_0
+    , id_6,
+    output wand id_1,
+    input supply1 id_2,
+    input supply1 id_3,
+    input uwire id_4
+);
+  wire [1 'd0 : 1] id_7;
+  assign id_6 = {1'h0{-1}};
+  assign id_1 = -1;
+  logic id_8;
+  ;
+  bit id_9, id_10;
+  assign id_8 = -1;
+  always
+    if (1) id_10 <= id_2;
+    else @(posedge 1 or posedge -1'b0) $unsigned(69);
+  ;
+  wire id_11;
   module_0 modCall_1 ();
-  assign id_13 = id_2;
-  wire id_18;
+  assign modCall_1.id_1 = 0;
+  assign id_9 = -1;
 endmodule

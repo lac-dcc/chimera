@@ -1,35 +1,35 @@
-// Seed: 2226921179
+// Seed: 2245537864
 module module_0 (
-    input supply1 id_0,
-    input supply0 id_1,
-    output wand id_2
+    id_1,
+    id_2
 );
-  wire id_4;
+  inout wor id_2;
+  inout wire id_1;
   assign module_1.id_4 = 0;
-  wire id_5;
-  assign id_4 = id_1(1 == 1, id_4);
+  assign id_2 = ("" < -1);
+  logic id_3;
+  always @(posedge -1'b0 > 1 or posedge -1'b0) begin : LABEL_0
+    repeat ("" != -1'b0) id_3 = -1;
+    disable id_4;
+    $signed(33);
+    ;
+    SystemTFIdentifier(id_4, -1 - id_4, (1), id_4, id_2, -1'b0, -1, -1);
+  end
 endmodule
-program module_1 (
-    input  uwire id_0,
-    input  wor   id_1,
-    output wand  id_2,
-    output tri1  id_3,
-    input  tri0  id_4,
-    output uwire id_5,
-    input  tri1  id_6,
-    output tri0  id_7
+module module_1 (
+    input supply0 id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input supply1 id_3,
+    output tri0 id_4
 );
-  logic [7:0] id_9;
-  wire id_10;
+  parameter id_6 = 1 == 1;
+  assign id_4 = 1;
+  assign id_4 = (id_2);
+  localparam id_7 = id_6;
   module_0 modCall_1 (
-      id_6,
-      id_0,
-      id_7
+      id_7,
+      id_6
   );
-  id_11(
-      .id_0(id_7), .id_1(1), .id_2(id_9), .id_3(1 - 1), .id_4(1'h0), .id_5(1), .id_6(1)
-  );
-  assign id_2 = 1'd0;
-  wire id_12;
-  assign id_9[1'd0] = id_4;
-endprogram
+  wire id_8;
+endmodule

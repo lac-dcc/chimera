@@ -1,83 +1,58 @@
-// Seed: 148041638
+// Seed: 2283574293
 module module_0 (
-    input supply1 id_0,
-    input tri0 id_1,
-    input supply0 id_2,
-    input wand id_3,
-    input wire id_4,
-    output uwire id_5,
-    input tri0 id_6,
-    output tri1 id_7,
-    output wand id_8,
-    output uwire id_9,
-    input wand id_10,
-    output uwire id_11,
-    input tri id_12,
-    output tri1 id_13,
-    output wand id_14,
-    input tri id_15
-    , id_25,
-    input supply1 id_16,
-    output supply0 id_17,
-    input uwire id_18,
-    input wire id_19,
-    output wor id_20,
-    output uwire id_21,
-    input supply1 id_22,
-    input wand id_23
+    input  wire id_0,
+    output wand id_1,
+    input  tri  id_2
 );
-  assign id_21#(
-      .id_15(id_16 > id_3),
-      .id_12(id_6 < id_15),
-      .id_1 (id_16 | 1)
-  ) = 1;
-  wire id_26;
-  assign module_1.type_5 = 0;
+  logic id_4;
+endmodule
+module module_1 (
+    output wand id_0,
+    input supply1 id_1,
+    input supply1 id_2,
+    output logic id_3
+);
+  assign id_0 = -1'h0;
+  parameter id_5 = 1;
+  module_0 modCall_1 (
+      id_2,
+      id_0,
+      id_2
+  );
+  assign modCall_1.id_2 = 0;
+  initial begin : LABEL_0
+    id_3 = 1;
+  end
 endmodule
 module module_0 (
-    input tri0 id_0,
-    inout wand id_1,
-    input wor id_2,
-    output wor id_3
-    , id_15,
-    input supply0 id_4,
-    input tri1 id_5,
-    input uwire id_6,
-    input wor id_7,
-    output tri0 sample,
-    output uwire id_9,
-    input tri id_10,
-    input tri0 module_1,
-    output wand id_12,
-    output wire id_13
+    output wire id_0,
+    output tri0 id_1,
+    input wire id_2,
+    input tri0 module_2,
+    input wand id_4,
+    input wand id_5,
+    input tri1 id_6,
+    input tri0 id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    output wire id_10,
+    input wor id_11,
+    output supply1 id_12,
+    input wor id_13,
+    input tri1 id_14,
+    input tri1 id_15,
+    input tri0 id_16,
+    output wand id_17,
+    input tri0 id_18,
+    input tri id_19
 );
-  always_latch @(*) begin : LABEL_0
-    cover (1);
-  end
+  assign id_1 = "" ? id_2 <= "" : id_7;
   module_0 modCall_1 (
-      id_0,
       id_4,
-      id_7,
-      id_4,
-      id_7,
-      id_13,
-      id_6,
-      id_13,
-      id_12,
-      id_9,
-      id_1,
-      id_1,
-      id_5,
-      id_9,
-      id_3,
-      id_6,
-      id_6,
-      id_9,
-      id_6,
-      id_6,
-      id_9,
-      id_1,
-      id_0,
-      id_10
+      id_10,
+      id_6
   );
+  assign modCall_1.id_0 = 0;
+  logic id_21 = id_11;
+  assign id_1 = -1;
 endmodule

@@ -1,84 +1,95 @@
-// Seed: 1734353040
-module module_2 (
-    output wor id_0,
-    output wand id_1,
-    output wire id_2
-    , id_25,
-    input uwire id_3,
-    output supply1 id_4,
-    output tri1 id_5,
-    output uwire id_6,
-    input supply0 id_7,
-    input tri1 id_8,
-    input tri0 id_9,
-    input tri id_10,
-    input tri1 id_11
-    , id_26,
-    output wand id_12,
-    output wand id_13,
-    output uwire id_14,
-    output uwire id_15,
-    output wire id_16,
-    output supply1 module_0,
-    output tri1 id_18,
-    output wire id_19,
-    output wire id_20,
-    output tri id_21,
-    output supply1 id_22,
-    input supply0 id_23
+// Seed: 2913610931
+module module_0 (
+    output tri0 id_0,
+    input  tri1 id_1,
+    input  wor  id_2
+    , id_5,
+    input  tri  id_3
 );
-  assign module_1.id_15 = 0;
-  assign id_25 = 1;
-endmodule : SymbolIdentifier
+  assign id_5[1] = -1;
+  uwire id_6 = -1;
+  assign id_5 = id_1;
+  module_2 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_1,
+      id_3,
+      id_0,
+      id_0,
+      id_0,
+      id_3,
+      id_2,
+      id_0,
+      id_3,
+      id_0,
+      id_0,
+      id_0,
+      id_0
+  );
+  logic id_7;
+  ;
+endmodule
 module module_1 (
-    output supply1 id_0
-    , id_15,
-    output supply1 id_1,
-    input uwire id_2,
-    output supply0 id_3,
-    input uwire id_4,
-    input tri0 id_5,
-    input supply1 id_6,
-    output supply1 id_7,
-    input tri1 id_8,
-    input tri id_9,
-    output uwire id_10,
-    output supply1 id_11
-    , id_16,
-    output supply1 id_12
-    , id_17,
-    input supply1 id_13
+    output wor id_0,
+    output supply0 id_1,
+    input wand id_2,
+    input wire id_3,
+    input tri1 id_4
 );
-  assign id_11 = id_13;
-  assign id_3  = 1;
+  generate
+    assign id_0 = id_4;
+  endgenerate
   module_0 modCall_1 (
       id_0,
-      id_11,
       id_3,
-      id_5,
-      id_1,
-      id_7,
-      id_0,
       id_4,
-      id_2,
-      id_13,
-      id_9,
-      id_9,
-      id_10,
-      id_0,
-      id_1,
-      id_12,
-      id_3,
-      id_7,
-      id_1,
-      id_0,
-      id_12,
-      id_7,
-      id_3,
-      id_6
+      id_3
   );
-  initial begin : LABEL_0
-    id_15 <= id_16;
-  end
-  wire id_18;
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 (
+    input wor id_0,
+    input wor id_1,
+    input tri0 id_2,
+    output uwire id_3,
+    input tri1 id_4
+    , id_23,
+    input supply0 id_5,
+    input tri id_6,
+    input supply0 id_7,
+    input supply0 id_8,
+    input wor id_9,
+    input tri0 id_10,
+    output tri0 id_11,
+    output supply1 id_12
+    , id_24,
+    output uwire id_13,
+    input tri id_14
+    , id_25,
+    input supply1 id_15,
+    output tri0 id_16,
+    input wor id_17,
+    output supply0 id_18,
+    output supply1 id_19,
+    output wor id_20,
+    output wor id_21
+);
+  assign id_20 = -1;
+  assign id_18 = 1;
+  wire id_26;
+  assign id_12 = id_2;
+  wire id_27;
+  assign id_18 = 1 + 1 ? id_4 : -1 ? id_25 : -1;
+  wire id_28, id_29, id_30, id_31, id_32, id_33, id_34, id_35, id_36, id_37;
+  parameter id_38 = (1);
+  genvar id_39;
+  wire [-1 : -1] id_40, id_41;
+  assign module_0.id_1 = 0;
 endmodule

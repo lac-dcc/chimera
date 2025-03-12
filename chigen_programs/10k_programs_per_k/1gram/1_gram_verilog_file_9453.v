@@ -1,31 +1,39 @@
-// Seed: 4088081073
+// Seed: 3103220084
 module module_0;
-  wire id_2;
-  assign id_2 = id_1 & 1'b0;
-  assign id_2 = id_1;
-  tri id_3 = 1;
+  logic id_1;
+  ;
+  always $unsigned(15);
+  ;
+  id_2(
+      -1'b0
+  );
 endmodule
 module module_1 #(
-    parameter id_13 = 32'd7
+    parameter id_5 = 32'd30,
+    parameter id_7 = 32'd62
 ) (
-    input supply1 id_0,
-    input tri1 id_1,
-    input supply0 id_2,
-    output supply1 id_3,
-    output supply0 id_4,
-    input supply0 id_5,
-    input tri1 id_6,
-    output uwire id_7,
-    input supply1 id_8,
-    output tri0 id_9,
+    output tri id_0,
+    input tri id_1,
+    input wire id_2,
+    input supply1 id_3,
+    output wire id_4,
+    input tri1 _id_5[1 : 1],
+    input supply1 id_6,
+    input tri1 _id_7,
+    input tri id_8,
+    output wand id_9,
     output supply0 id_10,
-    inout wire id_11
+    input wand id_11,
+    input wor id_12
 );
-  assign id_7 = id_0;
-  defparam id_13 = id_6 == 1;
-  initial
-    if (id_8) id_11 = 1'b0;
-    else id_10 = 1;
+  parameter id_14 = -1;
   module_0 modCall_1 ();
-  assign modCall_1.type_4 = 0;
+  assign id_0 = id_8;
+  logic id_15;
+  ;
+  assign id_0 = 1;
+  supply0 [-1 : id_7  -  id_5] id_16 = 1, id_17 = id_14;
+  logic id_18;
+  ;
+  assign id_9 = 1;
 endmodule

@@ -1,32 +1,38 @@
-// Seed: 3636103945
-module module_0 (
-    output tri id_0,
-    output supply1 id_1
-);
-  wor id_3;
-  assign id_0 = id_3#(1'b0, 1);
-  always id_3 = id_3;
-  assign module_1.type_13 = 0;
-  assign id_1 = id_3;
-  assign id_0 = id_3;
+// Seed: 2934566875
+module module_0;
+  timeunit 1ps;
 endmodule
-module module_1 (
-    output tri id_0,
-    input tri1 id_1,
-    input supply1 id_2,
-    input wand id_3
-    , id_11,
-    input supply0 id_4,
-    output wand id_5,
-    input wor id_6,
-    input wire id_7,
-    input tri1 id_8,
-    output wire id_9
+program module_1;
+  logic [7:0] id_1;
+  wire id_2;
+  ;
+  tri1 id_3;
+  always $signed(40);
+  ;
+  assign id_3 = -1'b0;
+  wire id_4, id_5;
+  assign {id_1, 1, "", id_1 >= id_4} = id_5 + id_3;
+  assign id_5 = id_2;
+  module_0 modCall_1 ();
+  assign id_3 = 1 / id_5;
+endprogram
+module module_2 #(
+    parameter id_4 = 32'd0
+) (
+    id_1,
+    id_2,
+    id_3,
+    _id_4[id_4 : 1>-1]
 );
-  wire id_12;
-  assign id_12 = id_4;
-  module_0 modCall_1 (
-      id_5,
-      id_0
-  );
+  input logic [7:0] _id_4;
+  input wire id_3;
+  input wire id_2;
+  inout supply0 id_1;
+  assign id_1 = -1;
+  int id_5[1 : -1];
+  module_0 modCall_1 ();
+  integer id_6;
+  wire id_7;
+  wire id_8;
+  wire id_9;
 endmodule

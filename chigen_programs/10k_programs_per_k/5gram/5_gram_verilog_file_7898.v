@@ -1,54 +1,47 @@
-// Seed: 4052426397
+// Seed: 3140803919
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input supply0 id_0,
+    output wor id_1
 );
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_4;
-  module_2 modCall_1 ();
-  assign id_4 = id_4;
+  assign #id_3 id_3 = id_3;
 endmodule
 module module_1 (
-    input  wire id_0,
-    output tri1 id_1
+    output tri1 id_0,
+    input  wor  id_1
 );
-  wire id_3;
-  assign id_1 = 1;
+  logic id_3;
+  assign id_3 = id_3 & id_3;
   wire id_4;
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_4
+      id_1,
+      id_0
   );
+  assign modCall_1.id_3 = 0;
 endmodule
-module module_2;
-  assign id_1 = id_1 & id_1;
-  wire id_2;
-  always @(*) id_1 <= 1;
-endmodule
-module module_3 (
-    id_1,
-    id_2
+module module_2 #(
+    parameter id_0 = 32'd31
+) (
+    output tri   _id_0,
+    input  wor   id_1,
+    output tri0  id_2,
+    output wand  id_3,
+    output logic id_4,
+    input  uwire id_5,
+    output tri1  id_6
 );
-  inout wire id_2;
-  output wire id_1;
-  assign id_1 = 1;
-  assign id_1 = 'h0;
-  wand id_3;
-  always @(*) begin : LABEL_0
-    wait (id_2 != 1);
+  logic [id_0 : -1  !=?  1] id_8 = id_5;
+  module_0 modCall_1 (
+      id_1,
+      id_6
+  );
+  assign modCall_1.id_0 = 0;
+  logic id_9 = id_5;
+  logic [1 'b0 : -1 'd0] id_10;
+  ;
+  always @(posedge id_8) begin : LABEL_0
+    if (1) id_4 <= id_8;
   end
-  id_4 :
-  assert property (@(posedge id_3) 1)
-  else $display(1 - 1);
-  module_2 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  assign id_3 = 1;
-  generate
-    assign id_3 = id_3 ? id_4 : 1;
-  endgenerate
-  assign id_3 = 1 ? id_4 : 1'd0;
+  always_ff @(id_10 or posedge !id_10) $unsigned(30);
+  ;
+  or primCall (id_6, id_5, id_1, id_8);
 endmodule

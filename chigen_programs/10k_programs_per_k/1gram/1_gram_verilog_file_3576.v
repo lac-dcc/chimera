@@ -1,48 +1,83 @@
-// Seed: 551810027
-module module_0;
-  assign module_3.type_0 = 0;
-  assign module_2.id_1   = 0;
-endmodule
-module module_1 (
+// Seed: 2970200376
+module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
   output wire id_3;
   inout wire id_2;
-  input wire id_1;
-  always @(posedge 1) id_3 <= 1;
-  module_0 modCall_1 ();
+  output wire id_1;
+  logic id_8;
+  ;
 endmodule
-module module_2 (
-    input tri1 id_0,
-    input wor  id_1,
-    input tri  id_2
+module module_1 #(
+    parameter id_10 = 32'd56,
+    parameter id_13 = 32'd11,
+    parameter id_14 = 32'd42,
+    parameter id_3  = 32'd29,
+    parameter id_6  = 32'd73
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4,
+    id_5,
+    _id_6,
+    id_7,
+    id_8,
+    id_9,
+    _id_10[1 : id_13<id_14],
+    id_11,
+    id_12[id_6 : id_3],
+    _id_13,
+    _id_14,
+    id_15
 );
-  wire id_4, id_5;
-  module_0 modCall_1 ();
-endmodule
-module module_3 (
-    input  wor   id_0,
-    output logic id_1,
-    input  wor   id_2,
-    output uwire id_3
-);
-  wire  id_5;
-  uwire id_6;
-  module_0 modCall_1 ();
-  always id_1 <= #id_2 1;
-  assign id_1 = 1;
-  logic [7:0] id_7;
-  reg id_8, id_9;
-  always id_8 <= (id_7[1'b0 : 1]);
-  initial begin : LABEL_0
-    begin : LABEL_0
-      begin : LABEL_0
-        force id_7 = 1'b0;
-      end
+  output logic [7:0] id_15;
+  output wire _id_14;
+  output wire _id_13;
+  output logic [7:0] id_12;
+  input wire id_11;
+  inout logic [7:0] _id_10;
+  inout wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  output wire _id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire _id_3;
+  output wire id_2;
+  inout logic [7:0] id_1;
+  if (1) wire id_16;
+  else begin : LABEL_0
+    wire [1 : 1 'd0] id_17;
+    assign id_15[1'b0] = id_17;
+    begin : LABEL_1
+      always_comb id_1[id_10] = -1;
+      assign id_15 = id_10;
     end
-    if (id_6 - id_9) return 1;
+    logic [7:0][-1] id_18 = 1, id_19;
+    logic id_20;
+    logic id_21 = 1;
   end
-  wire id_10;
+  logic id_22;
+  logic id_23;
+  module_0 modCall_1 (
+      id_8,
+      id_9,
+      id_8,
+      id_22,
+      id_8,
+      id_16,
+      id_9
+  );
+  assign id_22 = -1;
 endmodule

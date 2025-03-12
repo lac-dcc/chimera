@@ -1,37 +1,54 @@
-// Seed: 1841055401
-module module_0;
-  assign id_1 = id_1;
-  assign module_1.id_4 = 0;
-  id_2(
-      id_3
-  );
-endmodule
-module module_1 (
-    input supply1 id_0,
-    input tri id_1,
-    input wire id_2,
-    input wand id_3,
-    input tri0 id_4,
-    input tri1 id_5,
-    output tri1 id_6
+// Seed: 915305693
+program module_0 (
+    id_1
 );
-  always begin : LABEL_0
-    id_6 = 1;
+  output wire id_1;
+  wire [1 'b0 : -1  +  1 'b0] id_2;
+endprogram
+module module_1 #(
+    parameter id_0  = 32'd80,
+    parameter id_12 = 32'd56,
+    parameter id_18 = 32'd73,
+    parameter id_2  = 32'd62
+) (
+    input wire _id_0,
+    input tri0 id_1,
+    output supply0 _id_2,
+    output tri1 id_3,
+    input wire id_4,
+    output wire id_5,
+    output wire id_6,
+    input tri0 id_7,
+    output wor id_8,
+    output tri0 id_9,
+    output supply1 id_10,
+    input wor id_11,
+    output supply1 _id_12,
+    input wand id_13,
+    input wand id_14,
+    input uwire id_15,
+    input tri0 id_16,
+    output wor id_17,
+    input supply1 _id_18,
+    input wire id_19,
+    input wor id_20,
+    input supply0 id_21,
+    input supply0 id_22,
+    output supply1 id_23
+);
+  wire [-1 : -1] id_25, id_26[id_12 : -1];
+  module_0 modCall_1 (id_26);
+  wire [-1 'b0 : id_18] id_27, id_28, id_29;
+  assign id_17 = id_27;
+  wire id_30;
+  assign id_23 = id_26;
+  wire id_31;
+  struct packed {
+    logic id_32;
+    logic [id_2 : (  id_0  )] id_33;
+  } id_34;
+  always #1 begin : LABEL_0
+    $clog2(68);
+    ;
   end
-  module_0 modCall_1 ();
-  wire id_8;
-endmodule
-module module_2 (
-    input  tri  id_0,
-    output tri1 id_1,
-    input  wire id_2,
-    input  wire id_3,
-    output tri  id_4
-);
-  wire id_6;
-  tri1 id_7 = id_0, id_8;
-  wire id_9;
-  tri0 id_10, id_11 = 1'b0;
-  module_0 modCall_1 ();
-  wire id_12;
 endmodule

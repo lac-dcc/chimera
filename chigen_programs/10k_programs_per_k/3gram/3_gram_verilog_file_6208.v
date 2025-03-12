@@ -1,24 +1,34 @@
-// Seed: 1785810713
-module module_0 ();
-  wire id_2;
-  assign module_1.type_10 = 0;
+// Seed: 413481649
+module module_0 (
+    input supply1 id_0,
+    input tri0 id_1,
+    output wor id_2
+);
+  final $unsigned(89);
+  ;
+  parameter id_4 = 1;
+  assign module_1.id_0 = 0;
+  logic [7:0][(  1  ) : -1] id_5;
+  uwire id_6;
+  if (-1) begin : LABEL_0
+    assign id_2 = id_4[1'h0];
+  end else begin : LABEL_1
+    assign id_6 = 1'h0;
+  end
 endmodule
 module module_1 (
-    input  tri0 id_0,
-    output wire id_1
+    output wand id_0,
+    input wand id_1,
+    output supply1 id_2,
+    output supply0 id_3,
+    input wor id_4
 );
-  for (id_3 = 1; id_3; id_3 = id_3 << id_3) begin : LABEL_0
-    assign id_1 = id_3;
-    assign id_1 = id_3;
-  end
-  always @(posedge 1) id_1 = 1'b0;
-  wor id_4;
-  assign id_3 = 1;
-  wire id_5;
   wire id_6;
-  assign id_3 = 1'b0 !== id_4 - 1;
-  module_0 modCall_1 ();
   wire id_7;
-  wire id_8;
-  always @(posedge id_4 or posedge 1);
+  module_0 modCall_1 (
+      id_4,
+      id_1,
+      id_0
+  );
+  always @(*);
 endmodule

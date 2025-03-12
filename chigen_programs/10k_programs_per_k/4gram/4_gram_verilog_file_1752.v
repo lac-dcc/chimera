@@ -1,50 +1,49 @@
-// Seed: 2331939873
+// Seed: 3719397958
 module module_0 (
-    input supply1 id_0,
-    input supply0 id_1,
-    output supply1 id_2,
-    input wor id_3,
-    output tri1 id_4,
-    output tri id_5,
-    input wand id_6,
-    input supply1 id_7,
-    input tri id_8,
-    input wand id_9,
-    input supply1 id_10,
-    input supply0 id_11
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_13;
-  wire id_14;
-  wire  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  parameter id_4 = (1);
 endmodule
 module module_1 (
-    output wire id_0,
-    output wand id_1,
-    output wire id_2,
-    output tri0 id_3,
-    input wand id_4,
-    input tri1 id_5,
-    output tri0 id_6,
-    inout wand id_7,
-    input tri0 id_8,
-    output tri0 id_9,
-    input supply0 id_10
+    output tri  id_0,
+    output tri1 id_1
 );
-  assign id_0 = 1'h0;
+  logic [1 'b0 : 1] id_3, id_4;
+  not primCall (id_0, id_3);
   module_0 modCall_1 (
-      id_4,
-      id_7,
-      id_1,
-      id_7,
-      id_7,
-      id_1,
-      id_10,
-      id_8,
-      id_10,
-      id_10,
-      id_10,
-      id_8
+      id_3,
+      id_3,
+      id_4
   );
-  assign modCall_1.type_4 = 0;
-  wire  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ;
+endmodule
+module module_2 #(
+    parameter id_4 = 32'd82
+) (
+    input wire id_0,
+    output supply0 id_1,
+    output wor id_2,
+    input tri0 id_3,
+    input tri _id_4,
+    input tri id_5,
+    input supply0 id_6,
+    output tri0 id_7,
+    output tri0 id_8
+);
+  logic id_10 = id_5;
+  logic id_11;
+  ;
+  assign id_2 = id_11;
+  assign id_7 = id_10;
+  module_0 modCall_1 (
+      id_10,
+      id_10,
+      id_10
+  );
+  wire [1  -  1 : id_4] id_12;
+  wire id_13;
 endmodule

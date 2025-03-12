@@ -1,57 +1,34 @@
-// Seed: 4208302519
-module module_0 (
-    input tri  id_0,
-    input wand id_1
-);
-  always id_3 = 1;
-  assign module_1.type_0 = 0;
-  assign module_2.id_2   = 0;
+// Seed: 4002622142
+module module_0 #(
+    parameter id_2 = 32'd54
+) ();
+  wire id_1;
+  ;
+  wire _id_2;
+  ;
+  localparam id_3 = -1;
+  assign module_1.id_8 = 0;
+  parameter id_4 = id_3[id_2];
 endmodule
 module module_1 (
-    input  tri  id_0,
-    output wand id_1,
-    input  wire id_2
+    input tri1 id_0#(
+        .id_13(1),
+        .sum  (1),
+        .id_14(-1)
+    ),
+    input wor id_1,
+    output tri1 id_2,
+    input supply1 id_3,
+    input wand id_4,
+    input supply0 id_5,
+    input wand id_6,
+    inout uwire id_7,
+    input tri1 id_8,
+    output wire id_9,
+    input tri1 id_10,
+    input supply1 id_11[-1 'b0 : -1 'b0]
 );
-  wire id_4;
-  module_0 modCall_1 (
-      id_2,
-      id_2
-  );
-endmodule
-module module_2 (
-    output wire id_0,
-    input uwire id_1,
-    input uwire id_2,
-    output wor id_3#(1'h0),
-    output uwire id_4,
-    input wand id_5,
-    output tri id_6,
-    output tri1 id_7,
-    output wand id_8,
-    input supply1 id_9,
-    input uwire id_10,
-    output supply1 id_11,
-    input wire id_12,
-    output supply0 id_13,
-    input supply0 id_14,
-    output logic id_15,
-    output wire id_16,
-    output wand id_17,
-    input wor id_18,
-    input wire id_19,
-    output tri0 id_20
-);
-  always begin : LABEL_0
-    id_15 <= "";
-    id_7 = 1;
-    begin : LABEL_0
-      if (1) if ((1'd0)) id_6 = id_1;
-    end
-  end
-  module_0 modCall_1 (
-      id_19,
-      id_1
-  );
-  wire id_22;
-  xor primCall (id_15, id_1, id_19, id_9, id_10, id_5, id_18, id_14, id_2, id_12);
+  assign id_2 = id_13;
+  logic id_15 = -1 == 1;
+  module_0 modCall_1 ();
 endmodule

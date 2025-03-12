@@ -1,13 +1,33 @@
-// Seed: 501267244
-module module_0 ();
-  always_comb @(posedge id_1 ^ ~1) begin : LABEL_0
-    if (1'd0) id_1 = id_1;
-  end
-  assign id_1 = 1;
-  tri1 id_2;
-  assign id_2 = 1;
+// Seed: 1407827175
+module module_0 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign module_2.id_10 = 0;
+  wire [1 : ~  1 'b0] id_4;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_1 = 32'd13
+) (
+    _id_1
+);
+  input wire _id_1;
+  wire [-1 : id_1] id_2;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2
+  );
+  logic id_3 = id_3;
+endmodule
+macromodule module_2 #(
+    parameter id_8 = 32'd83,
+    parameter id_9 = 32'd54
+) (
     id_1,
     id_2,
     id_3,
@@ -15,51 +35,25 @@ module module_1 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    _id_8,
+    _id_9
 );
-  output wire id_20;
-  output wire id_19;
-  output wire id_18;
-  inout wire id_17;
-  input wire id_16;
-  inout wire id_15;
-  input wire id_14;
-  input wire id_13;
-  output wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  output wire id_8;
+  inout wire _id_9;
+  inout wire _id_8;
   inout wire id_7;
   output wire id_6;
-  inout wire id_5;
-  input wire id_4;
+  inout supply0 id_5;
+  output wire id_4;
   output wire id_3;
   output wire id_2;
-  output wire id_1;
-  wire id_21;
-  assign id_6 = id_5;
-  wire id_22;
-  assign id_6 = id_10;
-  assign id_2[1] = id_21;
-  module_0 modCall_1 ();
-  always @(posedge id_13[0] - "" or posedge id_4);
-  always_latch begin : LABEL_0
-    id_6 = 1;
-  end
-  assign id_12 = id_15;
-  wire id_23;
-  wire id_24;
+  input wire id_1;
+  assign id_5 = id_1 - -1 !== -1;
+  logic [id_9 : (  id_8  )] id_10;
+  localparam id_11 = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_10,
+      id_10
+  );
+  assign id_10 = -1;
 endmodule

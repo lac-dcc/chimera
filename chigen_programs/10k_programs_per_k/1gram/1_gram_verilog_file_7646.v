@@ -1,30 +1,31 @@
-// Seed: 728205728
+// Seed: 1368316573
 module module_0 (
-    input wand id_0
+    id_1
 );
-  integer id_2;
-  always
-    if (1 != id_0)
-      if (id_2 & 1'b0)
-        if (id_0) id_2 <= #1 1;
-        else;
-  assign id_2 = 1;
-  genvar id_3;
-  wire id_4;
-  assign module_1.id_3 = 0;
-  assign id_4 = 1;
-  assign id_2 = ~id_2;
+  output wire id_1;
+  assign module_1.id_1 = 0;
+  struct packed {id_2 id_3;} id_4;
+  ;
+  assign module_2.id_0 = 0;
 endmodule
-module module_1 (
-    output wire id_0
-    , id_5,
-    input tri0 id_1,
-    input supply0 id_2,
-    output tri1 id_3
+module module_1 #(
+    parameter id_1 = 32'd21
+) ();
+  wire _id_1;
+  supply1 [id_1 : 1 'b0] id_2;
+  parameter id_3 = 1;
+  assign id_2 = ~id_2 && id_3;
+  wire id_4;
+  module_0 modCall_1 (id_4);
+endmodule
+module module_2 (
+    input wand id_0,
+    input supply0 id_1
 );
-  wire id_6;
-  for (genvar id_7 = id_5 + (1); 1; id_6 = id_6) wire id_8, id_9;
-  wire id_10;
-  wire id_11;
-  module_0 modCall_1 (id_2);
+  wire id_3;
+  module_0 modCall_1 (id_3);
+  wire id_4, id_5;
+  logic id_6;
+  ;
+  logic id_7;
 endmodule

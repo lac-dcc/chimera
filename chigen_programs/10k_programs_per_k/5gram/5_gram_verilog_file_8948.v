@@ -1,52 +1,57 @@
-// Seed: 3436318185
+// Seed: 1225026159
 module module_0 (
     id_1,
-    module_0
+    id_2,
+    id_3
 );
+  input wire id_3;
   input wire id_2;
-  output wire id_1;
-  wire id_3;
-  wire id_4;
+  inout wire id_1;
+  assign id_1 = id_2;
+  logic id_4;
+  initial begin : LABEL_0
+    if ("") id_4 <= 1;
+  end
+  assign module_1.id_19 = 0;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input  tri0 id_1
+    output supply1 id_0,
+    input wire id_1,
+    output wire id_2,
+    output wor id_3,
+    input tri1 id_4,
+    input uwire id_5,
+    output wire id_6,
+    input wand id_7,
+    input supply1 id_8,
+    input tri0 id_9,
+    input supply1 id_10,
+    input tri1 id_11,
+    inout tri1 id_12,
+    input tri0 id_13,
+    input supply0 id_14,
+    input wor id_15,
+    output tri1 id_16,
+    input uwire id_17,
+    input supply0 id_18,
+    inout supply0 id_19,
+    input uwire id_20,
+    output wand id_21,
+    input tri1 id_22,
+    input wand id_23,
+    input tri0 id_24,
+    output logic id_25
 );
-  wire id_3 = id_3;
-  module_0 modCall_1 (
-      id_3,
-      id_3
-  );
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  output wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  assign id_3 = 1;
-  assign id_4 = 1'b0 == 1;
-  wire id_7;
-  wor id_8;
-  tri1 id_9;
-  supply0 id_10;
-  tri0 id_11 = id_10;
-  xor primCall (id_3, id_2, id_8, id_5, id_4, id_9, id_1, id_10, id_11);
-  assign id_9 = id_8 ? 1 : 1 + 1;
-  assign id_4 = ~id_11#(.id_8(id_5));
-  module_0 modCall_1 (
-      id_3,
-      id_7
-  );
-  final begin : LABEL_0
-    if (1'h0) $display((1'b0), {1'b0 == id_10, 1});
+  wire [-1 : ""] id_27;
+  initial begin : LABEL_0
+    id_25 <= id_22.id_8;
   end
+  module_0 modCall_1 (
+      id_27,
+      id_27,
+      id_27
+  );
+  wire id_28;
+  ;
+  logic id_29, id_30;
 endmodule

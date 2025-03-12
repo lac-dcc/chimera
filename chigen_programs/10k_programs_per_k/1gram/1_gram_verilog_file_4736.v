@@ -1,52 +1,52 @@
-// Seed: 2924143675
-module module_0;
-  integer id_1;
-  assign id_1 = id_1;
-  always id_1 = 1;
+// Seed: 1146516946
+module module_0 ();
+  wand id_1 = -1;
+  assign module_2.id_0 = 0;
 endmodule
-module module_1 ();
-  initial #1 if (1) id_1 <= 1;
+module module_1 (
+    id_1,
+    id_2
+);
+  input wire id_2;
+  output reg id_1;
+  and primCall (id_1, id_2, id_3, id_4, id_5, id_6);
+  assign id_1 = -1;
+  final id_1 <= -1;
+  wire id_3, id_4, id_5;
+  logic id_6 = id_2;
   module_0 modCall_1 ();
-  id_2(
-      1, 1'h0, id_1, id_3
-  );
 endmodule
 module module_2 (
-    output tri0  id_0,
-    output uwire id_1,
-    output wand  id_2,
-    input  tri1  id_3
+    input  tri0  id_0,
+    output logic id_1
 );
-  supply0 id_5;
-  assign id_1 = id_5 - id_5;
-  assign id_0 = id_3;
-  wire id_6, id_7, id_8;
-  wor  id_9, id_10 = 1'h0 || "";
-  wire id_11;
+  assign id_1 = ~1;
+  always id_1 <= 1'b0;
+  module_0 modCall_1 ();
 endmodule
-module module_3 (
-    input wire id_0,
-    input uwire id_1,
-    input wor id_2,
-    output tri id_3,
-    input wand id_4,
-    input tri0 id_5,
-    input wand id_6,
-    output tri1 id_7,
-    input uwire id_8,
-    output tri0 id_9,
-    output tri id_10,
-    output wor id_11,
-    input supply1 id_12,
-    output uwire id_13
+module module_3 #(
+    parameter id_9 = 32'd95
+) (
+    input supply1 id_0
+    , id_5, id_6,
+    output uwire id_1,
+    input tri1 id_2,
+    output logic id_3
 );
-  assign id_11 = id_12;
-  module_2 modCall_1 (
-      id_3,
-      id_10,
-      id_11,
-      id_12
-  );
-  tri1 id_15, id_16, id_17;
-  assign id_17 = 1;
+  assign id_6 = 1;
+  logic id_7;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  wire id_8;
+  localparam id_9 = 1;
+  wire id_10;
+  for (id_11 = id_8; id_6; id_6 = 1 - id_9 == id_11) begin : LABEL_0
+    logic [7:0][1] id_12;
+  end
+  defparam id_9 = 1;
+  assign id_1 = id_5;
+  for (id_13 = id_10; 1'b0; id_3 = -1'h0 | id_9) assign id_1 = id_10;
+  parameter id_14 = -1;
+  assign id_7 = id_8 == id_13;
+  parameter id_15 = 1;
 endmodule

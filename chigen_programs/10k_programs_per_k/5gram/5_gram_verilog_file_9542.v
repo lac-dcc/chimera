@@ -1,46 +1,44 @@
-// Seed: 867883719
+// Seed: 3289918357
 module module_0 (
-    output tri id_0,
-    input wand id_1,
-    output wor id_2,
-    output tri1 id_3,
-    input tri id_4,
-    output supply1 id_5,
-    input supply0 id_6,
-    output supply1 id_7,
-    input supply1 id_8
+    output supply1 id_0,
+    input wor id_1
 );
-  wand id_10;
-  wire id_11 = 1;
-  assign module_1.type_2 = 0;
-  initial begin : LABEL_0
-    id_10 = id_6 == 1;
-  end
+  assign id_0 = id_1;
+  assign id_0 = id_1 == id_1;
+  wire id_3;
 endmodule
-module module_1 (
-    output wor id_0,
-    output tri0 id_1,
-    output uwire id_2,
-    output wand id_3,
-    output supply0 id_4,
-    input tri1 id_5,
-    output wor id_6,
-    input supply0 id_7,
-    input wand id_8,
-    input wor id_9,
-    input uwire id_10,
-    input wor id_11
+module module_1 #(
+    parameter id_10 = 32'd92,
+    parameter id_11 = 32'd5,
+    parameter id_13 = 32'd21,
+    parameter id_9  = 32'd35
+) (
+    input tri1 id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    input tri0 id_3,
+    output tri0 id_4,
+    output uwire id_5,
+    input wand id_6,
+    input wor id_7
 );
-  wire id_13;
+  assign id_5 = id_7 == {~id_6, id_1};
+  assign id_5 = id_0;
+  logic _id_9;
+  ;
   module_0 modCall_1 (
-      id_0,
       id_5,
-      id_1,
-      id_3,
-      id_11,
-      id_4,
-      id_7,
-      id_6,
-      id_10
+      id_0
   );
+  assign modCall_1.id_1 = 0;
+  parameter id_10 = -1;
+  _id_11 :
+  assert property (@(posedge 1) id_11)
+  else $signed(id_10);
+  ;
+  wire id_12;
+  parameter id_13 = 1;
+  wire [id_10 : id_11] id_14;
+  wire [1 : -1] id_15;
+  wire [id_9 : id_11  -  id_13] id_16;
 endmodule

@@ -1,50 +1,32 @@
-// Seed: 2534707547
-module module_0;
-  always #1 begin : LABEL_0
-    wait (id_1);
-  end
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17
+// Seed: 1034044205
+module module_0 #(
+    parameter id_2 = 32'd58
+) (
+    output tri1 id_0,
+    output tri  id_1,
+    input  tri1 _id_2,
+    output wire id_3
 );
-  inout wire id_17;
-  output wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  input wire id_12;
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_18;
-  module_0 modCall_1 ();
-  assign id_14 = 1;
-  always @(posedge id_9) begin : LABEL_0
-    id_19(id_1);
-    id_16 <= 1 == id_8;
-  end
+  wire [id_2 : 1  * "" +  1] id_5;
+  assign module_1.id_5 = 0;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd74,
+    parameter id_2 = 32'd58,
+    parameter id_5 = 32'd5
+) (
+    input supply1 _id_0,
+    output wor id_1,
+    input wor _id_2,
+    output wor id_3
+);
+  wire [id_0  ==  1 : ~  id_2] _id_5;
+  wire [id_2 : id_5] id_6;
+  assign id_5 = id_0;
+  module_0 modCall_1 (
+      id_3,
+      id_1,
+      id_5,
+      id_3
+  );
 endmodule

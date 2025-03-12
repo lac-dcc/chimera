@@ -1,37 +1,39 @@
-// Seed: 2798630667
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign id_3 = (id_1);
-  assign module_1.id_6 = 0;
+// Seed: 486441912
+module module_0;
+  wire id_1, id_2, id_3 = id_2;
+  wire id_4;
+  assign module_1._id_17 = 0;
+  wire id_5;
 endmodule
-module module_1 (
-    input wire id_0,
-    input wire id_1,
-    input tri1 id_2,
-    input tri1 id_3,
-    output tri1 id_4,
-    output wor id_5,
-    input wor id_6,
-    input uwire id_7,
-    output wire id_8,
-    output uwire id_9,
-    output tri0 id_10,
-    input supply1 id_11,
-    output wor id_12
+module module_1 #(
+    parameter id_17 = 32'd61,
+    parameter id_5  = 32'd94
+) (
+    output tri id_0,
+    output wand id_1,
+    input supply0 id_2,
+    input tri0 id_3,
+    input uwire id_4,
+    input wor _id_5,
+    input supply1 id_6,
+    output wand id_7,
+    input wand id_8,
+    output tri0 id_9,
+    input tri id_10,
+    output wire id_11,
+    output logic id_12,
+    input tri0 id_13,
+    output tri1 id_14,
+    input tri1 id_15,
+    input tri1 id_16,
+    input supply0 _id_17
+    , id_20,
+    output wand id_18
 );
-  wire id_14;
+  wire [id_17 : id_5] id_21;
+  module_0 modCall_1 ();
+  always @(-1) if (1) id_12 <= -1;
   generate
-    supply1 id_15 = 1;
+    logic id_22 = -1;
   endgenerate
-  module_0 modCall_1 (
-      id_14,
-      id_15,
-      id_15
-  );
 endmodule

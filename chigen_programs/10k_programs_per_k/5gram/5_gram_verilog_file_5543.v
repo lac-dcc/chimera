@@ -1,45 +1,67 @@
-// Seed: 3184218961
-module module_0 (
+// Seed: 2672183434
+module module_0;
+  always @(posedge 1) begin : LABEL_0
+    $signed(87);
+    ;
+  end
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    id_4
 );
-  input wire id_8;
-  input wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  input wire id_3;
+  output uwire id_4;
+  inout wire id_3;
+  module_0 modCall_1 ();
   input wire id_2;
   inout wire id_1;
-  supply0 id_9;
-  assign id_9 = 1 & id_8 & 1 & 1'b0;
+  assign id_4 = 1 + 1 * 1;
 endmodule
-module module_1 (
-    output wire id_0,
-    input wand id_1,
-    output tri id_2,
-    output wand id_3,
-    output supply1 id_4,
-    output wand id_5,
-    output tri id_6
+module module_2 (
+    input tri0 id_0,
+    output supply1 id_1,
+    input tri0 id_2,
+    output tri id_3,
+    output supply0 id_4,
+    input uwire id_5,
+    output tri0 id_6,
+    input wand id_7,
+    output supply1 id_8,
+    output uwire id_9
+    , id_41,
+    input supply0 id_10,
+    input uwire id_11,
+    output supply1 id_12,
+    input supply1 id_13,
+    output supply1 id_14,
+    input tri1 id_15,
+    input tri id_16,
+    input uwire id_17,
+    input wire id_18
+    , id_42,
+    output wire id_19,
+    input wand id_20,
+    input wor id_21,
+    input wire id_22,
+    input wor id_23,
+    input tri id_24,
+    output tri0 id_25,
+    input wire id_26,
+    input wand id_27,
+    output wor id_28,
+    output wor id_29,
+    output supply0 id_30,
+    input supply1 id_31,
+    input wand id_32,
+    input wand id_33,
+    input uwire id_34,
+    input tri id_35,
+    output tri0 id_36,
+    output uwire id_37,
+    output tri1 id_38,
+    input tri id_39
 );
-  wire id_8;
-  wire id_9;
-  wire id_10;
-  module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_8,
-      id_9,
-      id_9,
-      id_8,
-      id_10,
-      id_10
-  );
+  wire id_43;
+  module_0 modCall_1 ();
 endmodule

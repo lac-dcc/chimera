@@ -1,40 +1,37 @@
-// Seed: 2246035389
+// Seed: 3676490877
 module module_0 (
-    output uwire id_0
-    , id_4,
-    input  wand  id_1,
-    output tri1  id_2
+    input uwire id_0,
+    output tri1 id_1,
+    input supply1 id_2,
+    input tri0 id_3,
+    input supply0 id_4
+    , id_8,
+    input tri id_5,
+    input tri id_6
+    , id_9
 );
-  assign id_2 = 1;
-  assign module_2.id_4 = 0;
-  assign module_1.type_5 = 0;
+  wire id_10;
+  assign module_1.id_4 = 0;
+  parameter id_11 = -1'b0;
 endmodule
 module module_1 (
-    input wand id_0,
-    input supply0 id_1
+    input  tri1  id_0,
+    input  wor   id_1,
+    output uwire id_2,
+    input  tri   id_3,
+    output logic id_4,
+    input  tri   id_5,
+    output wor   id_6
 );
-  wor id_3 = 1'b0 * 1'b0 - 1;
-  assign id_3 = 1'd0;
-  tri id_4 = 1'b0;
+  always @(posedge id_0 or posedge id_0) begin : LABEL_0
+    id_4 <= id_0;
+  end
   module_0 modCall_1 (
-      id_4,
+      id_3,
+      id_2,
+      id_5,
       id_0,
-      id_4
-  );
-  assign id_4 = id_1;
-endmodule
-module module_2 (
-    input wor id_0,
-    output supply0 id_1,
-    input wand id_2,
-    input wand id_3,
-    input tri1 id_4,
-    output tri1 id_5
-);
-  assign id_5 = |id_3;
-  buf primCall (id_1, id_4);
-  module_0 modCall_1 (
-      id_1,
+      id_5,
       id_0,
       id_1
   );

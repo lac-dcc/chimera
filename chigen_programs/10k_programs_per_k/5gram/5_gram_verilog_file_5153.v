@@ -1,46 +1,37 @@
-// Seed: 1899131392
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  output wire id_1;
-  wire id_6;
-  wor  id_7 = 1;
-  assign id_1 = (1'b0);
+// Seed: 1262742961
+module module_0;
+  logic id_1;
+  assign module_1.id_2 = 0;
+  wire id_2 = id_1;
 endmodule
-module module_1 (
-    input wire id_0,
-    input supply1 id_1,
-    input supply1 id_2,
-    input uwire id_3,
-    input uwire id_4,
-    input tri id_5,
-    input tri id_6,
-    output tri0 id_7,
-    input supply0 id_8,
-    output supply0 id_9,
-    input wor id_10,
-    output wire id_11,
-    input supply1 id_12,
-    output wor id_13,
-    input tri0 id_14
+module module_1 #(
+    parameter id_1 = 32'd89,
+    parameter id_2 = 32'd40,
+    parameter id_3 = 32'd8,
+    parameter id_7 = 32'd23
+) (
+    _id_1,
+    _id_2
 );
-  wire id_16;
-  wire id_17;
-  wire id_18;
-  tri1 id_19 = 1'b0;
-  module_0 modCall_1 (
-      id_19,
-      id_19,
-      id_17,
-      id_18,
-      id_18
-  );
+  output wire _id_2;
+  output wire _id_1;
+  wire _id_3;
+  task id_4();
+    union packed {
+      logic [id_1 : -1  -  id_2] id_5;
+      logic [id_3 : -1] id_6;
+    } _id_7;
+    begin : LABEL_0
+      if (1) begin : LABEL_1
+        wait (id_7.id_5[{id_7, 1, id_7}]);
+      end
+    end
+  endtask
+  module_0 modCall_1 ();
+  struct packed {
+    struct packed {
+      logic id_8;
+      logic [1 'b0 : id_1] id_9;
+    } [-1 : 1] id_10;
+  } id_11 = 1;
 endmodule

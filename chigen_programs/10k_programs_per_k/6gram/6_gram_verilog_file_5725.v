@@ -1,37 +1,67 @@
-// Seed: 3503693813
+// Seed: 1010135397
 module module_0 (
-    input  uwire id_0,
-    input  wor   id_1,
-    output tri   id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  always @(1 or posedge 1) begin : LABEL_0
-    if ((1'd0) == 1 < 1) begin : LABEL_0$display
-      ;
-    end
-  end
-  module_2 modCall_1 ();
-  assign module_1.type_0 = 0;
+  input wire id_16;
+  inout wire id_15;
+  input wire id_14;
+  input wire id_13;
+  inout tri1 id_12;
+  output wire id_11;
+  output wire id_10;
+  output tri0 id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_9  = -1;
+  assign id_12 = id_16 ? 1 : 1;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input supply1 id_1,
-    output tri1 id_2,
-    input uwire id_3,
-    input supply1 id_4,
-    output tri0 id_5
+    input  uwire id_0,
+    output tri   id_1,
+    output wand  id_2
+    , id_5,
+    output wand  id_3
 );
-  supply0 id_7;
+  parameter id_6 = ~1;
+  uwire id_7;
   module_0 modCall_1 (
-      id_3,
-      id_1,
-      id_5
+      id_7,
+      id_6,
+      id_7,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_6,
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
   );
-  assign id_7 = 1;
-endmodule
-module module_2;
-  assign id_1 = |id_1 ? 1'b0 : (1'b0);
-  supply1 id_2;
-  wand id_3 = id_2 >= id_2;
-  assign id_3 = 1;
-  assign module_0.id_2 = 0;
+  assign id_7 = id_0 == id_5[-1];
 endmodule

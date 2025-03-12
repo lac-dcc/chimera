@@ -1,41 +1,36 @@
-// Seed: 1840193782
-module module_0 (
-    input wand id_0,
-    output supply1 id_1
-);
+// Seed: 178605396
+module module_0;
+  wire id_1;
+  ;
+  assign module_1.id_0 = 0;
 endmodule
 module module_1 (
-    output logic id_0,
-    input  tri   id_1,
-    output wor   id_2
+    output tri id_0,
+    input tri1 id_1,
+    input wire id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    output supply1 id_5,
+    input supply1 id_6,
+    input wand id_7,
+    input tri id_8,
+    output tri0 id_9
+    , id_13,
+    input uwire id_10
+    , id_14,
+    input wor id_11
 );
-  tri1 id_4 = 1'd0 >= id_4;
-  module_0 modCall_1 (
-      id_1,
-      id_2
-  );
-  assign modCall_1.type_1 = 0;
-  wire id_5;
-  assign id_4 = id_4 ? 'd0 : 1;
-  assign id_4 = id_4;
-  always id_0 = #1 1;
-endmodule
-module module_2 (
-    input  tri   id_0,
-    input  wire  id_1,
-    output uwire id_2,
-    input  wand  id_3,
-    input  wire  id_4,
-    input  tri1  id_5,
-    output tri0  id_6,
-    output wire  id_7,
-    output tri   id_8,
-    output wor   id_9
-);
-  wire id_11;
-  module_0 modCall_1 (
-      id_0,
-      id_7
-  );
-  assign modCall_1.id_0 = 0;
+  tri1 id_15;
+  wire id_16;
+  assign id_15 = 1;
+  always @(-1 or posedge id_10) force id_13[-1 : 1] = id_1 | id_3;
+  always @(posedge {id_4,
+    id_1,
+    id_2,
+    id_8
+  })
+  begin : LABEL_0
+    if ("") disable id_17;
+  end
+  module_0 modCall_1 ();
 endmodule

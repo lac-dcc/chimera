@@ -1,24 +1,30 @@
-// Seed: 1064924752
-module module_0;
+// Seed: 997248231
+module module_0 ();
   wire id_1;
 endmodule
-module module_1;
-  reg id_1, id_2;
-  assign id_2 = 1;
-  final $display(1'b0, 1 % 1, 1, (id_1++), 1 > 1);
+module module_0 #(
+    parameter id_1 = 32'd62
+) (
+    input tri module_1
+    , id_4,
+    output tri _id_1,
+    output supply0 id_2
+);
+  logic [id_1 : -1] id_5;
+  nor primCall (id_2, id_4, id_5);
   module_0 modCall_1 ();
-  always @(id_2 or negedge 1) if (1 == id_2 + 1'b0) #1 id_1 <= 1'b0;
-  reg id_3;
-  assign id_2 = 1;
-  assign id_3 = 1;
-  wire id_4;
-  wire id_5;
-  wor  id_6;
-  id_7(
-      .id_0(1), .id_1(1), .id_2(1), .id_3(""), .id_4(id_5)
-  );
-  always @(negedge 1) begin : LABEL_0
-    if (1'b0) id_3 <= 1 !== id_1 - id_6;
-  end
-  wire id_8;
+endmodule
+module module_2 (
+    input wire id_0,
+    input wor id_1,
+    output wand id_2,
+    input wand id_3,
+    output tri id_4,
+    output wand id_5,
+    input wand id_6,
+    output logic id_7,
+    output supply1 id_8
+);
+  for (id_10 = 1 != -1; 1 && 1 - -1; id_7 = 1) wire id_11;
+  module_0 modCall_1 ();
 endmodule

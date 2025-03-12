@@ -1,63 +1,45 @@
-// Seed: 933356276
-module module_0 (
-    output supply0 id_0,
-    input wor id_1,
-    input wor id_2,
-    input wire id_3,
-    output supply0 id_4,
-    output tri0 id_5,
-    input supply0 id_6,
-    output supply1 id_7,
-    input supply1 id_8
-);
-  integer id_10 (
-      .id_0 ((1)),
-      .id_1 (id_5),
-      .id_2 (id_6),
-      .id_3 (1),
-      .id_4 (-id_6),
-      .id_5 (id_3),
-      .id_6 (),
-      .id_7 (id_5),
-      .id_8 (id_3),
-      .id_9 (id_6),
-      .id_10(id_3)
-  );
-  assign id_5 = ~id_3;
+// Seed: 3025472436
+module module_0;
 endmodule
-module module_1 (
-    input wor id_0,
-    input tri id_1
-    , id_11,
-    output wor id_2,
-    output uwire id_3
-    , id_12,
-    input supply0 id_4,
-    output logic id_5
-    , id_13,
-    input tri id_6,
-    input tri id_7,
-    input wand id_8,
-    output wand id_9
+module module_1 #(
+    parameter id_6 = 32'd80
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    _id_6
 );
-  reg id_14, id_15;
-  assign id_15 = id_13;
-  module_0 modCall_1 (
-      id_3,
-      id_6,
-      id_4,
-      id_4,
-      id_9,
-      id_2,
-      id_7,
-      id_2,
-      id_1
-  );
-  assign modCall_1.id_6 = 0;
-  always_comb @(*) begin : LABEL_0
-    id_5 <= id_14;
+  input wire _id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  module_0 modCall_1 ();
+  input wire id_1;
+  logic [7:0] id_7;
+  assign id_7[id_6] = id_5;
+  wire id_8;
+endmodule
+module module_2 (
+    output tri0 id_0,
+    output supply1 id_1,
+    input tri1 id_2,
+    output uwire id_3,
+    output wor id_4
+);
+  wire id_6;
+  genvar id_7;
+  bit id_8;
+  initial begin : LABEL_0
+    id_8 <= 1;
   end
-  id_16(
-      .id_0(id_9), .id_1(1), .id_2(1), .id_3(id_15), .id_4(1), .id_5(1), .id_6((1))
-  );
+  assign id_0 = id_6;
+  parameter id_9 = (1);
+  assign id_1 = id_6;
+  always_latch @(posedge id_7) begin : LABEL_1
+    id_8 <= "";
+  end
+  module_0 modCall_1 ();
 endmodule

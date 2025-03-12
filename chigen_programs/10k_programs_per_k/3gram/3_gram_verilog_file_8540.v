@@ -1,35 +1,52 @@
-// Seed: 202904723
+// Seed: 252622982
 module module_0 (
-    input  wire id_0,
-    output tri  id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  wire id_3;
-  module_2 modCall_1 ();
-  assign module_1.type_2 = 0;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout tri0 id_1;
+  assign id_1 = id_5 == -1 & id_9;
 endmodule
-module module_1 (
-    input wire id_0,
-    input tri  id_1,
-    input tri1 id_2,
-    inout wire id_3
+module module_1 #(
+    parameter id_0 = 32'd68,
+    parameter id_2 = 32'd67
+) (
+    input wor _id_0
 );
-  wire id_5;
+  wire _id_2;
+  logic [7:0] id_3;
+  always @(negedge id_2 == id_0);
+  logic [id_2 : id_0] id_4;
+  ;
+  assign id_3 = id_0;
+  assign id_3[1] = -1;
+  always assign id_4 = -1'b0;
+  assign id_4 = id_4;
   module_0 modCall_1 (
-      id_3,
-      id_3
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4
   );
-endmodule
-module module_2;
-  always @(posedge 1 or negedge 1'b0) id_1[1] = id_1;
-  assign id_1 = id_1;
-  wand id_2 = (id_2 + 1);
-  assign module_3.type_6 = 0;
-endmodule
-module module_3 ();
-  tri0 id_1;
-  tri  id_2;
-  wire id_3;
-  tri  id_4 = (id_1) && id_2 && 1;
-  module_2 modCall_1 ();
-  assign id_3 = id_3;
+  assign modCall_1.id_1 = 0;
+  assign id_3[id_0] = 1;
 endmodule

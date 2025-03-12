@@ -1,51 +1,68 @@
-// Seed: 408028412
-module module_0 ();
-  reg id_1, id_2;
-  assign id_2 = id_2;
-  assign id_2 = -1;
-  wire id_3;
-  tri1 id_5;
-  assign id_5 = 1'b0 * id_4;
-  always id_1 <= 1;
-  assign module_2.id_13 = 0;
-endmodule
-module module_1 (
-    id_1
+// Seed: 1418029349
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
   inout wire id_1;
-  tri1 id_2, id_3 = 1;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  wire id_4;
-  wire id_5;
-  id_6(
-      id_5
-  );
-  wire id_7;
 endmodule
-module module_2 (
-    input supply1 id_0,
-    input tri1 id_1,
-    output tri1 id_2,
-    input wire id_3,
-    input wire id_4,
-    output tri1 id_5,
-    output wire id_6,
-    input uwire id_7,
-    input wor id_8,
-    output wor id_9,
-    input uwire id_10,
-    output tri1 id_11,
-    input supply1 id_12,
-    output wor id_13
-    , id_20,
-    output wor id_14,
-    input supply0 id_15,
-    input tri id_16,
-    output tri0 id_17,
-    output logic id_18
+module module_1 #(
+    parameter id_12 = 32'd20,
+    parameter id_5  = 32'd36
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    _id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    _id_12,
+    id_13[1 : (id_12)],
+    id_14,
+    id_15,
+    id_16[id_12 : id_5+-1],
+    id_17,
+    id_18,
+    id_19,
+    id_20
 );
+  input wire id_20;
+  inout wire id_19;
+  input wire id_18;
+  input wire id_17;
+  inout logic [7:0] id_16;
+  input wire id_15;
+  inout wand id_14;
+  output logic [7:0] id_13;
+  inout wire _id_12;
+  input wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  module_0 modCall_1 (
+      id_1,
+      id_18,
+      id_19,
+      id_2
+  );
+  output wire id_7;
+  output wire id_6;
+  input wire _id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
   wire id_21;
-  initial id_18 <= 1 + 1;
-  module_0 modCall_1 ();
+  assign id_14 = -1;
+  assign id_7  = $clog2(21);
+  ;
 endmodule

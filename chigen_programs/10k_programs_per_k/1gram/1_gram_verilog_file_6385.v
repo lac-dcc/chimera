@@ -1,90 +1,32 @@
-// Seed: 4265153376
+// Seed: 1510443949
 module module_0;
+  wire id_1;
+  assign module_1._id_9 = 0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35,
-    id_36,
-    id_37
+program module_1 #(
+    parameter id_13 = 32'd45,
+    parameter id_9  = 32'd81
+) (
+    output tri0  id_0,
+    input  tri   id_1,
+    input  wand  id_2,
+    output tri0  id_3,
+    input  wor   id_4,
+    output uwire id_5,
+    input  tri   id_6,
+    input  tri   id_7,
+    output logic id_8,
+    input  tri0  _id_9,
+    input  uwire id_10
 );
-  output wire id_37;
-  inout wire id_36;
-  input wire id_35;
-  inout wire id_34;
-  inout wire id_33;
-  inout wire id_32;
-  output wire id_31;
-  inout wire id_30;
-  inout wire id_29;
-  input wire id_28;
-  output wire id_27;
-  output wire id_26;
-  output wire id_25;
-  output wire id_24;
-  output wire id_23;
-  input wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  output wire id_17;
-  output wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  if (id_34) always #1;
-  else begin : LABEL_0
-    wire id_38;
-    supply1 id_39 = id_34;
-    supply0 id_40 = 1, id_41, id_42 = 1;
+  logic [7:0] id_12, _id_13;
+  wire id_14, id_15, id_16;
+  assign id_13 = id_4;
+  initial begin : LABEL_0
+    begin : LABEL_1
+      id_12[id_13.id_9] <= -1;
+      id_8 = id_12;
+    end
   end
   module_0 modCall_1 ();
-  wire id_43;
-  wire id_44;
-  wire id_45;
-endmodule
+endprogram

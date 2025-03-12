@@ -1,5 +1,12 @@
-// Seed: 2043405630
-module module_0 (
+// Seed: 2125014162
+module module_0 #(
+    parameter id_1 = 32'd18
+) ();
+  wire [1 'b0 : ( "" )] _id_1;
+  logic [7:0][1 : -1 'b0] id_2;
+  assign id_1 = id_2[id_1];
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
@@ -9,40 +16,21 @@ module module_0 (
     id_7,
     id_8,
     id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+    id_10
 );
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
+  output wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  module_0 modCall_1 ();
   inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
   output wire id_1;
-endmodule
-module module_1 ();
-  assign id_1 = id_1;
-  module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
-  );
+  always @(posedge 1);
+  always_ff #1 disable id_11;
+  logic id_12;
+  parameter id_13 = -1 == 1;
 endmodule

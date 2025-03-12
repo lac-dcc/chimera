@@ -1,39 +1,40 @@
-// Seed: 1267530594
+// Seed: 2261363385
 module module_0 (
-    input supply0 id_0,
-    output tri id_1,
-    output supply1 id_2,
-    input supply1 id_3
-    , id_9,
-    input wand id_4,
-    input supply1 id_5,
-    output supply0 id_6,
-    output wor id_7
+    output uwire id_0,
+    input uwire id_1
+    , id_6,
+    input supply0 id_2,
+    input wire id_3,
+    output wand id_4
 );
-  assign id_6 = {1, id_0, 1, 1'b0 == id_3};
-  wire id_10;
-  assign id_7 = id_9;
-  wire id_11;
-  always @(posedge id_0 or posedge 1) $display(1, id_9 == 1);
+  logic id_7;
+  ;
+  assign module_1.id_3 = 0;
 endmodule
-module module_1 (
-    input wor id_0,
-    input wand id_1,
-    output tri id_2,
-    output uwire id_3,
-    input supply0 id_4,
-    input supply0 id_5
+module module_1 #(
+    parameter id_1 = 32'd84,
+    parameter id_2 = 32'd3,
+    parameter id_3 = 32'd51
+) (
+    input  tri   id_0,
+    output wor   _id_1,
+    input  wor   _id_2,
+    input  uwire _id_3,
+    output uwire id_4,
+    output logic id_5
 );
-  always #id_7 $display(id_4, 1, 1);
+  always @(posedge -1 or negedge 1) begin : LABEL_0
+    id_5 <= -1'b0;
+  end
   module_0 modCall_1 (
+      id_4,
       id_0,
-      id_2,
-      id_3,
       id_0,
-      id_5,
       id_0,
-      id_2,
-      id_3
+      id_4
   );
-  assign modCall_1.id_1 = 0;
+  logic [id_3 : {  id_2  &  1 'd0 &  -1  ,  1  }  <=  id_1] id_7;
+  wire id_8;
+  assign id_4 = id_7;
+  always @(posedge id_2) force id_4 = -1;
 endmodule

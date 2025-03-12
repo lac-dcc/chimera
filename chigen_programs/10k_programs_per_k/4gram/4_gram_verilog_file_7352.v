@@ -1,64 +1,42 @@
-// Seed: 1825566339
-module module_0 (
-    output supply1 id_0,
-    output uwire id_1,
-    input wor id_2,
-    output wand id_3,
-    input wor id_4,
-    output supply0 id_5,
-    input uwire id_6,
-    output supply0 id_7
-    , id_19,
-    output wire id_8,
-    input uwire id_9,
-    input supply0 id_10,
-    output wire id_11,
-    output wand id_12,
-    output supply0 id_13,
-    output tri0 id_14,
-    input uwire id_15,
-    output tri id_16,
-    input supply1 id_17
-);
+// Seed: 2142397676
+module module_0;
+  parameter id_1 = 1;
+  wire id_2;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    output wire id_1,
-    output wor id_2,
-    output tri id_3,
-    input wand id_4,
-    output wand id_5,
-    input uwire id_6,
-    output tri0 id_7,
-    input wor id_8,
-    output tri1 id_9,
-    input tri0 id_10,
-    output supply1 id_11,
-    input wand id_12
+module module_1 #(
+    parameter id_2  = 32'd40,
+    parameter id_25 = 32'd90
+) (
+    output tri0 id_0,
+    input tri1 id_1,
+    input supply0 _id_2,
+    input wor id_3,
+    input supply1 id_4,
+    output wor id_5,
+    output supply0 id_6,
+    input tri id_7
+    , id_21,
+    input tri1 id_8
+    , id_22,
+    input tri1 id_9,
+    output supply1 id_10,
+    output uwire id_11,
+    input tri1 id_12,
+    input supply1 id_13
+    , id_23,
+    output tri1 id_14,
+    input supply0 id_15,
+    input wor id_16
+    , id_24,
+    output wor id_17,
+    input wire id_18,
+    input tri0 id_19
 );
-  if (id_4) begin : LABEL_0
-    wire id_14;
-  end
-  module_0 modCall_1 (
-      id_3,
-      id_9,
-      id_6,
-      id_9,
-      id_8,
-      id_9,
-      id_6,
-      id_5,
-      id_11,
-      id_6,
-      id_10,
-      id_3,
-      id_9,
-      id_3,
-      id_11,
-      id_4,
-      id_11,
-      id_0
-  );
-  assign modCall_1.id_7 = 0;
-  wire id_15;
+  wire  _id_25;
+  logic id_26;
+  module_0 modCall_1 ();
+  wire [id_25 : id_2] id_27;
+  logic id_28;
+  localparam id_29 = -1'b0;
+  assign id_17 = 1;
 endmodule

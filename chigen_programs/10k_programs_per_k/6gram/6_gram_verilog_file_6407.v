@@ -1,59 +1,33 @@
-// Seed: 4000196267
-module module_0 (
-    input supply0 id_0,
-    input tri1 id_1,
-    input wire id_2,
-    input wand id_3,
-    output wand id_4,
-    input supply1 id_5,
-    output tri0 id_6
-);
+// Seed: 3165431238
+module module_0;
+  timeprecision 1ps;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wor id_1,
-    input tri id_2,
-    output tri1 id_3,
-    output tri1 id_4,
-    output wire id_5,
-    output logic id_6,
-    input tri id_7,
-    input tri id_8,
-    output uwire id_9,
-    input tri1 id_10,
-    input wor id_11,
-    output tri id_12,
-    input tri1 id_13,
-    output uwire id_14,
-    input wor id_15,
-    input supply1 id_16,
-    input wor id_17,
-    input wor id_18,
-    output supply0 id_19,
-    output wand id_20,
-    input wor id_21,
-    input tri1 id_22,
-    input tri1 id_23,
-    output wand id_24,
-    input tri0 id_25,
-    input tri0 id_26
+    input tri  id_0,
+    input tri1 id_1
+    , id_5,
+    input wor  id_2,
+    input wand id_3
 );
-  wire id_28;
-  assign id_12 = 1'h0;
-  module_0 modCall_1 (
-      id_8,
-      id_25,
-      id_16,
-      id_1,
-      id_9,
-      id_21,
-      id_3
-  );
-  assign modCall_1.type_10 = 0;
-  wire id_29;
-  assign id_20 = 1;
-  wire id_30;
-  wire id_31;
-  assign id_12 = 1;
-  always @(id_29) id_6 = #1 1;
+  wire id_6;
+  wire id_7;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    output logic id_0,
+    output logic id_1,
+    output logic id_2
+);
+  wire id_4;
+  module_0 modCall_1 ();
+  always @(*) begin : LABEL_0
+    if (1'd0) begin : LABEL_1
+      if (1) begin : LABEL_2
+        id_0 = "";
+      end
+    end else
+      for (id_2 = 1; 1; id_1 = -1) begin : LABEL_3
+        id_2 <= 1;
+      end
+  end
 endmodule

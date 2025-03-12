@@ -1,43 +1,41 @@
-// Seed: 80599995
-macromodule module_0 (
+// Seed: 3233306210
+module module_0 #(
+    parameter id_1 = 32'd90
+);
+  integer _id_1;
+  ;
+  wire id_2;
+  localparam id_3 = 1;
+  id_4 :
+  assert property (@(id_4) id_4) begin : LABEL_0
+    $signed(66);
+    ;
+    SystemTFIdentifier;
+  end
+  wire [1  ==  id_1  &  1 : ""] id_5;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd69,
+    parameter id_5 = 32'd50
+) (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    _id_4,
+    _id_5,
+    id_6
 );
-  inout wire id_8;
-  inout wire id_7;
   input wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
+  inout wire _id_5;
+  input wire _id_4;
+  inout wire id_3;
+  output wire id_2;
   output wire id_1;
-  assign id_5 = id_6;
-  wire id_9;
-  wand id_10, id_11, id_12, id_13, id_14, id_15 = id_15 == 1;
-  wire id_16;
-  wire id_17;
-  wire id_18;
-  tri  id_19 = 1;
-  always id_7 = id_6;
-endmodule
-module module_1;
-  always if (id_1) id_1 <= (1);
-  assign id_1 = 1;
-  wire id_2;
-  module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2
+  id_7(
+      id_6 - id_7
   );
+  assign id_7 = 1;
+  module_0 modCall_1 ();
+  wire [id_4 : -1  |  id_5] id_8;
+  logic id_9;
 endmodule

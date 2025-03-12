@@ -1,38 +1,30 @@
-// Seed: 3738112131
-module module_0 (
+// Seed: 2780147501
+module module_0 #(
+    parameter id_1 = 32'd10
+);
+  wire  _id_1;
+  logic id_2;
+  assign id_2 = "";
+  logic [id_1 : -1] id_3;
+  localparam id_4 = -1;
+  wire id_5;
+  ;
+endmodule
+module module_1 #(
+    parameter id_5 = 32'd39
+) (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5
+    _id_5
 );
-  inout wire id_5;
-  input wire id_4;
+  input wire _id_5;
+  module_0 modCall_1 ();
+  inout tri id_4;
   input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_2 = 1'b0;
-endmodule
-module module_1 (
-    id_1,
-    id_2
-);
-  input wire id_2;
-  inout wire id_1;
-  wire id_3;
-  initial begin : LABEL_0
-    fork
-      wait (1);
-      assume (1'b0);
-      $display(1);
-    join
-    if (1) assume (1);
-  end
-  module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_2,
-      id_1,
-      id_3
-  );
+  input logic [7:0] id_2;
+  output logic [7:0] id_1;
+  assign id_4 = -1 * id_5 == -1;
+  assign id_1[id_5] = id_2 ? id_2[1] : id_2#(.id_2(1));
 endmodule

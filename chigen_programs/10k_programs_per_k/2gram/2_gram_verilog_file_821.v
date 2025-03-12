@@ -1,42 +1,55 @@
-// Seed: 2459989161
+// Seed: 681851301
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input tri0 id_0,
+    input wire id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input supply1 id_4,
+    input tri1 id_5,
+    input supply1 id_6,
+    output supply0 id_7,
+    input tri id_8,
+    output wire id_9,
+    input wand id_10
 );
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  assign id_1 = id_3;
-  assign module_1.type_1 = 0;
-  assign id_1 = 1'b0;
-  wire id_5;
-  wire id_6;
+  logic [1 : -1] id_12 = -1;
+  wire id_13;
+  logic [-1 : 1] id_14, id_15;
 endmodule
-module module_1 (
-    input wor id_0,
-    input supply1 id_1,
-    input uwire id_2,
-    input tri0 id_3,
-    output uwire id_4,
-    input wor id_5,
-    input uwire id_6,
-    input wire id_7,
-    input tri id_8
-    , id_13,
-    output tri1 id_9,
-    input wire id_10,
-    input supply1 id_11
+module module_1 #(
+    parameter id_4 = 32'd88
+) (
+    output tri1  id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    input  tri1  id_3,
+    output wor   _id_4
 );
-  wire id_14;
+  wire id_6;
+  struct {
+    logic id_7;
+    logic id_8;
+    struct packed {
+      logic ["" : id_4] id_9;
+      id_10 id_11;
+    } id_12;
+    logic id_13;
+  } [id_4 : 1] id_14;
+  ;
   module_0 modCall_1 (
-      id_13,
-      id_13,
-      id_13,
-      id_13
+      id_3,
+      id_3,
+      id_1,
+      id_3,
+      id_1,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_0,
+      id_1
   );
-  wire id_15 = id_14;
-  wire id_16;
+  id_15 :
+  assert property (@(posedge id_14.id_13) id_14.id_8[(-1)])
+  else;
 endmodule

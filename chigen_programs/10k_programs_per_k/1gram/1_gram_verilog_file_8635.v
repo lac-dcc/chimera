@@ -1,89 +1,66 @@
-// Seed: 1067026256
+// Seed: 3232122815
 module module_0 (
-    input uwire id_0,
-    output wor id_1,
-    input uwire id_2,
-    input uwire id_3,
-    output supply0 id_4
-    , id_14,
-    input tri id_5,
-    input tri void id_6,
-    input wor id_7,
-    input uwire id_8,
-    output uwire id_9,
-    output tri id_10,
-    input wand id_11
-    , id_15,
-    input wire id_12
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  assign id_9 = id_6;
-  wire id_16;
-  wire id_17;
-  always $display;
-  assign id_15 = id_0;
-  final
-    if (1) id_14 = 1'b0;
-    else id_9 = id_8 - 1;
-  wire id_18;
+  input wire id_11;
+  inout reg id_10;
+  output wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output tri1 id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_5 = -1;
+  struct packed {logic id_12;} id_13 = id_1;
+  wire id_14;
+  assign id_5 = -1;
+  always id_10 = 1 ? id_13 : 1;
+  logic id_15;
+  assign id_3 = id_15;
 endmodule
 module module_1 (
-    input tri id_0,
-    input tri0 id_1,
-    output tri id_2,
-    input supply1 id_3,
-    input uwire id_4,
-    input tri0 id_5,
-    input wor id_6,
-    output wor id_7,
-    input tri0 id_8,
-    output tri0 id_9,
-    output tri0 id_10,
-    input wand id_11,
-    output tri1 id_12
-    , id_36,
-    input tri0 id_13,
-    input wor id_14,
-    output uwire id_15,
-    input tri1 id_16,
-    input tri0 id_17,
-    output wire id_18,
-    input tri0 id_19,
-    input wire id_20,
-    input wor id_21,
-    output wire id_22,
-    input tri1 id_23,
-    output supply0 id_24,
-    input wand id_25,
-    output wand id_26,
-    input supply1 id_27,
-    input tri0 id_28,
-    output uwire id_29,
-    input wand id_30,
-    output wand id_31,
-    input tri id_32,
-    input tri0 id_33,
-    input wire id_34
+    output logic   id_0,
+    output supply0 id_1
+    , id_3
 );
-  assign id_18 = 1;
-  assign id_31 = 1'b0;
-  id_37[1 : {
-    0, 1/1'b0
-  }] (
-      1, id_21
-  );
+  assign id_3 = 1'b0;
+  logic id_4;
+  struct packed {logic id_5;} id_6;
+  always $signed(35);
+  ;
+  assign id_0 = id_4;
   module_0 modCall_1 (
-      id_8,
-      id_15,
-      id_30,
-      id_27,
-      id_15,
-      id_13,
-      id_23,
-      id_28,
-      id_30,
-      id_26,
-      id_26,
-      id_30,
-      id_20
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_6,
+      id_3
   );
+  always id_6 <= id_4;
+  always begin : LABEL_0
+    if (-1) id_0 <= #id_4 -1;
+    else id_0 <= 1;
+    id_0 <= id_6.id_5;
+    id_0 = -1 * id_4;
+    while (-1) id_4 <= {1{-1'h0 - id_6}} ? -1 * id_6 : -1'b0;
+  end
 endmodule

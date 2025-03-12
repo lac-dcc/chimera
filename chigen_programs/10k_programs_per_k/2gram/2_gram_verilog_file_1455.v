@@ -1,62 +1,51 @@
-// Seed: 1970283024
-module module_0 (
-    input tri id_0,
-    output supply1 id_1,
-    input supply1 id_2,
-    input uwire id_3,
-    output wire id_4,
-    input wand id_5,
-    input tri id_6,
-    input tri0 id_7,
-    output supply1 id_8,
-    input wor id_9,
-    input wor id_10,
-    output uwire id_11
-    , id_19,
-    input wor id_12,
-    output tri1 id_13,
-    input supply1 id_14,
-    input tri0 id_15,
-    input tri id_16,
-    input tri1 id_17
-);
-  wire id_20;
+// Seed: 1836981774
+module module_0;
+  always_ff
+  fork
+  join_none
 endmodule
 module module_1 (
-    input supply1 id_0,
-    output supply0 id_1,
-    input wire id_2,
-    input tri id_3,
-    input wand id_4,
-    input supply0 id_5,
-    input wire id_6,
-    input uwire id_7,
-    input supply1 id_8,
-    input wor id_9,
-    input wor id_10,
-    input supply1 id_11
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  wire id_13;
-  nand primCall (id_1, id_10, id_2, id_3, id_5, id_0);
-  module_0 modCall_1 (
-      id_11,
-      id_1,
-      id_8,
-      id_5,
-      id_1,
-      id_9,
-      id_7,
-      id_10,
-      id_1,
-      id_8,
-      id_5,
-      id_1,
-      id_6,
-      id_1,
-      id_8,
-      id_7,
-      id_7,
-      id_8
-  );
-  assign modCall_1.type_23 = 0;
+  input wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_5 = id_7;
+  wire id_9;
+  module_0 modCall_1 ();
+endmodule
+macromodule module_2 #(
+    parameter id_5 = 32'd32,
+    parameter id_6 = 32'd22
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input logic [7:0] id_4;
+  inout wire id_3;
+  inout logic [7:0] id_2;
+  inout wire id_1;
+  wire _id_5;
+  parameter id_6 = -1;
+  assign id_2[id_6] = -1'b0 - -1;
+  assign id_1 = id_6;
+  wire id_7;
+  module_0 modCall_1 ();
+  wire [1 'b0 : id_5] id_8;
+  assign id_3 = id_4[-1];
+  assign id_7 = id_4;
 endmodule

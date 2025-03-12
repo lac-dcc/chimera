@@ -1,35 +1,51 @@
-// Seed: 3681587919
+// Seed: 1234031888
 module module_0 (
-    input wor id_0,
-    output wire id_1,
-    output wand id_2,
-    output supply0 id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_5;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  module_2 modCall_1 (
+      id_4,
+      id_1,
+      id_5
+  );
   wire id_6;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri id_1,
-    input wand id_2,
-    input wor id_3,
-    input tri id_4,
-    input supply1 id_5,
-    input supply0 id_6,
-    input supply1 id_7,
-    output supply1 id_8,
-    input wand id_9,
-    input wire id_10,
-    input wand id_11
+    input  tri0 id_0,
+    output wire id_1,
+    input  wand id_2,
+    input  wor  id_3
 );
-  `define pp_13 0
-  assign id_8 = 1;
-  final $display;
+  tri0 id_5;
+  assign id_5 = -1;
+  logic id_6;
+  ;
   module_0 modCall_1 (
-      id_10,
-      id_8,
-      id_8,
-      id_8
+      id_5,
+      id_6,
+      id_6,
+      id_6,
+      id_6
   );
-  assign modCall_1.type_8 = 0;
+  logic id_7;
+  ;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_4;
+  ;
 endmodule

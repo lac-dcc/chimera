@@ -1,46 +1,55 @@
-// Seed: 2254629226
+// Seed: 4197917993
 module module_0 (
-    output tri1 id_0,
-    output wor  id_1
-    , id_3
+    input wor id_0,
+    output tri id_1,
+    output supply1 id_2,
+    input tri1 id_3
 );
-  wire id_4;
-  wor  id_5;
-  id_6(
-      .id_0(id_4), .id_1()
-  );
-  assign id_5 = 1;
-  always @(*) begin : LABEL_0
-    id_1 = 1;
-  end
-  wire id_7;
-  wire id_8, id_9, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17, id_18;
+  logic id_5;
 endmodule
-module module_1 (
-    output wor id_0,
-    input supply1 id_1,
-    input wire id_2,
-    input uwire id_3
-    , id_17,
-    input tri0 id_4,
-    input tri0 id_5,
-    output supply1 id_6,
-    output wire id_7,
-    input supply1 id_8,
-    input supply1 id_9,
-    input wand id_10,
-    input wor id_11,
-    input tri id_12,
-    input tri0 id_13,
-    input tri id_14,
-    input wand id_15
+module module_1 #(
+    parameter id_13 = 32'd21,
+    parameter id_16 = 32'd67,
+    parameter id_3  = 32'd29
+) (
+    input tri0 id_0,
+    input wor id_1,
+    input wand id_2,
+    input tri0 _id_3,
+    input supply1 id_4,
+    output uwire id_5,
+    input wor id_6,
+    output uwire id_7,
+    output supply1 id_8,
+    output tri1 id_9,
+    output supply0 id_10,
+    input supply0 id_11,
+    input tri0 id_12,
+    input supply0 _id_13,
+    input tri0 id_14,
+    input supply1 id_15,
+    input tri _id_16,
+    input uwire id_17,
+    output supply0 id_18,
+    input uwire id_19,
+    output wor id_20,
+    input tri0 id_21,
+    input tri1 id_22,
+    input wor id_23,
+    output tri1 id_24,
+    input supply0 id_25,
+    output supply0 id_26,
+    output wor id_27
+    , id_32,
+    output tri1 id_28,
+    output wor id_29,
+    output supply1 id_30
 );
-  assign id_0 = 1;
+  always_ff @(*) id_32[id_16.id_13 : id_3] <= id_19;
   module_0 modCall_1 (
-      id_6,
-      id_0
+      id_0,
+      id_5,
+      id_28,
+      id_22
   );
-  assign id_17 = 1'b0;
-  assign id_0  = 1;
-  wand id_18 = 1;
 endmodule

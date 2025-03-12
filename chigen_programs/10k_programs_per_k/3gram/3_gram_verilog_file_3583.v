@@ -1,53 +1,41 @@
-// Seed: 1010252600
+// Seed: 2859925517
 module module_0 (
-    output tri id_0,
-    output tri0 id_1,
-    input tri1 id_2,
-    input uwire id_3,
-    input uwire id_4,
-    input wire id_5,
-    input supply1 id_6,
-    input supply1 id_7,
-    input tri id_8,
-    input tri0 id_9,
-    input tri0 id_10,
-    input supply1 id_11,
-    input supply0 id_12
+    input  wor id_0,
+    output wor id_1,
+    input  tri id_2
 );
-  always disable id_14;
-  assign module_1.type_7 = 0;
+  if (-1)
+    initial begin : LABEL_0
+      if (1) {id_0, id_0, -1 + (id_2) + -1 + 1 - -1'd0} = 1;
+      else {id_2, -1, -1, 'd0} = {-1, id_0};
+    end
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output logic id_1
+    input uwire id_0,
+    input uwire id_1,
+    input tri0 id_2,
+    output supply1 id_3,
+    output logic id_4,
+    output wire id_5,
+    output supply1 id_6,
+    output tri id_7,
+    input tri1 id_8,
+    input supply1 id_9,
+    input wand id_10,
+    input supply0 id_11,
+    input tri id_12
+    , id_16,
+    input tri id_13,
+    output supply1 id_14
 );
-  always @(id_0) id_1 <= 1;
-  assign id_1 = 1;
-  supply0 id_3;
-  wand id_4;
+  logic id_17;
+  wire id_18, id_19;
+  initial id_16 = id_11;
+  always @* id_4 <= 1;
   module_0 modCall_1 (
-      id_4,
-      id_4,
-      id_4,
-      id_4,
-      id_4,
-      id_4,
-      id_4,
-      id_4,
-      id_4,
       id_0,
-      id_0,
-      id_0,
-      id_4
+      id_6,
+      id_12
   );
-  always @(posedge id_0) if (id_0) id_3 = id_4 + 1;
-  always_comb @(1 or posedge 1) begin : LABEL_0
-    if (id_0) begin : LABEL_0
-      if (1 + 1) disable id_5;
-      id_4 = id_0;
-      `define pp_6 0
-      id_1 <= 1;
-      #1;
-    end else id_4 = id_4;
-  end
+  assign modCall_1.id_1 = 0;
 endmodule

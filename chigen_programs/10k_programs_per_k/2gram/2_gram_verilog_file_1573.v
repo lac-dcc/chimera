@@ -1,34 +1,44 @@
-// Seed: 2930387711
+// Seed: 2586950136
 module module_0 (
     id_1
 );
-  input wire id_1;
-  integer id_2 (
-      .id_0(~1),
-      .id_1(1),
-      .id_2(id_3),
-      .id_3(1),
-      .id_4(),
-      .id_5(1),
-      .id_6(id_1 - 1),
-      .id_7(id_1),
-      .id_8(id_1 - id_3),
-      .id_9()
-  );
-  wire id_4;
+  output wire id_1;
+  parameter id_2 = 1;
+  parameter id_3 = id_2;
+  assign {id_3, -1, id_3} = id_3;
+  assign id_1 = id_3;
+  assign module_1.id_11 = 0;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output wand  id_1,
-    input  wand  id_2,
-    input  tri0  id_3,
-    input  uwire id_4
+    input uwire id_0,
+    input wor id_1
+    , id_28,
+    output wor id_2
+    , id_29,
+    output uwire id_3,
+    input tri id_4,
+    input wand id_5,
+    output wire id_6,
+    input wor id_7,
+    input uwire id_8,
+    input uwire id_9,
+    input uwire id_10,
+    output supply0 id_11,
+    input tri id_12,
+    input tri id_13,
+    input supply1 id_14,
+    output wire id_15,
+    output wire id_16,
+    output tri1 id_17,
+    input supply0 id_18,
+    output supply1 id_19,
+    output wand id_20,
+    input supply1 id_21,
+    input supply0 id_22,
+    input supply1 id_23,
+    input tri id_24,
+    output wor id_25,
+    input tri1 id_26
 );
-  for (id_6 = 1; id_2; id_6 = id_2) begin : LABEL_0
-    tri id_7;
-    assign id_7 = 1'b0;
-  end
-  module_0 modCall_1 (id_7);
-  assign modCall_1.id_3 = 0;
-  wire id_8;
+  module_0 modCall_1 (id_29);
 endmodule

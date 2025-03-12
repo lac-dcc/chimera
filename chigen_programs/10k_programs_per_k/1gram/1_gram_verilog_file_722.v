@@ -1,36 +1,33 @@
-// Seed: 2901612586
-module module_0 (
-    id_1,
-    id_2,
-    id_3
+// Seed: 3725680106
+module module_0 #(
+    parameter id_6 = 32'd90,
+    parameter id_8 = 32'd59
+) (
+    input wor id_0,
+    output supply0 id_1,
+    input wire id_2,
+    output wand id_3
 );
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_4;
-  assign module_1.id_0 = 0;
-  wire id_5;
+  supply1 id_5, _id_6, id_7;
+  wire [1 : -1 'b0] _id_8, id_9[id_6 : 1];
+  wire ["" : id_8] id_10;
+  assign id_5 = id_8;
+  assign id_7 = 1;
 endmodule
 module module_1 (
-    output tri1  id_0,
-    output logic id_1,
-    input  logic id_2,
-    input  logic id_3,
-    input  logic id_4
+    output tri1 id_0,
+    input  wire id_1,
+    output tri1 id_2
+    , id_5,
+    output tri0 id_3
 );
-  assign id_1 = id_3;
-  assign id_1 = 1;
-  logic id_6, id_7;
-  wire  id_8;
-  logic id_9 = id_2;
-  always_comb begin : LABEL_0
-    id_9 <= id_4;
-  end
-  assign id_7 = id_4;
-  always id_1 <= id_9;
+  wire id_6 = id_5;
+  xnor primCall (id_3, id_6, id_5);
   module_0 modCall_1 (
-      id_8,
-      id_8,
-      id_8
+      id_1,
+      id_0,
+      id_1,
+      id_3
   );
+  assign modCall_1.id_0 = 0;
 endmodule

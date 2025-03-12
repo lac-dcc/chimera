@@ -1,29 +1,36 @@
-// Seed: 3589547093
+// Seed: 317708041
 module module_0 (
-    output wire id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  integer id_2 = id_2#(
-      .id_2({(1) {1}}),
-      .id_2(1)
-  );
-  assign id_2 = 1;
-  initial id_2 <= 1;
-  tri id_3 = 1 ? id_3 : 1;
+  output wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  logic id_5 = id_5;
 endmodule
-module module_1 (
-    input  tri1  id_0,
-    input  wand  id_1,
-    output uwire id_2,
-    output tri0  id_3,
-    input  tri1  id_4,
-    output wor   id_5,
-    output tri   id_6
+module module_1 #(
+    parameter id_2 = 32'd62
+) (
+    input wand id_0
 );
-  tri1 id_8, id_9;
-  wire id_10, id_11;
-  module_0 modCall_1 (id_2);
-  assign modCall_1.id_0 = 0;
-  initial id_8 = 1'b0;
-  assign id_3 = id_4;
-  assign id_6 = 1;
+  integer _id_2;
+  ;
+  wire [1 : id_2] id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
+  id_4 :
+  assert property (@(posedge id_4) -1) id_4 <= id_3;
+  assign id_4 = -1;
+  logic id_5;
+  ;
+  wire  id_6;
+  logic id_7;
+  ;
 endmodule

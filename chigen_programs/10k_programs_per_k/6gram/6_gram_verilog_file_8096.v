@@ -1,43 +1,53 @@
-// Seed: 2651099612
-module module_0 #(
-    parameter id_2 = 32'd93,
-    parameter id_3 = 32'd35
+// Seed: 517227627
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  generate
-    for (id_1 = id_1; id_1; id_1 = id_1[1]) begin : LABEL_0
-      defparam id_2.id_3 = 1;
-    end
-  endgenerate
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_5;
+  wire [-1 'b0 : 1] id_6;
 endmodule
 module module_1 #(
-    parameter id_12 = 32'd44,
-    parameter id_13 = 32'd90
+    parameter id_3 = 32'd26
 ) (
-    output tri0 id_0,
-    input  tri0 id_1,
-    output wand id_2,
-    output tri0 id_3,
-    output tri1 id_4
+    id_1,
+    id_2
 );
-  assign id_3 = 1;
-  wire id_6 = id_6;
-  wor  id_7;
-  module_0 modCall_1 ();
-  assign id_3 = id_7;
-  wire id_8 = id_8;
-  wire id_9;
-  always @(posedge 1, posedge 1) begin : LABEL_0
-    if (1'b0)
-      assume (id_7);
-      else assume (id_7);
-  end
-  assign id_0 = 1 * 1;
-  uwire id_10 = 1 && 1;
-  wand  id_11 = 1;
-  defparam id_12.id_13 = 1;
-  assign id_0 = 1 ? id_10 : id_7;
-  wire id_14;
-  wire id_15;
-  wire id_16;
-  tri0 id_17 = id_12;
+  output wire id_2;
+  inout logic [7:0] id_1;
+  logic _id_3;
+  assign id_1[id_3] = id_1 * id_1;
+  wire id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_2,
+      id_4,
+      id_4
+  );
+endmodule
+module module_2 #(
+    parameter id_3 = 32'd28
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4
+);
+  inout logic [7:0] id_4;
+  input wire _id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign id_4[1'b0] = "" !=? -1;
+  assign id_4[id_3==?-1] = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
 endmodule

@@ -1,59 +1,37 @@
-// Seed: 2401464849
+// Seed: 1821894964
 module module_0 (
-    input wor id_0
+    input tri id_0
 );
-  reg id_2, id_3, id_4;
-  id_5(
-      1 * 1'b0, 1
-  );
-  always begin : LABEL_0
-    id_3 <= id_2;
-  end
-  assign id_4 = 1;
+  assign module_2.id_4 = 0;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output logic id_1,
-    input  logic id_2,
-    input  wor   id_3,
-    output logic id_4,
-    input  logic id_5,
-    output logic id_6,
-    output logic id_7,
-    input  logic id_8
+    input tri1 id_0,
+    input tri1 id_1,
+    output tri1 id_2,
+    input wor id_3,
+    input supply0 id_4,
+    input supply0 id_5,
+    input tri0 id_6,
+    input wor id_7,
+    output supply1 id_8,
+    input wor id_9,
+    input wire id_10
 );
-  assign id_4 = id_5;
-  wire id_10;
-  logic id_11, id_12, id_13, id_14, id_15;
-  always
-  fork
-    id_1 = id_12;
-    id_7  <= 1;
-    id_11 <= id_8;
-    begin : LABEL_0
-      id_14 = 1 + 1 * id_0;
-      begin : LABEL_0
-        id_7 <= id_8;
-      end
-      begin : LABEL_0
-        id_7 <= id_5;
-      end
-      begin : LABEL_0
-        id_6 <= 1;
-      end
-    end
-    begin : LABEL_0
-      id_6 <= id_2;
-      id_15 = (1);
-    end
-    @(negedge id_3 or posedge 1) id_1 <= id_11;
-    id_6 = #(1) 1 - id_11;
-  join
-  module_0 modCall_1 (id_0);
-  generate
-    wire id_16;
-    begin : LABEL_0
-      wire id_17;
-    end
-  endgenerate
+  logic id_12 = -1;
+  module_0 modCall_1 (id_10);
+  assign modCall_1.id_0 = 0;
+  parameter id_13 = "";
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input uwire id_1,
+    output tri1 id_2,
+    input wand id_3,
+    input supply0 id_4,
+    input tri0 id_5
+);
+  wire id_7, id_8;
+  and primCall (id_2, id_8, id_1, id_7, id_5, id_0, id_4, id_3);
+  assign id_8 = ((id_4));
+  module_0 modCall_1 (id_1);
 endmodule

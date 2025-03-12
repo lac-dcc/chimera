@@ -1,33 +1,44 @@
-// Seed: 2703263594
+// Seed: 2976538425
 module module_0;
-  assign id_1 = 1;
-  uwire id_2;
-  assign module_1.type_20 = 0;
-  wire id_3;
-  assign id_2 = 1;
-  wire id_4;
+  id_1 :
+  assert property (@(posedge 1) -1'h0)
+  else $signed(89);
+  ;
+  assign module_1.id_15 = 0;
 endmodule
 module module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    input wand id_2,
-    input supply1 id_3,
-    input wor id_4,
-    input tri id_5,
-    input tri0 id_6,
-    input wand id_7,
-    output supply0 id_8,
-    input wire id_9,
-    output supply0 id_10
-    , id_17,
-    input tri0 id_11,
-    input wire id_12,
-    input supply1 id_13,
-    output tri1 id_14,
-    input tri id_15
+    input supply1 id_0,
+    input supply1 id_1,
+    input wire id_2,
+    input wire id_3,
+    input supply0 id_4,
+    output logic id_5,
+    input supply0 id_6,
+    input supply1 id_7,
+    input wire id_8,
+    input wand id_9,
+    input wand id_10,
+    output wor id_11,
+    input tri id_12,
+    input tri id_13,
+    output supply1 id_14,
+    output logic id_15,
+    input supply0 id_16,
+    input tri0 id_17,
+    output wire id_18,
+    input tri0 id_19,
+    output tri id_20,
+    input supply0 id_21,
+    input wor id_22
+    , id_27,
+    output uwire id_23,
+    input wand id_24,
+    input wire id_25
 );
-  assign id_17[1] = id_12;
+  always id_5 <= 1;
+  always_comb @(posedge 1 or negedge {1{1'b0}}) begin : LABEL_0
+    id_15 = {id_7, id_21};
+  end
   module_0 modCall_1 ();
-  wire id_18;
-  wire id_19;
+  assign id_18 = 1'b0 ? 1 : id_6;
 endmodule

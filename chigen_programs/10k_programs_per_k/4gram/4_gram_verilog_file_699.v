@@ -1,39 +1,45 @@
-// Seed: 401916548
-module module_0;
-  wire id_2;
-endmodule
+// Seed: 1371676098
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    module_1
+    output wor id_0
+    , id_13,
+    input tri1 id_1,
+    input tri0 id_2,
+    input tri0 id_3,
+    output tri id_4,
+    output uwire id_5,
+    output uwire id_6,
+    input supply1 id_7,
+    input tri id_8,
+    output wire id_9,
+    input tri1 id_10,
+    input uwire id_11
 );
-  output wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  input wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_10;
-  module_0 modCall_1 ();
+  if (1) begin : LABEL_0
+    assign id_4 = -1'b0;
+    logic id_14;
+    always @(posedge -1) begin : LABEL_1
+      disable id_15;
+    end
+  end else assign id_4 = -1;
+  assign module_1.id_1 = 0;
 endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
+module module_1 (
+    output wor  id_0,
+    input  tri1 id_1
 );
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_4;
-  module_0 modCall_1 ();
-  wire id_5;
+  always_ff @(posedge 1) id_0 -= 1'd0 & id_1;
+  module_0 modCall_1 (
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_1
+  );
 endmodule

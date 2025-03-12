@@ -1,59 +1,50 @@
-// Seed: 2439079067
-module module_0 (
-    input tri0 id_0,
-    input wor id_1,
-    input supply1 id_2,
-    input wand id_3,
-    input wire id_4,
-    input tri id_5
+// Seed: 121509198
+module module_0 #(
+    parameter id_1 = 32'd44,
+    parameter id_2 = 32'd6,
+    parameter id_3 = 32'd80
 );
+  localparam id_1 = 1;
+  parameter integer id_2 = 1;
+  wire [id_2 : ""] _id_3;
+  wire [id_2 : -1 'b0 -  -1] id_4;
+  logic [-1 : id_1] id_5;
+  ;
+  assign id_5[-1'b0==id_3] = id_3 - id_3 ? (1'b0) : -1;
 endmodule
-module module_1 (
-    input uwire id_0,
-    output tri1 id_1,
-    input wire id_2,
-    input supply1 id_3,
-    input tri1 id_4,
-    input supply1 id_5,
-    output tri1 id_6,
-    output tri id_7,
-    input wor id_8,
-    output supply1 id_9
+module module_1 #(
+    parameter id_10 = 32'd99,
+    parameter id_7  = 32'd5,
+    parameter id_8  = 32'd0
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    _id_7,
+    _id_8,
+    id_9
 );
-  uwire id_11;
-  module_0 modCall_1 (
-      id_2,
-      id_3,
-      id_0,
-      id_2,
-      id_8,
-      id_2
-  );
-  assign modCall_1.id_0 = 0;
-  supply0 id_12;
-  assign id_12 = 1;
-  tri id_13 = ~id_12;
-  assign id_6 = 1;
-  tri id_14;
-  assign id_11 = 1 ? 1 : 1 ? id_3 : (id_13);
-  tri0 id_15 = id_0;
-  assign id_7 = id_11;
-  generate
-    for (id_16 = 1; id_11; id_14 = 1'b0) begin : LABEL_0
-      id_17(
-          .id_0(1),
-          .id_1(1),
-          .id_2(1 == id_1),
-          .id_3(1),
-          .id_4(id_7),
-          .id_5(id_15),
-          .id_6(1),
-          .id_7(id_8)
-      );
-    end
-  endgenerate
-  wire id_18;
-  id_19(
-      .id_0(1), .id_1(id_12), .id_2(1'h0), .id_3(1), .id_4(1), .id_5((id_13))
-  );
+  inout wire id_9;
+  input wire _id_8;
+  inout wire _id_7;
+  xnor primCall (id_1, id_11, id_12, id_13, id_14, id_2, id_3, id_6, id_9);
+  input wire id_6;
+  output wire id_5;
+  output tri id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire _id_10;
+  ;
+  assign id_4 = -1;
+  wire id_11;
+  ;
+  wire  [ id_8 : id_7] id_12;
+  logic [id_10 : id_7] id_13;
+  ;
+  integer id_14;
+  module_0 modCall_1 ();
 endmodule

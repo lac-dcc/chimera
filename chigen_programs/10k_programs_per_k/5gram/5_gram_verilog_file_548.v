@@ -1,9 +1,9 @@
-// Seed: 928426072
-module module_0 (
-    id_1
-);
-  output wire id_1;
-  assign id_1 = id_2;
+// Seed: 2695715088
+module module_0;
+  always @(posedge -1) begin : LABEL_0
+    if (1) disable id_1;
+    else id_1 = 1'b0;
+  end
 endmodule
 module module_1 (
     id_1,
@@ -11,35 +11,80 @@ module module_1 (
     id_3
 );
   input wire id_3;
-  inout wire id_2;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  inout reg id_2;
   input wire id_1;
-  always force id_2 = 1'b0;
-  module_0 modCall_1 (id_2);
-  always @(1 & id_2 or 1) id_2 = 1;
+  always @(posedge -1 or posedge id_2) begin : LABEL_0
+    if (1) id_2 <= 1;
+  end
   wire id_4;
+  ;
 endmodule
-module module_2 (
-    output wire id_0,
-    output wor id_1,
-    output wor id_2,
-    output tri0 id_3,
-    output wand id_4,
-    input wor id_5,
-    output tri0 id_6,
-    input tri0 id_7,
-    output supply0 id_8,
-    output wor id_9,
-    output wor id_10,
-    input supply0 id_11,
-    input tri1 id_12,
-    output supply1 id_13,
-    input tri0 id_14
+module module_2 #(
+    parameter id_12 = 32'd65,
+    parameter id_15 = 32'd68,
+    parameter id_17 = 32'd81,
+    parameter id_21 = 32'd13,
+    parameter id_26 = 32'd83
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    _id_12,
+    id_13,
+    id_14,
+    _id_15,
+    id_16,
+    _id_17,
+    id_18,
+    id_19,
+    id_20,
+    _id_21,
+    id_22,
+    id_23,
+    id_24
 );
-  assign id_9 = 1 ? ~id_14 : id_12 ? id_14 : id_12;
-  supply0 id_16;
-  assign id_16 = id_7 ? id_11 : 1;
-  wire id_17;
-  wire id_18;
-  module_0 modCall_1 (id_18);
-  wire id_19;
+  inout wire id_24;
+  input wire id_23;
+  output wire id_22;
+  input wire _id_21;
+  output wire id_20;
+  inout wire id_19;
+  inout wire id_18;
+  module_0 modCall_1 ();
+  inout wire _id_17;
+  output wire id_16;
+  input wire _id_15;
+  output wire id_14;
+  output uwire id_13;
+  output wire _id_12;
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout logic [7:0] id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output logic [7:0] id_2;
+  nor primCall (id_1, id_10, id_18, id_19, id_23, id_24, id_3, id_4, id_5, id_6, id_7, id_8, id_9);
+  output wire id_1;
+  parameter id_25 = 1 == 1 - 1'h0;
+  wire _id_26;
+  assign id_2[{id_15{id_21}}] = id_25 ? id_7 : 1'b0;
+  assign id_13 = ({{1, {id_8, id_10, -1}}, 1}) <= -1;
+  logic [(  id_17  ) : id_12] id_27;
+  assign id_7[id_26] = -1 || 1;
+  int  id_28;
+  wire id_29;
 endmodule

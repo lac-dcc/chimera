@@ -1,51 +1,56 @@
-// Seed: 2721948757
+// Seed: 461746498
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    output uwire id_0,
+    input  wor   id_1,
+    input  uwire id_2
 );
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_7;
-  wire id_8;
-  wire id_9 = id_7;
-  wire id_10, id_11;
-  wire id_12;
-  wire id_13;
-  id_14(
-      .id_0(1), .id_1(id_12), .id_2(1), .id_3(1), .sum(id_1), .id_4(1)
-  );
+  assign module_1.id_26 = 0;
+  assign id_0 = -1;
+  wire id_4;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input wor id_0,
+    input supply1 id_1,
+    input tri id_2,
+    output uwire id_3,
+    output tri0 id_4,
+    input wand id_5,
+    output tri0 id_6,
+    input wand id_7,
+    input tri id_8,
+    input supply1 id_9,
+    output supply0 id_10,
+    inout wor id_11,
+    input wire id_12,
+    input supply0 id_13,
+    input wor id_14,
+    output tri0 id_15,
+    input tri1 id_16,
+    input tri0 id_17,
+    input wire id_18,
+    input wor id_19,
+    input tri0 id_20,
+    input supply1 id_21,
+    input tri1 id_22,
+    input uwire id_23,
+    output tri id_24,
+    input tri0 id_25,
+    input tri id_26,
+    input wire id_27,
+    input tri0 id_28,
+    input tri1 id_29,
+    input wire id_30,
+    output wand id_31,
+    input tri id_32
 );
-  input wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_7;
-  assign id_7 = id_5 ^ 1;
-  assign id_5 = 1 == 1;
+  assign id_11 = id_17;
   module_0 modCall_1 (
-      id_1,
-      id_2,
-      id_7,
-      id_1,
-      id_6,
-      id_4
+      id_4,
+      id_22,
+      id_7
   );
+  always_latch @* begin : LABEL_0
+    id_24 += ~|id_14;
+  end
+  wire id_34;
 endmodule

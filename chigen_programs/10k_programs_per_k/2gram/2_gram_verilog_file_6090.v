@@ -1,54 +1,44 @@
-// Seed: 1444015901
+// Seed: 3606369992
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    output tri0 id_0,
+    input  wand id_1
 );
-  inout wire id_9;
-  output wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  id_10 :
-  assert property (@(posedge id_3) id_7)
-  else;
-  wire id_11;
-  assign id_8 = id_1;
-  wire id_12;
-  assign id_12 = id_3;
+  logic id_3 = 1;
+  wire  id_4;
+  assign id_0 = id_4;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    output wand id_1,
-    input tri id_2,
-    input wand id_3,
-    output wire id_4,
-    output wand id_5
+    input  tri  id_0,
+    output wand id_1
+    , id_3
 );
-  if (id_2) begin : LABEL_0
-    wire id_7;
-  end else begin : LABEL_0
-    wire id_8;
-  end
+  wire id_4;
+  ;
   module_0 modCall_1 (
-      id_8,
-      id_7,
-      id_7,
-      id_8,
-      id_7,
-      id_7,
-      id_8,
-      id_7,
-      id_7
+      id_1,
+      id_0
   );
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 ();
+endmodule
+module module_3 #(
+    parameter id_1 = 32'd22
+) (
+    _id_1,
+    id_2,
+    id_3
+);
+  output wire id_3;
+  inout wire id_2;
+  inout wire _id_1;
+  wire [id_1 : id_1] id_4;
+  module_2 modCall_1 ();
+  id_5 :
+  assert property (@({-1, -1}) -1'b0)
+  else;
+  always_ff begin : LABEL_0
+    if (1 == 1) assign id_1[id_1] = id_4 & 1'b0;
+  end
+  assign id_5 = -1;
 endmodule

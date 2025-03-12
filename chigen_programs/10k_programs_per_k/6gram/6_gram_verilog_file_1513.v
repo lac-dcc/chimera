@@ -1,63 +1,57 @@
-// Seed: 1716342285
+// Seed: 3914838052
 module module_0 ();
-  wire id_1;
+  parameter id_1 = 1;
+  assign module_1.id_3 = 0;
+  logic [-1 : (  1  &&  1  )] id_2 = -id_1;
+  assign id_2 = id_2;
+  wire id_3;
+  assign module_2.id_22 = 0;
 endmodule
 module module_1 (
-    input  supply0 id_0,
-    output supply0 id_1
+    input  tri1  id_0,
+    input  tri0  id_1,
+    output uwire id_2,
+    input  tri0  id_3,
+    input  uwire id_4,
+    output wire  id_5,
+    input  uwire id_6
 );
-  always @(1) id_1 = 1'b0;
+  always @(posedge id_6 - -1 or posedge id_4) release id_5;
   module_0 modCall_1 ();
 endmodule
-module module_2 #(
-    parameter id_15 = 32'd46,
-    parameter id_16 = 32'd26
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13
+module module_2 (
+    output tri1 id_0,
+    output tri1 id_1,
+    output tri0 id_2,
+    output wand id_3,
+    input wire id_4,
+    input uwire id_5,
+    input wand id_6,
+    output wand id_7,
+    input wand id_8,
+    input tri0 id_9,
+    input wand id_10,
+    output uwire id_11,
+    input supply1 id_12,
+    output wand id_13,
+    input wor id_14,
+    input supply0 id_15,
+    input uwire id_16,
+    output tri1 id_17,
+    input tri id_18,
+    input tri0 id_19,
+    input tri1 id_20,
+    input supply0 id_21,
+    output wand id_22,
+    input wor id_23,
+    output uwire id_24,
+    output uwire id_25,
+    output wire id_26
 );
-  inout wire id_13;
-  output wire id_12;
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  always begin : LABEL_0
-    id_5 <= id_13;
-    $display(id_7, id_7, id_1);
-    id_10 <= id_5;
-    id_5  <= id_13;
-    id_7  <= {id_1 & 1'b0};
-  end
-  wire id_14;
+  wire id_28;
   module_0 modCall_1 ();
-  always @(1) begin : LABEL_0
-    if (id_9) begin : LABEL_0
-      id_9 <= id_1;
-    end
+  always begin : LABEL_0
+    $unsigned(60);
+    ;
   end
-  always @(posedge id_7 or 1'b0) begin : LABEL_0
-    id_5 = 1;
-  end
-  defparam id_15.id_16 = 1 ^ "";
-  wire id_17 = id_15;
-  wire id_18, id_19, id_20, id_21, id_22, id_23, id_24;
 endmodule

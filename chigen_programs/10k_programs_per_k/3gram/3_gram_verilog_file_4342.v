@@ -1,28 +1,45 @@
-// Seed: 1339956334
-module module_0 ();
-  tri0 id_2;
-  wire id_3;
+// Seed: 4042220853
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
+);
+  output wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign module_1.id_0 = 0;
+  logic [7:0] id_8;
+  assign id_8[-1] = id_3;
 endmodule
 module module_1 (
-    input tri id_0,
-    input supply1 id_1,
-    input wor id_2,
-    output supply1 id_3,
-    input supply0 id_4,
-    output wor id_5,
-    input wire id_6,
-    output supply0 id_7,
-    input tri id_8,
-    output uwire id_9,
-    input tri0 id_10,
-    output wand id_11,
-    input tri0 id_12,
-    input wand id_13,
-    input wire id_14,
-    input wor id_15,
-    input tri0 id_16,
-    output supply1 id_17
+    input supply1 id_0,
+    output supply1 id_1,
+    output logic id_2,
+    input tri0 id_3,
+    output tri1 id_4
 );
-  always_ff @(1 or negedge 1);
-  module_0 modCall_1 ();
+  always @({id_0{~id_0}}) id_2 = id_3;
+  parameter id_6 = 1;
+  and primCall (id_1, id_6, id_7, id_0, id_3);
+  assign id_2 = -1;
+  parameter id_7 = id_6;
+  module_0 modCall_1 (
+      id_7,
+      id_6,
+      id_7,
+      id_6,
+      id_6,
+      id_6,
+      id_6
+  );
+  wire id_8;
+  parameter id_9 = id_6;
 endmodule

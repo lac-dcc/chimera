@@ -1,74 +1,63 @@
-// Seed: 1640187170
+// Seed: 1599843275
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    input supply1 id_0,
+    input wire id_1,
+    input wire id_2,
+    input supply0 id_3,
+    input uwire id_4,
+    output uwire id_5,
+    input uwire id_6,
+    input wor id_7,
+    input tri id_8,
+    input tri1 id_9,
+    output supply1 id_10,
+    input tri1 id_11,
+    input tri id_12,
+    output wand id_13,
+    output supply0 id_14,
+    output wand id_15,
+    input wor id_16,
+    output wire id_17,
+    input tri id_18,
+    input wor id_19,
+    output uwire id_20,
+    input uwire id_21,
+    output tri id_22
 );
-  input wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  output wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  tri0 id_12;
-  wire id_13, id_14, id_15;
-  logic [7:0] id_16;
-  wire id_17;
-  always_comb @(id_17) id_16[1] <= !id_6;
-  wire id_18;
-  reg  id_19;
-  initial begin : LABEL_0
-    id_8 = id_14;
-    if (1 - 1) id_10#(.id_12(1)) = 1;
-    else begin : LABEL_0
-      if (1) disable id_20;
-    end
-  end
-  wire id_21;
-  initial begin : LABEL_0
-    id_19 <= id_11 == id_12;
-  end
 endmodule
 module module_1 (
-    input wire id_0,
+    input wand id_0,
     input wire id_1,
-    input tri1 id_2,
+    output uwire id_2,
     input supply1 id_3,
-    output tri1 id_4,
-    input tri id_5
+    input wor id_4,
+    input wire id_5
 );
-  wire id_7;
-  id_8(
-      .id_0(1), .id_1(1), .id_2(id_5)
-  );
-  generate
-    assign id_4 = 1;
-  endgenerate
-  wire id_9, id_10;
+  assign id_2 = -1'b0;
   module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_10,
-      id_9,
-      id_9,
-      id_9,
-      id_7,
-      id_10,
-      id_10,
-      id_9,
-      id_7
+      id_3,
+      id_0,
+      id_0,
+      id_1,
+      id_0,
+      id_2,
+      id_4,
+      id_4,
+      id_3,
+      id_5,
+      id_2,
+      id_1,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_5,
+      id_3,
+      id_2,
+      id_4,
+      id_2
   );
+  assign modCall_1.id_12 = 0;
 endmodule

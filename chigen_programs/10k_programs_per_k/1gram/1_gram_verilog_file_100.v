@@ -1,44 +1,51 @@
-// Seed: 3525664858
-module module_0 (
-    input wire id_0,
-    input wor id_1,
-    output supply1 id_2,
-    input tri0 id_3,
-    output uwire id_4,
-    output wor id_5,
-    output supply0 id_6
+// Seed: 1538755231
+module module_0 #(
+    parameter id_6 = 32'd0
+) (
+    id_1,
+    id_2,
+    id_3
 );
-  if (1) wire id_8;
-  else begin : LABEL_0
-    assign id_6 = 1;
-    wire id_9;
-  end
-  id_10(
-      .id_0(id_0), .id_1(id_8), .id_2(1), .id_3((id_8#(.id_4(1)))), .id_5("")
-  );
-  wire id_11;
-  wire id_12;
+  input wire id_3;
+  assign module_1.id_9 = 0;
+  input wire id_2;
+  input wire id_1;
+  logic [7:0] id_4[1 : {  1 'b0 {  -1  }  }], id_5, _id_6;
+  assign id_4[id_6][1] = -1;
+  assign id_5[1 : 1?1 : 1] = id_5;
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input tri0 id_1
+module module_1 #(
+    parameter id_1  = 32'd86,
+    parameter id_10 = 32'd65,
+    parameter id_14 = 32'd6
+) (
+    output wire id_0,
+    output tri1 _id_1,
+    output uwire id_2,
+    output tri0 id_3,
+    output tri0 id_4[id_14 : 1],
+    input tri1 id_5[id_10  >>  1 : (  id_14  )  <=  id_1],
+    input wire id_6,
+    input wand id_7
+    , id_20,
+    input tri0 id_8,
+    input supply0 id_9,
+    input tri1 _id_10,
+    output wor id_11,
+    output tri0 id_12,
+    input supply1 id_13,
+    output tri _id_14
+    , id_21,
+    output tri id_15,
+    input tri0 id_16,
+    input supply1 id_17,
+    input tri0 id_18
 );
-  assign id_3 = id_0;
+  wire [1 'b0 : $realtime] id_22, id_23;
   module_0 modCall_1 (
-      id_3,
-      id_1,
-      id_3,
-      id_0,
-      id_3,
-      id_3,
-      id_3
+      id_23,
+      id_23,
+      id_23
   );
-  assign modCall_1.id_5 = 0;
-  always id_3 = 1'b0;
-  assign id_3 = id_3;
-  wor id_4;
-  assign id_4 = 1;
-  supply1 id_5, id_6, id_7;
-  assign id_5 = 1;
-  wire id_8;
+  nor primCall (id_4, id_17, id_21, id_20, id_9, id_22, id_7, id_8);
 endmodule

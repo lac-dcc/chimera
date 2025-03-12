@@ -1,58 +1,59 @@
-// Seed: 3160669412
+// Seed: 3019869192
 module module_0 (
     id_1,
     id_2,
+    id_3
+);
+  output wire id_3;
+  output wire id_2;
+  assign module_2.id_2 = 0;
+  output wire id_1;
+endmodule
+module module_1 #(
+    parameter id_2 = 32'd49,
+    parameter id_5 = 32'd54
+) (
+    id_1,
+    _id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7
+    _id_5,
+    id_6
 );
-  inout wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
+  output wire id_6;
+  input wire _id_5;
+  output wire id_4;
   input wire id_3;
-  output wire id_2;
+  input wire _id_2;
   output wire id_1;
-  timeprecision 1ps;
-  assign module_2.type_1 = 0;
-  assign module_1.type_8 = 0;
-endmodule
-module module_1 (
-    input wand id_0,
-    input supply1 id_1,
-    input wand id_2,
-    input wire id_3,
-    output wand id_4
-);
-  wire id_6;
   module_0 modCall_1 (
-      id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
+      id_4,
+      id_4,
       id_6
   );
+  logic [id_2 : id_5] id_7;
+  wire id_8;
 endmodule
-module module_2 (
-    output supply1 id_0,
-    input wor id_1,
-    input tri id_2,
-    input tri0 id_3
+module module_2 #(
+    parameter id_4 = 32'd95,
+    parameter id_8 = 32'd63
+) (
+    input wire id_0,
+    input wand id_1,
+    input wor id_2,
+    output wire id_3,
+    input supply1 _id_4,
+    output uwire id_5
 );
-  generate
-    wire id_5;
-  endgenerate
+  wire id_7;
+  wire _id_8;
+  wire id_9  [1 'h0 : id_8  /  id_4];
+  ;
+  assign id_5 = (-1);
+  wire [-1 : 1 'h0] id_10;
   module_0 modCall_1 (
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5
+      id_10,
+      id_7,
+      id_7
   );
 endmodule

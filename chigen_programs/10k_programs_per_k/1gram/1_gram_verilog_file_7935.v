@@ -1,48 +1,36 @@
-// Seed: 780766805
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_4;
-  wire id_6;
-  wire id_7;
-  assign id_5 = id_7;
-  wire id_8;
+// Seed: 483105106
+module module_0 ();
+  wire \id_1 , id_2, id_3, id_4;
 endmodule
-module module_1 (
-    input logic id_0,
-    input logic id_1,
-    input supply1 id_2,
-    input wand id_3,
-    output supply0 id_4,
-    output logic id_5,
-    input supply1 id_6
+module module_1 #(
+    parameter id_2 = 32'd21,
+    parameter id_4 = 32'd19
+) (
+    input  supply1 id_0,
+    output supply0 id_1,
+    input  supply1 _id_2
 );
-  always id_5 <= id_1;
-  always id_5 = id_0;
-  assign id_5 = 1;
-  wire id_8;
-  module_0 modCall_1 (
-      id_8,
-      id_8,
-      id_8
-  );
-  id_9(
-      .id_0(1),
-      .id_1(1),
-      .id_2(1 ? 1 : 1'd0),
-      .id_3(id_5),
-      .id_4(1),
-      .sum(1),
-      .id_5(1),
-      .id_6(id_8),
-      .id_7(id_1),
-      .id_8(id_4),
-      .id_9(id_8),
-      .id_10(1)
-  );
+  wire [id_2 : 1] _id_4;
+  module_0 modCall_1 ();
+  wire [1 : id_4] id_5, id_6;
+endmodule
+module module_2 #(
+    parameter id_0 = 32'd92
+) (
+    input wand _id_0,
+    input tri0 id_1,
+    input wand id_2,
+    input tri0 id_3
+    , id_5
+);
+  wire id_6;
+  parameter id_7 = -1;
+  logic [7:0][-1] id_8;
+  ;
+  logic id_9;
+  ;
+  assign id_5 = -1 - 1;
+  module_0 modCall_1 ();
+  assign id_8[1'b0 : id_0] = !-1 + id_7[-1] - id_1 && -1;
+  wire id_10;
 endmodule

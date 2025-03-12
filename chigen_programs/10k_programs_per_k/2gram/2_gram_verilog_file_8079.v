@@ -1,41 +1,35 @@
-// Seed: 3847646763
-module module_0 (
-    output tri1 id_0,
-    input supply1 id_1,
-    output supply0 id_2,
-    input wor id_3
-);
-  always begin : LABEL_0
-    disable id_5;
-  end
+// Seed: 108723127
+module module_0 ();
+  bit id_1;
+  assign id_1 = id_1;
+  always id_1 = id_1 == id_1;
 endmodule
-module module_1 (
-    input wor id_0,
-    input wire id_1,
-    input wand id_2,
-    output tri0 id_3,
-    output supply1 id_4,
-    input tri1 id_5,
-    output uwire id_6,
-    output tri id_7,
-    input tri0 id_8,
-    input wand id_9,
-    output tri0 id_10,
-    input uwire id_11,
-    output tri id_12,
-    output wor id_13,
-    output supply1 id_14,
-    input tri id_15,
-    input supply1 id_16,
-    input supply0 id_17,
-    input tri0 id_18,
-    output tri id_19
+module module_1 #(
+    parameter id_0 = 32'd73
+) (
+    input uwire _id_0
 );
-  module_0 modCall_1 (
-      id_14,
-      id_1,
-      id_6,
-      id_0
-  );
+  wire [id_0 : 1 'd0] id_2 = id_2;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    output tri0 id_0
+    , id_15,
+    input wand id_1,
+    input uwire id_2,
+    input wor id_3,
+    input wire id_4,
+    input wire id_5,
+    output wand id_6,
+    input supply0 id_7,
+    output wire id_8,
+    input wor id_9,
+    input uwire id_10,
+    input tri id_11,
+    input wire id_12,
+    input wor id_13
+);
+  uwire id_16 = -1;
+  module_0 modCall_1 ();
   assign modCall_1.id_1 = 0;
 endmodule

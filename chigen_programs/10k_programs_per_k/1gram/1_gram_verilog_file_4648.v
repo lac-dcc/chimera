@@ -1,55 +1,52 @@
-// Seed: 787577828
-module module_0 (
-    output tri  id_0,
-    input  tri0 id_1,
-    output wand id_2,
-    output wire id_3,
-    output tri  id_4
-);
-  assign module_1.id_6 = 0;
-  module_2 modCall_1 (
-      id_3,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_0,
-      id_1
+// Seed: 2410528357
+module module_0 #(
+    parameter id_2 = 32'd91
+) ();
+  logic [7:0] id_1, _id_2;
+  assign id_1 = id_1[id_2];
+  logic id_3;
+  assign id_3 = 1;
+  id_4(
+      id_4, -1
   );
-  assign modCall_1.type_2 = 0;
+  struct packed {logic id_5;} id_6;
+  assign id_4 = 1;
+  assign id_6.id_5 = 1;
 endmodule
 module module_1 (
-    output wire  id_0,
-    input  tri1  id_1
-    , id_4,
-    input  uwire id_2
+    input uwire id_0,
+    output tri0 id_1,
+    output wand id_2,
+    input supply1 id_3,
+    input wor id_4,
+    output wire id_5,
+    input wire id_6,
+    input tri0 id_7,
+    input supply1 id_8
+    , id_25,
+    input wor id_9,
+    output wire id_10,
+    input wand id_11,
+    output wand id_12,
+    input tri id_13,
+    output wand id_14,
+    output wand id_15,
+    input supply1 id_16,
+    input supply1 id_17,
+    output wand id_18,
+    input wor id_19,
+    input tri id_20,
+    output tri0 id_21,
+    input tri id_22,
+    input wand id_23
 );
-  task id_5;
-    id_4 <= 1;
-  endtask
-  module_0 modCall_1 (
-      id_0,
-      id_2,
-      id_0,
-      id_0,
-      id_0
-  );
-  tri0 id_6, id_7, id_8, id_9;
-  wire id_10, id_11;
-  assign id_8 = 1'b0;
-  wire id_12, id_13;
-endmodule
-module module_2 (
-    output uwire id_0,
-    input wire id_1,
-    input uwire id_2,
-    input tri0 id_3,
-    input tri0 id_4,
-    input supply0 id_5,
-    output supply0 id_6,
-    input supply0 id_7
-);
-  uwire id_9;
-  assign id_9 = 1;
+  logic id_26[-1 : 1];
+  logic id_27 = -1;
+  parameter id_28 = 1;
+  assign id_27 = -1 * -1;
+  module_0 modCall_1 ();
+  parameter id_29 = id_28;
+  always begin : LABEL_0
+    id_26 <= -1;
+  end
 endmodule

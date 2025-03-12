@@ -1,43 +1,46 @@
-// Seed: 1908552749
-module module_0 (
-    input supply0 id_0,
-    output tri0 id_1,
-    input uwire id_2,
-    output wand id_3,
-    input tri id_4,
-    output wire id_5
+// Seed: 4003325710
+program module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_3 = (id_4);
-  assign id_5 = 1;
-  id_7(
-      id_5, id_2, 1 == id_5
-  );
-  wire id_8;
-  assign id_5 = 0;
-  wire id_9;
-  id_10(
-      .id_0(1'b0)
-  );
-  wire id_11;
-  assign module_1.id_3 = 0;
-  supply0 id_12 = id_2, id_13;
-  wire id_14;
-  assign id_12 = 1;
-endmodule : SymbolIdentifier
-module module_1 (
-    output wor  id_0,
-    input  wand id_1
-    , id_5,
-    input  wire id_2,
-    output tri0 id_3
+  input wire id_4;
+  input wire id_3;
+  inout supply1 id_2;
+  output wire id_1;
+  always begin : LABEL_0
+    return id_2;
+  end
+  assign id_2 = 1;
+endprogram
+program module_1 #(
+    parameter id_7 = 32'd30,
+    parameter id_8 = 32'd62
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    _id_7
 );
-  assign id_0 = 1'b0;
+  output wire _id_7;
+  input wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  logic _id_8, id_9, id_10[id_7 : id_8], id_11, id_12;
   module_0 modCall_1 (
-      id_2,
+      id_11,
+      id_4,
       id_3,
-      id_2,
-      id_3,
-      id_2,
-      id_3
+      id_9
   );
-endmodule
+  logic id_13;
+  logic id_14;
+  ;
+endprogram

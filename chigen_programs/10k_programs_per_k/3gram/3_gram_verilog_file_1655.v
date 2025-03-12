@@ -1,34 +1,43 @@
-// Seed: 1555138102
+// Seed: 3487241419
 module module_0 ();
+  logic id_1 = -1'b0;
+  assign id_1 = id_1;
+  always @(posedge -1 or id_1);
+  assign id_1 = 1;
+  always
+    if (~"") id_1 <= -1;
+    else begin : LABEL_0
+      id_1 = id_1;
+    end
   wire id_2;
+  wire id_3;
+  localparam id_4 = -1;
 endmodule
 module module_1 (
-    output wire id_0,
-    output supply0 id_1,
-    output supply0 id_2,
-    input supply0 id_3,
-    output tri1 id_4,
-    input supply1 id_5#(.id_22(1)),
-    output supply1 id_6,
-    input wire id_7,
-    input tri1 id_8,
-    output supply1 id_9,
-    output tri1 id_10,
-    input supply1 id_11,
-    input uwire id_12,
-    input wire id_13,
-    input uwire id_14,
-    input tri id_15,
-    input uwire id_16,
-    output tri0 id_17,
-    input tri0 id_18,
-    input tri0 id_19,
-    output supply1 id_20
+    id_1,
+    id_2,
+    id_3
 );
-  id_23(
-      .id_0(id_13), .id_1(1)
-  );
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  always disable id_4;
   module_0 modCall_1 ();
-  wire id_24;
-  assign id_10 = 1;
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
+);
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  module_0 modCall_1 ();
+  output wire id_2;
+  output wire id_1;
+  wire id_7;
 endmodule

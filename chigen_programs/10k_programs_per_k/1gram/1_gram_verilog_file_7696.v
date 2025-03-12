@@ -1,42 +1,34 @@
-// Seed: 3594316869
-module module_0 ();
-  assign module_3.id_5 = 0;
-  wire id_1;
-endmodule
-module module_1;
-  always begin : LABEL_0
-    id_1 <= 1;
-  end
-  assign id_2 = id_2;
-  module_0 modCall_1 ();
-endmodule
-module module_2 (
-    output wor id_0,
-    input uwire id_1,
-    output tri1 id_2,
-    input wor id_3,
-    input tri1 id_4,
-    input tri1 id_5,
-    output supply1 id_6
+// Seed: 2493859052
+module module_0 (
+    id_1,
+    id_2
 );
-  assign id_0 = 1;
-  module_0 modCall_1 ();
+  inout wire id_2;
+  inout wire id_1;
 endmodule
-module module_3 (
-    output supply0 id_0,
-    output wand id_1,
-    output logic id_2,
-    input supply1 id_3,
-    input logic id_4,
-    input wand id_5,
-    output wand id_6
+module module_1 #(
+    parameter id_3 = 32'd22,
+    parameter id_4 = 32'd28
+) (
+    input supply0 id_0,
+    input supply0 void id_1,
+    input tri1 id_2[1 : id_3],
+    input supply0 _id_3,
+    input supply1 _id_4,
+    input supply1 id_5,
+    input uwire id_6,
+    input tri id_7,
+    input wor id_8,
+    output wand id_9,
+    input supply0 id_10,
+    output wor id_11
 );
-  initial begin : LABEL_0
-    @(posedge id_3)
-    #1 begin : LABEL_0
-      assume (1'd0) id_2 <= 1;
-      if (1) id_2 <= "" ? id_4 : 1;
-    end
-  end
-  module_0 modCall_1 ();
+  wire [id_4 : -1] id_13;
+  module_0 modCall_1 (
+      id_13,
+      id_13
+  );
+  wire id_14, id_15[-1 : 1];
+  pmos (1);
+  wire id_16, id_17, id_18, id_19;
 endmodule

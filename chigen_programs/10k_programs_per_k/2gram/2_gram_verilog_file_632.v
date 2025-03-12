@@ -1,40 +1,46 @@
-// Seed: 2017473284
+// Seed: 2212673016
 module module_0 (
-    input tri0 id_0,
-    input wor  id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_3;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign module_1.id_3 = 0;
 endmodule
-module module_1 (
-    output tri1 id_0,
-    input uwire id_1,
-    output wand id_2,
-    input supply1 id_3,
-    input uwire id_4,
-    input supply1 id_5,
-    input wire id_6,
-    input logic id_7
-    , id_10,
-    output logic id_8
+module module_1 #(
+    parameter id_2 = 32'd61,
+    parameter id_3 = 32'd81,
+    parameter id_5 = 32'd9,
+    parameter id_6 = 32'd90
+) (
+    id_1,
+    _id_2,
+    _id_3,
+    id_4,
+    _id_5
 );
-  wire id_11;
-  wire id_12;
-  logic [7:0] id_13;
+  inout wire _id_5;
+  input wire id_4;
+  input wire _id_3;
+  inout wire _id_2;
+  output logic [7:0] id_1;
+  logic _id_6;
+  ;
+  assign id_1[id_6] = -1;
+  logic [id_2  +  id_3 : id_3  ==  id_2] id_7;
+  assign id_1[1+:id_5] = (1) ? id_7 : id_7 ? (id_3) : 1;
   module_0 modCall_1 (
-      id_11,
-      id_4
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
   );
-  assign modCall_1.id_1 = 0;
-  assign id_11 = id_5;
-  initial begin : LABEL_0
-    id_10 = 1;
-    fork
-      id_13[1] <= id_7;
-    join_any
-  end
-  always begin : LABEL_0
-    id_8 <= 1;
-  end
-  assign id_13[1'b0] = 1'h0;
-  if (id_7) assign id_0 = 1'b0;
+  localparam id_8 = 1;
 endmodule

@@ -1,36 +1,57 @@
-// Seed: 1145832776
-module module_0;
-  always_ff @(id_1, posedge 1) begin : LABEL_0
-    if (id_1) id_1 <= 1;
-    else begin : LABEL_0
-      id_1 <= id_1;
-      id_1 <= (1) ? id_1 : id_1;
-    end
-  end
-  assign module_2.type_4 = "";
-endmodule
-module module_1 (
+// Seed: 3077081949
+module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5
 );
+  input wire id_5;
+  inout wire id_4;
   input wire id_3;
-  inout wire id_2;
+  output uwire id_2;
   output wire id_1;
-  assign id_2 = id_2;
-  bufif0 primCall (id_1, id_2, id_3);
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  wire id_6;
+  tri0 id_7;
+  assign id_7#(1) = id_6;
+  assign id_2 = 1 ? -1 : -1'h0;
+  assign id_7 = 1;
 endmodule
-module module_2 (
-    id_1,
-    id_2
+module module_1 #(
+    parameter id_1 = 32'd98,
+    parameter id_3 = 32'd25,
+    parameter id_8 = 32'd81
+) (
+    input supply0 id_0,
+    input tri1 _id_1,
+    input wand id_2,
+    input tri _id_3,
+    input uwire id_4,
+    input wand id_5,
+    input tri0 id_6,
+    input supply0 id_7,
+    input tri1 _id_8
+    , id_15,
+    output wire id_9,
+    input tri1 id_10
+    , id_16,
+    input wire id_11,
+    input wand id_12,
+    input wire id_13
 );
-  inout wire id_2;
-  output wire id_1;
-  initial begin : LABEL_0
-    id_2 <= id_2;
-  end
-  module_0 modCall_1 ();
-  string id_3 = ("");
+  wire id_17;
+  wire [id_3 : id_1] id_18;
+  wire id_19;
+  module_0 modCall_1 (
+      id_17,
+      id_18,
+      id_16,
+      id_19,
+      id_15
+  );
+  assign modCall_1.id_7 = 0;
+  wire [1 : id_8] id_20;
+  logic id_21;
+  ;
+  localparam id_22 = 1;
 endmodule

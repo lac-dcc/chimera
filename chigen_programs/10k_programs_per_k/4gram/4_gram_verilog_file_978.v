@@ -1,70 +1,143 @@
-// Seed: 1551955031
+// Seed: 465898643
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input wire id_0,
+    output supply0 id_1,
+    input wor id_2,
+    output wire id_3,
+    output supply1 id_4,
+    input tri1 id_5,
+    output tri id_6,
+    output supply1 id_7,
+    output wand id_8,
+    input wire id_9,
+    input wor id_10,
+    output wire id_11,
+    output wor id_12,
+    input wor id_13,
+    input wire id_14,
+    output tri id_15,
+    output wand id_16,
+    input supply1 id_17,
+    input wor id_18,
+    input uwire id_19,
+    output supply1 id_20,
+    output wor id_21,
+    input wand id_22,
+    output wand id_23,
+    input tri1 id_24,
+    input tri0 id_25,
+    input tri1 id_26,
+    input supply1 id_27,
+    output wor id_28,
+    input wand id_29,
+    output wire id_30,
+    output tri0 id_31,
+    input supply1 id_32,
+    input tri id_33,
+    output tri1 id_34,
+    output tri id_35,
+    output wor id_36,
+    input tri id_37,
+    output supply1 id_38,
+    input wor id_39,
+    output wand id_40,
+    output wor id_41,
+    input tri1 id_42,
+    input wor id_43,
+    input tri0 id_44,
+    input supply1 id_45,
+    output supply1 id_46,
+    input wor id_47,
+    output supply0 id_48,
+    input uwire id_49,
+    input wire id_50,
+    output supply0 id_51
 );
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  tri1 id_5;
-  id_6 :
-  assert property (@(posedge 1) (1))
-  else $display(1);
-  assign module_1.id_1 = 0;
-  assign id_5 = 1;
-  module_2 modCall_1 (
-      id_3,
-      id_6,
-      id_1,
+  wire id_53;
+  ;
+endmodule
+module module_1 #(
+    parameter id_19 = 32'd67,
+    parameter id_4  = 32'd5
+) (
+    output supply1 id_0,
+    output wire id_1,
+    output supply0 id_2,
+    input uwire id_3
+    , _id_19,
+    output wand _id_4,
+    input tri1 id_5,
+    output wand id_6,
+    input wor id_7,
+    input tri0 id_8,
+    input wand id_9,
+    output wire id_10,
+    input uwire id_11,
+    input uwire id_12,
+    input supply0 id_13,
+    output supply0 id_14
+    , id_20,
+    output uwire id_15,
+    input tri0 id_16,
+    input wor id_17
+);
+  localparam id_21 = 1'b0;
+  logic [id_4 : id_19] id_22 = id_7;
+  assign id_0 = !id_11;
+  wire [1 'b0 : 1 'b0] id_23;
+  module_0 modCall_1 (
+      id_7,
+      id_15,
+      id_7,
+      id_14,
+      id_0,
+      id_8,
+      id_14,
+      id_2,
+      id_14,
+      id_16,
+      id_12,
+      id_15,
       id_2,
       id_3,
-      id_4,
+      id_11,
+      id_14,
+      id_10,
+      id_7,
+      id_3,
+      id_8,
+      id_0,
+      id_6,
+      id_7,
+      id_6,
+      id_3,
+      id_5,
+      id_9,
+      id_12,
+      id_15,
+      id_7,
+      id_14,
+      id_15,
+      id_11,
+      id_11,
+      id_10,
+      id_2,
+      id_6,
+      id_3,
+      id_15,
+      id_12,
+      id_2,
+      id_0,
+      id_9,
+      id_13,
+      id_17,
+      id_9,
+      id_10,
+      id_12,
+      id_6,
       id_5,
       id_5,
-      id_4,
-      id_6
+      id_0
   );
-  integer id_7;
-endmodule
-module module_1 (
-    input tri0 id_0,
-    input wand id_1
-);
-  wire id_3;
-  module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_3,
-      id_3
-  );
-  wire id_4;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10
-);
-  output wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  supply0 id_11 = 1 & id_2 & (1);
-  assign id_2 = id_9;
-  assign id_1 = 1;
+  assign modCall_1.id_25 = 0;
 endmodule

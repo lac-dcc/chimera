@@ -1,35 +1,35 @@
-// Seed: 3756486000
+// Seed: 699496252
 module module_0;
-  always $display(id_1);
-  always begin : LABEL_0
-    id_1 <= 1;
-    id_1 = 1;
-  end
-  assign id_1 = 1'd0;
-  wire id_2;
-  assign module_1.id_1 = 0;
-  wire id_3;
 endmodule
-module module_1 ();
-  always
-  fork
-    if (1'b0) id_1 = id_1;
-    else id_1 <= id_1;
-  join_any : SymbolIdentifier
+module module_1 (
+    output wire id_0,
+    input supply1 id_1
+    , id_4,
+    output tri1 id_2
+);
+  wire id_5;
   module_0 modCall_1 ();
 endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+module module_2 #(
+    parameter id_0 = 32'd51,
+    parameter id_3 = 32'd49
+) (
+    output supply1 _id_0,
+    input wire id_1,
+    output tri1 id_2,
+    output uwire _id_3
 );
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  output wire id_1;
-  xnor primCall (id_1, id_2, id_3);
+  genvar id_5;
+  module_0 modCall_1 ();
+  logic [id_3 : id_0] id_6;
+endmodule
+module module_3 (
+    input uwire id_0,
+    input supply0 id_1,
+    output tri id_2,
+    input tri id_3
+);
+  wire id_5;
+  assign id_2 = 1;
   module_0 modCall_1 ();
 endmodule

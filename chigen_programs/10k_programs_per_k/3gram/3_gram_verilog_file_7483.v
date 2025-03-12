@@ -1,40 +1,54 @@
-// Seed: 3529753169
-module module_0;
-  always @(posedge 1) begin : LABEL_0
-    if (id_1) id_1 = id_1;
-  end
-  module_2 modCall_1 ();
+// Seed: 2029098921
+module module_0 (
+    input  wor  id_0,
+    input  tri0 id_1,
+    output tri0 id_2
+);
+  logic id_4 = id_1;
+  wire  id_5;
+  localparam id_6 = 1'b0;
+  wire id_7;
+  assign module_1.id_8 = 0;
+  assign id_4 = id_1;
+  wire id_8;
+  wire [1 'h0 : 1] id_9;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    output logic id_0,
+    input supply1 id_1,
+    output wand id_2,
+    output tri0 id_3,
+    output tri1 id_4,
+    output tri1 id_5
 );
-  inout wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_4;
-  assign id_3 = id_4;
-  wire id_5, id_6;
-  module_0 modCall_1 ();
-endmodule
-module module_2 ();
-  wire id_2;
-  module_3 modCall_1 (
-      id_2,
-      id_2
+  assign id_0 = 1;
+  logic id_7;
+  xor primCall (id_5, id_7, id_1, id_9);
+  always @(-1 or posedge id_1)
+    if (1) begin : LABEL_0
+      $unsigned(72);
+      ;
+    end
+  always @(negedge id_7) begin : LABEL_1
+    id_8(1);
+    $unsigned(34);
+    ;
+    #1 id_7[-1'h0] <= -1;
+    begin : LABEL_2
+      if (1) id_8 <= 1;
+    end
+  end
+  initial begin : LABEL_3
+    id_0 = 1;
+    $signed(83);
+    ;
+  end
+  wire id_9;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_5
   );
-  assign module_0.id_1 = 0;
-  always_comb @(negedge 1);
-endmodule
-module module_3 #(
-    parameter id_3 = 32'd30,
-    parameter id_4 = 32'd73
-) (
-    id_1,
-    id_2
-);
-  input wire id_2;
-  inout wire id_1;
-  defparam id_3.id_4 = 1;
+  logic id_10;
+  ;
 endmodule

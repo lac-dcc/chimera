@@ -1,38 +1,50 @@
-// Seed: 2559771649
+// Seed: 3388953442
 module module_0;
-  wor id_2;
-  module_3 modCall_1 (id_2);
-  assign modCall_1.type_10 = 0;
-  tri0 id_3;
-  assign module_1.id_0 = 0;
-  integer id_5;
-  assign id_3 = id_5;
-  assign module_2.type_0 = 0;
 endmodule
 module module_1 (
-    input wire id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign #1 id_2 = 1;
+  input wire id_7;
+  inout wire id_6;
+  output uwire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  id_8 :
+  assert property (@(posedge id_8) 1)
+  else $signed(51);
+  ;
+  assign id_5 = -1'b0;
   module_0 modCall_1 ();
+  wire id_9;
+  ;
+  assign id_4 = id_4;
+  parameter id_10 = 1;
 endmodule
-module module_2 (
-    input  tri  id_0,
-    output wire id_1,
-    output tri  id_2,
-    output tri0 id_3
+macromodule module_2 (
+    input supply1 id_0,
+    input tri id_1,
+    input tri id_2,
+    input uwire id_3,
+    output supply1 id_4,
+    output wor id_5,
+    input supply1 id_6,
+    output wor id_7,
+    input supply1 id_8
 );
-  wire id_5;
-  not primCall (id_1, id_5);
+  assign id_4 = id_8;
+  parameter id_10 = 1;
+  logic id_11;
+  ;
+  assign id_11 = id_10;
+  wire id_12;
+  parameter id_13 = -1;
   module_0 modCall_1 ();
-endmodule
-module module_3 (
-    id_1
-);
-  input wire id_1;
-  supply1 id_2 = id_2;
-  integer id_3;
-  tri id_6 = id_3;
-  supply0 id_7;
-  assign id_6 = id_2;
-  assign id_7 = 1;
 endmodule

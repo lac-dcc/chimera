@@ -1,33 +1,24 @@
-// Seed: 2974699826
+// Seed: 4235068553
 module module_0;
-  initial begin : LABEL_0
-    #1 id_1 = id_1;
-    if (1) id_1 <= 1;
-    else id_1 = id_1;
-  end
 endmodule
-module module_1 (
-    input tri0 id_0,
-    output supply1 id_1,
-    output tri0 id_2,
+module module_1 #(
+    parameter id_10 = 32'd26,
+    parameter id_2  = 32'd72,
+    parameter id_7  = 32'd36
+) (
+    input uwire id_0,
+    input uwire id_1,
+    input wor _id_2,
     output supply0 id_3,
-    output supply1 id_4
+    output uwire id_4,
+    input tri id_5,
+    output wor id_6,
+    input uwire _id_7,
+    input uwire id_8
 );
+  parameter id_10 = -1;
+  and primCall (id_3, id_5, id_8);
+  assign id_6 = (id_5);
   module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  output wire id_1;
-  id_5(
-      .id_0(id_4), .id_1({$display(1), 1})
-  );
-  module_0 modCall_1 ();
+  wire [!  id_7  -  id_10  !=  id_2 : 1 'd0] id_11;
 endmodule

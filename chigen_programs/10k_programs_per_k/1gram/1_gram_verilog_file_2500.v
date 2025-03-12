@@ -1,24 +1,34 @@
-// Seed: 1928415913
+// Seed: 4039103308
 module module_0;
-  wire id_1;
-  if (1) wire id_2;
-  else wire id_3;
-  wand id_4;
-  wire id_5;
-  assign id_4 = 1;
-  supply1 id_6, id_7, id_8, id_9, id_10, id_11 = 1, id_12, id_13;
-  wire id_14;
-  wire id_15;
+  logic id_1;
 endmodule
-module module_1;
-  wire id_1;
-  logic [7:0] id_2;
-  final id_2[1] <= 1;
-  wire id_3, id_4;
-  specify
-    $setup(id_5, id_6, id_6 * 1'b0);
-  endspecify
+module module_1 #(
+    parameter id_12 = 32'd10,
+    parameter id_14 = 32'd18
+) (
+    input supply0 id_0[1  ?  id_12 : 1  || "" : id_14],
+    input wor id_1,
+    output supply1 id_2[-1 'd0 : 1  <<  1],
+    input tri1 id_3,
+    output wor id_4,
+    input wire id_5,
+    input tri1 id_6,
+    input wor id_7,
+    output supply0 id_8,
+    input tri0 id_9,
+    input supply0 id_10,
+    output wor id_11,
+    input uwire _id_12,
+    input tri1 id_13,
+    input wor _id_14,
+    input uwire id_15,
+    input supply0 id_16,
+    output tri0 id_17,
+    output tri0 id_18,
+    input wire id_19,
+    output wand id_20
+);
+  assign id_8 = id_13;
   module_0 modCall_1 ();
-  assign modCall_1.type_19 = 0;
-  wire id_7, id_8;
+  wire id_22;
 endmodule

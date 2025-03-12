@@ -1,40 +1,34 @@
-// Seed: 4027262813
+// Seed: 526351450
 module module_0 (
-    module_0,
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input tri  id_0,
+    input wand id_1
 );
-  input wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  assign id_5 = 1;
-  module_2 modCall_1 ();
-  assign modCall_1.id_4 = 0;
-  wire id_7;
+  wor id_3 = "" + id_0;
+  assign module_1._id_4 = 0;
+  assign id_3 = id_0 & 1 - id_1;
+  wire id_4;
 endmodule
-module module_1 ();
-  wire id_1;
+module module_1 #(
+    parameter id_4 = 32'd18,
+    parameter id_7 = 32'd28
+) (
+    output tri id_0,
+    output tri0 id_1,
+    output wand id_2,
+    input wand id_3,
+    input uwire _id_4,
+    input tri0 id_5,
+    output supply1 id_6,
+    input wire _id_7,
+    input wor id_8,
+    input wor id_9,
+    input tri1 id_10
+);
+  wire [id_7 : id_4] id_12;
+  initial assert (id_3);
   module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
+      id_10,
+      id_5
   );
-endmodule
-module module_2;
-  assign id_1 = id_1;
-  wire id_2;
-  tri1 id_4 = 1 & id_4;
-  wire id_5;
-  initial begin : LABEL_0
-    if (1'b0) assert (1);
-  end
+  wire id_13;
 endmodule

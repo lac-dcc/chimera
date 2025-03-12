@@ -1,39 +1,39 @@
-// Seed: 5403081
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_4;
-  always_ff @(*) begin : LABEL_0
-    id_3 = 1'h0;
-  end
+// Seed: 397838692
+module module_0;
+  wire id_1;
 endmodule
-module module_1 (
-    output wor id_0,
-    output supply0 id_1,
-    input wor id_2,
-    output wor id_3,
-    input wand id_4
+module module_1 #(
+    parameter id_1 = 32'd13
+) (
+    output supply1 id_0,
+    input tri0 _id_1
 );
-  tri1 id_6, id_7;
-  assign id_6 = 1 == "";
-  wire id_8;
-  assign id_7 = id_4;
-  tri1 id_9;
-  assign id_1 = 1;
-  module_0 modCall_1 (
-      id_8,
-      id_8,
-      id_8
-  );
-  assign modCall_1.id_3 = 0;
-  wand id_10 = 1;
-  for (id_11 = id_9; id_2; id_0 = id_11) begin : LABEL_0
-    assign id_1 = id_9;
-  end
-  assign id_9 = id_11 || 1;
+  assign id_0 = 1;
+  wire [id_1  ===  id_1 : id_1] id_3;
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_14 = 32'd59,
+    parameter id_5  = 32'd63
+) (
+    output wor id_0,
+    output wire id_1,
+    input wand id_2#(
+        ._id_5 (-1),
+        .id_6  (""),
+        .id_7  (1),
+        .id_8  (1 !== 1 * 1),
+        .id_9  (1),
+        .id_10 (1),
+        .id_11 (1),
+        .id_12 (1 && 1 - 1),
+        .id_13 (1),
+        ._id_14(1),
+        .id_15 (-1'b0)
+    ),
+    input supply0 id_3
+);
+  wire id_16;
+  module_0 modCall_1 ();
+  logic [-1  ==  ~  id_5 : id_14] id_17;
 endmodule

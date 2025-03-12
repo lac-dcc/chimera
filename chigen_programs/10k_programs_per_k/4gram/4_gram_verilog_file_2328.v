@@ -1,73 +1,45 @@
-// Seed: 2866740514
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_6;
-  assign module_2.id_7 = 0;
-  wire id_7;
+// Seed: 3250467392
+module module_0 ();
+  assign module_1.id_1 = 0;
+  wire id_1;
+  assign id_1 = id_1;
+  parameter id_2 = -1;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input  supply0 id_0,
+    input  supply0 id_1,
+    output logic   id_2,
+    output logic   id_3
 );
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_5;
-  wire id_6;
-  module_0 modCall_1 (
-      id_3,
-      id_6,
-      id_3,
-      id_6,
-      id_3
-  );
-  wire id_7;
+  always begin : LABEL_0
+    if (!1) begin : LABEL_1
+      id_2 <= id_1;
+      $signed(25);
+      ;
+      id_2 <= id_0;
+    end else if ({1, 1}) id_3 = -1'd0;
+  end
+  module_0 modCall_1 ();
+  generate
+    genvar id_5;
+  endgenerate
 endmodule
 module module_2 (
-    output wand id_0,
-    input wand id_1,
-    input tri0 id_2,
-    output supply1 id_3,
-    input tri id_4,
-    input wand id_5,
-    input tri1 id_6,
-    input uwire id_7,
-    input tri id_8,
-    input wire id_9,
-    input tri0 id_10,
-    input tri1 id_11,
-    input supply0 id_12,
-    output supply0 id_13,
-    input supply1 id_14,
-    input tri1 id_15,
-    output wand id_16,
-    input wand id_17,
-    input supply0 id_18,
-    input tri0 id_19
+    output wor   id_0,
+    output logic id_1,
+    input  uwire id_2
 );
-  wire id_21;
-  wor  id_22;
-  wire id_23;
-  assign id_22 = id_9;
-  timeunit 1ps;
-  module_0 modCall_1 (
-      id_21,
-      id_23,
-      id_21,
-      id_21,
-      id_21
-  );
+  wire id_4;
+  bit  id_5;
+  module_0 modCall_1 ();
+  always @(posedge id_5) begin : LABEL_0
+    id_5 <= id_5 & -1;
+  end
+  always_comb @(posedge 1) begin : LABEL_1
+    assume ((1));
+    case (1)
+      -1: id_1 = 1'd0;
+      default: ;
+    endcase
+  end
 endmodule

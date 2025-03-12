@@ -1,57 +1,38 @@
-// Seed: 3888726392
-module module_0 ();
-  assign id_1 = 1;
-  reg id_2, id_3;
-  task id_4;
-    if (1'b0) $display(id_4, 1, 1 + 1, 1'b0,, (id_4));
-  endtask
-  wire id_5;
-  reg  id_6;
-  for (id_7 = 1; id_4; id_7 = id_2) wire id_8;
-  assign id_3 = id_2;
-  always @("") id_6 <= id_2;
-  wire id_9, id_10;
-  wire id_11;
-endmodule
-module module_1 (
-    input wand id_0,
-    input tri1 id_1,
-    input tri id_2,
-    input uwire id_3
-    , id_18,
-    output wand id_4,
-    output uwire id_5,
-    input wand id_6,
-    output supply1 id_7,
-    input tri0 id_8,
-    input wor id_9,
-    output wor id_10,
-    input tri1 id_11,
-    output wire id_12,
-    input tri0 id_13,
-    output tri id_14,
-    input wand id_15,
-    input tri1 id_16
+// Seed: 1344575835
+module module_0 (
+    id_1
 );
-  tri0 id_19;
-  assign id_12 = id_19;
-  supply1 id_20;
-  wire id_21;
-  always
-    if (1) id_5 = id_1;
-    else begin : LABEL_0
-      @(posedge 1'b0) id_18 = id_13;
-    end
-  wire id_22, id_23, id_24;
-  assign id_19 = id_13;
-  module_0 modCall_1 ();
-  assign modCall_1.id_6 = 0;
-  wire id_25;
-  generate
-    wire id_26, id_27 = ~id_20;
-    assign id_19 = id_8;
-    begin : LABEL_0
-      wire id_28, id_29, id_30;
-    end
-  endgenerate
+  inout tri id_1;
+  parameter id_2 = (1);
+  assign id_1 = -1;
+endmodule
+module module_1 #(
+    parameter id_0  = 32'd62,
+    parameter id_1  = 32'd83,
+    parameter id_10 = 32'd41,
+    parameter id_11 = 32'd48
+) (
+    input tri1 _id_0,
+    input tri _id_1,
+    output tri0 id_2[-1  *  1  |  id_11 : id_10],
+    output tri1 id_3,
+    input supply0 id_4,
+    input tri1 id_5,
+    input wire id_6,
+    output uwire id_7,
+    output wor id_8,
+    output wire id_9
+    , id_15,
+    output wand _id_10,
+    output uwire _id_11,
+    input wire id_12[1 : -1],
+    output supply0 id_13
+);
+  logic id_16;
+  ;
+  initial if (-1'b0 * 1);
+  always if (-1'h0) id_16 <= 1;
+  module_0 modCall_1 (id_15);
+  assign modCall_1.id_1 = 0;
+  wire [id_1 : id_0  .  id_1] id_17, id_18, id_19;
 endmodule

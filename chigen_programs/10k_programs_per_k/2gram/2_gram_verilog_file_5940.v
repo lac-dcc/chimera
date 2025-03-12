@@ -1,97 +1,44 @@
-// Seed: 1839069911
-module module_0 (
-    input wand id_0
-);
+// Seed: 939233149
+module module_0 ();
+  logic id_1;
+  ;
+  assign module_1.id_8 = 0;
+  logic id_2;
+  ;
+  wire  id_3;
+  logic id_4;
+  wire  id_5;
+  ;
+  wire id_6;
 endmodule
-module module_1 (
-    input tri1 id_0
-);
-  initial id_2 <= 1;
-  module_0 modCall_1 (id_0);
-  assign modCall_1.id_0 = 0;
-endmodule
-module module_2 (
-    input tri0 id_0,
-    input supply1 id_1,
-    input wor id_2,
-    output wire id_3,
-    input wand id_4,
-    input supply1 id_5,
-    output wor id_6,
-    output wire id_7,
-    input uwire id_8,
-    input wire id_9,
-    output wand id_10,
-    input wand id_11,
-    input tri id_12,
-    input wand id_13,
-    output wand id_14,
-    input tri0 id_15,
-    output wire id_16,
-    input wor id_17,
-    input tri0 id_18,
-    input supply1 id_19,
-    input supply1 id_20,
-    output wand id_21,
-    input wor id_22,
-    input tri id_23,
-    output tri0 id_24,
-    input tri id_25,
-    input wand id_26
-);
-  wire id_28;
-  assign module_3.id_3 = 0;
-endmodule
-module module_3 (
+module module_1 #(
+    parameter id_13 = 32'd12
+) (
     input supply0 id_0,
-    input wor id_1,
-    input wire id_2,
-    output supply0 id_3,
-    input supply1 id_4,
-    input supply1 id_5,
-    input wire id_6,
-    input uwire id_7,
-    output supply1 id_8,
-    output wor id_9,
-    output tri0 id_10,
-    input uwire id_11,
-    output wand id_12,
-    input tri1 id_13,
-    input supply0 id_14,
-    input tri0 id_15,
-    output wire id_16,
-    output wire id_17
+    input supply1 id_1,
+    input supply1 id_2,
+    output wand id_3,
+    input wor id_4,
+    output wor id_5,
+    input supply0 id_6,
+    output uwire id_7,
+    output uwire id_8,
+    input wire id_9,
+    input uwire id_10,
+    output tri0 id_11
 );
-  always begin : LABEL_0
-    id_12 = id_7;
+  assign id_11 = id_9;
+  or primCall (id_11, id_13, id_14, id_2, id_4, id_6, id_9);
+  localparam id_13 = 1;
+  wire id_14;
+  module_0 modCall_1 ();
+  assign id_5 = -1;
+  bit id_15, id_16, id_17, id_18, id_19, id_20;
+  for (id_21 = 1; ~id_0; id_20 = id_16) begin : LABEL_0
+    defparam id_13.id_13 = "";
+    assign id_5 = -1 ? 1 : id_6;
+    logic id_22;
+    assign id_7 = id_2 == id_18;
+    wire id_23 = id_16;
   end
-  module_2 modCall_1 (
-      id_4,
-      id_2,
-      id_6,
-      id_3,
-      id_2,
-      id_13,
-      id_17,
-      id_10,
-      id_11,
-      id_5,
-      id_10,
-      id_15,
-      id_15,
-      id_2,
-      id_10,
-      id_11,
-      id_3,
-      id_1,
-      id_11,
-      id_4,
-      id_6,
-      id_8,
-      id_11,
-      id_4,
-      id_16,
-      id_2,
-      id_15
-  );
 endmodule

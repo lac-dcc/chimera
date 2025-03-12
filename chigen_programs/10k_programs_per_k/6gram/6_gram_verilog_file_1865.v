@@ -1,31 +1,34 @@
-// Seed: 2847467054
-module module_0 #(
-    parameter id_6 = 32'd31,
-    parameter id_7 = 32'd2
-) (
-    id_1
+// Seed: 590689789
+module module_0 (
+    input supply1 id_0,
+    output supply1 id_1,
+    output supply0 id_2,
+    output supply0 id_3,
+    output uwire id_4,
+    output tri id_5,
+    output wor id_6
 );
-  input wire id_1;
-  uwire id_2, id_3, id_4;
-  wire id_5;
-  assign id_2 = 1;
-  defparam id_6.id_7 = module_0;
-  function automatic id_8;
-    input id_9;
-    input id_10;
-    id_10 = id_2;
-  endfunction
-  wire id_11;
-  always disable id_12;
+  wire id_8;
+  assign id_2 = 1 ? id_0 : -1;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    input supply1 id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    output tri0 id_3,
+    output wire id_4,
+    output wire id_5,
+    output wor id_6
 );
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  assign id_1[1 : 1] = id_3;
-  module_0 modCall_1 (id_3);
+  assign id_6 = id_1;
+  module_0 modCall_1 (
+      id_0,
+      id_5,
+      id_6,
+      id_3,
+      id_5,
+      id_3,
+      id_5
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

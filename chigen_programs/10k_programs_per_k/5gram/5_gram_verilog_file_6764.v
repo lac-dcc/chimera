@@ -1,24 +1,66 @@
-// Seed: 1733036285
-module module_0 ();
-  id_2(
-      .id_0(id_1++ - id_1 - id_1 > id_1), .id_1(id_3), .id_2(id_1)
-  );
-  always @(1'b0 or posedge 1) id_3 = id_2;
+// Seed: 1897212400
+module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  ;
 endmodule
 module module_1 (
-    output wire id_0,
-    input tri0 id_1,
-    output uwire id_2,
-    input uwire id_3,
-    output tri id_4,
-    output tri0 id_5,
-    output wire id_6,
-    output wire id_7,
-    output tri0 id_8,
-    output supply0 id_9,
-    input wor id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_12;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  input wire id_5;
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  module_0 modCall_1 (
+      id_2,
+      id_2
+  );
+  logic id_6;
+  id_7 :
+  assert property (@(posedge id_6) id_2)
+  else $unsigned(25);
+  ;
+endmodule
+module module_2 (
+    output logic id_0,
+    input  wand  id_1,
+    input  tri0  id_2,
+    input  tri   id_3
+);
+  always @(id_1) id_0 <= 1;
+  assign module_3.id_4 = 0;
+endmodule
+module module_3 #(
+    parameter id_7 = 32'd5
+) (
+    input tri0 id_0,
+    input wire id_1,
+    output supply0 id_2,
+    output tri id_3,
+    input tri1 id_4,
+    input uwire id_5,
+    output logic id_6,
+    input wor _id_7,
+    output wand id_8,
+    output tri0 id_9
+);
+  wire [id_7 : id_7] id_11;
+  final begin : LABEL_0
+    id_6 = #id_12 1 + 1;
+  end
+  module_2 modCall_1 (
+      id_6,
+      id_5,
+      id_4,
+      id_1
+  );
 endmodule

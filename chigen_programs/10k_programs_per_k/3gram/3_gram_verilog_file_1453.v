@@ -1,59 +1,73 @@
-// Seed: 2525489740
+// Seed: 774405002
 module module_0 (
-    input tri0 id_0,
-    input tri0 id_1,
-    output wire id_2,
-    input tri0 id_3,
-    output tri id_4,
-    input supply0 id_5,
-    output wor id_6#(.id_22(id_22)),
-    input supply1 id_7,
-    input supply1 id_8,
-    output supply0 id_9,
-    input supply0 id_10,
-    output wor id_11,
-    output wor id_12,
-    input wire id_13,
-    output supply0 id_14,
-    input tri0 id_15,
-    output wire id_16,
-    output wor id_17,
-    output supply1 id_18,
-    input tri1 id_19,
-    output uwire id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  assign id_14 = id_13;
-  assign id_14 = 1;
+  inout supply0 id_6;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_6 = id_3 * (1'b0) + id_6;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input tri1 id_1
+module module_1 #(
+    parameter id_1  = 32'd22,
+    parameter id_12 = 32'd58,
+    parameter id_13 = 32'd69
+) (
+    _id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    _id_12,
+    _id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  for (id_3 = (1 >> id_1); 1'd0 & 0; id_0 = id_1) begin : LABEL_0
-    for (id_4 = 1; 1'b0; id_4 = 1) if (id_4) assign id_3 = id_1;
-  end
+  output wire id_16;
+  output logic [7:0] id_15;
+  output wire id_14;
+  input wire _id_13;
+  inout wire _id_12;
+  inout wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  output logic [7:0] id_8;
+  output wire id_7;
+  input wire id_6;
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_4,
-      id_3,
-      id_3,
-      id_4,
-      id_3,
-      id_1,
-      id_3,
-      id_0,
-      id_1,
-      id_0,
-      id_4,
-      id_4,
-      id_0,
-      id_3,
-      id_4,
-      id_3,
-      id_3,
-      id_4,
-      id_4
+      id_10,
+      id_5,
+      id_11,
+      id_5,
+      id_11,
+      id_5
   );
-  assign modCall_1.id_20 = 0;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  inout wire _id_1;
+  wire [1  ==  -1 : id_13] id_17;
+  wire id_18;
+  assign id_15[1==id_12] = id_5;
+  wire id_19;
+  ;
+  wire [id_1 : 1 'b0 +  1  +  1] id_20;
+  wire id_21;
+  wire id_22;
+  assign id_8[-1] = id_22;
 endmodule

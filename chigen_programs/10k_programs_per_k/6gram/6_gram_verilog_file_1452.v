@@ -1,50 +1,72 @@
-// Seed: 3592043496
+// Seed: 3749703783
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    output uwire id_0,
+    output tri1 id_1,
+    input supply0 id_2,
+    output uwire id_3,
+    output tri id_4,
+    input tri id_5,
+    inout supply0 id_6,
+    input wor id_7,
+    input supply1 id_8,
+    input uwire id_9,
+    output wor id_10
+    , id_24, id_25,
+    output supply1 id_11,
+    input tri id_12,
+    output wor id_13,
+    input supply1 id_14,
+    output tri id_15,
+    input supply1 id_16,
+    output tri0 id_17,
+    input wand id_18
+    , id_26,
+    input tri id_19,
+    output tri1 id_20,
+    input uwire id_21,
+    input wire id_22
 );
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  reg id_4;
-  reg id_5;
-  assign id_4 = !id_2;
-  wire id_6;
-  module_2 modCall_1 ();
-  always @(id_1) begin : LABEL_0
-    id_5 <= id_4;
-    $display;
+  always @(posedge 1) begin : LABEL_0
+    $signed(24);
+    ;
+    fork
+      repeat (-1) @(id_7 * -1 + -1);
+    join
   end
+  assign module_1.id_2 = 0;
 endmodule
-module module_1 ();
-  assign id_1 = id_1;
+module module_1 (
+    output wire id_0,
+    inout supply0 id_1,
+    output wor id_2
+);
+  wor id_4;
+  parameter id_5 = -1;
+  assign id_1 = -1;
+  assign id_4 = -1'b0;
   module_0 modCall_1 (
+      id_0,
+      id_2,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_1,
+      id_1,
       id_1,
       id_1,
       id_1
   );
-  assign modCall_1.type_7 = 0;
-  assign id_1 = 1 ** 1 ? 1 : 1;
-endmodule
-module module_2;
-  assign id_1 = "";
-  assign module_0.id_5 = 0;
-endmodule
-module module_3 (
-    input  wire id_0,
-    output wand id_1
-);
-  supply0 id_3;
-  wand id_4;
-  wire id_5;
-  initial begin : LABEL_0
-    id_1 = id_4.id_4;
-    id_3 = 1;
-  end
-  always @(posedge 1 or 1) begin : LABEL_0
-    wait (id_0);
-  end
-  module_2 modCall_1 ();
-  assign modCall_1.id_1 = "";
 endmodule

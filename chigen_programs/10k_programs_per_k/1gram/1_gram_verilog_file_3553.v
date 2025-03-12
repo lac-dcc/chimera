@@ -1,40 +1,46 @@
-// Seed: 14723352
+// Seed: 1329608969
 module module_0 (
-    input  tri  id_0,
-    output wand id_1,
-    input  wire id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_4;
-  module_2 modCall_1 ();
-  wire id_5;
-  nand primCall (id_1, id_2, id_4);
-  assign module_1.type_3 = 0;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  wire id_6 = id_2;
+  localparam id_7 = 1;
+  logic id_8;
+  logic id_9 = 1'b0 ^ id_7;
 endmodule
 module module_1 (
-    output uwire id_0,
-    input  tri0  id_1,
-    output uwire id_2,
-    input  tri0  id_3,
-    output wor   id_4,
-    output tri1  id_5
+    input tri0 id_0,
+    input wire id_1
 );
+  wire id_3;
   module_0 modCall_1 (
       id_3,
-      id_0,
+      id_3,
+      id_3,
+      id_3,
       id_3
   );
+  logic id_4;
 endmodule
-module module_2 ();
-  assign module_0.id_2 = 0;
-  assign module_3.id_2 = 0;
-endmodule
-module module_3 (
+module module_2 (
     input tri0 id_0,
-    input tri0 id_1,
-    input wand id_2,
-    input wor  id_3
-    , id_5
+    input tri  id_1
 );
-  wire id_6;
-  module_2 modCall_1 ();
+  logic id_3;
+  ;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
 endmodule

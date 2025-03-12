@@ -1,44 +1,38 @@
-// Seed: 3639616213
+// Seed: 860505879
 module module_0 (
-    output uwire id_0,
-    output uwire id_1,
-    input  uwire id_2,
-    output wor   id_3,
-    output wor   id_4,
-    input  uwire id_5
+    input supply1 id_0,
+    input tri0 id_1
+    , id_3
 );
-  always
-    cover (1) begin : LABEL_0
-      id_4 = id_2;
-      id_0 += id_2 >= id_2;
-    end
-  assign id_0 = id_5;
-  assign module_1.type_2 = 0;
+  assign id_3[1] = id_0 | id_3;
+  wire id_4;
+  wire id_5;
+  assign module_1.id_5 = 0;
 endmodule
-module module_1 (
-    output tri0 id_0,
-    output logic id_1,
-    input uwire id_2,
-    input tri id_3,
-    output supply1 id_4,
-    output wire id_5,
-    inout logic id_6,
-    input tri1 id_7,
-    input uwire id_8,
-    input tri1 id_9
+module module_1 #(
+    parameter id_3 = 32'd68,
+    parameter id_4 = 32'd67
+) (
+    input supply0 id_0
+    , id_9,
+    input tri id_1,
+    input tri id_2,
+    input supply1 _id_3,
+    input uwire _id_4,
+    input uwire id_5,
+    input uwire id_6[1  ?  1 : id_4 : id_3],
+    input wor id_7
 );
-  logic id_11 = id_6, id_12, id_13;
-  assign id_4 = 1;
-  always_ff begin : LABEL_0
-    id_1 <= id_13;
-    if (id_13) id_13 <= 1;
-  end
+  assign id_9 = {id_6, -1'b0};
+  initial $clog2(87);
+  ;
+  always_comb
+    if (1);
+    else id_9 <= 1 == (id_3 & id_5);
   module_0 modCall_1 (
-      id_0,
       id_5,
-      id_8,
-      id_5,
-      id_0,
-      id_9
+      id_7
   );
+  assign id_9 = id_6;
+  assign id_9 = (id_7);
 endmodule

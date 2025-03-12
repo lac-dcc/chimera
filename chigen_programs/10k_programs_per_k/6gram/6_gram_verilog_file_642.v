@@ -1,44 +1,89 @@
-// Seed: 2430049598
+// Seed: 444818226
 module module_0 (
-    input tri0 id_0,
-    input tri0 id_1,
-    input wand id_2,
-    input wand id_3
+    input uwire id_0,
+    input supply1 id_1,
+    output wand id_2,
+    output wire id_3,
+    output supply0 id_4,
+    input supply0 id_5,
+    input wire id_6,
+    input tri1 id_7,
+    input supply1 id_8,
+    output tri1 id_9,
+    input uwire id_10,
+    output wire id_11,
+    input uwire id_12,
+    output wand id_13
 );
-  always @(negedge 1 or id_2 & 1) begin : LABEL_0
-    id_5 <= "";
-  end
+  logic id_15;
+  assign module_1.id_1 = 0;
 endmodule
 module module_1 (
-    input tri id_0,
-    input tri1 id_1,
-    input wire id_2,
-    output supply1 id_3,
+    output tri id_0,
+    output wand id_1,
+    input tri1 id_2,
+    output tri1 id_3,
     input uwire id_4,
-    output wire id_5,
-    input tri0 id_6,
-    output wire id_7,
-    input wor id_8,
-    output supply0 id_9,
-    output supply0 id_10,
-    output supply0 id_11
+    output tri1 id_5,
+    input supply0 id_6,
+    output tri id_7,
+    input tri0 id_8,
+    input wor id_9,
+    input wor id_10,
+    input supply1 id_11,
+    output tri id_12,
+    output tri1 id_13,
+    output supply1 id_14,
+    output wire id_15,
+    output tri1 id_16,
+    input uwire id_17,
+    output supply0 id_18,
+    input wand id_19,
+    output uwire id_20,
+    output tri id_21,
+    input wor id_22,
+    output supply1 id_23,
+    input supply1 id_24,
+    input wire id_25,
+    input tri1 id_26,
+    input tri0 id_27,
+    input wand id_28,
+    output supply0 id_29,
+    input tri0 id_30,
+    input supply0 id_31,
+    input supply1 id_32,
+    input tri0 id_33,
+    input wand id_34,
+    output wire id_35,
+    input tri id_36,
+    input supply0 id_37,
+    input wor id_38,
+    input wand id_39,
+    output supply1 id_40,
+    input wire id_41,
+    input wire id_42,
+    input wand id_43,
+    input uwire id_44,
+    input wire id_45,
+    output tri1 id_46,
+    output wor id_47,
+    output wor id_48
 );
-  initial
-    #1 begin : LABEL_0
-      if (1 && id_6)
-        assume (id_8);
-        else begin : LABEL_0
-          cover ((id_6 ? 1 : id_0));
-          id_9 = 1'b0 > 1;
-        end
-      $display(id_0);
-    end
-  or primCall (id_5, id_8, id_1, id_6, id_0, id_2, id_4);
+  wire id_50, id_51;
   module_0 modCall_1 (
+      id_44,
       id_8,
+      id_20,
+      id_1,
+      id_13,
+      id_27,
       id_4,
-      id_8,
-      id_8
+      id_24,
+      id_9,
+      id_21,
+      id_33,
+      id_21,
+      id_25,
+      id_20
   );
-  assign modCall_1.type_0 = 0;
 endmodule

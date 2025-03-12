@@ -1,37 +1,36 @@
-// Seed: 2470943370
-module module_0;
-  assign module_1.type_10 = 0;
-  assign module_2.type_10 = 0;
-  assign id_1[1'b0] = id_1;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3
+// Seed: 504192517
+module module_0 (
+    output wand id_0
 );
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_1 = 1;
-  reg id_4;
-  wire id_5;
-  supply0 id_6 = 1;
-  module_0 modCall_1 ();
-  wire id_7;
-  reg  id_8;
-  id_9(
-      1 & -id_1
-  );
-  always @(posedge 1) wait (!id_4) id_8 <= id_4;
+  assign id_0 = 1;
+  bit id_2, id_3, id_4;
+  initial id_3 <= -1;
+  logic id_5;
+  ;
+  assign id_3 = 1 - 1;
+  logic id_6, id_7, id_8;
+  assign id_5 = id_2;
+  always_comb return (1);
 endmodule
-module module_2 (
-    output uwire id_0,
-    output uwire id_1,
-    output wire  id_2,
-    input  tri   id_3
-    , id_6,
-    output tri   id_4
+module module_1 #(
+    parameter id_2 = 32'd56
+) (
+    input tri0 id_0#(
+        .id_11(1),
+        .id_12(1)
+    )
+    , id_13,
+    input supply0 id_1[1 : id_2],
+    output uwire _id_2,
+    input tri1 id_3,
+    inout tri id_4,
+    input wor id_5,
+    output tri1 id_6[1 : -1],
+    input wire id_7,
+    input tri0 id_8,
+    input supply0 id_9
+    , id_14
 );
-  module_0 modCall_1 ();
-  wire id_7;
+  logic id_15;
+  module_0 modCall_1 (id_6);
 endmodule

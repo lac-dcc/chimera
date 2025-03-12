@@ -1,34 +1,46 @@
-// Seed: 2308836436
-module module_0 ();
-  wire id_1;
-  assign id_1 = id_1(id_1);
-  assign module_1.id_9 = 0;
-  assign id_3 = id_3 * 1;
-  wire id_4 = 1;
-endmodule
-module module_1 ();
-  tri1 id_1, id_2, id_3 = id_1;
-  module_0 modCall_1 ();
-  assign id_2 = 1'd0;
-  wand id_4 = id_1;
-  wire id_5;
-  tri id_6 = id_4, id_7, id_8, id_9;
-  wire id_10, id_11, id_12;
-endmodule
-module module_2 (
-    id_1,
-    id_2
+// Seed: 2558354469
+module module_0 (
+    input uwire id_0
 );
-  input wire id_2;
-  input wire id_1;
-  initial id_3 <= id_2;
-  module_0 modCall_1 ();
-  wire id_4;
-  tri  id_5;
-  wire id_6, id_7;
-  assign id_5 = 1;
-  wire id_8;
-  id_9(
-      .id_0(), .id_1(id_1), .id_2(id_3 & id_3)
-  );
+  for (id_2 = 1; id_2; id_2 = 1) wire id_3, id_4;
+  struct packed {
+    logic id_5;
+    logic id_6;
+    logic id_7;
+    logic id_8;
+    logic id_9  = 1;
+  } id_10;
+  ;
+  logic id_11;
+  ;
+  parameter id_12 = ~1;
+  assign module_1.type_32 = 0;
+endmodule
+module module_1 (
+    input wor id_0,
+    output supply1 id_1,
+    input wor id_2
+    , id_22,
+    input tri0 id_3,
+    input wor id_4,
+    input tri id_5,
+    input supply1 id_6,
+    input uwire id_7,
+    output wire id_8,
+    output tri1 id_9,
+    output uwire id_10,
+    output supply1 id_11,
+    input wor id_12
+    , id_23,
+    output tri id_13,
+    input supply1 id_14,
+    input tri0 id_15,
+    output uwire id_16,
+    output wor id_17,
+    input tri1 id_18,
+    input wand id_19,
+    input uwire void id_20
+);
+  assign id_23 = 1;
+  module_0 modCall_1 (id_20);
 endmodule

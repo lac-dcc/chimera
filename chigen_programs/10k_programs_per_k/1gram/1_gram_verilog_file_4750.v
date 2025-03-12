@@ -1,84 +1,39 @@
-// Seed: 960999427
+// Seed: 347006423
 module module_0 (
     id_1
 );
-  output wire id_1;
-  assign module_1.type_7 = 0;
-  wire id_2;
-  module_2 modCall_1 (
-      id_2,
-      id_2,
-      id_1,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_1,
-      id_2,
-      id_2,
-      id_2,
-      id_1,
-      id_2,
-      id_1,
-      id_2,
-      id_2,
-      id_2
-  );
+  input wire id_1;
+  assign module_1.id_5 = 0;
+  generate
+    struct packed {
+      integer id_2;
+      logic   id_3;
+      logic   id_4;
+    } id_5;
+  endgenerate
+  assign id_5.id_4 = "" << 1;
+  assign id_5 = -1;
+  final id_5 = 1;
+  logic id_6 = 1'd0;
+  wire id_7, id_8, id_9;
 endmodule
-module module_1 (
-    output uwire id_0,
-    output supply1 id_1,
-    input wor id_2,
-    output tri1 id_3,
-    input wire id_4
+module module_1 #(
+    parameter id_0 = 32'd92
+) (
+    input wor  _id_0,
+    inout wire id_1
 );
-  wire id_6;
-  module_0 modCall_1 (id_6);
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
-);
-  input wire id_20;
-  input wire id_19;
-  input wire id_18;
-  output wire id_17;
-  inout wire id_16;
-  output wire id_15;
-  input wire id_14;
-  input wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  output wire id_10;
-  output wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_15 = id_14;
+  logic id_3;
+  module_0 modCall_1 (id_3);
+  wire [-1 : id_0] id_4;
+  always begin : LABEL_0
+    assert (id_0)
+      #id_5 begin : LABEL_1
+        begin : LABEL_2
+        end
+        $clog2(59);
+        ;
+      end
+  end
+  logic id_6;
 endmodule

@@ -1,32 +1,34 @@
-// Seed: 2713119535
+// Seed: 2143879287
 module module_0 (
-    input wand  id_0,
-    input wire  id_1,
-    input uwire id_2
+    input wor id_0,
+    output uwire id_1,
+    input wor id_2,
+    input wand id_3,
+    output supply1 id_4
 );
-  assign module_1.type_1 = 0;
+  always @(posedge id_0) begin : LABEL_0
+    $clog2(12);
+    ;
+  end
+  assign module_1.id_4 = 0;
 endmodule
-module module_1 (
-    input tri1 id_0,
-    input supply1 id_1,
-    output supply0 id_2,
-    output tri id_3,
-    input wand id_4,
-    output wor id_5,
-    input wire id_6,
-    input wand id_7,
-    input tri1 id_8,
-    output wire id_9,
-    output wire id_10
+module module_0 #(
+    parameter id_0 = 32'd18
+) (
+    input supply1 _id_0,
+    input tri0 id_1,
+    output wand id_2,
+    output wor id_3,
+    input wire id_4
 );
-  wire id_12;
-  supply1 id_13 = 1'b0;
+  assign id_2 = 1;
   module_0 modCall_1 (
-      id_0,
-      id_7,
-      id_8
+      id_4,
+      id_3,
+      id_4,
+      id_4,
+      id_3
   );
-  tri  id_14;
-  wire id_15;
-  assign id_14 = 1;
+  wire [-1 : id_0] module_1;
+  logic id_6;
 endmodule

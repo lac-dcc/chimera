@@ -1,46 +1,39 @@
-// Seed: 944124262
-module module_0 ();
-  timeunit 1ps;
-  always @(posedge id_1)
-    if (1'd0)
-      #1 begin : LABEL_0
-        id_1 = #1  (1 == &id_1) == 1;
-      end
-    else begin : LABEL_0
-      case (1)
-        1: id_1 <= 1;
-        1: id_1 = 1;
-        id_1: ;
-      endcase
-    end
-  assign module_1.id_4 = 0;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 3527777982
+module module_0 (
+    input supply0 id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input tri id_3,
+    output uwire id_4,
+    input supply0 id_5,
+    output supply1 id_6,
+    input tri id_7,
+    output wand id_8
 );
-  input wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_1 = 1 > id_4;
-  uwire id_7;
-  module_0 modCall_1 ();
-  reg id_8, id_9, id_10, id_11;
-  assign id_7 = 1;
-  wire id_12;
-  generate
-    genvar id_13;
-    for (id_14 = 1 - ""; id_7 >> id_9; id_14 = 1) begin : LABEL_0
-      always @(posedge id_9) begin : LABEL_0
-        id_8 = #id_15 1 == id_8;
-      end
-    end
-  endgenerate
+  integer id_10 = -1;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd18
+) (
+    input  tri0 _id_0,
+    input  wand id_1,
+    output tri  id_2
+);
+  localparam id_4 = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_2
+  );
+  assign modCall_1.id_3 = 0;
+  localparam id_5 = id_4[id_0 :-1];
+  logic id_6;
+  logic id_7;
+  always @(-1) id_7 = ({1, id_6 * -1 + id_5});
 endmodule

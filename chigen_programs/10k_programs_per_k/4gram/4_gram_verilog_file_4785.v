@@ -1,33 +1,50 @@
-// Seed: 246625294
-module module_0;
-  assign id_1[1] = 1;
-  wire id_2;
-  tri1 id_3 = 1'b0;
-  logic [7:0] id_4;
-  wire id_5;
-  assign id_4 = id_1;
-  initial $display(id_4);
-  wire id_6;
-  wand id_7 = id_3;
-  wire id_8, id_9, id_10, id_11, id_12;
-endmodule
-module module_1 ();
-  wire id_1;
-  module_0 modCall_1 ();
-endmodule
-module module_2 (
-    output tri1 id_0,
-    output supply1 id_1
+// Seed: 3496782572
+module module_0 (
+    output supply1 id_0,
+    output supply0 id_1,
+    output supply1 id_2,
+    input supply1 id_3,
+    output supply0 id_4,
+    input wor access,
+    input wire id_6,
+    input wand module_0,
+    input wand id_8,
+    input tri id_9,
+    input wor id_10,
+    input tri1 id_11,
+    input tri id_12,
+    input wand id_13
 );
-  assign id_0 = 1;
-  module_0 modCall_1 ();
-  assign id_0 = 1;
+  wire id_15 = id_11;
+  assign module_1.id_2 = 0;
 endmodule
-module module_3 (
-    input supply0 id_0,
-    output tri id_1,
-    input tri0 id_2
+module module_1 (
+    input  tri0  id_0,
+    input  tri0  id_1,
+    output tri1  id_2,
+    input  tri0  id_3,
+    input  wor   id_4,
+    input  wand  id_5,
+    output uwire id_6,
+    output tri0  id_7,
+    output wor   id_8,
+    input  tri   id_9
 );
-  integer id_4 = id_0, id_5;
-  module_0 modCall_1 ();
+  parameter id_11 = 1, id_12 = id_1, id_13 = 1, id_14 = id_12, id_15 = id_5;
+  module_0 modCall_1 (
+      id_8,
+      id_6,
+      id_7,
+      id_4,
+      id_2,
+      id_4,
+      id_0,
+      id_4,
+      id_1,
+      id_5,
+      id_9,
+      id_4,
+      id_3,
+      id_1
+  );
 endmodule

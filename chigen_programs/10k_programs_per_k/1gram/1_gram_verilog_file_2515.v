@@ -1,59 +1,40 @@
-// Seed: 1541402932
+// Seed: 1568266885
 module module_0 (
-    id_1,
-    id_2
+    output wor id_0
 );
-  input wire id_2;
-  inout wire id_1;
-  assign module_1.id_16 = 0;
-  wire id_3, id_4, id_5, id_6, id_7, id_8;
+  `define pp_2 0
+  assign module_1.id_0 = 0;
+  wire [-1 : -1 'b0] id_3, id_4;
+  assign module_2.id_4 = 0;
 endmodule
-module module_1 (
-    output wor id_0,
-    input logic id_1,
-    input supply0 id_2,
-    input supply0 id_3,
-    input wor id_4,
-    input supply0 id_5,
-    input logic id_6
-    , id_14,
-    output supply0 id_7
-    , id_15,
-    input tri0 id_8,
-    input wire id_9,
-    input tri1 id_10,
-    output tri0 id_11,
-    output logic id_12
+program module_1 (
+    output tri0  id_0,
+    input  wand  id_1,
+    output logic id_2
 );
-  logic id_16, id_17;
-  generate
-    wire id_18;
-    assign id_11 = 1'b0;
-    always_latch
-      if (id_8) $display(1'h0);
-      else if (1 & 1'b0) id_16 = id_6;
-  endgenerate
-  task id_19;
-    begin : LABEL_0
-      id_14 <= 1'd0;
-      id_15 = id_17;
-      if (id_3) begin : LABEL_0
-        id_0 = 1;
-      end else id_19 <= 1'b0;
-      id_19 <= id_6;
-      begin : LABEL_0
-        id_15 <= id_16++;
-      end
-    end
-    if (id_2) @(posedge id_14) id_12 <= id_1;
-  endtask
-  wire id_20, id_21;
-  wire id_22;
-  module_0 modCall_1 (
-      id_20,
-      id_20
-  );
-  wire id_23, id_24;
-  assign id_17 = 1;
-  wire id_25;
+  module_0 modCall_1 (id_0);
+  always begin : LABEL_0
+    id_2 <= id_1;
+  end
+  assign id_0 = 1 == !1;
+endprogram
+module module_2 #(
+    parameter id_0 = 32'd61,
+    parameter id_1 = 32'd11,
+    parameter id_3 = 32'd92
+) (
+    input  tri1 _id_0,
+    input  tri0 _id_1,
+    output tri  id_2,
+    input  tri0 _id_3,
+    input  wire id_4
+);
+  wire [id_0 : 1  ?  {  1  ,  1  }  ==  id_3 : id_1] id_6;
+  wire id_7, id_8, id_9;
+  assign id_6 = id_3;
+  logic [7:0] id_10;
+  assign id_10 = ~id_6;
+  assign id_2  = 1;
+  module_0 modCall_1 (id_2);
+  assign id_10[1] = (id_6);
 endmodule

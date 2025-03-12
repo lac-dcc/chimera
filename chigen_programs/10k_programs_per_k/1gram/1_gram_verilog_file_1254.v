@@ -1,31 +1,34 @@
-// Seed: 1327152899
+// Seed: 578602049
 module module_0 (
-    id_1
+    input wor id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input wor id_3,
+    output wor id_4
 );
-  inout wire id_1;
-  tri0 id_2;
-  assign module_1.id_8 = 0;
-  assign id_2 = id_2;
-  wire id_3;
-  assign id_2 = 1;
+  bit [1 : -1 'b0] id_6;
+  assign id_4.id_0 = -1'b0;
+  logic [7:0][-1 'b0 : 1 'b0] id_7;
+  assign id_6 = -1;
+  always id_6 = 1;
+  assign id_4 = id_3;
+  wire id_8, id_9;
 endmodule
 module module_1 (
-    output tri1 id_0,
-    output logic id_1,
-    output uwire id_2,
-    input wand id_3,
-    input tri1 id_4,
-    output wand id_5,
-    input wor id_6,
-    input tri1 id_7,
-    input wire id_8,
-    input tri1 id_9,
-    input supply1 id_10
-    , id_12
+    inout  tri   id_0,
+    input  uwire id_1,
+    output logic id_2
 );
-  wire id_13, id_14;
-  always_ff $display(1'b0);
-  wire id_15;
-  always id_1 <= 1;
-  module_0 modCall_1 (id_14);
+  final id_2 <= "" || |id_0;
+  logic id_4;
+  module_0 modCall_1 (
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_0
+  );
+  assign modCall_1.id_1 = 0;
+  logic id_5;
+  ;
 endmodule

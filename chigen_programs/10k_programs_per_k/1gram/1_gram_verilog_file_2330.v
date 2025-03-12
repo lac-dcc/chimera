@@ -1,55 +1,48 @@
-// Seed: 2140347833
-module module_0 (
-    input supply1 id_0,
-    input wand id_1,
-    output wire id_2,
-    input wand id_3,
-    input tri id_4
+// Seed: 3332223598
+module module_0 #(
+    parameter id_0 = 32'd42,
+    parameter id_3 = 32'd29
+) (
+    input tri1 _id_0,
+    output tri0 id_1,
+    input tri0 id_2,
+    input tri _id_3,
+    input tri0 id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    output supply1 id_7,
+    input tri0 id_8,
+    input wire id_9,
+    input wire id_10[id_3 : 1]
 );
-  id_6(
-      1
-  );
+  assign id_7 = id_4;
+  logic id_12[1  +  id_0 : ""];
 endmodule
-module module_1 (
-    input  uwire id_0,
-    output logic id_1,
-    output logic id_2
-    , id_10,
-    input  logic id_3,
-    input  logic id_4,
-    output uwire id_5,
-    output wor   id_6,
-    input  logic id_7,
-    output logic id_8
+module module_1 #(
+    parameter id_1 = 32'd67,
+    parameter id_6 = 32'd35
+) (
+    output supply1 id_0,
+    input wire _id_1,
+    input wire id_2
 );
-  always_ff begin : LABEL_0
-    begin : LABEL_0
-      begin : LABEL_0
-        id_2 <= id_3.id_10;
-        begin : LABEL_0$display
-          ;
-        end
-        id_1 <= 1;
-      end
-    end
-    if (1)
-      #id_11 begin : LABEL_0
-        id_8 = id_4;
-        id_2 = id_11.id_4;
-        if (1)
-          if (1'b0) $display(1'b0 - 1);
-          else id_1 <= id_7;
-        $display(1, 1,, 1'b0, {1});
-        id_11 <= id_3;
-      end
-  end
-  wire id_12, id_13;
+  assign id_0 = -1;
+  localparam id_4 = 1, id_5 = id_5, id_6 = id_5, id_7 = id_5 + id_4, id_8 = id_6;
   module_0 modCall_1 (
-      id_0,
-      id_0,
       id_5,
       id_0,
-      id_0
+      id_2,
+      id_5,
+      id_2,
+      id_2,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_2
   );
-  assign modCall_1.type_10 = 0;
+  assign modCall_1.id_0 = 0;
+  logic id_9 = id_1;
+  final id_9 <= 1;
+  wire [id_1 : id_6] id_10;
 endmodule

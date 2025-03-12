@@ -1,92 +1,92 @@
-// Seed: 710261837
-module module_0 (
-    input tri1 id_0,
+// Seed: 1840078060
+macromodule module_0 (
+    input wire id_0,
     input wire id_1,
-    output supply1 id_2,
-    output supply1 id_3,
-    output supply1 id_4,
-    input wand id_5,
-    input wire id_6,
-    input tri1 id_7,
-    output wand id_8,
+    input tri1 id_2,
+    input wand id_3,
+    input uwire id_4,
+    input supply0 id_5,
+    output tri0 id_6,
+    input wire id_7,
+    output wire id_8,
     output tri0 id_9,
-    input tri0 id_10
-    , id_20,
-    input supply0 id_11,
-    input tri1 id_12,
-    input tri0 id_13,
-    input tri id_14,
-    output tri0 id_15,
+    output wor id_10,
+    output tri0 id_11,
+    output supply1 id_12,
+    input wor id_13,
+    input supply1 id_14,
+    input tri0 id_15,
     input wand id_16,
-    input uwire id_17,
-    input uwire id_18
+    input wor id_17,
+    output supply1 id_18,
+    input wire id_19,
+    output wor id_20,
+    output supply0 id_21,
+    output supply0 id_22,
+    output supply1 id_23,
+    output supply1 id_24,
+    output wire id_25
+    , id_36,
+    input uwire id_26,
+    input uwire id_27,
+    input tri id_28,
+    output tri id_29,
+    input tri0 id_30,
+    input tri1 id_31,
+    input tri0 id_32,
+    input tri0 id_33,
+    input supply1 id_34
 );
-  wire id_21;
-  tri0 id_22;
-  assign id_22 = 1;
-  wire   id_23;
-  wire   id_24 = id_23;
-  wire   id_25;
-  string id_26 = "";
+  parameter id_37 = 1;
+  assign id_18 = 1;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input tri0 id_1,
-    input tri id_2,
-    output logic id_3,
-    input tri0 id_4
+    input tri1 id_0,
+    output tri id_1,
+    input wand id_2,
+    input wor id_3,
+    input tri id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    output logic id_7
 );
-  wire id_6;
-  always_comb @(1) id_3 <= id_1 & id_4 - id_4;
+  always @(id_4) id_7 = id_6;
   module_0 modCall_1 (
       id_2,
+      id_5,
+      id_5,
+      id_0,
+      id_6,
       id_4,
-      id_0,
-      id_0,
-      id_0,
+      id_1,
+      id_6,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_3,
       id_2,
-      id_4,
-      id_4,
+      id_2,
       id_0,
-      id_0,
-      id_4,
+      id_3,
+      id_1,
+      id_6,
+      id_1,
+      id_1,
+      id_1,
       id_1,
       id_1,
       id_1,
       id_4,
+      id_4,
       id_0,
+      id_1,
+      id_5,
+      id_6,
+      id_3,
       id_4,
-      id_4,
-      id_2
+      id_6
   );
-  assign modCall_1.type_11 = 0;
-  wor id_7 = 1'b0;
-  supply0 id_8;
-  assign #id_9 id_6 = !id_8;
-  id_10(
-      .id_0(id_1 == 1),
-      .id_1(id_7),
-      .id_2(id_4),
-      .id_3(id_6),
-      .id_4((1)),
-      .id_5(1),
-      .id_6(id_3),
-      .id_7(id_9),
-      .id_8(1),
-      .id_9(id_8),
-      .id_10(id_4),
-      .id_11(1),
-      .id_12(1),
-      .id_13(1),
-      .id_14(id_7),
-      .id_15(1),
-      .id_16(~1 && id_4 && id_3),
-      .id_17(1),
-      .id_18(id_3),
-      .id_19(1 - id_0),
-      .id_20(1),
-      .id_21(id_4),
-      .id_22(id_1),
-      .id_23(1)
-  );
-endmodule : SymbolIdentifier
+  assign modCall_1.id_30 = 0;
+endmodule

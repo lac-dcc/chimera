@@ -1,35 +1,40 @@
-// Seed: 4099801047
+// Seed: 3894764236
 module module_0 (
-    input wand id_0,
-    input wand id_1
+    input tri id_0,
+    logic id_2
 );
-  assign module_1.type_5 = 0;
 endmodule
-module module_1 (
-    input wire id_0,
-    input tri0 id_1,
-    output wire id_2,
-    input supply1 id_3,
-    input supply0 id_4,
-    output supply1 id_5,
-    output wor id_6,
-    output wand id_7
+module module_1 #(
+    parameter id_10 = 32'd81,
+    parameter id_2  = 32'd75,
+    parameter id_3  = 32'd50
+) (
+    output wand id_0,
+    input tri1 id_1,
+    input uwire _id_2,
+    input supply0 _id_3,
+    output tri1 id_4,
+    output wor id_5
 );
-  for (id_9 = 1 == id_3; 1; id_5 = 1) begin : LABEL_0
-    assign id_7 = 1;
+  logic [id_3 : 1 'b0] id_7;
+  assign id_0 = 1'h0;
+  wire [-1 : id_2  ||  -1] id_8;
+  assign id_4 = id_3;
+  wire id_9;
+  module_0 modCall_1 (id_1);
+  parameter id_10 = 1;
+  logic id_11;
+  initial begin : LABEL_0
+    if (id_10) begin : LABEL_1
+      if (id_10) begin : LABEL_2
+        $clog2(id_10);
+        ;
+      end
+    end else assume ((id_8));
   end
-  wire id_10;
-  assign id_2 = id_0;
-  supply0 id_11;
-  assign id_6 = id_4;
-  wand id_12;
-  tri  id_13 = id_12 + id_0;
-  tri1 id_14 = id_12;
-  wire id_15;
-  module_0 modCall_1 (
-      id_0,
-      id_0
-  );
-  wire id_16;
-  assign id_11 = 1;
+  wire [-1 : id_3] id_12;
+  defparam id_10.id_10 = 1;
+  generate
+    assign id_7 = id_3;
+  endgenerate
 endmodule

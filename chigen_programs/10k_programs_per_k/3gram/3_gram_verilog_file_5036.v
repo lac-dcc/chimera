@@ -1,30 +1,31 @@
-// Seed: 153314129
-module module_0 ();
-  assign id_1 = 1;
-  assign module_1.id_13 = 0;
+// Seed: 962480982
+module module_0;
+  logic id_1 = id_1;
+  logic id_2;
+  ;
   wire id_3;
+  assign id_2 = id_3;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input wor id_1,
-    input tri0 id_2,
-    output wire id_3,
-    input wor id_4,
-    output supply0 id_5,
-    input supply1 id_6,
-    input tri id_7,
-    input tri1 id_8,
-    output tri0 id_9,
-    input wire id_10,
-    output supply0 id_11,
-    output tri1 id_12,
-    output wand id_13,
-    output supply1 id_14,
-    input tri1 id_15,
-    input wor id_16,
-    input supply1 id_17
+module module_1 #(
+    parameter id_3 = 32'd37
+) (
+    output supply1 id_0,
+    input uwire id_1,
+    input tri1 id_2,
+    input wire _id_3,
+    input supply1 id_4,
+    input wor id_5,
+    input wor id_6,
+    input tri id_7
 );
-  nor primCall (id_0, id_1, id_10, id_15, id_16, id_17, id_19, id_2, id_4, id_6, id_7, id_8);
-  wire id_19;
+  wire [1 : id_3] id_9;
+  wire id_10;
   module_0 modCall_1 ();
+  wire id_11;
+  localparam id_12 = 1;
+  logic [~  1  ==  (  -1  ) : -1 'h0] id_13;
+  wire id_14;
+  always @(posedge 1);
+  wire id_15;
+  wire id_16;
 endmodule

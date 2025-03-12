@@ -1,37 +1,53 @@
-// Seed: 1317563213
+// Seed: 2276978522
 module module_0 (
-    output wire id_0,
-    input  wor  id_1
+    input supply1 id_0,
+    output tri0 id_1,
+    input supply1 id_2,
+    input supply0 id_3
 );
-  wor id_3 = "" ? 1 & 1'd0 : id_3 == id_3;
-  id_4(
-      .id_0(id_3),
-      .id_1(id_0),
-      .id_2(1),
-      .id_3(~id_5),
-      .id_4(1'b0),
-      .id_5(id_1),
-      .id_6(1),
-      .id_7(id_3)
-  );
+  assign module_2.id_0 = 0;
 endmodule
 module module_1 (
-    input  tri0  id_0,
-    output logic id_1
+    input uwire id_0,
+    input wire id_1,
+    input tri0 id_2,
+    input supply0 id_3,
+    input wand id_4,
+    input wor id_5,
+    output tri1 id_6
 );
-  tri1  id_3;
-  tri   id_4 = id_3;
-  logic id_5;
+  logic id_8;
   module_0 modCall_1 (
-      id_4,
-      id_4
+      id_2,
+      id_6,
+      id_5,
+      id_0
   );
-  assign modCall_1.id_1 = 0;
-  assign id_1 = id_5;
-  always @({id_4, {1 + id_4, {id_3{1}}}} or posedge 1) id_4 = 1;
-  always @(posedge id_3 or posedge id_0) begin : LABEL_0
-    if (1'b0 == 1 && 1) begin : LABEL_0
-      id_1 <= id_5;
+  assign modCall_1.id_0 = 0;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    output supply1 id_1,
+    input tri0 id_2
+    , id_10,
+    input uwire id_3,
+    input wand id_4,
+    input tri0 id_5,
+    input tri id_6,
+    input tri0 id_7,
+    input wire id_8
+);
+  always @(posedge id_2) begin : LABEL_0
+    if (1 == 1) begin : LABEL_1
+      $unsigned(96);
+      ;
+      wait (id_7);
     end
   end
+  module_0 modCall_1 (
+      id_6,
+      id_1,
+      id_4,
+      id_8
+  );
 endmodule

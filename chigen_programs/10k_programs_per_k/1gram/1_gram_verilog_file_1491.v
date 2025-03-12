@@ -1,40 +1,25 @@
-// Seed: 3749859235
+// Seed: 598182615
 module module_0 (
-    input uwire id_0
+    input tri id_0
 );
-  assign id_2 = id_2;
-  assign module_1.type_5 = 0;
-  id_3(
-      id_0
-  );
 endmodule
-module module_1 (
-    input  logic id_0,
-    input  wire  id_1,
-    input  logic id_2,
-    input  logic id_3,
-    input  wand  id_4,
-    input  logic id_5,
-    output logic id_6,
-    input  logic id_7
+module module_1 #(
+    parameter id_4 = 32'd68
+) (
+    input tri1 id_0,
+    output supply0 id_1,
+    output wor id_2,
+    output tri0 id_3[1  ^  1 'b0 : -1],
+    input supply1 _id_4,
+    output tri id_5,
+    input tri0 id_6,
+    output tri0 id_7,
+    output wand id_8
 );
-  assign id_6 = 1;
-  id_9 :
-  assert property (@(negedge 1) 1) begin : LABEL_0
-    begin : LABEL_0
-      id_6 <= id_9;
-      @(posedge id_7 or posedge 1) #1 id_6 = ~1;
-    end
-    id_6 <= #1 1'd0;
-    id_6 <= id_9;
-    id_9 = id_5;
-    @(posedge id_2) @(posedge id_9) id_9 = id_3;
-  end
-  assign id_6 = 1;
-  for (id_10 = 1; id_3; id_9 = id_10) begin : LABEL_0
-    assign id_6 = id_0;
-    wire id_11 = id_11;
-    initial id_10 <= 1;
-  end
-  module_0 modCall_1 (id_4);
+  assign id_5 = 1 ? id_6 : -1;
+  wire [  -1 : 1] id_10;
+  wire [1 : id_4] id_11;
+  and primCall (id_1, id_0, id_11);
+  module_0 modCall_1 (id_6);
+  wire id_12;
 endmodule

@@ -1,45 +1,42 @@
-// Seed: 3641597269
-module module_0 ();
-  wire id_1;
-  assign module_2.type_12 = 0;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 457005794
+module module_0 (
+    input uwire id_0,
+    input tri id_1,
+    output supply0 id_2,
+    output tri id_3,
+    input tri id_4,
+    output tri0 id_5
 );
-  inout wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_6;
-  id_7(
-      .id_0(id_6), .id_1(), .id_2(id_1), .id_3(1)
+  id_7 :
+  assert property (@(posedge "") id_0);
+endmodule
+module module_1 #(
+    parameter id_7 = 32'd0
+) (
+    input wor id_0,
+    input tri id_1,
+    input supply0 id_2,
+    input wand id_3,
+    input uwire id_4,
+    input tri0 id_5,
+    input supply1 id_6[-1 'b0 : id_7],
+    input wand _id_7,
+    input supply0 id_8,
+    output supply0 id_9,
+    input wor id_10,
+    output uwire id_11,
+    output uwire id_12,
+    output wire id_13
+);
+  module_0 modCall_1 (
+      id_0,
+      id_4,
+      id_9,
+      id_12,
+      id_8,
+      id_12
   );
-  assign id_2 = id_3;
-  module_0 modCall_1 ();
-  logic [7:0][1] id_8;
-  assign id_3 = id_7;
-endmodule
-module module_2 (
-    id_1
-);
-  output wire id_1;
-  always_comb @(negedge 1) @({1{|id_2}}) id_2 = 1;
-  module_0 modCall_1 ();
-  wand id_3, id_4;
-  generate
-    assign id_1 = id_4;
-    assign id_3 = 1 - 1 + id_4;
-    wor id_5;
-    tri0 id_6, id_7;
-  endgenerate
-  wire id_8;
-  assign id_2 = id_6;
-  wire id_9;
-  assign id_7 = id_7 >= id_5 - 1;
-  wire id_10;
+  assign modCall_1.id_7 = "";
+  supply1 [-1 'd0 : 1] id_15, id_16;
+  assign id_15 = 1'b0;
 endmodule

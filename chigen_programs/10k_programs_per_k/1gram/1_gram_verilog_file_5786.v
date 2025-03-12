@@ -1,31 +1,41 @@
-// Seed: 2584888451
-module module_0 (
-    input tri id_0
-);
-  always_latch force id_2 = (~1'd0);
-  assign module_1.id_2 = 0;
-  tri id_3 = 1;
-  id_4(
-      1, 1 && 1, 1, 1 - id_0, 1 * id_2 == id_3.id_2
-  );
-  module_2 modCall_1 ();
+// Seed: 3355623045
+module module_0;
+  logic id_1;
+  assign module_2.id_5 = 0;
 endmodule
 module module_1 (
-    input  tri1  id_0,
-    output uwire id_1,
-    output wire  id_2
+    input wand id_0,
+    input wire id_1
 );
-  supply1 id_4 = 1;
-  assign id_4 = 1'b0;
-  module_0 modCall_1 (id_0);
+  wire id_3, id_4[(  1  ) : -1];
+  module_0 modCall_1 ();
 endmodule
-module module_2;
-  always begin : LABEL_0
-    id_1 <= ~id_1;
-    id_1 = id_1;
-    id_1 <= id_1;
-    if (1'h0) id_1 = id_1;
-    else if (id_1 - "") id_1 = (1);
-  end
-  assign module_0.type_5 = 0;
+module module_2 #(
+    parameter id_10 = 32'd34,
+    parameter id_5  = 32'd78
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    _id_5[id_5 : id_10],
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    _id_10
+);
+  inout wire _id_10;
+  inout wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  output logic [7:0] _id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  module_0 modCall_1 ();
+  assign id_7 = id_9;
+  wire id_11;
 endmodule

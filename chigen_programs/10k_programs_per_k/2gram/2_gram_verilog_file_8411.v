@@ -1,61 +1,65 @@
-// Seed: 1690804194
+// Seed: 1468388238
 module module_0 (
-    input uwire id_0,
-    input wor id_1,
-    input wire id_2,
-    input wor id_3,
-    output supply0 id_4,
-    input uwire id_5,
-    output supply0 id_6,
-    output tri id_7,
-    input wand id_8,
-    output uwire id_9,
-    input supply0 id_10,
-    input wire id_11,
-    output wand id_12,
-    input supply0 id_13,
-    input tri0 id_14,
-    output uwire id_15,
-    input tri id_16,
-    output supply1 id_17,
-    input supply1 id_18,
-    output supply1 id_19,
-    input tri id_20,
-    input supply1 id_21,
-    input uwire id_22
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign id_19 = (id_18);
-  wire id_24;
-  assign module_1.type_0 = 0;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_8;
+  supply0 id_9 = 1;
+  assign module_1.id_11 = 0;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input  supply1 id_1
+module module_1 #(
+    parameter id_10 = 32'd64,
+    parameter id_2  = 32'd67,
+    parameter id_3  = 32'd97
+) (
+    id_1,
+    _id_2,
+    _id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    _id_10
 );
-  assign id_0 = id_1;
+  inout wire _id_10;
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  input wire id_4;
+  input wire _id_3;
+  nand primCall (id_9, id_12, id_4, id_1, id_13, id_14, id_11, id_16, id_15);
+  input wire _id_2;
+  input wire id_1;
+  reg [id_3 : id_2  &&  id_10] id_11, id_12, id_13, id_14, id_15;
+  assign id_9 = id_3;
+  wire id_16;
   module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_0,
-      id_1,
-      id_0,
-      id_0,
-      id_1,
-      id_0,
-      id_1,
-      id_1,
-      id_0,
-      id_1,
-      id_1,
-      id_0,
-      id_1,
-      id_0,
-      id_1,
-      id_0,
-      id_1,
-      id_1,
-      id_1
+      id_16,
+      id_5,
+      id_16,
+      id_16,
+      id_8,
+      id_4,
+      id_7
   );
+  parameter id_17 = 1;
+  wire id_18;
+  assign id_15 = -1;
+  always id_14 <= 1'b0;
 endmodule

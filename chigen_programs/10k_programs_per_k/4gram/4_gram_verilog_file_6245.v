@@ -1,71 +1,80 @@
-// Seed: 4227101578
+// Seed: 3959833309
 module module_0 (
     id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+    id_2
 );
-  output wire id_15;
-  output wire id_14;
-  inout wire id_13;
-  input wire id_12;
-  input wire id_11;
-  output wire id_10;
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_1  = 1;
-  assign id_14 = id_11;
-  wire id_16;
-  assign module_1.type_6 = 0;
+  input wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wire id_4;
+  wire id_5;
 endmodule
-module module_1 (
-    input  tri  id_0,
-    input  tri  id_1,
-    input  wand id_2,
-    output wire id_3,
-    output tri1 id_4,
-    input  tri0 id_5,
-    input  wire id_6,
-    output tri  id_7,
-    input  wire id_8
-    , id_10
+module module_1 #(
+    parameter id_48 = 32'd98
+) (
+    input uwire id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    input uwire id_3,
+    input tri id_4,
+    input uwire id_5,
+    output wand id_6,
+    input supply1 id_7,
+    input wire id_8,
+    output wire id_9,
+    input wor id_10,
+    output tri0 id_11,
+    input tri id_12,
+    input tri id_13,
+    input wor id_14,
+    output uwire id_15,
+    output supply0 id_16,
+    input wire id_17,
+    output wand id_18,
+    output tri id_19,
+    input wor id_20,
+    input wand id_21,
+    inout tri id_22,
+    input supply1 id_23,
+    input wor id_24,
+    output tri id_25,
+    input tri0 id_26,
+    input tri id_27,
+    output wire id_28,
+    output tri0 id_29,
+    output supply1 id_30,
+    input wand id_31,
+    input uwire id_32,
+    input supply0 id_33,
+    output uwire id_34,
+    input wire id_35,
+    output tri id_36,
+    input tri id_37,
+    input uwire id_38,
+    input wire id_39,
+    input tri id_40,
+    input supply1 id_41,
+    input uwire id_42,
+    input wire id_43
+    , id_56,
+    input tri id_44,
+    output uwire id_45,
+    output tri0 id_46,
+    output tri0 id_47,
+    output tri _id_48,
+    output tri0 id_49,
+    input wor id_50,
+    input wand id_51,
+    output tri0 id_52,
+    input tri id_53,
+    output uwire id_54
 );
-  always @(negedge 1) begin : LABEL_0
-    id_10 = 1;
-  end
+  struct packed {struct {id_57 id_58;} [1 : ~  id_48] id_59;} id_60;
+  ;
   module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_10
+      id_59,
+      id_57
   );
+  wire id_61 = id_33;
+  uwire [1 'h0 : -1] id_62 = 1;
 endmodule

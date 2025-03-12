@@ -1,56 +1,43 @@
-// Seed: 4166747268
+// Seed: 3194396241
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    output wire  id_0,
+    input  tri   id_1,
+    output uwire id_2,
+    output tri1  id_3
 );
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  integer id_4 = 1'b0;
-  always if (1) $display(id_2);
-  assign module_2.id_8 = 0;
   wire id_5;
-  wire id_6 = id_6;
+  assign id_2 = -1;
+  logic id_6;
+  ;
+  assign id_6 = -1;
+  logic id_7;
 endmodule
-module module_1 (
-    input wor   id_0,
-    input wor   id_1,
-    input uwire id_2
+module module_1 #(
+    parameter id_7 = 32'd60
+) (
+    output tri0 id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    input tri1 id_3[id_7 : -1],
+    output wire id_4,
+    output uwire id_5,
+    input supply0 id_6,
+    input uwire _id_7,
+    input supply1 id_8,
+    output wor id_9,
+    input wand id_10,
+    input tri1 id_11,
+    output uwire id_12,
+    output uwire id_13,
+    input tri1 id_14
 );
-  assign id_4 = 1 == 1;
+  assign id_12 = 1;
+  and primCall (id_9, id_6, id_11, id_2, id_3, id_14, id_8, id_1, id_10);
   module_0 modCall_1 (
-      id_4,
-      id_4,
-      id_4
-  );
-  generate
-    uwire id_5;
-  endgenerate
-  assign id_5 = id_4;
-endmodule
-module module_2 (
-    input wire id_0,
-    output supply0 id_1,
-    input logic id_2,
-    input logic id_3,
-    output logic id_4,
-    input tri0 id_5,
-    input wor id_6
-);
-  for (id_8 = 1; 1'h0 & 1; id_8 = id_3)
-  always_comb
-    if (1) #id_9 id_4 <= 1;
-    else begin : LABEL_0
-      deassign id_4;
-      id_8 <= id_2;
-    end
-  wire id_10;
-  assign id_4 = ~1'b0;
-  module_0 modCall_1 (
+      id_5,
       id_10,
-      id_10,
-      id_10
+      id_5,
+      id_9
   );
-  assign id_9 = id_6;
+  assign modCall_1.id_6 = 0;
 endmodule

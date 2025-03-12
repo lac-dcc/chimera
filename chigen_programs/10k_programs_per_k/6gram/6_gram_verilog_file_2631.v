@@ -1,47 +1,41 @@
-// Seed: 62884483
+// Seed: 3874167547
 module module_0 (
-    input supply0 id_0,
-    input tri id_1,
-    output tri0 id_2,
-    input tri1 id_3,
-    input tri1 id_4,
-    output tri1 id_5
+    id_1,
+    id_2
 );
-  initial $display(1'b0, 1, id_3 ==? 1);
-  assign module_1.type_4 = 0;
-  `define pp_7 (  pp_8  ,  pp_9  )  0
-  assign id_5 = 1'd0;
-  assign #id_10 `pp_8 = id_3;
-  always @(negedge `pp_7 or posedge 1) $display(1, `pp_9);
-  wire id_11;
-  wire id_12;
-  wire id_13;
-  wire id_14;
-  assign id_2 = 1'b0;
+  output tri id_2;
+  input wire id_1;
+  genvar id_3;
+  logic [-1 : 1] id_4;
+  assign id_2 = 1 < id_3;
+  assign id_4 = -1;
 endmodule
-module module_1 (
-    input wire id_0,
-    input tri id_1,
-    input wire id_2,
-    input tri id_3,
-    input tri0 id_4,
-    input tri id_5,
-    inout wor id_6,
-    output tri1 id_7,
-    input tri0 id_8,
-    input supply0 id_9,
-    output wire id_10,
-    input wor id_11,
-    output wor id_12
+module module_1 #(
+    parameter id_1 = 32'd56,
+    parameter id_5 = 32'd90,
+    parameter id_9 = 32'd41
+) (
+    output supply0 id_0,
+    input supply0 _id_1,
+    output wand id_2,
+    output wire id_3,
+    input supply1 id_4,
+    input wire _id_5,
+    input supply1 id_6,
+    input uwire id_7,
+    input supply0 id_8,
+    output tri0 _id_9,
+    input supply1 id_10,
+    output tri0 id_11
 );
-  assign id_12 = id_0;
-  wire id_14;
+  wire id_13;
+  ;
+  wire [id_5 : id_1] id_14;
   module_0 modCall_1 (
-      id_8,
-      id_4,
-      id_6,
-      id_9,
-      id_5,
-      id_6
+      id_13,
+      id_14
   );
+  assign modCall_1.id_2 = 0;
+  parameter id_15 = 1;
+  logic [id_9 : -1] id_16;
 endmodule

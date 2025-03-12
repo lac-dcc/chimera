@@ -1,40 +1,66 @@
-// Seed: 3180749601
+// Seed: 161970174
 module module_0 (
-    input tri id_0,
-    input tri id_1,
-    output supply0 id_2,
-    input wand id_3
-);
-  wire id_5;
-endmodule
-module module_1 (
-    input tri1 id_0,
-    input logic id_1,
-    input tri0 id_2,
+    input tri0 id_0,
+    output supply0 id_1,
+    output tri1 id_2,
     input tri0 id_3,
-    input tri1 id_4,
-    output wand id_5,
-    input logic id_6,
-    input supply1 id_7,
-    input tri id_8,
-    output logic id_9,
-    output tri id_10
+    output wand id_4,
+    input tri1 module_0
 );
-  wire id_12, id_13;
-  always @(posedge id_1 or posedge id_6) begin : LABEL_0
-    id_9 <= #1 id_6;
-  end
-  wire id_14;
+endmodule
+module module_1 #(
+    parameter id_0  = 32'd19,
+    parameter id_10 = 32'd99,
+    parameter id_20 = 32'd21,
+    parameter id_4  = 32'd4,
+    parameter id_9  = 32'd39
+) (
+    input supply0 _id_0,
+    output wire id_1,
+    input tri1 id_2,
+    output logic id_3,
+    output supply1 _id_4,
+    output supply0 id_5,
+    input uwire id_6,
+    input wand id_7,
+    output wor id_8,
+    input tri0 _id_9
+    , id_19,
+    input wand _id_10,
+    input wand id_11,
+    input uwire id_12,
+    input tri0 id_13,
+    input wor id_14,
+    input tri0 id_15,
+    input uwire id_16,
+    output tri0 id_17
+);
+  wire [id_9 : -1] _id_20;
+  bit id_21;
   module_0 modCall_1 (
+      id_16,
       id_8,
-      id_4,
-      id_5,
-      id_7
+      id_1,
+      id_12,
+      id_8,
+      id_2
   );
-  assign modCall_1.type_1 = 0;
-  assign id_9 = id_5++;
-  wire id_15;
-  wire id_16;
-  assign id_12 = id_14;
-  wire id_17, id_18, id_19;
+  struct packed {
+    logic [id_20 : -1] id_22;
+    struct packed {
+      id_23 id_24;
+      logic [id_0  &&  -1  &&  id_4  &&  id_10 : 1] id_25;
+    } id_26;
+  } id_27;
+  assign id_27.id_22 = 1'b0;
+  assign id_3 = -1;
+  assign id_27.id_25 = 1;
+  always @(id_27)
+    if (-1'h0) begin : LABEL_0
+      id_21 = 1'h0;
+    end
+  always @(id_9) begin : LABEL_1
+    id_3 <= $realtime;
+    id_27.id_26 <= id_2;
+  end
 endmodule

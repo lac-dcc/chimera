@@ -1,41 +1,62 @@
-// Seed: 2744335707
+// Seed: 567754745
 module module_0 (
-    input  uwire id_0,
-    output uwire id_1,
-    input  wire  id_2,
-    input  wor   id_3,
-    input  tri0  id_4,
-    input  wor   id_5,
-    input  uwire id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
+  input wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  output wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  logic id_15;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input tri0 id_1,
-    input wor id_2
-    , id_7,
-    output tri0 id_3,
-    output wand id_4,
-    input supply0 id_5
+    output tri1 id_0,
+    input supply0 id_1,
+    input wand id_2,
+    input wire id_3,
+    input wor id_4,
+    output wire id_5,
+    input tri0 id_6
+    , id_9,
+    input wire id_7
 );
-  initial
-  fork : SymbolIdentifier
-  join : SymbolIdentifier
-  assign id_4 = 1'b0;
-  initial begin : LABEL_0
-    assert (1) $display;
-  end
-  id_8(
-      .id_0(id_4 + 1)
-  );
+  logic id_10;
   module_0 modCall_1 (
-      id_2,
-      id_4,
-      id_5,
-      id_0,
-      id_0,
-      id_1,
-      id_5
+      id_10,
+      id_10,
+      id_10,
+      id_9,
+      id_9,
+      id_9,
+      id_10,
+      id_10,
+      id_10,
+      id_9,
+      id_10,
+      id_9,
+      id_10,
+      id_9
   );
-  assign modCall_1.SymbolIdentifier.SymbolIdentifier.type_1 = 0;
 endmodule

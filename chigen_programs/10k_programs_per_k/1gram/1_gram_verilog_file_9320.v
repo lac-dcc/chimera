@@ -1,48 +1,40 @@
-// Seed: 376126279
+// Seed: 700262236
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    id_1
 );
-  input wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign module_1.id_8 = 0;
+  output wire id_1;
+  reg id_2;
+  assign module_1.id_0 = 0;
+  initial begin : LABEL_0
+    $signed(22);
+    ;
+    begin : LABEL_1
+      begin : LABEL_2
+        id_2 = id_2;
+      end
+    end
+    begin : LABEL_3
+      @(id_2) begin : LABEL_4
+        disable id_3;
+      end
+      @(posedge -1) if (1) @(posedge id_2) id_2 <= id_2;
+    end
+    begin : LABEL_5
+      SystemTFIdentifier(-1, 1 & 1, -1);
+      id_2 <= 1;
+    end
+  end
+  wire id_4;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    output logic   id_0,
+    input  supply1 id_1
 );
-  inout wire id_14;
-  output wire id_13;
-  input wire id_12;
-  input wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  input wire id_6;
-  input wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_8 = 1;
-  module_0 modCall_1 (
-      id_8,
-      id_4,
-      id_6
-  );
+  always
+    if (-1) id_0 <= id_1;
+    else if (1 == 1'h0) id_0 <= id_1;
+  integer [1 : 1] id_3;
+  ;
+  module_0 modCall_1 (id_3);
+  assign id_0 = -1'b0;
 endmodule

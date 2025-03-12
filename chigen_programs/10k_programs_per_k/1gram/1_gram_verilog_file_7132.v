@@ -1,48 +1,59 @@
-// Seed: 3327012505
+// Seed: 1150537640
 module module_0 (
-    id_1
+    output tri0  id_0,
+    output wire  id_1,
+    input  wire  id_2,
+    output tri   id_3,
+    input  tri   id_4,
+    input  uwire id_5
 );
-  input wire id_1;
-  wire id_2, id_3, id_4;
-  assign module_1.type_1 = 0;
+  wire id_7, id_8, id_9, id_10;
+  assign id_7 = id_4;
 endmodule
 module module_1 (
-    output supply0 id_0
-    , id_33,
-    output uwire id_1,
-    input supply1 id_2,
-    input tri id_3,
-    input supply1 id_4,
-    input uwire id_5,
-    output wand id_6,
-    output supply0 id_7,
-    input wor id_8,
-    output wand id_9,
-    input supply1 id_10
-    , id_34,
-    input uwire id_11,
-    input wor id_12
-    , id_35,
-    input wire id_13,
-    output tri id_14,
-    input uwire id_15,
-    input supply0 id_16#(.id_36(1)),
-    input tri0 id_17,
-    output tri0 id_18,
-    output supply0 id_19,
-    input wor id_20,
-    input tri0 id_21,
-    output tri id_22,
-    input supply1 id_23,
-    input tri0 id_24,
-    input wor id_25,
-    input tri1 id_26,
-    output supply0 id_27,
-    input tri0 id_28,
-    input wand id_29,
-    input wire id_30,
-    output wire id_31
+    input  tri1 id_0,
+    output tri1 id_1
 );
-  assign id_31 = 1;
-  module_0 modCall_1 (id_35);
+  logic id_3;
+  ;
+  xnor primCall (id_1, id_0, id_3);
+  assign id_1 = id_0;
+  supply1 id_4 = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0
+  );
+  assign modCall_1.id_3 = 0;
+endmodule
+module module_2 #(
+    parameter id_4 = 32'd35
+) (
+    input  wire  id_0#(1 + 1, -1),
+    input  tri   id_1,
+    output logic id_2
+);
+  assign id_2 = -1;
+  logic _id_4;
+  wire [id_4 : ""] id_5;
+  always id_2 = id_1;
+  assign id_2 = -1;
+endmodule
+module module_3 (
+    output logic id_0,
+    input  tri0  id_1,
+    input  wand  id_2,
+    input  wor   id_3
+);
+  final id_0 <= $realtime;
+  module_2 modCall_1 (
+      id_2,
+      id_2,
+      id_0
+  );
+  tri0 id_5 = -1;
+  wire id_6;
 endmodule

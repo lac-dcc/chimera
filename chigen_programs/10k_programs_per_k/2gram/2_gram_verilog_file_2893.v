@@ -1,66 +1,51 @@
-// Seed: 2179365117
+// Seed: 34171568
 module module_0 (
-    input wand id_0,
-    output wor id_1,
-    input supply1 id_2,
-    output wor id_3,
-    input supply1 id_4,
-    output tri0 id_5,
-    input wor id_6,
-    output wor id_7,
-    output uwire id_8,
-    output supply1 id_9,
-    input tri1 id_10,
-    input wor id_11,
-    input tri0 id_12,
-    input uwire id_13,
-    input tri id_14,
-    output wor id_15,
-    input wor id_16,
-    input tri0 id_17,
-    input wire id_18,
-    input wire id_19
+    id_1,
+    id_2
 );
-  wire id_21 = 1;
-  wire id_22 = 1'h0;
-  assign module_1.id_3 = 0;
-  wire id_23;
-  tri0 id_24 = id_18;
-  assign id_22 = 1 << id_22;
+  inout wire id_2;
+  input wire id_1;
+  assign module_1.id_0 = 0;
+  static logic id_3;
+  ;
+  assign id_2 = id_1;
 endmodule
 module module_1 #(
-    parameter id_5 = 32'd81,
-    parameter id_6 = 32'd5
+    parameter id_4 = 32'd90
 ) (
-    output supply1 id_0
+    output wire id_0,
+    input wire id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input wand _id_4,
+    output logic id_5,
+    input supply1 id_6,
+    input supply0 id_7,
+    input supply1 id_8,
+    input uwire id_9,
+    input supply0 id_10,
+    output logic id_11,
+    output logic id_12,
+    input tri0 id_13
 );
-  wire id_3;
-  always id_2 <= 1;
-  assign id_0 = id_3;
+  id_15 :
+  assert property (@(negedge -1 or id_8) $realtime | 1'b0)
+  else begin : LABEL_0
+    $unsigned(69);
+    ;
+    id_11 <= -1'b0 && id_3;
+    if (1 - 1) begin : LABEL_1
+      id_12 = 1;
+      id_12 = id_3;
+    end else begin : LABEL_2
+    end
+    id_5 <= id_4;
+  end
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_3,
-      id_0,
-      id_3,
-      id_0,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_0,
-      id_3,
-      id_3,
-      id_3,
-      id_3
+      id_15,
+      id_15
   );
-  wire id_4 = id_4;
-  defparam id_5.id_6 = 1'b0; id_7(
-      .id_0(id_6)
-  );
+  assign id_15 = id_4;
+  parameter id_16 = -1;
+  wire [id_4 : -1] id_17;
 endmodule

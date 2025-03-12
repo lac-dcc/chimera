@@ -1,29 +1,38 @@
-// Seed: 3437688841
-module module_0;
-  always while (1 != id_1) $display(id_1);
-  wire id_2;
-  assign module_1.id_7 = 0;
-  tri0 id_3;
-  wire id_4;
+// Seed: 1266881359
+module module_0 (
+    output wand id_0,
+    input supply0 id_1,
+    output wor id_2,
+    output wor id_3,
+    output tri id_4
+);
+  timeprecision 1ps;
   assign id_3 = id_1;
-  assign id_3 = 1;
-  wire id_5;
 endmodule
 module module_1 (
-    input  tri   id_0,
-    output uwire id_1,
-    input  tri0  id_2
-    , id_5,
-    output wor   id_3
+    input uwire id_0,
+    input wor id_1,
+    input tri1 id_2,
+    input supply1 id_3,
+    output tri id_4,
+    input wor id_5,
+    input tri0 id_6,
+    output supply1 id_7,
+    input wand id_8,
+    output uwire id_9,
+    output logic id_10
+    , id_13,
+    output logic id_11
 );
-  wire id_6;
-  module_0 modCall_1 ();
-  tri0 id_7;
-  wand id_8;
-  assign id_8 = id_7;
-  assign id_1 = id_5 == (1);
-  wire id_9;
-  id_10(
-      .id_0(id_8), .id_1(!id_8)
+  always @(*)
+    if (-1) id_10 <= -1'h0;
+    else id_11 <= id_13;
+  module_0 modCall_1 (
+      id_7,
+      id_5,
+      id_9,
+      id_7,
+      id_9
   );
+  assign modCall_1.id_2 = 0;
 endmodule

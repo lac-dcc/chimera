@@ -1,48 +1,47 @@
-// Seed: 2212409638
-module module_0 (
-    input wor id_0,
-    input supply0 id_1,
-    input wand id_2,
-    input wor id_3,
-    input tri0 id_4
+// Seed: 2992915162
+module module_0;
+endmodule : SymbolIdentifier
+module module_1 #(
+    parameter id_4 = 32'd96
+) (
+    input  uwire id_0,
+    input  tri0  id_1,
+    output tri0  id_2,
+    input  tri   id_3,
+    input  wor   _id_4
 );
-  assign module_1.id_4 = 0;
-  assign id_6 = 1;
+  logic [7:0][-1 'b0 +  -1 'h0 : id_4] id_6, id_7, id_8, id_9;
+  module_0 modCall_1 ();
+  always begin : LABEL_0
+    id_9[-1] <= id_7;
+  end
+  assign id_2 = -1;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input wand id_1,
-    output tri id_2,
-    output tri0 id_3,
-    input tri1 id_4,
-    input supply0 id_5,
-    input tri0 id_6,
-    input wor id_7,
-    input tri id_8,
-    input wand id_9,
-    input supply1 id_10,
-    input uwire id_11,
-    input tri1 id_12,
-    output supply1 id_13,
-    input wand id_14,
-    input tri1 id_15,
-    input uwire id_16,
-    input tri1 id_17,
-    input wire id_18,
-    output tri1 id_19,
-    input tri0 id_20,
-    input wand id_21
+module module_2;
+  module_0 modCall_1 ();
+endmodule
+program module_3 #(
+    parameter id_3 = 32'd34,
+    parameter id_5 = 32'd85
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4,
+    _id_5,
+    id_6
 );
-  module_0 modCall_1 (
-      id_9,
-      id_10,
-      id_1,
-      id_4,
-      id_9
-  );
-  assign id_19 = id_21;
-  initial id_3 = 1;
-  wire id_23;
-  wire id_24;
-  assign id_19 = 1;
-endmodule
+  output wire id_6;
+  inout wire _id_5;
+  input wire id_4;
+  inout wire _id_3;
+  module_0 modCall_1 ();
+  input wire id_2;
+  input wire id_1;
+  logic [id_3 : id_5] id_7;
+  wire id_8;
+  ;
+  logic id_9;
+  struct packed {logic id_10;} id_11, id_12;
+  parameter id_13 = 1;
+endprogram

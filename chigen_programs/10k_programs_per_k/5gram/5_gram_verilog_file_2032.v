@@ -1,31 +1,45 @@
-// Seed: 1846053958
+// Seed: 641870002
 module module_0 (
-    input uwire id_0,
-    input wire  id_1,
-    input uwire id_2
+    output supply1 id_0,
+    output wor id_1,
+    input wire id_2,
+    input tri0 id_3,
+    input tri0 id_4,
+    input uwire id_5
 );
-  assign id_4 = id_4;
-  wor id_5 = 1;
-  supply0 id_6 = id_5;
-  supply0 id_7 = id_0;
-  always_latch @(*) id_5 = module_0;
 endmodule
 module module_1 (
-    output logic id_0,
-    input supply1 id_1,
-    input tri0 id_2
+    input  wand id_0,
+    output wire id_1
 );
-  generate
-    if (1'b0) begin : LABEL_0
-      always @(*) begin : LABEL_0
-        id_0 <= 1;
-      end
-    end else assign {id_2, id_2, 1, 1, !id_2} = 1;
-  endgenerate
+  logic id_3;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0
+  );
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri1 id_1,
+    output supply1 id_2,
+    output supply1 id_3,
+    output wire id_4,
+    input wand id_5,
+    output supply1 id_6,
+    output tri id_7
+);
+  assign id_4 = -1;
+  nor primCall (id_4, id_1, id_5, id_0);
   module_0 modCall_1 (
       id_2,
-      id_1,
+      id_6,
+      id_5,
+      id_0,
+      id_0,
       id_1
   );
-  assign modCall_1.id_6 = 0;
 endmodule

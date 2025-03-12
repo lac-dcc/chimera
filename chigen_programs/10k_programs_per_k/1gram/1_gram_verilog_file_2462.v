@@ -1,71 +1,97 @@
-// Seed: 3675292817
-module module_0 (
-    id_1
+// Seed: 1256791533
+module module_0;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd4,
+    parameter id_5 = 32'd22,
+    parameter id_6 = 32'd92
+) (
+    _id_1,
+    id_2,
+    id_3,
+    id_4,
+    _id_5
 );
-  inout wire id_1;
-  supply1 id_2, id_3 = 1, id_4;
-  always
-    if (1)
-      if (1) id_2 = id_1;
-      else @(id_4 or posedge 1) id_4 = 1;
-  wire id_5;
+  input wire _id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire _id_1;
+  wire [id_5 : id_1] _id_6, id_7;
+  logic id_8;
+  ;
+  module_0 modCall_1 ();
+  logic id_9[-1 : id_6  +  1];
+  ;
 endmodule
-module module_1;
-  tri0 id_2, id_3 = 1 ? 1 : 1;
-  module_0 modCall_1 (id_3);
-  assign modCall_1.type_6 = 0;
-endmodule
-module module_2 (
-    input tri id_0,
-    input uwire id_1,
+module module_2 #(
+    parameter id_29 = 32'd66,
+    parameter id_8  = 32'd63
+) (
+    input wor id_0,
+    input wor id_1,
     input wire id_2,
-    input wor id_3,
-    input supply0 id_4,
-    input supply1 id_5,
-    input wand id_6,
-    input wand id_7,
-    inout uwire id_8,
-    output wor id_9,
-    output wor id_10
-    , id_26,
-    input uwire id_11,
-    input uwire id_12,
-    input uwire id_13,
-    output supply0 id_14,
-    input tri id_15,
-    input tri id_16,
-    input supply1 id_17,
-    input supply0 id_18,
-    input supply1 id_19,
-    input tri id_20,
-    output wor id_21,
-    input tri1 id_22,
-    input tri id_23,
-    input wand id_24
+    output tri1 id_3,
+    output supply0 id_4[id_29  -  (  1  ) : -1 'b0 -  SystemTFIdentifier  (  1  )],
+    output tri id_5,
+    output tri1 id_6,
+    input tri1 id_7[id_8 : 1],
+    input wand _id_8,
+    input tri0 id_9,
+    input wand id_10,
+    input wand id_11,
+    output wire id_12,
+    input supply0 id_13,
+    input wor id_14,
+    input supply0 id_15,
+    input supply1 id_16,
+    output wire id_17,
+    input uwire id_18,
+    input wire id_19,
+    output tri0 id_20,
+    input tri0 id_21,
+    output supply1 id_22
+    , id_39 = 1 + {-1'd0{1}},
+    input wand id_23,
+    output wor id_24,
+    input wire id_25,
+    output wor id_26,
+    output tri id_27
+    , id_40,
+    input supply0 id_28,
+    input tri0 _id_29,
+    input supply1 id_30,
+    output tri id_31,
+    input tri1 id_32,
+    input tri0 id_33,
+    input supply0 id_34,
+    input wor id_35,
+    input supply1 id_36,
+    output wire id_37
 );
-  wire id_27;
-  module_0 modCall_1 (id_26);
-  assign id_26 = 1;
-  assign id_9  = 1;
-  assign id_10 = 1'd0;
-  supply1 id_28 = id_23;
-  xnor primCall (
-      id_14,
-      id_4,
-      id_5,
-      id_7,
-      id_6,
-      id_11,
-      id_3,
-      id_15,
-      id_27,
-      id_13,
-      id_23,
-      id_8,
-      id_22,
-      id_24,
+  and primCall (
       id_12,
+      id_13,
+      id_14,
+      id_15,
+      id_16,
+      id_18,
+      id_19,
       id_2,
-      id_1
+      id_21,
+      id_23,
+      id_25,
+      id_28,
+      id_30,
+      id_32,
+      id_33,
+      id_34,
+      id_35,
+      id_36,
+      id_39,
+      id_40,
+      id_7,
+      id_9
   );
+  module_0 modCall_1 ();
 endmodule

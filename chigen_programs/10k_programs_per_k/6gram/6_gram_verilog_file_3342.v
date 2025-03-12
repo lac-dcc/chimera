@@ -1,89 +1,49 @@
-// Seed: 2633087150
+// Seed: 383352629
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16
+    output logic id_0,
+    output wire  id_1
 );
-  inout wire id_16;
-  output wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  output wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  output wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_17;
-  wire id_18;
-  assign module_1.type_0 = 0;
-  assign id_15 = 1;
-endmodule
-module module_1 (
-    input uwire id_0,
-    input supply0 id_1,
-    input logic id_2,
-    output wor id_3,
-    input tri0 id_4,
-    input tri1 id_5,
-    input wor id_6,
-    output uwire id_7,
-    input wor id_8,
-    input uwire id_9,
-    input logic id_10,
-    output tri0 id_11,
-    input wand id_12
-    , id_20,
-    output wor id_13,
-    output supply1 id_14,
-    output tri0 id_15,
-    output logic id_16,
-    input tri1 id_17,
-    output logic id_18
-);
-  assign id_14 = (1 == id_0);
-  integer id_21;
-  always @(posedge id_5) begin : LABEL_0
-    id_16 <= id_10;
-    deassign id_21.id_12;
-    id_18 <= 1;
+  parameter id_3 = 1 == 1;
+  wire id_4;
+  assign module_1.id_1 = 0;
+  parameter id_5 = id_3;
+  wire id_6;
+  initial begin : LABEL_0
+    id_0 <= id_6;
   end
-  assign id_16 = id_2;
+endmodule
+module module_1 #(
+    parameter id_14 = 32'd75
+) (
+    input  wire  id_0,
+    input  uwire id_1,
+    input  tri0  id_2,
+    input  tri1  id_3,
+    input  tri0  id_4,
+    inout  logic id_5,
+    input  tri0  id_6,
+    output uwire id_7,
+    input  tri0  id_8,
+    input  tri   id_9,
+    input  wire  id_10,
+    output tri   id_11
+);
+  localparam id_13 = 1;
+  logic [1 : -1] _id_14 = id_3 == id_0 - 1;
+  assign id_5 = -1;
+  assign id_7 = id_9;
   module_0 modCall_1 (
-      id_21,
-      id_20,
-      id_21,
-      id_20,
-      id_20,
-      id_21,
-      id_21,
-      id_20,
-      id_21,
-      id_20,
-      id_20,
-      id_21,
-      id_20,
-      id_20,
-      id_20,
-      id_20
+      id_5,
+      id_11
   );
+  parameter id_15 = 1;
+  assign id_5 = id_9;
+  always id_5 = @(-1'b0) id_0;
+  wire id_16;
+  assign id_11 = id_14;
+  wire id_17;
+  parameter time id_18 = -1 == id_13;
+  localparam id_19 = id_13;
+  wire [id_14 : -1] id_20;
+  logic id_21;
 endmodule

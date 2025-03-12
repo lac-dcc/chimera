@@ -1,22 +1,5 @@
-// Seed: 522614348
-module module_0;
-  wire id_2;
-  assign module_2.id_17 = 0;
-endmodule
-module module_1 (
-    input wire id_0,
-    input wand id_1,
-    input tri id_2,
-    input supply1 id_3,
-    input supply1 id_4,
-    input supply0 id_5
-);
-  wire id_7;
-  wire id_8;
-  module_0 modCall_1 ();
-  wire id_9;
-endmodule
-module module_2 (
+// Seed: 1032001759
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -30,29 +13,65 @@ module module_2 (
     id_11,
     id_12,
     id_13,
-    id_14,
+    module_0,
     id_15,
     id_16,
     id_17
 );
-  input wire id_17;
-  input wire id_16;
+  inout wire id_17;
+  inout wire id_16;
   inout wire id_15;
-  output wire id_14;
+  inout wire id_14;
   input wire id_13;
-  output wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  output wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  output wire id_3;
+  inout wire id_12;
+  input wire id_11;
+  input wire id_10;
+  input wire id_9;
+  inout uwire id_8;
+  input wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
   inout wire id_2;
-  inout wire id_1;
-  assign id_14 = 1 ? 1 : 1;
-  assign id_1  = ~id_15 == id_2 ? 1 : id_17;
-  module_0 modCall_1 ();
+  input wire id_1;
+  assign id_8 = 1'b0;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd61,
+    parameter id_3 = 32'd83,
+    parameter id_9 = 32'd51
+) (
+    input wand id_0,
+    input tri1 _id_1,
+    output logic id_2,
+    input wire _id_3,
+    input wor id_4,
+    input wor id_5,
+    input tri0 id_6,
+    input supply1 id_7
+);
+  wire [id_3 : id_1] _id_9;
+  wire [  id_9 : -1] id_10;
+  for (id_11 = id_3; 1; id_2 = -1'b0) tri0 id_12 = -1;
+  module_0 modCall_1 (
+      id_12,
+      id_10,
+      id_10,
+      id_12,
+      id_12,
+      id_12,
+      id_12,
+      id_10,
+      id_12,
+      id_11,
+      id_10,
+      id_12,
+      id_11,
+      id_10,
+      id_12,
+      id_10,
+      id_11
+  );
+  logic id_13 = id_0 == id_12;
 endmodule

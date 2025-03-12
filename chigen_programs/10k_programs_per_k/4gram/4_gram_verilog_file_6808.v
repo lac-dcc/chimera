@@ -1,84 +1,40 @@
-// Seed: 1396141363
+// Seed: 1373984509
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    module_0
+    id_4
 );
-  inout wire id_12;
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
-  input wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  output wire id_3;
+  output wire id_4;
+  output supply1 id_3;
   output wire id_2;
   output wire id_1;
-  wire id_13, id_14;
-  wire id_15;
-  wire id_16 = id_14;
+  wire id_5;
+  bit id_6 = {~id_5, 1'h0};
+  tri1 [1 : -1 'b0] id_7 = -1;
+  assign id_3 = id_6 - 1;
+  logic id_8;
+  always @(posedge id_8) begin : LABEL_0
+    id_6 <= 1;
+    assume (id_5);
+    if (1) disable id_9;
+  end
+  logic id_10;
+  wire  id_11 = id_8;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    id_1
 );
-  inout wire id_14;
-  inout wire id_13;
-  input wire id_12;
-  inout wire id_11;
-  input wire id_10;
-  input wire id_9;
-  output wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
   inout wire id_1;
-  id_15(
-      .id_0(1'b0), .id_1(id_8 - id_9), .id_2(1), .id_3(1), .id_4(""), .id_5($display)
-  );
   module_0 modCall_1 (
-      id_8,
-      id_6,
-      id_4,
-      id_4,
-      id_9,
-      id_4,
-      id_7,
-      id_4,
-      id_4,
-      id_13,
-      id_14,
-      id_11
+      id_1,
+      id_1,
+      id_1,
+      id_1
   );
-  assign modCall_1.id_6 = 0;
-  assign id_6 = id_14 === 1 ? id_5 : 1'b0 >> 1'b0;
-  wire id_16;
-  wire id_17;
-  wire id_18;
+  id_2 :
+  assert property (@(posedge 1) -1)
+  else $unsigned(81);
+  ;
+  always @(posedge id_2 or 1'b0) id_2 = (1);
 endmodule

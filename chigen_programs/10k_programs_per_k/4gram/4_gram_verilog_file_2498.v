@@ -1,92 +1,41 @@
-// Seed: 2413915775
+// Seed: 1728375004
 module module_0 (
-    input tri1 id_0,
-    input wand id_1,
-    output supply1 id_2,
-    output tri id_3,
-    input uwire id_4,
-    input tri0 id_5,
-    input supply0 id_6,
-    input wand id_7,
-    input uwire id_8,
-    input wand id_9,
-    input uwire id_10,
-    input tri id_11,
-    input tri1 id_12,
-    input wand id_13,
-    input supply1 id_14,
-    input tri0 id_15,
-    output tri1 id_16,
-    input tri0 id_17,
-    input wire id_18,
-    input supply0 id_19,
-    output uwire id_20,
-    input wire id_21,
-    input wor id_22,
-    input uwire id_23,
-    input supply1 id_24,
-    output wand id_25,
-    output wor id_26,
-    input supply0 id_27,
-    input uwire id_28,
-    input supply0 id_29,
-    output tri id_30,
-    input supply1 id_31,
-    input tri id_32,
-    output supply1 id_33,
-    input uwire id_34
+    id_1,
+    id_2
 );
-  wire id_36;
-  wire id_37;
-  assign id_30 = 1;
+  output wire id_2;
+  inout wire id_1;
+  wire id_3;
+  wire [-1 : -1] id_4;
 endmodule
-module module_1 (
-    input tri id_0,
-    output uwire id_1,
-    inout supply1 id_2,
-    output wand id_3,
-    input supply1 id_4
+module module_1 #(
+    parameter id_10 = 32'd59,
+    parameter id_12 = 32'd36,
+    parameter id_3  = 32'd32
+) (
+    output uwire id_0,
+    input tri id_1,
+    output logic id_2,
+    input supply1 _id_3,
+    output tri0 id_4
 );
-  assign id_3 = id_0;
-  or primCall (id_2, id_4, id_0, id_6);
   wire id_6;
-  module_0 modCall_1 (
-      id_2,
-      id_0,
-      id_2,
-      id_1,
-      id_0,
-      id_2,
-      id_4,
-      id_4,
-      id_2,
-      id_0,
-      id_4,
-      id_0,
-      id_2,
-      id_0,
-      id_4,
-      id_4,
-      id_1,
-      id_4,
-      id_2,
-      id_0,
-      id_3,
-      id_4,
-      id_0,
-      id_4,
-      id_2,
-      id_3,
-      id_1,
-      id_4,
-      id_4,
-      id_4,
-      id_2,
-      id_4,
-      id_4,
-      id_1,
-      id_2
-  );
-  assign modCall_1.id_24 = 0;
   wire id_7;
+  for (id_8 = 1'b0; -1; id_2 = id_3) begin : LABEL_0
+    always force id_2[id_3] = id_3;
+    wire id_9;
+  end
+  module_0 modCall_1 (
+      id_6,
+      id_7
+  );
+  assign id_4 = id_7;
+  parameter id_10 = 1;
+  wire id_11;
+  parameter id_12 = -1;
+  logic id_13;
+  ;
+  localparam id_14 = 1 & id_10;
+  parameter id_15 = id_14;
+  defparam id_10.id_12 = 1'b0;
 endmodule

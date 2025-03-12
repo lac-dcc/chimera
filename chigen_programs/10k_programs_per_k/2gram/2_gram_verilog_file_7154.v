@@ -1,34 +1,46 @@
-// Seed: 2882107642
+// Seed: 1729078464
 module module_0 (
-    output tri id_0,
+    input wor  id_0,
     input tri0 id_1,
-    input uwire id_2,
-    output wor id_3,
-    input supply1 id_4,
-    input uwire id_5
+    input wire id_2,
+    input wand id_3
 );
-  wire id_7;
-  assign module_1.type_0 = 0;
+  wire [-1 : 1] id_5;
+  assign #(id_0, -1) id_5 = -1;
+  assign id_5 = 1;
 endmodule
-module module_1 (
-    output wand id_0,
-    input tri0 id_1,
-    input wand id_2,
-    output tri1 id_3,
-    output wand id_4,
-    input tri0 id_5,
-    output tri0 id_6,
-    output supply0 id_7,
-    input tri id_8,
-    output wire id_9
+module module_1 #(
+    parameter id_0 = 32'd43,
+    parameter id_1 = 32'd95,
+    parameter id_6 = 32'd99,
+    parameter id_9 = 32'd24
+) (
+    output tri0 _id_0,
+    input tri1 _id_1,
+    input wor id_2,
+    output tri1 id_3
+    , id_8,
+    input wor id_4,
+    input uwire id_5,
+    input supply0 _id_6
 );
+  logic ["" : id_0] _id_9, id_10, id_11;
+  always begin : LABEL_0
+    id_11[1'b0 :-1] = -1;
+  end
+  assign id_10 = id_4;
+  logic id_12;
+  ;
   module_0 modCall_1 (
-      id_7,
-      id_2,
       id_5,
-      id_9,
-      id_5,
-      id_8
+      id_4,
+      id_4,
+      id_4
   );
-  assign id_6 = id_8;
+  assign id_12 = 1;
+  localparam id_13 = 1;
+  assign id_8 = 1'b0;
+  localparam integer id_14 = id_13[-1];
+  logic [{  -1  ,  id_6  } : (  (  id_9  +  id_1  )  )] id_15;
+  ;
 endmodule

@@ -1,42 +1,38 @@
-// Seed: 4096339572
+// Seed: 3701182558
 module module_0 (
-    output tri0 id_0
+    output wire id_0
 );
-  assign module_2.id_3 = 0;
+  always begin : LABEL_0
+    $clog2(19);
+    ;
+  end
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri id_1,
-    input supply1 id_2,
-    input tri id_3,
-    input uwire id_4,
-    input uwire id_5,
-    input tri id_6,
-    output wire id_7
+    output wire id_0,
+    input wand id_1,
+    output tri id_2,
+    input wand id_3,
+    output wire id_4,
+    input tri0 id_5,
+    input wor id_6,
+    output supply0 id_7,
+    output tri0 id_8,
+    input wor id_9,
+    output supply0 id_10,
+    input supply1 id_11,
+    input supply0 id_12,
+    input supply0 id_13,
+    input supply0 id_14,
+    input tri0 id_15,
+    input wire id_16,
+    input tri id_17,
+    input supply0 id_18,
+    input supply0 id_19,
+    output uwire id_20,
+    output wand id_21
 );
-  tri1 id_9;
-  assign id_9 = id_3 * "";
-  wire id_10;
-  wire id_11;
-  module_0 modCall_1 (id_9);
+  logic id_23 = {1{id_9}};
+  module_0 modCall_1 (id_20);
   assign modCall_1.id_0 = 0;
-  assign id_9 = id_6;
-  id_12(
-      1
-  );
-  real id_13;
-endmodule
-module module_2 (
-    input  tri  id_0,
-    output wire id_1,
-    input  tri0 id_2,
-    output wire id_3,
-    output tri  id_4,
-    output tri0 id_5,
-    input  tri  id_6,
-    input  wor  id_7
-);
-  wire id_9;
-  assign id_1 = 1;
-  module_0 modCall_1 (id_3);
+  logic id_24;
 endmodule

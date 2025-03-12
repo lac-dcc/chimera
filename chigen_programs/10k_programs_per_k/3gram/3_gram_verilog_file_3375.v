@@ -1,27 +1,31 @@
-// Seed: 402608789
-module module_0 ();
-  wire id_1;
-  assign id_1 = 1'b0;
-  module_2 modCall_1 ();
+// Seed: 282533913
+module module_0 (
+    input supply1 id_0
+);
 endmodule
-module module_0 ();
-  module_0 modCall_1 ();
-  assign modCall_1.type_2 = 0;
-  assign id_1 = id_1;
-  wire module_1;
+module module_1 (
+    input  wand  id_0,
+    output logic id_1
+);
+  always_ff @(posedge id_0 - id_0 or id_0) disable id_3;
+  always @(*) begin : LABEL_0
+    id_1 <= 1;
+  end
+  module_0 modCall_1 (id_0);
+  logic id_4;
 endmodule
-module module_2;
-  if (1'd0) begin : LABEL_0
-    wire id_2 = id_2;
-    if (id_1) assign id_1 = id_1 | 1;
-  end else begin : LABEL_0
-    id_4(
-        .id_0(1), .id_1(id_3)
-    );
-  end
-  initial id_5 <= id_5;
-  assign module_0.id_1 = 0;
-  always #1 begin : LABEL_0
-    id_5 <= 1;
-  end
+module module_2 #(
+    parameter id_5 = 32'd85
+) (
+    input wor id_0,
+    output tri id_1,
+    input tri id_2,
+    input wor id_3,
+    input wire id_4,
+    input supply0 _id_5
+);
+  tri [$ : id_5] id_7 = -1'b0;
+  module_0 modCall_1 (id_2);
+  assign modCall_1.id_0 = 0;
+  assign id_7 = id_4;
 endmodule

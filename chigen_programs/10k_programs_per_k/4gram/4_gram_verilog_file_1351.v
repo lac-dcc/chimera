@@ -1,68 +1,54 @@
-// Seed: 647128607
+// Seed: 3326157103
 module module_0 (
     id_1,
     id_2,
-    module_0,
     id_3,
+    id_4
+);
+  output wire id_4;
+  input wire id_3;
+  input wire id_2;
+  output tri1 id_1;
+  assign id_1 = -1;
+  generate
+    assign id_1 = -1;
+  endgenerate
+endmodule
+module module_1 #(
+    parameter id_1  = 32'd41,
+    parameter id_10 = 32'd46,
+    parameter id_3  = 32'd23,
+    parameter id_8  = 32'd38
+) (
+    _id_1,
+    id_2,
+    _id_3,
     id_4,
     id_5,
     id_6,
     id_7,
-    id_8
+    _id_8,
+    id_9
 );
-  input wire id_9;
-  input wire id_8;
+  inout wire id_9;
+  inout wire _id_8;
   input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  final $display;
-  assign module_2.type_10 = 0;
-endmodule
-module module_1 (
-    input wand id_0,
-    output supply0 id_1
-);
-  wire id_3, id_4, id_5 = id_4;
-  module_0 modCall_1 (
-      id_4,
-      id_4,
-      id_5,
-      id_4,
-      id_4,
-      id_4,
-      id_3,
-      id_5,
-      id_4
-  );
-endmodule
-module module_0 (
-    input supply1 id_0,
-    input supply0 module_2,
-    input supply0 id_2,
-    input wor id_3
-);
-  assign id_5 = 1 / 1;
-  wire id_6;
-  assign {1, id_3, id_2, 1, 1 & 1'b0} = 1;
+  output wire id_6;
+  input wire id_5;
+  inout logic [7:0] id_4;
+  input wire _id_3;
   module_0 modCall_1 (
       id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
-      id_6,
+      id_9,
+      id_5,
       id_6
   );
-  assign id_5 = id_0;
-  assign id_6 = 1;
-  id_7(
-      .id_0(), .id_1(id_5), .id_2(1'b0 && 1)
-  );
-  supply1 id_8 = 1;
+  output wire id_2;
+  input wire _id_1;
+  assign id_4[""] = -1'b0;
+  wire [1 : id_8] _id_10;
+  wire id_11;
+  ;
+  wire [{  (  -1  )  ,  1  ,  id_10  ,  id_10  , "" ,  id_1  ,  id_3  } : -1] id_12;
+  wire id_13;
 endmodule

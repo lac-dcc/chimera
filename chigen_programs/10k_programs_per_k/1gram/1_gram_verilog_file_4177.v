@@ -1,30 +1,39 @@
-// Seed: 4209875448
-module module_0 #(
-    parameter id_1 = 32'd59,
-    parameter id_2 = 32'd22,
-    parameter id_3 = 32'd47,
-    parameter id_4 = 32'd24
+// Seed: 1478626356
+module module_0 (
+    input wire id_0,
+    input wire id_1,
+    output wand id_2,
+    output uwire id_3,
+    input tri1 id_4,
+    input wire id_5,
+    output supply1 id_6,
+    input tri1 id_7,
+    output uwire id_8,
+    input wire id_9
 );
-  defparam id_1 = id_1, id_2 = (1), id_3 = id_2, id_4 = 1;
-  assign module_1.id_3 = "";
-  wire id_5, id_6, id_7, id_8;
-  wire id_9;
-  module_2 modCall_1 ();
-  wire id_10, id_11;
+  localparam integer id_11 = 1;
+  logic id_12;
+  logic id_13 = 1'b0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3
+program module_1 (
+    input supply0 id_0,
+    input tri1 id_1,
+    output tri id_2,
+    input tri0 id_3,
+    output wire id_4
 );
-  inout wire id_3;
-  output wire id_2;
-  input wire id_1;
-  assign id_3 = "";
-  module_0 modCall_1 ();
-endmodule
-module module_2;
-  final $display(1);
-  assign id_1 = id_1;
-  assign id_1 = id_1;
-endmodule
+  logic id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_0,
+      id_2,
+      id_4,
+      id_0,
+      id_3,
+      id_4,
+      id_3,
+      id_2,
+      id_1
+  );
+  assign modCall_1.id_3 = 0;
+endprogram

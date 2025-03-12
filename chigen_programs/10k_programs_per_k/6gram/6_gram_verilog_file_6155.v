@@ -1,30 +1,33 @@
-// Seed: 1752965631
+// Seed: 4157684452
 module module_0 ();
-  wire id_1;
-  assign module_1.id_10 = 0;
+  reg id_1;
+  assign id_1 = id_1 >> id_1 ? ~id_1 : -1;
+  assign id_1 = -1;
+  initial begin : LABEL_0
+    begin : LABEL_1
+      id_1 <= -1;
+      id_1 = id_1;
+    end
+  end
+  assign module_1.id_5 = 0;
 endmodule
 module module_1 (
-    input wand id_0,
-    input uwire id_1,
-    input uwire id_2
-    , id_14,
-    input tri id_3,
-    input tri1 id_4,
-    input wand id_5,
-    input supply1 id_6,
-    output logic id_7,
-    output logic id_8,
-    input wand id_9,
-    output tri1 id_10,
-    input tri0 id_11,
-    input supply1 id_12
+    input tri0 id_0,
+    output supply0 id_1
+    , id_8,
+    input supply1 id_2,
+    output logic id_3,
+    input uwire id_4,
+    input wire id_5,
+    output tri1 id_6
 );
-  wire id_15;
   module_0 modCall_1 ();
-  always @(posedge id_11, 1) begin : LABEL_0
-    id_8 <= 1'b0;
-  end
-  always @(*) begin : LABEL_0
-    id_7 <= 1;
+  parameter id_9 = -1;
+  assign id_1 = id_5 ? id_0 : id_4;
+  initial begin : LABEL_0
+    $clog2(13);
+    ;
+    if (-1'b0) id_3 <= id_9;
+    else if (-1) id_8 = id_8;
   end
 endmodule

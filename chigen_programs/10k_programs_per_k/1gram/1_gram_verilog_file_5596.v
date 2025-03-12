@@ -1,26 +1,47 @@
-// Seed: 2670376900
-module module_0;
-  always begin : LABEL_0
-    id_1 <= id_1;
-  end
-  assign module_1.id_11 = 0;
-  always id_2 = id_2;
-  always id_2 <= 1;
+// Seed: 2701026545
+module module_0 (
+    input  tri1 id_0,
+    input  wand id_1,
+    output tri0 id_2,
+    input  tri1 id_3,
+    input  tri1 id_4
+);
 endmodule
 module module_1 (
-    output supply0 id_0
+    output supply0 id_0,
+    input wand id_1,
+    output wire id_2
+    , id_7,
+    input uwire id_3,
+    input supply1 id_4,
+    input wand id_5
 );
-  id_2(
-      1
-  ); id_3(
-      1 ^ 1, 1 - id_0, id_2
+  parameter id_8 = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_5,
+      id_0,
+      id_1,
+      id_3
   );
-  wire id_4;
-  assign id_0 = id_2 + 1;
-  always @(posedge 1) id_0 = 1;
-  wire id_6;
-  tri0 id_7, id_8 = 1, id_9, id_10, id_11, id_12, id_13, id_14, id_15;
-  assign id_12 = 1'b0;
-  module_0 modCall_1 ();
-  always $display(id_5);
-endmodule : SymbolIdentifier
+  assign id_0 = 1 == id_1;
+endmodule
+module module_2 (
+    input tri1 id_0,
+    input wand id_1,
+    output wire id_2,
+    input supply0 id_3,
+    input supply1 id_4,
+    input wand id_5
+);
+  wire id_7;
+  module_0 modCall_1 (
+      id_3,
+      id_5,
+      id_2,
+      id_0,
+      id_5
+  );
+  assign modCall_1.id_1 = 0;
+  wire [1 'h0 : 1] id_8;
+endmodule

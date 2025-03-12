@@ -1,34 +1,52 @@
-// Seed: 3914869556
+// Seed: 1344898847
 module module_0 (
-    input  uwire id_0,
-    output tri1  id_1,
-    output wire  id_2,
-    output wand  id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  supply1 id_5 = 1;
-  assign module_1.id_2 = 0;
-  wire id_6;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
 endmodule
-module module_1 (
-    output wand id_0,
-    output tri1 id_1,
-    output supply0 id_2,
-    output supply1 id_3,
-    input tri1 id_4,
-    input tri1 id_5,
-    input tri0 id_6,
-    output supply1 id_7,
-    output supply1 id_8,
-    output wand id_9
+module module_1 #(
+    parameter id_1 = 32'd61,
+    parameter id_3 = 32'd28,
+    parameter id_6 = 32'd78
+) (
+    _id_1,
+    id_2
 );
-  initial begin : LABEL_0
-    id_1 = 1;
-  end
-  assign id_3 = id_6 == 1;
+  inout wire id_2;
+  output wire _id_1;
+  _id_3 :
+  assert property (@(posedge id_3 + $realtime) 1)
+  else $clog2(89);
+  ;
+  logic id_4;
+  ;
+  id_5 :
+  assert property (@(posedge -1) id_4)
+  else $unsigned(53);
+  ;
   module_0 modCall_1 (
-      id_6,
+      id_5,
+      id_4,
+      id_4,
       id_2,
-      id_1,
-      id_9
+      id_5,
+      id_4,
+      id_5
   );
+  wire [id_3 : 1  -  id_1] _id_6;
+  wire id_7[id_6 : 1];
+  ;
+  wire [1 : ""] id_8;
 endmodule

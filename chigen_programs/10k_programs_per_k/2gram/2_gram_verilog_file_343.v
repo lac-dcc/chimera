@@ -1,44 +1,65 @@
-// Seed: 3782008720
+// Seed: 3511220525
 module module_0 (
-    input tri1 id_0
+    output tri0 id_0,
+    output wand id_1
 );
-  assign id_2 = id_2;
-  wire  id_3;
-  wire  id_4 = id_3;
-  uwire id_5 = 1 == 1'b0;
-  wire  id_6;
-  wire  id_7;
+  assign module_1.id_3 = 0;
 endmodule
-module module_1 (
-    input wor id_0,
-    input wor id_1,
-    input supply1 id_2,
-    input wor id_3,
-    output supply1 id_4,
-    output tri0 id_5,
-    input wor id_6,
-    output wand id_7,
-    input uwire id_8,
-    output supply1 id_9,
-    input tri1 id_10,
-    input wor id_11,
-    input tri0 id_12,
-    output uwire id_13,
-    input tri id_14,
-    output wor id_15,
-    input wor id_16,
-    output uwire id_17
-    , id_22,
-    input tri0 id_18
-    , id_23,
-    input wire id_19,
-    output wire id_20
+macromodule module_1 (
+    input tri id_0,
+    input tri id_1,
+    output supply1 id_2,
+    output uwire id_3,
+    input tri0 id_4,
+    output supply0 id_5
+    , id_8,
+    input supply0 id_6
 );
-  wire id_24;
-  wire id_25;
-  wire id_26;
-  assign id_26 = id_26 - 1;
-  wire id_27, id_28, id_29, id_30;
-  wire id_31;
-  module_0 modCall_1 (id_6);
+  assign id_2 = id_0;
+  module_0 modCall_1 (
+      id_2,
+      id_5
+  );
+endmodule
+module module_2 (
+    output tri id_0,
+    input tri0 id_1,
+    input uwire id_2,
+    output tri0 id_3,
+    input wire id_4,
+    output supply0 id_5,
+    output wor id_6,
+    input supply0 id_7,
+    inout wire id_8,
+    input tri1 id_9,
+    input wand id_10,
+    input wor id_11,
+    input supply1 id_12,
+    input supply1 id_13,
+    input supply0 id_14,
+    input wand id_15,
+    input tri id_16,
+    input uwire id_17,
+    input supply0 id_18,
+    input wor id_19,
+    input wor id_20,
+    input uwire id_21,
+    input wand id_22,
+    input tri1 id_23,
+    output tri0 id_24,
+    input wire id_25,
+    input supply0 id_26,
+    output wand id_27,
+    input tri id_28,
+    input wor id_29,
+    input tri1 id_30
+);
+  id_32 :
+  assert property (@(1 or posedge id_29) id_20 - 1'b0)
+  else;
+  module_0 modCall_1 (
+      id_6,
+      id_27
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

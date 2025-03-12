@@ -1,57 +1,42 @@
-// Seed: 3819662973
+// Seed: 2312298853
 module module_0 (
-    input tri0 id_0,
-    output tri0 id_1,
-    output tri0 id_2,
-    output uwire id_3,
-    input wor id_4,
-    output uwire id_5,
-    output tri1 id_6,
-    output supply0 id_7,
-    input wand id_8,
-    output tri id_9,
-    output tri0 id_10,
-    input wire id_11
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_13;
-  always_latch $display(1'h0, 1);
-  assign id_3 = id_0;
-  wire id_14;
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  assign module_1.id_7 = 0;
+  inout tri1 id_2;
+  input wire id_1;
+  assign id_2 = id_1;
+  assign id_2 = 1;
+  logic id_6;
 endmodule
-module module_1 (
-    input tri id_0,
-    output tri id_1,
-    output supply0 id_2
+module module_1 #(
+    parameter id_0 = 32'd92,
+    parameter id_2 = 32'd2
+) (
+    input supply0 _id_0
 );
-  assign id_1 = 1;
-  initial $display("");
-  assign id_2 = 1 != id_0;
-  final id_1 = 1;
-  assign id_2 = 1;
-  wand id_4;
-  id_5(
-      .id_0(1'b0)
-  );
-  wand id_6 = id_4;
+  wire [id_0 : 1 'b0] _id_2;
+  wire id_3;
+  logic [7:0][id_2 : id_0] id_4, id_5;
+  integer id_6;
+  always id_4[id_2] = -1;
+  id_7 :
+  assert property (@(-1) id_5) $signed(30);
+  ;
+  assign id_3 = id_5;
   wire id_8;
-  wire id_9;
-  wire id_10;
   module_0 modCall_1 (
-      id_0,
-      id_1,
-      id_1,
-      id_2,
-      id_0,
-      id_2,
-      id_2,
-      id_1,
-      id_0,
-      id_1,
-      id_1,
-      id_0
+      id_6,
+      id_3,
+      id_3,
+      id_6,
+      id_3
   );
-  assign modCall_1.type_2 = 0;
-  supply1 id_11 = 1;
-  assign id_4 = 1;
-  assign id_2 = 1;
 endmodule

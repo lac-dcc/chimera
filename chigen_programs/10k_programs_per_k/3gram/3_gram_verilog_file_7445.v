@@ -1,41 +1,50 @@
-// Seed: 305028440
+// Seed: 1975130880
 module module_0 (
-    input  uwire id_0,
-    output logic id_1,
-    input  uwire id_2
+    input supply1 id_0
 );
-  always
-  fork
-    id_1 <= 1 - 1;
-    disable id_4;
-    id_4 <= 1'b0;
-  join
-  assign id_1 = 1;
-  assign id_1 = id_2 >> 1;
-  assign module_1.type_1 = 0;
-  wire id_5;
+  wire id_2;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    output tri id_1,
-    output supply1 id_2,
-    output tri id_3,
-    output wor id_4,
-    input tri0 id_5,
-    input logic id_6,
-    inout tri0 id_7,
-    input uwire id_8,
-    inout tri0 id_9,
-    output wor id_10,
-    output logic id_11,
-    input tri1 id_12,
-    input tri0 id_13,
-    output wire id_14
+    input  wire  id_0,
+    output tri0  id_1,
+    output tri   id_2,
+    output uwire id_3,
+    input  wor   id_4,
+    input  tri0  id_5,
+    input  tri0  id_6,
+    output tri1  id_7,
+    input  tri   id_8
 );
-  always if (1) id_11 <= id_6;
-  module_0 modCall_1 (
-      id_8,
-      id_11,
-      id_12
-  );
+  module_0 modCall_1 (id_0);
+  assign modCall_1.id_0 = 0;
+  assign id_7 = id_0;
+  assign id_3 = -1;
+endmodule
+module module_2 (
+    input uwire id_0,
+    input supply0 id_1
+    , id_22,
+    input wire id_2,
+    input tri0 id_3,
+    output tri id_4,
+    output wand id_5,
+    output tri id_6,
+    output tri id_7,
+    output wire id_8,
+    output wire id_9,
+    input supply1 id_10,
+    input tri1 id_11,
+    output wand id_12,
+    output wire id_13,
+    input uwire id_14,
+    output tri0 id_15,
+    output uwire id_16,
+    output wor id_17,
+    output supply1 id_18,
+    output tri1 id_19,
+    output tri0 id_20
+);
+  assign id_6 = id_11;
+  module_0 modCall_1 (id_2);
+  assign modCall_1.id_0 = 0;
 endmodule

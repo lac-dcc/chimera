@@ -1,112 +1,77 @@
-// Seed: 926748272
+// Seed: 9343281
 module module_0 (
-    input tri1 id_0,
-    output tri id_1,
-    input supply1 id_2,
-    input tri id_3,
-    input wire id_4,
-    input tri1 id_5,
-    output uwire id_6,
-    input tri0 id_7,
-    input tri id_8,
-    input uwire id_9,
-    input uwire id_10,
-    inout wor id_11,
-    output uwire id_12,
-    output wor id_13,
-    input tri id_14,
-    input tri id_15,
-    output supply0 id_16,
-    input uwire id_17,
-    input tri1 id_18,
-    input tri0 id_19,
-    input tri0 id_20,
-    input supply1 id_21,
-    output tri0 id_22,
-    input tri0 id_23,
-    input wand id_24,
-    input wand id_25,
-    input tri0 id_26,
-    input wire id_27,
-    input supply0 id_28,
-    input uwire id_29,
-    output uwire id_30,
-    input wire id_31
+    id_1,
+    id_2
 );
-  final $display(1'd0, 1, 1);
-  assign module_1.id_19 = 0;
+  inout wire id_2;
+  inout wire id_1;
+  supply1 id_3 = 1;
+  parameter id_4 = 1;
 endmodule
-module module_1 (
-    output uwire id_0,
-    input uwire id_1,
-    inout tri id_2,
-    output logic id_3,
-    input logic id_4,
-    input wand id_5,
-    output wire id_6,
-    input wor id_7,
-    input wor id_8,
-    input uwire id_9,
-    input uwire id_10,
-    input logic id_11,
-    output uwire id_12,
-    input supply0 id_13,
-    output tri id_14,
-    input tri id_15,
-    output logic id_16,
-    input wor id_17,
-    input supply0 id_18,
-    input supply1 id_19,
-    input wand id_20,
-    output supply1 id_21
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    module_1,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21,
+    id_22,
+    id_23,
+    id_24,
+    id_25,
+    id_26,
+    id_27,
+    id_28,
+    id_29
 );
-  wire id_23;
-  always @(*) begin : LABEL_0
-    id_16 <= id_11;
-    id_16 <= id_4;
-  end
+  inout wire id_29;
+  input wire id_28;
+  inout wire id_27;
+  inout logic [7:0] id_26;
+  output wire id_25;
+  inout wire id_24;
+  output wire id_23;
+  input wire id_22;
   module_0 modCall_1 (
-      id_20,
-      id_6,
-      id_19,
-      id_10,
-      id_2,
-      id_2,
-      id_14,
-      id_19,
-      id_19,
-      id_9,
-      id_7,
-      id_2,
-      id_6,
-      id_14,
-      id_7,
-      id_17,
-      id_12,
-      id_18,
-      id_10,
-      id_1,
-      id_7,
-      id_17,
-      id_6,
-      id_1,
-      id_8,
-      id_17,
-      id_8,
-      id_8,
-      id_20,
-      id_20,
-      id_21,
-      id_2
+      id_24,
+      id_27
   );
-  always @(1 or posedge 1) begin : LABEL_0
-    id_3 <= id_5 || id_1;
-    id_0 = 1;
-    $display;
-  end
-  always
-  fork
-  join : SymbolIdentifier
-  wire id_24;
-  assign id_14 = 1;
+  inout uwire id_21;
+  input wire id_20;
+  input wire id_19;
+  inout wire id_18;
+  input wire id_17;
+  inout wire id_16;
+  inout wire id_15;
+  output wire id_14;
+  output wire id_13;
+  output wire id_12;
+  output wire id_11;
+  inout wire id_10;
+  output wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign  id_26  [  -1  ]  =  id_10  ||  -1  &&  id_19  ||  id_7  !=?  -1  ||  1  -  -1 'b0 &  {  id_4  ,  id_5  }  &&  id_2  ||  id_4  ||  1 'b0 ;
+  assign id_21 = 1 ? id_8 : 1;
 endmodule

@@ -1,4 +1,4 @@
-// Seed: 2909767839
+// Seed: 4098921645
 module module_0 (
     id_1,
     id_2,
@@ -6,50 +6,42 @@ module module_0 (
     id_4,
     id_5,
     id_6,
-    id_7,
-    id_8
+    id_7
 );
-  inout wire id_8;
   input wire id_7;
-  input wire id_6;
+  output supply1 id_6;
   inout wire id_5;
   input wire id_4;
   inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign module_1.type_4 = 0;
+  output supply1 id_2;
+  inout wire id_1;
+  assign id_6 = 1;
+  assign id_2 = (-1);
 endmodule
-module module_1 #(
-    parameter id_21 = 32'd86,
-    parameter id_22 = 32'd41
+program module_1 #(
+    parameter id_4 = 32'd85
 ) (
-    input wor id_0,
+    output logic id_0[-1 : id_4],
     input wire id_1,
-    output supply1 id_2,
-    output tri id_3,
-    input supply0 id_4,
-    output supply1 id_5,
-    input wor id_6,
-    output supply0 id_7,
-    input wor id_8,
-    input tri0 id_9,
-    input tri1 id_10,
-    input tri0 id_11,
-    output wire id_12
+    input supply0 id_2,
+    input uwire id_3,
+    output supply0 _id_4,
+    output tri0 id_5,
+    output tri1 id_6
 );
-  supply0 id_14 = 1;
-  tri1 id_15, id_16, id_17;
+  logic [7:0] id_8;
+  logic id_9 = id_8 - -1'h0;
+  for (id_10 = {id_8{1 + {id_3 == id_8[-1-1][-1] >> -1{id_9}}, (-1'd0 + id_9)}}; id_1; id_0 = id_2)
+  localparam id_11 = 1;
+  parameter id_12 = "";
   module_0 modCall_1 (
-      id_14,
-      id_17,
-      id_14,
-      id_17,
-      id_16,
-      id_15,
-      id_14,
-      id_15
+      id_11,
+      id_12,
+      id_11,
+      id_9,
+      id_9,
+      id_11,
+      id_10
   );
-  wire id_18;
-  wire id_19, id_20;
-  defparam id_21 = 1, id_22 = 1'b0 >> id_15;
-endmodule
+  assign id_10 = id_3 | -1 ^ id_3 && id_2;
+endprogram

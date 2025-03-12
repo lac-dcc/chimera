@@ -1,41 +1,43 @@
-// Seed: 3630361539
-module module_1 (
-    input  wand id_0,
-    output tri1 id_1,
-    input  wire module_0,
-    input  tri  id_3,
-    output wand id_4
+// Seed: 1747845110
+module module_0 (
+    input uwire id_0,
+    output supply0 id_1,
+    input wire id_2,
+    input wor id_3,
+    output tri id_4,
+    output tri id_5,
+    input wor id_6,
+    output supply0 id_7,
+    input supply0 id_8,
+    input tri id_9,
+    input wor id_10
 );
-  assign id_4 = 1 - 1'b0;
-  assign module_1.type_1 = 0;
+  logic id_12;
+  ;
 endmodule
 module module_1 (
-    inout tri0 id_0
-    , id_14,
-    input wor id_1,
-    output wire id_2,
-    input tri0 id_3,
-    inout tri id_4,
-    output tri1 id_5,
-    input wor id_6,
-    input supply1 id_7,
-    input wand id_8
-    , id_15,
-    output tri1 id_9,
-    input tri id_10,
-    input uwire id_11,
-    input wand id_12
+    output uwire id_0,
+    input wire id_1,
+    input supply1 id_2,
+    input tri id_3
 );
-  uwire id_16 = 1'b0;
-  xnor primCall (id_4, id_14, id_11, id_3, id_0, id_7, id_17, id_12, id_6, id_10, id_8, id_15);
-  id_17(
-      .id_0(1)
-  );
   module_0 modCall_1 (
-      id_6,
-      id_5,
+      id_2,
+      id_0,
       id_3,
-      id_12,
-      id_4
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_1
   );
+  assign modCall_1.id_5 = 0;
+  assign id_0 = -1;
+  wire id_5;
+  wire [-1 : 1] id_6;
+  localparam integer id_7 = 1;
+  parameter id_8 = id_7;
 endmodule

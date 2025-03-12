@@ -1,42 +1,51 @@
-// Seed: 4251806875
-module module_0 ();
-  wire id_1, id_2;
-  wire id_3;
-  assign module_1.id_21 = 0;
-  id_4(
-      1'b0
-  );
-endmodule
-module module_1 (
-    inout tri id_0,
-    output tri0 id_1,
-    output tri id_2,
-    input tri0 id_3,
-    input wor id_4,
-    input uwire id_5,
-    input tri1 id_6#(.id_30(1)),
-    input tri0 id_7,
-    output wor id_8,
-    input tri0 id_9,
-    output tri0 id_10,
-    output tri0 id_11,
-    output wand id_12,
-    input tri1 id_13,
-    output tri0 id_14,
-    input supply1 id_15,
-    input wor id_16,
-    input uwire id_17,
-    output wire id_18,
-    output tri0 id_19,
-    output wire id_20,
-    output wor id_21,
-    input wire id_22,
-    output tri1 id_23,
-    output supply0 id_24,
-    output wand id_25,
-    input wand id_26,
-    input supply1 id_27,
-    output tri0 id_28
+// Seed: 657406174
+program module_0 (
+    output wire  id_0,
+    input  tri0  id_1,
+    output tri1  id_2,
+    output uwire id_3,
+    output tri1  id_4
 );
-  module_0 modCall_1 ();
+  assign id_2 = id_1;
+  assign module_1.id_6 = 0;
+  parameter id_6 = 1;
+endprogram
+module module_1 #(
+    parameter id_1  = 32'd59,
+    parameter id_15 = 32'd23,
+    parameter id_2  = 32'd45,
+    parameter id_6  = 32'd14
+) (
+    output logic id_0,
+    input supply1 _id_1
+    , _id_6,
+    input tri _id_2,
+    input wire id_3,
+    output uwire id_4
+);
+  parameter id_7 = 1 ** 1;
+  always id_0 = -1;
+  assign id_0 = 1;
+  always begin : LABEL_0
+    id_0 = 1'b0 - id_7;
+    id_0 <= 1;
+  end
+  assign id_0 = id_6;
+  logic id_8;
+  module_0 modCall_1 (
+      id_4,
+      id_3,
+      id_4,
+      id_4,
+      id_4
+  );
+  assign id_4 = 1;
+  wire id_9;
+  wire id_10, id_11;
+  task id_12(output [-1 'b0 +  -1 'b0 : id_2] id_13);
+    output [-1 : (  id_1  )] id_14, _id_15;
+  endtask
+  assign id_0 = id_7[id_6 : id_15];
+  logic id_16;
+  ;
 endmodule

@@ -1,43 +1,46 @@
-// Seed: 3595568757
+// Seed: 2298063143
 module module_0 (
     id_1,
-    id_2
-);
-  input wire id_2;
-  input wire id_1;
-  tri0 id_3 = (1 ? id_2 : (1));
-  assign module_1.id_9 = 0;
-  tri id_4 = 1'b0 - 1;
-endmodule
-module module_1 (
-    id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_3
 );
-  input wire id_6;
-  output wire id_5;
-  inout wire id_4;
   input wire id_3;
   output wire id_2;
   input wire id_1;
-  tri0 id_7;
+  supply1 id_4 = -1;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd42
+) (
+    output tri1 id_0,
+    input supply0 _id_1
+);
+  parameter id_3 = {-1'b0{1 < id_0++}};
   module_0 modCall_1 (
-      id_4,
+      id_3,
+      id_3,
+      id_3
+  );
+  assign modCall_1.id_4 = 0;
+  assign id_0 = -1'd0;
+  wire [id_1 : -1] id_4;
+endmodule
+module module_2 #(
+    parameter id_1 = 32'd87,
+    parameter id_3 = 32'd4
+) (
+    output uwire   id_0,
+    input  supply0 _id_1
+);
+  wire _id_3;
+  wire [id_1 : id_3] id_4;
+  wire id_5;
+  wire id_6;
+  module_0 modCall_1 (
+      id_5,
+      id_5,
       id_6
   );
-  reg id_8, id_9, id_10 = 1;
-  wire id_11;
-  always_ff @(posedge id_11) begin : LABEL_0
-    if (id_3[1'b0]) begin : LABEL_0
-      if (1) id_2 <= id_9;
-    end
-  end
-  assign id_7 = 1;
-  wire id_12;
-  wire id_13;
-  always_latch disable id_14;
-  wire id_15;
+  wire [id_3  &&  -1 'd0 : id_3  &  1 'd0] id_7;
+  wire id_8;
 endmodule

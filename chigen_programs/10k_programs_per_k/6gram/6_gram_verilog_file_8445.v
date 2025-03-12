@@ -1,53 +1,34 @@
-// Seed: 2994045462
-module module_0 (
-    output tri1 id_0,
-    output tri0 id_1
+// Seed: 3797629378
+module module_0 #(
+    parameter id_1 = 32'd53
 );
-  assign id_0 = id_3[1];
-  wire id_4 = (id_4);
-  genvar id_5;
+  wire _id_1;
+  ;
+  wire [-1 : id_1] id_2;
+  assign id_2 = id_1;
 endmodule
-module module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    inout tri1 id_2,
-    input supply0 id_3,
-    output wire id_4,
-    output wor id_5,
-    output supply0 id_6,
-    output supply1 id_7
-    , id_35,
-    input tri0 id_8,
-    output wire id_9,
-    input supply0 id_10,
-    input tri1 id_11,
-    input wand id_12,
-    input supply1 id_13,
-    output tri1 id_14,
-    input wor id_15,
-    input supply1 id_16,
-    output supply0 id_17,
-    output tri id_18,
-    input supply1 id_19,
-    input wor id_20,
-    input tri id_21,
-    input uwire id_22,
-    output tri0 id_23,
-    output wand id_24,
-    input tri0 id_25,
-    input wand id_26,
-    output wire id_27,
-    input wor id_28,
-    output tri0 id_29,
-    input supply1 id_30,
-    input tri1 id_31,
-    output uwire id_32,
-    output tri id_33
+module module_1 #(
+    parameter id_1 = 32'd55,
+    parameter id_2 = 32'd90
+) (
+    _id_1,
+    _id_2,
+    id_3
 );
-  wire id_36;
-  module_0 modCall_1 (
-      id_14,
-      id_5
-  );
-  assign modCall_1.type_1 = 0;
+  inout wire id_3;
+  inout wire _id_2;
+  output wire _id_1;
+  logic [~  id_1 : id_2] id_4;
+  ;
+  task automatic id_5;
+    id_5 = id_2;
+    integer [-1 'd0 : 1 'b0] id_6;
+    begin : LABEL_0
+      id_5 <= 1;
+      id_6 = 1;
+    end
+  endtask
+  wire [1 'h0 : id_2] id_7;
+  logic id_8, id_9;
+  module_0 modCall_1 ();
 endmodule

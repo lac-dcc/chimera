@@ -1,14 +1,5 @@
-// Seed: 3957696600
-module module_0 ();
-  logic [7:0] id_2;
-  wor id_3 = 1'b0;
-  wire id_4;
-  assign id_2[1] = 1;
-  wire id_5;
-  assign id_1 = 1 || 1 < 1;
-  wire id_6;
-endmodule
-module module_1 (
+// Seed: 3836143130
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -23,14 +14,33 @@ module module_1 (
   input wire id_10;
   output wire id_9;
   output wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  input wire id_5;
+  input wire id_7;
+  input wire id_6;
+  output wire id_5;
   input wire id_4;
-  inout wire id_3;
+  input wire id_3;
   output wire id_2;
-  input wire id_1;
-  always force id_2 = id_5;
-  module_0 modCall_1 ();
-  assign modCall_1.type_8 = 0;
+  output wire id_1;
+endmodule
+module module_1 (
+    output tri   id_0,
+    input  tri   id_1,
+    output logic id_2
+);
+  wire [-1 : 1] id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4
+  );
+  always @(negedge -1) begin : LABEL_0
+    id_2 = -1;
+  end
 endmodule

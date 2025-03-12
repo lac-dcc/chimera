@@ -1,45 +1,42 @@
-// Seed: 856880331
+// Seed: 3716152349
 module module_0 (
-    input uwire id_0,
-    input tri0 id_1,
-    input wire id_2,
-    input supply1 id_3,
-    input supply1 id_4,
-    input wand id_5,
-    input uwire id_6,
-    output uwire id_7,
-    input tri id_8,
-    input tri1 id_9,
-    output uwire id_10
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_12;
-  genvar id_13;
-  always @(posedge id_9) begin : LABEL_0
-    deassign id_13;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  bit id_4 = id_3;
+  localparam id_5 = 1 == -1 + -1;
+  always @(posedge -1 - id_1, posedge id_1) id_4 = 1;
+  always @(*) begin : LABEL_0
+    if (1) disable id_6;
+    else begin : LABEL_1
+      id_4 = -1;
+      $unsigned(5);
+      ;
+      SystemTFIdentifier(1 == 1);
+    end
+    assume ({1, id_3, -1});
   end
 endmodule
-module module_1 #(
-    parameter id_5 = 32'd97,
-    parameter id_6 = 32'd16
-) (
-    output tri id_0,
-    input tri id_1,
-    output uwire id_2,
-    output supply1 id_3
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  assign id_2 = 1;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
   module_0 modCall_1 (
       id_1,
       id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_3,
-      id_1,
-      id_1,
-      id_0
+      id_5
   );
-  defparam id_5.id_6 = "";
+  inout wire id_2;
+  inout wire id_1;
+  wire id_6;
 endmodule

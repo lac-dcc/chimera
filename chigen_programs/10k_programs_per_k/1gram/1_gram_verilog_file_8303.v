@@ -1,36 +1,34 @@
-// Seed: 2661913327
-module module_0 (
-    id_1,
-    id_2
+// Seed: 1867438487
+program module_0 ();
+  wire id_1;
+  assign module_1.id_7 = 0;
+  always $signed(25);
+  ;
+endprogram : SymbolIdentifier
+module module_1 #(
+    parameter id_6 = 32'd99
+) (
+    output logic id_0,
+    input wire id_1,
+    input wand id_2,
+    input tri0 id_3[id_6 : 1],
+    input tri0 id_4,
+    input tri0 id_5,
+    input uwire _id_6,
+    input tri id_7,
+    output wor id_8,
+    input tri1 id_9,
+    input supply0 id_10,
+    input tri0 id_11,
+    output tri0 id_12
 );
-  output wire id_2;
-  input wire id_1;
-  uwire id_3;
-  for (id_4 = 1; 1; id_3 = 1'd0) wire id_5 = id_1;
-  logic [7:0][1] id_6 (
-      1 - 1,
-      1'd0,
-      id_4 < 1'b0,
-      1'h0
-  );
-  wire id_7;
-endmodule
-module module_1 (
-    id_1,
-    id_2
-);
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = id_2;
-  wire id_3;
-  assign id_2 = id_3;
-  assign id_2 = id_3;
-  wire id_4;
-  wire id_5;
-  module_0 modCall_1 (
-      id_4,
-      id_4
-  );
-  assign modCall_1.type_8 = 0;
-  assign id_2 = 1;
+  struct packed {
+    logic id_14;
+    id_15 id_16[1 : -1];
+  } id_17;
+  module_0 modCall_1 ();
+  initial begin : LABEL_0
+    id_0 <= id_1;
+  end
+  assign id_17.id_14 = id_6;
 endmodule

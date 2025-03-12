@@ -1,53 +1,41 @@
-// Seed: 2467986839
+// Seed: 1776936296
 module module_0 (
-    input supply1 id_0,
-    output wand id_1,
-    input tri id_2,
-    output wand id_3,
-    input wire id_4,
-    input wand id_5,
-    output tri id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  input wire id_1;
+  always begin : LABEL_0
+    $clog2(51);
+    ;
+  end
 endmodule
 module module_1 (
-    input wor id_0,
-    input uwire id_1,
-    output uwire id_2,
-    input uwire id_3,
-    input uwire id_4,
-    output tri id_5,
-    input wand id_6,
-    input wire id_7,
-    output wor id_8,
-    input uwire id_9
-    , id_28,
-    input supply0 id_10,
-    input tri id_11,
-    input tri id_12,
-    input supply1 id_13,
-    output wire id_14,
-    input wire id_15
-    , id_29,
-    output tri1 id_16,
-    input supply1 id_17,
-    input wor id_18,
-    input supply0 id_19,
-    output supply1 id_20,
-    output wand id_21,
-    output supply1 id_22,
-    input supply0 id_23,
-    input supply1 id_24,
-    input tri id_25,
-    input wor id_26
+    output tri   id_0,
+    output wor   id_1,
+    input  uwire id_2,
+    output tri1  id_3
 );
+  assign id_0 = id_2;
+  wire [1 'h0 : -1] id_5;
+  wire id_6;
+  ;
+  bit id_7;
+  always begin : LABEL_0
+    id_7 = id_7;
+  end
   module_0 modCall_1 (
-      id_0,
       id_5,
-      id_26,
-      id_20,
-      id_18,
-      id_23,
-      id_14
+      id_6,
+      id_6,
+      id_5
   );
-  assign modCall_1.type_8 = 0;
+  wire id_8;
+  xnor primCall (id_0, id_5, id_6, id_7);
+  wire  id_9;
+  logic id_10;
 endmodule

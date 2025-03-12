@@ -1,43 +1,60 @@
-// Seed: 3531337667
+// Seed: 3658401927
 module module_0 (
-    output wand id_0
+    id_1
 );
-  supply1 id_2;
-  for (id_3 = 1; id_2; id_3.id_2 = 1'd0) begin : LABEL_0
-    assign id_3 = 1'd0;
-  end
-endmodule : SymbolIdentifier
-module module_1 (
-    input wire id_0,
-    output supply0 id_1,
-    input uwire id_2,
-    input wire id_3,
-    inout wor id_4,
-    input uwire id_5,
-    input supply1 id_6,
-    output wand id_7,
-    input supply0 id_8,
-    input tri0 id_9,
-    input uwire id_10,
-    input tri id_11,
-    input supply1 id_12,
-    output logic id_13
+  output wire id_1;
+  assign module_1.id_16 = 0;
+endmodule
+module module_1 #(
+    parameter id_13 = 32'd92,
+    parameter id_2  = 32'd16
+) (
+    id_1[1'b0 :-1],
+    _id_2,
+    id_3,
+    id_4,
+    id_5[-1 : id_2&1/1],
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    _id_13,
+    id_14
 );
-  initial id_1 = 1;
-  tri0 id_15, id_16;
-  assign id_4 = ((id_16));
-  tri1 id_17, id_18;
-  final begin : LABEL_0
-    assume #1  (1) id_13 <= 1;
+  inout wire id_14;
+  inout wire _id_13;
+  input wire id_12;
+  input wire id_11;
+  inout wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output logic [7:0] id_5;
+  inout tri id_4;
+  output wire id_3;
+  input wire _id_2;
+  input logic [7:0] id_1;
+  module_0 modCall_1 (id_8);
+  assign id_4 = 1;
+  wire id_15;
+  bit id_16, id_17, id_18;
+  always begin : LABEL_0
+    begin : LABEL_1
+      $signed(55);
+      ;
+      id_17 <= 1;
+      SystemTFIdentifier;
+    end
   end
-  assign id_17 = id_12;
-  wire id_19;
-  wand id_20;
-  and primCall (id_4, id_10, id_17, id_6, id_11, id_19, id_21, id_16);
-  wire id_21;
-  wire id_22;
-  always id_20 = 1'b0;
-  assign id_18 = id_11;
-  module_0 modCall_1 (id_15);
-  assign modCall_1.id_3 = 0;
+  logic id_19[1 'h0 : id_13];
+  id_20 :
+  assert property (@(*) id_18) begin : LABEL_2
+    assign id_19 = -1;
+  end
+  logic id_21;
+  ;
 endmodule

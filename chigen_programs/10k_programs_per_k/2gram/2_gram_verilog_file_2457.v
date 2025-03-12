@@ -1,56 +1,60 @@
-// Seed: 492213432
-module module_0 (
-    input wor id_0,
-    input wand id_1,
-    input wire id_2,
-    input wire id_3,
-    input tri0 id_4,
-    input supply1 id_5,
-    input supply0 id_6,
-    output supply1 id_7
-    , id_16,
-    input supply0 id_8,
-    output wand id_9,
-    output tri id_10,
-    output tri1 id_11,
-    output supply1 id_12,
-    input tri1 id_13,
-    output wire id_14
-);
-  assign id_7  = 1;
-  assign id_16 = 1;
+// Seed: 3702426470
+module module_0 #(
+    parameter id_1 = 32'd15
+) ();
+  wire _id_1;
+  if (-1) begin : LABEL_0
+    wire [id_1 : id_1] id_2;
+  end
 endmodule
-module module_1 (
-    input  uwire id_0,
-    input  tri   id_1,
-    output wand  id_2,
-    output uwire id_3
-    , id_10,
-    output wor   id_4,
-    input  wor   id_5,
-    input  uwire id_6,
-    input  uwire id_7,
-    input  wire  id_8
+macromodule module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14
 );
-  wor  id_11 = 1'b0;
-  wire id_12;
-  wire id_13;
-  module_0 modCall_1 (
-      id_0,
-      id_6,
-      id_7,
-      id_6,
-      id_7,
-      id_8,
-      id_6,
-      id_4,
-      id_5,
-      id_4,
-      id_4,
-      id_4,
-      id_2,
-      id_7,
-      id_4
-  );
-  assign modCall_1.type_8 = 0;
+  input wire id_14;
+  input wire id_13;
+  inout reg id_12;
+  output wor id_11;
+  output reg id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  for (id_15 = -1; -1; id_11++) begin : LABEL_0
+    assign id_9 = (id_13);
+  end
+  parameter [-1 : 1 'd0] id_16 = -1 * -1 - -1;
+  logic [ 1 : 1] id_17;
+  logic [1 : -1] id_18;
+  ;
+  logic id_19;
+  wire  id_20;
+  assign id_10 = id_16 == -1;
+  module_0 modCall_1 ();
+  id_21 :
+  assert property (@(1'd0) id_18)
+  else;
+  always id_10 = 1;
+  assign id_21 = 1;
+  assign id_12 = ~id_19;
+  parameter id_22 = 1;
+  always id_12 = new[-1];
+  logic id_23 = id_9;
 endmodule

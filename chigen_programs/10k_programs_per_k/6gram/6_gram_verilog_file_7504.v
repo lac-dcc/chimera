@@ -1,43 +1,29 @@
-// Seed: 2502049140
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  input wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  tri id_6 = 1;
+// Seed: 2231877811
+module module_0 ();
+  wire  id_1;
+  logic id_2;
+  assign module_1.id_4 = 0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+module module_0 #(
+    parameter id_12 = 32'd40,
+    parameter id_4  = 32'd4
+) (
+    output tri0 id_0,
+    output wire id_1,
+    input wire id_2,
+    input tri0 id_3
+    , id_9,
+    input wor _id_4,
+    input wire id_5,
+    output tri1 id_6,
+    output supply0 id_7
 );
-  inout wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = id_1 ? id_5 * 1'b0 : 1;
-  xnor primCall (id_7, id_4, id_1, id_5, id_2, id_8, id_6);
-  wire id_8;
-  module_0 modCall_1 (
-      id_8,
-      id_6,
-      id_6,
-      id_2,
-      id_7
-  );
-  assign modCall_1.type_7 = 0;
+  wire [-1 : id_4] id_10;
+  wire id_11, _id_12;
+  assign id_1 = -1;
+  parameter id_13 = 1;
+  wire [1  +  -1 : 1] id_14;
+  wire module_1;
+  logic [-1 : id_12] id_15;
+  module_0 modCall_1 ();
 endmodule

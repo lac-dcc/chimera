@@ -1,55 +1,37 @@
-// Seed: 2552628833
+// Seed: 3773800805
 module module_0 (
     id_1,
     id_2,
     id_3
 );
-  inout wire id_3;
+  output wire id_3;
   inout wire id_2;
-  output wire id_1;
+  input wire id_1;
   wire id_4;
-  initial
-    #1
-      if ((id_2 || 1)) begin : LABEL_0
-        id_1 = 1'b0;
-        $display(1);
-      end else id_3 <= 1;
-  assign module_1.id_10 = 0;
   wire id_5;
-  assign id_4 = id_5;
+  assign id_5 = id_5;
 endmodule
-module module_0 (
-    input logic id_0,
+module module_1 #(
+    parameter id_2 = 32'd10
+) (
+    output supply0 id_0,
     output logic id_1,
-    input logic id_2,
-    input supply1 id_3,
-    input tri1 module_1,
-    output tri1 id_5
+    input supply0 _id_2,
+    input wand id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    output uwire id_6
 );
-  logic id_7;
-  assign id_5 = ~id_2 != 1 + id_7;
-  reg id_8;
-  logic id_9, id_10;
-  reg id_11;
-  always @(posedge {id_0,
-    id_7
-  })
-  begin : LABEL_0
-    id_8 <= id_11;
-    id_9 <= id_10;
-    if (id_4) id_11 <= #1 id_2;
+  initial begin : LABEL_0
+    id_1 = $realtime;
   end
-  wire id_12;
-  assign id_10 = 1;
+  logic [-1 : 1] id_8, id_9, id_10;
   module_0 modCall_1 (
-      id_12,
-      id_12,
-      id_11
+      id_8,
+      id_9,
+      id_8
   );
-  assign id_1 = (1 ? id_9 : 1 - id_2);
-  wire  id_13;
-  logic id_14 = id_7 ? id_9 : 1;
-  wire  id_15;
-  wire  id_16;
-  assign id_10 = id_0;
+  logic [1 : id_2] id_11;
+  ;
+  assign id_9 = 1'b0;
 endmodule

@@ -1,27 +1,39 @@
-// Seed: 2765020884
-module module_0;
-  wire id_1, id_2, id_3, id_4, id_5, id_6, id_7, id_8, id_9;
-  assign id_9 = id_7;
-  assign module_1.id_7 = 0;
+// Seed: 588660622
+module module_0 (
+    input supply0 id_0,
+    output wand id_1
+);
 endmodule
 module module_1 (
-    input uwire id_0,
-    input supply1 id_1,
-    input tri id_2,
-    input supply1 id_3,
-    output tri id_4
+    output uwire id_0,
+    output logic id_1,
+    input  tri0  id_2,
+    input  uwire id_3,
+    output tri1  id_4
 );
-  assign id_4 = id_2;
-  nand primCall (id_4, id_6, id_7);
-  generate
-    supply0 id_6;
-    for (id_7 = 1; 1; id_6 = id_0) begin : LABEL_0
-      assign id_7 = 1 ? 1'b0 : id_6 * 1;
-    end
-  endgenerate
-  module_0 modCall_1 ();
-  wand id_8 = 1'h0;
-  always @(id_8) begin : LABEL_0
-    id_4 += 1'h0;
-  end
+  wire ["" : -1] id_6;
+  initial id_1 = -1'b0;
+  module_0 modCall_1 (
+      id_2,
+      id_0
+  );
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input tri1 id_1,
+    input tri1 id_2,
+    output tri id_3,
+    output tri0 id_4,
+    output wire id_5,
+    input supply1 id_6,
+    input tri0 id_7,
+    inout supply0 id_8,
+    output supply0 id_9
+);
+  logic id_11 = id_0;
+  module_0 modCall_1 (
+      id_2,
+      id_3
+  );
+  assign modCall_1.id_1 = 0;
 endmodule

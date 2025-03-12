@@ -1,65 +1,68 @@
-// Seed: 3498449600
+// Seed: 1995219347
 module module_0 (
     id_1,
-    id_2,
-    id_3
+    id_2
 );
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
+  output wire id_2;
+  input wire id_1;
+  assign id_2 = -1;
+  assign module_1.id_6 = 0;
 endmodule
-module module_1 (
-    id_1
+module module_1 #(
+    parameter id_22 = 32'd7,
+    parameter id_32 = 32'd72,
+    parameter id_33 = 32'd91,
+    parameter id_39 = 32'd40,
+    parameter id_9  = 32'd11
+) (
+    input wire id_0,
+    input tri0 id_1,
+    output tri id_2,
+    input wire id_3,
+    output wire id_4,
+    input uwire id_5,
+    output uwire id_6
+    , id_38,
+    input tri0 id_7,
+    input tri0 id_8,
+    input uwire _id_9,
+    output supply0 id_10,
+    output wor id_11,
+    input tri0 id_12,
+    input wand id_13,
+    input wire id_14,
+    input uwire id_15,
+    input wand id_16,
+    input wand id_17,
+    input tri1 id_18,
+    output supply1 id_19,
+    output uwire id_20,
+    output wire id_21,
+    input wire _id_22,
+    output logic id_23,
+    input wor id_24,
+    input tri1 id_25,
+    input supply0 id_26,
+    input uwire id_27,
+    input uwire id_28,
+    input supply1 id_29,
+    input tri id_30,
+    input supply1 id_31,
+    input wand _id_32,
+    input wire _id_33,
+    input wor id_34,
+    input supply0 id_35,
+    output wire id_36
 );
-  output wire id_1;
-  wire id_2;
-  wire id_3;
-  assign {1'b0, 1 | 1'b0} = 1;
-  xor primCall (id_1, id_2, id_3);
-  wire id_4;
+  logic [-1 : -1  ==  id_32] _id_39;
+  wire [id_33  -  id_39 : id_9] id_40;
+  wire [1 : id_39] id_41;
+  assign id_38 = id_1;
+  always id_23 <= 1 - !id_1;
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_4
+      id_41,
+      id_41
   );
-endmodule
-module module_2 ();
-  assign module_3.type_0 = 0;
-  always begin : LABEL_0
-    disable id_1;
-  end
-  module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1
-  );
-endmodule
-module module_3 (
-    output wire id_0
-);
-  module_2 modCall_1 ();
-endmodule
-module module_4 (
-    output uwire id_0,
-    output tri id_1,
-    input wand id_2,
-    input tri1 id_3,
-    input supply1 id_4,
-    input logic id_5
-);
-  logic id_7;
-  assign id_0 = 1;
-  assign id_1 = 1;
-  wire id_8;
-  and primCall (id_0, id_2, id_8);
-  module_0 modCall_1 (
-      id_8,
-      id_8,
-      id_8
-  );
-  assign id_1 = 1'b0;
-  id_9 :
-  assert property (@(posedge id_4 ? id_5 : id_7) 1 * 1)
-  else id_7 <= "";
-  wire id_10;
+  assign id_20 = id_38[id_22];
+  assign id_36 = 1;
 endmodule

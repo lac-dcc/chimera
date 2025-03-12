@@ -1,52 +1,42 @@
-// Seed: 1556569534
-module module_0 (
-    input wire id_0,
-    input supply0 id_1,
-    output tri0 id_2
-    , id_7,
-    input tri1 id_3,
-    output wand id_4,
-    output uwire id_5
-);
+// Seed: 4237074929
+module module_0 ();
+  uwire id_1, id_2;
+  assign module_1._id_7 = 0;
+  assign id_2 = -1;
 endmodule
-module module_1 (
-    input wire id_0,
-    input tri0 id_1,
-    input wire id_2
-    , id_23,
-    output wor id_3,
-    output wire id_4,
-    input tri1 id_5,
-    input supply0 void id_6,
-    output tri1 id_7,
-    input wor id_8,
-    output tri0 id_9,
-    output uwire id_10,
-    output supply1 id_11,
-    output tri id_12
-    , id_24,
-    output tri0 id_13,
-    input tri0 id_14,
-    input tri id_15,
-    input wand id_16,
-    inout wand id_17,
-    input supply1 id_18,
-    input tri0 id_19,
-    output uwire id_20,
-    input wand id_21
+module module_1 #(
+    parameter id_1  = 32'd15,
+    parameter id_10 = 32'd70,
+    parameter id_12 = 32'd13,
+    parameter id_3  = 32'd26,
+    parameter id_7  = 32'd91
+) (
+    output wire id_0,
+    input uwire _id_1,
+    input uwire id_2,
+    input supply1 _id_3[1  ==  -1 : id_1],
+    output logic id_4,
+    input supply0 id_5,
+    input supply0 id_6,
+    input wor _id_7,
+    output wire id_8,
+    output supply1 id_9[id_10 : id_3],
+    input wor _id_10,
+    output logic id_11,
+    input supply1 _id_12
 );
-  assign id_4 = id_8;
-  module_0 modCall_1 (
-      id_2,
-      id_18,
-      id_13,
-      id_5,
-      id_12,
-      id_9
-  );
-  assign modCall_1.type_1 = 0;
-  wire id_25, id_26;
-  assign id_11 = 1'h0;
-  wire id_27 = id_25;
-  wand id_28 = {1 ^ id_24, 1'b0};
+  wire id_14;
+  nand primCall (id_0, id_14, id_15, id_16, id_2, id_5, id_6);
+  always begin : LABEL_0
+    begin : LABEL_1
+      id_11 <= -1;
+      if (1) id_4 <= 1;
+    end
+  end
+  logic id_15;
+  wire [id_7 : id_12  &  id_3] id_16;
+  module_0 modCall_1 ();
+  logic id_17;
+  ;
+  wire id_18;
 endmodule

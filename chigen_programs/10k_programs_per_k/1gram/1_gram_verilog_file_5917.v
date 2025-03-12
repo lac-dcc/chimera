@@ -1,29 +1,32 @@
-// Seed: 2655359981
-module module_0;
-  if (1) assign id_1 = id_1;
-  always_ff repeat (1'b0) id_1 <= id_1 << ((1));
+// Seed: 1712348986
+module module_0 (
+    id_1,
+    id_2
+);
+  inout logic [7:0] id_2;
+  input wire id_1;
+  always id_2#(1, 1 + 1) [1] = -1;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_6 = 32'd54
+) (
     id_1,
     id_2,
     id_3,
-    id_4
+    id_4["" :-1],
+    id_5,
+    _id_6
 );
-  input wire id_4;
-  inout wire id_3;
+  inout wire _id_6;
+  output wire id_5;
+  inout logic [7:0] id_4;
+  input wire id_3;
   output wire id_2;
-  output wire id_1;
-  wire id_5;
-  assign id_1 = id_4;
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  assign id_3 = "";
-  wire id_9;
-  wire id_10, id_11, id_12;
-  wire id_13;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  wire id_14, id_15 = id_5;
-  wire id_16, id_17;
+  inout wire id_1;
+  module_0 modCall_1 (
+      id_1,
+      id_4
+  );
+  logic [id_6 : -1] id_7;
+  ;
 endmodule

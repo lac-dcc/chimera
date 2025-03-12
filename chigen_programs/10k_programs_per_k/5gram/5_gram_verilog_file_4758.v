@@ -1,62 +1,45 @@
-// Seed: 2014604468
+// Seed: 1802539680
 module module_0 (
-    input supply0 id_0,
-    output supply1 id_1,
-    output wand id_2,
-    input tri id_3,
-    input wor id_4,
-    output tri1 id_5,
-    input tri id_6,
-    output wand id_7,
-    input supply1 id_8,
-    input supply1 id_9,
-    input supply0 id_10,
-    input wor id_11,
-    input wire id_12
-    , id_24,
-    output wand id_13,
-    input tri id_14,
-    input uwire id_15,
-    input uwire id_16,
-    input wor id_17,
-    output supply1 id_18,
-    output wand id_19,
-    input wire id_20,
-    output wand id_21,
-    output tri module_0
+    id_1,
+    id_2
 );
-  wire id_25;
-endmodule
-module module_1 (
-    output wire id_0,
-    input  wand id_1,
-    output tri1 id_2
-);
+  input wire id_2;
+  output reg id_1;
+  assign module_1.id_1 = 0;
+  always @(posedge (id_2)) begin : LABEL_0
+    if (1) begin : LABEL_1
+      id_1 = #id_3 -1;
+    end
+  end
   wire id_4;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd24,
+    parameter id_4 = 32'd82
+) (
+    output logic id_0,
+    input supply0 _id_1
+    , id_6,
+    input tri1 id_2,
+    input supply1 id_3,
+    input wor _id_4
+);
+  always_comb
+    case (-1)
+      1'b0:  id_6 = -1;
+      -1'h0: id_6 <= -1'h0;
+      1: begin : LABEL_0
+        repeat (-1) begin : LABEL_1
+          if (1 && 1 && 1 >> -1'b0) id_0 <= -1;
+          else assume (-1'b0);
+        end
+      end
+      id_1:  id_0 = -1;
+    endcase
+  wire [id_4 : id_1] id_7;
+  parameter id_8 = 1;
   module_0 modCall_1 (
-      id_1,
-      id_2,
-      id_0,
-      id_1,
-      id_1,
-      id_0,
-      id_1,
-      id_0,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_2,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_2,
-      id_0,
-      id_1,
-      id_2,
-      id_0
+      id_6,
+      id_8
   );
-  assign modCall_1.id_17 = 0;
 endmodule

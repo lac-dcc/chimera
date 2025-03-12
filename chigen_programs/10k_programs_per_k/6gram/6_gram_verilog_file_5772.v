@@ -1,29 +1,23 @@
-// Seed: 2172124249
-module module_0;
-  wor id_1;
-  tri id_2;
-  assign id_1 = id_2;
-  timeprecision 1ps;
-  assign module_2.id_7 = 0;
+// Seed: 1163423809
+module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output reg id_1;
+  tri1 id_3;
+  generate
+    for (id_4 = id_3; -1'b0; id_4 = id_4) begin : LABEL_0
+      wire id_5;
+    end
+  endgenerate
+  always @(posedge -1) begin : LABEL_1
+    id_1 = -1;
+    {-1, -1} <= 1;
+  end
+  assign id_3 = -1;
 endmodule
 module module_1 (
-    input tri0 id_0,
-    input supply1 id_1,
-    input wand id_2,
-    output uwire id_3,
-    output wand id_4
-    , id_7,
-    output wand id_5
-);
-  wire id_8;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  always
-    repeat (id_2) begin : LABEL_0
-      id_7 = id_2;
-    end
-endmodule
-module module_2 (
     id_1,
     id_2,
     id_3,
@@ -31,15 +25,18 @@ module module_2 (
     id_5,
     id_6
 );
-  inout wire id_6;
+  inout reg id_6;
   inout wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  tri1 id_7 = (1);
-  module_0 modCall_1 ();
-  initial begin : LABEL_0
-    id_3 <= 1;
+  output wire id_4;
+  inout wire id_3;
+  module_0 modCall_1 (
+      id_6,
+      id_5
+  );
+  output wire id_2;
+  output wire id_1;
+  wire id_7;
+  always @(1 or posedge id_7) begin : LABEL_0
+    id_6 <= 1;
   end
 endmodule

@@ -1,39 +1,37 @@
-// Seed: 463493345
+// Seed: 1313848533
 module module_0 (
-    input uwire id_0,
-    input tri0  id_1,
-    input tri1  id_2
+    id_1,
+    id_2,
+    id_3
 );
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  logic id_4;
 endmodule
-module module_0 (
-    input supply0 id_0,
-    input uwire id_1,
-    input tri id_2,
-    output supply1 id_3,
-    input tri id_4,
-    output supply1 id_5,
-    output uwire id_6,
-    input wand id_7,
-    input supply0 id_8,
-    input wor id_9,
-    output wand id_10,
-    input supply1 id_11,
-    inout uwire id_12,
-    output wor module_1,
-    output wire id_14,
-    inout uwire id_15,
-    input supply0 id_16,
-    input wire id_17,
-    input tri0 id_18,
-    input tri0 id_19,
-    output supply0 id_20,
-    input wor id_21
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  always @(posedge id_18 or posedge {(id_2) {1}}) $display(id_2,, id_0, id_15);
+  inout wire id_6;
+  xnor primCall (id_3, id_1, id_4, id_2, id_6, id_5);
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
   module_0 modCall_1 (
-      id_21,
-      id_16,
-      id_7
+      id_3,
+      id_6,
+      id_3
   );
-  assign modCall_1.id_0 = 0;
+  inout wand id_2;
+  inout logic [7:0] id_1;
+  assign id_2 = 1;
+  always @(posedge id_2) begin : LABEL_0
+    id_1[-1'h0] <= id_6;
+  end
+  wire id_7;
 endmodule

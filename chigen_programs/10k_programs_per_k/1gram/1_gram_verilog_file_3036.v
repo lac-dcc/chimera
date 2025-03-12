@@ -1,83 +1,88 @@
-// Seed: 2471670595
-module module_0 ();
-  wand id_1;
-  assign id_1 = (1);
-  always_latch id_1 = 1;
-  assign id_1 = id_2;
-  assign id_2 = 1;
-  tri0 id_3 = 1 * 1'b0;
-endmodule
-module module_1 (
-    output tri0 id_0,
-    input tri id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input wand id_4,
+// Seed: 2044073506
+program module_0 (
+    input supply1 id_0,
+    output tri0 id_1,
+    input tri id_2,
+    input supply1 id_3,
+    input uwire id_4,
     input tri0 id_5,
-    output tri0 id_6,
-    input tri id_7,
-    input supply1 id_8,
-    output uwire id_9,
-    input tri0 id_10,
-    input wor id_11,
-    output tri1 id_12,
-    input tri0 id_13,
-    input wire id_14,
-    input wor id_15,
-    input tri0 id_16,
-    output wor id_17,
-    input uwire id_18,
-    input wand id_19,
-    input tri1 id_20,
-    input wire id_21#(.id_63(1)),
-    input tri1 id_22,
-    input supply0 id_23,
-    input tri0 id_24,
-    output supply1 id_25,
-    input uwire id_26,
-    input tri1 id_27,
-    input supply1 id_28,
-    output tri1 id_29,
-    input supply0 id_30,
-    output supply1 id_31,
-    input supply0 id_32,
-    input supply0 id_33,
-    input uwire id_34,
-    input tri id_35
-    , id_64, id_65, id_66,
-    output wor id_36,
-    output wand id_37,
-    output logic id_38
-    , id_67,
-    input wire id_39,
-    input wor id_40,
-    input wire id_41,
-    input tri1 id_42,
-    input supply0 id_43,
-    input wand id_44,
-    output wand id_45,
-    output supply1 id_46,
-    output tri0 id_47,
-    input uwire id_48,
-    input wand id_49,
-    input wand id_50,
-    input tri id_51,
-    output tri0 id_52,
-    output wire id_53,
-    input wor id_54,
-    input wor id_55,
-    input tri1 id_56,
-    output tri0 id_57,
-    output supply1 id_58,
-    input wand id_59,
-    input tri1 id_60,
-    input tri id_61
+    input wand id_6,
+    output tri0 id_7,
+    output tri id_8,
+    output tri id_9,
+    input supply0 id_10,
+    input uwire id_11,
+    input tri id_12,
+    input tri1 id_13,
+    input uwire id_14,
+    input tri1 id_15,
+    input tri1 id_16,
+    input wor id_17,
+    output wor id_18,
+    input wire id_19,
+    input uwire id_20
 );
-  always id_38 <= 1;
-  assign id_37 = id_15;
-  id_68(
-      id_63
+endprogram
+module module_1 #(
+    parameter id_1  = 32'd97,
+    parameter id_11 = 32'd8,
+    parameter id_21 = 32'd29
+) (
+    input supply1 id_0,
+    input tri _id_1,
+    input wor id_2
+    , id_13,
+    output wor id_3,
+    input supply1 id_4,
+    input supply1 id_5,
+    input tri0 id_6,
+    output tri id_7,
+    input tri1 id_8,
+    input tri1 id_9,
+    output uwire id_10,
+    input tri _id_11
+);
+  assign #(id_11  : id_4  : id_0 + (1) == ~&1'd0) id_7 = 1 & id_4;
+  bit id_14, id_15;
+  assign id_3  = id_8;
+  assign id_13 = -1;
+  wire id_16;
+  parameter integer id_17 = 1;
+  wire id_18;
+  module_0 modCall_1 (
+      id_6,
+      id_3,
+      id_2,
+      id_5,
+      id_5,
+      id_2,
+      id_8,
+      id_7,
+      id_3,
+      id_3,
+      id_2,
+      id_8,
+      id_6,
+      id_5,
+      id_2,
+      id_8,
+      id_0,
+      id_6,
+      id_10,
+      id_8,
+      id_8
   );
-  module_0 modCall_1 ();
-  assign modCall_1.type_4 = 0;
+  assign id_13 = -1;
+  assign id_3  = 1'd0;
+  supply1 id_19;
+  assign id_7 = 1;
+  wire id_20;
+  ;
+  always if (1);
+  if (1 & id_17) initial id_14 <= id_9;
+  else assign id_19 = -1;
+  logic _id_21 = id_4;
+  logic id_22;
+  ;
+  wire [id_11  .  id_21  .  id_1 : 1] id_23, id_24;
 endmodule

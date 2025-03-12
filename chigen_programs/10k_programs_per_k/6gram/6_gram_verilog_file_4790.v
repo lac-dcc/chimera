@@ -1,40 +1,54 @@
-// Seed: 3194808298
-module module_0 (
-    input  uwire id_0,
-    input  tri1  id_1,
-    input  wor   id_2,
-    input  uwire id_3,
-    output tri   id_4,
-    output wand  id_5
+// Seed: 1813451570
+module module_0 #(
+    parameter id_16 = 32'd13,
+    parameter id_19 = 32'd72
 );
-  wire id_7 = 1'b0, id_8;
-  wire id_9;
-endmodule
-module module_1 (
-    input wor id_0,
-    input tri1 id_1,
-    input tri id_2,
-    output supply1 id_3,
-    output supply0 id_4,
-    input supply1 id_5,
-    input wand id_6,
-    inout supply1 id_7,
-    input tri id_8,
-    output wand id_9,
-    input supply1 id_10,
-    output wand id_11,
-    output wire id_12,
-    output wand id_13,
-    output tri id_14
-);
-  wire id_16;
-  module_0 modCall_1 (
-      id_6,
-      id_10,
+  bit
+      id_1,
       id_2,
+      id_3,
+      id_4,
       id_5,
+      id_6,
+      id_7,
+      id_8,
+      id_9,
+      id_10,
+      id_11,
+      id_12,
       id_13,
-      id_3
-  );
-  assign modCall_1.id_3 = 0;
+      id_14,
+      id_15,
+      _id_16,
+      id_17,
+      id_18,
+      _id_19,
+      id_20;
+  logic [-1 : -1] id_21;
+  logic [id_16 : id_19] id_22;
+  ;
+  assign id_14 = -1;
+  always @(posedge id_11) begin : LABEL_0
+    if (1) begin : LABEL_1
+      id_6 <= "";
+    end else begin : LABEL_2
+      id_3 <= 1'h0;
+    end
+  end
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd58,
+    parameter id_3 = 32'd17,
+    parameter id_5 = 32'd6
+) (
+    output wor   _id_0,
+    output tri   id_1,
+    input  uwire id_2,
+    inout  wand  _id_3
+);
+  wire [id_3 : -1] _id_5;
+  bufif0 primCall (id_1, id_2, id_6);
+  logic [(  id_0  ) : id_3] id_6;
+  module_0 modCall_1 ();
+  logic [id_5  &  id_3 : 1 'b0] id_7;
 endmodule

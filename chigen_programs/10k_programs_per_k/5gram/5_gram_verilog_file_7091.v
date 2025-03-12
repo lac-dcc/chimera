@@ -1,56 +1,63 @@
-// Seed: 3101402698
-module module_0 (
-    output wand  id_0,
-    input  tri0  id_1,
-    input  uwire id_2
-);
-  always @* begin : LABEL_0
-    deassign id_0.id_2;
-  end
-  assign module_1.type_3 = 0;
+// Seed: 328222274
+module module_0 ();
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input tri1 id_1,
-    output uwire id_2,
-    input supply1 id_3,
+module module_1 #(
+    parameter id_29 = 32'd16
+) (
+    output wor id_0,
+    input wor id_1,
+    output supply1 id_2,
+    output tri id_3,
     input supply1 id_4,
-    input tri1 id_5,
-    input supply0 id_6,
-    output supply0 id_7,
-    output uwire id_8,
-    output tri id_9,
-    input wor id_10,
-    input wand id_11,
-    output supply0 id_12,
-    output supply0 id_13,
-    output tri0 id_14
-    , id_17,
-    input supply0 id_15
+    input uwire id_5
+    , id_12,
+    input wire id_6,
+    input uwire id_7,
+    input supply1 id_8,
+    input wor id_9,
+    output tri1 id_10
 );
-  wire id_18;
-  module_0 modCall_1 (
-      id_7,
-      id_11,
-      id_6
-  );
-  wire id_19 = id_19 - 1 == id_1;
-  wire id_20;
-  tri1 id_21;
-  id_22(
-      .id_0(id_4),
-      .id_1(""),
-      .id_2(id_10),
-      .id_3(1'b0),
-      .id_4((id_15 == id_1 * 1 - 1'h0)),
-      .id_5(1 == id_12),
-      .id_6(1)
-  );
-  wand  id_23;
-  wire  id_24;
-  uwire id_25 = 1;
-  wor   id_26;
-  assign id_14 = (id_23) != {1'b0, id_21};
-  assign id_21 = id_26;
-  wire id_27;
+  module_0 modCall_1 ();
+  bit
+      id_13,
+      id_14,
+      id_15,
+      id_16,
+      id_17,
+      id_18,
+      id_19,
+      id_20,
+      id_21,
+      id_22,
+      id_23,
+      id_24,
+      id_25,
+      id_26,
+      id_27,
+      id_28,
+      _id_29,
+      id_30,
+      id_31,
+      id_32,
+      id_33,
+      id_34,
+      id_35,
+      id_36,
+      id_37,
+      id_38;
+  assign #1 id_21 = 1;
+  wire id_39;
+  always @(id_23)
+    if (1) begin : LABEL_0
+      struct packed {
+        logic [-1 'b0 : 1 'b0] id_40;
+        struct packed {
+          id_41 id_42;
+          struct packed {
+            logic id_43;
+            logic [-1  !=  1 'b0 : -1  ==  1] id_44;
+          } [-1 : id_29] id_45;
+        } id_46;
+      } [1 : -1] id_47;
+    end else id_34 <= id_31;
 endmodule

@@ -1,31 +1,30 @@
-// Seed: 2441476816
-module module_0 (
+// Seed: 3296753887
+module module_0;
+  logic [1 : -1 'b0] id_1 = 1'b0, id_2;
+endmodule
+module module_1 #(
+    parameter id_3 = 32'd34,
+    parameter id_4 = 32'd21
+) (
+    id_1,
+    id_2,
+    _id_3
+);
+  input wire _id_3;
+  output wire id_2;
+  output wire id_1;
+  module_0 modCall_1 ();
+  wire _id_4;
+  ;
+  assign id_2 = id_3;
+  wire [id_4 : id_3] id_5;
+endmodule
+module module_2 (
     id_1,
     id_2
 );
-  input wire id_2;
-  input wire id_1;
-  reg id_3;
-  always @(posedge id_3 or 1 == id_3) begin : LABEL_0
-    id_3 <= 1;
-  end
-  reg id_4;
-  for (id_5 = 1; 1; id_3 = 1'h0) begin : LABEL_0
-    if (id_4) begin : LABEL_0
-      if (1) begin : LABEL_0
-      end
-    end
-  end
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  wor  id_9 = 1;
-endmodule
-module module_1;
-  wire id_1;
-  module_0 modCall_1 (
-      id_1,
-      id_1
-  );
-  assign modCall_1.id_3 = 0;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_3;
+  module_0 modCall_1 ();
 endmodule

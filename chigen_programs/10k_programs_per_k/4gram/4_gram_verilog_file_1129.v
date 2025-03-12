@@ -1,66 +1,75 @@
-// Seed: 3475051749
+// Seed: 4284004073
 module module_0 (
-    id_1
+    id_1,
+    module_0,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15
 );
+  input wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  input wire id_12;
+  inout wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
   output wire id_1;
-  wire module_0;
+  parameter id_16 = -1;
 endmodule
-module module_1 (
-    input wand id_0
-    , id_43,
-    input wor id_1,
-    output uwire id_2,
-    input uwire id_3,
-    input wor id_4,
-    input tri id_5,
-    output uwire id_6,
-    output wire id_7,
-    input wor id_8,
-    output supply0 id_9,
-    input supply1 id_10,
-    input wand id_11,
-    input supply1 id_12,
-    input supply0 id_13,
-    input supply1 id_14,
-    input tri id_15,
-    input uwire id_16,
-    input uwire id_17,
-    input supply0 id_18,
-    output tri id_19,
-    input tri id_20,
-    output supply1 id_21,
-    input wire id_22,
-    output wire id_23,
-    input tri1 id_24
-    , id_44,
-    input supply1 id_25,
-    input tri1 id_26,
-    output tri id_27,
-    input wand id_28,
-    output supply0 id_29,
-    input wand id_30,
-    output wor id_31,
-    output wire id_32
-    , id_45,
-    output wire id_33,
-    input tri0 id_34,
-    output supply1 id_35,
-    output supply0 id_36,
-    input wor id_37,
-    input tri1 id_38,
-    output tri id_39,
-    input wand id_40,
-    output supply1 id_41
+module module_1 #(
+    parameter id_8 = 32'd97
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_43 = 1;
-  integer id_46 (
-      .id_0(id_22),
-      .id_1(1'b0),
-      .id_2(1),
-      .id_3(1),
-      .id_4(!id_5),
-      .id_5(),
-      .id_6(1)
+  input wire id_4;
+  inout logic [7:0] id_3;
+  output wire id_2;
+  input wire id_1;
+  logic id_5;
+  ;
+  wire id_6;
+  parameter id_7 = -1;
+  _id_8 :
+  assert property (@(negedge -1'b0) -1)
+  else $unsigned(83);
+  ;
+  logic id_9;
+  logic id_10;
+  module_0 modCall_1 (
+      id_5,
+      id_10,
+      id_10,
+      id_9,
+      id_5,
+      id_5,
+      id_6,
+      id_10,
+      id_6,
+      id_1,
+      id_9,
+      id_1,
+      id_5,
+      id_10,
+      id_10
   );
-  module_0 modCall_1 (id_44);
 endmodule

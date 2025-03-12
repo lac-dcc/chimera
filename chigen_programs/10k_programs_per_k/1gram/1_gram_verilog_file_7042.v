@@ -1,59 +1,43 @@
-// Seed: 3919960375
+// Seed: 2814481497
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wire id_0[1 : ""]
 );
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  assign id_1 = (1);
-  string id_4, id_5;
-  initial id_1 = id_3;
-  assign id_4 = "";
+  parameter id_2 = 1;
+  module_2 modCall_1 (id_2);
 endmodule
 module module_1 (
-    output tri0 id_0,
-    output uwire id_1,
-    output supply1 id_2,
-    input tri0 id_3,
-    input wire id_4,
-    output uwire id_5,
-    input tri0 id_6,
-    input wand id_7,
-    input wand id_8,
-    input tri id_9,
-    input wor id_10,
-    input supply1 id_11,
-    output tri0 id_12,
-    input tri id_13,
-    input tri id_14,
-    input supply0 id_15
-    , id_34,
-    input uwire id_16
-    , id_35,
-    input tri id_17,
-    input uwire id_18,
-    output supply1 id_19,
-    input tri1 id_20,
-    output wor id_21,
-    output logic id_22,
-    input wand id_23,
-    input tri id_24,
-    output tri1 id_25,
-    input logic id_26,
-    input supply1 id_27,
-    output wire id_28,
-    output tri0 id_29,
-    output supply0 id_30,
-    output wire id_31,
-    input wand id_32
+    input tri id_0,
+    input wand id_1,
+    output supply0 id_2,
+    input tri1 id_3,
+    input supply1 id_4,
+    output tri1 id_5
 );
-  always id_22 <= id_26;
-  module_0 modCall_1 (
-      id_34,
-      id_34,
-      id_35
-  );
-  assign modCall_1.id_3 = 0;
+  assign id_2 = -1;
+  module_0 modCall_1 (id_3);
 endmodule
+program module_2 #(
+    parameter id_2 = 32'd79
+) (
+    id_1
+);
+  input wire id_1;
+  wire _id_2;
+  wire id_3;
+  logic id_4[1 : 1 'd0] = id_4[id_2];
+  logic id_5 = id_5;
+  wire [-1 : -1 'b0] id_6, id_7;
+  union {
+    struct packed {
+      logic id_8;
+      logic id_9;
+      logic id_10;
+    } id_11;
+  } id_12;
+  ;
+  wire id_13;
+  wire id_14;
+  integer id_15;
+  wire id_16;
+  assign id_12.id_10 = 1;
+endprogram

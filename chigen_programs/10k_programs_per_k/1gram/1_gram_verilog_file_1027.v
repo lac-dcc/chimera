@@ -1,125 +1,78 @@
-// Seed: 2320564955
+// Seed: 874751990
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    output wor id_0,
+    output wire id_1,
+    input wire id_2,
+    input uwire id_3,
+    output supply0 id_4,
+    input supply0 id_5,
+    input wor id_6,
+    output supply1 id_7,
+    output tri1 id_8,
+    input wand id_9,
+    input supply0 id_10,
+    input supply0 id_11,
+    output wor id_12
+    , id_18,
+    input tri id_13,
+    input tri id_14,
+    input wor id_15,
+    output supply0 id_16
 );
-  inout wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  output wire id_19;
-  inout wire id_18;
-  inout wire id_17;
-  input wire id_16;
-  output wire id_15;
-  output wire id_14;
-  output wire id_13;
-  output wire id_12;
-  output wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always begin : LABEL_0
-    id_15 <= id_16;
-  end
-  reg id_23, id_24, id_25 = 1'b0;
-  logic [7:0] id_26;
-  id_27 :
-  assert property (@(posedge 1, posedge 1 or id_25 or posedge id_8) id_25) id_26[1] <= id_24;
-  assign id_14[1] = id_18;
-  uwire id_28;
-  id_29(
-      id_10, 1, 1
-  );
-  assign id_28 = (id_10);
-  wire id_30;
+  assign id_16 = id_3;
+  assign module_1.id_14 = 0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+module module_1 #(
+    parameter id_5 = 32'd36
+) (
+    output tri1 id_0,
+    input wand id_1,
+    output wand id_2,
+    input supply0 id_3,
+    input tri0 id_4,
+    input uwire _id_5,
+    input wand id_6,
+    input uwire id_7,
+    input tri1 id_8,
+    input wor id_9,
+    output logic id_10,
+    output tri0 id_11,
+    output tri0 id_12
+    , id_21,
+    input uwire id_13[id_5 : -1],
+    input tri id_14,
+    input uwire id_15,
+    input supply1 id_16,
+    output tri0 id_17,
+    output logic id_18,
+    input wire id_19
 );
-  output wire id_11;
-  output wire id_10;
-  output wire id_9;
-  input wire id_8;
-  input wire id_7;
-  output wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  always id_6 = 1;
-  always if (id_7) id_10 <= id_4;
-  wor  id_12;
-  tri0 id_13 = 1;
+  initial begin : LABEL_0
+    fork
+      id_18 = 1'b0;
+      id_10 = -1'b0;
+    join
+  end
+  logic \id_22 ;
+  assign id_10 = -1;
+  logic id_23, id_24, id_25;
   module_0 modCall_1 (
-      id_12,
-      id_12,
-      id_8,
-      id_5,
-      id_12,
-      id_13,
-      id_12,
+      id_11,
+      id_17,
+      id_19,
       id_4,
-      id_12,
-      id_8,
-      id_5,
-      id_5,
-      id_6,
+      id_11,
+      id_15,
+      id_13,
       id_2,
-      id_4,
-      id_4,
-      id_12,
-      id_12,
-      id_12,
-      id_12,
-      id_13,
-      id_12
+      id_0,
+      id_9,
+      id_19,
+      id_9,
+      id_11,
+      id_8,
+      id_6,
+      id_9,
+      id_17
   );
-  assign modCall_1.id_8 = 0;
-  wire id_14;
-  logic [7:0] id_15;
-  generate
-    assign id_6 = $display;
-  endgenerate
-  initial $display(1, id_12, 1'h0, id_8, id_7);
-  assign id_15 = id_1;
-  assign id_13 = id_1[1'b0];
-  tri1 id_16, id_17, id_18 = 1'h0, id_19, id_20, id_21;
 endmodule

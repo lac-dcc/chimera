@@ -1,43 +1,38 @@
-// Seed: 162377126
+// Seed: 101042674
 module module_0 (
-    input wand id_0,
-    input tri id_1,
-    output tri1 id_2,
-    input supply1 id_3,
-    input wand id_4,
-    input wire id_5,
-    output wand id_6,
-    input tri id_7
+    input uwire id_0,
+    output wand id_1,
+    input supply1 id_2
 );
+  reg id_4;
+  ;
+  assign id_4 = id_2;
+  parameter id_5 = 1;
+  always @(*) if (1) id_4 <= id_5 - -1;
+  assign id_4 = id_5(id_5) ? (1) : 1;
 endmodule
-module module_1 (
-    output wor   id_0,
-    output tri1  id_1,
-    output tri0  id_2,
-    input  uwire id_3,
-    output tri   id_4,
-    output wor   id_5,
-    input  wor   id_6
+module module_0 #(
+    parameter id_3 = 32'd70,
+    parameter id_6 = 32'd52
+) (
+    output supply1 id_0,
+    input tri0 id_1,
+    output supply1 id_2,
+    input tri0 module_1,
+    input uwire id_4,
+    output supply0 id_5,
+    input supply0 _id_6,
+    input supply1 id_7,
+    output supply0 id_8,
+    output wand id_9
 );
-  wire id_8;
-  always @(posedge id_6 or posedge 1) $display(1);
-  wire id_9;
-  supply1 id_10;
-  uwire id_11;
-  generate
-    assign id_1 = id_10;
-  endgenerate
-  assign id_2 = id_11;
-  wire id_12;
+  wire id_11;
+  wire [id_3  <  1 : id_6] id_12;
   module_0 modCall_1 (
-      id_10,
-      id_3,
-      id_2,
-      id_11,
-      id_11,
-      id_11,
-      id_4,
-      id_6
+      id_7,
+      id_5,
+      id_4
   );
-  assign modCall_1.id_6 = 0;
+  assign modCall_1.id_1 = 0;
+  assign id_0 = -1;
 endmodule

@@ -1,50 +1,88 @@
-// Seed: 4079406483
+// Seed: 2646962358
 module module_0 (
-    output tri   id_0,
-    input  uwire id_1,
-    input  tri1  id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19
 );
-  assign id_0 = 1;
-  assign module_2.id_14 = 0;
+  inout wire id_19;
+  inout wire id_18;
+  output wire id_17;
+  output wire id_16;
+  output wire id_15;
+  input wire id_14;
+  inout wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  input wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_20;
 endmodule
-module module_1 (
-    input  tri  id_0,
-    output wand id_1
+module module_1 #(
+    parameter id_3 = 32'd84
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4,
+    id_5
 );
-  id_3 :
-  assert property (@(posedge id_3) 1)
-  else id_1 = 1;
-  module_0 modCall_1 (
-      id_1,
-      id_0,
-      id_0
-  );
-  assign modCall_1.id_0 = 0;
-endmodule
-module module_2 (
-    output tri1 id_0,
-    input wire id_1,
-    output tri1 id_2,
-    output tri0 id_3,
-    output wand id_4,
-    output supply1 id_5,
-    input supply1 id_6,
-    input supply1 id_7,
-    output tri0 id_8,
-    output supply0 id_9,
-    input tri1 id_10,
-    output tri0 id_11,
-    input tri id_12,
-    output tri0 id_13,
-    input wand id_14,
-    input wor id_15,
-    input tri id_16,
-    output wand id_17
-);
-  wand id_19 = {1'b0, ~id_19, 1'h0};
+  output reg id_5;
+  inout wire id_4;
+  input wire _id_3;
   module_0 modCall_1 (
       id_4,
-      id_10,
-      id_6
+      id_4,
+      id_1,
+      id_4,
+      id_4,
+      id_1,
+      id_4,
+      id_1,
+      id_4,
+      id_1,
+      id_1,
+      id_1,
+      id_4,
+      id_4,
+      id_1,
+      id_1,
+      id_1,
+      id_4,
+      id_4
   );
+  inout reg id_2;
+  inout wire id_1;
+  id_6 :
+  assert property (@(posedge id_1) -1 - id_1)
+  else begin : LABEL_0
+    id_2 <= 1 - id_4;
+  end
+  supply0 [1 : id_3] id_7 = 1;
+  always @(1) begin : LABEL_1
+    assume (id_2) id_5 <= -1'b0;
+  end
 endmodule

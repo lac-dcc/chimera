@@ -1,75 +1,45 @@
-// Seed: 4199017794
-module module_0 ();
+// Seed: 483112683
+module module_0 (
+    output tri0 id_0,
+    input  tri1 id_1,
+    output wire id_2
+);
+  module_2 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
+  assign modCall_1.id_4 = 0;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input wor id_1,
-    input wor id_2,
-    output wire id_3,
-    input tri1 id_4,
-    input uwire id_5,
-    input supply1 id_6,
+    input wor id_0,
+    output logic id_1,
+    input tri id_2,
+    input supply1 id_3,
+    output supply1 id_4,
+    input wor id_5,
+    input wor id_6,
     output wor id_7,
-    input supply1 id_8,
-    input tri0 id_9,
-    input wor id_10,
-    input tri id_11,
-    input supply1 id_12,
-    input uwire id_13,
-    output wor id_14,
-    input tri1 id_15,
-    input wand id_16,
-    input uwire id_17,
-    input tri id_18,
-    input tri0 id_19,
-    input uwire id_20
-    , id_65,
-    output wor id_21,
-    input uwire id_22,
-    input wire id_23,
-    input tri id_24,
-    input wand id_25,
-    input tri0 id_26,
-    output wand id_27,
-    input tri1 id_28
-    , id_66,
-    input wand id_29,
-    output tri0 id_30,
-    output tri0 id_31,
-    output supply0 id_32,
-    input tri1 id_33,
-    input wor id_34,
-    input tri id_35,
-    output wire id_36,
-    input uwire id_37,
-    input wand id_38,
-    output tri0 id_39,
-    input tri1 id_40,
-    input supply1 id_41,
-    input wand id_42,
-    inout wor id_43
-    , id_67,
-    input supply0 id_44,
-    output wand id_45,
-    input wor id_46,
-    output tri id_47,
-    input uwire id_48,
-    output supply0 id_49,
-    output supply0 id_50,
-    output supply1 id_51,
-    input supply0 id_52,
-    input tri1 id_53,
-    output supply1 id_54,
-    input tri1 id_55,
-    input uwire id_56,
-    input supply1 id_57,
-    output tri0 id_58,
-    inout supply0 id_59,
-    output wire id_60,
-    input tri1 id_61,
-    output wand id_62,
-    input uwire id_63
+    input uwire id_8
 );
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  always begin : LABEL_0
+    id_1 <= id_2 < -1;
+  end
+  module_0 modCall_1 (
+      id_4,
+      id_8,
+      id_4
+  );
+  assign modCall_1.id_2 = 0;
+endmodule
+module module_2 (
+    input wire id_0,
+    input tri1 id_1#(.id_6(1)),
+    input supply1 id_2,
+    input tri1 id_3,
+    input wire id_4
+);
+  assign id_6 = 1;
 endmodule

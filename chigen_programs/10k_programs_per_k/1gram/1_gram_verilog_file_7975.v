@@ -1,36 +1,41 @@
-// Seed: 2025790836
-module module_0 ();
-  assign id_1 = 1;
-  assign module_2.id_1 = 0;
-  if ("" + 1 % 1) assign id_1 = 1;
-  else begin : LABEL_0
-    wire id_2;
-  end
-  wire id_3, id_4;
+// Seed: 355327330
+module module_0 #(
+    parameter id_1 = 32'd54,
+    parameter id_2 = 32'd50
+) ();
+  wire _id_1;
+  wire _id_2[id_1 : -1], id_3[id_2 : id_2];
 endmodule
-module module_1 ();
-  assign #(1'b0) id_1 = 1'b0;
-  module_0 modCall_1 ();
-endmodule
-module module_2;
-  module_0 modCall_1 ();
-  assign id_1 = 1;
-endmodule
-module module_3 (
-    input tri1 id_0,
-    input tri0 id_1,
-    output supply1 id_2,
-    output wor id_3,
-    output wor id_4,
-    output wire id_5,
-    output tri0 id_6,
-    input tri id_7,
-    input wand id_8,
-    input tri1 id_9
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5["" : 1&&-1],
+    id_6[1 :-1],
+    id_7,
+    id_8,
+    id_9
 );
-  assign id_4 = 1'b0;
-  wire id_11;
-  wire id_12;
+  input wire id_9;
+  input wire id_8;
+  input wire id_7;
+  output logic [7:0] id_6;
+  output logic [7:0] id_5;
+  inout reg id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  initial begin : LABEL_0
+    @(negedge 1 or negedge -1 or posedge id_4) id_4 <= -1'b0;
+    $unsigned(41);
+    ;
+  end
+  wire id_10;
+  always
+  `define pp_11 0
   module_0 modCall_1 ();
-  wire id_13;
+  wire id_12;
+  ;
+  assign id_12 = id_9;
 endmodule

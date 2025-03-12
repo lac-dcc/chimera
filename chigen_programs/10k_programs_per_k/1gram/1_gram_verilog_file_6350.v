@@ -1,97 +1,31 @@
-// Seed: 1610327685
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23
-);
-  input wire id_23;
-  inout wire id_22;
-  output wire id_21;
-  inout wire id_20;
-  input wire id_19;
-  output wire id_18;
-  inout wire id_17;
-  inout wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  input wire id_12;
-  inout wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_8 = 1;
+// Seed: 4142087793
+module module_0 ();
+  reg id_1;
+  always id_1 <= -1 !== -1 & 1 / id_1;
+  wire id_2;
+  always_latch $signed(54);
+  ;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+module module_1 #(
+    parameter id_0 = 32'd64,
+    parameter id_5 = 32'd57
+) (
+    input uwire _id_0,
+    input uwire id_1,
+    input tri1 id_2,
+    output tri1 id_3,
+    input uwire id_4,
+    input wor _id_5,
+    output supply0 id_6,
+    input tri1 id_7,
+    output tri id_8,
+    output wand id_9
 );
-  input wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  input wire id_4;
-  output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_9, id_10;
-  module_0 modCall_1 (
-      id_7,
-      id_6,
-      id_10,
-      id_9,
-      id_5,
-      id_6,
-      id_7,
-      id_10,
-      id_10,
-      id_10,
-      id_10,
-      id_1,
-      id_2,
-      id_10,
-      id_9,
-      id_7,
-      id_9,
-      id_3,
-      id_4,
-      id_7,
-      id_7,
-      id_10,
-      id_10
-  );
-  assign id_10 = id_8;
+  parameter id_11 = 1;
+  logic [id_5  +  id_0 : 1] id_12 = id_12;
+  module_0 modCall_1 ();
+  assign id_3 = 1'b0;
+  logic [7:0][1 'b0] id_13 = id_5, id_14;
+  always $unsigned(96);
+  ;
 endmodule

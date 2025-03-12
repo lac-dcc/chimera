@@ -1,36 +1,42 @@
-// Seed: 3202064552
-module module_0 (
-    input supply1 id_0
-);
-  assign module_2.type_1 = 0;
-  assign module_1.id_1   = 0;
+// Seed: 4020654253
+module module_0;
+  parameter id_1 = 1;
+  module_2 modCall_1 (
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1
+  );
+  logic id_2;
 endmodule
 module module_1 (
-    input supply1 id_0,
-    output uwire id_1,
-    input supply1 id_2,
-    input wire id_3
-    , id_15,
-    input supply0 id_4,
-    output supply0 id_5,
-    output wire id_6,
-    input tri1 id_7,
-    input wand id_8,
-    input tri1 id_9,
-    output uwire id_10,
-    output wire id_11,
-    input uwire id_12,
-    input wand id_13
+    id_1,
+    id_2,
+    id_3
 );
-  module_0 modCall_1 (id_8);
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  always @(1'b0);
+  module_0 modCall_1 ();
+  parameter id_4 = 1;
+  notif1 primCall (id_1, id_2, id_3);
 endmodule
 module module_2 (
-    output tri1  id_0,
-    input  uwire id_1,
-    output tri0  id_2,
-    input  wand  id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  supply1 id_5 = id_3;
-  integer id_6;
-  module_0 modCall_1 (id_3);
+  inout wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout uwire id_1;
+  logic id_6;
+  assign id_1 = 1'b0;
+  logic id_7;
+  ;
 endmodule

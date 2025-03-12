@@ -1,49 +1,47 @@
-// Seed: 1197492860
-module module_0;
-  reg  id_2;
-  tri1 id_4;
-  assign id_2 = id_3;
-  initial if (id_1) id_3 <= 1 || id_4;
-  string id_5 = "";
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18
+// Seed: 2404985519
+module module_0 (
+    output tri0 id_0
 );
-  inout wire id_18;
-  input wire id_17;
-  inout wire id_16;
-  input wire id_15;
-  output wire id_14;
-  input wire id_13;
-  output wire id_12;
-  inout wire id_11;
-  output wire id_10;
-  output wire id_9;
-  output wire id_8;
-  output wire id_7;
-  output wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_19 = id_5;
-  module_0 modCall_1 ();
+  tri [-1 : -1  <  -1] id_2 = 1, id_3 = -1'b0;
+  assign id_2 = id_2 == 1;
+  reg   id_4 = -1;
+  logic id_5;
+  ;
+  always id_4 <= -1'b0 + -1 - -1'h0;
+  wire id_6;
+  ;
+  wire [(  1  ) : -1] id_7 = id_2;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd22
+) (
+    output logic id_0,
+    output logic id_1,
+    input tri id_2,
+    output wand id_3,
+    input supply1 _id_4
+);
+  localparam id_6 = 1;
+  assign id_0 = id_6 - 1;
+  always begin : LABEL_0
+    id_1 <= -1;
+    wait (-1 % id_2);
+  end
+  wire id_7;
+  tri1 [1 : 1] id_8;
+  assign id_7 = id_2;
+  always begin : LABEL_1
+    id_0 <= id_4;
+  end
+  assign #({id_6 | id_8, id_6 & -1, id_2} - id_6) id_8 = 1;
+  module_0 modCall_1 (id_3);
+  assign modCall_1.id_3 = 0;
+  always begin : LABEL_2
+    $signed(87);
+    ;
+  end
+  bit [id_4 : 1] id_9;
+  always_ff begin : LABEL_3
+    id_9 <= -1;
+  end
 endmodule

@@ -1,7 +1,33 @@
-// Seed: 876146487
-module module_0 (
+// Seed: 1491922385
+module module_0;
+endmodule
+module module_1 (
+    input  wire  id_0,
+    output uwire id_1
+);
+  assign id_1 = -1;
+  module_0 modCall_1 ();
+  parameter id_3 = 1'b0;
+endmodule
+module module_2;
+  localparam id_1 = -1;
+  module_0 modCall_1 ();
+  always @(id_1 or posedge -1);
+endmodule
+module module_3 (
+    input tri   id_0,
+    input tri0  id_1,
+    input uwire id_2
+);
+  wire id_4;
+  ;
+  module_0 modCall_1 ();
+endmodule
+module module_4 #(
+    parameter id_2 = 32'd28
+) (
     id_1,
-    id_2,
+    _id_2,
     id_3,
     id_4,
     id_5,
@@ -9,39 +35,13 @@ module module_0 (
     id_7
 );
   output wire id_7;
-  inout wire id_6;
-  output wire id_5;
+  input wire id_6;
+  input wire id_5;
+  module_0 modCall_1 ();
   inout wire id_4;
   input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_8 = id_1;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
-);
-  input wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_7;
-  assign id_7 = id_2;
-  module_0 modCall_1 (
-      id_1,
-      id_6,
-      id_7,
-      id_7,
-      id_4,
-      id_7,
-      id_7
-  );
-  always_ff @(1 or 1) id_5 = id_3;
-  wire id_8;
+  input wire _id_2;
+  inout wire id_1;
+  parameter id_8 = 1;
+  wire [-1 : id_2] id_9;
 endmodule

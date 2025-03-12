@@ -1,35 +1,39 @@
-// Seed: 2195755772
-module module_0;
-  logic [7:0][1] id_1;
-  wire id_2, id_3, id_4, id_5, id_6;
-  wire id_7;
-  wire id_8;
-  wire id_9;
-  always_comb $display;
-endmodule
-module module_1 (
-    input  wire id_0,
-    output wire id_1,
-    input  wand id_2
+// Seed: 227676924
+program module_0;
+  logic id_1;
+  assign id_1 = id_1;
+endprogram
+module module_1 #(
+    parameter id_13 = 32'd4
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10[-1 : ""],
+    id_11[1 : 1*-1],
+    id_12,
+    _id_13["" : id_13]
 );
-  assign id_1 = id_0;
-  reg id_4, id_5, id_6;
-  assign id_1 = 1;
-  generate
-    id_7(
-        1
-    );
-    begin : LABEL_0
-      assign id_1 = 1;
-      reg id_8 = ({1, id_0}) && 1'b0;
-      always id_4 <= "";
-      wire id_9, id_10, id_11;
-      initial id_8 <= 1'b0;
-    end
-    wire id_12;
-  endgenerate
-  wire id_13;
-  assign id_5 = id_4;
-  assign id_6 = id_6;
+  inout logic [7:0] _id_13;
+  input wire id_12;
+  inout logic [7:0] id_11;
+  input logic [7:0] id_10;
+  input wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output wire id_1;
+  localparam id_14 = 1;
   module_0 modCall_1 ();
+  assign id_2 = id_12;
 endmodule

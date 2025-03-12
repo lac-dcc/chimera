@@ -1,45 +1,59 @@
-// Seed: 2226154862
+// Seed: 200805139
 module module_0 (
-    input wand id_0,
-    input supply1 id_1,
-    output tri1 id_2
+    output tri id_0,
+    input wire id_1
+    , id_8,
+    input tri1 id_2,
+    input supply0 id_3,
+    input tri1 id_4,
+    input supply0 id_5,
+    output supply1 module_0
+    , id_9
 );
-  reg id_4;
-  assign module_1.id_9 = 0;
-  assign id_2 = id_0;
-  wire id_5;
-  reg  id_6 = 1;
-  always begin : LABEL_0
-    id_4 <= id_6;
-  end
+  wire id_10;
+  wire id_11;
+  wire id_12;
+  assign id_0 = id_3 ? |(id_2 === id_5 - 1'b0) : id_3;
 endmodule
-module module_1 #(
-    parameter id_12 = 32'd33,
-    parameter id_13 = 32'd84
-) (
-    input tri id_0,
-    input supply1 id_1,
-    output uwire id_2,
-    input tri1 id_3
-    , id_11,
+module module_1 (
+    output uwire id_0,
+    input tri1 id_1,
+    output logic id_2
+    , id_12,
+    input wand id_3,
     input supply1 id_4,
-    output supply1 id_5,
-    input wor id_6,
-    input supply1 id_7,
-    output tri0 id_8,
-    input tri1 id_9
+    output wor id_5,
+    input wand id_6,
+    output tri0 id_7,
+    inout logic id_8,
+    input wire id_9,
+    output logic id_10
 );
-  assign id_2 = 1 == id_4 ? id_11 : 1'h0;
-  generate
-    if (1 == 1 && id_7) begin : LABEL_0
-      defparam id_12.id_13 = 1;
-    end else id_14(.id_0(1), .id_1(id_3), .id_2(1), .id_3(1), .id_4(1), .id_5(1 == 1));
-  endgenerate
-  wire id_15;
+  initial begin : LABEL_0
+    if (1 - -1) id_2 <= -1;
+    else id_10 <= id_6 & 1;
+  end
   module_0 modCall_1 (
-      id_0,
+      id_5,
+      id_4,
+      id_9,
+      id_1,
       id_6,
+      id_4,
       id_5
   );
-  initial assume (1'b0);
+  generate
+    assign id_2 = 1;
+    if (1'b0 < 1)
+      if (1 == 1'd0) begin : LABEL_1
+        wire id_13;
+        ;
+      end else begin : LABEL_2
+        wire id_14;
+      end
+    else logic id_15;
+  endgenerate
+  always
+    if ((1) || -1'd0) #1 id_8 <= id_1 ? -1 : 1;
+    else id_2 <= id_6;
 endmodule

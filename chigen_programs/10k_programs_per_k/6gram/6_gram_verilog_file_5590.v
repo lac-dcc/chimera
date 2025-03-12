@@ -1,37 +1,36 @@
-// Seed: 2400572706
-module module_0 (
-    output supply1 id_0,
-    output tri1 id_1,
-    output tri id_2,
-    input tri id_3,
-    output supply1 id_4
-);
+// Seed: 3543138313
+module module_0 ();
+  wire id_1;
+  parameter id_2 = 1;
+  wire  id_3;
+  logic id_4;
 endmodule
 module module_1 (
-    input  wire  id_0,
-    input  uwire id_1,
-    input  uwire id_2,
-    output tri0  id_3
+    input uwire id_0,
+    input uwire id_1,
+    input wor id_2,
+    output wor id_3,
+    input uwire id_4,
+    input uwire id_5,
+    input uwire id_6,
+    input supply0 id_7,
+    output tri id_8,
+    input tri id_9,
+    output supply1 id_10,
+    output wire id_11,
+    output wire id_12,
+    output logic id_13
 );
-  assign id_3 = 1;
-  module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_3,
-      id_2,
-      id_3
-  );
-  assign modCall_1.type_2 = 0;
-endmodule
-module module_2;
-  wire id_2;
-  assign module_3.id_6 = 0;
-  wire id_3;
-endmodule
-module module_3;
-  wor id_1, id_2, id_3, id_4, id_5, id_6, id_7, id_8, id_9, id_10;
-  assign id_3 = {id_6} !== 1;
-  module_2 modCall_1 ();
-  wire id_11;
-  assign id_5 = 1;
+  initial begin : LABEL_0
+    assume (1);
+    id_13 <= id_4;
+    $signed(87);
+    ;
+    if (1) begin : LABEL_1
+      if ("") id_13 = 1 - 1;
+    end else begin : LABEL_2
+      wait (id_9);
+    end
+  end
+  module_0 modCall_1 ();
 endmodule

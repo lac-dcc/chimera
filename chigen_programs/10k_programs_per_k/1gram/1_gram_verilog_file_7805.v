@@ -1,25 +1,36 @@
-// Seed: 1262553172
+// Seed: 1580390739
 module module_0 ();
-  assign id_1 = id_1;
-  assign id_1 = id_1;
-  assign module_1.id_11 = 0;
-  wire id_2;
+  logic id_1;
+  assign id_1 = id_1 - id_1;
 endmodule
-macromodule module_1 (
-    input wire id_0,
-    input wand id_1,
-    output tri0 id_2,
-    input uwire id_3,
-    input wor id_4,
-    output uwire id_5,
-    input wand id_6,
-    input supply1 id_7,
-    input supply1 id_8
+module module_1 (
+    input tri0 id_0,
+    output tri id_1,
+    input wor id_2,
+    output supply1 id_3,
+    input tri0 id_4,
+    input wor void id_5,
+    output tri1 id_6
+    , id_23,
+    input supply0 id_7,
+    input supply0 id_8,
+    output tri0 id_9,
+    output tri0 id_10,
+    input wand id_11,
+    input uwire id_12,
+    input supply1 id_13,
+    input tri id_14,
+    input supply1 id_15,
+    input tri id_16,
+    input supply0 id_17
+    , id_24,
+    inout tri0 id_18,
+    output wand id_19,
+    input wire id_20,
+    output wire id_21
 );
-  supply1 id_10 = id_3;
-  assign id_10 = id_8;
-  initial $display(1);
-  supply1 id_11, id_12, id_13;
-  assign id_12 = id_10;
+  assign id_21 = 1'b0;
+  logic id_25;
   module_0 modCall_1 ();
+  assign modCall_1.type_2 = 0;
 endmodule

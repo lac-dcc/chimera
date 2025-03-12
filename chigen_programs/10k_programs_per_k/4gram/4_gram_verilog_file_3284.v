@@ -1,28 +1,41 @@
-// Seed: 2153548847
-module module_1 #(
-    parameter id_4 = 32'd18,
-    parameter id_5 = 32'd11
+// Seed: 1812696245
+module module_0 (
+    output wire id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    input wor id_3,
+    input wire id_4,
+    input tri1 id_5,
+    output supply0 id_6,
+    output uwire id_7,
+    output tri1 id_8,
+    output wand id_9,
+    output wand id_10,
+    input uwire id_11
 );
-  assign id_1 = id_1;
-  wire id_2;
-  tri  id_3 = id_1;
-  wire module_0;
-  defparam id_4.id_5 = 1'b0;
-  assign id_1 = 1;
-  integer id_6 = id_4;
-  wor id_7 = id_3;
-  supply1 id_8 = 1;
-  wire id_9;
-  wire id_10;
+  assign id_8 = 1;
+  wire id_13 = id_2, id_14 = id_13;
+  assign module_1.id_0 = 0;
 endmodule
-module module_1;
-  always_comb @(1) begin : LABEL_0
-    id_1 <= id_1;
-  end
-  module_0 modCall_1 ();
-  assign modCall_1.id_3 = 0;
-  reg id_2;
-  initial begin : LABEL_0
-    id_2 <= 1;
-  end
+module module_1 (
+    output wand id_0,
+    input  wire id_1
+);
+  wire id_3;
+  assign id_3 = id_3;
+  logic id_4;
+  module_0 modCall_1 (
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_0,
+      id_1
+  );
 endmodule

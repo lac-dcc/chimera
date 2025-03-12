@@ -1,69 +1,74 @@
-// Seed: 616775648
+// Seed: 1432454453
 module module_0 (
-    input  uwire id_0,
-    output wand  id_1,
-    input  tri1  id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  initial
-  fork : SymbolIdentifier
-  join : SymbolIdentifier
-  module_2 modCall_1 (
-      id_2,
-      id_1,
-      id_0,
-      id_0,
-      id_1,
-      id_0,
-      id_2,
-      id_1,
-      id_1,
-      id_2,
-      id_1,
-      id_0,
-      id_1,
-      id_2,
-      id_1
-  );
-  assign modCall_1.SymbolIdentifier.SymbolIdentifier.id_1 = 0;
-  assign module_1.SymbolIdentifier.SymbolIdentifier.id_6  = 0;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  assign module_1.id_3 = 0;
+  output wire id_1;
 endmodule
 module module_1 (
-    input wor id_0,
-    input tri1 id_1,
-    output tri0 id_2,
-    output tri1 id_3,
-    input tri0 id_4,
-    input wor id_5,
-    output wor id_6,
-    input supply1 id_7,
-    input tri id_8,
-    input uwire id_9,
-    input tri1 id_10
+    input  wand id_0,
+    input  tri0 id_1,
+    output tri  id_2,
+    output tri  id_3,
+    output wor  id_4
 );
-  wire id_12;
+  wire id_6;
   module_0 modCall_1 (
-      id_10,
-      id_3,
-      id_8
+      id_6,
+      id_6,
+      id_6,
+      id_6
   );
 endmodule
-module module_2 (
-    input wand id_0,
-    output tri0 id_1,
-    input supply1 id_2,
-    input tri0 id_3,
-    output wire id_4,
-    input supply0 id_5,
-    input tri id_6,
-    output tri1 id_7,
-    output wor id_8,
-    input tri1 id_9
-    , id_16,
-    output tri0 id_10,
-    input tri1 id_11,
-    output wor id_12,
-    input tri0 id_13,
-    output wire id_14
+module module_2 #(
+    parameter id_4 = 32'd11,
+    parameter id_5 = 32'd33,
+    parameter id_6 = 32'd43
+) (
+    id_1,
+    id_2,
+    id_3,
+    _id_4,
+    _id_5,
+    _id_6,
+    id_7,
+    id_8
 );
-  wire id_17;
+  output wire id_8;
+  input wire id_7;
+  input wire _id_6;
+  input wire _id_5;
+  input wire _id_4;
+  output wire id_3;
+  output wire id_2;
+  input wire id_1;
+  rtran (id_7, -1, id_8);
+  assign id_2 = id_6;
+  always @(1 or -1) begin : LABEL_0
+    $unsigned(45);
+    ;
+  end
+  logic [id_4  |  1 'b0 -  id_5 : 1] id_9;
+  wire [id_6 : id_6] id_10;
+  integer id_11;
+  ;
+  logic [id_4  +  -1 : 1 'h0 -  -1] id_12;
+  parameter id_13 = 1;
+  module_0 modCall_1 (
+      id_11,
+      id_11,
+      id_10,
+      id_9
+  );
+  wire [1 'b0 : -1  &  id_6  |  1] id_14;
+  always @(-1) begin : LABEL_1
+    $clog2(13);
+    ;
+  end
 endmodule

@@ -1,71 +1,40 @@
-// Seed: 3356527494
+// Seed: 757915609
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input  tri   id_0,
+    output wand  id_1,
+    output wire  id_2,
+    input  uwire id_3,
+    input  uwire id_4,
+    output tri1  id_5,
+    output wor   id_6,
+    input  tri0  id_7
 );
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_1 = 1'b0;
-  assign id_3 = 1;
-  rnmos (.id_0(""), .id_1(1'h0), .id_2(id_2));
-  always
-  `define pp_5 0
-  assign module_1.id_12 = 0;
+  struct packed {logic id_9;} id_10;
 endmodule
-module module_1 (
-    input uwire id_0,
-    input uwire id_1,
-    output tri1 id_2,
-    input supply0 id_3,
-    input tri0 id_4,
-    input supply1 id_5,
-    output uwire id_6,
-    input wire id_7,
-    input tri0 id_8,
-    output supply0 id_9,
-    input tri1 id_10,
-    input tri id_11,
-    output supply0 id_12,
-    output tri id_13,
-    input wor id_14,
-    input wire id_15,
-    input uwire id_16,
-    input wor id_17,
-    input wor id_18,
-    input tri1 id_19,
-    input tri1 id_20,
-    input wand id_21,
-    input uwire id_22,
-    output supply0 id_23,
-    input tri1 id_24,
-    output tri1 id_25,
-    output wand id_26,
-    input uwire id_27,
-    output supply1 id_28,
-    input uwire id_29,
-    input tri id_30,
-    input wand id_31,
-    output supply1 id_32,
-    input wand id_33
+module module_1 #(
+    parameter id_4 = 32'd2
+) (
+    output tri1 id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    input tri id_3,
+    input tri _id_4,
+    input wand id_5,
+    input tri id_6,
+    input supply1 id_7
 );
-  assign id_12 = 1'b0;
-  wire id_35;
-  assign id_35 = 1;
+  wire [id_4 : 1  +  -1] id_9;
+  assign id_9 = ~id_6;
+  wire id_10;
   module_0 modCall_1 (
-      id_35,
-      id_35,
-      id_35,
-      id_35
+      id_2,
+      id_0,
+      id_0,
+      id_2,
+      id_5,
+      id_0,
+      id_0,
+      id_1
   );
-  wire id_36;
-  integer id_37 (
-      id_12,
-      1,
-      id_13
-  );
-  uwire id_38 = 1'h0 | id_20, id_39, id_40;
+  assign modCall_1.id_7 = 0;
 endmodule

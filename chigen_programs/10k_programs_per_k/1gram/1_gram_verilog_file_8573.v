@@ -1,39 +1,34 @@
-// Seed: 3269078368
-module module_0;
-  wire id_1;
-endmodule
-module module_1 (
-    id_1
+// Seed: 1266750372
+module module_0 (
+    output tri0  id_0,
+    input  uwire id_1,
+    input  tri1  id_2
 );
-  inout wire id_1;
-  reg id_2;
-  reg id_3 = id_2;
-  assign id_3 = id_2 ? id_2 : id_1;
-  assign id_2 = id_3;
-  reg id_4 = 1 != id_1;
-  reg id_5, id_6, id_7;
-  always begin : LABEL_0
-    id_4 <= 1;
-    begin : LABEL_0
-      return 1;
-    end
-  end
-  reg id_8 = id_4;
-  module_0 modCall_1 ();
-  tri id_9;
-  reg id_10;
-  reg id_11;
-  if (id_3) reg id_12;
-  else assign id_7 = id_4;
-  assign id_11 = id_6;
-  assign id_4  = id_8 - id_12;
-  assign id_4  = id_10;
-  id_13(
-      1, 0, id_12 ? id_3 : 1, id_6, id_12, id_6
+  localparam id_4 = 1;
+endmodule
+module module_1 #(
+    parameter id_10 = 32'd55,
+    parameter id_4  = 32'd10,
+    parameter id_5  = 32'd85
+) (
+    input supply1 id_0,
+    input uwire id_1,
+    output wire id_2
+    , id_13 = 1,
+    output uwire id_3,
+    input wire _id_4[-1 'b0 /  1 : id_10],
+    input tri1 _id_5,
+    input uwire id_6,
+    input supply0 id_7,
+    input wire id_8,
+    input supply0 id_9[id_4  -  -1 : (  -1  )],
+    input tri0 _id_10,
+    output tri1 id_11
+);
+  logic id_14[id_5 : -1  /  1];
+  module_0 modCall_1 (
+      id_2,
+      id_7,
+      id_1
   );
-  supply1 id_14, id_15, id_16;
-  tri id_17 = id_16, id_18 = 1;
-  assign id_16 = 1;
-  assign id_1  = 1;
-  assign id_15 = id_9 || id_8 + id_6;
 endmodule

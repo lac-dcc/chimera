@@ -1,35 +1,30 @@
-// Seed: 2652392697
+// Seed: 167812435
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wire id_0,
+    output wor id_1,
+    output supply1 id_2
 );
-  input wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_4;
-  assign module_1.id_7 = 0;
-  wire id_5;
-  wire id_6;
+  reg [1 : 1] id_4;
+  assign module_1.id_3 = 0;
+  assign id_4 = -1 < id_0;
+  localparam id_5 = 1;
+  wire id_6, id_7;
+  wire id_8;
+  always id_4 = id_8;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input supply0 id_1,
-    input wand id_2,
-    input tri id_3,
-    input wire id_4,
-    output supply0 id_5
+    output wor id_0,
+    input wand id_1,
+    output supply1 id_2,
+    output supply0 id_3[-1 'h0 : -1],
+    output uwire id_4,
+    input tri0 id_5[1 : -1],
+    input wand id_6
 );
-  initial id_5 = 1;
-  wire id_7;
-  wire id_8;
-  assign id_7 = id_0;
-  id_9(
-      .id_0(1), .id_1(id_0), .id_2(id_4 === id_2)
-  );
+  wire [-1 : -1  +  -1] id_8;
   module_0 modCall_1 (
-      id_8,
-      id_8,
-      id_8
+      id_1,
+      id_0,
+      id_4
   );
 endmodule

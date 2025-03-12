@@ -1,107 +1,98 @@
-// Seed: 2157674561
+// Seed: 3719171646
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20
+    output tri1 id_0,
+    output wire id_1,
+    input tri id_2,
+    output tri0 id_3,
+    input supply1 id_4,
+    output tri id_5,
+    input uwire id_6,
+    input wor id_7,
+    output uwire id_8,
+    input wor id_9,
+    input tri0 id_10,
+    input uwire id_11,
+    input tri0 id_12,
+    input tri1 id_13,
+    input wor id_14,
+    input supply1 id_15,
+    input supply0 id_16,
+    input wand id_17,
+    output tri id_18,
+    output tri id_19,
+    output wor id_20,
+    input wand id_21,
+    input uwire id_22,
+    input wand id_23,
+    output wand id_24,
+    input wor id_25,
+    output wor id_26,
+    input supply1 id_27,
+    output wire id_28,
+    output supply0 id_29,
+    output wire id_30,
+    output tri id_31,
+    output tri id_32
+    , id_34
 );
-  output wire id_20;
-  output wire id_19;
-  output wire id_18;
-  input wire id_17;
-  input wire id_16;
-  output wire id_15;
-  output wire id_14;
-  inout wire id_13;
-  output wire id_12;
-  output wire id_11;
-  input wire id_10;
-  input wire id_9;
-  output wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_21;
-  assign module_1.id_6 = 0;
-  assign id_14 = 1;
+  wire id_35;
+  assign module_1.id_9 = 0;
 endmodule
-module module_1 (
-    output logic id_0,
-    input supply0 id_1,
-    input wand id_2,
-    output tri1 id_3,
-    input wor id_4,
-    output supply0 id_5,
-    output logic id_6,
-    input wand id_7,
-    output wor id_8,
-    input tri0 id_9,
-    input uwire id_10,
-    input logic id_11
+module module_1 #(
+    parameter id_0 = 32'd16,
+    parameter id_8 = 32'd52
+) (
+    input wor _id_0,
+    output tri1 id_1,
+    output wire id_2,
+    input wor id_3
+    , id_11,
+    input supply1 id_4,
+    output wire id_5,
+    output wor id_6,
+    output uwire id_7
+    , id_12,
+    input tri0 _id_8,
+    output supply1 id_9
 );
-  always @(posedge 1) id_5 = 1'b0 == id_11;
-  always_latch @(posedge id_2 or 1) begin : LABEL_0
-    deassign id_3.id_11;
-    id_0 <= id_1 == $display || id_9;
-  end
-  wor id_13;
-  always_latch @(posedge id_10) begin : LABEL_0
-    disable id_14;
-  end
+  reg [-1  ==  id_8 : 1] id_13;
   module_0 modCall_1 (
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_13
+      id_1,
+      id_6,
+      id_4,
+      id_9,
+      id_3,
+      id_5,
+      id_3,
+      id_3,
+      id_2,
+      id_4,
+      id_3,
+      id_4,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_4,
+      id_4,
+      id_1,
+      id_2,
+      id_1,
+      id_4,
+      id_3,
+      id_3,
+      id_5,
+      id_4,
+      id_1,
+      id_4,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_5
   );
-  always @(posedge 1 == 1) begin : LABEL_0
-    if (1) begin : LABEL_0
-      fork
-        begin : LABEL_0
-          id_6 <= id_11;
-          id_13 = 1;
-          assume (id_2 == 1'b0);
-        end
-      join
-    end else if (1) begin : LABEL_0
-      if (id_4 == id_7) disable id_15;
-    end
+  wire id_14;
+  always_latch @(posedge id_12[id_0]) begin : LABEL_0
+    if (1) id_13 = 1;
   end
-  assign id_8 = 1;
 endmodule

@@ -1,45 +1,65 @@
-// Seed: 1317691483
+// Seed: 3879480864
 module module_0 (
-    input tri0 id_0,
-    input wor  id_1,
-    input wire id_2,
-    input tri1 id_3,
-    input wire module_0
+    input supply1 id_0,
+    input supply1 id_1,
+    output wire id_2,
+    input supply0 id_3,
+    output wand id_4,
+    input supply0 id_5,
+    output supply0 id_6,
+    output supply0 id_7,
+    input uwire id_8,
+    input tri1 id_9,
+    input wire id_10,
+    input tri0 id_11,
+    input tri id_12,
+    input uwire id_13,
+    output wor id_14,
+    input wor id_15,
+    input tri0 id_16,
+    output tri id_17,
+    output tri id_18,
+    input wor id_19,
+    output wand id_20,
+    output supply1 id_21,
+    input tri1 id_22
 );
-  wire id_6;
+  always if (1);
+  logic id_24;
+  assign id_14 = -1;
+  localparam id_25 = 1;
+  wire id_26;
 endmodule
 module module_1 (
-    input tri0 id_0
-    , id_18,
-    output uwire id_1,
-    output uwire id_2,
-    input tri1 id_3,
-    input wire id_4,
-    output wire id_5,
-    output tri id_6
-    , id_19, id_20,
-    output wand id_7,
-    output supply0 id_8,
-    output tri0 id_9,
-    input tri id_10,
-    output tri id_11,
-    output wire id_12,
-    output tri id_13,
-    output supply0 id_14,
-    output tri1 id_15,
-    input supply1 id_16
+    output tri id_0,
+    input supply0 id_1,
+    inout tri id_2
 );
-  wire id_21;
-  wire id_22;
-  tri  id_23 = id_16;
-  always @("" or posedge 1'b0) $display(id_10, 1 || id_10);
+  assign id_0 = id_1;
   module_0 modCall_1 (
+      id_2,
+      id_1,
       id_0,
-      id_10,
-      id_3,
-      id_10,
-      id_3
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1
   );
-  assign modCall_1.type_3 = 0;
-  uwire id_24 = 1'h0 & id_24;
+  assign modCall_1.id_3 = 0;
 endmodule

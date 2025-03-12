@@ -1,45 +1,33 @@
-// Seed: 3087600487
+// Seed: 1706568410
 module module_0 (
     input tri1 id_0,
-    input tri1 id_1
+    output wor id_1,
+    output wand id_2,
+    input supply0 id_3,
+    input supply0 id_4,
+    output wire id_5
 );
-  always id_3 = 1;
-  final id_3 = {id_3 - id_3{id_0 - 1 - 1}};
-  assign module_1.id_14 = 0;
-  wire id_4;
-  wire id_5, id_6;
-  wire id_7;
+  parameter id_7 = 1;
 endmodule
 module module_1 (
-    input wor id_0,
-    output wor id_1,
-    output supply1 id_2,
-    input supply1 id_3,
-    input tri0 id_4,
-    inout wor id_5,
-    input tri id_6,
-    input supply1 id_7
-    , id_26,
-    input wire id_8,
-    output tri1 id_9,
-    output uwire id_10,
-    input supply1 id_11,
-    input wor id_12,
-    input tri id_13,
-    input tri0 id_14,
-    input uwire id_15,
-    input wor id_16,
-    output uwire id_17,
-    input uwire id_18,
-    input wor id_19,
-    input tri1 id_20,
-    output wand id_21,
-    input uwire id_22,
-    output tri1 id_23,
-    input supply1 id_24
+    output logic id_0,
+    input  wire  id_1,
+    output wand  id_2
 );
+  logic id_4;
+  assign id_4 = id_4;
+  always_latch if (-1'b0);
+  for (id_5 = -1'b0; 1'b0 ? id_5 : id_5; id_5 = -1) always id_5 = 1;
+  assign id_2 = 1;
+  assign id_0 = -1;
+  assign id_5 = id_4;
   module_0 modCall_1 (
-      id_5,
-      id_6
+      id_1,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_2
   );
+  always if (1) id_0 = id_1;
 endmodule

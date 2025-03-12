@@ -1,38 +1,50 @@
-// Seed: 3153495852
-module module_0;
-  wire id_1;
-  module_3 modCall_1 ();
-  assign module_1.id_1 = 0;
-endmodule
-module module_1;
-  assign id_1 = id_1 && id_1;
-  module_0 modCall_1 ();
-endmodule
-module module_2 ();
-  wire id_2;
-  wire id_4 = id_3;
-  module_0 modCall_1 ();
-endmodule
-module module_3 ();
-  wire id_1;
-  assign module_5.id_23 = 0;
-endmodule
-module module_4;
-  always id_1 <= id_1;
-  module_3 modCall_1 ();
-endmodule
-module module_5 (
-    input supply1 id_0,
-    output tri1 id_1,
-    input tri1 id_2,
-    output wire id_3,
-    output wire id_4,
-    input tri id_5
+// Seed: 3224049290
+module module_0 (
+    id_1
 );
-  supply1 id_7, id_8, id_9 = 1, id_10, id_11, id_12, id_13, id_14, id_15, id_16, id_17;
-  wire id_18;
-  supply1  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  =  1  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ;
-  integer id_37;
-  assign id_30 = 1;
-  module_3 modCall_1 ();
+  inout wire id_1;
+  wire id_2;
+  assign module_1.id_24 = 0;
+endmodule
+module module_1 (
+    output wor id_0,
+    input tri0 id_1,
+    input uwire id_2,
+    input wor id_3,
+    input supply0 id_4,
+    input supply1 id_5,
+    input supply0 id_6,
+    input supply1 id_7,
+    input wand id_8,
+    input tri1 id_9#(1, 1'b0),
+    input supply0 id_10,
+    output tri0 id_11,
+    input wire id_12,
+    output wire id_13,
+    input wire id_14,
+    output wire id_15,
+    input wire id_16,
+    output supply1 id_17,
+    input wire id_18,
+    output uwire id_19,
+    input uwire id_20,
+    output tri id_21,
+    output tri id_22,
+    output tri0 id_23,
+    output tri1 id_24,
+    output tri0 id_25,
+    output tri0 id_26,
+    output supply1 id_27,
+    input supply0 id_28,
+    output supply1 id_29,
+    input tri0 id_30,
+    input wire id_31,
+    input wire id_32,
+    input wor id_33,
+    output wand id_34,
+    output supply0 id_35,
+    input wand id_36
+);
+  wire id_38;
+  module_0 modCall_1 (id_38);
 endmodule

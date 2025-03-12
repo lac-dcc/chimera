@@ -1,41 +1,43 @@
-// Seed: 555468319
-module module_0 (
-    input tri id_0,
-    input wor id_1
-);
-  assign id_3 = id_3;
-  assign module_1.id_0 = 0;
-  assign id_3 = 1;
+// Seed: 262270590
+module module_0;
+  wire id_1;
+  assign module_4.id_2 = 0;
+  assign module_1.id_1 = 0;
 endmodule
-module module_1 #(
-    parameter id_17 = 32'd47,
-    parameter id_18 = 32'd23
-) (
-    input wand id_0,
-    input supply1 id_1,
-    input uwire id_2,
-    input tri id_3,
-    output uwire id_4,
-    input tri1 id_5,
-    output tri1 id_6,
-    input supply0 id_7
+module module_1 (
+    input  tri  id_0,
+    input  wand id_1,
+    output wire id_2
 );
-  uwire id_9;
-  module_0 modCall_1 (
-      id_3,
-      id_1
-  );
-  assign id_9 = id_3;
-  for (id_10 = {{id_10, 1} {1'b0}}; 1'b0; id_9 = id_1) begin : LABEL_0
-    assign id_10 = 1;
-    wire id_11;
-    reg  id_12;
-    wire id_13;
-    wire id_14;
-    always id_12 <= 1;
-    wire id_15;
-    wire id_16;
-    defparam id_17.id_18 = 1;
-  end
-  assign id_4 = id_1;
+  wire id_4;
+  ;
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_0 = 32'd71
+) (
+    input  uwire _id_0,
+    output tri1  id_1
+);
+  wire [id_0 : 1] id_3;
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    input tri1 id_0
+);
+  always @(posedge -1 & 1'b0 - 1'b0 or id_0) disable id_2;
+  module_0 modCall_1 ();
+endmodule
+module module_4 #(
+    parameter id_1 = 32'd28
+) (
+    output wire id_0,
+    input supply1 _id_1,
+    output wor id_2
+);
+  supply0 [id_1 : 1  &  -1  &  id_1] id_4;
+  module_0 modCall_1 ();
+  wire id_5;
+  not primCall (id_0, id_4);
+  assign id_4 = ((1'b0)) * 1;
 endmodule

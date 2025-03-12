@@ -1,37 +1,39 @@
-// Seed: 3113504751
-module module_0;
-  logic [7:0] id_1;
-  reg id_4 = id_2;
-  always id_3 = id_2;
-  always id_4 <= 1;
-  wire id_5, id_6;
-  tri id_7 = 1'b0, id_8;
-  assign id_5 = id_1[1'b0];
-  wor id_9, id_10;
-  wire id_11;
-  reg  id_12;
-  for (id_13 = id_7; id_9; id_4 = 1) always id_12 <= 1;
-endmodule
-module module_1 (
+// Seed: 3398865928
+module module_0 (
     id_1,
+    id_2
+);
+  inout wire id_2;
+  inout wire id_1;
+  logic id_3;
+  ;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd41,
+    parameter id_7 = 32'd31
+) (
+    _id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7
+    id_6
 );
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
+  output wire id_6;
+  inout wire id_5;
+  notif1 primCall (id_3, id_5, id_9);
   output wire id_4;
   inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  logic [7:0][1 'd0 +  1] id_8 (
-      .id_0(1),
-      .id_1(1)
+  output wire id_2;
+  input wire _id_1;
+  logic _id_7;
+  ;
+  logic id_8[id_1  -  {  -1  } : id_7];
+  ;
+  logic id_9;
+  module_0 modCall_1 (
+      id_5,
+      id_8
   );
-  always id_3 = 1;
-  module_0 modCall_1 ();
+  wire id_10, id_11;
 endmodule

@@ -1,90 +1,26 @@
-// Seed: 3339499419
-module module_0 (
-    output uwire id_0,
-    input wor id_1,
-    output tri0 id_2,
-    input supply1 id_3,
-    output supply0 id_4,
-    input uwire id_5,
-    output supply0 id_6,
-    input tri0 id_7,
-    output tri0 id_8,
-    input uwire id_9,
-    output wand id_10,
-    input tri1 id_11,
-    input tri1 id_12,
-    output tri id_13,
-    input wand id_14,
-    input uwire id_15,
-    input wire id_16,
-    input tri id_17,
-    input tri1 id_18,
-    input tri0 id_19,
-    output wand id_20,
-    output tri id_21,
-    output supply0 module_0,
-    output supply1 id_23,
-    input tri id_24,
-    output tri id_25,
-    input wor id_26,
-    input wor id_27,
-    input tri0 id_28,
-    input wor id_29,
-    input supply1 id_30
-    , id_35,
-    output supply1 id_31,
-    input uwire id_32,
-    input wand id_33
-);
-  wire id_36 = id_36;
-  assign module_1.id_6 = 0;
+// Seed: 3368850387
+module module_0 ();
+  localparam id_1 = 1;
+  wire [-1 : -1 'b0] id_2;
+  wire id_3;
+  assign module_1.id_3 = 0;
 endmodule
 module module_1 (
-    output uwire id_0,
-    output supply1 id_1,
-    input logic id_2,
-    input supply0 id_3,
-    output tri id_4,
-    output tri id_5,
-    output uwire id_6,
-    output logic id_7
+    input wand id_0,
+    input tri  id_1,
+    input tri1 id_2,
+    input wire id_3
 );
-  always @(*) id_7 <= id_2;
-  notif1 primCall (id_4, id_2, id_3);
-  module_0 modCall_1 (
-      id_1,
-      id_3,
-      id_5,
-      id_3,
-      id_6,
-      id_3,
-      id_5,
-      id_3,
-      id_6,
-      id_3,
-      id_0,
-      id_3,
-      id_3,
-      id_6,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_4,
-      id_6,
-      id_1,
-      id_4,
-      id_3,
-      id_1,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_3,
-      id_6,
-      id_3,
-      id_3
-  );
+  logic id_5;
+  module_0 modCall_1 ();
+  always @(posedge (1'd0)) begin : LABEL_0
+    id_5 = id_1 == (id_5);
+    id_5 = 1'd0;
+    wait (id_5);
+  end
+  always @(posedge id_2 or negedge id_5) begin : LABEL_1
+    if (1) begin : LABEL_2
+      id_5 <= id_0;
+    end
+  end
 endmodule

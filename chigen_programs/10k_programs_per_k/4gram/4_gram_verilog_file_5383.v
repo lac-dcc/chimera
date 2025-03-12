@@ -1,53 +1,59 @@
-// Seed: 2838133356
-module module_0;
-  assign id_1 = 1;
+// Seed: 3941195848
+module module_0 (
+    output supply1 id_0,
+    output supply1 id_1,
+    input uwire id_2,
+    input tri1 id_3,
+    input tri id_4,
+    output supply0 id_5,
+    output wor id_6
+    , id_22,
+    input wire id_7,
+    output tri id_8,
+    output tri id_9,
+    output supply1 id_10,
+    output tri id_11,
+    input wire module_0,
+    output wand id_13,
+    input tri0 id_14,
+    output uwire id_15,
+    input uwire id_16,
+    output supply1 id_17,
+    output supply0 id_18,
+    input tri1 id_19,
+    input wand id_20
+    , id_23
+);
+  final $signed(35);
+  ;
 endmodule
 module module_1 (
-    output supply0 id_0,
-    input  supply1 id_1
+    input  supply0 id_0,
+    output supply0 id_1
 );
-  wire id_3;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  assign id_0 = 1'h0;
-endmodule
-module module_2 (
-    input uwire id_0,
-    input tri1  id_1
-);
-  assign id_3 = 1'b0;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-endmodule
-module module_3 (
-    input supply0 id_0,
-    input wand id_1
-    , id_20,
-    input wire id_2,
-    input wire id_3
-    , id_21,
-    output uwire id_4,
-    input supply0 id_5,
-    input supply1 id_6,
-    output tri0 id_7,
-    input wor id_8
-    , id_22,
-    output wire id_9,
-    input supply0 id_10,
-    output tri1 id_11,
-    input uwire id_12,
-    output tri1 id_13,
-    input wire id_14,
-    input tri0 id_15,
-    input uwire id_16,
-    output tri0 id_17,
-    output wor id_18
-);
-  assign id_17 = id_1;
-  wire id_23;
-  nand primCall (
-      id_11, id_12, id_14, id_15, id_16, id_2, id_20, id_21, id_22, id_23, id_3, id_5, id_6, id_8
+  parameter id_3 = -1;
+  module_0 modCall_1 (
+      id_1,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_0
   );
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  assign modCall_1.id_9 = 0;
 endmodule

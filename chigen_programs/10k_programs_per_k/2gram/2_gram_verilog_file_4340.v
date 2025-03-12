@@ -1,48 +1,44 @@
-// Seed: 995870139
+// Seed: 901570267
 module module_0 (
-    id_1
-);
-  input wire id_1;
-  wire id_2;
-  wire id_3;
-  assign module_1.type_12 = 0;
-endmodule
-module module_1 (
-    input wand id_0,
-    input supply1 id_1,
-    output tri1 id_2,
-    input uwire id_3,
-    output tri0 id_4,
-    input tri1 id_5,
-    output wor id_6,
-    input tri id_7,
-    input tri1 id_8
-);
-  wire id_10;
-  module_0 modCall_1 (id_10);
-endmodule
-module module_2 (
-    output supply1 id_0,
-    input  supply1 id_1
-);
-  wire id_3;
-  always begin : LABEL_0
-    id_3 = id_1;
-  end
-  assign module_3.type_5 = 0;
-  wire id_4;
-  wire id_5;
-endmodule
-module module_3 (
-    input wor id_0,
+    output wand id_0,
     output supply0 id_1,
-    input wor id_2
+    input tri1 id_2,
+    input tri0 id_3,
+    input wor id_4,
+    input wire id_5,
+    output wire id_6
 );
-  id_4(
-      .id_0(id_1)
+  initial begin : LABEL_0
+    $clog2(29);
+    ;
+    SystemTFIdentifier(-1'b0, id_5, 1 * id_2);
+  end
+  wire [1 : 1  &  {  -1  ,  1 'b0 }] id_8;
+  id_9(
+      -1, id_4, {1'b0, 1'b0, id_3}
   );
-  module_2 modCall_1 (
+  assign module_1.id_1 = 0;
+  logic id_10 = 1;
+  logic id_11;
+  assign id_0 = id_3;
+  assign id_8 = id_8;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd52
+) (
+    input  wor   _id_0,
+    output uwire id_1,
+    input  wor   id_2
+);
+  logic [-1 : id_0  -  -1] id_4 = (~id_2);
+  module_0 modCall_1 (
       id_1,
-      id_2
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1
   );
+  wire id_5;
 endmodule

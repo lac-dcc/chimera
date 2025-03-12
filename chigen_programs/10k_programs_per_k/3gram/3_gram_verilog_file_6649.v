@@ -1,60 +1,48 @@
-// Seed: 3881177166
-module module_0 (
-    input wor id_0,
-    input uwire id_1
-    , id_10,
-    input uwire id_2,
-    input wire id_3,
-    input uwire id_4,
-    input tri id_5,
-    input supply1 id_6,
-    output wor id_7,
-    input supply0 id_8
+// Seed: 2997481038
+macromodule module_0 (
+    input wire id_0,
+    output wor id_1,
+    output tri1 id_2,
+    output supply0 id_3
 );
-  tri0 id_11;
-  assign id_11 = 1;
-  assign id_11 = 1'h0;
-  wire id_12;
-  assign id_11 = 1'b0 && id_3;
-  assign module_1.id_8 = 0;
-  wire id_13;
-  wire id_14, id_15, id_16, id_17, id_18;
-  always @(posedge id_15);
+  assign id_2 = -1 & id_0;
+  genvar id_5, id_6;
+  parameter id_7 = 1;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input tri1 id_1,
-    output wand id_2,
-    input tri0 id_3,
-    input tri id_4,
-    output wire id_5,
-    output tri id_6,
-    input tri0 id_7,
-    input wand id_8,
-    input tri0 id_9,
-    input wire id_10,
-    input wand id_11,
-    output wire id_12,
-    input tri0 id_13,
-    input tri0 id_14,
-    input supply0 id_15,
-    input uwire id_16,
-    output wire id_17,
-    output uwire id_18,
-    output tri0 id_19,
-    input wire id_20,
-    output uwire id_21
+module module_1 #(
+    parameter id_1  = 32'd5,
+    parameter id_13 = 32'd28,
+    parameter id_9  = 32'd27
+) (
+    input tri1 id_0#(
+        ._id_9 (1),
+        .id_10 (-1),
+        .id_11 (-1),
+        .id_12 (1),
+        ._id_13(-1),
+        .id_14 (1),
+        .id_15 (1)
+    ),
+    output uwire _id_1,
+    input supply0 id_2,
+    input wire id_3,
+    output wand id_4
+    , id_16,
+    output supply0 id_5,
+    input supply1 id_6,
+    input uwire id_7
 );
-  assign id_21 = id_9;
+  wire id_17;
   module_0 modCall_1 (
-      id_9,
-      id_10,
-      id_1,
+      id_6,
+      id_5,
       id_4,
-      id_9,
-      id_11,
-      id_4,
-      id_12,
-      id_7
+      id_5
   );
+  assign modCall_1.id_0 = 0;
+  wire id_18;
+  assign id_14 = id_7;
+  parameter id_19 = 1 == 1 ? 1'h0 - (1) : 1;
+  real  [id_9 : id_1] id_20;
+  logic [  1 : id_13] id_21 = 1;
 endmodule

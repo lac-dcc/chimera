@@ -1,37 +1,28 @@
-// Seed: 4154547067
+// Seed: 409659961
 module module_0 (
-    output tri  id_0,
-    input  wand id_1,
-    input  tri0 id_2
+    input tri1 id_0
 );
-  assign id_0 = 1;
-  wire id_4, id_5;
-  assign module_1.type_17 = 0;
-endmodule : SymbolIdentifier
-module module_1 (
-    output wor id_0,
-    input wire id_1,
-    output wire id_2,
-    input tri0 id_3,
-    input wand id_4,
-    input supply1 id_5,
-    output supply0 id_6,
-    input wand id_7,
-    output tri id_8,
-    output tri1 id_9,
-    output supply1 id_10
+  logic id_2;
+  ;
+  assign module_1._id_6 = 0;
+  assign id_2 = id_2;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd30,
+    parameter id_1 = 32'd33,
+    parameter id_6 = 32'd63,
+    parameter id_7 = 32'd87
+) (
+    input tri0 _id_0[id_0 : id_1  - "" !=?  id_6],
+    output tri0 _id_1,
+    output uwire id_2,
+    output supply1 id_3,
+    input tri1 id_4,
+    input tri0 id_5,
+    input supply1 _id_6,
+    input wor _id_7
 );
-  always id_0 = 1;
-  wire id_12;
-  module_0 modCall_1 (
-      id_10,
-      id_4,
-      id_4
-  );
-  assign id_9 = 1;
-  wire id_13;
-  id_14(
-      1, 1 !=? 1
-  ); id_15 :
-  assert property (@* 1) $display(1);
+  logic id_9;
+  logic [7:0][id_7] id_10;
+  module_0 modCall_1 (id_4);
 endmodule

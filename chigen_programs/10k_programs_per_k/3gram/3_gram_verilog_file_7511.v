@@ -1,35 +1,50 @@
-// Seed: 4178716473
+// Seed: 712567836
 module module_0 (
-    input tri1 id_0,
-    input tri0 id_1
+    output tri0 id_0,
+    input  tri  id_1
 );
-  assign id_3 = id_1;
-  assign module_1.id_0 = 0;
+  assign id_0 = -1;
 endmodule
 module module_1 (
-    output wire id_0,
-    input tri1 id_1,
-    input wand id_2,
-    input supply0 id_3,
-    output tri0 id_4
-    , id_11,
-    output supply1 id_5,
-    output logic id_6,
-    input logic id_7,
-    input logic id_8,
-    input logic id_9
+    output tri0 id_0,
+    input wor id_1,
+    input tri0 id_2,
+    output wand id_3,
+    output wire id_4,
+    input tri id_5,
+    input uwire id_6,
+    input tri1 id_7,
+    input tri0 id_8,
+    input wand id_9,
+    input supply0 id_10,
+    output wor id_11,
+    input tri1 id_12,
+    output uwire id_13,
+    output wor id_14,
+    output uwire id_15,
+    input tri0 id_16,
+    inout wor id_17,
+    input tri id_18,
+    output supply0 id_19,
+    input wire id_20,
+    input tri0 id_21
+    , id_34,
+    output wor id_22,
+    output wand id_23,
+    input tri0 id_24,
+    input supply1 id_25,
+    input tri1 id_26,
+    output tri0 id_27,
+    output tri1 id_28,
+    output wor id_29#(.id_35(1))
+    , id_36,
+    input tri0 id_30,
+    input wire id_31,
+    output wand id_32
 );
-  assign id_11 = id_9;
   module_0 modCall_1 (
-      id_2,
-      id_3
+      id_22,
+      id_5
   );
-  always @(id_9 or posedge id_8)
-    repeat (id_2)
-      if (1'b0) begin : LABEL_0
-        if (1) id_6 = #1 id_11;
-      end
-  assign id_6 = id_7;
-  wire id_12;
-  assign id_12 = id_12;
+  assign modCall_1.id_1 = 0;
 endmodule

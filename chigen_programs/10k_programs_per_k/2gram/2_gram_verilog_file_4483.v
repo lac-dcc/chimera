@@ -1,39 +1,31 @@
-// Seed: 928937414
-macromodule module_0;
-  module_2 modCall_1 ();
-  always #1
-    @(id_1 or negedge id_1) begin : LABEL_0$display
-      ;
-    end
+// Seed: 2404318121
+module module_0;
+  logic id_1;
+  wire  id_2;
+  logic id_3;
+  assign id_1 = 1;
+  logic id_4;
+  assign id_1 = id_1;
+  assign id_1 = id_2;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input wor  id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_3 = 1;
+  inout supply0 id_4;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  always $clog2(18);
+  ;
   module_0 modCall_1 ();
-  assign id_3 = 1;
-  tri1 id_4 = 1;
-endmodule
-macromodule module_2;
-  wire id_1;
-  assign module_0.id_1 = 0;
-endmodule
-module module_3 (
-    input  wire  id_0,
-    output wor   id_1,
-    input  wand  id_2,
-    input  tri1  id_3,
-    input  uwire id_4,
-    input  tri0  id_5,
-    output wor   id_6,
-    input  tri1  id_7,
-    input  wor   id_8,
-    input  tri0  id_9
-);
-  integer id_11 = 1;
-  wire id_12;
-  module_2 modCall_1 ();
-  assign id_6 = 1 && 1 == id_6++;
-  wire id_13;
+  assign id_3 = id_4;
+  wire [1 'b0 : -1] id_5;
+  assign id_4 = -1;
+  parameter  id_6  =  1  ,  id_7  =  id_4  ,  id_8  =  id_6  ,  id_9  =  -1 'd0 -  {  1  ,  1 'b0 ,  id_1  ?  id_3  :  id_3  ,  1 'h0 }  ,  id_10  =  $signed  (
+      63
+  );
+  ;
 endmodule

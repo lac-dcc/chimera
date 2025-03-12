@@ -1,35 +1,40 @@
-// Seed: 3998624388
-module module_1 (
-    input wand id_0,
-    output tri id_1,
-    input wand id_2,
-    output supply0 module_0
+// Seed: 2989139576
+module module_0 (
+    output tri id_0,
+    output wor id_1,
+    output supply1 id_2
 );
-  wire id_5;
-  uwire id_6, id_7;
-  assign id_7 = id_0;
+  logic [7:0] id_4;
+  assign id_4[-1] = -1'b0;
 endmodule
 module module_1 (
-    output wor id_0,
-    output tri0 id_1,
-    input supply1 id_2,
-    input tri0 id_3,
-    output wor id_4,
-    output logic id_5,
-    input supply1 id_6,
-    input wand id_7,
-    output wire id_8,
+    input wand id_0,
+    input uwire id_1,
+    output wand id_2,
+    input uwire id_3,
+    inout tri0 id_4,
+    input wor id_5,
+    output tri id_6,
+    output wire id_7,
+    output supply0 id_8,
     input wire id_9,
-    output wire id_10,
-    input wire id_11,
-    output tri0 id_12
+    input uwire id_10,
+    output supply1 id_11,
+    input supply1 id_12,
+    output tri0 id_13
 );
-  always @(id_7 or posedge 1) id_5 <= {1{1}};
+  assign id_13 = id_0;
   module_0 modCall_1 (
-      id_11,
-      id_10,
-      id_6,
-      id_4
+      id_8,
+      id_4,
+      id_6
   );
-  assign modCall_1.type_2 = 0;
+  bit id_15;
+  always @(negedge -1'b0 == {id_3 == 1, -1, -1, id_12 + id_12}) begin : LABEL_0
+    if (1) begin : LABEL_1
+      begin : LABEL_2
+        id_15 <= id_5;
+      end
+    end
+  end
 endmodule

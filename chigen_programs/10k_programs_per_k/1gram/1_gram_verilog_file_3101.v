@@ -1,55 +1,56 @@
-// Seed: 1826518619
+// Seed: 4043839078
 module module_0 (
     id_1,
     id_2,
     id_3
 );
-  output wire id_3;
+  input wire id_3;
   output wire id_2;
-  output wire id_1;
-  supply1 id_4 = id_4 != id_4(id_4, id_4 - id_4);
-endmodule
-module module_1 (
-    input tri id_0
+  inout wire id_1;
+endmodule : SymbolIdentifier
+module module_1 #(
+    parameter id_16 = 32'd85
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6#(
+        .id_7  (1),
+        .id_8  (-1),
+        .id_9  (1),
+        .id_10 (1),
+        .id_11 (1 - 1),
+        .id_12 ("" == 1),
+        .id_13 (1),
+        .id_14 (-1),
+        .id_15 (1),
+        ._id_16(-1)
+    ),
+    id_17,
+    id_18,
+    id_19,
+    id_20,
+    id_21
 );
-  assign id_2 = ~id_0;
-  always $display;
-  assign id_2 = 1;
-  module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_2
-  );
-  assign id_2 = 1'b0;
-  wand id_3 = 1, id_4, id_5;
-endmodule
-module module_2 (
-    input wire id_0,
-    input supply0 id_1,
-    input uwire id_2,
-    input wire id_3,
-    output wor id_4,
-    output uwire id_5,
-    output wand void id_6,
-    output supply0 id_7,
-    input tri0 id_8,
-    output uwire id_9,
-    input tri id_10,
-    input supply1 id_11,
-    input tri0 id_12,
-    input tri1 id_13,
-    input wand id_14
-);
-  supply1 id_16 = (1), id_17;
-  id_18(
-      .id_0(1), .id_1(id_2 + id_17 ? 1 & id_2 : id_17), .id_2(id_12)
-  );
-  assign id_7 = id_16;
-  wire id_19;
-  wire id_20, id_21;
+  output logic [7:0] id_11;
+  inout wire id_10;
+  input wire id_9;
+  input wire id_8;
   module_0 modCall_1 (
       id_21,
-      id_19,
-      id_19
+      id_10,
+      id_21
   );
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  always id_11[id_16] = "";
+  logic id_22;
+  ;
 endmodule

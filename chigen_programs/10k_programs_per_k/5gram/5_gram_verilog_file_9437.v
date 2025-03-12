@@ -1,45 +1,56 @@
-// Seed: 1046052999
+// Seed: 3490234165
 module module_0 (
-    id_1,
-    id_2
+    input  tri0 id_0,
+    input  wand id_1,
+    output tri1 id_2,
+    input  wand id_3
 );
-  input wire id_2;
-  output wire id_1;
-  wire id_3;
-  notif0 primCall (id_1, id_2, id_3);
-  module_2 modCall_1 ();
-  assign modCall_1.id_2 = 0;
+  always_comb @(*) begin : LABEL_0
+    $clog2(9);
+    ;
+  end
 endmodule
-module module_1 (
-    input supply0 id_0,
-    output supply1 id_1,
-    input wand id_2,
-    input wand id_3
-    , id_5
+module module_0 #(
+    parameter id_2 = 32'd2,
+    parameter id_3 = 32'd55
+) (
+    input wire id_0,
+    output wand id_1,
+    input wire _id_2,
+    output tri1 _id_3,
+    input supply0 id_4,
+    input uwire id_5,
+    input wire id_6,
+    output tri0 id_7,
+    input wor module_1,
+    input tri id_9,
+    input uwire id_10,
+    input wand id_11,
+    input supply0 id_12
 );
-  wire id_6;
-  wire id_7;
+  logic id_14;
+  ;
+  final begin : LABEL_0
+    if (1) id_14 = id_9;
+    else id_14 = (id_5 ? id_5 : id_4);
+  end
+  wire id_15;
+  assign id_3 = id_12;
+  wire id_16;
+  wire id_17;
+  wire id_18;
+  logic [-1  ==  1 : 1 'b0 -  -1] id_19, id_20;
+  assign id_19 = id_4;
+  logic [id_3 : -1  -  -1] id_21 = id_4;
+  wire \id_22 ;
+  wire id_23;
+  wire \id_24 ;
+  wire [id_2 : -1] id_25;
   module_0 modCall_1 (
-      id_5,
-      id_6
+      id_4,
+      id_0,
+      id_1,
+      id_0
   );
-endmodule
-module module_2;
-  wor id_2;
-  assign id_3 = id_2;
-  assign id_2 = 1'b0;
-  id_4(
-      .id_0(id_2)
-  );
-  assign module_3.type_1 = 0;
-endmodule
-module module_3 (
-    output tri0 id_0,
-    input  tri  id_1,
-    input  tri0 id_2,
-    input  wor  id_3
-);
-  wire id_5;
-  assign id_0 = 1'd0;
-  module_2 modCall_1 ();
+  assign modCall_1.id_2 = 0;
 endmodule

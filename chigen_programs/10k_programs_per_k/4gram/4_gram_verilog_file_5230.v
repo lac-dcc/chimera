@@ -1,38 +1,65 @@
-// Seed: 112574548
+// Seed: 4252851564
 module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  output wire id_3;
-  input wire id_2;
+  inout wire id_9;
+  input wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
   inout wire id_1;
-  assign id_3 = ~1;
-  specify
-    (id_4 => id_5) = (1'b0 : id_2  : id_4, id_4);
-    (id_6 => id_7) = 0;
-  endspecify
-  assign module_1.type_17 = 0;
+  wire id_10, id_11, id_12, id_13, id_14, id_15;
 endmodule
 module module_1 (
-    input tri id_0,
-    output wor id_1,
-    input tri1 id_2,
-    input supply1 id_3,
-    input supply0 id_4,
-    output supply1 id_5,
-    input wand id_6,
-    output supply1 id_7,
-    output tri id_8,
-    output wand id_9
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  wire id_11;
-  assign id_7 = id_3;
-  integer id_12;
-  wire id_13;
+  inout reg id_8;
+  inout reg id_7;
+  output wire id_6;
+  output reg id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout reg id_1;
+  always @(posedge 1)
+    if (-1)
+      if (1) id_8 <= -1;
+      else id_1 <= -1'b0;
+    else id_5 <= -1;
+  always @(*) begin : LABEL_0
+    if (1) id_7 = -1;
+  end
+  assign id_7 = !1;
+  assign (highz1, pull0) id_1 = 1;
+  always @(posedge id_7) id_1 <= id_7 + id_3;
   module_0 modCall_1 (
-      id_12,
-      id_12,
-      id_13
+      id_4,
+      id_4,
+      id_4,
+      id_2,
+      id_4,
+      id_4,
+      id_6,
+      id_3,
+      id_4
   );
+  supply0 id_9 = 1;
 endmodule

@@ -1,74 +1,43 @@
-// Seed: 1417842280
+// Seed: 3841548909
 module module_0 (
-    input wor id_0,
-    input wand id_1,
-    output supply1 id_2,
-    output tri0 id_3,
-    input uwire id_4,
-    input wand id_5,
-    output supply0 id_6,
-    output tri id_7,
-    output wire id_8,
-    input wand id_9,
-    input tri0 id_10
-);
-  assign id_7 = 1;
-  reg id_12;
-  id_13(
-      .id_0(id_10), .id_1(id_3)
-  );
-  always #1 begin : LABEL_0
-    id_14();
-    if (1) begin : LABEL_0
-      id_12 <= 1;
-    end
-  end
-  assign module_1.type_33 = 0;
-endmodule
-module module_1 (
     output tri id_0,
-    output supply1 id_1,
+    input uwire id_1,
     input supply0 id_2,
-    input uwire id_3,
-    input tri id_4,
-    input supply0 id_5,
-    input supply1 id_6,
-    input tri0 id_7,
-    input uwire id_8
-    , id_28,
-    input tri1 id_9,
-    input wor id_10,
-    input supply1 id_11,
-    input uwire id_12,
-    input wor id_13,
-    input supply1 id_14,
-    output tri id_15,
-    input wor id_16,
-    input wand id_17,
-    input tri id_18,
-    output tri1 id_19,
-    output uwire id_20,
-    output wire id_21,
-    input wand id_22,
-    output logic id_23,
-    input tri id_24,
-    output uwire id_25,
-    input supply0 id_26
+    input tri1 id_3,
+    input wor id_4
 );
-  always @(1) begin : LABEL_0
-    id_23 <= id_26 && 1;
+endmodule
+module module_1 #(
+    parameter id_12 = 32'd77,
+    parameter id_2  = 32'd9,
+    parameter id_9  = 32'd87
+) (
+    output tri1 id_0,
+    output wor id_1,
+    input uwire _id_2,
+    input wor id_3,
+    output logic id_4
+    , _id_12,
+    input wand id_5,
+    input supply0 id_6,
+    input wor id_7,
+    input wire id_8,
+    input wand _id_9,
+    input wand id_10
+);
+  initial begin : LABEL_0
+    id_4 <= 1;
   end
   module_0 modCall_1 (
+      id_0,
       id_8,
-      id_22,
-      id_25,
-      id_1,
-      id_6,
-      id_18,
-      id_1,
-      id_20,
-      id_20,
-      id_26,
-      id_16
+      id_5,
+      id_8,
+      id_5
   );
+  assign modCall_1.id_2 = 0;
+  wire id_13;
+  logic [7:0] id_14, id_15;
+  assign id_12 = id_14[id_12];
+  wire [id_2 : id_9] id_16;
 endmodule

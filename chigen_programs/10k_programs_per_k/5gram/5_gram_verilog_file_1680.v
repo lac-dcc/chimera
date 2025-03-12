@@ -1,41 +1,36 @@
-// Seed: 1917996096
+// Seed: 97629937
 module module_0 (
-    input tri id_0,
-    input supply0 id_1
+    input wire id_0,
+    input supply1 id_1,
+    input supply1 id_2,
+    input wire id_3
 );
-  supply1 id_3;
-  assign id_3 = id_1;
-  assign module_1.type_6 = 0;
+  wire id_5;
+  module_2 modCall_1 (id_3);
+  assign modCall_1.id_0 = 0;
 endmodule
 module module_1 (
-    input wire id_0,
-    input logic id_1,
-    output logic id_2,
-    output logic id_3,
-    input logic id_4,
-    input wand id_5,
-    output logic id_6,
-    output tri id_7,
-    input wire id_8,
-    inout wand id_9,
-    output supply0 id_10
+    output tri0 id_0,
+    input tri id_1,
+    output tri1 id_2,
+    output supply0 id_3,
+    output supply1 id_4,
+    input supply0 id_5,
+    inout supply1 id_6,
+    output tri1 id_7,
+    input supply1 id_8
 );
-  always begin : LABEL_0
-    id_6 <= id_4;
-    $display(1,, 1);
-    id_6 <= 1 == 1;
-  end
-  initial begin : LABEL_0
-    if (1) begin : LABEL_0
-      if (1)
-        if (1) id_3 <= id_1;
-        else id_2 <= 1;
-    end
-  end
-  wire id_12, id_13;
-  always_latch @(posedge id_8) id_3 = 1'b0;
+  assign id_3 = !id_6;
   module_0 modCall_1 (
-      id_0,
-      id_5
+      id_5,
+      id_1,
+      id_1,
+      id_8
   );
+  assign modCall_1.id_3 = 0;
+endmodule
+module module_2 (
+    input wire id_0
+);
+  wire id_2 = id_2;
 endmodule

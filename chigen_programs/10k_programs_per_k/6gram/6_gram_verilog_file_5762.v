@@ -1,35 +1,37 @@
-// Seed: 3266743537
+// Seed: 2544852857
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input  supply0 id_0,
+    output supply1 id_1
 );
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wor id_5;
-  assign id_5 = 1;
-  assign module_1.id_0 = 0;
-  always @(posedge 1 or 1 == id_3) begin : LABEL_0
-    wait (1);
-  end
+  wire id_3;
+  ;
 endmodule
-module module_1 (
-    input tri1 id_0,
-    output wor id_1,
-    output supply0 id_2,
-    input wor id_3,
-    output supply1 id_4
+module module_1 #(
+    parameter id_0 = 32'd21
+) (
+    output wor _id_0,
+    input tri1 id_1,
+    output wor id_2,
+    output supply1 id_3,
+    output wor id_4,
+    input tri1 id_5,
+    output logic id_6
 );
-  assign id_1 = 1'b0;
-  wire id_6;
+  wire id_8  [1 : {  1  ,  id_0  }];
+  wire id_9;
+  wire id_10;
+  always @(posedge id_10) begin : LABEL_0
+    assume (id_1);
+    id_6 <= -1;
+  end
+  wire [1  - "" : 1] id_11;
+  wire id_12;
+  wire id_13, id_14;
+  assign id_8 = id_13;
+  wire id_15;
   module_0 modCall_1 (
-      id_6,
-      id_6,
-      id_6,
-      id_6
+      id_5,
+      id_3
   );
-  wire id_7;
+  logic [-1 : ""] id_16;
 endmodule

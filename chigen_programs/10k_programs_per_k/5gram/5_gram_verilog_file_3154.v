@@ -1,44 +1,45 @@
-// Seed: 3146937293
-module module_0 (
-    id_1,
-    id_2
-);
-  inout wire id_2;
-  output wire id_1;
-  wire id_3;
-  logic [7:0] id_4, id_5;
-  assign id_5[1'b0] = id_4;
-  wire id_6;
-  module_2 modCall_1 (
-      id_4,
-      id_6,
-      id_3,
-      id_2,
-      id_3
-  );
-  wire id_7, id_8;
-endmodule
-module module_1 (
-    output wor  id_0,
-    output tri1 id_1
-);
-  tri1 id_3 = id_3 == id_3;
-  module_0 modCall_1 (
-      id_3,
-      id_3
-  );
-endmodule
-module module_2 (
+// Seed: 4117724656
+module module_0 #(
+    parameter id_5 = 32'd60
+) (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5
+    id_4
 );
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  assign id_1[1] = id_5;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  output logic [7:0] id_1;
+  wire _id_5;
+  logic [1 : -1] id_6;
+  wire id_7;
+  always_ff @(id_7 & id_5#(.id_6(1)
+  ) & id_7)
+  begin : LABEL_0
+    assume (-1);
+  end
+  wire id_8;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd79,
+    parameter id_3 = 32'd20
+) (
+    _id_1,
+    id_2,
+    _id_3
+);
+  input wire _id_3;
+  output tri1 id_2;
+  input wire _id_1;
+  assign id_2 = -1 == {-1, id_3 == id_3};
+  parameter id_4 = 1;
+  logic [7:0][id_1  ==  id_3 : -1] id_5;
+  module_0 modCall_1 (
+      id_5,
+      id_4,
+      id_4,
+      id_2
+  );
+  assign id_5[1 : 1] = id_5;
 endmodule

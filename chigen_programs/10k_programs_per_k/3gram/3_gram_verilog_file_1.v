@@ -1,37 +1,45 @@
-// Seed: 4136358400
+// Seed: 952865733
 module module_0 (
-    input wire id_0,
-    input tri1 id_1
-);
-  uwire id_3;
-  assign module_1.id_3 = 0;
-  if (1'b0) begin : LABEL_0
-    supply1 id_4, id_5, id_6, id_7, id_8;
-    assign id_5 = 1'h0;
-  end else begin : LABEL_0
-    if (id_3++) begin : LABEL_0
-      wire id_9;
-    end
-  end
-  wire id_10;
-  genvar id_11;
-endmodule
-module module_1 (
-    output uwire id_0,
-    input wor id_1
-    , id_11, id_12,
-    input tri id_2,
-    input tri id_3,
+    input supply1 id_0,
+    input uwire id_1,
+    output tri id_2,
+    output supply0 id_3,
     output wor id_4,
     input supply0 id_5,
-    output uwire id_6,
-    output uwire id_7,
-    input uwire id_8,
-    input tri id_9
+    output wand id_6
 );
-  supply1 id_13 = 1;
+  assign module_1.id_0 = 0;
+  assign id_3 = id_5;
+  assign id_4 = ~1 + 1'd0;
+  assign id_4 = id_1;
+  assign id_4 = 1;
+endmodule
+module module_1 #(
+    parameter id_0  = 32'd74,
+    parameter id_11 = 32'd7,
+    parameter id_12 = 32'd18,
+    parameter id_3  = 32'd16
+) (
+    output supply1 _id_0,
+    input tri0 id_1,
+    output tri id_2,
+    input tri _id_3,
+    inout supply0 id_4,
+    output uwire id_5
+);
+  wire [-1 'd0 -  1 : 1] id_7;
+  logic [-1 : id_0] id_8;
+  wire [id_3  &  -1 'b0 : 1] id_9;
+  logic id_10, _id_11, _id_12;
+  wire id_13;
+  wire [id_12 : id_11] id_14;
   module_0 modCall_1 (
-      id_8,
-      id_5
+      id_1,
+      id_1,
+      id_4,
+      id_4,
+      id_4,
+      id_1,
+      id_2
   );
 endmodule

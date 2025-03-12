@@ -1,31 +1,42 @@
-// Seed: 4288600842
-module module_0 (
-    input  tri0 id_0,
-    output wand id_1
-);
-  wire id_3;
+// Seed: 2528735807
+module module_0;
+  wire id_1;
+  logic [-1 : -1] id_2;
+  assign module_2.id_3 = 0;
 endmodule
 module module_1 (
-    output uwire id_0,
-    input wand id_1,
-    input tri0 id_2,
+    input wand id_0,
+    input supply1 id_1,
+    output supply0 id_2,
     input supply1 id_3,
-    output tri id_4,
-    output supply1 id_5,
-    input tri id_6,
-    input supply0 id_7,
-    input tri0 id_8,
-    output supply0 id_9,
-    output wor id_10,
-    input tri0 id_11,
-    output tri id_12,
-    input supply1 id_13
+    output supply0 id_4,
+    output wor id_5,
+    input wire id_6,
+    output wand id_7,
+    input supply1 id_8,
+    input tri id_9,
+    input wor id_10,
+    output tri1 id_11
 );
-  assign id_12 = 1'h0 ? 1'b0 : id_7;
-  nand primCall (id_10, id_8, id_13, id_7, id_1, id_6, id_3, id_2, id_11);
-  module_0 modCall_1 (
-      id_8,
-      id_10
-  );
-  assign modCall_1.id_1 = 0;
+  assign id_4 = 1'b0;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input wor id_0,
+    input tri1 id_1,
+    output logic id_2,
+    input uwire id_3,
+    input supply1 id_4,
+    output tri id_5
+);
+  always @(posedge 1) begin : LABEL_0
+    if (1) begin : LABEL_1
+      assert (id_0);
+    end else begin : LABEL_2
+      id_2 <= -1;
+      wait (-1);
+    end
+    id_2 <= 1;
+  end
+  module_0 modCall_1 ();
 endmodule

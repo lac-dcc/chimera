@@ -1,42 +1,37 @@
-// Seed: 147252643
-module module_0 (
-    input  uwire id_0,
-    input  tri0  id_1,
-    output wor   id_2,
-    output uwire id_3
-);
-  wire id_5;
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  tri  id_9;
-  always @(*) begin : LABEL_0
-    id_7 = 1;
-    for (id_7 = {id_9{1'b0}}; 1; id_5 = id_8) @(posedge id_0);
-  end
+// Seed: 4016047429
+module module_0;
+  logic id_1 = id_1 != -1;
 endmodule
 module module_1 (
-    output tri1 id_0,
-    input wand id_1,
-    input uwire id_2,
-    input wor id_3,
+    input supply1 id_0,
+    input tri1 id_1,
+    input tri id_2,
+    output wand id_3,
     input uwire id_4,
-    input supply1 id_5,
-    output tri id_6,
-    output tri1 id_7
+    output supply1 id_5,
+    input supply1 id_6,
+    input wor id_7,
+    output supply0 id_8,
+    input tri id_9,
+    output wire id_10
 );
-  supply1 id_9;
-  wand id_10 = id_5;
-  assign id_9 = 1;
-  wor id_11 = id_9;
-  module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_6,
-      id_6
-  );
-  supply0 id_12;
-  initial begin : LABEL_0
-    id_12 = id_4;
-  end
+  wire id_12;
+  ;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+endmodule
+module module_2 #(
+    parameter id_1 = 32'd40
+) (
+    _id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  output logic [7:0] id_2;
+  input wire _id_1;
+  module_0 modCall_1 ();
+  logic id_4;
+  ;
+  buf primCall (id_2, id_3);
 endmodule

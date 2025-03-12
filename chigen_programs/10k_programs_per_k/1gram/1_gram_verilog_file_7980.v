@@ -1,62 +1,49 @@
-// Seed: 1914826040
-module module_0 (
-    id_1,
-    id_2
+// Seed: 757699197
+program module_0 (
+    id_1
 );
-  input wire id_2;
   inout wire id_1;
-  genvar id_3;
-  assign module_2.id_16  = 0;
-  assign module_1.type_3 = 0;
-endmodule
+  logic id_2 = 1, id_3 = id_1;
+endprogram
 module module_1 (
-    input tri id_0
+    input uwire   id_0,
+    input supply0 id_1
 );
-  supply1 id_2 = 1;
-  module_0 modCall_1 (
-      id_2,
-      id_2
-  );
+  logic id_3;
+  ;
+  module_0 modCall_1 (id_3);
 endmodule
-module module_2 (
-    input tri1 id_0,
-    output uwire id_1,
-    output uwire id_2,
-    input tri0 id_3,
-    input supply0 id_4,
+module module_2 #(
+    parameter id_10 = 32'd98,
+    parameter id_11 = 32'd60
+) (
+    output tri1 id_0,
+    output supply1 id_1,
+    output tri1 id_2[1 : -1],
+    output wire id_3,
+    input wire id_4,
     input tri0 id_5,
-    input wand id_6,
-    output supply0 id_7,
-    input wire id_8,
-    output uwire id_9,
-    output wand id_10,
-    output logic id_11,
-    input supply1 id_12,
-    input tri1 id_13#(
-        .id_25(id_25[(1'b0)][1'b0]),
-        .id_26(1)
-    ),
-    input wand id_14,
-    output supply0 id_15,
-    input supply0 id_16,
-    input supply1 id_17,
-    input tri1 id_18,
-    input supply1 id_19,
-    output wand id_20,
-    input wire id_21,
-    inout supply0 id_22,
-    output uwire id_23
+    output tri id_6,
+    input wand id_7,
+    input tri1 id_8,
+    output wand id_9,
+    output tri _id_10,
+    input wand _id_11[id_11 : id_10],
+    input supply0 id_12,
+    input uwire id_13,
+    input supply0 id_14,
+    input uwire id_15,
+    output wor id_16,
+    output tri id_17,
+    input uwire id_18,
+    output wor id_19,
+    output tri id_20,
+    input tri1 id_21,
+    output supply1 id_22
 );
-  uwire id_27;
-  module_0 modCall_1 (
-      id_27,
-      id_27
-  );
-  wire id_28;
-  always_latch begin : LABEL_0
-    id_11 <= 1;
-  end
-  assign id_27 = 1;
-  assign id_15 = 1;
-  assign id_15 = id_22;
+  parameter id_24 = 1;
+  parameter id_25 = (id_24);
+  module_0 modCall_1 (id_24);
+  logic id_26;
+  wire  id_27;
 endmodule

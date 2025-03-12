@@ -1,38 +1,37 @@
-// Seed: 1741133156
+// Seed: 54141917
 module module_0 (
-    input tri id_0
-);
-  wire id_2;
-  wire id_3;
-endmodule
-module module_1 (
-    input tri0 id_0,
-    input supply0 id_1,
+    output supply1 id_0,
+    output logic id_1,
     input tri1 id_2,
-    output wand id_3,
-    input wire id_4,
-    input wire id_5,
-    output tri0 id_6,
-    input tri1 id_7,
-    input wor id_8,
-    output tri0 id_9,
-    output supply1 id_10,
-    output tri id_11,
-    output tri0 id_12,
-    input wor id_13,
-    input supply0 id_14,
-    input tri0 id_15,
-    input tri0 id_16,
-    input wand id_17,
-    output uwire id_18,
-    output tri0 id_19,
-    input tri1 id_20,
-    output tri id_21,
-    output tri0 id_22,
-    output supply1 id_23
+    input wire id_3
 );
-  assign id_6  = id_5;
-  assign id_10 = 1;
-  module_0 modCall_1 (id_2);
-  assign modCall_1.type_4 = 0;
+  always @(negedge (id_3)) begin : LABEL_0
+    id_1 <= id_2 ? -1 : 1;
+  end
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd39,
+    parameter id_2 = 32'd59
+) (
+    input  uwire _id_0,
+    input  wire  id_1,
+    input  wand  _id_2,
+    input  tri0  id_3,
+    output logic id_4,
+    output wand  id_5,
+    input  wand  id_6,
+    input  wand  id_7
+);
+  always
+  fork
+    id_4 = -1;
+  join
+  wire [id_0 : id_2] id_9;
+  module_0 modCall_1 (
+      id_5,
+      id_4,
+      id_7,
+      id_1
+  );
+  assign modCall_1.id_3 = 0;
 endmodule

@@ -1,47 +1,59 @@
-// Seed: 3696392594
+// Seed: 2391735725
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9
+    input wor id_0
 );
-  input wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  assign id_8 = {id_8, 1};
+  tri1 id_2 = 1;
+  assign module_1.id_29 = 0;
 endmodule
 module module_1 (
-    output wand id_0,
-    output supply1 id_1,
-    output wand id_2,
-    input tri id_3,
-    output tri1 id_4,
-    input wor id_5,
-    output tri id_6,
-    output supply1 id_7
+    output wor id_0,
+    input uwire id_1,
+    input wor id_2,
+    input uwire id_3,
+    input tri0 id_4,
+    output wor id_5,
+    output wire id_6,
+    output uwire id_7,
+    output wire id_8,
+    output uwire id_9,
+    input tri id_10,
+    input wire id_11,
+    input uwire id_12,
+    input supply0 id_13,
+    input uwire id_14,
+    input wand id_15,
+    input supply1 id_16,
+    output tri0 id_17,
+    output supply1 id_18,
+    input wand id_19,
+    input uwire id_20,
+    input tri1 id_21,
+    input wire id_22,
+    input tri0 id_23,
+    input uwire id_24,
+    input uwire id_25,
+    input supply0 id_26,
+    output wire id_27,
+    input wand id_28,
+    output supply1 id_29,
+    input tri1 id_30,
+    output supply1 id_31,
+    output supply0 id_32,
+    input wand id_33,
+    output supply0 id_34
+    , id_43,
+    input tri0 id_35,
+    input uwire id_36,
+    output wor id_37,
+    input tri0 id_38
+    , id_44,
+    output tri0 id_39,
+    input wire id_40,
+    input tri id_41
 );
-  wire id_9;
-  wire id_10;
-  module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_10,
-      id_9,
-      id_9,
-      id_9,
-      id_10,
-      id_10,
-      id_10
-  );
+  wire id_45;
+  module_0 modCall_1 (id_40);
+  logic id_46;
+  assign id_39 = 1 && id_13;
+  wire [-1 'b0 : 1] id_47, id_48, id_49, id_50, id_51, id_52, id_53, id_54, id_55, id_56;
 endmodule

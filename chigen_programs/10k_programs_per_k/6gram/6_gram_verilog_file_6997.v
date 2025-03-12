@@ -1,65 +1,46 @@
-// Seed: 4138682991
-module module_0 (
-    output supply0 id_0
-    , id_3,
-    output uwire   id_1
-);
-  wire id_4;
-  assign module_2.type_0 = 0;
-  assign module_1.type_1 = 0;
+// Seed: 160594150
+module module_0;
+  wire id_1;
+  ;
+  assign module_1._id_0 = 0;
 endmodule
-module module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    input uwire id_2,
-    output tri0 id_3,
-    output supply1 id_4,
-    input supply1 id_5,
-    input supply1 id_6,
-    output uwire id_7,
-    input wand id_8,
-    output wand id_9,
-    input supply0 id_10
+module module_1 #(
+    parameter id_0 = 32'd46,
+    parameter id_1 = 32'd23
+) (
+    input tri1 _id_0,
+    output wor _id_1,
+    output wire id_2,
+    input tri1 id_3,
+    output supply0 id_4
 );
-  wire id_12;
-  module_0 modCall_1 (
-      id_4,
-      id_4
-  );
+  logic [id_1 : id_0] id_6;
+  ;
+  wire [{  id_0  {  1  }  } : 1  ==  -1 'b0] id_7;
+  xor primCall (id_2, id_3, id_6, id_7);
+  module_0 modCall_1 ();
+  wire id_8, id_9;
 endmodule
 module module_2 (
-    input tri0 id_0,
-    input supply0 id_1
-    , id_3
+    input supply1 id_0,
+    input tri id_1,
+    output wire id_2,
+    input wor id_3,
+    input wor id_4,
+    input supply1 id_5,
+    input wor id_6,
+    output supply1 id_7,
+    input wand id_8,
+    input tri id_9,
+    input uwire id_10,
+    output tri1 id_11,
+    input wor id_12,
+    input uwire id_13,
+    output tri1 id_14,
+    input supply0 id_15,
+    output wire id_16
 );
-  assign id_3 = id_1;
-  module_0 modCall_1 (
-      id_3,
-      id_3
-  );
-  assign id_3 = id_1 ? id_3 : 1 + id_3;
-  assign id_3 = 1;
-  tri1 id_4;
-  wand id_5 = id_0;
-  assign id_3 = !id_5;
-  assign id_4 = 1;
-  always if (1) $display(1, id_5);
-  uwire id_6, id_7;
-  wor id_8, id_9, id_10, id_11;
-  assign id_10 = 1;
-  tri1 id_12;
-  always @(*)
-    case (1 == id_10 - id_1 < id_7)
-      {
-        id_1, 1'b0
-      } :
-      #1 begin : LABEL_0
-        id_11 = 1 == id_6;
-      end
-      1 == id_0: begin : LABEL_0
-        disable id_13;
-      end
-      1 == 1:  id_12 = 1;
-      default: #1;
-    endcase
+  wire id_18;
+  assign id_16 = id_8;
+  module_0 modCall_1 ();
 endmodule

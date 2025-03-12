@@ -1,26 +1,7 @@
-// Seed: 1868586356
+// Seed: 404297253
 module module_0;
-  assign id_1 = 1;
-  always
-    if (1'b0 & id_1)
-      #1 begin : LABEL_0
-        id_1 <= 1'b0;
-      end
-    else;
-  logic [7:0] id_2;
-  always $display(1);
-  assign module_1.id_0 = 0;
-  assign id_1 = id_2[1'b0];
 endmodule
-module module_1 (
-    input  wire  id_0,
-    output uwire id_1,
-    input  wand  id_2,
-    input  tri1  id_3,
-    input  wor   id_4,
-    input  wor   id_5
-);
-  wire id_7;
+module module_1 ();
   module_0 modCall_1 ();
 endmodule
 module module_2 (
@@ -48,39 +29,41 @@ module module_2 (
     id_22,
     id_23,
     id_24,
-    id_25
+    id_25,
+    id_26,
+    id_27
 );
-  output wire id_25;
+  output wire id_27;
+  inout wire id_26;
+  input wire id_25;
   inout wire id_24;
   output wire id_23;
-  inout wire id_22;
-  output wire id_21;
+  output wire id_22;
+  output wor id_21;
   inout wire id_20;
   output wire id_19;
-  input wire id_18;
+  inout wire id_18;
   output wire id_17;
   inout wire id_16;
-  input wire id_15;
+  output wire id_15;
   output wire id_14;
-  output wire id_13;
+  input wire id_13;
   inout wire id_12;
-  output wire id_11;
-  output wire id_10;
-  output wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  assign id_14 = 1;
-  always id_14 = id_20;
-  wire id_26;
-  assign id_8 = id_12;
-  always id_20 <= 1;
+  input wire id_11;
   module_0 modCall_1 ();
-  assign id_6 = "";
-  always if (id_16) $display(1);
+  input wire id_10;
+  inout wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  parameter id_28 = 1;
+  always foreach (id_29) if (1 & 1) $clog2(55);
+  ;
+  assign id_21 = -1;
+  wire id_30;
 endmodule

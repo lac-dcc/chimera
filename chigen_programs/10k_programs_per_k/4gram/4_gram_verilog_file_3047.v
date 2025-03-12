@@ -1,37 +1,5 @@
-// Seed: 916489896
-module module_0;
-  assign id_1[1] = id_1;
-  wire id_2;
-  logic [7:0] id_3;
-  module_2 modCall_1 (
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2
-  );
-  assign id_3 = id_1;
-  assign module_1.id_1 = 0;
-endmodule
-module module_1 (
-    input  supply0 id_0,
-    output supply0 id_1,
-    input  supply1 id_2
-);
-  wire id_4;
-  module_0 modCall_1 ();
-  assign id_1 = id_0;
-endmodule
-module module_2 (
+// Seed: 4105296565
+module module_0 (
     id_1,
     id_2,
     id_3,
@@ -43,24 +11,69 @@ module module_2 (
     id_9,
     id_10,
     id_11,
-    id_12,
-    id_13,
-    id_14
+    id_12
 );
-  output wire id_14;
-  output wire id_13;
-  input wire id_12;
+  inout wire id_12;
   inout wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  inout wire id_7;
+  input wire id_10;
+  output wire id_9;
+  inout wire id_8;
+  input wire id_7;
   input wire id_6;
-  input wire id_5;
-  output wire id_4;
-  input wire id_3;
+  inout wire id_5;
+  inout wire id_4;
+  inout wor id_3;
   inout wire id_2;
-  input wire id_1;
-  always @(posedge 1 == 1);
-  assign id_10 = 1;
+  output wire id_1;
+  assign id_3 = 1;
+  logic id_13;
+endmodule
+module module_1 (
+    input supply0 id_0,
+    output wor id_1,
+    input supply1 id_2,
+    input wand id_3
+    , id_21,
+    input wand id_4,
+    output tri id_5,
+    input supply1 id_6,
+    input wire id_7,
+    input supply1 id_8,
+    input tri id_9
+    , id_22,
+    input supply1 id_10,
+    output tri1 id_11,
+    output uwire id_12,
+    output logic id_13,
+    output logic id_14,
+    input uwire id_15,
+    input tri0 id_16,
+    input uwire id_17,
+    input wor id_18,
+    input uwire id_19
+);
+  module_0 modCall_1 (
+      id_22,
+      id_21,
+      id_22,
+      id_22,
+      id_21,
+      id_21,
+      id_22,
+      id_22,
+      id_21,
+      id_22,
+      id_21,
+      id_21
+  );
+  initial begin : LABEL_0
+    id_14 <= id_4;
+    id_13 <= -1'b0;
+  end
+  assign id_13 = -1;
+  assign id_12 = 1;
+  wire id_23;
+  localparam id_24 = -1;
+  assign id_11 = id_19;
+  assign id_13 = id_2;
 endmodule

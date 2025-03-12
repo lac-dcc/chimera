@@ -1,62 +1,56 @@
-// Seed: 1342920746
+// Seed: 1435865500
 module module_0 (
-    input  tri0 id_0,
-    output tri0 id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  wire id_3;
-  genvar id_4;
-  wire id_5;
-  always_ff $display(id_0);
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  wire id_9;
-  assign module_1.id_16 = 0;
-  wire id_10;
+  input wire id_11;
+  inout wire id_10;
+  assign module_1.id_2 = 0;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
 endmodule
-module module_1 (
-    output supply1 id_0,
-    input supply1 id_1,
-    input wire id_2,
-    input tri0 id_3,
-    output tri0 id_4,
-    output tri0 id_5,
-    input tri id_6,
-    input supply0 id_7,
-    output supply0 id_8,
-    output wor id_9,
-    output wor id_10,
-    input wire id_11,
-    output supply0 id_12,
-    input tri0 id_13,
-    input wire id_14
-    , id_28, id_29,
-    output tri id_15,
-    output wire id_16,
-    input supply0 id_17,
-    input wor id_18,
-    output wor id_19,
-    output supply1 id_20,
-    inout tri1 id_21,
-    output uwire id_22,
-    input wor id_23,
-    output wor id_24,
-    output tri1 id_25,
-    output tri1 id_26
+module module_1 #(
+    parameter id_0 = 32'd81,
+    parameter id_1 = 32'd61,
+    parameter id_2 = 32'd90,
+    parameter id_4 = 32'd23
+) (
+    output tri   _id_0,
+    input  tri0  _id_1,
+    input  uwire _id_2
 );
-  always_ff id_21 = id_23;
-  assign id_12 = 1;
-  wire id_30;
-  initial begin : LABEL_0
-    wait ("");
-  end
-  wire id_31;
-  wire id_32;
-  wire id_33;
-  wire id_34;
+  wire _id_4;
+  wire id_5;
+  logic id_6;
+  logic [id_0 : id_1  <->  id_2] id_7 = "";
   module_0 modCall_1 (
-      id_14,
-      id_19
+      id_5,
+      id_6,
+      id_6,
+      id_5,
+      id_6,
+      id_6,
+      id_6,
+      id_5,
+      id_6,
+      id_6,
+      id_6
   );
-  wire id_35, id_36;
+  wire [-1 'b0 |  id_4  |  -1 : -1] id_8;
 endmodule

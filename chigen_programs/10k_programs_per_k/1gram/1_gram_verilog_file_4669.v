@@ -1,34 +1,41 @@
-// Seed: 2557840799
+// Seed: 3213217604
 module module_0 (
-    id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  inout wire id_1;
-  initial if (1) id_1 -= id_1;
-  module_2 modCall_1 ();
-  assign modCall_1.id_3 = 0;
+  inout wire id_8;
+  input wire id_7;
+  output wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  logic id_9;
 endmodule
-module module_1;
-  wire id_1;
-  module_0 modCall_1 (id_1);
-  wire id_2;
-endmodule
-module module_2;
-  class id_1;
-    reg id_2;
-    reg id_3;
-    function new;
-      begin : LABEL_0$display
-        ;
-      end
-      if (1) id_3 <= 1 - 1;
-    endfunction
-    task id_4;
-    endtask
-  endclass
-  string id_5, id_6;
-  assign id_6 = "";
-  integer id_7;
-  assign id_3 = 1;
-  assign id_7 = id_5;
-  wire id_8;
+module module_1 #(
+    parameter id_1 = 32'd36
+) (
+    _id_1,
+    id_2
+);
+  input wire id_2;
+  input wire _id_1;
+  wire [-1 'b0 : id_1] id_3;
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
 endmodule

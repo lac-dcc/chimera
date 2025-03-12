@@ -1,68 +1,49 @@
-// Seed: 1179273129
-module module_0 (
-    id_1,
-    id_2
-);
-  inout wire id_2;
-  inout wire id_1;
-  assign id_1 = id_2;
-  assign module_1.type_15 = 0;
+// Seed: 2278812200
+module module_0;
+  wire id_1;
 endmodule
-module module_1 (
-    output uwire id_0,
-    input uwire id_1,
-    input tri id_2,
-    input wire id_3,
-    output tri id_4,
-    input tri1 id_5,
-    output wor id_6,
-    input wire id_7,
-    input tri0 id_8,
-    input tri1 id_9,
-    input tri0 id_10,
-    output wor id_11,
-    input supply1 id_12,
-    input tri id_13,
-    input wire id_14,
-    input tri1 id_15,
-    input uwire id_16,
-    input tri0 id_17,
-    input wire id_18,
-    input tri1 id_19,
-    input supply1 id_20,
-    input wire id_21
-    , id_47,
-    input tri1 id_22,
-    input tri0 id_23,
-    output wor id_24,
-    input wire id_25,
-    output tri id_26,
-    output supply0 id_27,
-    input tri id_28,
-    input supply0 id_29,
-    output supply0 id_30,
-    input tri1 id_31,
-    output tri1 id_32,
-    input supply1 id_33,
-    input tri id_34,
-    inout tri0 sample,
-    output wire id_36,
-    output supply1 id_37,
-    input tri0 id_38,
-    output tri id_39,
-    input wand id_40,
-    input uwire id_41,
-    input tri1 id_42,
-    input tri1 id_43,
-    input wand id_44,
-    output tri id_45
+module module_0 #(
+    parameter id_10 = 32'd40,
+    parameter id_4  = 32'd34,
+    parameter id_9  = 32'd47
+) (
+    id_1,
+    id_2,
+    module_1,
+    _id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    _id_9,
+    _id_10,
+    id_11,
+    id_12,
+    id_13
 );
-  wire id_48;
-  assign id_6 = id_7;
-  module_0 modCall_1 (
-      id_48,
-      id_47
-  );
-  wire module_1;
-  wire id_49;
+  input wire id_13;
+  input wire id_12;
+  input wire id_11;
+  inout wire _id_10;
+  input wire _id_9;
+  inout logic [7:0] id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  inout wire _id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire [1 : 1] id_14;
+  module_0 modCall_1 ();
+  wire id_15;
+  wire id_16;
+  ;
+  logic [1  ==  (  id_4  ==?  1  ) : id_10] id_17;
+  ;
+  logic id_18, id_19, id_20;
+  logic id_21;
+  ;
+  wire [1 : id_9] id_22;
+  wire id_23;
 endmodule

@@ -1,46 +1,41 @@
-// Seed: 3781338925
-module module_0 (
-    input uwire id_0,
-    input wand id_1,
-    output tri1 id_2,
-    input tri0 id_3,
-    input wor id_4,
-    input supply1 id_5,
-    output wire id_6
-);
-  initial $display(id_1 & id_0);
+// Seed: 1789862171
+module module_1;
+  logic id_6;
+  ;
+  module_2 modCall_1 ();
 endmodule
-module module_1 (
-    input  tri   id_0,
-    output wand  id_1,
-    input  uwire id_2,
-    input  logic id_3,
-    output logic id_4,
-    input  logic id_5
+module module_0 #(
+    parameter id_2 = 32'd68
+) (
+    output tri  id_0,
+    input  tri  id_1,
+    input  wand _id_2,
+    output wire id_3
 );
-  always begin : LABEL_0
-    assume (1);
-    repeat (1) id_4 <= id_3;
-    id_4 <= id_5;
-    if (id_2) if (id_5 < 1 && id_3 && id_0 && id_2) id_4 <= (id_3 - id_5);
-    if (id_3) begin : LABEL_0
-      id_4 = id_5;
-      fork
-        id_7();
-        $display(id_0, id_7);
-      join
-    end
-    wait (1);
-    wait (id_3);
+  logic id_5;
+  assign id_0 = 1;
+  assign id_5[-1] = id_5[id_2];
+  module_0 modCall_1 ();
+endmodule
+module module_2;
+  assign module_3.id_1 = 0;
+endmodule
+module module_3 (
+    input  wire  id_0,
+    output logic id_1
+);
+  always @(posedge id_0) begin : LABEL_0
+    wait ("");
+    id_1 = id_0;
   end
-  module_0 modCall_1 (
-      id_0,
-      id_2,
-      id_7,
-      id_2,
-      id_7,
-      id_0,
-      id_1
-  );
-  assign modCall_1.type_11 = 0;
+  reg id_3;
+  assign id_3 = id_3;
+  logic [7:0] id_4, id_5;
+  always @(posedge -1'b0 * id_0 or posedge -1'h0)
+    for (id_3 = 1'd0 >= -1'b0; 1; id_3 = (-1'b0))
+      if (1) begin : LABEL_1
+        id_1 <= ~id_3 ? id_5[-1] : id_5;
+      end
+  module_2 modCall_1 ();
+  integer id_6 = (id_0);
 endmodule

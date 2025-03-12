@@ -1,100 +1,54 @@
-// Seed: 1879522856
+// Seed: 2361993596
 module module_0 (
-    input tri id_0#(.id_27(1)),
-    output wire id_1,
-    input wand id_2,
-    input wire id_3,
-    input tri1 id_4,
-    input tri1 id_5,
-    input wire id_6,
-    output tri1 id_7,
-    output uwire id_8,
-    input wand id_9,
-    input tri1 id_10,
-    output supply1 id_11,
-    output tri1 id_12,
-    output wand id_13,
-    output wor id_14,
-    input wor id_15,
-    input tri1 id_16,
-    output tri1 id_17,
-    input supply0 id_18,
-    output tri0 id_19,
-    output supply0 id_20,
-    input uwire id_21,
-    output wire void id_22,
-    input tri1 id_23,
-    output wand id_24,
-    input tri id_25
+    input wor id_0,
+    output supply0 id_1,
+    output wor id_2,
+    input wire id_3
 );
-  wire id_28, id_29, id_30, id_31, id_32, id_33;
-  assign id_11 = 1;
-  assign id_11 = 1;
-  id_34 :
-  assert property (@({1{id_5}}) 'b0) wait (1);
+  assign id_1 = -1'd0;
+  assign id_1 = -1;
+  assign id_1 = 1;
+  assign id_1 = !-1'b0;
+  wire  id_5;
+  logic id_6 = -1;
 endmodule
-module module_1 (
-    input uwire id_0,
-    input uwire id_1,
-    input tri id_2,
-    output logic id_3,
-    input wand id_4,
-    output wire id_5,
-    input wor id_6,
-    input wor id_7,
+module module_1 #(
+    parameter id_10 = 32'd16,
+    parameter id_15 = 32'd52,
+    parameter id_19 = 32'd78,
+    parameter id_3  = 32'd29,
+    parameter id_4  = 32'd46
+) (
+    output tri0 id_0,
+    input wand id_1,
+    input tri id_2[-1 : 1],
+    input supply1 _id_3,
+    input wor _id_4,
+    input tri id_5,
+    input supply1 id_6,
+    output wire id_7,
     output wor id_8,
-    output logic id_9,
-    input uwire id_10,
-    output uwire id_11,
-    input uwire id_12,
-    input supply0 id_13,
-    output tri id_14,
-    input tri id_15,
-    input supply0 id_16,
-    input supply1 id_17,
-    output logic id_18
+    input supply1 id_9,
+    input wand _id_10,
+    input wire id_11
+    , id_21,
+    output wand id_12,
+    input tri id_13,
+    input tri0 id_14,
+    input tri1 _id_15,
+    input wor id_16,
+    input tri id_17,
+    output tri0 id_18,
+    input tri _id_19
 );
-  assign id_5 = 1;
-  always begin : LABEL_0
-    id_9 = 1;
-    id_3 <= 1;
-    $display(id_4, id_1, 1'b0 == id_16, id_12);
-    id_8 = id_10;
-    $display(id_13);
-  end
+  logic id_22 = "";
+  wire [-  id_19 : id_3] id_23[id_15  (  id_10  &&  id_19  ,  id_4  |  -1  ) : id_4  -  id_3],
+      id_24;
   module_0 modCall_1 (
-      id_4,
-      id_11,
-      id_6,
-      id_17,
-      id_1,
-      id_6,
-      id_4,
-      id_14,
-      id_5,
-      id_2,
-      id_4,
-      id_8,
-      id_14,
-      id_8,
-      id_11,
-      id_10,
-      id_16,
-      id_8,
-      id_10,
-      id_8,
-      id_14,
-      id_16,
-      id_5,
-      id_12,
-      id_8,
-      id_15
+      id_9,
+      id_7,
+      id_7,
+      id_5
   );
-  assign modCall_1.id_2 = 0;
-  time id_20, id_21;
-  initial id_9 <= #1 1;
-  always begin : LABEL_0
-    id_18 <= 1;
-  end
-  always id_3 <= 1;
-endmodule
+  assign modCall_1.id_1 = 0;
+endmodule : SymbolIdentifier

@@ -1,78 +1,51 @@
-// Seed: 724179137
-module module_0;
-  assign id_1 = 1'b0;
-  assign module_5.id_16 = 0;
-  assign module_2.type_3 = 0;
-endmodule
-module module_1 ();
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-endmodule
-module module_2;
-  tri1 id_2;
-  module_0 modCall_1 ();
-  assign id_1 = id_1 + id_2;
-endmodule
-module module_3 (
-    input wire id_0,
-    input wand id_1
-);
-  module_0 modCall_1 ();
-endmodule
-module module_4 (
+// Seed: 1498814463
+module module_0 (
     id_1,
     id_2,
     id_3,
     id_4
 );
-  output wire id_4;
-  input wire id_3;
+  inout wire id_4;
+  output wire id_3;
   input wire id_2;
-  inout wire id_1;
-  wire id_5;
-  xnor primCall (id_1, id_2, id_3, id_5);
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  inout wor id_1;
+  assign module_1.id_11 = 0;
+  always @(-1'b0);
+  assign id_1 = 1;
 endmodule
-module module_5 (
-    output tri0  id_0,
-    output wire  id_1,
-    output logic id_2,
-    output tri1  id_3
+module module_1 #(
+    parameter id_11 = 32'd46,
+    parameter id_16 = 32'd29,
+    parameter id_5  = 32'd13,
+    parameter id_7  = 32'd57,
+    parameter id_9  = 32'd24
+) (
+    output tri0 id_0,
+    input wire id_1,
+    input wire id_2,
+    output wire id_3,
+    output wor id_4,
+    input tri0 _id_5,
+    input supply1 id_6,
+    input wor _id_7,
+    output supply1 id_8,
+    input wand _id_9,
+    input wor id_10,
+    input wor _id_11
+    , id_13
 );
-  wire id_5;
-  logic
-      id_6,
-      id_7,
-      id_8,
-      id_9,
-      id_10,
-      id_11,
-      id_12,
+  logic [-1 : !  -1] id_14;
+  ;
+  module_0 modCall_1 (
+      id_14,
       id_13,
       id_14,
-      id_15,
-      id_16,
-      id_17,
-      id_18,
-      id_19,
-      id_20,
-      id_21,
-      id_22,
-      id_23,
-      id_24,
-      id_25,
-      id_26,
-      id_27,
-      id_28,
-      id_29,
-      id_30;
-  module_0 modCall_1 ();
-  if (id_5) begin : LABEL_0
-    wire id_31;
-  end else
-    always
-      if (1) id_14 <= {id_25, 1, 1, id_3++, id_18, 1} == 1;
-      else id_2 = id_25;
-  wire id_32;
+      id_13
+  );
+  uwire id_15 = -1'h0;
+  logic _id_16;
+  parameter id_17 = 1;
+  always #1;
+  int [1 'd0 : id_5] id_18;
+  logic [id_7  &  id_9 : id_16  ^  id_11] id_19;
 endmodule

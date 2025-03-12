@@ -1,55 +1,37 @@
-// Seed: 1994190410
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  output wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  wire id_6, id_7;
-  logic [7:0][1] id_8;
+// Seed: 393632459
+module module_0 ();
+  wire id_1;
+  assign module_2.id_1 = 0;
+  assign id_1 = id_1 && -1'h0;
+  wire id_2;
+  assign module_1.id_1 = 0;
+  wire id_3;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+module module_1 #(
+    parameter id_0 = 32'd99,
+    parameter id_3 = 32'd72
+) (
+    output tri0 _id_0,
+    output tri0 id_1,
+    input  wor  id_2 [  id_3 : id_0],
+    inout  tri  _id_3[1 : -1  -  -1],
+    input  tri0 id_4
 );
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
+  assign id_3 = id_4;
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_2 = 32'd73,
+    parameter id_3 = 32'd64
+) (
+    id_1,
+    _id_2
+);
+  inout wire _id_2;
   output wire id_1;
-  supply0 id_9, id_10, id_11, id_12, id_13, id_14;
-  always_latch #1 id_4 <= 1;
-  tri id_15, id_16 = id_9;
-  tri id_17;
-  always @(id_15) $display({id_12, id_11, 1}, id_6, (id_7), id_17);
-  assign id_17 = id_9;
-  assign id_10 = 1;
-  always id_9 = id_12;
-  uwire id_18 = 1;
-  assign id_4 = ~id_16;
-  wire id_19;
-  module_0 modCall_1 (
-      id_2,
-      id_11,
-      id_6,
-      id_9,
-      id_10
-  );
-  assign id_14 = (1'h0);
-  wire id_20;
+  module_0 modCall_1 ();
+  assign id_1 = -1;
+  wire _id_3 = id_2, id_4[id_3 : id_2];
+  supply0 id_5 = -1;
+  wire id_6, id_7, id_8;
 endmodule

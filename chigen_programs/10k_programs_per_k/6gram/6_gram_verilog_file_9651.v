@@ -1,42 +1,38 @@
-// Seed: 2805043378
+// Seed: 3101403660
 module module_0 (
-    input  tri0  id_0,
-    input  tri1  id_1,
-    output wire  id_2,
-    output tri   id_3,
-    input  tri0  id_4,
-    input  tri   id_5,
-    input  uwire id_6,
-    output wire  id_7,
-    output wand  id_8
+    output supply0 id_0,
+    output wand id_1,
+    output supply0 id_2,
+    output tri0 id_3,
+    output wor id_4
 );
-  string module_0 = "";
-  assign id_2 = 1'b0;
-  tri id_10 = id_0;
+  logic id_6;
 endmodule
-module module_1 (
-    input wor id_0,
-    output tri0 id_1,
-    output supply1 id_2,
-    inout tri id_3
+module module_1 #(
+    parameter id_0 = 32'd26,
+    parameter id_3 = 32'd50,
+    parameter id_5 = 32'd62
+) (
+    output wor   _id_0,
+    input  tri0  id_1,
+    input  tri0  id_2
+    , id_7,
+    input  tri1  _id_3,
+    output wire  id_4,
+    output uwire _id_5
 );
-  wire id_5;
-  assign id_1 = 1;
-  uwire id_6;
-  assign id_1 = id_6;
-  id_7(
-      .id_0(id_8#(.id_1(1)) [1'b0])
-  );
+  logic [id_3 : -1] id_8[id_5 : id_0];
+  always @(posedge -1) begin : LABEL_0
+    $clog2(48);
+    ;
+    SystemTFIdentifier;
+  end
   module_0 modCall_1 (
-      id_3,
-      id_6,
-      id_6,
-      id_2,
-      id_6,
-      id_0,
-      id_6,
-      id_1,
-      id_2
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4
   );
-  assign modCall_1.id_8 = 0;
+  assign modCall_1.id_2 = 0;
 endmodule

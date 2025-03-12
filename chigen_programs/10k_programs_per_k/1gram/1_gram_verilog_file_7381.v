@@ -1,33 +1,44 @@
-// Seed: 3013548583
-macromodule module_0;
-  wire id_1;
-  assign id_1 = id_1;
-  wire id_2;
-  assign id_1 = id_1;
-  assign id_2 = id_1;
-endmodule
-module module_1 (
-    input supply0 id_0
+// Seed: 1797656233
+module module_0 (
+    input tri id_0,
+    input supply1 id_1
 );
-  wire id_2;
-  module_0 modCall_1 ();
+  if (1'b0) logic id_3 = id_0;
+  else logic id_4;
+  assign module_2.id_4 = 0;
+  parameter id_5 = "" - 1;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd94
+) (
+    inout uwire _id_0,
+    input tri0  id_1,
+    input tri0  id_2
+);
+  wire [id_0 : 1] id_4;
+  wire id_5;
+  module_0 modCall_1 (
+      id_2,
+      id_1
+  );
+  assign modCall_1.id_1 = 0;
+  logic id_6;
+  assign id_4 = (id_4);
 endmodule
 module module_2 (
-    input tri0 id_0,
-    input wire id_1,
-    output tri0 id_2,
-    input wor id_3,
-    output supply1 id_4,
-    input wand id_5,
-    input uwire id_6,
-    input uwire id_7
+    input  wor   id_0,
+    input  wor   id_1,
+    input  uwire id_2,
+    input  uwire id_3,
+    output tri0  id_4,
+    input  wor   id_5,
+    input  wire  id_6,
+    input  uwire id_7,
+    input  wor   id_8
 );
-  wire id_9, id_10, id_11, id_12, id_13;
-  assign id_13 = id_9;
-  id_14(
-      id_7, ~id_5, id_5
+  assign id_4 = id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_1
   );
-  uwire id_15 = 1, id_16;
-  wire  id_17 = id_17, id_18;
-  module_0 modCall_1 ();
 endmodule

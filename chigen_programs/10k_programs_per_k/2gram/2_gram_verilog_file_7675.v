@@ -1,39 +1,5 @@
-// Seed: 1204632514
+// Seed: 1755687206
 module module_0 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  output wire id_1;
-  wire id_3;
-  assign module_2.type_5 = 0;
-endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3
-);
-  input wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_4;
-  module_0 modCall_1 (
-      id_4,
-      id_1
-  );
-endmodule
-module module_2 (
-    output wand id_0,
-    input  tri  id_1
-);
-  tri1 id_3;
-  assign id_3 = 1'b0;
-  module_0 modCall_1 (
-      id_3,
-      id_3
-  );
-endmodule
-module module_3 (
     id_1,
     id_2,
     id_3,
@@ -42,65 +8,58 @@ module module_3 (
     id_6,
     id_7,
     id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15
+    id_9
 );
-  inout wire id_15;
-  input wire id_14;
-  input wire id_13;
-  input wire id_12;
-  inout wire id_11;
-  input wire id_10;
-  input wire id_9;
+  inout wire id_9;
   input wire id_8;
-  output wire id_7;
+  input wire id_7;
   input wire id_6;
-  input wire id_5;
-  input wire id_4;
+  inout wire id_5;
+  output wire id_4;
   output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  wire id_16;
-  xor primCall (
-      id_3,
-      id_10,
-      id_4,
-      id_17,
-      id_14,
-      id_27,
-      id_26,
-      id_9,
-      id_21,
-      id_11,
-      id_1,
-      id_8,
-      id_29,
-      id_19,
-      id_13,
-      id_30,
-      id_12,
-      id_23,
-      id_5,
-      id_25,
-      id_15
-  );
-  generate
-    assign id_15 = 1;
-    reg id_17, id_18, id_19, id_20, id_21, id_22, id_23, id_24, id_25, id_26, id_27;
-    wire id_28;
-  endgenerate
-  wire id_29, id_30;
-  assign id_17 = id_6;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_10;
+  wire id_11;
+  assign id_1 = id_5;
+  wire id_12;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd73,
+    parameter id_4 = 32'd76,
+    parameter id_6 = 32'd50
+) (
+    output uwire id_0,
+    input wand _id_1,
+    output logic id_2,
+    input supply0 id_3,
+    input supply0 _id_4,
+    input tri id_5,
+    input tri _id_6
+);
+  struct {
+    integer [id_4 : id_1] id_8;
+    logic id_9;
+    logic id_10;
+    logic id_11;
+    id_12 id_13;
+    logic id_14;
+  } [-1 : -1 'b0] id_15[1 : id_6];
+  ;
   always begin : LABEL_0
-    id_24 <= 1;
+    $unsigned(26);
+    ;
   end
+  final id_2 <= ~"";
   module_0 modCall_1 (
+      id_11,
       id_15,
-      id_28
+      id_8,
+      id_8,
+      id_10,
+      id_12,
+      id_15,
+      id_9,
+      id_12
   );
 endmodule

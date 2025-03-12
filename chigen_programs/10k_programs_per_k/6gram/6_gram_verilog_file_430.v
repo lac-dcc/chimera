@@ -1,37 +1,35 @@
-// Seed: 3545924098
-module module_0;
-  always @(posedge id_1[1]) id_1 = ((id_1[1]));
-  assign module_1.type_3 = 0;
-endmodule
-module module_1 #(
-    parameter id_6 = 32'd6,
-    parameter id_7 = 32'd1
-) (
-    output uwire id_0,
-    input wand id_1,
-    input tri1 id_2,
-    input tri id_3,
-    inout supply0 id_4
+// Seed: 4027887667
+module module_0 (
+    id_1,
+    id_2
 );
-  module_0 modCall_1 ();
-  defparam id_6.id_7 = 1;
+  output wire id_2;
+  input wire id_1;
+  tri [$realtime : 1] id_3;
+  assign id_3 = id_1 - id_1;
 endmodule
-module module_2 (
-    output uwire id_0,
-    output tri0  id_1,
-    input  wor   id_2,
-    output tri0  id_3
+module module_1 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
 );
-  uwire id_5;
-  id_6(
-      .id_0(1)
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  module_0 modCall_1 (
+      id_4,
+      id_2
   );
-  initial forever id_7(id_2);
-  tri0 id_8;
-  module_0 modCall_1 ();
-  wire id_9;
-  wire id_10;
-  always @(id_5 != id_8 or id_8) begin : LABEL_0
-    id_1 += 1;
-  end
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout wire id_1;
 endmodule

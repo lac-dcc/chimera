@@ -1,36 +1,61 @@
-// Seed: 944173677
-module module_0;
-  reg id_2;
-  assign module_1.id_6 = 0;
-  reg id_3;
-  always @(id_1, 1 + id_3) begin : LABEL_0
-    if (1) deassign id_1;
-    else begin : LABEL_0
-      id_2 <= id_3;
-      id_2 <= id_2;
-    end
-  end
-endmodule
-module module_1 (
+// Seed: 2544327797
+module module_0 (
     id_1,
     id_2,
-    id_3
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10
 );
+  output wire id_10;
+  input wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  output wire id_5;
+  output wire id_4;
   inout wire id_3;
-  output wire id_2;
-  input wire id_1;
-  `define pp_4 0
-  always_ff @(1 == id_3 or 1) id_2 <= 1;
-  module_0 modCall_1 ();
-  wire id_5;
-  wire id_7;
+  input wire id_2;
+  output wire id_1;
+  parameter id_11 = 1;
+  always @(posedge 1 * 1 or posedge id_7) begin : LABEL_0
+    if (-1) disable id_12;
+  end
 endmodule
-module module_2 (
-    input supply1 id_0,
-    output tri id_1,
-    input wire id_2
+module module_1 #(
+    parameter id_2 = 32'd26
+) (
+    id_1,
+    _id_2,
+    id_3,
+    id_4
 );
-  assign id_1 = 1 == id_0;
-  module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
+  output wire id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_1,
+      id_1,
+      id_1,
+      id_4,
+      id_1,
+      id_1,
+      id_1,
+      id_1,
+      id_4
+  );
+  output wire id_3;
+  input wire _id_2;
+  inout wire id_1;
+  always @(posedge 1 or posedge -1) begin : LABEL_0
+    `define pp_5 0
+    $clog2(61);
+    ;
+    `pp_5 = #id_6 "";
+  end
+  logic [id_2 : id_2  ==  1] id_7;
+  wire id_8;
 endmodule

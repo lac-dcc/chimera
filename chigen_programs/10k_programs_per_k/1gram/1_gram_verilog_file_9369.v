@@ -1,38 +1,34 @@
-// Seed: 3318689030
-module module_0 (
-    output tri0  id_0,
-    output uwire id_1
-);
+// Seed: 322199839
+module module_0 ();
+  reg [1 : ~  -1] id_1, id_2, id_3;
+  initial id_1 = id_1;
+  assign id_1 = id_2;
 endmodule
-module module_1 (
-    output supply1 id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    input supply0 id_3
+module module_1 #(
+    parameter id_0 = 32'd35,
+    parameter id_3 = 32'd4
+) (
+    input supply1 _id_0,
+    input supply0 id_1,
+    input uwire id_2,
+    output uwire _id_3,
+    input wire id_4,
+    input wand id_5,
+    input tri1 id_6,
+    input supply1 id_7,
+    output supply0 id_8[id_3 : id_0],
+    output wand id_9
 );
-  uwire id_5 = 1;
-  module_0 modCall_1 (
-      id_0,
-      id_0
-  );
-  assign modCall_1.type_0 = 0;
-endmodule
-module module_2 ();
-  id_1 :
-  assert property (@* 1);
-  wire id_2 = id_2;
-  wire id_3;
-  assign id_2 = id_2;
-endmodule
-module module_3 (
-    id_1
-);
-  input wire id_1;
-  final
-    if (id_1 - id_1) id_2 <= 1;
-    else id_2 = 1;
-  reg id_3, id_4, id_5;
-  always id_3 <= id_4;
-  always_latch id_2 = 1;
-  module_2 modCall_1 ();
+  assign id_9 = id_0;
+  supply0 id_11;
+  logic   id_12;
+  module_0 modCall_1 ();
+  assign modCall_1.id_1 = 0;
+  assign id_11 = id_6 == 1'h0;
+  logic id_13;
+  logic id_14;
+  ;
+  wire id_15;
+  assign id_12 = id_12.min;
+  logic id_16, id_17;
 endmodule

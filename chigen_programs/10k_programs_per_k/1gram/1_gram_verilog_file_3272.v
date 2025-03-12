@@ -1,58 +1,53 @@
-// Seed: 1952193534
-module module_0 (
-    input tri1 id_0,
-    output supply0 id_1,
-    input uwire id_2,
-    output uwire void id_3,
-    input tri0 id_4,
-    input tri id_5,
-    input tri id_6,
-    output tri0 id_7,
-    input wor id_8,
-    input supply0 id_9,
-    input tri1 id_10,
-    output supply0 id_11,
-    input tri id_12,
-    output tri1 id_13,
-    input tri id_14,
-    output uwire id_15,
-    input supply0 id_16
+// Seed: 2524269119
+program module_0 (
+    output supply0 id_0#(
+        .sum  (1),
+        .id_8 (1),
+        .id_9 (1'h0),
+        .id_10(1),
+        .id_11(1),
+        .id_12(-1),
+        .id_13(1'b0),
+        .id_14(1),
+        .id_15(1),
+        .id_16(1)
+    ),
+    output uwire id_1,
+    input supply0 id_2,
+    input wand id_3,
+    input tri id_4,
+    output wor id_5,
+    output supply1 id_6
 );
-endmodule
+  assign id_1 = -1;
+  always_comb id_8 <= #1 -1;
+  assign id_1 = -1;
+endprogram
 module module_1 (
-    output wire id_0,
-    output supply1 id_1,
-    input uwire id_2,
-    input tri0 id_3
+    input tri id_0,
+    output wire id_1,
+    input tri0 id_2,
+    output tri id_3,
+    output wor id_4,
+    output tri1 id_5,
+    input tri0 id_6,
+    input tri id_7,
+    output wire id_8[-1 : 1 'b0],
+    input tri0 id_9,
+    input supply0 id_10,
+    output wire id_11,
+    input wor id_12
 );
-  wire id_5;
-  tri1 id_6, id_7, id_8, id_9;
-  if (1'b0) tri1 id_10, id_11, id_12, id_13, id_14;
-  else wire id_15;
-  assign id_7 = 1;
-  wand id_16, id_17 = id_16 ^ id_8, id_18;
-  assign id_16 = id_2;
-  wire id_19;
-  assign id_13 = 1'b0;
-  supply0 id_20 = (1) & 1;
+  wor id_14 = id_2 >= id_7 & "" == -1;
+  or primCall (id_11, id_10, id_7, id_12, id_9, id_2, id_0);
   module_0 modCall_1 (
-      id_2,
-      id_1,
-      id_2,
-      id_0,
-      id_3,
-      id_2,
-      id_18,
-      id_16,
-      id_2,
-      id_16,
-      id_17,
-      id_0,
-      id_17,
-      id_18,
-      id_16,
-      id_0,
-      id_2
+      id_8,
+      id_4,
+      id_6,
+      id_9,
+      id_9,
+      id_8,
+      id_11
   );
-  assign modCall_1.id_7 = 0;
+  assign modCall_1.id_8 = 0;
 endmodule

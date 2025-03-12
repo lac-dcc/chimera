@@ -1,53 +1,53 @@
-// Seed: 995593114
-module module_0 (
-    input uwire id_0,
-    input uwire id_1,
-    input uwire id_2
-);
-  assign id_4 = 1;
-  wire id_5;
-  wire id_6;
-  wire id_7;
-  wire id_8;
+// Seed: 3861888981
+module module_0 ();
 endmodule
-module module_1 (
-    input wire id_0,
-    output wire id_1,
-    output wire id_2,
-    output tri1 id_3,
-    inout supply0 id_4,
-    input wand id_5,
-    input wand id_6,
-    output wor id_7,
-    output tri0 id_8,
-    inout tri0 id_9,
-    output tri1 id_10,
-    input wor id_11,
-    output tri0 id_12,
-    input uwire id_13,
-    input supply1 id_14,
-    output tri id_15,
-    input tri0 id_16,
-    output supply1 id_17,
-    output tri0 id_18,
-    input uwire id_19,
-    input wand id_20,
-    output wand id_21,
-    output tri id_22,
-    input tri0 id_23,
-    input wire id_24
+program module_1 (
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_26, id_27;
-  module_0 modCall_1 (
-      id_20,
-      id_11,
-      id_14
-  );
-  assign modCall_1.type_9 = 0;
-  assign id_21 = 1;
-  wire id_28;
-  assign id_15 = 1;
-  id_29(
-      id_11
-  );
+  output wire id_3;
+  inout reg id_2;
+  input wire id_1;
+  always id_2 <= 1;
+  assign id_3 = id_1;
+  module_0 modCall_1 ();
+endprogram
+module module_2 (
+    output tri0 id_0
+);
+  module_0 modCall_1 ();
+endmodule
+module module_3 (
+    output tri0 id_0,
+    input  wire id_1
+);
+  localparam id_3 = 1;
+  module_0 modCall_1 ();
+endmodule
+module module_4 #(
+    parameter id_8 = 32'd68
+) (
+    output uwire id_0,
+    output uwire id_1,
+    output wire id_2,
+    output tri id_3,
+    output logic id_4,
+    output tri1 id_5,
+    output uwire id_6,
+    output supply0 id_7,
+    input tri _id_8,
+    input wire id_9,
+    output wand id_10[id_8 : -1],
+    output supply0 id_11,
+    input wire id_12
+);
+  initial
+    if ({1})
+      if (1 - -1'b0) begin : LABEL_0
+        id_4 <= id_12;
+      end
+  assign id_5 = -1'd0 == id_9 * id_9;
+  nand primCall (id_0, id_12, id_9);
+  module_0 modCall_1 ();
 endmodule

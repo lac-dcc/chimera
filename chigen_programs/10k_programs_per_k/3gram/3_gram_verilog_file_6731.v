@@ -1,36 +1,26 @@
-// Seed: 1524590282
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+// Seed: 2060722497
+module module_0 #(
+    parameter id_3 = 32'd24
+) (
+    input supply0 id_0
+    , _id_3,
+    input uwire   id_1
 );
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  output wire id_1;
-  assign id_3 = 1'h0;
-  wire id_6;
-  wire id_7;
-  assign id_3 = id_3 - 1'h0;
-  tri0 id_8;
-  assign id_8 = 1;
+  wire [id_3 : 1] id_4;
+  parameter id_5 = 1 - -1;
+  localparam id_6 = -1'b0;
+  localparam id_7 = 1;
+  parameter id_8 = id_5;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input tri0 id_1
-    , id_5,
-    input tri id_2,
-    input supply0 id_3
+    output logic id_0,
+    input  tri1  id_1
 );
-  always @(posedge 1);
+  always @(negedge id_1 ? 1 || id_1 * -1 + -1'b0 || id_1 || id_1 : 1'h0) id_0 <= -1;
+  not primCall (id_0, id_1);
   module_0 modCall_1 (
-      id_5,
-      id_5,
-      id_5,
-      id_5,
-      id_5
+      id_1,
+      id_1
   );
+  assign modCall_1.id_0 = 0;
 endmodule

@@ -1,32 +1,39 @@
-// Seed: 3863826704
-module module_0;
-  reg id_1;
-  reg id_2;
-  assign module_1.type_11 = 0;
-  assign id_1 = id_2.id_1;
-  always id_1 = id_1;
-  assign module_2.id_4 = 0;
-  always id_1 <= 1;
-endmodule
-module module_1 (
-    input supply0 id_0,
-    output supply1 id_1,
-    input tri0 id_2
+// Seed: 985891106
+module module_0 (
+    input supply1 id_0,
+    input supply0 id_1,
+    output wor id_2,
+    input wor id_3,
+    input tri id_4
 );
-  tri0 id_4;
-  supply1 id_5;
-  tri0 id_6 = id_4;
-  xor primCall (id_1, id_2, id_4, id_5, id_6, id_7);
-  assign id_5 = 1;
-  assign id_6 = id_5;
-  wire id_7;
-  module_0 modCall_1 ();
-  wire id_8;
+  reg id_6;
+  final id_6 = -1 <-> 1;
 endmodule
-module module_2 (
-    output uwire id_0,
-    input  wor   id_1
+module module_1 #(
+    parameter id_3 = 32'd29,
+    parameter id_4 = 32'd59,
+    parameter id_5 = 32'd98,
+    parameter id_8 = 32'd60
+) (
+    input  wire  id_0,
+    output tri1  id_1
+    , _id_8,
+    input  tri   id_2,
+    input  uwire _id_3
+    , id_9,
+    input  wand  _id_4,
+    input  tri   _id_5,
+    input  uwire id_6
 );
-  wire id_3;
-  module_0 modCall_1 ();
+  parameter [(  id_8  )  ?  id_4  ==  id_3 : id_8  ==  -1 'b0 : id_5] id_10 = 1;
+  module_0 modCall_1 (
+      id_2,
+      id_0,
+      id_1,
+      id_2,
+      id_0
+  );
+  assign modCall_1.id_2 = 0;
+  logic id_11;
+  wire [-1 : -1] id_12;
 endmodule

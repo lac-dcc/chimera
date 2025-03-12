@@ -1,55 +1,55 @@
-// Seed: 1129763442
-module module_0;
-  id_1 :
-  assert property (@(posedge 1) 1)
-  else $display;
-  assign id_1 = 1;
-  assign module_1.type_20 = 0;
-  wire id_3;
-  wire id_4;
-  wand id_5;
-  assign id_5 = 1;
-endmodule
-module module_1 (
-    input tri id_0,
-    input tri id_1,
-    input wand id_2,
-    input wire id_3,
-    input uwire id_4
-    , id_38,
-    input wor id_5,
-    input wor id_6,
-    output tri id_7,
-    input wire id_8,
-    input tri1 id_9,
-    input tri0 id_10,
-    input wire id_11,
-    input tri id_12,
-    input tri0 id_13,
-    input tri id_14,
-    output uwire id_15,
-    input tri1 id_16,
-    input supply1 id_17,
-    input uwire id_18,
-    input tri0 id_19,
-    input wor id_20,
-    input tri1 id_21,
-    output supply1 id_22,
-    input uwire id_23,
-    output wor id_24,
-    input wor id_25,
-    input wand id_26,
-    input supply1 id_27,
-    input wor id_28,
-    input supply1 id_29,
-    input tri0 id_30,
-    output wor id_31,
-    output tri0 id_32,
-    input wire id_33,
-    input wire id_34,
-    output wire id_35,
-    input wire id_36
+// Seed: 2099596266
+module module_0 #(
+    parameter id_2 = 32'd40,
+    parameter id_7 = 32'd26
+) (
+    input  tri   id_0,
+    output wand  id_1,
+    input  uwire _id_2,
+    output uwire id_3
 );
-  timeprecision 1ps;
-  module_0 modCall_1 ();
+  localparam id_5 = 1;
+  wire id_6;
+  wire _id_7;
+  wire [-1 'b0 ==?  -1 : id_7  -  id_2] id_8;
+  parameter id_9 = 1;
+  id_10 :
+  assert property (@(posedge id_7) 'b0)
+  else $clog2(27);
+  ;
+  wire id_11;
+  generate
+    genvar id_12;
+  endgenerate
+  assign module_1._id_11 = 0;
+endmodule
+module module_1 #(
+    parameter id_11 = 32'd99
+) (
+    output tri1  id_0,
+    input  uwire id_1,
+    output uwire id_2,
+    input  tri   id_3,
+    output logic id_4,
+    output wor   id_5,
+    input  tri0  id_6
+    , _id_11,
+    input  uwire id_7
+    , id_12,
+    input  uwire id_8,
+    input  wire  id_9
+);
+  wire [-1  ^  1 : id_11] id_13;
+  assign id_4 = id_6;
+  initial begin : LABEL_0
+    id_4 <= -1;
+  end
+  assign id_11 = id_9;
+  assign id_12 = -1;
+  module_0 modCall_1 (
+      id_8,
+      id_5,
+      id_11,
+      id_5
+  );
 endmodule

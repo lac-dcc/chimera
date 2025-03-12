@@ -1,40 +1,38 @@
-// Seed: 129705000
-module module_0 ();
-  wire id_1, id_3, id_4, id_5, id_6, id_7;
-  always $display(1, id_1 == 1'b0, id_5, (1 + ""));
-  assign id_2 = id_1;
+// Seed: 3895852220
+module module_0;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+module module_1 #(
+    parameter id_26 = 32'd90
+) (
+    input wor id_0,
+    input supply1 id_1,
+    input tri id_2,
+    output uwire id_3,
+    input wand id_4,
+    output tri id_5,
+    input supply0 id_6,
+    output supply1 id_7,
+    input tri1 id_8,
+    output tri0 id_9,
+    input wire id_10,
+    output wand id_11,
+    input supply0 id_12,
+    input tri0 id_13,
+    input supply0 id_14,
+    output supply1 id_15,
+    input tri1 id_16,
+    output uwire id_17,
+    output tri1 id_18,
+    input tri0 id_19,
+    input supply0 id_20,
+    output tri id_21,
+    input wand id_22,
+    input tri1 id_23[SystemTFIdentifier  (  -1  ) : -1]
 );
-  input wire id_11;
-  inout wire id_10;
-  output wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  input wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
+  wire id_25;
+  wire _id_26;
+  assign id_11 = id_8;
+  wire id_27[id_26 : 1];
+  assign id_7 = id_23;
   module_0 modCall_1 ();
-  assign modCall_1.id_5 = 0;
-  wire id_12;
-  reg  id_13;
-  wire id_14, id_15;
-  wire id_16;
-  wire id_17;
-  always id_10 <= id_13;
-  assign id_8 = id_16;
 endmodule

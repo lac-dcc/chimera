@@ -1,44 +1,25 @@
-// Seed: 3839479112
-module module_0;
-  assign id_1 = 1;
-  supply0 id_4;
-  module_2 modCall_1 ();
-  always_ff @(posedge id_3 or posedge id_1) id_2 = {id_4, id_3};
-  assign module_1.id_1 = 0;
-  assign id_3 = id_2;
+// Seed: 2953460688
+module module_0 ();
+  wire id_1;
 endmodule
-module module_1 (
-    output tri1 id_0,
-    input supply0 id_1
-    , id_4,
-    output wire id_2
+module module_1 #(
+    parameter id_2 = 32'd26,
+    parameter id_3 = 32'd40,
+    parameter id_4 = 32'd26,
+    parameter id_6 = 32'd72
+) (
+    input  wor   id_0,
+    input  uwire id_1,
+    input  uwire _id_2,
+    output wor   _id_3,
+    output uwire _id_4,
+    input  uwire id_5
+    , id_9,
+    input  uwire _id_6,
+    input  tri   id_7
 );
-  assign id_0 = id_4;
+  logic [ id_3 : ~  id_4] id_10 = -1;
+  wire  [1 'b0 *  1 : -1] id_11;
   module_0 modCall_1 ();
-endmodule
-module module_2;
-  wire id_2;
-  module_3 modCall_1 (
-      id_2,
-      id_2,
-      id_2,
-      id_2,
-      id_2
-  );
-  assign module_0.type_6 = 0;
-endmodule
-module module_3 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  inout wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  output wire id_1;
-  wor id_6 = 1'b0;
-  assign id_1 = 1;
+  wire [id_6 : id_2  & ""] id_12;
 endmodule

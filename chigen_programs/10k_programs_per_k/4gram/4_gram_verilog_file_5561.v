@@ -1,47 +1,34 @@
-// Seed: 3429476276
+// Seed: 1990901026
 module module_0 (
-    input tri1 id_0,
-    input tri module_0,
-    input supply0 id_2
+    id_1,
+    id_2
 );
-  wire id_4;
-  assign module_1.id_22 = 0;
-  assign id_4 = 1;
+  input wire id_2;
+  inout wire id_1;
+  logic id_3;
+  logic id_4 = id_2, id_5;
+  genvar id_6;
 endmodule
-module module_0 (
-    output tri1 id_0,
-    input supply0 id_1,
-    input supply1 id_2,
-    output supply1 id_3,
-    output tri1 module_1,
-    output uwire id_5,
-    input supply1 id_6,
-    inout tri0 id_7,
-    input supply0 id_8,
-    output supply0 id_9,
-    input uwire id_10,
-    output tri id_11,
-    output wor id_12,
-    output wand id_13,
-    output supply0 id_14,
-    input wor id_15,
-    output wand id_16,
-    output supply1 id_17,
-    output supply0 id_18,
-    input wire id_19
-    , id_28,
-    output tri1 id_20,
-    input wand id_21,
-    input uwire id_22,
-    input wor id_23,
-    output tri0 id_24,
-    input tri1 id_25,
-    input wand id_26
+module module_1 #(
+    parameter id_1 = 32'd27
+) (
+    _id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  assign id_0 = id_1;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout logic [7:0] id_2;
+  input wire _id_1;
+  for (id_6 = id_6; -1; id_2[id_1+:-1] = 1) begin : LABEL_0
+    assign id_6 = {id_6, & -1, 1} ? id_5 > "" : -1;
+  end
+  xor primCall (id_4, id_2, id_6, id_3);
   module_0 modCall_1 (
-      id_19,
-      id_7,
-      id_25
+      id_6,
+      id_5
   );
 endmodule

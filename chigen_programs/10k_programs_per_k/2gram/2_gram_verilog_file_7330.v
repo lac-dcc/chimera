@@ -1,85 +1,96 @@
-// Seed: 2272694123
+// Seed: 147443081
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14
+    output wor id_0,
+    input uwire id_1,
+    input wire id_2,
+    output uwire id_3,
+    output tri0 id_4,
+    output tri id_5,
+    input wor id_6,
+    input tri1 id_7,
+    input tri id_8,
+    input tri id_9,
+    input wand id_10,
+    input wire id_11,
+    output tri1 id_12,
+    input tri0 id_13,
+    input wire id_14,
+    input wor id_15,
+    output tri id_16#(
+        .id_33(-1),
+        .id_34(1)
+    ),
+    input supply1 id_17,
+    output uwire id_18,
+    input wor id_19,
+    output wor id_20,
+    input wand id_21,
+    input supply1 id_22,
+    input wor id_23,
+    output supply1 id_24,
+    input tri0 id_25,
+    input wor id_26,
+    input tri0 id_27
+    , id_35,
+    input wire id_28,
+    input wire id_29,
+    input wire id_30,
+    input wire id_31
 );
-  inout wire id_14;
-  input wire id_13;
-  input wire id_12;
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  output wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  output wire id_2;
-  output wire id_1;
-  wire id_15;
-  assign id_9  = id_9;
-  assign id_14 = 1 !=? {1, 1 - 1, id_9, id_4, 1 * 1};
-  wire  id_16  ,  id_17  =  id_15  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  =  id_21  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  =  id_25  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ,  id_49  ,  id_50  ,  id_51  ,  id_52  ,  id_53  ,  id_54  ,  id_55  ;
-  wire id_56;
+  assign id_34 = id_13;
+  assign module_1.id_7 = 0;
 endmodule
-module module_1 (
-    output tri1  id_0,
-    output logic id_1
+module module_1 #(
+    parameter id_0 = 32'd17,
+    parameter id_2 = 32'd7,
+    parameter id_7 = 32'd69
+) (
+    input tri _id_0,
+    output wire id_1,
+    input wire _id_2,
+    input supply1 id_3,
+    input supply0 id_4,
+    input tri id_5
 );
-  reg id_3;
-  always begin : LABEL_0
-    if (id_3) begin : LABEL_0
-      id_3 <= 1;
-    end else id_1 = 1 & id_3;
-  end
-  logic   id_4;
-  integer id_5 = 1'b0;
-  id_6(
-      .id_0(1),
-      .id_1(1'd0),
-      .id_2(1'b0),
-      .id_3(id_5),
-      .id_4(id_3),
-      .id_5(1),
-      .id_6((1 && 1)),
-      .id_7(id_4),
-      .id_8(1),
-      .id_9(id_5),
-      .id_10(id_0),
-      .id_11(1),
-      .id_12(id_4),
-      .id_13(1)
-  );
-  wire id_7;
-  final id_4 <= 1 - 1;
+  assign id_1 = -1'b0;
+  localparam id_7 = (1) == 1;
+  wor [1 : -1] id_8;
+  logic [id_7 : id_0] id_9;
+  assign id_8 = 1;
   module_0 modCall_1 (
+      id_1,
+      id_3,
       id_5,
+      id_1,
+      id_1,
+      id_1,
+      id_3,
+      id_3,
+      id_4,
+      id_4,
       id_5,
-      id_7,
+      id_4,
+      id_1,
+      id_4,
+      id_3,
+      id_3,
+      id_1,
       id_5,
-      id_7,
-      id_7,
-      id_7,
+      id_1,
       id_5,
-      id_7,
+      id_1,
       id_5,
-      id_7,
+      id_4,
+      id_4,
+      id_1,
       id_5,
-      id_7,
-      id_7
+      id_4,
+      id_4,
+      id_3,
+      id_3,
+      id_4,
+      id_3
   );
-  reg id_8 = id_3;
+  logic [7:0] id_10 = id_9, id_11, id_12;
+  assign id_10[id_2] = 1'b0;
 endmodule

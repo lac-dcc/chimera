@@ -1,35 +1,36 @@
-// Seed: 2501433791
-module module_0 #(
-    parameter id_8 = 32'd29,
-    parameter id_9 = 32'd43
-) (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+// Seed: 3919629578
+module module_0 (
+    output uwire id_0,
+    output wand  id_1
 );
-  input wire id_6;
-  output wire id_5;
-  input wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_5 = id_1;
-  id_7(
-      .id_0(id_3), .id_1(id_2), .id_2(1'b0)
-  ); defparam id_8.id_9 = 1'b0;
-  wire id_10 = id_10;
 endmodule
-module module_1;
-  assign id_1 = 1;
+module module_1 (
+    input tri1 id_0
+    , id_20,
+    input wand id_1,
+    input tri id_2,
+    output wire id_3,
+    input wor id_4,
+    output tri id_5,
+    output supply0 id_6,
+    input tri id_7,
+    input tri id_8,
+    input wand id_9,
+    input uwire id_10,
+    output wor id_11,
+    input supply0 id_12,
+    input wor id_13
+    , id_21,
+    input tri1 id_14,
+    input wand id_15,
+    input wor id_16,
+    input tri1 id_17,
+    output supply0 id_18
+);
+  assign id_3 = 1;
+  wire id_22;
   module_0 modCall_1 (
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1,
-      id_1
+      id_3,
+      id_6
   );
 endmodule

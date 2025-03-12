@@ -1,71 +1,72 @@
-// Seed: 1815617443
+// Seed: 3019729675
 module module_0 (
-    input tri0 id_0,
-    input tri1 id_1,
-    input wire id_2,
-    input supply0 id_3,
-    input tri1 id_4,
+    input tri id_0,
+    input tri0 id_1,
+    input wor id_2,
+    input supply1 id_3,
+    output tri id_4,
     input wand id_5,
-    input supply1 id_6,
-    output tri0 id_7,
-    input wor id_8,
-    input supply0 id_9,
-    input wire id_10,
-    output wor id_11,
-    input supply0 id_12,
-    output supply1 id_13,
-    input tri id_14
-);
-  generate
-    for (id_16 = id_1; 1; id_13 = id_5) begin : LABEL_0
-      assign id_11 = id_1;
-    end
-  endgenerate
-  assign module_1.type_3 = 0;
-  initial
-  fork : SymbolIdentifier
-  join_any : SymbolIdentifier
-endmodule
-module module_1 (
-    input wand id_0,
-    input uwire id_1,
-    input tri0 id_2,
-    inout logic id_3,
-    input tri0 id_4,
-    input supply0 id_5,
     input wor id_6,
-    input logic id_7,
-    input supply1 id_8,
-    input tri id_9,
-    inout supply1 id_10,
-    input tri id_11,
-    output supply0 id_12,
-    input uwire id_13,
+    output tri id_7,
+    output tri id_8,
+    input wire id_9,
+    output tri0 id_10,
+    input supply1 id_11,
+    input wand id_12,
+    output uwire id_13,
     output supply0 id_14,
-    input wor id_15,
-    output wand id_16,
-    output logic id_17
+    input uwire module_0
+    , id_21,
+    output wire id_16,
+    input wand id_17,
+    input wand id_18,
+    input uwire id_19
 );
-  always @(negedge 1'b0) begin : LABEL_0
-    id_17 <= 1;
-    id_3 = id_7;
-    id_3 <= 1;
-  end
+  assign id_14 = 1;
+  assign module_1.id_2 = 0;
+  assign id_21 = 1;
+endmodule
+module module_1 #(
+    parameter id_3 = 32'd47
+) (
+    input  wor   id_0,
+    input  wor   id_1,
+    input  uwire id_2,
+    input  uwire _id_3,
+    input  wand  id_4,
+    output tri   id_5
+);
+  wire id_7;
+  logic [1 : id_3] id_8;
+  ;
+  wire id_9;
+  ;
+  parameter id_10 = -1'b0;
+  logic [-1 : 1] id_11 = 1;
+  parameter id_12 = 1'b0;
+  assign id_5 = 1;
   module_0 modCall_1 (
+      id_0,
       id_4,
-      id_2,
-      id_6,
-      id_2,
-      id_2,
-      id_13,
-      id_4,
-      id_10,
-      id_11,
-      id_10,
+      id_1,
+      id_1,
       id_5,
-      id_16,
-      id_15,
-      id_12,
-      id_10
+      id_1,
+      id_2,
+      id_5,
+      id_5,
+      id_0,
+      id_5,
+      id_4,
+      id_2,
+      id_5,
+      id_5,
+      id_2,
+      id_5,
+      id_0,
+      id_2,
+      id_1
   );
+  wire id_13;
+  assign id_11 = 1'b0;
 endmodule

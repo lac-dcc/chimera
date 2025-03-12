@@ -1,67 +1,60 @@
-// Seed: 610865064
-module module_0 ();
-  assign module_1.type_6 = 0;
+// Seed: 4092975774
+module module_0;
+  wire id_1 = id_1;
 endmodule
 module module_1 (
-    output uwire id_0,
-    output wire id_1,
-    input supply0 id_2,
-    input wand id_3,
-    input wand id_4
+    input tri1 id_0,
+    input wire id_1,
+    output wire id_2,
+    output wand id_3,
+    output supply0 id_4,
+    input tri1 id_5
+    , id_42#(
+        .id_43(1)
+    ),
+    output wand id_6,
+    output wor id_7,
+    input supply1 id_8,
+    output tri id_9,
+    input tri id_10,
+    input supply0 id_11,
+    input uwire id_12,
+    output uwire id_13
+    , id_44,
+    input tri id_14,
+    input uwire id_15,
+    output wor id_16,
+    output wire id_17,
+    inout wire id_18,
+    output tri0 id_19,
+    input supply1 id_20,
+    output supply0 id_21,
+    input supply1 id_22,
+    input tri0 id_23,
+    input tri0 id_24,
+    output tri1 id_25,
+    input tri0 id_26,
+    output tri id_27,
+    output tri id_28,
+    input uwire id_29,
+    input uwire id_30,
+    input wire id_31,
+    input supply1 id_32,
+    output supply1 id_33,
+    input supply0 id_34,
+    input supply0 id_35,
+    output wor id_36,
+    output supply1 id_37,
+    input wire id_38,
+    output supply1 id_39,
+    output wor id_40
 );
+  logic id_45;
+  ;
+  wire id_46;
+  wire id_47;
+  assign id_21 = id_47;
+  struct packed {logic id_48;} id_49;
+  ;
   module_0 modCall_1 ();
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
-);
-  output wire id_21;
-  input wire id_20;
-  output wire id_19;
-  inout wire id_18;
-  output wire id_17;
-  output wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  output wire id_12;
-  input wire id_11;
-  output wire id_10;
-  output wire id_9;
-  input wire id_8;
-  input wire id_7;
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  initial id_21 = 1;
-  wand id_22, id_23 = 1;
-  wire id_24, id_25, id_26;
-  module_0 modCall_1 ();
-  wire id_27;
-  id_28(
-      id_18 !== 1, 1'b0, id_19
-  );
-  wire id_29;
 endmodule

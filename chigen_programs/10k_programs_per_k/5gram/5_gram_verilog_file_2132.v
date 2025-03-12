@@ -1,54 +1,65 @@
-// Seed: 4214573949
+// Seed: 562413853
 module module_0 (
     input tri1 id_0,
-    input supply0 id_1
+    input supply1 id_1,
+    input tri1 id_2,
+    input tri id_3,
+    input tri1 id_4,
+    input wor id_5
+    , id_13,
+    input supply0 id_6,
+    output wand id_7,
+    output uwire id_8,
+    output supply1 id_9,
+    output tri1 id_10,
+    output tri1 id_11
 );
-  supply1 id_3 = 1;
-  assign module_1.id_10 = 0;
-  wire id_4;
+  parameter id_14 = -1;
+  assign module_1.id_12 = 0;
+  parameter id_15 = id_14 + -1'b0;
+  wire id_16;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input uwire id_1,
-    input wor id_2,
-    input tri id_3,
-    output supply1 id_4,
-    input tri id_5,
-    input tri1 id_6,
-    output tri id_7,
-    input uwire id_8,
-    input wor id_9,
-    output tri id_10,
-    input tri id_11,
-    output supply0 id_12,
-    input uwire id_13,
-    input wand id_14,
-    input supply0 id_15,
-    output supply0 id_16,
-    input supply1 id_17,
-    input wire id_18,
-    input tri1 id_19,
-    input uwire id_20,
-    input tri0 id_21,
-    input tri1 id_22,
-    input tri0 id_23,
-    input tri0 id_24,
-    output supply1 id_25,
-    input tri0 id_26,
-    input tri0 id_27,
-    output wand id_28,
-    output wand id_29,
-    input tri0 id_30,
-    input wire id_31,
-    input supply0 id_32,
-    output uwire id_33,
-    input uwire id_34,
-    output wire id_35,
-    input wand id_36
+    input wire id_0,
+    output uwire id_1,
+    output logic id_2,
+    output tri0 id_3,
+    input wor id_4,
+    input wand id_5
+    , id_14,
+    output wand id_6
+    , id_15,
+    output uwire id_7,
+    input supply0 id_8,
+    input wire id_9,
+    input tri0 id_10,
+    output wand id_11,
+    output wand id_12
 );
-  assign #id_38 id_25 = 1'b0;
+  localparam id_16 = -1 == ~1;
+  wire id_17;
+  ;
+  initial begin : LABEL_0
+    id_2  = -1 == 'b0;
+    id_14 = id_10;
+  end
+  wire  id_18;
+  logic id_19;
+  ;
+  wire  id_20;
+  logic id_21 = ~id_9;
   module_0 modCall_1 (
-      id_6,
-      id_9
+      id_0,
+      id_9,
+      id_4,
+      id_8,
+      id_0,
+      id_8,
+      id_4,
+      id_12,
+      id_3,
+      id_7,
+      id_12,
+      id_12
   );
 endmodule

@@ -1,47 +1,55 @@
-// Seed: 4287958957
+// Seed: 3041474479
 module module_0 (
-    input  wor  module_0,
-    output wire id_1,
-    input  tri  id_2
+    output uwire id_0,
+    input tri1 id_1,
+    input supply0 id_2,
+    output tri0 id_3,
+    input wand id_4,
+    input supply0 id_5,
+    output tri id_6,
+    output supply1 id_7,
+    input wand id_8,
+    output wand id_9,
+    input uwire id_10,
+    input tri0 id_11,
+    input supply0 id_12,
+    output tri1 id_13,
+    output uwire id_14,
+    output wand id_15,
+    input uwire id_16,
+    output tri id_17,
+    output tri0 id_18
 );
-  wire id_4;
-  assign module_1.type_4 = 0;
+  logic id_20;
+  ;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input tri0 id_1,
-    output supply0 id_2,
-    input wor id_3,
-    output wor id_4,
-    output tri1 id_5,
-    output tri1 id_6,
-    input wand id_7,
-    input uwire id_8
+    input  wire id_0,
+    output wand id_1
 );
-  for (id_10 = 1; 1'h0; id_6 = id_10) begin : LABEL_0
-    assign id_6 = id_10;
-    id_11(
-        .id_0(id_6),
-        .id_1(1),
-        .id_2(id_2),
-        .id_3(id_1 & id_2),
-        .id_4(1),
-        .id_5(id_3),
-        .id_6(1 + 1'b0 - id_6),
-        .id_7(""),
-        .id_8(1),
-        .id_9(id_8),
-        .id_10(),
-        .id_11(1),
-        .id_12(id_2),
-        .id_13(1),
-        .id_14(1)
-    );
-  end
+  assign id_1 = -1;
   module_0 modCall_1 (
+      id_1,
       id_0,
-      id_6,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_0,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
       id_1
   );
-  wire id_12;
+  assign modCall_1.id_12 = 0;
+  assign id_1 = id_0;
+  assign id_1 = id_0;
 endmodule

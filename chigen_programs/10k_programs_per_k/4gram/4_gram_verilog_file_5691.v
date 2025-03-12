@@ -1,45 +1,33 @@
-// Seed: 1522020958
+// Seed: 44841144
 module module_0 (
-    id_1,
-    id_2
+    input  wire  id_0
+    , id_7,
+    input  wor   id_1,
+    input  wand  id_2,
+    input  tri   id_3,
+    input  uwire id_4,
+    output uwire id_5
 );
-  output wire id_2;
-  input wire id_1;
-  assign id_2 = id_1;
-  supply1 id_3;
-  wire id_4;
-  assign id_2 = (id_1);
-  assign id_3 = id_1 ^ 1;
-  assign module_2.type_5 = 0;
+  logic id_8;
+  final $signed(66);
+  ;
+  logic id_9;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_5;
-  assign id_1 = id_2;
-  module_0 modCall_1 (
-      id_4,
-      id_3
-  );
-  assign modCall_1.id_2 = 0;
-endmodule
-module module_2 (
     input wand id_0,
-    input wire id_1
+    input wire id_1,
+    input uwire id_2,
+    output supply1 id_3
 );
-  integer id_3;
+  assign id_3 = -1;
+  logic id_5;
+  ;
   module_0 modCall_1 (
-      id_3,
+      id_0,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
       id_3
-  );
-  id_4(
-      .id_0(id_3 * id_3), .id_1(1'b0), .id_2(1'b0), .id_3(id_0), .id_4(1), .id_5()
   );
 endmodule

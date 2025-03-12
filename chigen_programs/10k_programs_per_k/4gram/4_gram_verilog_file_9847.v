@@ -1,41 +1,61 @@
-// Seed: 4263921392
-program module_0;
-  always
-    while (1) begin : LABEL_0
-      id_8 <= (1);
-    end
-endprogram : SymbolIdentifier
-module module_1 (
-    output wire  id_0,
-    output uwire id_1
+// Seed: 2939493228
+module module_0;
+  tri0 id_1, id_2, id_3;
+  module_2 modCall_1 (
+      id_3,
+      id_2,
+      id_2,
+      id_1,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_2
+  );
+  assign id_1 = -1;
+endmodule
+module module_1 #(
+    parameter id_0 = 32'd28,
+    parameter id_2 = 32'd72
+) (
+    input  tri1 _id_0,
+    output tri0 id_1,
+    input  tri1 _id_2,
+    output tri  id_3
 );
-  wor  id_3;
-  wire id_4;
-  wire id_5;
-  assign id_3 = 1;
-  assign id_0 = 1;
-  for (id_6 = 1'b0; id_3; id_4 = id_6) begin : LABEL_0
-    assign id_6 = 1'b0;
-  end : SymbolIdentifier
+  wire [id_2 : id_0] id_5;
   module_0 modCall_1 ();
-  wire id_7;
+  assign modCall_1.id_2 = 0;
 endmodule
 module module_2 (
-    output tri1 id_0,
-    output supply0 id_1,
-    input supply1 id_2,
-    input uwire id_3,
-    input wire id_4,
-    input wand id_5,
-    input supply1 id_6,
-    input wand id_7,
-    input wire id_8
-    , id_12,
-    input supply1 id_9,
-    input supply0 id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11
 );
-  assign id_12[1] = 1;
-  and primCall (id_0, id_10, id_12, id_2, id_3, id_4, id_5, id_6, id_7, id_8, id_9);
-  module_0 modCall_1 ();
-  assign modCall_1.id_8 = 0;
+  input wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wor id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout supply0 id_1;
+  assign id_8 = (-1);
+  wire id_12;
+  ;
+  assign id_1 = 1;
+  wire id_13;
 endmodule

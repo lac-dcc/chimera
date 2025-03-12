@@ -1,68 +1,43 @@
-// Seed: 3789519318
+// Seed: 2036715473
 module module_0 (
     id_1,
     id_2,
     id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_4
 );
-  inout wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  input wire id_5;
-  inout wire id_4;
-  output wire id_3;
+  output wand id_4;
+  inout wire id_3;
   input wire id_2;
-  input wire id_1;
-  wire id_12, id_13;
-  wire id_14;
+  output wire id_1;
+  wire [1 : -1] id_5 = id_2;
+  localparam id_6 = -1'b0;
+  parameter id_7 = -1;
+  assign id_4 = id_6['b0] | -1 | id_6 == id_6;
 endmodule
-module module_1 (
-    input tri1 id_0,
-    input wor id_1,
-    output tri id_2,
-    input supply1 id_3,
-    input tri1 id_4,
-    input uwire id_5,
-    input supply1 id_6,
-    output tri1 id_7,
-    output tri1 id_8,
-    input supply0 id_9,
-    output wand id_10,
-    input uwire id_11,
-    output supply0 id_12,
-    input wire id_13,
-    output tri0 id_14,
-    input tri id_15,
-    input wand id_16,
-    input tri0 id_17
-    , id_20,
-    input tri1 id_18
+module module_1 #(
+    parameter id_3 = 32'd26,
+    parameter id_7 = 32'd95
+) (
+    id_1,
+    id_2,
+    _id_3
 );
-  assign id_7 = id_3;
-  wire id_21;
+  inout wire _id_3;
+  output wire id_2;
+  inout wire id_1;
+  logic [1  <=  id_3 : 1] \id_4 ;
+  parameter id_5 = 1;
   module_0 modCall_1 (
-      id_21,
-      id_20,
-      id_21,
-      id_20,
-      id_20,
-      id_21,
-      id_21,
-      id_20,
-      id_21,
-      id_20,
-      id_20
+      id_2,
+      \id_4 ,
+      id_5,
+      id_2
   );
-  wire id_22;
-  wire id_23;
+  wire id_6;
+  wire _id_7;
+  wire [id_7 : 1  |  id_7] id_8;
+  id_9 :
+  assert property (@(posedge -1) 1)
+  else $clog2(38);
+  ;
 endmodule

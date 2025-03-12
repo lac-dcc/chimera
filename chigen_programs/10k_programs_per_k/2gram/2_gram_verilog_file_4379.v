@@ -1,47 +1,29 @@
-// Seed: 4224359813
-module module_0 (
-    id_1,
-    id_2,
-    id_3
-);
-  output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  tri id_4;
-  supply1 id_5 = 1'h0;
-  reg id_6;
-  assign id_4 = id_5;
-  supply1 id_7;
-  initial begin : LABEL_0
-    id_6 <= 1;
-    id_7 = 1;
-    if (1) id_3 <= 1;
-    else id_4 = 1 + id_5;
-  end
-  wire id_8;
-endmodule
-module module_1 #(
-    parameter id_5 = 32'd85,
-    parameter id_6 = 32'd22
+// Seed: 2350611337
+module module_0 #(
+    parameter id_2 = 32'd58
 ) (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output tri0 id_0
 );
-  input wire id_4;
-  input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  final begin : LABEL_0
-    id_1 <= id_4;
-  end
-  assign id_2 = 1;
-  module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_1
-  );
-  assign modCall_1.type_9 = 0;
-  defparam id_5.id_6 = 1;
+  wire _id_2;
+  wire [id_2 : 1] id_3;
+endmodule
+module module_1 (
+    input supply1 id_0,
+    output wor id_1,
+    input tri id_2,
+    input wor id_3,
+    output tri0 id_4,
+    inout supply0 id_5,
+    input wand id_6,
+    input wire id_7,
+    input tri0 id_8,
+    input wand id_9,
+    output tri id_10,
+    input wor id_11,
+    output uwire id_12
+);
+  wire id_14;
+  assign id_4 = 'b0;
+  wire id_15;
+  module_0 modCall_1 (id_5);
 endmodule

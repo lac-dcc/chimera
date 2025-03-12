@@ -1,69 +1,65 @@
-// Seed: 2730689740
+// Seed: 2167119695
 module module_0 (
-    output wire id_0,
-    output tri1 id_1,
-    input supply1 id_2,
-    input wire id_3,
-    input supply1 id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  assign id_1 = 1;
+  inout wire id_12;
+  inout wire id_11;
+  assign module_1.id_14 = 0;
+  inout wire id_10;
+  input wire id_9;
+  output wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  input wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  logic id_13;
+  wire  id_14;
 endmodule
 module module_1 (
-    input  uwire id_0,
-    input  wor   id_1,
-    input  uwire id_2,
-    output tri   id_3,
-    input  wand  id_4,
-    input  wire  id_5,
-    output wor   id_6,
-    output logic id_7,
-    input  wor   id_8,
-    input  logic id_9,
-    input  uwire id_10,
-    input  logic id_11,
-    input  uwire id_12,
-    input  uwire id_13
+    input wire id_0,
+    output wire id_1,
+    output tri0 id_2,
+    output wor id_3,
+    input tri0 id_4,
+    output uwire id_5,
+    input wand id_6,
+    output wire id_7,
+    input tri id_8,
+    output uwire id_9,
+    input tri0 id_10,
+    output wire id_11,
+    input tri0 id_12,
+    input uwire id_13,
+    input supply0 id_14
 );
-  task id_15(input id_16, input id_17, id_18);
-    input id_19;
-    input id_20;
-    if (1) begin : LABEL_0
-      id_17 <= id_9;
-    end else id_19 <= 1'b0;
-  endtask
-  xnor primCall (
-      id_6,
-      id_4,
-      id_19,
-      id_1,
-      id_10,
-      id_11,
-      id_0,
-      id_8,
-      id_2,
-      id_13,
-      id_5,
-      id_15,
-      id_16,
-      id_17,
-      id_9,
-      id_12,
-      id_20,
-      id_18
-  );
-  assign id_15 = 1;
+  parameter id_16 = 1;
+  and primCall (id_1, id_10, id_14, id_16, id_4, id_12, id_13);
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_5,
-      id_4,
-      id_4
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16,
+      id_16
   );
-  assign modCall_1.id_2 = 0;
-  reg id_21;
-  initial begin : LABEL_0
-    id_7  <= 1;
-    id_21 <= id_11;
-  end
-  assign id_18 = 1 && id_17 ? 1 : 1;
 endmodule

@@ -1,28 +1,37 @@
-// Seed: 3572135931
-module module_0 (
-    id_1
-);
-  output wire id_1;
-  for (id_2 = 1; 1'b0; id_1 = 1)
-  if (id_2) begin : LABEL_0
-    id_3(
-        .id_0(id_1)
-    );
-  end else begin : LABEL_0
-    if (1'b0 - id_2) begin : LABEL_0
-      if (id_2) begin : LABEL_0
-        genvar id_4;
-        wire id_5;
-        wire id_6;
-      end else begin : LABEL_0
-        always @(posedge !id_2) id_1 = id_2;
-      end
-    end
-  end
-  assign module_1.id_1 = 0;
+// Seed: 2787108481
+module module_0;
+  wire [-1 : 1  %  -1] id_1;
 endmodule
-module module_1 ();
-  assign id_1 = (1 - 1'b0) != 1;
-  supply1 id_2 = id_1 == id_1;
-  module_0 modCall_1 (id_2);
+module module_1 #(
+    parameter id_10 = 32'd84,
+    parameter id_7  = 32'd37
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    _id_7,
+    id_8,
+    id_9,
+    _id_10
+);
+  input wire _id_10;
+  inout wire id_9;
+  inout wire id_8;
+  inout wire _id_7;
+  output wire id_6;
+  inout reg id_5;
+  inout wire id_4;
+  input wire id_3;
+  output reg id_2;
+  output wire id_1;
+  module_0 modCall_1 ();
+  always @(~id_5) id_2 = id_3;
+  always_comb @(posedge -1) begin : LABEL_0
+    id_5 <= id_5;
+  end
+  wire id_11;
+  wire [{  id_7  ,  id_7  } : id_7  >  id_10] id_12;
 endmodule

@@ -1,40 +1,44 @@
-// Seed: 1361622749
+// Seed: 1817890669
 module module_0 (
-    input  tri  id_0,
-    output wand id_1,
-    input  wire id_2,
-    input  wire id_3,
-    input  wor  id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  tri1 id_6;
-  assign id_6 = 1 ? 1'b0 : 1;
-  module_2 modCall_1 (
-      id_2,
-      id_1,
-      id_1
-  );
-  wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  logic id_7;
 endmodule
-module module_1 (
-    output supply1 id_0,
-    input wand id_1,
-    output wor id_2
+module module_1 #(
+    parameter id_6 = 32'd60
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  assign id_0 = 1;
+  output wire id_5;
+  inout logic [7:0] id_4;
+  output wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  _id_6 :
+  assert property (@(posedge id_4) id_4[id_6-:1])
+  else $clog2(64);
+  ;
   module_0 modCall_1 (
-      id_1,
       id_2,
-      id_1,
-      id_1,
-      id_1
+      id_2,
+      id_2,
+      id_5,
+      id_2,
+      id_2
   );
-  final $display(id_1);
-endmodule
-module module_2 (
-    input  wor  id_0,
-    output tri1 id_1,
-    output wand id_2
-);
-  wire id_4;
-  assign module_0.id_1 = 0;
 endmodule

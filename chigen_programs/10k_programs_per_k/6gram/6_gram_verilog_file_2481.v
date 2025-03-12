@@ -1,44 +1,32 @@
-// Seed: 4221968060
-module module_0;
-  id_1(
-      .id_0(1'b0), .id_1(1)
-  );
+// Seed: 3113066395
+module module_0 #(
+    parameter id_1 = 32'd23,
+    parameter id_2 = 32'd87,
+    parameter id_5 = 32'd31
+) ();
+  wire _id_1;
+  logic _id_2, id_3, id_4 = 1, _id_5;
+  logic [id_1 : ~  id_2] id_6 = id_1;
+  assign id_6[~id_5]   = id_1;
+  assign module_1.id_0 = 0;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input wand id_1,
-    input tri0 id_2,
-    input uwire id_3,
-    output supply1 id_4,
-    output uwire id_5,
-    input tri0 id_6,
-    input supply1 id_7,
-    input tri0 id_8,
-    output logic id_9,
-    input wor id_10,
-    output tri1 id_11
+module module_1 #(
+    parameter id_4 = 32'd18
+) (
+    input  tri   id_0,
+    output uwire id_1,
+    output tri0  id_2,
+    output wor   id_3,
+    input  tri0  _id_4,
+    output wand  id_5,
+    input  tri0  id_6,
+    input  wand  id_7,
+    output wire  id_8
 );
-  supply0 id_13 = id_10;
-  supply0 id_14 = id_7;
-  supply0 id_15;
-  integer id_16;
-  always #0 id_9 <= 1'b0;
-  wor id_17;
+  wire id_10;
+  logic [id_4 : -1] id_11;
+  ;
   module_0 modCall_1 ();
-  uwire id_18;
-  initial begin : LABEL_0
-    id_17 = 1;
-    disable id_19;
-  end
-  id_20(
-      id_9, id_21, 1
-  );
-  assign id_17 = 1;
-  initial
-    if (1 ~^ id_3) begin : LABEL_0
-      id_16 = 1;
-    end
-  supply0 id_22, id_23, id_24 = id_1 - id_21;
-  uwire id_25 = id_18 - 1;
-  assign id_15 = id_0;
+  assign id_3  = id_11;
+  assign id_11 = id_6 == -1 <= id_4;
 endmodule

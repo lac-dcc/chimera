@@ -1,37 +1,49 @@
-// Seed: 2164011218
-module module_0;
-  wire id_1, id_2;
-  wire id_3, id_4;
+// Seed: 3607632301
+module module_0 (
+    id_1,
+    id_2
+);
+  inout wire id_2;
+  output wire id_1;
+  struct packed {
+    logic id_3;
+    logic id_4;
+  } id_5;
+  assign module_1.id_1 = 0;
 endmodule
 module module_1 (
-    input wand id_0,
-    input supply0 id_1,
-    output wand id_2,
-    output tri0 id_3,
-    input tri0 id_4,
-    input wand id_5
+    output supply0 id_0,
+    input tri0 id_1,
+    input wire id_2,
+    output tri1 id_3,
+    input wand id_4
 );
-  wire id_7;
-  id_8(
-      .id_0(1)
+  assign id_0 = id_1.id_4;
+  wire id_6;
+  module_0 modCall_1 (
+      id_6,
+      id_6
   );
-  module_0 modCall_1 ();
-  wire id_9;
-  wor  id_10 = 1, id_11;
+  parameter id_7 = -1'b0;
 endmodule
-module module_2 (
-    output tri  id_0,
-    output wor  id_1,
-    input  wor  id_2,
-    input  wire id_3,
-    input  wor  id_4,
-    input  wor  id_5
+module module_2 #(
+    parameter id_0 = 32'd29,
+    parameter id_2 = 32'd2,
+    parameter id_4 = 32'd68
+) (
+    output wand  _id_0,
+    input  tri0  id_1,
+    input  uwire _id_2
 );
+  assign id_0 = id_1.product;
+  wire _id_4[id_0 : id_2];
+  import "" function id_5
+  [- 1  : id_4 - id_4];
+  logic id_6[id_2 : (  -1 'd0 )];
+  assign id_6 = id_4;
+  module_0 modCall_1 (
+      id_6,
+      id_6
+  );
   wire id_7;
-  initial assign id_7 = 1 - id_5;
-  wire id_8;
-  module_0 modCall_1 ();
-  wire id_9;
-  wire id_10;
-  wire id_11;
 endmodule

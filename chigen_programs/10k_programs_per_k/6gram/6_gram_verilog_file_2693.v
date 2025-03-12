@@ -1,32 +1,42 @@
-// Seed: 223685246
-module module_0 #(
-    parameter id_2 = 32'd50,
-    parameter id_3 = 32'd87
-) ();
-  wor id_1 = id_1 - 1 & 1 & id_1 & id_1 & 1 & 1'b0;
-  defparam id_2.id_3 = (1);
-  module_2 modCall_1 ();
+// Seed: 3140940678
+module module_0 ();
+  logic [7:0] id_1, id_2, id_3;
+  assign id_1 = id_2;
+  wire id_4;
+  ;
+  assign id_2 = id_1[1];
+  always force id_3 = id_4 ==? 1;
+  assign module_1.id_9 = 0;
 endmodule
 module module_1 (
-    output tri0 id_0,
-    input wire id_1,
-    input wire id_2,
-    input supply0 id_3
+    output wand id_0,
+    output wand id_1,
+    output wor id_2,
+    input tri id_3,
+    input supply0 id_4,
+    output wor id_5,
+    output supply0 id_6,
+    output supply1 id_7,
+    input tri id_8,
+    input supply0 id_9,
+    input supply1 id_10,
+    input tri id_11,
+    input uwire id_12,
+    output tri1 id_13,
+    input tri1 id_14,
+    input wand id_15,
+    input wand id_16,
+    output tri id_17,
+    output wor id_18,
+    input supply0 id_19,
+    output supply0 id_20,
+    input wire id_21,
+    output uwire id_22,
+    input supply0 id_23,
+    input supply0 id_24,
+    input tri0 id_25,
+    input uwire id_26
 );
-  wire id_5;
+  assign id_18 = 1;
   module_0 modCall_1 ();
-  assign modCall_1.id_2 = 0;
-  wire id_6;
-endmodule
-module module_2;
-  assign id_1 = id_1;
-endmodule
-module module_3 (
-    id_1,
-    id_2
-);
-  inout wire id_2;
-  input wire id_1;
-  timeprecision 1ps;
-  module_2 modCall_1 ();
 endmodule

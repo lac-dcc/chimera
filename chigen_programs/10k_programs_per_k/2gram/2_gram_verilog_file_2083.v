@@ -1,48 +1,53 @@
-// Seed: 850688097
-module module_0 #(
-    parameter id_11 = 32'd5,
-    parameter id_12 = 32'd1
-) (
-    input uwire id_0,
-    input tri1 id_1,
-    output wor id_2,
-    output uwire id_3,
-    input wand id_4,
-    output supply1 id_5,
-    input tri1 id_6,
-    input supply1 id_7,
-    input wand id_8,
-    input wor id_9
+// Seed: 1520516619
+module module_0 (
+    input tri0 id_0,
+    input wand id_1#(.id_3(-1), .id_4(-1'b0), .id_5(1), .id_6(1))
 );
-  defparam id_11.id_12 = id_6 - id_4;
-  supply0 id_13;
-  if (1) begin : LABEL_0
-    if (1'b0) begin : LABEL_0
-      wire id_14;
-      assign id_13 = 1 / "";
-    end
-  end else assign id_3 = 1'b0 + 1'd0;
+  logic id_7 = id_6;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_11 = 32'd92,
+    parameter id_2  = 32'd17,
+    parameter id_20 = 32'd64,
+    parameter id_3  = 32'd21,
+    parameter id_8  = 32'd20
+) (
     output tri1 id_0,
-    output supply0 id_1,
-    input supply1 id_2,
-    input tri1 id_3
+    input tri1 id_1,
+    input uwire _id_2,
+    input uwire _id_3,
+    input tri0 id_4,
+    output tri1 id_5,
+    input tri0 id_6,
+    input tri0 id_7,
+    input supply1 _id_8,
+    input wor id_9,
+    output wor id_10,
+    output tri1 _id_11
 );
-  assign id_1 = 1 && 1 && 1;
+  struct packed {
+    logic id_13;
+    logic id_14;
+    logic id_15;
+    logic [id_2 : id_8] id_16;
+    logic [id_3 : 1] id_17;
+    logic id_18;
+  } id_19;
+  ;
+  parameter id_20 = 1;
+  assign id_5 = id_3;
+  logic id_21;
+  logic [id_20 : id_11] id_22 = -1;
   module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_0,
-      id_1,
-      id_2,
-      id_1,
-      id_2,
-      id_3,
-      id_2,
-      id_2
+      id_6,
+      id_9
   );
-  assign modCall_1.type_3 = 0;
-  wire id_5;
-  assign id_1 = 1;
+  id_23 :
+  assert property (@(id_19.id_13 or id_19.id_18) -1)
+  else;
+  logic id_24 = 1;
+  assign id_0 = {-1, id_19.id_18};
+  wire  id_25;
+  logic id_26;
+  ;
 endmodule

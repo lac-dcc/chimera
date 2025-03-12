@@ -1,35 +1,43 @@
-// Seed: 2010225131
+// Seed: 3585932425
 module module_0;
-  wire id_1;
+  logic id_1, id_2 = (~id_1);
+  module_2 modCall_1 (
+      id_2,
+      id_1,
+      id_1,
+      id_2
+  );
 endmodule
-module module_1 (
-    input supply1 id_0,
-    input tri1 id_1
+module module_0 (
+    input supply0 id_0,
+    input wand id_1,
+    output tri id_2,
+    input wor id_3,
+    input wire id_4,
+    input wire id_5,
+    input tri0 id_6,
+    input supply1 module_1,
+    input wand id_8,
+    input tri1 id_9,
+    output supply1 id_10,
+    input tri1 id_11
 );
-  wire id_3;
+  wire id_13;
+  localparam id_14 = 1;
   module_0 modCall_1 ();
-  tri1 id_4;
-  assign id_4 = id_0;
+  wire id_15;
 endmodule
-module module_2;
-  id_2(
-      .id_0(id_1 == 'b0),
-      .id_1(1),
-      .id_2(id_3),
-      .id_3(id_3 != id_1),
-      .id_4(1),
-      .id_5(1),
-      .id_6(1 && ~id_3),
-      .id_7(id_3)
-  );
-  module_0 modCall_1 ();
-  wire id_4;
-  supply1  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ;
-  wire id_34 = id_11++, id_35;
-  id_36(
-      .id_0(id_23), .id_1(1)
-  );
-  assign id_21 = id_7;
-  wire id_37;
-  wire id_38;
+module module_2 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
+);
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_5;
+  ;
+  wire id_6;
 endmodule

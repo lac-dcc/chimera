@@ -1,30 +1,33 @@
-// Seed: 3703793633
-module module_0;
-  wire id_2;
-  assign module_2.id_2 = 0;
-  wire id_3 = id_1(id_2);
-  wire id_5;
-  tri  id_6 = 1;
+// Seed: 1460624698
+module module_0 (
+    input wor id_0,
+    input tri id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input supply0 id_4
+);
 endmodule
 module module_1 (
-    input  wire  id_0,
-    output tri1  id_1,
-    input  uwire id_2,
-    input  wor   id_3
+    output tri1 id_0,
+    output tri0 id_1,
+    output wor id_2,
+    input supply1 id_3,
+    input wire id_4,
+    input wand id_5,
+    input wor id_6,
+    output logic id_7
 );
-  wor  id_5 = 1;
-  wire id_6;
-  module_0 modCall_1 ();
-  supply1 id_7 = id_5;
-  wire id_8;
-endmodule
-module module_2 ();
-  always assign id_1 = 1;
-  id_2 :
-  assert property (@(posedge id_1) 1'b0)
-  else;
-  module_0 modCall_1 ();
-  always_latch begin : LABEL_0
-    id_1 = 1;
-  end
+  initial id_7 = -1;
+  logic id_9, id_10, id_11;
+  genvar id_12;
+  module_0 modCall_1 (
+      id_4,
+      id_3,
+      id_3,
+      id_4,
+      id_5
+  );
+  assign modCall_1.id_4 = 0;
+  wire id_13;
+  assign id_12[-1] = 1;
 endmodule

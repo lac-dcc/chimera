@@ -1,44 +1,30 @@
-// Seed: 3119630232
+// Seed: 2147373131
 module module_0;
-  wire id_2;
+  id_1 :
+  assert property (@(-1) id_1)
+    @(posedge id_1 or id_1 !== 1'b0, 1'h0)
+      @(posedge id_1) begin : LABEL_0
+        id_1 <= 1'd0;
+      end
+  logic id_2;
 endmodule
-module module_1 (
-    id_1,
+module module_1 #(
+    parameter id_1 = 32'd35
+) (
+    _id_1,
     id_2,
     id_3,
     id_4,
     id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    id_6
 );
-  input wire id_11;
-  output wire id_10;
-  output wire id_9;
-  inout wire id_8;
-  inout wire id_7;
-  output wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_10 = 1 - id_4;
-  wire id_12;
-  wire id_13;
-  id_14(
-      id_12
-  );
-  tri1 id_15 = 1;
-  wire id_16;
-  uwire id_17, id_18;
-  assign id_18 = 1;
-  wire id_19;
-  wire id_20;
+  input wire id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire _id_1;
+  wire [1 : id_1] id_7, id_8;
   module_0 modCall_1 ();
-  wire id_21;
-  wire id_22;
+  assign modCall_1.id_1 = 0;
 endmodule

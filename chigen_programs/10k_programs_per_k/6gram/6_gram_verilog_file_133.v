@@ -1,41 +1,76 @@
-// Seed: 198004324
-module module_0;
-  wire id_1;
-  wire id_2 = id_2;
-  wire id_3;
-endmodule
-module module_1 ();
-  wire id_2;
-  module_0 modCall_1 ();
-endmodule
-module module_2 (
-    output uwire id_0,
-    output logic id_1,
-    output logic id_2
+// Seed: 841466533
+module module_0 (
+    input tri id_0,
+    input wire id_1,
+    output tri0 id_2,
+    output supply0 id_3,
+    input tri id_4,
+    input tri0 id_5,
+    input tri id_6,
+    output tri0 id_7,
+    input wor id_8,
+    output wand id_9,
+    output wire id_10,
+    input tri1 id_11
 );
-  assign id_2 = id_4;
-  always @(1 or 1) begin : LABEL_0
-    if (id_4) for (id_4 = id_4; id_4; id_1 = id_4) @(1);
-    for (id_2 = id_4; 1'h0; id_1 = id_4) @(1);
-    assert (id_4);
-    if ("") id_4 <= id_4;
-    else begin : LABEL_0
-      @(posedge id_4) $display;
-      if (id_4)
-        if (id_4 == id_4 && 1)
-          if (1 == id_4) begin : LABEL_0
-            id_4 <= 1;
-          end else id_1 <= id_4;
-        else begin : LABEL_0
-          id_4 <= 1;
-        end
-    end
-  end
-  logic id_5 = 1 == 1;
-  module_0 modCall_1 ();
-  always @(posedge id_5) begin : LABEL_0
-    #1 id_1 = id_4;
-    disable id_6;
-    id_5 <= 1;
-  end
+  assign id_3 = id_5;
+endmodule
+module module_1 #(
+    parameter id_22 = 32'd8,
+    parameter id_7  = 32'd22
+) (
+    input uwire id_0,
+    input supply1 id_1,
+    output wire id_2,
+    output supply1 id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    output wand id_6,
+    input supply1 _id_7,
+    input wor id_8,
+    input uwire id_9,
+    output supply0 id_10
+    , id_30,
+    input supply0 id_11,
+    input supply1 id_12,
+    input tri0 id_13,
+    output wand id_14,
+    input wand id_15,
+    output uwire id_16,
+    input tri id_17,
+    input uwire id_18,
+    input supply0 id_19,
+    input tri1 id_20,
+    input tri0 id_21,
+    input tri0 _id_22
+    , id_31,
+    output uwire id_23,
+    input uwire id_24,
+    input wand id_25,
+    output supply1 id_26,
+    input supply0 id_27,
+    output wor id_28
+);
+  wire [-1 : 1 'b0] id_32;
+  struct packed {
+    logic [-1 'b0 : -1] id_33;
+    logic id_34;
+  } [-1  -  id_22 : !  {  !  id_7  ,  1  }] id_35;
+  ;
+  module_0 modCall_1 (
+      id_5,
+      id_5,
+      id_6,
+      id_28,
+      id_9,
+      id_17,
+      id_19,
+      id_14,
+      id_27,
+      id_28,
+      id_16,
+      id_9
+  );
+  assign modCall_1.id_1 = 0;
+  assign id_23 = id_19;
 endmodule

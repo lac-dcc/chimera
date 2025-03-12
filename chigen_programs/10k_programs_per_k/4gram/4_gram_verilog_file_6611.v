@@ -1,36 +1,61 @@
-// Seed: 799327584
+// Seed: 222504002
 module module_0;
-  id_1(
-      .id_0(1)
+  assign module_1.id_1 = 0;
+  wire [-1 : 1  -  1] id_1;
+  module_2 modCall_1 (
+      id_1,
+      id_1,
+      id_1
   );
-  wor id_2;
-  assign module_2.id_8 = 0;
-  wire id_3;
-  reg  id_4;
-  always #1 id_4 <= 1 ? !id_2 : 1;
 endmodule
-module module_1;
-  wire module_1 = id_1;
+module module_1 (
+    output supply1 id_0,
+    input wand id_1
+);
+  wire [1 : -1] id_3;
   module_0 modCall_1 ();
-  assign modCall_1.type_8 = 0;
 endmodule
 module module_2 (
-    input supply1 id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    output wor id_3,
-    output tri id_4,
-    input tri id_5,
-    input wire id_6,
-    input supply0 id_7,
-    input tri1 id_8,
-    input uwire id_9,
-    output wand id_10,
-    output supply1 id_11,
-    inout wire id_12
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_4 = id_2 ==? 1;
-  wire id_14;
-  module_0 modCall_1 ();
-  wire id_15;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  assign module_3.id_5 = 0;
+endmodule
+module module_0 #(
+    parameter id_2 = 32'd66,
+    parameter id_4 = 32'd49,
+    parameter id_5 = 32'd96,
+    parameter id_7 = 32'd21
+) (
+    input uwire id_0,
+    output logic id_1,
+    input supply0 _id_2,
+    input wire id_3,
+    output wor _id_4,
+    input wand module_3
+);
+  wire [id_5 : 1] _id_7;
+  id_8 :
+  assert property (@(posedge id_0) -1)
+  else $clog2(72);
+  ;
+  logic id_9;
+  ;
+  generate
+    logic [-1 : id_7  -  id_7  -  {  id_4  ,  1  }] id_10;
+  endgenerate
+  module_2 modCall_1 (
+      id_10,
+      id_9,
+      id_10
+  );
+  initial begin : LABEL_0
+    id_1 = -1;
+  end
+  logic id_11;
+  wire  id_12;
 endmodule

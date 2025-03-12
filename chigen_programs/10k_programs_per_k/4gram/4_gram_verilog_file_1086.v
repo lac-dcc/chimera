@@ -1,49 +1,32 @@
-// Seed: 126441702
+// Seed: 1664070939
 module module_0 (
-    input wand id_0,
-    input tri  id_1
+    output supply1 id_0
+    , id_2
 );
-  assign id_3 = id_3;
-  assign module_1.id_10 = 0;
+  assign id_0 = 1;
+  wire id_3;
+  wire id_4;
+  assign module_1.id_4 = 0;
 endmodule
 module module_1 (
-    output wire id_0,
+    input tri0 id_0,
     input wand id_1,
-    input tri0 id_2,
-    input supply1 id_3,
-    input tri1 id_4,
-    input uwire id_5,
+    output wire id_2,
+    output tri id_3,
+    input supply1 id_4,
+    inout tri1 id_5,
     input tri id_6,
-    output tri0 id_7,
-    output tri0 id_8,
-    output wand id_9,
+    input wor id_7,
+    output wor id_8,
+    output wire id_9,
     input tri0 id_10,
-    input uwire id_11,
-    output tri id_12,
-    output wor id_13,
-    input supply1 id_14,
-    input tri id_15,
-    input supply1 id_16,
-    output supply0 id_17,
-    input wor id_18,
-    input tri id_19,
-    input wire id_20,
-    input tri0 id_21,
-    input tri1 id_22
-    , id_33,
-    input wire id_23,
-    input wand id_24,
-    input tri id_25,
-    output tri id_26,
-    input wire id_27,
-    output uwire id_28,
-    input wor id_29,
-    input wor id_30,
-    input tri id_31
+    input supply0 id_11
 );
-  wire id_34;
-  module_0 modCall_1 (
-      id_4,
-      id_19
-  );
+  logic id_13;
+  ;
+  wire id_14;
+  module_0 modCall_1 (id_8);
+  generate
+    assign id_8 = 1;
+  endgenerate
 endmodule

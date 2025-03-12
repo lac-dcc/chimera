@@ -1,73 +1,40 @@
-// Seed: 4249870664
+// Seed: 1669054880
 module module_0 (
-    input supply0 id_0,
-    input wand id_1,
-    input wor id_2,
-    output wand id_3,
-    input tri id_4,
-    output tri1 id_5,
-    input supply1 id_6,
-    input tri1 id_7
+    output tri1 id_0
 );
-  assign id_3 = id_0;
+  wire id_2;
+  parameter id_3 = 1;
 endmodule
-module module_1 (
-    output wor   id_0,
-    output wor   id_1,
-    input  uwire id_2
+module module_1 #(
+    parameter id_24 = 32'd40,
+    parameter id_5  = 32'd0
+) (
+    input wire id_0,
+    output tri1 id_1,
+    input uwire id_2,
+    input wire id_3,
+    output tri0 id_4,
+    input tri _id_5,
+    output supply0 id_6,
+    input wire id_7,
+    output supply0 id_8,
+    input wire id_9,
+    output tri id_10,
+    output supply0 id_11,
+    output tri id_12,
+    output wor id_13,
+    output wire id_14,
+    input uwire id_15,
+    input supply0 id_16,
+    output wor id_17,
+    input tri id_18,
+    input supply1 id_19
+    , _id_24,
+    output uwire id_20,
+    input supply1 id_21,
+    output wire id_22
 );
-  wire id_4;
-  module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_2,
-      id_1,
-      id_2,
-      id_1,
-      id_2,
-      id_2
-  );
-  assign modCall_1.id_1 = 0;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
-);
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  output wire id_2;
-  output wire id_1;
-  uwire id_9 = 1;
-  wire id_10;
-  supply0 id_11 = 1;
-endmodule
-module module_3 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  input wire id_1;
-  wire id_3;
-  wire id_4;
-  module_2 modCall_1 (
-      id_3,
-      id_3,
-      id_4,
-      id_3,
-      id_3,
-      id_4,
-      id_3,
-      id_4
-  );
-  assign modCall_1.id_11 = 0;
+  wire [-1 : -1  |  id_5  ^  id_24  -  -1] id_25, id_26, id_27, id_28, id_29, id_30, id_31, id_32,
+      id_33;
+  module_0 modCall_1 (id_6);
 endmodule

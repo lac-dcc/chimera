@@ -1,62 +1,52 @@
-// Seed: 386561154
+// Seed: 1812665335
 module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4
+    id_3
 );
-  input wire id_4;
   output wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_1 = id_4 - 1;
-  assign module_2.id_15 = 0;
-  assign module_1.id_0 = 0;
+  output wire id_2;
+  inout wire id_1;
+  wire id_4;
+  wire \id_5 ;
+  wire id_6;
+  ;
 endmodule
 module module_1 (
-    input uwire id_0
+    id_1,
+    id_2,
+    id_3
 );
-  wire id_2 = 1;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  logic [1 : 1] id_4;
   module_0 modCall_1 (
-      id_2,
-      id_2,
-      id_2,
-      id_2
+      id_3,
+      id_3,
+      id_4
   );
 endmodule
 module module_2 (
-    input tri1 id_0,
-    output supply1 id_1,
-    output wand id_2,
-    output wire id_3,
-    output supply1 id_4,
-    output supply0 id_5,
-    input tri id_6,
-    input supply1 id_7,
-    input tri id_8,
-    input tri0 id_9,
-    output uwire id_10,
-    input wor id_11,
-    input tri1 id_12,
-    input tri id_13,
-    input uwire id_14,
-    output supply0 id_15,
-    input wire id_16,
-    input wor id_17,
-    input supply1 id_18,
-    inout wire id_19,
-    output wand id_20,
-    input tri id_21,
-    input supply1 id_22
-    , id_26,
-    input wor id_23,
-    output wire id_24
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  assign id_20 = id_16 + id_8;
+  input wire id_5;
+  output wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  bit id_6;
+  id_7 :
+  assert property (@(posedge id_6) 1 - -1)
+  else id_6 = -1'h0;
+  logic id_8;
   module_0 modCall_1 (
-      id_26,
-      id_26,
-      id_26,
-      id_26
+      id_8,
+      id_7,
+      id_7
   );
 endmodule

@@ -1,45 +1,39 @@
-// Seed: 3004353901
+// Seed: 3280470379
 module module_0 (
-    input  tri  id_0,
-    output tri0 id_1,
-    input  tri  id_2,
-    input  wire id_3,
-    input  wire id_4,
-    input  wand id_5,
-    output wand id_6,
-    input  wand id_7
+    id_1,
+    id_2
 );
-  generate
-    assign id_6 = id_0;
-    assign id_1 = 1;
-  endgenerate
-  assign module_1.type_3 = 0;
+  inout wire id_2;
+  input wire id_1;
+  logic id_3;
+  ;
+  wire id_4;
+  assign id_3 = 1 ? "" == 1'h0 : id_2;
+  localparam id_5 = 1'b0;
+  wire id_6 = id_2;
+  final $clog2(28);
+  ;
 endmodule
 module module_1 (
-    output tri1  id_0,
-    output uwire id_1
-    , id_11,
-    output wor   id_2,
-    input  tri0  id_3,
-    input  uwire id_4,
-    input  uwire id_5,
-    input  wire  id_6,
-    output logic id_7,
-    output uwire id_8,
-    input  tri   id_9
+    input uwire id_0,
+    input uwire id_1,
+    input supply0 id_2
+    , id_7,
+    output wire id_3,
+    input tri0 id_4,
+    input wand id_5
 );
-  wire id_12;
+  parameter id_8 = 1;
+  reg id_9;
+  logic id_10;
+  wire [-1 : 1] id_11;
   module_0 modCall_1 (
-      id_5,
-      id_0,
-      id_9,
-      id_5,
-      id_6,
-      id_5,
-      id_8,
-      id_9
+      id_11,
+      id_7
   );
-  always @(posedge id_11) begin : LABEL_0
-    id_7 <= 1;
+  initial begin : LABEL_0
+    if ('b0) id_9 = -1'b0;
+    $signed(72);
+    ;
   end
 endmodule

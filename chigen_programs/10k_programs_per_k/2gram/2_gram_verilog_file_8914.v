@@ -1,54 +1,46 @@
-// Seed: 3734829663
-macromodule module_0 (
-    input wand id_0
+// Seed: 3239800796
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  assign id_2 = !id_0;
-  assign id_2 = (id_2 + id_0);
-  module_2 modCall_1 ();
+  input wire id_3;
+  output wire id_2;
+  input wire id_1;
+  wire id_4;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input  supply1 id_1
+module module_1 #(
+    parameter id_0 = 32'd83
+) (
+    input uwire _id_0
 );
-  wire id_3;
-  module_0 modCall_1 (id_1);
-  assign modCall_1.id_2 = 0;
+  logic id_2;
+  ;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2
+  );
+  logic [id_0  (  id_0  ,  id_0  ) : 1 'b0 -  1] id_3;
 endmodule
-module module_2;
-  wire id_1;
-  wire id_2;
-  assign module_0.id_0 = 0;
-  wire id_3;
-  always id_2 = id_3;
-  assign id_3 = id_1;
-  assign id_2 = id_1;
-endmodule
-module module_3 (
-    input tri1 id_0,
-    input tri1 id_1
-    , id_15,
-    input wand id_2
-    , id_16,
-    output wand id_3,
-    output tri0 id_4,
-    input wor id_5,
-    input supply0 id_6,
-    input supply0 id_7,
-    input wand id_8,
-    input supply0 id_9,
-    input wor id_10,
-    output wire id_11,
-    output tri1 id_12,
-    output tri id_13
-    , id_17
+module module_2 #(
+    parameter id_1 = 32'd28
+) (
+    _id_1,
+    id_2
 );
-  assign id_13 = id_1;
-  supply1 id_18 = id_8;
-  wire id_19;
-  assign id_3 = id_5;
-  wor id_20, id_21, id_22, id_23, id_24 = id_19, id_25, id_26, id_27;
-  assign id_13 = id_15;
-  supply0 id_28 = 1, id_29;
-  assign id_23 = 1;
-  module_2 modCall_1 ();
+  output wire id_2;
+  input wire _id_1;
+  logic [7:0][id_1 : id_1] id_3;
+  localparam id_4 = 1;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4
+  );
+  uwire id_5 = id_4;
+  assign id_3[-1'b0-:(id_1)] = 1;
+  assign id_5 = -1;
+  not primCall (id_2, id_4);
+  tri0 id_6 = 1'h0, id_7;
 endmodule

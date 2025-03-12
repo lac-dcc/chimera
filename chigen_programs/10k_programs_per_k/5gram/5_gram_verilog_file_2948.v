@@ -1,53 +1,34 @@
-// Seed: 1833934638
+// Seed: 354485607
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    output tri  id_0,
+    output tri1 id_1,
+    input  tri0 id_2
 );
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = id_2;
-  module_2 modCall_1 ();
-  tri id_4 = 1;
+  wire id_4;
+  ;
+  assign id_1 = id_4;
+  wire id_5, id_6;
+  assign id_0 = 1 ? id_2 : 1 == -1;
 endmodule
-module module_1 (
-    id_1,
-    id_2
+module module_1 #(
+    parameter id_2 = 32'd40,
+    parameter id_6 = 32'd34
+) (
+    input tri0 id_0,
+    output logic id_1,
+    input uwire _id_2,
+    output supply1 id_3,
+    input supply1 id_4
 );
-  inout wire id_2;
-  inout wire id_1;
-  assign id_2 = 1;
-  assign id_1 = id_2 != 1;
+  logic _id_6;
+  ;
   module_0 modCall_1 (
-      id_2,
-      id_1,
-      id_1
+      id_3,
+      id_3,
+      id_4
   );
-endmodule
-module module_2 ();
-  final $display(id_1);
-  wire id_2, id_3;
-  generate
-    assign id_1 = id_1;
-  endgenerate
-endmodule
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    module_3,
-    id_5
-);
-  input wire id_6;
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  integer id_7;
-  and primCall (id_2, id_3, id_4, id_7);
-  module_2 modCall_1 ();
-  logic [7:0] id_8 = id_8[1'b0];
+  always id_1 = #1 -1;
+  wire [id_6 : id_2  &  -1] id_7;
+  logic \id_8 ;
+  ;
 endmodule

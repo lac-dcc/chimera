@@ -1,45 +1,78 @@
-// Seed: 3200377322
+// Seed: 3785194617
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+    input supply1 id_0,
+    input wand id_1,
+    input wor id_2,
+    output supply0 id_3,
+    input wand id_4
+    , id_30,
+    output wire id_5,
+    output supply0 id_6,
+    output tri1 id_7,
+    input tri0 id_8,
+    output wand id_9,
+    input uwire id_10,
+    input wire id_11,
+    input uwire id_12,
+    output uwire id_13,
+    input supply0 id_14,
+    input wire id_15,
+    output tri0 id_16,
+    input wand id_17,
+    output uwire id_18,
+    input tri0 id_19,
+    input wor id_20,
+    output tri0 id_21
+    , id_31,
+    input uwire id_22,
+    output tri0 id_23,
+    input wand id_24,
+    input tri id_25,
+    output tri0 id_26,
+    output wire id_27,
+    input supply0 id_28
 );
-  input wire id_5;
-  inout wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  wire id_9;
-  wire id_10;
-  assign id_7 = id_6;
+  logic [1 : 1] id_32 = 1'b0;
+  logic id_33;
 endmodule
 module module_1 (
-    input tri1 id_0,
-    input tri id_1,
-    output wand id_2,
-    output wor id_3,
-    input tri id_4
-    , id_12,
-    output supply1 id_5,
-    output supply0 id_6
-    , id_13,
-    output supply1 id_7,
-    output wand id_8
-    , id_14,
-    input wire id_9,
-    output wand id_10
+    output supply1 id_0,
+    input supply1 id_1,
+    input tri0 id_2,
+    input wand id_3
 );
-  assign id_2 = 1'b0;
+  assign id_0 = -1;
   module_0 modCall_1 (
-      id_13,
-      id_13,
-      id_13,
-      id_13,
-      id_14
+      id_2,
+      id_2,
+      id_3,
+      id_0,
+      id_2,
+      id_0,
+      id_0,
+      id_0,
+      id_2,
+      id_0,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_3,
+      id_2,
+      id_0,
+      id_2,
+      id_0,
+      id_3,
+      id_3,
+      id_0,
+      id_2,
+      id_0,
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_1
   );
+  assign modCall_1.id_24 = 0;
+  assign id_0 = -1;
 endmodule

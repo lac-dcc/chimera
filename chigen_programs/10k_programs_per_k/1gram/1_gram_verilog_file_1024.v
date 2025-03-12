@@ -1,30 +1,28 @@
-// Seed: 3172640752
-module module_0 (
-    id_1
-);
-  output wire id_1;
-  assign id_1 = 1;
-  wire id_2, id_3;
-  wor id_4;
-  uwire id_5, id_6, id_7;
-  wire id_8;
-  wor  id_9, id_10 = id_5;
-  wire id_11 = id_2, id_12;
-  wire id_13, id_14 = id_13;
-  assign id_4 = 1;
-  assign id_6 = id_4;
-  id_15(
-      id_4, 1, id_7
-  );
+// Seed: 1733218039
+module module_0;
+  logic id_1;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    output wor id_0,
+    output supply0 id_1,
+    input supply1 id_2,
+    output tri id_3,
+    input supply1 id_4,
+    input wor id_5,
+    input wire id_6,
+    output supply0 id_7,
+    output wor id_8
 );
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always if (1 & id_3) id_3 = 1'b0;
-  module_0 modCall_1 (id_3);
+  logic id_10;
+  bit   id_11;
+  ;
+  wire  id_12;
+  logic id_13;
+  if (1) always id_11 <= -1;
+  else logic id_14;
+  logic id_15 = id_2 | 1;
+  module_0 modCall_1 ();
+  parameter id_16 = 1;
+  assign id_15 = -1;
+  rtran (-1);
 endmodule

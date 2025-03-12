@@ -1,34 +1,53 @@
-// Seed: 228241724
+// Seed: 2476968403
 module module_0 (
-    input tri0 id_0
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  wor id_2;
-  assign id_2 = 1'b0;
-  wire id_3;
-  assign module_1.id_3 = 0;
+  input wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_5;
+  ;
 endmodule
-module module_1 (
-    output wand id_0,
-    input tri0 id_1#(.id_18(1)),
-    output wire id_2,
-    output wor id_3,
-    output tri0 id_4,
+module module_1 #(
+    parameter id_16 = 32'd11
+) (
+    input tri1 id_0,
+    input supply1 id_1,
+    output tri id_2,
+    input supply1 id_3,
+    output uwire id_4,
     output wand id_5,
-    input supply1 id_6,
-    output uwire id_7,
-    input tri id_8,
-    output wor id_9,
-    input supply1 id_10,
-    output tri id_11,
-    input supply1 id_12,
-    input supply0 id_13,
-    output wor id_14,
-    output tri0 id_15,
-    input wire id_16
+    output wor id_6,
+    output tri id_7,
+    output tri id_8,
+    output supply0 id_9,
+    inout wand id_10,
+    output supply0 id_11,
+    input wire id_12
 );
-  assign id_14 = 1'b0;
-  assign id_0  = id_10;
-  module_0 modCall_1 (id_12);
+  wire id_14;
+  ;
+  module_0 modCall_1 (
+      id_14,
+      id_14,
+      id_14,
+      id_14
+  );
+  wire id_15;
+  ;
+  parameter id_16 = 1;
+  id_17 :
+  assert property (@(1) id_14)
+  else;
+  assign id_8 = id_16;
+  assign id_6 = id_15;
+  wire id_18;
+  defparam id_16.id_16 = 1;
   wire id_19;
-  always id_15 = id_10;
+  real [-1 : -1 'h0 !==  |  1] id_20;
+  ;
 endmodule

@@ -1,72 +1,88 @@
-// Seed: 1756122563
+// Seed: 1504543627
 module module_0 (
-    output tri1 id_0,
-    input  tri  id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17
 );
-  wire id_3;
-  wire id_4 = id_4;
+  input wire id_17;
+  input wire id_16;
+  inout wire id_15;
+  inout wire id_14;
+  output wire id_13;
+  input wire id_12;
+  input wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
 endmodule
-module module_1 (
-    output tri id_0,
-    input tri0 id_1,
-    input tri id_2,
-    output tri1 id_3,
-    input wire id_4,
-    output wire id_5,
-    input supply1 id_6,
-    output tri id_7,
-    input uwire id_8,
-    input wire id_9,
-    input uwire id_10,
-    inout wor id_11,
-    output uwire id_12,
-    output wor id_13,
-    output supply0 id_14,
-    output tri0 id_15,
-    input tri id_16,
-    output logic id_17,
-    input tri1 id_18,
-    output tri0 id_19,
-    output supply1 id_20,
-    output wire id_21,
-    input wire id_22,
-    output wire id_23,
-    input wor id_24,
-    output logic id_25,
-    input supply1 id_26,
-    input tri id_27,
-    output wand id_28,
-    output wire id_29,
-    input supply1 id_30,
-    input supply1 id_31,
-    input supply0 id_32,
-    input supply1 id_33,
-    input wire id_34,
-    output tri id_35,
-    output tri1 id_36,
-    input supply1 id_37,
-    input supply0 id_38
+module module_1 #(
+    parameter id_10 = 32'd44,
+    parameter id_11 = 32'd26
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    _id_10,
+    _id_11
 );
-  wor id_40 = id_9;
-  always @(posedge id_16) id_3 = 1;
-  initial begin : LABEL_0
-    if ("") begin : LABEL_0
-      id_17 <= 1 == id_8;
-    end else begin : LABEL_0
-      if (1) begin : LABEL_0
-        id_25 <= id_30 < 1;
-      end
-    end
-  end
+  inout wire _id_11;
   module_0 modCall_1 (
-      id_40,
-      id_33
+      id_4,
+      id_2,
+      id_2,
+      id_9,
+      id_6,
+      id_4,
+      id_7,
+      id_2,
+      id_4,
+      id_1,
+      id_9,
+      id_6,
+      id_1,
+      id_2,
+      id_4,
+      id_2,
+      id_3
   );
-  assign modCall_1.type_0 = 0;
-  wire id_41;
-  wire id_42;
-  id_43(
-      1, 1
-  );
-  wire id_44;
+  input wire _id_10;
+  inout wire id_9;
+  input wire id_8;
+  inout wire id_7;
+  input wire id_6;
+  input wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  output wire id_1;
+  assign id_9 = id_8;
+  logic id_12;
+  wire [id_11 : id_10] id_13, id_14, id_15, id_16, id_17, id_18, id_19, id_20, id_21, id_22;
 endmodule

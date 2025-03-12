@@ -1,39 +1,41 @@
-// Seed: 2410481020
+// Seed: 3903086661
 module module_0 (
-    input wor id_0,
-    input wor id_1
+    id_1,
+    id_2,
+    id_3
 );
-  always @(*) if ((1 & 1)) $display;
-  assign module_1.type_11 = 0;
+  output wor id_3;
+  inout wire id_2;
+  inout wire id_1;
+  assign id_3 = 1'b0;
+  wire id_4;
+  ;
 endmodule
-module module_0 (
-    input tri id_0,
-    input tri1 id_1,
-    output uwire id_2,
-    inout wor id_3,
-    input tri1 id_4,
-    output uwire id_5,
-    output tri id_6
-    , id_23,
-    input tri id_7,
-    input wor id_8,
-    output supply1 id_9,
-    input tri1 id_10,
-    input tri1 id_11,
-    input uwire id_12,
-    input tri0 id_13,
-    output tri id_14,
-    input tri id_15,
-    input supply0 module_1,
-    input wor id_17,
-    output wor id_18,
-    output tri0 id_19,
-    input tri id_20,
-    output tri1 id_21
+module module_1 #(
+    parameter id_0 = 32'd34,
+    parameter id_6 = 32'd58
+) (
+    input wor _id_0,
+    output tri0 id_1,
+    input tri id_2
+    , id_9,
+    output tri id_3,
+    input wire id_4,
+    input wire id_5,
+    input supply1 _id_6,
+    input tri0 id_7
 );
-  always_comb @(*) id_14 = id_7;
+  assign id_3 = id_6;
+  wire [-1 'b0 : 1 'b0] id_10;
+  wire id_11;
+  parameter id_12 = 1;
+  assign {!id_6} = id_2;
+  logic id_13 = id_0;
+  logic [-1 : id_0] id_14 = 1 * (id_14);
+  wire [-1 : id_6] id_15;
   module_0 modCall_1 (
-      id_20,
+      id_12,
+      id_12,
       id_10
   );
 endmodule

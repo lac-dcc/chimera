@@ -1,47 +1,68 @@
-// Seed: 992504179
-module module_0;
-  assign module_1.type_12 = 0;
-endmodule
-module module_1 (
-    output supply1 id_0,
-    output tri0 id_1,
-    output tri1 id_2,
-    input tri0 id_3,
-    input supply0 id_4,
-    output wand id_5,
-    input wire id_6,
-    input tri id_7
-    , id_36,
-    input wand id_8,
-    input uwire id_9,
-    input wand id_10,
-    input uwire id_11
-    , id_37,
-    input tri id_12,
-    output tri1 id_13,
-    output uwire id_14,
-    output wand id_15,
-    output supply1 id_16,
-    input supply0 id_17,
-    input uwire id_18,
-    input wire id_19,
-    inout wor id_20,
-    output uwire id_21,
-    input supply1 id_22,
-    output wand id_23,
-    input wor id_24,
-    input supply0 id_25,
-    output uwire id_26,
-    input supply0 id_27,
-    input tri id_28,
-    input supply1 id_29,
-    input tri id_30,
-    input supply1 id_31,
-    input uwire id_32,
-    output wand id_33,
-    output tri0 id_34
+// Seed: 612650560
+module module_0 (
+    input  tri0 id_0,
+    input  wire id_1#(.id_4(1)),
+    output wor  id_2
 );
-  initial return id_22;
-  tri0 id_38 = 1 / id_12;
-  module_0 modCall_1 ();
+  assign module_1.id_15 = 0;
+endmodule
+module module_1 #(
+    parameter id_10 = 32'd57,
+    parameter id_14 = 32'd32,
+    parameter id_30 = 32'd48,
+    parameter id_5  = 32'd61
+) (
+    output wire id_0,
+    output wire id_1,
+    input supply1 id_2,
+    input supply0 id_3,
+    input tri1 id_4,
+    output tri0 _id_5,
+    inout logic id_6,
+    input wire id_7,
+    output wor id_8,
+    input supply1 id_9,
+    input supply0 _id_10,
+    output tri id_11,
+    input tri1 id_12,
+    input tri0 id_13,
+    input tri _id_14,
+    input wor id_15,
+    output uwire id_16,
+    input tri id_17,
+    input tri1 id_18
+);
+  wire id_20;
+  wire [id_14 : id_14] id_21[id_5 : id_10];
+  struct packed {
+    integer id_22;
+    logic   id_23;
+    logic   id_24;
+  } id_25;
+  ;
+  logic id_26;
+  nor primCall (
+      id_6, id_25, id_2, id_9, id_12, id_26, id_23, id_15, id_21, id_3, id_4, id_18, id_7, id_24
+  );
+  logic id_27;
+  ;
+  always_ff begin : LABEL_0
+    @(-1'b0);
+    @(id_27[-1'b0-(1)] or -1 or posedge 1) $clog2(99);
+    ;
+  end
+  logic id_28;
+  module_0 modCall_1 (
+      id_2,
+      id_9,
+      id_1
+  );
+  assign id_0 = id_27;
+  logic id_29;
+  assign id_26 = 1;
+  logic _id_30;
+  ;
+  wire [id_30 : '0] id_31;
+  always_comb id_6 = new;
+  wire id_32, id_33;
 endmodule

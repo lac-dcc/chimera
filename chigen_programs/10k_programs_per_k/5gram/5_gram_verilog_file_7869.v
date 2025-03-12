@@ -1,36 +1,48 @@
-// Seed: 1742866627
+// Seed: 1609784329
 module module_0 (
-    input wand id_0,
-    input supply1 id_1,
-    output wand id_2,
-    input wire id_3
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  assign id_2 = id_1;
-  module_2 modCall_1 ();
+  input wire id_4;
+  input wire id_3;
+  inout wire id_2;
+  inout wire id_1;
 endmodule
-module module_1 #(
-    parameter id_8 = 32'd59,
-    parameter id_9 = 32'd51
-) (
-    output wire id_0,
-    input tri1 id_1,
-    input tri0 id_2,
-    input wand id_3,
-    output tri1 id_4,
-    output supply1 id_5,
-    input supply1 id_6
+module module_1 (
+    output tri0 id_0,
+    output wand id_1
 );
-  defparam id_8.id_9 = 1;
-  or primCall (id_0, id_3, id_1, id_2, id_8, id_6);
+  wire id_3;
+  buf primCall (id_0, id_3);
   module_0 modCall_1 (
       id_3,
-      id_1,
-      id_4,
+      id_3,
+      id_3,
       id_3
   );
-  assign modCall_1.type_3 = 0;
 endmodule
-module module_2 ();
-  assign id_1 = 1;
-  assign module_0.type_3 = 0;
+module module_2 #(
+    parameter id_2 = 32'd99
+) (
+    id_1,
+    _id_2
+);
+  inout wire _id_2;
+  inout logic [7:0] id_1;
+  wire id_3;
+  always @(id_3 or ~id_2)
+    if (-1) begin : LABEL_0
+      $unsigned(7);
+      ;
+    end else begin : LABEL_1
+      deassign id_1;
+    end
+  module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_3,
+      id_3
+  );
 endmodule

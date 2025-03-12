@@ -1,36 +1,47 @@
-// Seed: 446632666
+// Seed: 3362764222
 module module_0 (
     id_1,
-    id_2
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
+  inout wire id_6;
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
   inout wire id_2;
-  inout wire id_1;
-  wire id_3;
-  reg  id_6;
-  tri0 id_7, id_8, id_9, id_10, id_11;
-  always_ff deassign id_4;
-  assign module_1.type_0 = 0;
-  assign id_9 = 1;
-  always @(id_1 or posedge id_9)
-    if (id_5)
-      if (id_9)
-        if ("") begin : LABEL_0
-          if (1) id_7 = id_10;
-          else begin : LABEL_0
-            forever id_6 <= 1;
-          end
-        end
-  wire id_12;
-  tri1 id_13 = 1, id_14;
+  output wire id_1;
 endmodule
-module module_1 (
-    input wand id_0,
-    input wire id_1
+module module_1 #(
+    parameter id_4 = 32'd32,
+    parameter id_6 = 32'd51
+) (
+    id_1,
+    id_2,
+    id_3,
+    _id_4,
+    id_5
 );
-  wire id_3;
+  output wire id_5;
+  output wire _id_4;
+  inout uwire id_3;
+  input wire id_2;
   module_0 modCall_1 (
+      id_3,
+      id_3,
+      id_2,
+      id_3,
       id_3,
       id_3
   );
-  wire id_4;
+  output wire id_1;
+  assign id_1 = id_3;
+  parameter id_6 = ~1;
+  wire id_7 = id_3;
+  assign id_3 = (-1);
+  parameter [-1 'h0 : id_6] id_8 = -1 ? 1 : -1'd0;
+  wire id_9 = id_6;
+  time [id_4 : ~  1  !=  -1] id_10;
 endmodule

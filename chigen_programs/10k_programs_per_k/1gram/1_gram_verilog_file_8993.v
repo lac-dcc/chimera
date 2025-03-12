@@ -1,26 +1,37 @@
-// Seed: 1837015571
-module module_0;
-  wire id_1;
-  assign module_1.type_2 = 0;
-endmodule
-module module_1 (
-    output wor   id_0,
-    output tri0  id_1,
-    input  uwire id_2,
-    output wand  id_3,
-    output tri1  id_4
+// Seed: 609870493
+module module_0 #(
+    parameter id_2 = 32'd49,
+    parameter id_5 = 32'd28,
+    parameter id_9 = 32'd15
 );
-  supply0 id_6, id_7;
-  always id_3 = (~1);
-  rtran (id_6);
-  if (id_2)
-    if (id_7) assign id_0 = 1;
-    else supply1 id_8 = 1 && id_7;
-  assign id_4 = 1 ^ 1'b0;
-  module_0 modCall_1 ();
+  localparam id_1 = 1;
+  logic _id_2 = "";
+  tri0  id_3;
+  assign id_3 = -1'd0;
+  logic [7:0][~  id_2 : 1] id_4;
+  assign id_3 = id_4 != -1;
+  logic _id_5;
+  wire  id_6;
+  parameter [-1 : id_5] id_7 = id_1;
+  logic id_8;
+  parameter id_9 = id_1;
+  wire [-1 : 1] id_10, id_11, id_12;
+  wire id_13, id_14 = id_4[1'b0 : 1|1];
+  bit [id_9 : -1] id_15, id_16;
+  initial id_15 <= -1;
+  assign id_15 = id_4;
 endmodule
-module module_2 ();
+module module_1 #(
+    parameter id_2 = 32'd61
+) (
+    id_1,
+    _id_2,
+    id_3[1 : id_2.id_2],
+    id_4
+);
+  output wire id_4;
   module_0 modCall_1 ();
-  wire id_1;
-  wire id_2;
+  output logic [7:0] id_3;
+  input wire _id_2;
+  inout wire id_1;
 endmodule

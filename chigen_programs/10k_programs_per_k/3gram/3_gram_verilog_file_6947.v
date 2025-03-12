@@ -1,29 +1,22 @@
-// Seed: 2322597943
-program module_0 ();
-  assign id_1[1] = 1;
-endprogram
-module module_1 #(
-    parameter id_14 = 32'd33,
-    parameter id_15 = 32'd57
-) (
-    input supply0 id_0,
-    input supply1 id_1,
-    input wand id_2,
-    output wand id_3,
-    input wand id_4,
-    output tri id_5,
-    input wand id_6,
-    output wand id_7,
-    output wire id_8,
-    output wire id_9,
-    input tri id_10
-    , id_12
+// Seed: 2995215766
+module module_0 #(
+    parameter id_1 = 32'd84
+) ();
+  wire _id_1 = id_1;
+  supply1 [1 : id_1] id_2 = 1'd0;
+  logic id_3;
+  ;
+  assign id_2 = 1;
+endmodule
+module module_1 (
+    inout logic id_0,
+    input tri0 id_1,
+    input supply0 id_2
 );
-  id_13(
-      id_9, "" && 1
-  );
-  assign id_8 = id_2 != 1'b0 < id_0;
+  always @(posedge 1, posedge -1) id_0 = -1'b0;
   module_0 modCall_1 ();
-  defparam id_14.id_15 = 1;
-  wire id_16;
+  wire [1 : -1 'b0] id_4;
+  wire id_5;
+  assign id_5 = -1;
+  always @(posedge -1 or posedge -1) disable id_6;
 endmodule

@@ -1,43 +1,28 @@
-// Seed: 1688581029
+// Seed: 3787483774
 module module_0;
-  assign module_2.id_3 = 0;
-  tri1 id_1 = 1;
+  logic [7:0] id_1 = id_1[1];
+  localparam id_2 = -1'd0;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_3 = 32'd0,
+    parameter id_4 = 32'd22
+) (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5
+    _id_3,
+    _id_4
 );
-  inout wire id_5;
-  output wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_6;
+  inout wire _id_4;
+  input wire _id_3;
+  output logic [7:0] id_2;
+  output wire id_1;
+  assign id_2[id_4] = -1 - -1;
+  assign id_2 = id_4;
   module_0 modCall_1 ();
-  assign modCall_1.type_2 = 0;
-  always @(id_1);
-  wire id_7;
-  always @(posedge 1 & id_1 or posedge id_5) id_4 = id_2;
-endmodule
-module module_2 (
-    input  uwire id_0,
-    output wand  id_1,
-    output wire  id_2,
-    input  tri   id_3,
-    input  tri0  id_4
-);
-  supply0 id_6 = id_3;
-  always @(posedge 1 != id_6 or posedge id_4) $display;
-  wire id_7;
-  always #1;
-  module_0 modCall_1 ();
-  assign id_1 = id_3 - (0);
-  tri  id_8 = id_6;
-  wire id_9;
-  wire id_10;
-  wire id_11;
-  always_ff disable id_12;
+  always @(negedge -1);
+  initial begin : LABEL_0
+    id_2[id_4==id_3] <= id_4;
+  end
+  wire id_5;
+  always_latch @(posedge 1);
 endmodule

@@ -1,31 +1,31 @@
-// Seed: 351252555
+// Seed: 1980490170
 module module_0;
-  always_ff @(posedge id_1 - 1 or 1 == id_1) id_1 = 1;
-  always @(posedge 1 ==? 1'h0 or negedge 1'b0) begin : LABEL_0
-    id_1 <= id_1;
+  wire id_1;
+  logic id_2, id_3;
+  always @(posedge id_3[1'b0]) begin : LABEL_0
+    $clog2(58);
+    ;
   end
+  id_4 :
+  assert property (@(posedge id_3) id_2 ? 1'b0 : id_1 != 1'b0)
+  else $unsigned(40);
+  ;
+  assign module_1.id_1 = 0;
+  assign id_4 = id_4 | -1;
+  logic id_5 = id_4;
+  wire  id_6;
+  assign id_4 = 1;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+module module_0 (
+    output wor id_0,
+    input tri0 id_1,
+    input supply1 id_2,
+    output logic id_3,
+    input supply1 module_1
 );
-  input wire id_8;
-  input wire id_7;
-  output wire id_6;
-  output wire id_5;
-  output wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  wire id_9;
-  assign id_2 = 1'b0;
-  assign id_4 = 1 ? id_1 : 1;
+  always @(id_4) id_3 = id_2 <= id_4;
+  assign id_3 = -1;
+  assign id_0 = 1;
+  assign {id_1, 1} = (-1) ^ id_4 == 1;
   module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
 endmodule

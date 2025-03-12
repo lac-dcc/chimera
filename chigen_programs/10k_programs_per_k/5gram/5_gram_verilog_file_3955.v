@@ -1,34 +1,37 @@
-// Seed: 3778671318
-module module_0;
-  assign id_1 = id_1 == 1'b0;
-  assign module_1.id_8 = 0;
-endmodule
-module module_1 (
+// Seed: 130315414
+module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    id_3
 );
-  output wire id_6;
-  inout wire id_5;
-  input wire id_4;
-  output wire id_3;
-  input wire id_2;
+  inout wire id_3;
+  inout wire id_2;
   inout wire id_1;
-  reg id_7 = 1, id_8;
-  module_0 modCall_1 ();
-  always
-    if (id_4)
-      if (id_8) begin : LABEL_0
-        id_8 <= id_5 == id_2;
-      end
-  always @(1) begin : LABEL_0
-    if (1)
-      assert (1)
-      else;
-    else assert (id_4 < 1);
-    id_1 <= id_4;
-  end
+  logic id_4, id_5, id_6, id_7, id_8, id_9;
+  wire id_10;
+endmodule
+module module_1 (
+    output wire id_0,
+    input tri0 id_1,
+    output wor id_2,
+    input supply0 id_3,
+    output wor id_4,
+    input wor id_5
+);
+  logic id_7;
+  logic [7:0] id_8;
+  parameter id_9 = -1;
+  assign id_8[1'b0] = id_8;
+  module_0 modCall_1 (
+      id_9,
+      id_9,
+      id_9
+  );
+  wire  id_10;
+  logic id_11;
+  generate
+    for (id_12 = id_10; id_10; id_7 = 1) begin : LABEL_0
+      always @(negedge 1) id_7 = id_3;
+    end
+  endgenerate
 endmodule

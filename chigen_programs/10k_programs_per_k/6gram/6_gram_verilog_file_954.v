@@ -1,61 +1,65 @@
-// Seed: 3736390897
+// Seed: 1744606169
 module module_0;
-  always @(posedge 1) begin : LABEL_0
-    disable id_1;
-  end
+  wire id_1;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_27 = 32'd44,
+    parameter id_30 = 32'd2,
+    parameter id_34 = 32'd2
+) (
     input tri id_0,
-    input logic id_1
-    , id_28,
-    output logic id_2,
-    input logic id_3,
-    input tri1 id_4,
-    input logic id_5,
-    input logic id_6,
-    output wand id_7,
-    input supply0 id_8,
-    input wand id_9,
+    input tri id_1,
+    input uwire id_2,
+    input tri1 id_3,
+    input tri0 id_4,
+    input tri id_5,
+    input tri1 id_6,
+    input tri1 id_7,
+    input wire id_8,
+    output wor id_9,
     input wor id_10,
-    input wire id_11,
-    output logic id_12,
-    input logic id_13,
-    output logic id_14,
-    input supply1 id_15,
+    input supply0 id_11,
+    input wand id_12,
+    input wor id_13,
+    input wor id_14,
+    input tri id_15,
     input tri1 id_16,
-    input wire id_17,
-    input wire id_18,
+    output uwire id_17,
+    input wor id_18,
     input supply1 id_19,
-    input tri id_20,
-    input tri id_21,
-    input supply0 id_22,
-    output logic id_23,
-    input uwire id_24,
-    input uwire id_25,
-    output logic id_26
+    output tri1 id_20,
+    input tri1 id_21,
+    output uwire id_22,
+    input tri0 id_23,
+    output tri id_24,
+    output tri id_25,
+    input supply0 id_26,
+    input wor _id_27,
+    output tri0 id_28,
+    output supply1 id_29,
+    input supply0 _id_30,
+    input wire id_31,
+    input wire id_32,
+    output uwire id_33,
+    input supply0 _id_34,
+    input wor id_35,
+    output tri1 id_36,
+    output tri1 id_37
+    , id_42,
+    output wand id_38,
+    input tri0 id_39,
+    output tri0 id_40
 );
-  assign id_12 = id_5;
-  wire  id_29;
-  uwire id_30;
-  assign id_2 = id_13;
+  logic [7:0] id_43;
   module_0 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  wire id_31;
-  always @(posedge 1 + id_1 or negedge 1) begin : LABEL_0
-    id_26 = 1;
-  end
-  assign id_30 = 1;
-  initial begin : LABEL_0
-    {id_18} += 1;
-    #1 id_23 = id_3;
-    id_26 = id_5;
-    id_2 <= id_3;
-    id_2 = 1'b0;
-    if (id_21) begin : LABEL_0
-      id_2 = id_6;
-    end else begin : LABEL_0
-      id_14 <= #1 id_1;
-      id_26 <= 1;
-    end
-  end
+  assign id_33 = id_43[1];
+  logic [7:0][id_30 : 1] id_44, id_45;
+  wire id_46;
+  wire id_47;
+  assign id_25 = {id_26, -1 - id_44};
+  logic [id_27 : -1 'b0 <  1] id_48;
+  assign id_22 = id_6;
+  assign id_44[id_34] = id_3 ? -1 : 1;
+  assign id_9 = id_8 < 1;
+  assign id_40 = 1;
 endmodule

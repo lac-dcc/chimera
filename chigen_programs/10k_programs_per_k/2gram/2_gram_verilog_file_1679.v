@@ -1,51 +1,29 @@
-// Seed: 3086913179
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  wire id_5;
-  module_2 modCall_1 (
-      id_4,
-      id_1,
-      id_5
-  );
+// Seed: 3297699629
+module module_0;
+  assign module_1.id_9 = 0;
+  wire id_1;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3
+    input wor id_0,
+    input wire id_1,
+    input wand id_2,
+    input supply0 id_3,
+    output wand id_4,
+    input tri1 id_5
+    , id_18,
+    input wor id_6,
+    output uwire id_7,
+    input wand id_8,
+    input tri0 id_9,
+    output wand id_10,
+    input tri1 id_11,
+    input tri1 id_12,
+    input wor id_13,
+    input supply0 id_14,
+    input supply0 id_15,
+    input supply0 id_16
 );
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  id_4(
-      .id_0(1 & 1)
-  );
-  module_0 modCall_1 (
-      id_2,
-      id_1,
-      id_1,
-      id_2
-  );
-  final begin : LABEL_0
-    wait (1 & 1);
-  end
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3
-);
-  input wire id_3;
-  input wire id_2;
-  output wire id_1;
-  always_latch begin : LABEL_0
-    id_1 = id_2;
-  end
+  wire id_19;
+  module_0 modCall_1 ();
+  wire id_20 = id_19;
 endmodule

@@ -1,42 +1,41 @@
-// Seed: 1010409006
+// Seed: 1022867178
 module module_0 (
-    output supply0 id_0,
-    input tri1 id_1
+    input tri0 id_0,
+    input wor id_1,
+    input tri id_2,
+    output supply0 id_3
 );
-  assign module_1.type_5 = 0;
-  id_3 :
-  assert property (@(posedge 1) id_3)
-  else $display(id_3 < 1, 1);
+  assign id_3 = id_1;
+  id_5 :
+  assert property (@(posedge -1'b0) -1)
+  else $clog2(2);
+  ;
+  wire id_6 = 1;
 endmodule
-module module_1 (
-    output wor id_0,
-    input tri1 id_1,
-    input wand id_2,
-    input wire id_3,
-    output logic id_4,
-    output tri1 id_5,
-    output supply1 id_6,
-    input tri1 id_7,
-    output uwire id_8,
-    output tri0 id_9,
-    input supply0 id_10,
-    input tri0 id_11,
-    output wand id_12,
-    input tri1 id_13,
-    input wand id_14,
-    input wor id_15,
-    input tri1 id_16,
-    input wand id_17,
-    output supply0 id_18,
-    input wor id_19,
-    input wor id_20,
-    input tri id_21,
-    inout tri0 id_22,
-    input tri0 id_23
+module module_1 #(
+    parameter id_5 = 32'd31,
+    parameter id_7 = 32'd48,
+    parameter id_8 = 32'd42
+) (
+    input supply1 id_0,
+    input tri id_1,
+    output supply0 id_2,
+    output tri0 id_3,
+    input tri id_4,
+    input wor _id_5,
+    input supply1 id_6,
+    input wor _id_7,
+    input wor _id_8
 );
-  always @(id_22) id_4 <= id_0++;
+  wand [{  1  !=  1 'h0 ,  id_8  ,  id_5  ,  1 'b0 } : id_5] id_10 = 1 ? 1'h0 : 1;
+  logic [(  -1  &&  -1  ) : -1] id_11;
+  ;
+  wire [id_7 : -1] id_12 = id_7;
   module_0 modCall_1 (
-      id_22,
+      id_0,
+      id_1,
+      id_1,
       id_2
   );
+  assign modCall_1.id_2 = 0;
 endmodule

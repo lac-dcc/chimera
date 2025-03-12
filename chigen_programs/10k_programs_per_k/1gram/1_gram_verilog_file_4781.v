@@ -1,33 +1,33 @@
-// Seed: 2793618309
-module module_0 (
-    output wire id_0
-);
-  module_2 modCall_1 ();
-  assign modCall_1.type_13 = 0;
-  always begin : LABEL_0
-    id_0 = 1;
-  end
-endmodule
-module module_1 (
-    input  uwire id_0,
-    output tri   id_1,
-    input  wor   id_2
-);
+// Seed: 2854875527
+module module_0;
+  tri id_1;
+  ;
+  logic id_2;
+  assign id_2 = id_2;
   assign id_1 = 1;
-  module_0 modCall_1 (id_1);
-  assign modCall_1.type_0 = 0;
 endmodule
-module module_2 #(
-    parameter id_9 = 32'd80
+module module_1 #(
+    parameter id_4 = 32'd78
+) (
+    id_1,
+    id_2,
+    id_3[1 : id_4],
+    _id_4,
+    id_5,
+    id_6,
+    id_7[id_4 : 1'b0],
+    id_8
 );
-  tri1 id_2;
-  logic [7:0][1 'h0] id_3;
-  reg id_4, id_5;
-  initial id_5 <= id_5.id_1;
-  assign id_1 = id_2 < id_5;
-  uwire id_6, id_7;
-  assign id_7 = 1;
-  id_8(
-      .product(id_1), .id_0(1'h0)
-  ); defparam id_9 = "";
+  inout wire id_8;
+  inout logic [7:0] id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire _id_4;
+  input logic [7:0] id_3;
+  output wire id_2;
+  inout logic [7:0] id_1;
+  integer id_9;
+  ;
+  module_0 modCall_1 ();
+  wire id_10, id_11, id_12;
 endmodule

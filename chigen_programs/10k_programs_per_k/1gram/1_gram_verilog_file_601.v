@@ -1,31 +1,34 @@
-// Seed: 3215471517
-module module_0 ();
-  reg id_1;
-  assign id_1 = 1;
-  assign module_2.id_2 = 0;
-  reg id_2, id_3;
-  always id_1 <= 1'h0;
-  assign id_1 = id_2;
+// Seed: 891534096
+module module_0;
+  parameter id_1 = 1'd0;
+  logic id_2;
 endmodule
-module module_1 (
-    id_1
+module module_1 #(
+    parameter id_11 = 32'd15,
+    parameter id_6  = 32'd70
+) (
+    input wor id_0,
+    output wire id_1
+    , id_8,
+    output tri0 id_2,
+    input tri1 id_3,
+    input supply1 id_4
+    , id_9,
+    output wand id_5,
+    input wor _id_6
 );
-  input wire id_1;
-  assign id_2 = id_2;
-  wire id_3, id_4, id_5;
+  genvar id_10;
+  logic _id_11;
+  logic id_12;
   module_0 modCall_1 ();
-  assign modCall_1.id_3 = 0;
-endmodule
-module module_2 (
-    output uwire id_0,
-    output wire  id_1,
-    output tri1  id_2
-);
-  id_4 :
-  assert property (@(1) 1)
-  else id_2 = id_4;
-  tri id_5;
-  for (id_6 = 1; id_4; id_5 = id_6) if (1) wire id_7;
-  module_0 modCall_1 ();
-  assign id_2 = id_6;
+  id_13#(
+      .id_14(-1),
+      .id_15(1)
+  ) :
+  assert property (@(1'b0) 1 * id_10) id_12 <= id_9;
+  localparam id_16 = 1;
+  assign id_12 = ~^id_12;
+  logic id_17;
+  ;
+  wire [id_11 : -1 'h0 ==  id_6] id_18;
 endmodule

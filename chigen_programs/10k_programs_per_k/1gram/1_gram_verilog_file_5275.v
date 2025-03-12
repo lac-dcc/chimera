@@ -1,11 +1,14 @@
-// Seed: 3906075709
-module module_0;
-  wire id_1;
-  wire id_2, id_3;
-  assign id_3 = id_3;
-  assign module_1.id_13 = 0;
+// Seed: 2008773478
+module module_0 (
+    id_1,
+    id_2
+);
+  inout logic [7:0] id_2;
+  input logic [7:0] id_1;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_8 = 32'd11
+) (
     id_1,
     id_2,
     id_3,
@@ -13,41 +16,59 @@ module module_1 (
     id_5,
     id_6,
     id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11
+    _id_8
 );
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  input wire id_4;
-  input wire id_3;
-  input wire id_2;
-  input wire id_1;
-  tri1 id_12, id_13;
-  id_14(
-      1
+  inout wire _id_8;
+  inout wire id_7;
+  input wire id_6;
+  inout wire id_5;
+  module_0 modCall_1 (
+      id_3,
+      id_3
   );
-  always @(posedge 1'b0 + id_1 or {
-    id_7 && id_12 != id_9,
-    1 || 1
-  })
-    #1
-      if (1)
-        `define pp_15 0
-  assign id_11 = id_4[`pp_15][1][1];
-  wire id_16;
-  logic [7:0] id_17, id_18;
-  module_0 modCall_1 ();
-  assign id_12 = id_3;
-  wire id_19;
-  assign id_18 = id_4;
-  uwire id_20, id_21, id_22;
-  initial id_12 = id_21;
-  assign id_12 = 1;
+  output wire id_4;
+  inout logic [7:0] id_3;
+  inout wire id_2;
+  input wire id_1;
+  assign id_3 = id_3[id_8 : 1];
+endmodule
+module module_2 #(
+    parameter id_2 = 32'd69
+) (
+    input tri0 id_0
+);
+  wire  _id_2;
+  logic id_3;
+  assign id_3 = id_3;
+  assign id_3 = 1'h0;
+  logic id_4[-1 : id_2];
+  ;
+  generate
+    logic id_5;
+    begin : LABEL_0
+      wire id_6, id_7;
+    end
+  endgenerate
+  assign id_4 = 1;
+  id_8(
+      -1
+  );
+  supply1 id_9;
+  assign id_4 = id_5;
+  assign id_9 = -1;
+  wire id_10;
+  pullup (.id_0(id_9), .id_1(id_2));
+  assign id_8 = id_3;
+endmodule
+module module_3 (
+    input  wor  id_0,
+    input  tri1 id_1,
+    output tri1 id_2,
+    output tri  id_3,
+    output wor  id_4,
+    output wire id_5
+);
+  assign id_3 = -1;
+  notif1 primCall (id_2, id_1, id_0);
+  module_2 modCall_1 (id_1);
 endmodule

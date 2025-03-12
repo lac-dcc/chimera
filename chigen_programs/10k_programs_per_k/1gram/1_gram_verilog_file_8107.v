@@ -1,51 +1,42 @@
-// Seed: 2855559483
-module module_0 ();
-  id_1(
-      id_2, 1 & 1'b0
-  );
-  assign id_3 = 1;
-  assign module_1.type_3 = 0;
-endmodule
-module module_1 (
-    input  wire  id_0,
-    input  uwire id_1,
-    output tri   id_2,
-    output uwire id_3,
-    input  wire  id_4,
-    output wor   id_5,
-    output uwire id_6
+// Seed: 2579838569
+module module_0 #(
+    parameter id_1 = 32'd84
 );
-  wor id_8;
-  module_0 modCall_1 ();
-  or primCall (id_2, id_4, id_8);
-  assign id_8 = id_0;
+  wire [1 : 1] _id_1, id_2, id_3[id_1 : 1], id_4;
 endmodule
-module module_2 (
-    input wor id_0,
-    input tri1 id_1,
-    input wand id_2,
-    input tri id_3,
-    input supply1 id_4,
-    input uwire id_5,
-    input tri0 id_6,
-    output tri0 id_7,
-    input wire id_8,
-    output wire id_9,
-    input tri0 id_10,
-    output tri0 void id_11,
-    input uwire id_12,
-    input supply1 id_13,
-    input supply0 id_14,
-    input wand id_15,
-    input wire id_16,
-    output tri id_17,
-    output wor id_18,
-    input supply0 id_19,
-    input tri1 id_20,
-    input supply0 void id_21
+module module_1 #(
+    parameter id_11 = 32'd86,
+    parameter id_5  = 32'd70,
+    parameter id_6  = 32'd94,
+    parameter id_7  = 32'd45
+) (
+    id_1[({1, 1-id_6, id_6, id_6}) : ~id_7],
+    id_2,
+    id_3,
+    id_4,
+    _id_5,
+    _id_6,
+    _id_7,
+    id_8
 );
-  assign id_9 = 1 / id_10 < 1'b0;
+  inout reg id_8;
+  output wire _id_7;
+  input wire _id_6;
+  inout wire _id_5;
+  output uwire id_4;
+  inout wire id_3;
+  input logic [7:0] id_2;
   module_0 modCall_1 ();
-  wire id_23;
-  wire id_24, id_25, id_26;
+  input logic [7:0] id_1;
+  parameter id_9 = -1 - -1;
+  assign id_4 = 1;
+  logic id_10;
+  parameter id_11 = id_9;
+  assign id_4 = 1'b0;
+  initial id_8 = id_2 - -1'b0;
+  wire [id_11 : (  id_5  )] id_12;
+  supply0 id_13, id_14, id_15;
+  assign id_15 = -1;
+  assign id_7  = id_15;
+  localparam id_16 = ("");
 endmodule

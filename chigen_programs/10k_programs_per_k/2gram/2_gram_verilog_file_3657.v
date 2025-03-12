@@ -1,42 +1,32 @@
-// Seed: 2632001726
+// Seed: 2329723988
 module module_0 (
-    input tri1  id_0,
-    input uwire id_1
+    input wor   id_0,
+    input uwire id_1,
+    input tri0  id_2
 );
-  wire id_3;
-  assign module_1.type_24 = 0;
 endmodule
-module module_1 (
-    output tri1 id_0,
-    input tri1 id_1,
-    output tri id_2,
-    output supply0 id_3,
-    input tri id_4,
-    input uwire id_5,
-    output supply0 id_6,
-    output uwire id_7,
-    output supply0 id_8,
-    output tri1 id_9,
-    input wor id_10,
-    inout uwire id_11,
-    output tri0 id_12,
-    output tri id_13,
-    input tri id_14,
-    input tri0 id_15,
-    output supply0 id_16,
-    input supply0 id_17,
-    input supply1 id_18
+module module_1 #(
+    parameter id_3 = 32'd73
+) (
+    input uwire id_0,
+    input supply0 id_1,
+    input wire id_2,
+    input wor _id_3,
+    input supply1 id_4,
+    input tri1 id_5
 );
-  integer id_20 (
-      .id_0(1),
-      .id_1(id_14),
-      .id_2(id_16),
-      .id_3(1),
-      .id_4(id_10 & 1 & id_10 === 1)
-  );
+  wire [1 : -1] id_7;
+  id_8 :
+  assert property (@(posedge id_1 or posedge 1) -1 >= 1)
+  else;
   module_0 modCall_1 (
-      id_15,
-      id_1
+      id_4,
+      id_1,
+      id_5
   );
-  assign id_16 = 1'b0;
+  assign modCall_1.id_2 = 0;
+  wire id_9;
+  wire [id_3 : ""] id_10;
+  localparam id_11 = -1;
+  initial id_8 <= -1'b0;
 endmodule

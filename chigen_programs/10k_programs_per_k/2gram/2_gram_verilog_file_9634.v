@@ -1,38 +1,31 @@
-// Seed: 333957168
-module module_0 (
-    input tri id_0
+// Seed: 1247049263
+module module_0 #(
+    parameter id_3 = 32'd31,
+    parameter id_5 = 32'd48
+) (
+    output supply1 id_0,
+    output wand id_1
 );
-  wand id_2 = id_0;
-  wire id_3;
-  assign module_1.id_1 = 0;
-  wire id_4;
+  wor _id_3 = id_3 & 1'h0;
+  parameter [( $realtime ) : id_3] id_4 = -1;
+  wor [id_3 : -1] _id_5 = -1;
+  localparam id_6 = id_4;
+  assign module_1.id_3 = 0;
+  logic [(  -1 'h0 ) : id_5] id_7;
+  ;
 endmodule
-module module_1 (
-    output wor id_0,
-    input uwire id_1,
-    output supply1 id_2,
-    output wor id_3,
-    output wand id_4,
-    input supply1 id_5,
-    output wor id_6,
-    input supply1 id_7,
-    input tri1 id_8,
-    output wor id_9,
-    output tri0 id_10,
-    inout uwire id_11,
-    input tri id_12,
-    output wor id_13
-    , id_21,
-    output wor id_14,
-    input uwire id_15,
-    output wire id_16,
-    output tri0 id_17,
-    input wor id_18,
-    input tri0 id_19
+module module_1 #(
+    parameter id_1 = 32'd29
+) (
+    output logic id_0,
+    input  tri0  _id_1,
+    output tri   id_2,
+    output wire  id_3
 );
-  assign id_21 = ~{1, 1'b0, 1};
-  always id_17 = 1;
-  module_0 modCall_1 (id_19);
-  assign id_10 = id_12;
-  wire id_22;
+  initial id_0 <= id_1;
+  wire [id_1 : -1  <->  -1  /  id_1] id_5;
+  module_0 modCall_1 (
+      id_3,
+      id_3
+  );
 endmodule

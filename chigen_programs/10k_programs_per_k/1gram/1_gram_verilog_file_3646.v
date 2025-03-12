@@ -1,40 +1,37 @@
-// Seed: 4012717787
+// Seed: 2639984872
 module module_0 (
-    input uwire id_0,
-    input wire  id_1
+    id_1
 );
-  assign id_3 = id_3;
+  input wire id_1;
+  logic id_2, id_3;
+  assign id_2 = -1'b0;
 endmodule
-module module_1 (
-    input wire id_0,
-    output tri1 id_1,
-    output supply0 id_2,
-    output supply0 id_3,
-    input wire id_4,
-    output supply1 id_5,
-    input uwire id_6,
-    output supply1 id_7,
-    input supply0 id_8
-    , id_23,
-    input wire id_9,
-    input wor id_10,
-    input wire id_11,
-    input tri id_12,
-    input supply1 id_13,
-    output wand id_14,
-    input tri0 id_15,
-    input tri1 id_16,
-    input tri1 id_17
-    , id_24 = id_23,
-    input wand id_18,
-    output tri1 id_19,
-    input uwire id_20,
-    output wire id_21
+program module_1 #(
+    parameter id_2 = 32'd47,
+    parameter id_3 = 32'd51,
+    parameter id_9 = 32'd31
+) (
+    id_1,
+    _id_2,
+    _id_3[1 : !id_2&&id_3],
+    id_4,
+    id_5
 );
-  always if (1);
-  module_0 modCall_1 (
-      id_0,
-      id_18
-  );
-  assign modCall_1.id_0 = 0;
-endmodule
+  output tri id_5;
+  input wire id_4;
+  module_0 modCall_1 (id_4);
+  input logic [7:0] _id_3;
+  inout wire _id_2;
+  output uwire id_1;
+  time  id_6 = id_3;
+  logic id_7;
+  if (1 === !-1) id_8 : assert property (@(-1 or 1 or posedge (id_6)) id_6) $clog2(11);
+  ;
+  assign id_7 = 1;
+  assign id_5 = 1;
+  wire _id_9, id_10, id_11;
+  assign id_1 = 1;
+  reg id_12, id_13, id_14;
+  wire [id_9 : id_9] id_15, id_16, id_17;
+  always_ff id_13 <= id_6;
+endprogram

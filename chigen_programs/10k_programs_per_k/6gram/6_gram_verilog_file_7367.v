@@ -1,34 +1,49 @@
-// Seed: 1603731462
-module module_1;
-  integer id_6 = 1;
+// Seed: 1584969802
+module module_0;
+endmodule
+module module_1 #(
+    parameter id_3 = 32'd30,
+    parameter id_8 = 32'd62
+) (
+    id_1,
+    id_2,
+    _id_3
+);
+  output wire _id_3;
+  input wire id_2;
+  inout logic [7:0] id_1;
+  assign id_1[{1{-1!=1}}] = 1'b0;
+  not primCall (id_1, id_2);
   module_0 modCall_1 ();
-  assign modCall_1.id_6 = 0;
-  timeunit 1ps;
-  module_2 modCall_1 ();
-endmodule : SymbolIdentifier
-module module_0 (
-    input tri id_0,
-    output supply1 id_1,
-    input tri0 id_2,
-    input uwire id_3
-);
-  wire id_5;
-  wire id_7;
-endmodule
-module module_2 ();
-  wire id_1;
-  assign module_3.type_0 = 0;
-  assign module_1.id_6   = 0;
-endmodule
-module module_3 (
-    input wor id_0,
-    output wire id_1,
-    output supply0 id_2
-);
-  assign id_2 = id_0;
-  tri1 id_4;
-  always @(1 or 1) begin : LABEL_0
-    id_4 = {1'h0{(1)}};
+  logic [7:0] id_4;
+  assign id_4[1] = id_1;
+  logic [1 : id_3] id_5;
+  logic id_6 = -1;
+  logic [(  -1  ) : 1] id_7;
+  ;
+  bit
+      _id_8,
+      id_9,
+      id_10,
+      id_11,
+      id_12,
+      id_13,
+      id_14,
+      id_15,
+      id_16,
+      id_17,
+      id_18,
+      id_19,
+      id_20,
+      id_21,
+      id_22,
+      id_23,
+      id_24,
+      id_25,
+      id_26;
+  wire [1 : id_8] id_27;
+  always @((-1'h0) - 1) begin : LABEL_0
+    id_24 = id_24;
+    id_11 <= (-1'b0);
   end
-  module_2 modCall_1 ();
 endmodule

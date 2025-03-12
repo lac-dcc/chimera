@@ -1,44 +1,54 @@
-// Seed: 3930667053
+// Seed: 1951779373
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input wor id_0,
+    input wire id_1,
+    input uwire id_2,
+    input uwire id_3,
+    input wand id_4,
+    output supply0 id_5,
+    input wand id_6,
+    input wand id_7,
+    input tri id_8,
+    input wire id_9
 );
-  input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  wire id_4;
+  logic [1 : 1] id_11 = id_9;
+  generate
+    wire id_12, id_13;
+  endgenerate
 endmodule
-module module_1 (
-    input  wire id_0,
-    output wand id_1,
-    output wand id_2
+module module_1 #(
+    parameter id_0 = 32'd34
+) (
+    output wand _id_0,
+    input wire id_1,
+    input supply1 id_2,
+    output wand id_3,
+    output supply0 id_4,
+    input tri0 id_5
+    , id_16,
+    output supply1 id_6,
+    input tri id_7,
+    input tri id_8,
+    input wire id_9,
+    input tri0 id_10,
+    output supply1 id_11,
+    input supply1 id_12,
+    input tri1 id_13,
+    input supply1 id_14
 );
-  reg id_4, id_5, id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13, id_14;
-  supply0 id_15;
-  reg id_16;
+  logic id_17, id_18;
+  logic [id_0 : 1] id_19;
   module_0 modCall_1 (
-      id_15,
-      id_15,
-      id_15
+      id_7,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_3,
+      id_14,
+      id_7,
+      id_12,
+      id_5
   );
-  assign modCall_1.id_2 = 0;
-  assign id_16 = 1;
-  id_17(
-      .id_0(id_4),
-      .id_1(id_11),
-      .id_2(id_9 < 1),
-      .id_3(id_16 - 1 || 1'd0),
-      .id_4(id_7),
-      .id_5(id_4 * id_14),
-      .id_6(1)
-  );
-  always_ff @(*) begin : LABEL_0
-    id_12 <= id_4;
-  end
-  xnor primCall (id_2, id_11, id_8, id_15, id_13, id_12, id_6, id_7, id_9, id_4);
-  assign id_7 = 1;
-  uwire id_18, id_19;
-  reg id_20 = id_6;
-  assign id_20 = id_9;
+  assign modCall_1.id_3 = 0;
 endmodule

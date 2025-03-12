@@ -1,36 +1,70 @@
-// Seed: 1808206883
+// Seed: 2858352876
 module module_0 (
-    output wand id_0
+    output supply1 id_0
 );
-  wire id_2;
-  assign module_1.type_0 = 0;
-  wire id_3, id_4;
+  logic id_2 = -1'b0 - -1;
+  assign id_0 = id_2;
+  assign id_2 = id_2;
+  assign module_1.id_29 = 0;
+  tri id_3, id_4;
+  wire id_5;
+  assign id_0.id_4 = 1;
 endmodule
-module module_1 (
-    output logic   id_0,
-    output supply0 id_1
+module module_1 #(
+    parameter id_23 = 32'd81
+) (
+    output tri0 id_0,
+    input wand id_1,
+    output tri0 id_2,
+    input supply1 id_3,
+    output tri0 id_4[1 : 1],
+    output tri0 id_5,
+    input tri1 id_6,
+    output wand id_7,
+    output tri0 id_8,
+    output wire id_9,
+    output supply0 void id_10,
+    input uwire id_11,
+    input uwire id_12,
+    input wire id_13,
+    output wand id_14,
+    output tri0 id_15,
+    output wor id_16,
+    input tri0 id_17,
+    input uwire id_18
+    , id_41,
+    input tri1 id_19[id_23  *  1 : -1],
+    output wire id_20,
+    input tri id_21,
+    input tri1 id_22,
+    input tri _id_23,
+    output supply1 id_24,
+    input tri id_25,
+    input uwire id_26,
+    input uwire id_27,
+    output wor id_28,
+    input uwire id_29,
+    input wor id_30,
+    input tri id_31,
+    input tri id_32,
+    input supply0 id_33,
+    input uwire id_34,
+    input wand id_35,
+    inout supply0 id_36,
+    output supply0 id_37,
+    input supply1 id_38,
+    output supply0 id_39
 );
-  always_latch id_0 <= id_3;
-  module_0 modCall_1 (id_1);
-endmodule
-module module_2;
-  assign id_1 = 1;
-endmodule
-module module_3 (
-    input logic id_0,
-    input logic id_1
-);
-  reg id_3;
-  always id_3 <= id_1;
-  logic id_4;
-  tri1  id_5;
-  assign id_3 = 1;
-  module_2 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  assign id_5 = 1;
-  initial id_3.id_1 <= 1;
-  id_6 :
-  assert property (@(posedge 1 or posedge id_1 or posedge 1'b0) id_4)
-    if (id_0) #1 id_4 = id_0;
-    else id_4 = 1;
+  wire id_42;
+  module_0 modCall_1 (id_36);
+  logic id_43;
+  ;
+  parameter id_44 = -1'h0;
+  wire id_45;
+  ;
+  struct packed {
+    logic id_46;
+    logic id_47;
+    logic id_48;
+  } id_49;
 endmodule

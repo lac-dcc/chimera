@@ -1,55 +1,43 @@
-// Seed: 1522702271
-module module_0 (
-    input tri id_0,
-    input uwire id_1,
-    output uwire id_2,
-    input wand id_3,
-    output wand id_4,
-    input uwire id_5,
-    input wand id_6,
-    output tri0 id_7,
-    output wire id_8
-    , id_19,
-    input wire id_9,
-    input uwire id_10,
-    output uwire id_11,
-    output uwire id_12,
-    input supply0 id_13,
-    input wand id_14,
-    input tri id_15,
-    input wand id_16,
-    input tri1 id_17
+// Seed: 1313739915
+module module_0 #(
+    parameter id_6 = 32'd75
+) (
+    input uwire id_0,
+    input supply1 id_1
+    , _id_6,
+    input wire id_2,
+    output wire id_3,
+    output uwire id_4
 );
-  wire id_20;
-  wire id_21;
+  logic id_7;
+  ;
+  always @(posedge id_6 == id_0) $unsigned(73);
+  ;
+  wire id_8;
+  ;
+  module_2 modCall_1 ();
 endmodule
 module module_1 (
-    output uwire id_0,
-    input  tri0  id_1,
-    input  wor   id_2,
-    input  tri0  id_3,
-    input  wand  id_4,
-    input  tri   id_5
+    output tri1 id_0
+    , id_3,
+    inout supply0 id_1
 );
+  assign id_1 = 1;
   module_0 modCall_1 (
-      id_2,
-      id_5,
-      id_0,
+      id_1,
+      id_1,
       id_1,
       id_0,
-      id_3,
-      id_4,
-      id_0,
-      id_0,
-      id_5,
-      id_5,
-      id_0,
-      id_0,
-      id_3,
-      id_3,
-      id_4,
-      id_5,
-      id_4
+      id_1
   );
-  assign modCall_1.type_5 = 0;
+endmodule
+module module_2 ();
+  wire id_1;
+  wire id_2;
+  always @(!id_1) begin : LABEL_0
+    fork
+      #1 $unsigned(58);
+      ;
+    join
+  end
 endmodule

@@ -1,26 +1,30 @@
-// Seed: 848599720
+// Seed: 4124715458
 module module_0;
-  task id_3;
-    fork : SymbolIdentifier
-      $display(1, id_1, 'b0);
-      id_4();
-    join : SymbolIdentifier
-  endtask
-  assign module_1.SymbolIdentifier.SymbolIdentifier.id_4 = 0;
-  assign id_1 = id_4;
-  assign id_4 = 1 + id_3;
 endmodule
-module module_1 (
-    output logic id_0,
-    output logic id_1
+module module_1 #(
+    parameter id_0 = 32'd76
+) (
+    input  tri1  _id_0,
+    input  uwire id_1,
+    input  wand  id_2,
+    input  tri1  id_3,
+    output wand  id_4
 );
-  initial begin : LABEL_0
-    if (1'b0)
-      if (1'b0) begin : LABEL_0
-        if (1) begin : LABEL_0
-          id_1 <= id_3;
-        end
-      end else if (id_4) id_0 <= 1;
-  end
+  module_0 modCall_1 ();
+  parameter id_6 = 1;
+  id_7 :
+  assert property (@(posedge id_1) (id_6[id_0]) !== -1'h0)
+  else $signed(44);
+  ;
+endmodule
+module module_2 (
+    output tri1 id_0,
+    input supply0 id_1,
+    input wor id_2,
+    input wire id_3
+);
+  parameter id_5 = -1;
+  wire id_6;
+  ;
   module_0 modCall_1 ();
 endmodule

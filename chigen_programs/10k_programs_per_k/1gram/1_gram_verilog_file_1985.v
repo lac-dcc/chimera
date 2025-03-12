@@ -1,63 +1,46 @@
-// Seed: 1734265937
+// Seed: 4262024811
 module module_0 (
     id_1,
-    id_2
+    id_2[-1 : 1'b0],
+    id_3,
+    id_4,
+    id_5,
+    id_6
 );
-  output wire id_2;
+  input wire id_6;
+  output wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  input logic [7:0] id_2;
   inout wire id_1;
-  wire id_3;
-  assign module_1.type_0 = 0;
 endmodule
-module module_1 (
-    input uwire id_0
+module module_1 #(
+    parameter id_2 = 32'd22
 );
-  assign id_2 = 1;
+  reg [1 : 1] id_1;
+  assign id_1 = 1;
+  wire _id_2;
+  parameter id_3[id_2 : 1] = 1;
+  wire id_4, id_5;
+  parameter id_6 = -1;
+  wire id_7;
+  assign id_7 = id_6;
+  wire  id_8;
+  logic id_9 = id_2;
+  logic [7:0] id_10, id_11, id_12, id_13, id_14;
   module_0 modCall_1 (
-      id_2,
-      id_2
+      id_8,
+      id_12,
+      id_8,
+      id_5,
+      id_8,
+      id_9
   );
-endmodule
-module module_2 (
-    input wor id_0,
-    input tri1 id_1,
-    input wand id_2
-    , id_35,
-    input wor id_3,
-    input supply1 id_4,
-    input tri id_5,
-    output tri1 id_6,
-    input supply1 id_7,
-    input tri id_8,
-    input supply0 id_9,
-    output tri0 void id_10,
-    input tri1 id_11,
-    output uwire id_12,
-    input tri1 id_13,
-    output supply0 id_14,
-    output tri id_15,
-    input wand id_16,
-    output uwire id_17,
-    input wire id_18,
-    input tri1 id_19,
-    input uwire id_20,
-    output wire id_21,
-    input wire id_22,
-    input wand id_23,
-    output uwire id_24,
-    output wire id_25,
-    input tri1 id_26,
-    input wor id_27,
-    inout wor id_28,
-    input wand void id_29,
-    output wire id_30,
-    input supply1 id_31,
-    output wor id_32,
-    input tri0 id_33
-);
-  wire id_36, id_37;
-  module_0 modCall_1 (
-      id_36,
-      id_35
-  );
-  wire id_38, id_39, id_40;
+  always if (id_6) id_1 <= id_14;
+  always @(posedge id_9 or posedge id_5) @(posedge -1) id_12[1'h0] <= 1 - id_2;
+  generate
+    logic [7:0][-1 : 1] id_15;
+  endgenerate
+  for (id_16 = -1; id_2 % 1; id_1 = id_13) parameter id_17 = id_3;
+  assign id_11 = id_2;
 endmodule

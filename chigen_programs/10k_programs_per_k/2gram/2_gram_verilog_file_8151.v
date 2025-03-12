@@ -1,33 +1,39 @@
-// Seed: 2265181938
-module module_0 (
-    input wire id_0,
-    input wand id_1,
-    output supply1 id_2,
-    input wand id_3,
-    output tri id_4
-);
-  assign module_1.type_3 = 0;
+// Seed: 3928945843
+module module_0 ();
+  id_1 :
+  assert property (@(posedge 1) id_1)
+  else;
+  assign module_1.id_6 = 0;
 endmodule
 module module_1 (
-    output wand  id_0,
-    input  logic id_1,
-    input  tri0  id_2,
-    output uwire id_3,
+    output uwire id_0,
+    output tri0 id_1,
+    input tri id_2,
+    input uwire id_3,
     output logic id_4,
-    output tri   id_5
-    , id_9,
-    input  wor   id_6,
-    output tri0  id_7
+    input tri1 id_5,
+    output logic id_6,
+    input wor id_7,
+    input supply1 id_8#(
+        .id_17(-1),
+        .id_18(1)
+    ),
+    output tri0 id_9,
+    input tri id_10,
+    input supply0 id_11,
+    output wire id_12,
+    input wire id_13,
+    output wand id_14,
+    input uwire id_15
 );
-  assign id_4 = 1;
-  always id_4 <= id_9;
-  assign id_5 = 1;
-  module_0 modCall_1 (
-      id_6,
-      id_2,
-      id_0,
-      id_2,
-      id_5
-  );
-  wire id_10;
+  assign id_17 = -1;
+  assign id_17 = -1;
+  always begin : LABEL_0
+    id_4 = id_17 < id_3;
+  end
+  module_0 modCall_1 ();
+  wire id_19, id_20, id_21, id_22;
+  always begin : LABEL_1
+    id_6 <= -1;
+  end
 endmodule

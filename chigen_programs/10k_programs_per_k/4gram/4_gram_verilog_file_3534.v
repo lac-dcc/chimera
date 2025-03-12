@@ -1,63 +1,57 @@
-// Seed: 2586864202
-module module_0 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  input wire id_1;
-  wire id_3;
-endmodule
-module module_1 (
-    output wire id_0,
-    input wand id_1,
-    output tri id_2,
-    input wor id_3,
-    output supply0 id_4,
-    input supply1 id_5
-    , id_24,
-    input wand id_6,
-    input supply1 id_7,
-    output uwire id_8,
+// Seed: 92147956
+module module_0 #(
+    parameter id_15 = 32'd86,
+    parameter id_17 = 32'd69
+) (
+    output tri1 id_0,
+    output wor id_1,
+    output tri0 id_2,
+    input wand id_3,
+    input uwire id_4,
+    input wire id_5,
+    output supply0 id_6,
+    output tri0 id_7,
+    input supply1 id_8,
     input uwire id_9,
-    output wor id_10,
-    input wor id_11,
-    input uwire id_12,
-    input uwire id_13,
-    input uwire id_14,
-    output supply0 id_15,
-    output tri id_16,
-    output supply0 id_17,
-    output supply1 id_18
-    , id_25, id_26,
-    input tri id_19,
-    input wor id_20,
-    input tri1 id_21,
-    input tri id_22
+    input tri1 id_10,
+    input supply1 id_11,
+    output tri1 id_12
 );
-  wand id_27;
-  assign id_27 = id_14;
-  and primCall (
-      id_16,
-      id_7,
-      id_14,
-      id_27,
-      id_12,
-      id_22,
-      id_13,
-      id_3,
-      id_26,
-      id_24,
-      id_19,
-      id_1,
-      id_9,
-      id_25,
-      id_20,
-      id_21,
-      id_6,
-      id_5
-  );
+  supply0 id_14;
+  parameter id_15 = 1;
+  assign id_2 = 1;
+  logic id_16;
+  localparam id_17 = id_15;
+  wire id_18;
+  defparam id_17.id_15 = id_15;
+  assign id_14 = 1;
+endmodule
+module module_1 #(
+    parameter id_2 = 32'd62
+) (
+    input supply0 id_0
+    , id_6,
+    input wand id_1,
+    output supply1 _id_2,
+    output supply0 id_3,
+    input supply1 id_4
+);
+  wire [id_2 : 1] id_7;
   module_0 modCall_1 (
-      id_26,
-      id_26
+      id_3,
+      id_3,
+      id_3,
+      id_1,
+      id_0,
+      id_4,
+      id_3,
+      id_3,
+      id_4,
+      id_1,
+      id_4,
+      id_1,
+      id_3
   );
+  assign modCall_1.id_4 = 0;
+  assign id_6 = -1;
 endmodule

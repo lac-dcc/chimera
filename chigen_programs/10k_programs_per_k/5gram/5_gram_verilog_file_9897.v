@@ -1,52 +1,36 @@
-// Seed: 385143338
+// Seed: 1901926339
 module module_0 (
+    id_1
+);
+  input wire id_1;
+  wire id_2;
+  wire id_3;
+endmodule
+module module_0 #(
+    parameter id_2 = 32'd94
+) (
     id_1,
-    id_2,
+    _id_2,
     id_3,
     id_4,
-    id_5
+    id_5,
+    id_6
 );
-  input wire id_5;
+  input wire id_6;
+  inout wire id_5;
   inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_3 = id_5 == id_4;
-endmodule
-module module_1;
-  assign id_1 = 1;
-  wire id_3, id_4 = id_4;
-  module_0 modCall_1 (
-      id_4,
-      id_3,
-      id_3,
-      id_1,
-      id_4
-  );
-  assign modCall_1.id_5 = 0;
-  wire id_5;
-endmodule
-module module_2 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
-);
-  output wire id_5;
-  output wire id_4;
+  module_0 modCall_1 (id_5);
   inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_6;
-  assign id_1[1] = id_2;
-  wire id_7;
-  module_0 modCall_1 (
-      id_4,
-      id_6,
-      id_7,
-      id_3,
-      id_6
-  );
-  assign modCall_1.id_4 = 0;
+  input wire _id_2;
+  input wire id_1;
+  logic id_7;
+  ;
+  wire [-1 'd0 ==  1 : 1] id_8;
+  always_latch @(id_7 - id_4) $clog2(0);
+  ;
+  wire [-1  ==  1 'b0 &&  -1 : id_2] id_9;
+  generate
+    genvar id_10;
+  endgenerate
+  wire module_1;
 endmodule

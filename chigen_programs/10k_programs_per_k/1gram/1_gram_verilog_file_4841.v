@@ -1,37 +1,40 @@
-// Seed: 1524567245
-module module_0 (
+// Seed: 567755907
+module module_0 #(
+    parameter id_5 = 32'd51,
+    parameter id_6 = 32'd49
+) (
+    id_1,
+    id_2,
+    id_3
+);
+  input wire id_3;
+  output tri1 id_2;
+  input wire id_1;
+  real id_4, _id_5 = id_5;
+  assign id_2 = id_1 && (-1'b0 < 1'b0);
+  wire _id_6, id_7, id_8;
+  localparam id_9 = 1;
+  wire [id_5  -  -1 'b0 : id_6  !=  -1] id_10;
+endmodule
+module module_1 (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5
 );
-  input wire id_5;
+  output reg id_5;
   input wire id_4;
-  inout wire id_3;
+  output wire id_3;
   inout wire id_2;
   output wire id_1;
-  always $display(1);
-  assign id_1 = id_4;
-endmodule
-module module_1 (
-    output logic id_0,
-    input  tri0  id_1,
-    input  uwire id_2
-);
-  wire id_4;
   module_0 modCall_1 (
       id_4,
-      id_4,
-      id_4,
-      id_4,
+      id_3,
       id_4
   );
-  wor id_5, id_6;
-  always id_0 <= 1'b0;
+  assign modCall_1.id_6 = 0;
+  wire [-1 : 1] id_6;
   wire id_7;
-  wire id_8;
-  always id_5 = 1;
-  wire id_9;
-  wire id_10, id_11, id_12;
+  always_comb id_5 <= ~1;
 endmodule

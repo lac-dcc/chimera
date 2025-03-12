@@ -1,41 +1,35 @@
-// Seed: 2114895544
-module module_0 (
-    input supply1 id_0
+// Seed: 2329364996
+macromodule module_0 #(
+    parameter id_1 = 32'd48
 );
-  assign id_2 = id_0;
+  wire  _id_1;
+  logic id_2;
+  ;
   assign id_2 = 1;
+  logic [-1 : id_1] id_3;
+  string id_4 = "";
+  wire id_5;
+  assign module_1.id_3 = 0;
 endmodule
 module module_1 (
-    input wand id_0,
-    input supply1 id_1,
-    output supply0 id_2,
-    input supply1 id_3,
-    output supply0 id_4,
-    output supply1 id_5,
-    output tri id_6,
-    input wor id_7,
-    output wor id_8,
-    input wire id_9,
-    inout wand id_10,
-    output tri id_11,
-    input uwire id_12,
-    output uwire id_13,
-    input wor id_14,
-    input wor id_15,
-    input uwire id_16,
-    input uwire id_17,
-    output tri1 id_18,
-    input tri id_19,
-    input wand id_20,
-    input supply1 id_21
+    input wire id_0
 );
-  always begin : LABEL_0$display
-    ;
+  module_0 modCall_1 ();
+  wire id_2;
+  always $clog2(88);
+  ;
+  reg id_3;
+  always id_3 <= id_3;
+  logic id_4;
+  always $unsigned(49);
+  ;
+  if (1) begin : LABEL_0
+    always begin : LABEL_1
+      id_3 = -1;
+    end
+    assign id_3 = id_4;
+  end else begin : LABEL_2
   end
-  wire id_23;
-  assign id_8 = {1 | id_12, 1};
-  module_0 modCall_1 (id_20);
-  assign modCall_1.id_2 = 0;
-  assign id_5 = id_14;
-  wire id_24;
+  wire id_5;
+  localparam id_6 = 1, id_7 = 1, id_8 = -1, id_9 = 1, id_10 = id_2;
 endmodule

@@ -1,55 +1,52 @@
-// Seed: 2630578753
+// Seed: 300312694
 module module_0 (
-    output wire id_0,
-    input supply0 id_1,
-    input tri id_2,
-    input tri0 id_3,
-    input wor id_4,
-    input wand id_5
-    , id_7
+    input wor id_0,
+    input uwire id_1,
+    output uwire id_2,
+    input supply0 id_3
 );
-  always @(1);
-  assign module_1.type_6 = 0;
+  assign id_2 = 1 < 1;
+  assign module_1.id_1 = 0;
 endmodule
-module module_1 (
-    output tri0  id_0,
-    output tri   id_1,
-    input  uwire id_2,
-    output tri0  id_3,
-    input  wire  id_4,
-    output uwire id_5,
-    input  wire  id_6,
-    input  logic id_7,
-    input  tri   id_8,
-    input  tri0  id_9,
-    output logic id_10
+module module_1 #(
+    parameter id_13 = 32'd65,
+    parameter id_19 = 32'd86
+) (
+    input tri id_0,
+    input tri1 id_1,
+    input supply1 id_2
+    , id_26,
+    output supply0 id_3,
+    output tri0 id_4,
+    output wand id_5,
+    input supply0 id_6,
+    input tri0 id_7,
+    output tri1 id_8,
+    input wire id_9,
+    output wor id_10,
+    input wire id_11,
+    input wand id_12,
+    output tri0 _id_13,
+    input supply1 id_14,
+    output tri1 id_15,
+    output tri1 id_16,
+    output supply1 id_17,
+    input wand id_18,
+    output uwire _id_19,
+    input supply0 id_20,
+    output uwire id_21,
+    input tri1 id_22,
+    output wire id_23,
+    input tri0 id_24
 );
-  assign id_3 = id_6;
-  reg id_12;
-  always @(posedge 1 > id_2 or posedge 1) id_10 = id_7;
+  uwire id_27;
   module_0 modCall_1 (
-      id_5,
-      id_4,
-      id_8,
-      id_8,
-      id_6,
-      id_4
+      id_22,
+      id_9,
+      id_3,
+      id_20
   );
-  logic [7:0] id_13;
-  initial begin : LABEL_0
-    id_12 <= id_7;
-  end
-  wire id_14;
-  tri0 id_15 = id_2;
-  reg  id_16 = 1;
-  wire id_17, id_18;
-  wire id_19;
-  wire id_20;
-  assign id_17 = id_18;
-  assign {1, id_8} = 1;
-  tri1 id_21 = 1;
-  initial begin : LABEL_0
-    id_16 <= #1 1;
-  end
-  assign id_13[1] = 1;
+  assign id_10 = id_22;
+  assign id_27 = 1;
+  logic [id_19  ^  id_13 : 1] id_28;
 endmodule

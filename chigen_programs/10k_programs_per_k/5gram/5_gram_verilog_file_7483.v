@@ -1,55 +1,36 @@
-// Seed: 338459804
+// Seed: 2408433260
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    module_0,
-    id_5,
-    id_6
+    input  supply0 id_0,
+    output supply1 id_1
 );
-  inout wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  input wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  id_8(
-      .id_0(1'b0), .id_1(id_6), .id_2(1'd0), .id_3(1), .id_4(1), .id_5(1), .id_6(1)
-  );
-  wire id_9;
-  static id_10(
-      .id_0((1) == 1), .id_1(^id_7), .id_2(1)
-  );
-  wire id_11;
-  wire id_12;
-  tri1 id_13;
-  integer id_14 = "";
-  assign id_13 = 1;
-  wire id_15;
+  id_3 :
+  assert property (@(posedge id_3) id_0)
+  else $clog2(21);
+  ;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+module module_1 #(
+    parameter id_0 = 32'd29,
+    parameter id_4 = 32'd82
+) (
+    input wire _id_0,
+    input tri1 id_1,
+    output supply1 id_2,
+    output supply1 id_3,
+    inout wire _id_4,
+    output tri id_5,
+    output tri id_6,
+    output supply0 id_7,
+    output uwire id_8,
+    input uwire id_9
 );
-  output wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  input wire id_2;
-  inout wire id_1;
-  wire id_6, id_7, id_8, id_9, id_10, id_11, id_12, id_13;
-  or primCall (id_1, id_12, id_13, id_10, id_6, id_3, id_2);
+  assign id_5 = id_4;
+  always @(negedge 1) id_4 += -1;
+  wire [-1 : id_0  +  1] id_11;
+  wire [1  <  id_0 : id_4  !=  -1] id_12;
   module_0 modCall_1 (
-      id_12,
-      id_5,
-      id_8,
-      id_5,
-      id_12,
-      id_13,
+      id_1,
       id_7
   );
+  assign modCall_1.id_0 = 0;
+  assign id_6 = 1;
 endmodule

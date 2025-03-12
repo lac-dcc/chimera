@@ -1,43 +1,43 @@
-// Seed: 3386128552
-module module_0 (
-    input supply1 id_0,
-    output wor id_1,
-    input uwire id_2,
-    input wor id_3,
-    input uwire id_4,
-    input tri0 id_5,
-    input wor id_6,
-    input wand id_7,
-    output wor id_8
-);
-  assign id_8 = 1 < 1;
-  assign module_1.id_0 = 0;
-  assign id_1 = 1;
-  wire id_10, id_11, id_12;
+// Seed: 1276742742
+module module_0;
+  uwire id_1;
+  wire  id_2;
+  wire  id_3;
+  logic id_4 = -1;
+  assign id_1 = -1 ? 1 & -1 : id_3;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input tri1 id_1,
-    input uwire id_2
-    , id_7,
-    output logic id_3,
-    output uwire id_4,
-    output supply1 id_5
+module module_0 #(
+    parameter id_15 = 32'd64,
+    parameter id_18 = 32'd53
+) (
+    output supply1 id_0,
+    output wand id_1,
+    input uwire id_2,
+    input tri1 id_3,
+    input tri0 id_4,
+    input wand id_5,
+    input wand id_6,
+    output tri id_7,
+    input tri1 id_8,
+    input tri1 id_9,
+    output uwire id_10,
+    output wor module_1,
+    input tri1 id_12,
+    input tri1 id_13,
+    input tri id_14,
+    input supply1 _id_15,
+    input supply0 id_16
+    , id_22,
+    output wor id_17,
+    inout supply0 _id_18
+    , id_23,
+    output supply1 id_19,
+    output wand id_20
 );
-  wire id_8;
-  always @(posedge $display) begin : LABEL_0
-    id_9(1);
-    id_3 = #id_10 "";
-  end
-  module_0 modCall_1 (
-      id_1,
-      id_5,
-      id_1,
-      id_1,
-      id_1,
-      id_2,
-      id_1,
-      id_1,
-      id_0
-  );
+  logic id_24;
+  ;
+  wire [id_18 : id_15] id_25;
+  module_0 modCall_1 ();
+  assign id_7 = -1'b0;
+  logic id_26;
 endmodule

@@ -1,51 +1,47 @@
-// Seed: 2966389744
+// Seed: 3110232019
 module module_0 (
-    id_1,
-    id_2
+    output tri0 id_0
+    , id_15,
+    output wand id_1,
+    input tri0 id_2,
+    input uwire id_3,
+    output tri id_4,
+    input wor id_5,
+    output supply1 id_6,
+    output tri id_7,
+    input wand id_8,
+    output wire id_9,
+    input wor id_10,
+    input tri0 id_11,
+    output supply1 id_12,
+    input tri1 id_13
 );
-  output wire id_2;
-  input wire id_1;
-  wor id_3;
-  assign id_3 = 1'b0;
-  genvar id_4;
 endmodule
 module module_1 (
-    input wand id_0,
-    input supply1 id_1,
-    output wand id_2,
-    input wire id_3,
-    input wand id_4,
-    input tri id_5
-);
-  wire id_7;
-  module_0 modCall_1 (
-      id_7,
-      id_7
-  );
-endmodule
-module module_2 #(
-    parameter id_12 = 32'd28,
-    parameter id_13 = 32'd43
-) (
-    input tri id_0,
-    output wand id_1,
+    output tri1 id_0,
+    output supply0 id_1,
     output uwire id_2,
-    input tri0 id_3
-    , id_10,
-    output wand id_4,
-    output supply1 id_5,
-    output tri0 id_6,
-    input wire id_7,
-    input wor id_8
+    input supply0 id_3,
+    input tri id_4,
+    input tri1 id_5
 );
-  if (1 - id_8) begin : LABEL_0
-    wor id_11 = 1;
-  end else begin : LABEL_0
-    defparam id_12.id_13 = 1'h0;
-  end
+  assign id_2 = id_4 && -1'b0;
+  or primCall (id_1, id_5, id_4);
   module_0 modCall_1 (
-      id_11,
-      id_11
+      id_2,
+      id_0,
+      id_3,
+      id_3,
+      id_0,
+      id_3,
+      id_1,
+      id_0,
+      id_3,
+      id_1,
+      id_5,
+      id_3,
+      id_1,
+      id_3
   );
-  assign modCall_1.id_3 = 0;
+  assign modCall_1.id_10 = 0;
 endmodule

@@ -1,32 +1,45 @@
-// Seed: 1308219874
-module module_0;
-  wire id_1;
-  assign module_1.id_3 = 0;
-  if (1'b0) begin : LABEL_0
-    always begin : LABEL_0
-      if (1) begin : LABEL_0
-        deassign id_1;
-      end
-    end
-    assign id_1 = 1;
-  end else begin : LABEL_0
-    assign id_1 = id_1 - 1;
-    assign id_1 = id_1;
-  end
-  wire id_2;
-  integer id_4, id_5, id_6;
+// Seed: 2898444873
+module module_0 (
+    input tri1 id_0,
+    output tri1 id_1,
+    input tri id_2,
+    output uwire id_3,
+    input tri1 id_4,
+    input supply1 id_5,
+    output tri1 id_6,
+    input wor id_7,
+    input supply1 id_8,
+    output supply0 id_9,
+    output tri0 id_10,
+    output supply1 id_11,
+    output tri1 id_12
+);
+  wire id_14, id_15;
+  assign module_1.id_0 = 0;
 endmodule
 module module_1 (
-    input  supply0 id_0
-    , id_3,
-    output supply0 id_1
+    input wor id_0,
+    input supply1 id_1,
+    inout tri id_2,
+    input tri0 id_3,
+    output uwire id_4,
+    input wor id_5,
+    input uwire id_6
 );
-  initial begin : LABEL_0
-    fork
-      id_3 <= 1'b0;
-    join_any
-  end
-  assign id_3 = 1;
-  module_0 modCall_1 ();
-  supply1 id_4 = id_3 ^ 1;
+  wire [(  -1  ) : -1] id_8;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_5,
+      id_2,
+      id_6,
+      id_6,
+      id_4,
+      id_6,
+      id_3,
+      id_2,
+      id_4,
+      id_4,
+      id_2
+  );
 endmodule

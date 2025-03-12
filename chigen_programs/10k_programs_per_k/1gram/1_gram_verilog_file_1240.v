@@ -1,90 +1,44 @@
-// Seed: 575666093
+// Seed: 2107424073
 module module_0 (
-    input uwire id_0,
-    input wand id_1,
-    input tri0 id_2,
-    input wire id_3,
-    input tri id_4,
-    input wor id_5,
-    output tri1 id_6,
-    input supply0 id_7,
-    input tri0 id_8,
-    input tri0 id_9,
-    input wor id_10,
-    input wand id_11,
-    input tri0 id_12,
-    input wire id_13,
-    output wor id_14,
-    output wor id_15,
-    input supply0 id_16,
-    output wor id_17,
-    output tri0 id_18,
-    input tri0 id_19,
-    output wand id_20,
-    output tri1 id_21,
-    input wand id_22,
-    input tri0 id_23,
-    input wand id_24,
-    input tri id_25,
-    input wire id_26,
-    output uwire id_27,
-    input wor id_28,
-    input uwire id_29,
-    input tri0 id_30,
-    output tri id_31,
-    output wor id_32,
-    output supply1 id_33,
-    input uwire id_34,
-    input tri1 id_35
+    output tri0 id_0,
+    input tri0 id_1,
+    output supply0 id_2,
+    output wor id_3
+    , id_6,
+    input supply0 id_4
 );
-  wire id_37;
-  assign id_6 = id_16;
+  wire id_7, id_8, id_9, id_10;
+  wire id_11, id_12, id_13, id_14;
+  logic id_15;
+  assign module_1.id_2 = 0;
+  tri0 id_16 = 1 || -1;
 endmodule
-module module_1 (
-    input tri id_0,
-    output supply0 id_1,
-    input tri1 id_2,
-    input tri0 id_3,
-    output supply1 id_4
+module module_1 #(
+    parameter id_0  = 32'd30,
+    parameter id_10 = 32'd77,
+    parameter id_3  = 32'd46,
+    parameter id_4  = 32'd90,
+    parameter id_9  = 32'd90
+) (
+    input wand _id_0,
+    output tri id_1,
+    output supply1 id_2,
+    input tri1 _id_3[id_3 : id_4],
+    input tri0 _id_4,
+    input supply0 id_5
 );
-  always id_1 = {id_2, id_0, 1'h0};
+  wand [-1 : id_0] id_7, id_8;
+  assign id_7 = 'b0;
+  assign id_2 = id_8;
+  logic _id_9;
+  wire  _id_10;
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_2,
-      id_3,
-      id_3,
-      id_3,
       id_1,
-      id_0,
-      id_3,
-      id_2,
-      id_2,
-      id_2,
-      id_3,
-      id_0,
+      id_5,
       id_1,
-      id_4,
-      id_3,
       id_1,
-      id_4,
-      id_0,
-      id_4,
-      id_1,
-      id_2,
-      id_3,
-      id_3,
-      id_2,
-      id_0,
-      id_1,
-      id_0,
-      id_2,
-      id_0,
-      id_1,
-      id_4,
-      id_4,
-      id_0,
-      id_0
+      id_5
   );
-  assign modCall_1.type_44 = 0;
+  localparam id_11 = 1'b0;
+  wire id_12[id_9 : id_10], id_13 = id_10;
 endmodule

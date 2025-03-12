@@ -1,48 +1,50 @@
-// Seed: 474953921
-module module_0;
-  integer id_1 = id_1;
-  wire id_3;
+// Seed: 781660041
+module module_0 (
+    output supply1 id_0
+    , id_15,
+    output tri0 id_1,
+    output tri0 id_2,
+    input wor id_3,
+    input wire id_4,
+    input wand id_5,
+    output wand id_6,
+    input tri id_7,
+    output uwire id_8,
+    input wire id_9,
+    output wand id_10,
+    output supply1 id_11,
+    output wor id_12,
+    output wire id_13
+);
+  logic [-1 : -1] id_16;
+  ;
 endmodule
 module module_1 (
-    input wand id_0,
-    input wand id_1,
-    output tri0 id_2,
-    output wire id_3,
-    output wor id_4,
-    input wor id_5,
-    input tri1 id_6,
-    output uwire id_7,
-    output tri0 id_8,
-    output supply1 id_9,
-    input wand id_10,
-    input wand id_11,
-    output supply0 id_12,
-    input tri1 id_13,
-    input wire id_14,
-    input wor id_15,
-    input tri id_16,
-    input tri0 id_17
-    , id_34, id_35,
-    input supply1 id_18,
-    input wand id_19,
-    input tri1 id_20,
-    input tri id_21,
-    output uwire id_22,
-    output wand id_23,
-    input uwire id_24
-    , id_36,
-    output wand id_25,
-    output tri1 id_26,
-    input tri0 id_27,
-    output supply1 id_28,
-    input tri id_29,
-    input uwire id_30,
-    input tri0 id_31,
-    output supply0 id_32
+    output tri  id_0,
+    input  tri0 id_1,
+    output wand id_2
 );
-  wire id_37;
-  assign id_8 = id_13;
-  module_0 modCall_1 ();
-  always @(posedge 1'b0) id_36 = 1;
-  assign id_25 = 1;
+  id_4 :
+  assert property (@(posedge id_1) -1)
+  else $signed(37);
+  ;
+  wire id_5;
+  assign id_4 = (-1);
+  module_0 modCall_1 (
+      id_0,
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_1,
+      id_0,
+      id_1,
+      id_0,
+      id_1,
+      id_2,
+      id_2,
+      id_0,
+      id_0
+  );
+  assign modCall_1.id_3 = 0;
 endmodule

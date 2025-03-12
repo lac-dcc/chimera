@@ -1,70 +1,32 @@
-// Seed: 120088501
-module module_0 ();
-  assign id_1 = 1 ? 1 : id_1;
-  final $display(id_1, id_1);
-  assign id_1 = 1'b0;
-  always force id_1 = 1;
-  wire id_2;
+// Seed: 3891598159
+module module_0;
+  parameter id_1 = 1;
+  assign module_1.id_3 = 0;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25
+    input tri1 id_0,
+    output supply0 id_1,
+    output tri id_2,
+    output uwire id_3,
+    output tri1 id_4,
+    output tri0 id_5,
+    input supply0 id_6,
+    input tri id_7,
+    output wand id_8,
+    input uwire id_9,
+    output tri id_10,
+    input wor id_11
+    , id_14,
+    input supply1 id_12
 );
-  output wire id_25;
-  output wire id_24;
-  output wire id_23;
-  input wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  output wire id_17;
-  output wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  wire id_26;
-  assign id_10 = id_15;
+  wire id_15;
+  assign id_5 = id_15;
+  task id_16(input [1 : 'b0] id_17);
+    begin : LABEL_0
+      return id_11;
+    end
+  endtask
+  parameter id_18 = 1;
+  logic id_19;
   module_0 modCall_1 ();
-  wire id_27;
-  assign id_12 = 1;
-  wire id_28;
-  assign id_16 = id_21[1];
-  wire id_29;
-  wire id_30;
 endmodule

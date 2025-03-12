@@ -1,40 +1,23 @@
-// Seed: 2001740654
-module module_0 (
-    id_1,
-    id_2
-);
-  input wire id_2;
-  inout wire id_1;
-  assign id_1 = 1;
-  integer id_3;
+// Seed: 1327762026
+module module_0;
+  wire [-1 : -1] id_1 = 1'b0 && id_1 && -1 == -1, id_2 = id_2, id_3 = -1;
+  logic id_4;
+  ;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input uwire id_1,
-    output wire id_2,
-    input tri0 id_3,
-    input supply0 id_4
-    , id_11,
-    input tri1 id_5,
-    input uwire id_6,
-    input supply1 id_7,
-    input tri1 id_8,
-    input supply0 id_9
+    output wand id_0,
+    output tri id_1,
+    output tri1 id_2,
+    input uwire id_3,
+    output supply0 id_4,
+    input wire id_5,
+    output wand id_6,
+    input supply0 id_7,
+    input uwire id_8,
+    output uwire id_9,
+    output uwire id_10
 );
-  tri0 id_12, id_13, id_14;
-  rpmos (id_8 == id_3, 1, 1);
-  assign id_12 = id_0;
-  reg id_15;
-  assign id_13 = id_9;
-  uwire id_16;
-  module_0 modCall_1 (
-      id_16,
-      id_11
-  );
-  assign modCall_1.id_1 = 0;
-  always @(*) begin : LABEL_0
-    id_11 = 1 - id_12;
-    id_12 = id_12;
-    if (1 && id_16) id_15 <= 1;
-  end
+  module_0 modCall_1 ();
+  assign modCall_1.id_3 = 0;
+  assign id_2 = id_3 ? id_8 : 1 ? -1 : 1;
 endmodule

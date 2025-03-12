@@ -1,63 +1,47 @@
-// Seed: 1501279038
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
-);
-  input wire id_4;
-  input wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_1 = id_2;
-  always @(posedge 1) begin : LABEL_0
-    id_1 = id_2;
-    return id_4;
-  end
-  tri1 id_5 = 1;
-  assign id_5 = 1'b0 ? 1 : id_3;
-  wire id_6;
-  wire id_7;
-  wire id_8;
-  wire id_9;
+// Seed: 630032991
+module module_0;
+  parameter id_1 = ~1;
+  wire id_2;
+  wire id_3, id_4;
+  assign module_1.type_4 = 0;
 endmodule
-module module_1 #(
-    parameter id_27 = 32'd25,
-    parameter id_28 = 32'd44
-) (
-    input supply1 id_0,
-    input tri1 id_1,
-    output wand id_2,
-    input uwire id_3,
-    output wire id_4,
-    input tri0 id_5,
-    input uwire id_6
-    , id_25,
-    input tri1 id_7,
-    input supply1 id_8,
-    output tri1 id_9,
-    output supply0 id_10,
-    input supply1 id_11,
-    output logic id_12,
-    output supply0 id_13,
-    output supply0 id_14,
-    input supply0 id_15
-    , id_26,
-    input wor id_16,
-    output tri0 id_17,
-    input tri1 id_18,
-    input wand id_19,
-    input tri0 id_20,
-    output tri0 id_21,
-    input tri0 id_22,
-    input wor id_23
+module module_1 (
+    input  wire id_0,
+    output wor  id_1,
+    input  tri0 id_2
 );
-  always @(posedge 1'b0 + "" + 1 * id_22 + 1 + 1 - id_6 or posedge 1'b0) id_12 <= 1'h0;
-  module_0 modCall_1 (
-      id_25,
-      id_26,
-      id_26,
-      id_25
-  );
-  defparam id_27.id_28 = 1'b0;
+  assign id_1 = -1 - id_0;
+  module_0 modCall_1 ();
+endmodule
+module module_2 #(
+    parameter id_10 = 32'd71,
+    parameter id_2  = 32'd50,
+    parameter id_3  = 32'd8,
+    parameter id_7  = 32'd81
+) (
+    id_1,
+    _id_2,
+    _id_3,
+    id_4,
+    id_5,
+    id_6,
+    _id_7
+);
+  input wire _id_7;
+  output wire id_6;
+  output reg id_5;
+  output logic [7:0] id_4;
+  input wire _id_3;
+  input wire _id_2;
+  output wire id_1;
+  localparam id_8 = -1'b0;
+  logic [~  id_2 : 1] id_9;
+  wire  [id_3 : id_7] _id_10;
+  assign id_4[id_2 : 1*id_2] = 1;
+  always @(posedge "" or id_9) id_5 <= id_3;
+  wire [id_10 : -1  <=  {  1  ,  -1  }] id_11;
+  module_0 modCall_1 ();
+  logic [7:0] id_12;
+  wire id_13;
+  assign id_12[-1] = {id_3{-1}};
 endmodule

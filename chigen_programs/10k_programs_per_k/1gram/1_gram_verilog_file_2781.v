@@ -1,43 +1,44 @@
-// Seed: 2128954655
-module module_0 (
-    input tri0 id_0,
-    output wire id_1,
-    input wire id_2,
-    input supply0 id_3,
-    output tri1 id_4,
-    input wand id_5,
-    input uwire id_6
-);
-endmodule
-module module_1 (
-    output supply0 id_0,
-    input tri id_1,
-    input supply0 id_2,
-    input tri id_3,
-    input wand id_4,
-    input tri1 id_5
-);
-  tri0 id_7 = 1 != id_4;
-  wire id_8;
-  wire id_9;
-  module_0 modCall_1 (
-      id_3,
-      id_0,
+// Seed: 1477865931
+module module_0;
+  logic id_1, id_2[-1 : -1];
+  initial assign id_2 = -1;
+  module_2 modCall_1 (
+      id_2,
       id_1,
-      id_3,
-      id_0,
-      id_3,
+      id_1
+  );
+endmodule
+module module_1 ();
+  wire id_1, id_2;
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    id_1,
+    id_2,
+    id_3
+);
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  logic id_4 = id_1;
+endmodule
+module module_3 (
+    output logic id_0,
+    output logic id_1,
+    input  wire  id_2,
+    input  wand  id_3
+    , id_5
+);
+  initial begin : LABEL_0
+    @(posedge -1 or negedge 1) if (-1) id_0 = id_3;
+  end
+  initial id_1 = id_2;
+  module_2 modCall_1 (
+      id_5,
+      id_5,
       id_5
   );
-  assign modCall_1.id_2 = 0;
-  wire id_10 = !id_2;
-  if (1) wire id_11;
-  else begin : LABEL_0
-    tri0 id_12, id_13, id_14, id_15;
-    assign id_14 = 1 ? {1, 1} : 1;
-    id_16(
-        id_14, 1'b0, id_15
-    );
-  end
-  assign id_10 = id_8;
+  localparam id_6 = -1;
+  wire [-1 : -1] id_7;
+  parameter id_8 = id_6;
 endmodule

@@ -1,48 +1,41 @@
-// Seed: 2847989228
-module module_0 (
-    input supply1 id_0,
-    input supply1 id_1,
-    input wand id_2,
-    input wire id_3
-);
-  assign id_5[1] = -id_2;
-  assign module_1.type_7 = 0;
-  wire id_6;
-  assign id_5['b0] = 1'b0;
+// Seed: 3033406048
+module module_0;
+  logic id_1;
+  assign id_1[-1] = -1'b0;
+  assign module_2.id_1 = 0;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input supply0 id_1,
-    input supply0 id_2,
-    input wor id_3
-    , id_16,
-    input supply0 id_4,
-    input tri1 id_5,
-    input tri1 id_6,
-    input wor id_7,
-    input uwire id_8,
-    input wor id_9,
-    input uwire id_10,
-    output wire id_11,
-    input uwire id_12,
-    input tri id_13,
-    input supply1 id_14
-    , id_17
+module module_1 #(
+    parameter id_2 = 32'd4,
+    parameter id_3 = 32'd26,
+    parameter id_4 = 32'd95
+) (
+    id_1,
+    _id_2,
+    _id_3,
+    _id_4
 );
-  tri1 id_18;
-  module_0 modCall_1 (
-      id_4,
-      id_2,
-      id_6,
-      id_2
-  );
-  assign id_16[1] = id_5;
-  wire id_19;
-  always @(negedge 1 == 1'b0) begin : LABEL_0
-    deassign id_11;
-    fork
-      #1 id_18 = 1;
-      id_20.id_21(id_20);
-    join
+  output wire _id_4;
+  module_0 modCall_1 ();
+  output wire _id_3;
+  output wire _id_2;
+  input wire id_1;
+  logic [id_4 : id_3  &  id_2] id_5;
+  ;
+  logic id_6 = -1'b0;
+  assign id_5 = id_1 == id_6;
+endmodule
+module module_2 (
+    input supply1 id_0,
+    output logic id_1,
+    output tri0 id_2,
+    output logic id_3
+);
+  assign id_1 = id_0;
+  wire id_5;
+  assign id_2 = (id_0);
+  always @(posedge -1 == id_0) begin : LABEL_0
+    id_1 = -1'd0;
+    id_3 <= 1;
   end
+  module_0 modCall_1 ();
 endmodule

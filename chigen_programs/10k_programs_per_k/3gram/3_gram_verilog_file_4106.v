@@ -1,47 +1,42 @@
-// Seed: 2294122762
-module module_0 (
-    input supply1 id_0,
-    output tri id_1,
-    input supply1 id_2,
-    input wor id_3
-);
-  initial begin : LABEL_0
-    id_1 = !id_2;
-  end
-  module_2 modCall_1 (
-      id_2,
-      id_1
-  );
-  assign module_1.id_4 = 0;
+// Seed: 472082399
+module module_0 ();
+  localparam id_1 = 1;
+  assign module_1.id_6 = 0;
 endmodule
-module module_1 (
-    input wor id_0,
-    input supply1 id_1,
-    input tri0 id_2,
-    output wand id_3,
-    input wor id_4,
-    input wor id_5,
-    output uwire id_6,
-    input supply1 id_7,
-    input supply1 id_8,
-    output wor id_9
+module module_1 #(
+    parameter id_6 = 32'd48
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    _id_6,
+    id_7
 );
-  wire id_11;
-  module_0 modCall_1 (
-      id_2,
-      id_3,
-      id_1,
-      id_7
-  );
+  inout wire id_7;
+  module_0 modCall_1 ();
+  input wire _id_6;
+  inout wire id_5;
+  output wire id_4;
+  output logic [7:0] id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_3[id_6==id_6 :-1'b0] = id_6;
+  assign id_4 = id_6;
 endmodule
 module module_2 (
-    input  tri id_0,
-    output wor id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  id_3(
-      .id_0(1), .id_1(id_4), .id_2(1), .id_3(id_4), .id_4(id_1), .id_5(1)
-  );
-  assign module_0.id_0 = 0;
-  always @* id_3 = id_3;
-  assign {1, id_0} = id_4;
-endmodule : SymbolIdentifier
+  inout wire id_5;
+  module_0 modCall_1 ();
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  assign id_5 = id_1;
+endmodule

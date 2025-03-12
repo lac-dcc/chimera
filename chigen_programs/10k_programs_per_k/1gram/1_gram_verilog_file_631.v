@@ -1,37 +1,54 @@
-// Seed: 840616000
-module module_0 ();
-  function id_1;
-    output reg id_2;
-    id_2 <= id_2;
-  endfunction
+// Seed: 4181200674
+module module_0 (
+    input wor id_0,
+    input tri0 id_1,
+    input supply0 id_2,
+    output wire id_3,
+    input wor id_4,
+    output logic id_5
+);
+  logic id_7;
+  bit   id_8;
+  id_9 :
+  assert property (@(-1) -1) id_8 = -1 | -1'h0;
+  else begin : LABEL_0
+    if (1) id_8 = id_7;
+  end
+  if (1) wire id_10, id_11;
+  else wire id_12, id_13;
+  always begin : LABEL_1
+    id_5 <= 1;
+  end
+  assign id_12 = id_7;
+  assign module_1.id_1 = 0;
+  wire id_14;
+  assign id_5 = id_10;
 endmodule
 module module_1 (
-    output supply1 id_0,
-    input wand id_1,
-    output supply1 id_2,
-    output supply1 id_3,
-    input supply0 id_4,
-    output tri id_5,
-    input wor id_6,
-    output tri1 id_7,
-    output supply0 id_8,
-    input wor id_9,
-    output wire id_10,
-    input wand id_11,
-    input tri id_12,
-    input uwire id_13,
-    input uwire id_14,
-    input wor id_15,
-    output wor id_16,
-    output uwire id_17
-    , id_24,
-    output tri id_18,
-    output wand id_19,
-    input supply1 id_20,
-    input wand id_21,
-    output wire id_22
+    output supply0 id_0,
+    input uwire id_1,
+    input wor id_2,
+    input wand id_3,
+    input supply1 id_4,
+    output logic id_5,
+    output uwire id_6,
+    input supply0 id_7,
+    output logic id_8,
+    input tri id_9,
+    output logic id_10
 );
-  assign id_2 = 1;
-  module_0 modCall_1 ();
-  assign modCall_1.type_3 = 0;
+  always id_10 = 1;
+  always begin : LABEL_0
+    id_8 <= -1;
+    id_5 = !id_3;
+  end
+  module_0 modCall_1 (
+      id_2,
+      id_7,
+      id_1,
+      id_0,
+      id_7,
+      id_8
+  );
+  wire id_12;
 endmodule

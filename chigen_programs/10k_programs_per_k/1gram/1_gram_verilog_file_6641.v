@@ -1,45 +1,52 @@
-// Seed: 1704848223
+// Seed: 965305274
 module module_0 (
-    output wand id_0,
-    input  tri0 id_1,
-    output tri0 id_2,
-    input  wand id_3,
-    output tri1 id_4
-    , id_6
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8
 );
-  logic [7:0][1] id_7 (
-      "" - id_4,
-      ""
-  );
-  assign module_1.type_9 = 0;
-  wire id_8;
+  inout wire id_8;
+  input wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
+  logic id_9;
+  ;
+  assign module_1.id_5 = 0;
+  always_comb $clog2(22);
+  ;
 endmodule
-module module_1 (
-    input supply1 id_0,
-    output tri id_1,
-    input logic id_2,
-    input uwire id_3,
-    input uwire id_4,
-    inout logic id_5
+module module_1 #(
+    parameter id_0 = 32'd86,
+    parameter id_3 = 32'd85
+) (
+    input tri1 _id_0,
+    inout tri1 id_1,
+    input wor id_2,
+    output supply0 _id_3[id_0  ?  1 : -1 'b0 : -1],
+    input supply0 id_4,
+    output supply0 id_5
 );
+  logic [id_3 : 1 'd0] id_7;
+  ;
+  reg [-1 'b0 : "" -  1] id_8;
   module_0 modCall_1 (
-      id_1,
-      id_0,
-      id_1,
-      id_3,
-      id_1
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7,
+      id_7
   );
-  reg id_7;
-  always begin : LABEL_0
-    id_5 = {1, 1};
-    id_5 <= id_2;
-    @(1 or posedge id_7) $display(1'b0);
-    id_5 <= !id_5;
-    if (1'b0) id_7 = 1;
-    else id_7 <= 1 + 1'b0;
-  end
-  id_8(
-      1'b0, 1, id_2
-  );
-  assign id_5 = 1;
+  initial id_8 <= -1'b0;
+  logic id_9;
 endmodule

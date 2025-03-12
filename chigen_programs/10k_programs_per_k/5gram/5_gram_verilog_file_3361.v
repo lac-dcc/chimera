@@ -1,35 +1,43 @@
-// Seed: 2260900622
-module module_0 ();
-  logic [7:0] id_1;
-  assign id_1[1] = id_1;
-  wire id_2;
-endmodule
-module module_1 #(
-    parameter id_4 = 32'd13,
-    parameter id_5 = 32'd57
+// Seed: 2135363475
+module module_0 #(
+    parameter id_1 = 32'd46
 );
-  assign id_1 = id_1;
+  wire _id_1;
+  ;
+  wire [id_1 : id_1] id_2;
+endmodule
+module module_0 #(
+    parameter id_1  = 32'd40,
+    parameter id_16 = 32'd49
+) (
+    input wand id_0,
+    input tri0 _id_1,
+    input tri0 id_2,
+    output supply0 id_3,
+    output supply1 id_4,
+    output uwire id_5,
+    input supply1 id_6,
+    output tri id_7,
+    input supply0 id_8,
+    input uwire id_9,
+    input supply0 id_10,
+    output wor id_11,
+    output wand module_1,
+    input supply1 id_13,
+    output tri id_14,
+    output uwire id_15,
+    input wor _id_16,
+    output tri0 id_17,
+    output tri id_18,
+    input supply1 id_19,
+    output tri0 id_20
+);
+  logic id_22;
   module_0 modCall_1 ();
-  reg id_3;
-  always @(id_3 or posedge id_3) begin : LABEL_0
-    fork
-      begin : LABEL_0
-        id_1[1] <= id_3;
-        $display;
-      end
-    join_any
-  end
-  if (1)
-    if (1) begin : LABEL_0
-      defparam id_4.id_5 = 1;
-      assign id_4 = id_5;
-      wire id_6;
-    end else begin : LABEL_0
-      wire id_7;
-      id_8(
-          1, 1
-      );
-    end
-  wire id_9 = 1;
-  wire  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ;
+  logic [id_16 : id_1] id_23;
+  assign id_22 = 1'b0;
+  assign id_18 = 1;
+  parameter id_24 = 1;
+  wire id_25;
+  wor  id_26 = 1;
 endmodule

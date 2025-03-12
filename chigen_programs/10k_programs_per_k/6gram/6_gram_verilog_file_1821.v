@@ -1,26 +1,37 @@
-// Seed: 154325913
-module module_0 ();
-  always @(posedge 1 < id_1 or posedge 1'b0) repeat (1) id_1 = id_1 | 1;
-  assign id_1 = id_1;
-  wire id_2;
-  wire id_3;
+// Seed: 3764001313
+module module_0 (
+    output wand id_0,
+    input tri1 id_1,
+    input wor id_2,
+    output uwire id_3,
+    output tri1 id_4,
+    output supply1 id_5,
+    input wand id_6,
+    output wor id_7
+);
+  always @(posedge id_2) $signed(5);
+  ;
 endmodule
 module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7
+    output uwire id_0,
+    output tri0  id_1,
+    output tri   id_2,
+    output wor   id_3,
+    input  wor   id_4,
+    inout  uwire id_5
 );
-  output wire id_7;
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  always force id_1 = id_2;
-  module_0 modCall_1 ();
+  reg id_7 = id_5 ? 1'h0 : -1;
+  assign id_1 = -1;
+  module_0 modCall_1 (
+      id_3,
+      id_5,
+      id_5,
+      id_2,
+      id_5,
+      id_0,
+      id_5,
+      id_1
+  );
+  assign modCall_1.id_1 = 0;
+  initial id_7 = id_7;
 endmodule

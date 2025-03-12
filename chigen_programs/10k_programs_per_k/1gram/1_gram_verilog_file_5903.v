@@ -1,32 +1,28 @@
-// Seed: 4149269253
-module module_0 (
-    input tri1 id_0,
-    input wand id_1,
-    input supply1 id_2,
-    input supply0 id_3
-);
-  wire id_5;
+// Seed: 977450652
+module module_0 ();
+  parameter id_1 = 1 & 1;
+  assign module_1.id_8 = 0;
+  uwire id_2, id_3, id_4, id_5, id_6;
+  logic id_7;
+  assign id_4 = -1;
+  assign id_5 = id_2;
 endmodule
-module module_1 (
-    input  tri1  id_0,
-    output uwire id_1,
-    output tri0  id_2,
-    output tri0  id_3,
-    output wire  id_4,
-    input  logic id_5,
-    input  logic id_6,
-    input  wire  id_7,
-    input  tri1  id_8,
-    input  tri   id_9
+module module_1 #(
+    parameter id_0 = 32'd41,
+    parameter id_2 = 32'd50,
+    parameter id_6 = 32'd93
+) (
+    input uwire _id_0
 );
-  logic id_11, id_12;
-  module_0 modCall_1 (
-      id_8,
-      id_0,
-      id_8,
-      id_8
-  );
-  assign modCall_1.type_7 = 0;
-  id_13 :
-  assert property (@(id_5) id_11) @(id_6) {1} <= id_11;
+  localparam id_2 = 1'b0;
+  module_0 modCall_1 ();
+  logic [7:0][id_0 : id_2] id_3 = id_2.id_0;
+  reg id_4, id_5;
+  always begin : LABEL_0
+    id_5 <= id_4;
+  end
+  if (-1) wire _id_6 = id_0, id_7 = id_3[id_6];
+  assign id_3 = id_7;
+  supply0 id_8 = 1;
+  localparam id_9 = -1;
 endmodule

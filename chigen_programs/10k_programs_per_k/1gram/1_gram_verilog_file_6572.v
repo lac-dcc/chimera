@@ -1,48 +1,66 @@
-// Seed: 4208548997
-module module_0 (
-    input tri1 id_0
-);
-  always $display(1, 1, 1 - "" < id_0, id_0, id_0);
-  assign module_1.id_3 = 0;
-  assign id_2 = id_2;
-  assign id_2 = 1;
-  assign id_3 = 1;
-  wire id_4;
+// Seed: 421338933
+module module_0;
+  logic id_1;
+  ;
+  always id_1 = 1;
+  logic id_2;
+  assign id_2.id_1 = 1;
 endmodule
-macromodule module_1 (
-    input logic id_0,
-    output logic id_1,
-    output wand id_2,
-    output wand id_3,
-    output supply0 id_4,
-    input wor id_5,
-    output wor id_6,
-    input tri0 id_7,
-    input tri0 id_8,
-    input tri0 id_9,
-    input wand id_10,
-    output tri1 id_11,
-    input tri1 id_12,
-    output wor id_13,
-    input wand id_14,
-    output supply0 id_15,
-    input wor id_16,
-    output wor id_17,
-    input supply0 id_18,
-    output tri id_19,
-    input tri0 id_20,
-    input supply0 id_21,
-    output logic id_22,
-    input supply1 id_23,
-    output supply0 id_24
-    , id_27,
-    input supply0 id_25
+module module_1 (
+    .id_2(id_1)
 );
-  initial id_1 <= 1 * id_25;
-  module_0 modCall_1 (id_20);
-  reg id_28, id_29;
-  wire id_30;
-  wire id_31;
-  final id_22 <= 1;
-  final id_28 <= id_0;
+  output wire id_1;
+  logic id_3;
+  module_0 modCall_1 ();
+  assign modCall_1.id_2 = 0;
+  logic id_4;
+  always id_4 <= -1;
+  wire id_5;
+  assign id_3 = id_3 == 1 * -1;
+endmodule
+module module_2 #(
+    parameter id_11 = 32'd10
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    _id_11,
+    id_12,
+    id_13,
+    id_14
+);
+  output wand id_14;
+  inout wire id_13;
+  output wire id_12;
+  input wire _id_11;
+  input wire id_10;
+  input wire id_9;
+  output wire id_8;
+  inout wire id_7;
+  output tri1 id_6;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  inout wire id_1;
+  wire id_15;
+  reg [-1 : -1] id_16;
+  assign id_14 = -1;
+  wire id_17[-1 : 1], id_18;
+  assign id_5 = id_9(-1) || -1;
+  wire [~  -1 : id_11] id_19, id_20;
+  module_0 modCall_1 ();
+  parameter id_21 = 1;
+  assign id_6 = -1;
+  localparam id_22 = -1;
+  initial @(posedge (-1)) id_16 <= 1'b0;
+  wire  id_23;
+  logic id_24;
 endmodule

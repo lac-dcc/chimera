@@ -1,46 +1,52 @@
-// Seed: 887676484
+// Seed: 1931503331
 module module_0 (
     id_1,
     id_2
 );
-  output wire id_2;
-  inout wire id_1;
+  input wire id_2;
+  output wire id_1;
+  logic id_3, id_4, id_5, id_6, id_7, id_8, id_9, id_10, id_11 = -1;
 endmodule
-module module_1;
-  wire id_1;
+module module_1 (
+    id_1,
+    id_2
+);
+  output wire id_2;
+  input wire id_1;
   module_0 modCall_1 (
-      id_1,
+      id_2,
       id_1
   );
-  initial begin : LABEL_0
-    id_1 = id_1;
-  end
-  wire id_2;
-  wire id_3;
+  assign id_2 = id_1;
 endmodule
-module module_2 (
-    output tri  id_0
-    , id_3,
-    input  tri0 id_1
+module module_2 #(
+    parameter id_1 = 32'd26,
+    parameter id_5 = 32'd80
+) (
+    _id_1,
+    id_2,
+    id_3,
+    id_4,
+    _id_5
 );
-  tri id_4;
-  id_5 :
-  assert property (@(posedge id_3) id_4)
-  else $display(id_1, id_5);
-  wire id_6;
-  final $display(1);
-  wor id_7 = 1;
-  assign id_5 = 1;
-  uwire id_8, id_9 = 1;
-  time id_10 (
-      .id_0(id_5 - 1'b0),
-      .id_1(1),
-      .id_2(id_9),
-      .id_3(id_8),
-      .id_4(id_4)
-  );
+  input wire _id_5;
+  inout tri id_4;
+  input wire id_3;
   module_0 modCall_1 (
-      id_7,
-      id_6
+      id_4,
+      id_3
   );
+  inout wire id_2;
+  output wire _id_1;
+  assign id_4 = id_2 ? 1 : 1;
+  logic [id_5 : 1  +  id_1] id_6;
+  wire [1 : -1 'b0] id_7;
+  always
+  fork
+  join : SymbolIdentifier
+  assign id_6 = -1;
+  wire id_8;
+  wire id_9;
+  ;
+  parameter id_10 = 1;
 endmodule

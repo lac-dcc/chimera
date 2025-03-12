@@ -1,71 +1,60 @@
-// Seed: 2974699621
-module module_0;
-  wire id_1;
-  assign id_1 = id_1;
-endmodule
-module module_1 (
-    output uwire id_0,
-    output tri1 id_1,
-    output tri1 id_2,
-    input tri1 id_3
-    , id_51,
-    output uwire id_4,
-    output wor id_5,
-    input tri0 id_6,
-    input tri id_7,
-    input wor id_8,
-    input tri1 id_9
-    , id_52,
-    output uwire id_10
-    , id_53,
-    input tri id_11,
-    input tri id_12,
-    output wor id_13,
-    input tri0 id_14,
-    input tri id_15,
-    input tri id_16,
-    input tri id_17,
-    output supply0 id_18,
-    output wor id_19,
-    output tri0 id_20,
-    input supply1 id_21,
-    input supply0 id_22,
-    input wire id_23,
-    input wire id_24,
-    output uwire id_25,
-    input supply0 id_26,
-    input wand id_27,
-    input tri0 id_28,
-    input wor id_29,
-    input logic id_30,
-    output wire id_31,
-    output supply0 id_32,
-    output tri1 id_33,
-    input uwire id_34,
-    input tri1 id_35
-    , id_54,
-    input supply1 id_36,
-    output wire id_37,
-    output tri1 id_38,
-    output tri1 id_39,
-    input wire id_40,
-    input wor id_41,
-    input wor id_42,
-    input supply0 id_43,
-    output wand id_44,
-    input wor id_45,
-    input tri1 id_46,
-    output tri1 id_47,
-    output wand id_48,
-    input tri0 id_49
+// Seed: 2524847206
+module module_0 (
+    input wand id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output wire id_3,
+    input tri1 id_4,
+    output wire id_5,
+    input wire id_6,
+    output tri id_7,
+    output supply0 id_8,
+    output supply0 id_9,
+    input wire id_10,
+    input uwire id_11
 );
-  always @(negedge 1 or posedge id_53) begin : LABEL_0
-    id_31 = 1 == (1'h0);
-  end
-  wire id_55;
-  module_0 modCall_1 ();
-  always @(id_30) begin : LABEL_0
-    id_53 <= 1;
-    id_0 = 1'h0;
-  end
+  wire id_13;
+  wire [-1 : -1 'h0 &&  -1] id_14;
+  assign id_8 = id_0;
+  final $signed(82);
+  ;
+endmodule
+module module_1 #(
+    parameter id_7 = 32'd79,
+    parameter id_9 = 32'd90
+) (
+    output tri id_0,
+    input uwire id_1,
+    output wire id_2,
+    output wire id_3,
+    output uwire id_4,
+    input supply0 id_5
+);
+  _id_7 :
+  assert property (@(posedge 1) id_7)
+  else $unsigned(98);
+  ;
+  localparam id_8 = {1, 1 == 1};
+  wire [1 'h0 : 1] _id_9;
+  assign id_7 = $clog2(id_7);
+  ;
+  assign id_2 = id_5;
+  assign id_0 = 1 ~^ -1;
+  wire [id_9 : id_7] id_10;
+  wire id_11;
+  module_0 modCall_1 (
+      id_5,
+      id_5,
+      id_1,
+      id_3,
+      id_1,
+      id_4,
+      id_5,
+      id_3,
+      id_0,
+      id_4,
+      id_1,
+      id_5
+  );
+  assign modCall_1.id_6 = 0;
 endmodule

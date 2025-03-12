@@ -1,31 +1,33 @@
-// Seed: 3862244700
-module module_0;
-  always @(posedge 1 / id_1 or negedge 1'd0) #1 id_1 = 1;
-  assign module_1.id_3 = 0;
-  tri0 id_3;
-  assign module_2.id_2 = 0;
-  wire id_4;
-  assign id_1 = 1;
-endmodule
-module module_1 (
-    input  uwire id_0,
-    output tri1  id_1,
-    input  tri0  id_2,
-    input  tri0  id_3,
-    input  tri1  id_4,
-    input  tri   id_5,
-    output tri0  id_6
+// Seed: 1734952676
+module module_0 #(
+    parameter id_2 = 32'd22
 );
-  assign id_6 = 1'b0;
-  module_0 modCall_1 ();
+  logic [-1 : 1] id_1;
+  ;
+  wire _id_2;
+  ;
+  wand [id_2  ==  -1 'h0 : -1 'b0] id_3;
+  logic id_4;
+  assign id_3 = -1;
+  wire id_5;
+  ;
+  logic id_6 = -1;
+  always @(*) $unsigned(96);
+  ;
 endmodule
-module module_2 (
-    input wire id_0,
-    output wor id_1,
-    input supply0 id_2,
-    input uwire id_3
+module module_1 #(
+    parameter id_3 = 32'd33
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4
 );
-  assign id_1 = id_2 ? {id_2 + id_3{1 - !id_3}} : 1 ? {id_0 == id_0{id_2}} : 1;
-  and primCall (id_1, id_2, id_3);
+  output wire id_4;
+  input wire _id_3;
+  input wire id_2;
+  output logic [7:0] id_1;
+  assign id_1[1^id_3!==id_3] = "" & -1;
+  assign id_1 = id_3;
   module_0 modCall_1 ();
 endmodule

@@ -1,54 +1,44 @@
-// Seed: 3785004111
+// Seed: 1744060156
 module module_0 (
     id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
+);
+  input wire id_5;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  inout wire id_1;
+  wire id_6;
+endmodule
+module module_0 #(
+    parameter id_1 = 32'd42
+) (
+    _id_1,
     id_2
 );
   inout wire id_2;
-  output wire id_1;
-  assign id_2 = 1'b0;
-  wire id_3;
-  integer id_4;
-  assign module_1.type_3 = 0;
-  wire id_5;
-endmodule
-module module_1 (
-    input tri0 id_0,
-    input wor id_1,
-    input tri1 id_2,
-    output tri id_3,
-    input tri id_4,
-    input supply1 id_5,
-    output supply0 id_6,
-    output wire id_7,
-    input supply1 id_8,
-    input uwire id_9,
-    output wand id_10
-    , id_28,
-    output tri1 id_11,
-    output tri1 id_12,
-    output wor id_13,
-    input wor id_14,
-    output tri id_15,
-    input wire id_16,
-    input wor id_17,
-    input uwire id_18,
-    input wand id_19,
-    input wire id_20,
-    output wor id_21,
-    output uwire id_22,
-    output wire id_23,
-    input tri1 id_24,
-    input tri1 id_25,
-    output tri1 id_26
-);
-  `define pp_29 0
-  always begin : LABEL_0
-    begin : LABEL_0$display
-      ;
-    end
-  end
+  input wire _id_1;
+  uwire id_3;
+  wire id_4;
+  logic [1 : {  -1  ,  1  }] id_5;
+  assign id_3 = id_4 == id_2 ? 1 : 1;
+  logic [id_1  -  -1 : id_1] id_6 = id_6;
+  module_1 id_7;
+  ;
+  bit id_8;
   module_0 modCall_1 (
-      id_28,
-      id_28
+      id_5,
+      id_3,
+      id_2,
+      id_4,
+      id_5
   );
+  initial begin : LABEL_0
+    id_6 <= id_6;
+    id_7 = id_8;
+    id_8 = id_3;
+  end
 endmodule

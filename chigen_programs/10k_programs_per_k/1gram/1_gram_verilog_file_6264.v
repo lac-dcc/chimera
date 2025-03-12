@@ -1,42 +1,40 @@
-// Seed: 3403697954
-module module_0;
-  assign id_1 = id_1 * id_1;
-  assign id_1 = 1;
-  assign id_1.id_1 = 1;
-  assign module_1.id_18 = 0;
-endmodule
-macromodule module_1 (
-    input supply1 id_0,
-    input wire id_1,
-    input tri0 id_2,
-    output supply1 id_3,
-    input tri0 id_4,
-    input supply0 id_5,
-    input supply0 id_6,
-    input wor id_7,
-    input wor id_8,
-    input wire id_9,
-    inout supply0 id_10,
-    input tri0 id_11
+// Seed: 915066738
+module module_0 #(
+    parameter id_2 = 32'd5,
+    parameter id_3 = 32'd25
+) (
+    output tri0 id_0
 );
-  wire id_13, id_14 = 1, id_15, id_16, id_17, id_18, id_19;
-  id_20(
-      id_19
-  );
-  wire id_21;
-  tri0 id_22;
-  if (id_6)
-    `define pp_23 0
-  else tri id_24 = 1;
-  assign id_10 = 1'b0 - 1;
-  assign id_3  = 1;
-  supply0 id_25;
-  always_ff id_25 = 1'd0 == 1;
-  wire id_26;
-  assign id_22 = id_4;
-  module_0 modCall_1 ();
-  wire id_27;
-  wire id_28;
-  wire id_29;
-  wire id_30, id_31, id_32;
+  wire _id_2 = id_2;
+  wor [id_2 : id_2  >  id_2] _id_3 = -1;
+  assign id_0 = id_3;
+  parameter id_4 = 1 & -1;
+  supply1 [1 : (  id_3  )] id_5 = -1, id_6 = 1'h0;
+endmodule
+module module_1 #(
+    parameter id_14 = 32'd36,
+    parameter id_3  = 32'd8,
+    parameter id_6  = 32'd82,
+    parameter id_9  = 32'd4
+) (
+    output supply0 id_0,
+    input wand id_1,
+    output wire id_2[1 : id_6],
+    input wire _id_3[(  -1  ) : id_3  ?  id_9 : 1],
+    output wor id_4,
+    input supply0 id_5,
+    output tri1 _id_6,
+    output tri1 id_7,
+    input uwire id_8,
+    output uwire _id_9,
+    output tri1 id_10,
+    input uwire id_11
+);
+  assign id_10 = id_3;
+  module_0 modCall_1 (id_0);
+  assign modCall_1.id_0 = 0;
+  assign id_4 = 1;
+  wire id_13, _id_14, id_15[id_6 : -1];
+  assign id_2 = -1 & 1;
+  wire [id_14 : -1] id_16;
 endmodule

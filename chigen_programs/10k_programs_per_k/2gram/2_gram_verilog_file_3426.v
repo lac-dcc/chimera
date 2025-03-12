@@ -1,59 +1,53 @@
-// Seed: 3857860904
+// Seed: 829138930
 module module_0 (
-    id_1
+    id_1,
+    id_2,
+    id_3
 );
+  output wire id_3;
+  inout wire id_2;
   input wire id_1;
-  tri1 id_2;
-  assign id_2 = id_1;
+  static logic id_4 = 1'h0;
+  rpmos (id_3);
+  wire id_5;
+  ;
+  logic [7:0] id_6;
+  ;
+  initial id_6[-1 : 1'd0] = 1;
+  localparam id_7 = 1 ==? 1;
 endmodule
-module module_1 (
+module module_1 #(
+    parameter id_7 = 32'd23
+) (
     id_1,
     id_2,
     id_3,
     id_4,
     id_5,
     id_6,
-    id_7,
+    _id_7,
     id_8,
     id_9,
     id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21
+    id_11
 );
-  output wire id_21;
-  input wire id_20;
-  output wire id_19;
-  inout wire id_18;
-  input wire id_17;
-  input wire id_16;
-  output wire id_15;
-  inout wire id_14;
-  input wire id_13;
-  output wire id_12;
-  inout wire id_11;
+  output tri id_11;
   output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
-  input wire id_6;
+  input wire id_9;
+  inout wire id_8;
+  inout wire _id_7;
+  inout wire id_6;
   output wire id_5;
   output wire id_4;
-  input wire id_3;
+  output wire id_3;
   input wire id_2;
-  output wire id_1;
-  integer id_22 = id_8;
-  module_0 modCall_1 (id_20);
-  assign id_19 = 1'b0 ? 1'b0 : id_6;
-  always begin : LABEL_0
-    id_18 <= id_22;
-  end
+  inout wire id_1;
+  assign id_11 = -1'h0;
+  logic [7:0] id_12;
+  assign id_12[(id_7)-""] = -1'b0;
+  module_0 modCall_1 (
+      id_1,
+      id_6,
+      id_10
+  );
 endmodule

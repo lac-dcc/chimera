@@ -1,92 +1,71 @@
-// Seed: 700859409
+// Seed: 2261022761
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    module_0,
-    id_19,
-    id_20,
-    id_21
+    input  tri0  id_0,
+    input  tri1  id_1,
+    output uwire id_2
 );
-  input wire id_22;
-  inout wire id_21;
-  output wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  input wire id_17;
-  inout wire id_16;
-  inout wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  output wire id_12;
-  output wire id_11;
-  output wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  inout wire id_7;
-  inout wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  `define pp_23 0
-  wire id_24;
-  wire id_25;
 endmodule
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5
+module module_1 (
+    output tri0 id_0,
+    input wor id_1,
+    input uwire id_2,
+    input wire id_3
+    , id_27,
+    output logic id_4
+    , id_28,
+    input wand id_5,
+    input tri1 id_6,
+    input uwire id_7,
+    output uwire id_8,
+    input tri id_9,
+    input wand id_10,
+    output wire id_11,
+    output uwire id_12,
+    output uwire id_13,
+    input uwire id_14,
+    input wand id_15,
+    input supply1 id_16,
+    output supply1 id_17,
+    output supply1 id_18,
+    output wand id_19,
+    output logic id_20
+    , id_29,
+    output logic id_21,
+    input tri0 id_22,
+    input tri1 id_23,
+    input wire id_24,
+    input tri1 id_25
 );
-  input wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  logic [7:0] id_6;
-  assign id_6[1] = id_3++;
-  assign id_3 = (1) == 1;
-  wire module_1;
+  logic [1 : 1] id_30;
+  parameter id_31 = 1;
+  always id_30 <= 1;
+  always @(posedge 1) id_21 = -1;
+  wire id_32;
+  always_ff @(*)
+    if (id_31 / -1) id_20 <= id_25;
+    else begin : LABEL_0
+      if (1) begin : LABEL_1
+        $signed(23);
+        ;
+      end else begin : LABEL_2
+        deassign id_20;
+        id_4 <= id_25;
+      end
+    end
+  wire id_33;
+  ;
+  wire [1 'b0 : {
+-1  ,  1
+}] id_34, id_35, id_36, id_37, id_38, id_39, id_40, id_41, id_42, id_43, id_44, id_45, id_46, id_47,
+      id_48, id_49, id_50;
+  wire id_51, id_52;
+  always @(negedge 1'b0) begin : LABEL_3
+    id_20 <= -1'h0;
+  end
   module_0 modCall_1 (
-      id_3,
-      id_3,
-      id_6,
-      id_2,
-      id_3,
-      id_4,
-      id_4,
-      id_5,
-      id_3,
-      id_2,
-      id_4,
-      id_2,
-      id_2,
-      id_4,
-      id_4,
-      id_3,
-      id_1,
-      id_4,
-      id_3,
-      id_4,
-      id_4,
-      id_5
+      id_14,
+      id_22,
+      id_13
   );
+  assign modCall_1.id_0 = 0;
 endmodule

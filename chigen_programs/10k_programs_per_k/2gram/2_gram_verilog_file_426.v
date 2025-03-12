@@ -1,30 +1,44 @@
-// Seed: 2192667754
+// Seed: 4159091037
 module module_0 (
-    input uwire id_0,
-    input wire  id_1
+    output wire id_0,
+    output tri0 id_1,
+    input supply0 id_2,
+    input tri id_3,
+    output wand id_4,
+    input tri0 id_5,
+    input tri id_6
 );
-  assign id_3 = 1;
-  wire id_4;
-  always @(posedge 1)
-    @(posedge 1 or id_1)
-      @(*) begin : LABEL_0
-        id_3 = id_0 - 1;
-      end
-  assign module_1.id_2 = 0;
+  wire id_8[-1 : -1 'b0];
+  final begin : LABEL_0
+    $unsigned(25);
+    ;
+  end
 endmodule
 module module_1 (
-    input  wand  id_0,
-    input  wand  id_1,
-    output uwire id_2,
-    output tri   id_3,
-    input  uwire id_4
+    output logic id_0,
+    input uwire id_1,
+    output supply1 id_2,
+    input supply1 id_3,
+    output logic id_4,
+    output tri1 id_5,
+    input wire id_6
 );
-  wire id_6;
-  module_0 modCall_1 (
-      id_1,
-      id_0
-  );
-  wire id_7;
   wire id_8;
-  wire id_9 = id_0;
+  parameter id_9 = 1;
+  assign id_5 = id_1;
+  for (id_10 = 1; -1'h0; id_0 = -1) begin : LABEL_0
+    always id_4 <= $unsigned(52);
+    ;
+  end
+  module_0 modCall_1 (
+      id_5,
+      id_5,
+      id_1,
+      id_1,
+      id_5,
+      id_1,
+      id_6
+  );
+  assign modCall_1.id_2 = 0;
+  wire id_11;
 endmodule

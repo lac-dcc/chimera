@@ -1,33 +1,32 @@
-// Seed: 3846577957
-module module_0 (
-    input  wand id_0,
-    input  tri1 id_1,
-    output tri0 id_2,
-    input  tri0 id_3,
-    output wand id_4
-);
-  always @(*) begin : LABEL_0
-    #1;
-    wait ("");
-  end
-  assign module_1.id_0 = 0;
+// Seed: 860255665
+module module_0 ();
 endmodule
 module module_1 (
-    input tri0 id_0,
+    output logic id_0,
     input supply0 id_1,
-    input supply1 id_2,
-    input tri id_3,
-    input tri1 id_4,
-    output tri0 id_5,
-    output wor id_6,
-    output supply1 id_7
+    input supply0 id_2,
+    output logic id_3,
+    input wor id_4,
+    input uwire id_5,
+    input uwire id_6,
+    input wand id_7
 );
-  assign id_5 = id_0;
-  module_0 modCall_1 (
-      id_2,
-      id_0,
-      id_5,
-      id_0,
-      id_6
-  );
+  assign id_3 = 1'b0;
+  wire id_9;
+  ;
+  initial begin : LABEL_0
+    id_0 <= (id_7 + id_5);
+    if (1) begin : LABEL_1
+      wait (1);
+      id_3 <= id_5;
+    end
+  end
+  module_0 modCall_1 ();
+endmodule
+module module_2 (
+    input supply0 id_0,
+    input supply0 id_1
+);
+  logic id_3;
+  module_0 modCall_1 ();
 endmodule

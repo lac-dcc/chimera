@@ -1,56 +1,55 @@
-// Seed: 666093338
+// Seed: 2150134360
 module module_0 (
-    id_1,
-    id_2
-);
-  output wire id_2;
-  input wire id_1;
-  wire id_3;
-  wire id_4;
-  wire id_5, id_6;
-endmodule
-module module_1 (
-    input supply0 id_0,
-    input wand id_1,
-    output wand id_2,
-    input wor id_3
-    , id_7,
-    input wor id_4,
-    output tri0 id_5
-);
-  wire id_8;
-  wire id_9;
-  generate
-    assign id_2 = id_7;
-  endgenerate
-  xnor primCall (id_2, id_7, id_0, id_8, id_4);
-  module_0 modCall_1 (
-      id_8,
-      id_9
-  );
-endmodule
-module module_2 (
     id_1,
     id_2,
     id_3,
     id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8
+    id_5
 );
-  inout wire id_8;
-  output wire id_7;
-  output wire id_6;
-  input wire id_5;
-  input wire id_4;
-  output wire id_3;
-  input wire id_2;
-  output wire id_1;
-  always_latch @(1 && id_5) id_3 = (id_2);
+  inout wire id_5;
+  output wire id_4;
+  input wire id_3;
+  output wire id_2;
+  inout tri1 id_1;
+  wire id_6;
+  assign id_1 = 1;
+  wire id_7;
+endmodule
+module module_1 #(
+    parameter id_2 = 32'd97,
+    parameter id_4 = 32'd55,
+    parameter id_6 = 32'd72
+) (
+    id_1,
+    _id_2,
+    id_3,
+    _id_4,
+    id_5
+);
+  inout wire id_5;
   module_0 modCall_1 (
-      id_2,
-      id_6
+      id_5,
+      id_3,
+      id_3,
+      id_1,
+      id_5
   );
-  assign id_8 = "";
+  output wire _id_4;
+  inout wand id_3;
+  input wire _id_2;
+  output wire id_1;
+  parameter id_6 = 1;
+  assign id_1 = id_5;
+  wire id_7;
+  wire id_8;
+  wire id_9;
+  wor  id_10 = 1;
+  assign (supply1, strong0) id_10 = 1;
+  assign id_3 = -1'b0;
+  buf primCall (id_5, id_3);
+  logic [id_2  &  id_4 : id_6] id_11;
+  ;
+  logic id_12;
+  ;
+  assign id_9 = (id_3);
 endmodule

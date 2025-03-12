@@ -1,64 +1,73 @@
-// Seed: 2242564029
-module module_0 (
-    output wor id_0
-    , id_10,
-    output uwire id_1,
-    input wire id_2,
-    input uwire id_3,
-    input supply0 id_4,
-    input wire id_5,
-    input wand id_6,
-    output supply0 id_7,
-    input supply1 id_8
-);
-  wire id_11;
-  assign module_1.id_12 = 0;
-  final id_7 = 1;
+// Seed: 3942823711
+module module_0;
+  wire id_1;
 endmodule
-module module_1 #(
-    parameter id_22 = 32'd93,
-    parameter id_23 = 32'd18
+module module_1;
+  wor id_1 = id_1;
+  assign id_1 = 1;
+  module_0 modCall_1 ();
+  logic id_2;
+  initial $signed(48);
+  ;
+endmodule
+module module_2 #(
+    parameter id_10 = 32'd84,
+    parameter id_11 = 32'd59,
+    parameter id_12 = 32'd88,
+    parameter id_18 = 32'd61,
+    parameter id_4  = 32'd35,
+    parameter id_8  = 32'd96
 ) (
-    output wand id_0,
-    output tri id_1,
-    input tri0 id_2,
-    input wire id_3,
-    output wand id_4,
-    output wor id_5,
-    input logic id_6,
-    output uwire id_7,
-    output tri0 id_8,
-    input supply1 id_9,
-    input wand id_10,
-    input wand id_11
-    , id_19 = 1'b0,
-    output supply0 id_12,
-    output tri1 id_13,
-    input wire id_14,
-    input wor id_15,
-    input tri1 id_16,
-    input tri0 id_17
+    id_1,
+    id_2,
+    id_3,
+    _id_4,
+    id_5,
+    id_6,
+    id_7,
+    _id_8,
+    id_9[-1'b0 : 1'b0],
+    _id_10,
+    _id_11,
+    _id_12,
+    id_13,
+    id_14[id_8-id_18#(
+        .id_10(-1'b0),
+        .id_11(id_18),
+        .id_12(-1),
+        .id_4 (1)
+    ) : ""],
+    id_15,
+    id_16,
+    id_17,
+    _id_18
 );
-  assign id_8 = id_11;
-  logic id_20, id_21;
-  assign id_12 = 1'b0;
-  assign id_12 = 1;
-  defparam id_22 = 1, id_23 = 1;
-  assign id_5  = id_3;
-  assign id_21 = id_6;
-  always id_21 <= 1'b0;
-  wire id_24;
-  module_0 modCall_1 (
-      id_7,
-      id_4,
-      id_17,
-      id_14,
-      id_16,
-      id_16,
-      id_14,
-      id_13,
-      id_3
-  );
-  assign id_8 = 1;
-  wire id_25;
+  input wire _id_18;
+  input wire id_17;
+  inout wire id_16;
+  input wire id_15;
+  input logic [7:0] id_14;
+  inout wire id_13;
+  input wire _id_12;
+  input wire _id_11;
+  input wire _id_10;
+  input logic [7:0] id_9;
+  input wire _id_8;
+  module_0 modCall_1 ();
+  inout reg id_7;
+  inout wire id_6;
+  input wire id_5;
+  inout wire _id_4;
+  output wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_3 = id_11;
+  logic [7:0][-1] id_19;
+  id_20 :
+  assert property (@(posedge id_20[id_4]) id_4) begin : LABEL_0
+    id_7 <= 1;
+  end
+  assign id_1 = id_11;
+  always $signed(94);
+  ;
 endmodule

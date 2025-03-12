@@ -1,36 +1,35 @@
-// Seed: 3522815353
+// Seed: 2972494361
 module module_0 (
-    output logic id_0,
-    input  logic id_1,
-    input  logic id_2,
-    input  logic id_3
+    id_1
 );
-  reg id_5;
-  always begin : LABEL_0
-    id_0 <= 1;
-  end
-  assign id_5 = 1;
-  reg id_6, id_7;
-  assign id_5 = id_7;
-  final repeat (1) id_6 <= id_6 && id_5;
-  assign module_1.type_7 = 0;
-  wire id_8;
-  always id_6.id_3 <= id_1;
-  assign id_5 = 1;
-  wire id_9, id_10, id_11;
+  inout wire id_1;
+  assign module_1.id_2 = 0;
+  assign module_2.id_2 = 0;
+  wire id_2;
+  ;
 endmodule
 module module_1 (
-    output logic id_0,
-    output uwire id_1,
-    input  logic id_2
+    input wor id_0,
+    input tri0 id_1,
+    output supply0 id_2#(
+        .id_8(1 & 1'b0),
+        .id_9(-1)
+    ),
+    output supply0 id_3,
+    output supply1 id_4,
+    output uwire id_5,
+    input tri id_6
 );
-  initial id_0 <= id_2;
-  module_0 modCall_1 (
-      id_0,
-      id_2,
-      id_2,
-      id_2
-  );
-  wire id_4;
-  wire id_5, id_6;
+  assign id_8 = -1'b0;
+  module_0 modCall_1 (id_8);
+endmodule
+module module_2 (
+    input  wire  id_0,
+    input  uwire id_1,
+    input  uwire id_2,
+    output logic id_3
+);
+  wire [-1 'b0 : -1] id_5;
+  always id_3 = -1;
+  module_0 modCall_1 (id_5);
 endmodule

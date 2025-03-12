@@ -1,30 +1,32 @@
-// Seed: 4001148105
-module module_0 (
-    id_1
+// Seed: 3116747808
+module module_0;
+  wire id_1;
+  ;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd30
+) (
+    id_1,
+    id_2,
+    id_3,
+    _id_4
 );
+  input wire _id_4;
+  inout logic [7:0] id_3;
+  inout wire id_2;
   input wire id_1;
-  assign module_2.id_1 = 0;
-  assign module_1.id_0 = 0;
-endmodule
-module module_1 (
-    input supply1 id_0,
-    output tri0 id_1,
-    input supply1 id_2,
-    output tri0 id_3
-);
-  wire id_5, id_6;
-  module_0 modCall_1 (id_5);
-  wire id_7;
-endmodule
-module module_2 (
-    input  tri1  id_0,
-    input  wire  id_1,
-    output uwire id_2,
-    input  wand  id_3
-);
-  assign id_2 = 1;
-  assign id_2 = id_0 % id_3 <= id_3;
-  integer id_5;
-  module_0 modCall_1 (id_5);
-  assign id_5 = 1 > 1;
+  module_0 modCall_1 ();
+  reg id_5;
+  assign id_3[~id_4] = -1 & "" == id_5;
+  parameter id_6 = 1 - (1);
+  always @(posedge id_1 or posedge id_4) begin : LABEL_0
+    id_5 <= id_4 * 1;
+    $unsigned(4);
+    ;
+  end
+  bit  id_7;
+  wire id_8;
+  initial begin : LABEL_1
+    id_7 = -1;
+  end
 endmodule

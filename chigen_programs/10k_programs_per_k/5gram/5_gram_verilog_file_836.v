@@ -1,59 +1,49 @@
-// Seed: 2702675113
-module module_0;
-  id_1(
-      .id_0(1), .id_1(id_2), .id_2(1), .id_3(id_2), .id_4(1)
-  );
-  wire id_3;
-  assign module_1.id_20 = 0;
-  tri1 id_4 = 1'h0;
-endmodule
-module module_1 (
-    input supply0 id_0,
-    output supply0 id_1,
-    input supply0 id_2,
-    input wor id_3,
-    input tri1 id_4,
-    output tri1 id_5,
-    output wand id_6,
-    output tri0 id_7,
-    input wor id_8,
-    input wire id_9,
-    output tri1 id_10,
-    input tri id_11,
-    input supply1 id_12,
-    input wire id_13,
-    output uwire id_14
-    , id_34,
-    input wire id_15,
-    output tri0 id_16,
-    output tri0 id_17,
-    input wand id_18,
-    input wand id_19,
-    input wire id_20,
-    input wor id_21,
-    output supply0 id_22,
-    input wand id_23,
-    input tri1 id_24,
-    output wor id_25,
-    output uwire id_26,
-    output wor id_27,
-    input wor id_28
-    , id_35,
-    input supply0 id_29,
-    input supply1 id_30,
-    inout supply0 id_31,
-    input supply0 id_32
+// Seed: 382885528
+module module_0 #(
+    parameter id_3 = 32'd75
+) (
+    id_1,
+    id_2
 );
-  wire id_36;
-  initial begin : LABEL_0
-    id_25 = id_23;
-    deassign id_7;
-  end
-  wire id_37;
-  wire id_38;
-  wire id_39;
-  generate
-    assign id_17 = 1;
-  endgenerate
-  module_0 modCall_1 ();
+  input wire id_2;
+  inout wire id_1;
+  localparam id_3 = 1;
+  tri [id_3 : (  -1 'h0 )] id_4, id_5, id_6, id_7;
+  assign id_5 = $realtime ? 'b0 : -1;
+  wire id_8;
+  wire id_9;
+endmodule
+module module_1 #(
+    parameter id_1  = 32'd37,
+    parameter id_11 = 32'd62
+) (
+    _id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  output wire id_9;
+  output wire id_8;
+  input wire id_7;
+  input logic [7:0] id_6;
+  inout wire id_5;
+  inout logic [7:0] id_4;
+  output wire id_3;
+  module_0 modCall_1 (
+      id_5,
+      id_7
+  );
+  assign modCall_1.id_5 = 0;
+  inout logic [7:0] id_2;
+  input wire _id_1;
+  specify
+    (posedge id_10 => (_id_11 +: -1)) = (-1, {1, 1} == (-1'b0): -1'b0 : -1);
+    (id_12 => id_13) = (-1'b0 : id_2.id_6  : 1'b0, -1  : id_4[id_11] : id_6[id_1==1]);
+    (id_14 => id_15) = 1;
+  endspecify
 endmodule

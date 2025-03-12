@@ -1,43 +1,43 @@
-// Seed: 2997086201
+// Seed: 260657275
 module module_0 (
-    id_1,
-    id_2,
-    id_3
+    input uwire id_0,
+    input tri1 id_1,
+    input supply1 id_2,
+    input tri id_3,
+    input tri0 id_4,
+    output tri id_5
 );
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  supply1 id_4;
-  assign module_1.type_11 = 0;
-  assign id_4 = 1;
-  id_5(
-      1, (id_4 - id_3)
-  );
-  assign id_3 = 1 - (id_2);
-  assign id_1 = id_2;
-  wire id_6;
-  assign id_1 = id_1;
   wire id_7;
 endmodule
 module module_1 (
-    input wire id_0,
-    input tri id_1,
-    output supply1 id_2,
-    input uwire id_3
-    , id_10,
-    output supply0 id_4,
-    output logic id_5,
-    input supply1 id_6,
-    input uwire id_7,
-    input tri0 id_8
+    output tri id_0,
+    output uwire id_1,
+    input uwire id_2,
+    input tri1 id_3,
+    input tri0 id_4,
+    input tri0 id_5,
+    output supply1 id_6,
+    output supply0 id_7,
+    input tri0 id_8,
+    input wire id_9,
+    input supply1 id_10,
+    input supply1 id_11,
+    output supply0 id_12,
+    input supply0 id_13,
+    input wor id_14,
+    output wire id_15,
+    input supply1 id_16,
+    input wor id_17,
+    input tri id_18,
+    input supply1 id_19
 );
-  always @(posedge 1) begin : LABEL_0
-    id_5 <= 1;
-    $display(id_10, 1'b0 + id_3);
-  end
+  wire id_21;
   module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_10
+      id_19,
+      id_13,
+      id_14,
+      id_8,
+      id_3,
+      id_15
   );
 endmodule

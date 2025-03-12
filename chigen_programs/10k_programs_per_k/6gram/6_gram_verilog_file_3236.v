@@ -1,40 +1,72 @@
-// Seed: 587680700
+// Seed: 3954599501
 module module_0 (
-    input wand id_0,
-    output uwire id_1,
-    output supply0 id_2
+    output tri0 id_0,
+    input tri id_1,
+    input tri id_2,
+    input wor id_3,
+    input supply1 id_4,
+    input tri id_5,
+    input wand id_6,
+    input wor id_7,
+    input wire id_8,
+    input tri0 id_9,
+    input supply1 id_10,
+    output wand id_11,
+    input uwire id_12,
+    input supply0 id_13,
+    input uwire id_14,
+    input wire id_15,
+    input tri id_16,
+    output uwire id_17,
+    input tri id_18,
+    output wand id_19,
+    input wand id_20,
+    output uwire id_21,
+    output tri id_22,
+    input uwire id_23,
+    input supply1 id_24,
+    output tri id_25,
+    output wire id_26,
+    output uwire id_27
 );
-  wire id_4 = 1;
-  tri0 id_6 = id_5;
-  generate
-    for (id_7 = 1; id_6; id_5 = 1) begin : LABEL_0
-      wire id_8;
-    end
-  endgenerate
-  assign id_6 = 1;
-  always @(1) begin : LABEL_0
-    id_7 = id_6;
-  end
+  assign id_22 = 1;
+  assign module_1.id_1 = 0;
 endmodule
 module module_1 (
-    input wire id_0,
-    output supply0 id_1,
-    input supply1 id_2,
-    input uwire id_3,
-    output wand id_4
+    output logic id_0,
+    output supply1 id_1,
+    input wor id_2,
+    output uwire id_3
 );
-  wand id_6;
-  wire id_7;
-  wire id_8;
-  assign id_1 = id_3;
-  id_9(
-      .id_0(), .id_1("")
-  );
-  wire id_10;
+  initial id_0 <= id_2;
   module_0 modCall_1 (
-      id_6,
-      id_6,
-      id_4
+      id_3,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_1,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_2,
+      id_3,
+      id_3,
+      id_2,
+      id_2,
+      id_1,
+      id_3,
+      id_1
   );
-  assign modCall_1.id_4 = 0;
 endmodule

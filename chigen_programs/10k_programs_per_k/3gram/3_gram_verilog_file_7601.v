@@ -1,42 +1,63 @@
-// Seed: 904599015
+// Seed: 3088208089
 module module_0 (
-    output tri1  id_0,
-    input  tri   id_1,
-    input  tri0  id_2,
-    input  wand  id_3,
-    output uwire id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  supply1 id_6;
-  assign id_6 = id_1;
-  wire id_7;
+  inout wire id_4;
+  output wire id_3;
+  output wire id_2;
+  output wire id_1;
+  wire id_5;
 endmodule
-module module_1 (
-    input supply0 id_0,
-    input wor id_1,
-    input tri0 id_2,
-    output tri id_3,
-    output wand id_4,
-    input wire id_5,
-    input supply1 id_6,
-    output supply0 id_7,
-    output supply0 id_8,
-    input supply0 id_9,
-    output tri0 id_10,
-    input wire id_11,
-    input tri id_12,
-    input wor id_13,
-    input tri1 id_14,
-    inout uwire id_15
-);
-  id_17(
-      id_7, 1 ? 1 : 1'h0 ? id_13 : 1, 1, 1 - "", 1'b0, id_5, 1
-  );
+module module_1;
+  wire id_1;
   module_0 modCall_1 (
-      id_4,
-      id_11,
-      id_13,
-      id_5,
-      id_15
+      id_1,
+      id_1,
+      id_1,
+      id_1
   );
-  assign modCall_1.id_4 = 0;
+endmodule
+module module_2 #(
+    parameter id_3 = 32'd94,
+    parameter id_6 = 32'd93
+) (
+    id_1,
+    id_2,
+    _id_3,
+    id_4,
+    id_5,
+    _id_6,
+    id_7,
+    id_8,
+    id_9
+);
+  inout wire id_9;
+  inout wire id_8;
+  inout wire id_7;
+  inout wire _id_6;
+  input wire id_5;
+  inout wire id_4;
+  output wire _id_3;
+  output wire id_2;
+  output wire id_1;
+  logic [(  id_3  ) : -1 'b0] id_10 = 1 + id_8;
+  module_0 modCall_1 (
+      id_2,
+      id_7,
+      id_7,
+      id_10
+  );
+  assign {id_4, 1} = -1;
+  logic [id_6 : 1] id_11;
+  ;
+  specify
+    (id_12 => id_13) = (id_12, 1  : id_13  : 1);
+    (id_14 => id_15) = (1, 1  : -1'b0 : 1);
+    if (id_5) (id_16 => id_17) = (-1, id_5  : id_7  : id_7);
+    $width(posedge id_18, id_5);
+    if (id_18) (posedge id_19 => (id_20 +: id_19)) = (id_14 + id_20  : -1  : 1'h0, id_10);
+  endspecify
 endmodule

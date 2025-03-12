@@ -1,44 +1,59 @@
-// Seed: 2470501203
-module module_0;
-  wire id_1 = id_1;
-  assign id_1 = 1;
-  id_2(
-      .id_0(id_1),
-      .id_1(id_1),
-      .id_2(id_1),
-      .id_3(id_1),
-      .id_4(id_1),
-      .id_5(id_1),
-      .id_6((1)),
-      .id_7(id_1),
-      .id_8(1'b0),
-      .id_9(id_1),
-      .id_10(1),
-      .id_11(id_1),
-      .id_12(1),
-      .sum()
-  );
-  uwire id_3 = 1;
-  wire id_4, id_5;
-  wire id_6;
-endmodule
-module module_1 (
-    input tri id_0,
-    input supply0 id_1,
-    input wire id_2,
-    output tri1 id_3
-    , id_13,
-    output uwire id_4,
-    input wire id_5,
-    input wand id_6
-    , id_14,
-    output tri0 id_7,
-    output tri0 id_8,
-    output wor id_9,
-    output wand id_10,
-    input tri0 id_11
+// Seed: 1213036850
+module module_0 (
+    input supply1 id_0,
+    input supply1 id_1,
+    output uwire id_2,
+    input tri1 id_3,
+    input tri id_4,
+    input supply0 id_5
 );
-  wire id_15;
-  module_0 modCall_1 ();
-  assign modCall_1.type_1 = 0;
+endmodule
+module module_1 #(
+    parameter id_31 = 32'd52,
+    parameter id_5  = 32'd31
+) (
+    input wand id_0,
+    input supply0 id_1,
+    output tri0 id_2,
+    output supply0 id_3,
+    input wand id_4,
+    input tri0 _id_5,
+    input tri1 id_6,
+    output wire id_7,
+    input tri id_8,
+    output supply0 id_9,
+    input wor id_10,
+    inout supply1 id_11,
+    input wand id_12,
+    output tri0 id_13,
+    input supply1 id_14,
+    input tri0 id_15,
+    output uwire id_16,
+    input wire id_17,
+    input supply1 id_18,
+    input supply1 id_19,
+    input wor id_20,
+    input tri id_21,
+    output uwire id_22,
+    output wand id_23,
+    input tri id_24,
+    input supply0 id_25,
+    input tri1 id_26,
+    output uwire id_27,
+    input tri1 id_28,
+    input tri0 id_29
+);
+  wire [id_5 : 1  ==  1] _id_31;
+  module_0 modCall_1 (
+      id_8,
+      id_4,
+      id_27,
+      id_20,
+      id_14,
+      id_21
+  );
+  assign modCall_1.id_2 = 0;
+  wire [id_31 : id_5] id_32;
+  wire id_33;
+  wire id_34;
 endmodule

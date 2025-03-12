@@ -1,31 +1,44 @@
-// Seed: 3242159662
+// Seed: 2584835388
 module module_0 (
-    input tri id_0
+    output supply0 id_0,
+    input wire id_1
 );
-  assign module_2.id_2 = 0;
+  logic [7:0] id_3;
+  assign id_3[-1] = id_3;
 endmodule
-module module_1 (
-    input tri id_0,
-    input tri1 id_1,
-    input wor id_2,
-    output wand id_3,
-    input supply1 id_4,
-    input wand id_5
+module module_1 #(
+    parameter id_9 = 32'd29
+) (
+    output logic id_0,
+    input wand id_1
+    , _id_9,
+    input tri id_2,
+    input tri0 id_3,
+    input wand id_4,
+    output uwire id_5,
+    input tri0 id_6,
+    output supply1 id_7
 );
-  wire id_7;
-  module_0 modCall_1 (id_0);
-  assign modCall_1.type_2 = 0;
-endmodule
-module module_2 (
-    input tri id_0,
-    input uwire id_1,
-    output tri1 id_2,
-    output supply1 id_3,
-    input supply0 id_4,
-    input uwire id_5,
-    input tri id_6,
-    output supply0 id_7
-);
-  always id_3 = id_1 - id_5;
-  module_0 modCall_1 (id_1);
+  assign id_0 = 1;
+  wire id_10;
+  wire [id_9  /  -1 : 1  -  1] id_11;
+  logic id_12 = 1 !=? 1;
+  logic id_13;
+  ;
+  reg \id_14 ;
+  always assume (1);
+  wire id_15, id_16;
+  module_0 modCall_1 (
+      id_5,
+      id_4
+  );
+  assign modCall_1.id_1 = 0;
+  always begin : LABEL_0
+    id_0 = -1;
+    id_12 <= id_1;
+  end
+  wire id_17;
+  always begin : LABEL_1
+    \id_14 <= -1;
+  end
 endmodule

@@ -1,49 +1,39 @@
-// Seed: 1120097820
+// Seed: 3117654077
 module module_0 (
-    input supply0 id_0,
-    output tri0 id_1
+    output tri id_0,
+    output supply0 id_1
 );
+  wire id_3, id_4;
 endmodule
 module module_1 (
-    output supply0 id_0,
-    input supply0 id_1,
-    output supply1 id_2,
-    output supply1 id_3,
-    input wire id_4,
+    output wor id_0
+    , id_18,
+    input wor id_1,
+    input supply1 id_2,
+    input tri1 id_3,
+    output logic id_4,
     output uwire id_5,
-    input uwire id_6,
-    input tri id_7,
-    input wor id_8,
-    output wire id_9,
-    output supply1 id_10,
-    input wor id_11,
+    input wor id_6,
+    output supply0 id_7,
+    input tri id_8,
+    input tri0 id_9,
+    output logic id_10,
+    input tri0 id_11,
     input tri0 id_12,
-    input uwire id_13,
-    input wand id_14,
-    input tri1 id_15,
-    input supply0 id_16,
-    input tri0 id_17,
-    input tri id_18,
-    output tri0 id_19,
-    output tri1 id_20,
-    input tri0 id_21,
-    output tri0 id_22,
-    input supply1 id_23,
-    input supply0 id_24,
-    input supply1 id_25,
-    output tri0 id_26,
-    input wire id_27,
-    input wire id_28
-    , id_33,
-    output wor id_29,
-    input wand id_30,
-    output supply0 id_31
+    output wire id_13,
+    input supply1 id_14,
+    output supply1 id_15,
+    input supply0 id_16
 );
-  assign id_20 = 1;
+  initial begin : LABEL_0
+    if (1) begin : LABEL_1
+      id_10 = 1 & 1;
+    end else begin : LABEL_2
+      id_4 <= !id_9;
+    end
+  end
   module_0 modCall_1 (
-      id_4,
-      id_22
+      id_15,
+      id_15
   );
-  assign modCall_1.type_0 = 0;
-  final $display;
 endmodule

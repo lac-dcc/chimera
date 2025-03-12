@@ -1,133 +1,172 @@
-// Seed: 3608103687
+// Seed: 3362055480
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22
+    input wor id_0
+    , id_66,
+    output uwire id_1,
+    input tri0 id_2,
+    input wand id_3,
+    output wand id_4,
+    output uwire id_5,
+    output uwire id_6,
+    input supply0 id_7,
+    input supply1 id_8,
+    input tri id_9,
+    input tri id_10,
+    input wand id_11,
+    output wire id_12,
+    output uwire id_13,
+    output tri0 id_14,
+    output tri0 id_15,
+    input tri1 id_16,
+    input supply0 id_17,
+    output tri id_18,
+    input wor id_19,
+    input tri id_20,
+    input wor id_21,
+    input wor id_22,
+    output wand id_23,
+    output uwire id_24,
+    input tri id_25,
+    output wor id_26,
+    input uwire id_27,
+    input supply1 id_28,
+    input uwire id_29,
+    output wor id_30,
+    output wire id_31,
+    input tri1 id_32,
+    output uwire id_33,
+    output tri0 id_34,
+    input wire id_35,
+    input wor id_36,
+    input wand id_37,
+    input tri id_38,
+    output wor id_39,
+    input tri1 id_40,
+    output uwire id_41,
+    output supply0 id_42,
+    output supply0 id_43,
+    input wire id_44,
+    output tri id_45,
+    input tri1 id_46
+    , id_67,
+    input tri0 id_47,
+    output wand id_48,
+    output tri0 id_49,
+    input wor id_50,
+    input wor id_51,
+    output wand id_52,
+    input tri0 id_53,
+    output wor id_54
+    , id_68,
+    output tri0 id_55,
+    input supply0 id_56,
+    output uwire id_57
+    , id_69,
+    output supply1 id_58,
+    input tri id_59,
+    input uwire id_60,
+    input wire id_61,
+    input wand id_62,
+    input tri1 id_63,
+    input supply0 id_64
 );
-  input wire id_22;
-  inout wire id_21;
-  output wire id_20;
-  output wire id_19;
-  output wire id_18;
-  inout wire id_17;
-  output wire id_16;
-  inout wire id_15;
-  output wire id_14;
-  inout wire id_13;
-  output wire id_12;
-  output wire id_11;
-  input wire id_10;
-  inout wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  inout wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  wire id_23;
-  assign id_14 = 1;
+  wire id_70;
+  wire id_71;
+  wire id_72;
 endmodule
-module module_1 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27
+module module_1 #(
+    parameter id_5 = 32'd32
+) (
+    output wor id_0,
+    output uwire id_1,
+    input tri0 id_2,
+    output wire id_3,
+    input wand id_4,
+    input wire _id_5
+    , id_17,
+    input tri1 id_6,
+    input supply0 id_7,
+    output wand id_8,
+    output supply0 id_9,
+    input supply1 id_10,
+    input supply1 id_11,
+    input wor id_12,
+    input uwire id_13,
+    input tri0 id_14,
+    input supply0 id_15
 );
-  inout wire id_27;
-  output wire id_26;
-  input wire id_25;
-  input wire id_24;
-  inout wire id_23;
-  inout wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  input wire id_18;
-  inout wire id_17;
-  inout wire id_16;
-  output wire id_15;
-  output wire id_14;
-  input wire id_13;
-  input wire id_12;
-  input wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  inout wire id_8;
-  input wire id_7;
-  input wire id_6;
-  inout wire id_5;
-  output wire id_4;
-  output wire id_3;
-  output wire id_2;
-  input wire id_1;
-  always id_26[1?1'b0 : 1==1] <= id_13;
-  id_28();
+  logic id_18;
+  ;
+  wire ["" : ""] id_19;
+  assign id_17 = id_6;
   module_0 modCall_1 (
-      id_8,
-      id_23,
-      id_17,
-      id_10,
-      id_5,
-      id_22,
-      id_19,
-      id_21,
-      id_5,
-      id_27,
-      id_17,
-      id_27,
-      id_20,
       id_15,
-      id_20,
-      id_23,
+      id_9,
+      id_6,
+      id_2,
+      id_8,
+      id_1,
+      id_3,
+      id_10,
+      id_11,
       id_10,
       id_4,
-      id_20,
-      id_20,
-      id_5,
-      id_27
+      id_15,
+      id_8,
+      id_1,
+      id_3,
+      id_8,
+      id_2,
+      id_10,
+      id_8,
+      id_12,
+      id_6,
+      id_15,
+      id_11,
+      id_3,
+      id_9,
+      id_14,
+      id_1,
+      id_10,
+      id_2,
+      id_12,
+      id_3,
+      id_3,
+      id_13,
+      id_1,
+      id_1,
+      id_4,
+      id_15,
+      id_13,
+      id_11,
+      id_1,
+      id_11,
+      id_1,
+      id_0,
+      id_1,
+      id_4,
+      id_8,
+      id_11,
+      id_13,
+      id_3,
+      id_8,
+      id_14,
+      id_7,
+      id_1,
+      id_2,
+      id_1,
+      id_3,
+      id_2,
+      id_1,
+      id_3,
+      id_7,
+      id_10,
+      id_14,
+      id_6,
+      id_10,
+      id_14
   );
+  parameter id_20 = 1;
+  logic [-1 'b0 : id_5] id_21;
+  ;
 endmodule

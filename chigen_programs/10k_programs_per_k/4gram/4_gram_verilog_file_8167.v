@@ -1,60 +1,63 @@
-// Seed: 3645480178
+// Seed: 2166309171
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    input  wor  id_0,
+    input  tri  id_1,
+    output wor  id_2,
+    input  wire id_3,
+    output tri1 id_4
 );
-  inout wire id_6;
-  inout wire id_5;
-  inout wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  input wire id_1;
-  task id_7;
-    fork : SymbolIdentifier
-    join : SymbolIdentifier
-  endtask
-  assign module_1.SymbolIdentifier.SymbolIdentifier.type_7 = 0;
 endmodule
-module module_1 (
-    input supply0 id_0,
-    output wire id_1,
-    output wor id_2,
-    input supply1 id_3,
-    output wand id_4,
-    output supply1 id_5,
-    output supply0 id_6,
-    input supply1 id_7,
-    input wand id_8,
-    output tri id_9,
-    input uwire id_10,
-    input uwire id_11,
-    input wor id_12,
-    input wor id_13,
-    output uwire id_14,
-    output uwire id_15,
-    output uwire id_16,
-    input supply0 id_17,
-    output tri id_18,
-    input wor id_19,
-    input tri1 id_20,
-    output tri id_21,
-    input wand id_22,
+module module_1 #(
+    parameter id_10 = 32'd55
+) (
+    input tri id_0,
+    input wand id_1,
+    output supply0 id_2,
+    input wire id_3,
+    input wire id_4,
+    input tri1 id_5,
+    input wor id_6,
+    input supply0 id_7,
+    input uwire id_8,
+    input wand id_9,
+    input tri _id_10,
+    input supply1 id_11,
+    input wire id_12,
+    output wor id_13,
+    input tri id_14,
+    input wor id_15,
+    output wire id_16,
+    input wand id_17,
+    output logic id_18,
+    input wire id_19,
+    input tri id_20
+    , id_30,
+    input tri0 id_21,
+    input wor id_22,
     input supply1 id_23,
-    output wand id_24
+    output uwire id_24,
+    input uwire id_25,
+    input tri1 id_26,
+    input supply0 id_27,
+    input tri1 id_28
 );
-  wire id_26;
+  assign id_30 = -1;
+  always @(posedge 1) begin : LABEL_0
+    id_18 = -1;
+  end
   module_0 modCall_1 (
-      id_26,
-      id_26,
-      id_26,
-      id_26,
-      id_26,
-      id_26
+      id_8,
+      id_5,
+      id_13,
+      id_21,
+      id_24
   );
-  wire id_27;
-  assign id_18 = (id_0);
+  assign modCall_1.id_1 = 0;
+  id_31 :
+  assert property (@(posedge id_8) id_20 + id_11)
+  else $unsigned(97);
+  ;
+  if (-1) logic id_32;
+  ;
+  logic [id_10  - "" : 1] id_33 = 1'b0;
 endmodule

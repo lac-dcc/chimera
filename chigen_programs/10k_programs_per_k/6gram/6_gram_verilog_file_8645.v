@@ -1,45 +1,66 @@
-// Seed: 304772614
-module module_0 #(
-    parameter id_11 = 32'd41,
-    parameter id_12 = 32'd70
-) (
-    input supply1 id_0,
-    output supply0 id_1,
-    input supply1 id_2,
-    input uwire id_3
-    , id_10,
-    output supply0 id_4,
-    input supply0 id_5,
-    input tri0 id_6,
-    input wand id_7,
-    output wire id_8
+// Seed: 4123061552
+module module_0 (
+    id_1,
+    id_2,
+    id_3
 );
-  defparam id_11.id_12 = 1 - 1;
+  inout wire id_3;
+  input wire id_2;
+  inout wire id_1;
 endmodule
 module module_1 #(
-    parameter id_10 = 32'd32,
-    parameter id_9  = 32'd82
+    parameter id_21 = 32'd69,
+    parameter id_29 = 32'd10,
+    parameter id_7  = 32'd60
 ) (
-    output wand id_0,
-    input tri1 id_1,
-    input wor id_2,
-    input wire id_3,
-    input supply0 id_4,
-    input wand id_5,
-    output wand id_6
+    output uwire id_0,
+    output logic id_1,
+    input tri id_2,
+    input wand id_3,
+    input supply1 id_4,
+    output wand id_5,
+    input tri id_6,
+    input tri0 _id_7,
+    input tri0 id_8,
+    input tri0 id_9,
+    input tri id_10,
+    output tri0 id_11,
+    input tri id_12,
+    input tri0 id_13,
+    input tri id_14
+    , id_33, id_34,
+    input supply0 id_15,
+    input wand id_16,
+    input uwire id_17,
+    input tri id_18,
+    output wor id_19,
+    output wire id_20,
+    input uwire _id_21,
+    output wire id_22,
+    output logic id_23,
+    input tri0 id_24,
+    output supply0 id_25,
+    input wand id_26,
+    input wire id_27,
+    output tri1 id_28,
+    output wor _id_29,
+    input wor id_30,
+    input wire id_31
 );
-  wor id_8 = id_5#(.id_1(1));
-  defparam id_9.id_10 = {1{1'h0}};
+  wire id_35[-1  -  {  id_29  } : -1];
+  assign id_0 = $signed(43);
+  ;
+  assign id_28 = id_33[id_7 : id_21];
+  wire id_36;
+  wire id_37;
+  ;
+  initial begin : LABEL_0
+    id_23 = id_12;
+    id_1 <= id_8;
+  end
   module_0 modCall_1 (
-      id_1,
-      id_0,
-      id_4,
-      id_1,
-      id_0,
-      id_5,
-      id_1,
-      id_1,
-      id_8
+      id_35,
+      id_35,
+      id_35
   );
-  assign modCall_1.id_6 = 0;
 endmodule

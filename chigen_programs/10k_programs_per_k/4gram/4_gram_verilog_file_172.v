@@ -1,46 +1,40 @@
-// Seed: 1689059915
+// Seed: 2878430627
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    output supply1 id_0,
+    input  supply0 id_1,
+    output supply0 id_2
 );
-  output wire id_4;
-  output wire id_3;
-  input wire id_2;
-  input wire id_1;
-  id_5(
-      1 >= 1, id_1, (id_1)
-  );
-  wire id_6;
+  wire id_4;
+  wire id_5;
+  assign id_2 = -1;
+  generate
+    begin : LABEL_0
+      assign id_2 = -1;
+    end
+  endgenerate
 endmodule
-module module_1 (
-    output supply0 id_0,
-    output tri0 id_1,
-    input tri id_2,
-    output supply0 id_3,
-    input supply0 id_4,
-    input wand id_5,
-    inout uwire id_6,
-    input supply0 id_7,
-    input supply1 id_8,
-    output supply0 id_9,
-    output tri0 id_10,
-    output wor id_11,
-    input wor id_12,
-    input supply0 id_13
-    , id_20,
-    output wand id_14,
-    input wand id_15,
-    input tri0 id_16,
-    input tri0 id_17,
-    input tri id_18
+module module_1 #(
+    parameter id_0 = 32'd82,
+    parameter id_1 = 32'd65,
+    parameter id_6 = 32'd39
+) (
+    input tri0 _id_0,
+    input supply0 _id_1,
+    input tri0 id_2,
+    output tri id_3,
+    input tri1 id_4
 );
-  wire id_21;
+  wire [(  id_1  ) : id_0] _id_6;
+  wire [id_6 : -1] id_7;
   module_0 modCall_1 (
-      id_21,
-      id_20,
-      id_21,
-      id_20
+      id_3,
+      id_4,
+      id_3
   );
+  assign modCall_1.id_0 = 0;
+  task id_8(input real id_9);
+    begin : LABEL_0
+    end
+  endtask
+  wire id_10;
 endmodule

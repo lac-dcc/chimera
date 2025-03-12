@@ -1,94 +1,87 @@
-// Seed: 2534772182
-module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16
+// Seed: 3767240577
+module module_0 #(
+    parameter id_21 = 32'd87,
+    parameter id_22 = 32'd72
+) (
+    output supply0 id_0
+    , id_8,
+    output tri id_1,
+    input tri id_2,
+    input uwire id_3,
+    input uwire id_4,
+    output supply1 id_5,
+    input wand id_6
 );
-  inout wire id_16;
-  inout wire id_15;
-  input wire id_14;
-  input wire id_13;
-  output wire id_12;
-  inout wire id_11;
-  inout wire id_10;
-  inout wire id_9;
-  output wire id_8;
-  output wire id_7;
-  inout wire id_6;
-  input wire id_5;
-  input wire id_4;
-  output wire id_3;
-  inout wire id_2;
-  inout wire id_1;
-  assign id_10 = id_11;
-  id_17(
-      .id_0(1'b0), .id_1(1), .id_2(id_9)
-  );
-  wire id_18;
-  wire id_19;
+  reg
+      id_9,
+      id_10,
+      id_11,
+      id_12,
+      id_13,
+      id_14,
+      id_15,
+      id_16,
+      id_17,
+      id_18,
+      id_19,
+      id_20,
+      _id_21,
+      _id_22,
+      id_23;
+  assign id_18 = id_10;
+  always_comb id_14 <= id_23++;
+  assign id_14 = id_13;
+  always begin : LABEL_0
+    wait (-1);
+  end
+  wire id_24;
+  struct packed {
+    struct packed {
+      integer [id_22 : -1 'b0] id_25;
+      logic id_26;
+      real id_27;
+      logic id_28;
+    } id_29;
+    logic id_30;
+  } id_31 = id_11;
+  parameter id_32 = 1;
+  parameter id_33 = "";
+  wire [1  &  -1  &  id_21  &  -1  <->  -1 : 1] id_34;
+  wire id_35;
+  logic id_36;
+  ;
 endmodule
-module module_1 (
-    output tri id_0,
-    input tri id_1,
-    input supply1 id_2,
-    input tri0 id_3,
-    input tri1 id_4,
-    input tri1 id_5,
-    input uwire id_6,
-    output wor id_7,
-    input wire id_8,
-    output supply0 id_9,
-    output tri id_10,
-    input wor id_11,
-    input tri0 id_12,
-    output uwire id_13,
-    output wand id_14,
-    output wand id_15,
-    output uwire id_16,
-    input wand id_17,
-    output supply1 id_18,
-    output wire id_19,
-    input wand id_20,
-    input tri0 id_21,
-    output tri0 id_22,
-    input tri id_23
+module module_1 #(
+    parameter id_1 = 32'd42,
+    parameter id_3 = 32'd54,
+    parameter id_6 = 32'd44
+) (
+    input  tri1 id_0,
+    input  tri  _id_1,
+    output tri0 id_2,
+    input  wand _id_3
 );
-  assign id_14 = 1'h0 & id_3;
-  wire id_25;
-  assign id_0 = id_1;
+  logic [id_1 : id_3] id_5;
+  ;
+  assign id_5 = 1;
+  assign id_2 = 1;
+  wire [id_3 : id_1] _id_6;
+  logic [-1 : -1] id_7;
+  logic id_8;
   module_0 modCall_1 (
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25,
-      id_25
+      id_2,
+      id_2,
+      id_0,
+      id_0,
+      id_0,
+      id_2,
+      id_0
   );
-  assign id_7 = 1;
-  wire id_26;
-  wire id_27;
-  wire id_28, id_29;
+  wire id_9;
+  assign id_2 = (1 == 1);
+  wire [1 : id_6] id_10;
+  logic [id_3  == "" : -1] id_11;
+  wire id_12;
+  ;
+  parameter id_13 = 1;
 endmodule

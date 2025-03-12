@@ -1,135 +1,36 @@
-// Seed: 172771223
-module module_0 #(
-    parameter id_37 = 32'd73,
-    parameter id_38 = 32'd21
-) (
+// Seed: 3373877654
+module module_0 (
     id_1,
     id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6,
-    id_7,
-    id_8,
-    id_9,
-    id_10,
-    id_11,
-    id_12,
-    id_13,
-    id_14,
-    id_15,
-    id_16,
-    id_17,
-    id_18,
-    id_19,
-    id_20,
-    id_21,
-    id_22,
-    id_23,
-    id_24,
-    id_25,
-    id_26,
-    id_27,
-    id_28,
-    id_29,
-    id_30,
-    id_31,
-    id_32,
-    id_33,
-    id_34,
-    id_35
+    id_3
 );
-  input wire id_35;
-  inout wire id_34;
-  inout wire id_33;
-  inout wire id_32;
-  output wire id_31;
-  inout wire id_30;
-  inout wire id_29;
-  input wire id_28;
-  output wire id_27;
-  output wire id_26;
-  output wire id_25;
-  output wire id_24;
-  output wire id_23;
-  input wire id_22;
-  inout wire id_21;
-  inout wire id_20;
-  inout wire id_19;
-  output wire id_18;
-  output wire id_17;
-  output wire id_16;
-  input wire id_15;
-  inout wire id_14;
-  output wire id_13;
-  inout wire id_12;
-  output wire id_11;
-  inout wire id_10;
-  input wire id_9;
-  input wire id_8;
-  input wire id_7;
-  inout wire id_6;
-  output wire id_5;
-  output wire id_4;
-  inout wire id_3;
-  inout wire id_2;
+  output wire id_3;
+  input wire id_2;
   output wire id_1;
-  initial begin : LABEL_0
-    begin : LABEL_0
-      #1 id_30 = id_35 ? id_7 : 1;
-    end
-  end
-  wire id_36;
-  if (1 ? 1 : id_6) begin : LABEL_0
-    defparam id_37.id_38 = 1;
-  end else begin : LABEL_0
-    assign id_31 = 1;
-  end
+  wire id_4;
+  ;
+  final $clog2(85);
+  ;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    output tri1 id_1,
-    input tri0 id_2,
-    inout tri0 id_3,
-    input supply1 id_4,
-    input supply0 id_5
+module module_1 #(
+    parameter id_4 = 32'd26,
+    parameter id_5 = 32'd0
+) (
+    input wand id_0,
+    input tri0 id_1,
+    input supply0 id_2,
+    output supply1 id_3,
+    input tri0 _id_4,
+    input wand _id_5
 );
-  wire id_7;
+  wire id_7[id_4 : 1];
   module_0 modCall_1 (
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
-      id_7,
       id_7,
       id_7,
       id_7
   );
+  logic id_8;
+  bufif0 primCall (id_3, id_0, id_1);
+  wire id_9;
+  logic [id_5 : -1] id_10 = 1'b0;
 endmodule

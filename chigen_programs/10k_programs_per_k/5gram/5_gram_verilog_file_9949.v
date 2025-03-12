@@ -1,32 +1,30 @@
-// Seed: 186310626
+// Seed: 3848621515
 module module_0;
-  wand id_1;
-  always_ff @(posedge id_1 == 1'd0) id_1 = id_1 < !1;
-  assign id_1 = id_1;
-  assign id_1 = id_1 - 1;
-  generate
-    assign id_1 = 1;
-  endgenerate
+  logic id_1;
+  assign module_1.id_3 = 0;
+  logic [7:0] id_2;
+  assign id_2[1+1>-1'b0^-1] = -1;
+  assign id_2 = id_2;
+  assign id_2[1'b0 :-1] = 1'd0 == -1;
 endmodule
 module module_1 #(
-    parameter id_12 = 32'd69,
-    parameter id_13 = 32'd71
+    parameter id_0 = 32'd33,
+    parameter id_2 = 32'd14
 ) (
-    input tri id_0,
-    input supply1 id_1,
-    output supply1 id_2,
-    input wor id_3,
-    output tri1 id_4,
-    input wire id_5,
-    input tri1 id_6,
-    output uwire id_7,
-    input wire id_8
+    input wor _id_0,
+    output supply0 id_1,
+    input tri1 _id_2,
+    output tri1 id_3,
+    input uwire id_4,
+    output uwire id_5,
+    output tri1 id_6
 );
-  wire id_10 = 1;
-  id_11(
-      .id_0(1), .id_1(id_2), .id_2(id_2 == id_2)
-  );
+  wire [id_0  **  id_0 : -1] id_8;
+  logic id_9;
+  wire id_10;
+  logic id_11;
+  wire id_12;
   module_0 modCall_1 ();
-  assign modCall_1.type_2 = 0;
-  defparam id_12.id_13 = "";
+  logic [id_2 : -1 'b0] id_13;
+  ;
 endmodule

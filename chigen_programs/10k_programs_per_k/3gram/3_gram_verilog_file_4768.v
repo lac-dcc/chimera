@@ -1,32 +1,37 @@
-// Seed: 2593492086
-module module_0;
-  wire id_1;
-  assign module_2.id_3 = 0;
-endmodule
-module module_1 (
-    input tri id_0,
-    input wand id_1,
-    output supply1 id_2,
-    input tri1 id_3,
-    output wor id_4,
-    input tri id_5,
-    output supply1 id_6,
-    input supply0 id_7
-    , id_11,
-    output wand id_8,
-    input wire id_9
+// Seed: 2292907978
+module module_0 (
+    id_1,
+    id_2
 );
-  wire id_12;
-  module_0 modCall_1 ();
-  assign id_11 = id_7;
-  nand primCall (id_2, id_3, id_5, id_7, id_9);
+  inout wire id_2;
+  inout wire id_1;
+  logic [1 'd0 : 1  &&  1] id_3;
+  static logic id_4;
+  ;
+  wire id_5 = id_4;
 endmodule
-module module_2 (
-    input  wor  id_0,
-    output tri  id_1,
-    output tri1 id_2,
-    output tri1 id_3
+module module_1 #(
+    parameter id_5 = 32'd41
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    _id_5
 );
-  wire id_5, id_6;
-  module_0 modCall_1 ();
+  inout wire _id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout tri id_2;
+  module_0 modCall_1 (
+      id_3,
+      id_3
+  );
+  output wire id_1;
+  wire [1  -  id_5 : 1 'b0 ^  -1] id_6;
+  wire id_7;
+  xnor primCall (id_3, id_4, id_2);
+  assign id_2 = 1;
+  wire id_8;
+  wire id_9;
 endmodule

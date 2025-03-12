@@ -1,32 +1,39 @@
-// Seed: 3130063430
+// Seed: 150461997
 module module_0;
-  wire id_1;
+  parameter id_1 = 1;
   assign module_1.id_1 = 0;
 endmodule
-module module_1;
-  module_0 modCall_1 ();
-endmodule
-module module_2 ();
-  integer id_1;
-  module_0 modCall_1 ();
-endmodule
-module module_3 (
-    input supply0 id_0,
-    input supply0 id_1,
-    output wand id_2,
-    input uwire id_3,
-    output uwire id_4,
-    input wire id_5,
-    input uwire id_6,
-    input tri0 id_7,
-    input wor id_8,
-    output supply1 id_9,
-    input supply1 id_10
+module module_1 #(
+    parameter id_6 = 32'd69
+) (
+    input tri id_0,
+    input tri id_1,
+    output tri0 id_2,
+    output wor id_3,
+    input supply1 id_4,
+    input tri1 id_5,
+    inout supply1 _id_6,
+    output supply0 id_7
 );
-  xnor primCall (id_2, id_3, id_5, id_6, id_7, id_8);
+  wire id_9 = id_4;
+  assign id_3 = id_4;
+  integer [-1 : id_6] id_10;
+  ;
+  logic id_11;
+  assign id_2 = 1'h0;
+  wire id_12;
+  ;
   module_0 modCall_1 ();
 endmodule
-module module_4;
-  wire id_1;
+module module_2 (
+    input  tri   id_0,
+    input  wire  id_1,
+    output logic id_2
+);
+  wire id_4;
+  ;
   module_0 modCall_1 ();
+  always @(id_1 or id_1) begin : LABEL_0
+    id_2 = -1'b0;
+  end
 endmodule

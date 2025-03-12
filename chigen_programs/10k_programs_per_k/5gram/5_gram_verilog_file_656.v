@@ -1,35 +1,46 @@
-// Seed: 1681725495
+// Seed: 3122358146
 module module_0 (
-    output supply1 id_0,
-    output supply1 id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  always @(id_3 or posedge id_3) begin : LABEL_0
-    if (id_3) begin : LABEL_0
-      force id_3 = id_3;
-      while (1) begin : LABEL_0
-        id_3 = #id_4 id_4;
-        disable id_5;
-      end
-    end
-    #1 id_0 = 1;
-    id_0 = 1;
-  end
-  wire id_6;
-  wire id_7 = id_7;
+  output wire id_7;
+  assign module_1.id_5 = 0;
+  inout wire id_6;
+  inout wire id_5;
+  inout wire id_4;
+  inout wire id_3;
+  input wire id_2;
+  output wire id_1;
+  assign id_5 = id_3;
+  assign id_1 = id_3;
+  assign id_7 = id_3;
 endmodule
 module module_1 (
-    output wand id_0,
-    input wor id_1,
-    input tri0 id_2,
-    input uwire id_3,
-    input supply1 id_4,
-    output supply0 id_5,
-    output wand id_6
+    output tri id_0,
+    input supply1 id_1,
+    input tri id_2,
+    input wor id_3,
+    output supply1 id_4,
+    output logic id_5,
+    input wand id_6,
+    output tri1 id_7,
+    input tri0 id_8,
+    input wand id_9
 );
-  wire id_8;
+  wire id_11;
   module_0 modCall_1 (
-      id_6,
-      id_5
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11,
+      id_11
   );
-  assign modCall_1.id_1 = 0;
+  always @(posedge id_6 or negedge ~(id_2)) id_5 <= (1 + -1);
 endmodule

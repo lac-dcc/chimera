@@ -1,33 +1,41 @@
-// Seed: 2215868234
+// Seed: 4024335851
 module module_0 (
-    output tri0 id_0,
-    output wand id_1,
-    input  tri0 id_2,
-    output wand id_3
+    id_1,
+    id_2
 );
-  wire id_5 = 1;
-  assign module_1.id_2 = 0;
-  module_2 modCall_1 ();
+  output wire id_2;
+  inout logic [7:0] id_1;
+  assign id_2 = (id_1);
+  wire ["" : -1 'h0] id_3;
+  assign module_1.id_7 = 0;
 endmodule
-module module_1 (
-    input tri1 id_0,
-    output supply1 id_1,
-    output uwire id_2
+module module_1 #(
+    parameter id_0 = 32'd48,
+    parameter id_2 = 32'd47
+) (
+    input  wor   _id_0,
+    input  wire  id_1,
+    input  uwire _id_2,
+    output logic id_3,
+    input  tri0  id_4,
+    input  wire  id_5
 );
-  assign id_2 = id_0;
+  for (id_7 = -1 == -1; -1; id_3 = -1)
+  always begin : LABEL_0
+    id_7 <= -1 == (-1) <= id_0;
+  end
+  localparam id_8#(
+      .id_9 (-1),
+      .id_10(id_8[(id_0)==~id_2] == id_9),
+      .id_11(id_10),
+      .id_12(id_11),
+      .id_13(1'b0),
+      .id_14(id_9)
+  ) = -1;
+  reg id_15, id_16, id_17;
   module_0 modCall_1 (
-      id_2,
-      id_1,
-      id_0,
-      id_1
+      id_8,
+      id_12
   );
-  wire id_4;
-  real id_5;
-  wire id_6;
-endmodule
-module module_2;
-  tri0 id_1, id_2, id_3;
-  assign module_0.id_3 = 0;
-  assign id_2 = 1 == id_3;
-  assign id_3 = id_2 !== 1 & id_3;
+  always_latch while (id_12) @(id_11) id_15 <= "";
 endmodule

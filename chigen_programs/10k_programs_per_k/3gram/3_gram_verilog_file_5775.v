@@ -1,36 +1,53 @@
-// Seed: 3362821439
-macromodule module_0 (
-    id_1,
-    id_2
+// Seed: 2361621492
+module module_0 #(
+    parameter id_13 = 32'd74,
+    parameter id_15 = 32'd86,
+    parameter id_19 = 32'd94,
+    parameter id_23 = 32'd47
+) (
+    input  supply0 id_0,
+    output logic   id_1
 );
-  inout wire id_2;
-  input wire id_1;
-  assign id_2 = 1;
-  assign id_2 = 1;
-  wire id_3 = id_2, id_4;
-  assign id_2 = 1;
+  id_3 :
+  assert property (@(posedge -1) -1)
+  else begin : LABEL_0
+    #1 begin : LABEL_1
+      id_3 = id_3;
+      id_1 <= id_3;
+      id_1 <= id_3;
+    end
+  end
+  wire id_4;
+  assign module_1.id_2 = 0;
+  assign id_3 = id_3;
+  wire  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  _id_13  ,  id_14  ,  _id_15  ,  id_16  ,  id_17  ,  id_18  ,  _id_19  ,  id_20  ,  id_21  ,  id_22  ,  _id_23  ,  id_24  [  id_19  :  1  ]  ,  id_25  ;
+  wire id_26;
+  localparam id_27 = 1 ? 1 : -1;
+  logic id_28;
+  wire id_29[id_15 : 1];
+  wire id_30;
+  struct packed {
+    logic [-1 : 1] id_31;
+    logic [1  &&  id_13 : id_23] id_32;
+  } id_33;
+  ;
 endmodule
-module module_1 (
-    input tri id_0,
-    input wor id_1,
-    output tri1 id_2,
-    output supply0 id_3,
-    input supply1 id_4,
-    output wand id_5,
-    input supply1 id_6,
-    input supply0 id_7,
-    input supply1 id_8,
-    input tri id_9,
-    input wand id_10,
-    input supply1 id_11,
-    input wand id_12,
-    output wire id_13,
-    input wand id_14
+macromodule module_1 (
+    output wire id_0,
+    input supply1 id_1,
+    input wand id_2,
+    output tri id_3,
+    output logic id_4,
+    output tri0 id_5,
+    output tri0 id_6,
+    output supply1 id_7
 );
-  wire id_16;
+  wire id_9, id_10, id_11, id_12;
+  initial begin : LABEL_0
+    id_4 <= id_12;
+  end
   module_0 modCall_1 (
-      id_16,
-      id_16
+      id_2,
+      id_4
   );
-  assign modCall_1.type_5 = 0;
 endmodule

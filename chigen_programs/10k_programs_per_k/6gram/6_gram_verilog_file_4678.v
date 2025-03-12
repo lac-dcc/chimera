@@ -1,26 +1,33 @@
-// Seed: 3721939274
-module module_0 ();
-  logic [7:0] id_1;
-  id_2(
-      .id_0(id_3),
-      .id_1(),
-      .id_2(1),
-      .id_3(id_1),
-      .id_4(id_3),
-      .id_5(id_1[1]),
-      .id_6(id_3),
-      .id_7(id_3)
-  );
-  assign id_3 = 1;
-endmodule
-module module_1 (
-    output wand id_0
+// Seed: 3736616186
+module module_0 (
+    output tri0 id_0,
+    input  wand id_1,
+    output wire id_2,
+    output wor  id_3
 );
-  wand id_2 = id_2 < id_2 - id_2 - id_2;
-  module_0 modCall_1 ();
-  supply0 id_3, id_4;
-  assign id_2 = id_3 + 1'b0;
-  wire id_5;
-  reg  id_6;
-  initial id_6 = #1 1;
+endmodule
+module module_1 #(
+    parameter id_3 = 32'd1
+) (
+    output wor id_0,
+    input wire id_1,
+    inout uwire id_2,
+    input tri0 _id_3,
+    output supply1 id_4
+    , id_6
+);
+  assign id_2 = id_6[1<=-1'd0];
+  parameter id_7 = $realtime;
+  assign id_6 = id_6 ? !id_3 : id_7;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_2,
+      id_4
+  );
+  wire id_8;
+  parameter id_9 = 1 == id_7;
+  wire id_10 = {id_7};
+  assign id_0 = id_9;
+  wire id_11;
 endmodule

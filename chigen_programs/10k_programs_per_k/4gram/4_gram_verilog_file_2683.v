@@ -1,39 +1,33 @@
-// Seed: 2609850582
+// Seed: 2375771072
 module module_0 (
-    input wor   id_0,
-    input uwire id_1
+    id_1,
+    id_2
 );
-  wire id_3;
-  assign module_1.type_3 = 0;
-  wire id_4;
-  assign module_2.type_0 = 0;
-  wire id_5;
-  wire id_6;
+  inout wor id_2;
+  assign module_1.id_4 = 0;
+  input wire id_1;
+  assign id_2 = 1;
 endmodule
 module module_1 (
-    input  uwire id_0,
-    output uwire id_1
+    output wor id_0,
+    input supply0 id_1,
+    input wand id_2,
+    output wire id_3,
+    input tri1 id_4,
+    input tri1 id_5,
+    input tri id_6,
+    input tri0 id_7,
+    output wor id_8,
+    inout wor id_9,
+    output tri1 id_10,
+    output tri1 id_11,
+    input wand id_12
 );
-  always_latch @(id_0) begin : LABEL_0
-    id_1 = 1;
-  end
-  assign id_1 = 1;
+  wire id_14;
+  ;
+  xor primCall (id_10, id_4, id_12, id_9, id_5, id_14, id_7, id_1, id_6, id_2);
   module_0 modCall_1 (
-      id_0,
-      id_0
+      id_14,
+      id_14
   );
-endmodule
-module module_2 (
-    input  uwire id_0,
-    output tri0  id_1
-);
-  tri0 id_3 = 1;
-  wire id_4;
-  assign id_4 = 1;
-  assign id_1 = 1;
-  module_0 modCall_1 (
-      id_0,
-      id_0
-  );
-  wire id_5;
 endmodule

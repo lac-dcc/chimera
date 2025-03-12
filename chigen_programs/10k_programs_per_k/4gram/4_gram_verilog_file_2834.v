@@ -1,42 +1,40 @@
-// Seed: 1173331343
+// Seed: 2208605808
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4
+    input wand id_0,
+    output supply0 id_1,
+    input wor id_2,
+    input wire id_3
 );
-  input wire id_4;
-  inout wire id_3;
-  output wire id_2;
-  inout wire id_1;
-  assign id_2 = id_3;
+  wire id_5;
+  assign id_5 = id_3;
+  initial begin : LABEL_0
+    if (1)
+      if (1 - -1'b0) begin : LABEL_1
+        disable id_6;
+        wait (id_5 || -1'b0);
+      end
+  end
+  logic id_7, id_8;
 endmodule
-module module_1 (
-    output wand id_0,
-    output supply1 id_1,
-    input supply1 id_2,
-    input supply0 id_3,
-    input supply1 id_4,
-    output tri id_5,
-    output wor id_6,
-    input tri1 id_7,
-    input supply0 id_8,
-    output wor id_9,
-    input wire id_10,
-    input wand id_11,
-    input tri id_12,
-    input uwire id_13
+module module_0 (
+    input wand id_0,
+    output tri id_1,
+    input wor id_2,
+    output supply0 module_1,
+    input wor id_4,
+    input wand id_5,
+    output tri id_6
 );
-  uwire id_15 = 1;
-  wire  id_16;
-  wire  id_17;
-  wire  id_18 = id_17;
-  assign id_1 = 1;
   module_0 modCall_1 (
-      id_16,
-      id_17,
-      id_18,
-      id_15
+      id_2,
+      id_6,
+      id_2,
+      id_4
   );
-  wire id_19;
+  assign modCall_1.id_3 = 0;
+  logic id_8;
+  generate
+    initial $signed(90);
+    ;
+  endgenerate
 endmodule

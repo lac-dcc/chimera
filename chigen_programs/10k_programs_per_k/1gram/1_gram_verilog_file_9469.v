@@ -1,31 +1,29 @@
-// Seed: 3174195006
+// Seed: 12489411
 module module_0 (
-    input tri id_0,
-    input wor id_1
+    id_1
 );
-  wire id_3, id_4;
-  module_2 modCall_1 ();
+  output wire id_1;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input wire id_1,
-    input wor id_2,
-    input uwire id_3,
-    output tri1 id_4,
-    input wire id_5,
-    output tri0 id_6,
-    output uwire id_7,
-    output tri1 id_8,
-    input tri0 id_9,
-    output wand id_10
+module module_1 #(
+    parameter id_3 = 32'd76,
+    parameter id_4 = 32'd78
+) (
+    id_1,
+    id_2,
+    _id_3,
+    _id_4
 );
-  module_0 modCall_1 (
-      id_2,
-      id_3
-  );
-endmodule
-module module_2 ();
-  id_1(
-      1'b0
-  );
+  input wire _id_4;
+  module_0 modCall_1 (id_2);
+  inout wire _id_3;
+  output wire id_2;
+  input wire id_1;
+  parameter id_5 = 1;
+  wire [id_4 : id_3] id_6;
+  reg id_7, id_8;
+  always $signed(99);
+  ;
+  `define pp_9 0
+  initial id_8 = -1 == {1'd0{""}} == -1;
+  assign `pp_9 = 1;
 endmodule

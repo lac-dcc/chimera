@@ -1,27 +1,68 @@
-// Seed: 15171698
-module module_0 ();
-  assign module_2.type_3 = 0;
-  assign id_1 = 1;
-endmodule
-module module_1;
-  assign id_1 = 1;
-  wire id_2;
-  wire id_4;
-  wire id_5;
-  wire id_6;
-  module_0 modCall_1 ();
-  wire  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  =  id_25  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ;
-endmodule
-module module_2 (
-    output tri1 id_0
+// Seed: 3184003247
+module module_0 (
+    output supply1 id_0
 );
-  reg id_2 = id_2;
-  assign id_0 = id_2 - id_2;
-  module_0 modCall_1 ();
-  always #1 begin : LABEL_0
-    id_2 = id_2;
-    $display(1);
-    id_2 <= id_2;
-    $display(1);
-  end
+  logic id_2;
+  ;
+endmodule
+module module_1 #(
+    parameter id_11 = 32'd38,
+    parameter id_26 = 32'd51,
+    parameter id_27 = 32'd51,
+    parameter id_29 = 32'd73,
+    parameter id_37 = 32'd11
+) (
+    input tri1 id_0,
+    output uwire id_1,
+    input supply0 id_2,
+    input wand id_3,
+    output wand id_4,
+    input wire id_5,
+    output tri0 id_6,
+    output tri id_7,
+    output tri0 id_8,
+    input wor id_9,
+    output logic id_10,
+    input wand _id_11,
+    output supply1 id_12
+    , id_31, id_32,
+    output logic id_13,
+    output wire id_14,
+    output tri1 id_15,
+    input supply0 id_16,
+    output tri id_17,
+    input wand id_18,
+    output wire id_19,
+    input supply0 id_20,
+    output wor id_21,
+    input supply0 id_22,
+    output uwire id_23,
+    input tri0 id_24,
+    input wire id_25,
+    input tri0 _id_26,
+    input uwire _id_27,
+    input tri id_28,
+    input tri0 _id_29
+);
+  logic id_33, id_34 = id_0 ? -1 : id_20, id_35;
+  module_0 modCall_1 (id_6);
+  assign modCall_1.id_0 = 0;
+  logic [-1 'b0 !=  id_29 : -1] id_36;
+  parameter id_37 = 1;
+  wire id_38;
+  wire [1 : id_11] id_39;
+  wire id_40;
+  id_41 :
+  assert property (@(negedge -1) 1'b0)
+  else;
+  always @(posedge -1)
+    if (1) begin : LABEL_0
+      return 1 == -1;
+      id_13 = -1;
+      id_10 = id_3 + id_11;
+      id_34 = id_26;
+    end
+  wire [-1 : id_37] id_42;
+  wire id_43;
+  wire [id_26 : id_27] id_44;
 endmodule

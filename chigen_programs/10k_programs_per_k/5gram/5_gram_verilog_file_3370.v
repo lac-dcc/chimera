@@ -1,48 +1,28 @@
-// Seed: 4128271820
+// Seed: 685758137
 module module_0 (
-    id_1,
-    id_2,
-    id_3,
-    id_4,
-    id_5,
-    id_6
+    output wand id_0,
+    input  wor  id_1
 );
-  input wire id_6;
-  input wire id_5;
-  input wire id_4;
-  inout wire id_3;
-  inout wire id_2;
-  output wire id_1;
-  assign id_1 = id_4;
-  wire id_7;
+  assign id_0 = 1;
 endmodule
-module module_1 (
-    output supply0 id_0,
-    input wand id_1
-    , id_16,
-    output wire id_2,
-    input supply1 id_3,
-    input uwire id_4,
-    output wand id_5,
-    input wor id_6,
-    input tri0 id_7,
-    input supply0 id_8,
-    output tri1 id_9,
-    output uwire id_10
-    , id_17,
-    input tri0 id_11,
-    output wor id_12,
-    input tri0 id_13,
-    input uwire id_14
+module module_1 #(
+    parameter id_2 = 32'd31,
+    parameter id_4 = 32'd63,
+    parameter id_5 = 32'd10
+) (
+    input  uwire id_0,
+    output tri0  id_1,
+    input  uwire _id_2
 );
-  assign id_10 = id_11;
-  nand primCall (id_5, id_4, id_14, id_13, id_17, id_7, id_1, id_6, id_11, id_16, id_8, id_3);
+  wire _id_4;
   module_0 modCall_1 (
-      id_17,
-      id_17,
-      id_17,
-      id_17,
-      id_16,
-      id_17
+      id_1,
+      id_0
   );
+  wire [1 : id_4  ==  id_2] _id_5;
+  logic [7:0][-1  !=  -1  < "" : 1] id_6;
+  assign id_6[id_4==id_4] = 1;
+  wire [id_4  |  -1 : id_5] id_7;
+  assign id_6[1] = id_0;
+  assign id_7 = id_6;
 endmodule

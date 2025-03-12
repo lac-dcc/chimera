@@ -1,47 +1,48 @@
-// Seed: 2185329836
+// Seed: 656767485
 module module_0 (
-    input supply0 id_0
+    output supply0 id_0,
+    input supply0 id_1,
+    input wor id_2,
+    input wand id_3,
+    output tri1 id_4,
+    input wire id_5[1 : ~  1],
+    input wire id_6,
+    input wor id_7,
+    output tri id_8
 );
-  assign id_2 = id_0;
-  module_2 modCall_1 (
-      id_2,
-      id_0,
-      id_0,
-      id_2,
-      id_2,
-      id_0,
-      id_2,
-      id_2,
-      id_2,
-      id_2
-  );
+  assign id_4 = 1;
+  assign module_1.id_2 = 0;
 endmodule
-module module_1 (
-    input tri1 id_0,
-    input tri id_1,
-    input supply0 id_2,
-    input tri id_3,
-    input uwire id_4,
-    input supply0 id_5
+module module_1 #(
+    parameter id_0 = 32'd93
+) (
+    input wor _id_0,
+    input supply0 id_1,
+    input supply1 id_2,
+    output supply0 id_3,
+    input supply1 id_4
 );
-  wire id_7;
-  module_0 modCall_1 (id_3);
-  assign modCall_1.id_2 = 0;
-endmodule
-module module_2 (
-    input  tri0  id_0,
-    input  wire  id_1,
-    input  wire  id_2,
-    input  uwire id_3,
-    output wor   id_4,
-    input  tri0  id_5,
-    input  wand  id_6,
-    input  tri   id_7,
-    input  uwire id_8,
-    input  tri0  id_9
-);
-  id_11(
-      (1) - 1, id_1, 1
+  wire id_6;
+  module_0 modCall_1 (
+      id_3,
+      id_4,
+      id_4,
+      id_4,
+      id_3,
+      id_2,
+      id_1,
+      id_1,
+      id_3
   );
-  assign module_0.id_2 = 0;
+  struct packed {
+    logic id_7   = 1;
+    logic id_8;
+    logic id_9   = -1 - -1;
+    logic id_10;
+    logic id_11  = -1 - -1'b0;
+    logic id_12;
+    logic id_13;
+  } id_14;
+  ;
+  assign id_14[1 : id_0] = 1 - 1'b0;
 endmodule

@@ -1,29 +1,114 @@
-// Seed: 1953417665
+// Seed: 411436941
 module module_0 (
-    input tri0 id_0,
-    output supply1 id_1
-    , id_3
+    input wand id_0,
+    output supply1 id_1,
+    output tri id_2,
+    input uwire id_3,
+    input supply1 id_4,
+    output uwire id_5,
+    input uwire id_6,
+    output wand id_7,
+    input wand id_8,
+    input wire id_9,
+    output tri1 id_10,
+    output supply0 id_11,
+    output supply1 id_12,
+    input wire id_13,
+    input supply1 id_14,
+    input supply0 id_15,
+    output wor id_16,
+    input tri1 id_17,
+    output tri1 id_18,
+    input supply0 id_19,
+    output uwire id_20,
+    input wand id_21,
+    output tri1 id_22,
+    output tri1 id_23,
+    output wor id_24,
+    input wor id_25,
+    output uwire module_0,
+    input tri0 id_27,
+    input supply0 id_28,
+    output tri1 id_29,
+    input supply1 id_30,
+    output uwire id_31,
+    output uwire id_32,
+    output uwire id_33,
+    input wire id_34,
+    input tri0 id_35,
+    input supply0 id_36,
+    output tri1 id_37,
+    output tri id_38,
+    input supply0 id_39,
+    input tri1 id_40,
+    input supply0 id_41,
+    input wand id_42,
+    input wand id_43,
+    output wor id_44,
+    input tri0 id_45
 );
-  id_4 :
-  assert property (@(posedge id_3) id_3)
-  else $display(1'b0, 1, 1'd0, 1, id_0);
-  assign module_1.type_0 = 0;
+  uwire id_47 = 1;
+  assign module_1.id_2 = 0;
+  always_latch @(posedge id_34 or posedge -1'b0) begin : LABEL_0
+    $clog2(52);
+    ;
+  end
 endmodule
 module module_1 (
-    input tri0 id_0,
-    output tri0 id_1,
+    output uwire id_0,
+    output tri id_1,
     input supply1 id_2,
-    output uwire id_3,
-    input supply1 id_4,
-    input tri1 id_5,
-    input supply0 id_6,
-    output supply0 id_7,
-    input tri0 id_8,
-    input wor id_9
+    input supply1 id_3,
+    output supply1 id_4
 );
-  wire id_11;
+  wire id_6;
   module_0 modCall_1 (
       id_2,
-      id_7
+      id_0,
+      id_0,
+      id_3,
+      id_2,
+      id_1,
+      id_3,
+      id_4,
+      id_2,
+      id_3,
+      id_4,
+      id_1,
+      id_1,
+      id_3,
+      id_3,
+      id_2,
+      id_0,
+      id_3,
+      id_1,
+      id_3,
+      id_4,
+      id_3,
+      id_0,
+      id_1,
+      id_1,
+      id_3,
+      id_1,
+      id_3,
+      id_3,
+      id_4,
+      id_2,
+      id_4,
+      id_4,
+      id_1,
+      id_2,
+      id_3,
+      id_3,
+      id_0,
+      id_0,
+      id_3,
+      id_3,
+      id_3,
+      id_2,
+      id_3,
+      id_4,
+      id_3
   );
+  tri id_7 = 1;
 endmodule

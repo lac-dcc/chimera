@@ -1,34 +1,30 @@
-// Seed: 1971293351
-module module_0 (
-    output uwire id_0,
-    output supply0 id_1,
-    output tri id_2
-);
-  assign id_2 = id_4;
+// Seed: 1367120958
+module module_0 #(
+    parameter id_4 = 32'd73
+) ();
+  bit id_1, id_2, id_3;
+  if (1) localparam id_4 = 1'h0;
+  else always id_1 = id_3;
+  wire id_5;
+  defparam id_4 = id_4;
+  assign module_1.id_0 = 0;
+  localparam id_6 = -1;
+  assign id_5 = id_4;
 endmodule
-module module_1 (
-    input tri0 id_0,
-    input tri1 id_1,
-    input wire id_2,
-    input wand id_3,
-    output tri0 id_4,
-    output supply0 id_5,
-    input wire id_6,
-    output tri1 id_7,
-    output uwire id_8,
-    output tri0 id_9,
-    output tri1 id_10,
-    input tri id_11,
-    input tri0 id_12,
-    input supply1 id_13,
-    input tri0 id_14
+module module_1 #(
+    parameter id_1 = 32'd54,
+    parameter id_3 = 32'd67
+) (
+    output uwire id_0,
+    input wand _id_1,
+    output supply1 id_2,
+    input tri1 _id_3,
+    input tri id_4
 );
-  module_0 modCall_1 (
-      id_8,
-      id_9,
-      id_4
-  );
-  assign modCall_1.type_1 = 0;
-  always id_7 = id_1;
-  assign id_4 = 1 - id_3;
+  assign id_0 = id_1;
+  module_0 modCall_1 ();
+  tri [id_1 : id_3] id_6 = 1'b0, id_7 = 1;
+  assign id_7 = id_3;
+  wire id_8 = ~id_4;
+  supply1 [id_1 : id_1] id_9 = -1 - -1, id_10 = 1;
 endmodule

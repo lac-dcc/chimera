@@ -1,25 +1,48 @@
-// Seed: 2409566045
-module module_0;
-  wire id_2;
-  wire id_3;
-  wand id_4;
-  assign id_4 = 1;
-endmodule
-module module_1 (
-    output wand id_0,
-    output tri1 id_1,
-    output wand id_2,
-    input  tri0 id_3,
-    input  tri0 id_4
+// Seed: 563543066
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_6;
-  wire  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ;
-  wire id_21;
-  wire id_22 = id_22;
-  module_0 modCall_1 ();
-  assign modCall_1.type_7 = 0;
-  id_23(
-      .id_0(1'b0), .id_1(id_16)
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
+  wire id_6 = id_4;
+endmodule
+module module_1 #(
+    parameter id_1 = 32'd3
+) (
+    _id_1,
+    id_2
+);
+  input wire id_2;
+  input wire _id_1;
+  wire id_3 = id_1;
+  wire [id_1 : -1] id_4 = id_4;
+  bit id_5 = -1;
+  assign id_5 = id_4;
+  assign id_5 = -1;
+  logic id_6, id_7;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4,
+      id_3,
+      id_2
   );
-  tri0 id_24 = 1;
+  always @("" or id_1) begin : LABEL_0
+    if (-1) begin : LABEL_1
+      $unsigned(6);
+      ;
+      id_7 <= 1;
+    end
+    if (-1) begin : LABEL_2
+      SystemTFIdentifier(1'b0, id_1);
+      id_5 <= id_5;
+    end
+  end
 endmodule

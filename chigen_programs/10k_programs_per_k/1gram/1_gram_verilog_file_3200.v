@@ -1,36 +1,46 @@
-// Seed: 2880281905
+// Seed: 679952004
 module module_0 (
-    input wor id_0,
-    input wor id_1#(
-        .id_4(1),
-        .id_5($display)
-    ),
-    wire id_6,
-    input supply1 id_2
+    id_1,
+    id_2
 );
-  generate
-    wire id_7, id_8;
-  endgenerate
+  inout wire id_2;
+  module_2 modCall_1 ();
+  output wire id_1;
+  genvar id_3;
 endmodule
 module module_1 (
-    input uwire id_0,
-    input tri1 id_1,
-    input wand id_2,
-    output logic id_3,
-    output tri1 id_4,
-    output wor id_5,
-    input uwire id_6,
-    input supply1 id_7,
-    input supply1 id_8,
-    output wand id_9
-    , id_12,
-    input wor id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  always if (id_0) #1 id_3 <= 1;
+  output wire id_7;
+  inout wire id_6;
+  input wire id_5;
+  input wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  inout wire id_1;
   module_0 modCall_1 (
-      id_10,
-      id_10,
-      id_8
+      id_1,
+      id_6
   );
-  assign modCall_1.id_2 = 0;
+  wire id_8;
+  wire id_9;
+endmodule
+program module_2;
+endprogram
+module module_3 (
+    output wor id_0,
+    input supply1 id_1,
+    input wor id_2,
+    output tri0 id_3,
+    output wand id_4
+);
+  logic id_6;
+  ;
+  module_2 modCall_1 ();
 endmodule

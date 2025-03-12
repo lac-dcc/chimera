@@ -1,38 +1,24 @@
-// Seed: 2992023793
-module module_0 (
-    input supply1 id_0,
-    input tri1 id_1
-);
-  for (id_3 = 1; ~id_0; id_3++) begin : LABEL_0
-    if (1) begin : LABEL_0
-      wor id_4 = id_0;
-    end else begin : LABEL_0
-      assign id_3 = id_3 ? id_1 : 1 == 1'b0;
-    end
+// Seed: 3804257518
+module module_0;
+  bit id_1;
+  assign module_1.id_7 = 0;
+  initial id_1 = id_1;
+  assign id_1 = 1;
+  always_comb @(id_1 or id_1 - &id_1) begin : LABEL_0
+    id_1 <= id_1;
   end
-  id_6(
-      id_3, id_3
-  );
+  assign id_1 = id_1;
 endmodule
-module module_1 (
-    output tri1 id_0,
-    input  wor  id_1
+module module_0 (
+    output tri id_0,
+    input wor id_1,
+    input supply1 sample,
+    output tri module_1,
+    input wire id_4,
+    output supply0 id_5,
+    input tri id_6,
+    output wor id_7
 );
-  wire id_3;
-  module_0 modCall_1 (
-      id_1,
-      id_1
-  );
-endmodule
-module module_2 (
-    input  wor  id_0,
-    output tri1 id_1
-);
-  wire id_3;
-  xnor primCall (id_1, id_3, id_0);
-  module_0 modCall_1 (
-      id_0,
-      id_0
-  );
-  assign modCall_1.id_3 = 0;
+  logic [-1 : -1] id_9 = id_1, id_10;
+  module_0 modCall_1 ();
 endmodule

@@ -1,48 +1,95 @@
-// Seed: 329644485
+// Seed: 2500358790
 module module_0 (
-    output tri0 id_0,
-    output supply1 id_1
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16
 );
-  initial begin : LABEL_0
-    id_0 = (1'd0);
-    if (id_3) $display(id_3);
-  end
-  wire id_4;
-  wire id_5;
-  assign id_1 = (1);
-  assign module_1.id_5 = 0;
+  input wire id_16;
+  output supply1 id_15;
+  inout wire id_14;
+  inout wire id_13;
+  inout wire id_12;
+  input wire id_11;
+  output wire id_10;
+  output wire id_9;
+  output wire id_8;
+  output wire id_7;
+  input wire id_6;
+  input wire id_5;
+  output wire id_4;
+  output wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  logic id_17;
+  assign id_15 = id_16;
+  assign id_15 = id_11 ? -1 & -1 : 1;
 endmodule
 module module_1 #(
-    parameter id_24 = 32'd52,
-    parameter id_25 = 32'd96
+    parameter id_13 = 32'd85,
+    parameter id_7  = 32'd36
 ) (
-    output uwire id_0,
-    input tri id_1,
-    input tri1 id_2,
-    input uwire id_3,
-    output wire id_4,
-    output tri1 id_5,
-    input supply0 id_6,
-    input supply1 id_7,
-    input supply1 id_8,
-    input wand id_9,
-    input uwire id_10,
-    input uwire id_11,
-    output wire id_12,
-    input wand id_13,
-    output tri0 id_14,
-    input tri id_15,
-    output uwire id_16,
-    input wire id_17,
-    input wor id_18,
-    output tri0 id_19,
-    output wand id_20
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    _id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12
 );
-  wire id_22;
+  input wire id_12;
+  output wire id_11;
+  input wire id_10;
+  inout wire id_9;
+  input wire id_8;
+  input wire _id_7;
+  input wire id_6;
+  output reg id_5;
+  output wire id_4;
+  inout reg id_3;
+  input wire id_2;
   module_0 modCall_1 (
-      id_14,
-      id_16
+      id_12,
+      id_9,
+      id_4,
+      id_9,
+      id_6,
+      id_10,
+      id_11,
+      id_9,
+      id_11,
+      id_11,
+      id_2,
+      id_9,
+      id_9,
+      id_9,
+      id_4,
+      id_9
   );
-  wire id_23;
-  defparam id_24.id_25 = 1'b0;
+  input wire id_1;
+  always @(posedge 1 === 1 or id_1 == 1) begin : LABEL_0
+    if (1) if (1 == 1) id_3 = -1;
+    id_5 = id_12;
+  end
+  wire [-1 : -1] _id_13;
+  logic id_14[id_7  -  id_13 : -1];
+  ;
+  logic id_15;
 endmodule

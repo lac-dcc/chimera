@@ -1,49 +1,41 @@
-// Seed: 4042396595
-module module_0 ();
-  tri id_1;
-  assign module_1.id_4 = 0;
-  assign id_1 = 1;
-  logic [7:0] id_3;
-  always begin : LABEL_0
-    id_3[1&&1] = id_3;
-  end
-  assign id_3[1] = 1;
-endmodule
-module module_1 (
-    input tri id_0,
-    output uwire id_1,
-    input wor id_2,
-    input wor id_3,
-    input wire id_4,
-    output tri0 id_5,
-    input wand id_6,
-    output wand id_7,
-    input wand id_8,
-    input wand id_9,
-    output logic id_10,
-    output uwire id_11,
-    input wire id_12,
-    input uwire id_13,
-    input tri1 id_14,
-    input wand id_15,
-    input supply1 id_16,
-    input uwire id_17,
-    input tri id_18,
-    output wand id_19,
-    input wand id_20,
-    output wire id_21,
-    input wor id_22,
-    input supply1 id_23,
-    output tri0 id_24,
-    input logic id_25,
-    input tri0 id_26,
-    input uwire id_27
-    , id_31,
-    input wire id_28,
-    input wand id_29
+// Seed: 3276364018
+module module_0 (
+    id_1,
+    id_2,
+    id_3,
+    id_4
 );
-  wire id_32;
-  module_0 modCall_1 ();
-  always if (1) id_10 <= id_25;
-  wire id_33;
+  output wire id_4;
+  inout wire id_3;
+  output wire id_2;
+  input wire id_1;
+endmodule
+module module_1 #(
+    parameter id_4 = 32'd10
+) (
+    id_1,
+    id_2,
+    id_3,
+    _id_4,
+    id_5
+);
+  inout wire id_5;
+  xnor primCall (id_2, id_7, id_3, id_5, id_9, id_8, id_6);
+  input wire _id_4;
+  inout logic [7:0] id_3;
+  inout wire id_2;
+  input wire id_1;
+  parameter id_6 = 1;
+  logic [{  id_4  {  -1  }  } : 1] id_7;
+  ;
+  assign id_7[id_4] = id_4 - {1, !id_1, id_4, id_3 * (-1), id_3, id_3};
+  wire id_8;
+  parameter id_9 = id_6;
+  assign id_3[-1'b0] = id_6;
+  module_0 modCall_1 (
+      id_9,
+      id_8,
+      id_6,
+      id_2
+  );
 endmodule

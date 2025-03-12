@@ -1,37 +1,39 @@
-// Seed: 624079370
-module module_0;
-  wire id_1 = id_1;
-  tri  id_2;
-  wire id_3;
-  assign module_2.type_17 = 0;
-  assign id_2 = 1;
-endmodule
-module module_1 (
-    input uwire id_0
-    , id_2
+// Seed: 3080339649
+module module_0 (
+    input tri1 id_0,
+    input supply0 id_1,
+    input wand id_2
 );
-  module_0 modCall_1 ();
+  logic [7:0] id_4;
+  assign id_4[-1] = id_0;
 endmodule
-module module_2 #(
-    parameter id_15 = 32'd9,
-    parameter id_16 = 32'd65
+module module_1 #(
+    parameter id_13 = 32'd84,
+    parameter id_3  = 32'd8,
+    parameter id_4  = 32'd34
 ) (
-    input supply1 id_0
-    , id_13,
-    output supply1 id_1,
-    input supply0 id_2,
-    input uwire id_3,
-    output uwire id_4
-    , id_14,
-    input tri0 id_5,
-    input supply1 id_6,
-    input supply1 id_7,
-    input tri1 id_8,
-    output tri id_9,
-    output uwire id_10,
-    output supply1 id_11
+    output wor id_0,
+    output wor id_1,
+    input wor id_2,
+    input wire _id_3,
+    input supply1 _id_4,
+    input tri id_5,
+    output uwire id_6,
+    input wor id_7,
+    output uwire id_8,
+    input tri0 id_9,
+    output wor id_10
 );
-  defparam id_15.id_16 = id_5 - id_0;
-  nor primCall (id_1, id_13, id_14, id_15, id_16, id_2, id_3, id_5, id_6, id_7, id_8);
-  module_0 modCall_1 ();
+  wire  id_12;
+  logic _id_13;
+  parameter time id_14 = 1;
+  localparam id_15 = id_14;
+  logic [1 : 1] id_16[id_3 : 1];
+  ;
+  module_0 modCall_1 (
+      id_7,
+      id_5,
+      id_5
+  );
+  wire [id_4  |  1  &  id_13 : id_4] id_17;
 endmodule

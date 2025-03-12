@@ -1,49 +1,60 @@
-// Seed: 745369439
+// Seed: 685935999
 module module_0 (
-    output wor  id_0,
-    input  wand id_1
+    input tri0  id_0,
+    input tri   id_1,
+    input wire  id_2,
+    input uwire id_3
 );
-  assign module_1.id_7 = 0;
+  assign module_1.id_2  = 0;
+  assign module_2.id_18 = 0;
 endmodule
 module module_1 (
-    output wor id_0,
-    input wor id_1,
-    input tri id_2,
-    output wand id_3,
-    input wire id_4,
-    output uwire id_5,
-    output logic id_6,
-    input wor id_7,
-    input uwire id_8,
-    input uwire id_9,
-    input uwire id_10,
-    input supply0 id_11,
-    output tri id_12,
-    output tri id_13#(.id_30(1)),
-    output supply1 id_14,
-    output uwire id_15,
-    output wire id_16,
-    output wire id_17,
-    input supply0 id_18,
-    output supply1 id_19,
-    input wand id_20,
-    input supply1 id_21,
-    input supply0 id_22,
-    output supply1 id_23,
-    input tri id_24,
-    input wor id_25,
-    input tri1 id_26,
-    output tri id_27,
-    input wand id_28
+    input  wand id_0,
+    input  tri  id_1,
+    input  tri  id_2,
+    output tri0 id_3['h0 : 1],
+    input  tri  id_4,
+    output wor  id_5
 );
-  always id_6 <= 1'b0;
-  reg id_31, id_32;
-  always
-  fork
-    id_31 <= 1;
-  join_none
+  assign id_3.id_4 = id_2 ? id_4 : 1;
+  parameter id_7 = 1;
+  assign id_3 = id_0;
+  logic id_8;
   module_0 modCall_1 (
-      id_14,
-      id_4
+      id_2,
+      id_0,
+      id_4,
+      id_0
+  );
+endmodule
+module module_2 (
+    input supply1 id_0,
+    input uwire id_1,
+    input tri id_2,
+    output tri0 id_3,
+    output wand id_4
+    , id_21,
+    input uwire id_5,
+    input supply1 id_6,
+    input wire id_7,
+    output wor id_8,
+    input tri id_9,
+    input supply1 id_10,
+    input supply1 id_11,
+    input wor id_12,
+    input supply1 id_13,
+    output uwire id_14,
+    input tri0 id_15,
+    input tri id_16,
+    input tri1 id_17,
+    input tri0 id_18,
+    output tri1 id_19
+);
+  assign id_4 = -1;
+  module_0 modCall_1 (
+      id_0,
+      id_15,
+      id_7,
+      id_5
   );
 endmodule

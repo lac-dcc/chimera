@@ -1,35 +1,55 @@
-// Seed: 2376101205
+// Seed: 330654506
 module module_0 (
-    id_1,
-    id_2
+    output tri1 id_0,
+    input wor id_1,
+    output tri id_2,
+    output supply1 id_3,
+    input tri1 id_4,
+    output wire id_5,
+    input tri1 id_6,
+    output uwire id_7,
+    input tri id_8,
+    output wor id_9,
+    output wire id_10,
+    input tri1 id_11
+    , id_15,
+    input uwire id_12,
+    input uwire id_13
 );
-  output wire id_2;
-  inout wire id_1;
-  supply1 id_3;
-  assign id_3 = 1;
-  assign module_2.id_2 = 0;
 endmodule
-module module_1 ();
-  tri0 id_1;
+module module_0 #(
+    parameter id_0 = 32'd37,
+    parameter id_3 = 32'd1
+) (
+    input supply0 module_1,
+    output wand id_1,
+    output wand id_2,
+    input wor _id_3,
+    input tri id_4,
+    input wor id_5,
+    input tri0 id_6,
+    input tri id_7,
+    input wor id_8,
+    input supply0 id_9,
+    input wand id_10,
+    input supply0 id_11
+);
+  logic [id_0 : id_3] id_13[-1 'b0 ==  -1 : 1];
+  ;
   module_0 modCall_1 (
       id_1,
-      id_1
-  );
-  id_2(
-      .id_0(1), .id_1(""), .id_2(id_3), .id_3(1), .id_4(1), .id_5(id_4), .id_6(id_1 - 1)
-  );
-endmodule
-module module_2 (
-    input  uwire id_0,
-    input  wand  id_1,
-    output tri1  id_2
-);
-  wor id_4 = 1;
-  module_0 modCall_1 (
-      id_4,
+      id_7,
+      id_1,
+      id_1,
+      id_7,
+      id_2,
+      id_11,
+      id_1,
+      id_11,
+      id_1,
+      id_2,
+      id_8,
+      id_6,
       id_4
-  );
-  id_5(
-      .id_0(1), .id_1({id_1 - 1, 1 == id_0}), .id_2(), .id_3(1)
   );
 endmodule

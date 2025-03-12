@@ -1,63 +1,69 @@
-// Seed: 2179349292
+// Seed: 4269692550
 module module_0 (
-    output supply0 id_0,
-    output tri1 id_1,
-    input tri0 id_2,
-    input tri0 id_3,
-    input tri1 id_4
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    module_0,
+    id_11,
+    id_12,
+    id_13
 );
-  wire id_6;
+  inout wire id_13;
+  output wire id_12;
+  inout wire id_11;
+  output wire id_10;
+  output wire id_9;
+  assign module_1._id_4 = 0;
+  inout wire id_8;
+  output wire id_7;
+  output wire id_6;
+  input wire id_5;
+  output wire id_4;
+  inout wire id_3;
+  inout wire id_2;
+  input wire id_1;
+  wire id_14;
 endmodule
-module module_1 (
-    output wire id_0,
-    input tri id_1,
-    input wand id_2,
-    input tri1 id_3,
-    input tri0 id_4,
-    input wire id_5,
-    output tri id_6,
-    output tri0 id_7,
-    input tri id_8,
-    input uwire id_9,
-    output wor id_10,
-    output tri id_11,
-    output wire id_12,
-    output wor id_13,
-    input tri id_14,
-    output uwire id_15,
-    input tri0 id_16,
-    input wor id_17,
-    input tri1 id_18,
-    output supply1 id_19,
-    input uwire id_20,
-    output wor id_21,
-    input wor id_22,
-    input wand id_23,
-    input supply1 id_24,
-    input wor id_25,
-    input supply1 id_26
+module module_1 #(
+    parameter id_0 = 32'd4,
+    parameter id_4 = 32'd79
+) (
+    input  uwire _id_0,
+    input  wor   id_1
+    , id_6,
+    output tri   id_2,
+    output tri   id_3,
+    input  wor   _id_4
 );
-  id_28(
-      .id_0(id_12),
-      .id_1(id_1 ==? id_6(1, 1 + {1{id_17 + 1}} - 1'b0, 1)),
-      .id_2(id_0),
-      .id_3(1),
-      .id_4(1),
-      .id_5(1),
-      .id_6(1),
-      .id_7(1),
-      .id_8(1),
-      .id_9(1),
-      .id_10(("")),
-      .id_11(1),
-      .id_12(1)
-  );
+  uwire [id_0  -  id_0 : id_4] id_7;
+  wire id_8;
+  parameter id_9 = "";
+  wire [-1 : 1] id_10;
+  logic id_11;
+  assign id_6 = id_8;
+  logic id_12;
+  localparam id_13 = id_9;
+  logic id_14[-1 : 1] = -1 < -1'h0;
   module_0 modCall_1 (
-      id_19,
-      id_13,
-      id_16,
-      id_1,
-      id_9
+      id_11,
+      id_11,
+      id_8,
+      id_8,
+      id_6,
+      id_12,
+      id_14,
+      id_7,
+      id_12,
+      id_8,
+      id_9,
+      id_10,
+      id_10
   );
-  assign modCall_1.id_4 = 0;
+  assign id_7 = -1 == -1;
 endmodule

@@ -1,38 +1,34 @@
-// Seed: 2831088380
-module module_0 ();
-  assign id_1 = id_1;
-  assign module_1.type_1 = 0;
-endmodule
-module module_1 (
-    output wire id_0,
-    input tri0 id_1,
-    input supply1 id_2,
-    output tri id_3,
-    input tri0 id_4,
-    input tri id_5
+// Seed: 2260751406
+module module_0 #(
+    parameter id_1 = 32'd96,
+    parameter id_3 = 32'd55
+) (
+    input  supply0 id_0,
+    output uwire   _id_1
 );
-  wor id_7 = 1'b0;
-  module_0 modCall_1 ();
+  wire _id_3;
+  localparam id_4 = (-1'd0);
+  assign module_1._id_1 = 0;
+  struct packed {
+    logic [-1 : -1] id_5;
+    logic [id_1 : (  id_3  )] id_6;
+  } id_7;
 endmodule
-module module_2 (
-    output wor id_0,
-    output wor id_1
+module module_1 #(
+    parameter id_1 = 32'd21,
+    parameter id_4 = 32'd22
+) (
+    input tri id_0,
+    input supply1 _id_1
 );
-  wire id_4;
-  module_0 modCall_1 ();
-  wire id_5 = id_4;
-  wire id_7;
-endmodule
-module module_3 (
-    input  tri0  id_0,
-    input  tri0  id_1,
-    input  wor   id_2,
-    input  uwire id_3,
-    input  tri   id_4,
-    output wire  id_5
-);
-  id_7(
-      1, id_3, id_0 < id_0 - id_0
+  supply1 id_3;
+  assign id_3 = 1'b0;
+  logic [-1 : id_1] _id_4;
+  localparam id_5 = 1'b0, id_6 = -1, id_7 = id_6;
+  module_0 modCall_1 (
+      id_0,
+      id_6
   );
-  module_0 modCall_1 ();
+  wire [id_4 : {  -1  {  1  }  }] id_8;
+  wire id_9 = id_9;
 endmodule

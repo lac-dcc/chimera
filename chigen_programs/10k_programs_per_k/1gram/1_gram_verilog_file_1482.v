@@ -1,26 +1,52 @@
-// Seed: 1970583368
+// Seed: 2935207830
 module module_0 #(
-    parameter id_5 = 32'd84,
-    parameter id_6 = 32'd92,
-    parameter id_7 = 32'd72,
-    parameter id_8 = 32'd72,
-    parameter id_9 = 32'd50
-) ();
-  wire id_1;
-  wire id_2 = id_2;
-  wire id_3;
-  supply0 id_4;
-  defparam id_5 = 1, id_6 = 1, id_7 = id_7, id_8 = id_4, id_9 = 1'b0;
-  assign id_2 = 1;
-  reg id_10;
-  always id_10 <= "";
-  `define pp_11 0
+    parameter id_8 = 32'd36
+) (
+    input wor id_0,
+    input uwire id_1,
+    input supply1 id_2,
+    input tri id_3
+    , id_6,
+    output tri1 id_4
+);
+  assign id_4 = id_1.id_3;
+  assign id_4 = id_3;
+  wire id_7, _id_8;
+  struct packed {
+    logic   id_9;
+    integer id_10;
+  } id_11;
+  ;
+  wire id_12[id_8 : 1], id_13;
+  always $signed(47);
+  ;
 endmodule
-module module_1;
-  generate
-    wire id_2;
-    wire id_3;
-  endgenerate
-  module_0 modCall_1 ();
-  assign modCall_1.id_4 = 0;
+module module_1 (
+    output wor  id_0,
+    input  wand id_1,
+    input  tri1 id_2
+);
+  struct packed {
+    integer id_4;
+    logic   id_5;
+  } id_6;
+  ;
+  wire  id_7;
+  logic id_8;
+  wire  id_9;
+  parameter id_10 = -1 - 1, id_11 = -1;
+  nor primCall (id_0, id_2, id_6, id_10, id_1);
+  assign id_7 = id_6.id_4;
+  module_0 modCall_1 (
+      id_2,
+      id_2,
+      id_1,
+      id_1,
+      id_0
+  );
+  logic id_12;
+  wire  id_13;
+  wire  id_14;
+  logic id_15;
+  ;
 endmodule

@@ -1,36 +1,36 @@
-// Seed: 4101645866
+// Seed: 2366229780
 module module_0 (
-    input wand id_0,
-    input wire id_1,
-    output supply1 id_2
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  wire id_4;
-  wire id_5, id_6;
-  wand id_7 = 1 == 1;
-  module_2 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  wire id_8;
+  inout wire id_5;
+  inout wire id_4;
+  inout uwire id_3;
+  output wire id_2;
+  output wire id_1;
+  assign id_3 = -1;
 endmodule
 module module_1 #(
-    parameter id_4 = 32'd8,
-    parameter id_5 = 32'd16
+    parameter id_2 = 32'd17
 ) (
-    input tri0 id_0,
-    output supply1 id_1,
-    output wor id_2
+    id_1,
+    _id_2,
+    id_3
 );
-  defparam id_4.id_5 = 1;
+  output wire id_3;
+  input wire _id_2;
+  output wire id_1;
+  wire id_4;
   module_0 modCall_1 (
-      id_0,
-      id_0,
-      id_2
+      id_4,
+      id_3,
+      id_4,
+      id_4,
+      id_4
   );
-  assign modCall_1.id_2 = 0;
-endmodule
-module module_2;
-  assign id_1 = id_1;
-  generate
-    assign id_1 = 1 != 1'd0 ** 1'b0;
-    `undef pp_2
-  endgenerate
+  wire [1 : 1  ==  id_2] id_5;
+  always force id_1 = 1'b0;
 endmodule

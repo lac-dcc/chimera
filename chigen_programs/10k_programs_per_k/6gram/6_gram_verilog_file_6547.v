@@ -1,41 +1,49 @@
-// Seed: 3496469958
+// Seed: 3097785395
 module module_0 (
-    input  tri1 id_0,
-    output wor  id_1,
-    input  wor  id_2,
-    output tri1 id_3,
-    input  tri  id_4,
-    output wire id_5,
-    input  wor  id_6,
-    input  wand id_7
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5
 );
-  module_2 modCall_1 ();
-  assign modCall_1.id_1 = 0;
-  assign module_1.type_5 = 0;
-  assign id_3 = id_6;
-  assign id_5 = 1;
-  uwire id_9 = 1;
-  wire  id_10;
-  assign id_3 = 1;
+  inout wire id_5;
+  input wire id_4;
+  output wire id_3;
+  input wire id_2;
+  input wire id_1;
+  logic id_6;
+  wire id_7 = id_4;
+  bit [-1 : -1] id_8 = id_1;
+  always  @  (  -1  or  1  or  id_6  ,  {  -1  <  id_6  {  1  }  }  ,  id_2  or  (  1  )  or  -1  or  negedge  id_6  ,  posedge  -1  )  begin :LABEL_0
+    id_8 <= -1;
+    id_6 <= id_2;
+    id_6 <= -1;
+  end
+  generate
+    for (id_9 = 1; 1; id_9 = -1'b0) begin : LABEL_1
+      wire id_10 = id_5;
+      always @(posedge -1) begin : LABEL_2
+        $signed(73);
+        ;
+      end
+    end
+  endgenerate
 endmodule
-module module_1 (
-    output tri id_0
+module module_1 #(
+    parameter id_2 = 32'd51
+) (
+    input  uwire id_0,
+    output wor   id_1,
+    inout  tri   _id_2,
+    output tri0  id_3
 );
-  uwire id_2 = 1'd0;
+  logic [id_2 : 'h0] id_5 = 1;
   module_0 modCall_1 (
-      id_2,
-      id_0,
-      id_2,
-      id_2,
-      id_2,
-      id_0,
-      id_2,
-      id_2
+      id_5,
+      id_5,
+      id_5,
+      id_5,
+      id_5
   );
-  assign id_0 = id_2;
-  wire id_3;
-endmodule
-module module_2 ();
-  wor id_1 = 1, id_2;
-  assign id_2 = id_2;
+  assign modCall_1.id_8 = 0;
 endmodule

@@ -1,54 +1,76 @@
-// Seed: 1740353459
-module module_0 (
-    input supply1 id_0,
-    output tri1 id_1
-);
-  wire id_3;
-  wire id_5;
-  always force id_5 = "";
-  wire id_6;
-  id_7(
-      .id_0(1'b0), .id_1(1 !== 1)
-  );
-  wire id_8;
+// Seed: 3576096645
+module module_0 ();
 endmodule
-module module_0 (
-    input supply1 id_0,
-    output tri0 id_1,
-    input supply0 id_2,
-    output supply1 id_3,
-    input tri0 id_4,
-    output wor id_5,
-    input tri1 id_6,
-    input tri id_7,
-    input tri1 id_8,
-    output tri0 id_9,
-    input uwire id_10
-    , id_24,
-    input tri1 id_11,
-    output tri0 id_12,
-    input wire id_13,
-    input wire id_14,
-    input wand id_15,
-    output tri0 id_16,
-    input supply1 id_17,
-    input wand id_18,
-    output tri1 id_19,
-    input supply0 id_20,
-    output wire id_21,
-    input tri0 id_22
+module module_1 #(
+    parameter id_20 = 32'd56,
+    parameter id_23 = 32'd87
+) (
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7,
+    id_8,
+    id_9,
+    id_10,
+    id_11,
+    id_12,
+    id_13,
+    id_14,
+    id_15,
+    id_16,
+    id_17,
+    id_18,
+    id_19,
+    _id_20,
+    id_21,
+    id_22,
+    _id_23,
+    id_24,
+    id_25,
+    id_26
 );
-  assign id_19 = 1;
-  module_0 modCall_1 (
-      id_2,
-      id_12
-  );
-  assign modCall_1.type_9 = 0;
-  tri1 id_25;
-  wire module_1;
-  wire id_26;
-  assign id_19 = 1;
+  output wire id_26;
+  output logic [7:0] id_25;
+  input wire id_24;
+  input wire _id_23;
+  output wire id_22;
+  inout wire id_21;
+  input wire _id_20;
+  input logic [7:0] id_19;
+  input wire id_18;
+  inout wire id_17;
+  output wire id_16;
+  input wire id_15;
+  inout reg id_14;
+  output wire id_13;
+  inout wire id_12;
+  output wire id_11;
+  output wire id_10;
+  input wire id_9;
+  output logic [7:0] id_8;
+  output reg id_7;
+  inout wire id_6;
+  output supply0 id_5;
+  inout wire id_4;
+  input wire id_3;
+  input wire id_2;
+  module_0 modCall_1 ();
+  inout wire id_1;
+  assign id_25[1] = -1;
+  always @(posedge id_14 or posedge id_9) begin : LABEL_0
+    wait (id_6 - 1);
+    id_14 <= -1;
+  end
+  initial begin : LABEL_1
+    id_7 <= -1'b0;
+  end
+  assign id_8[-1==""] = id_12;
+  assign id_7 = -1;
   wire id_27;
-  assign id_24 = id_0;
-  assign id_1  = id_25;
+  wire ["" : -1] id_28;
+  wire ["" : id_23] id_29;
+  assign id_5 = -1'b0 ** -1 & id_19 & id_19["" : id_20];
 endmodule

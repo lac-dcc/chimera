@@ -1,89 +1,69 @@
-// Seed: 1321084552
+// Seed: 1208010373
 module module_0 (
-    output tri id_0,
-    input tri0 id_1,
-    input tri1 id_2,
-    output uwire id_3,
-    input uwire id_4,
-    input wire id_5,
-    input supply1 id_6,
-    input supply1 id_7,
-    output tri id_8,
-    input tri0 id_9,
-    input tri0 id_10
+    id_1,
+    id_2,
+    id_3,
+    id_4,
+    id_5,
+    id_6,
+    id_7
 );
-  assign module_1.id_4 = 0;
+  inout wire id_7;
+  inout wire id_6;
+  output wire id_5;
+  inout wire id_4;
+  input wire id_3;
+  output wire id_2;
+  output wire id_1;
 endmodule
 module module_1 (
-    input supply0 id_0,
-    output wire id_1,
-    output wor id_2,
-    output tri0 id_3,
-    input wire id_4,
-    output tri id_5,
-    output wire id_6,
-    input tri id_7,
-    input wor id_8,
-    input supply0 id_9,
-    input supply0 id_10,
-    input supply1 id_11,
-    input supply1 id_12,
-    input wire id_13,
-    input tri0 id_14,
-    output tri0 id_15,
-    input tri0 id_16,
-    input tri id_17,
-    input tri0 id_18,
-    input tri id_19,
-    output wor id_20,
-    input tri1 id_21,
-    output tri0 id_22,
-    output tri id_23,
-    input wand id_24,
-    input tri id_25,
-    output tri0 id_26,
-    input tri id_27,
-    input wor id_28,
-    input wand id_29,
-    input supply1 id_30,
-    input supply1 id_31,
-    output wire id_32,
-    inout wor id_33,
-    output supply1 id_34,
-    output wand id_35,
-    output wire id_36,
-    output uwire id_37,
-    input tri0 id_38,
-    input tri0 id_39,
-    input supply0 id_40,
-    output wor id_41,
-    output wor id_42,
-    output supply1 id_43,
-    input tri1 id_44,
-    input uwire id_45,
-    input wor id_46,
-    input wor id_47,
-    output tri1 id_48,
-    input tri1 id_49,
-    output supply1 id_50,
-    input wire id_51,
-    input wire id_52,
-    output tri1 id_53
+    output wand id_0,
+    output tri0 id_1
 );
-  wire id_55;
+  logic id_3;
   module_0 modCall_1 (
-      id_35,
-      id_11,
-      id_44,
-      id_53,
-      id_30,
-      id_13,
-      id_8,
-      id_51,
       id_3,
-      id_11,
-      id_17
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3,
+      id_3
   );
-  assign id_1  = 1;
-  assign id_50 = id_30;
 endmodule
+program module_2 #(
+    parameter id_0 = 32'd59
+) (
+    input  supply0 _id_0,
+    input  supply0 id_1,
+    output logic   id_2
+);
+  always
+    if (1) id_2 <= -1;
+    else begin : LABEL_0
+      id_2 = 1;
+    end
+  logic id_4;
+  module_0 modCall_1 (
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4,
+      id_4
+  );
+  logic id_5;
+  assign id_5 = 1'b0;
+  union packed {
+    logic id_6;
+    logic id_7;
+    logic id_8;
+  } id_9 = id_9.id_8;
+  parameter [id_0 : -1] id_10 = -1;
+  task id_11;
+    id_5 = -1'b0;
+    logic id_12;
+    logic id_13;
+  endtask
+endprogram

@@ -1,16 +1,40 @@
-// Seed: 3918302695
-module module_0 ();
-  wire id_1, id_2, id_3, id_4, id_5, id_6, id_7, id_8;
-  assign module_1.id_19 = 0;
-endmodule
-module module_1 (
-    output wand id_0,
-    output supply1 id_1
+// Seed: 2168294868
+module module_0 (
+    input  tri0  id_0,
+    output wire  id_1,
+    output uwire id_2
 );
-  assign id_1 = id_3 == id_3;
-  wire  id_4  ,  id_5  ,  id_6  ,  id_7  ,  id_8  ,  id_9  ,  id_10  ,  id_11  ,  id_12  ,  id_13  ,  id_14  ,  id_15  ,  id_16  ,  id_17  ,  id_18  ,  id_19  ,  id_20  ,  id_21  ,  id_22  ,  id_23  ,  id_24  ,  id_25  ,  id_26  ,  id_27  ,  id_28  ,  id_29  ,  id_30  ,  id_31  ,  id_32  ,  id_33  ,  id_34  ,  id_35  ,  id_36  ,  id_37  ,  id_38  ,  id_39  ,  id_40  ,  id_41  ,  id_42  ,  id_43  ,  id_44  ,  id_45  ,  id_46  ,  id_47  ,  id_48  ,  id_49  ,  id_50  ,  id_51  ,  id_52  ,  id_53  ,  id_54  ,  id_55  ,  id_56  ,  id_57  ,  id_58  ,  id_59  ;
-  id_60 :
-  assert property (@(posedge id_45) id_54)
-  else $display({1, 1, 1 + 1, 1, id_39, 1, 1, 1, 1'b0, 1, id_43});
-  module_0 modCall_1 ();
+endmodule
+module module_0 #(
+    parameter id_1  = 32'd7,
+    parameter id_11 = 32'd59,
+    parameter id_2  = 32'd28,
+    parameter id_3  = 32'd6,
+    parameter id_8  = 32'd97
+) (
+    input wor id_0,
+    output tri1 module_1,
+    output tri1 _id_2,
+    input wor _id_3,
+    input tri id_4,
+    input wire id_5,
+    input wor id_6,
+    output wor id_7,
+    output supply1 _id_8
+);
+  wire id_10;
+  wire _id_11;
+  wire [id_11 : id_3] id_12;
+  wire id_13[id_8 : id_1];
+  logic id_14;
+  ;
+  module_0 modCall_1 (
+      id_0,
+      id_7,
+      id_7
+  );
+  assign modCall_1.id_2 = 0;
+  wire  [ "" : id_11] id_15;
+  logic [id_8 : id_2] id_16;
+  logic [  1 : 1 'd0] id_17;
 endmodule
