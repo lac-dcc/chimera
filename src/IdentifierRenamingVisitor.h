@@ -67,6 +67,7 @@ public:
   int moduleID = 0;
   int typeID = 0;
   int labelID = 0;
+  std::string module_or_interface_end;
 
   IdentifierRenamingVisitor(
       int modID, std::unordered_map<std::string, Node *> &declMap,
@@ -78,6 +79,8 @@ public:
   virtual void visit(Module_or_interface_declaration *node) override;
 
   virtual void visit(Module_start *node) override;
+
+  virtual void visit(Module_end *node) override;
 
   virtual void visit(Module_or_generate_item *node) override;
 
@@ -130,7 +133,7 @@ public:
   virtual void visit(Parameter_override *node) override;
 
   virtual void visit(Expression_in_parens *node) override;
-  
+
   virtual void visit(Struct_data_type *node) override;
 };
 #endif

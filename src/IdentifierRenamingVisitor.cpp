@@ -315,9 +315,22 @@ void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
 void IdentifierRenamingVisitor::visit(Module_start *node) {
   createIDContext(ContextType::MODULE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->getElement() == " module " ||
+        node->getElement() == " macromodule ") {
+      this->module_or_interface_end = " endmodule ";
+    } else {
+      this->module_or_interface_end = " endprogram ";
+    }
     this->applyVisit(child.get());
   }
   finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Module_end *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    child->setElement(this->module_or_interface_end);
+    this->applyVisit(child.get());
+  }
 }
 
 void IdentifierRenamingVisitor::visit(Module_or_generate_item *node) {
@@ -571,7 +584,6 @@ void IdentifierRenamingVisitor::visit(Parameter_override *node) {
   }
   finishIDContext();
 }
-
 
 void IdentifierRenamingVisitor::visit(Expression_in_parens *node) {
   createIDContext(ContextType::CONSTANT_EXPR);
