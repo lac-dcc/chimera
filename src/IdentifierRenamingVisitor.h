@@ -135,5 +135,9 @@ public:
   virtual void visit(Expression_in_parens *node) override;
 
   virtual void visit(Struct_data_type *node) override;
+
+  virtual void
+  visit(Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node)
+      override;
 };
 #endif
