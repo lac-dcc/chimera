@@ -315,11 +315,10 @@ void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
 void IdentifierRenamingVisitor::visit(Module_start *node) {
   createIDContext(ContextType::MODULE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    if (child->getElement() == " module " ||
-        node->getElement() == " macromodule ") {
-      this->module_or_interface_end = " endmodule ";
-    } else {
+    if (child->getElement() == " program ") {
       this->module_or_interface_end = " endprogram ";
+    } else {
+      this->module_or_interface_end = " endmodule ";
     }
     this->applyVisit(child.get());
   }
@@ -599,4 +598,15 @@ void IdentifierRenamingVisitor::visit(Struct_data_type *node) {
     this->applyVisit(child.get());
   }
   finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(
+    Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->getElement() == " void " &&
+        node->getParent()->type != NodeType::FUNCTION_RETURN_TYPE_AND_ID) {
+      child->setElement("");
+    }
+    this->applyVisit(child.get());
+  }
 }
