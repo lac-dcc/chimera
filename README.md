@@ -81,6 +81,7 @@ We have found various bugs in open-source platforms with programs from ChiBench 
 |   [1174](https://github.com/steveicarus/iverilog/issues/1174) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Crashes when assigning to parameters in a procedural block. | 
 |   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
 |   [2359](https://github.com/chipsalliance/verible/issues/2359) | [Verible's code formatter](https://github.com/chipsalliance/verible/tree/master/verible/verilog/tools/formatter/README.md) | Fails to parse input. |
+|   [2364](https://github.com/chipsalliance/verible/issues/2364) | [Verible's code formatter](https://github.com/chipsalliance/verible/tree/master/verible/verilog/tools/formatter/README.md) | Fails to parse input. |
 
 ## Technical Report
 
