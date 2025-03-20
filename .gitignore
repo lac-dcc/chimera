@@ -7,7 +7,12 @@ database/verible_invalid_programs/
 jgproject*/
 build/
 .vscode/
-generated_programs/
+generated_programs*/
+cadence_gram_tests/
+chigen_programs/
+vloghammer_programs/
+verismith_10k_programs/
+transFuzz/
 size_test/
 sample_database/
 time_test/
@@ -17,3 +22,4 @@ coverage/debug/
 coverage/output/
 coverage/*.png
 coverage/*.prof*
+nohup.out
