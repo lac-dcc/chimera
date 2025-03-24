@@ -595,7 +595,128 @@ enum class NodeType {
   HIERARCHY_OR_CALL_EXTENSION,
   COVERAGE_EVENT_OPT,
   CYCLE_RANGE_OR_EXPR,
-  COVERAGE_SPEC_OR_OPTION
+  COVERAGE_SPEC_OR_OPTION,
+  UNTIL_OPERATOR,
+  COVER_SEQUENCE_STATEMENT,
+  WITH_COVERGROUP_EXPRESSION_IN_PARENS,
+  DECLARATION_EXTENDS_LIST_OPT,
+  RS_IF_ELSE,
+  FOLLOWED_BY_OPERATOR,
+  LOCAL_SEQUENCE_LVAR_PORT_DIRECTION_OPT,
+  BINS_EXPRESSION,
+  PROPERTY_ACTUAL_ARG,
+  SELECT_EXPRESSION,
+  SLICE_SIZE,
+  PROPERTY_CASE_ITEM,
+  DEFAULT_SKEW,
+  CONSTRAINT_EXPRESSION_LIST,
+  MODPORT_CLOCKING_DECLARATION_BEGIN,
+  PROPERTY_CASE_ITEM_LIST,
+  RANDOMIZE_CALL,
+  CROSS_ITEM_LIST,
+  PRODUCTION_ITEM,
+  DATA_TYPE_OR_VOID_WITH_ID,
+  LB_STAR_RB,
+  MODPORT_CLOCKING_DECLARATION_LAST,
+  UNIQUENESS_CONSTRAINT,
+  ANY_PORT_LIST_PREPROCESSOR_LAST_NAMED,
+  MODPORT_TF_PORTS_DECLARATION_TRAILING_COMMA,
+  INTERFACE_DATA_DECLARATION,
+  METHOD_PROPERTY_QUALIFIER,
+  BINS_OR_OPTIONS_LIST,
+  OPT_CONFIG,
+  PATTERN_LIST,
+  BINS_OR_OPTIONS,
+  PATTERN_OPT,
+  INTERFACE_CLASS_ITEM_LIST,
+  CROSS_BODY_ITEM_LIST,
+  MODPORT_TF_PORTS_DECLARATION_BEGIN,
+  RS_RULE_LIST,
+  CELL_CLAUSE,
+  SEQUENCE_PORT_LIST,
+  LET_PORT_LIST,
+  PRODUCTION_LIST,
+  RS_PRODUCTION_LIST_OR_RAND_JOIN,
+  RS_CODE_BLOCK,
+  LET_DECLARATION,
+  EXPRESSION_IN_PARENS_OPT,
+  ARRAY_METHOD_WITH_PREDICATE_OPT,
+  CROSS_ITEM,
+  MODPORT_TF_PORTS_DECLARATION_LAST,
+  CASE_PATTERN_ITEM,
+  INST_CLAUSE,
+  RS_REPEAT,
+  COVERGROUP_EXPRESSION_BRACKETED_OPT,
+  CLOCKING_DRIVE_ONLY,
+  CONSTRAINT_PRIMARY,
+  CONSTRAINT_EXPRESSION,
+  SEQUENCE_MATCH_ITEM_LIST,
+  SEQUENCE_SPEC,
+  COVER_CROSS,
+  WILDCARD_OPT,
+  CASE_INSIDE_ITEMS,
+  MODPORT_TF_PORT,
+  WEIGHT_SPECIFICATION,
+  SELECT_CONDITION,
+  DEFERRED_IMMEDIATE_ASSERTION_ITEM,
+  LET_FORMAL_TYPE_FOLLOWED_BY_ID,
+  COVERAGE_BIN_RHS,
+  PRODUCTION_ITEMS_LIST,
+  PREPROCESSOR_BALANCED_PORT_DECLARATIONS,
+  SIMPLE_TYPE,
+  RS_PRODUCTION_LIST,
+  DPI_EXPORT_ITEM,
+  PRODUCTION,
+  MODPORT_CLOCKING_DECLARATION_TRAILING_COMMA,
+  LET_PORT_LIST_IN_PARENS_OPT,
+  CROSS_BODY,
+  USE_CLAUSE,
+  SEQUENCE_MATCH_ITEM,
+  COVERAGE_BIN,
+  SEQUENCE_PORT_TYPE_FOLLOWED_BY_ID,
+  INTERFACE_CLASS_DECLARATION,
+  IDENTIFIER_LIST,
+  SEQUENCE_PORT_ITEM,
+  DIST_ITEM,
+  DIST_WEIGHT,
+  BINS_KEYWORD,
+  LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_ANSI,
+  IMPLEMENTS_INTERFACE_LIST,
+  LET_PORT_ITEM,
+  ARRAY_METHOD_WITH_PREDICATE,
+  COVERAGE_OPTION,
+  CONSTRAINT_SET,
+  PATTERN,
+  NET_TYPE_DECLARATION,
+  BINS_SELECTION,
+  EXPRESSION_OR_DIST_LIST,
+  CLOCKING_SKEW,
+  INTERFACE_CLASS_ITEM,
+  SEQUENCE_EXPR_MATCH_ITEM_LIST,
+  TK_ANGLEBRACKETINCLUDE,
+  INTERFACE_CLASS_ITEM_LIST_OPT,
+  IMPORT_EXPORT,
+  WITH_COVERGROUP_EXPRESSION,
+  CONSTRAINT_PRIMARY_LIST,
+  PROPERTY_CASE_STATEMENT,
+  CHARGE_STRENGTH,
+  DPI_IMPORT_PROPERTY,
+  IFF_EXPR_OPT,
+  RS_RULE,
+  INTERFACE_CLASS_METHOD,
+  MODPORT_SIMPLE_PORTS_DECLARATION_TRAILING_COMMA,
+  CASE_INSIDE_ITEM,
+  RESTRICT_PROPERTY_STATEMENT,
+  DIST_LIST,
+  RS_PROD,
+  ARRAY_ORDERING_METHOD,
+  RANDSEQUENCE_STATEMENT,
+  CROSS_BODY_ITEM,
+  CASE_PATTERN_ITEMS,
+  CROSS_BODY_ITEM_LIST_OPT,
+  MODPORT_PORTS_DECLARATION_TRAILING_COMMA,
+  SET_COVERGROUP_EXPRESSION_OR_COVERGROUP_RANGE_LIST_OR_TRANS_LIST,
+
 };
 
 /**
@@ -4850,6 +4971,785 @@ public:
   Tk_static_opt(std::string element);
   Tk_static_opt(Tk_static_opt &&) = default;
   Tk_static_opt &operator=(Tk_static_opt &&) = default;
+};
+
+class Until_Operator : public Node {
+public:
+  Until_Operator(std::string element);
+  Until_Operator(Until_Operator &&) = default;
+  Until_Operator &operator=(Until_Operator &&) = default;
+};
+class Cover_Sequence_Statement : public Node {
+public:
+  Cover_Sequence_Statement(std::string element);
+  Cover_Sequence_Statement(Cover_Sequence_Statement &&) = default;
+  Cover_Sequence_Statement &operator=(Cover_Sequence_Statement &&) = default;
+};
+class With_Covergroup_Expression_In_Parens : public Node {
+public:
+  With_Covergroup_Expression_In_Parens(std::string element);
+  With_Covergroup_Expression_In_Parens(
+      With_Covergroup_Expression_In_Parens &&) = default;
+  With_Covergroup_Expression_In_Parens &
+  operator=(With_Covergroup_Expression_In_Parens &&) = default;
+};
+class Declaration_Extends_List_Opt : public Node {
+public:
+  Declaration_Extends_List_Opt(std::string element);
+  Declaration_Extends_List_Opt(Declaration_Extends_List_Opt &&) = default;
+  Declaration_Extends_List_Opt &
+  operator=(Declaration_Extends_List_Opt &&) = default;
+};
+class Rs_If_Else : public Node {
+public:
+  Rs_If_Else(std::string element);
+  Rs_If_Else(Rs_If_Else &&) = default;
+  Rs_If_Else &operator=(Rs_If_Else &&) = default;
+};
+class Followed_By_Operator : public Node {
+public:
+  Followed_By_Operator(std::string element);
+  Followed_By_Operator(Followed_By_Operator &&) = default;
+  Followed_By_Operator &operator=(Followed_By_Operator &&) = default;
+};
+class Local_Sequence_Lvar_Port_Direction_Opt : public Node {
+public:
+  Local_Sequence_Lvar_Port_Direction_Opt(std::string element);
+  Local_Sequence_Lvar_Port_Direction_Opt(
+      Local_Sequence_Lvar_Port_Direction_Opt &&) = default;
+  Local_Sequence_Lvar_Port_Direction_Opt &
+  operator=(Local_Sequence_Lvar_Port_Direction_Opt &&) = default;
+};
+class Bins_Expression : public Node {
+public:
+  Bins_Expression(std::string element);
+  Bins_Expression(Bins_Expression &&) = default;
+  Bins_Expression &operator=(Bins_Expression &&) = default;
+};
+class Property_Actual_Arg : public Node {
+public:
+  Property_Actual_Arg(std::string element);
+  Property_Actual_Arg(Property_Actual_Arg &&) = default;
+  Property_Actual_Arg &operator=(Property_Actual_Arg &&) = default;
+};
+class Select_Expression : public Node {
+public:
+  Select_Expression(std::string element);
+  Select_Expression(Select_Expression &&) = default;
+  Select_Expression &operator=(Select_Expression &&) = default;
+};
+class Slice_Size : public Node {
+public:
+  Slice_Size(std::string element);
+  Slice_Size(Slice_Size &&) = default;
+  Slice_Size &operator=(Slice_Size &&) = default;
+};
+class Property_Case_Item : public Node {
+public:
+  Property_Case_Item(std::string element);
+  Property_Case_Item(Property_Case_Item &&) = default;
+  Property_Case_Item &operator=(Property_Case_Item &&) = default;
+};
+class Default_Skew : public Node {
+public:
+  Default_Skew(std::string element);
+  Default_Skew(Default_Skew &&) = default;
+  Default_Skew &operator=(Default_Skew &&) = default;
+};
+class Constraint_Expression_List : public Node {
+public:
+  Constraint_Expression_List(std::string element);
+  Constraint_Expression_List(Constraint_Expression_List &&) = default;
+  Constraint_Expression_List &
+  operator=(Constraint_Expression_List &&) = default;
+};
+class Modport_Clocking_Declaration_Begin : public Node {
+public:
+  Modport_Clocking_Declaration_Begin(std::string element);
+  Modport_Clocking_Declaration_Begin(Modport_Clocking_Declaration_Begin &&) =
+      default;
+  Modport_Clocking_Declaration_Begin &
+  operator=(Modport_Clocking_Declaration_Begin &&) = default;
+};
+class Property_Case_Item_List : public Node {
+public:
+  Property_Case_Item_List(std::string element);
+  Property_Case_Item_List(Property_Case_Item_List &&) = default;
+  Property_Case_Item_List &operator=(Property_Case_Item_List &&) = default;
+};
+class Randomize_Call : public Node {
+public:
+  Randomize_Call(std::string element);
+  Randomize_Call(Randomize_Call &&) = default;
+  Randomize_Call &operator=(Randomize_Call &&) = default;
+};
+class Cross_Item_List : public Node {
+public:
+  Cross_Item_List(std::string element);
+  Cross_Item_List(Cross_Item_List &&) = default;
+  Cross_Item_List &operator=(Cross_Item_List &&) = default;
+};
+class Production_Item : public Node {
+public:
+  Production_Item(std::string element);
+  Production_Item(Production_Item &&) = default;
+  Production_Item &operator=(Production_Item &&) = default;
+};
+class Data_Type_Or_Void_With_Id : public Node {
+public:
+  Data_Type_Or_Void_With_Id(std::string element);
+  Data_Type_Or_Void_With_Id(Data_Type_Or_Void_With_Id &&) = default;
+  Data_Type_Or_Void_With_Id &operator=(Data_Type_Or_Void_With_Id &&) = default;
+};
+class Lb_Star_Rb : public Node {
+public:
+  Lb_Star_Rb(std::string element);
+  Lb_Star_Rb(Lb_Star_Rb &&) = default;
+  Lb_Star_Rb &operator=(Lb_Star_Rb &&) = default;
+};
+class Modport_Clocking_Declaration_Last : public Node {
+public:
+  Modport_Clocking_Declaration_Last(std::string element);
+  Modport_Clocking_Declaration_Last(Modport_Clocking_Declaration_Last &&) =
+      default;
+  Modport_Clocking_Declaration_Last &
+  operator=(Modport_Clocking_Declaration_Last &&) = default;
+};
+class Uniqueness_Constraint : public Node {
+public:
+  Uniqueness_Constraint(std::string element);
+  Uniqueness_Constraint(Uniqueness_Constraint &&) = default;
+  Uniqueness_Constraint &operator=(Uniqueness_Constraint &&) = default;
+};
+class Any_Port_List_Preprocessor_Last_Named : public Node {
+public:
+  Any_Port_List_Preprocessor_Last_Named(std::string element);
+  Any_Port_List_Preprocessor_Last_Named(
+      Any_Port_List_Preprocessor_Last_Named &&) = default;
+  Any_Port_List_Preprocessor_Last_Named &
+  operator=(Any_Port_List_Preprocessor_Last_Named &&) = default;
+};
+class Modport_Tf_Ports_Declaration_Trailing_Comma : public Node {
+public:
+  Modport_Tf_Ports_Declaration_Trailing_Comma(std::string element);
+  Modport_Tf_Ports_Declaration_Trailing_Comma(
+      Modport_Tf_Ports_Declaration_Trailing_Comma &&) = default;
+  Modport_Tf_Ports_Declaration_Trailing_Comma &
+  operator=(Modport_Tf_Ports_Declaration_Trailing_Comma &&) = default;
+};
+class Interface_Data_Declaration : public Node {
+public:
+  Interface_Data_Declaration(std::string element);
+  Interface_Data_Declaration(Interface_Data_Declaration &&) = default;
+  Interface_Data_Declaration &
+  operator=(Interface_Data_Declaration &&) = default;
+};
+class Method_Property_Qualifier : public Node {
+public:
+  Method_Property_Qualifier(std::string element);
+  Method_Property_Qualifier(Method_Property_Qualifier &&) = default;
+  Method_Property_Qualifier &operator=(Method_Property_Qualifier &&) = default;
+};
+class Bins_Or_Options_List : public Node {
+public:
+  Bins_Or_Options_List(std::string element);
+  Bins_Or_Options_List(Bins_Or_Options_List &&) = default;
+  Bins_Or_Options_List &operator=(Bins_Or_Options_List &&) = default;
+};
+class Opt_Config : public Node {
+public:
+  Opt_Config(std::string element);
+  Opt_Config(Opt_Config &&) = default;
+  Opt_Config &operator=(Opt_Config &&) = default;
+};
+class Pattern_List : public Node {
+public:
+  Pattern_List(std::string element);
+  Pattern_List(Pattern_List &&) = default;
+  Pattern_List &operator=(Pattern_List &&) = default;
+};
+class Bins_Or_Options : public Node {
+public:
+  Bins_Or_Options(std::string element);
+  Bins_Or_Options(Bins_Or_Options &&) = default;
+  Bins_Or_Options &operator=(Bins_Or_Options &&) = default;
+};
+class Pattern_Opt : public Node {
+public:
+  Pattern_Opt(std::string element);
+  Pattern_Opt(Pattern_Opt &&) = default;
+  Pattern_Opt &operator=(Pattern_Opt &&) = default;
+};
+class Interface_Class_Item_List : public Node {
+public:
+  Interface_Class_Item_List(std::string element);
+  Interface_Class_Item_List(Interface_Class_Item_List &&) = default;
+  Interface_Class_Item_List &operator=(Interface_Class_Item_List &&) = default;
+};
+class Cross_Body_Item_List : public Node {
+public:
+  Cross_Body_Item_List(std::string element);
+  Cross_Body_Item_List(Cross_Body_Item_List &&) = default;
+  Cross_Body_Item_List &operator=(Cross_Body_Item_List &&) = default;
+};
+class Modport_Tf_Ports_Declaration_Begin : public Node {
+public:
+  Modport_Tf_Ports_Declaration_Begin(std::string element);
+  Modport_Tf_Ports_Declaration_Begin(Modport_Tf_Ports_Declaration_Begin &&) =
+      default;
+  Modport_Tf_Ports_Declaration_Begin &
+  operator=(Modport_Tf_Ports_Declaration_Begin &&) = default;
+};
+class Rs_Rule_List : public Node {
+public:
+  Rs_Rule_List(std::string element);
+  Rs_Rule_List(Rs_Rule_List &&) = default;
+  Rs_Rule_List &operator=(Rs_Rule_List &&) = default;
+};
+class Cell_Clause : public Node {
+public:
+  Cell_Clause(std::string element);
+  Cell_Clause(Cell_Clause &&) = default;
+  Cell_Clause &operator=(Cell_Clause &&) = default;
+};
+class Sequence_Port_List : public Node {
+public:
+  Sequence_Port_List(std::string element);
+  Sequence_Port_List(Sequence_Port_List &&) = default;
+  Sequence_Port_List &operator=(Sequence_Port_List &&) = default;
+};
+class Let_Port_List : public Node {
+public:
+  Let_Port_List(std::string element);
+  Let_Port_List(Let_Port_List &&) = default;
+  Let_Port_List &operator=(Let_Port_List &&) = default;
+};
+class Production_List : public Node {
+public:
+  Production_List(std::string element);
+  Production_List(Production_List &&) = default;
+  Production_List &operator=(Production_List &&) = default;
+};
+class Rs_Production_List_Or_Rand_Join : public Node {
+public:
+  Rs_Production_List_Or_Rand_Join(std::string element);
+  Rs_Production_List_Or_Rand_Join(Rs_Production_List_Or_Rand_Join &&) = default;
+  Rs_Production_List_Or_Rand_Join &
+  operator=(Rs_Production_List_Or_Rand_Join &&) = default;
+};
+class Rs_Code_Block : public Node {
+public:
+  Rs_Code_Block(std::string element);
+  Rs_Code_Block(Rs_Code_Block &&) = default;
+  Rs_Code_Block &operator=(Rs_Code_Block &&) = default;
+};
+class Let_Declaration : public Node {
+public:
+  Let_Declaration(std::string element);
+  Let_Declaration(Let_Declaration &&) = default;
+  Let_Declaration &operator=(Let_Declaration &&) = default;
+};
+class Expression_In_Parens_Opt : public Node {
+public:
+  Expression_In_Parens_Opt(std::string element);
+  Expression_In_Parens_Opt(Expression_In_Parens_Opt &&) = default;
+  Expression_In_Parens_Opt &operator=(Expression_In_Parens_Opt &&) = default;
+};
+class Array_Method_With_Predicate_Opt : public Node {
+public:
+  Array_Method_With_Predicate_Opt(std::string element);
+  Array_Method_With_Predicate_Opt(Array_Method_With_Predicate_Opt &&) = default;
+  Array_Method_With_Predicate_Opt &
+  operator=(Array_Method_With_Predicate_Opt &&) = default;
+};
+class Cross_Item : public Node {
+public:
+  Cross_Item(std::string element);
+  Cross_Item(Cross_Item &&) = default;
+  Cross_Item &operator=(Cross_Item &&) = default;
+};
+class Modport_Tf_Ports_Declaration_Last : public Node {
+public:
+  Modport_Tf_Ports_Declaration_Last(std::string element);
+  Modport_Tf_Ports_Declaration_Last(Modport_Tf_Ports_Declaration_Last &&) =
+      default;
+  Modport_Tf_Ports_Declaration_Last &
+  operator=(Modport_Tf_Ports_Declaration_Last &&) = default;
+};
+class Case_Pattern_Item : public Node {
+public:
+  Case_Pattern_Item(std::string element);
+  Case_Pattern_Item(Case_Pattern_Item &&) = default;
+  Case_Pattern_Item &operator=(Case_Pattern_Item &&) = default;
+};
+class Inst_Clause : public Node {
+public:
+  Inst_Clause(std::string element);
+  Inst_Clause(Inst_Clause &&) = default;
+  Inst_Clause &operator=(Inst_Clause &&) = default;
+};
+class Rs_Repeat : public Node {
+public:
+  Rs_Repeat(std::string element);
+  Rs_Repeat(Rs_Repeat &&) = default;
+  Rs_Repeat &operator=(Rs_Repeat &&) = default;
+};
+class Covergroup_Expression_Bracketed_Opt : public Node {
+public:
+  Covergroup_Expression_Bracketed_Opt(std::string element);
+  Covergroup_Expression_Bracketed_Opt(Covergroup_Expression_Bracketed_Opt &&) =
+      default;
+  Covergroup_Expression_Bracketed_Opt &
+  operator=(Covergroup_Expression_Bracketed_Opt &&) = default;
+};
+class Clocking_Drive_Only : public Node {
+public:
+  Clocking_Drive_Only(std::string element);
+  Clocking_Drive_Only(Clocking_Drive_Only &&) = default;
+  Clocking_Drive_Only &operator=(Clocking_Drive_Only &&) = default;
+};
+class Constraint_Primary : public Node {
+public:
+  Constraint_Primary(std::string element);
+  Constraint_Primary(Constraint_Primary &&) = default;
+  Constraint_Primary &operator=(Constraint_Primary &&) = default;
+};
+class Constraint_Expression : public Node {
+public:
+  Constraint_Expression(std::string element);
+  Constraint_Expression(Constraint_Expression &&) = default;
+  Constraint_Expression &operator=(Constraint_Expression &&) = default;
+};
+class Tk_Evalstringliteral : public Node {
+public:
+  Tk_Evalstringliteral(std::string element);
+  Tk_Evalstringliteral(Tk_Evalstringliteral &&) = default;
+  Tk_Evalstringliteral &operator=(Tk_Evalstringliteral &&) = default;
+};
+class Sequence_Match_Item_List : public Node {
+public:
+  Sequence_Match_Item_List(std::string element);
+  Sequence_Match_Item_List(Sequence_Match_Item_List &&) = default;
+  Sequence_Match_Item_List &operator=(Sequence_Match_Item_List &&) = default;
+};
+class Sequence_Spec : public Node {
+public:
+  Sequence_Spec(std::string element);
+  Sequence_Spec(Sequence_Spec &&) = default;
+  Sequence_Spec &operator=(Sequence_Spec &&) = default;
+};
+class Cover_Cross : public Node {
+public:
+  Cover_Cross(std::string element);
+  Cover_Cross(Cover_Cross &&) = default;
+  Cover_Cross &operator=(Cover_Cross &&) = default;
+};
+class Wildcard_Opt : public Node {
+public:
+  Wildcard_Opt(std::string element);
+  Wildcard_Opt(Wildcard_Opt &&) = default;
+  Wildcard_Opt &operator=(Wildcard_Opt &&) = default;
+};
+class Case_Inside_Items : public Node {
+public:
+  Case_Inside_Items(std::string element);
+  Case_Inside_Items(Case_Inside_Items &&) = default;
+  Case_Inside_Items &operator=(Case_Inside_Items &&) = default;
+};
+class Modport_Tf_Port : public Node {
+public:
+  Modport_Tf_Port(std::string element);
+  Modport_Tf_Port(Modport_Tf_Port &&) = default;
+  Modport_Tf_Port &operator=(Modport_Tf_Port &&) = default;
+};
+class Weight_Specification : public Node {
+public:
+  Weight_Specification(std::string element);
+  Weight_Specification(Weight_Specification &&) = default;
+  Weight_Specification &operator=(Weight_Specification &&) = default;
+};
+class Select_Condition : public Node {
+public:
+  Select_Condition(std::string element);
+  Select_Condition(Select_Condition &&) = default;
+  Select_Condition &operator=(Select_Condition &&) = default;
+};
+class Deferred_Immediate_Assertion_Item : public Node {
+public:
+  Deferred_Immediate_Assertion_Item(std::string element);
+  Deferred_Immediate_Assertion_Item(Deferred_Immediate_Assertion_Item &&) =
+      default;
+  Deferred_Immediate_Assertion_Item &
+  operator=(Deferred_Immediate_Assertion_Item &&) = default;
+};
+class Let_Formal_Type_Followed_By_Id : public Node {
+public:
+  Let_Formal_Type_Followed_By_Id(std::string element);
+  Let_Formal_Type_Followed_By_Id(Let_Formal_Type_Followed_By_Id &&) = default;
+  Let_Formal_Type_Followed_By_Id &
+  operator=(Let_Formal_Type_Followed_By_Id &&) = default;
+};
+class Coverage_Bin_Rhs : public Node {
+public:
+  Coverage_Bin_Rhs(std::string element);
+  Coverage_Bin_Rhs(Coverage_Bin_Rhs &&) = default;
+  Coverage_Bin_Rhs &operator=(Coverage_Bin_Rhs &&) = default;
+};
+class Production_Items_List : public Node {
+public:
+  Production_Items_List(std::string element);
+  Production_Items_List(Production_Items_List &&) = default;
+  Production_Items_List &operator=(Production_Items_List &&) = default;
+};
+class Preprocessor_Balanced_Port_Declarations : public Node {
+public:
+  Preprocessor_Balanced_Port_Declarations(std::string element);
+  Preprocessor_Balanced_Port_Declarations(
+      Preprocessor_Balanced_Port_Declarations &&) = default;
+  Preprocessor_Balanced_Port_Declarations &
+  operator=(Preprocessor_Balanced_Port_Declarations &&) = default;
+};
+class Simple_Type : public Node {
+public:
+  Simple_Type(std::string element);
+  Simple_Type(Simple_Type &&) = default;
+  Simple_Type &operator=(Simple_Type &&) = default;
+};
+class Rs_Production_List : public Node {
+public:
+  Rs_Production_List(std::string element);
+  Rs_Production_List(Rs_Production_List &&) = default;
+  Rs_Production_List &operator=(Rs_Production_List &&) = default;
+};
+class Dpi_Export_Item : public Node {
+public:
+  Dpi_Export_Item(std::string element);
+  Dpi_Export_Item(Dpi_Export_Item &&) = default;
+  Dpi_Export_Item &operator=(Dpi_Export_Item &&) = default;
+};
+class Production : public Node {
+public:
+  Production(std::string element);
+  Production(Production &&) = default;
+  Production &operator=(Production &&) = default;
+};
+class Modport_Clocking_Declaration_Trailing_Comma : public Node {
+public:
+  Modport_Clocking_Declaration_Trailing_Comma(std::string element);
+  Modport_Clocking_Declaration_Trailing_Comma(
+      Modport_Clocking_Declaration_Trailing_Comma &&) = default;
+  Modport_Clocking_Declaration_Trailing_Comma &
+  operator=(Modport_Clocking_Declaration_Trailing_Comma &&) = default;
+};
+class Let_Port_List_In_Parens_Opt : public Node {
+public:
+  Let_Port_List_In_Parens_Opt(std::string element);
+  Let_Port_List_In_Parens_Opt(Let_Port_List_In_Parens_Opt &&) = default;
+  Let_Port_List_In_Parens_Opt &
+  operator=(Let_Port_List_In_Parens_Opt &&) = default;
+};
+class Cross_Body : public Node {
+public:
+  Cross_Body(std::string element);
+  Cross_Body(Cross_Body &&) = default;
+  Cross_Body &operator=(Cross_Body &&) = default;
+};
+class Use_Clause : public Node {
+public:
+  Use_Clause(std::string element);
+  Use_Clause(Use_Clause &&) = default;
+  Use_Clause &operator=(Use_Clause &&) = default;
+};
+class Sequence_Match_Item : public Node {
+public:
+  Sequence_Match_Item(std::string element);
+  Sequence_Match_Item(Sequence_Match_Item &&) = default;
+  Sequence_Match_Item &operator=(Sequence_Match_Item &&) = default;
+};
+class Coverage_Bin : public Node {
+public:
+  Coverage_Bin(std::string element);
+  Coverage_Bin(Coverage_Bin &&) = default;
+  Coverage_Bin &operator=(Coverage_Bin &&) = default;
+};
+class Sequence_Port_Type_Followed_By_Id : public Node {
+public:
+  Sequence_Port_Type_Followed_By_Id(std::string element);
+  Sequence_Port_Type_Followed_By_Id(Sequence_Port_Type_Followed_By_Id &&) =
+      default;
+  Sequence_Port_Type_Followed_By_Id &
+  operator=(Sequence_Port_Type_Followed_By_Id &&) = default;
+};
+class Interface_Class_Declaration : public Node {
+public:
+  Interface_Class_Declaration(std::string element);
+  Interface_Class_Declaration(Interface_Class_Declaration &&) = default;
+  Interface_Class_Declaration &
+  operator=(Interface_Class_Declaration &&) = default;
+};
+class Identifier_List : public Node {
+public:
+  Identifier_List(std::string element);
+  Identifier_List(Identifier_List &&) = default;
+  Identifier_List &operator=(Identifier_List &&) = default;
+};
+class Sequence_Port_Item : public Node {
+public:
+  Sequence_Port_Item(std::string element);
+  Sequence_Port_Item(Sequence_Port_Item &&) = default;
+  Sequence_Port_Item &operator=(Sequence_Port_Item &&) = default;
+};
+class Dist_Item : public Node {
+public:
+  Dist_Item(std::string element);
+  Dist_Item(Dist_Item &&) = default;
+  Dist_Item &operator=(Dist_Item &&) = default;
+};
+class Dist_Weight : public Node {
+public:
+  Dist_Weight(std::string element);
+  Dist_Weight(Dist_Weight &&) = default;
+  Dist_Weight &operator=(Dist_Weight &&) = default;
+};
+class Bins_Keyword : public Node {
+public:
+  Bins_Keyword(std::string element);
+  Bins_Keyword(Bins_Keyword &&) = default;
+  Bins_Keyword &operator=(Bins_Keyword &&) = default;
+};
+class List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi : public Node {
+public:
+  List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi(
+      std::string element);
+  List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi(
+      List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi &&) = default;
+  List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi &operator=(
+      List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi &&) = default;
+};
+class Implements_Interface_List : public Node {
+public:
+  Implements_Interface_List(std::string element);
+  Implements_Interface_List(Implements_Interface_List &&) = default;
+  Implements_Interface_List &operator=(Implements_Interface_List &&) = default;
+};
+class Let_Port_Item : public Node {
+public:
+  Let_Port_Item(std::string element);
+  Let_Port_Item(Let_Port_Item &&) = default;
+  Let_Port_Item &operator=(Let_Port_Item &&) = default;
+};
+class Array_Method_With_Predicate : public Node {
+public:
+  Array_Method_With_Predicate(std::string element);
+  Array_Method_With_Predicate(Array_Method_With_Predicate &&) = default;
+  Array_Method_With_Predicate &
+  operator=(Array_Method_With_Predicate &&) = default;
+};
+class Coverage_Option : public Node {
+public:
+  Coverage_Option(std::string element);
+  Coverage_Option(Coverage_Option &&) = default;
+  Coverage_Option &operator=(Coverage_Option &&) = default;
+};
+class Constraint_Set : public Node {
+public:
+  Constraint_Set(std::string element);
+  Constraint_Set(Constraint_Set &&) = default;
+  Constraint_Set &operator=(Constraint_Set &&) = default;
+};
+class Pattern : public Node {
+public:
+  Pattern(std::string element);
+  Pattern(Pattern &&) = default;
+  Pattern &operator=(Pattern &&) = default;
+};
+class Net_Type_Declaration : public Node {
+public:
+  Net_Type_Declaration(std::string element);
+  Net_Type_Declaration(Net_Type_Declaration &&) = default;
+  Net_Type_Declaration &operator=(Net_Type_Declaration &&) = default;
+};
+class Bins_Selection : public Node {
+public:
+  Bins_Selection(std::string element);
+  Bins_Selection(Bins_Selection &&) = default;
+  Bins_Selection &operator=(Bins_Selection &&) = default;
+};
+class Expression_Or_Dist_List : public Node {
+public:
+  Expression_Or_Dist_List(std::string element);
+  Expression_Or_Dist_List(Expression_Or_Dist_List &&) = default;
+  Expression_Or_Dist_List &operator=(Expression_Or_Dist_List &&) = default;
+};
+class Clocking_Skew : public Node {
+public:
+  Clocking_Skew(std::string element);
+  Clocking_Skew(Clocking_Skew &&) = default;
+  Clocking_Skew &operator=(Clocking_Skew &&) = default;
+};
+class Interface_Class_Item : public Node {
+public:
+  Interface_Class_Item(std::string element);
+  Interface_Class_Item(Interface_Class_Item &&) = default;
+  Interface_Class_Item &operator=(Interface_Class_Item &&) = default;
+};
+class Sequence_Expr_Match_Item_List : public Node {
+public:
+  Sequence_Expr_Match_Item_List(std::string element);
+  Sequence_Expr_Match_Item_List(Sequence_Expr_Match_Item_List &&) = default;
+  Sequence_Expr_Match_Item_List &
+  operator=(Sequence_Expr_Match_Item_List &&) = default;
+};
+class Tk_Anglebracketinclude : public Node {
+public:
+  Tk_Anglebracketinclude(std::string element);
+  Tk_Anglebracketinclude(Tk_Anglebracketinclude &&) = default;
+  Tk_Anglebracketinclude &operator=(Tk_Anglebracketinclude &&) = default;
+};
+class Interface_Class_Item_List_Opt : public Node {
+public:
+  Interface_Class_Item_List_Opt(std::string element);
+  Interface_Class_Item_List_Opt(Interface_Class_Item_List_Opt &&) = default;
+  Interface_Class_Item_List_Opt &
+  operator=(Interface_Class_Item_List_Opt &&) = default;
+};
+class Import_Export : public Node {
+public:
+  Import_Export(std::string element);
+  Import_Export(Import_Export &&) = default;
+  Import_Export &operator=(Import_Export &&) = default;
+};
+class With_Covergroup_Expression : public Node {
+public:
+  With_Covergroup_Expression(std::string element);
+  With_Covergroup_Expression(With_Covergroup_Expression &&) = default;
+  With_Covergroup_Expression &
+  operator=(With_Covergroup_Expression &&) = default;
+};
+class Constraint_Primary_List : public Node {
+public:
+  Constraint_Primary_List(std::string element);
+  Constraint_Primary_List(Constraint_Primary_List &&) = default;
+  Constraint_Primary_List &operator=(Constraint_Primary_List &&) = default;
+};
+class Property_Case_Statement : public Node {
+public:
+  Property_Case_Statement(std::string element);
+  Property_Case_Statement(Property_Case_Statement &&) = default;
+  Property_Case_Statement &operator=(Property_Case_Statement &&) = default;
+};
+class Charge_Strength : public Node {
+public:
+  Charge_Strength(std::string element);
+  Charge_Strength(Charge_Strength &&) = default;
+  Charge_Strength &operator=(Charge_Strength &&) = default;
+};
+class Dpi_Import_Property : public Node {
+public:
+  Dpi_Import_Property(std::string element);
+  Dpi_Import_Property(Dpi_Import_Property &&) = default;
+  Dpi_Import_Property &operator=(Dpi_Import_Property &&) = default;
+};
+class Iff_Expr_Opt : public Node {
+public:
+  Iff_Expr_Opt(std::string element);
+  Iff_Expr_Opt(Iff_Expr_Opt &&) = default;
+  Iff_Expr_Opt &operator=(Iff_Expr_Opt &&) = default;
+};
+class Rs_Rule : public Node {
+public:
+  Rs_Rule(std::string element);
+  Rs_Rule(Rs_Rule &&) = default;
+  Rs_Rule &operator=(Rs_Rule &&) = default;
+};
+class Interface_Class_Method : public Node {
+public:
+  Interface_Class_Method(std::string element);
+  Interface_Class_Method(Interface_Class_Method &&) = default;
+  Interface_Class_Method &operator=(Interface_Class_Method &&) = default;
+};
+class Modport_Simple_Ports_Declaration_Trailing_Comma : public Node {
+public:
+  Modport_Simple_Ports_Declaration_Trailing_Comma(std::string element);
+  Modport_Simple_Ports_Declaration_Trailing_Comma(
+      Modport_Simple_Ports_Declaration_Trailing_Comma &&) = default;
+  Modport_Simple_Ports_Declaration_Trailing_Comma &
+  operator=(Modport_Simple_Ports_Declaration_Trailing_Comma &&) = default;
+};
+class Case_Inside_Item : public Node {
+public:
+  Case_Inside_Item(std::string element);
+  Case_Inside_Item(Case_Inside_Item &&) = default;
+  Case_Inside_Item &operator=(Case_Inside_Item &&) = default;
+};
+class Restrict_Property_Statement : public Node {
+public:
+  Restrict_Property_Statement(std::string element);
+  Restrict_Property_Statement(Restrict_Property_Statement &&) = default;
+  Restrict_Property_Statement &
+  operator=(Restrict_Property_Statement &&) = default;
+};
+class Dist_List : public Node {
+public:
+  Dist_List(std::string element);
+  Dist_List(Dist_List &&) = default;
+  Dist_List &operator=(Dist_List &&) = default;
+};
+class Rs_Prod : public Node {
+public:
+  Rs_Prod(std::string element);
+  Rs_Prod(Rs_Prod &&) = default;
+  Rs_Prod &operator=(Rs_Prod &&) = default;
+};
+class Array_Ordering_Method : public Node {
+public:
+  Array_Ordering_Method(std::string element);
+  Array_Ordering_Method(Array_Ordering_Method &&) = default;
+  Array_Ordering_Method &operator=(Array_Ordering_Method &&) = default;
+};
+class Randsequence_Statement : public Node {
+public:
+  Randsequence_Statement(std::string element);
+  Randsequence_Statement(Randsequence_Statement &&) = default;
+  Randsequence_Statement &operator=(Randsequence_Statement &&) = default;
+};
+class Cross_Body_Item : public Node {
+public:
+  Cross_Body_Item(std::string element);
+  Cross_Body_Item(Cross_Body_Item &&) = default;
+  Cross_Body_Item &operator=(Cross_Body_Item &&) = default;
+};
+class Case_Pattern_Items : public Node {
+public:
+  Case_Pattern_Items(std::string element);
+  Case_Pattern_Items(Case_Pattern_Items &&) = default;
+  Case_Pattern_Items &operator=(Case_Pattern_Items &&) = default;
+};
+class Cross_Body_Item_List_Opt : public Node {
+public:
+  Cross_Body_Item_List_Opt(std::string element);
+  Cross_Body_Item_List_Opt(Cross_Body_Item_List_Opt &&) = default;
+  Cross_Body_Item_List_Opt &operator=(Cross_Body_Item_List_Opt &&) = default;
+};
+class Modport_Ports_Declaration_Trailing_Comma : public Node {
+public:
+  Modport_Ports_Declaration_Trailing_Comma(std::string element);
+  Modport_Ports_Declaration_Trailing_Comma(
+      Modport_Ports_Declaration_Trailing_Comma &&) = default;
+  Modport_Ports_Declaration_Trailing_Comma &
+  operator=(Modport_Ports_Declaration_Trailing_Comma &&) = default;
+};
+class Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List
+    : public Node {
+public:
+  Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List(
+      std::string element);
+  Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List(
+      Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List &&) =
+      default;
+  Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List &operator=(
+      Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List &&) =
+      default;
 };
 
 using ClassMap =

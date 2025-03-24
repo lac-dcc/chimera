@@ -3027,6 +3027,518 @@ Tk_static_opt::Tk_static_opt(std::string element) {
   this->setElement(element);
 }
 
+Until_Operator::Until_Operator(std::string element) {
+  this->type = NodeType::UNTIL_OPERATOR;
+  this->setElement(element);
+}
+Cover_Sequence_Statement::Cover_Sequence_Statement(std::string element) {
+  this->type = NodeType::COVER_SEQUENCE_STATEMENT;
+  this->setElement(element);
+}
+With_Covergroup_Expression_In_Parens::With_Covergroup_Expression_In_Parens(
+    std::string element) {
+  this->type = NodeType::WITH_COVERGROUP_EXPRESSION_IN_PARENS;
+  this->setElement(element);
+}
+Declaration_Extends_List_Opt::Declaration_Extends_List_Opt(
+    std::string element) {
+  this->type = NodeType::DECLARATION_EXTENDS_LIST_OPT;
+  this->setElement(element);
+}
+Rs_If_Else::Rs_If_Else(std::string element) {
+  this->type = NodeType::RS_IF_ELSE;
+  this->setElement(element);
+}
+Followed_By_Operator::Followed_By_Operator(std::string element) {
+  this->type = NodeType::FOLLOWED_BY_OPERATOR;
+  this->setElement(element);
+}
+Local_Sequence_Lvar_Port_Direction_Opt::Local_Sequence_Lvar_Port_Direction_Opt(
+    std::string element) {
+  this->type = NodeType::LOCAL_SEQUENCE_LVAR_PORT_DIRECTION_OPT;
+  this->setElement(element);
+}
+Bins_Expression::Bins_Expression(std::string element) {
+  this->type = NodeType::BINS_EXPRESSION;
+  this->setElement(element);
+}
+Property_Actual_Arg::Property_Actual_Arg(std::string element) {
+  this->type = NodeType::PROPERTY_ACTUAL_ARG;
+  this->setElement(element);
+}
+Select_Expression::Select_Expression(std::string element) {
+  this->type = NodeType::SELECT_EXPRESSION;
+  this->setElement(element);
+}
+Slice_Size::Slice_Size(std::string element) {
+  this->type = NodeType::SLICE_SIZE;
+  this->setElement(element);
+}
+Property_Case_Item::Property_Case_Item(std::string element) {
+  this->type = NodeType::PROPERTY_CASE_ITEM;
+  this->setElement(element);
+}
+Default_Skew::Default_Skew(std::string element) {
+  this->type = NodeType::DEFAULT_SKEW;
+  this->setElement(element);
+}
+Constraint_Expression_List::Constraint_Expression_List(std::string element) {
+  this->type = NodeType::CONSTRAINT_EXPRESSION_LIST;
+  this->setElement(element);
+}
+Modport_Clocking_Declaration_Begin::Modport_Clocking_Declaration_Begin(
+    std::string element) {
+  this->type = NodeType::MODPORT_CLOCKING_DECLARATION_BEGIN;
+  this->setElement(element);
+}
+Property_Case_Item_List::Property_Case_Item_List(std::string element) {
+  this->type = NodeType::PROPERTY_CASE_ITEM_LIST;
+  this->setElement(element);
+}
+Randomize_Call::Randomize_Call(std::string element) {
+  this->type = NodeType::RANDOMIZE_CALL;
+  this->setElement(element);
+}
+Cross_Item_List::Cross_Item_List(std::string element) {
+  this->type = NodeType::CROSS_ITEM_LIST;
+  this->setElement(element);
+}
+Production_Item::Production_Item(std::string element) {
+  this->type = NodeType::PRODUCTION_ITEM;
+  this->setElement(element);
+}
+Data_Type_Or_Void_With_Id::Data_Type_Or_Void_With_Id(std::string element) {
+  this->type = NodeType::DATA_TYPE_OR_VOID_WITH_ID;
+  this->setElement(element);
+}
+Lb_Star_Rb::Lb_Star_Rb(std::string element) {
+  this->type = NodeType::LB_STAR_RB;
+  this->setElement(element);
+}
+Modport_Clocking_Declaration_Last::Modport_Clocking_Declaration_Last(
+    std::string element) {
+  this->type = NodeType::MODPORT_CLOCKING_DECLARATION_LAST;
+  this->setElement(element);
+}
+Uniqueness_Constraint::Uniqueness_Constraint(std::string element) {
+  this->type = NodeType::UNIQUENESS_CONSTRAINT;
+  this->setElement(element);
+}
+Any_Port_List_Preprocessor_Last_Named::Any_Port_List_Preprocessor_Last_Named(
+    std::string element) {
+  this->type = NodeType::ANY_PORT_LIST_PREPROCESSOR_LAST_NAMED;
+  this->setElement(element);
+}
+Modport_Tf_Ports_Declaration_Trailing_Comma::
+    Modport_Tf_Ports_Declaration_Trailing_Comma(std::string element) {
+  this->type = NodeType::MODPORT_TF_PORTS_DECLARATION_TRAILING_COMMA;
+  this->setElement(element);
+}
+Interface_Data_Declaration::Interface_Data_Declaration(std::string element) {
+  this->type = NodeType::INTERFACE_DATA_DECLARATION;
+  this->setElement(element);
+}
+Method_Property_Qualifier::Method_Property_Qualifier(std::string element) {
+  this->type = NodeType::METHOD_PROPERTY_QUALIFIER;
+  this->setElement(element);
+}
+Bins_Or_Options_List::Bins_Or_Options_List(std::string element) {
+  this->type = NodeType::BINS_OR_OPTIONS_LIST;
+  this->setElement(element);
+}
+Opt_Config::Opt_Config(std::string element) {
+  this->type = NodeType::OPT_CONFIG;
+  this->setElement(element);
+}
+Pattern_List::Pattern_List(std::string element) {
+  this->type = NodeType::PATTERN_LIST;
+  this->setElement(element);
+}
+Bins_Or_Options::Bins_Or_Options(std::string element) {
+  this->type = NodeType::BINS_OR_OPTIONS;
+  this->setElement(element);
+}
+Pattern_Opt::Pattern_Opt(std::string element) {
+  this->type = NodeType::PATTERN_OPT;
+  this->setElement(element);
+}
+Interface_Class_Item_List::Interface_Class_Item_List(std::string element) {
+  this->type = NodeType::INTERFACE_CLASS_ITEM_LIST;
+  this->setElement(element);
+}
+Cross_Body_Item_List::Cross_Body_Item_List(std::string element) {
+  this->type = NodeType::CROSS_BODY_ITEM_LIST;
+  this->setElement(element);
+}
+Modport_Tf_Ports_Declaration_Begin::Modport_Tf_Ports_Declaration_Begin(
+    std::string element) {
+  this->type = NodeType::MODPORT_TF_PORTS_DECLARATION_BEGIN;
+  this->setElement(element);
+}
+Rs_Rule_List::Rs_Rule_List(std::string element) {
+  this->type = NodeType::RS_RULE_LIST;
+  this->setElement(element);
+}
+Cell_Clause::Cell_Clause(std::string element) {
+  this->type = NodeType::CELL_CLAUSE;
+  this->setElement(element);
+}
+Sequence_Port_List::Sequence_Port_List(std::string element) {
+  this->type = NodeType::SEQUENCE_PORT_LIST;
+  this->setElement(element);
+}
+Let_Port_List::Let_Port_List(std::string element) {
+  this->type = NodeType::LET_PORT_LIST;
+  this->setElement(element);
+}
+Production_List::Production_List(std::string element) {
+  this->type = NodeType::PRODUCTION_LIST;
+  this->setElement(element);
+}
+Rs_Production_List_Or_Rand_Join::Rs_Production_List_Or_Rand_Join(
+    std::string element) {
+  this->type = NodeType::RS_PRODUCTION_LIST_OR_RAND_JOIN;
+  this->setElement(element);
+}
+Rs_Code_Block::Rs_Code_Block(std::string element) {
+  this->type = NodeType::RS_CODE_BLOCK;
+  this->setElement(element);
+}
+Let_Declaration::Let_Declaration(std::string element) {
+  this->type = NodeType::LET_DECLARATION;
+  this->setElement(element);
+}
+Expression_In_Parens_Opt::Expression_In_Parens_Opt(std::string element) {
+  this->type = NodeType::EXPRESSION_IN_PARENS_OPT;
+  this->setElement(element);
+}
+Array_Method_With_Predicate_Opt::Array_Method_With_Predicate_Opt(
+    std::string element) {
+  this->type = NodeType::ARRAY_METHOD_WITH_PREDICATE_OPT;
+  this->setElement(element);
+}
+Cross_Item::Cross_Item(std::string element) {
+  this->type = NodeType::CROSS_ITEM;
+  this->setElement(element);
+}
+Modport_Tf_Ports_Declaration_Last::Modport_Tf_Ports_Declaration_Last(
+    std::string element) {
+  this->type = NodeType::MODPORT_TF_PORTS_DECLARATION_LAST;
+  this->setElement(element);
+}
+Case_Pattern_Item::Case_Pattern_Item(std::string element) {
+  this->type = NodeType::CASE_PATTERN_ITEM;
+  this->setElement(element);
+}
+Inst_Clause::Inst_Clause(std::string element) {
+  this->type = NodeType::INST_CLAUSE;
+  this->setElement(element);
+}
+Rs_Repeat::Rs_Repeat(std::string element) {
+  this->type = NodeType::RS_REPEAT;
+  this->setElement(element);
+}
+Covergroup_Expression_Bracketed_Opt::Covergroup_Expression_Bracketed_Opt(
+    std::string element) {
+  this->type = NodeType::COVERGROUP_EXPRESSION_BRACKETED_OPT;
+  this->setElement(element);
+}
+Clocking_Drive_Only::Clocking_Drive_Only(std::string element) {
+  this->type = NodeType::CLOCKING_DRIVE_ONLY;
+  this->setElement(element);
+}
+Constraint_Primary::Constraint_Primary(std::string element) {
+  this->type = NodeType::CONSTRAINT_PRIMARY;
+  this->setElement(element);
+}
+Constraint_Expression::Constraint_Expression(std::string element) {
+  this->type = NodeType::CONSTRAINT_EXPRESSION;
+  this->setElement(element);
+}
+Tk_Evalstringliteral::Tk_Evalstringliteral(std::string element) {
+  this->type = NodeType::TK_EVALSTRINGLITERAL;
+  this->setElement(element);
+}
+Sequence_Match_Item_List::Sequence_Match_Item_List(std::string element) {
+  this->type = NodeType::SEQUENCE_MATCH_ITEM_LIST;
+  this->setElement(element);
+}
+Sequence_Spec::Sequence_Spec(std::string element) {
+  this->type = NodeType::SEQUENCE_SPEC;
+  this->setElement(element);
+}
+Cover_Cross::Cover_Cross(std::string element) {
+  this->type = NodeType::COVER_CROSS;
+  this->setElement(element);
+}
+Wildcard_Opt::Wildcard_Opt(std::string element) {
+  this->type = NodeType::WILDCARD_OPT;
+  this->setElement(element);
+}
+Case_Inside_Items::Case_Inside_Items(std::string element) {
+  this->type = NodeType::CASE_INSIDE_ITEMS;
+  this->setElement(element);
+}
+Modport_Tf_Port::Modport_Tf_Port(std::string element) {
+  this->type = NodeType::MODPORT_TF_PORT;
+  this->setElement(element);
+}
+Weight_Specification::Weight_Specification(std::string element) {
+  this->type = NodeType::WEIGHT_SPECIFICATION;
+  this->setElement(element);
+}
+Select_Condition::Select_Condition(std::string element) {
+  this->type = NodeType::SELECT_CONDITION;
+  this->setElement(element);
+}
+Deferred_Immediate_Assertion_Item::Deferred_Immediate_Assertion_Item(
+    std::string element) {
+  this->type = NodeType::DEFERRED_IMMEDIATE_ASSERTION_ITEM;
+  this->setElement(element);
+}
+Let_Formal_Type_Followed_By_Id::Let_Formal_Type_Followed_By_Id(
+    std::string element) {
+  this->type = NodeType::LET_FORMAL_TYPE_FOLLOWED_BY_ID;
+  this->setElement(element);
+}
+Coverage_Bin_Rhs::Coverage_Bin_Rhs(std::string element) {
+  this->type = NodeType::COVERAGE_BIN_RHS;
+  this->setElement(element);
+}
+Production_Items_List::Production_Items_List(std::string element) {
+  this->type = NodeType::PRODUCTION_ITEMS_LIST;
+  this->setElement(element);
+}
+Preprocessor_Balanced_Port_Declarations::
+    Preprocessor_Balanced_Port_Declarations(std::string element) {
+  this->type = NodeType::PREPROCESSOR_BALANCED_PORT_DECLARATIONS;
+  this->setElement(element);
+}
+Simple_Type::Simple_Type(std::string element) {
+  this->type = NodeType::SIMPLE_TYPE;
+  this->setElement(element);
+}
+Rs_Production_List::Rs_Production_List(std::string element) {
+  this->type = NodeType::RS_PRODUCTION_LIST;
+  this->setElement(element);
+}
+Dpi_Export_Item::Dpi_Export_Item(std::string element) {
+  this->type = NodeType::DPI_EXPORT_ITEM;
+  this->setElement(element);
+}
+Production::Production(std::string element) {
+  this->type = NodeType::PRODUCTION;
+  this->setElement(element);
+}
+Modport_Clocking_Declaration_Trailing_Comma::
+    Modport_Clocking_Declaration_Trailing_Comma(std::string element) {
+  this->type = NodeType::MODPORT_CLOCKING_DECLARATION_TRAILING_COMMA;
+  this->setElement(element);
+}
+Let_Port_List_In_Parens_Opt::Let_Port_List_In_Parens_Opt(std::string element) {
+  this->type = NodeType::LET_PORT_LIST_IN_PARENS_OPT;
+  this->setElement(element);
+}
+Cross_Body::Cross_Body(std::string element) {
+  this->type = NodeType::CROSS_BODY;
+  this->setElement(element);
+}
+Use_Clause::Use_Clause(std::string element) {
+  this->type = NodeType::USE_CLAUSE;
+  this->setElement(element);
+}
+Sequence_Match_Item::Sequence_Match_Item(std::string element) {
+  this->type = NodeType::SEQUENCE_MATCH_ITEM;
+  this->setElement(element);
+}
+Coverage_Bin::Coverage_Bin(std::string element) {
+  this->type = NodeType::COVERAGE_BIN;
+  this->setElement(element);
+}
+Sequence_Port_Type_Followed_By_Id::Sequence_Port_Type_Followed_By_Id(
+    std::string element) {
+  this->type = NodeType::SEQUENCE_PORT_TYPE_FOLLOWED_BY_ID;
+  this->setElement(element);
+}
+Interface_Class_Declaration::Interface_Class_Declaration(std::string element) {
+  this->type = NodeType::INTERFACE_CLASS_DECLARATION;
+  this->setElement(element);
+}
+Identifier_List::Identifier_List(std::string element) {
+  this->type = NodeType::IDENTIFIER_LIST;
+  this->setElement(element);
+}
+Sequence_Port_Item::Sequence_Port_Item(std::string element) {
+  this->type = NodeType::SEQUENCE_PORT_ITEM;
+  this->setElement(element);
+}
+Dist_Item::Dist_Item(std::string element) {
+  this->type = NodeType::DIST_ITEM;
+  this->setElement(element);
+}
+Dist_Weight::Dist_Weight(std::string element) {
+  this->type = NodeType::DIST_WEIGHT;
+  this->setElement(element);
+}
+Bins_Keyword::Bins_Keyword(std::string element) {
+  this->type = NodeType::BINS_KEYWORD;
+  this->setElement(element);
+}
+List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi::
+    List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi(
+        std::string element) {
+  this->type =
+      NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_ANSI;
+  this->setElement(element);
+}
+Implements_Interface_List::Implements_Interface_List(std::string element) {
+  this->type = NodeType::IMPLEMENTS_INTERFACE_LIST;
+  this->setElement(element);
+}
+Let_Port_Item::Let_Port_Item(std::string element) {
+  this->type = NodeType::LET_PORT_ITEM;
+  this->setElement(element);
+}
+Array_Method_With_Predicate::Array_Method_With_Predicate(std::string element) {
+  this->type = NodeType::ARRAY_METHOD_WITH_PREDICATE;
+  this->setElement(element);
+}
+Coverage_Option::Coverage_Option(std::string element) {
+  this->type = NodeType::COVERAGE_OPTION;
+  this->setElement(element);
+}
+Constraint_Set::Constraint_Set(std::string element) {
+  this->type = NodeType::CONSTRAINT_SET;
+  this->setElement(element);
+}
+Pattern::Pattern(std::string element) {
+  this->type = NodeType::PATTERN;
+  this->setElement(element);
+}
+Net_Type_Declaration::Net_Type_Declaration(std::string element) {
+  this->type = NodeType::NET_TYPE_DECLARATION;
+  this->setElement(element);
+}
+Bins_Selection::Bins_Selection(std::string element) {
+  this->type = NodeType::BINS_SELECTION;
+  this->setElement(element);
+}
+Expression_Or_Dist_List::Expression_Or_Dist_List(std::string element) {
+  this->type = NodeType::EXPRESSION_OR_DIST_LIST;
+  this->setElement(element);
+}
+Clocking_Skew::Clocking_Skew(std::string element) {
+  this->type = NodeType::CLOCKING_SKEW;
+  this->setElement(element);
+}
+Interface_Class_Item::Interface_Class_Item(std::string element) {
+  this->type = NodeType::INTERFACE_CLASS_ITEM;
+  this->setElement(element);
+}
+Sequence_Expr_Match_Item_List::Sequence_Expr_Match_Item_List(
+    std::string element) {
+  this->type = NodeType::SEQUENCE_EXPR_MATCH_ITEM_LIST;
+  this->setElement(element);
+}
+Tk_Anglebracketinclude::Tk_Anglebracketinclude(std::string element) {
+  this->type = NodeType::TK_ANGLEBRACKETINCLUDE;
+  this->setElement(element);
+}
+Interface_Class_Item_List_Opt::Interface_Class_Item_List_Opt(
+    std::string element) {
+  this->type = NodeType::INTERFACE_CLASS_ITEM_LIST_OPT;
+  this->setElement(element);
+}
+Import_Export::Import_Export(std::string element) {
+  this->type = NodeType::IMPORT_EXPORT;
+  this->setElement(element);
+}
+With_Covergroup_Expression::With_Covergroup_Expression(std::string element) {
+  this->type = NodeType::WITH_COVERGROUP_EXPRESSION;
+  this->setElement(element);
+}
+Constraint_Primary_List::Constraint_Primary_List(std::string element) {
+  this->type = NodeType::CONSTRAINT_PRIMARY_LIST;
+  this->setElement(element);
+}
+Property_Case_Statement::Property_Case_Statement(std::string element) {
+  this->type = NodeType::PROPERTY_CASE_STATEMENT;
+  this->setElement(element);
+}
+Charge_Strength::Charge_Strength(std::string element) {
+  this->type = NodeType::CHARGE_STRENGTH;
+  this->setElement(element);
+}
+Dpi_Import_Property::Dpi_Import_Property(std::string element) {
+  this->type = NodeType::DPI_IMPORT_PROPERTY;
+  this->setElement(element);
+}
+Iff_Expr_Opt::Iff_Expr_Opt(std::string element) {
+  this->type = NodeType::IFF_EXPR_OPT;
+  this->setElement(element);
+}
+Rs_Rule::Rs_Rule(std::string element) {
+  this->type = NodeType::RS_RULE;
+  this->setElement(element);
+}
+Interface_Class_Method::Interface_Class_Method(std::string element) {
+  this->type = NodeType::INTERFACE_CLASS_METHOD;
+  this->setElement(element);
+}
+Modport_Simple_Ports_Declaration_Trailing_Comma::
+    Modport_Simple_Ports_Declaration_Trailing_Comma(std::string element) {
+  this->type = NodeType::MODPORT_SIMPLE_PORTS_DECLARATION_TRAILING_COMMA;
+  this->setElement(element);
+}
+Case_Inside_Item::Case_Inside_Item(std::string element) {
+  this->type = NodeType::CASE_INSIDE_ITEM;
+  this->setElement(element);
+}
+Restrict_Property_Statement::Restrict_Property_Statement(std::string element) {
+  this->type = NodeType::RESTRICT_PROPERTY_STATEMENT;
+  this->setElement(element);
+}
+Dist_List::Dist_List(std::string element) {
+  this->type = NodeType::DIST_LIST;
+  this->setElement(element);
+}
+Rs_Prod::Rs_Prod(std::string element) {
+  this->type = NodeType::RS_PROD;
+  this->setElement(element);
+}
+Array_Ordering_Method::Array_Ordering_Method(std::string element) {
+  this->type = NodeType::ARRAY_ORDERING_METHOD;
+  this->setElement(element);
+}
+Randsequence_Statement::Randsequence_Statement(std::string element) {
+  this->type = NodeType::RANDSEQUENCE_STATEMENT;
+  this->setElement(element);
+}
+Cross_Body_Item::Cross_Body_Item(std::string element) {
+  this->type = NodeType::CROSS_BODY_ITEM;
+  this->setElement(element);
+}
+Case_Pattern_Items::Case_Pattern_Items(std::string element) {
+  this->type = NodeType::CASE_PATTERN_ITEMS;
+  this->setElement(element);
+}
+Cross_Body_Item_List_Opt::Cross_Body_Item_List_Opt(std::string element) {
+  this->type = NodeType::CROSS_BODY_ITEM_LIST_OPT;
+  this->setElement(element);
+}
+Modport_Ports_Declaration_Trailing_Comma::
+    Modport_Ports_Declaration_Trailing_Comma(std::string element) {
+  this->type = NodeType::MODPORT_PORTS_DECLARATION_TRAILING_COMMA;
+  this->setElement(element);
+}
+Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List::
+    Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List(
+        std::string element) {
+  this->type = NodeType::
+      SET_COVERGROUP_EXPRESSION_OR_COVERGROUP_RANGE_LIST_OR_TRANS_LIST;
+  this->setElement(element);
+}
+
 ClassMap classMap = {
   {"terminal",
    [](std::string &&f) {
@@ -5428,5 +5940,489 @@ ClassMap classMap = {
   {"tk_static_opt",
    [](std::string &&f){
       return std::make_unique<Tk_static_opt>(f);
-   }}
+   }},
+   {"until_operator",
+    [](std::string &&f){
+       return std::make_unique<Until_Operator>(f);
+    }},
+ {"cover_sequence_statement",
+    [](std::string &&f){
+       return std::make_unique<Cover_Sequence_Statement>(f);
+    }},
+ {"with_covergroup_expression_in_parens",
+    [](std::string &&f){
+       return std::make_unique<With_Covergroup_Expression_In_Parens>(f);
+    }},
+ {"declaration_extends_list_opt",
+    [](std::string &&f){
+       return std::make_unique<Declaration_Extends_List_Opt>(f);
+    }},
+ {"rs_if_else",
+    [](std::string &&f){
+       return std::make_unique<Rs_If_Else>(f);
+    }},
+ {"followed_by_operator",
+    [](std::string &&f){
+       return std::make_unique<Followed_By_Operator>(f);
+    }},
+ {"local_sequence_lvar_port_direction_opt",
+    [](std::string &&f){
+       return std::make_unique<Local_Sequence_Lvar_Port_Direction_Opt>(f);
+    }},
+ {"bins_expression",
+    [](std::string &&f){
+       return std::make_unique<Bins_Expression>(f);
+    }},
+ {"property_actual_arg",
+    [](std::string &&f){
+       return std::make_unique<Property_Actual_Arg>(f);
+    }},
+ {"select_expression",
+    [](std::string &&f){
+       return std::make_unique<Select_Expression>(f);
+    }},
+ {"slice_size",
+    [](std::string &&f){
+       return std::make_unique<Slice_Size>(f);
+    }},
+ {"property_case_item",
+    [](std::string &&f){
+       return std::make_unique<Property_Case_Item>(f);
+    }},
+ {"default_skew",
+    [](std::string &&f){
+       return std::make_unique<Default_Skew>(f);
+    }},
+ {"constraint_expression_list",
+    [](std::string &&f){
+       return std::make_unique<Constraint_Expression_List>(f);
+    }},
+ {"modport_clocking_declaration_begin",
+    [](std::string &&f){
+       return std::make_unique<Modport_Clocking_Declaration_Begin>(f);
+    }},
+ {"property_case_item_list",
+    [](std::string &&f){
+       return std::make_unique<Property_Case_Item_List>(f);
+    }},
+ {"randomize_call",
+    [](std::string &&f){
+       return std::make_unique<Randomize_Call>(f);
+    }},
+ {"cross_item_list",
+    [](std::string &&f){
+       return std::make_unique<Cross_Item_List>(f);
+    }},
+ {"production_item",
+    [](std::string &&f){
+       return std::make_unique<Production_Item>(f);
+    }},
+ {"data_type_or_void_with_id",
+    [](std::string &&f){
+       return std::make_unique<Data_Type_Or_Void_With_Id>(f);
+    }},
+ {"lb_star_rb",
+    [](std::string &&f){
+       return std::make_unique<Lb_Star_Rb>(f);
+    }},
+ {"modport_clocking_declaration_last",
+    [](std::string &&f){
+       return std::make_unique<Modport_Clocking_Declaration_Last>(f);
+    }},
+ {"uniqueness_constraint",
+    [](std::string &&f){
+       return std::make_unique<Uniqueness_Constraint>(f);
+    }},
+ {"any_port_list_preprocessor_last_named",
+    [](std::string &&f){
+       return std::make_unique<Any_Port_List_Preprocessor_Last_Named>(f);
+    }},
+ {"modport_tf_ports_declaration_trailing_comma",
+    [](std::string &&f){
+       return std::make_unique<Modport_Tf_Ports_Declaration_Trailing_Comma>(f);
+    }},
+ {"interface_data_declaration",
+    [](std::string &&f){
+       return std::make_unique<Interface_Data_Declaration>(f);
+    }},
+ {"method_property_qualifier",
+    [](std::string &&f){
+       return std::make_unique<Method_Property_Qualifier>(f);
+    }},
+ {"bins_or_options_list",
+    [](std::string &&f){
+       return std::make_unique<Bins_Or_Options_List>(f);
+    }},
+ {"opt_config",
+    [](std::string &&f){
+       return std::make_unique<Opt_Config>(f);
+    }},
+ {"pattern_list",
+    [](std::string &&f){
+       return std::make_unique<Pattern_List>(f);
+    }},
+ {"bins_or_options",
+    [](std::string &&f){
+       return std::make_unique<Bins_Or_Options>(f);
+    }},
+ {"pattern_opt",
+    [](std::string &&f){
+       return std::make_unique<Pattern_Opt>(f);
+    }},
+ {"interface_class_item_list",
+    [](std::string &&f){
+       return std::make_unique<Interface_Class_Item_List>(f);
+    }},
+ {"cross_body_item_list",
+    [](std::string &&f){
+       return std::make_unique<Cross_Body_Item_List>(f);
+    }},
+ {"modport_tf_ports_declaration_begin",
+    [](std::string &&f){
+       return std::make_unique<Modport_Tf_Ports_Declaration_Begin>(f);
+    }},
+ {"rs_rule_list",
+    [](std::string &&f){
+       return std::make_unique<Rs_Rule_List>(f);
+    }},
+ {"cell_clause",
+    [](std::string &&f){
+       return std::make_unique<Cell_Clause>(f);
+    }},
+ {"sequence_port_list",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Port_List>(f);
+    }},
+ {"let_port_list",
+    [](std::string &&f){
+       return std::make_unique<Let_Port_List>(f);
+    }},
+ {"production_list",
+    [](std::string &&f){
+       return std::make_unique<Production_List>(f);
+    }},
+ {"rs_production_list_or_rand_join",
+    [](std::string &&f){
+       return std::make_unique<Rs_Production_List_Or_Rand_Join>(f);
+    }},
+ {"rs_code_block",
+    [](std::string &&f){
+       return std::make_unique<Rs_Code_Block>(f);
+    }},
+ {"let_declaration",
+    [](std::string &&f){
+       return std::make_unique<Let_Declaration>(f);
+    }},
+ {"expression_in_parens_opt",
+    [](std::string &&f){
+       return std::make_unique<Expression_In_Parens_Opt>(f);
+    }},
+ {"array_method_with_predicate_opt",
+    [](std::string &&f){
+       return std::make_unique<Array_Method_With_Predicate_Opt>(f);
+    }},
+ {"cross_item",
+    [](std::string &&f){
+       return std::make_unique<Cross_Item>(f);
+    }},
+ {"modport_tf_ports_declaration_last",
+    [](std::string &&f){
+       return std::make_unique<Modport_Tf_Ports_Declaration_Last>(f);
+    }},
+ {"case_pattern_item",
+    [](std::string &&f){
+       return std::make_unique<Case_Pattern_Item>(f);
+    }},
+ {"inst_clause",
+    [](std::string &&f){
+       return std::make_unique<Inst_Clause>(f);
+    }},
+ {"rs_repeat",
+    [](std::string &&f){
+       return std::make_unique<Rs_Repeat>(f);
+    }},
+ {"covergroup_expression_bracketed_opt",
+    [](std::string &&f){
+       return std::make_unique<Covergroup_Expression_Bracketed_Opt>(f);
+    }},
+ {"clocking_drive_only",
+    [](std::string &&f){
+       return std::make_unique<Clocking_Drive_Only>(f);
+    }},
+ {"constraint_primary",
+    [](std::string &&f){
+       return std::make_unique<Constraint_Primary>(f);
+    }},
+ {"constraint_expression",
+    [](std::string &&f){
+       return std::make_unique<Constraint_Expression>(f);
+    }},
+ {"tk_evalstringliteral",
+    [](std::string &&f){
+       return std::make_unique<Tk_Evalstringliteral>(f);
+    }},
+ {"sequence_match_item_list",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Match_Item_List>(f);
+    }},
+ {"sequence_spec",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Spec>(f);
+    }},
+ {"cover_cross",
+    [](std::string &&f){
+       return std::make_unique<Cover_Cross>(f);
+    }},
+ {"wildcard_opt",
+    [](std::string &&f){
+       return std::make_unique<Wildcard_Opt>(f);
+    }},
+ {"case_inside_items",
+    [](std::string &&f){
+       return std::make_unique<Case_Inside_Items>(f);
+    }},
+ {"modport_tf_port",
+    [](std::string &&f){
+       return std::make_unique<Modport_Tf_Port>(f);
+    }},
+ {"weight_specification",
+    [](std::string &&f){
+       return std::make_unique<Weight_Specification>(f);
+    }},
+ {"select_condition",
+    [](std::string &&f){
+       return std::make_unique<Select_Condition>(f);
+    }},
+ {"deferred_immediate_assertion_item",
+    [](std::string &&f){
+       return std::make_unique<Deferred_Immediate_Assertion_Item>(f);
+    }},
+ {"let_formal_type_followed_by_id",
+    [](std::string &&f){
+       return std::make_unique<Let_Formal_Type_Followed_By_Id>(f);
+    }},
+ {"coverage_bin_rhs",
+    [](std::string &&f){
+       return std::make_unique<Coverage_Bin_Rhs>(f);
+    }},
+ {"production_items_list",
+    [](std::string &&f){
+       return std::make_unique<Production_Items_List>(f);
+    }},
+ {"preprocessor_balanced_port_declarations",
+    [](std::string &&f){
+       return std::make_unique<Preprocessor_Balanced_Port_Declarations>(f);
+    }},
+ {"simple_type",
+    [](std::string &&f){
+       return std::make_unique<Simple_Type>(f);
+    }},
+ {"rs_production_list",
+    [](std::string &&f){
+       return std::make_unique<Rs_Production_List>(f);
+    }},
+ {"dpi_export_item",
+    [](std::string &&f){
+       return std::make_unique<Dpi_Export_Item>(f);
+    }},
+ {"production",
+    [](std::string &&f){
+       return std::make_unique<Production>(f);
+    }},
+ {"modport_clocking_declaration_trailing_comma",
+    [](std::string &&f){
+       return std::make_unique<Modport_Clocking_Declaration_Trailing_Comma>(f);
+    }},
+ {"let_port_list_in_parens_opt",
+    [](std::string &&f){
+       return std::make_unique<Let_Port_List_In_Parens_Opt>(f);
+    }},
+ {"cross_body",
+    [](std::string &&f){
+       return std::make_unique<Cross_Body>(f);
+    }},
+ {"use_clause",
+    [](std::string &&f){
+       return std::make_unique<Use_Clause>(f);
+    }},
+ {"sequence_match_item",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Match_Item>(f);
+    }},
+ {"coverage_bin",
+    [](std::string &&f){
+       return std::make_unique<Coverage_Bin>(f);
+    }},
+ {"sequence_port_type_followed_by_id",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Port_Type_Followed_By_Id>(f);
+    }},
+ {"interface_class_declaration",
+    [](std::string &&f){
+       return std::make_unique<Interface_Class_Declaration>(f);
+    }},
+ {"identifier_list",
+    [](std::string &&f){
+       return std::make_unique<Identifier_List>(f);
+    }},
+ {"sequence_port_item",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Port_Item>(f);
+    }},
+ {"dist_item",
+    [](std::string &&f){
+       return std::make_unique<Dist_Item>(f);
+    }},
+ {"dist_weight",
+    [](std::string &&f){
+       return std::make_unique<Dist_Weight>(f);
+    }},
+ {"bins_keyword",
+    [](std::string &&f){
+       return std::make_unique<Bins_Keyword>(f);
+    }},
+ {"list_of_ports_or_port_declarations_preprocessor_last_ansi",
+    [](std::string &&f){
+       return std::make_unique<List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi>(f);
+    }},
+ {"implements_interface_list",
+    [](std::string &&f){
+       return std::make_unique<Implements_Interface_List>(f);
+    }},
+ {"let_port_item",
+    [](std::string &&f){
+       return std::make_unique<Let_Port_Item>(f);
+    }},
+ {"array_method_with_predicate",
+    [](std::string &&f){
+       return std::make_unique<Array_Method_With_Predicate>(f);
+    }},
+ {"coverage_option",
+    [](std::string &&f){
+       return std::make_unique<Coverage_Option>(f);
+    }},
+ {"constraint_set",
+    [](std::string &&f){
+       return std::make_unique<Constraint_Set>(f);
+    }},
+ {"pattern",
+    [](std::string &&f){
+       return std::make_unique<Pattern>(f);
+    }},
+ {"net_type_declaration",
+    [](std::string &&f){
+       return std::make_unique<Net_Type_Declaration>(f);
+    }},
+ {"bins_selection",
+    [](std::string &&f){
+       return std::make_unique<Bins_Selection>(f);
+    }},
+ {"expression_or_dist_list",
+    [](std::string &&f){
+       return std::make_unique<Expression_Or_Dist_List>(f);
+    }},
+ {"clocking_skew",
+    [](std::string &&f){
+       return std::make_unique<Clocking_Skew>(f);
+    }},
+ {"interface_class_item",
+    [](std::string &&f){
+       return std::make_unique<Interface_Class_Item>(f);
+    }},
+ {"sequence_expr_match_item_list",
+    [](std::string &&f){
+       return std::make_unique<Sequence_Expr_Match_Item_List>(f);
+    }},
+ {"tk_anglebracketinclude",
+    [](std::string &&f){
+       return std::make_unique<Tk_Anglebracketinclude>(f);
+    }},
+ {"interface_class_item_list_opt",
+    [](std::string &&f){
+       return std::make_unique<Interface_Class_Item_List_Opt>(f);
+    }},
+ {"import_export",
+    [](std::string &&f){
+       return std::make_unique<Import_Export>(f);
+    }},
+ {"with_covergroup_expression",
+    [](std::string &&f){
+       return std::make_unique<With_Covergroup_Expression>(f);
+    }},
+ {"constraint_primary_list",
+    [](std::string &&f){
+       return std::make_unique<Constraint_Primary_List>(f);
+    }},
+ {"property_case_statement",
+    [](std::string &&f){
+       return std::make_unique<Property_Case_Statement>(f);
+    }},
+ {"charge_strength",
+    [](std::string &&f){
+       return std::make_unique<Charge_Strength>(f);
+    }},
+ {"dpi_import_property",
+    [](std::string &&f){
+       return std::make_unique<Dpi_Import_Property>(f);
+    }},
+ {"iff_expr_opt",
+    [](std::string &&f){
+       return std::make_unique<Iff_Expr_Opt>(f);
+    }},
+ {"rs_rule",
+    [](std::string &&f){
+       return std::make_unique<Rs_Rule>(f);
+    }},
+ {"interface_class_method",
+    [](std::string &&f){
+       return std::make_unique<Interface_Class_Method>(f);
+    }},
+ {"modport_simple_ports_declaration_trailing_comma",
+    [](std::string &&f){
+       return std::make_unique<Modport_Simple_Ports_Declaration_Trailing_Comma>(f);
+    }},
+ {"case_inside_item",
+    [](std::string &&f){
+       return std::make_unique<Case_Inside_Item>(f);
+    }},
+ {"restrict_property_statement",
+    [](std::string &&f){
+       return std::make_unique<Restrict_Property_Statement>(f);
+    }},
+ {"dist_list",
+    [](std::string &&f){
+       return std::make_unique<Dist_List>(f);
+    }},
+ {"rs_prod",
+    [](std::string &&f){
+       return std::make_unique<Rs_Prod>(f);
+    }},
+ {"array_ordering_method",
+    [](std::string &&f){
+       return std::make_unique<Array_Ordering_Method>(f);
+    }},
+ {"randsequence_statement",
+    [](std::string &&f){
+       return std::make_unique<Randsequence_Statement>(f);
+    }},
+ {"cross_body_item",
+    [](std::string &&f){
+       return std::make_unique<Cross_Body_Item>(f);
+    }},
+ {"case_pattern_items",
+    [](std::string &&f){
+       return std::make_unique<Case_Pattern_Items>(f);
+    }},
+ {"cross_body_item_list_opt",
+    [](std::string &&f){
+       return std::make_unique<Cross_Body_Item_List_Opt>(f);
+    }},
+ {"modport_ports_declaration_trailing_comma",
+    [](std::string &&f){
+       return std::make_unique<Modport_Ports_Declaration_Trailing_Comma>(f);
+    }},
+ {"set_covergroup_expression_or_covergroup_range_list_or_trans_list",
+    [](std::string &&f){
+       return std::make_unique<Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List>(f);
+    }}
 };

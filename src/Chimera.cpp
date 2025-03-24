@@ -114,8 +114,8 @@ static std::unique_ptr<Node> buildSyntaxTree(
         &map,
     const int n, std::mt19937 &gen) {
 
-  //bool is_first_netassign = false;
-  //bool is_first_netvariable = false;
+  bool is_first_netassign = false;
+  bool is_first_netvariable = false;
   auto head = classMap["source_text"]("source_text");
   head->setParent(nullptr);
 
@@ -129,7 +129,7 @@ static std::unique_ptr<Node> buildSyntaxTree(
     std::string context = getNodeContext(curr, n);
     auto prods = chooseProds(map, context, gen);
 
-    //isnetdecl(prods, is_first_netassign, is_first_netvariable);
+    isnetdecl(prods, is_first_netassign, is_first_netvariable);
     std::vector<std::unique_ptr<Node>> children;
     context = getNodeContext(curr, n - 1);
     if (!context.empty())
@@ -741,17 +741,19 @@ static void findAnsiDeclarations(
       setDir(head->getChildren()[0].get());
 
       auto id = getID(head);
-      auto s = " id_" + std::to_string(counter++) + " ";
+      if (id) {
+        auto s = " id_" + std::to_string(counter++) + " ";
 
-      decl_map[s] = id;
+        decl_map[s] = id;
 
-      if (debug)
-        std::cerr << "Renaming ID to " << s << std::endl;
+        if (debug)
+          std::cerr << "Renaming ID to " << s << std::endl;
 
-      id->setElement(s);
+        id->setElement(s);
 
-      directionMap[s] = {head, currentDir};
-      portList.push_back({s, currentDir});
+        directionMap[s] = {head, currentDir};
+        portList.push_back({s, currentDir});
+      }
 
       auto netType = head->getChildren()[1].get();
 
