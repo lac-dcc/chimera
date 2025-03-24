@@ -1,0 +1,150 @@
+class_names = ["Until_Operator",
+"Cover_Sequence_Statement",
+"With_Covergroup_Expression_In_Parens",
+"Declaration_Extends_List_Opt",
+"Rs_If_Else",
+"Followed_By_Operator",
+"Local_Sequence_Lvar_Port_Direction_Opt",
+"Bins_Expression",
+"Property_Actual_Arg",
+"Select_Expression",
+"Slice_Size",
+"Property_Case_Item",
+"Default_Skew",
+"Constraint_Expression_List",
+"Modport_Clocking_Declaration_Begin",
+"Property_Case_Item_List",
+"Randomize_Call",
+"Cross_Item_List",
+"Production_Item",
+"Data_Type_Or_Void_With_Id",
+"Lb_Star_Rb",
+"Modport_Clocking_Declaration_Last",
+"Uniqueness_Constraint",
+"Any_Port_List_Preprocessor_Last_Named",
+"Modport_Tf_Ports_Declaration_Trailing_Comma",
+"Interface_Data_Declaration",
+"Method_Property_Qualifier",
+"Bins_Or_Options_List",
+"Opt_Config",
+"Pattern_List",
+"Bins_Or_Options",
+"Pattern_Opt",
+"Interface_Class_Item_List",
+"Cross_Body_Item_List",
+"Modport_Tf_Ports_Declaration_Begin",
+"Rs_Rule_List",
+"Cell_Clause",
+"Sequence_Port_List",
+"Let_Port_List",
+"Production_List",
+"Rs_Production_List_Or_Rand_Join",
+"Rs_Code_Block",
+"Let_Declaration",
+"Expression_In_Parens_Opt",
+"Array_Method_With_Predicate_Opt",
+"Cross_Item",
+"Modport_Tf_Ports_Declaration_Last",
+"Case_Pattern_Item",
+"Inst_Clause",
+"Rs_Repeat",
+"Covergroup_Expression_Bracketed_Opt",
+"Clocking_Drive_Only",
+"Constraint_Primary",
+"Constraint_Expression",
+"Tk_Evalstringliteral",
+"Sequence_Match_Item_List",
+"Sequence_Spec",
+"Cover_Cross",
+"Wildcard_Opt",
+"Case_Inside_Items",
+"Modport_Tf_Port",
+"Weight_Specification",
+"Select_Condition",
+"Deferred_Immediate_Assertion_Item",
+"Let_Formal_Type_Followed_By_Id",
+"Coverage_Bin_Rhs",
+"Production_Items_List",
+"Preprocessor_Balanced_Port_Declarations",
+"Simple_Type",
+"Rs_Production_List",
+"Dpi_Export_Item",
+"Production",
+"Modport_Clocking_Declaration_Trailing_Comma",
+"Let_Port_List_In_Parens_Opt",
+"Cross_Body",
+"Use_Clause",
+"Sequence_Match_Item",
+"Coverage_Bin",
+"Sequence_Port_Type_Followed_By_Id",
+"Interface_Class_Declaration",
+"Identifier_List",
+"Sequence_Port_Item",
+"Dist_Item",
+"Dist_Weight",
+"Bins_Keyword",
+"List_Of_Ports_Or_Port_Declarations_Preprocessor_Last_Ansi",
+"Implements_Interface_List",
+"Let_Port_Item",
+"Array_Method_With_Predicate",
+"Coverage_Option",
+"Constraint_Set",
+"Pattern",
+"Net_Type_Declaration",
+"Bins_Selection",
+"Expression_Or_Dist_List",
+"Clocking_Skew",
+"Interface_Class_Item",
+"Sequence_Expr_Match_Item_List",
+"Tk_Anglebracketinclude",
+"Interface_Class_Item_List_Opt",
+"Import_Export",
+"With_Covergroup_Expression",
+"Constraint_Primary_List",
+"Property_Case_Statement",
+"Charge_Strength",
+"Dpi_Import_Property",
+"Iff_Expr_Opt",
+"Rs_Rule",
+"Interface_Class_Method",
+"Modport_Simple_Ports_Declaration_Trailing_Comma",
+"Case_Inside_Item",
+"Restrict_Property_Statement",
+"Dist_List",
+"Rs_Prod",
+"Array_Ordering_Method",
+"Randsequence_Statement",
+"Cross_Body_Item",
+"Case_Pattern_Items",
+"Cross_Body_Item_List_Opt",
+"Modport_Ports_Declaration_Trailing_Comma",
+"Set_Covergroup_Expression_Or_Covergroup_Range_List_Or_Trans_List"]
+
+def insert_strings(template: str, placeholders: list, values: list) -> str:
+    """
+    Inserts values into the template string at the positions of placeholders.
+
+    :param template: The template string containing placeholders.
+    :param placeholders: A list of placeholder strings to replace.
+    :param values: A list of values to insert in place of the placeholders.
+    :return: The resulting string with values inserted.
+    """
+    if len(placeholders) != len(values):
+        raise ValueError("The number of placeholders must match the number of values.")
+
+    for placeholder, value in zip(placeholders, values):
+        template = template.replace(placeholder, value)
+
+    return template
+
+
+# Example usage
+if __name__ == "__main__":
+    template_string = """{"{lower}",
+   [](std::string &&f){
+      return std::make_unique<{capitalized}>(f);
+   }},"""
+    placeholders = ["{lower}", "{capitalized}"]
+    for c in class_names:
+        result = insert_strings(template_string, placeholders, [c.lower(), c])
+        print(result)
