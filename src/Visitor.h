@@ -1114,8 +1114,13 @@ public:
     case NodeType::ASSERTION_VARIABLE_DECLARATION:
       return visit(dynamic_cast<Assertion_variable_declaration *>(node));
 
-    case NodeType::TK_STATIC_OPT:
-      return visit(dynamic_cast<TK_static_opt *>(node));
+    case NodeType::TK_STATIC_OPT: {
+      auto castedNode = dynamic_cast<Tk_static_opt *>(node);
+      if (!castedNode) {
+        throw std::runtime_error("Invalid cast to TK_static_opt");
+      }
+      return visit(castedNode);
+    }
 
     case NodeType::DESIGN_STATEMENT:
       return visit(dynamic_cast<Design_statement *>(node));
@@ -1228,8 +1233,13 @@ public:
     case NodeType::LIBLIST_CLAUSE:
       return visit(dynamic_cast<Liblist_clause *>(node));
 
-    case NodeType::CONSTRAINT_DECLARATION:
-      return visit(dynamic_cast<Constraint_declaration *>(node));
+    case NodeType::CONSTRAINT_DECLARATION: {
+      auto castedNode = dynamic_cast<Constraint_declaration *>(node);
+      if (!castedNode) {
+        throw std::runtime_error("Invalid cast to Constraint_declaration");
+      }
+      return visit(castedNode);
+    }
 
     case NodeType::PROPERTY_ACTUAL_ARG_OPT:
       return visit(dynamic_cast<Property_actual_arg_opt *>(node));
@@ -2409,7 +2419,7 @@ public:
       return visit(dynamic_cast<Assertion_variable_declaration *>(node), arg);
 
     case NodeType::TK_STATIC_OPT:
-      return visit(dynamic_cast<TK_static_opt *>(node), arg);
+      return visit(dynamic_cast<Tk_static_opt *>(node), arg);
 
     case NodeType::DESIGN_STATEMENT:
       return visit(dynamic_cast<Design_statement *>(node), arg);
@@ -10863,20 +10873,6 @@ public:
   }
 
   virtual R visit(Assertion_variable_declaration *node, T arg) {
-    for (const std::unique_ptr<Node> &child : node->getChildren()) {
-      applyVisit(child.get(), arg);
-    }
-    return R();
-  }
-
-  virtual R visit(TK_static_opt *node) {
-    for (const std::unique_ptr<Node> &child : node->getChildren()) {
-      applyVisit(child.get());
-    }
-    return R();
-  }
-
-  virtual R visit(TK_static_opt *node, T arg) {
     for (const std::unique_ptr<Node> &child : node->getChildren()) {
       applyVisit(child.get(), arg);
     }

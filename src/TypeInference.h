@@ -1352,8 +1352,6 @@ public:
   virtual constraintSet visit(Assertion_variable_declaration *node,
                               typeId type) override;
 
-  virtual constraintSet visit(TK_static_opt *node, typeId type) override;
-
   virtual constraintSet visit(Design_statement *node, typeId type) override;
 
   virtual constraintSet visit(Sequence_declaration *node, typeId type) override;

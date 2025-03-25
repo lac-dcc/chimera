@@ -4857,13 +4857,6 @@ public:
   Modport_item_list &operator=(Modport_item_list &&) = default;
 };
 
-class TK_static_opt : public Node {
-public:
-  TK_static_opt(std::string element);
-  TK_static_opt(TK_static_opt &&) = default;
-  TK_static_opt &operator=(TK_static_opt &&) = default;
-};
-
 class Property_port_item : public Node {
 public:
   Property_port_item(std::string element);

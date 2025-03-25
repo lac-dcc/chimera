@@ -2945,11 +2945,6 @@ Modport_item_list::Modport_item_list(std::string element) {
   this->setElement(element);
 }
 
-TK_static_opt::TK_static_opt(std::string element) {
-  this->type = NodeType::TK_STATIC_OPT;
-  this->setElement(element);
-}
-
 Property_port_item::Property_port_item(std::string element) {
   this->type = NodeType::PROPERTY_PORT_ITEM;
   this->setElement(element);
@@ -5644,10 +5639,6 @@ ClassMap classMap = {
   {"assertion_variable_declaration", 
       [](std::string &&f) {
           return std::make_unique<Assertion_variable_declaration>(f);
-      }},
-  {"TK_static_opt", 
-      [](std::string &&f) {
-          return std::make_unique<TK_static_opt>(f);
       }},
   {"property_operator", 
       [](std::string &&f) {

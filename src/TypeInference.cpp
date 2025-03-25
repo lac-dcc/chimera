@@ -3247,10 +3247,6 @@ constraintSet TypeInferenceVisitor::visit(Assertion_variable_declaration *node,
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(TK_static_opt *node, typeId type) {
-  return defaultVisitor(node, type);
-}
-
 constraintSet TypeInferenceVisitor::visit(Design_statement *node, typeId type) {
   return defaultVisitor(node, type);
 }
