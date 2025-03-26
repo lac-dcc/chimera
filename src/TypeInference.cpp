@@ -1658,20 +1658,8 @@ constraintSet TypeInferenceVisitor::visit(Specify_item *node, typeId type) {
                                          constraintDelayValue.end());
     return constraintsSpecReferenceEvent;
 
-  } else {
-    auto t1 = freshType();
-    auto constraintsSpecReferenceEvent1 =
-        applyVisit(node->getChildren()[2].get(), t1);
-    auto constraintsSpecReferenceEvent2 =
-        applyVisit(node->getChildren()[4].get(), t1);
-    auto constraintDelayValue = applyVisit(node->getChildren()[6].get(), t1);
-    constraintsSpecReferenceEvent1.insert(constraintDelayValue.begin(),
-                                          constraintDelayValue.end());
-    constraintsSpecReferenceEvent1.insert(
-        constraintsSpecReferenceEvent2.begin(),
-        constraintsSpecReferenceEvent2.end());
-    return constraintsSpecReferenceEvent1;
   }
+  return defaultVisitor(node, freshType());
 }
 
 constraintSet TypeInferenceVisitor::visit(Any_param_declaration *node, typeId) {
