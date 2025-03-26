@@ -1278,6 +1278,1717 @@ public:
 
     case NodeType::COVERAGE_SPEC_OR_OPTION:
       return visit(dynamic_cast<Coverage_spec_or_option *>(node));
+    case NodeType::UNTIL_OPERATOR:
+      return visit(dynamic_cast<Until_operator *>(node));
+
+    case NodeType::COVER_SEQUENCE_STATEMENT:
+      return visit(dynamic_cast<Cover_sequence_statement *>(node));
+
+    case NodeType::WITH_COVERGROUP_EXPRESSION_IN_PARENS:
+      return visit(dynamic_cast<With_covergroup_expression_in_parens *>(node));
+
+    case NodeType::DECLARATION_EXTENDS_LIST_OPT:
+      return visit(dynamic_cast<Declaration_extends_list_opt *>(node));
+
+    case NodeType::RS_IF_ELSE:
+      return visit(dynamic_cast<Rs_if_else *>(node));
+
+    case NodeType::FOLLOWED_BY_OPERATOR:
+      return visit(dynamic_cast<Followed_by_operator *>(node));
+
+    case NodeType::LOCAL_SEQUENCE_LVAR_PORT_DIRECTION_OPT:
+      return visit(
+          dynamic_cast<Local_sequence_lvar_port_direction_opt *>(node));
+
+    case NodeType::BINS_EXPRESSION:
+      return visit(dynamic_cast<Bins_expression *>(node));
+
+    case NodeType::PROPERTY_ACTUAL_ARG:
+      return visit(dynamic_cast<Property_actual_arg *>(node));
+
+    case NodeType::SELECT_EXPRESSION:
+      return visit(dynamic_cast<Select_expression *>(node));
+
+    case NodeType::SLICE_SIZE:
+      return visit(dynamic_cast<Slice_size *>(node));
+
+    case NodeType::PROPERTY_CASE_ITEM:
+      return visit(dynamic_cast<Property_case_item *>(node));
+
+    case NodeType::DEFAULT_SKEW:
+      return visit(dynamic_cast<Default_skew *>(node));
+
+    case NodeType::CONSTRAINT_EXPRESSION_LIST:
+      return visit(dynamic_cast<Constraint_expression_list *>(node));
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_BEGIN:
+      return visit(dynamic_cast<Modport_clocking_declaration_begin *>(node));
+
+    case NodeType::PROPERTY_CASE_ITEM_LIST:
+      return visit(dynamic_cast<Property_case_item_list *>(node));
+
+    case NodeType::RANDOMIZE_CALL:
+      return visit(dynamic_cast<Randomize_call *>(node));
+
+    case NodeType::CROSS_ITEM_LIST:
+      return visit(dynamic_cast<Cross_item_list *>(node));
+
+    case NodeType::PRODUCTION_ITEM:
+      return visit(dynamic_cast<Production_item *>(node));
+
+    case NodeType::DATA_TYPE_OR_VOID_WITH_ID:
+      return visit(dynamic_cast<Data_type_or_void_with_id *>(node));
+
+    case NodeType::LB_STAR_RB:
+      return visit(dynamic_cast<Lb_star_rb *>(node));
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_LAST:
+      return visit(dynamic_cast<Modport_clocking_declaration_last *>(node));
+
+    case NodeType::UNIQUENESS_CONSTRAINT:
+      return visit(dynamic_cast<Uniqueness_constraint *>(node));
+
+    case NodeType::ANY_PORT_LIST_PREPROCESSOR_LAST_NAMED:
+      return visit(dynamic_cast<Any_port_list_preprocessor_last_named *>(node));
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_tf_ports_declaration_trailing_comma *>(node));
+
+    case NodeType::INTERFACE_DATA_DECLARATION:
+      return visit(dynamic_cast<Interface_data_declaration *>(node));
+
+    case NodeType::METHOD_PROPERTY_QUALIFIER:
+      return visit(dynamic_cast<Method_property_qualifier *>(node));
+
+    case NodeType::BINS_OR_OPTIONS_LIST:
+      return visit(dynamic_cast<Bins_or_options_list *>(node));
+
+    case NodeType::OPT_CONFIG:
+      return visit(dynamic_cast<Opt_config *>(node));
+
+    case NodeType::PATTERN_LIST:
+      return visit(dynamic_cast<Pattern_list *>(node));
+
+    case NodeType::BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Bins_or_options *>(node));
+
+    case NodeType::PATTERN_OPT:
+      return visit(dynamic_cast<Pattern_opt *>(node));
+
+    case NodeType::INTERFACE_CLASS_ITEM_LIST:
+      return visit(dynamic_cast<Interface_class_item_list *>(node));
+
+    case NodeType::CROSS_BODY_ITEM_LIST:
+      return visit(dynamic_cast<Cross_body_item_list *>(node));
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_BEGIN:
+      return visit(dynamic_cast<Modport_tf_ports_declaration_begin *>(node));
+
+    case NodeType::RS_RULE_LIST:
+      return visit(dynamic_cast<Rs_rule_list *>(node));
+
+    case NodeType::CELL_CLAUSE:
+      return visit(dynamic_cast<Cell_clause *>(node));
+
+    case NodeType::SEQUENCE_PORT_LIST:
+      return visit(dynamic_cast<Sequence_port_list *>(node));
+
+    case NodeType::LET_PORT_LIST:
+      return visit(dynamic_cast<Let_port_list *>(node));
+
+    case NodeType::PRODUCTION_LIST:
+      return visit(dynamic_cast<Production_list *>(node));
+
+    case NodeType::RS_PRODUCTION_LIST_OR_RAND_JOIN:
+      return visit(dynamic_cast<Rs_production_list_or_rand_join *>(node));
+
+    case NodeType::RS_CODE_BLOCK:
+      return visit(dynamic_cast<Rs_code_block *>(node));
+
+    case NodeType::LET_DECLARATION:
+      return visit(dynamic_cast<Let_declaration *>(node));
+
+    case NodeType::EXPRESSION_IN_PARENS_OPT:
+      return visit(dynamic_cast<Expression_in_parens_opt *>(node));
+
+    case NodeType::ARRAY_METHOD_WITH_PREDICATE_OPT:
+      return visit(dynamic_cast<Array_method_with_predicate_opt *>(node));
+
+    case NodeType::CROSS_ITEM:
+      return visit(dynamic_cast<Cross_item *>(node));
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_LAST:
+      return visit(dynamic_cast<Modport_tf_ports_declaration_last *>(node));
+
+    case NodeType::CASE_PATTERN_ITEM:
+      return visit(dynamic_cast<Case_pattern_item *>(node));
+
+    case NodeType::INST_CLAUSE:
+      return visit(dynamic_cast<Inst_clause *>(node));
+
+    case NodeType::RS_REPEAT:
+      return visit(dynamic_cast<Rs_repeat *>(node));
+
+    case NodeType::COVERGROUP_EXPRESSION_BRACKETED_OPT:
+      return visit(dynamic_cast<Covergroup_expression_bracketed_opt *>(node));
+
+    case NodeType::CLOCKING_DRIVE_ONLY:
+      return visit(dynamic_cast<Clocking_drive_only *>(node));
+
+    case NodeType::CONSTRAINT_PRIMARY:
+      return visit(dynamic_cast<Constraint_primary *>(node));
+
+    case NodeType::CONSTRAINT_EXPRESSION:
+      return visit(dynamic_cast<Constraint_expression *>(node));
+
+    case NodeType::SEQUENCE_MATCH_ITEM_LIST:
+      return visit(dynamic_cast<Sequence_match_item_list *>(node));
+
+    case NodeType::SEQUENCE_SPEC:
+      return visit(dynamic_cast<Sequence_spec *>(node));
+
+    case NodeType::COVER_CROSS:
+      return visit(dynamic_cast<Cover_cross *>(node));
+
+    case NodeType::WILDCARD_OPT:
+      return visit(dynamic_cast<Wildcard_opt *>(node));
+
+    case NodeType::CASE_INSIDE_ITEMS:
+      return visit(dynamic_cast<Case_inside_items *>(node));
+
+    case NodeType::MODPORT_TF_PORT:
+      return visit(dynamic_cast<Modport_tf_port *>(node));
+
+    case NodeType::WEIGHT_SPECIFICATION:
+      return visit(dynamic_cast<Weight_specification *>(node));
+
+    case NodeType::SELECT_CONDITION:
+      return visit(dynamic_cast<Select_condition *>(node));
+
+    case NodeType::DEFERRED_IMMEDIATE_ASSERTION_ITEM:
+      return visit(dynamic_cast<Deferred_immediate_assertion_item *>(node));
+
+    case NodeType::LET_FORMAL_TYPE_FOLLOWED_BY_ID:
+      return visit(dynamic_cast<Let_formal_type_followed_by_id *>(node));
+
+    case NodeType::COVERAGE_BIN_RHS:
+      return visit(dynamic_cast<Coverage_bin_rhs *>(node));
+
+    case NodeType::PRODUCTION_ITEMS_LIST:
+      return visit(dynamic_cast<Production_items_list *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_PORT_DECLARATIONS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_port_declarations *>(node));
+
+    case NodeType::SIMPLE_TYPE:
+      return visit(dynamic_cast<Simple_type *>(node));
+
+    case NodeType::RS_PRODUCTION_LIST:
+      return visit(dynamic_cast<Rs_production_list *>(node));
+
+    case NodeType::DPI_EXPORT_ITEM:
+      return visit(dynamic_cast<Dpi_export_item *>(node));
+
+    case NodeType::PRODUCTION:
+      return visit(dynamic_cast<Production *>(node));
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_clocking_declaration_trailing_comma *>(node));
+
+    case NodeType::LET_PORT_LIST_IN_PARENS_OPT:
+      return visit(dynamic_cast<Let_port_list_in_parens_opt *>(node));
+
+    case NodeType::CROSS_BODY:
+      return visit(dynamic_cast<Cross_body *>(node));
+
+    case NodeType::USE_CLAUSE:
+      return visit(dynamic_cast<Use_clause *>(node));
+
+    case NodeType::SEQUENCE_MATCH_ITEM:
+      return visit(dynamic_cast<Sequence_match_item *>(node));
+
+    case NodeType::COVERAGE_BIN:
+      return visit(dynamic_cast<Coverage_bin *>(node));
+
+    case NodeType::SEQUENCE_PORT_TYPE_FOLLOWED_BY_ID:
+      return visit(dynamic_cast<Sequence_port_type_followed_by_id *>(node));
+
+    case NodeType::INTERFACE_CLASS_DECLARATION:
+      return visit(dynamic_cast<Interface_class_declaration *>(node));
+
+    case NodeType::IDENTIFIER_LIST:
+      return visit(dynamic_cast<Identifier_list *>(node));
+
+    case NodeType::SEQUENCE_PORT_ITEM:
+      return visit(dynamic_cast<Sequence_port_item *>(node));
+
+    case NodeType::DIST_ITEM:
+      return visit(dynamic_cast<Dist_item *>(node));
+
+    case NodeType::DIST_WEIGHT:
+      return visit(dynamic_cast<Dist_weight *>(node));
+
+    case NodeType::BINS_KEYWORD:
+      return visit(dynamic_cast<Bins_keyword *>(node));
+
+    case NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_ANSI:
+      return visit(dynamic_cast<
+                   List_of_ports_or_port_declarations_preprocessor_last_ansi *>(
+          node));
+
+    case NodeType::IMPLEMENTS_INTERFACE_LIST:
+      return visit(dynamic_cast<Implements_interface_list *>(node));
+
+    case NodeType::LET_PORT_ITEM:
+      return visit(dynamic_cast<Let_port_item *>(node));
+
+    case NodeType::ARRAY_METHOD_WITH_PREDICATE:
+      return visit(dynamic_cast<Array_method_with_predicate *>(node));
+
+    case NodeType::COVERAGE_OPTION:
+      return visit(dynamic_cast<Coverage_option *>(node));
+
+    case NodeType::CONSTRAINT_SET:
+      return visit(dynamic_cast<Constraint_set *>(node));
+
+    case NodeType::PATTERN:
+      return visit(dynamic_cast<Pattern *>(node));
+
+    case NodeType::NET_TYPE_DECLARATION:
+      return visit(dynamic_cast<Net_type_declaration *>(node));
+
+    case NodeType::BINS_SELECTION:
+      return visit(dynamic_cast<Bins_selection *>(node));
+
+    case NodeType::EXPRESSION_OR_DIST_LIST:
+      return visit(dynamic_cast<Expression_or_dist_list *>(node));
+
+    case NodeType::CLOCKING_SKEW:
+      return visit(dynamic_cast<Clocking_skew *>(node));
+
+    case NodeType::INTERFACE_CLASS_ITEM:
+      return visit(dynamic_cast<Interface_class_item *>(node));
+
+    case NodeType::SEQUENCE_EXPR_MATCH_ITEM_LIST:
+      return visit(dynamic_cast<Sequence_expr_match_item_list *>(node));
+
+    case NodeType::TK_ANGLEBRACKETINCLUDE:
+      return visit(dynamic_cast<Tk_anglebracketinclude *>(node));
+
+    case NodeType::INTERFACE_CLASS_ITEM_LIST_OPT:
+      return visit(dynamic_cast<Interface_class_item_list_opt *>(node));
+
+    case NodeType::IMPORT_EXPORT:
+      return visit(dynamic_cast<Import_export *>(node));
+
+    case NodeType::WITH_COVERGROUP_EXPRESSION:
+      return visit(dynamic_cast<With_covergroup_expression *>(node));
+
+    case NodeType::CONSTRAINT_PRIMARY_LIST:
+      return visit(dynamic_cast<Constraint_primary_list *>(node));
+
+    case NodeType::PROPERTY_CASE_STATEMENT:
+      return visit(dynamic_cast<Property_case_statement *>(node));
+
+    case NodeType::CHARGE_STRENGTH:
+      return visit(dynamic_cast<Charge_strength *>(node));
+
+    case NodeType::DPI_IMPORT_PROPERTY:
+      return visit(dynamic_cast<Dpi_import_property *>(node));
+
+    case NodeType::IFF_EXPR_OPT:
+      return visit(dynamic_cast<Iff_expr_opt *>(node));
+
+    case NodeType::RS_RULE:
+      return visit(dynamic_cast<Rs_rule *>(node));
+
+    case NodeType::INTERFACE_CLASS_METHOD:
+      return visit(dynamic_cast<Interface_class_method *>(node));
+
+    case NodeType::MODPORT_SIMPLE_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_simple_ports_declaration_trailing_comma *>(
+              node));
+
+    case NodeType::CASE_INSIDE_ITEM:
+      return visit(dynamic_cast<Case_inside_item *>(node));
+
+    case NodeType::RESTRICT_PROPERTY_STATEMENT:
+      return visit(dynamic_cast<Restrict_property_statement *>(node));
+
+    case NodeType::DIST_LIST:
+      return visit(dynamic_cast<Dist_list *>(node));
+
+    case NodeType::RS_PROD:
+      return visit(dynamic_cast<Rs_prod *>(node));
+
+    case NodeType::ARRAY_ORDERING_METHOD:
+      return visit(dynamic_cast<Array_ordering_method *>(node));
+
+    case NodeType::RANDSEQUENCE_STATEMENT:
+      return visit(dynamic_cast<Randsequence_statement *>(node));
+
+    case NodeType::CROSS_BODY_ITEM:
+      return visit(dynamic_cast<Cross_body_item *>(node));
+
+    case NodeType::CASE_PATTERN_ITEMS:
+      return visit(dynamic_cast<Case_pattern_items *>(node));
+
+    case NodeType::CROSS_BODY_ITEM_LIST_OPT:
+      return visit(dynamic_cast<Cross_body_item_list_opt *>(node));
+
+    case NodeType::MODPORT_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_ports_declaration_trailing_comma *>(node));
+
+    case NodeType::
+        SET_COVERGROUP_EXPRESSION_OR_COVERGROUP_RANGE_LIST_OR_TRANS_LIST:
+      return visit(
+          dynamic_cast<
+              Set_covergroup_expression_or_covergroup_range_list_or_trans_list
+                  *>(node));
+
+    case NodeType::TK_STRONG:
+      return visit(dynamic_cast<Tk_strong *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CLASS_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_class_item *>(node));
+
+    case NodeType::TK_GENVAR:
+      return visit(dynamic_cast<Tk_genvar *>(node));
+
+    case NodeType::FILE_PATH_SPEC_LIST:
+      return visit(dynamic_cast<File_path_spec_list *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_description_item *>(node));
+
+    case NodeType::BRANCH_PROBE_EXPRESSION:
+      return visit(dynamic_cast<Branch_probe_expression *>(node));
+
+    case NodeType::TK_RCMOS:
+      return visit(dynamic_cast<Tk_rcmos *>(node));
+
+    case NodeType::TK_PIPEARROW2:
+      return visit(dynamic_cast<Tk_pipearrow2 *>(node));
+
+    case NodeType::TK_SSETUP:
+      return visit(dynamic_cast<Tk_ssetup *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_items *>(node));
+
+    case NodeType::TK_SSKEW:
+      return visit(dynamic_cast<Tk_sskew *>(node));
+
+    case NodeType::TK_NEW:
+      return visit(dynamic_cast<Tk_new *>(node));
+
+    case NodeType::LIBRARY_SOURCE:
+      return visit(dynamic_cast<Library_source *>(node));
+
+    case NodeType::TK_LOCALPARAM:
+      return visit(dynamic_cast<Tk_localparam *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_port_declarations_opt *>(node));
+
+    case NodeType::TK_UNION:
+      return visit(dynamic_cast<Tk_union *>(node));
+
+    case NodeType::TK_SHOWCANCELLED:
+      return visit(dynamic_cast<Tk_showcancelled *>(node));
+
+    case NodeType::TK_WAND:
+      return visit(dynamic_cast<Tk_wand *>(node));
+
+    case NodeType::DR_BEGIN_KEYWORDS:
+      return visit(dynamic_cast<Dr_begin_keywords *>(node));
+
+    case NodeType::MEMBER_PATTERN_LIST:
+      return visit(dynamic_cast<Member_pattern_list *>(node));
+
+    case NodeType::TK_STRONG0:
+      return visit(dynamic_cast<Tk_strong0 *>(node));
+
+    case NodeType::ANALOG_CONSTRUCT:
+      return visit(dynamic_cast<Analog_construct *>(node));
+
+    case NodeType::TK_WREAL:
+      return visit(dynamic_cast<Tk_wreal *>(node));
+
+    case NodeType::TK_RAND:
+      return visit(dynamic_cast<Tk_rand *>(node));
+
+    case NodeType::TK_POUNDPOUND:
+      return visit(dynamic_cast<Tk_poundpound *>(node));
+
+    case NodeType::NATURE_ITEMS:
+      return visit(dynamic_cast<Nature_items *>(node));
+
+    case NodeType::DR_SUPPRESS_FAULTS:
+      return visit(dynamic_cast<Dr_suppress_faults *>(node));
+
+    case NodeType::TK_REPEAT:
+      return visit(dynamic_cast<Tk_repeat *>(node));
+
+    case NodeType::TK_TIME:
+      return visit(dynamic_cast<Tk_time *>(node));
+
+    case NodeType::DR_RESETALL:
+      return visit(dynamic_cast<Dr_resetall *>(node));
+
+    case NodeType::TK_CLOCKING:
+      return visit(dynamic_cast<Tk_clocking *>(node));
+
+    case NodeType::TK_PARAMETER:
+      return visit(dynamic_cast<Tk_parameter *>(node));
+
+    case NodeType::TK_INITIAL:
+      return visit(dynamic_cast<Tk_initial *>(node));
+
+    case NodeType::TK_PULSESTYLE_ONDETECT:
+      return visit(dynamic_cast<Tk_pulsestyle_ondetect *>(node));
+
+    case NodeType::DISCIPLINE_ITEMS:
+      return visit(dynamic_cast<Discipline_items *>(node));
+
+    case NodeType::TK_GLOBAL:
+      return visit(dynamic_cast<Tk_global *>(node));
+
+    case NodeType::DR_END_KEYWORDS:
+      return visit(dynamic_cast<Dr_end_keywords *>(node));
+
+    case NodeType::TK_SAMPLE:
+      return visit(dynamic_cast<Tk_sample *>(node));
+
+    case NodeType::TK_UNIQUE_INDEX:
+      return visit(dynamic_cast<Tk_unique_index *>(node));
+
+    case NodeType::TK_CMOS:
+      return visit(dynamic_cast<Tk_cmos *>(node));
+
+    case NodeType::TK_PSTAR:
+      return visit(dynamic_cast<Tk_pstar *>(node));
+
+    case NodeType::TK_EXTERN:
+      return visit(dynamic_cast<Tk_extern *>(node));
+
+    case NodeType::MODULE_ATTRIBUTE_FOREIGN:
+      return visit(dynamic_cast<Module_attribute_foreign *>(node));
+
+    case NodeType::TK_CONSTRAINT:
+      return visit(dynamic_cast<Tk_constraint *>(node));
+
+    case NodeType::TK_SOLVE:
+      return visit(dynamic_cast<Tk_solve *>(node));
+
+    case NodeType::TK_TRIAND:
+      return visit(dynamic_cast<Tk_triand *>(node));
+
+    case NodeType::TK_JOIN_NONE:
+      return visit(dynamic_cast<Tk_join_none *>(node));
+
+    case NodeType::TK_STATIC:
+      return visit(dynamic_cast<Tk_static *>(node));
+
+    case NodeType::PP_DEFINE:
+      return visit(dynamic_cast<Pp_define *>(node));
+
+    case NodeType::DISCIPLINE_DECLARATION:
+      return visit(dynamic_cast<Discipline_declaration *>(node));
+
+    case NodeType::TK_DISABLE:
+      return visit(dynamic_cast<Tk_disable *>(node));
+
+    case NodeType::TK_REVERSE:
+      return visit(dynamic_cast<Tk_reverse *>(node));
+
+    case NodeType::TK_SHORTREAL:
+      return visit(dynamic_cast<Tk_shortreal *>(node));
+
+    case NodeType::TK_FIND_LAST_INDEX:
+      return visit(dynamic_cast<Tk_find_last_index *>(node));
+
+    case NodeType::TK_EXPECT:
+      return visit(dynamic_cast<Tk_expect *>(node));
+
+    case NodeType::ANALOG_STATEMENT:
+      return visit(dynamic_cast<Analog_statement *>(node));
+
+    case NodeType::UDP_UNKNOWN_LIST:
+      return visit(dynamic_cast<Udp_unknown_list *>(node));
+
+    case NodeType::TK_LBSTARRB:
+      return visit(dynamic_cast<Tk_lbstarrb *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_module_items *>(node));
+
+    case NodeType::RS_CASE:
+      return visit(dynamic_cast<Rs_case *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_CLASS_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_class_items *>(node));
+
+    case NodeType::NAMED_PARAMETER_ASSIGNMENT_LIST:
+      return visit(dynamic_cast<Named_parameter_assignment_list *>(node));
+
+    case NodeType::RS_CASE_ITEM_LIST:
+      return visit(dynamic_cast<Rs_case_item_list *>(node));
+
+    case NodeType::DR_PRAGMA:
+      return visit(dynamic_cast<Dr_pragma *>(node));
+
+    case NodeType::TK_DISCRETE:
+      return visit(dynamic_cast<Tk_discrete *>(node));
+
+    case NodeType::TK_FLOW:
+      return visit(dynamic_cast<Tk_flow *>(node));
+
+    case NodeType::TK_REF:
+      return visit(dynamic_cast<Tk_ref *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENTS:
+      return visit(dynamic_cast<Preprocessor_elsif_statements *>(node));
+
+    case NodeType::TK_XNOR:
+      return visit(dynamic_cast<Tk_xnor *>(node));
+
+    case NodeType::TK_SUPPLY1:
+      return visit(dynamic_cast<Tk_supply1 *>(node));
+
+    case NodeType::TK_CONST:
+      return visit(dynamic_cast<Tk_const *>(node));
+
+    case NodeType::TK_LOCAL_SCOPE:
+      return visit(dynamic_cast<Tk_local_scope *>(node));
+
+    case NodeType::TK_STRONG1:
+      return visit(dynamic_cast<Tk_strong1 *>(node));
+
+    case NodeType::TK_RELEASE:
+      return visit(dynamic_cast<Tk_release *>(node));
+
+    case NodeType::DISCIPLINE_ITEMS_OPT:
+      return visit(dynamic_cast<Discipline_items_opt *>(node));
+
+    case NodeType::TK_PROGRAM:
+      return visit(dynamic_cast<Tk_program *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_module_item *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_STATEMENT_OPT:
+      return visit(dynamic_cast<Preprocessor_else_statement_opt *>(node));
+
+    case NodeType::TK_ALWAYS:
+      return visit(dynamic_cast<Tk_always *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_class_item *>(node));
+
+    case NodeType::TK_TABLE:
+      return visit(dynamic_cast<Tk_table *>(node));
+
+    case NodeType::TK_TRIGGER:
+      return visit(dynamic_cast<Tk_trigger *>(node));
+
+    case NodeType::TK_LIBLIST:
+      return visit(dynamic_cast<Tk_liblist *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_HEADER:
+      return visit(dynamic_cast<Preprocessor_elsif_header *>(node));
+
+    case NodeType::TK_PURE:
+      return visit(dynamic_cast<Tk_pure *>(node));
+
+    case NodeType::TK_CASE:
+      return visit(dynamic_cast<Tk_case *>(node));
+
+    case NodeType::TK_SHOLD:
+      return visit(dynamic_cast<Tk_shold *>(node));
+
+    case NodeType::TK_LBRARROW:
+      return visit(dynamic_cast<Tk_lbrarrow *>(node));
+
+    case NodeType::TK_PACKAGE:
+      return visit(dynamic_cast<Tk_package *>(node));
+
+    case NodeType::TK_ALWAYS_FF:
+      return visit(dynamic_cast<Tk_always_ff *>(node));
+
+    case NodeType::TK_FILEPATH:
+      return visit(dynamic_cast<Tk_filepath *>(node));
+
+    case NodeType::TK_COLON_EQ:
+      return visit(dynamic_cast<Tk_colon_eq *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENTS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statements_opt *>(node));
+
+    case NodeType::TK_PULLDOWN:
+      return visit(dynamic_cast<Tk_pulldown *>(node));
+
+    case NodeType::TK_RPMOS:
+      return visit(dynamic_cast<Tk_rpmos *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_GENERATE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_generate_item_opt *>(node));
+
+    case NodeType::TK_BIT:
+      return visit(dynamic_cast<Tk_bit *>(node));
+
+    case NodeType::TK_CHANDLE:
+      return visit(dynamic_cast<Tk_chandle *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS_LIST:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_bins_or_options_list *>(node));
+
+    case NodeType::TK_BINSOF:
+      return visit(dynamic_cast<Tk_binsof *>(node));
+
+    case NodeType::MACRO_ARGS_OPT:
+      return visit(dynamic_cast<Macro_args_opt *>(node));
+
+    case NodeType::TK_SRECOVERY:
+      return visit(dynamic_cast<Tk_srecovery *>(node));
+
+    case NodeType::TK_CONFIG:
+      return visit(dynamic_cast<Tk_config *>(node));
+
+    case NodeType::TK_NONBLOCKING_TRIGGER:
+      return visit(dynamic_cast<Tk_nonblocking_trigger *>(node));
+
+    case NodeType::TK_SHUFFLE:
+      return visit(dynamic_cast<Tk_shuffle *>(node));
+
+    case NodeType::TK_SIGNED:
+      return visit(dynamic_cast<Tk_signed *>(node));
+
+    case NodeType::TK_INCR:
+      return visit(dynamic_cast<Tk_incr *>(node));
+
+    case NodeType::TK_ALWAYS_LATCH:
+      return visit(dynamic_cast<Tk_always_latch *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_GENERATE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_generate_items *>(node));
+
+    case NodeType::TK_PRODUCT:
+      return visit(dynamic_cast<Tk_product *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_MODULE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_module_item_opt *>(node));
+
+    case NodeType::TK_INPUT:
+      return visit(dynamic_cast<Tk_input *>(node));
+
+    case NodeType::TK_ASSIGN:
+      return visit(dynamic_cast<Tk_assign *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEMS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_description_items_opt *>(node));
+
+    case NodeType::DR_DELAY_MODE_DISTRIBUTED:
+      return visit(dynamic_cast<Dr_delay_mode_distributed *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_PACKAGE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_package_item *>(node));
+
+    case NodeType::BINS_OR_OPTIONS_LIST_OPT_PP:
+      return visit(dynamic_cast<Bins_or_options_list_opt_pp *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_package_items_opt *>(node));
+
+    case NodeType::TK_S_UNTIL_WITH:
+      return visit(dynamic_cast<Tk_s_until_with *>(node));
+
+    case NodeType::RS_CASE_ITEM:
+      return visit(dynamic_cast<Rs_case_item *>(node));
+
+    case NodeType::ANY_PORT_LIST_PREPROCESSOR_LAST_POSITIONAL:
+      return visit(
+          dynamic_cast<Any_port_list_preprocessor_last_positional *>(node));
+
+    case NodeType::TK_IGNORE_BINS:
+      return visit(dynamic_cast<Tk_ignore_bins *>(node));
+
+    case NodeType::TK_SUM:
+      return visit(dynamic_cast<Tk_sum *>(node));
+
+    case NodeType::TKK_ATTRIBUTE:
+      return visit(dynamic_cast<Tkk_attribute *>(node));
+
+    case NodeType::TK_MAX:
+      return visit(dynamic_cast<Tk_max *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_BLOCK_ITEM_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_block_item_opt *>(node));
+
+    case NodeType::TK_NEXTTIME:
+      return visit(dynamic_cast<Tk_nexttime *>(node));
+
+    case NodeType::TK_SEQUENCE:
+      return visit(dynamic_cast<Tk_sequence *>(node));
+
+    case NodeType::TK_AUTOMATIC:
+      return visit(dynamic_cast<Tk_automatic *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_STATEMENT:
+      return visit(dynamic_cast<Preprocessor_else_statement *>(node));
+
+    case NodeType::TK_PULLUP:
+      return visit(dynamic_cast<Tk_pullup *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_description_items *>(node));
+
+    case NodeType::ENUM_NAME_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Enum_name_list_preprocessor_last *>(node));
+
+    case NodeType::FROM_EXCLUDE:
+      return visit(dynamic_cast<From_exclude *>(node));
+
+    case NodeType::TK_INT:
+      return visit(dynamic_cast<Tk_int *>(node));
+
+    case NodeType::TK_JOIN:
+      return visit(dynamic_cast<Tk_join *>(node));
+
+    case NodeType::TK_FIND_FIRST_INDEX:
+      return visit(dynamic_cast<Tk_find_first_index *>(node));
+
+    case NodeType::TK_IMPLEMENTS:
+      return visit(dynamic_cast<Tk_implements *>(node));
+
+    case NodeType::DISCIPLINE_ITEM:
+      return visit(dynamic_cast<Discipline_item *>(node));
+
+    case NodeType::BLOCK_EVENT_EXPRESSION:
+      return visit(dynamic_cast<Block_event_expression *>(node));
+
+    case NodeType::TK_DISCIPLINE:
+      return visit(dynamic_cast<Tk_discipline *>(node));
+
+    case NodeType::INCLUDE_STATEMENT:
+      return visit(dynamic_cast<Include_statement *>(node));
+
+    case NodeType::TK_LBSTAR:
+      return visit(dynamic_cast<Tk_lbstar *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS_LIST_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_bins_or_options_list_opt *>(node));
+
+    case NodeType::TK_LBEQ:
+      return visit(dynamic_cast<Tk_lbeq *>(node));
+
+    case NodeType::TK_VOID:
+      return visit(dynamic_cast<Tk_void *>(node));
+
+    case NodeType::TK_EXCLUDE:
+      return visit(dynamic_cast<Tk_exclude *>(node));
+
+    case NodeType::TK_RANDC:
+      return visit(dynamic_cast<Tk_randc *>(node));
+
+    case NodeType::TK_WEAK:
+      return visit(dynamic_cast<Tk_weak *>(node));
+
+    case NodeType::TK_INSTANCE:
+      return visit(dynamic_cast<Tk_instance *>(node));
+
+    case NodeType::TK_TYPE_OPTION:
+      return visit(dynamic_cast<Tk_type_option *>(node));
+
+    case NodeType::TK_WAIT:
+      return visit(dynamic_cast<Tk_wait *>(node));
+
+    case NodeType::TK_ABSTOL:
+      return visit(dynamic_cast<Tk_abstol *>(node));
+
+    case NodeType::TK_DECR:
+      return visit(dynamic_cast<Tk_decr *>(node));
+
+    case NodeType::TK_XOR:
+      return visit(dynamic_cast<Tk_xor *>(node));
+
+    case NodeType::TK_TIMEPRECISION:
+      return visit(dynamic_cast<Tk_timeprecision *>(node));
+
+    case NodeType::DR_DELAY_MODE_ZERO:
+      return visit(dynamic_cast<Dr_delay_mode_zero *>(node));
+
+    case NodeType::TK_FIND_FIRST:
+      return visit(dynamic_cast<Tk_find_first *>(node));
+
+    case NodeType::TK_PULSESTYLE_ONEVENT:
+      return visit(dynamic_cast<Tk_pulsestyle_onevent *>(node));
+
+    case NodeType::TK_COVERGROUP:
+      return visit(dynamic_cast<Tk_covergroup *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEMS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_items_opt *>(node));
+
+    case NodeType::MACRO_DIGITS:
+      return visit(dynamic_cast<Macro_digits *>(node));
+
+    case NodeType::TK_UNITS:
+      return visit(dynamic_cast<Tk_units *>(node));
+
+    case NodeType::TK_TRAN:
+      return visit(dynamic_cast<Tk_tran *>(node));
+
+    case NodeType::TK_WILDCARD:
+      return visit(dynamic_cast<Tk_wildcard *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_BINS_OR_OPTIONS_LIST:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_bins_or_options_list *>(node));
+
+    case NodeType::TK_FINAL:
+      return visit(dynamic_cast<Tk_final *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_PACKAGE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_package_item_opt *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_class_items *>(node));
+
+    case NodeType::ANY_ARGUMENT_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Any_argument_list_preprocessor_last *>(node));
+
+    case NodeType::TK_SORT:
+      return visit(dynamic_cast<Tk_sort *>(node));
+
+    case NodeType::INCDIR_SPEC:
+      return visit(dynamic_cast<Incdir_spec *>(node));
+
+    case NodeType::PREPROCESSOR_IF_HEADER:
+      return visit(dynamic_cast<Preprocessor_if_header *>(node));
+
+    case NodeType::DR_DISABLE_PORTFAULTS:
+      return visit(dynamic_cast<Dr_disable_portfaults *>(node));
+
+    case NodeType::TK_S_NEXTTIME:
+      return visit(dynamic_cast<Tk_s_nexttime *>(node));
+
+    case NodeType::TK_WITH:
+      return visit(dynamic_cast<Tk_with *>(node));
+
+    case NodeType::DR_UNCONNECTED_DRIVE:
+      return visit(dynamic_cast<Dr_unconnected_drive *>(node));
+
+    case NodeType::TK_SNOCHANGE:
+      return visit(dynamic_cast<Tk_snochange *>(node));
+
+    case NodeType::MACRO_CALL_OR_ITEM:
+      return visit(dynamic_cast<Macro_call_or_item *>(node));
+
+    case NodeType::LIBRARY_DESCRIPTION_LIST_OPT:
+      return visit(dynamic_cast<Library_description_list_opt *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATION:
+      return visit(dynamic_cast<Preprocessor_elsif_port_declaration *>(node));
+
+    case NodeType::TK_CONTEXT:
+      return visit(dynamic_cast<Tk_context *>(node));
+
+    case NodeType::TK_INCLUDE:
+      return visit(dynamic_cast<Tk_include *>(node));
+
+    case NodeType::TK_VAR:
+      return visit(dynamic_cast<Tk_var *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_constraint_block_item *>(node));
+
+    case NodeType::TK_MODULE:
+      return visit(dynamic_cast<Tk_module *>(node));
+
+    case NodeType::DR_USELIB:
+      return visit(dynamic_cast<Dr_uselib *>(node));
+
+    case NodeType::CONSTRAINT_DECLARATION_PACKAGE_ITEM:
+      return visit(dynamic_cast<Constraint_declaration_package_item *>(node));
+
+    case NodeType::DR_NOUNCONNECTED_DRIVE:
+      return visit(dynamic_cast<Dr_nounconnected_drive *>(node));
+
+    case NodeType::TK_EVENT:
+      return visit(dynamic_cast<Tk_event *>(node));
+
+    case NodeType::TK_ACCESS:
+      return visit(dynamic_cast<Tk_access *>(node));
+
+    case NodeType::TK_TYPEDEF:
+      return visit(dynamic_cast<Tk_typedef *>(node));
+
+    case NodeType::LIBRARY_DESCRIPTION:
+      return visit(dynamic_cast<Library_description *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_DESCRIPTION_ITEMS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_description_items *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATIONS:
+      return visit(dynamic_cast<Preprocessor_elsif_port_declarations *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_BINS_OR_OPTIONS_OPT:
+      return visit(dynamic_cast<Preprocessor_else_bins_or_options_opt *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_PORT_DECLARATIONS:
+      return visit(dynamic_cast<Preprocessor_else_port_declarations *>(node));
+
+    case NodeType::TK_UNTIL_WITH:
+      return visit(dynamic_cast<Tk_until_with *>(node));
+
+    case NodeType::TK_ATAT:
+      return visit(dynamic_cast<Tk_atat *>(node));
+
+    case NodeType::TK_OPTION:
+      return visit(dynamic_cast<Tk_option *>(node));
+
+    case NodeType::TK_NEGEDGE:
+      return visit(dynamic_cast<Tk_negedge *>(node));
+
+    case NodeType::TK_UNTIL:
+      return visit(dynamic_cast<Tk_until *>(node));
+
+    case NodeType::TK_PO_NEG:
+      return visit(dynamic_cast<Tk_po_neg *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_CONFIG_RULE_STATEMENTS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_config_rule_statements *>(node));
+
+    case NodeType::MEMBER_PATTERN:
+      return visit(dynamic_cast<Member_pattern *>(node));
+
+    case NodeType::TK_WEAK1:
+      return visit(dynamic_cast<Tk_weak1 *>(node));
+
+    case NodeType::TK_1STEP:
+      return visit(dynamic_cast<Tk_1step *>(node));
+
+    case NodeType::PARAMETER_VALUE_BYNAME_LIST_PREPROCESSOR_LAST:
+      return visit(
+          dynamic_cast<Parameter_value_byname_list_preprocessor_last *>(node));
+
+    case NodeType::TK_UNSIGNED:
+      return visit(dynamic_cast<Tk_unsigned *>(node));
+
+    case NodeType::MACRO_ARG_OPT:
+      return visit(dynamic_cast<Macro_arg_opt *>(node));
+
+    case NodeType::TK_TAGGED:
+      return visit(dynamic_cast<Tk_tagged *>(node));
+
+    case NodeType::TK_SCOPE_RES:
+      return visit(dynamic_cast<Tk_scope_res *>(node));
+
+    case NodeType::DR_ENDPROTECT:
+      return visit(dynamic_cast<Dr_endprotect *>(node));
+
+    case NodeType::DR_DELAY_MODE_UNIT:
+      return visit(dynamic_cast<Dr_delay_mode_unit *>(node));
+
+    case NodeType::PARAMETER_VALUE_RANGES:
+      return visit(dynamic_cast<Parameter_value_ranges *>(node));
+
+    case NodeType::NATURE_ITEM:
+      return visit(dynamic_cast<Nature_item *>(node));
+
+    case NodeType::TK_VIRTUAL:
+      return visit(dynamic_cast<Tk_virtual *>(node));
+
+    case NodeType::TK_WITH__COVERGROUP:
+      return visit(dynamic_cast<Tk_with__covergroup *>(node));
+
+    case NodeType::ERROR:
+      return visit(dynamic_cast<Error *>(node));
+
+    case NodeType::TK_SPECPARAM:
+      return visit(dynamic_cast<Tk_specparam *>(node));
+
+    case NodeType::TK_ASSUME:
+      return visit(dynamic_cast<Tk_assume *>(node));
+
+    case NodeType::TK_UWIRE:
+      return visit(dynamic_cast<Tk_uwire *>(node));
+
+    case NodeType::TK_RTRAN:
+      return visit(dynamic_cast<Tk_rtran *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expressions_opt *>(node));
+
+    case NodeType::TK_SYNC_ACCEPT_ON:
+      return visit(dynamic_cast<Tk_sync_accept_on *>(node));
+
+    case NodeType::TK_COVERPOINT:
+      return visit(dynamic_cast<Tk_coverpoint *>(node));
+
+    case NodeType::TK_RNMOS:
+      return visit(dynamic_cast<Tk_rnmos *>(node));
+
+    case NodeType::TK_EVENTUALLY:
+      return visit(dynamic_cast<Tk_eventually *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_DESCRIPTION_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_description_item *>(node));
+
+    case NodeType::TK_THIS:
+      return visit(dynamic_cast<Tk_this *>(node));
+
+    case NodeType::TK_DO:
+      return visit(dynamic_cast<Tk_do *>(node));
+
+    case NodeType::TK_MODPORT:
+      return visit(dynamic_cast<Tk_modport *>(node));
+
+    case NodeType::TK_SOFT:
+      return visit(dynamic_cast<Tk_soft *>(node));
+
+    case NodeType::DR_DEFAULT_TRIREG_STRENGTH:
+      return visit(dynamic_cast<Dr_default_trireg_strength *>(node));
+
+    case NodeType::TK_TRIREG:
+      return visit(dynamic_cast<Tk_trireg *>(node));
+
+    case NodeType::DESCRIPTION_LIST_OPT:
+      return visit(dynamic_cast<Description_list_opt *>(node));
+
+    case NodeType::TK_EDGE:
+      return visit(dynamic_cast<Tk_edge *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENTS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_statements_opt *>(node));
+
+    case NodeType::CASE_ITEM_EXPRESSION:
+      return visit(dynamic_cast<Case_item_expression *>(node));
+
+    case NodeType::TK_INFINITE:
+      return visit(dynamic_cast<Tk_infinite *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONFIG_RULE_STATEMENT:
+      return visit(
+          dynamic_cast<Preprocessor_else_config_rule_statement *>(node));
+
+    case NodeType::TK_NATURE:
+      return visit(dynamic_cast<Tk_nature *>(node));
+
+    case NodeType::TK_ANALOG:
+      return visit(dynamic_cast<Tk_analog *>(node));
+
+    case NodeType::TK_MACROMODULE:
+      return visit(dynamic_cast<Tk_macromodule *>(node));
+
+    case NodeType::TK_S_EVENTUALLY:
+      return visit(dynamic_cast<Tk_s_eventually *>(node));
+
+    case NodeType::TK_SRECREM:
+      return visit(dynamic_cast<Tk_srecrem *>(node));
+
+    case NodeType::TK_NULL:
+      return visit(dynamic_cast<Tk_null *>(node));
+
+    case NodeType::TK_LP:
+      return visit(dynamic_cast<Tk_lp *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CLASS_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_class_item_opt *>(node));
+
+    case NodeType::NAMED_PARAMETER_ASSIGNMENT:
+      return visit(dynamic_cast<Named_parameter_assignment *>(node));
+
+    case NodeType::TK_MIN:
+      return visit(dynamic_cast<Tk_min *>(node));
+
+    case NodeType::TK_UNIQUE0:
+      return visit(dynamic_cast<Tk_unique0 *>(node));
+
+    case NodeType::TK_OR:
+      return visit(dynamic_cast<Tk_or *>(node));
+
+    case NodeType::TK_WONE:
+      return visit(dynamic_cast<Tk_wone *>(node));
+
+    case NodeType::TK_RS:
+      return visit(dynamic_cast<Tk_rs *>(node));
+
+    case NodeType::TK_FIND:
+      return visit(dynamic_cast<Tk_find *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statement *>(node));
+
+    case NodeType::TK_END:
+      return visit(dynamic_cast<Tk_end *>(node));
+
+    case NodeType::TK_BIND:
+      return visit(dynamic_cast<Tk_bind *>(node));
+
+    case NodeType::INCDIR_SPEC_OPT:
+      return visit(dynamic_cast<Incdir_spec_opt *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSIONS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expressions *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_EXPRESSION:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_expression *>(node));
+
+    case NodeType::TK_CONTINUE:
+      return visit(dynamic_cast<Tk_continue *>(node));
+
+    case NodeType::TK_CROSS:
+      return visit(dynamic_cast<Tk_cross *>(node));
+
+    case NodeType::DR_TIMESCALE:
+      return visit(dynamic_cast<Dr_timescale *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_item *>(node));
+
+    case NodeType::TK_ALIAS:
+      return visit(dynamic_cast<Tk_alias *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_CONSTRAINT_EXPRESSIONS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_constraint_expressions *>(node));
+
+    case NodeType::TK_INTEGER:
+      return visit(dynamic_cast<Tk_integer *>(node));
+
+    case NodeType::TK_JOIN_ANY:
+      return visit(dynamic_cast<Tk_join_any *>(node));
+
+    case NodeType::TK_INTERFACE:
+      return visit(dynamic_cast<Tk_interface *>(node));
+
+    case NodeType::TF_PORT_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Tf_port_list_preprocessor_last *>(node));
+
+    case NodeType::TK_EXPORT:
+      return visit(dynamic_cast<Tk_export *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENT:
+      return visit(dynamic_cast<Preprocessor_elsif_statement *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONFIG_RULE_STATEMENT_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_config_rule_statement_opt *>(node));
+
+    case NodeType::TK_NXOR:
+      return visit(dynamic_cast<Tk_nxor *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_items_opt *>(node));
+
+    case NodeType::TK_SUPPLY0:
+      return visit(dynamic_cast<Tk_supply0 *>(node));
+
+    case NodeType::TK_S_ALWAYS:
+      return visit(dynamic_cast<Tk_s_always *>(node));
+
+    case NodeType::TK_REG:
+      return visit(dynamic_cast<Tk_reg *>(node));
+
+    case NodeType::FILE_PATH_SPEC:
+      return visit(dynamic_cast<File_path_spec *>(node));
+
+    case NodeType::DR_ENDCELLDEFINE:
+      return visit(dynamic_cast<Dr_endcelldefine *>(node));
+
+    case NodeType::PREPROCESSOR_LIST_OF_PORTS_OR_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_list_of_ports_or_port_declarations_opt *>(
+              node));
+
+    case NodeType::TK_IMPLIES:
+      return visit(dynamic_cast<Tk_implies *>(node));
+
+    case NodeType::TK_FIRST_MATCH:
+      return visit(dynamic_cast<Tk_first_match *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_package_items *>(node));
+
+    case NodeType::TK_PMOS:
+      return visit(dynamic_cast<Tk_pmos *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_MODULE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_module_items *>(node));
+
+    case NodeType::BLOCK_EVENT_EXPR_PRIMARY:
+      return visit(dynamic_cast<Block_event_expr_primary *>(node));
+
+    case NodeType::CONSTRAINT_PROTOTYPE:
+      return visit(dynamic_cast<Constraint_prototype *>(node));
+
+    case NodeType::TK_LS:
+      return visit(dynamic_cast<Tk_ls *>(node));
+
+    case NodeType::TK_CELL:
+      return visit(dynamic_cast<Tk_cell *>(node));
+
+    case NodeType::TK_WEAK0:
+      return visit(dynamic_cast<Tk_weak0 *>(node));
+
+    case NodeType::DR_ENABLE_PORTFAULTS:
+      return visit(dynamic_cast<Dr_enable_portfaults *>(node));
+
+    case NodeType::TK_NOSHOWCANCELLED:
+      return visit(dynamic_cast<Tk_noshowcancelled *>(node));
+
+    case NodeType::TK_NOT:
+      return visit(dynamic_cast<Tk_not *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Preprocessor_else_bins_or_options *>(node));
+
+    case NodeType::TK_COVER:
+      return visit(dynamic_cast<Tk_cover *>(node));
+
+    case NodeType::PREPROCESSOR_CONTROL_FLOW:
+      return visit(dynamic_cast<Preprocessor_control_flow *>(node));
+
+    case NodeType::TK_OUTPUT:
+      return visit(dynamic_cast<Tk_output *>(node));
+
+    case NodeType::TK_TRI1:
+      return visit(dynamic_cast<Tk_tri1 *>(node));
+
+    case NodeType::TK_DOTSTAR:
+      return visit(dynamic_cast<Tk_dotstar *>(node));
+
+    case NodeType::TK_TIMEUNIT:
+      return visit(dynamic_cast<Tk_timeunit *>(node));
+
+    case NodeType::TK_TRI:
+      return visit(dynamic_cast<Tk_tri *>(node));
+
+    case NodeType::MACROCALL:
+      return visit(dynamic_cast<Macrocall *>(node));
+
+    case NodeType::TK_INOUT:
+      return visit(dynamic_cast<Tk_inout *>(node));
+
+    case NodeType::TK_CASEX:
+      return visit(dynamic_cast<Tk_casex *>(node));
+
+    case NodeType::TK_POTENTIAL:
+      return visit(dynamic_cast<Tk_potential *>(node));
+
+    case NodeType::TK_POUNDEQPOUND:
+      return visit(dynamic_cast<Tk_poundeqpound *>(node));
+
+    case NodeType::TK_LET:
+      return visit(dynamic_cast<Tk_let *>(node));
+
+    case NodeType::DR_DEFAULT_NETTYPE:
+      return visit(dynamic_cast<Dr_default_nettype *>(node));
+
+    case NodeType::TK_BEGIN:
+      return visit(dynamic_cast<Tk_begin *>(node));
+
+    case NodeType::TK_CASEZ:
+      return visit(dynamic_cast<Tk_casez *>(node));
+
+    case NodeType::TK_NETTYPE:
+      return visit(dynamic_cast<Tk_nettype *>(node));
+
+    case NodeType::TK_PULL0:
+      return visit(dynamic_cast<Tk_pull0 *>(node));
+
+    case NodeType::TK_ILLEGAL_BINS:
+      return visit(dynamic_cast<Tk_illegal_bins *>(node));
+
+    case NodeType::DECAY_VALUE_SIMPLE:
+      return visit(dynamic_cast<Decay_value_simple *>(node));
+
+    case NodeType::TK_ENUM:
+      return visit(dynamic_cast<Tk_enum *>(node));
+
+    case NodeType::TK_WOR:
+      return visit(dynamic_cast<Tk_wor *>(node));
+
+    case NodeType::TK_INF:
+      return visit(dynamic_cast<Tk_inf *>(node));
+
+    case NodeType::TK_SROOT:
+      return visit(dynamic_cast<Tk_sroot *>(node));
+
+    case NodeType::TK_INTERCONNECT:
+      return visit(dynamic_cast<Tk_interconnect *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_PACKAGE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_package_items *>(node));
+
+    case NodeType::TK_SHORTINT:
+      return visit(dynamic_cast<Tk_shortint *>(node));
+
+    case NodeType::TK_STRUCT:
+      return visit(dynamic_cast<Tk_struct *>(node));
+
+    case NodeType::TK_BREAK:
+      return visit(dynamic_cast<Tk_break *>(node));
+
+    case NodeType::TK_NMOS:
+      return visit(dynamic_cast<Tk_nmos *>(node));
+
+    case NodeType::TK_STRING:
+      return visit(dynamic_cast<Tk_string *>(node));
+
+    case NodeType::TK_SYNC_REJECT_ON:
+      return visit(dynamic_cast<Tk_sync_reject_on *>(node));
+
+    case NodeType::TK_WIRE:
+      return visit(dynamic_cast<Tk_wire *>(node));
+
+    case NodeType::TK_PO_POS:
+      return visit(dynamic_cast<Tk_po_pos *>(node));
+
+    case NodeType::TK_RETURN:
+      return visit(dynamic_cast<Tk_return *>(node));
+
+    case NodeType::TK_PIPEARROW:
+      return visit(dynamic_cast<Tk_pipearrow *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_DESCRIPTION_ITEM_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_description_item_opt *>(node));
+
+    case NodeType::DR_PROTECT:
+      return visit(dynamic_cast<Dr_protect *>(node));
+
+    case NodeType::MACROCALLITEM:
+      return visit(dynamic_cast<Macrocallitem *>(node));
+
+    case NodeType::TK_DOMAIN:
+      return visit(dynamic_cast<Tk_domain *>(node));
+
+    case NodeType::TK_STIMESKEW:
+      return visit(dynamic_cast<Tk_stimeskew *>(node));
+
+    case NodeType::MACROARG:
+      return visit(dynamic_cast<Macroarg *>(node));
+
+    case NodeType::TK_TIMEPRECISION_CHECK:
+      return visit(dynamic_cast<Tk_timeprecision_check *>(node));
+
+    case NodeType::TK_BINS:
+      return visit(dynamic_cast<Tk_bins *>(node));
+
+    case NodeType::TK_DEASSIGN:
+      return visit(dynamic_cast<Tk_deassign *>(node));
+
+    case NodeType::TK_NOR:
+      return visit(dynamic_cast<Tk_nor *>(node));
+
+    case NodeType::TK_PACKED:
+      return visit(dynamic_cast<Tk_packed *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_port_declarations_opt *>(node));
+
+    case NodeType::TK_PRIMITIVE:
+      return visit(dynamic_cast<Tk_primitive *>(node));
+
+    case NodeType::TK_NAND:
+      return visit(dynamic_cast<Tk_nand *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_block_item *>(node));
+
+    case NodeType::TK_PRIORITY:
+      return visit(dynamic_cast<Tk_priority *>(node));
+
+    case NodeType::NATURE_DECLARATION:
+      return visit(dynamic_cast<Nature_declaration *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENTS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statements *>(node));
+
+    case NodeType::DR_CELLDEFINE:
+      return visit(dynamic_cast<Dr_celldefine *>(node));
+
+    case NodeType::TK_ACCEPT_ON:
+      return visit(dynamic_cast<Tk_accept_on *>(node));
+
+    case NodeType::TK_SWIDTH:
+      return visit(dynamic_cast<Tk_swidth *>(node));
+
+    case NodeType::TK_BYTE:
+      return visit(dynamic_cast<Tk_byte *>(node));
+
+    case NodeType::TK_LBPLUSRB:
+      return visit(dynamic_cast<Tk_lbplusrb *>(node));
+
+    case NodeType::TK_RANDSEQUENCE:
+      return visit(dynamic_cast<Tk_randsequence *>(node));
+
+    case NodeType::TK_DIST:
+      return visit(dynamic_cast<Tk_dist *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_item *>(node));
+
+    case NodeType::TK_CONTINUOUS:
+      return visit(dynamic_cast<Tk_continuous *>(node));
+
+    case NodeType::MACROCALLID:
+      return visit(dynamic_cast<Macrocallid *>(node));
+
+    case NodeType::DR_NOSUPPRESS_FAULTS:
+      return visit(dynamic_cast<Dr_nosuppress_faults *>(node));
+
+    case NodeType::TK_DEFPARAM:
+      return visit(dynamic_cast<Tk_defparam *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_package_item *>(node));
+
+    case NodeType::CASE_ITEM_EXPRESSION_LIST:
+      return visit(dynamic_cast<Case_item_expression_list *>(node));
+
+    case NodeType::CLASS_ITEM_QUALIFIER_LIST:
+      return visit(dynamic_cast<Class_item_qualifier_list *>(node));
+
+    case NodeType::TK_ASSERT:
+      return visit(dynamic_cast<Tk_assert *>(node));
+
+    case NodeType::TK_DEFAULT:
+      return visit(dynamic_cast<Tk_default *>(node));
+
+    case NodeType::PP_UNDEF:
+      return visit(dynamic_cast<Pp_undef *>(node));
+
+    case NodeType::PP_ENDIF:
+      return visit(dynamic_cast<Pp_endif *>(node));
+
+    case NodeType::TK_PROTECTED:
+      return visit(dynamic_cast<Tk_protected *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSION:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expression *>(node));
+
+    case NodeType::VALUE_RANGE_EXPRESSION:
+      return visit(dynamic_cast<Value_range_expression *>(node));
+
+    case NodeType::DR_DEFAULT_DECAY_TIME:
+      return visit(dynamic_cast<Dr_default_decay_time *>(node));
+
+    case NodeType::TK_LIBRARY:
+      return visit(dynamic_cast<Tk_library *>(node));
+
+    case NodeType::TK_LOCAL:
+      return visit(dynamic_cast<Tk_local *>(node));
+
+    case NodeType::TK_UNTYPED:
+      return visit(dynamic_cast<Tk_untyped *>(node));
+
+    case NodeType::TK_UNIQUE:
+      return visit(dynamic_cast<Tk_unique *>(node));
+
+    case NodeType::TK_SSETUPHOLD:
+      return visit(dynamic_cast<Tk_ssetuphold *>(node));
+
+    case NodeType::TK_USE:
+      return visit(dynamic_cast<Tk_use *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_MODULE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_module_item *>(node));
+
+    case NodeType::
+        LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_NON_ANSI:
+      return visit(
+          dynamic_cast<
+              List_of_ports_or_port_declarations_preprocessor_last_non_ansi *>(
+              node));
+
+    case NodeType::TK_SFULLSKEW:
+      return visit(dynamic_cast<Tk_sfullskew *>(node));
+
+    case NodeType::TK_BUF:
+      return visit(dynamic_cast<Tk_buf *>(node));
+
+    case NodeType::TK_PROPERTY:
+      return visit(dynamic_cast<Tk_property *>(node));
+
+    case NodeType::TK_PULL1:
+      return visit(dynamic_cast<Tk_pull1 *>(node));
+
+    case NodeType::TK_SPERIOD:
+      return visit(dynamic_cast<Tk_speriod *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_EXPRESSION_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_expression_opt *>(node));
+
+    case NodeType::SELECT_DIMENSIONS:
+      return visit(dynamic_cast<Select_dimensions *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_module_items_opt *>(node));
+
+    case NodeType::TK_TIMEUNIT_CHECK:
+      return visit(dynamic_cast<Tk_timeunit_check *>(node));
+
+    case NodeType::PARAMETER_VALUE_RANGE:
+      return visit(dynamic_cast<Parameter_value_range *>(node));
+
+    case NodeType::TK_EXTENDS:
+      return visit(dynamic_cast<Tk_extends *>(node));
+
+    case NodeType::TK_TRIOR:
+      return visit(dynamic_cast<Tk_trior *>(node));
+
+    case NodeType::TK_S_UNTIL:
+      return visit(dynamic_cast<Tk_s_until *>(node));
+
+    case NodeType::LIBRARY_DECLARATION:
+      return visit(dynamic_cast<Library_declaration *>(node));
+
+    case NodeType::TK_RSORT:
+      return visit(dynamic_cast<Tk_rsort *>(node));
+
+    case NodeType::TK_POSEDGE:
+      return visit(dynamic_cast<Tk_posedge *>(node));
+
+    case NodeType::TK_GENERATE:
+      return visit(dynamic_cast<Tk_generate *>(node));
+
+    case NodeType::TK_DESIGN:
+      return visit(dynamic_cast<Tk_design *>(node));
+
+    case NodeType::TK_ALWAYS_COMB:
+      return visit(dynamic_cast<Tk_always_comb *>(node));
+
+    case NodeType::LIBRARY_DESCRIPTION_LIST:
+      return visit(dynamic_cast<Library_description_list *>(node));
+
+    case NodeType::PREPROCESSOR_ELSE_GENERATE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_generate_item *>(node));
+
+    case NodeType::TK_TRI0:
+      return visit(dynamic_cast<Tk_tri0 *>(node));
+
+    case NodeType::PREPROCESSOR_BALANCED_STATEMENTS:
+      return visit(dynamic_cast<Preprocessor_balanced_statements *>(node));
+
+    case NodeType::TK_REAL:
+      return visit(dynamic_cast<Tk_real *>(node));
+
+    case NodeType::TK_FROM:
+      return visit(dynamic_cast<Tk_from *>(node));
+
+    case NodeType::DR_DELAY_MODE_PATH:
+      return visit(dynamic_cast<Dr_delay_mode_path *>(node));
+
+    case NodeType::TK_RANDOMIZE:
+      return visit(dynamic_cast<Tk_randomize *>(node));
+
+    case NodeType::TK_AND:
+      return visit(dynamic_cast<Tk_and *>(node));
+
+    case NodeType::TK_LOGIC:
+      return visit(dynamic_cast<Tk_logic *>(node));
+
+    case NodeType::TK_DDT_NATURE:
+      return visit(dynamic_cast<Tk_ddt_nature *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Preprocessor_elsif_bins_or_options *>(node));
+
+    case NodeType::CONSTRAINT_EXPRESSION_LIST_OPT:
+      return visit(dynamic_cast<Constraint_expression_list_opt *>(node));
+
+    case NodeType::DECLARATION_EXTENDS_LIST:
+      return visit(dynamic_cast<Declaration_extends_list *>(node));
+
+    case NodeType::PP_INCLUDE:
+      return visit(dynamic_cast<Pp_include *>(node));
+
+    case NodeType::TK_SUPER:
+      return visit(dynamic_cast<Tk_super *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEMS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_items *>(node));
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_class_items_opt *>(node));
+
+    case NodeType::TK_POUNDMINUSPOUND:
+      return visit(dynamic_cast<Tk_poundminuspound *>(node));
+
+    case NodeType::TK_REJECT_ON:
+      return visit(dynamic_cast<Tk_reject_on *>(node));
+
+    case NodeType::TK_FUNCTION:
+      return visit(dynamic_cast<Tk_function *>(node));
+
+    case NodeType::TK_SUNIT:
+      return visit(dynamic_cast<Tk_sunit *>(node));
+
+    case NodeType::TK_RESTRICT:
+      return visit(dynamic_cast<Tk_restrict *>(node));
+
+    case NodeType::TK_TASK:
+      return visit(dynamic_cast<Tk_task *>(node));
+
+    case NodeType::TK_FIND_LAST:
+      return visit(dynamic_cast<Tk_find_last *>(node));
+
+    case NodeType::TK_SREMOVAL:
+      return visit(dynamic_cast<Tk_sremoval *>(node));
+
+    case NodeType::TK_LONGINT:
+      return visit(dynamic_cast<Tk_longint *>(node));
+
+    case NodeType::TK_TYPE:
+      return visit(dynamic_cast<Tk_type *>(node));
+
+    case NodeType::PD_LIBRARY_SYNTAX_BEGIN:
+      return visit(dynamic_cast<Pd_library_syntax_begin *>(node));
+
+    case NodeType::TK_FIND_INDEX:
+      return visit(dynamic_cast<Tk_find_index *>(node));
+
+    case NodeType::TK_IDT_NATURE:
+      return visit(dynamic_cast<Tk_idt_nature *>(node));
+
+    case NodeType::TK_IMPORT:
+      return visit(dynamic_cast<Tk_import *>(node));
+
+    case NodeType::TK_COLON_DIV:
+      return visit(dynamic_cast<Tk_colon_div *>(node));
+
+    case NodeType::BLOCK_EVENT_OR_EXPR:
+      return visit(dynamic_cast<Block_event_or_expr *>(node));
 
     default:
       return R();
@@ -2578,6 +4289,1770 @@ public:
 
     case NodeType::COVERAGE_SPEC_OR_OPTION:
       return visit(dynamic_cast<Coverage_spec_or_option *>(node), arg);
+
+    case NodeType::UNTIL_OPERATOR:
+      return visit(dynamic_cast<Until_operator *>(node), arg);
+
+    case NodeType::COVER_SEQUENCE_STATEMENT:
+      return visit(dynamic_cast<Cover_sequence_statement *>(node), arg);
+
+    case NodeType::WITH_COVERGROUP_EXPRESSION_IN_PARENS:
+      return visit(dynamic_cast<With_covergroup_expression_in_parens *>(node),
+                   arg);
+
+    case NodeType::DECLARATION_EXTENDS_LIST_OPT:
+      return visit(dynamic_cast<Declaration_extends_list_opt *>(node), arg);
+
+    case NodeType::RS_IF_ELSE:
+      return visit(dynamic_cast<Rs_if_else *>(node), arg);
+
+    case NodeType::FOLLOWED_BY_OPERATOR:
+      return visit(dynamic_cast<Followed_by_operator *>(node), arg);
+
+    case NodeType::LOCAL_SEQUENCE_LVAR_PORT_DIRECTION_OPT:
+      return visit(dynamic_cast<Local_sequence_lvar_port_direction_opt *>(node),
+                   arg);
+
+    case NodeType::BINS_EXPRESSION:
+      return visit(dynamic_cast<Bins_expression *>(node), arg);
+
+    case NodeType::PROPERTY_ACTUAL_ARG:
+      return visit(dynamic_cast<Property_actual_arg *>(node), arg);
+
+    case NodeType::SELECT_EXPRESSION:
+      return visit(dynamic_cast<Select_expression *>(node), arg);
+
+    case NodeType::SLICE_SIZE:
+      return visit(dynamic_cast<Slice_size *>(node), arg);
+
+    case NodeType::PROPERTY_CASE_ITEM:
+      return visit(dynamic_cast<Property_case_item *>(node), arg);
+
+    case NodeType::DEFAULT_SKEW:
+      return visit(dynamic_cast<Default_skew *>(node), arg);
+
+    case NodeType::CONSTRAINT_EXPRESSION_LIST:
+      return visit(dynamic_cast<Constraint_expression_list *>(node), arg);
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_BEGIN:
+      return visit(dynamic_cast<Modport_clocking_declaration_begin *>(node),
+                   arg);
+
+    case NodeType::PROPERTY_CASE_ITEM_LIST:
+      return visit(dynamic_cast<Property_case_item_list *>(node), arg);
+
+    case NodeType::RANDOMIZE_CALL:
+      return visit(dynamic_cast<Randomize_call *>(node), arg);
+
+    case NodeType::CROSS_ITEM_LIST:
+      return visit(dynamic_cast<Cross_item_list *>(node), arg);
+
+    case NodeType::PRODUCTION_ITEM:
+      return visit(dynamic_cast<Production_item *>(node), arg);
+
+    case NodeType::DATA_TYPE_OR_VOID_WITH_ID:
+      return visit(dynamic_cast<Data_type_or_void_with_id *>(node), arg);
+
+    case NodeType::LB_STAR_RB:
+      return visit(dynamic_cast<Lb_star_rb *>(node), arg);
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_LAST:
+      return visit(dynamic_cast<Modport_clocking_declaration_last *>(node),
+                   arg);
+
+    case NodeType::UNIQUENESS_CONSTRAINT:
+      return visit(dynamic_cast<Uniqueness_constraint *>(node), arg);
+
+    case NodeType::ANY_PORT_LIST_PREPROCESSOR_LAST_NAMED:
+      return visit(dynamic_cast<Any_port_list_preprocessor_last_named *>(node),
+                   arg);
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_tf_ports_declaration_trailing_comma *>(node),
+          arg);
+
+    case NodeType::INTERFACE_DATA_DECLARATION:
+      return visit(dynamic_cast<Interface_data_declaration *>(node), arg);
+
+    case NodeType::METHOD_PROPERTY_QUALIFIER:
+      return visit(dynamic_cast<Method_property_qualifier *>(node), arg);
+
+    case NodeType::BINS_OR_OPTIONS_LIST:
+      return visit(dynamic_cast<Bins_or_options_list *>(node), arg);
+
+    case NodeType::OPT_CONFIG:
+      return visit(dynamic_cast<Opt_config *>(node), arg);
+
+    case NodeType::PATTERN_LIST:
+      return visit(dynamic_cast<Pattern_list *>(node), arg);
+
+    case NodeType::BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Bins_or_options *>(node), arg);
+
+    case NodeType::PATTERN_OPT:
+      return visit(dynamic_cast<Pattern_opt *>(node), arg);
+
+    case NodeType::INTERFACE_CLASS_ITEM_LIST:
+      return visit(dynamic_cast<Interface_class_item_list *>(node), arg);
+
+    case NodeType::CROSS_BODY_ITEM_LIST:
+      return visit(dynamic_cast<Cross_body_item_list *>(node), arg);
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_BEGIN:
+      return visit(dynamic_cast<Modport_tf_ports_declaration_begin *>(node),
+                   arg);
+
+    case NodeType::RS_RULE_LIST:
+      return visit(dynamic_cast<Rs_rule_list *>(node), arg);
+
+    case NodeType::CELL_CLAUSE:
+      return visit(dynamic_cast<Cell_clause *>(node), arg);
+
+    case NodeType::SEQUENCE_PORT_LIST:
+      return visit(dynamic_cast<Sequence_port_list *>(node), arg);
+
+    case NodeType::LET_PORT_LIST:
+      return visit(dynamic_cast<Let_port_list *>(node), arg);
+
+    case NodeType::PRODUCTION_LIST:
+      return visit(dynamic_cast<Production_list *>(node), arg);
+
+    case NodeType::RS_PRODUCTION_LIST_OR_RAND_JOIN:
+      return visit(dynamic_cast<Rs_production_list_or_rand_join *>(node), arg);
+
+    case NodeType::RS_CODE_BLOCK:
+      return visit(dynamic_cast<Rs_code_block *>(node), arg);
+
+    case NodeType::LET_DECLARATION:
+      return visit(dynamic_cast<Let_declaration *>(node), arg);
+
+    case NodeType::EXPRESSION_IN_PARENS_OPT:
+      return visit(dynamic_cast<Expression_in_parens_opt *>(node), arg);
+
+    case NodeType::ARRAY_METHOD_WITH_PREDICATE_OPT:
+      return visit(dynamic_cast<Array_method_with_predicate_opt *>(node), arg);
+
+    case NodeType::CROSS_ITEM:
+      return visit(dynamic_cast<Cross_item *>(node), arg);
+
+    case NodeType::MODPORT_TF_PORTS_DECLARATION_LAST:
+      return visit(dynamic_cast<Modport_tf_ports_declaration_last *>(node),
+                   arg);
+
+    case NodeType::CASE_PATTERN_ITEM:
+      return visit(dynamic_cast<Case_pattern_item *>(node), arg);
+
+    case NodeType::INST_CLAUSE:
+      return visit(dynamic_cast<Inst_clause *>(node), arg);
+
+    case NodeType::RS_REPEAT:
+      return visit(dynamic_cast<Rs_repeat *>(node), arg);
+
+    case NodeType::COVERGROUP_EXPRESSION_BRACKETED_OPT:
+      return visit(dynamic_cast<Covergroup_expression_bracketed_opt *>(node),
+                   arg);
+
+    case NodeType::CLOCKING_DRIVE_ONLY:
+      return visit(dynamic_cast<Clocking_drive_only *>(node), arg);
+
+    case NodeType::CONSTRAINT_PRIMARY:
+      return visit(dynamic_cast<Constraint_primary *>(node), arg);
+
+    case NodeType::CONSTRAINT_EXPRESSION:
+      return visit(dynamic_cast<Constraint_expression *>(node), arg);
+
+    case NodeType::SEQUENCE_MATCH_ITEM_LIST:
+      return visit(dynamic_cast<Sequence_match_item_list *>(node), arg);
+
+    case NodeType::SEQUENCE_SPEC:
+      return visit(dynamic_cast<Sequence_spec *>(node), arg);
+
+    case NodeType::COVER_CROSS:
+      return visit(dynamic_cast<Cover_cross *>(node), arg);
+
+    case NodeType::WILDCARD_OPT:
+      return visit(dynamic_cast<Wildcard_opt *>(node), arg);
+
+    case NodeType::CASE_INSIDE_ITEMS:
+      return visit(dynamic_cast<Case_inside_items *>(node), arg);
+
+    case NodeType::MODPORT_TF_PORT:
+      return visit(dynamic_cast<Modport_tf_port *>(node), arg);
+
+    case NodeType::WEIGHT_SPECIFICATION:
+      return visit(dynamic_cast<Weight_specification *>(node), arg);
+
+    case NodeType::SELECT_CONDITION:
+      return visit(dynamic_cast<Select_condition *>(node), arg);
+
+    case NodeType::DEFERRED_IMMEDIATE_ASSERTION_ITEM:
+      return visit(dynamic_cast<Deferred_immediate_assertion_item *>(node),
+                   arg);
+
+    case NodeType::LET_FORMAL_TYPE_FOLLOWED_BY_ID:
+      return visit(dynamic_cast<Let_formal_type_followed_by_id *>(node), arg);
+
+    case NodeType::COVERAGE_BIN_RHS:
+      return visit(dynamic_cast<Coverage_bin_rhs *>(node), arg);
+
+    case NodeType::PRODUCTION_ITEMS_LIST:
+      return visit(dynamic_cast<Production_items_list *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_PORT_DECLARATIONS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_port_declarations *>(node), arg);
+
+    case NodeType::SIMPLE_TYPE:
+      return visit(dynamic_cast<Simple_type *>(node), arg);
+
+    case NodeType::RS_PRODUCTION_LIST:
+      return visit(dynamic_cast<Rs_production_list *>(node), arg);
+
+    case NodeType::DPI_EXPORT_ITEM:
+      return visit(dynamic_cast<Dpi_export_item *>(node), arg);
+
+    case NodeType::PRODUCTION:
+      return visit(dynamic_cast<Production *>(node), arg);
+
+    case NodeType::MODPORT_CLOCKING_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_clocking_declaration_trailing_comma *>(node),
+          arg);
+
+    case NodeType::LET_PORT_LIST_IN_PARENS_OPT:
+      return visit(dynamic_cast<Let_port_list_in_parens_opt *>(node), arg);
+
+    case NodeType::CROSS_BODY:
+      return visit(dynamic_cast<Cross_body *>(node), arg);
+
+    case NodeType::USE_CLAUSE:
+      return visit(dynamic_cast<Use_clause *>(node), arg);
+
+    case NodeType::SEQUENCE_MATCH_ITEM:
+      return visit(dynamic_cast<Sequence_match_item *>(node), arg);
+
+    case NodeType::COVERAGE_BIN:
+      return visit(dynamic_cast<Coverage_bin *>(node), arg);
+
+    case NodeType::SEQUENCE_PORT_TYPE_FOLLOWED_BY_ID:
+      return visit(dynamic_cast<Sequence_port_type_followed_by_id *>(node),
+                   arg);
+
+    case NodeType::INTERFACE_CLASS_DECLARATION:
+      return visit(dynamic_cast<Interface_class_declaration *>(node), arg);
+
+    case NodeType::IDENTIFIER_LIST:
+      return visit(dynamic_cast<Identifier_list *>(node), arg);
+
+    case NodeType::SEQUENCE_PORT_ITEM:
+      return visit(dynamic_cast<Sequence_port_item *>(node), arg);
+
+    case NodeType::DIST_ITEM:
+      return visit(dynamic_cast<Dist_item *>(node), arg);
+
+    case NodeType::DIST_WEIGHT:
+      return visit(dynamic_cast<Dist_weight *>(node), arg);
+
+    case NodeType::BINS_KEYWORD:
+      return visit(dynamic_cast<Bins_keyword *>(node), arg);
+
+    case NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_ANSI:
+      return visit(
+          dynamic_cast<List_of_ports_or_port_declarations_preprocessor_last_ansi
+                           *>(node),
+          arg);
+
+    case NodeType::IMPLEMENTS_INTERFACE_LIST:
+      return visit(dynamic_cast<Implements_interface_list *>(node), arg);
+
+    case NodeType::LET_PORT_ITEM:
+      return visit(dynamic_cast<Let_port_item *>(node), arg);
+
+    case NodeType::ARRAY_METHOD_WITH_PREDICATE:
+      return visit(dynamic_cast<Array_method_with_predicate *>(node), arg);
+
+    case NodeType::COVERAGE_OPTION:
+      return visit(dynamic_cast<Coverage_option *>(node), arg);
+
+    case NodeType::CONSTRAINT_SET:
+      return visit(dynamic_cast<Constraint_set *>(node), arg);
+
+    case NodeType::PATTERN:
+      return visit(dynamic_cast<Pattern *>(node), arg);
+
+    case NodeType::NET_TYPE_DECLARATION:
+      return visit(dynamic_cast<Net_type_declaration *>(node), arg);
+
+    case NodeType::BINS_SELECTION:
+      return visit(dynamic_cast<Bins_selection *>(node), arg);
+
+    case NodeType::EXPRESSION_OR_DIST_LIST:
+      return visit(dynamic_cast<Expression_or_dist_list *>(node), arg);
+
+    case NodeType::CLOCKING_SKEW:
+      return visit(dynamic_cast<Clocking_skew *>(node), arg);
+
+    case NodeType::INTERFACE_CLASS_ITEM:
+      return visit(dynamic_cast<Interface_class_item *>(node), arg);
+
+    case NodeType::SEQUENCE_EXPR_MATCH_ITEM_LIST:
+      return visit(dynamic_cast<Sequence_expr_match_item_list *>(node), arg);
+
+    case NodeType::TK_ANGLEBRACKETINCLUDE:
+      return visit(dynamic_cast<Tk_anglebracketinclude *>(node), arg);
+
+    case NodeType::INTERFACE_CLASS_ITEM_LIST_OPT:
+      return visit(dynamic_cast<Interface_class_item_list_opt *>(node), arg);
+
+    case NodeType::IMPORT_EXPORT:
+      return visit(dynamic_cast<Import_export *>(node), arg);
+
+    case NodeType::WITH_COVERGROUP_EXPRESSION:
+      return visit(dynamic_cast<With_covergroup_expression *>(node), arg);
+
+    case NodeType::CONSTRAINT_PRIMARY_LIST:
+      return visit(dynamic_cast<Constraint_primary_list *>(node), arg);
+
+    case NodeType::PROPERTY_CASE_STATEMENT:
+      return visit(dynamic_cast<Property_case_statement *>(node), arg);
+
+    case NodeType::CHARGE_STRENGTH:
+      return visit(dynamic_cast<Charge_strength *>(node), arg);
+
+    case NodeType::DPI_IMPORT_PROPERTY:
+      return visit(dynamic_cast<Dpi_import_property *>(node), arg);
+
+    case NodeType::IFF_EXPR_OPT:
+      return visit(dynamic_cast<Iff_expr_opt *>(node), arg);
+
+    case NodeType::RS_RULE:
+      return visit(dynamic_cast<Rs_rule *>(node), arg);
+
+    case NodeType::INTERFACE_CLASS_METHOD:
+      return visit(dynamic_cast<Interface_class_method *>(node), arg);
+
+    case NodeType::MODPORT_SIMPLE_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_simple_ports_declaration_trailing_comma *>(node),
+          arg);
+
+    case NodeType::CASE_INSIDE_ITEM:
+      return visit(dynamic_cast<Case_inside_item *>(node), arg);
+
+    case NodeType::RESTRICT_PROPERTY_STATEMENT:
+      return visit(dynamic_cast<Restrict_property_statement *>(node), arg);
+
+    case NodeType::DIST_LIST:
+      return visit(dynamic_cast<Dist_list *>(node), arg);
+
+    case NodeType::RS_PROD:
+      return visit(dynamic_cast<Rs_prod *>(node), arg);
+
+    case NodeType::ARRAY_ORDERING_METHOD:
+      return visit(dynamic_cast<Array_ordering_method *>(node), arg);
+
+    case NodeType::RANDSEQUENCE_STATEMENT:
+      return visit(dynamic_cast<Randsequence_statement *>(node), arg);
+
+    case NodeType::CROSS_BODY_ITEM:
+      return visit(dynamic_cast<Cross_body_item *>(node), arg);
+
+    case NodeType::CASE_PATTERN_ITEMS:
+      return visit(dynamic_cast<Case_pattern_items *>(node), arg);
+
+    case NodeType::CROSS_BODY_ITEM_LIST_OPT:
+      return visit(dynamic_cast<Cross_body_item_list_opt *>(node), arg);
+
+    case NodeType::MODPORT_PORTS_DECLARATION_TRAILING_COMMA:
+      return visit(
+          dynamic_cast<Modport_ports_declaration_trailing_comma *>(node), arg);
+
+    case NodeType::
+        SET_COVERGROUP_EXPRESSION_OR_COVERGROUP_RANGE_LIST_OR_TRANS_LIST:
+      return visit(
+          dynamic_cast<
+              Set_covergroup_expression_or_covergroup_range_list_or_trans_list
+                  *>(node),
+          arg);
+
+    case NodeType::TK_STRONG:
+      return visit(dynamic_cast<Tk_strong *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CLASS_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_class_item *>(node), arg);
+
+    case NodeType::TK_GENVAR:
+      return visit(dynamic_cast<Tk_genvar *>(node), arg);
+
+    case NodeType::FILE_PATH_SPEC_LIST:
+      return visit(dynamic_cast<File_path_spec_list *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_description_item *>(node),
+                   arg);
+
+    case NodeType::BRANCH_PROBE_EXPRESSION:
+      return visit(dynamic_cast<Branch_probe_expression *>(node), arg);
+
+    case NodeType::TK_RCMOS:
+      return visit(dynamic_cast<Tk_rcmos *>(node), arg);
+
+    case NodeType::TK_PIPEARROW2:
+      return visit(dynamic_cast<Tk_pipearrow2 *>(node), arg);
+
+    case NodeType::TK_SSETUP:
+      return visit(dynamic_cast<Tk_ssetup *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_items *>(node),
+                   arg);
+
+    case NodeType::TK_SSKEW:
+      return visit(dynamic_cast<Tk_sskew *>(node), arg);
+
+    case NodeType::TK_NEW:
+      return visit(dynamic_cast<Tk_new *>(node), arg);
+
+    case NodeType::LIBRARY_SOURCE:
+      return visit(dynamic_cast<Library_source *>(node), arg);
+
+    case NodeType::TK_LOCALPARAM:
+      return visit(dynamic_cast<Tk_localparam *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_port_declarations_opt *>(node), arg);
+
+    case NodeType::TK_UNION:
+      return visit(dynamic_cast<Tk_union *>(node), arg);
+
+    case NodeType::TK_SHOWCANCELLED:
+      return visit(dynamic_cast<Tk_showcancelled *>(node), arg);
+
+    case NodeType::TK_WAND:
+      return visit(dynamic_cast<Tk_wand *>(node), arg);
+
+    case NodeType::DR_BEGIN_KEYWORDS:
+      return visit(dynamic_cast<Dr_begin_keywords *>(node), arg);
+
+    case NodeType::MEMBER_PATTERN_LIST:
+      return visit(dynamic_cast<Member_pattern_list *>(node), arg);
+
+    case NodeType::TK_STRONG0:
+      return visit(dynamic_cast<Tk_strong0 *>(node), arg);
+
+    case NodeType::ANALOG_CONSTRUCT:
+      return visit(dynamic_cast<Analog_construct *>(node), arg);
+
+    case NodeType::TK_WREAL:
+      return visit(dynamic_cast<Tk_wreal *>(node), arg);
+
+    case NodeType::TK_RAND:
+      return visit(dynamic_cast<Tk_rand *>(node), arg);
+
+    case NodeType::TK_POUNDPOUND:
+      return visit(dynamic_cast<Tk_poundpound *>(node), arg);
+
+    case NodeType::NATURE_ITEMS:
+      return visit(dynamic_cast<Nature_items *>(node), arg);
+
+    case NodeType::DR_SUPPRESS_FAULTS:
+      return visit(dynamic_cast<Dr_suppress_faults *>(node), arg);
+
+    case NodeType::TK_REPEAT:
+      return visit(dynamic_cast<Tk_repeat *>(node), arg);
+
+    case NodeType::TK_TIME:
+      return visit(dynamic_cast<Tk_time *>(node), arg);
+
+    case NodeType::DR_RESETALL:
+      return visit(dynamic_cast<Dr_resetall *>(node), arg);
+
+    case NodeType::TK_CLOCKING:
+      return visit(dynamic_cast<Tk_clocking *>(node), arg);
+
+    case NodeType::TK_PARAMETER:
+      return visit(dynamic_cast<Tk_parameter *>(node), arg);
+
+    case NodeType::TK_INITIAL:
+      return visit(dynamic_cast<Tk_initial *>(node), arg);
+
+    case NodeType::TK_PULSESTYLE_ONDETECT:
+      return visit(dynamic_cast<Tk_pulsestyle_ondetect *>(node), arg);
+
+    case NodeType::DISCIPLINE_ITEMS:
+      return visit(dynamic_cast<Discipline_items *>(node), arg);
+
+    case NodeType::TK_GLOBAL:
+      return visit(dynamic_cast<Tk_global *>(node), arg);
+
+    case NodeType::DR_END_KEYWORDS:
+      return visit(dynamic_cast<Dr_end_keywords *>(node), arg);
+
+    case NodeType::TK_SAMPLE:
+      return visit(dynamic_cast<Tk_sample *>(node), arg);
+
+    case NodeType::TK_UNIQUE_INDEX:
+      return visit(dynamic_cast<Tk_unique_index *>(node), arg);
+
+    case NodeType::TK_CMOS:
+      return visit(dynamic_cast<Tk_cmos *>(node), arg);
+
+    case NodeType::TK_PSTAR:
+      return visit(dynamic_cast<Tk_pstar *>(node), arg);
+
+    case NodeType::TK_EXTERN:
+      return visit(dynamic_cast<Tk_extern *>(node), arg);
+
+    case NodeType::MODULE_ATTRIBUTE_FOREIGN:
+      return visit(dynamic_cast<Module_attribute_foreign *>(node), arg);
+
+    case NodeType::TK_CONSTRAINT:
+      return visit(dynamic_cast<Tk_constraint *>(node), arg);
+
+    case NodeType::TK_SOLVE:
+      return visit(dynamic_cast<Tk_solve *>(node), arg);
+
+    case NodeType::TK_TRIAND:
+      return visit(dynamic_cast<Tk_triand *>(node), arg);
+
+    case NodeType::TK_JOIN_NONE:
+      return visit(dynamic_cast<Tk_join_none *>(node), arg);
+
+    case NodeType::TK_STATIC:
+      return visit(dynamic_cast<Tk_static *>(node), arg);
+
+    case NodeType::PP_DEFINE:
+      return visit(dynamic_cast<Pp_define *>(node), arg);
+
+    case NodeType::DISCIPLINE_DECLARATION:
+      return visit(dynamic_cast<Discipline_declaration *>(node), arg);
+
+    case NodeType::TK_DISABLE:
+      return visit(dynamic_cast<Tk_disable *>(node), arg);
+
+    case NodeType::TK_REVERSE:
+      return visit(dynamic_cast<Tk_reverse *>(node), arg);
+
+    case NodeType::TK_SHORTREAL:
+      return visit(dynamic_cast<Tk_shortreal *>(node), arg);
+
+    case NodeType::TK_FIND_LAST_INDEX:
+      return visit(dynamic_cast<Tk_find_last_index *>(node), arg);
+
+    case NodeType::TK_EXPECT:
+      return visit(dynamic_cast<Tk_expect *>(node), arg);
+
+    case NodeType::ANALOG_STATEMENT:
+      return visit(dynamic_cast<Analog_statement *>(node), arg);
+
+    case NodeType::UDP_UNKNOWN_LIST:
+      return visit(dynamic_cast<Udp_unknown_list *>(node), arg);
+
+    case NodeType::TK_LBSTARRB:
+      return visit(dynamic_cast<Tk_lbstarrb *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_module_items *>(node), arg);
+
+    case NodeType::RS_CASE:
+      return visit(dynamic_cast<Rs_case *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_CLASS_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_class_items *>(node),
+                   arg);
+
+    case NodeType::NAMED_PARAMETER_ASSIGNMENT_LIST:
+      return visit(dynamic_cast<Named_parameter_assignment_list *>(node), arg);
+
+    case NodeType::RS_CASE_ITEM_LIST:
+      return visit(dynamic_cast<Rs_case_item_list *>(node), arg);
+
+    case NodeType::DR_PRAGMA:
+      return visit(dynamic_cast<Dr_pragma *>(node), arg);
+
+    case NodeType::TK_DISCRETE:
+      return visit(dynamic_cast<Tk_discrete *>(node), arg);
+
+    case NodeType::TK_FLOW:
+      return visit(dynamic_cast<Tk_flow *>(node), arg);
+
+    case NodeType::TK_REF:
+      return visit(dynamic_cast<Tk_ref *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENTS:
+      return visit(dynamic_cast<Preprocessor_elsif_statements *>(node), arg);
+
+    case NodeType::TK_XNOR:
+      return visit(dynamic_cast<Tk_xnor *>(node), arg);
+
+    case NodeType::TK_SUPPLY1:
+      return visit(dynamic_cast<Tk_supply1 *>(node), arg);
+
+    case NodeType::TK_CONST:
+      return visit(dynamic_cast<Tk_const *>(node), arg);
+
+    case NodeType::TK_LOCAL_SCOPE:
+      return visit(dynamic_cast<Tk_local_scope *>(node), arg);
+
+    case NodeType::TK_STRONG1:
+      return visit(dynamic_cast<Tk_strong1 *>(node), arg);
+
+    case NodeType::TK_RELEASE:
+      return visit(dynamic_cast<Tk_release *>(node), arg);
+
+    case NodeType::DISCIPLINE_ITEMS_OPT:
+      return visit(dynamic_cast<Discipline_items_opt *>(node), arg);
+
+    case NodeType::TK_PROGRAM:
+      return visit(dynamic_cast<Tk_program *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_module_item *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_STATEMENT_OPT:
+      return visit(dynamic_cast<Preprocessor_else_statement_opt *>(node), arg);
+
+    case NodeType::TK_ALWAYS:
+      return visit(dynamic_cast<Tk_always *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_class_item *>(node), arg);
+
+    case NodeType::TK_TABLE:
+      return visit(dynamic_cast<Tk_table *>(node), arg);
+
+    case NodeType::TK_TRIGGER:
+      return visit(dynamic_cast<Tk_trigger *>(node), arg);
+
+    case NodeType::TK_LIBLIST:
+      return visit(dynamic_cast<Tk_liblist *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_HEADER:
+      return visit(dynamic_cast<Preprocessor_elsif_header *>(node), arg);
+
+    case NodeType::TK_PURE:
+      return visit(dynamic_cast<Tk_pure *>(node), arg);
+
+    case NodeType::TK_CASE:
+      return visit(dynamic_cast<Tk_case *>(node), arg);
+
+    case NodeType::TK_SHOLD:
+      return visit(dynamic_cast<Tk_shold *>(node), arg);
+
+    case NodeType::TK_LBRARROW:
+      return visit(dynamic_cast<Tk_lbrarrow *>(node), arg);
+
+    case NodeType::TK_PACKAGE:
+      return visit(dynamic_cast<Tk_package *>(node), arg);
+
+    case NodeType::TK_ALWAYS_FF:
+      return visit(dynamic_cast<Tk_always_ff *>(node), arg);
+
+    case NodeType::TK_FILEPATH:
+      return visit(dynamic_cast<Tk_filepath *>(node), arg);
+
+    case NodeType::TK_COLON_EQ:
+      return visit(dynamic_cast<Tk_colon_eq *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENTS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statements_opt *>(node),
+          arg);
+
+    case NodeType::TK_PULLDOWN:
+      return visit(dynamic_cast<Tk_pulldown *>(node), arg);
+
+    case NodeType::TK_RPMOS:
+      return visit(dynamic_cast<Tk_rpmos *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_GENERATE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_generate_item_opt *>(node),
+                   arg);
+
+    case NodeType::TK_BIT:
+      return visit(dynamic_cast<Tk_bit *>(node), arg);
+
+    case NodeType::TK_CHANDLE:
+      return visit(dynamic_cast<Tk_chandle *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS_LIST:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_bins_or_options_list *>(node), arg);
+
+    case NodeType::TK_BINSOF:
+      return visit(dynamic_cast<Tk_binsof *>(node), arg);
+
+    case NodeType::MACRO_ARGS_OPT:
+      return visit(dynamic_cast<Macro_args_opt *>(node), arg);
+
+    case NodeType::TK_SRECOVERY:
+      return visit(dynamic_cast<Tk_srecovery *>(node), arg);
+
+    case NodeType::TK_CONFIG:
+      return visit(dynamic_cast<Tk_config *>(node), arg);
+
+    case NodeType::TK_NONBLOCKING_TRIGGER:
+      return visit(dynamic_cast<Tk_nonblocking_trigger *>(node), arg);
+
+    case NodeType::TK_SHUFFLE:
+      return visit(dynamic_cast<Tk_shuffle *>(node), arg);
+
+    case NodeType::TK_SIGNED:
+      return visit(dynamic_cast<Tk_signed *>(node), arg);
+
+    case NodeType::TK_INCR:
+      return visit(dynamic_cast<Tk_incr *>(node), arg);
+
+    case NodeType::TK_ALWAYS_LATCH:
+      return visit(dynamic_cast<Tk_always_latch *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_GENERATE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_generate_items *>(node),
+                   arg);
+
+    case NodeType::TK_PRODUCT:
+      return visit(dynamic_cast<Tk_product *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_MODULE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_module_item_opt *>(node),
+                   arg);
+
+    case NodeType::TK_INPUT:
+      return visit(dynamic_cast<Tk_input *>(node), arg);
+
+    case NodeType::TK_ASSIGN:
+      return visit(dynamic_cast<Tk_assign *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEMS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_description_items_opt *>(node), arg);
+
+    case NodeType::DR_DELAY_MODE_DISTRIBUTED:
+      return visit(dynamic_cast<Dr_delay_mode_distributed *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_PACKAGE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_package_item *>(node), arg);
+
+    case NodeType::BINS_OR_OPTIONS_LIST_OPT_PP:
+      return visit(dynamic_cast<Bins_or_options_list_opt_pp *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_package_items_opt *>(node),
+                   arg);
+
+    case NodeType::TK_S_UNTIL_WITH:
+      return visit(dynamic_cast<Tk_s_until_with *>(node), arg);
+
+    case NodeType::RS_CASE_ITEM:
+      return visit(dynamic_cast<Rs_case_item *>(node), arg);
+
+    case NodeType::ANY_PORT_LIST_PREPROCESSOR_LAST_POSITIONAL:
+      return visit(
+          dynamic_cast<Any_port_list_preprocessor_last_positional *>(node),
+          arg);
+
+    case NodeType::TK_IGNORE_BINS:
+      return visit(dynamic_cast<Tk_ignore_bins *>(node), arg);
+
+    case NodeType::TK_SUM:
+      return visit(dynamic_cast<Tk_sum *>(node), arg);
+
+    case NodeType::TKK_ATTRIBUTE:
+      return visit(dynamic_cast<Tkk_attribute *>(node), arg);
+
+    case NodeType::TK_MAX:
+      return visit(dynamic_cast<Tk_max *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_BLOCK_ITEM_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_block_item_opt *>(node),
+          arg);
+
+    case NodeType::TK_NEXTTIME:
+      return visit(dynamic_cast<Tk_nexttime *>(node), arg);
+
+    case NodeType::TK_SEQUENCE:
+      return visit(dynamic_cast<Tk_sequence *>(node), arg);
+
+    case NodeType::TK_AUTOMATIC:
+      return visit(dynamic_cast<Tk_automatic *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_STATEMENT:
+      return visit(dynamic_cast<Preprocessor_else_statement *>(node), arg);
+
+    case NodeType::TK_PULLUP:
+      return visit(dynamic_cast<Tk_pullup *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_DESCRIPTION_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_description_items *>(node),
+                   arg);
+
+    case NodeType::ENUM_NAME_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Enum_name_list_preprocessor_last *>(node), arg);
+
+    case NodeType::FROM_EXCLUDE:
+      return visit(dynamic_cast<From_exclude *>(node), arg);
+
+    case NodeType::TK_INT:
+      return visit(dynamic_cast<Tk_int *>(node), arg);
+
+    case NodeType::TK_JOIN:
+      return visit(dynamic_cast<Tk_join *>(node), arg);
+
+    case NodeType::TK_FIND_FIRST_INDEX:
+      return visit(dynamic_cast<Tk_find_first_index *>(node), arg);
+
+    case NodeType::TK_IMPLEMENTS:
+      return visit(dynamic_cast<Tk_implements *>(node), arg);
+
+    case NodeType::DISCIPLINE_ITEM:
+      return visit(dynamic_cast<Discipline_item *>(node), arg);
+
+    case NodeType::BLOCK_EVENT_EXPRESSION:
+      return visit(dynamic_cast<Block_event_expression *>(node), arg);
+
+    case NodeType::TK_DISCIPLINE:
+      return visit(dynamic_cast<Tk_discipline *>(node), arg);
+
+    case NodeType::INCLUDE_STATEMENT:
+      return visit(dynamic_cast<Include_statement *>(node), arg);
+
+    case NodeType::TK_LBSTAR:
+      return visit(dynamic_cast<Tk_lbstar *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS_LIST_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_bins_or_options_list_opt *>(node),
+          arg);
+
+    case NodeType::TK_LBEQ:
+      return visit(dynamic_cast<Tk_lbeq *>(node), arg);
+
+    case NodeType::TK_VOID:
+      return visit(dynamic_cast<Tk_void *>(node), arg);
+
+    case NodeType::TK_EXCLUDE:
+      return visit(dynamic_cast<Tk_exclude *>(node), arg);
+
+    case NodeType::TK_RANDC:
+      return visit(dynamic_cast<Tk_randc *>(node), arg);
+
+    case NodeType::TK_WEAK:
+      return visit(dynamic_cast<Tk_weak *>(node), arg);
+
+    case NodeType::TK_INSTANCE:
+      return visit(dynamic_cast<Tk_instance *>(node), arg);
+
+    case NodeType::TK_TYPE_OPTION:
+      return visit(dynamic_cast<Tk_type_option *>(node), arg);
+
+    case NodeType::TK_WAIT:
+      return visit(dynamic_cast<Tk_wait *>(node), arg);
+
+    case NodeType::TK_ABSTOL:
+      return visit(dynamic_cast<Tk_abstol *>(node), arg);
+
+    case NodeType::TK_DECR:
+      return visit(dynamic_cast<Tk_decr *>(node), arg);
+
+    case NodeType::TK_XOR:
+      return visit(dynamic_cast<Tk_xor *>(node), arg);
+
+    case NodeType::TK_TIMEPRECISION:
+      return visit(dynamic_cast<Tk_timeprecision *>(node), arg);
+
+    case NodeType::DR_DELAY_MODE_ZERO:
+      return visit(dynamic_cast<Dr_delay_mode_zero *>(node), arg);
+
+    case NodeType::TK_FIND_FIRST:
+      return visit(dynamic_cast<Tk_find_first *>(node), arg);
+
+    case NodeType::TK_PULSESTYLE_ONEVENT:
+      return visit(dynamic_cast<Tk_pulsestyle_onevent *>(node), arg);
+
+    case NodeType::TK_COVERGROUP:
+      return visit(dynamic_cast<Tk_covergroup *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEMS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_items_opt *>(node),
+          arg);
+
+    case NodeType::MACRO_DIGITS:
+      return visit(dynamic_cast<Macro_digits *>(node), arg);
+
+    case NodeType::TK_UNITS:
+      return visit(dynamic_cast<Tk_units *>(node), arg);
+
+    case NodeType::TK_TRAN:
+      return visit(dynamic_cast<Tk_tran *>(node), arg);
+
+    case NodeType::TK_WILDCARD:
+      return visit(dynamic_cast<Tk_wildcard *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_BINS_OR_OPTIONS_LIST:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_bins_or_options_list *>(node),
+          arg);
+
+    case NodeType::TK_FINAL:
+      return visit(dynamic_cast<Tk_final *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_PACKAGE_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_package_item_opt *>(node),
+                   arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_class_items *>(node), arg);
+
+    case NodeType::ANY_ARGUMENT_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Any_argument_list_preprocessor_last *>(node),
+                   arg);
+
+    case NodeType::TK_SORT:
+      return visit(dynamic_cast<Tk_sort *>(node), arg);
+
+    case NodeType::INCDIR_SPEC:
+      return visit(dynamic_cast<Incdir_spec *>(node), arg);
+
+    case NodeType::PREPROCESSOR_IF_HEADER:
+      return visit(dynamic_cast<Preprocessor_if_header *>(node), arg);
+
+    case NodeType::DR_DISABLE_PORTFAULTS:
+      return visit(dynamic_cast<Dr_disable_portfaults *>(node), arg);
+
+    case NodeType::TK_S_NEXTTIME:
+      return visit(dynamic_cast<Tk_s_nexttime *>(node), arg);
+
+    case NodeType::TK_WITH:
+      return visit(dynamic_cast<Tk_with *>(node), arg);
+
+    case NodeType::DR_UNCONNECTED_DRIVE:
+      return visit(dynamic_cast<Dr_unconnected_drive *>(node), arg);
+
+    case NodeType::TK_SNOCHANGE:
+      return visit(dynamic_cast<Tk_snochange *>(node), arg);
+
+    case NodeType::MACRO_CALL_OR_ITEM:
+      return visit(dynamic_cast<Macro_call_or_item *>(node), arg);
+
+    case NodeType::LIBRARY_DESCRIPTION_LIST_OPT:
+      return visit(dynamic_cast<Library_description_list_opt *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATION:
+      return visit(dynamic_cast<Preprocessor_elsif_port_declaration *>(node),
+                   arg);
+
+    case NodeType::TK_CONTEXT:
+      return visit(dynamic_cast<Tk_context *>(node), arg);
+
+    case NodeType::TK_INCLUDE:
+      return visit(dynamic_cast<Tk_include *>(node), arg);
+
+    case NodeType::TK_VAR:
+      return visit(dynamic_cast<Tk_var *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_constraint_block_item *>(node),
+          arg);
+
+    case NodeType::TK_MODULE:
+      return visit(dynamic_cast<Tk_module *>(node), arg);
+
+    case NodeType::DR_USELIB:
+      return visit(dynamic_cast<Dr_uselib *>(node), arg);
+
+    case NodeType::CONSTRAINT_DECLARATION_PACKAGE_ITEM:
+      return visit(dynamic_cast<Constraint_declaration_package_item *>(node),
+                   arg);
+
+    case NodeType::DR_NOUNCONNECTED_DRIVE:
+      return visit(dynamic_cast<Dr_nounconnected_drive *>(node), arg);
+
+    case NodeType::TK_EVENT:
+      return visit(dynamic_cast<Tk_event *>(node), arg);
+
+    case NodeType::TK_ACCESS:
+      return visit(dynamic_cast<Tk_access *>(node), arg);
+
+    case NodeType::TK_TYPEDEF:
+      return visit(dynamic_cast<Tk_typedef *>(node), arg);
+
+    case NodeType::LIBRARY_DESCRIPTION:
+      return visit(dynamic_cast<Library_description *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_DESCRIPTION_ITEMS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_description_items *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PORT_DECLARATIONS:
+      return visit(dynamic_cast<Preprocessor_elsif_port_declarations *>(node),
+                   arg);
+
+    case NodeType::PREPROCESSOR_ELSE_BINS_OR_OPTIONS_OPT:
+      return visit(dynamic_cast<Preprocessor_else_bins_or_options_opt *>(node),
+                   arg);
+
+    case NodeType::PREPROCESSOR_ELSE_PORT_DECLARATIONS:
+      return visit(dynamic_cast<Preprocessor_else_port_declarations *>(node),
+                   arg);
+
+    case NodeType::TK_UNTIL_WITH:
+      return visit(dynamic_cast<Tk_until_with *>(node), arg);
+
+    case NodeType::TK_ATAT:
+      return visit(dynamic_cast<Tk_atat *>(node), arg);
+
+    case NodeType::TK_OPTION:
+      return visit(dynamic_cast<Tk_option *>(node), arg);
+
+    case NodeType::TK_NEGEDGE:
+      return visit(dynamic_cast<Tk_negedge *>(node), arg);
+
+    case NodeType::TK_UNTIL:
+      return visit(dynamic_cast<Tk_until *>(node), arg);
+
+    case NodeType::TK_PO_NEG:
+      return visit(dynamic_cast<Tk_po_neg *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_CONFIG_RULE_STATEMENTS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_config_rule_statements *>(node),
+          arg);
+
+    case NodeType::MEMBER_PATTERN:
+      return visit(dynamic_cast<Member_pattern *>(node), arg);
+
+    case NodeType::TK_WEAK1:
+      return visit(dynamic_cast<Tk_weak1 *>(node), arg);
+
+    case NodeType::TK_1STEP:
+      return visit(dynamic_cast<Tk_1step *>(node), arg);
+
+    case NodeType::PARAMETER_VALUE_BYNAME_LIST_PREPROCESSOR_LAST:
+      return visit(
+          dynamic_cast<Parameter_value_byname_list_preprocessor_last *>(node),
+          arg);
+
+    case NodeType::TK_UNSIGNED:
+      return visit(dynamic_cast<Tk_unsigned *>(node), arg);
+
+    case NodeType::MACRO_ARG_OPT:
+      return visit(dynamic_cast<Macro_arg_opt *>(node), arg);
+
+    case NodeType::TK_TAGGED:
+      return visit(dynamic_cast<Tk_tagged *>(node), arg);
+
+    case NodeType::TK_SCOPE_RES:
+      return visit(dynamic_cast<Tk_scope_res *>(node), arg);
+
+    case NodeType::DR_ENDPROTECT:
+      return visit(dynamic_cast<Dr_endprotect *>(node), arg);
+
+    case NodeType::DR_DELAY_MODE_UNIT:
+      return visit(dynamic_cast<Dr_delay_mode_unit *>(node), arg);
+
+    case NodeType::PARAMETER_VALUE_RANGES:
+      return visit(dynamic_cast<Parameter_value_ranges *>(node), arg);
+
+    case NodeType::NATURE_ITEM:
+      return visit(dynamic_cast<Nature_item *>(node), arg);
+
+    case NodeType::TK_VIRTUAL:
+      return visit(dynamic_cast<Tk_virtual *>(node), arg);
+
+    case NodeType::TK_WITH__COVERGROUP:
+      return visit(dynamic_cast<Tk_with__covergroup *>(node), arg);
+
+    case NodeType::ERROR:
+      return visit(dynamic_cast<Error *>(node), arg);
+
+    case NodeType::TK_SPECPARAM:
+      return visit(dynamic_cast<Tk_specparam *>(node), arg);
+
+    case NodeType::TK_ASSUME:
+      return visit(dynamic_cast<Tk_assume *>(node), arg);
+
+    case NodeType::TK_UWIRE:
+      return visit(dynamic_cast<Tk_uwire *>(node), arg);
+
+    case NodeType::TK_RTRAN:
+      return visit(dynamic_cast<Tk_rtran *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expressions_opt *>(node),
+          arg);
+
+    case NodeType::TK_SYNC_ACCEPT_ON:
+      return visit(dynamic_cast<Tk_sync_accept_on *>(node), arg);
+
+    case NodeType::TK_COVERPOINT:
+      return visit(dynamic_cast<Tk_coverpoint *>(node), arg);
+
+    case NodeType::TK_RNMOS:
+      return visit(dynamic_cast<Tk_rnmos *>(node), arg);
+
+    case NodeType::TK_EVENTUALLY:
+      return visit(dynamic_cast<Tk_eventually *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_DESCRIPTION_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_description_item *>(node),
+                   arg);
+
+    case NodeType::TK_THIS:
+      return visit(dynamic_cast<Tk_this *>(node), arg);
+
+    case NodeType::TK_DO:
+      return visit(dynamic_cast<Tk_do *>(node), arg);
+
+    case NodeType::TK_MODPORT:
+      return visit(dynamic_cast<Tk_modport *>(node), arg);
+
+    case NodeType::TK_SOFT:
+      return visit(dynamic_cast<Tk_soft *>(node), arg);
+
+    case NodeType::DR_DEFAULT_TRIREG_STRENGTH:
+      return visit(dynamic_cast<Dr_default_trireg_strength *>(node), arg);
+
+    case NodeType::TK_TRIREG:
+      return visit(dynamic_cast<Tk_trireg *>(node), arg);
+
+    case NodeType::DESCRIPTION_LIST_OPT:
+      return visit(dynamic_cast<Description_list_opt *>(node), arg);
+
+    case NodeType::TK_EDGE:
+      return visit(dynamic_cast<Tk_edge *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENTS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_statements_opt *>(node),
+                   arg);
+
+    case NodeType::CASE_ITEM_EXPRESSION:
+      return visit(dynamic_cast<Case_item_expression *>(node), arg);
+
+    case NodeType::TK_INFINITE:
+      return visit(dynamic_cast<Tk_infinite *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONFIG_RULE_STATEMENT:
+      return visit(
+          dynamic_cast<Preprocessor_else_config_rule_statement *>(node), arg);
+
+    case NodeType::TK_NATURE:
+      return visit(dynamic_cast<Tk_nature *>(node), arg);
+
+    case NodeType::TK_ANALOG:
+      return visit(dynamic_cast<Tk_analog *>(node), arg);
+
+    case NodeType::TK_MACROMODULE:
+      return visit(dynamic_cast<Tk_macromodule *>(node), arg);
+
+    case NodeType::TK_S_EVENTUALLY:
+      return visit(dynamic_cast<Tk_s_eventually *>(node), arg);
+
+    case NodeType::TK_SRECREM:
+      return visit(dynamic_cast<Tk_srecrem *>(node), arg);
+
+    case NodeType::TK_NULL:
+      return visit(dynamic_cast<Tk_null *>(node), arg);
+
+    case NodeType::TK_LP:
+      return visit(dynamic_cast<Tk_lp *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CLASS_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_class_item_opt *>(node), arg);
+
+    case NodeType::NAMED_PARAMETER_ASSIGNMENT:
+      return visit(dynamic_cast<Named_parameter_assignment *>(node), arg);
+
+    case NodeType::TK_MIN:
+      return visit(dynamic_cast<Tk_min *>(node), arg);
+
+    case NodeType::TK_UNIQUE0:
+      return visit(dynamic_cast<Tk_unique0 *>(node), arg);
+
+    case NodeType::TK_OR:
+      return visit(dynamic_cast<Tk_or *>(node), arg);
+
+    case NodeType::TK_WONE:
+      return visit(dynamic_cast<Tk_wone *>(node), arg);
+
+    case NodeType::TK_RS:
+      return visit(dynamic_cast<Tk_rs *>(node), arg);
+
+    case NodeType::TK_FIND:
+      return visit(dynamic_cast<Tk_find *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENT:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statement *>(node), arg);
+
+    case NodeType::TK_END:
+      return visit(dynamic_cast<Tk_end *>(node), arg);
+
+    case NodeType::TK_BIND:
+      return visit(dynamic_cast<Tk_bind *>(node), arg);
+
+    case NodeType::INCDIR_SPEC_OPT:
+      return visit(dynamic_cast<Incdir_spec_opt *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSIONS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expressions *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_EXPRESSION:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_expression *>(node), arg);
+
+    case NodeType::TK_CONTINUE:
+      return visit(dynamic_cast<Tk_continue *>(node), arg);
+
+    case NodeType::TK_CROSS:
+      return visit(dynamic_cast<Tk_cross *>(node), arg);
+
+    case NodeType::DR_TIMESCALE:
+      return visit(dynamic_cast<Dr_timescale *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_item *>(node), arg);
+
+    case NodeType::TK_ALIAS:
+      return visit(dynamic_cast<Tk_alias *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_CONSTRAINT_EXPRESSIONS:
+      return visit(
+          dynamic_cast<Preprocessor_balanced_constraint_expressions *>(node),
+          arg);
+
+    case NodeType::TK_INTEGER:
+      return visit(dynamic_cast<Tk_integer *>(node), arg);
+
+    case NodeType::TK_JOIN_ANY:
+      return visit(dynamic_cast<Tk_join_any *>(node), arg);
+
+    case NodeType::TK_INTERFACE:
+      return visit(dynamic_cast<Tk_interface *>(node), arg);
+
+    case NodeType::TF_PORT_LIST_PREPROCESSOR_LAST:
+      return visit(dynamic_cast<Tf_port_list_preprocessor_last *>(node), arg);
+
+    case NodeType::TK_EXPORT:
+      return visit(dynamic_cast<Tk_export *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_STATEMENT:
+      return visit(dynamic_cast<Preprocessor_elsif_statement *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONFIG_RULE_STATEMENT_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_config_rule_statement_opt *>(node),
+          arg);
+
+    case NodeType::TK_NXOR:
+      return visit(dynamic_cast<Tk_nxor *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_items_opt *>(node),
+                   arg);
+
+    case NodeType::TK_SUPPLY0:
+      return visit(dynamic_cast<Tk_supply0 *>(node), arg);
+
+    case NodeType::TK_S_ALWAYS:
+      return visit(dynamic_cast<Tk_s_always *>(node), arg);
+
+    case NodeType::TK_REG:
+      return visit(dynamic_cast<Tk_reg *>(node), arg);
+
+    case NodeType::FILE_PATH_SPEC:
+      return visit(dynamic_cast<File_path_spec *>(node), arg);
+
+    case NodeType::DR_ENDCELLDEFINE:
+      return visit(dynamic_cast<Dr_endcelldefine *>(node), arg);
+
+    case NodeType::PREPROCESSOR_LIST_OF_PORTS_OR_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_list_of_ports_or_port_declarations_opt *>(
+              node),
+          arg);
+
+    case NodeType::TK_IMPLIES:
+      return visit(dynamic_cast<Tk_implies *>(node), arg);
+
+    case NodeType::TK_FIRST_MATCH:
+      return visit(dynamic_cast<Tk_first_match *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_elsif_package_items *>(node), arg);
+
+    case NodeType::TK_PMOS:
+      return visit(dynamic_cast<Tk_pmos *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_MODULE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_module_items *>(node),
+                   arg);
+
+    case NodeType::BLOCK_EVENT_EXPR_PRIMARY:
+      return visit(dynamic_cast<Block_event_expr_primary *>(node), arg);
+
+    case NodeType::CONSTRAINT_PROTOTYPE:
+      return visit(dynamic_cast<Constraint_prototype *>(node), arg);
+
+    case NodeType::TK_LS:
+      return visit(dynamic_cast<Tk_ls *>(node), arg);
+
+    case NodeType::TK_CELL:
+      return visit(dynamic_cast<Tk_cell *>(node), arg);
+
+    case NodeType::TK_WEAK0:
+      return visit(dynamic_cast<Tk_weak0 *>(node), arg);
+
+    case NodeType::DR_ENABLE_PORTFAULTS:
+      return visit(dynamic_cast<Dr_enable_portfaults *>(node), arg);
+
+    case NodeType::TK_NOSHOWCANCELLED:
+      return visit(dynamic_cast<Tk_noshowcancelled *>(node), arg);
+
+    case NodeType::TK_NOT:
+      return visit(dynamic_cast<Tk_not *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Preprocessor_else_bins_or_options *>(node),
+                   arg);
+
+    case NodeType::TK_COVER:
+      return visit(dynamic_cast<Tk_cover *>(node), arg);
+
+    case NodeType::PREPROCESSOR_CONTROL_FLOW:
+      return visit(dynamic_cast<Preprocessor_control_flow *>(node), arg);
+
+    case NodeType::TK_OUTPUT:
+      return visit(dynamic_cast<Tk_output *>(node), arg);
+
+    case NodeType::TK_TRI1:
+      return visit(dynamic_cast<Tk_tri1 *>(node), arg);
+
+    case NodeType::TK_DOTSTAR:
+      return visit(dynamic_cast<Tk_dotstar *>(node), arg);
+
+    case NodeType::TK_TIMEUNIT:
+      return visit(dynamic_cast<Tk_timeunit *>(node), arg);
+
+    case NodeType::TK_TRI:
+      return visit(dynamic_cast<Tk_tri *>(node), arg);
+
+    case NodeType::MACROCALL:
+      return visit(dynamic_cast<Macrocall *>(node), arg);
+
+    case NodeType::TK_INOUT:
+      return visit(dynamic_cast<Tk_inout *>(node), arg);
+
+    case NodeType::TK_CASEX:
+      return visit(dynamic_cast<Tk_casex *>(node), arg);
+
+    case NodeType::TK_POTENTIAL:
+      return visit(dynamic_cast<Tk_potential *>(node), arg);
+
+    case NodeType::TK_POUNDEQPOUND:
+      return visit(dynamic_cast<Tk_poundeqpound *>(node), arg);
+
+    case NodeType::TK_LET:
+      return visit(dynamic_cast<Tk_let *>(node), arg);
+
+    case NodeType::DR_DEFAULT_NETTYPE:
+      return visit(dynamic_cast<Dr_default_nettype *>(node), arg);
+
+    case NodeType::TK_BEGIN:
+      return visit(dynamic_cast<Tk_begin *>(node), arg);
+
+    case NodeType::TK_CASEZ:
+      return visit(dynamic_cast<Tk_casez *>(node), arg);
+
+    case NodeType::TK_NETTYPE:
+      return visit(dynamic_cast<Tk_nettype *>(node), arg);
+
+    case NodeType::TK_PULL0:
+      return visit(dynamic_cast<Tk_pull0 *>(node), arg);
+
+    case NodeType::TK_ILLEGAL_BINS:
+      return visit(dynamic_cast<Tk_illegal_bins *>(node), arg);
+
+    case NodeType::DECAY_VALUE_SIMPLE:
+      return visit(dynamic_cast<Decay_value_simple *>(node), arg);
+
+    case NodeType::TK_ENUM:
+      return visit(dynamic_cast<Tk_enum *>(node), arg);
+
+    case NodeType::TK_WOR:
+      return visit(dynamic_cast<Tk_wor *>(node), arg);
+
+    case NodeType::TK_INF:
+      return visit(dynamic_cast<Tk_inf *>(node), arg);
+
+    case NodeType::TK_SROOT:
+      return visit(dynamic_cast<Tk_sroot *>(node), arg);
+
+    case NodeType::TK_INTERCONNECT:
+      return visit(dynamic_cast<Tk_interconnect *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_PACKAGE_ITEMS:
+      return visit(dynamic_cast<Preprocessor_balanced_package_items *>(node),
+                   arg);
+
+    case NodeType::TK_SHORTINT:
+      return visit(dynamic_cast<Tk_shortint *>(node), arg);
+
+    case NodeType::TK_STRUCT:
+      return visit(dynamic_cast<Tk_struct *>(node), arg);
+
+    case NodeType::TK_BREAK:
+      return visit(dynamic_cast<Tk_break *>(node), arg);
+
+    case NodeType::TK_NMOS:
+      return visit(dynamic_cast<Tk_nmos *>(node), arg);
+
+    case NodeType::TK_STRING:
+      return visit(dynamic_cast<Tk_string *>(node), arg);
+
+    case NodeType::TK_SYNC_REJECT_ON:
+      return visit(dynamic_cast<Tk_sync_reject_on *>(node), arg);
+
+    case NodeType::TK_WIRE:
+      return visit(dynamic_cast<Tk_wire *>(node), arg);
+
+    case NodeType::TK_PO_POS:
+      return visit(dynamic_cast<Tk_po_pos *>(node), arg);
+
+    case NodeType::TK_RETURN:
+      return visit(dynamic_cast<Tk_return *>(node), arg);
+
+    case NodeType::TK_PIPEARROW:
+      return visit(dynamic_cast<Tk_pipearrow *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_DESCRIPTION_ITEM_OPT:
+      return visit(dynamic_cast<Preprocessor_else_description_item_opt *>(node),
+                   arg);
+
+    case NodeType::DR_PROTECT:
+      return visit(dynamic_cast<Dr_protect *>(node), arg);
+
+    case NodeType::MACROCALLITEM:
+      return visit(dynamic_cast<Macrocallitem *>(node), arg);
+
+    case NodeType::TK_DOMAIN:
+      return visit(dynamic_cast<Tk_domain *>(node), arg);
+
+    case NodeType::TK_STIMESKEW:
+      return visit(dynamic_cast<Tk_stimeskew *>(node), arg);
+
+    case NodeType::MACROARG:
+      return visit(dynamic_cast<Macroarg *>(node), arg);
+
+    case NodeType::TK_TIMEPRECISION_CHECK:
+      return visit(dynamic_cast<Tk_timeprecision_check *>(node), arg);
+
+    case NodeType::TK_BINS:
+      return visit(dynamic_cast<Tk_bins *>(node), arg);
+
+    case NodeType::TK_DEASSIGN:
+      return visit(dynamic_cast<Tk_deassign *>(node), arg);
+
+    case NodeType::TK_NOR:
+      return visit(dynamic_cast<Tk_nor *>(node), arg);
+
+    case NodeType::TK_PACKED:
+      return visit(dynamic_cast<Tk_packed *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_PORT_DECLARATIONS_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_port_declarations_opt *>(node), arg);
+
+    case NodeType::TK_PRIMITIVE:
+      return visit(dynamic_cast<Tk_primitive *>(node), arg);
+
+    case NodeType::TK_NAND:
+      return visit(dynamic_cast<Tk_nand *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_BLOCK_ITEM:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_block_item *>(node), arg);
+
+    case NodeType::TK_PRIORITY:
+      return visit(dynamic_cast<Tk_priority *>(node), arg);
+
+    case NodeType::NATURE_DECLARATION:
+      return visit(dynamic_cast<Nature_declaration *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONFIG_RULE_STATEMENTS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_config_rule_statements *>(node), arg);
+
+    case NodeType::DR_CELLDEFINE:
+      return visit(dynamic_cast<Dr_celldefine *>(node), arg);
+
+    case NodeType::TK_ACCEPT_ON:
+      return visit(dynamic_cast<Tk_accept_on *>(node), arg);
+
+    case NodeType::TK_SWIDTH:
+      return visit(dynamic_cast<Tk_swidth *>(node), arg);
+
+    case NodeType::TK_BYTE:
+      return visit(dynamic_cast<Tk_byte *>(node), arg);
+
+    case NodeType::TK_LBPLUSRB:
+      return visit(dynamic_cast<Tk_lbplusrb *>(node), arg);
+
+    case NodeType::TK_RANDSEQUENCE:
+      return visit(dynamic_cast<Tk_randsequence *>(node), arg);
+
+    case NodeType::TK_DIST:
+      return visit(dynamic_cast<Tk_dist *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_GENERATE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_generate_item *>(node), arg);
+
+    case NodeType::TK_CONTINUOUS:
+      return visit(dynamic_cast<Tk_continuous *>(node), arg);
+
+    case NodeType::MACROCALLID:
+      return visit(dynamic_cast<Macrocallid *>(node), arg);
+
+    case NodeType::DR_NOSUPPRESS_FAULTS:
+      return visit(dynamic_cast<Dr_nosuppress_faults *>(node), arg);
+
+    case NodeType::TK_DEFPARAM:
+      return visit(dynamic_cast<Tk_defparam *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_PACKAGE_ITEM:
+      return visit(dynamic_cast<Preprocessor_elsif_package_item *>(node), arg);
+
+    case NodeType::CASE_ITEM_EXPRESSION_LIST:
+      return visit(dynamic_cast<Case_item_expression_list *>(node), arg);
+
+    case NodeType::CLASS_ITEM_QUALIFIER_LIST:
+      return visit(dynamic_cast<Class_item_qualifier_list *>(node), arg);
+
+    case NodeType::TK_ASSERT:
+      return visit(dynamic_cast<Tk_assert *>(node), arg);
+
+    case NodeType::TK_DEFAULT:
+      return visit(dynamic_cast<Tk_default *>(node), arg);
+
+    case NodeType::PP_UNDEF:
+      return visit(dynamic_cast<Pp_undef *>(node), arg);
+
+    case NodeType::PP_ENDIF:
+      return visit(dynamic_cast<Pp_endif *>(node), arg);
+
+    case NodeType::TK_PROTECTED:
+      return visit(dynamic_cast<Tk_protected *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_EXPRESSION:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_expression *>(node), arg);
+
+    case NodeType::VALUE_RANGE_EXPRESSION:
+      return visit(dynamic_cast<Value_range_expression *>(node), arg);
+
+    case NodeType::DR_DEFAULT_DECAY_TIME:
+      return visit(dynamic_cast<Dr_default_decay_time *>(node), arg);
+
+    case NodeType::TK_LIBRARY:
+      return visit(dynamic_cast<Tk_library *>(node), arg);
+
+    case NodeType::TK_LOCAL:
+      return visit(dynamic_cast<Tk_local *>(node), arg);
+
+    case NodeType::TK_UNTYPED:
+      return visit(dynamic_cast<Tk_untyped *>(node), arg);
+
+    case NodeType::TK_UNIQUE:
+      return visit(dynamic_cast<Tk_unique *>(node), arg);
+
+    case NodeType::TK_SSETUPHOLD:
+      return visit(dynamic_cast<Tk_ssetuphold *>(node), arg);
+
+    case NodeType::TK_USE:
+      return visit(dynamic_cast<Tk_use *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_MODULE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_module_item *>(node), arg);
+
+    case NodeType::
+        LIST_OF_PORTS_OR_PORT_DECLARATIONS_PREPROCESSOR_LAST_NON_ANSI:
+      return visit(
+          dynamic_cast<
+              List_of_ports_or_port_declarations_preprocessor_last_non_ansi *>(
+              node),
+          arg);
+
+    case NodeType::TK_SFULLSKEW:
+      return visit(dynamic_cast<Tk_sfullskew *>(node), arg);
+
+    case NodeType::TK_BUF:
+      return visit(dynamic_cast<Tk_buf *>(node), arg);
+
+    case NodeType::TK_PROPERTY:
+      return visit(dynamic_cast<Tk_property *>(node), arg);
+
+    case NodeType::TK_PULL1:
+      return visit(dynamic_cast<Tk_pull1 *>(node), arg);
+
+    case NodeType::TK_SPERIOD:
+      return visit(dynamic_cast<Tk_speriod *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_CONSTRAINT_EXPRESSION_OPT:
+      return visit(
+          dynamic_cast<Preprocessor_else_constraint_expression_opt *>(node),
+          arg);
+
+    case NodeType::SELECT_DIMENSIONS:
+      return visit(dynamic_cast<Select_dimensions *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_MODULE_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_module_items_opt *>(node),
+                   arg);
+
+    case NodeType::TK_TIMEUNIT_CHECK:
+      return visit(dynamic_cast<Tk_timeunit_check *>(node), arg);
+
+    case NodeType::PARAMETER_VALUE_RANGE:
+      return visit(dynamic_cast<Parameter_value_range *>(node), arg);
+
+    case NodeType::TK_EXTENDS:
+      return visit(dynamic_cast<Tk_extends *>(node), arg);
+
+    case NodeType::TK_TRIOR:
+      return visit(dynamic_cast<Tk_trior *>(node), arg);
+
+    case NodeType::TK_S_UNTIL:
+      return visit(dynamic_cast<Tk_s_until *>(node), arg);
+
+    case NodeType::LIBRARY_DECLARATION:
+      return visit(dynamic_cast<Library_declaration *>(node), arg);
+
+    case NodeType::TK_RSORT:
+      return visit(dynamic_cast<Tk_rsort *>(node), arg);
+
+    case NodeType::TK_POSEDGE:
+      return visit(dynamic_cast<Tk_posedge *>(node), arg);
+
+    case NodeType::TK_GENERATE:
+      return visit(dynamic_cast<Tk_generate *>(node), arg);
+
+    case NodeType::TK_DESIGN:
+      return visit(dynamic_cast<Tk_design *>(node), arg);
+
+    case NodeType::TK_ALWAYS_COMB:
+      return visit(dynamic_cast<Tk_always_comb *>(node), arg);
+
+    case NodeType::LIBRARY_DESCRIPTION_LIST:
+      return visit(dynamic_cast<Library_description_list *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSE_GENERATE_ITEM:
+      return visit(dynamic_cast<Preprocessor_else_generate_item *>(node), arg);
+
+    case NodeType::TK_TRI0:
+      return visit(dynamic_cast<Tk_tri0 *>(node), arg);
+
+    case NodeType::PREPROCESSOR_BALANCED_STATEMENTS:
+      return visit(dynamic_cast<Preprocessor_balanced_statements *>(node), arg);
+
+    case NodeType::TK_REAL:
+      return visit(dynamic_cast<Tk_real *>(node), arg);
+
+    case NodeType::TK_FROM:
+      return visit(dynamic_cast<Tk_from *>(node), arg);
+
+    case NodeType::DR_DELAY_MODE_PATH:
+      return visit(dynamic_cast<Dr_delay_mode_path *>(node), arg);
+
+    case NodeType::TK_RANDOMIZE:
+      return visit(dynamic_cast<Tk_randomize *>(node), arg);
+
+    case NodeType::TK_AND:
+      return visit(dynamic_cast<Tk_and *>(node), arg);
+
+    case NodeType::TK_LOGIC:
+      return visit(dynamic_cast<Tk_logic *>(node), arg);
+
+    case NodeType::TK_DDT_NATURE:
+      return visit(dynamic_cast<Tk_ddt_nature *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_BINS_OR_OPTIONS:
+      return visit(dynamic_cast<Preprocessor_elsif_bins_or_options *>(node),
+                   arg);
+
+    case NodeType::CONSTRAINT_EXPRESSION_LIST_OPT:
+      return visit(dynamic_cast<Constraint_expression_list_opt *>(node), arg);
+
+    case NodeType::DECLARATION_EXTENDS_LIST:
+      return visit(dynamic_cast<Declaration_extends_list *>(node), arg);
+
+    case NodeType::PP_INCLUDE:
+      return visit(dynamic_cast<Pp_include *>(node), arg);
+
+    case NodeType::TK_SUPER:
+      return visit(dynamic_cast<Tk_super *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CONSTRAINT_BLOCK_ITEMS:
+      return visit(
+          dynamic_cast<Preprocessor_elsif_constraint_block_items *>(node), arg);
+
+    case NodeType::PREPROCESSOR_ELSIF_CLASS_ITEMS_OPT:
+      return visit(dynamic_cast<Preprocessor_elsif_class_items_opt *>(node),
+                   arg);
+
+    case NodeType::TK_POUNDMINUSPOUND:
+      return visit(dynamic_cast<Tk_poundminuspound *>(node), arg);
+
+    case NodeType::TK_REJECT_ON:
+      return visit(dynamic_cast<Tk_reject_on *>(node), arg);
+
+    case NodeType::TK_FUNCTION:
+      return visit(dynamic_cast<Tk_function *>(node), arg);
+
+    case NodeType::TK_SUNIT:
+      return visit(dynamic_cast<Tk_sunit *>(node), arg);
+
+    case NodeType::TK_RESTRICT:
+      return visit(dynamic_cast<Tk_restrict *>(node), arg);
+
+    case NodeType::TK_TASK:
+      return visit(dynamic_cast<Tk_task *>(node), arg);
+
+    case NodeType::TK_FIND_LAST:
+      return visit(dynamic_cast<Tk_find_last *>(node), arg);
+
+    case NodeType::TK_SREMOVAL:
+      return visit(dynamic_cast<Tk_sremoval *>(node), arg);
+
+    case NodeType::TK_LONGINT:
+      return visit(dynamic_cast<Tk_longint *>(node), arg);
+
+    case NodeType::TK_TYPE:
+      return visit(dynamic_cast<Tk_type *>(node), arg);
+
+    case NodeType::PD_LIBRARY_SYNTAX_BEGIN:
+      return visit(dynamic_cast<Pd_library_syntax_begin *>(node), arg);
+
+    case NodeType::TK_FIND_INDEX:
+      return visit(dynamic_cast<Tk_find_index *>(node), arg);
+
+    case NodeType::TK_IDT_NATURE:
+      return visit(dynamic_cast<Tk_idt_nature *>(node), arg);
+
+    case NodeType::TK_IMPORT:
+      return visit(dynamic_cast<Tk_import *>(node), arg);
+
+    case NodeType::TK_COLON_DIV:
+      return visit(dynamic_cast<Tk_colon_div *>(node), arg);
+
+    case NodeType::BLOCK_EVENT_OR_EXPR:
+      return visit(dynamic_cast<Block_event_or_expr *>(node), arg);
 
     default:
       return R();
@@ -11621,6 +15096,8897 @@ public:
   }
 
   virtual R visit(Tk_static_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Until_operator *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Until_operator *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cover_sequence_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cover_sequence_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(With_covergroup_expression_in_parens *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(With_covergroup_expression_in_parens *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Declaration_extends_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Declaration_extends_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_if_else *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_if_else *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Followed_by_operator *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Followed_by_operator *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Local_sequence_lvar_port_direction_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Local_sequence_lvar_port_direction_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_actual_arg *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_actual_arg *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Slice_size *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Slice_size *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Default_skew *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Default_skew *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_begin *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_begin *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Randomize_call *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Randomize_call *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Data_type_or_void_with_id *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Data_type_or_void_with_id *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Lb_star_rb *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Lb_star_rb *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Uniqueness_constraint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Uniqueness_constraint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_port_list_preprocessor_last_named *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_port_list_preprocessor_last_named *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_trailing_comma *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_trailing_comma *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_data_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_data_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Method_property_qualifier *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Method_property_qualifier *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Opt_config *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Opt_config *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_begin *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_begin *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_rule_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_rule_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cell_clause *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cell_clause *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_production_list_or_rand_join *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_production_list_or_rand_join *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_code_block *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_code_block *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Expression_in_parens_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Expression_in_parens_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_method_with_predicate_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_method_with_predicate_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_ports_declaration_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_pattern_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_pattern_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Inst_clause *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Inst_clause *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_repeat *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_repeat *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Covergroup_expression_bracketed_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Covergroup_expression_bracketed_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Clocking_drive_only *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Clocking_drive_only *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_primary *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_primary *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_match_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_match_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_spec *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_spec *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cover_cross *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cover_cross *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Wildcard_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Wildcard_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_inside_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_inside_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_port *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_tf_port *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Weight_specification *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Weight_specification *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_condition *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_condition *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Deferred_immediate_assertion_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Deferred_immediate_assertion_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_formal_type_followed_by_id *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_formal_type_followed_by_id *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_bin_rhs *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_bin_rhs *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_items_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production_items_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_port_declarations *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_port_declarations *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Simple_type *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Simple_type *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_production_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_production_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dpi_export_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dpi_export_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Production *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_trailing_comma *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_clocking_declaration_trailing_comma *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_list_in_parens_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_list_in_parens_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Use_clause *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Use_clause *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_match_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_match_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_bin *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_bin *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_type_followed_by_id *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_type_followed_by_id *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Identifier_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Identifier_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_port_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_weight *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_weight *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_keyword *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_keyword *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R
+  visit(List_of_ports_or_port_declarations_preprocessor_last_ansi *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R
+  visit(List_of_ports_or_port_declarations_preprocessor_last_ansi *node,
+        T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Implements_interface_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Implements_interface_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Let_port_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_method_with_predicate *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_method_with_predicate *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_option *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Coverage_option *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_set *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_set *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pattern *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Net_type_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Net_type_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_selection *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_selection *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Expression_or_dist_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Expression_or_dist_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Clocking_skew *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Clocking_skew *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_expr_match_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Sequence_expr_match_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_anglebracketinclude *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_anglebracketinclude *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_item_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Import_export *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Import_export *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(With_covergroup_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(With_covergroup_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_primary_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_primary_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Property_case_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Charge_strength *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Charge_strength *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dpi_import_property *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dpi_import_property *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Iff_expr_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Iff_expr_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_rule *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_rule *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_method *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Interface_class_method *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_simple_ports_declaration_trailing_comma *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_simple_ports_declaration_trailing_comma *node,
+                  T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_inside_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_inside_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Restrict_property_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Restrict_property_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dist_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_prod *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_prod *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_ordering_method *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Array_ordering_method *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Randsequence_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Randsequence_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_pattern_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_pattern_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Cross_body_item_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_ports_declaration_trailing_comma *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Modport_ports_declaration_trailing_comma *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(
+      Set_covergroup_expression_or_covergroup_range_list_or_trans_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R
+  visit(Set_covergroup_expression_or_covergroup_range_list_or_trans_list *node,
+        T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_class_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_class_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_genvar *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_genvar *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(File_path_spec_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(File_path_spec_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Branch_probe_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Branch_probe_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rcmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rcmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pipearrow2 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pipearrow2 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ssetup *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ssetup *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sskew *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sskew *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_new *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_new *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_source *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_source *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_localparam *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_localparam *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declarations_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declarations_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_union *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_union *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_showcancelled *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_showcancelled *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wand *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wand *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_begin_keywords *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_begin_keywords *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Member_pattern_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Member_pattern_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Analog_construct *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Analog_construct *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wreal *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wreal *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rand *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rand *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundpound *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundpound *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_suppress_faults *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_suppress_faults *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_repeat *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_repeat *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_time *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_time *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_resetall *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_resetall *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_clocking *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_clocking *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_parameter *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_parameter *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_initial *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_initial *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulsestyle_ondetect *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulsestyle_ondetect *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_global *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_global *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_end_keywords *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_end_keywords *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sample *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sample *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique_index *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique_index *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pstar *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pstar *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_extern *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_extern *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Module_attribute_foreign *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Module_attribute_foreign *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_constraint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_constraint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_solve *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_solve *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_triand *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_triand *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join_none *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join_none *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_static *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_static *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_define *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_define *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_disable *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_disable *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reverse *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reverse *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shortreal *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shortreal *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_last_index *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_last_index *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_expect *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_expect *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Analog_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Analog_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Udp_unknown_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Udp_unknown_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbstarrb *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbstarrb *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_class_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_class_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Named_parameter_assignment_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Named_parameter_assignment_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case_item_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case_item_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_pragma *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_pragma *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_discrete *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_discrete *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_flow *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_flow *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ref *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ref *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statements *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statements *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_xnor *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_xnor *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_supply1 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_supply1 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_const *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_const *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_local_scope *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_local_scope *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong1 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_strong1 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_release *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_release *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_program *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_program *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_statement_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_statement_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_table *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_table *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trigger *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trigger *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_liblist *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_liblist *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_header *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_header *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pure *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pure *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_case *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_case *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shold *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shold *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbrarrow *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbrarrow *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_package *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_package *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_ff *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_ff *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_filepath *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_filepath *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_colon_eq *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_colon_eq *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statements_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statements_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulldown *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulldown *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rpmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rpmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_generate_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_generate_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bit *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bit *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_chandle *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_chandle *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_binsof *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_binsof *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_args_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_args_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_srecovery *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_srecovery *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_config *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_config *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nonblocking_trigger *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nonblocking_trigger *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shuffle *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shuffle *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_signed *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_signed *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_incr *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_incr *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_latch *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_latch *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_generate_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_generate_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_product *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_product *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_module_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_module_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_input *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_input *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assign *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assign *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_distributed *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_distributed *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_package_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_package_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options_list_opt_pp *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Bins_or_options_list_opt_pp *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_until_with *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_until_with *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Rs_case_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_port_list_preprocessor_last_positional *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_port_list_preprocessor_last_positional *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ignore_bins *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ignore_bins *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sum *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sum *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tkk_attribute *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tkk_attribute *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_max *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_max *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_block_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_block_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nexttime *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nexttime *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sequence *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sequence *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_automatic *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_automatic *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pullup *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pullup *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_description_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Enum_name_list_preprocessor_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Enum_name_list_preprocessor_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(From_exclude *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(From_exclude *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_int *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_int *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_first_index *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_first_index *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_implements *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_implements *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Discipline_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_discipline *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_discipline *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Include_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Include_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbstar *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbstar *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbeq *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbeq *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_void *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_void *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_exclude *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_exclude *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randc *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randc *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_instance *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_instance *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_type_option *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_type_option *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wait *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wait *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_abstol *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_abstol *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_decr *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_decr *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_xor *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_xor *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeprecision *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeprecision *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_zero *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_zero *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_first *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_first *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulsestyle_onevent *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pulsestyle_onevent *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_covergroup *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_covergroup *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_digits *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_digits *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_units *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_units *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tran *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tran *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wildcard *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wildcard *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_bins_or_options_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_bins_or_options_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_final *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_final *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_package_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_package_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_argument_list_preprocessor_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Any_argument_list_preprocessor_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sort *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sort *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Incdir_spec *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Incdir_spec *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_if_header *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_if_header *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_disable_portfaults *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_disable_portfaults *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_nexttime *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_nexttime *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_with *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_with *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_unconnected_drive *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_unconnected_drive *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_snochange *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_snochange *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_call_or_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_call_or_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_context *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_context *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_include *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_include *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_var *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_var *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_constraint_block_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_constraint_block_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_module *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_module *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_uselib *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_uselib *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_declaration_package_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_declaration_package_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_nounconnected_drive *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_nounconnected_drive *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_event *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_event *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_access *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_access *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_typedef *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_typedef *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_description_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_description_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declarations *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_port_declarations *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_bins_or_options_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_bins_or_options_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_port_declarations *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_port_declarations *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_until_with *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_until_with *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_atat *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_atat *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_option *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_option *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_negedge *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_negedge *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_until *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_until *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_po_neg *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_po_neg *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_config_rule_statements *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_config_rule_statements *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Member_pattern *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Member_pattern *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak1 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak1 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_1step *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_1step *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_byname_list_preprocessor_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_byname_list_preprocessor_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unsigned *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unsigned *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_arg_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macro_arg_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tagged *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tagged *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_scope_res *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_scope_res *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_endprotect *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_endprotect *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_unit *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_unit *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_ranges *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_ranges *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_virtual *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_virtual *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_with__covergroup *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_with__covergroup *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Error *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Error *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_specparam *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_specparam *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assume *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assume *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_uwire *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_uwire *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rtran *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rtran *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expressions_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expressions_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sync_accept_on *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sync_accept_on *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_coverpoint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_coverpoint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rnmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rnmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_eventually *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_eventually *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_description_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_description_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_this *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_this *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_do *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_do *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_modport *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_modport *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_soft *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_soft *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_trireg_strength *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_trireg_strength *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trireg *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trireg *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Description_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Description_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_edge *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_edge *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statements_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statements_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_item_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_item_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_infinite *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_infinite *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_config_rule_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_config_rule_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nature *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nature *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_analog *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_analog *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_macromodule *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_macromodule *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_eventually *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_eventually *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_srecrem *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_srecrem *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_null *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_null *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lp *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lp *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_class_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_class_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Named_parameter_assignment *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Named_parameter_assignment *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_min *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_min *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_or *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_or *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wone *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wone *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rs *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rs *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_end *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_end *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bind *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bind *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Incdir_spec_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Incdir_spec_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expressions *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expressions *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_continue *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_continue *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cross *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cross *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_timescale *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_timescale *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_alias *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_alias *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_constraint_expressions *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_constraint_expressions *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_integer *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_integer *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join_any *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_join_any *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_interface *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_interface *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tf_port_list_preprocessor_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tf_port_list_preprocessor_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_export *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_export *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statement *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_statement *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_config_rule_statement_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_config_rule_statement_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nxor *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nxor *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_supply0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_supply0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_always *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_always *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reg *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reg *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(File_path_spec *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(File_path_spec *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_endcelldefine *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_endcelldefine *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_list_of_ports_or_port_declarations_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_list_of_ports_or_port_declarations_opt *node,
+                  T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_implies *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_implies *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_first_match *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_first_match *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_module_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_module_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_expr_primary *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_expr_primary *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_prototype *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_prototype *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ls *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ls *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cell *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cell *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_weak0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_enable_portfaults *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_enable_portfaults *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_noshowcancelled *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_noshowcancelled *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_not *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_not *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_bins_or_options *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_bins_or_options *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cover *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_cover *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_control_flow *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_control_flow *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_output *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_output *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri1 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri1 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_dotstar *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_dotstar *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeunit *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeunit *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocall *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocall *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_inout *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_inout *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_casex *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_casex *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_potential *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_potential *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundeqpound *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundeqpound *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_let *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_let *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_nettype *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_nettype *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_begin *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_begin *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_casez *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_casez *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nettype *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nettype *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pull0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pull0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_illegal_bins *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_illegal_bins *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Decay_value_simple *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Decay_value_simple *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_enum *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_enum *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wor *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wor *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_inf *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_inf *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sroot *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sroot *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_interconnect *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_interconnect *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_package_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_package_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shortint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_shortint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_struct *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_struct *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_break *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_break *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nmos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nmos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_string *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_string *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sync_reject_on *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sync_reject_on *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wire *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_wire *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_po_pos *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_po_pos *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_return *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_return *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pipearrow *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pipearrow *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_description_item_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_description_item_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_protect *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_protect *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocallitem *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocallitem *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_domain *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_domain *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_stimeskew *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_stimeskew *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macroarg *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macroarg *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeprecision_check *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeprecision_check *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bins *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_bins *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_deassign *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_deassign *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nor *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nor *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_packed *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_packed *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_port_declarations_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_port_declarations_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_primitive *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_primitive *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nand *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_nand *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_block_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_block_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_priority *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_priority *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Nature_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statements *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_config_rule_statements *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_celldefine *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_celldefine *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_accept_on *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_accept_on *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_swidth *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_swidth *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_byte *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_byte *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbplusrb *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_lbplusrb *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randsequence *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randsequence *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_dist *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_dist *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_generate_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_continuous *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_continuous *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocallid *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Macrocallid *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_nosuppress_faults *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_nosuppress_faults *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_defparam *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_defparam *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_package_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_item_expression_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Case_item_expression_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Class_item_qualifier_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Class_item_qualifier_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assert *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_assert *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_default *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_default *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_undef *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_undef *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_endif *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_endif *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_protected *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_protected *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Value_range_expression *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Value_range_expression *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_decay_time *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_default_decay_time *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_library *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_library *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_local *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_local *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_untyped *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_untyped *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_unique *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ssetuphold *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ssetuphold *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_use *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_use *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_module_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_module_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R
+  visit(List_of_ports_or_port_declarations_preprocessor_last_non_ansi *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R
+  visit(List_of_ports_or_port_declarations_preprocessor_last_non_ansi *node,
+        T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sfullskew *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sfullskew *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_buf *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_buf *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_property *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_property *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pull1 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_pull1 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_speriod *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_speriod *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_expression_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_constraint_expression_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_dimensions *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Select_dimensions *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_module_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeunit_check *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_timeunit_check *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_range *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Parameter_value_range *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_extends *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_extends *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trior *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_trior *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_until *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_s_until *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_declaration *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_declaration *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rsort *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_rsort *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_posedge *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_posedge *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_generate *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_generate *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_design *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_design *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_comb *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_always_comb *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Library_description_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_generate_item *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_else_generate_item *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri0 *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_tri0 *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_statements *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_balanced_statements *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_real *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_real *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_from *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_from *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_path *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Dr_delay_mode_path *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randomize *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_randomize *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_and *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_and *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_logic *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_logic *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ddt_nature *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_ddt_nature *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_bins_or_options *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression_list_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Constraint_expression_list_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Declaration_extends_list *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Declaration_extends_list *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_include *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pp_include *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_super *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_super *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_items *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_constraint_block_items *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_items_opt *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Preprocessor_elsif_class_items_opt *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundminuspound *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_poundminuspound *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reject_on *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_reject_on *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_function *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_function *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sunit *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sunit *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_restrict *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_restrict *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_task *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_task *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_last *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_last *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sremoval *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_sremoval *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_longint *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_longint *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_type *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_type *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pd_library_syntax_begin *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Pd_library_syntax_begin *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_index *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_find_index *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_idt_nature *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_idt_nature *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_import *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_import *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_colon_div *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Tk_colon_div *node, T arg) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get(), arg);
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_or_expr *node) {
+    for (const std::unique_ptr<Node> &child : node->getChildren()) {
+      applyVisit(child.get());
+    }
+
+    return R();
+  }
+
+  virtual R visit(Block_event_or_expr *node, T arg) {
     for (const std::unique_ptr<Node> &child : node->getChildren()) {
       applyVisit(child.get(), arg);
     }
