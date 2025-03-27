@@ -828,6 +828,18 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
+static void removeIncorrectParameters(Node *head) {
+  // Remove gates declarations from the generated module
+  if (head->type == NodeType::PARAMETER_VALUE_OPT) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectParameters(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -837,6 +849,7 @@ static void generateModules(
   head = buildSyntaxTree(map, n, gen);
 
   removeIncorrectGates(head.get());
+  removeIncorrectParameters(head.get());
 
   std::vector<Node *> moduleHeads, portDeclarations;
   findModulePorts(head.get(), moduleHeads, portDeclarations);
