@@ -629,6 +629,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("printseed", "Prints the randomization seed.")
     ("printcfg","Generates call graph dot file.")
     ("d,debug", "Prints debug messages.")
+    ("b,addbind", "Enables bind statements (not supported in many EDA tools)")
     //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
     ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
@@ -1191,6 +1192,61 @@ addPrimitiveFunctionCalls(std::vector<std::shared_ptr<Module>> &modules) {
   }
 }
 
+static void addBindStatement(std::vector<std::shared_ptr<Module>> &modules) {
+  if (modules.size() == 0 || modules.size() == 1)
+    return;
+
+  auto topModule = modules[0];
+  std::shared_ptr<Module> targetModule, boundModule;
+  if (modules.size() == 3) {
+    targetModule = modules[1];
+    boundModule = modules[2];
+  } else {
+    targetModule = modules[rand() % modules.size()];
+    boundModule = modules[rand() % modules.size()];
+  }
+
+  if (targetModule == boundModule)
+    return;
+
+  auto rng = std::default_random_engine{};
+  auto idsSet =
+      boundModule->programPoints[boundModule->programPoints.size() - 1].defs;
+
+  std::vector<std::string> availableIds(idsSet.begin(), idsSet.end());
+  std::vector<std::string> chosenIds;
+
+  for (auto [x, y] : targetModule->portList) {
+    std::shuffle(availableIds.begin(), availableIds.end(), rng);
+
+    // find possible ids to add call to m2 in m
+    auto id =
+        findCompatibleId(availableIds, boundModule->directionMap,
+                         boundModule->idToType, targetModule->idToType[x], y);
+    if (id == "")
+      return;
+
+    chosenIds.push_back(id);
+  }
+  auto bind = std::make_unique<Bind_directive>("bind_directive");
+  bind->insertChildToEnd(std::make_unique<Terminal>(" bind "));
+  bind->insertChildToEnd(std::make_unique<Terminal>(
+      " " + targetModule->moduleName->getElement() + " "));
+  bind->insertChildToEnd(std::make_unique<Terminal>(
+      " " + boundModule->moduleName->getElement() + " "));
+  bind->insertChildToEnd(std::make_unique<Terminal>(" bind_inst "));
+  bind->insertChildToEnd(std::make_unique<Terminal>(" ( "));
+  for (auto const &id : chosenIds) {
+    bind->insertChildToEnd(std::make_unique<Terminal>(id));
+    bind->insertChildToEnd(std::make_unique<Terminal>(" , "));
+  }
+  bind->getChildren()[bind->getChildren().size() - 1]->setElement(" ); ");
+
+  topModule->programPoints[topModule->programPoints.size() - 1]
+      .programPoint->getParent()
+      ->insertChildToEnd(std::move(bind));
+}
+
 static void getParametersFromFunction(
     Node *head, std::vector<std::pair<std::string, PortDir>> &parameterList,
     bool fromSignature = true) {
@@ -1318,6 +1374,7 @@ int main(int argc, char **argv) {
   bool printSeed = flags.count("printseed") != 0;
   bool verbose = flags.count("verbose") != 0;
   bool pcfg = flags.count("printcfg") != 0;
+  bool bind = flags.count("addbind") != 0;
 
   std::ostringstream dotcfg;
   if (pcfg) {
@@ -1516,6 +1573,9 @@ int main(int argc, char **argv) {
 
   addPrimitiveFunctionCalls(usedModules);
   formatandCallCustomFunctions(usedModules);
+  if (bind)
+    addBindStatement(usedModules);
+
   if (pcfg) {
     dotcfg << "}\n";
     std::ofstream dotfile("chimera.cfg.dot", std::ios::trunc);

@@ -1657,7 +1657,6 @@ constraintSet TypeInferenceVisitor::visit(Specify_item *node, typeId type) {
     constraintsSpecReferenceEvent.insert(constraintDelayValue.begin(),
                                          constraintDelayValue.end());
     return constraintsSpecReferenceEvent;
-
   }
   return defaultVisitor(node, freshType());
 }
