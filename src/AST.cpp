@@ -9998,6 +9998,11 @@ ClassMap classMap = {
          return std::make_unique<Tk_po_pos>(f);
       }}
    ,
+    {"tk_static_opt",
+      [](std::string &&f){
+         return std::make_unique<Tk_static_opt>(f);
+      }}
+    ,
     {"tk_return",
       [](std::string &&f){
          return std::make_unique<Tk_return>(f);
