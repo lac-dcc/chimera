@@ -828,6 +828,63 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
+static Node copyNode(Node *node) {}
+
+static std::string findIdFromNode(Node *head) {
+  if (head->type == NodeType::SYMBOLIDENTIFIER) {
+    return head->getElement();
+  }
+  // if (head->type == NodeType::EXPRESSION) {
+  //   std::string expr = "";
+
+  //   return expr;
+  // }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    std::string id = findIdFromNode(head->getChildren()[i].get());
+    if (id != "") {
+      return id;
+    }
+  }
+  return "";
+}
+
+static void
+findAssignments(Node *head,
+                std::vector<std::pair<std::string, std::string>> &assignments) {
+  if (head->type == NodeType::CONT_ASSIGN) {
+    std::string lhs = findIdFromNode(head->getChildren()[0].get());
+    std::string rhs = findIdFromNode(head->getChildren()[2].get());
+    assignments.push_back({lhs, rhs});
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    findAssignments(head->getChildren()[i].get(), assignments);
+  }
+}
+
+static void
+addAsserts(Node *head,
+           std::vector<std::pair<std::string, std::string>> &assignments,
+           int index) {
+  // Remove gates declarations from the generated module
+  if (index >= assignments.size()) {
+    return;
+  }
+  if (head->type == NodeType::CONT_ASSIGN) {
+    head->insertChildToEnd(std::make_unique<Terminal>(";"));
+    head->insertChildToEnd(std::make_unique<Terminal>("assert ("));
+    head->insertChildToEnd(
+        std::make_unique<Terminal>(assignments[index].first));
+    head->insertChildToEnd(std::make_unique<Terminal>("=="));
+    head->insertChildToEnd(
+        std::make_unique<Terminal>(assignments[index].second));
+    head->insertChildToEnd(std::make_unique<Terminal>(");"));
+    index += 1;
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    addAsserts(head->getChildren()[i].get(), assignments, index);
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -881,6 +938,9 @@ static void generateModules(
     if (lastID == -1) {
       isCorrect = false;
     }
+    std::vector<std::pair<std::string, std::string>> assignments;
+    findAssignments(head.get(), assignments);
+    addAsserts(head.get(), assignments, 0);
 
     // Replace real generated types for placeholders
     // Prepares for type inference
