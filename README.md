@@ -85,9 +85,23 @@ We have found various bugs in open-source platforms with programs from ChiBench 
 |   [1225](https://github.com/steveicarus/iverilog/issues/1225) |  [Icarus Verilog](https://github.com/steveicarus/iverilog) | Freezes in invalid infinite loop. |
 |   [4598](https://github.com/YosysHQ/yosys/issues/4598)  |  [Yosys](https://github.com/YosysHQ/yosys) |     Crashes while simplifying program.|
 
-## Technical Report
+## Publications
 
-The process of constructing and curating this collection of benchmarks is described on this [technical report](https://arxiv.org/abs/2406.06550).
+The design and implementation of ChiGen is described in this [paper](https://arxiv.org/abs/2504.06295). Cite it as:
+
+```
+@misc{Vieira25,
+      title={Bottom-Up Generation of Verilog Designs for Testing EDA Tools}, 
+      author={João Victor Amorim Vieira and Luiza de Melo Gomes and Rafael Sumitani and Raissa Maciel and Augusto Mafra and Mirlaine Crepalde and Fernando Magno Quintão Pereira},
+      year={2025},
+      eprint={2504.06295},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      url={https://arxiv.org/abs/2504.06295}, 
+}
+```
+
+The process of constructing and curating the ChiBench collection of benchmarks is described in this [paper](https://arxiv.org/abs/2406.06550).
 Cite it as:
 
 ```
