@@ -1297,9 +1297,8 @@ static void callFunction(Module &mod, Function *func) {
 
     selectedIds.push_back(selectedId);
   }
-  auto procBlock = std::make_unique<Initial_construct>("initial_construct");
-  procBlock->insertChildToEnd(std::make_unique<Terminal>(" initial "));
-  procBlock->insertChildToEnd(std::make_unique<Terminal>(" begin "));
+  auto procBlock = std::make_unique<Always_construct>("always_construct");
+  procBlock->insertChildToEnd(std::make_unique<Terminal>(" always @* "));
 
   auto callNode = std::make_unique<System_tf_call>("system_tf_call");
   auto nameNode = std::make_unique<Terminal>(func->name);
@@ -1317,7 +1316,6 @@ static void callFunction(Module &mod, Function *func) {
     callNode->insertChildToEnd(std::make_unique<Terminal>(" )"));
   callNode->insertChildToEnd(std::make_unique<Terminal>(";"));
   procBlock->insertChildToEnd(std::move(callNode));
-  procBlock->insertChildToEnd(std::make_unique<Terminal>(" end "));
   auto it = mod.moduleHead->getChildren().begin();
 
   mod.moduleHead->insertChild(std::move(procBlock), std::next(it, 9));
