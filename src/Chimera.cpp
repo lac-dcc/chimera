@@ -631,6 +631,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("d,debug", "Prints debug messages.")
     //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
+    ("addasserts", "Adds assert constructions.")
     ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
   // clang-format on
@@ -828,24 +829,17 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
-static Node copyNode(Node *node) {}
-
 static std::string findIdFromNode(Node *head) {
-  if (head->type == NodeType::SYMBOLIDENTIFIER) {
+
+  // head is a terminal node
+  if (head->getChildren().size() == 0) {
     return head->getElement();
   }
-  // if (head->type == NodeType::EXPRESSION) {
-  //   std::string expr = "";
-
-  //   return expr;
-  // }
+  std::string id;
   for (size_t i = 0; i < head->getChildren().size(); i++) {
-    std::string id = findIdFromNode(head->getChildren()[i].get());
-    if (id != "") {
-      return id;
-    }
+    id += findIdFromNode(head->getChildren()[i].get());
   }
-  return "";
+  return id;
 }
 
 static void
@@ -864,8 +858,7 @@ findAssignments(Node *head,
 static void
 addAsserts(Node *head,
            std::vector<std::pair<std::string, std::string>> &assignments,
-           int index) {
-  // Remove gates declarations from the generated module
+           long unsigned int index) {
   if (index >= assignments.size()) {
     return;
   }
@@ -938,9 +931,6 @@ static void generateModules(
     if (lastID == -1) {
       isCorrect = false;
     }
-    std::vector<std::pair<std::string, std::string>> assignments;
-    findAssignments(head.get(), assignments);
-    addAsserts(head.get(), assignments, 0);
 
     // Replace real generated types for placeholders
     // Prepares for type inference
@@ -953,6 +943,7 @@ static void generateModules(
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
     if (isCorrect) {
+
       // Removes not replaced gate types
       removeEmptyGateTypes(m);
 
@@ -1365,6 +1356,7 @@ int main(int argc, char **argv) {
   bool printSeed = flags.count("printseed") != 0;
   bool verbose = flags.count("verbose") != 0;
   bool pcfg = flags.count("printcfg") != 0;
+  bool hasAsserts = flags.count("addasserts") != 0;
 
   std::ostringstream dotcfg;
   if (pcfg) {
@@ -1575,6 +1567,11 @@ int main(int argc, char **argv) {
   }
 
   for (const auto &m : usedModules) {
+    if (hasAsserts) {
+      std::vector<std::pair<std::string, std::string>> assignments;
+      findAssignments(m->moduleHead.get(), assignments);
+      addAsserts(m->moduleHead.get(), assignments, 0);
+    }
     if (flags.count("printtree"))
       dumpSyntaxTree(m->moduleHead.get());
     if (flags.count("visualisetree"))
