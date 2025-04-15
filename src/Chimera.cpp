@@ -632,6 +632,7 @@ static cxxopts::ParseResult parseArgs(int argc, char **argv) {
     ("b,addbind", "Enables bind statements (not supported in many EDA tools)")
     //("a,allow-ambiguous", "Force the inference analyses to allow programs with ambiguous types.")
     ("v,verbose", "Verbose output.") //Needs to implement
+    ("addasserts", "Adds assert constructions.")
     ("s,seed", "Set the seed for randomization.", cxxopts::value<std::random_device::result_type>())
     ("h,help", "Display usage");
   // clang-format on
@@ -829,6 +830,55 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
+static std::string findIdFromNode(Node *head) {
+
+  // head is a terminal node
+  if (head->getChildren().size() == 0) {
+    return head->getElement();
+  }
+  std::string id;
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    id += findIdFromNode(head->getChildren()[i].get());
+  }
+  return id;
+}
+
+static void
+findAssignments(Node *head,
+                std::vector<std::pair<std::string, std::string>> &assignments) {
+  if (head->type == NodeType::CONT_ASSIGN) {
+    std::string lhs = findIdFromNode(head->getChildren()[0].get());
+    std::string rhs = findIdFromNode(head->getChildren()[2].get());
+    assignments.push_back({lhs, rhs});
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    findAssignments(head->getChildren()[i].get(), assignments);
+  }
+}
+
+static void
+addAsserts(Node *head,
+           std::vector<std::pair<std::string, std::string>> &assignments,
+           long unsigned int index) {
+  if (index >= assignments.size()) {
+    return;
+  }
+  if (head->type == NodeType::CONT_ASSIGN) {
+    head->insertChildToEnd(std::make_unique<Terminal>(";"));
+    head->insertChildToEnd(std::make_unique<Terminal>("assert ("));
+    head->insertChildToEnd(
+        std::make_unique<Terminal>(assignments[index].first));
+    head->insertChildToEnd(std::make_unique<Terminal>("=="));
+    head->insertChildToEnd(
+        std::make_unique<Terminal>(assignments[index].second));
+    head->insertChildToEnd(std::make_unique<Terminal>(");"));
+    index += 1;
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    addAsserts(head->getChildren()[i].get(), assignments, index);
+  }
+}
+
 static void removeIncorrectParameters(Node *head) {
   // Remove gates declarations from the generated module
   if (head->type == NodeType::PARAMETER_VALUE_OPT) {
@@ -838,6 +888,7 @@ static void removeIncorrectParameters(Node *head) {
 
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     removeIncorrectParameters(head->getChildren()[i].get());
+
   }
 }
 
@@ -907,6 +958,7 @@ static void generateModules(
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
     if (isCorrect) {
+
       // Removes not replaced gate types
       removeEmptyGateTypes(m);
 
@@ -1372,7 +1424,9 @@ int main(int argc, char **argv) {
   bool printSeed = flags.count("printseed") != 0;
   bool verbose = flags.count("verbose") != 0;
   bool pcfg = flags.count("printcfg") != 0;
+  bool hasAsserts = flags.count("addasserts") != 0;
   bool bind = flags.count("addbind") != 0;
+
 
   std::ostringstream dotcfg;
   if (pcfg) {
@@ -1586,6 +1640,11 @@ int main(int argc, char **argv) {
   }
 
   for (const auto &m : usedModules) {
+    if (hasAsserts) {
+      std::vector<std::pair<std::string, std::string>> assignments;
+      findAssignments(m->moduleHead.get(), assignments);
+      addAsserts(m->moduleHead.get(), assignments, 0);
+    }
     if (flags.count("printtree"))
       dumpSyntaxTree(m->moduleHead.get());
     if (flags.count("visualisetree"))
