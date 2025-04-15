@@ -1486,5 +1486,1278 @@ public:
   virtual constraintSet visit(Method_qualifier *node, typeId type) override;
 
   virtual constraintSet visit(Tk_static_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Until_operator *node, typeId type) override;
+
+  virtual constraintSet visit(Cover_sequence_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(With_covergroup_expression_in_parens *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Declaration_extends_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Rs_if_else *node, typeId type) override;
+
+  virtual constraintSet visit(Followed_by_operator *node, typeId type) override;
+
+  virtual constraintSet visit(Local_sequence_lvar_port_direction_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Bins_expression *node, typeId type) override;
+
+  virtual constraintSet visit(Property_actual_arg *node, typeId type) override;
+
+  virtual constraintSet visit(Select_expression *node, typeId type) override;
+
+  virtual constraintSet visit(Slice_size *node, typeId type) override;
+
+  virtual constraintSet visit(Property_case_item *node, typeId type) override;
+
+  virtual constraintSet visit(Default_skew *node, typeId type) override;
+
+  virtual constraintSet visit(Constraint_expression_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Modport_clocking_declaration_begin *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Property_case_item_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Randomize_call *node, typeId type) override;
+
+  virtual constraintSet visit(Cross_item_list *node, typeId type) override;
+
+  virtual constraintSet visit(Production_item *node, typeId type) override;
+
+  virtual constraintSet visit(Data_type_or_void_with_id *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Lb_star_rb *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_clocking_declaration_last *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Uniqueness_constraint *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Any_port_list_preprocessor_last_named *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Modport_tf_ports_declaration_trailing_comma *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Interface_data_declaration *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Method_property_qualifier *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Bins_or_options_list *node, typeId type) override;
+
+  virtual constraintSet visit(Opt_config *node, typeId type) override;
+
+  virtual constraintSet visit(Pattern_list *node, typeId type) override;
+
+  virtual constraintSet visit(Bins_or_options *node, typeId type) override;
+
+  virtual constraintSet visit(Pattern_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Interface_class_item_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Cross_body_item_list *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_tf_ports_declaration_begin *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Rs_rule_list *node, typeId type) override;
+
+  virtual constraintSet visit(Cell_clause *node, typeId type) override;
+
+  virtual constraintSet visit(Sequence_port_list *node, typeId type) override;
+
+  virtual constraintSet visit(Let_port_list *node, typeId type) override;
+
+  virtual constraintSet visit(Production_list *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_production_list_or_rand_join *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Rs_code_block *node, typeId type) override;
+
+  virtual constraintSet visit(Let_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(Expression_in_parens_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Array_method_with_predicate_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Cross_item *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_tf_ports_declaration_last *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Case_pattern_item *node, typeId type) override;
+
+  virtual constraintSet visit(Inst_clause *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_repeat *node, typeId type) override;
+
+  virtual constraintSet visit(Covergroup_expression_bracketed_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Clocking_drive_only *node, typeId type) override;
+
+  virtual constraintSet visit(Constraint_primary *node, typeId type) override;
+
+  virtual constraintSet visit(Constraint_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Sequence_match_item_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Sequence_spec *node, typeId type) override;
+
+  virtual constraintSet visit(Cover_cross *node, typeId type) override;
+
+  virtual constraintSet visit(Wildcard_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Case_inside_items *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_tf_port *node, typeId type) override;
+
+  virtual constraintSet visit(Weight_specification *node, typeId type) override;
+
+  virtual constraintSet visit(Select_condition *node, typeId type) override;
+
+  virtual constraintSet visit(Deferred_immediate_assertion_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Let_formal_type_followed_by_id *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Coverage_bin_rhs *node, typeId type) override;
+
+  virtual constraintSet visit(Production_items_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_port_declarations *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Simple_type *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_production_list *node, typeId type) override;
+
+  virtual constraintSet visit(Dpi_export_item *node, typeId type) override;
+
+  virtual constraintSet visit(Production *node, typeId type) override;
+
+  virtual constraintSet visit(Modport_clocking_declaration_trailing_comma *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Let_port_list_in_parens_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Cross_body *node, typeId type) override;
+
+  virtual constraintSet visit(Use_clause *node, typeId type) override;
+
+  virtual constraintSet visit(Sequence_match_item *node, typeId type) override;
+
+  virtual constraintSet visit(Coverage_bin *node, typeId type) override;
+
+  virtual constraintSet visit(Sequence_port_type_followed_by_id *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Interface_class_declaration *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Identifier_list *node, typeId type) override;
+
+  virtual constraintSet visit(Sequence_port_item *node, typeId type) override;
+
+  virtual constraintSet visit(Dist_item *node, typeId type) override;
+
+  virtual constraintSet visit(Dist_weight *node, typeId type) override;
+
+  virtual constraintSet visit(Bins_keyword *node, typeId type) override;
+
+  virtual constraintSet
+  visit(List_of_ports_or_port_declarations_preprocessor_last_ansi *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Implements_interface_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Let_port_item *node, typeId type) override;
+
+  virtual constraintSet visit(Array_method_with_predicate *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Coverage_option *node, typeId type) override;
+
+  virtual constraintSet visit(Constraint_set *node, typeId type) override;
+
+  virtual constraintSet visit(Pattern *node, typeId type) override;
+
+  virtual constraintSet visit(Net_type_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(Bins_selection *node, typeId type) override;
+
+  virtual constraintSet visit(Expression_or_dist_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Clocking_skew *node, typeId type) override;
+
+  virtual constraintSet visit(Interface_class_item *node, typeId type) override;
+
+  virtual constraintSet visit(Sequence_expr_match_item_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_anglebracketinclude *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Interface_class_item_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Import_export *node, typeId type) override;
+
+  virtual constraintSet visit(With_covergroup_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Constraint_primary_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Property_case_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Charge_strength *node, typeId type) override;
+
+  virtual constraintSet visit(Dpi_import_property *node, typeId type) override;
+
+  virtual constraintSet visit(Iff_expr_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_rule *node, typeId type) override;
+
+  virtual constraintSet visit(Interface_class_method *node,
+                              typeId type) override;
+
+  virtual constraintSet
+  visit(Modport_simple_ports_declaration_trailing_comma *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Case_inside_item *node, typeId type) override;
+
+  virtual constraintSet visit(Restrict_property_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dist_list *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_prod *node, typeId type) override;
+
+  virtual constraintSet visit(Array_ordering_method *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Randsequence_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Cross_body_item *node, typeId type) override;
+
+  virtual constraintSet visit(Case_pattern_items *node, typeId type) override;
+
+  virtual constraintSet visit(Cross_body_item_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Modport_ports_declaration_trailing_comma *node,
+                              typeId type) override;
+
+  virtual constraintSet
+  visit(Set_covergroup_expression_or_covergroup_range_list_or_trans_list *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_strong *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_class_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_genvar *node, typeId type) override;
+
+  virtual constraintSet visit(File_path_spec_list *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_description_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Branch_probe_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_rcmos *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pipearrow2 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_ssetup *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_generate_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_sskew *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_new *node, typeId type) override;
+
+  virtual constraintSet visit(Library_source *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_localparam *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_port_declarations_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_union *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_showcancelled *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wand *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_begin_keywords *node, typeId type) override;
+
+  virtual constraintSet visit(Member_pattern_list *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_strong0 *node, typeId type) override;
+
+  virtual constraintSet visit(Analog_construct *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wreal *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rand *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_poundpound *node, typeId type) override;
+
+  virtual constraintSet visit(Nature_items *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_suppress_faults *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_repeat *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_time *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_resetall *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_clocking *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_parameter *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_initial *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pulsestyle_ondetect *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Discipline_items *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_global *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_end_keywords *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sample *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_unique_index *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_cmos *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pstar *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_extern *node, typeId type) override;
+
+  virtual constraintSet visit(Module_attribute_foreign *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_constraint *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_solve *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_triand *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_join_none *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_static *node, typeId type) override;
+
+  virtual constraintSet visit(Pp_define *node, typeId type) override;
+
+  virtual constraintSet visit(Discipline_declaration *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_disable *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_reverse *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_shortreal *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_find_last_index *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_expect *node, typeId type) override;
+
+  virtual constraintSet visit(Analog_statement *node, typeId type) override;
+
+  virtual constraintSet visit(Udp_unknown_list *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_lbstarrb *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_module_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Rs_case *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_class_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Named_parameter_assignment_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Rs_case_item_list *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_pragma *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_discrete *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_flow *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_ref *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_statements *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_xnor *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_supply1 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_const *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_local_scope *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_strong1 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_release *node, typeId type) override;
+
+  virtual constraintSet visit(Discipline_items_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_program *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_module_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_statement_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_always *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_class_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_table *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_trigger *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_liblist *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_header *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_pure *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_case *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_shold *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_lbrarrow *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_package *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_always_ff *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_filepath *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_colon_eq *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_elsif_config_rule_statements_opt *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_pulldown *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rpmos *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_generate_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_bit *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_chandle *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_bins_or_options_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_binsof *node, typeId type) override;
+
+  virtual constraintSet visit(Macro_args_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_srecovery *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_config *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_nonblocking_trigger *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_shuffle *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_signed *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_incr *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_always_latch *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_generate_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_product *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_module_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_input *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_assign *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_description_items_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_delay_mode_distributed *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_package_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Bins_or_options_list_opt_pp *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_package_items_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_s_until_with *node, typeId type) override;
+
+  virtual constraintSet visit(Rs_case_item *node, typeId type) override;
+
+  virtual constraintSet visit(Any_port_list_preprocessor_last_positional *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_ignore_bins *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sum *node, typeId type) override;
+
+  virtual constraintSet visit(Tkk_attribute *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_max *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_constraint_block_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_nexttime *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sequence *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_automatic *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_pullup *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_description_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Enum_name_list_preprocessor_last *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(From_exclude *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_int *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_join *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_find_first_index *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_implements *node, typeId type) override;
+
+  virtual constraintSet visit(Discipline_item *node, typeId type) override;
+
+  virtual constraintSet visit(Block_event_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_discipline *node, typeId type) override;
+
+  virtual constraintSet visit(Include_statement *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_lbstar *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_bins_or_options_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_lbeq *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_void *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_exclude *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_randc *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_weak *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_instance *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_type_option *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wait *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_abstol *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_decr *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_xor *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_timeprecision *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_delay_mode_zero *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_find_first *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pulsestyle_onevent *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_covergroup *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_elsif_constraint_block_items_opt *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Macro_digits *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_units *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_tran *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wildcard *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_bins_or_options_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_final *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_package_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_class_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Any_argument_list_preprocessor_last *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_sort *node, typeId type) override;
+
+  virtual constraintSet visit(Incdir_spec *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_if_header *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_disable_portfaults *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_s_nexttime *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_with *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_unconnected_drive *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_snochange *node, typeId type) override;
+
+  virtual constraintSet visit(Macro_call_or_item *node, typeId type) override;
+
+  virtual constraintSet visit(Library_description_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_port_declaration *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_context *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_include *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_var *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_constraint_block_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_module *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_uselib *node, typeId type) override;
+
+  virtual constraintSet visit(Constraint_declaration_package_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_nounconnected_drive *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_event *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_access *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_typedef *node, typeId type) override;
+
+  virtual constraintSet visit(Library_description *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_description_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_port_declarations *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_bins_or_options_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_port_declarations *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_until_with *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_atat *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_option *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_negedge *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_until *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_po_neg *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_balanced_config_rule_statements *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Member_pattern *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_weak1 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_1step *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Parameter_value_byname_list_preprocessor_last *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_unsigned *node, typeId type) override;
+
+  virtual constraintSet visit(Macro_arg_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_tagged *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_scope_res *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_endprotect *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_delay_mode_unit *node, typeId type) override;
+
+  virtual constraintSet visit(Parameter_value_ranges *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Nature_item *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_virtual *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_with__covergroup *node, typeId type) override;
+
+  virtual constraintSet visit(Error *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_specparam *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_assume *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_uwire *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rtran *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_elsif_constraint_expressions_opt *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_sync_accept_on *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_coverpoint *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rnmos *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_eventually *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_description_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_this *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_do *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_modport *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_soft *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_default_trireg_strength *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_trireg *node, typeId type) override;
+
+  virtual constraintSet visit(Description_list_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_edge *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_statements_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Case_item_expression *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_infinite *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_config_rule_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_nature *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_analog *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_macromodule *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_s_eventually *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_srecrem *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_null *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_lp *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_class_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Named_parameter_assignment *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_min *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_unique0 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_or *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wone *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rs *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_find *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_config_rule_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_end *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_bind *node, typeId type) override;
+
+  virtual constraintSet visit(Incdir_spec_opt *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_constraint_expressions *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_constraint_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_continue *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_cross *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_timescale *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_constraint_block_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_alias *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_balanced_constraint_expressions *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_integer *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_join_any *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_interface *node, typeId type) override;
+
+  virtual constraintSet visit(Tf_port_list_preprocessor_last *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_export *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_statement *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_config_rule_statement_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_nxor *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_generate_items_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_supply0 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_s_always *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_reg *node, typeId type) override;
+
+  virtual constraintSet visit(File_path_spec *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_endcelldefine *node, typeId type) override;
+
+  virtual constraintSet
+  visit(Preprocessor_list_of_ports_or_port_declarations_opt *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_implies *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_first_match *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_package_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_pmos *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_module_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Block_event_expr_primary *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Constraint_prototype *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_ls *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_cell *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_weak0 *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_enable_portfaults *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_noshowcancelled *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_not *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_bins_or_options *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_cover *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_control_flow *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_output *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_tri1 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_dotstar *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_timeunit *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_tri *node, typeId type) override;
+
+  virtual constraintSet visit(Macrocall *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_inout *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_casex *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_potential *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_poundeqpound *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_let *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_default_nettype *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_begin *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_casez *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_nettype *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pull0 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_illegal_bins *node, typeId type) override;
+
+  virtual constraintSet visit(Decay_value_simple *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_enum *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wor *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_inf *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sroot *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_interconnect *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_package_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_shortint *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_struct *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_break *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_nmos *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_string *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sync_reject_on *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_wire *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_po_pos *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_return *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pipearrow *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_description_item_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_protect *node, typeId type) override;
+
+  virtual constraintSet visit(Macrocallitem *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_domain *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_stimeskew *node, typeId type) override;
+
+  virtual constraintSet visit(Macroarg *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_timeprecision_check *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_bins *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_deassign *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_nor *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_packed *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_port_declarations_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_primitive *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_nand *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_constraint_block_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_priority *node, typeId type) override;
+
+  virtual constraintSet visit(Nature_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_config_rule_statements *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_celldefine *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_accept_on *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_swidth *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_byte *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_lbplusrb *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_randsequence *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_dist *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_generate_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_continuous *node, typeId type) override;
+
+  virtual constraintSet visit(Macrocallid *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_nosuppress_faults *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_defparam *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_package_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Case_item_expression_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Class_item_qualifier_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_assert *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_default *node, typeId type) override;
+
+  virtual constraintSet visit(Pp_undef *node, typeId type) override;
+
+  virtual constraintSet visit(Pp_endif *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_protected *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_constraint_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Value_range_expression *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Dr_default_decay_time *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_library *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_local *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_untyped *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_unique *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_ssetuphold *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_use *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_module_item *node,
+                              typeId type) override;
+
+  virtual constraintSet
+  visit(List_of_ports_or_port_declarations_preprocessor_last_non_ansi *node,
+        typeId type) override;
+
+  virtual constraintSet visit(Tk_sfullskew *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_buf *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_property *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_pull1 *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_speriod *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_constraint_expression_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Select_dimensions *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_module_items_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_timeunit_check *node, typeId type) override;
+
+  virtual constraintSet visit(Parameter_value_range *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_extends *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_trior *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_s_until *node, typeId type) override;
+
+  virtual constraintSet visit(Library_declaration *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_rsort *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_posedge *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_generate *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_design *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_always_comb *node, typeId type) override;
+
+  virtual constraintSet visit(Library_description_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_else_generate_item *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_tri0 *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_balanced_statements *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_real *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_from *node, typeId type) override;
+
+  virtual constraintSet visit(Dr_delay_mode_path *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_randomize *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_and *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_logic *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_ddt_nature *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_bins_or_options *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Constraint_expression_list_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Declaration_extends_list *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Pp_include *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_super *node, typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_constraint_block_items *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Preprocessor_elsif_class_items_opt *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_poundminuspound *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_reject_on *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_function *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sunit *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_restrict *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_task *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_find_last *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_sremoval *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_longint *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_type *node, typeId type) override;
+
+  virtual constraintSet visit(Pd_library_syntax_begin *node,
+                              typeId type) override;
+
+  virtual constraintSet visit(Tk_find_index *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_idt_nature *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_import *node, typeId type) override;
+
+  virtual constraintSet visit(Tk_colon_div *node, typeId type) override;
+
+  virtual constraintSet visit(Block_event_or_expr *node, typeId type) override;
 };
 #endif
