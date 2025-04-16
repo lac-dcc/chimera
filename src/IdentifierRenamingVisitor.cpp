@@ -610,3 +610,11 @@ void IdentifierRenamingVisitor::visit(
     this->applyVisit(child.get());
   }
 }
+
+void IdentifierRenamingVisitor::visit(Modport_declaration *node){
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}

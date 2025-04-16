@@ -139,5 +139,7 @@ public:
   virtual void
   visit(Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node)
       override;
+  
+  virtual void visit(Modport_declaration *node) override;
 };
 #endif
