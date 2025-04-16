@@ -72,8 +72,6 @@ verible-verilog-format --inplace program.v
 - `--seed`: Set the seed for randomization.
 - `--help`: Display usage.
 
-
-
 If you ever use ChiBench or ChiGen to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
 
