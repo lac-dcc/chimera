@@ -618,3 +618,19 @@ void IdentifierRenamingVisitor::visit(Modport_declaration *node){
   }
   finishIDContext();
 }
+
+void IdentifierRenamingVisitor::visit(Package_export_declaration *node){
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Package_import_declaration *node){
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}

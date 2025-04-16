@@ -141,5 +141,9 @@ public:
       override;
   
   virtual void visit(Modport_declaration *node) override;
+
+  virtual void visit(Package_export_declaration *node) override;
+
+  virtual void visit(Package_import_declaration *node) override;
 };
 #endif
