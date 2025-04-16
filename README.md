@@ -63,6 +63,15 @@ If you chose to use a pre-trained grammar, replace `grammar.json` with the gramm
 verible-verilog-format --inplace program.v
 ```
 
+### 7. Command Line options (optional)
+- `--printseed`: Prints the randomization seed.
+- `--printcfg`: Generates call graph dot file.
+- `--debug`: Prints debug messages.
+- `--addbind`: Enables bind statements (not supported in many EDA tools).
+- `--addasserts`: Enables assert statements.
+- `--seed`: Set the seed for randomization.
+- `--help`: Display usage.
+
 If you ever use ChiBench or ChiGen to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
 
