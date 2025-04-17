@@ -25,6 +25,9 @@ bool debug = false;
 
 static constexpr char separator = '~';
 
+std::vector<int> declared_modules;
+std::map<int, std::vector<std::string>> module_ports;
+
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
   std::vector<std::string> result;
@@ -214,6 +217,8 @@ static int renameVars(
   if (visitor.to_define.size() > 0) {
     return -1;
   }
+  declared_modules.push_back(modID);
+  module_ports[modID] = visitor.module_ports;
   return visitor.varID;
 }
 
@@ -888,7 +893,39 @@ static void removeIncorrectParameters(Node *head) {
 
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     removeIncorrectParameters(head->getChildren()[i].get());
+  }
+}
 
+static void
+printModulePorts(const std::map<int, std::vector<std::string>> &module_ports) {
+  for (const auto &pair : module_ports) {
+    std::cerr << "Module tal " << pair.first << ": ";
+    for (const auto &port : pair.second) {
+      std::cerr << port << " ";
+    }
+    std::cerr << std::endl;
+  }
+}
+
+static void findModulePorts(Node *head, int modID) {
+  if (head->type == NodeType::SYMBOLIDENTIFIER) {
+    module_ports[modID].push_back(head->getElement());
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    findModulePorts(head->getChildren()[i].get(), modID);
+  }
+}
+
+static void renameQualifiedIds(Node *head) {
+  if (head->getElement() == "SCOPE") {
+    head->setElement(" module_" + std::to_string(declared_modules[0]));
+  }
+  if (head->getElement() == "SCOPE_ELEMENT") {
+    std::vector<std::string> port_list = module_ports[0];
+    head->setElement(port_list[rand() % port_list.size()]);
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    renameQualifiedIds(head->getChildren()[i].get());
   }
 }
 
@@ -971,6 +1008,9 @@ static void generateModules(
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);
+      findModulePorts(mod->moduleHead.get(), modID);
+      renameQualifiedIds(mod->moduleHead.get());
+      printModulePorts(module_ports);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
@@ -979,7 +1019,8 @@ static void generateModules(
       modules.push_back(std::move(mod));
     }
   }
-
+  // declared_modules.clear();
+  // module_ports.clear();
   declMap.clear();
   dirMap.clear();
   directionMap.clear();
@@ -1426,7 +1467,6 @@ int main(int argc, char **argv) {
   bool pcfg = flags.count("printcfg") != 0;
   bool hasAsserts = flags.count("addasserts") != 0;
   bool bind = flags.count("addbind") != 0;
-
 
   std::ostringstream dotcfg;
   if (pcfg) {

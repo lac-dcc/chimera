@@ -3,6 +3,8 @@
 #include <set>
 
 std::string last_id_name_created = "";
+int current_module = -1;
+
 std::set<std::string> constant_names;
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
@@ -104,7 +106,6 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
     v.name = "type_" + std::to_string(typeID++);
   } else if (t == "module") {
     v.name = " module_" + std::to_string(moduleID++);
-
   } else if (t == "PP") {
     v.name = " `pp_" + std::to_string(varID++) + " ";
   } else {
@@ -112,6 +113,7 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
       v.name = " \\id_" + std::to_string(varID++) + " ";
     } else {
       v.name = " id_" + std::to_string(varID++) + " ";
+      // module_ports.push_back(v.name);
     }
   }
   v.type = t;
@@ -274,6 +276,8 @@ std::string IdentifierRenamingVisitor::placeID(
       constant_names.insert(id.name);
     }
 
+    module_ports.push_back(id.name);
+
     return id.name;
   }
 
@@ -322,6 +326,7 @@ void IdentifierRenamingVisitor::visit(Module_start *node) {
     }
     this->applyVisit(child.get());
   }
+  // declared_modules.push_back(current_module);
   finishIDContext();
 }
 
@@ -367,6 +372,16 @@ void IdentifierRenamingVisitor::visit(Expression *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Symbolidentifier *node) {
+
+  if (!contexts.empty() && contexts.top() == ContextType::SCOPE) {
+    node->setElement("SCOPE");
+    return;
+  } else if (!contexts.empty() &&
+             contexts.top() == ContextType::SCOPE_ELEMENT) {
+    node->setElement("SCOPE_ELEMENT");
+    return;
+  }
+
   // discover possible type of symbol
   if (node->getElement() == " SymbolIdentifier ") {
     auto id = placeID("");
@@ -441,6 +456,7 @@ void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
   if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
+    // module_ports.push_back(this->defId);
     this->defType = this->identifiers.back()->type;
   }
 
@@ -611,7 +627,7 @@ void IdentifierRenamingVisitor::visit(
   }
 }
 
-void IdentifierRenamingVisitor::visit(Modport_declaration *node){
+void IdentifierRenamingVisitor::visit(Modport_declaration *node) {
   createIDContext(ContextType::EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -619,7 +635,7 @@ void IdentifierRenamingVisitor::visit(Modport_declaration *node){
   finishIDContext();
 }
 
-void IdentifierRenamingVisitor::visit(Package_export_declaration *node){
+void IdentifierRenamingVisitor::visit(Package_export_declaration *node) {
   createIDContext(ContextType::EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -627,10 +643,37 @@ void IdentifierRenamingVisitor::visit(Package_export_declaration *node){
   finishIDContext();
 }
 
-void IdentifierRenamingVisitor::visit(Package_import_declaration *node){
+void IdentifierRenamingVisitor::visit(Package_import_declaration *node) {
   createIDContext(ContextType::EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
   finishIDContext();
 }
+
+void IdentifierRenamingVisitor::visit(Qualified_id *node) {
+  int count = 0;
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (count == 0) {
+      createIDContext(ContextType::SCOPE);
+      this->applyVisit(child.get());
+      finishIDContext();
+    } else if (count == 2) {
+      createIDContext(ContextType::SCOPE_ELEMENT);
+      this->applyVisit(child.get());
+      finishIDContext();
+    }
+    count += 1;
+  }
+}
+// void IdentifierRenamingVisitor::visit(Unqualified_id *node) {
+//   for (const std::unique_ptr<Node> &child : node->getChildren()) {
+//     if (node->getParent()->type == NodeType::QUALIFIED_ID) {
+//       createIDContext(ContextType::SCOPE);
+//       this->applyVisit(child.get());
+//       finishIDContext();
+//     } else {
+//       this->applyVisit(child.get());
+//     }
+//   }
+// }

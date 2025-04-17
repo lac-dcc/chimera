@@ -2,6 +2,7 @@
 #define CHIMERA_IDENTIFIER_RENAMING_H
 #include "AST.h"
 #include "Visitor.h"
+#include <map>
 #include <memory>
 #include <stack>
 #include <string>
@@ -33,12 +34,15 @@ public:
     DEFINING_TYPE,
     TYPE_DECL,
     ASSIGNMENT,
+    SCOPE,
+    SCOPE_ELEMENT,
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
   std::vector<std::shared_ptr<Var>>
       structIds; // temporary vector to store identifiers declared inside a
                  // struct
+  std::vector<std::string> module_ports;
 
 private:
   std::string defId = "";
@@ -139,11 +143,15 @@ public:
   virtual void
   visit(Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node)
       override;
-  
+
   virtual void visit(Modport_declaration *node) override;
 
   virtual void visit(Package_export_declaration *node) override;
 
   virtual void visit(Package_import_declaration *node) override;
+
+  virtual void visit(Qualified_id *node) override;
+
+  // virtual void visit(Unqualified_id *node) override;
 };
 #endif
