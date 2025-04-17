@@ -3,7 +3,6 @@
 #include <set>
 
 std::string last_id_name_created = "";
-int current_module = -1;
 
 std::set<std::string> constant_names;
 
@@ -113,7 +112,6 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
       v.name = " \\id_" + std::to_string(varID++) + " ";
     } else {
       v.name = " id_" + std::to_string(varID++) + " ";
-      // module_ports.push_back(v.name);
     }
   }
   v.type = t;
@@ -276,8 +274,6 @@ std::string IdentifierRenamingVisitor::placeID(
       constant_names.insert(id.name);
     }
 
-    module_ports.push_back(id.name);
-
     return id.name;
   }
 
@@ -326,7 +322,6 @@ void IdentifierRenamingVisitor::visit(Module_start *node) {
     }
     this->applyVisit(child.get());
   }
-  // declared_modules.push_back(current_module);
   finishIDContext();
 }
 
@@ -456,7 +451,6 @@ void IdentifierRenamingVisitor::visit(Any_port_list_opt *node) {
   createIDContext(ContextType::DEFINING_ID);
   if (!identifiers.empty()) {
     this->defId = this->identifiers.back()->name;
-    // module_ports.push_back(this->defId);
     this->defType = this->identifiers.back()->type;
   }
 

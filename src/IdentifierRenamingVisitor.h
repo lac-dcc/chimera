@@ -42,7 +42,6 @@ public:
   std::vector<std::shared_ptr<Var>>
       structIds; // temporary vector to store identifiers declared inside a
                  // struct
-  std::vector<std::string> module_ports;
 
 private:
   std::string defId = "";
