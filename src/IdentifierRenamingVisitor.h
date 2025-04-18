@@ -150,7 +150,5 @@ public:
   virtual void visit(Package_import_declaration *node) override;
 
   virtual void visit(Qualified_id *node) override;
-
-  // virtual void visit(Unqualified_id *node) override;
 };
 #endif

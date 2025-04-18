@@ -660,14 +660,3 @@ void IdentifierRenamingVisitor::visit(Qualified_id *node) {
     count += 1;
   }
 }
-// void IdentifierRenamingVisitor::visit(Unqualified_id *node) {
-//   for (const std::unique_ptr<Node> &child : node->getChildren()) {
-//     if (node->getParent()->type == NodeType::QUALIFIED_ID) {
-//       createIDContext(ContextType::SCOPE);
-//       this->applyVisit(child.get());
-//       finishIDContext();
-//     } else {
-//       this->applyVisit(child.get());
-//     }
-//   }
-// }
