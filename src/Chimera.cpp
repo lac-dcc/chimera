@@ -918,20 +918,6 @@ renameQualifiedIds(Node *head,
   }
 }
 
-static void addPackages(Node *head) {
-  // if (head->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
-  //   auto packageHead = std::make_unique<Package_declaration>("");
-  //   packageHead->insertChildToEnd(std::make_unique<Terminal>(" package "));
-  //   packageHead->insertChildToEnd(std::make_unique<Terminal>(" package1; "));
-  //   packageHead->insertChildToEnd(std::make_unique<Terminal>(" endpackage
-  //   ")); head->insertChildToBegin(std::move(packageHead));
-  // } else {
-  //   for (size_t i = 0; i < head->getChildren().size(); i++) {
-  //     addPackages(head->getChildren()[i].get());
-  //   }
-  // }
-}
-
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -951,7 +937,7 @@ static void generateModules(
 
   replaceConstants(head.get());
   renamePositionalPorts(head.get());
-  // addPackages(head.get());
+
   int modID = 0;
   int packageID = 0;
   std::unordered_map<std::string, Node *> declMap; //
@@ -1021,7 +1007,6 @@ static void generateModules(
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
       rd.applyVisit(mod->moduleHead.get());
-      addPackages(m);
 
       modules.push_back(std::move(mod));
     }
