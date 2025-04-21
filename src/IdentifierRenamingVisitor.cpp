@@ -7,12 +7,13 @@ std::string last_id_name_created = "";
 std::set<std::string> constant_names;
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
-    int modID, std::unordered_map<std::string, Node *> &declMap,
+    int modID, int packageID, std::unordered_map<std::string, Node *> &declMap,
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
   this->varID = directionMap.size() + 1;
   this->typeID = directionMap.size() + 1;
 
   this->moduleID = modID;
+  this->packageID = packageID;
   this->declMap = &declMap;
 
   if (debug)
@@ -107,6 +108,8 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
     v.name = " module_" + std::to_string(moduleID++);
   } else if (t == "PP") {
     v.name = " `pp_" + std::to_string(varID++) + " ";
+  } else if (t == "package") {
+    v.name = " package_" + std::to_string(packageID++);
   } else {
     if (isEscaped) {
       v.name = " \\id_" + std::to_string(varID++) + " ";
@@ -169,7 +172,8 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   std::vector<std::string> options;
   for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
 
-    if (((type == "" && (*id)->type != "module" && (*id)->type != "type") ||
+    if (((type == "" && (*id)->type != "module" && (*id)->type != "type" &&
+          (*id)->type != "package") ||
          (*id)->type == type) &&
         ((isAssign && (*id)->dir != PortDir::INPUT) ||
          (isExpr && (*id)->dir != PortDir::OUTPUT) || (!isAssign && !isExpr))) {
@@ -263,6 +267,11 @@ std::string IdentifierRenamingVisitor::placeID(
     createIDContext(ContextType::DECL);
     return addId("module").name;
   }
+  if (!contexts.empty() && contexts.top() == ContextType::PACKAGE) {
+    contexts.pop();
+    createIDContext(ContextType::DECL);
+    return addId("package").name;
+  }
   if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
                             contexts.top() == ContextType::DECL_CONSTANT ||
                             contexts.top() == ContextType::DECL_STRUCT)) {
@@ -306,6 +315,14 @@ void IdentifierRenamingVisitor::visit(Terminal *node) {
 void IdentifierRenamingVisitor::visit(Module_or_interface_declaration *node) {
   constant_names.clear();
   createIDContext(ContextType::MODULE);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Package_declaration *node) {
+  createIDContext(ContextType::PACKAGE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
@@ -660,14 +677,14 @@ void IdentifierRenamingVisitor::visit(Qualified_id *node) {
     count += 1;
   }
 }
-// void IdentifierRenamingVisitor::visit(Unqualified_id *node) {
-//   for (const std::unique_ptr<Node> &child : node->getChildren()) {
-//     if (node->getParent()->type == NodeType::QUALIFIED_ID) {
-//       createIDContext(ContextType::SCOPE);
-//       this->applyVisit(child.get());
-//       finishIDContext();
-//     } else {
-//       this->applyVisit(child.get());
-//     }
-//   }
-// }
+void IdentifierRenamingVisitor::visit(Scope_prefix *node) {
+  int count = 0;
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (count == 0) {
+      createIDContext(ContextType::SCOPE);
+      this->applyVisit(child.get());
+      finishIDContext();
+    }
+    count += 1;
+  }
+}
