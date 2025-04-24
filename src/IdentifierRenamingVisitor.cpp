@@ -172,6 +172,14 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   std::vector<std::string> options;
   for (auto id = identifiers.rbegin(); id != identifiers.rend(); id++) {
 
+    // constant variables can only be assigned to another constant variables
+    // in its declaration
+    if (!contexts.empty() && contexts.top() == ContextType::CONSTANT_EXPR &&
+        (!constant_names.count((*id)->name) ||
+         (*id)->name == last_id_name_created)) {
+      continue;
+    }
+
     if (((type == "" && (*id)->type != "module" && (*id)->type != "type" &&
           (*id)->type != "package") ||
          (*id)->type == type) &&
@@ -182,13 +190,6 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
         continue;
       }
 
-      // constant variables can only be assigned to another constant variables
-      // in its declaration
-      if (!contexts.empty() && contexts.top() == ContextType::CONSTANT_EXPR &&
-          (!constant_names.count((*id)->name) ||
-           (*id)->name == last_id_name_created)) {
-        continue;
-      }
       std::stack<std::string> stackName;
       auto curr = *id;
       stackName.push(curr->name);
@@ -206,7 +207,8 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
     }
   }
 
-  // there are no constant ids to be used in the assigment of constant variables
+  // there are no constant ids to be used in the assigment of constant
+  // expressions
   if (options.empty() && !contexts.empty() &&
       contexts.top() == ContextType::CONSTANT_EXPR) {
     return " 1 ";
@@ -291,7 +293,7 @@ std::string IdentifierRenamingVisitor::placeID(
 
 void IdentifierRenamingVisitor::visit(Terminal *node) {
   if (node->getElement() == " [ ") {
-    createIDContext(ContextType::EXPR);
+    createIDContext(ContextType::CONSTANT_EXPR);
   }
 
   if (node->getElement() == " ] ") {
@@ -326,6 +328,7 @@ void IdentifierRenamingVisitor::visit(Package_declaration *node) {
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
+  node->getChildren()[4]->setElement("; endpackage ");
   finishIDContext();
 }
 
@@ -370,6 +373,8 @@ void IdentifierRenamingVisitor::visit(Lpvalue *node) {
 
 void IdentifierRenamingVisitor::visit(Expression *node) {
 
+  std::cerr << "parent element:" << node->getParent()->getElement()
+            << std::endl;
   if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
     createIDContext(ContextType::EXPR);
   }
@@ -687,4 +692,20 @@ void IdentifierRenamingVisitor::visit(Scope_prefix *node) {
     }
     count += 1;
   }
+}
+
+void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
 }

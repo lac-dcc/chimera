@@ -157,5 +157,9 @@ public:
   virtual void visit(Qualified_id *node) override;
 
   virtual void visit(Scope_prefix *node) override;
+
+  virtual void visit(Decl_variable_dimension *node) override;
+
+  virtual void visit(Select_variable_dimension *node) override;
 };
 #endif
