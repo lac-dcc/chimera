@@ -24,7 +24,9 @@ void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_realtime *node) {
-  auto el = node->getParent()->type == NodeType::EXPR_PRIMARY_NO_GROUPS ? std::to_string(rand()%100) : "$realtime";
+  auto el = node->getParent()->type == NodeType::EXPR_PRIMARY_NO_GROUPS
+                ? std::to_string(rand() % 100)
+                : "$realtime";
   node->setElement(el);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
