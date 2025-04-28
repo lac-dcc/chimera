@@ -25,6 +25,8 @@ bool debug = false;
 
 static constexpr char separator = '~';
 
+std::vector<int> declared_packages;
+
 static std::vector<std::string> breakRuleInProds(const std::string &rule) {
   std::istringstream iss(rule);
   std::vector<std::string> result;
@@ -46,6 +48,24 @@ static std::vector<std::string> chooseProds(
 
   int sum = 0;
   for (const auto &[prod, prodCount] : map.at(context)) {
+    if (prod.find("timescale_directive") != std::string::npos) {
+      continue;
+    }
+    if (prod.find("misc_directive") != std::string::npos) {
+      continue;
+    }
+    if (prod.find("package_or_generate_item_declaration") !=
+        std::string::npos) {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(3767);
+      continue;
+    }
+    if (prod.find("any_param_declaration") != std::string::npos) {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(1000);
+      continue;
+    }
+
     productionsStr.push_back(prod);
     productionsCount.push_back(prodCount);
     sum += prodCount;
@@ -168,7 +188,8 @@ static std::unique_ptr<Node> buildSyntaxTree(
 
 static void findModulePorts(Node *head, std::vector<Node *> &modules,
                             std::vector<Node *> &portDeclarations) {
-  if (head->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
+  if (head->type == NodeType::MODULE_OR_INTERFACE_DECLARATION ||
+      head->type == NodeType::PACKAGE_DECLARATION) {
     modules.push_back(head);
   } else if (head->type == NodeType::MODULE_PORT_DECLARATION) {
     portDeclarations.push_back(head);
@@ -207,9 +228,10 @@ static void replaceConstants(Node *head) {
 }
 
 static int renameVars(
-    Node *head, int modID, std::unordered_map<std::string, Node *> &declMap,
+    Node *head, int modID, int packageID,
+    std::unordered_map<std::string, Node *> &declMap,
     std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
-  IdentifierRenamingVisitor visitor(modID, declMap, directionMap);
+  IdentifierRenamingVisitor visitor(modID, packageID, declMap, directionMap);
   visitor.applyVisit(head);
   if (visitor.to_define.size() > 0) {
     return -1;
@@ -580,8 +602,10 @@ addConstantIDsToParameterList(Node *head,
     return;
 
   auto parameterList = findParameterList(head); // Can't be null
-  assert(parameterList != nullptr);
-
+  // assert(parameterList != nullptr);
+  if (!parameterList) {
+    return;
+  }
   if (parameterList->getChildren().size() <= 1) {
     createParameterList(parameterList);
   } else if (parameterList->getChildren().size() > 3) {
@@ -598,7 +622,9 @@ addConstantIDsToParameterList(Node *head,
 
 static void removeParameters(Node *head) {
   auto param = findParameterList(head);
-  param->clearChildren();
+  if (param) {
+    param->clearChildren();
+  }
 }
 
 static void dumpSyntaxTree(Node *head) {
@@ -787,7 +813,9 @@ static void findModuleName(Node *head, Node *&name) {
   if (head->type == NodeType::GENERICIDENTIFIER &&
       !head->getChildren().empty()) {
     if (head->getChildren()[0]->getElement().find("module") !=
-        std::string::npos) {
+            std::string::npos ||
+        head->getChildren()[0]->getElement().find("package") !=
+            std::string::npos) {
       name = head->getChildren()[0].get();
     } else if (head->getChildren()[0]->type == NodeType::KEYWORDIDENTIFIER) {
       name = head->getChildren()[0]
@@ -888,8 +916,29 @@ static void removeIncorrectParameters(Node *head) {
 
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     removeIncorrectParameters(head->getChildren()[i].get());
-
   }
+}
+
+static bool
+renameQualifiedIds(Node *head,
+                   std::vector<std::pair<std::string, PortDir>> &portList) {
+  if (head->getElement() == "SCOPE") {
+    if (declared_packages.empty()) {
+      return false;
+    }
+    head->setElement(" package_" + std::to_string(declared_packages[0]));
+  }
+  if (portList.size() != 0) {
+    if (head->getElement() == "SCOPE_ELEMENT") {
+      head->setElement(portList[0].first);
+    }
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    if (!renameQualifiedIds(head->getChildren()[i].get(), portList)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 static void generateModules(
@@ -911,7 +960,9 @@ static void generateModules(
 
   replaceConstants(head.get());
   renamePositionalPorts(head.get());
+
   int modID = 0;
+  int packageID = 0;
   std::unordered_map<std::string, Node *> declMap; //
   std::unordered_map<std::string, Node *> dirMap;  // maps an id to its
                                                    // definition
@@ -919,13 +970,14 @@ static void generateModules(
       directionMap; // maps the direction(in, out, inout) of the ids
   std::vector<std::pair<std::string, PortDir>>
       portList; // list of ports for a module
-
+  std::vector<std::pair<std::string, PortDir>> previousPortList;
   for (auto &m : moduleHeads) {
 
     declMap.clear();
     dirMap.clear();
     directionMap.clear();
     portList.clear();
+    declared_packages.clear();
     auto ansi = isAnsi(m);
 
     if (!ansi) {
@@ -940,7 +992,13 @@ static void generateModules(
     removeAssignmentsInPorts(m);
 
     // Rename SymbolIdentifier placeholders
-    int lastID = renameVars(m, modID++, declMap, directionMap);
+    int lastID;
+    if (m->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
+      lastID = renameVars(m, modID++, packageID, declMap, directionMap);
+    } else {
+      declared_packages.push_back(packageID);
+      lastID = renameVars(m, modID, packageID++, declMap, directionMap);
+    }
 
     // Discard programs that use variables not declared
     if (lastID == -1) {
@@ -954,6 +1012,10 @@ static void generateModules(
 
     std::unordered_map<std::string, CanonicalTypes>
         idToType; // maps an id to its inferred type
+
+    if (!renameQualifiedIds(m, previousPortList)) {
+      isCorrect = false;
+    }
 
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
@@ -971,6 +1033,9 @@ static void generateModules(
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);
+      if (previousPortList.size() == 0) {
+        previousPortList = mod->portList;
+      }
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
@@ -978,14 +1043,14 @@ static void generateModules(
 
       modules.push_back(std::move(mod));
     }
+    previousPortList = portList;
   }
-
   declMap.clear();
   dirMap.clear();
   directionMap.clear();
 
   // Rename what is left of the generated program, e.g. global vars
-  renameVars(head.get(), 0, declMap, directionMap);
+  renameVars(head.get(), 0, 0, declMap, directionMap);
 }
 
 static void measureSize(Node *head, int &size) {
@@ -1427,7 +1492,6 @@ int main(int argc, char **argv) {
   bool hasAsserts = flags.count("addasserts") != 0;
   bool bind = flags.count("addbind") != 0;
 
-
   std::ostringstream dotcfg;
   if (pcfg) {
     dotcfg << "digraph {\n label=\"Generated verilog cfg\" \n";
@@ -1459,7 +1523,8 @@ int main(int argc, char **argv) {
       createdModules; // modules that were created
   std::vector<std::shared_ptr<Module>>
       usedModules; // modules already processed that will be in the output
-                   // program
+  // program
+  std::vector<std::shared_ptr<Module>> usedPackages;
 
   int TARGET_SIZE = flags["target-size"].as<int>();
 
@@ -1485,6 +1550,9 @@ int main(int argc, char **argv) {
 
     auto &m =
         createdModules[rand() % createdModules.size()]; // pick a random module
+    if (m->moduleHead->type == NodeType::PACKAGE_DECLARATION) {
+      continue;
+    }
     if (!m->programPoints.empty()) {
       auto pp =
           m->programPoints[rand() %
@@ -1495,7 +1563,7 @@ int main(int argc, char **argv) {
         auto &m2 = *it;
         auto rng = std::default_random_engine{};
         std::vector<std::string> availableIds(pp.defs.begin(), pp.defs.end());
-        if (m2 != m) {
+        if (m2 != m && m2->moduleHead->type != NodeType::PACKAGE_DECLARATION) {
           bool compatible = true;
           std::vector<std::string> chosenIds;
 
@@ -1623,6 +1691,14 @@ int main(int argc, char **argv) {
     }
   } while (measureSize(usedModules) < TARGET_SIZE);
 
+  for (auto &m : createdModules) {
+    if (m->moduleHead->type == NodeType::PACKAGE_DECLARATION) {
+      m->moduleName->setElement(" package_" +
+                                std::to_string(usedPackages.size()));
+      usedPackages.push_back(m);
+    }
+  }
+
   addPrimitiveFunctionCalls(usedModules);
   formatandCallCustomFunctions(usedModules);
   if (bind)
@@ -1637,6 +1713,16 @@ int main(int argc, char **argv) {
       dotfile << dotcfg.str();
       dotfile.close();
     }
+  }
+
+  for (const auto &m : usedPackages) {
+    if (flags.count("printtree"))
+      dumpSyntaxTree(m->moduleHead.get());
+    if (flags.count("visualisetree"))
+      writeSyntaxTreeToDOT(m->moduleHead.get(),
+                           m->moduleName->getElement() + ".dot");
+    codeGen(m->moduleHead.get());
+    std::cout << std::endl;
   }
 
   for (const auto &m : usedModules) {

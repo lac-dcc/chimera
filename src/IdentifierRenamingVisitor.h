@@ -2,6 +2,7 @@
 #define CHIMERA_IDENTIFIER_RENAMING_H
 #include "AST.h"
 #include "Visitor.h"
+#include <map>
 #include <memory>
 #include <stack>
 #include <string>
@@ -33,6 +34,10 @@ public:
     DEFINING_TYPE,
     TYPE_DECL,
     ASSIGNMENT,
+    SCOPE,
+    SCOPE_ELEMENT,
+    PACKAGE,
+    TYPE,
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
@@ -67,10 +72,12 @@ public:
   int moduleID = 0;
   int typeID = 0;
   int labelID = 0;
+  int packageID = 0;
   std::string module_or_interface_end;
 
   IdentifierRenamingVisitor(
-      int modID, std::unordered_map<std::string, Node *> &declMap,
+      int modID, int packageID,
+      std::unordered_map<std::string, Node *> &declMap,
       std::unordered_map<std::string, std::pair<Node *, PortDir>>
           &directionMap);
 
@@ -83,6 +90,8 @@ public:
   virtual void visit(Module_end *node) override;
 
   virtual void visit(Module_or_generate_item *node) override;
+
+  virtual void visit(Package_declaration *node) override;
 
   virtual void visit(Lpvalue *node) override;
 
@@ -139,11 +148,25 @@ public:
   virtual void
   visit(Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node)
       override;
-  
+
   virtual void visit(Modport_declaration *node) override;
 
   virtual void visit(Package_export_declaration *node) override;
 
   virtual void visit(Package_import_declaration *node) override;
+
+  virtual void visit(Qualified_id *node) override;
+
+  virtual void visit(Scope_prefix *node) override;
+
+  virtual void visit(Decl_variable_dimension *node) override;
+
+  virtual void visit(Select_variable_dimension *node) override;
+
+  virtual void visit(Specify_path_identifiers *node) override;
+
+  virtual void visit(Type_identifier_followed_by_id *node) override;
+
+  virtual void visit(Type_declaration *node) override;
 };
 #endif
