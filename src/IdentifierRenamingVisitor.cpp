@@ -733,6 +733,12 @@ void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
+
+  if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+    node->clearChildren();
+    node->insertChildToEnd(std::make_unique<Terminal>("[10:0]"));
+    return;
+  }
   createIDContext(ContextType::CONSTANT_EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
@@ -762,4 +768,19 @@ void IdentifierRenamingVisitor::visit(Type_declaration *node) {
     this->applyVisit(child.get());
   }
   finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Reference *node) {
+
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->type == NodeType::SELECT_VARIABLE_DIMENSION &&
+        node->getParent()->type == NodeType::DATA_TYPE) {
+      createIDContext(ContextType::DECL);
+    }
+    this->applyVisit(child.get());
+    if (node->getParent()->type == NodeType::SELECT_VARIABLE_DIMENSION &&
+        node->getParent()->type == NodeType::DATA_TYPE) {
+      finishIDContext();
+    }
+  }
 }
