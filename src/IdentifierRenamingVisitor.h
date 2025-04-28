@@ -36,7 +36,8 @@ public:
     ASSIGNMENT,
     SCOPE,
     SCOPE_ELEMENT,
-    PACKAGE
+    PACKAGE,
+    TYPE,
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
@@ -161,5 +162,11 @@ public:
   virtual void visit(Decl_variable_dimension *node) override;
 
   virtual void visit(Select_variable_dimension *node) override;
+
+  virtual void visit(Specify_path_identifiers *node) override;
+
+  virtual void visit(Type_identifier_followed_by_id *node) override;
+
+  virtual void visit(Type_declaration *node) override;
 };
 #endif

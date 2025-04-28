@@ -260,6 +260,12 @@ std::string IdentifierRenamingVisitor::placeID(
     return " " + name;
   }
 
+  // TODO: implement a way to return types. The renaming phase was returning
+  // non-declared IDs as types
+  if (!contexts.empty() && contexts.top() == ContextType::TYPE) {
+    return "";
+  }
+
   if (!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
     return addId("type").name;
 
@@ -634,6 +640,7 @@ void IdentifierRenamingVisitor::visit(Struct_data_type *node) {
 
 void IdentifierRenamingVisitor::visit(
     Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node) {
+  createIDContext(ContextType::TYPE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     if (child->getElement() == " void " &&
         node->getParent()->type != NodeType::FUNCTION_RETURN_TYPE_AND_ID) {
@@ -641,6 +648,7 @@ void IdentifierRenamingVisitor::visit(
     }
     this->applyVisit(child.get());
   }
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Modport_declaration *node) {
@@ -704,6 +712,30 @@ void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
 
 void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
   createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Specify_path_identifiers *node) {
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Type_identifier_followed_by_id *node) {
+  createIDContext(ContextType::TYPE);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Type_declaration *node) {
+  createIDContext(ContextType::TYPE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }

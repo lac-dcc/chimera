@@ -236,7 +236,6 @@ static int renameVars(
   if (visitor.to_define.size() > 0) {
     return -1;
   }
-  declared_packages.push_back(packageID);
   return visitor.varID;
 }
 
@@ -920,10 +919,13 @@ static void removeIncorrectParameters(Node *head) {
   }
 }
 
-static void
+static bool
 renameQualifiedIds(Node *head,
                    std::vector<std::pair<std::string, PortDir>> &portList) {
   if (head->getElement() == "SCOPE") {
+    if (declared_packages.empty()) {
+      return false;
+    }
     head->setElement(" package_" + std::to_string(declared_packages[0]));
   }
   if (portList.size() != 0) {
@@ -932,8 +934,11 @@ renameQualifiedIds(Node *head,
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
-    renameQualifiedIds(head->getChildren()[i].get(), portList);
+    if (!renameQualifiedIds(head->getChildren()[i].get(), portList)) {
+      return false;
+    }
   }
+  return true;
 }
 
 static void generateModules(
@@ -972,6 +977,7 @@ static void generateModules(
     dirMap.clear();
     directionMap.clear();
     portList.clear();
+    declared_packages.clear();
     auto ansi = isAnsi(m);
 
     if (!ansi) {
@@ -986,7 +992,13 @@ static void generateModules(
     removeAssignmentsInPorts(m);
 
     // Rename SymbolIdentifier placeholders
-    int lastID = renameVars(m, modID++, packageID++, declMap, directionMap);
+    int lastID;
+    if (m->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
+      lastID = renameVars(m, modID++, packageID, declMap, directionMap);
+    } else {
+      declared_packages.push_back(packageID);
+      lastID = renameVars(m, modID, packageID++, declMap, directionMap);
+    }
 
     // Discard programs that use variables not declared
     if (lastID == -1) {
@@ -1000,6 +1012,10 @@ static void generateModules(
 
     std::unordered_map<std::string, CanonicalTypes>
         idToType; // maps an id to its inferred type
+
+    if (!renameQualifiedIds(m, previousPortList)) {
+      isCorrect = false;
+    }
 
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
@@ -1020,7 +1036,6 @@ static void generateModules(
       if (previousPortList.size() == 0) {
         previousPortList = mod->portList;
       }
-      renameQualifiedIds(mod->moduleHead.get(), previousPortList);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
