@@ -168,5 +168,6 @@ public:
   virtual void visit(Type_identifier_followed_by_id *node) override;
 
   virtual void visit(Type_declaration *node) override;
+  virtual void visit(Reference *node) override;
 };
 #endif
