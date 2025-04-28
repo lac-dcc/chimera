@@ -5,6 +5,8 @@
 std::string last_id_name_created = "";
 
 std::set<std::string> constant_names;
+bool prevAssign = false;
+std::string prevAssignId = "";
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
     int modID, int packageID, std::unordered_map<std::string, Node *> &declMap,
@@ -190,6 +192,22 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
         continue;
       }
 
+      // constant variables can only be assigned to another constant variables
+      // in its declaration
+      if (!contexts.empty() && contexts.top() == ContextType::CONSTANT_EXPR &&
+          (!constant_names.count((*id)->name) ||
+           (*id)->name == last_id_name_created)) {
+        continue;
+      }
+      if (isExpr && (*id)->name == last_id_name_created)
+        continue;
+
+      if (prevAssign && (*id)->name == prevAssignId) {
+        prevAssign = false;
+        prevAssignId = "";
+        continue;
+      }
+
       std::stack<std::string> stackName;
       auto curr = *id;
       stackName.push(curr->name);
@@ -244,6 +262,10 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   if (debug)
     std::cerr << "Using var: " << options[c] << std::endl;
 
+  if (isAssign) {
+    prevAssign = true;
+    prevAssignId = options[c];
+  }
   return options[c];
 }
 
