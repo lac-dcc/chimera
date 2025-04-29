@@ -941,6 +941,20 @@ renameQualifiedIds(Node *head,
   return true;
 }
 
+static void removeInoutRegisters(Node *head) {
+  if (head->getChildren().size() >= 3) {
+    if (head->getChildren()[0]->getElement().find("inout") !=
+            std::string::npos &&
+        head->getChildren()[0]->getElement().find("reg") != std::string::npos) {
+      head->getChildren()[0]->setElement(" input ");
+    }
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeInoutRegisters(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -1036,6 +1050,8 @@ static void generateModules(
       if (previousPortList.size() == 0) {
         previousPortList = mod->portList;
       }
+
+      removeInoutRegisters(m);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
