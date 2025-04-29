@@ -401,8 +401,6 @@ void IdentifierRenamingVisitor::visit(Lpvalue *node) {
 
 void IdentifierRenamingVisitor::visit(Expression *node) {
 
-  std::cerr << "parent element:" << node->getParent()->getElement()
-            << std::endl;
   if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
     createIDContext(ContextType::EXPR);
   }
