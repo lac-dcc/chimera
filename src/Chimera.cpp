@@ -50,24 +50,28 @@ static std::vector<std::string> chooseProds(
   for (const auto &[prod, prodCount] : map.at(context)) {
     if (prod.find("timescale_directive") != std::string::npos) {
       continue;
-    }
-    if (prod.find("misc_directive") != std::string::npos) {
+    } else if (prod.find("misc_directive") != std::string::npos) {
       continue;
-    }
-    if (prod.find("package_or_generate_item_declaration") !=
-        std::string::npos) {
+    } else if (prod.find("package_or_generate_item_declaration") !=
+               std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
-    }
-    if (prod.find("any_param_declaration") != std::string::npos) {
+    } else if (prod.find("any_param_declaration") != std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(1000);
       continue;
     }
 
-    productionsStr.push_back(prod);
-    productionsCount.push_back(prodCount);
+    else if (prod.find("class_declaration") != std::string::npos) {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(40000);
+      continue;
+    } else {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(prodCount);
+    }
+
     sum += prodCount;
   }
 
@@ -945,7 +949,7 @@ static void removeInoutRegisters(Node *head) {
   if (head->getChildren().size() >= 3) {
     if (head->getChildren()[0]->getElement().find("inout") !=
             std::string::npos &&
-        head->getChildren()[0]->getElement().find("reg") != std::string::npos) {
+        head->getChildren()[1]->getElement().find("reg") != std::string::npos) {
       head->getChildren()[0]->setElement(" input ");
     }
   }

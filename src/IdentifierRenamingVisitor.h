@@ -38,6 +38,7 @@ public:
     SCOPE_ELEMENT,
     PACKAGE,
     TYPE,
+    BLOCK,
   };
 
   std::vector<std::shared_ptr<Var>> to_define; // vars used but not declared
@@ -73,6 +74,7 @@ public:
   int typeID = 0;
   int labelID = 0;
   int packageID = 0;
+  int blockID = 0;
   std::string module_or_interface_end;
 
   IdentifierRenamingVisitor(
@@ -168,6 +170,12 @@ public:
   virtual void visit(Type_identifier_followed_by_id *node) override;
 
   virtual void visit(Type_declaration *node) override;
+
   virtual void visit(Reference *node) override;
+
+  virtual void visit(Block_identifier_opt *node) override;
+
+  virtual void
+  visit(Non_anonymous_gate_instance_or_register_variable *node) override;
 };
 #endif
