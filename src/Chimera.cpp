@@ -65,7 +65,7 @@ static std::vector<std::string> chooseProds(
 
     else if (prod.find("class_declaration") != std::string::npos) {
       productionsStr.push_back(prod);
-      productionsCount.push_back(40000);
+      productionsCount.push_back(3767);
       continue;
     } else {
       productionsStr.push_back(prod);
