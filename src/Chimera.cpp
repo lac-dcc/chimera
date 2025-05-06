@@ -50,24 +50,28 @@ static std::vector<std::string> chooseProds(
   for (const auto &[prod, prodCount] : map.at(context)) {
     if (prod.find("timescale_directive") != std::string::npos) {
       continue;
-    }
-    if (prod.find("misc_directive") != std::string::npos) {
+    } else if (prod.find("misc_directive") != std::string::npos) {
       continue;
-    }
-    if (prod.find("package_or_generate_item_declaration") !=
-        std::string::npos) {
+    } else if (prod.find("package_or_generate_item_declaration") !=
+               std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
-    }
-    if (prod.find("any_param_declaration") != std::string::npos) {
+    } else if (prod.find("any_param_declaration") != std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(1000);
       continue;
     }
 
-    productionsStr.push_back(prod);
-    productionsCount.push_back(prodCount);
+    else if (prod.find("class_declaration") != std::string::npos) {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(3767);
+      continue;
+    } else {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(prodCount);
+    }
+
     sum += prodCount;
   }
 
@@ -858,6 +862,18 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
+static void removeDeclDimensions(Node *head) {
+  if (head->type == NodeType::DECL_DIMENSIONS) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+    return;
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeDeclDimensions(head->getChildren()[i].get());
+  }
+}
+
 static std::string findIdFromNode(Node *head) {
 
   // head is a terminal node
@@ -945,7 +961,7 @@ static void removeInoutRegisters(Node *head) {
   if (head->getChildren().size() >= 3) {
     if (head->getChildren()[0]->getElement().find("inout") !=
             std::string::npos &&
-        head->getChildren()[0]->getElement().find("reg") != std::string::npos) {
+        head->getChildren()[1]->getElement().find("reg") != std::string::npos) {
       head->getChildren()[0]->setElement(" input ");
     }
   }
@@ -1052,6 +1068,7 @@ static void generateModules(
       }
 
       removeInoutRegisters(m);
+      removeDeclDimensions(m);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
