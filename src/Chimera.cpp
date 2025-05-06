@@ -862,6 +862,18 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
+static void removeDeclDimensions(Node *head) {
+  if (head->type == NodeType::DECL_DIMENSIONS) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+    return;
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeDeclDimensions(head->getChildren()[i].get());
+  }
+}
+
 static std::string findIdFromNode(Node *head) {
 
   // head is a terminal node
@@ -1056,6 +1068,7 @@ static void generateModules(
       }
 
       removeInoutRegisters(m);
+      removeDeclDimensions(m);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
