@@ -225,13 +225,6 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
     }
   }
 
-  // there are no constant ids to be used in the assigment of constant
-  // expressions
-  if (options.empty() && !contexts.empty() &&
-      contexts.top() == ContextType::CONSTANT_EXPR) {
-    return " 1 ";
-  }
-
   if (options.empty()) {
     auto id = addId(type);
     to_define.push_back(std::make_shared<Var>(id));
@@ -737,7 +730,8 @@ void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
 
 void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
 
-  if (!contexts.empty() && contexts.top() == ContextType::DECL) {
+  if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
+                            contexts.top() == ContextType::CONSTANT_EXPR)) {
     node->clearChildren();
     node->insertChildToEnd(std::make_unique<Terminal>(""));
     return;
@@ -775,16 +769,15 @@ void IdentifierRenamingVisitor::visit(Type_declaration *node) {
 
 void IdentifierRenamingVisitor::visit(Reference *node) {
 
+  if (node->getParent()->type == NodeType::DEFPARAM_ASSIGN) {
+    createIDContext(ContextType::DECL);
+  }
+
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
-    if (child->type == NodeType::SELECT_VARIABLE_DIMENSION &&
-        node->getParent()->type == NodeType::DATA_TYPE) {
-      createIDContext(ContextType::DECL);
-    }
     this->applyVisit(child.get());
-    if (node->getParent()->type == NodeType::SELECT_VARIABLE_DIMENSION &&
-        node->getParent()->type == NodeType::DATA_TYPE) {
-      finishIDContext();
-    }
+  }
+  if (node->getParent()->type == NodeType::DEFPARAM_ASSIGN) {
+    finishIDContext();
   }
 }
 
