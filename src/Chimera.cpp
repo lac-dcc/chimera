@@ -57,13 +57,8 @@ static std::vector<std::string> chooseProds(
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
-    } else if (prod.find("any_param_declaration") != std::string::npos) {
-      productionsStr.push_back(prod);
-      productionsCount.push_back(1000);
-      continue;
-    }
 
-    else if (prod.find("class_declaration") != std::string::npos) {
+    } else if (prod.find("class_declaration") != std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
@@ -475,12 +470,7 @@ static void findConstantIDs(Node *head,
   }
 
   for (const auto &c : head->getChildren()) {
-
-    if (head->type == NodeType::DEFPARAM_ASSIGN &&
-        c->type == NodeType::REFERENCE)
-      findConstantIDs(c.get(), idsFound, isIndex, true);
-    else
-      findConstantIDs(c.get(), idsFound, isIndex, isParam);
+    findConstantIDs(c.get(), idsFound, isIndex, isParam);
   }
 }
 
@@ -853,7 +843,7 @@ static void removeIncorrectGates(Node *head) {
     if (head->getChildren()[2]->getElement() == " ( ") {
       head->extractChild(head->getChildren()[2].get());
       head->extractChild(head->getChildren()[2].get());
-      head->getChildren()[2]->setElement(" ; ");
+      head->getChildren()[2]->setElement("");
     }
   }
 
@@ -932,6 +922,18 @@ static void removeIncorrectParameters(Node *head) {
 
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     removeIncorrectParameters(head->getChildren()[i].get());
+  }
+}
+
+static void removeIncorrectVariableDimensions(Node *head) {
+  // Remove gates declarations from the generated module
+  if (head->type == NodeType::REFERENCE && head->getChildren().size() >= 2) {
+    std::string id = findIdFromNode(head->getChildren()[1].get());
+    std::cerr << "id found:" << id << std::endl;
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectVariableDimensions(head->getChildren()[i].get());
   }
 }
 
@@ -1069,6 +1071,7 @@ static void generateModules(
 
       removeInoutRegisters(m);
       removeDeclDimensions(m);
+
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
