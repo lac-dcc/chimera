@@ -57,6 +57,7 @@ static std::vector<std::string> chooseProds(
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
+
     } else if (prod.find("class_declaration") != std::string::npos) {
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
@@ -1070,7 +1071,7 @@ static void generateModules(
 
       removeInoutRegisters(m);
       removeDeclDimensions(m);
-      // removeIncorrectVariableDimensions(m);
+
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
