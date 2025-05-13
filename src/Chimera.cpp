@@ -977,7 +977,7 @@ static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
     std::unique_ptr<Node> &head, std::mt19937 &gen,
-    std::vector<std::shared_ptr<Module>> &modules) {
+    std::vector<std::shared_ptr<Module>> &modules, int callsCount) {
 
   head = buildSyntaxTree(map, n, gen);
 
@@ -1051,7 +1051,7 @@ static void generateModules(
 
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
-    if (isCorrect) {
+    if (isCorrect || callsCount > 1000) {
 
       // Removes not replaced gate types
       removeEmptyGateTypes(m);
@@ -1071,7 +1071,6 @@ static void generateModules(
 
       removeInoutRegisters(m);
       removeDeclDimensions(m);
-
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
@@ -1578,15 +1577,17 @@ int main(int argc, char **argv) {
   if (printSeed)
     std::cout << "// Seed: " << finalSeed << std::endl;
   do {
+    int callsCount = 0;
     do {
-      generateModules(n, map, head, gen,
-                      createdModules); // populates createdModules with type
-                                       // inference checked modules
+      generateModules(n, map, head, gen, createdModules,
+                      callsCount++); // populates createdModules with type
+                                     // inference checked modules
     } while (createdModules.empty());
 
     auto &m =
         createdModules[rand() % createdModules.size()]; // pick a random module
     if (m->moduleHead->type == NodeType::PACKAGE_DECLARATION) {
+      usedModules.push_back(m);
       continue;
     }
     if (!m->programPoints.empty()) {
