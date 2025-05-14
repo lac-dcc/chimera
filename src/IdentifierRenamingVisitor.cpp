@@ -658,7 +658,6 @@ void IdentifierRenamingVisitor::visit(Struct_data_type *node) {
 
 void IdentifierRenamingVisitor::visit(
     Data_type_or_implicit_basic_followed_by_id_and_dimensions_opt *node) {
-  createIDContext(ContextType::TYPE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     if (child->getElement() == " void " &&
         node->getParent()->type != NodeType::FUNCTION_RETURN_TYPE_AND_ID) {
@@ -666,7 +665,6 @@ void IdentifierRenamingVisitor::visit(
     }
     this->applyVisit(child.get());
   }
-  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Modport_declaration *node) {
