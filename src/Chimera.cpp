@@ -1412,6 +1412,7 @@ mapFunctionToClasses(std::map<std::string, std::string> &functionToClass,
     if (currentClass != "") {
       auto funcNameNode = getID(head->getChildren()[2]->getChildren()[0].get());
       functionToClass[funcNameNode->getElement()] = currentClass;
+      head->getChildren()[0]->setElement(" static function ");
     }
   } else if (head->type == NodeType::CLASS_DECLARATION) {
     auto className = getID(head->getChildren()[3].get());
@@ -1478,7 +1479,7 @@ static void callFunction(Module &mod, Function *func) {
 
   auto callNode = std::make_unique<System_tf_call>("system_tf_call");
   if (func->prefix != "") {
-    auto prefix = std::make_unique<Terminal>(func->prefix + ".");
+    auto prefix = std::make_unique<Terminal>(func->prefix + "::2");
     callNode->insertChildToEnd(std::move(prefix));
   }
   auto nameNode = std::make_unique<Terminal>(func->name);
