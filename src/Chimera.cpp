@@ -62,7 +62,13 @@ static std::vector<std::string> chooseProds(
       productionsStr.push_back(prod);
       productionsCount.push_back(3767);
       continue;
-    } else {
+    } else if (prod.find("function_declaration") != std::string::npos) {
+      productionsStr.push_back(prod);
+      productionsCount.push_back(3767);
+      continue;
+    }
+
+    else {
       productionsStr.push_back(prod);
       productionsCount.push_back(prodCount);
     }
@@ -1399,6 +1405,25 @@ static void addBindStatement(std::vector<std::shared_ptr<Module>> &modules) {
       ->insertChildToEnd(std::move(bind));
 }
 
+static void
+mapFunctionToClasses(std::map<std::string, std::string> &functionToClass,
+                     Node *head, std::string currentClass) {
+  if (head->type == NodeType::FUNCTION_DECLARATION) {
+    if (currentClass != "") {
+      auto funcNameNode = getID(head->getChildren()[2]->getChildren()[0].get());
+      functionToClass[funcNameNode->getElement()] = currentClass;
+      head->getChildren()[0]->setElement(" static function ");
+    }
+  } else if (head->type == NodeType::CLASS_DECLARATION) {
+    auto className = getID(head->getChildren()[3].get());
+    currentClass = className->getElement();
+  }
+
+  for (const auto &c : head->getChildren()) {
+    mapFunctionToClasses(functionToClass, c.get(), currentClass);
+  }
+}
+
 static void getParametersFromFunction(
     Node *head, std::vector<std::pair<std::string, PortDir>> &parameterList,
     bool fromSignature = true) {
@@ -1453,6 +1478,10 @@ static void callFunction(Module &mod, Function *func) {
   procBlock->insertChildToEnd(std::make_unique<Terminal>(" always @* "));
 
   auto callNode = std::make_unique<System_tf_call>("system_tf_call");
+  if (func->prefix != "") {
+    auto prefix = std::make_unique<Terminal>(func->prefix + "::2");
+    callNode->insertChildToEnd(std::move(prefix));
+  }
   auto nameNode = std::make_unique<Terminal>(func->name);
   callNode->insertChildToEnd(std::move(nameNode));
   callNode->insertChildToEnd(std::make_unique<Terminal>(" ( "));
@@ -1480,6 +1509,9 @@ formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>> &modules) {
     findNodes(m->moduleHead.get(), functionNodes,
               NodeType::FUNCTION_DECLARATION);
 
+    std::map<std::string, std::string> functionToClass;
+    mapFunctionToClasses(functionToClass, m->moduleHead.get(), "");
+
     for (auto &node : functionNodes) {
 
       auto func = std::make_unique<Function>();
@@ -1504,6 +1536,10 @@ formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>> &modules) {
         funcType = " void ";
       func->funcType = funcType;
       func->name = funcNameNode->getElement();
+
+      if (functionToClass.find(func->name) != functionToClass.end()) {
+        func->prefix = functionToClass[func->name];
+      }
 
       // adding function type
       auto typeNode = std::make_unique<Terminal>(funcType);
