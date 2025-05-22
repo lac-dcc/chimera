@@ -259,7 +259,8 @@ constraintSet TypeInferenceVisitor::visit(Node *node, typeId type) {
 }
 
 constraintSet TypeInferenceVisitor::visit(Terminal *node, typeId type) {
-  if (node->getElement().find("type") != std::string::npos) {
+  if (node->getElement().find("type") != std::string::npos &&
+      node->getElement().find("typedef") == std::string::npos) {
     constraintSet d;
     auto t = freshType();
 
