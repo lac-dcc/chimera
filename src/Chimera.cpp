@@ -870,6 +870,20 @@ static void removeDeclDimensions(Node *head) {
   }
 }
 
+static void removeIncorrectClassId(Node *head) {
+  if (head->type ==
+      NodeType::
+          TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
+    if (head->getChildren().size() == 4) {
+      head->extractChild(head->getChildren()[3].get());
+      head->extractChild(head->getChildren()[2].get());
+    }
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectClassId(head->getChildren()[i].get());
+  }
+}
+
 static std::string findIdFromNode(Node *head) {
 
   // head is a terminal node
@@ -1068,6 +1082,8 @@ static void generateModules(
       mod->directionMap = std::move(directionMap);
       mod->portList = std::move(portList);
       mod->idToType = idToType;
+
+      removeIncorrectClassId(m);
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);
