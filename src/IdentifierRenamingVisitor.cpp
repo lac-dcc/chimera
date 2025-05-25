@@ -524,11 +524,11 @@ void IdentifierRenamingVisitor::visit(Net_declaration *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Net_type *node) {
-  contexts.push(ContextType::TYPE_DECL);
+  createIDContext(ContextType::TYPE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
-  contexts.pop();
+  finishIDContext();
 }
 
 void IdentifierRenamingVisitor::visit(Port_expression_opt *node) {
@@ -758,7 +758,7 @@ void IdentifierRenamingVisitor::visit(Type_identifier_followed_by_id *node) {
 }
 
 void IdentifierRenamingVisitor::visit(Type_declaration *node) {
-  createIDContext(ContextType::TYPE);
+  createIDContext(ContextType::DECL);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
