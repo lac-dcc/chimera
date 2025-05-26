@@ -1440,6 +1440,15 @@ mapFunctionToClasses(std::map<std::string, std::string> &functionToClass,
   }
 }
 
+static void matchLabels(Node *head, std::string moduleName) {
+  if (head->getElement().find("SymbolIdentifier") != std::string::npos) {
+    head->setElement(moduleName);
+  }
+  for (const auto &c : head->getChildren()) {
+    matchLabels(c.get(), moduleName);
+  }
+}
+
 static void getParametersFromFunction(
     Node *head, std::vector<std::pair<std::string, PortDir>> &parameterList,
     bool fromSignature = true) {
@@ -1792,6 +1801,14 @@ int main(int argc, char **argv) {
   formatandCallCustomFunctions(usedModules);
   if (bind)
     addBindStatement(usedModules);
+
+  for (auto &m : usedPackages) {
+    matchLabels(m->moduleHead.get(), m->moduleName->getElement());
+  }
+
+  for (auto &m : usedModules) {
+    matchLabels(m->moduleHead.get(), m->moduleName->getElement());
+  }
 
   if (pcfg) {
     dotcfg << "}\n";
