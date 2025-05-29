@@ -17,18 +17,18 @@ using constraintVector = std::vector<std::pair<typeId, typeId>>;
 using equivalenceMap = std::unordered_map<typeId, std::unordered_set<typeId>>;
 
 enum class CanonicalTypes : typeId {
-  DEFAULT_TYPE,
-  SCALAR,
-  CONST_SCALAR,
-  BIT,
-  LOGIC,
-  ANONYMOUS_GATE,
-  GATE,
+  DEFAULT_TYPE,   // 0
+  SCALAR,         // 1
+  CONST_SCALAR,   // 2
+  BIT,            // 3
+  LOGIC,          // 4
+  ANONYMOUS_GATE, // 5
+  GATE,           // 6
   VECTOR,
-  FLOAT_SCALAR,
-  STRING,
-  REG,
-  WIRE,
+  FLOAT_SCALAR, // 7
+  STRING,       // 8
+  REG,          // 9
+  WIRE,         // 10
   INTEGER,
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
