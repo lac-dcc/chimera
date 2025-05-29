@@ -904,8 +904,13 @@ static void removeIncorrectGateInstances(Node *head) {
       head->getChildren()[2]->setElement("");
       head->getChildren()[4]->setElement("");
     }
-  } else if (head->type == NodeType::ANY_PORT_LIST_OPT &&
-             head->getParent()->type == NodeType::PRIMITIVE_GATE_INSTANCE) {
+  } else if ((head->type ==
+                  NodeType::NON_ANONYMOUS_GATE_INSTANCE_OR_REGISTER_VARIABLE ||
+              head->type == NodeType::GATE_INSTANCE_OR_REGISTER_VARIABLE) &&
+             head->getChildren().size() == 5) {
+    head->getChildren()[2]->setElement("");
+    head->getChildren()[4]->setElement("");
+  } else if (head->type == NodeType::ANY_PORT_LIST_OPT) {
     head->clearChildren();
     head->insertChildToEnd(std::make_unique<Terminal>(""));
   }
