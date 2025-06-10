@@ -884,6 +884,41 @@ static void removeIncorrectClassId(Node *head) {
   }
 }
 
+// removes hierarchy_extension nodes, because it is added manually later
+static void removeIncorrectHierarchy(Node *head) {
+  if (head->type == NodeType::HIERARCHY_EXTENSION) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectHierarchy(head->getChildren()[i].get());
+  }
+}
+
+static void removeIncorrectGateInstances(Node *head) {
+  if (head->type == NodeType::PRIMITIVE_GATE_INSTANCE) {
+    if (head->getChildren().size() == 3) {
+      head->clearChildren();
+      head->insertChildToEnd(std::make_unique<Terminal>(""));
+    } else {
+      head->getChildren()[2]->setElement("");
+      head->getChildren()[4]->setElement("");
+    }
+  } else if ((head->type ==
+                  NodeType::NON_ANONYMOUS_GATE_INSTANCE_OR_REGISTER_VARIABLE ||
+              head->type == NodeType::GATE_INSTANCE_OR_REGISTER_VARIABLE) &&
+             head->getChildren().size() == 5) {
+    head->getChildren()[2]->setElement("");
+    head->getChildren()[4]->setElement("");
+  } else if (head->type == NodeType::ANY_PORT_LIST_OPT) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectGateInstances(head->getChildren()[i].get());
+  }
+}
+
 static std::string findIdFromNode(Node *head) {
 
   // head is a terminal node
@@ -1084,6 +1119,8 @@ static void generateModules(
       mod->idToType = idToType;
 
       removeIncorrectClassId(m);
+      removeIncorrectHierarchy(m);
+      removeIncorrectGateInstances(m);
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);
