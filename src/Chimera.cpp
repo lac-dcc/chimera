@@ -1028,6 +1028,16 @@ static void removeInoutRegisters(Node *head) {
   }
 }
 
+static void addGenvar(Node *head) {
+  if (head->type == NodeType::GENVAR_OPT) {
+    head->getChildren()[0]->setElement("genvar");
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    addGenvar(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -1096,6 +1106,7 @@ static void generateModules(
     // Prepares for type inference
     replaceTypes(m, lastID);
     addConstantIDsToParameterList(m, declMap, dirMap);
+    addGenvar(m);
 
     std::unordered_map<std::string, CanonicalTypes>
         idToType; // maps an id to its inferred type
