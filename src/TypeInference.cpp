@@ -2765,7 +2765,8 @@ constraintSet TypeInferenceVisitor::visit(Always_construct *node, typeId) {
   return defaultVisitor(node, type);
 }
 
-constraintSet TypeInferenceVisitor::visit(Genvar_opt *node, typeId type) {
+constraintSet TypeInferenceVisitor::visit(Genvar_opt *node, typeId) {
+  auto type = static_cast<typeId>(CanonicalTypes::INTEGER);
   return defaultVisitor(node, type);
 }
 

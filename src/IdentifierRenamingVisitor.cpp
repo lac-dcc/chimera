@@ -5,7 +5,9 @@
 std::string last_id_name_created = "";
 
 std::set<std::string> constant_names;
+std::string curr_genvar;
 bool prevAssign = false;
+bool is_inside_loop = false;
 std::string prevAssignId = "";
 
 IdentifierRenamingVisitor::IdentifierRenamingVisitor(
@@ -125,6 +127,9 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
     std::cerr << "ID name: " << v.name << " type: " << v.type << std::endl;
 
   v.dir = PortDir::NONE;
+  if (is_inside_loop) {
+    curr_genvar = v.name;
+  }
 
   last_id_name_created = v.name;
   v.parent = nullptr;
@@ -169,6 +174,9 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   if (!contexts.empty() && (contexts.top() == ContextType::ASSIGNMENT)) {
     contexts.pop();
     isAssign = true;
+  }
+  if (isAssign && is_inside_loop) {
+    return curr_genvar;
   }
 
   std::vector<std::string> options;
@@ -394,6 +402,11 @@ void IdentifierRenamingVisitor::visit(Lpvalue *node) {
 
 void IdentifierRenamingVisitor::visit(Expression *node) {
 
+  is_inside_loop = node->getParent()->type == NodeType::LOOP_GENERATE_CONSTRUCT;
+  if (is_inside_loop) {
+    createIDContext(ContextType::CONSTANT_EXPR);
+  }
+
   if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
     createIDContext(ContextType::EXPR);
   }
@@ -404,6 +417,10 @@ void IdentifierRenamingVisitor::visit(Expression *node) {
 
   if (!contexts.empty() && contexts.top() != ContextType::CONSTANT_EXPR) {
     finishIDContext();
+  }
+  if (is_inside_loop) {
+    finishIDContext();
+    is_inside_loop = false;
   }
 }
 
