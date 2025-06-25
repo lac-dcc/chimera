@@ -577,18 +577,18 @@ static void renameConstantIDsDeclarations(
 
 static void removeAssignmentsInPorts(Node *head) {
   if (head->type == NodeType::PORT_DECLARATION_ANSI ||
-      head->type == NodeType::PORT) {
+      head->type == NodeType::PORT ||
+      head->type ==
+          NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_ITEM_LAST_ANSI) {
 
     for (auto &c : head->getChildren()) {
       if (c->type == NodeType::TRAILING_ASSIGN_OPT) {
         c->clearChildren();
       }
     }
-
-  } else {
-    for (auto &c : head->getChildren())
-      removeAssignmentsInPorts(c.get());
   }
+  for (auto &c : head->getChildren())
+    removeAssignmentsInPorts(c.get());
 }
 
 static void
@@ -1028,6 +1028,27 @@ static void removeInoutRegisters(Node *head) {
   }
 }
 
+static void fixIncorrectPortDeclarations(Node *head) {
+  if (head->type ==
+      NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_ITEM_LAST_ANSI) {
+    if (head->getChildren().size() == 3 &&
+        head->getChildren()[1]->type == NodeType::CLASS_ID) {
+      head->getChildren()[1]->insertChildToBegin(
+          std::make_unique<Var_or_net_type_opt>("var_or_net_type_opt"));
+      auto *node = head->getChildren()[1].get();
+      node->getChildren()[0]->insertChildToEnd(
+          std::make_unique<Net_type>("net_type"));
+      node->getChildren()[0]->getChildren()[0]->insertChildToEnd(
+          std::make_unique<Terminal>(" reg "));
+      head->getChildren()[1]->insertChildToBegin(
+          std::make_unique<Terminal>(" input "));
+    }
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    fixIncorrectPortDeclarations(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -1130,6 +1151,7 @@ static void generateModules(
 
       removeInoutRegisters(m);
       removeDeclDimensions(m);
+      fixIncorrectPortDeclarations(m);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);

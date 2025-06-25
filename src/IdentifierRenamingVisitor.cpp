@@ -729,7 +729,8 @@ void IdentifierRenamingVisitor::visit(Decl_variable_dimension *node) {
 void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
 
   if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
-                            contexts.top() == ContextType::CONSTANT_EXPR)) {
+                            contexts.top() == ContextType::CONSTANT_EXPR ||
+                            contexts.top() == ContextType::DEFINING_TYPE)) {
     node->clearChildren();
     node->insertChildToEnd(std::make_unique<Terminal>(""));
     return;
