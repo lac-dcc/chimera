@@ -64,6 +64,7 @@ verible-verilog-format --inplace program.v
 ```
 
 ### 7. Command Line options (optional)
+- `-t <target-size>`: Specifies the minimum number of tokens in the generated programs, for instance, `-t 200`.
 - `--printseed`: Prints the randomization seed.
 - `--printcfg`: Generates call graph dot file.
 - `--debug`: Prints debug messages.
@@ -74,6 +75,19 @@ verible-verilog-format --inplace program.v
 
 If you ever use ChiBench or ChiGen to find bugs in some EDA tool, we would appreciate it very much if you could reach out to us and report your experience.
 If you need help to set up the scripts to do this kind of exploration, feel free to reach out to us as well!
+
+### Available designs
+There are already some ChiGen programs available in the folder `3k_programs_for_bugs/chigen/`. 
+
+### Generating multiple designs
+In the `scripts` folder, there is a script called `generate_programs.sh`, which generates a specified number of programs. The usage is:
+```
+scripts/generate_programs.sh <target-directory> <chimera_executable> <json_file> <n_gram> <number of programs to generate> <path_to_formatter> <target_size>"
+```
+One example of use would be:
+```
+./scripts/generate_programs.sh ./generated_programs ./build/Chimera ./json/1gram_size_test_modified.json 1 1000 ./verible_bin/verible-verilog-format 100
+```
 
 ## Use cases
 We have found various bugs in open-source platforms with programs from ChiBench and ChiGen. Below we list examples of issues reported:
