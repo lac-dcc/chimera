@@ -1043,6 +1043,21 @@ static void fixIncorrectPortDeclarations(Node *head) {
       head->getChildren()[1]->insertChildToBegin(
           std::make_unique<Terminal>(" input "));
     }
+  } else if (
+      head->type ==
+          NodeType::
+              DATA_TYPE_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT &&
+      head->getParent()->type == NodeType::DATA_DECLARATION_BASE) {
+    if (head->getChildren()[0]->type ==
+        NodeType::
+            TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
+      head->insertChildToBegin(
+          std::make_unique<Var_or_net_type_opt>("var_or_net_type_opt"));
+      head->getChildren()[0]->insertChildToEnd(
+          std::make_unique<Terminal>(" input "));
+      head->getChildren()[0]->insertChildToEnd(
+          std::make_unique<Terminal>(" reg "));
+    }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     fixIncorrectPortDeclarations(head->getChildren()[i].get());
