@@ -15,7 +15,7 @@ void ReplaceConstantsVisitor::visit(Terminal *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_decnumber *node) {
-  std::vector<std::string> options = {" -1 ", " 1 "};
+  std::vector<std::string> options = {" (-1)", " 1 "};
   node->setElement(options[rand() % options.size()]);
 
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
