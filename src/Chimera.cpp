@@ -877,6 +877,9 @@ static void removeIncorrectClassId(Node *head) {
     if (head->getChildren().size() == 4) {
       head->extractChild(head->getChildren()[3].get());
       head->extractChild(head->getChildren()[2].get());
+    } else if (head->getChildren().size() == 2) {
+      head->insertChildToBegin(std::make_unique<Terminal>(" reg "));
+      head->insertChildToBegin(std::make_unique<Terminal>(" input "));
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
