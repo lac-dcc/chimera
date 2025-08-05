@@ -983,6 +983,17 @@ static void removeIncorrectParameters(Node *head) {
   }
 }
 
+static void removeIncorrectParameterExpr(Node *head) {
+  if (head->type == NodeType::PARAMETER_EXPR &&
+      head->getChildren()[0]->type == NodeType::DATA_TYPE_PRIMITIVE) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(" 1 "));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeIncorrectParameterExpr(head->getChildren()[i].get());
+  }
+}
+
 static void removeIncorrectVariableDimensions(Node *head) {
   // Remove gates declarations from the generated module
   if (head->type == NodeType::REFERENCE && head->getChildren().size() >= 2) {
@@ -1160,6 +1171,7 @@ static void generateModules(
       removeIncorrectClassId(m);
       removeIncorrectHierarchy(m);
       removeIncorrectGateInstances(m);
+      removeIncorrectParameterExpr(m);
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);
