@@ -4,6 +4,7 @@
 #include "Visitor.h"
 #include <map>
 #include <memory>
+#include <set>
 #include <stack>
 #include <string>
 #include <vector>
@@ -45,6 +46,7 @@ public:
   std::vector<std::shared_ptr<Var>>
       structIds; // temporary vector to store identifiers declared inside a
                  // struct
+  std::set<std::string> declaredIds;
 
 private:
   std::string defId = "";
@@ -177,5 +179,9 @@ public:
 
   virtual void
   visit(Non_anonymous_gate_instance_or_register_variable *node) override;
+
+  virtual void visit(Clocking_decl_assign *node) override;
+
+  virtual void visit(Loop_generate_construct *node) override;
 };
 #endif

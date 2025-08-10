@@ -127,6 +127,7 @@ Var IdentifierRenamingVisitor::createNewID(std::string t, bool isEscaped) {
   v.dir = PortDir::NONE;
 
   last_id_name_created = v.name;
+  this->declaredIds.insert(v.name);
   v.parent = nullptr;
 
   return v;
@@ -258,6 +259,7 @@ std::string IdentifierRenamingVisitor::findID(std::string type) {
   if (isAssign) {
     prevAssign = true;
     prevAssignId = options[c];
+    this->declaredIds.insert(options[c]);
   }
   return options[c];
 }
@@ -795,4 +797,24 @@ void IdentifierRenamingVisitor::visit(
     this->applyVisit(child.get());
   }
   finishIDContext();
+}
+void IdentifierRenamingVisitor::visit(Clocking_decl_assign *node) {
+  createIDContext(ContextType::EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Loop_generate_construct *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->type == NodeType::EXPRESSION ||
+        child->type == NodeType::EXPRESSION_OPT) {
+      createIDContext(ContextType::CONSTANT_EXPR);
+      this->applyVisit(child.get());
+      finishIDContext();
+    } else {
+      this->applyVisit(child.get());
+    }
+  }
 }

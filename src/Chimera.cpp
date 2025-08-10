@@ -235,9 +235,11 @@ static void replaceConstants(Node *head) {
 static int renameVars(
     Node *head, int modID, int packageID,
     std::unordered_map<std::string, Node *> &declMap,
-    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap) {
+    std::unordered_map<std::string, std::pair<Node *, PortDir>> &directionMap,
+    std::set<std::string> &declaredIds) {
   IdentifierRenamingVisitor visitor(modID, packageID, declMap, directionMap);
   visitor.applyVisit(head);
+  declaredIds = visitor.declaredIds;
   if (visitor.to_define.size() > 0) {
     return -1;
   }
@@ -474,7 +476,6 @@ static void findConstantIDs(Node *head,
 
     idsFound.insert({head->getElement(), shouldRename});
   }
-
   for (const auto &c : head->getChildren()) {
     findConstantIDs(c.get(), idsFound, isIndex, isParam);
   }
@@ -594,10 +595,19 @@ static void removeAssignmentsInPorts(Node *head) {
 static void
 addConstantIDsToParameterList(Node *head,
                               std::unordered_map<std::string, Node *> &declMap,
-                              std::unordered_map<std::string, Node *> &dirMap) {
+                              std::unordered_map<std::string, Node *> &dirMap,
+                              std::set<std::string> &declaredIds) {
   std::set<std::pair<std::string, bool>> constantIDs;
   findConstantIDs(head, constantIDs);
 
+  // removing ids already declared
+  for (auto it = constantIDs.begin(); it != constantIDs.end();) {
+    if (declaredIds.count(it->first)) {
+      it = constantIDs.erase(it);
+    } else {
+      ++it;
+    }
+  }
   if (constantIDs.empty())
     return;
 
@@ -878,8 +888,8 @@ static void removeIncorrectClassId(Node *head) {
       head->extractChild(head->getChildren()[3].get());
       head->extractChild(head->getChildren()[2].get());
     } else if (head->getChildren().size() == 2) {
-      head->insertChildToBegin(std::make_unique<Terminal>(" reg "));
-      head->insertChildToBegin(std::make_unique<Terminal>(" input "));
+      // head->insertChildToBegin(std::make_unique<Terminal>(" reg "));
+      // head->insertChildToBegin(std::make_unique<Terminal>(" input "));
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
@@ -1065,12 +1075,17 @@ static void fixIncorrectPortDeclarations(Node *head) {
     if (head->getChildren()[0]->type ==
         NodeType::
             TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
-      head->insertChildToBegin(
-          std::make_unique<Var_or_net_type_opt>("var_or_net_type_opt"));
-      head->getChildren()[0]->insertChildToEnd(
-          std::make_unique<Terminal>(" input "));
-      head->getChildren()[0]->insertChildToEnd(
-          std::make_unique<Terminal>(" reg "));
+      head->insertChildToBegin(std::make_unique<Terminal>(" logic "));
+    }
+  } else if (head->type == NodeType::PORT_DECLARATION_ANSI) {
+    if (head->getChildren()[0]->type ==
+        NodeType::TYPE_IDENTIFIER_FOLLOWED_BY_ID) {
+      head->getChildren()[0]->clearChildren();
+      head->getChildren()[0]->insertChildToEnd(std::make_unique<Terminal>(" "));
+
+      head->getParent()->getParent()->getParent()->getChildren()[1]->setElement(
+          " ");
+      return;
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
@@ -1108,6 +1123,8 @@ static void generateModules(
   std::vector<std::pair<std::string, PortDir>>
       portList; // list of ports for a module
   std::vector<std::pair<std::string, PortDir>> previousPortList;
+  std::set<std::string> declaredIds;
+
   for (auto &m : moduleHeads) {
 
     declMap.clear();
@@ -1131,10 +1148,12 @@ static void generateModules(
     // Rename SymbolIdentifier placeholders
     int lastID;
     if (m->type == NodeType::MODULE_OR_INTERFACE_DECLARATION) {
-      lastID = renameVars(m, modID++, packageID, declMap, directionMap);
+      lastID =
+          renameVars(m, modID++, packageID, declMap, directionMap, declaredIds);
     } else {
       declared_packages.push_back(packageID);
-      lastID = renameVars(m, modID, packageID++, declMap, directionMap);
+      lastID =
+          renameVars(m, modID, packageID++, declMap, directionMap, declaredIds);
     }
 
     // Discard programs that use variables not declared
@@ -1145,7 +1164,7 @@ static void generateModules(
     // Replace real generated types for placeholders
     // Prepares for type inference
     replaceTypes(m, lastID);
-    addConstantIDsToParameterList(m, declMap, dirMap);
+    addConstantIDsToParameterList(m, declMap, dirMap, declaredIds);
 
     std::unordered_map<std::string, CanonicalTypes>
         idToType; // maps an id to its inferred type
@@ -1153,6 +1172,7 @@ static void generateModules(
     if (!renameQualifiedIds(m, previousPortList)) {
       isCorrect = false;
     }
+    fixIncorrectPortDeclarations(m);
 
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
@@ -1181,7 +1201,6 @@ static void generateModules(
 
       removeInoutRegisters(m);
       removeDeclDimensions(m);
-      fixIncorrectPortDeclarations(m);
 
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
@@ -1196,7 +1215,7 @@ static void generateModules(
   directionMap.clear();
 
   // Rename what is left of the generated program, e.g. global vars
-  renameVars(head.get(), 0, 0, declMap, directionMap);
+  renameVars(head.get(), 0, 0, declMap, directionMap, declaredIds);
 }
 
 static void measureSize(Node *head, int &size) {
