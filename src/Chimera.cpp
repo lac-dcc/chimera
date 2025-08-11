@@ -592,6 +592,17 @@ static void removeAssignmentsInPorts(Node *head) {
     removeAssignmentsInPorts(c.get());
 }
 
+static void removeCallBases(Node *head) {
+  if (head->type == NodeType::REFERENCE_OR_CALL_BASE &&
+      head->getParent()->type == NodeType::INSTANTIATION_BASE) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(""));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeCallBases(head->getChildren()[i].get());
+  }
+}
+
 static void
 addConstantIDsToParameterList(Node *head,
                               std::unordered_map<std::string, Node *> &declMap,
@@ -840,8 +851,9 @@ static void findModuleName(Node *head, Node *&name) {
 }
 
 static void removeEmptyGateTypes(Node *head) {
-  if (head->type == NodeType::GATETYPE &&
-      head->getChildren()[0]->getElement().empty()) {
+  if ((head->type == NodeType::GATETYPE &&
+       head->getChildren()[0]->getElement().empty()) ||
+      head->type == NodeType::SWITCHTYPE) {
     auto parent = head->getParent();
     parent->clearChildren();
     parent->insertChildToEnd(std::make_unique<Terminal>(""));
@@ -909,13 +921,16 @@ static void removeIncorrectHierarchy(Node *head) {
 }
 
 static void removeIncorrectGateInstances(Node *head) {
-  if (head->type == NodeType::PRIMITIVE_GATE_INSTANCE) {
-    if (head->getChildren().size() == 3) {
-      head->clearChildren();
-      head->insertChildToEnd(std::make_unique<Terminal>(""));
+  if (head->type == NodeType::GATE_INSTANTIATION &&
+      (head->getChildren()[0]->type == NodeType::SWITCHTYPE ||
+       head->getChildren()[0]->type == NodeType::GATETYPE)) {
+    auto node = head->getChildren()[1]->getChildren()[0].get();
+    if (node->getChildren().size() == 3) {
+      node->clearChildren();
+      node->insertChildToEnd(std::make_unique<Terminal>(""));
     } else {
-      head->getChildren()[2]->setElement("");
-      head->getChildren()[4]->setElement("");
+      node->getChildren()[2]->setElement("");
+      node->getChildren()[4]->setElement("");
     }
   } else if ((head->type ==
                   NodeType::NON_ANONYMOUS_GATE_INSTANCE_OR_REGISTER_VARIABLE ||
@@ -929,6 +944,23 @@ static void removeIncorrectGateInstances(Node *head) {
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
     removeIncorrectGateInstances(head->getChildren()[i].get());
+  }
+}
+
+static void removeInvalidTokens(Node *head) {
+  if (head->type == NodeType::PROPERTY_DECLARATION ||
+      head->type == NodeType::SEQUENCE_DECLARATION) {
+    if (head->getChildren().size() == 8) {
+      head->getChildren()[3]->setElement(";");
+    } else {
+      head->getChildren()[5]->setElement(";");
+    }
+  } else if (head->type == NodeType::PREPROCESSOR_ACTION) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(" "));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeInvalidTokens(head->getChildren()[i].get());
   }
 }
 
@@ -1023,11 +1055,29 @@ renameQualifiedIds(Node *head,
     if (declared_packages.empty()) {
       return false;
     }
-    head->setElement(" package_" + std::to_string(declared_packages[0]));
+    // head->setElement(" package_" + std::to_string(declared_packages[0]));
+    head->setElement(" package_0 ");
   }
   if (portList.size() != 0) {
     if (head->getElement() == "SCOPE_ELEMENT") {
       head->setElement(portList[0].first);
+    }
+  } else if (head->getElement() == "SCOPE_ELEMENT") {
+    head->setElement("*");
+  }
+
+  if (head->type == NodeType::QUALIFIED_ID) {
+    if (head->getChildren()[0]->type == NodeType::UNQUALIFIED_ID) {
+      head->getChildren()[0]->getChildren()[0]->getChildren()[0]->setElement(
+          " package_0 ");
+    } else if (head->getChildren()[0]->type != NodeType::UNQUALIFIED_ID) {
+      head->getChildren()[0]->setElement(" package_0 ");
+    }
+    if (head->getChildren()[2]->type == NodeType::UNQUALIFIED_ID) {
+      head->getChildren()[2]->getChildren()[0]->getChildren()[0]->setElement(
+          " id_0 ");
+    } else if (head->getChildren()[0]->type != NodeType::UNQUALIFIED_ID) {
+      head->getChildren()[0]->setElement(" id_0 ");
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
@@ -1075,17 +1125,38 @@ static void fixIncorrectPortDeclarations(Node *head) {
     if (head->getChildren()[0]->type ==
         NodeType::
             TYPE_IDENTIFIER_OR_IMPLICIT_BASIC_FOLLOWED_BY_ID_AND_DIMENSIONS_OPT) {
-      head->insertChildToBegin(std::make_unique<Terminal>(" logic "));
+      head->insertChildToBegin(std::make_unique<Terminal>(" reg "));
     }
   } else if (head->type == NodeType::PORT_DECLARATION_ANSI) {
     if (head->getChildren()[0]->type ==
         NodeType::TYPE_IDENTIFIER_FOLLOWED_BY_ID) {
-      head->getChildren()[0]->clearChildren();
-      head->getChildren()[0]->insertChildToEnd(std::make_unique<Terminal>(" "));
 
-      head->getParent()->getParent()->getParent()->getChildren()[1]->setElement(
-          " ");
-      return;
+      auto node = head->getChildren()[0].get();
+      if (node->getChildren().size() > 3) {
+        node->getChildren()[1]->setElement("");
+      }
+
+      while (node != nullptr &&
+             node->type !=
+                 NodeType::
+                     LIST_OF_PORTS_OR_PORT_DECLARATIONS_TRAILING_COMMA_ANSI) {
+        if (node->type ==
+                NodeType::LIST_OF_PORTS_OR_PORT_DECLARATIONS_ITEM_LAST_ANSI &&
+            node->getChildren().size() > 1) {
+          if (node->getChildren()[0]->type ==
+              NodeType::
+                  LIST_OF_PORTS_OR_PORT_DECLARATIONS_TRAILING_COMMA_ANSI) {
+            node = node->getChildren()[0].get();
+            break;
+          }
+        }
+        node = node->getParent();
+      }
+      head->getChildren()[0]->getChildren()[0]->setElement("");
+      if (node && node->getChildren().size() >= 2 && node->getChildren()[1]) {
+        node->getChildren()[1]->setElement(" ");
+      }
+      node = head;
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
@@ -1108,6 +1179,7 @@ static void generateModules(
   findModulePorts(head.get(), moduleHeads, portDeclarations);
 
   removePortDeclarations(portDeclarations);
+  removeCallBases(head.get());
   bool isCorrect = true;
 
   replaceConstants(head.get());
@@ -1143,7 +1215,9 @@ static void generateModules(
                            portList);
     }
     removeParameters(m);
+    removeInvalidTokens(m);
     removeAssignmentsInPorts(m);
+    fixIncorrectPortDeclarations(m);
 
     // Rename SymbolIdentifier placeholders
     int lastID;
@@ -1172,7 +1246,6 @@ static void generateModules(
     if (!renameQualifiedIds(m, previousPortList)) {
       isCorrect = false;
     }
-    fixIncorrectPortDeclarations(m);
 
     isCorrect = inferTypes(m, idToType) && isCorrect;
 
@@ -1421,14 +1494,17 @@ static void callPrimitiveModule(Module *m,
     primitiveNames = {"not", "buf"};
     break;
   case 3:
-    primitiveNames = {"and",  "or",     "xor",    "nand",   "nor",
-                      "xnor", "bufif1", "bufif0", "notif1", "notif0"};
+    primitiveNames = {"and",      "or",      "xor",      "nand",    "nor",
+                      "xnor",     "bufif1",  "bufif0",   "notif1",  "notif0",
+                      "rtranif1", "tranif1", "rtranif0", "tranif0", "rtran",
+                      "tran",     "pmos",    "nmos",     "cmos",    "rnmos",
+                      "rpmos",    "rcmos"};
 
     break;
   default:
 
     if (chosenIds.size() >= 3) {
-      primitiveNames = {"and", "or", "xor", "nand", "nor", "xnor"};
+      primitiveNames = {"and", "or", "xor", "nand", "nor", "xnor", "nmos"};
     } else {
 
       return;

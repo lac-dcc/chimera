@@ -31,6 +31,7 @@ enum class CanonicalTypes : typeId {
   WIRE,         // 10
   INTEGER,
   GENVAR,
+  OTHERS,          // classes, clocking, functions
   FIRST_FRESH_TYPE // Marks the size of CanonicalTypes. Not meant to be used.
 };
 

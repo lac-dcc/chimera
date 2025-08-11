@@ -183,5 +183,11 @@ public:
   virtual void visit(Clocking_decl_assign *node) override;
 
   virtual void visit(Loop_generate_construct *node) override;
+
+  virtual void visit(Specify_terminal_descriptor *node) override;
+
+  virtual void visit(Localparam_assign *node) override;
+
+  virtual void visit(Enum_name *node) override;
 };
 #endif

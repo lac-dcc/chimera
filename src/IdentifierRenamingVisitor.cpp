@@ -818,3 +818,37 @@ void IdentifierRenamingVisitor::visit(Loop_generate_construct *node) {
     }
   }
 }
+
+void IdentifierRenamingVisitor::visit(Specify_terminal_descriptor *node) {
+  createIDContext(ContextType::CONSTANT_EXPR);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Localparam_assign *node) {
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->type == NodeType::EXPRESSION) {
+      createIDContext(ContextType::CONSTANT_EXPR);
+      this->applyVisit(child.get());
+      finishIDContext();
+    } else {
+      this->applyVisit(child.get());
+    }
+  }
+}
+
+void IdentifierRenamingVisitor::visit(Enum_name *node) {
+  createIDContext(ContextType::DECL);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    if (child->type == NodeType::EXPRESSION) {
+      createIDContext(ContextType::CONSTANT_EXPR);
+      this->applyVisit(child.get());
+      finishIDContext();
+    } else {
+      this->applyVisit(child.get());
+    }
+  }
+  finishIDContext();
+}
