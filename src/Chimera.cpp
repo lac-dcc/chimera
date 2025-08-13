@@ -858,18 +858,6 @@ static void removeIncorrectGates(Node *head) {
   }
 }
 
-static void removeDeclDimensions(Node *head) {
-  if (head->type == NodeType::DECL_DIMENSIONS) {
-    head->clearChildren();
-    head->insertChildToEnd(std::make_unique<Terminal>(""));
-    return;
-  }
-
-  for (size_t i = 0; i < head->getChildren().size(); i++) {
-    removeDeclDimensions(head->getChildren()[i].get());
-  }
-}
-
 static void removeIncorrectClassId(Node *head) {
   if (head->type ==
       NodeType::
@@ -1170,7 +1158,6 @@ static void generateModules(
 
       removeIncorrectClassId(m);
       removeIncorrectHierarchy(m);
-      removeIncorrectGateInstances(m);
       removeIncorrectParameterExpr(m);
 
       // Get the name of the module
@@ -1179,14 +1166,12 @@ static void generateModules(
         previousPortList = mod->portList;
       }
 
-      removeInoutRegisters(m);
-      removeDeclDimensions(m);
-      fixIncorrectPortDeclarations(m);
-
       // Map live vars to each program point
       ReachingDefsVisitor rd(mod->programPoints);
       rd.applyVisit(mod->moduleHead.get());
-
+      removeInoutRegisters(m);
+      // removeIncorrectGateInstances(m);
+      fixIncorrectPortDeclarations(m);
       modules.push_back(std::move(mod));
     }
     previousPortList = portList;
@@ -1515,9 +1500,15 @@ mapFunctionToClasses(std::map<std::string, std::string> &functionToClass,
                      Node *head, std::string currentClass) {
   if (head->type == NodeType::FUNCTION_DECLARATION) {
     if (currentClass != "") {
-      auto funcNameNode = getID(head->getChildren()[2]->getChildren()[0].get());
-      functionToClass[funcNameNode->getElement()] = currentClass;
-      head->getChildren()[0]->setElement(" static function ");
+      if (head->getChildren()[2]->getChildren().size() > 0) {
+
+        auto funcNameNode =
+            getID(head->getChildren()[2]->getChildren()[0].get());
+        if (funcNameNode) {
+          functionToClass[funcNameNode->getElement()] = currentClass;
+          head->getChildren()[0]->setElement(" static function ");
+        }
+      }
     }
   } else if (head->type == NodeType::CLASS_DECLARATION) {
     auto className = getID(head->getChildren()[3].get());
@@ -1611,9 +1602,11 @@ static void callFunction(Module &mod, Function *func) {
     callNode->insertChildToEnd(std::make_unique<Terminal>(" )"));
   callNode->insertChildToEnd(std::make_unique<Terminal>(";"));
   procBlock->insertChildToEnd(std::move(callNode));
-  auto it = mod.moduleHead->getChildren().begin();
-
-  mod.moduleHead->insertChild(std::move(procBlock), std::next(it, 9));
+  auto &kids = mod.moduleHead->getChildren();
+  const std::size_t pos = std::min<std::size_t>(9, kids.size());
+  auto it = kids.begin();
+  std::advance(it, pos);
+  mod.moduleHead->insertChild(std::move(procBlock), it);
 }
 
 static void
@@ -1639,8 +1632,15 @@ formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>> &modules) {
       getParametersFromFunction(node, func->portList, parametersInSignature);
 
       // get function name and type
+      if (!(node->getChildren().size() >= 2 &&
+            node->getChildren()[2]->getChildren().size() > 0)) {
+        continue;
+      }
       auto funcNameNode = getID(node->getChildren()[2]->getChildren()[0].get());
 
+      if (!funcNameNode) {
+        continue;
+      }
       std::string funcType = "";
 
       if (m->idToType.find(funcNameNode->getElement()) != m->idToType.end())
