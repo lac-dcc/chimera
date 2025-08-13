@@ -1602,9 +1602,9 @@ static void callFunction(Module &mod, Function *func) {
     callNode->insertChildToEnd(std::make_unique<Terminal>(" )"));
   callNode->insertChildToEnd(std::make_unique<Terminal>(";"));
   procBlock->insertChildToEnd(std::move(callNode));
-  auto &kids = mod.moduleHead->getChildren();
-  const std::size_t pos = std::min<std::size_t>(9, kids.size());
-  auto it = kids.begin();
+  auto &children = mod.moduleHead->getChildren();
+  const std::size_t pos = std::min<std::size_t>(9, children.size());
+  auto it = children.begin();
   std::advance(it, pos);
   mod.moduleHead->insertChild(std::move(procBlock), it);
 }
