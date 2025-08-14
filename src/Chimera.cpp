@@ -910,6 +910,18 @@ static void removeIncorrectGateInstances(Node *head) {
   }
 }
 
+static void removeDeclDimensions(Node *head) {
+  if (head->type == NodeType::DECL_DIMENSIONS) {
+    head->clearChildren();
+    head->insertChildToBegin(std::make_unique<Terminal>(""));
+    return;
+  }
+
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeDeclDimensions(head->getChildren()[i].get());
+  }
+}
+
 static std::string findIdFromNode(Node *head) {
 
   // head is a terminal node
@@ -1665,6 +1677,11 @@ formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>> &modules) {
   }
 }
 
+static void cleanModule(Node *head) {
+  removeIncorrectGateInstances(head);
+  removeDeclDimensions(head);
+}
+
 int main(int argc, char **argv) {
   auto flags = parseArgs(argc, argv);
 
@@ -1921,6 +1938,7 @@ int main(int argc, char **argv) {
   }
 
   for (const auto &m : usedModules) {
+    cleanModule(m->moduleHead.get());
     if (hasAsserts) {
       std::vector<std::pair<std::string, std::string>> assignments;
       findAssignments(m->moduleHead.get(), assignments);
