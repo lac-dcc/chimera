@@ -830,8 +830,9 @@ static void findModuleName(Node *head, Node *&name) {
 }
 
 static void removeEmptyGateTypes(Node *head) {
-  if (head->type == NodeType::GATETYPE &&
-      head->getChildren()[0]->getElement().empty()) {
+  if ((head->type == NodeType::GATETYPE &&
+       head->getChildren()[0]->getElement().empty()) ||
+      head->type == NodeType::SWITCHTYPE) {
     auto parent = head->getParent();
     parent->clearChildren();
     parent->insertChildToEnd(std::make_unique<Terminal>(""));
@@ -839,6 +840,23 @@ static void removeEmptyGateTypes(Node *head) {
     for (size_t i = 0; i < head->getChildren().size(); i++) {
       removeEmptyGateTypes(head->getChildren()[i].get());
     }
+  }
+}
+
+static void removeInvalidTokens(Node *head) {
+  if (head->type == NodeType::PROPERTY_DECLARATION ||
+      head->type == NodeType::SEQUENCE_DECLARATION) {
+    if (head->getChildren().size() == 8) {
+      head->getChildren()[3]->setElement(";");
+    } else {
+      head->getChildren()[5]->setElement(";");
+    }
+  } else if (head->type == NodeType::PREPROCESSOR_ACTION) {
+    head->clearChildren();
+    head->insertChildToEnd(std::make_unique<Terminal>(" "));
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    removeInvalidTokens(head->getChildren()[i].get());
   }
 }
 
@@ -1680,6 +1698,7 @@ formatandCallCustomFunctions(std::vector<std::shared_ptr<Module>> &modules) {
 static void cleanModule(Node *head) {
   removeIncorrectGateInstances(head);
   removeDeclDimensions(head);
+  removeInvalidTokens(head);
 }
 
 int main(int argc, char **argv) {
