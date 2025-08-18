@@ -73,7 +73,7 @@ void ReachingDefsVisitor::visit(Label_opt *node) {
   }
 };
 
-void ReachingDefsVisitor::visit(Any_port_list_opt *){};
+void ReachingDefsVisitor::visit(Any_port_list_opt *) {};
 
 void ReachingDefsVisitor::visit(Udp_port_decls *node) {
   context.push(IdentifierRenamingVisitor::ContextType::DECL);
@@ -81,7 +81,7 @@ void ReachingDefsVisitor::visit(Udp_port_decls *node) {
   context.pop();
 };
 
-void ReachingDefsVisitor::visit(Expression *){};
+void ReachingDefsVisitor::visit(Expression *) {};
 
 void ReachingDefsVisitor::visit(Function_declaration *node) {
   startNewScope();
@@ -91,7 +91,9 @@ void ReachingDefsVisitor::visit(Function_declaration *node) {
 
 void ReachingDefsVisitor::visit(End *) {
   finishScope();
-  labelContext.pop_back();
+  if (!labelContext.empty()) {
+    labelContext.pop_back();
+  }
 };
 
 void ReachingDefsVisitor::visit(Net_declaration *node) {
