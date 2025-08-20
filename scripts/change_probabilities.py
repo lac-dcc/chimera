@@ -1,4 +1,5 @@
 import json
+import argparse
 
 def should_skip_rule(rule_name, productions):
     if 'expr' in rule_name:
@@ -42,10 +43,18 @@ def change_probabilities(data, compress_power=0.5):
 
     return updated
 
-with open('mixed_jasper_chibench_grammar.json', 'r') as f:
-    data = json.load(f)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Modify grammar probabilities in a JSON file.")
+    parser.add_argument("--input", required=True, help="Input JSON grammar file")
+    parser.add_argument("--output", required=True, help="Output JSON grammar file")
+    parser.add_argument("--power", type=float, default=0.5, help="Compression power (default: 0.5)")
 
-changed_grammar = change_probabilities(data)
+    args = parser.parse_args()
 
-with open('mixed_jasper_chibench_grammar_boosted.json', 'w') as f:
-    json.dump(changed_grammar, f, indent=2)
+    with open(args.input, 'r') as f:
+        data = json.load(f)
+
+    changed_grammar = change_probabilities(data, compress_power=args.power)
+
+    with open(args.output, 'w') as f:
+        json.dump(changed_grammar, f, indent=2)
