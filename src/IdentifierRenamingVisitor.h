@@ -171,6 +171,8 @@ public:
 
   virtual void visit(Type_declaration *node) override;
 
+  virtual void visit(Data_type *node) override;
+
   virtual void visit(Reference *node) override;
 
   virtual void visit(Block_identifier_opt *node) override;

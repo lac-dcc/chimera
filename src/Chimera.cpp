@@ -1096,6 +1096,16 @@ static void fixIncorrectPortDeclarations(Node *head) {
   }
 }
 
+static void fixTypedefs(Node *head) {
+  if (head->type == NodeType::TYPE_DECLARATION &&
+      head->getChildren().size() == 3) {
+    head->getChildren()[0]->setElement("typedef logic");
+  }
+  for (size_t i = 0; i < head->getChildren().size(); i++) {
+    fixTypedefs(head->getChildren()[i].get());
+  }
+}
+
 static void generateModules(
     int n,
     std::unordered_map<std::string, std::unordered_map<std::string, int>> map,
@@ -1189,6 +1199,7 @@ static void generateModules(
       removeIncorrectClassId(m);
       removeIncorrectHierarchy(m);
       removeIncorrectParameterExpr(m);
+      fixTypedefs(m);
 
       // Get the name of the module
       findModuleName(m, mod->moduleName);

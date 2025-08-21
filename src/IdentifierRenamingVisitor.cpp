@@ -278,7 +278,7 @@ std::string IdentifierRenamingVisitor::placeID(
   // TODO: implement a way to return types. The renaming phase was returning
   // non-declared IDs as types
   if (!contexts.empty() && contexts.top() == ContextType::TYPE) {
-    return "";
+    return "logic";
   }
 
   if (!contexts.empty() && contexts.top() == ContextType::DEFINING_TYPE)
@@ -760,6 +760,14 @@ void IdentifierRenamingVisitor::visit(Type_identifier_followed_by_id *node) {
 
 void IdentifierRenamingVisitor::visit(Type_declaration *node) {
   createIDContext(ContextType::DECL);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Data_type *node) {
+  createIDContext(ContextType::TYPE);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
