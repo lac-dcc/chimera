@@ -1033,9 +1033,11 @@ renameQualifiedIds(Node *head,
     }
     head->setElement(" package_" + std::to_string(declared_packages[0]));
   }
-  if (portList.size() != 0) {
-    if (head->getElement() == "SCOPE_ELEMENT") {
+  if (head->getElement() == "SCOPE_ELEMENT") {
+    if (portList.size() != 0) {
       head->setElement(portList[0].first);
+    } else {
+      return false;
     }
   }
   for (size_t i = 0; i < head->getChildren().size(); i++) {
@@ -1927,8 +1929,8 @@ int main(int argc, char **argv) {
 
   for (auto &m : createdModules) {
     if (m->moduleHead->type == NodeType::PACKAGE_DECLARATION) {
-      m->moduleName->setElement(" package_" +
-                                std::to_string(usedPackages.size()));
+      m->moduleHead->getChildren()[2]->getChildren()[0]->setElement(
+          " package_" + std::to_string(usedPackages.size()));
       usedPackages.push_back(m);
     }
   }

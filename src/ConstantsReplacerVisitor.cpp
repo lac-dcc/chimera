@@ -123,7 +123,7 @@ void ReplaceConstantsVisitor::visit(Tk_hexdigits *node) {
 }
 
 void ReplaceConstantsVisitor::visit(Tk_stringliteral *node) {
-  node->setElement("\"\"");
+  node->setElement("\"test.v\"");
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
