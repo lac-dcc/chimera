@@ -179,5 +179,7 @@ public:
 
   virtual void
   visit(Non_anonymous_gate_instance_or_register_variable *node) override;
+
+  virtual void visit(Delay_value_simple *node) override;
 };
 #endif

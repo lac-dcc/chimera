@@ -730,7 +730,8 @@ void IdentifierRenamingVisitor::visit(Select_variable_dimension *node) {
 
   if (!contexts.empty() && (contexts.top() == ContextType::DECL ||
                             contexts.top() == ContextType::CONSTANT_EXPR ||
-                            contexts.top() == ContextType::DEFINING_TYPE)) {
+                            contexts.top() == ContextType::DEFINING_TYPE ||
+                            contexts.top() == ContextType::TYPE)) {
     node->clearChildren();
     node->insertChildToEnd(std::make_unique<Terminal>(""));
     return;
@@ -799,6 +800,14 @@ void IdentifierRenamingVisitor::visit(Block_identifier_opt *node) {
 void IdentifierRenamingVisitor::visit(
     Non_anonymous_gate_instance_or_register_variable *node) {
   createIDContext(ContextType::DECL);
+  for (const std::unique_ptr<Node> &child : node->getChildren()) {
+    this->applyVisit(child.get());
+  }
+  finishIDContext();
+}
+
+void IdentifierRenamingVisitor::visit(Delay_value_simple *node) {
+  createIDContext(ContextType::EXPR);
   for (const std::unique_ptr<Node> &child : node->getChildren()) {
     this->applyVisit(child.get());
   }
