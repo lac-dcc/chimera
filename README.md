@@ -90,7 +90,7 @@ One example of use would be:
 ```
 
 ### How to change probabilities of the grammar?
-As described in Step 4, ChiGen requires a JSON file containing a Verilog grammar, where each production rule is associated with a probability. However, you may want to modify these probabilities to increase the diversity of the generated programs. To do this, you can use the `change_probabilities` script located in the `scripts` folder.  
+As described in Step 4, ChiGen requires a JSON file containing a Verilog grammar, where each production rule is associated with a probability. However, you may want to modify these probabilities to increase the diversity of the generated programs. To do this, you can use the `change_probabilities.py` script located in the `scripts` folder.  
 
 Example command:
 ```bash
